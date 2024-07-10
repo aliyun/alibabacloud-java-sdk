@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeApplicationScalingRulesRequest extends TeaModel {
     /**
-     * <p>7171a6ca-d1cd-4928-8642-7d5cfe69\\*\\*\\*\\*</p>
-     * <br>
+     * <p>7171a6ca-d1cd-4928-8642-7d5cfe69\<em>\</em>\<em>\</em></p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7171a6ca-d1cd-4928-8642-7d5cfe69****</p>
      */
     @NameInMap("AppId")
     public String appId;

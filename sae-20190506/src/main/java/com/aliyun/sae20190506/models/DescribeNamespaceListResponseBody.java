@@ -6,11 +6,15 @@ import com.aliyun.tea.*;
 public class DescribeNamespaceListResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code. Valid values:</p>
-     * <br>
-     * <p>*   **2xx**: The call was successful.</p>
-     * <p>*   **3xx**: The call was redirected.</p>
-     * <p>*   **4xx**: The call failed.</p>
-     * <p>*   **5xx**: A server error occurred.</p>
+     * <ul>
+     * <li><strong>2xx</strong>: The call was successful.</li>
+     * <li><strong>3xx</strong>: The call was redirected.</li>
+     * <li><strong>4xx</strong>: The call failed.</li>
+     * <li><strong>5xx</strong>: A server error occurred.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -23,39 +27,54 @@ public class DescribeNamespaceListResponseBody extends TeaModel {
 
     /**
      * <p>The returned error code. Valid values:</p>
-     * <br>
-     * <p>*   If the call is successful, the **ErrorCode** parameter is not returned.</p>
-     * <p>*   If the call fails, the **ErrorCode** parameter is returned. For more information, see the "**Error codes**" section of this topic.</p>
+     * <ul>
+     * <li>If the call is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+     * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the &quot;<strong>Error codes</strong>&quot; section of this topic.</li>
+     * </ul>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The returned information. Valid values:</p>
-     * <br>
-     * <p>*   success: If the call is successful, **success** is returned.</p>
-     * <p>*   An error code: If the call fails, an error code is returned.</p>
+     * <ul>
+     * <li>success: If the call is successful, <strong>success</strong> is returned.</li>
+     * <li>An error code: If the call fails, an error code is returned.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30375C38-F4ED-4135-A0AE-5C75DC7F****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the namespaces were obtained. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The namespaces were obtained.</p>
-     * <p>*   **false**: The namespaces failed to be obtained.</p>
+     * <ul>
+     * <li><strong>true</strong>: The namespaces were obtained.</li>
+     * <li><strong>false</strong>: The namespaces failed to be obtained.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The trace ID that is used to query the details of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ac1a0b2215622920113732501e****</p>
      */
     @NameInMap("TraceId")
     public String traceId;
@@ -124,69 +143,105 @@ public class DescribeNamespaceListResponseBody extends TeaModel {
     public static class DescribeNamespaceListResponseBodyData extends TeaModel {
         /**
          * <p>The command that was run to install the agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://edas-bj.oss-cn-beijing-internal.aliyuncs.com/test/install.sh">http://edas-bj.oss-cn-beijing-internal.aliyuncs.com/test/install.sh</a></p>
          */
         @NameInMap("AgentInstall")
         public String agentInstall;
 
         /**
          * <p>This parameter is no longer valid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Current")
         public Boolean current;
 
         /**
          * <p>Indicates whether custom namespaces are returned. Valid values:</p>
-         * <br>
-         * <p>*   **true**: Custom namespaces are returned.</p>
-         * <p>*   **false**: Custom namespaces are not returned.</p>
+         * <ul>
+         * <li><strong>true</strong>: Custom namespaces are returned.</li>
+         * <li><strong>false</strong>: Custom namespaces are not returned.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Custom")
         public Boolean custom;
 
         /**
          * <p>Specifies whether hybrid cloud namespaces are excluded. Valid values:</p>
-         * <br>
-         * <p>*   **true**: Hybrid cloud namespaces are excluded.</p>
-         * <p>*   **false**: Hybrid cloud namespaces are included.</p>
+         * <ul>
+         * <li><strong>true</strong>: Hybrid cloud namespaces are excluded.</li>
+         * <li><strong>false</strong>: Hybrid cloud namespaces are included.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("HybridCloudEnable")
         public Boolean hybridCloudEnable;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("NameSpaceShortId")
         public String nameSpaceShortId;
 
         /**
          * <p>The ID of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing:test</p>
          */
         @NameInMap("NamespaceId")
         public String namespaceId;
 
         /**
          * <p>The name of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("NamespaceName")
         public String namespaceName;
 
         /**
          * <p>The region to which the namespace belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The ID of the security group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-wz969ngg2e49q5i4****</p>
          */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
         /**
          * <p>The ID of the vSwitch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-2ze559r1z1bpwqxwp****</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
         /**
          * <p>The ID of the virtual private cloud (VPC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-2ze0i263cnn311nvj****</p>
          */
         @NameInMap("VpcId")
         public String vpcId;

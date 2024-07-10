@@ -4,6 +4,10 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class ExecJobResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
@@ -13,15 +17,31 @@ public class ExecJobResponseBody extends TeaModel {
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>67DD9A98-9CCC-5BE8-8C9E-B45E72F4****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0b87b7e716575071334387401e****</p>
+     */
     @NameInMap("TraceId")
     public String traceId;
 
@@ -87,15 +107,31 @@ public class ExecJobResponseBody extends TeaModel {
     }
 
     public static class ExecJobResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <strong>example:</strong>
+         * <p>manual-3db7a8fa-5d40-4edc-92e4-49d50eab****</p>
+         */
         @NameInMap("Data")
         public String data;
 
+        /**
+         * <strong>example:</strong>
+         * <p>success</p>
+         */
         @NameInMap("Msg")
         public String msg;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Success")
         public String success;
 

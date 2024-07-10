@@ -6,11 +6,15 @@ import com.aliyun.tea.*;
 public class GetAvailabilityMetricResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code. The following limits are imposed on the ID:</p>
-     * <br>
-     * <p>*   **2xx**: The call was successful.</p>
-     * <p>*   **3xx**: The call was redirected.</p>
-     * <p>*   **4xx**: The call failed.</p>
-     * <p>*   **5xx**: A server error occurred.</p>
+     * <ul>
+     * <li><strong>2xx</strong>: The call was successful.</li>
+     * <li><strong>3xx</strong>: The call was redirected.</li>
+     * <li><strong>4xx</strong>: The call failed.</li>
+     * <li><strong>5xx</strong>: A server error occurred.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -23,24 +27,35 @@ public class GetAvailabilityMetricResponseBody extends TeaModel {
 
     /**
      * <p>The additional information that is returned. The following limits are imposed on the ID:</p>
-     * <br>
-     * <p>*   success: If the call is successful, **success** is returned.</p>
-     * <p>*   An error code: If the call fails, an error code is returned.</p>
+     * <ul>
+     * <li>success: If the call is successful, <strong>success</strong> is returned.</li>
+     * <li>An error code: If the call fails, an error code is returned.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3A92C4EA-4C53-5A1C-8AEB-F2DB11982D5F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the list of applications was obtained. The following limits are imposed on the ID:</p>
-     * <br>
-     * <p>*   **true**: The namespaces were obtained.</p>
-     * <p>*   **false**: no</p>
+     * <ul>
+     * <li><strong>true</strong>: The namespaces were obtained.</li>
+     * <li><strong>false</strong>: no</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -92,46 +107,68 @@ public class GetAvailabilityMetricResponseBody extends TeaModel {
 
     public static class GetAvailabilityMetricResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the application.</p>
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>017f39b8-dfa4-4e16-a84b-1dcee4b1****</p>
          */
         @NameInMap("AppId")
         public String appId;
 
         /**
-         * <p>Indicates whether an auto scaling policy is enabled. The following limits are imposed on the ID:</p>
-         * <br>
-         * <p>*   **1**: An auto scaling policy is enabled.</p>
-         * <p>*   **0**: No auto scaling policy is enabled.</p>
+         * <p>Indicates whether an auto scaling policy is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: An auto scaling policy is enabled.</li>
+         * <li><strong>0</strong>: No auto scaling policy is enabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("EnableAutoscale")
         public Long enableAutoscale;
 
         /**
          * <p>The number of abnormal instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ErrorInstances")
         public Long errorInstances;
 
         /**
          * <p>The expected number of instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Instances")
         public Long instances;
 
         /**
-         * <p>The name of the application.</p>
+         * <p>The application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The ID of the namespace.</p>
+         * <p>The namespace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The current number of instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Runnings")
         public Long runnings;

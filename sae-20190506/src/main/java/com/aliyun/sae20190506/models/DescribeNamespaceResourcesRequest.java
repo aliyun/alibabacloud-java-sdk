@@ -4,10 +4,17 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class DescribeNamespaceResourcesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("NameSpaceShortId")
     public String nameSpaceShortId;
 
     /**
+     * <p>cn-shanghai:test</p>
+     * 
+     * <strong>example:</strong>
      * <p>cn-shanghai:test</p>
      */
     @NameInMap("NamespaceId")

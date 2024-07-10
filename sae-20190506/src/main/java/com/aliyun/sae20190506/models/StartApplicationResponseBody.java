@@ -6,11 +6,15 @@ import com.aliyun.tea.*;
 public class StartApplicationResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code. Valid values:</p>
-     * <br>
-     * <p>*   **2xx**: The call was successful.</p>
-     * <p>*   **3xx**: The call was redirected.</p>
-     * <p>*   **4xx**: The call failed.</p>
-     * <p>*   **5xx**: A server error occurred.</p>
+     * <ul>
+     * <li><strong>2xx</strong>: The call was successful.</li>
+     * <li><strong>3xx</strong>: The call was redirected.</li>
+     * <li><strong>4xx</strong>: The call failed.</li>
+     * <li><strong>5xx</strong>: A server error occurred.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -23,39 +27,57 @@ public class StartApplicationResponseBody extends TeaModel {
 
     /**
      * <p>The error code returned. Take note of the following rules:</p>
-     * <br>
-     * <p>*   If the call is successful, **ErrorCode** is not returned.</p>
-     * <p>*   If the call fails, **ErrorCode** is returned. For more information, see the "**Error codes**" section in this topic.</p>
+     * <ul>
+     * <li>If the call is successful, <strong>ErrorCode</strong> is not returned.</li>
+     * <li>If the call fails, <strong>ErrorCode</strong> is returned. For more information, see the &quot;<strong>Error codes</strong>&quot; section in this topic.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Null</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The returned message. Take note of the following rules:</p>
-     * <br>
-     * <p>*   If the call is successful, **success** is returned.</p>
-     * <p>*   If the call fails, an error code is returned.</p>
+     * <ul>
+     * <li>If the call is successful, <strong>success</strong> is returned.</li>
+     * <li>If the call fails, an error code is returned.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7BD8F4C7-D84C-4D46-9885-8212997E****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the application is started. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The trace ID that is used to query the details of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0bc3b6e215637275918588187d****</p>
      */
     @NameInMap("TraceId")
     public String traceId;
@@ -124,6 +146,9 @@ public class StartApplicationResponseBody extends TeaModel {
     public static class StartApplicationResponseBodyData extends TeaModel {
         /**
          * <p>The ID of the change order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4a815998-b468-4bea-b7d8-59f52a44****</p>
          */
         @NameInMap("ChangeOrderId")
         public String changeOrderId;

@@ -13,12 +13,20 @@ public class DeleteApplicationScalingRuleResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0a98a02315955564772843261e****</p>
+     */
     @NameInMap("TraceId")
     public String traceId;
 

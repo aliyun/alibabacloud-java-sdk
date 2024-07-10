@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateSecretShrinkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing:test</p>
      */
     @NameInMap("NamespaceId")
     public String namespaceId;
@@ -18,6 +21,9 @@ public class UpdateSecretShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16</p>
      */
     @NameInMap("SecretId")
     public Long secretId;

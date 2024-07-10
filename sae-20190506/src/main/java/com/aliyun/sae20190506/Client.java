@@ -27,8 +27,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary ba386059-69b1-4e65-b1e5-0682d9fa\\*\\*\\*\\*
-     *
+     * <b>summary</b> : 
+     * <p>ba386059-69b1-4e65-b1e5-0682d9fa\<em>\</em>\<em>\</em></p>
+     * 
      * @param request AbortAndRollbackChangeOrderRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -60,8 +61,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary ba386059-69b1-4e65-b1e5-0682d9fa\\*\\*\\*\\*
-     *
+     * <b>summary</b> : 
+     * <p>ba386059-69b1-4e65-b1e5-0682d9fa\<em>\</em>\<em>\</em></p>
+     * 
      * @param request AbortAndRollbackChangeOrderRequest
      * @return AbortAndRollbackChangeOrderResponse
      */
@@ -113,8 +115,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary cn-shanghai
-     *
+     * <b>summary</b> : 
+     * <p>cn-shanghai</p>
+     * 
      * @param request BatchStartApplicationsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -154,8 +157,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary cn-shanghai
-     *
+     * <b>summary</b> : 
+     * <p>cn-shanghai</p>
+     * 
      * @param request BatchStartApplicationsRequest
      * @return BatchStartApplicationsResponse
      */
@@ -600,14 +604,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Null
-     *
-     * @description The HTTP status code. Take note of the following rules:
-     * *   **2xx**: The call was successful.
-     * *   **3xx**: The call was redirected.
-     * *   **4xx**: The call failed.
-     * *   **5xx**: A server error occurred.
-     *
+     * <b>description</b> :
+     * <p>The HTTP status code. Take note of the following rules:</p>
+     * <ul>
+     * <li><strong>2xx</strong>: The call was successful.</li>
+     * <li><strong>3xx</strong>: The call was redirected.</li>
+     * <li><strong>4xx</strong>: The call failed.</li>
+     * <li><strong>5xx</strong>: A server error occurred.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Null</p>
+     * 
      * @param request CreateApplicationScalingRuleRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -667,14 +675,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Null
-     *
-     * @description The HTTP status code. Take note of the following rules:
-     * *   **2xx**: The call was successful.
-     * *   **3xx**: The call was redirected.
-     * *   **4xx**: The call failed.
-     * *   **5xx**: A server error occurred.
-     *
+     * <b>description</b> :
+     * <p>The HTTP status code. Take note of the following rules:</p>
+     * <ul>
+     * <li><strong>2xx</strong>: The call was successful.</li>
+     * <li><strong>3xx</strong>: The call was redirected.</li>
+     * <li><strong>4xx</strong>: The call failed.</li>
+     * <li><strong>5xx</strong>: A server error occurred.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Null</p>
+     * 
      * @param request CreateApplicationScalingRuleRequest
      * @return CreateApplicationScalingRuleResponse
      */
@@ -685,8 +697,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary name
-     *
+     * <b>summary</b> : 
+     * <p>name</p>
+     * 
      * @param request CreateConfigMapRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -732,8 +745,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary name
-     *
+     * <b>summary</b> : 
+     * <p>name</p>
+     * 
      * @param request CreateConfigMapRequest
      * @return CreateConfigMapResponse
      */
@@ -744,10 +758,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a canary release rule for a Spring Cloud or Dubbo application.
-     *
-     * @description >  You can configure only one canary release rule for each application.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> You can configure only one canary release rule for each application.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a canary release rule for a Spring Cloud or Dubbo application.</p>
+     * 
      * @param request CreateGreyTagRouteRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -799,10 +817,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a canary release rule for a Spring Cloud or Dubbo application.
-     *
-     * @description >  You can configure only one canary release rule for each application.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> You can configure only one canary release rule for each application.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a canary release rule for a Spring Cloud or Dubbo application.</p>
+     * 
      * @param request CreateGreyTagRouteRequest
      * @return CreateGreyTagRouteResponse
      */
@@ -813,8 +835,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary {"appId":"395b60e4-0550-458d-9c54-a265d036\\*\\*\\*\\*","containerPort":8080}
-     *
+     * <b>summary</b> : 
+     * <p>{&quot;appId&quot;:&quot;395b60e4-0550-458d-9c54-a265d036\<em>\</em>\<em>\</em>&quot;,&quot;containerPort&quot;:8080}</p>
+     * 
      * @param request CreateIngressRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -884,8 +907,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary {"appId":"395b60e4-0550-458d-9c54-a265d036\\*\\*\\*\\*","containerPort":8080}
-     *
+     * <b>summary</b> : 
+     * <p>{&quot;appId&quot;:&quot;395b60e4-0550-458d-9c54-a265d036\<em>\</em>\<em>\</em>&quot;,&quot;containerPort&quot;:8080}</p>
+     * 
      * @param request CreateIngressRequest
      * @return CreateIngressResponse
      */
@@ -896,8 +920,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates a job template.
-     *
+     * <b>summary</b> : 
+     * <p>Updates a job template.</p>
+     * 
      * @param request CreateJobRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1143,8 +1168,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates a job template.
-     *
+     * <b>summary</b> : 
+     * <p>Updates a job template.</p>
+     * 
      * @param request CreateJobRequest
      * @return CreateJobResponse
      */
@@ -1155,8 +1181,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary desc
-     *
+     * <b>summary</b> : 
+     * <p>desc</p>
+     * 
      * @param request CreateNamespaceRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1204,8 +1231,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary desc
-     *
+     * <b>summary</b> : 
+     * <p>desc</p>
+     * 
      * @param request CreateNamespaceRequest
      * @return CreateNamespaceResponse
      */
@@ -1216,8 +1244,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Null
-     *
+     * <b>summary</b> : 
+     * <p>Null</p>
+     * 
      * @param tmpReq CreateSecretRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1267,8 +1296,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Null
-     *
+     * <b>summary</b> : 
+     * <p>Null</p>
+     * 
      * @param request CreateSecretRequest
      * @return CreateSecretResponse
      */
@@ -1276,6 +1306,102 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.createSecretWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建应用</p>
+     * 
+     * @param request CreateWebApplicationRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateWebApplicationResponse
+     */
+    public CreateWebApplicationResponse createWebApplicationWithOptions(CreateWebApplicationRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.namespaceId)) {
+            query.put("NamespaceId", request.namespaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateWebApplication"),
+            new TeaPair("version", "2019-05-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/pop/v2/api/web/applications"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateWebApplicationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建应用</p>
+     * 
+     * @param request CreateWebApplicationRequest
+     * @return CreateWebApplicationResponse
+     */
+    public CreateWebApplicationResponse createWebApplication(CreateWebApplicationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createWebApplicationWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>新建自定义域名</p>
+     * 
+     * @param request CreateWebCustomDomainRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateWebCustomDomainResponse
+     */
+    public CreateWebCustomDomainResponse createWebCustomDomainWithOptions(CreateWebCustomDomainRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.namespaceId)) {
+            query.put("NamespaceId", request.namespaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateWebCustomDomain"),
+            new TeaPair("version", "2019-05-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/pop/v2/api/web/custom-domains"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateWebCustomDomainResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>新建自定义域名</p>
+     * 
+     * @param request CreateWebCustomDomainRequest
+     * @return CreateWebCustomDomainResponse
+     */
+    public CreateWebCustomDomainResponse createWebCustomDomain(CreateWebCustomDomainRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createWebCustomDomainWithOptions(request, headers, runtime);
     }
 
     /**
@@ -1320,8 +1446,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 7171a6ca-d1cd-4928-8642-7d5cfe69\\*\\*\\*\\*
-     *
+     * <b>summary</b> : 
+     * <p>7171a6ca-d1cd-4928-8642-7d5cfe69\<em>\</em>\<em>\</em></p>
+     * 
      * @param request DeleteApplicationScalingRuleRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1357,8 +1484,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 7171a6ca-d1cd-4928-8642-7d5cfe69\\*\\*\\*\\*
-     *
+     * <b>summary</b> : 
+     * <p>7171a6ca-d1cd-4928-8642-7d5cfe69\<em>\</em>\<em>\</em></p>
+     * 
      * @param request DeleteApplicationScalingRuleRequest
      * @return DeleteApplicationScalingRuleResponse
      */
@@ -1410,8 +1538,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 1
-     *
+     * <b>summary</b> : 
+     * <p>1</p>
+     * 
      * @param request DeleteGreyTagRouteRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1443,8 +1572,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 1
-     *
+     * <b>summary</b> : 
+     * <p>1</p>
+     * 
      * @param request DeleteGreyTagRouteRequest
      * @return DeleteGreyTagRouteResponse
      */
@@ -1455,8 +1585,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a job.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a job.</p>
+     * 
      * @param request DeleteHistoryJobRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1492,8 +1623,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a job.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a job.</p>
+     * 
      * @param request DeleteHistoryJobRequest
      * @return DeleteHistoryJobResponse
      */
@@ -1545,8 +1677,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a job template.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a job template.</p>
+     * 
      * @param request DeleteJobRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1578,8 +1711,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a job template.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a job template.</p>
+     * 
      * @param request DeleteJobRequest
      * @return DeleteJobResponse
      */
@@ -1635,8 +1769,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a Secret.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a Secret.</p>
+     * 
      * @param request DeleteSecretRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1672,8 +1807,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a Secret.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a Secret.</p>
+     * 
      * @param request DeleteSecretRequest
      * @return DeleteSecretResponse
      */
@@ -1684,8 +1820,150 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deploys an application.
-     *
+     * <b>summary</b> : 
+     * <p>删除应用</p>
+     * 
+     * @param request DeleteWebApplicationRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteWebApplicationResponse
+     */
+    public DeleteWebApplicationResponse deleteWebApplicationWithOptions(String ApplicationId, DeleteWebApplicationRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.namespaceId)) {
+            query.put("NamespaceId", request.namespaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteWebApplication"),
+            new TeaPair("version", "2019-05-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/pop/v2/api/web/applications/" + com.aliyun.openapiutil.Client.getEncodeParam(ApplicationId) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteWebApplicationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除应用</p>
+     * 
+     * @param request DeleteWebApplicationRequest
+     * @return DeleteWebApplicationResponse
+     */
+    public DeleteWebApplicationResponse deleteWebApplication(String ApplicationId, DeleteWebApplicationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteWebApplicationWithOptions(ApplicationId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除应用版本</p>
+     * 
+     * @param request DeleteWebApplicationRevisionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteWebApplicationRevisionResponse
+     */
+    public DeleteWebApplicationRevisionResponse deleteWebApplicationRevisionWithOptions(String ApplicationId, String RevisionId, DeleteWebApplicationRevisionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.namespaceId)) {
+            query.put("NamespaceId", request.namespaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteWebApplicationRevision"),
+            new TeaPair("version", "2019-05-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/pop/v2/api/web/application-revisions/" + com.aliyun.openapiutil.Client.getEncodeParam(ApplicationId) + "/revisions/" + com.aliyun.openapiutil.Client.getEncodeParam(RevisionId) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteWebApplicationRevisionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除应用版本</p>
+     * 
+     * @param request DeleteWebApplicationRevisionRequest
+     * @return DeleteWebApplicationRevisionResponse
+     */
+    public DeleteWebApplicationRevisionResponse deleteWebApplicationRevision(String ApplicationId, String RevisionId, DeleteWebApplicationRevisionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteWebApplicationRevisionWithOptions(ApplicationId, RevisionId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除自定义域名</p>
+     * 
+     * @param request DeleteWebCustomDomainRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteWebCustomDomainResponse
+     */
+    public DeleteWebCustomDomainResponse deleteWebCustomDomainWithOptions(String DomainName, DeleteWebCustomDomainRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.namespaceId)) {
+            query.put("NamespaceId", request.namespaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteWebCustomDomain"),
+            new TeaPair("version", "2019-05-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/pop/v2/api/web/custom-domains/" + com.aliyun.openapiutil.Client.getEncodeParam(DomainName) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteWebCustomDomainResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除自定义域名</p>
+     * 
+     * @param request DeleteWebCustomDomainRequest
+     * @return DeleteWebCustomDomainResponse
+     */
+    public DeleteWebCustomDomainResponse deleteWebCustomDomain(String DomainName, DeleteWebCustomDomainRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteWebCustomDomainWithOptions(DomainName, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deploys an application.</p>
+     * 
      * @param request DeployApplicationRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1955,8 +2233,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deploys an application.
-     *
+     * <b>summary</b> : 
+     * <p>Deploys an application.</p>
+     * 
      * @param request DeployApplicationRequest
      * @return DeployApplicationResponse
      */
@@ -1967,8 +2246,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the metadata details of the service of an application.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the metadata details of the service of an application.</p>
+     * 
      * @param request DescribeAppServiceDetailRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2024,8 +2304,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the metadata details of the service of an application.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the metadata details of the service of an application.</p>
+     * 
      * @param request DescribeAppServiceDetailRequest
      * @return DescribeAppServiceDetailResponse
      */
@@ -2175,8 +2456,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries application instances.
-     *
+     * <b>summary</b> : 
+     * <p>Queries application instances.</p>
+     * 
      * @param request DescribeApplicationInstancesRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2224,8 +2506,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries application instances.
-     *
+     * <b>summary</b> : 
+     * <p>Queries application instances.</p>
+     * 
      * @param request DescribeApplicationInstancesRequest
      * @return DescribeApplicationInstancesResponse
      */
@@ -2236,8 +2519,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a specified auto scaling policy of an application.
-     *
+     * <b>summary</b> : 
+     * <p>Queries a specified auto scaling policy of an application.</p>
+     * 
      * @param request DescribeApplicationScalingRuleRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2273,8 +2557,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a specified auto scaling policy of an application.
-     *
+     * <b>summary</b> : 
+     * <p>Queries a specified auto scaling policy of an application.</p>
+     * 
      * @param request DescribeApplicationScalingRuleRequest
      * @return DescribeApplicationScalingRuleResponse
      */
@@ -2285,8 +2570,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the auto scaling policies of an application.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the auto scaling policies of an application.</p>
+     * 
      * @param request DescribeApplicationScalingRulesRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2318,8 +2604,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the auto scaling policies of an application.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the auto scaling policies of an application.</p>
+     * 
      * @param request DescribeApplicationScalingRulesRequest
      * @return DescribeApplicationScalingRulesResponse
      */
@@ -2330,8 +2617,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 017f39b8-dfa4-4e16-a84b-1dcee4b1\\*\\*\\*\\*
-     *
+     * <b>summary</b> : 
+     * <p>017f39b8-dfa4-4e16-a84b-1dcee4b1\<em>\</em>\<em>\</em></p>
+     * 
      * @param request DescribeApplicationSlbsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2363,8 +2651,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 017f39b8-dfa4-4e16-a84b-1dcee4b1\\*\\*\\*\\*
-     *
+     * <b>summary</b> : 
+     * <p>017f39b8-dfa4-4e16-a84b-1dcee4b1\<em>\</em>\<em>\</em></p>
+     * 
      * @param request DescribeApplicationSlbsRequest
      * @return DescribeApplicationSlbsResponse
      */
@@ -2624,8 +2913,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of a canary release rule based on the specified rule ID.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details of a canary release rule based on the specified rule ID.</p>
+     * 
      * @param request DescribeGreyTagRouteRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2657,8 +2947,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of a canary release rule based on the specified rule ID.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details of a canary release rule based on the specified rule ID.</p>
+     * 
      * @param request DescribeGreyTagRouteRequest
      * @return DescribeGreyTagRouteResponse
      */
@@ -2783,8 +3074,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the configurations of a job template.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the configurations of a job template.</p>
+     * 
      * @param request DescribeJobRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2820,8 +3112,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the configurations of a job template.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the configurations of a job template.</p>
+     * 
      * @param request DescribeJobRequest
      * @return DescribeJobResponse
      */
@@ -2832,8 +3125,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Query the information about jobs.
-     *
+     * <b>summary</b> : 
+     * <p>Query the information about jobs.</p>
+     * 
      * @param request DescribeJobHistoryRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2877,8 +3171,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Query the information about jobs.
-     *
+     * <b>summary</b> : 
+     * <p>Query the information about jobs.</p>
+     * 
      * @param request DescribeJobHistoryRequest
      * @return DescribeJobHistoryResponse
      */
@@ -2889,8 +3184,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the status of a job.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the status of a job.</p>
+     * 
      * @param request DescribeJobStatusRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2926,8 +3222,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the status of a job.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the status of a job.</p>
+     * 
      * @param request DescribeJobStatusRequest
      * @return DescribeJobStatusResponse
      */
@@ -2938,8 +3235,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of a namespace.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details of a namespace.</p>
+     * 
      * @param request DescribeNamespaceRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2975,8 +3273,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of a namespace.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details of a namespace.</p>
+     * 
      * @param request DescribeNamespaceRequest
      * @return DescribeNamespaceResponse
      */
@@ -3077,8 +3376,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of namespaces.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details of namespaces.</p>
+     * 
      * @param request DescribeNamespacesRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3114,8 +3414,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of namespaces.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details of namespaces.</p>
+     * 
      * @param request DescribeNamespacesRequest
      * @return DescribeNamespacesResponse
      */
@@ -3126,8 +3427,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information of a batch.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information of a batch.</p>
+     * 
      * @param request DescribePipelineRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3159,8 +3461,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information of a batch.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information of a batch.</p>
+     * 
      * @param request DescribePipelineRequest
      * @return DescribePipelineResponse
      */
@@ -3171,8 +3474,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries available regions.
-     *
+     * <b>summary</b> : 
+     * <p>Queries available regions.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeRegionsResponse
@@ -3196,8 +3500,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries available regions.
-     *
+     * <b>summary</b> : 
+     * <p>Queries available regions.</p>
      * @return DescribeRegionsResponse
      */
     public DescribeRegionsResponse describeRegions() throws Exception {
@@ -3207,8 +3511,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of a Secret instance.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details of a Secret instance.</p>
+     * 
      * @param request DescribeSecretRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3244,8 +3549,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of a Secret instance.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details of a Secret instance.</p>
+     * 
      * @param request DescribeSecretRequest
      * @return DescribeSecretResponse
      */
@@ -3253,6 +3559,347 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.describeSecretWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取应用信息</p>
+     * 
+     * @param request DescribeWebApplicationRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeWebApplicationResponse
+     */
+    public DescribeWebApplicationResponse describeWebApplicationWithOptions(String ApplicationId, DescribeWebApplicationRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.namespaceId)) {
+            query.put("NamespaceId", request.namespaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeWebApplication"),
+            new TeaPair("version", "2019-05-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/pop/v2/api/web/applications/" + com.aliyun.openapiutil.Client.getEncodeParam(ApplicationId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeWebApplicationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取应用信息</p>
+     * 
+     * @param request DescribeWebApplicationRequest
+     * @return DescribeWebApplicationResponse
+     */
+    public DescribeWebApplicationResponse describeWebApplication(String ApplicationId, DescribeWebApplicationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.describeWebApplicationWithOptions(ApplicationId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>应用资源用量统计</p>
+     * 
+     * @param request DescribeWebApplicationResourceStaticsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeWebApplicationResourceStaticsResponse
+     */
+    public DescribeWebApplicationResourceStaticsResponse describeWebApplicationResourceStaticsWithOptions(String ApplicationId, DescribeWebApplicationResourceStaticsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespaceId)) {
+            query.put("NamespaceId", request.namespaceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeWebApplicationResourceStatics"),
+            new TeaPair("version", "2019-05-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/pop/v2/api/web/applications-observability/" + com.aliyun.openapiutil.Client.getEncodeParam(ApplicationId) + "/resource"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeWebApplicationResourceStaticsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>应用资源用量统计</p>
+     * 
+     * @param request DescribeWebApplicationResourceStaticsRequest
+     * @return DescribeWebApplicationResourceStaticsResponse
+     */
+    public DescribeWebApplicationResourceStaticsResponse describeWebApplicationResourceStatics(String ApplicationId, DescribeWebApplicationResourceStaticsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.describeWebApplicationResourceStaticsWithOptions(ApplicationId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取应用版本</p>
+     * 
+     * @param request DescribeWebApplicationRevisionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeWebApplicationRevisionResponse
+     */
+    public DescribeWebApplicationRevisionResponse describeWebApplicationRevisionWithOptions(String ApplicationId, String RevisionId, DescribeWebApplicationRevisionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.namespaceId)) {
+            query.put("NamespaceId", request.namespaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeWebApplicationRevision"),
+            new TeaPair("version", "2019-05-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/pop/v2/api/web/application-revisions/" + com.aliyun.openapiutil.Client.getEncodeParam(ApplicationId) + "/revisions/" + com.aliyun.openapiutil.Client.getEncodeParam(RevisionId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeWebApplicationRevisionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取应用版本</p>
+     * 
+     * @param request DescribeWebApplicationRevisionRequest
+     * @return DescribeWebApplicationRevisionResponse
+     */
+    public DescribeWebApplicationRevisionResponse describeWebApplicationRevision(String ApplicationId, String RevisionId, DescribeWebApplicationRevisionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.describeWebApplicationRevisionWithOptions(ApplicationId, RevisionId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>弹性配置详情</p>
+     * 
+     * @param request DescribeWebApplicationScalingConfigRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeWebApplicationScalingConfigResponse
+     */
+    public DescribeWebApplicationScalingConfigResponse describeWebApplicationScalingConfigWithOptions(String ApplicationId, DescribeWebApplicationScalingConfigRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.namespaceId)) {
+            query.put("NamespaceId", request.namespaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeWebApplicationScalingConfig"),
+            new TeaPair("version", "2019-05-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/pop/v2/api/web/application-scaling/" + com.aliyun.openapiutil.Client.getEncodeParam(ApplicationId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeWebApplicationScalingConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>弹性配置详情</p>
+     * 
+     * @param request DescribeWebApplicationScalingConfigRequest
+     * @return DescribeWebApplicationScalingConfigResponse
+     */
+    public DescribeWebApplicationScalingConfigResponse describeWebApplicationScalingConfig(String ApplicationId, DescribeWebApplicationScalingConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.describeWebApplicationScalingConfigWithOptions(ApplicationId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>流量配置详情</p>
+     * 
+     * @param request DescribeWebApplicationTrafficConfigRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeWebApplicationTrafficConfigResponse
+     */
+    public DescribeWebApplicationTrafficConfigResponse describeWebApplicationTrafficConfigWithOptions(String ApplicationId, DescribeWebApplicationTrafficConfigRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.namespaceId)) {
+            query.put("NamespaceId", request.namespaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeWebApplicationTrafficConfig"),
+            new TeaPair("version", "2019-05-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/pop/v2/api/web/application-traffic/" + com.aliyun.openapiutil.Client.getEncodeParam(ApplicationId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeWebApplicationTrafficConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>流量配置详情</p>
+     * 
+     * @param request DescribeWebApplicationTrafficConfigRequest
+     * @return DescribeWebApplicationTrafficConfigResponse
+     */
+    public DescribeWebApplicationTrafficConfigResponse describeWebApplicationTrafficConfig(String ApplicationId, DescribeWebApplicationTrafficConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.describeWebApplicationTrafficConfigWithOptions(ApplicationId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取域名.</p>
+     * 
+     * @param request DescribeWebCustomDomainRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeWebCustomDomainResponse
+     */
+    public DescribeWebCustomDomainResponse describeWebCustomDomainWithOptions(String DomainName, DescribeWebCustomDomainRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.namespaceId)) {
+            query.put("NamespaceId", request.namespaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeWebCustomDomain"),
+            new TeaPair("version", "2019-05-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/pop/v2/api/web/custom-domains/" + com.aliyun.openapiutil.Client.getEncodeParam(DomainName) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeWebCustomDomainResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取域名.</p>
+     * 
+     * @param request DescribeWebCustomDomainRequest
+     * @return DescribeWebCustomDomainResponse
+     */
+    public DescribeWebCustomDomainResponse describeWebCustomDomain(String DomainName, DescribeWebCustomDomainRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.describeWebCustomDomainWithOptions(DomainName, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>应用实例日志</p>
+     * 
+     * @param request DescribeWebInstanceLogsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeWebInstanceLogsResponse
+     */
+    public DescribeWebInstanceLogsResponse describeWebInstanceLogsWithOptions(String ApplicationId, String InstanceId, DescribeWebInstanceLogsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.namespaceId)) {
+            query.put("NamespaceId", request.namespaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeWebInstanceLogs"),
+            new TeaPair("version", "2019-05-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/pop/v2/api/web/applications-observability/" + com.aliyun.openapiutil.Client.getEncodeParam(ApplicationId) + "/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(InstanceId) + "/logs"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeWebInstanceLogsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>应用实例日志</p>
+     * 
+     * @param request DescribeWebInstanceLogsRequest
+     * @return DescribeWebInstanceLogsResponse
+     */
+    public DescribeWebInstanceLogsResponse describeWebInstanceLogs(String ApplicationId, String InstanceId, DescribeWebInstanceLogsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.describeWebInstanceLogsWithOptions(ApplicationId, InstanceId, request, headers, runtime);
     }
 
     /**
@@ -3301,8 +3948,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables an auto scaling policy for an application.
-     *
+     * <b>summary</b> : 
+     * <p>Enables an auto scaling policy for an application.</p>
+     * 
      * @param request EnableApplicationScalingRuleRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3338,8 +3986,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables an auto scaling policy for an application.
-     *
+     * <b>summary</b> : 
+     * <p>Enables an auto scaling policy for an application.</p>
+     * 
      * @param request EnableApplicationScalingRuleRequest
      * @return EnableApplicationScalingRuleResponse
      */
@@ -3427,8 +4076,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the top N applications in Application Monitoring.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the top N applications in Application Monitoring.</p>
+     * 
      * @param request GetArmsTopNMetricRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3484,8 +4134,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the top N applications in Application Monitoring.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the top N applications in Application Monitoring.</p>
+     * 
      * @param request GetArmsTopNMetricRequest
      * @return GetArmsTopNMetricResponse
      */
@@ -3496,8 +4147,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the top N applications in which abnormal instances exist. The applications are sorted by the total number of abnormal instances.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the top N applications in which abnormal instances exist. The applications are sorted by the total number of abnormal instances.</p>
+     * 
      * @param request GetAvailabilityMetricRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3541,8 +4193,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the top N applications in which abnormal instances exist. The applications are sorted by the total number of abnormal instances.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the top N applications in which abnormal instances exist. The applications are sorted by the total number of abnormal instances.</p>
+     * 
      * @param request GetAvailabilityMetricRequest
      * @return GetAvailabilityMetricResponse
      */
@@ -3553,8 +4206,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries top N applications in abnormal change orders.
-     *
+     * <b>summary</b> : 
+     * <p>Queries top N applications in abnormal change orders.</p>
+     * 
      * @param request GetChangeOrderMetricRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3606,8 +4260,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries top N applications in abnormal change orders.
-     *
+     * <b>summary</b> : 
+     * <p>Queries top N applications in abnormal change orders.</p>
+     * 
      * @param request GetChangeOrderMetricRequest
      * @return GetChangeOrderMetricResponse
      */
@@ -3618,8 +4273,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the top N applications in which auto scaling takes effect.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the top N applications in which auto scaling takes effect.</p>
+     * 
      * @param request GetScaleAppMetricRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3663,8 +4319,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the top N applications in which auto scaling takes effect.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the top N applications in which auto scaling takes effect.</p>
+     * 
      * @param request GetScaleAppMetricRequest
      * @return GetScaleAppMetricResponse
      */
@@ -3675,8 +4332,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the top N applications in which Warning events occur.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the top N applications in which Warning events occur.</p>
+     * 
      * @param request GetWarningEventMetricRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3728,8 +4386,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the top N applications in which Warning events occur.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the top N applications in which Warning events occur.</p>
+     * 
      * @param request GetWarningEventMetricRequest
      * @return GetWarningEventMetricResponse
      */
@@ -3740,8 +4399,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the events that occurred in an application.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the events that occurred in an application.</p>
+     * 
      * @param request ListAppEventsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3801,8 +4461,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the events that occurred in an application.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the events that occurred in an application.</p>
+     * 
      * @param request ListAppEventsRequest
      * @return ListAppEventsResponse
      */
@@ -3813,8 +4474,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 6dcc8c9e-d3da-478a-a066-86dcf820\\*\\*\\*\\*
-     *
+     * <b>summary</b> : 
+     * <p>6dcc8c9e-d3da-478a-a066-86dcf820\<em>\</em>\<em>\</em></p>
+     * 
      * @param request ListAppServicesPageRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3858,8 +4520,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 6dcc8c9e-d3da-478a-a066-86dcf820\\*\\*\\*\\*
-     *
+     * <b>summary</b> : 
+     * <p>6dcc8c9e-d3da-478a-a066-86dcf820\<em>\</em>\<em>\</em></p>
+     * 
      * @param request ListAppServicesPageRequest
      * @return ListAppServicesPageResponse
      */
@@ -3870,8 +4533,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 7171a6ca-d1cd-4928-8642-7d5cfe69\\*\\*\\*\\*
-     *
+     * <b>summary</b> : 
+     * <p>7171a6ca-d1cd-4928-8642-7d5cfe69\<em>\</em>\<em>\</em></p>
+     * 
      * @param request ListAppVersionsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3903,8 +4567,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 7171a6ca-d1cd-4928-8642-7d5cfe69\\*\\*\\*\\*
-     *
+     * <b>summary</b> : 
+     * <p>7171a6ca-d1cd-4928-8642-7d5cfe69\<em>\</em>\<em>\</em></p>
+     * 
      * @param request ListAppVersionsRequest
      * @return ListAppVersionsResponse
      */
@@ -3915,8 +4580,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary The ID of the namespace.
-     *
+     * <b>summary</b> : 
+     * <p>The ID of the namespace.</p>
+     * 
      * @param request ListApplicationsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3984,8 +4650,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary The ID of the namespace.
-     *
+     * <b>summary</b> : 
+     * <p>The ID of the namespace.</p>
+     * 
      * @param request ListApplicationsRequest
      * @return ListApplicationsResponse
      */
@@ -4057,8 +4724,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary b2a8a925-477a-4ed7-b825-d5e22500\\*\\*\\*\\*
-     *
+     * <b>summary</b> : 
+     * <p>b2a8a925-477a-4ed7-b825-d5e22500\<em>\</em>\<em>\</em></p>
+     * 
      * @param request ListConsumedServicesRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4090,8 +4758,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary b2a8a925-477a-4ed7-b825-d5e22500\\*\\*\\*\\*
-     *
+     * <b>summary</b> : 
+     * <p>b2a8a925-477a-4ed7-b825-d5e22500\<em>\</em>\<em>\</em></p>
+     * 
      * @param request ListConsumedServicesRequest
      * @return ListConsumedServicesResponse
      */
@@ -4102,10 +4771,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of a canary release rule based on an application ID.
-     *
-     * @description >  You can configure only one canary release rule for each application.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> You can configure only one canary release rule for each application.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of a canary release rule based on an application ID.</p>
+     * 
      * @param request ListGreyTagRouteRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4137,10 +4810,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of a canary release rule based on an application ID.
-     *
-     * @description >  You can configure only one canary release rule for each application.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> You can configure only one canary release rule for each application.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of a canary release rule based on an application ID.</p>
+     * 
      * @param request ListGreyTagRouteRequest
      * @return ListGreyTagRouteResponse
      */
@@ -4151,10 +4828,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary The returned message.
-     * *   **success** is returned when the request succeeds.
-     * *   An error code is returned when the request fails.
-     *
+     * <b>summary</b> : 
+     * <p>The returned message.</p>
+     * <ul>
+     * <li><strong>success</strong> is returned when the request succeeds.</li>
+     * <li>An error code is returned when the request fails.</li>
+     * </ul>
+     * 
      * @param request ListIngressesRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4190,10 +4870,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary The returned message.
-     * *   **success** is returned when the request succeeds.
-     * *   An error code is returned when the request fails.
-     *
+     * <b>summary</b> : 
+     * <p>The returned message.</p>
+     * <ul>
+     * <li><strong>success</strong> is returned when the request succeeds.</li>
+     * <li>An error code is returned when the request fails.</li>
+     * </ul>
+     * 
      * @param request ListIngressesRequest
      * @return ListIngressesResponse
      */
@@ -4204,8 +4887,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about job templates.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about job templates.</p>
+     * 
      * @param request ListJobsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4273,8 +4957,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about job templates.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about job templates.</p>
+     * 
      * @param request ListJobsRequest
      * @return ListJobsResponse
      */
@@ -4285,8 +4970,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 56f77b65-788d-442a-9885-7f20d91f\\*\\*\\*\\*
-     *
+     * <b>summary</b> : 
+     * <p>56f77b65-788d-442a-9885-7f20d91f\<em>\</em>\<em>\</em></p>
+     * 
      * @param request ListLogConfigsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4326,8 +5012,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 56f77b65-788d-442a-9885-7f20d91f\\*\\*\\*\\*
-     *
+     * <b>summary</b> : 
+     * <p>56f77b65-788d-442a-9885-7f20d91f\<em>\</em>\<em>\</em></p>
+     * 
      * @param request ListLogConfigsRequest
      * @return ListLogConfigsResponse
      */
@@ -4399,8 +5086,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the ConfigMap instances in a namespace.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the ConfigMap instances in a namespace.</p>
+     * 
      * @param request ListNamespacedConfigMapsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4432,8 +5120,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the ConfigMap instances in a namespace.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the ConfigMap instances in a namespace.</p>
+     * 
      * @param request ListNamespacedConfigMapsRequest
      * @return ListNamespacedConfigMapsResponse
      */
@@ -4444,8 +5133,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary b2a8a925-477a-4ed7-b825-d5e22500\\*\\*\\*\\*
-     *
+     * <b>summary</b> : 
+     * <p>b2a8a925-477a-4ed7-b825-d5e22500\<em>\</em>\<em>\</em></p>
+     * 
      * @param request ListPublishedServicesRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4477,8 +5167,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary b2a8a925-477a-4ed7-b825-d5e22500\\*\\*\\*\\*
-     *
+     * <b>summary</b> : 
+     * <p>b2a8a925-477a-4ed7-b825-d5e22500\<em>\</em>\<em>\</em></p>
+     * 
      * @param request ListPublishedServicesRequest
      * @return ListPublishedServicesResponse
      */
@@ -4489,8 +5180,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about Secrets in a namespace.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about Secrets in a namespace.</p>
+     * 
      * @param request ListSecretsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4522,8 +5214,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about Secrets in a namespace.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about Secrets in a namespace.</p>
+     * 
      * @param request ListSecretsRequest
      * @return ListSecretsResponse
      */
@@ -4534,8 +5227,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the mapping relationships between applications and tags.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the mapping relationships between applications and tags.</p>
+     * 
      * @param request ListTagResourcesRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4583,8 +5277,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the mapping relationships between applications and tags.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the mapping relationships between applications and tags.</p>
+     * 
      * @param request ListTagResourcesRequest
      * @return ListTagResourcesResponse
      */
@@ -4595,10 +5290,276 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Activates the Serverless App Engine (SAE) service for free.
-     *
-     * @description > Make sure that your account balance is greater than 0. Otherwise, the SAE service cannot be activated.
-     *
+     * <b>summary</b> : 
+     * <p>应用实例列表</p>
+     * 
+     * @param tmpReq ListWebApplicationInstancesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListWebApplicationInstancesResponse
+     */
+    public ListWebApplicationInstancesResponse listWebApplicationInstancesWithOptions(String ApplicationId, ListWebApplicationInstancesRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListWebApplicationInstancesShrinkRequest request = new ListWebApplicationInstancesShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.instanceIds)) {
+            request.instanceIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.instanceIds, "InstanceIds", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.statuses)) {
+            request.statusesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.statuses, "Statuses", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.versionIds)) {
+            request.versionIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.versionIds, "VersionIds", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceIdsShrink)) {
+            query.put("InstanceIds", request.instanceIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
+            query.put("Limit", request.limit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespaceId)) {
+            query.put("NamespaceId", request.namespaceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.statusesShrink)) {
+            query.put("Statuses", request.statusesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.versionIdsShrink)) {
+            query.put("VersionIds", request.versionIdsShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListWebApplicationInstances"),
+            new TeaPair("version", "2019-05-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/pop/v2/api/web/applications-observability/" + com.aliyun.openapiutil.Client.getEncodeParam(ApplicationId) + "/instances"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListWebApplicationInstancesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>应用实例列表</p>
+     * 
+     * @param request ListWebApplicationInstancesRequest
+     * @return ListWebApplicationInstancesResponse
+     */
+    public ListWebApplicationInstancesResponse listWebApplicationInstances(String ApplicationId, ListWebApplicationInstancesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listWebApplicationInstancesWithOptions(ApplicationId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>版本列表</p>
+     * 
+     * @param request ListWebApplicationRevisionsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListWebApplicationRevisionsResponse
+     */
+    public ListWebApplicationRevisionsResponse listWebApplicationRevisionsWithOptions(String ApplicationId, ListWebApplicationRevisionsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
+            query.put("Limit", request.limit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespaceId)) {
+            query.put("NamespaceId", request.namespaceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListWebApplicationRevisions"),
+            new TeaPair("version", "2019-05-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/pop/v2/api/web/application-revisions/" + com.aliyun.openapiutil.Client.getEncodeParam(ApplicationId) + "/revisions"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListWebApplicationRevisionsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>版本列表</p>
+     * 
+     * @param request ListWebApplicationRevisionsRequest
+     * @return ListWebApplicationRevisionsResponse
+     */
+    public ListWebApplicationRevisionsResponse listWebApplicationRevisions(String ApplicationId, ListWebApplicationRevisionsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listWebApplicationRevisionsWithOptions(ApplicationId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>应用列表</p>
+     * 
+     * @param request ListWebApplicationsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListWebApplicationsResponse
+     */
+    public ListWebApplicationsResponse listWebApplicationsWithOptions(ListWebApplicationsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
+            query.put("Limit", request.limit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespaceId)) {
+            query.put("NamespaceId", request.namespaceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.prefix)) {
+            query.put("Prefix", request.prefix);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListWebApplications"),
+            new TeaPair("version", "2019-05-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/pop/v2/api/web/applications"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListWebApplicationsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>应用列表</p>
+     * 
+     * @param request ListWebApplicationsRequest
+     * @return ListWebApplicationsResponse
+     */
+    public ListWebApplicationsResponse listWebApplications(ListWebApplicationsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listWebApplicationsWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>自定义域名列表.</p>
+     * 
+     * @param request ListWebCustomDomainsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListWebCustomDomainsResponse
+     */
+    public ListWebCustomDomainsResponse listWebCustomDomainsWithOptions(ListWebCustomDomainsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationId)) {
+            query.put("ApplicationId", request.applicationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
+            query.put("Limit", request.limit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespaceId)) {
+            query.put("NamespaceId", request.namespaceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.prefix)) {
+            query.put("Prefix", request.prefix);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListWebCustomDomains"),
+            new TeaPair("version", "2019-05-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/pop/v2/api/web/custom-domains"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListWebCustomDomainsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>自定义域名列表.</p>
+     * 
+     * @param request ListWebCustomDomainsRequest
+     * @return ListWebCustomDomainsResponse
+     */
+    public ListWebCustomDomainsResponse listWebCustomDomains(ListWebCustomDomainsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listWebCustomDomainsWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Make sure that your account balance is greater than 0. Otherwise, the SAE service cannot be activated.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Activates the Serverless App Engine (SAE) service for free.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return OpenSaeServiceResponse
@@ -4622,10 +5583,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Activates the Serverless App Engine (SAE) service for free.
-     *
-     * @description > Make sure that your account balance is greater than 0. Otherwise, the SAE service cannot be activated.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Make sure that your account balance is greater than 0. Otherwise, the SAE service cannot be activated.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Activates the Serverless App Engine (SAE) service for free.</p>
      * @return OpenSaeServiceResponse
      */
     public OpenSaeServiceResponse openSaeService() throws Exception {
@@ -4635,8 +5599,57 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the resource usage of an application.
-     *
+     * <b>summary</b> : 
+     * <p>新建版本</p>
+     * 
+     * @param request PublishWebApplicationRevisionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return PublishWebApplicationRevisionResponse
+     */
+    public PublishWebApplicationRevisionResponse publishWebApplicationRevisionWithOptions(String ApplicationId, PublishWebApplicationRevisionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.namespaceId)) {
+            query.put("NamespaceId", request.namespaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PublishWebApplicationRevision"),
+            new TeaPair("version", "2019-05-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/pop/v2/api/web/application-revisions/" + com.aliyun.openapiutil.Client.getEncodeParam(ApplicationId) + "/revisions"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PublishWebApplicationRevisionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>新建版本</p>
+     * 
+     * @param request PublishWebApplicationRevisionRequest
+     * @return PublishWebApplicationRevisionResponse
+     */
+    public PublishWebApplicationRevisionResponse publishWebApplicationRevision(String ApplicationId, PublishWebApplicationRevisionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.publishWebApplicationRevisionWithOptions(ApplicationId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the resource usage of an application.</p>
+     * 
      * @param request QueryResourceStaticsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4668,8 +5681,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the resource usage of an application.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the resource usage of an application.</p>
+     * 
      * @param request QueryResourceStaticsRequest
      * @return QueryResourceStaticsResponse
      */
@@ -4680,8 +5694,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Reduces capacity by instance IDs.
-     *
+     * <b>summary</b> : 
+     * <p>Reduces capacity by instance IDs.</p>
+     * 
      * @param request ReduceApplicationCapacityByInstanceIdsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4717,8 +5732,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Reduces capacity by instance IDs.
-     *
+     * <b>summary</b> : 
+     * <p>Reduces capacity by instance IDs.</p>
+     * 
      * @param request ReduceApplicationCapacityByInstanceIdsRequest
      * @return ReduceApplicationCapacityByInstanceIdsResponse
      */
@@ -4729,8 +5745,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Scales an application.
-     *
+     * <b>summary</b> : 
+     * <p>Scales an application.</p>
+     * 
      * @param request RescaleApplicationRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4778,8 +5795,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Scales an application.
-     *
+     * <b>summary</b> : 
+     * <p>Scales an application.</p>
+     * 
      * @param request RescaleApplicationRequest
      * @return RescaleApplicationResponse
      */
@@ -4790,8 +5808,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Changes the instance specifications of an application.
-     *
+     * <b>summary</b> : 
+     * <p>Changes the instance specifications of an application.</p>
+     * 
      * @param request RescaleApplicationVerticallyRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4831,8 +5850,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Changes the instance specifications of an application.
-     *
+     * <b>summary</b> : 
+     * <p>Changes the instance specifications of an application.</p>
+     * 
      * @param request RescaleApplicationVerticallyRequest
      * @return RescaleApplicationVerticallyResponse
      */
@@ -4843,8 +5863,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Restarts an application.
-     *
+     * <b>summary</b> : 
+     * <p>Restarts an application.</p>
+     * 
      * @param request RestartApplicationRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4888,8 +5909,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Restarts an application.
-     *
+     * <b>summary</b> : 
+     * <p>Restarts an application.</p>
+     * 
      * @param request RestartApplicationRequest
      * @return RestartApplicationResponse
      */
@@ -4900,8 +5922,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Restarts one or more instances in an application.
-     *
+     * <b>summary</b> : 
+     * <p>Restarts one or more instances in an application.</p>
+     * 
      * @param request RestartInstancesRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4937,8 +5960,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Restarts one or more instances in an application.
-     *
+     * <b>summary</b> : 
+     * <p>Restarts one or more instances in an application.</p>
+     * 
      * @param request RestartInstancesRequest
      * @return RestartInstancesResponse
      */
@@ -4949,8 +5973,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Rolls back an application.
-     *
+     * <b>summary</b> : 
+     * <p>Rolls back an application.</p>
+     * 
      * @param request RollbackApplicationRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5006,8 +6031,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Rolls back an application.
-     *
+     * <b>summary</b> : 
+     * <p>Rolls back an application.</p>
+     * 
      * @param request RollbackApplicationRequest
      * @return RollbackApplicationResponse
      */
@@ -5018,8 +6044,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Starts an application.
-     *
+     * <b>summary</b> : 
+     * <p>Starts an application.</p>
+     * 
      * @param request StartApplicationRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5051,8 +6078,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Starts an application.
-     *
+     * <b>summary</b> : 
+     * <p>Starts an application.</p>
+     * 
      * @param request StartApplicationRequest
      * @return StartApplicationResponse
      */
@@ -5063,8 +6091,56 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 0099b7be-5f5b-4512-a7fc-56049ef1\\*\\*\\*\\*
-     *
+     * <b>summary</b> : 
+     * <p>启动应用</p>
+     * 
+     * @param request StartWebApplicationRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StartWebApplicationResponse
+     */
+    public StartWebApplicationResponse startWebApplicationWithOptions(String ApplicationId, StartWebApplicationRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.namespaceId)) {
+            query.put("NamespaceId", request.namespaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StartWebApplication"),
+            new TeaPair("version", "2019-05-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/pop/v2/api/web/application-ops/" + com.aliyun.openapiutil.Client.getEncodeParam(ApplicationId) + "/start"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StartWebApplicationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>启动应用</p>
+     * 
+     * @param request StartWebApplicationRequest
+     * @return StartWebApplicationResponse
+     */
+    public StartWebApplicationResponse startWebApplication(String ApplicationId, StartWebApplicationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.startWebApplicationWithOptions(ApplicationId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>0099b7be-5f5b-4512-a7fc-56049ef1\<em>\</em>\<em>\</em></p>
+     * 
      * @param request StopApplicationRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5096,8 +6172,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 0099b7be-5f5b-4512-a7fc-56049ef1\\*\\*\\*\\*
-     *
+     * <b>summary</b> : 
+     * <p>0099b7be-5f5b-4512-a7fc-56049ef1\<em>\</em>\<em>\</em></p>
+     * 
      * @param request StopApplicationRequest
      * @return StopApplicationResponse
      */
@@ -5108,8 +6185,56 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Suspends a job.
-     *
+     * <b>summary</b> : 
+     * <p>停止应用</p>
+     * 
+     * @param request StopWebApplicationRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StopWebApplicationResponse
+     */
+    public StopWebApplicationResponse stopWebApplicationWithOptions(String ApplicationId, StopWebApplicationRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.namespaceId)) {
+            query.put("NamespaceId", request.namespaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StopWebApplication"),
+            new TeaPair("version", "2019-05-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/pop/v2/api/web/application-ops/" + com.aliyun.openapiutil.Client.getEncodeParam(ApplicationId) + "/stop"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StopWebApplicationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>停止应用</p>
+     * 
+     * @param request StopWebApplicationRequest
+     * @return StopWebApplicationResponse
+     */
+    public StopWebApplicationResponse stopWebApplication(String ApplicationId, StopWebApplicationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.stopWebApplicationWithOptions(ApplicationId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Suspends a job.</p>
+     * 
      * @param request SuspendJobRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5145,8 +6270,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Suspends a job.
-     *
+     * <b>summary</b> : 
+     * <p>Suspends a job.</p>
+     * 
      * @param request SuspendJobRequest
      * @return SuspendJobResponse
      */
@@ -5157,8 +6283,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary cn-beijing
-     *
+     * <b>summary</b> : 
+     * <p>cn-beijing</p>
+     * 
      * @param request TagResourcesRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5202,8 +6329,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary cn-beijing
-     *
+     * <b>summary</b> : 
+     * <p>cn-beijing</p>
+     * 
      * @param request TagResourcesRequest
      * @return TagResourcesResponse
      */
@@ -5214,8 +6342,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 0099b7be-5f5b-4512-a7fc-56049ef1\\*\\*\\*\\*
-     *
+     * <b>summary</b> : 
+     * <p>0099b7be-5f5b-4512-a7fc-56049ef1\<em>\</em>\<em>\</em></p>
+     * 
      * @param request UnbindSlbRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5255,8 +6384,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 0099b7be-5f5b-4512-a7fc-56049ef1\\*\\*\\*\\*
-     *
+     * <b>summary</b> : 
+     * <p>0099b7be-5f5b-4512-a7fc-56049ef1\<em>\</em>\<em>\</em></p>
+     * 
      * @param request UnbindSlbRequest
      * @return UnbindSlbResponse
      */
@@ -5324,8 +6454,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 017f39b8-dfa4-4e16-a84b-1dcee4b1\\*\\*\\*\\*
-     *
+     * <b>summary</b> : 
+     * <p>017f39b8-dfa4-4e16-a84b-1dcee4b1\<em>\</em>\<em>\</em></p>
+     * 
      * @param request UpdateAppSecurityGroupRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5361,8 +6492,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 017f39b8-dfa4-4e16-a84b-1dcee4b1\\*\\*\\*\\*
-     *
+     * <b>summary</b> : 
+     * <p>017f39b8-dfa4-4e16-a84b-1dcee4b1\<em>\</em>\<em>\</em></p>
+     * 
      * @param request UpdateAppSecurityGroupRequest
      * @return UpdateAppSecurityGroupResponse
      */
@@ -5373,8 +6505,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新应用描述信息
-     *
+     * <b>summary</b> : 
+     * <p>更新应用描述信息</p>
+     * 
      * @param request UpdateApplicationDescriptionRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5410,8 +6543,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新应用描述信息
-     *
+     * <b>summary</b> : 
+     * <p>更新应用描述信息</p>
+     * 
      * @param request UpdateApplicationDescriptionRequest
      * @return UpdateApplicationDescriptionResponse
      */
@@ -5422,11 +6556,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the auto scaling policy of an application.
-     *
-     * @description ##
-     * If you want to configure more than 50 instances for an application, you must submit a [ticket](https://workorder.console.aliyun.com/#/ticket/createIndex) to add your account to the whitelist.
-     *
+     * <b>description</b> :
+     * <h2></h2>
+     * <p>If you want to configure more than 50 instances for an application, you must submit a <a href="https://workorder.console.aliyun.com/#/ticket/createIndex">ticket</a> to add your account to the whitelist.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the auto scaling policy of an application.</p>
+     * 
      * @param request UpdateApplicationScalingRuleRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5478,11 +6614,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the auto scaling policy of an application.
-     *
-     * @description ##
-     * If you want to configure more than 50 instances for an application, you must submit a [ticket](https://workorder.console.aliyun.com/#/ticket/createIndex) to add your account to the whitelist.
-     *
+     * <b>description</b> :
+     * <h2></h2>
+     * <p>If you want to configure more than 50 instances for an application, you must submit a <a href="https://workorder.console.aliyun.com/#/ticket/createIndex">ticket</a> to add your account to the whitelist.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the auto scaling policy of an application.</p>
+     * 
      * @param request UpdateApplicationScalingRuleRequest
      * @return UpdateApplicationScalingRuleResponse
      */
@@ -5538,8 +6676,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 1
-     *
+     * <b>summary</b> : 
+     * <p>1</p>
+     * 
      * @param request UpdateConfigMapRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5581,8 +6720,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 1
-     *
+     * <b>summary</b> : 
+     * <p>1</p>
+     * 
      * @param request UpdateConfigMapRequest
      * @return UpdateConfigMapResponse
      */
@@ -5593,8 +6733,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates a canary release rule.
-     *
+     * <b>summary</b> : 
+     * <p>Updates a canary release rule.</p>
+     * 
      * @param request UpdateGreyTagRouteRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5642,8 +6783,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates a canary release rule.
-     *
+     * <b>summary</b> : 
+     * <p>Updates a canary release rule.</p>
+     * 
      * @param request UpdateGreyTagRouteRequest
      * @return UpdateGreyTagRouteResponse
      */
@@ -5729,8 +6871,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates a job template.
-     *
+     * <b>summary</b> : 
+     * <p>Updates a job template.</p>
+     * 
      * @param request UpdateJobRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5940,8 +7083,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates a job template.
-     *
+     * <b>summary</b> : 
+     * <p>Updates a job template.</p>
+     * 
      * @param request UpdateJobRequest
      * @return UpdateJobResponse
      */
@@ -5952,8 +7096,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the information about a namespace.
-     *
+     * <b>summary</b> : 
+     * <p>Updates the information about a namespace.</p>
+     * 
      * @param request UpdateNamespaceRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -6001,8 +7146,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the information about a namespace.
-     *
+     * <b>summary</b> : 
+     * <p>Updates the information about a namespace.</p>
+     * 
      * @param request UpdateNamespaceRequest
      * @return UpdateNamespaceResponse
      */
@@ -6013,8 +7159,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary cn-beijing:test
-     *
+     * <b>summary</b> : 
+     * <p>cn-beijing:test</p>
+     * 
      * @param request UpdateNamespaceVpcRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -6054,8 +7201,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary cn-beijing:test
-     *
+     * <b>summary</b> : 
+     * <p>cn-beijing:test</p>
+     * 
      * @param request UpdateNamespaceVpcRequest
      * @return UpdateNamespaceVpcResponse
      */
@@ -6066,12 +7214,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary The HTTP status code. Valid values:
-     * *   **2xx**: The call was successful.
-     * *   **3xx**: The call was redirected.
-     * *   **4xx**: The call failed.
-     * *   **5xx**: A server error occurred.
-     *
+     * <b>summary</b> : 
+     * <p>The HTTP status code. Valid values:</p>
+     * <ul>
+     * <li><strong>2xx</strong>: The call was successful.</li>
+     * <li><strong>3xx</strong>: The call was redirected.</li>
+     * <li><strong>4xx</strong>: The call failed.</li>
+     * <li><strong>5xx</strong>: A server error occurred.</li>
+     * </ul>
+     * 
      * @param tmpReq UpdateSecretRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -6117,12 +7268,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary The HTTP status code. Valid values:
-     * *   **2xx**: The call was successful.
-     * *   **3xx**: The call was redirected.
-     * *   **4xx**: The call failed.
-     * *   **5xx**: A server error occurred.
-     *
+     * <b>summary</b> : 
+     * <p>The HTTP status code. Valid values:</p>
+     * <ul>
+     * <li><strong>2xx</strong>: The call was successful.</li>
+     * <li><strong>3xx</strong>: The call was redirected.</li>
+     * <li><strong>4xx</strong>: The call failed.</li>
+     * <li><strong>5xx</strong>: A server error occurred.</li>
+     * </ul>
+     * 
      * @param request UpdateSecretRequest
      * @return UpdateSecretResponse
      */
@@ -6130,5 +7284,197 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateSecretWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新应用</p>
+     * 
+     * @param request UpdateWebApplicationRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateWebApplicationResponse
+     */
+    public UpdateWebApplicationResponse updateWebApplicationWithOptions(String ApplicationId, UpdateWebApplicationRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.namespaceId)) {
+            query.put("NamespaceId", request.namespaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateWebApplication"),
+            new TeaPair("version", "2019-05-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/pop/v2/api/web/applications/" + com.aliyun.openapiutil.Client.getEncodeParam(ApplicationId) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateWebApplicationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新应用</p>
+     * 
+     * @param request UpdateWebApplicationRequest
+     * @return UpdateWebApplicationResponse
+     */
+    public UpdateWebApplicationResponse updateWebApplication(String ApplicationId, UpdateWebApplicationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateWebApplicationWithOptions(ApplicationId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新弹性配置</p>
+     * 
+     * @param request UpdateWebApplicationScalingConfigRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateWebApplicationScalingConfigResponse
+     */
+    public UpdateWebApplicationScalingConfigResponse updateWebApplicationScalingConfigWithOptions(String ApplicationId, UpdateWebApplicationScalingConfigRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.namespaceId)) {
+            query.put("NamespaceId", request.namespaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateWebApplicationScalingConfig"),
+            new TeaPair("version", "2019-05-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/pop/v2/api/web/application-scaling/" + com.aliyun.openapiutil.Client.getEncodeParam(ApplicationId) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateWebApplicationScalingConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新弹性配置</p>
+     * 
+     * @param request UpdateWebApplicationScalingConfigRequest
+     * @return UpdateWebApplicationScalingConfigResponse
+     */
+    public UpdateWebApplicationScalingConfigResponse updateWebApplicationScalingConfig(String ApplicationId, UpdateWebApplicationScalingConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateWebApplicationScalingConfigWithOptions(ApplicationId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新流量配置</p>
+     * 
+     * @param request UpdateWebApplicationTrafficConfigRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateWebApplicationTrafficConfigResponse
+     */
+    public UpdateWebApplicationTrafficConfigResponse updateWebApplicationTrafficConfigWithOptions(String ApplicationId, UpdateWebApplicationTrafficConfigRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.namespaceId)) {
+            query.put("NamespaceId", request.namespaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateWebApplicationTrafficConfig"),
+            new TeaPair("version", "2019-05-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/pop/v2/api/web/application-traffic/" + com.aliyun.openapiutil.Client.getEncodeParam(ApplicationId) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateWebApplicationTrafficConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新流量配置</p>
+     * 
+     * @param request UpdateWebApplicationTrafficConfigRequest
+     * @return UpdateWebApplicationTrafficConfigResponse
+     */
+    public UpdateWebApplicationTrafficConfigResponse updateWebApplicationTrafficConfig(String ApplicationId, UpdateWebApplicationTrafficConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateWebApplicationTrafficConfigWithOptions(ApplicationId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新自定义域名.</p>
+     * 
+     * @param request UpdateWebCustomDomainRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateWebCustomDomainResponse
+     */
+    public UpdateWebCustomDomainResponse updateWebCustomDomainWithOptions(String DomainName, UpdateWebCustomDomainRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.namespaceId)) {
+            query.put("NamespaceId", request.namespaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateWebCustomDomain"),
+            new TeaPair("version", "2019-05-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/pop/v2/api/web/custom-domains/" + com.aliyun.openapiutil.Client.getEncodeParam(DomainName) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateWebCustomDomainResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新自定义域名.</p>
+     * 
+     * @param request UpdateWebCustomDomainRequest
+     * @return UpdateWebCustomDomainResponse
+     */
+    public UpdateWebCustomDomainResponse updateWebCustomDomain(String DomainName, UpdateWebCustomDomainRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateWebCustomDomainWithOptions(DomainName, request, headers, runtime);
     }
 }

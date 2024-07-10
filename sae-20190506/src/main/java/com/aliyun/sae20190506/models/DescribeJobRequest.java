@@ -6,14 +6,19 @@ import com.aliyun.tea.*;
 public class DescribeJobRequest extends TeaModel {
     /**
      * <p>The application ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7171a6ca-d1cd-4928-8642-7d5cfe69****</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>The job ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>event-b798157b-40a2-4388-b578-71fb897103**-**</p>
      */
     @NameInMap("JobId")
     public String jobId;

@@ -5,33 +5,47 @@ import com.aliyun.tea.*;
 
 public class BindSlbRequest extends TeaModel {
     /**
-     * <p>0099b7be-5f5b-4512-a7fc-56049ef1\\*\\*\\*\\*</p>
-     * <br>
+     * <p>0099b7be-5f5b-4512-a7fc-56049ef1\<em>\</em>\<em>\</em></p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0099b7be-5f5b-4512-a7fc-56049ef1****</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
-     * <p>[{"port":80,"targetPort":8080,"protocol":"TCP"}]</p>
+     * <p>[{&quot;port&quot;:80,&quot;targetPort&quot;:8080,&quot;protocol&quot;:&quot;TCP&quot;}]</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;port&quot;:80,&quot;targetPort&quot;:8080,&quot;protocol&quot;:&quot;TCP&quot;}]</p>
      */
     @NameInMap("Internet")
     public String internet;
 
     /**
-     * <p>lb-bp1tg0k6d9nqaw7l1\\*\\*\\*\\*</p>
+     * <p>lb-bp1tg0k6d9nqaw7l1\<em>\</em>\<em>\</em></p>
+     * 
+     * <strong>example:</strong>
+     * <p>lb-bp1tg0k6d9nqaw7l1****</p>
      */
     @NameInMap("InternetSlbId")
     public String internetSlbId;
 
     /**
-     * <p>[{"port":80,"targetPort":8080,"protocol":"TCP"}]</p>
+     * <p>[{&quot;port&quot;:80,&quot;targetPort&quot;:8080,&quot;protocol&quot;:&quot;TCP&quot;}]</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;port&quot;:80,&quot;targetPort&quot;:8080,&quot;protocol&quot;:&quot;TCP&quot;}]</p>
      */
     @NameInMap("Intranet")
     public String intranet;
 
     /**
-     * <p>lb-bp1tg0k6d9nqaw7l1\\*\\*\\*\\*</p>
+     * <p>lb-bp1tg0k6d9nqaw7l1\<em>\</em>\<em>\</em></p>
+     * 
+     * <strong>example:</strong>
+     * <p>lb-bp1tg0k6d9nqaw7l1****</p>
      */
     @NameInMap("IntranetSlbId")
     public String intranetSlbId;

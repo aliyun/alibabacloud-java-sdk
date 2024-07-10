@@ -6,11 +6,15 @@ import com.aliyun.tea.*;
 public class DescribeNamespacesResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code. Valid values:</p>
-     * <br>
-     * <p>*   **2xx**: indicates that the request was successful.</p>
-     * <p>*   **3xx**: indicates that the request was redirected.</p>
-     * <p>*   **4xx**: indicates that the request failed.</p>
-     * <p>*   **5xx**: indicates that a server error occurred.</p>
+     * <ul>
+     * <li><strong>2xx</strong>: indicates that the request was successful.</li>
+     * <li><strong>3xx</strong>: indicates that the request was redirected.</li>
+     * <li><strong>4xx</strong>: indicates that the request failed.</li>
+     * <li><strong>5xx</strong>: indicates that a server error occurred.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -23,39 +27,54 @@ public class DescribeNamespacesResponseBody extends TeaModel {
 
     /**
      * <p>The error code. </p>
-     * <br>
-     * <p>- The **ErrorCode** parameter is not returned when the request succeeds.</p>
-     * <p>- The **ErrorCode** parameter is returned when the request fails. For more information, see **Error codes** in this topic.</p>
+     * <ul>
+     * <li>The <strong>ErrorCode</strong> parameter is not returned when the request succeeds.</li>
+     * <li>The <strong>ErrorCode</strong> parameter is returned when the request fails. For more information, see <strong>Error codes</strong> in this topic.</li>
+     * </ul>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The returned message.</p>
-     * <br>
-     * <p>*   **success** is returned when the request succeeds.</p>
-     * <p>*   An error message is returned when the request fails.</p>
+     * <ul>
+     * <li><strong>success</strong> is returned when the request succeeds.</li>
+     * <li>An error message is returned when the request fails.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the details of namespaces were queried successfully. Valid values:</p>
-     * <br>
-     * <p>*   **true**: indicates that the query was successful.</p>
-     * <p>*   **false**: indicates that the query failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: indicates that the query was successful.</li>
+     * <li><strong>false</strong>: indicates that the query failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The ID of the trace. It can be used to query the details of a request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0a981dd515966966104121683d****</p>
      */
     @NameInMap("TraceId")
     public String traceId;
@@ -123,49 +142,78 @@ public class DescribeNamespacesResponseBody extends TeaModel {
 
     public static class DescribeNamespacesResponseBodyDataNamespaces extends TeaModel {
         /**
-         * <p>The ACM-specific AccessKey ID. It can be used to manage data in an Application Configuration Management (ACM) namespace. For more information, see [Differences between Alibaba Cloud AccessKey and ACM-specific AccessKey](~~~~).</p>
+         * <p>The ACM-specific AccessKey ID. It can be used to manage data in an Application Configuration Management (ACM) namespace. For more information, see <a href="~~~~">Differences between Alibaba Cloud AccessKey and ACM-specific AccessKey</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b34dbe3315c64f9f99b58ea447ec****</p>
          */
         @NameInMap("AccessKey")
         public String accessKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>addr-bj-internal.edas.aliyun.com</p>
+         */
         @NameInMap("AddressServerHost")
         public String addressServerHost;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("NameSpaceShortId")
         public String nameSpaceShortId;
 
         /**
          * <p>The description of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         @NameInMap("NamespaceDescription")
         public String namespaceDescription;
 
         /**
          * <p>The ID of the namespace. The information of the default namespace cannot be queried or modified. The default namespace cannot be deleted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing:test</p>
          */
         @NameInMap("NamespaceId")
         public String namespaceId;
 
         /**
          * <p>The name of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         @NameInMap("NamespaceName")
         public String namespaceName;
 
         /**
          * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>The ACM-specific AccessKey secret. It can be used to manage data in an ACM namespace. For more information, see [Differences between Alibaba Cloud AccessKey and ACM-specific AccessKey](~~~~).</p>
+         * <p>The ACM-specific AccessKey secret. It can be used to manage data in an ACM namespace. For more information, see <a href="~~~~">Differences between Alibaba Cloud AccessKey and ACM-specific AccessKey</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>G/w6sseK7+nb3S6HBmANDBMD****</p>
          */
         @NameInMap("SecretKey")
         public String secretKey;
 
         /**
          * <p>The ID of the tenant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>838cad95-973f-48fe-830b-2a8546d7****</p>
          */
         @NameInMap("TenantId")
         public String tenantId;
@@ -252,6 +300,9 @@ public class DescribeNamespacesResponseBody extends TeaModel {
     public static class DescribeNamespacesResponseBodyData extends TeaModel {
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
@@ -264,12 +315,18 @@ public class DescribeNamespacesResponseBody extends TeaModel {
 
         /**
          * <p>The number of entries returned on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of namespaces.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("TotalSize")
         public Integer totalSize;

@@ -6,9 +6,13 @@ import com.aliyun.tea.*;
 public class ListLogConfigsResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the logging configurations of an application were obtained. Valid values:</p>
-     * <br>
-     * <p>*   **true**: indicates that the configurations were obtained.</p>
-     * <p>*   **false**: indicates that the configurations could not be obtained.</p>
+     * <ul>
+     * <li><strong>true</strong>: indicates that the configurations were obtained.</li>
+     * <li><strong>false</strong>: indicates that the configurations could not be obtained.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -21,35 +25,50 @@ public class ListLogConfigsResponseBody extends TeaModel {
 
     /**
      * <p>The HTTP status code. Valid values:</p>
-     * <br>
-     * <p>*   **2xx**: indicates that the request was successful.</p>
-     * <p>*   **3xx**: indicates that the request was redirected.</p>
-     * <p>*   **4xx**: indicates that the request was invalid.</p>
-     * <p>*   **5xx**: indicates that a server error occurred.</p>
+     * <ul>
+     * <li><strong>2xx</strong>: indicates that the request was successful.</li>
+     * <li><strong>3xx</strong>: indicates that the request was redirected.</li>
+     * <li><strong>4xx</strong>: indicates that the request was invalid.</li>
+     * <li><strong>5xx</strong>: indicates that a server error occurred.</li>
+     * </ul>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The ID of the trace. It can be used to query the details of a request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The returned message.</p>
-     * <br>
-     * <p>*   **success** is returned when the request succeeds.</p>
-     * <p>*   An error code is returned when the request fails.</p>
+     * <ul>
+     * <li><strong>success</strong> is returned when the request succeeds.</li>
+     * <li>An error code is returned when the request fails.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The logging configurations.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ac1d5e2c15671581252413581d****</p>
      */
     @NameInMap("TraceId")
     public String traceId;
@@ -118,48 +137,72 @@ public class ListLogConfigsResponseBody extends TeaModel {
     public static class ListLogConfigsResponseBodyDataLogConfigs extends TeaModel {
         /**
          * <p>The path of logs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sae-1f240907a6faf58c653f09e81b7e****</p>
          */
         @NameInMap("ConfigName")
         public String configName;
 
         /**
          * <p>The storage type of logs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-08-29 17:18:00</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The name of the Logstore in Log Service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/root/logs/hsf/hsf.log</p>
          */
         @NameInMap("LogDir")
         public String logDir;
 
         /**
          * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>file_log</p>
          */
         @NameInMap("LogType")
         public String logType;
 
         /**
          * <p>The number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The time when the configuration was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sae-1f240907a6faf58c653f09e81b7e****</p>
          */
         @NameInMap("SlsLogStore")
         public String slsLogStore;
 
         /**
-         * <p>The type of the log. Set this value to **file_log**.</p>
+         * <p>The type of the log. Set this value to <strong>file_log</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sae-56f77b65-788d-442a-9885-7f20d91f****</p>
          */
         @NameInMap("SlsProject")
         public String slsProject;
 
         /**
          * <p>The ID of the Log Service project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sls</p>
          */
         @NameInMap("StoreType")
         public String storeType;
@@ -238,6 +281,9 @@ public class ListLogConfigsResponseBody extends TeaModel {
     public static class ListLogConfigsResponseBodyData extends TeaModel {
         /**
          * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
@@ -250,15 +296,22 @@ public class ListLogConfigsResponseBody extends TeaModel {
 
         /**
          * <p>The error code.</p>
-         * <br>
-         * <p>*   The **ErrorCode** parameter is not returned when the request succeeds.</p>
-         * <p>*   The **ErrorCode** parameter is returned when the request fails. For more information, see **Error codes** in this topic.</p>
+         * <ul>
+         * <li>The <strong>ErrorCode</strong> parameter is not returned when the request succeeds.</li>
+         * <li>The <strong>ErrorCode</strong> parameter is returned when the request fails. For more information, see <strong>Error codes</strong> in this topic.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The number of entries returned on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("TotalSize")
         public Integer totalSize;

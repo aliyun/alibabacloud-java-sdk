@@ -6,72 +6,106 @@ import com.aliyun.tea.*;
 public class ListJobsRequest extends TeaModel {
     /**
      * <p>The name of the job template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>demo-app</p>
      */
     @NameInMap("AppName")
     public String appName;
 
     /**
      * <p>The number of the page to return. The parameter value is a positive integer that is greater than or equal to 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>The dimension by which applications are filtered. Valid values:</p>
-     * <br>
-     * <p>*   **appName**: Applications are filtered by job template name.</p>
-     * <p>*   **appIds**: Applications are filtered by job template ID.</p>
+     * <ul>
+     * <li><strong>appName</strong>: Applications are filtered by job template name.</li>
+     * <li><strong>appIds</strong>: Applications are filtered by job template ID.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>appName</p>
      */
     @NameInMap("FieldType")
     public String fieldType;
 
     /**
      * <p>Enter the name and ID of the job template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>demo-app</p>
      */
     @NameInMap("FieldValue")
     public String fieldValue;
 
     /**
      * <p>The namespace ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing:demo</p>
      */
     @NameInMap("NamespaceId")
     public String namespaceId;
 
     /**
      * <p>Specifies how applications are sorted. Valid values:</p>
-     * <br>
-     * <p>*   **running**: The applications are sorted based on the number of running instances.</p>
-     * <p>*   **instances**: The applications are sorted based on the number of destination instances.</p>
+     * <ul>
+     * <li><strong>running</strong>: The applications are sorted based on the number of running instances.</li>
+     * <li><strong>instances</strong>: The applications are sorted based on the number of destination instances.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>running</p>
      */
     @NameInMap("OrderBy")
     public String orderBy;
 
     /**
      * <p>The number of entries to return on each page. Valid value: 0 to 200.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>Specifies whether to sort the field names that are passed by **OrderBy** in ascending order. Valid values:</p>
-     * <br>
-     * <p>*   **true**: in ascending order</p>
-     * <p>*   **false**: in descending order</p>
+     * <p>Specifies whether to sort the field names that are passed by <strong>OrderBy</strong> in ascending order. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: in ascending order</li>
+     * <li><strong>false</strong>: in descending order</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Reverse")
     public Boolean reverse;
 
     /**
      * <p>The tags that are displayed in a JSON string. Valid values:</p>
-     * <br>
-     * <p>*   **key**: the tag key</p>
-     * <p>*   **value**: the tag value</p>
+     * <ul>
+     * <li><strong>key</strong>: the tag key</li>
+     * <li><strong>value</strong>: the tag value</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;key&quot;:&quot;key&quot;,&quot;value&quot;:&quot;value&quot;}]</p>
      */
     @NameInMap("Tags")
     public String tags;
 
     /**
-     * <p>Set the value to `job`.</p>
+     * <p>Set the value to <code>job</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>job</p>
      */
     @NameInMap("Workload")
     public String workload;

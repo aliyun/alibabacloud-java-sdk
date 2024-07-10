@@ -6,25 +6,36 @@ import com.aliyun.tea.*;
 public class CreateConfigMapRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;env.shell&quot;: &quot;/bin/sh&quot;}</p>
      */
     @NameInMap("Data")
     public String data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test-desc</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>cn-hangzhou</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>name</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The ID of the request.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("NamespaceId")
     public String namespaceId;

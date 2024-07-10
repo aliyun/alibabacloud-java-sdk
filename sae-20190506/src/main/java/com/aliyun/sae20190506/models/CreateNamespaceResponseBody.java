@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateNamespaceResponseBody extends TeaModel {
     /**
      * <p>The ID of the trace. It can be used to query the details of a request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,30 +21,45 @@ public class CreateNamespaceResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The returned message.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>name</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The description of the namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The information of the namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The ID of the trace. It can be used to query the details of a request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0a981dd515966966104121683d****</p>
      */
     @NameInMap("TraceId")
     public String traceId;
@@ -113,30 +131,45 @@ public class CreateNamespaceResponseBody extends TeaModel {
 
         /**
          * <p>desc</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("NameSpaceShortId")
         public String nameSpaceShortId;
 
         /**
          * <p>The information of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         @NameInMap("NamespaceDescription")
         public String namespaceDescription;
 
         /**
          * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing:test</p>
          */
         @NameInMap("NamespaceId")
         public String namespaceId;
 
         /**
          * <p>cn-beijing:test</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         @NameInMap("NamespaceName")
         public String namespaceName;
 
         /**
          * <p>name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         @NameInMap("RegionId")
         public String regionId;

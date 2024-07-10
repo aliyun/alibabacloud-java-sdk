@@ -4,24 +4,52 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class MetricInfo extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1234.5</p>
+     */
     @NameInMap("Average")
     public Float average;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1234.5</p>
+     */
     @NameInMap("Count")
     public Float count;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1234.5</p>
+     */
     @NameInMap("Maximum")
     public Float maximum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1234.5</p>
+     */
     @NameInMap("Minimum")
     public Float minimum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1234.5</p>
+     */
     @NameInMap("Sum")
     public Float sum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1686568800000</p>
+     */
     @NameInMap("timestamp")
     public Long timestamp;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1234.5</p>
+     */
     @NameInMap("value")
     public Float value;
 

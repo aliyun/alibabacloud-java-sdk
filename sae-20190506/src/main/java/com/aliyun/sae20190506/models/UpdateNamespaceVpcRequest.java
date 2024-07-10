@@ -4,19 +4,28 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class UpdateNamespaceVpcRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("NameSpaceShortId")
     public String nameSpaceShortId;
 
     /**
-     * <p>vpc-2ze0i263cnn311nvj\\*\\*\\*\\*</p>
+     * <p>vpc-2ze0i263cnn311nvj\<em>\</em>\<em>\</em></p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing:test</p>
      */
     @NameInMap("NamespaceId")
     public String namespaceId;
 
     /**
      * <p>The ID of the request.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-2ze0i263cnn311nvj****</p>
      */
     @NameInMap("VpcId")
     public String vpcId;

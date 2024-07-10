@@ -9,26 +9,37 @@ public class UpdateNamespaceRequest extends TeaModel {
 
     /**
      * <p>The short ID of the namespace. You do not need to specify a region ID. We recommend that you configure this parameter. The value of this parameter can be up to 20 characters in length and can contain only lowercase letters and digits.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("NameSpaceShortId")
     public String nameSpaceShortId;
 
     /**
      * <p>The description of the namespace. The description cannot exceed 100 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>desc</p>
      */
     @NameInMap("NamespaceDescription")
     public String namespaceDescription;
 
     /**
-     * <p>The long ID of the namespace. If you configure this parameter, the long ID take effects and the value of the NameSpaceShortId parameter is ignored. To ensure compatibility, we recommend that you specify a short namespace ID. A long namespace ID follows the `<RegionId>:<NamespaceId>` format. The `NamespaceId` variable can contain only lowercase letters and digits. Example: `cn-beijing:test`. The value of the NamespaceId variable cannot exceed 32 characters in length. For more information about **RegionId**, you can call the [DescribeRegions](https://help.aliyun.com/document_detail/126213.html) operation to obtain the IDs of regions supported by SAE.</p>
+     * <p>The long ID of the namespace. If you configure this parameter, the long ID take effects and the value of the NameSpaceShortId parameter is ignored. To ensure compatibility, we recommend that you specify a short namespace ID. A long namespace ID follows the <code>&lt;RegionId&gt;:&lt;NamespaceId&gt;</code> format. The <code>NamespaceId</code> variable can contain only lowercase letters and digits. Example: <code>cn-beijing:test</code>. The value of the NamespaceId variable cannot exceed 32 characters in length. For more information about <strong>RegionId</strong>, you can call the <a href="https://help.aliyun.com/document_detail/126213.html">DescribeRegions</a> operation to obtain the IDs of regions supported by SAE.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing:test</p>
      */
     @NameInMap("NamespaceId")
     public String namespaceId;
 
     /**
      * <p>The name of the namespace. The name cannot exceed 64 characters in length.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>name</p>
      */
     @NameInMap("NamespaceName")
     public String namespaceName;

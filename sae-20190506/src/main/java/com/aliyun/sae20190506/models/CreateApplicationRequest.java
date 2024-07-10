@@ -5,12 +5,18 @@ import com.aliyun.tea.*;
 
 public class CreateApplicationRequest extends TeaModel {
     /**
-     * <p>acs:ram::123456789012\\*\\*\\*\\*:role/adminrole</p>
+     * <p>acs:ram::123456789012\<em>\</em>\<em>\</em>:role/adminrole</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acs:ram::123456789012****:role/adminrole</p>
      */
     @NameInMap("AcrAssumeRoleArn")
     public String acrAssumeRoleArn;
 
     /**
+     * <p>cri-xxxxxx</p>
+     * 
+     * <strong>example:</strong>
      * <p>cri-xxxxxx</p>
      */
     @NameInMap("AcrInstanceId")
@@ -18,14 +24,19 @@ public class CreateApplicationRequest extends TeaModel {
 
     /**
      * <p>This is a test description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>This is a test description.</p>
      */
     @NameInMap("AppDescription")
     public String appDescription;
 
     /**
      * <p>test</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("AppName")
     public String appName;
@@ -35,11 +46,17 @@ public class CreateApplicationRequest extends TeaModel {
 
     /**
      * <p>true</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("AssociateEip")
     public Boolean associateEip;
 
     /**
+     * <p>true</p>
+     * 
+     * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("AutoConfig")
@@ -50,41 +67,62 @@ public class CreateApplicationRequest extends TeaModel {
 
     /**
      * <p>sleep</p>
+     * 
+     * <strong>example:</strong>
+     * <p>echo</p>
      */
     @NameInMap("Command")
     public String command;
 
     /**
      * <p>1d</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;a&quot;,&quot;b&quot;]</p>
      */
     @NameInMap("CommandArgs")
     public String commandArgs;
 
     /**
-     * <p>[{"configMapId":16,"key":"test","mountPath":"/tmp"}]</p>
+     * <p>[{&quot;configMapId&quot;:16,&quot;key&quot;:&quot;test&quot;,&quot;mountPath&quot;:&quot;/tmp&quot;}]</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;configMapId&quot;:16,&quot;key&quot;:&quot;test&quot;,&quot;mountPath&quot;:&quot;/tmp&quot;}]</p>
      */
     @NameInMap("ConfigMapMountDesc")
     public String configMapMountDesc;
 
     /**
      * <p>1000</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1000</p>
      */
     @NameInMap("Cpu")
     public Integer cpu;
 
     /**
-     * <p>[{"hostName":"samplehost","ip":"127.0.0.1"}]</p>
+     * <p>[{&quot;hostName&quot;:&quot;samplehost&quot;,&quot;ip&quot;:&quot;127.0.0.1&quot;}]</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;hostName&quot;:&quot;samplehost&quot;,&quot;ip&quot;:&quot;127.0.0.1&quot;}]</p>
      */
     @NameInMap("CustomHostAlias")
     public String customHostAlias;
 
     /**
      * <p>true</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Deploy")
     public Boolean deploy;
 
     /**
+     * <p>3.5.3</p>
+     * 
+     * <strong>example:</strong>
      * <p>3.5.3</p>
      */
     @NameInMap("EdasContainerVersion")
@@ -94,15 +132,25 @@ public class CreateApplicationRequest extends TeaModel {
     public String enableEbpf;
 
     /**
-     * <p>[{"name":"envtmp","value":"0"}]</p>
+     * <p>[{&quot;name&quot;:&quot;envtmp&quot;,&quot;value&quot;:&quot;0&quot;}]</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;name&quot;:&quot;envtmp&quot;,&quot;value&quot;:&quot;0&quot;}]</p>
      */
     @NameInMap("Envs")
     public String envs;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("ImagePullSecrets")
     public String imagePullSecrets;
 
     /**
+     * <p>registry.cn-hangzhou.aliyuncs.com/sae_test/ali_sae_test:0.0.1</p>
+     * 
+     * <strong>example:</strong>
      * <p>registry.cn-hangzhou.aliyuncs.com/sae_test/ali_sae_test:0.0.1</p>
      */
     @NameInMap("ImageUrl")
@@ -110,37 +158,60 @@ public class CreateApplicationRequest extends TeaModel {
 
     /**
      * <p>custom-args</p>
+     * 
+     * <strong>example:</strong>
+     * <p>custom-args</p>
      */
     @NameInMap("JarStartArgs")
     public String jarStartArgs;
 
     /**
-     * <p>\\-Xms4G -Xmx4G</p>
+     * <p>\-Xms4G -Xmx4G</p>
+     * 
+     * <strong>example:</strong>
+     * <p>-Xms4G -Xmx4G</p>
      */
     @NameInMap("JarStartOptions")
     public String jarStartOptions;
 
     /**
      * <p>Open JDK 8</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Open JDK 8</p>
      */
     @NameInMap("Jdk")
     public String jdk;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;kafkaEndpoint&quot;:&quot;10.0.X.XXX:XXXX,10.0.X.XXX:XXXX,10.0.X.XXX:XXXX\&quot;,&quot;kafkaInstanceId&quot;:&quot;alikafka_pre-cn-7pp2l8kr****&quot;,&quot;kafkaConfigs&quot;:[{&quot;logType&quot;:&quot;file_log&quot;,&quot;logDir&quot;:&quot;/tmp/a.log&quot;,&quot;kafkaTopic&quot;:&quot;test2&quot;},{&quot;logType&quot;:&quot;stdout&quot;,&quot;logDir&quot;:&quot;&quot;,&quot;kafkaTopic&quot;:&quot;test&quot;}]}</p>
+     */
     @NameInMap("KafkaConfigs")
     public String kafkaConfigs;
 
     /**
-     * <p>{"exec":{"command":["sh","-c","cat /home/admin/start.sh"]},"initialDelaySeconds":30,"periodSeconds":30,"timeoutSeconds":2}</p>
+     * <p>{&quot;exec&quot;:{&quot;command&quot;:[&quot;sh&quot;,&quot;-c&quot;,&quot;cat /home/admin/start.sh&quot;]},&quot;initialDelaySeconds&quot;:30,&quot;periodSeconds&quot;:30,&quot;timeoutSeconds&quot;:2}</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;exec&quot;:{&quot;command&quot;:[&quot;sh&quot;,&quot;-c&quot;,&quot;cat /home/admin/start.sh&quot;]},&quot;initialDelaySeconds&quot;:30,&quot;periodSeconds&quot;:30,&quot;timeoutSeconds&quot;:2}</p>
      */
     @NameInMap("Liveness")
     public String liveness;
 
     /**
      * <p>1024</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1024</p>
      */
     @NameInMap("Memory")
     public Integer memory;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;0&quot;</p>
+     */
     @NameInMap("MicroRegistration")
     public String microRegistration;
 
@@ -148,12 +219,18 @@ public class CreateApplicationRequest extends TeaModel {
     public String microRegistrationConfig;
 
     /**
-     * <p>[{mountPath: "/tmp", nasPath: "/"}]</p>
+     * <p>[{mountPath: &quot;/tmp&quot;, nasPath: &quot;/&quot;}]</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{mountPath: &quot;/tmp&quot;, nasPath: &quot;/&quot;}]</p>
      */
     @NameInMap("MountDesc")
     public String mountDesc;
 
     /**
+     * <p>example.com</p>
+     * 
+     * <strong>example:</strong>
      * <p>example.com</p>
      */
     @NameInMap("MountHost")
@@ -161,20 +238,33 @@ public class CreateApplicationRequest extends TeaModel {
 
     /**
      * <p>cn-beijing:test</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing:test</p>
      */
     @NameInMap("NamespaceId")
     public String namespaceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[{&quot;mountPath&quot;:&quot;/test1&quot;,&quot;readOnly&quot;:false,&quot;nasId&quot;:&quot;nasId1&quot;,&quot;mountDomain&quot;:&quot;nasId1.cn-shenzhen.nas.aliyuncs.com&quot;,&quot;nasPath&quot;:&quot;/test1&quot;},{&quot;nasId&quot;:&quot;nasId2&quot;,&quot;mountDomain&quot;:&quot;nasId2.cn-shenzhen.nas.aliyuncs.com&quot;,&quot;readOnly&quot;:false,&quot;nasPath&quot;:&quot;/test2&quot;,&quot;mountPath&quot;:&quot;/test2&quot;}]</p>
+     */
     @NameInMap("NasConfigs")
     public String nasConfigs;
 
     /**
-     * <p>KSAK\\*\\*\\*\\*</p>
+     * <p>KSAK\<em>\</em>\<em>\</em></p>
+     * 
+     * <strong>example:</strong>
+     * <p>KSAK****</p>
      */
     @NameInMap("NasId")
     public String nasId;
 
     /**
+     * <p>xxxxxx</p>
+     * 
+     * <strong>example:</strong>
      * <p>xxxxxx</p>
      */
     @NameInMap("OssAkId")
@@ -182,40 +272,61 @@ public class CreateApplicationRequest extends TeaModel {
 
     /**
      * <p>xxxxxx</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxxxxx</p>
      */
     @NameInMap("OssAkSecret")
     public String ossAkSecret;
 
     /**
-     * <p>[{"bucketName": "oss-bucket", "bucketPath": "data/user.data", "mountPath": "/usr/data/user.data", "readOnly": true}]</p>
+     * <p>[{&quot;bucketName&quot;: &quot;oss-bucket&quot;, &quot;bucketPath&quot;: &quot;data/user.data&quot;, &quot;mountPath&quot;: &quot;/usr/data/user.data&quot;, &quot;readOnly&quot;: true}]</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;bucketName&quot;: &quot;oss-bucket&quot;, &quot;bucketPath&quot;: &quot;data/user.data&quot;, &quot;mountPath&quot;: &quot;/usr/data/user.data&quot;, &quot;readOnly&quot;: true}]</p>
      */
     @NameInMap("OssMountDescs")
     public String ossMountDescs;
 
     /**
      * <p>FatJar</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FatJar</p>
      */
     @NameInMap("PackageType")
     public String packageType;
 
     /**
-     * <p>http://myoss.oss-cn-\\*\\*\\*\\*.aliyuncs.com/my-buc/2019-06-30/\\*\\*\\*\\*.jar</p>
+     * <p><a href="http://myoss.oss-cn-%5C%5C*%5C%5C*%5C%5C*%5C%5C*.aliyuncs.com/my-buc/2019-06-30/%5C%5C*%5C%5C*%5C%5C*%5C%5C*.jar">http://myoss.oss-cn-\\*\\*\\*\\*.aliyuncs.com/my-buc/2019-06-30/\\*\\*\\*\\*.jar</a></p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://myoss.oss-cn-****.aliyuncs.com/my-buc/2019-06-30/****.jar">http://myoss.oss-cn-****.aliyuncs.com/my-buc/2019-06-30/****.jar</a></p>
      */
     @NameInMap("PackageUrl")
     public String packageUrl;
 
     /**
      * <p>1.0.0</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.0.0</p>
      */
     @NameInMap("PackageVersion")
     public String packageVersion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>PHP-FPM 7.0</p>
+     */
     @NameInMap("Php")
     public String php;
 
     /**
+     * <p>/usr/local/etc/php/conf.d/arms.ini</p>
+     * 
+     * <strong>example:</strong>
      * <p>/usr/local/etc/php/conf.d/arms.ini</p>
      */
     @NameInMap("PhpArmsConfigLocation")
@@ -223,50 +334,83 @@ public class CreateApplicationRequest extends TeaModel {
 
     /**
      * <p>k1=v1</p>
+     * 
+     * <strong>example:</strong>
+     * <p>k1=v1</p>
      */
     @NameInMap("PhpConfig")
     public String phpConfig;
 
     /**
      * <p>/usr/local/etc/php/php.ini</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/usr/local/etc/php/php.ini</p>
      */
     @NameInMap("PhpConfigLocation")
     public String phpConfigLocation;
 
     /**
-     * <p>{"exec":{"command":["cat","/etc/group"]}}</p>
+     * <p>{&quot;exec&quot;:{&quot;command&quot;:[&quot;cat&quot;,&quot;/etc/group&quot;]}}</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;exec&quot;:{&quot;command&quot;:[&quot;cat&quot;,&quot;/etc/group&quot;]}}</p>
      */
     @NameInMap("PostStart")
     public String postStart;
 
     /**
-     * <p>{"exec":{"command":["cat","/etc/group"]}}</p>
+     * <p>{&quot;exec&quot;:{&quot;command&quot;:[&quot;cat&quot;,&quot;/etc/group&quot;]}}</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;exec&quot;:{&quot;command&quot;:[&quot;cat&quot;,&quot;/etc/group&quot;]}}</p>
      */
     @NameInMap("PreStop")
     public String preStop;
 
+    /**
+     * <strong>example:</strong>
+     * <p>java</p>
+     */
     @NameInMap("ProgrammingLanguage")
     public String programmingLanguage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;serviceName&quot;:&quot;bwm-poc-sc-gateway-cn-beijing-front&quot;,&quot;namespaceId&quot;:&quot;cn-beijing:front&quot;,&quot;portAndProtocol&quot;:{&quot;18012&quot;:&quot;TCP&quot;},&quot;enable&quot;:true}</p>
+     */
     @NameInMap("PvtzDiscoverySvc")
     public String pvtzDiscoverySvc;
 
+    /**
+     * <strong>example:</strong>
+     * <p>PYTHON 3.9.15</p>
+     */
     @NameInMap("Python")
     public String python;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Flask==2.0</p>
+     */
     @NameInMap("PythonModules")
     public String pythonModules;
 
     /**
-     * <p>{"exec":{"command":["sh","-c","cat /home/admin/start.sh"]},"initialDelaySeconds":30,"periodSeconds":30,"timeoutSeconds":2}</p>
+     * <p>{&quot;exec&quot;:{&quot;command&quot;:[&quot;sh&quot;,&quot;-c&quot;,&quot;cat /home/admin/start.sh&quot;]},&quot;initialDelaySeconds&quot;:30,&quot;periodSeconds&quot;:30,&quot;timeoutSeconds&quot;:2}</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;exec&quot;:{&quot;command&quot;:[&quot;sh&quot;,&quot;-c&quot;,&quot;cat /home/admin/start.sh&quot;]},&quot;initialDelaySeconds&quot;:30,&quot;periodSeconds&quot;:30,&quot;timeoutSeconds&quot;:2}</p>
      */
     @NameInMap("Readiness")
     public String readiness;
 
     /**
      * <p>1</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Replicas")
     public Integer replicas;
@@ -275,7 +419,10 @@ public class CreateApplicationRequest extends TeaModel {
     public String saeVersion;
 
     /**
-     * <p>sg-wz969ngg2e49q5i4\\*\\*\\*\\*</p>
+     * <p>sg-wz969ngg2e49q5i4\<em>\</em>\<em>\</em></p>
+     * 
+     * <strong>example:</strong>
+     * <p>sg-wz969ngg2e49q5i4****</p>
      */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
@@ -284,12 +431,18 @@ public class CreateApplicationRequest extends TeaModel {
     public String serviceTags;
 
     /**
-     * <p>[{"logDir":"","logType":"stdout"},{"logDir":"/tmp/a.log"}]</p>
+     * <p>[{&quot;logDir&quot;:&quot;&quot;,&quot;logType&quot;:&quot;stdout&quot;},{&quot;logDir&quot;:&quot;/tmp/a.log&quot;}]</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;logDir&quot;:&quot;&quot;,&quot;logType&quot;:&quot;stdout&quot;},{&quot;logDir&quot;:&quot;/tmp/a.log&quot;}]</p>
      */
     @NameInMap("SlsConfigs")
     public String slsConfigs;
 
     /**
+     * <p>30</p>
+     * 
+     * <strong>example:</strong>
      * <p>30</p>
      */
     @NameInMap("TerminationGracePeriodSeconds")
@@ -297,35 +450,53 @@ public class CreateApplicationRequest extends TeaModel {
 
     /**
      * <p>Asia/Shanghai</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Asia/Shanghai</p>
      */
     @NameInMap("Timezone")
     public String timezone;
 
     /**
-     * <p>{"port":8080,"contextPath":"/","maxThreads":400,"uriEncoding":"ISO-8859-1","useBodyEncodingForUri":true}</p>
+     * <p>{&quot;port&quot;:8080,&quot;contextPath&quot;:&quot;/&quot;,&quot;maxThreads&quot;:400,&quot;uriEncoding&quot;:&quot;ISO-8859-1&quot;,&quot;useBodyEncodingForUri&quot;:true}</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;port&quot;:8080,&quot;contextPath&quot;:&quot;/&quot;,&quot;maxThreads&quot;:400,&quot;uriEncoding&quot;:&quot;ISO-8859-1&quot;,&quot;useBodyEncodingForUri&quot;:true}</p>
      */
     @NameInMap("TomcatConfig")
     public String tomcatConfig;
 
     /**
-     * <p>vsw-bp12mw1f8k3jgygk9\\*\\*\\*\\*</p>
+     * <p>vsw-bp12mw1f8k3jgygk9\<em>\</em>\<em>\</em></p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-bp12mw1f8k3jgygk9****</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
     /**
-     * <p>vpc-bp1aevy8sofi8mh1q\\*\\*\\*\\*</p>
+     * <p>vpc-bp1aevy8sofi8mh1q\<em>\</em>\<em>\</em></p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-bp1aevy8sofi8mh1q****</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
 
     /**
-     * <p>CATALINA_OPTS=\\\\"$CATALINA_OPTS $Options\\\\" catalina.sh run</p>
+     * <p>CATALINA_OPTS=\\&quot;$CATALINA_OPTS $Options\\&quot; catalina.sh run</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CATALINA_OPTS=\&quot;$CATALINA_OPTS $Options\&quot; catalina.sh run</p>
      */
     @NameInMap("WarStartOptions")
     public String warStartOptions;
 
     /**
+     * <p>apache-tomcat-7.0.91</p>
+     * 
+     * <strong>example:</strong>
      * <p>apache-tomcat-7.0.91</p>
      */
     @NameInMap("WebContainer")

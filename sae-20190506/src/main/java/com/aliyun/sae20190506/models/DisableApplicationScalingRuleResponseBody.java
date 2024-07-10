@@ -15,6 +15,9 @@ public class DisableApplicationScalingRuleResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the trace. The ID is used to query the details of a request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -22,6 +25,10 @@ public class DisableApplicationScalingRuleResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0a98a02315955564772843261e****</p>
+     */
     @NameInMap("TraceId")
     public String traceId;
 

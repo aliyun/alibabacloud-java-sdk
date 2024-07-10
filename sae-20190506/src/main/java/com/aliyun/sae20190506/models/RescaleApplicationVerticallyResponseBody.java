@@ -6,11 +6,15 @@ import com.aliyun.tea.*;
 public class RescaleApplicationVerticallyResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code. Take note of the following rules:</p>
-     * <br>
-     * <p>*   **2xx**: The call was successful.</p>
-     * <p>*   **3xx**: The call was redirected.</p>
-     * <p>*   **4xx**: The call failed.</p>
-     * <p>*   **5xx**: A server error occurred.</p>
+     * <ul>
+     * <li><strong>2xx</strong>: The call was successful.</li>
+     * <li><strong>3xx</strong>: The call was redirected.</li>
+     * <li><strong>4xx</strong>: The call failed.</li>
+     * <li><strong>5xx</strong>: A server error occurred.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -23,36 +27,53 @@ public class RescaleApplicationVerticallyResponseBody extends TeaModel {
 
     /**
      * <p>The error code returned if the request failed. Take note of the following rules:</p>
-     * <br>
-     * <p>*   The **ErrorCode** parameter is not returned if the request succeeds.</p>
-     * <p>*   The **ErrorCode** parameter is returned if the request fails. For more information, see the **Error codes** section in this topic.</p>
+     * <ul>
+     * <li>The <strong>ErrorCode</strong> parameter is not returned if the request succeeds.</li>
+     * <li>The <strong>ErrorCode</strong> parameter is returned if the request fails. For more information, see the <strong>Error codes</strong> section in this topic.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Null</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The message returned for the operation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AB521DBB-FA78-42E6-803F-A862EA4F****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the instance specifications are changed. Take note of the following rules:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The trace ID that is used to query the details of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0bc3b6f315637273629117900d****</p>
      */
     @NameInMap("TraceId")
     public String traceId;
@@ -121,6 +142,9 @@ public class RescaleApplicationVerticallyResponseBody extends TeaModel {
     public static class RescaleApplicationVerticallyResponseBodyData extends TeaModel {
         /**
          * <p>The ID of the change order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ffd8cd45-2b5f-415d-b4d0-1003e80b****</p>
          */
         @NameInMap("ChangeOrderId")
         public String changeOrderId;

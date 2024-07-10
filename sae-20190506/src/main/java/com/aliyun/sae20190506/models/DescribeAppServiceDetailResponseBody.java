@@ -6,11 +6,15 @@ import com.aliyun.tea.*;
 public class DescribeAppServiceDetailResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code. Valid values:</p>
-     * <br>
-     * <p>- **2xx**: indicates that the call was successful.</p>
-     * <p>- **3xx**: indicates that the call was redirected.</p>
-     * <p>- **4xx**: indicates that the call failed.</p>
-     * <p>- **5xx**: indicates that a server error occurred.</p>
+     * <ul>
+     * <li><strong>2xx</strong>: indicates that the call was successful.</li>
+     * <li><strong>3xx</strong>: indicates that the call was redirected.</li>
+     * <li><strong>4xx</strong>: indicates that the call failed.</li>
+     * <li><strong>5xx</strong>: indicates that a server error occurred.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -23,36 +27,50 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
 
     /**
      * <p>The returned error code. Valid values:</p>
-     * <br>
-     * <p>- If the call is successful, the **ErrorCode** parameter is not returned.</p>
-     * <p>- If the call fails, the **ErrorCode** parameter is returned. For more information, see the "**Error codes**" section of this topic.</p>
+     * <ul>
+     * <li>If the call is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+     * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the &quot;<strong>Error codes</strong>&quot; section of this topic.</li>
+     * </ul>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The returned information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B2C7874F-F109-5B34-8618-2C10BBA2****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the meta data was obtained. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The metadata was obtained.</p>
-     * <p>*   **false**: The metadata failed to be obtained.</p>
+     * <ul>
+     * <li><strong>true</strong>: The metadata was obtained.</li>
+     * <li><strong>false</strong>: The metadata failed to be obtained.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The ID of the trace. The ID is used to query the details of a request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0b16399316402420740034918e****</p>
      */
     @NameInMap("TraceId")
     public String traceId;
@@ -121,18 +139,27 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
     public static class DescribeAppServiceDetailResponseBodyDataMethodsParameterDefinitions extends TeaModel {
         /**
          * <p>The description of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>description</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>arg0</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The type of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>java.lang.String</p>
          */
         @NameInMap("Type")
         public String type;
@@ -171,18 +198,27 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
     public static class DescribeAppServiceDetailResponseBodyDataMethods extends TeaModel {
         /**
          * <p>The class to which the method belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>com.serverless.sae.controller.EchoController</p>
          */
         @NameInMap("MethodController")
         public String methodController;
 
         /**
          * <p>The name of the method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>echo</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The details of the method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>description</p>
          */
         @NameInMap("NameDetail")
         public String nameDetail;
@@ -207,29 +243,35 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
 
         /**
          * <p>The request paths. Format:</p>
-         * <br>
-         * <p>`/path`</p>
+         * <p><code>/path</code></p>
          */
         @NameInMap("Paths")
         public java.util.List<String> paths;
 
         /**
          * <p>The request methods. Valid values:</p>
-         * <br>
-         * <p>*   **GET**</p>
-         * <p>*   **ALL**</p>
+         * <ul>
+         * <li><strong>GET</strong></li>
+         * <li><strong>ALL</strong></li>
+         * </ul>
          */
         @NameInMap("RequestMethods")
         public java.util.List<String> requestMethods;
 
         /**
          * <p>The details of the response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("ReturnDetails")
         public String returnDetails;
 
         /**
          * <p>The data format of the response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>java.lang.String</p>
          */
         @NameInMap("ReturnType")
         public String returnType;
@@ -324,24 +366,36 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
     public static class DescribeAppServiceDetailResponseBodyData extends TeaModel {
         /**
          * <p>The name of the Dubbo application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>service-consumer</p>
          */
         @NameInMap("DubboApplicationName")
         public String dubboApplicationName;
 
         /**
          * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-zhangjiakou-micro-service-******</p>
          */
         @NameInMap("EdasAppName")
         public String edasAppName;
 
         /**
          * <p>The group to which the service belongs. You can create a custom group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>springCloud</p>
          */
         @NameInMap("Group")
         public String group;
 
         /**
-         * <p>The metadata. Example: `{side: "provider", port: "18081", preserved: {register: {source: "SPRING_CLOUD"}},…}`.</p>
+         * <p>The metadata. Example: <code>{side: &quot;provider&quot;, port: &quot;18081&quot;, preserved: {register: {source: &quot;SPRING_CLOUD&quot;}},…}</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{side: &quot;provider&quot;, port: &quot;18081&quot;, preserved: {register: {source: &quot;SPRING_CLOUD&quot;}},…}</p>
          */
         @NameInMap("Metadata")
         public java.util.Map<String, ?> metadata;
@@ -354,6 +408,9 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
 
         /**
          * <p>The name of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>service-provider</p>
          */
         @NameInMap("ServiceName")
         public String serviceName;
@@ -369,21 +426,31 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
 
         /**
          * <p>The type of the service. Valid values:</p>
-         * <br>
-         * <p>*   **dubbo**</p>
-         * <p>*   **springCloud**</p>
+         * <ul>
+         * <li><strong>dubbo</strong></li>
+         * <li><strong>springCloud</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>springCloud</p>
          */
         @NameInMap("ServiceType")
         public String serviceType;
 
         /**
          * <p>The name of the Spring Cloud application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>service-provider</p>
          */
         @NameInMap("SpringApplicationName")
         public String springApplicationName;
 
         /**
          * <p>The version of the service. You can create a custom version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
          */
         @NameInMap("Version")
         public String version;

@@ -6,46 +6,62 @@ import com.aliyun.tea.*;
 public class ListAppVersionsResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the historical versions of the application were obtained. Valid values:</p>
-     * <br>
-     * <p>*   **true**: indicates that the historical versions of the application were obtained.</p>
-     * <p>*   **false**: indicates that the historical versions of the application could not be obtained.</p>
+     * <ul>
+     * <li><strong>true</strong>: indicates that the historical versions of the application were obtained.</li>
+     * <li><strong>false</strong>: indicates that the historical versions of the application could not be obtained.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The deployment method of the application. Valid values:</p>
-     * <br>
-     * <p>*   **image**: indicates that the application was deployed by using an image.</p>
-     * <p>*   **upload**: indicates that the application was deployed by uploading a WAR or JAR package.</p>
-     * <p>*   **url**: indicates that the application was deployed by specifying the URL of a WAR or JAR package.</p>
+     * <ul>
+     * <li><strong>image</strong>: indicates that the application was deployed by using an image.</li>
+     * <li><strong>upload</strong>: indicates that the application was deployed by uploading a WAR or JAR package.</li>
+     * <li><strong>url</strong>: indicates that the application was deployed by specifying the URL of a WAR or JAR package.</li>
+     * </ul>
      */
     @NameInMap("Data")
     public java.util.List<ListAppVersionsResponseBodyData> data;
 
     /**
      * <p>The HTTP status code. Valid values:</p>
-     * <br>
-     * <p>*   **2xx**: indicates that the request was successful.</p>
-     * <p>*   **3xx**: indicates that the request was redirected.</p>
-     * <p>*   **4xx**: indicates that the request was invalid.</p>
-     * <p>*   **5xx**: indicates that a server error occurred.</p>
+     * <ul>
+     * <li><strong>2xx</strong>: indicates that the request was successful.</li>
+     * <li><strong>3xx</strong>: indicates that the request was redirected.</li>
+     * <li><strong>4xx</strong>: indicates that the request was invalid.</li>
+     * <li><strong>5xx</strong>: indicates that a server error occurred.</li>
+     * </ul>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The information about the versions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>01CF26C7-00A3-4AA6-BA76-7E95F2A3****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -104,29 +120,41 @@ public class ListAppVersionsResponseBody extends TeaModel {
 
     public static class ListAppVersionsResponseBodyData extends TeaModel {
         /**
-         * <p>*   The address of the image. This parameter is returned when the **Type** parameter is set to **image**.</p>
-         * <p>*   The download link of the WAR or JAR package. This parameter is returned when the **Type** parameter is set to **upload**.</p>
+         * <ul>
+         * <li>The address of the image. This parameter is returned when the <strong>Type</strong> parameter is set to <strong>image</strong>.</li>
+         * <li>The download link of the WAR or JAR package. This parameter is returned when the <strong>Type</strong> parameter is set to <strong>upload</strong>.</li>
+         * </ul>
          */
         @NameInMap("BuildPackageUrl")
         public String buildPackageUrl;
 
         /**
-         * <p>The download link of the WAR or JAR package. This parameter is returned when the **Type** parameter is set to **url**.</p>
+         * <p>The download link of the WAR or JAR package. This parameter is returned when the <strong>Type</strong> parameter is set to <strong>url</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1590124643553</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The error code.</p>
-         * <br>
-         * <p>*   The **ErrorCode** parameter is not returned when the request succeeds.</p>
-         * <p>*   The **ErrorCode** parameter is returned when the request fails. For more information, see **Error codes** in this topic.</p>
+         * <ul>
+         * <li>The <strong>ErrorCode</strong> parameter is not returned when the request succeeds.</li>
+         * <li>The <strong>ErrorCode</strong> parameter is returned when the request fails. For more information, see <strong>Error codes</strong> in this topic.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>a0ce266c-d354-423a-9bd6-4083405a****</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The time when the application was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>image</p>
          */
         @NameInMap("Type")
         public String type;

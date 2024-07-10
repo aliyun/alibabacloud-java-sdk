@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ListApplicationsResponseBody extends TeaModel {
     /**
      * <p>Queries applications.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>20</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
@@ -24,36 +30,54 @@ public class ListApplicationsResponseBody extends TeaModel {
 
     /**
      * <p>The number of entries returned on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>20</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>cn-beijing:demo</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The number of entries returned on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B4D805CA-926D-41B1-8E63-7AD0C1ED****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>1</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>demo-app</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("TotalSize")
     public Integer totalSize;
@@ -352,12 +376,18 @@ public class ListApplicationsResponseBody extends TeaModel {
     public static class ListApplicationsResponseBodyDataApplicationsTags extends TeaModel {
         /**
          * <p>appName</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The key of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value</p>
          */
         @NameInMap("Value")
         public String value;
@@ -388,24 +418,36 @@ public class ListApplicationsResponseBody extends TeaModel {
     public static class ListApplicationsResponseBodyDataApplications extends TeaModel {
         /**
          * <p>demo-app</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("AppDeletingStatus")
         public Boolean appDeletingStatus;
 
         /**
-         * <p>[{"key":"key","value":"value"}]</p>
+         * <p>[{&quot;key&quot;:&quot;key&quot;,&quot;value&quot;:&quot;value&quot;}]</p>
+         * 
+         * <strong>example:</strong>
+         * <p>description</p>
          */
         @NameInMap("AppDescription")
         public String appDescription;
 
         /**
          * <p>The total number of applications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f7730764-d88f-4b9a-8d8e-cd8efbfe****</p>
          */
         @NameInMap("AppId")
         public String appId;
 
         /**
          * <p>The ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo-app</p>
          */
         @NameInMap("AppName")
         public String appName;
@@ -421,6 +463,9 @@ public class ListApplicationsResponseBody extends TeaModel {
 
         /**
          * <p>The total number of applications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Instances")
         public Integer instances;
@@ -436,6 +481,9 @@ public class ListApplicationsResponseBody extends TeaModel {
 
         /**
          * <p>demo-app</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing:demo</p>
          */
         @NameInMap("NamespaceId")
         public String namespaceId;
@@ -445,12 +493,18 @@ public class ListApplicationsResponseBody extends TeaModel {
 
         /**
          * <p>The number of running instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("RunningInstances")
         public Integer runningInstances;
@@ -605,18 +659,27 @@ public class ListApplicationsResponseBody extends TeaModel {
 
         /**
          * <p>The number of application instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The tags of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The information about applications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("TotalSize")
         public Integer totalSize;

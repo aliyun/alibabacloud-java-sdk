@@ -4,27 +4,51 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class AppStackInstance extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1706518652</p>
+     */
     @NameInMap("CreateTime")
     public Long createTime;
 
     @NameInMap("Endpoints")
     public java.util.List<AppStackInstanceEndpoints> endpoints;
 
+    /**
+     * <strong>example:</strong>
+     * <p>i-789y</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>palworld</p>
+     */
     @NameInMap("InstanceName")
     public String instanceName;
 
     @NameInMap("Parameters")
     public java.util.List<AppStackInstanceParameters> parameters;
 
+    /**
+     * <strong>example:</strong>
+     * <p>palworld</p>
+     */
     @NameInMap("StackId")
     public String stackId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>WAIT</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1706518652</p>
+     */
     @NameInMap("UpdateTime")
     public Long updateTime;
 
@@ -98,12 +122,24 @@ public class AppStackInstance extends TeaModel {
     }
 
     public static class AppStackInstanceEndpoints extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>127.0.0.1:8211</p>
+         */
         @NameInMap("Address")
         public String address;
 
+        /**
+         * <strong>example:</strong>
+         * <p>game</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>UDP</p>
+         */
         @NameInMap("Protocol")
         public String protocol;
 
@@ -139,9 +175,17 @@ public class AppStackInstance extends TeaModel {
     }
 
     public static class AppStackInstanceParameters extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>regionId</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("Value")
         public String value;
 

@@ -6,9 +6,13 @@ import com.aliyun.tea.*;
 public class ListChangeOrdersResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the list of change orders was obtained. Valid values:</p>
-     * <br>
-     * <p>*   **true**: indicates that the list was obtained.</p>
-     * <p>*   **false**: indicates that the list could not be obtained.</p>
+     * <ul>
+     * <li><strong>true</strong>: indicates that the list was obtained.</li>
+     * <li><strong>false</strong>: indicates that the list could not be obtained.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -21,32 +25,46 @@ public class ListChangeOrdersResponseBody extends TeaModel {
 
     /**
      * <p>The HTTP status code. Valid values:</p>
-     * <br>
-     * <p>*   **2xx**: indicates that the request was successful.</p>
-     * <p>*   **3xx**: indicates that the request was redirected.</p>
-     * <p>*   **4xx**: indicates that the request was invalid.</p>
-     * <p>*   **5xx**: indicates that a server error occurred.</p>
+     * <ul>
+     * <li><strong>2xx</strong>: indicates that the request was successful.</li>
+     * <li><strong>3xx</strong>: indicates that the request was redirected.</li>
+     * <li><strong>4xx</strong>: indicates that the request was invalid.</li>
+     * <li><strong>5xx</strong>: indicates that a server error occurred.</li>
+     * </ul>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The ID of the trace. It is used to query the details of a request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>65E1F-43BA-4D0C-8E61-E4D1337F****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The information about change orders.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0bb6f815638568884597879d****</p>
      */
     @NameInMap("TraceId")
     public String traceId;
@@ -115,27 +133,40 @@ public class ListChangeOrdersResponseBody extends TeaModel {
     public static class ListChangeOrdersResponseBodyDataChangeOrderList extends TeaModel {
         /**
          * <p>The number of entries returned on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>164341c-9708-4967-b3ec-24933767****</p>
          */
         @NameInMap("AppId")
         public String appId;
 
         /**
          * <p>The ID of the user who created the change order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("BatchCount")
         public Integer batchCount;
 
         /**
          * <p>The ID of the group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>auto</p>
          */
         @NameInMap("BatchType")
         public String batchType;
 
         /**
          * <p>The mode in which the release batches are determined. Valid values:</p>
-         * <br>
-         * <p>*   **auto**: SAE automatically determines the release batches.</p>
-         * <p>*   **manual**: You must manually determine the release batches.</p>
+         * <ul>
+         * <li><strong>auto</strong>: SAE automatically determines the release batches.</li>
+         * <li><strong>manual</strong>: You must manually determine the release batches.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>7fa5c0-9ebb-4bb4-b383-1f885447****</p>
          */
         @NameInMap("ChangeOrderId")
         public String changeOrderId;
@@ -148,75 +179,100 @@ public class ListChangeOrdersResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the change order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CoCreateApp</p>
          */
         @NameInMap("CoTypeCode")
         public String coTypeCode;
 
         /**
          * <p>The ID of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-07-11 15:54:49</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The code of the change type. Valid values:</p>
-         * <br>
-         * <p>*   **CoBindSlb**: associates an SLB instance with the application.</p>
-         * <p>*   **CoUnbindSlb**: disassociates the SLB instance from the application.</p>
-         * <p>*   **CoCreateApp**: creates the application.</p>
-         * <p>*   **CoDeleteApp**: deletes the application.</p>
-         * <p>*   **CoDeploy**: deploys the application.</p>
-         * <p>*   **CoRestartApplication**: restarts the application.</p>
-         * <p>*   **CoRollback**: rolls back the application.</p>
-         * <p>*   **CoScaleIn**: scales in the application.</p>
-         * <p>*   **CoScaleOut**: scales out the application.</p>
-         * <p>*   **CoStart**: starts the application.</p>
-         * <p>*   **CoStop**: stops the application.</p>
-         * <p>*   **CoRescaleApplicationVertically**: modifies the instance specifications.</p>
-         * <p>*   **CoDeployHistroy**: rolls back the application to a historical version.</p>
-         * <p>*   **CoBindNas**: associates a NAS file system with the application.</p>
-         * <p>*   **CoUnbindNas**: disassociates the NAS file system from the application.</p>
-         * <p>*   **CoBatchStartApplication**: starts multiple applications concurrently.</p>
-         * <p>*   **CoBatchStopApplication**: stops multiple applications concurrently.</p>
-         * <p>*   **CoRestartInstances**: restarts the instances.</p>
-         * <p>*   **CoDeleteInstances**: deletes the instances.</p>
-         * <p>*   **CoScaleInAppWithInstances**: reduces the number of the specified application instances.</p>
+         * <ul>
+         * <li><strong>CoBindSlb</strong>: associates an SLB instance with the application.</li>
+         * <li><strong>CoUnbindSlb</strong>: disassociates the SLB instance from the application.</li>
+         * <li><strong>CoCreateApp</strong>: creates the application.</li>
+         * <li><strong>CoDeleteApp</strong>: deletes the application.</li>
+         * <li><strong>CoDeploy</strong>: deploys the application.</li>
+         * <li><strong>CoRestartApplication</strong>: restarts the application.</li>
+         * <li><strong>CoRollback</strong>: rolls back the application.</li>
+         * <li><strong>CoScaleIn</strong>: scales in the application.</li>
+         * <li><strong>CoScaleOut</strong>: scales out the application.</li>
+         * <li><strong>CoStart</strong>: starts the application.</li>
+         * <li><strong>CoStop</strong>: stops the application.</li>
+         * <li><strong>CoRescaleApplicationVertically</strong>: modifies the instance specifications.</li>
+         * <li><strong>CoDeployHistroy</strong>: rolls back the application to a historical version.</li>
+         * <li><strong>CoBindNas</strong>: associates a NAS file system with the application.</li>
+         * <li><strong>CoUnbindNas</strong>: disassociates the NAS file system from the application.</li>
+         * <li><strong>CoBatchStartApplication</strong>: starts multiple applications concurrently.</li>
+         * <li><strong>CoBatchStopApplication</strong>: stops multiple applications concurrently.</li>
+         * <li><strong>CoRestartInstances</strong>: restarts the instances.</li>
+         * <li><strong>CoDeleteInstances</strong>: deletes the instances.</li>
+         * <li><strong>CoScaleInAppWithInstances</strong>: reduces the number of the specified application instances.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>sae-beta-test</p>
          */
         @NameInMap("CreateUserId")
         public String createUserId;
 
         /**
-         * <p>The change type, which corresponds to the **CoTypeCode** parameter.</p>
+         * <p>The change type, which corresponds to the <strong>CoTypeCode</strong> parameter.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The time when the change order was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-07-11 20:12:58</p>
          */
         @NameInMap("FinishTime")
         public String finishTime;
 
         /**
          * <p>The description about the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c9ecd2-cf6c-46c3-9f20-525de202****</p>
          */
         @NameInMap("GroupId")
         public String groupId;
 
         /**
          * <p>The number of release batches.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>console</p>
          */
         @NameInMap("Source")
         public String source;
 
         /**
          * <p>The time when the change order was completed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Status")
         public Integer status;
 
         /**
          * <p>The source of the change order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sae-beta-test</p>
          */
         @NameInMap("UserId")
         public String userId;
@@ -343,38 +399,49 @@ public class ListChangeOrdersResponseBody extends TeaModel {
     public static class ListChangeOrdersResponseBodyData extends TeaModel {
         /**
          * <p>The status of the change order. Valid values:</p>
-         * <br>
-         * <p>*   **0**: The change order is being prepared.</p>
-         * <p>*   **1**: The change order is being executed.</p>
-         * <p>*   **2**: The change order was executed.</p>
-         * <p>*   **3**: The change order could not be executed.</p>
-         * <p>*   **6**: The change order was terminated.</p>
-         * <p>*   **8**: The execution process is pending. You must manually determine the release batch.</p>
-         * <p>*   **9**: The execution process is pending. SAE will automatically determine the release batch.</p>
-         * <p>*   **10**: The change order could not be executed due to a system exception.</p>
-         * <p>*   **11**: The change order is pending approval.</p>
-         * <p>*   **12**: The change order is approved and is pending execution.</p>
+         * <ul>
+         * <li><strong>0</strong>: The change order is being prepared.</li>
+         * <li><strong>1</strong>: The change order is being executed.</li>
+         * <li><strong>2</strong>: The change order was executed.</li>
+         * <li><strong>3</strong>: The change order could not be executed.</li>
+         * <li><strong>6</strong>: The change order was terminated.</li>
+         * <li><strong>8</strong>: The execution process is pending. You must manually determine the release batch.</li>
+         * <li><strong>9</strong>: The execution process is pending. SAE will automatically determine the release batch.</li>
+         * <li><strong>10</strong>: The change order could not be executed due to a system exception.</li>
+         * <li><strong>11</strong>: The change order is pending approval.</li>
+         * <li><strong>12</strong>: The change order is approved and is pending execution.</li>
+         * </ul>
          */
         @NameInMap("ChangeOrderList")
         public java.util.List<ListChangeOrdersResponseBodyDataChangeOrderList> changeOrderList;
 
         /**
          * <p>The total number of change orders.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The error code.</p>
-         * <br>
-         * <p>*   The **ErrorCode** parameter is not returned when the request succeeds.</p>
-         * <p>*   The **ErrorCode** parameter is returned when the request fails. For more information, see **Error codes** in this topic.</p>
+         * <ul>
+         * <li>The <strong>ErrorCode</strong> parameter is not returned when the request succeeds.</li>
+         * <li>The <strong>ErrorCode</strong> parameter is returned when the request fails. For more information, see <strong>Error codes</strong> in this topic.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The list of change orders.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("TotalSize")
         public Integer totalSize;

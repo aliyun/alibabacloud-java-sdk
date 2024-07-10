@@ -6,14 +6,19 @@ import com.aliyun.tea.*;
 public class DescribeJobStatusRequest extends TeaModel {
     /**
      * <p>The ID of the job template.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>e1a7a07-abcb-4652-a1d3-2d57f415****</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>The job ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>event-b798157b-40a2-4388-b578-71fb897103**-**</p>
      */
     @NameInMap("JobId")
     public String jobId;

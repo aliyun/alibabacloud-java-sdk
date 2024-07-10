@@ -4,27 +4,55 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class AppStackTask extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1706518652</p>
+     */
     @NameInMap("CreateTime")
     public Long createTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1706518652</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>i-789y</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>palworld</p>
+     */
     @NameInMap("StackId")
     public String stackId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1706518652</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>WAIT</p>
+     */
     @NameInMap("Status")
     public String status;
 
     @NameInMap("Steps")
     public java.util.List<AppStackTaskSteps> steps;
 
+    /**
+     * <strong>example:</strong>
+     * <p>t-789y-deploy</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 
@@ -98,27 +126,59 @@ public class AppStackTask extends TeaModel {
     }
 
     public static class AppStackTaskSteps extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>OK</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Duration")
         public Long duration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1706518652</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>VPC_CREATE_NETWORK</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OK</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <strong>example:</strong>
+         * <p>初始化 VPC 网络</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1706518652</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>WAIT</p>
+         */
         @NameInMap("Status")
         public String status;
 

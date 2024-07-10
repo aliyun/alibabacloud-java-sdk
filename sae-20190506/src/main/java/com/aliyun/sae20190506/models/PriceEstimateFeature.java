@@ -6,72 +6,138 @@ import com.aliyun.tea.*;
 public class PriceEstimateFeature extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Web/MicroService</p>
      */
     @NameInMap("AppType")
     public String appType;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CpuCore")
     public Float cpuCore;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Request/Always</p>
      */
     @NameInMap("CpuStrategy")
     public String cpuStrategy;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Test/Production</p>
      */
     @NameInMap("EnvType")
     public String envType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("HighLoadInstanceCount")
     public Long highLoadInstanceCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("HighLoadQps")
     public Float highLoadQps;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3600</p>
+     */
     @NameInMap("HighLoadSeconds")
     public Long highLoadSeconds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("InstanceQps")
     public Float instanceQps;
 
+    /**
+     * <strong>example:</strong>
+     * <p>24</p>
+     */
     @NameInMap("InternetOutboundGiB")
     public Float internetOutboundGiB;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("LowLoadInstanceCount")
     public Long lowLoadInstanceCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("LowLoadQps")
     public Float lowLoadQps;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3600</p>
+     */
     @NameInMap("LowLoadSeconds")
     public Long lowLoadSeconds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("MaxInstanceCount")
     public Long maxInstanceCount;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("MemoryGiB")
     public Float memoryGiB;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("MinInstanceCount")
     public Long minInstanceCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("NoneLoadInstanceCount")
     public Long noneLoadInstanceCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>79200</p>
+     */
     @NameInMap("NoneLoadSeconds")
     public Long noneLoadSeconds;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

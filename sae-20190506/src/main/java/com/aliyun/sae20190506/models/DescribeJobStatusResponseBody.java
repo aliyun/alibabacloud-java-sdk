@@ -6,11 +6,15 @@ import com.aliyun.tea.*;
 public class DescribeJobStatusResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code. Valid values:</p>
-     * <br>
-     * <p>*   **2xx**: The call was successful.</p>
-     * <p>*   **3xx**: The call was redirected.</p>
-     * <p>*   **4xx**: The call failed.</p>
-     * <p>*   **5xx**: A server error occurred.</p>
+     * <ul>
+     * <li><strong>2xx</strong>: The call was successful.</li>
+     * <li><strong>3xx</strong>: The call was redirected.</li>
+     * <li><strong>4xx</strong>: The call failed.</li>
+     * <li><strong>5xx</strong>: A server error occurred.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -23,39 +27,57 @@ public class DescribeJobStatusResponseBody extends TeaModel {
 
     /**
      * <p>The error code returned. Take note of the following rules:</p>
-     * <br>
-     * <p>*   **ErrorCode** is not returned if the request succeeds.</p>
-     * <p>*   **ErrorCode** is returned if the request fails. For more information, see the "**Error codes**" section in this topic.</p>
+     * <ul>
+     * <li><strong>ErrorCode</strong> is not returned if the request succeeds.</li>
+     * <li><strong>ErrorCode</strong> is returned if the request fails. For more information, see the &quot;<strong>Error codes</strong>&quot; section in this topic.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Null</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The returned message. Take note of the following rules:</p>
-     * <br>
-     * <p>*   If the call is successful, **success** is returned.</p>
-     * <p>*   If the call fails, an error code is returned.</p>
+     * <ul>
+     * <li>If the call is successful, <strong>success</strong> is returned.</li>
+     * <li>If the call fails, an error code is returned.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>53F15A18-8079-5992-810C-0211A5AE****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The trace ID that is used to query the details of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0b1639af16575057857241351e****</p>
      */
     @NameInMap("TraceId")
     public String traceId;
@@ -124,56 +146,82 @@ public class DescribeJobStatusResponseBody extends TeaModel {
     public static class DescribeJobStatusResponseBodyData extends TeaModel {
         /**
          * <p>The number of running instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Active")
         public Long active;
 
         /**
          * <p>The time when the job was executed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1657522839</p>
          */
         @NameInMap("CompletionTime")
         public Long completionTime;
 
         /**
          * <p>The number of instances that failed to run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Failed")
         public Long failed;
 
         /**
          * <p>The job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>event-b798157b-40a2-4388-b578-71fb897103**-**</p>
          */
         @NameInMap("JobId")
         public String jobId;
 
         /**
          * <p>The returned message. Take note of the following rules:</p>
-         * <br>
-         * <p>*   If the call is successful, **success** is returned.</p>
-         * <p>*   If the call fails, an error code is returned.</p>
+         * <ul>
+         * <li>If the call is successful, <strong>success</strong> is returned.</li>
+         * <li>If the call fails, an error code is returned.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
          * <p>The time when the job was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1657522800</p>
          */
         @NameInMap("StartTime")
         public Long startTime;
 
         /**
          * <p>The status of the job. Valid values:</p>
-         * <br>
-         * <p>*   **0**: The job is not executed.</p>
-         * <p>*   **1**: The job was executed.</p>
-         * <p>*   **2**: The job failed to be executed.</p>
-         * <p>*   **3**: The job is being executed.</p>
+         * <ul>
+         * <li><strong>0</strong>: The job is not executed.</li>
+         * <li><strong>1</strong>: The job was executed.</li>
+         * <li><strong>2</strong>: The job failed to be executed.</li>
+         * <li><strong>3</strong>: The job is being executed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("State")
         public String state;
 
         /**
          * <p>The number of instances that are successfully run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("Succeeded")
         public Long succeeded;

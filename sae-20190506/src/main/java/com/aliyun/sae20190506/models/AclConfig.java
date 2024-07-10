@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class AclConfig extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
      */
     @NameInMap("aclEntries")
     public java.util.List<AclEntryConfig> aclEntries;

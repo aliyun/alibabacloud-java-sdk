@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class AclEntryConfig extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.2.3.4/32</p>
      */
     @NameInMap("entry")
     public String entry;

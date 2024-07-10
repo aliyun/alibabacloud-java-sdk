@@ -6,9 +6,13 @@ import com.aliyun.tea.*;
 public class CreateGreyTagRouteResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the information of the change order was queried. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The information was queried.</p>
-     * <p>*   **false**: The information failed to be queried.</p>
+     * <ul>
+     * <li><strong>true</strong>: The information was queried.</li>
+     * <li><strong>false</strong>: The information failed to be queried.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -21,32 +25,46 @@ public class CreateGreyTagRouteResponseBody extends TeaModel {
 
     /**
      * <p>The HTTP status code. Valid values:</p>
-     * <br>
-     * <p>*   **2xx**: The call was successful.</p>
-     * <p>*   **3xx**: The call was redirected.</p>
-     * <p>*   **4xx**: The call failed.</p>
-     * <p>*   **5xx**: A server error occurred.</p>
+     * <ul>
+     * <li><strong>2xx</strong>: The call was successful.</li>
+     * <li><strong>3xx</strong>: The call was redirected.</li>
+     * <li><strong>4xx</strong>: The call failed.</li>
+     * <li><strong>5xx</strong>: A server error occurred.</li>
+     * </ul>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The trace ID that is used to query the details of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The returned information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9D29CBD0-45D3-410B-9826-52F86F90****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The information about the canary release rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0a98a02315955564772843261e****</p>
      */
     @NameInMap("TraceId")
     public String traceId;
@@ -115,9 +133,13 @@ public class CreateGreyTagRouteResponseBody extends TeaModel {
     public static class CreateGreyTagRouteResponseBodyData extends TeaModel {
         /**
          * <p>The returned error code. Valid values:</p>
-         * <br>
-         * <p>*   If the call is successful, the **ErrorCode** parameter is not returned.</p>
-         * <p>*   If the call fails, the **ErrorCode** parameter is returned. For more information, see the "**Error codes**" section of this topic.</p>
+         * <ul>
+         * <li>If the call is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+         * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the &quot;<strong>Error codes</strong>&quot; section of this topic.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>16</p>
          */
         @NameInMap("GreyTagRouteId")
         public Long greyTagRouteId;

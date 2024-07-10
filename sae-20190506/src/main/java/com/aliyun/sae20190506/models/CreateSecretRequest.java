@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateSecretRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing:test</p>
      */
     @NameInMap("NamespaceId")
     public String namespaceId;
@@ -18,12 +21,18 @@ public class CreateSecretRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>registry-auth-acree</p>
      */
     @NameInMap("SecretName")
     public String secretName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>kubernetes.io/dockerconfigjson</p>
      */
     @NameInMap("SecretType")
     public String secretType;

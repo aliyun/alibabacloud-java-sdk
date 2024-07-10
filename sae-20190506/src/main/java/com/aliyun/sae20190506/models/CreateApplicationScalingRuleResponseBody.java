@@ -4,6 +4,10 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class CreateApplicationScalingRuleResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
@@ -13,15 +17,31 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0a98a02315955564772843261e****</p>
+     */
     @NameInMap("TraceId")
     public String traceId;
 
@@ -87,9 +107,17 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
     }
 
     public static class CreateApplicationScalingRuleResponseBodyDataMetricMetrics extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("MetricTargetAverageUtilization")
         public Integer metricTargetAverageUtilization;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CPU</p>
+         */
         @NameInMap("MetricType")
         public String metricType;
 
@@ -161,12 +189,20 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
     }
 
     public static class CreateApplicationScalingRuleResponseBodyDataMetric extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("MaxReplicas")
         public Integer maxReplicas;
 
         @NameInMap("Metrics")
         public java.util.List<CreateApplicationScalingRuleResponseBodyDataMetricMetrics> metrics;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("MinReplicas")
         public Integer minReplicas;
 
@@ -202,6 +238,10 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
     }
 
     public static class CreateApplicationScalingRuleResponseBodyDataTimerSchedules extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>08:00</p>
+         */
         @NameInMap("AtTime")
         public String atTime;
 
@@ -211,6 +251,10 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
         @NameInMap("MinReplicas")
         public Integer minReplicas;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("TargetReplicas")
         public Integer targetReplicas;
 
@@ -254,12 +298,24 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
     }
 
     public static class CreateApplicationScalingRuleResponseBodyDataTimer extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2021-03-25</p>
+         */
         @NameInMap("BeginDate")
         public String beginDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-04-25</p>
+         */
         @NameInMap("EndDate")
         public String endDate;
 
+        /**
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("Period")
         public String period;
 
@@ -306,30 +362,58 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
     }
 
     public static class CreateApplicationScalingRuleResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>7171a6ca-d1cd-4928-8642-7d5cfe69****</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1616642248938</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1641882854484</p>
+         */
         @NameInMap("LastDisableTime")
         public Long lastDisableTime;
 
         @NameInMap("Metric")
         public CreateApplicationScalingRuleResponseBodyDataMetric metric;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("ScaleRuleEnabled")
         public Boolean scaleRuleEnabled;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("ScaleRuleName")
         public String scaleRuleName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>timing</p>
+         */
         @NameInMap("ScaleRuleType")
         public String scaleRuleType;
 
         @NameInMap("Timer")
         public CreateApplicationScalingRuleResponseBodyDataTimer timer;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1616642248938</p>
+         */
         @NameInMap("UpdateTime")
         public Long updateTime;
 
