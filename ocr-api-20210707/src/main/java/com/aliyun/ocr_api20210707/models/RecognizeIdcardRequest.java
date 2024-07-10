@@ -4,12 +4,24 @@ package com.aliyun.ocr_api20210707.models;
 import com.aliyun.tea.*;
 
 public class RecognizeIdcardRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("OutputFigure")
     public Boolean outputFigure;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("OutputQualityInfo")
     public Boolean outputQualityInfo;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://img.alicdn.com/tfs/TB1q5IeXAvoK1RjSZFNXXcxMVXa-483-307.jpg">https://img.alicdn.com/tfs/TB1q5IeXAvoK1RjSZFNXXcxMVXa-483-307.jpg</a></p>
+     */
     @NameInMap("Url")
     public String url;
 

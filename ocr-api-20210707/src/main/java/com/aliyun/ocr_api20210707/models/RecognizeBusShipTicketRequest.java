@@ -4,6 +4,10 @@ package com.aliyun.ocr_api20210707.models;
 import com.aliyun.tea.*;
 
 public class RecognizeBusShipTicketRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://img.alicdn.com/imgextra/i2/O1CN010iDcM7218ZQJtJyGX_!!6000000006940-0-tps-936-541.jpg">https://img.alicdn.com/imgextra/i2/O1CN010iDcM7218ZQJtJyGX_!!6000000006940-0-tps-936-541.jpg</a></p>
+     */
     @NameInMap("Url")
     public String url;
 

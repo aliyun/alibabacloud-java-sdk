@@ -4,6 +4,10 @@ package com.aliyun.ocr_api20210707.models;
 import com.aliyun.tea.*;
 
 public class RecognizeShoppingReceiptRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p><a href="http://duguang-database-public.oss-cn-hangzhou.aliyuncs.com/multi_receipt_shopping_receipt/shop_receipt__ticket_2020-05-14-11-59-30.540668_01_List.jpg">http://duguang-database-public.oss-cn-hangzhou.aliyuncs.com/multi_receipt_shopping_receipt/shop_receipt__ticket_2020-05-14-11-59-30.540668_01_List.jpg</a></p>
+     */
     @NameInMap("Url")
     public String url;
 

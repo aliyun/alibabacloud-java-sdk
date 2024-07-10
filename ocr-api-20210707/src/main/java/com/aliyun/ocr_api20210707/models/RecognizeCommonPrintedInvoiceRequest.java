@@ -4,6 +4,10 @@ package com.aliyun.ocr_api20210707.models;
 import com.aliyun.tea.*;
 
 public class RecognizeCommonPrintedInvoiceRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://img.alicdn.com/imgextra/i2/O1CN01XU9dTh1O4CdHxXhMw_!!6000000001651-0-tps-1437-909.jpg">https://img.alicdn.com/imgextra/i2/O1CN01XU9dTh1O4CdHxXhMw_!!6000000001651-0-tps-1437-909.jpg</a></p>
+     */
     @NameInMap("Url")
     public String url;
 

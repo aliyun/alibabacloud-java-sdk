@@ -4,6 +4,10 @@ package com.aliyun.ocr_api20210707.models;
 import com.aliyun.tea.*;
 
 public class RecognizeAirItineraryRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://img.alicdn.com/tfs/TB1hBCIcBr0gK0jSZFnXXbRRXXa-1833-785.png">https://img.alicdn.com/tfs/TB1hBCIcBr0gK0jSZFnXXbRRXXa-1833-785.png</a></p>
+     */
     @NameInMap("Url")
     public String url;
 

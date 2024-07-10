@@ -13,6 +13,10 @@ public class RecognizeIdcardResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>86B83935-DD36-195B-B6E4-D07BE370C8B6</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

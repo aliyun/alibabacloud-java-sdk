@@ -4,15 +4,27 @@ package com.aliyun.ocr_api20210707.models;
 import com.aliyun.tea.*;
 
 public class RecognizeAllTextResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>400</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public RecognizeAllTextResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>illegalImageUrl</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>E2A98925-DC2C-18FB-995F-BAF507XXXXXX</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,9 +66,17 @@ public class RecognizeAllTextResponseBody extends TeaModel {
     }
 
     public static class RecognizeAllTextResponseBodyDataSubImagesBarCodeInfoBarCodeDetailsBarCodePoints extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("X")
         public Integer x;
 
+        /**
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("Y")
         public Integer y;
 
@@ -84,15 +104,31 @@ public class RecognizeAllTextResponseBody extends TeaModel {
     }
 
     public static class RecognizeAllTextResponseBodyDataSubImagesBarCodeInfoBarCodeDetailsBarCodeRect extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("CenterX")
         public Integer centerX;
 
+        /**
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("CenterY")
         public Integer centerY;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Height")
         public Integer height;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Width")
         public Integer width;
 
@@ -136,6 +172,10 @@ public class RecognizeAllTextResponseBody extends TeaModel {
     }
 
     public static class RecognizeAllTextResponseBodyDataSubImagesBarCodeInfoBarCodeDetails extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("BarCodeAngle")
         public Integer barCodeAngle;
 
@@ -145,9 +185,17 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         @NameInMap("BarCodeRect")
         public RecognizeAllTextResponseBodyDataSubImagesBarCodeInfoBarCodeDetailsBarCodeRect barCodeRect;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;1100011XXXXXX&quot;</p>
+         */
         @NameInMap("Data")
         public Object data;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Code128</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -199,6 +247,10 @@ public class RecognizeAllTextResponseBody extends TeaModel {
     }
 
     public static class RecognizeAllTextResponseBodyDataSubImagesBarCodeInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("BarCodeCount")
         public Integer barCodeCount;
 
@@ -229,9 +281,17 @@ public class RecognizeAllTextResponseBody extends TeaModel {
     }
 
     public static class RecognizeAllTextResponseBodyDataSubImagesBlockInfoBlockDetailsBlockPoints extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("X")
         public Integer x;
 
+        /**
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("Y")
         public Integer y;
 
@@ -259,15 +319,31 @@ public class RecognizeAllTextResponseBody extends TeaModel {
     }
 
     public static class RecognizeAllTextResponseBodyDataSubImagesBlockInfoBlockDetailsBlockRect extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("CenterX")
         public Integer centerX;
 
+        /**
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("CenterY")
         public Integer centerY;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Height")
         public Integer height;
 
+        /**
+         * <strong>example:</strong>
+         * <p>50</p>
+         */
         @NameInMap("Width")
         public Integer width;
 
@@ -311,9 +387,17 @@ public class RecognizeAllTextResponseBody extends TeaModel {
     }
 
     public static class RecognizeAllTextResponseBodyDataSubImagesBlockInfoBlockDetailsCharInfosCharPoints extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("X")
         public Integer x;
 
+        /**
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("Y")
         public Integer y;
 
@@ -341,15 +425,31 @@ public class RecognizeAllTextResponseBody extends TeaModel {
     }
 
     public static class RecognizeAllTextResponseBodyDataSubImagesBlockInfoBlockDetailsCharInfosCharRect extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("CenterX")
         public Integer centerX;
 
+        /**
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("CenterY")
         public Integer centerY;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Height")
         public Integer height;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Width")
         public Integer width;
 
@@ -393,12 +493,20 @@ public class RecognizeAllTextResponseBody extends TeaModel {
     }
 
     public static class RecognizeAllTextResponseBodyDataSubImagesBlockInfoBlockDetailsCharInfos extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>95</p>
+         */
         @NameInMap("CharConfidence")
         public Integer charConfidence;
 
         @NameInMap("CharContent")
         public String charContent;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("CharId")
         public Integer charId;
 
@@ -456,15 +564,27 @@ public class RecognizeAllTextResponseBody extends TeaModel {
     }
 
     public static class RecognizeAllTextResponseBodyDataSubImagesBlockInfoBlockDetails extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("BlockAngle")
         public Integer blockAngle;
 
+        /**
+         * <strong>example:</strong>
+         * <p>98</p>
+         */
         @NameInMap("BlockConfidence")
         public Integer blockConfidence;
 
         @NameInMap("BlockContent")
         public String blockContent;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("BlockId")
         public Integer blockId;
 
@@ -541,6 +661,10 @@ public class RecognizeAllTextResponseBody extends TeaModel {
     }
 
     public static class RecognizeAllTextResponseBodyDataSubImagesBlockInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("BlockCount")
         public Integer blockCount;
 
@@ -574,6 +698,10 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         @NameInMap("Data")
         public Object data;
 
+        /**
+         * <strong>example:</strong>
+         * <p>6</p>
+         */
         @NameInMap("KvCount")
         public Integer kvCount;
 
@@ -618,6 +746,10 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         @NameInMap("ParagraphContent")
         public String paragraphContent;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ParagraphId")
         public Integer paragraphId;
 
@@ -653,6 +785,10 @@ public class RecognizeAllTextResponseBody extends TeaModel {
     }
 
     public static class RecognizeAllTextResponseBodyDataSubImagesParagraphInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>11</p>
+         */
         @NameInMap("ParagraphCount")
         public Integer paragraphCount;
 
@@ -683,9 +819,17 @@ public class RecognizeAllTextResponseBody extends TeaModel {
     }
 
     public static class RecognizeAllTextResponseBodyDataSubImagesQrCodeInfoQrCodeDetailsQrCodePoints extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("X")
         public Integer x;
 
+        /**
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("Y")
         public Integer y;
 
@@ -713,15 +857,31 @@ public class RecognizeAllTextResponseBody extends TeaModel {
     }
 
     public static class RecognizeAllTextResponseBodyDataSubImagesQrCodeInfoQrCodeDetailsQrCodeRect extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("CenterX")
         public Integer centerX;
 
+        /**
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("CenterY")
         public Integer centerY;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Height")
         public Integer height;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Width")
         public Integer width;
 
@@ -765,9 +925,17 @@ public class RecognizeAllTextResponseBody extends TeaModel {
     }
 
     public static class RecognizeAllTextResponseBodyDataSubImagesQrCodeInfoQrCodeDetails extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>“<a href="http://www.gsxt.gov.cn/indeXXX%E2%80%9D">http://www.gsxt.gov.cn/indeXXX”</a></p>
+         */
         @NameInMap("Data")
         public Object data;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("QrCodeAngle")
         public Integer qrCodeAngle;
 
@@ -817,6 +985,10 @@ public class RecognizeAllTextResponseBody extends TeaModel {
     }
 
     public static class RecognizeAllTextResponseBodyDataSubImagesQrCodeInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("QrCodeCount")
         public Integer qrCodeCount;
 
@@ -847,18 +1019,38 @@ public class RecognizeAllTextResponseBody extends TeaModel {
     }
 
     public static class RecognizeAllTextResponseBodyDataSubImagesQualityInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>90.5</p>
+         */
         @NameInMap("CompletenessScore")
         public Float completenessScore;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("IsCopy")
         public Boolean isCopy;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("IsReshoot")
         public Boolean isReshoot;
 
+        /**
+         * <strong>example:</strong>
+         * <p>80.5</p>
+         */
         @NameInMap("QualityScore")
         public Float qualityScore;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10.5</p>
+         */
         @NameInMap("TamperScore")
         public Float tamperScore;
 
@@ -916,6 +1108,10 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         @NameInMap("RowContent")
         public String rowContent;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("RowId")
         public Integer rowId;
 
@@ -951,6 +1147,10 @@ public class RecognizeAllTextResponseBody extends TeaModel {
     }
 
     public static class RecognizeAllTextResponseBodyDataSubImagesRowInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>9</p>
+         */
         @NameInMap("RowCount")
         public Integer rowCount;
 
@@ -981,21 +1181,41 @@ public class RecognizeAllTextResponseBody extends TeaModel {
     }
 
     public static class RecognizeAllTextResponseBodyDataSubImagesStampInfoStampDetailsData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;3205823XXXXXX&quot;</p>
+         */
         @NameInMap("AntiFakeCode")
         public String antiFakeCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;XXX&quot;</p>
+         */
         @NameInMap("CompanyId")
         public String companyId;
 
         @NameInMap("OrganizationName")
         public String organizationName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("OrganizationNameEng")
         public String organizationNameEng;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;3205823XXXXXX&quot;</p>
+         */
         @NameInMap("OtherText")
         public String otherText;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("TaxpayerId")
         public String taxpayerId;
 
@@ -1066,9 +1286,17 @@ public class RecognizeAllTextResponseBody extends TeaModel {
     }
 
     public static class RecognizeAllTextResponseBodyDataSubImagesStampInfoStampDetailsStampPoints extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("X")
         public Integer x;
 
+        /**
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("Y")
         public Integer y;
 
@@ -1096,15 +1324,31 @@ public class RecognizeAllTextResponseBody extends TeaModel {
     }
 
     public static class RecognizeAllTextResponseBodyDataSubImagesStampInfoStampDetailsStampRect extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("CenterX")
         public Integer centerX;
 
+        /**
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("CenterY")
         public Integer centerY;
 
+        /**
+         * <strong>example:</strong>
+         * <p>50</p>
+         */
         @NameInMap("Height")
         public Integer height;
 
+        /**
+         * <strong>example:</strong>
+         * <p>50</p>
+         */
         @NameInMap("Width")
         public Integer width;
 
@@ -1151,6 +1395,10 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         @NameInMap("Data")
         public RecognizeAllTextResponseBodyDataSubImagesStampInfoStampDetailsData data;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("StampAngle")
         public Integer stampAngle;
 
@@ -1200,6 +1448,10 @@ public class RecognizeAllTextResponseBody extends TeaModel {
     }
 
     public static class RecognizeAllTextResponseBodyDataSubImagesStampInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("StampCount")
         public Integer stampCount;
 
@@ -1230,9 +1482,17 @@ public class RecognizeAllTextResponseBody extends TeaModel {
     }
 
     public static class RecognizeAllTextResponseBodyDataSubImagesSubImagePoints extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("X")
         public Integer x;
 
+        /**
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("Y")
         public Integer y;
 
@@ -1260,15 +1520,31 @@ public class RecognizeAllTextResponseBody extends TeaModel {
     }
 
     public static class RecognizeAllTextResponseBodyDataSubImagesSubImageRect extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("CenterX")
         public Integer centerX;
 
+        /**
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("CenterY")
         public Integer centerY;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2000</p>
+         */
         @NameInMap("Height")
         public Integer height;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("Width")
         public Integer width;
 
@@ -1312,9 +1588,17 @@ public class RecognizeAllTextResponseBody extends TeaModel {
     }
 
     public static class RecognizeAllTextResponseBodyDataSubImagesTableInfoTableDetailsCellDetailsCellPoints extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("X")
         public Integer x;
 
+        /**
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("Y")
         public Integer y;
 
@@ -1342,15 +1626,31 @@ public class RecognizeAllTextResponseBody extends TeaModel {
     }
 
     public static class RecognizeAllTextResponseBodyDataSubImagesTableInfoTableDetailsCellDetailsCellRect extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("CenterX")
         public Integer centerX;
 
+        /**
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("CenterY")
         public Integer centerY;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("Height")
         public Integer height;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("Width")
         public Integer width;
 
@@ -1397,12 +1697,20 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         @NameInMap("BlockList")
         public java.util.List<Integer> blockList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("CellAngle")
         public Integer cellAngle;
 
         @NameInMap("CellContent")
         public String cellContent;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("CellId")
         public Integer cellId;
 
@@ -1412,15 +1720,31 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         @NameInMap("CellRect")
         public RecognizeAllTextResponseBodyDataSubImagesTableInfoTableDetailsCellDetailsCellRect cellRect;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("ColumnEnd")
         public Integer columnEnd;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("ColumnStart")
         public Integer columnStart;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("RowEnd")
         public Integer rowEnd;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("RowStart")
         public Integer rowStart;
 
@@ -1512,6 +1836,10 @@ public class RecognizeAllTextResponseBody extends TeaModel {
     }
 
     public static class RecognizeAllTextResponseBodyDataSubImagesTableInfoTableDetailsFooter extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("BlockId")
         public Integer blockId;
 
@@ -1542,6 +1870,10 @@ public class RecognizeAllTextResponseBody extends TeaModel {
     }
 
     public static class RecognizeAllTextResponseBodyDataSubImagesTableInfoTableDetailsHeader extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("BlockId")
         public Integer blockId;
 
@@ -1572,9 +1904,17 @@ public class RecognizeAllTextResponseBody extends TeaModel {
     }
 
     public static class RecognizeAllTextResponseBodyDataSubImagesTableInfoTableDetailsTablePoints extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("X")
         public Integer x;
 
+        /**
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("Y")
         public Integer y;
 
@@ -1602,15 +1942,31 @@ public class RecognizeAllTextResponseBody extends TeaModel {
     }
 
     public static class RecognizeAllTextResponseBodyDataSubImagesTableInfoTableDetailsTableRect extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("CenterX")
         public Integer centerX;
 
+        /**
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("CenterY")
         public Integer centerY;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Height")
         public Integer height;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Width")
         public Integer width;
 
@@ -1654,12 +2010,20 @@ public class RecognizeAllTextResponseBody extends TeaModel {
     }
 
     public static class RecognizeAllTextResponseBodyDataSubImagesTableInfoTableDetails extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>29</p>
+         */
         @NameInMap("CellCount")
         public Integer cellCount;
 
         @NameInMap("CellDetails")
         public java.util.List<RecognizeAllTextResponseBodyDataSubImagesTableInfoTableDetailsCellDetails> cellDetails;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("ColumnCount")
         public Integer columnCount;
 
@@ -1669,9 +2033,17 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         @NameInMap("Header")
         public RecognizeAllTextResponseBodyDataSubImagesTableInfoTableDetailsHeader header;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("RowCount")
         public Integer rowCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("TableId")
         public Integer tableId;
 
@@ -1761,15 +2133,27 @@ public class RecognizeAllTextResponseBody extends TeaModel {
     }
 
     public static class RecognizeAllTextResponseBodyDataSubImagesTableInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("TableCount")
         public Integer tableCount;
 
         @NameInMap("TableDetails")
         public java.util.List<RecognizeAllTextResponseBodyDataSubImagesTableInfoTableDetails> tableDetails;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://example.xlsx">https://example.xlsx</a></p>
+         */
         @NameInMap("TableExcel")
         public String tableExcel;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://example.html">https://example.html</a></p>
+         */
         @NameInMap("TableHtml")
         public String tableHtml;
 
@@ -1813,6 +2197,10 @@ public class RecognizeAllTextResponseBody extends TeaModel {
     }
 
     public static class RecognizeAllTextResponseBodyDataSubImages extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Angle")
         public Integer angle;
 
@@ -1843,6 +2231,10 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         @NameInMap("StampInfo")
         public RecognizeAllTextResponseBodyDataSubImagesStampInfo stampInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("SubImageId")
         public Integer subImageId;
 
@@ -1989,36 +2381,72 @@ public class RecognizeAllTextResponseBody extends TeaModel {
         @NameInMap("AlgoServer")
         public java.util.List<String> algoServer;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("AlgoVersion")
         public String algoVersion;
 
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("DebugInfo")
         public Object debugInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2000</p>
+         */
         @NameInMap("Height")
         public Integer height;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("IsMixedMode")
         public Boolean isMixedMode;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://example.xlsx">https://example.xlsx</a></p>
+         */
         @NameInMap("KvExcelUrl")
         public String kvExcelUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNo")
         public Integer pageNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("SubImageCount")
         public Integer subImageCount;
 
         @NameInMap("SubImages")
         public java.util.List<RecognizeAllTextResponseBodyDataSubImages> subImages;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("Width")
         public Integer width;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("XmlResult")
         public String xmlResult;
 

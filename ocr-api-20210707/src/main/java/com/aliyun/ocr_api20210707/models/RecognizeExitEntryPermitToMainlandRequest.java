@@ -4,9 +4,17 @@ package com.aliyun.ocr_api20210707.models;
 import com.aliyun.tea.*;
 
 public class RecognizeExitEntryPermitToMainlandRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>true/false</p>
+     */
     @NameInMap("OutputFigure")
     public Boolean outputFigure;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://img.alicdn.com/imgextra/i2/O1CN01VpucoK1PtmovU859J_!!6000000001899-0-tps-928-626.jpg">https://img.alicdn.com/imgextra/i2/O1CN01VpucoK1PtmovU859J_!!6000000001899-0-tps-928-626.jpg</a></p>
+     */
     @NameInMap("Url")
     public String url;
 

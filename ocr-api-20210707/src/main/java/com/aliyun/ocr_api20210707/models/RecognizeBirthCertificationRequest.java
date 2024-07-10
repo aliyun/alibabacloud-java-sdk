@@ -4,6 +4,10 @@ package com.aliyun.ocr_api20210707.models;
 import com.aliyun.tea.*;
 
 public class RecognizeBirthCertificationRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://img.alicdn.com/tfs/TB1P6Yll8Bh1e4jSZFhXXcC9VXa-1381-962.png">https://img.alicdn.com/tfs/TB1P6Yll8Bh1e4jSZFhXXcC9VXa-1381-962.png</a></p>
+     */
     @NameInMap("Url")
     public String url;
 

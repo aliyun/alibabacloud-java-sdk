@@ -6,10 +6,17 @@ import com.aliyun.tea.*;
 public class RecognizeInternationalBusinessLicenseRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>India</p>
      */
     @NameInMap("Country")
     public String country;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://www.example.com">https://www.example.com</a></p>
+     */
     @NameInMap("Url")
     public String url;
 

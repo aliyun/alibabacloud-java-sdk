@@ -4,6 +4,10 @@ package com.aliyun.ocr_api20210707.models;
 import com.aliyun.tea.*;
 
 public class RecognizeRollTicketRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://img.alicdn.com/tfs/TB1Y2ryJKT2gK0jSZFvXXXnFXXa-438-934.png">https://img.alicdn.com/tfs/TB1Y2ryJKT2gK0jSZFvXXXnFXXa-438-934.png</a></p>
+     */
     @NameInMap("Url")
     public String url;
 

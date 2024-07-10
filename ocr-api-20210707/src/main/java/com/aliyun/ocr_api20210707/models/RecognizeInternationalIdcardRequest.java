@@ -6,10 +6,17 @@ import com.aliyun.tea.*;
 public class RecognizeInternationalIdcardRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Vietnam</p>
      */
     @NameInMap("Country")
     public String country;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="http://example.jpg">http://example.jpg</a></p>
+     */
     @NameInMap("Url")
     public String url;
 

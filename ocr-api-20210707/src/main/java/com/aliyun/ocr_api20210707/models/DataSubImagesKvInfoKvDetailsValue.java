@@ -4,15 +4,27 @@ package com.aliyun.ocr_api20210707.models;
 import com.aliyun.tea.*;
 
 public class DataSubImagesKvInfoKvDetailsValue extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;address&quot;</p>
+     */
     @NameInMap("KeyName")
     public String keyName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("KeyConfidence")
     public Integer keyConfidence;
 
     @NameInMap("Value")
     public String value;
 
+    /**
+     * <strong>example:</strong>
+     * <p>98</p>
+     */
     @NameInMap("ValueConfidence")
     public Integer valueConfidence;
 
@@ -22,6 +34,10 @@ public class DataSubImagesKvInfoKvDetailsValue extends TeaModel {
     @NameInMap("ValueRect")
     public DataSubImagesKvInfoKvDetailsValueValueRect valueRect;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("ValueAngle")
     public Integer valueAngle;
 
@@ -87,9 +103,17 @@ public class DataSubImagesKvInfoKvDetailsValue extends TeaModel {
     }
 
     public static class DataSubImagesKvInfoKvDetailsValueValuePoints extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("X")
         public Integer x;
 
+        /**
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("Y")
         public Integer y;
 
@@ -117,15 +141,31 @@ public class DataSubImagesKvInfoKvDetailsValue extends TeaModel {
     }
 
     public static class DataSubImagesKvInfoKvDetailsValueValueRect extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("CenterX")
         public Integer centerX;
 
+        /**
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("CenterY")
         public Integer centerY;
 
+        /**
+         * <strong>example:</strong>
+         * <p>50</p>
+         */
         @NameInMap("Width")
         public Integer width;
 
+        /**
+         * <strong>example:</strong>
+         * <p>50</p>
+         */
         @NameInMap("Height")
         public Integer height;
 
