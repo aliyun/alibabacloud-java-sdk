@@ -6,16 +6,20 @@ import com.aliyun.tea.*;
 public class SuspendJobRequest extends TeaModel {
     /**
      * <p>The ID of the job template.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ee1a7a07-abcb-4652-a1d3-2d57f415****</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>Specifies whether to suspend the job template.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Suspend")
     public Boolean suspend;

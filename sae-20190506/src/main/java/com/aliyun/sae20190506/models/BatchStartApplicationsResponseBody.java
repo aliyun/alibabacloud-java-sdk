@@ -4,44 +4,63 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class BatchStartApplicationsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The error code.</p>
-     * <br>
-     * <p>*   If the request is successful, this parameter is not returned.****</p>
-     * <p>*   This parameter is returned only if the request failed.**** For more information, see **Error codes** in this topic.</p>
+     * <ul>
+     * <li>If the request is successful, this parameter is not returned.****</li>
+     * <li>This parameter is returned only if the request failed.**** For more information, see <strong>Error codes</strong> in this topic.</li>
+     * </ul>
      */
     @NameInMap("Data")
     public BatchStartApplicationsResponseBodyData data;
 
     /**
      * <p>Indicates whether the specified applications are successfully started. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The returned data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the trace. It is used to query the details of a request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The ID of the change order.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0a98a02315955564772843261e****</p>
      */
     @NameInMap("TraceId")
     public String traceId;
@@ -110,11 +129,15 @@ public class BatchStartApplicationsResponseBody extends TeaModel {
     public static class BatchStartApplicationsResponseBodyData extends TeaModel {
         /**
          * <p>The HTTP status code. Valid values:</p>
-         * <br>
-         * <p>*   **2xx**: indicates that the request was successful.</p>
-         * <p>*   **3xx**: indicates that the request was redirected.</p>
-         * <p>*   **4xx**: indicates that the request was invalid.</p>
-         * <p>*   **5xx**: indicates that a server error occurred.</p>
+         * <ul>
+         * <li><strong>2xx</strong>: indicates that the request was successful.</li>
+         * <li><strong>3xx</strong>: indicates that the request was redirected.</li>
+         * <li><strong>4xx</strong>: indicates that the request was invalid.</li>
+         * <li><strong>5xx</strong>: indicates that a server error occurred.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>01db03d3-3ee9-48b3-b3d0-dfce2d88****</p>
          */
         @NameInMap("ChangeOrderId")
         public String changeOrderId;

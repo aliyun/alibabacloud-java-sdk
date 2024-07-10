@@ -6,28 +6,38 @@ import com.aliyun.tea.*;
 public class ListAppServicesPageRequest extends TeaModel {
     /**
      * <p>1</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6dcc8c9e-d3da-478a-a066-86dcf820****</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The returned information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9999</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>9999</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>springCloud</p>
      */
     @NameInMap("ServiceType")
     public String serviceType;

@@ -10,9 +10,6 @@ public class OSSMountPoint extends TeaModel {
     @NameInMap("bucketPath")
     public String bucketPath;
 
-    @NameInMap("endpoint")
-    public String endpoint;
-
     @NameInMap("mountDir")
     public String mountDir;
 
@@ -38,14 +35,6 @@ public class OSSMountPoint extends TeaModel {
     }
     public String getBucketPath() {
         return this.bucketPath;
-    }
-
-    public OSSMountPoint setEndpoint(String endpoint) {
-        this.endpoint = endpoint;
-        return this;
-    }
-    public String getEndpoint() {
-        return this.endpoint;
     }
 
     public OSSMountPoint setMountDir(String mountDir) {

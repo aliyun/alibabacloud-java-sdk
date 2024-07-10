@@ -6,38 +6,55 @@ import com.aliyun.tea.*;
 public class ListChangeOrdersRequest extends TeaModel {
     /**
      * <p>1</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>145341c-9708-4967-b3ec-24933767****</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("CoStatus")
     public String coStatus;
 
     /**
      * <p>2</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CoCreateApp</p>
      */
     @NameInMap("CoType")
     public String coType;
 
     /**
      * <p>20</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>CoCreateApp</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Key")
     public String key;
 
     /**
      * <p>test</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

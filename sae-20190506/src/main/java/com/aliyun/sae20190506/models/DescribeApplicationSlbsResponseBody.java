@@ -6,9 +6,13 @@ import com.aliyun.tea.*;
 public class DescribeApplicationSlbsResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the information about the SLB instances that are associated with an application was obtained successfully. Valid values:</p>
-     * <br>
-     * <p>*   **true**: indicates that the information was obtained successfully.</p>
-     * <p>*   **false**: indicates that the information failed to be obtained.</p>
+     * <ul>
+     * <li><strong>true</strong>: indicates that the information was obtained successfully.</li>
+     * <li><strong>false</strong>: indicates that the information failed to be obtained.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -21,35 +25,50 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
 
     /**
      * <p>The HTTP status code. Valid values:</p>
-     * <br>
-     * <p>*   **2xx**: indicates that the request was successful.</p>
-     * <p>*   **3xx**: indicates that the request was redirected.</p>
-     * <p>*   **4xx**: indicates that the request was invalid.</p>
-     * <p>*   **5xx**: indicates that a server error occurred.</p>
+     * <ul>
+     * <li><strong>2xx</strong>: indicates that the request was successful.</li>
+     * <li><strong>3xx</strong>: indicates that the request was redirected.</li>
+     * <li><strong>4xx</strong>: indicates that the request was invalid.</li>
+     * <li><strong>5xx</strong>: indicates that a server error occurred.</li>
+     * </ul>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The ID of the trace. It can be used to query the details of a request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The returned message.</p>
-     * <br>
-     * <p>*   **success** is returned when the request succeeds.</p>
-     * <p>*   An error code is returned when the request fails.</p>
+     * <ul>
+     * <li><strong>success</strong> is returned when the request succeeds.</li>
+     * <li>An error code is returned when the request fails.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The returned data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0a98a02315955564772843261e****</p>
      */
     @NameInMap("TraceId")
     public String traceId;
@@ -116,29 +135,53 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
     }
 
     public static class DescribeApplicationSlbsResponseBodyDataInternet extends TeaModel {
+        @NameInMap("Cookie")
+        public String cookie;
+
+        @NameInMap("CookieTimeout")
+        public Integer cookieTimeout;
+
         @NameInMap("HttpsCaCertId")
         public String httpsCaCertId;
 
         /**
          * <p>The supported protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1513561019707729_16f37aae5f3_-375882821_-169099****</p>
          */
         @NameInMap("HttpsCertId")
         public String httpsCertId;
 
         /**
          * <p>The ID of the internal-facing SLB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("Port")
         public Integer port;
 
         /**
          * <p>The container port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TCP</p>
          */
         @NameInMap("Protocol")
         public String protocol;
 
+        @NameInMap("StickySession")
+        public Boolean stickySession;
+
+        @NameInMap("StickySessionType")
+        public String stickySessionType;
+
         /**
          * <p>The port specified for the SLB listener.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8080</p>
          */
         @NameInMap("TargetPort")
         public Integer targetPort;
@@ -146,6 +189,22 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
         public static DescribeApplicationSlbsResponseBodyDataInternet build(java.util.Map<String, ?> map) throws Exception {
             DescribeApplicationSlbsResponseBodyDataInternet self = new DescribeApplicationSlbsResponseBodyDataInternet();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeApplicationSlbsResponseBodyDataInternet setCookie(String cookie) {
+            this.cookie = cookie;
+            return this;
+        }
+        public String getCookie() {
+            return this.cookie;
+        }
+
+        public DescribeApplicationSlbsResponseBodyDataInternet setCookieTimeout(Integer cookieTimeout) {
+            this.cookieTimeout = cookieTimeout;
+            return this;
+        }
+        public Integer getCookieTimeout() {
+            return this.cookieTimeout;
         }
 
         public DescribeApplicationSlbsResponseBodyDataInternet setHttpsCaCertId(String httpsCaCertId) {
@@ -180,6 +239,22 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             return this.protocol;
         }
 
+        public DescribeApplicationSlbsResponseBodyDataInternet setStickySession(Boolean stickySession) {
+            this.stickySession = stickySession;
+            return this;
+        }
+        public Boolean getStickySession() {
+            return this.stickySession;
+        }
+
+        public DescribeApplicationSlbsResponseBodyDataInternet setStickySessionType(String stickySessionType) {
+            this.stickySessionType = stickySessionType;
+            return this;
+        }
+        public String getStickySessionType() {
+            return this.stickySessionType;
+        }
+
         public DescribeApplicationSlbsResponseBodyDataInternet setTargetPort(Integer targetPort) {
             this.targetPort = targetPort;
             return this;
@@ -191,29 +266,53 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
     }
 
     public static class DescribeApplicationSlbsResponseBodyDataIntranet extends TeaModel {
+        @NameInMap("Cookie")
+        public String cookie;
+
+        @NameInMap("CookieTimeout")
+        public Integer cookieTimeout;
+
         @NameInMap("HttpsCaCertId")
         public String httpsCaCertId;
 
         /**
          * <p>The supported protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1513561019707729_16f37aae5f3_-375882821_-169099****</p>
          */
         @NameInMap("HttpsCertId")
         public String httpsCertId;
 
         /**
          * <p>The IP address of the Internet-facing SLB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("Port")
         public Integer port;
 
         /**
          * <p>The container port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TCP</p>
          */
         @NameInMap("Protocol")
         public String protocol;
 
+        @NameInMap("StickySession")
+        public Boolean stickySession;
+
+        @NameInMap("StickySessionType")
+        public String stickySessionType;
+
         /**
          * <p>The port specified for the SLB listener.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8080</p>
          */
         @NameInMap("TargetPort")
         public Integer targetPort;
@@ -221,6 +320,22 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
         public static DescribeApplicationSlbsResponseBodyDataIntranet build(java.util.Map<String, ?> map) throws Exception {
             DescribeApplicationSlbsResponseBodyDataIntranet self = new DescribeApplicationSlbsResponseBodyDataIntranet();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeApplicationSlbsResponseBodyDataIntranet setCookie(String cookie) {
+            this.cookie = cookie;
+            return this;
+        }
+        public String getCookie() {
+            return this.cookie;
+        }
+
+        public DescribeApplicationSlbsResponseBodyDataIntranet setCookieTimeout(Integer cookieTimeout) {
+            this.cookieTimeout = cookieTimeout;
+            return this;
+        }
+        public Integer getCookieTimeout() {
+            return this.cookieTimeout;
         }
 
         public DescribeApplicationSlbsResponseBodyDataIntranet setHttpsCaCertId(String httpsCaCertId) {
@@ -255,6 +370,22 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             return this.protocol;
         }
 
+        public DescribeApplicationSlbsResponseBodyDataIntranet setStickySession(Boolean stickySession) {
+            this.stickySession = stickySession;
+            return this;
+        }
+        public Boolean getStickySession() {
+            return this.stickySession;
+        }
+
+        public DescribeApplicationSlbsResponseBodyDataIntranet setStickySessionType(String stickySessionType) {
+            this.stickySessionType = stickySessionType;
+            return this;
+        }
+        public String getStickySessionType() {
+            return this.stickySessionType;
+        }
+
         public DescribeApplicationSlbsResponseBodyDataIntranet setTargetPort(Integer targetPort) {
             this.targetPort = targetPort;
             return this;
@@ -274,6 +405,9 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the Internet-facing SLB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>59.74.**.**</p>
          */
         @NameInMap("InternetIp")
         public String internetIp;
@@ -283,6 +417,9 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
 
         /**
          * <p>Configurations of Internet-facing SLB instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-uf6xc7wybefehnv45****</p>
          */
         @NameInMap("InternetSlbId")
         public String internetSlbId;
@@ -295,9 +432,13 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
 
         /**
          * <p>The error code.</p>
-         * <br>
-         * <p>*   The **ErrorCode** parameter is not returned when the request succeeds.</p>
-         * <p>*   The **ErrorCode** parameter is returned when the request fails. For more information, see **Error codes** in this topic.</p>
+         * <ul>
+         * <li>The <strong>ErrorCode</strong> parameter is not returned when the request succeeds.</li>
+         * <li>The <strong>ErrorCode</strong> parameter is returned when the request fails. For more information, see <strong>Error codes</strong> in this topic.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.0.0</p>
          */
         @NameInMap("IntranetIp")
         public String intranetIp;
@@ -307,6 +448,9 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
 
         /**
          * <p>The IP address of the internal-facing SLB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-uf6xc7wybefehnv45****</p>
          */
         @NameInMap("IntranetSlbId")
         public String intranetSlbId;

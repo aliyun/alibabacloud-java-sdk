@@ -6,59 +6,84 @@ import com.aliyun.tea.*;
 public class ListAppEventsRequest extends TeaModel {
     /**
      * <p>The application ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>f7730764-d88f-4b9a-8d8e-cd8efbfe****</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>The page number of the page to return.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>The type of the event. Valid values:</p>
-     * <br>
-     * <p>*   **Warning**: an alert.</p>
-     * <p>*   **Normal**: a normal event.</p>
+     * <ul>
+     * <li><strong>Warning</strong>: an alert.</li>
+     * <li><strong>Normal</strong>: a normal event.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Warning</p>
      */
     @NameInMap("EventType")
     public String eventType;
 
     /**
      * <p>The namespace ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
      * <p>The type of the object. Valid values:</p>
-     * <br>
-     * <p>*   **Deployment**: an application.</p>
-     * <p>*   **Pod**: an application instance.</p>
-     * <p>*   **Service**: a Server Load Balancer (SLB) instance.</p>
-     * <p>*   **HorizontalPodAutoscaler**: an auto scaling policy.</p>
-     * <p>*   **CloneSet**: an application.</p>
+     * <ul>
+     * <li><strong>Deployment</strong>: an application.</li>
+     * <li><strong>Pod</strong>: an application instance.</li>
+     * <li><strong>Service</strong>: a Server Load Balancer (SLB) instance.</li>
+     * <li><strong>HorizontalPodAutoscaler</strong>: an auto scaling policy.</li>
+     * <li><strong>CloneSet</strong>: an application.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Pod</p>
      */
     @NameInMap("ObjectKind")
     public String objectKind;
 
     /**
      * <p>The name of the object. Fuzzy search by prefix is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>errew-b86bf540-b4dc-47d8-a42f-b4997c14bd8f-5595cbddd6-x****</p>
      */
     @NameInMap("ObjectName")
     public String objectName;
 
     /**
      * <p>The number of entries to return on each page. Valid values: 0 to 10000.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The cause of the event. Fuzzy search by prefix is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Started</p>
      */
     @NameInMap("Reason")
     public String reason;

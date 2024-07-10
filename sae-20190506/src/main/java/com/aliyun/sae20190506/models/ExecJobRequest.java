@@ -6,25 +6,52 @@ import com.aliyun.tea.*;
 public class ExecJobRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ee1a7a07-abcb-4652-a1d3-2d57f415****</p>
      */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>echo</p>
+     */
     @NameInMap("Command")
     public String command;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[&quot;a&quot;,&quot;b&quot;]</p>
+     */
     @NameInMap("CommandArgs")
     public String commandArgs;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[{&quot;name&quot;:&quot;envtmp&quot;,&quot;value&quot;:&quot;0&quot;}]</p>
+     */
     @NameInMap("Envs")
     public String envs;
 
+    /**
+     * <strong>example:</strong>
+     * <p>custom</p>
+     */
     @NameInMap("EventId")
     public String eventId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>custom-args</p>
+     */
     @NameInMap("JarStartArgs")
     public String jarStartArgs;
 
+    /**
+     * <strong>example:</strong>
+     * <p>-Xms4G -Xmx4G</p>
+     */
     @NameInMap("JarStartOptions")
     public String jarStartOptions;
 
@@ -34,6 +61,10 @@ public class ExecJobRequest extends TeaModel {
     @NameInMap("Time")
     public String time;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CATALINA_OPTS=\&quot;$CATALINA_OPTS $Options\&quot; catalina.sh run</p>
+     */
     @NameInMap("WarStartOptions")
     public String warStartOptions;
 

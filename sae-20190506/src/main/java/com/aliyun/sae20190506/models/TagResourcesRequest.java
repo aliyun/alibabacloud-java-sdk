@@ -6,28 +6,38 @@ import com.aliyun.tea.*;
 public class TagResourcesRequest extends TeaModel {
     /**
      * <p>application</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the request.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;d42921c4-5433-4abd-8075-0e536f8b****&quot;]</p>
      */
     @NameInMap("ResourceIds")
     public String resourceIds;
 
     /**
-     * <p>[{"key":"k1","value":"v1"}]</p>
-     * <br>
+     * <p>[{&quot;key&quot;:&quot;k1&quot;,&quot;value&quot;:&quot;v1&quot;}]</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>application</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
-     * <p>["d42921c4-5433-4abd-8075-0e536f8b\\*\\*\\*\\*"]</p>
+     * <p>[&quot;d42921c4-5433-4abd-8075-0e536f8b\<em>\</em>\<em>\</em>&quot;]</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;key&quot;:&quot;k1&quot;,&quot;value&quot;:&quot;v1&quot;}]</p>
      */
     @NameInMap("Tags")
     public String tags;

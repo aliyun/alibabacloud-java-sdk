@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class DeleteConfigMapRequest extends TeaModel {
     /**
      * <p>1</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("ConfigMapId")
     public Long configMapId;

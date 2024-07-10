@@ -4,6 +4,10 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class ListAppServicesPageResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
@@ -15,30 +19,44 @@ public class ListAppServicesPageResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the microservice list was obtained. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The list was obtained.</p>
-     * <p>*   **false**: The list failed to be obtained.</p>
+     * <ul>
+     * <li><strong>true</strong>: The list was obtained.</li>
+     * <li><strong>false</strong>: The list failed to be obtained.</li>
+     * </ul>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The details of microservices.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the trace. The ID is used to query the details of a request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2583E089-99C2-562E-8B7E-73512136****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The page number of the current page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0be3e0c816394483660457498e****</p>
      */
     @NameInMap("TraceId")
     public String traceId;
@@ -107,44 +125,64 @@ public class ListAppServicesPageResponseBody extends TeaModel {
     public static class ListAppServicesPageResponseBodyDataResult extends TeaModel {
         /**
          * <p>The group to which the service belongs. You can create a custom group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hc4fs1****@98314c8790b****</p>
          */
         @NameInMap("EdasAppId")
         public String edasAppId;
 
         /**
          * <p>The total number of instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-zhangjiakou-micro-service-******</p>
          */
         @NameInMap("EdasAppName")
         public String edasAppName;
 
         /**
          * <p>The HTTP status code. Valid values:</p>
-         * <br>
-         * <p>*   **2xx**: indicates that the call was successful.</p>
-         * <p>*   **3xx**: indicates that the call was redirected.</p>
-         * <p>*   **4xx**: indicates that the call failed.</p>
-         * <p>*   **5xx**: indicates that a server error occurred.</p>
+         * <ul>
+         * <li><strong>2xx</strong>: indicates that the call was successful.</li>
+         * <li><strong>3xx</strong>: indicates that the call was redirected.</li>
+         * <li><strong>4xx</strong>: indicates that the call failed.</li>
+         * <li><strong>5xx</strong>: indicates that a server error occurred.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>springCloud</p>
          */
         @NameInMap("Group")
         public String group;
 
         /**
          * <p>The name of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("InstanceNum")
         public Long instanceNum;
 
         /**
          * <p>The returned error code. Valid values:</p>
-         * <br>
-         * <p>- If the call is successful, the **ErrorCode** parameter is not returned.</p>
-         * <p>- If the call fails, the **ErrorCode** parameter is returned. For more information, see the "**Error codes**" section of this topic.</p>
+         * <ul>
+         * <li>If the call is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+         * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the &quot;<strong>Error codes</strong>&quot; section of this topic.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>edas.service.provider</p>
          */
         @NameInMap("ServiceName")
         public String serviceName;
 
         /**
          * <p>The ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
          */
         @NameInMap("Version")
         public String version;
@@ -207,18 +245,27 @@ public class ListAppServicesPageResponseBody extends TeaModel {
     public static class ListAppServicesPageResponseBodyData extends TeaModel {
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public String currentPage;
 
         /**
          * <p>The returned result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageNumber")
         public String pageNumber;
 
         /**
          * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9999</p>
          */
         @NameInMap("PageSize")
         public String pageSize;
@@ -231,6 +278,9 @@ public class ListAppServicesPageResponseBody extends TeaModel {
 
         /**
          * <p>The number of entries returned per page. Valid values: 0 to 9999.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("TotalSize")
         public String totalSize;

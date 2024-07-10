@@ -124,18 +124,33 @@ public class BuildPipeline extends TeaModel {
     }
 
     public static class BuildPipelineBuildConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>mvn clean package</p>
+         */
         @NameInMap("BeforeBuildCommand")
         public String beforeBuildCommand;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>buildpacks/dockerfile</p>
          */
         @NameInMap("BuildType")
         public String buildType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>code/Dockerfile</p>
+         */
         @NameInMap("DockerfilePath")
         public String dockerfilePath;
 
+        /**
+         * <strong>example:</strong>
+         * <p>java -jar target/app.jar</p>
+         */
         @NameInMap("RunCommand")
         public String runCommand;
 
@@ -148,6 +163,10 @@ public class BuildPipeline extends TeaModel {
         @NameInMap("TomcatConfig")
         public TomcatConfig tomcatConfig;
 
+        /**
+         * <strong>example:</strong>
+         * <p>code</p>
+         */
         @NameInMap("WorkingDir")
         public String workingDir;
 
@@ -225,12 +244,18 @@ public class BuildPipeline extends TeaModel {
     public static class BuildPipelineCodeConfig extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         @NameInMap("AccountId")
         public String accountId;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>master</p>
          */
         @NameInMap("BranchName")
         public String branchName;
@@ -246,18 +271,27 @@ public class BuildPipeline extends TeaModel {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>github/gitee/gitlab等</p>
          */
         @NameInMap("Provider")
         public String provider;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sae-samples/java-maven-demo</p>
          */
         @NameInMap("RepoFullName")
         public String repoFullName;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3001</p>
          */
         @NameInMap("RepoId")
         public String repoId;
@@ -346,6 +380,9 @@ public class BuildPipeline extends TeaModel {
         @NameInMap("UpdateApplicationInput")
         public String updateApplicationInput;
 
+        @NameInMap("UpdateTraffic")
+        public Boolean updateTraffic;
+
         public static BuildPipelineDeployConfig build(java.util.Map<String, ?> map) throws Exception {
             BuildPipelineDeployConfig self = new BuildPipelineDeployConfig();
             return TeaModel.build(map, self);
@@ -383,9 +420,21 @@ public class BuildPipeline extends TeaModel {
             return this.updateApplicationInput;
         }
 
+        public BuildPipelineDeployConfig setUpdateTraffic(Boolean updateTraffic) {
+            this.updateTraffic = updateTraffic;
+            return this;
+        }
+        public Boolean getUpdateTraffic() {
+            return this.updateTraffic;
+        }
+
     }
 
     public static class BuildPipelineImageConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>ACR/ACREE</p>
+         */
         @NameInMap("InstanceType")
         public String instanceType;
 
@@ -430,12 +479,24 @@ public class BuildPipeline extends TeaModel {
         @NameInMap("PackageName")
         public String packageName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>war/jar/zip</p>
+         */
         @NameInMap("PackageType")
         public String packageType;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://myoss.oss-cn-****.aliyuncs.com/my-buc/2019-06-30/****.jar">http://myoss.oss-cn-****.aliyuncs.com/my-buc/2019-06-30/****.jar</a></p>
+         */
         @NameInMap("PackageUrl")
         public String packageUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
+         */
         @NameInMap("PackageVersion")
         public String packageVersion;
 
@@ -479,14 +540,25 @@ public class BuildPipeline extends TeaModel {
     }
 
     public static class BuildPipelineTriggerConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>master</p>
+         */
         @NameInMap("BranchName")
         public String branchName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>v1</p>
+         */
         @NameInMap("TagName")
         public String tagName;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PUSH</p>
          */
         @NameInMap("Type")
         public String type;

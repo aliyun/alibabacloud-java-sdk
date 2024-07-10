@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class AbortChangeOrderRequest extends TeaModel {
     /**
      * <p>The ID of the request.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>be2e1c76-682b-4897-98d3-1d8d6478****</p>
      */
     @NameInMap("ChangeOrderId")
     public String changeOrderId;

@@ -6,14 +6,19 @@ import com.aliyun.tea.*;
 public class ListIngressesRequest extends TeaModel {
     /**
      * <p>The list of routing rules.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bbf3a590-6d13-46fe-8ca9-c947a20b****</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>The returned data.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
      */
     @NameInMap("NamespaceId")
     public String namespaceId;

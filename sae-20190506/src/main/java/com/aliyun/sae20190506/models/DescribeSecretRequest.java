@@ -6,16 +6,20 @@ import com.aliyun.tea.*;
 public class DescribeSecretRequest extends TeaModel {
     /**
      * <p>The ID of the namespace in which the Secret instance resides. By default, the namespace ID is the same as the region ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing:test</p>
      */
     @NameInMap("NamespaceId")
     public String namespaceId;
 
     /**
-     * <p>The ID of the Secret instance to be queried. You can call the [ListSecrets](https://help.aliyun.com/document_detail/466929.html) operation to view the IDs of Secrete instances.</p>
-     * <br>
+     * <p>The ID of the Secret instance to be queried. You can call the <a href="https://help.aliyun.com/document_detail/466929.html">ListSecrets</a> operation to view the IDs of Secrete instances.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16</p>
      */
     @NameInMap("SecretId")
     public Long secretId;

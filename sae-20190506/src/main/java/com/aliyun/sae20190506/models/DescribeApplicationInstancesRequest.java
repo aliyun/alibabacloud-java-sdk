@@ -5,34 +5,47 @@ import com.aliyun.tea.*;
 
 public class DescribeApplicationInstancesRequest extends TeaModel {
     /**
-     * <p>d700e680-aa4d-4ec1-afc2-6566b5ff\\*\\*\\*\\*</p>
-     * <br>
+     * <p>d700e680-aa4d-4ec1-afc2-6566b5ff\<em>\</em>\<em>\</em></p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d700e680-aa4d-4ec1-afc2-6566b5ff****</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>1</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
-     * <p>b2a8a925-477a-4ed7-b825-d5e22500\\*\\*\\*\\*</p>
-     * <br>
+     * <p>b2a8a925-477a-4ed7-b825-d5e22500\<em>\</em>\<em>\</em></p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>b2a8a925-477a-4ed7-b825-d5e22500****</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
      * <p>10</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
+     * <p>true</p>
+     * 
+     * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("Reverse")

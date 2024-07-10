@@ -4,27 +4,59 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class AppStackResource extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1706518652000</p>
+     */
     @NameInMap("CreateTime")
     public Long createTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>i-78yt</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>VPC</p>
+     */
     @NameInMap("ProductCode")
     public String productCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>vsw-qwe112233</p>
+     */
     @NameInMap("ResourceId")
     public String resourceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>vsw-palworld-a</p>
+     */
     @NameInMap("ResourceName")
     public String resourceName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>VSWITCH</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>palworld</p>
+     */
     @NameInMap("StackId")
     public String stackId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>NORMAL</p>
+     */
     @NameInMap("Status")
     public String status;
 

@@ -6,9 +6,13 @@ import com.aliyun.tea.*;
 public class ListPublishedServicesResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the microservice list was obtained. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The list was obtained.</p>
-     * <p>*   **false**: The list failed to be obtained.</p>
+     * <ul>
+     * <li><strong>true</strong>: The list was obtained.</li>
+     * <li><strong>false</strong>: The list failed to be obtained.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -21,35 +25,50 @@ public class ListPublishedServicesResponseBody extends TeaModel {
 
     /**
      * <p>The HTTP status code. Valid values:</p>
-     * <br>
-     * <p>*   **2xx**: indicates that the call was successful.</p>
-     * <p>*   **3xx**: indicates that the call was redirected.</p>
-     * <p>*   **4xx**: indicates that the call failed.</p>
-     * <p>*   **5xx**: indicates that a server error occurred.</p>
+     * <ul>
+     * <li><strong>2xx</strong>: indicates that the call was successful.</li>
+     * <li><strong>3xx</strong>: indicates that the call was redirected.</li>
+     * <li><strong>4xx</strong>: indicates that the call failed.</li>
+     * <li><strong>5xx</strong>: indicates that a server error occurred.</li>
+     * </ul>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The ID of the trace. It is used to query the details of a request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The returned information. Valid values:</p>
-     * <br>
-     * <p>*   If the call is successful, **success** is returned.</p>
-     * <p>*   If the call fails, an error code is returned.</p>
+     * <ul>
+     * <li>If the call is successful, <strong>success</strong> is returned.</li>
+     * <li>If the call fails, an error code is returned.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The details of the microservices.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0a98a02315955564772843261e****</p>
      */
     @NameInMap("TraceId")
     public String traceId;
@@ -118,12 +137,18 @@ public class ListPublishedServicesResponseBody extends TeaModel {
     public static class ListPublishedServicesResponseBodyData extends TeaModel {
         /**
          * <p>The reserved parameter. This parameter does not take effect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b2a8a925-477a-4ed7-b825-d5e22500****</p>
          */
         @NameInMap("AppId")
         public String appId;
 
         /**
          * <p>The subscription address of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         @NameInMap("Group2Ip")
         public String group2Ip;
@@ -142,21 +167,31 @@ public class ListPublishedServicesResponseBody extends TeaModel {
 
         /**
          * <p>The returned error code. Valid values:</p>
-         * <br>
-         * <p>*   If the call is successful, the **ErrorCode** parameter is not returned.</p>
-         * <p>*   If the call fails, the **ErrorCode** parameter is returned. For more information, see the "**Error codes**" section of this topic.</p>
+         * <ul>
+         * <li>If the call is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+         * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the &quot;<strong>Error codes</strong>&quot; section of this topic.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>com.alibaba.nodejs.ItemService</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The service group that corresponds to the consumed service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RPC</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
          */
         @NameInMap("Version")
         public String version;

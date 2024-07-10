@@ -6,14 +6,19 @@ import com.aliyun.tea.*;
 public class DescribeComponentsRequest extends TeaModel {
     /**
      * <p>TOMCAT</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d700e680-aa4d-4ec1-afc2-6566b5ff****</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>The ID of the request.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TOMCAT</p>
      */
     @NameInMap("Type")
     public String type;

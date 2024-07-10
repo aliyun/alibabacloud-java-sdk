@@ -4,6 +4,10 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class DescribeIngressResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
@@ -18,21 +22,34 @@ public class DescribeIngressResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the SLB instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The name of the routing rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0a981dd515966966104121683d****</p>
      */
     @NameInMap("TraceId")
     public String traceId;
@@ -101,21 +118,34 @@ public class DescribeIngressResponseBody extends TeaModel {
     public static class DescribeIngressResponseBodyDataDefaultRule extends TeaModel {
         /**
          * <p>The domain name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>395b60e4-0550-458d-9c54-a265d036****</p>
          */
         @NameInMap("AppId")
         public String appId;
 
         /**
          * <p>The container port of the application specified in the forwarding rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app1</p>
          */
         @NameInMap("AppName")
         public String appName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>HTTP</p>
+         */
         @NameInMap("BackendProtocol")
         public String backendProtocol;
 
         /**
          * <p>The name of the application specified in the forwarding rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8080</p>
          */
         @NameInMap("ContainerPort")
         public Integer containerPort;
@@ -162,42 +192,64 @@ public class DescribeIngressResponseBody extends TeaModel {
     public static class DescribeIngressResponseBodyDataRules extends TeaModel {
         /**
          * <p>The protocol used to forward requests. Valid values:</p>
-         * <br>
-         * <p>*   **HTTP**: used when the application needs to identify the transmitted data.</p>
-         * <p>*   **HTTPS**: used when the application requires encrypted data transmission.</p>
+         * <ul>
+         * <li><strong>HTTP</strong>: used when the application needs to identify the transmitted data.</li>
+         * <li><strong>HTTPS</strong>: used when the application requires encrypted data transmission.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>395b60e4-0550-458d-9c54-a265d036****</p>
          */
         @NameInMap("AppId")
         public String appId;
 
         /**
          * <p>The path of the URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app1</p>
          */
         @NameInMap("AppName")
         public String appName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>HTTP</p>
+         */
         @NameInMap("BackendProtocol")
         public String backendProtocol;
 
         /**
          * <p>The ID of the routing rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8080</p>
          */
         @NameInMap("ContainerPort")
         public Integer containerPort;
 
         /**
          * <p>The type of the SLB instance based on the processing capabilities. Valid values:</p>
-         * <br>
-         * <p>*   **clb**: the Classic Load Balancer (CLB) instance.</p>
-         * <p>*   **alb**: the Application Load Balancer (ALB) instance.</p>
+         * <ul>
+         * <li><strong>clb</strong>: the Classic Load Balancer (CLB) instance.</li>
+         * <li><strong>alb</strong>: the Application Load Balancer (ALB) instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>edas.site</p>
          */
         @NameInMap("Domain")
         public String domain;
 
         /**
          * <p>The error code.</p>
-         * <br>
-         * <p>*   The **ErrorCode** parameter is not returned when the request succeeds.</p>
-         * <p>*   The **ErrorCode** parameter is returned when the request fails. For more information, see **Error codes** in this topic.</p>
+         * <ul>
+         * <li>The <strong>ErrorCode</strong> parameter is not returned when the request succeeds.</li>
+         * <li>The <strong>ErrorCode</strong> parameter is returned when the request fails. For more information, see <strong>Error codes</strong> in this topic.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>/path1</p>
          */
         @NameInMap("Path")
         public String path;
@@ -271,10 +323,17 @@ public class DescribeIngressResponseBody extends TeaModel {
     public static class DescribeIngressResponseBodyData extends TeaModel {
         /**
          * <p>The name of the application specified in the default rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13623****809_16cad216b32_845_-419427029</p>
          */
         @NameInMap("CertId")
         public String certId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>87<em><strong>35-cn-hangzhou,812</strong></em>3-cn-hangzhou</p>
+         */
         @NameInMap("CertIds")
         public String certIds;
 
@@ -286,47 +345,71 @@ public class DescribeIngressResponseBody extends TeaModel {
 
         /**
          * <p>The name of the routing rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ingress-sae-test</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The HTTP status code. Valid values:</p>
-         * <br>
-         * <p>*   **2xx**: indicates that the request was successful.</p>
-         * <p>*   **3xx**: indicates that the request was redirected.</p>
-         * <p>*   **4xx**: indicates that the request was invalid.</p>
-         * <p>*   **5xx**: indicates that a server error occurred.</p>
+         * <ul>
+         * <li><strong>2xx</strong>: indicates that the request was successful.</li>
+         * <li><strong>3xx</strong>: indicates that the request was redirected.</li>
+         * <li><strong>4xx</strong>: indicates that the request was invalid.</li>
+         * <li><strong>5xx</strong>: indicates that a server error occurred.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>87</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The default rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>443</p>
          */
         @NameInMap("ListenerPort")
         public Integer listenerPort;
 
+        /**
+         * <strong>example:</strong>
+         * <p>HTTP</p>
+         */
         @NameInMap("ListenerProtocol")
         public String listenerProtocol;
 
         /**
          * <p>Indicates whether the configurations of the routing rule were queried successfully. Valid values:</p>
-         * <br>
-         * <p>*   **true**: indicates that the query was successful.</p>
-         * <p>*   **false**: indicates that the query failed.</p>
+         * <ul>
+         * <li><strong>true</strong>: indicates that the query was successful.</li>
+         * <li><strong>false</strong>: indicates that the query failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>clb</p>
          */
         @NameInMap("LoadBalanceType")
         public String loadBalanceType;
 
         /**
          * <p>The ID of the application specified in the default rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-uf6jt0nu4z6ior943****-80-f5****</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The ID of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing:sae-test</p>
          */
         @NameInMap("NamespaceId")
         public String namespaceId;
@@ -339,15 +422,22 @@ public class DescribeIngressResponseBody extends TeaModel {
 
         /**
          * <p>The type of the SLB instance based on the IP address. Valid values:</p>
-         * <br>
-         * <p>*   **internet**: the Internet-facing SLB instance.</p>
-         * <p>*   **intranet**: the internal-facing SLB instance.</p>
+         * <ul>
+         * <li><strong>internet</strong>: the Internet-facing SLB instance.</li>
+         * <li><strong>intranet</strong>: the internal-facing SLB instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-uf62****6d13tq2u5</p>
          */
         @NameInMap("SlbId")
         public String slbId;
 
         /**
          * <p>The container port of the application specified in the default rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internet</p>
          */
         @NameInMap("SlbType")
         public String slbType;

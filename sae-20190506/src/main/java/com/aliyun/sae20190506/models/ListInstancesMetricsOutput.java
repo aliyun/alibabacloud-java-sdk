@@ -10,12 +10,24 @@ public class ListInstancesMetricsOutput extends TeaModel {
     @NameInMap("metricsList")
     public java.util.List<InstanceMetricInfo> metricsList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("pageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1234</p>
+     */
     @NameInMap("totalCount")
     public Integer totalCount;
 

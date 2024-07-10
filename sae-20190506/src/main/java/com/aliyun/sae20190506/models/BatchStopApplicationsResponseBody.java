@@ -6,9 +6,13 @@ import com.aliyun.tea.*;
 public class BatchStopApplicationsResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the specified applications are stopped. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -21,35 +25,50 @@ public class BatchStopApplicationsResponseBody extends TeaModel {
 
     /**
      * <p>The HTTP status code. Valid values:</p>
-     * <br>
-     * <p>*   **2xx**: indicates that the request was successful.</p>
-     * <p>*   **3xx**: indicates that the request was redirected.</p>
-     * <p>*   **4xx**: indicates that the request was invalid.</p>
-     * <p>*   **5xx**: indicates that a server error occurred.</p>
+     * <ul>
+     * <li><strong>2xx</strong>: indicates that the request was successful.</li>
+     * <li><strong>3xx</strong>: indicates that the request was redirected.</li>
+     * <li><strong>4xx</strong>: indicates that the request was invalid.</li>
+     * <li><strong>5xx</strong>: indicates that a server error occurred.</li>
+     * </ul>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The ID of the trace. It can be used to query the details of a request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The returned message.</p>
-     * <br>
-     * <p>*   **success** is returned when the request succeeds.</p>
-     * <p>*   An error code is returned when the request fails.</p>
+     * <ul>
+     * <li><strong>success</strong> is returned when the request succeeds.</li>
+     * <li>An error code is returned when the request fails.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>7BD8F4C7-D84C-4D46-9885-8212997E****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The returned data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0bc3b6e215637275918588187d****</p>
      */
     @NameInMap("TraceId")
     public String traceId;
@@ -118,9 +137,13 @@ public class BatchStopApplicationsResponseBody extends TeaModel {
     public static class BatchStopApplicationsResponseBodyData extends TeaModel {
         /**
          * <p>The error code.</p>
-         * <br>
-         * <p>*   If the request is successful, this parameter is not returned.****</p>
-         * <p>*   This parameter is returned only if the request failed.**** For more information, see the "**Error codes**" section in this topic.</p>
+         * <ul>
+         * <li>If the request is successful, this parameter is not returned.****</li>
+         * <li>This parameter is returned only if the request failed.**** For more information, see the &quot;<strong>Error codes</strong>&quot; section in this topic.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>4a815998-b468-4bea-b7d8-59f52a44****</p>
          */
         @NameInMap("ChangeOrderId")
         public String changeOrderId;

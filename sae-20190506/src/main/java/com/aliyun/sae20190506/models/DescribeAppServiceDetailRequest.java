@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeAppServiceDetailRequest extends TeaModel {
     /**
-     * <p>6dcc8c9e-d3da-478a-a066-86dcf820\\*\\*\\*\\*</p>
-     * <br>
+     * <p>6dcc8c9e-d3da-478a-a066-86dcf820\<em>\</em>\<em>\</em></p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6dcc8c9e-d3da-478a-a066-86dcf820****</p>
      */
     @NameInMap("AppId")
     public String appId;
@@ -20,11 +22,17 @@ public class DescribeAppServiceDetailRequest extends TeaModel {
 
     /**
      * <p>springCloud</p>
+     * 
+     * <strong>example:</strong>
+     * <p>springCloud</p>
      */
     @NameInMap("ServiceGroup")
     public String serviceGroup;
 
     /**
+     * <p>edas.service.provider</p>
+     * 
+     * <strong>example:</strong>
      * <p>edas.service.provider</p>
      */
     @NameInMap("ServiceName")
@@ -32,11 +40,17 @@ public class DescribeAppServiceDetailRequest extends TeaModel {
 
     /**
      * <p>springCloud</p>
+     * 
+     * <strong>example:</strong>
+     * <p>springCloud</p>
      */
     @NameInMap("ServiceType")
     public String serviceType;
 
     /**
+     * <p>1.0.0</p>
+     * 
+     * <strong>example:</strong>
      * <p>1.0.0</p>
      */
     @NameInMap("ServiceVersion")

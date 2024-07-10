@@ -6,9 +6,13 @@ import com.aliyun.tea.*;
 public class DeleteApplicationResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the application is deleted. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -21,35 +25,50 @@ public class DeleteApplicationResponseBody extends TeaModel {
 
     /**
      * <p>The HTTP status code. Valid values:</p>
-     * <br>
-     * <p>*   **2xx**: The request is successful.</p>
-     * <p>*   **3xx**: A redirection message is returned.</p>
-     * <p>*   **4xx**: The request is invalid.</p>
-     * <p>*   **5xx**: A server error occurred.</p>
+     * <ul>
+     * <li><strong>2xx</strong>: The request is successful.</li>
+     * <li><strong>3xx</strong>: A redirection message is returned.</li>
+     * <li><strong>4xx</strong>: The request is invalid.</li>
+     * <li><strong>5xx</strong>: A server error occurred.</li>
+     * </ul>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The trace ID that is used to query details of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The returned message.</p>
-     * <br>
-     * <p>*   If the request is successful, **success** is returned.</p>
-     * <p>*   If an error occurred, the error code is returned.</p>
+     * <ul>
+     * <li>If the request is successful, <strong>success</strong> is returned.</li>
+     * <li>If an error occurred, the error code is returned.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The returned results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0a98a02315955564772843261e****</p>
      */
     @NameInMap("TraceId")
     public String traceId;
@@ -118,9 +137,13 @@ public class DeleteApplicationResponseBody extends TeaModel {
     public static class DeleteApplicationResponseBodyData extends TeaModel {
         /**
          * <p>The error code that is returned if the request fails.</p>
-         * <br>
-         * <p>*   If the request is successful, this parameter is not returned.****</p>
-         * <p>*   This parameter is returned only if the request failed.**** For more information about the values of this parameter, see the "**Error codes**" section of this topic.</p>
+         * <ul>
+         * <li>If the request is successful, this parameter is not returned.****</li>
+         * <li>This parameter is returned only if the request failed.**** For more information about the values of this parameter, see the &quot;<strong>Error codes</strong>&quot; section of this topic.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>01db03d3-3ee9-48b3-b3d0-dfce2d88****</p>
          */
         @NameInMap("ChangeOrderId")
         public String changeOrderId;

@@ -6,17 +6,24 @@ import com.aliyun.tea.*;
 public class ListJobsResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code. Valid values:</p>
-     * <br>
-     * <p>*   **2xx**: The call was successful.</p>
-     * <p>*   **3xx**: The call was redirected.</p>
-     * <p>*   **4xx**: The call failed.</p>
-     * <p>*   **5xx**: A server error occurred.</p>
+     * <ul>
+     * <li><strong>2xx</strong>: The call was successful.</li>
+     * <li><strong>3xx</strong>: The call was redirected.</li>
+     * <li><strong>4xx</strong>: The call failed.</li>
+     * <li><strong>5xx</strong>: A server error occurred.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
@@ -29,42 +36,62 @@ public class ListJobsResponseBody extends TeaModel {
 
     /**
      * <p>The error code returned. Take note of the following rules:</p>
-     * <br>
-     * <p>*   If the call is successful, **ErrorCode** is not returned.</p>
-     * <p>*   If the call fails, **ErrorCode** is returned. For more information, see the "**Error codes**" section in this topic.</p>
+     * <ul>
+     * <li>If the call is successful, <strong>ErrorCode</strong> is not returned.</li>
+     * <li>If the call fails, <strong>ErrorCode</strong> is returned. For more information, see the &quot;<strong>Error codes</strong>&quot; section in this topic.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Null</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The number of entries returned on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B4D805CA-926D-41B1-8E63-7AD0C1ED****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the applications were obtained. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The total number of job templates.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("TotalSize")
     public Integer totalSize;
@@ -149,12 +176,18 @@ public class ListJobsResponseBody extends TeaModel {
     public static class ListJobsResponseBodyDataApplicationsTags extends TeaModel {
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value</p>
          */
         @NameInMap("Value")
         public String value;
@@ -185,30 +218,45 @@ public class ListJobsResponseBody extends TeaModel {
     public static class ListJobsResponseBodyDataApplications extends TeaModel {
         /**
          * <p>The number of running instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Active")
         public Long active;
 
         /**
          * <p>The description of the job template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>description</p>
          */
         @NameInMap("AppDescription")
         public String appDescription;
 
         /**
          * <p>The ID of the job template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f7730764-d88f-4b9a-8d8e-cd8efbfe****</p>
          */
         @NameInMap("AppId")
         public String appId;
 
         /**
          * <p>The name of the job template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo-app</p>
          */
         @NameInMap("AppName")
         public String appName;
 
         /**
          * <p>The time when the job was last completed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1657522839</p>
          */
         @NameInMap("CompletionTime")
         public Long completionTime;
@@ -218,32 +266,46 @@ public class ListJobsResponseBody extends TeaModel {
 
         /**
          * <p>The number of instances that failed to run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Failed")
         public Long failed;
 
         /**
          * <p>Indicates whether the latest change order was executed. Valid values:</p>
-         * <br>
-         * <p>*   **0**: The latest change order failed to be executed.</p>
-         * <p>*   **1**: The latest change order was executed.</p>
+         * <ul>
+         * <li><strong>0</strong>: The latest change order failed to be executed.</li>
+         * <li><strong>1</strong>: The latest change order was executed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("LastChangeorderState")
         public String lastChangeorderState;
 
         /**
          * <p>The running status of the latest job. Valid values:</p>
-         * <br>
-         * <p>*   **0**: The job is not executed.</p>
-         * <p>*   **1**: The job was executed.</p>
-         * <p>*   **2**: The job failed to be executed.</p>
-         * <p>*   **3**: The job is being executed.</p>
+         * <ul>
+         * <li><strong>0</strong>: The job is not executed.</li>
+         * <li><strong>1</strong>: The job was executed.</li>
+         * <li><strong>2</strong>: The job failed to be executed.</li>
+         * <li><strong>3</strong>: The job is being executed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("LastJobState")
         public String lastJobState;
 
         /**
          * <p>The time when the job was last started.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1657522800</p>
          */
         @NameInMap("LastStartTime")
         public Long lastStartTime;
@@ -256,24 +318,36 @@ public class ListJobsResponseBody extends TeaModel {
 
         /**
          * <p>The namespace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing:demo</p>
          */
         @NameInMap("NamespaceId")
         public String namespaceId;
 
         /**
          * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The number of instances that were successfully run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("Succeeded")
         public Long succeeded;
 
         /**
          * <p>Indicates whether the job template is suspended.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Suspend")
         public Boolean suspend;
@@ -447,18 +521,27 @@ public class ListJobsResponseBody extends TeaModel {
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The number of entries returned on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of job templates.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("TotalSize")
         public Integer totalSize;

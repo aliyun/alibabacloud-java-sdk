@@ -6,11 +6,15 @@ import com.aliyun.tea.*;
 public class RescaleApplicationResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code. Take note of the following rules:</p>
-     * <br>
-     * <p>*   **2xx**: The call was successful.</p>
-     * <p>*   **3xx**: The call was redirected.</p>
-     * <p>*   **4xx**: The call failed.</p>
-     * <p>*   **5xx**: A server error occurred.</p>
+     * <ul>
+     * <li><strong>2xx</strong>: The call was successful.</li>
+     * <li><strong>3xx</strong>: The call was redirected.</li>
+     * <li><strong>4xx</strong>: The call failed.</li>
+     * <li><strong>5xx</strong>: A server error occurred.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -23,30 +27,44 @@ public class RescaleApplicationResponseBody extends TeaModel {
 
     /**
      * <p>The error code returned if the request failed. Take note of the following rules:</p>
-     * <br>
-     * <p>*   The **ErrorCode** parameter is not returned if the request succeeds.</p>
-     * <p>*   If the call fails, the **ErrorCode** parameter is returned. For more information, see the "**Error codes**" section of this topic.</p>
+     * <ul>
+     * <li>The <strong>ErrorCode</strong> parameter is not returned if the request succeeds.</li>
+     * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the &quot;<strong>Error codes</strong>&quot; section of this topic.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Null</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The message returned for the operation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the application is successfully scaled. Take note of the following rules:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -107,6 +125,9 @@ public class RescaleApplicationResponseBody extends TeaModel {
     public static class RescaleApplicationResponseBodyData extends TeaModel {
         /**
          * <p>The ID of the change order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0e09829f-4914-4612-bc88-6f52fd81****</p>
          */
         @NameInMap("ChangeOrderId")
         public String changeOrderId;

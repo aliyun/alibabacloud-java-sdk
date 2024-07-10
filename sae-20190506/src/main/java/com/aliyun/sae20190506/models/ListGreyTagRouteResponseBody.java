@@ -6,11 +6,15 @@ import com.aliyun.tea.*;
 public class ListGreyTagRouteResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code. Valid values:</p>
-     * <br>
-     * <p>- **2xx**: The call was successful.</p>
-     * <p>- **3xx**: The call was redirected.</p>
-     * <p>- **4xx**: The call failed.</p>
-     * <p>- **5xx**: A server error occurred.</p>
+     * <ul>
+     * <li><strong>2xx</strong>: The call was successful.</li>
+     * <li><strong>3xx</strong>: The call was redirected.</li>
+     * <li><strong>4xx</strong>: The call failed.</li>
+     * <li><strong>5xx</strong>: A server error occurred.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -23,39 +27,54 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
 
     /**
      * <p>The returned error code. Valid values:</p>
-     * <br>
-     * <p>- If the call is successful, the **ErrorCode** parameter is not returned.</p>
-     * <p>- If the call fails, the **ErrorCode** parameter is returned. For more information, see the "**Error codes**" section of this topic.</p>
+     * <ul>
+     * <li>If the call is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+     * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the &quot;<strong>Error codes</strong>&quot; section of this topic.</li>
+     * </ul>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The returned information. Valid values:</p>
-     * <br>
-     * <p>*   success: If the call is successful, **success** is returned.</p>
-     * <p>*   An error code: If the call fails, an error code is returned.</p>
+     * <ul>
+     * <li>success: If the call is successful, <strong>success</strong> is returned.</li>
+     * <li>An error code: If the call fails, an error code is returned.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9D29CBD0-45D3-410B-9826-52F86F90****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the information of the change order was queried. Valid values:</p>
-     * <br>
-     * <p>- **true**: The information was queried.</p>
-     * <p>- **false**: The information failed to be queried.</p>
+     * <ul>
+     * <li><strong>true</strong>: The information was queried.</li>
+     * <li><strong>false</strong>: The information failed to be queried.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The trace ID that is used to query the details of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0a98a02315955564772843261e****</p>
      */
     @NameInMap("TraceId")
     public String traceId;
@@ -122,24 +141,52 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
     }
 
     public static class ListGreyTagRouteResponseBodyDataResultAlbRulesItems extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>==</p>
+         */
         @NameInMap("cond")
         public String cond;
 
+        /**
+         * <strong>example:</strong>
+         * <p>N/A</p>
+         */
         @NameInMap("expr")
         public String expr;
 
+        /**
+         * <strong>example:</strong>
+         * <p>N/A</p>
+         */
         @NameInMap("index")
         public Integer index;
 
+        /**
+         * <strong>example:</strong>
+         * <p>example</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>rawvalue</p>
+         */
         @NameInMap("operator")
         public String operator;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cookie</p>
+         */
         @NameInMap("type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("value")
         public String value;
 
@@ -207,9 +254,17 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
     }
 
     public static class ListGreyTagRouteResponseBodyDataResultAlbRules extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>AND</p>
+         */
         @NameInMap("condition")
         public String condition;
 
+        /**
+         * <strong>example:</strong>
+         * <p>23</p>
+         */
         @NameInMap("ingressId")
         public String ingressId;
 
@@ -260,55 +315,78 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
 
     public static class ListGreyTagRouteResponseBodyDataResultDubboRulesItems extends TeaModel {
         /**
-         * <p>The comparison operator. Valid values: **>**, **<**, **>=**, **<=**, **==**, and **! =**.</p>
+         * <p>The comparison operator. Valid values: <strong>&gt;</strong>, <strong>&lt;**, **&gt;=</strong>, <strong>&lt;=</strong>, <strong>==</strong>, and <strong>! =</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>==</p>
          */
         @NameInMap("cond")
         public String cond;
 
         /**
          * <p>The expression that is used to obtain the value of the parameter. The syntax of the expression must follow the standard of the SpEL. Valid values:</p>
-         * <br>
-         * <p>- **Empty**: obtains the value of the parameter.</p>
-         * <p>- **.name**: obtains the name property of the parameter. This expression works the same way as args0.getName().</p>
-         * <p>- **.isEnabled()**: obtains the enabled property of the parameter. This expression works the same way as args0.isEnabled().</p>
-         * <p>- **[0]**: indicates that the value of the parameter is an array and obtains the first value of the array. This expression works the same way as args0[0]. This expression does not start with a period (.).</p>
-         * <p>- **.get(0)**: indicates that the value of the parameter is a list and obtains the first value of the list. This expression works the same way as args0.get(0).</p>
-         * <p>- **.get("key")**: indicates that the value of the parameter is a map and obtains the value of the key in the map. This expression works the same way as args0.get("key").  >  For more information about the expressions that are used to obtain parameter values, see  [Spring Expression Language (SpEL)](https://docs.spring.io/spring-integration/docs/current/reference/html/spel.html).</p>
+         * <ul>
+         * <li><strong>Empty</strong>: obtains the value of the parameter.</li>
+         * <li><strong>.name</strong>: obtains the name property of the parameter. This expression works the same way as args0.getName().</li>
+         * <li><strong>.isEnabled()</strong>: obtains the enabled property of the parameter. This expression works the same way as args0.isEnabled().</li>
+         * <li><strong>[0]</strong>: indicates that the value of the parameter is an array and obtains the first value of the array. This expression works the same way as args0[0]. This expression does not start with a period (.).</li>
+         * <li><strong>.get(0)</strong>: indicates that the value of the parameter is a list and obtains the first value of the list. This expression works the same way as args0.get(0).</li>
+         * <li><strong>.get(&quot;key&quot;)</strong>: indicates that the value of the parameter is a map and obtains the value of the key in the map. This expression works the same way as args0.get(&quot;key&quot;).  &gt;  For more information about the expressions that are used to obtain parameter values, see  <a href="https://docs.spring.io/spring-integration/docs/current/reference/html/spel.html">Spring Expression Language (SpEL)</a>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>.name</p>
          */
         @NameInMap("expr")
         public String expr;
 
         /**
          * <p>The index of the parameter. The value 0 indicates the first parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("index")
         public Integer index;
 
         /**
          * <p>This parameter is not returned for Dubbo services.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>N/A</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>The operator. Valid values:</p>
-         * <br>
-         * <p>- **rawvalue**: direct comparison.</p>
-         * <p>- **list**: whitelist.</p>
-         * <p>- **mod**: mods 100.</p>
-         * <p>- **deterministic_proportional_steaming_division**: percentage.</p>
+         * <ul>
+         * <li><strong>rawvalue</strong>: direct comparison.</li>
+         * <li><strong>list</strong>: whitelist.</li>
+         * <li><strong>mod</strong>: mods 100.</li>
+         * <li><strong>deterministic_proportional_steaming_division</strong>: percentage.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>rawvalue</p>
          */
         @NameInMap("operator")
         public String operator;
 
         /**
          * <p>This parameter is not returned for Dubbo services.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>N/A</p>
          */
         @NameInMap("type")
         public String type;
 
         /**
-         * <p>The value of the parameter. This value is compared with the value that is obtained based on the **expr** and **index** parameters.</p>
+         * <p>The value of the parameter. This value is compared with the value that is obtained based on the <strong>expr</strong> and <strong>index</strong> parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("value")
         public String value;
@@ -379,15 +457,22 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
     public static class ListGreyTagRouteResponseBodyDataResultDubboRules extends TeaModel {
         /**
          * <p>The relationship between the conditions in the canary release rule. Valid values:</p>
-         * <br>
-         * <p>- **AND**: The conditions are in the logical AND relation. All conditions must be met at the same time.</p>
-         * <p>- **OR**: The conditions are in the logical OR relation. At least one of the conditions must be met.</p>
+         * <ul>
+         * <li><strong>AND</strong>: The conditions are in the logical AND relation. All conditions must be met at the same time.</li>
+         * <li><strong>OR</strong>: The conditions are in the logical OR relation. At least one of the conditions must be met.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OR</p>
          */
         @NameInMap("condition")
         public String condition;
 
         /**
          * <p>The group of the Dubbo service that corresponds to the canary release rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DUBBO</p>
          */
         @NameInMap("group")
         public String group;
@@ -400,18 +485,27 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
 
         /**
          * <p>The method name of the Dubbo service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>echo</p>
          */
         @NameInMap("methodName")
         public String methodName;
 
         /**
          * <p>The name of the Dubbo service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>com.alibaba.edas.boot.EchoService</p>
          */
         @NameInMap("serviceName")
         public String serviceName;
 
         /**
          * <p>The version of the Dubbo service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
          */
         @NameInMap("version")
         public String version;
@@ -473,52 +567,75 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
 
     public static class ListGreyTagRouteResponseBodyDataResultScRulesItems extends TeaModel {
         /**
-         * <p>The comparison operator. Valid values: **>**, **<**, **>=**, **<=**, **==**, and **! =**.</p>
+         * <p>The comparison operator. Valid values: <strong>&gt;</strong>, <strong>&lt;**, **&gt;=</strong>, <strong>&lt;=</strong>, <strong>==</strong>, and <strong>! =</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>==</p>
          */
         @NameInMap("cond")
         public String cond;
 
         /**
          * <p>This parameter is not returned for Spring Cloud applications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>N/A</p>
          */
         @NameInMap("expr")
         public String expr;
 
         /**
          * <p>This parameter is not returned for Spring Cloud applications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>N/A</p>
          */
         @NameInMap("index")
         public Integer index;
 
         /**
          * <p>The name of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>The operator. Valid values:</p>
-         * <br>
-         * <p>*   **rawvalue**: direct comparison.</p>
-         * <p>*   **list**: whitelist.</p>
-         * <p>*   **mod**: mods 100.</p>
-         * <p>*   **deterministic_proportional_steaming_division**: percentage.</p>
+         * <ul>
+         * <li><strong>rawvalue</strong>: direct comparison.</li>
+         * <li><strong>list</strong>: whitelist.</li>
+         * <li><strong>mod</strong>: mods 100.</li>
+         * <li><strong>deterministic_proportional_steaming_division</strong>: percentage.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>rawvalue</p>
          */
         @NameInMap("operator")
         public String operator;
 
         /**
          * <p>The type of the comparison. Valid values:</p>
-         * <br>
-         * <p>*   **param**: parameter</p>
-         * <p>*   **cookie**: cookie</p>
-         * <p>*   **header**: header</p>
+         * <ul>
+         * <li><strong>param</strong>: parameter</li>
+         * <li><strong>cookie</strong>: cookie</li>
+         * <li><strong>header</strong>: header</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cookie</p>
          */
         @NameInMap("type")
         public String type;
 
         /**
-         * <p>The value of the parameter. This value is compared with the value that is obtained based on the **type** and **name** parameters.</p>
+         * <p>The value of the parameter. This value is compared with the value that is obtained based on the <strong>type</strong> and <strong>name</strong> parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("value")
         public String value;
@@ -589,9 +706,13 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
     public static class ListGreyTagRouteResponseBodyDataResultScRules extends TeaModel {
         /**
          * <p>The relationship between the conditions in the canary release rule. Valid values:</p>
-         * <br>
-         * <p>*   **AND**: The conditions are in the logical AND relation. All conditions must be met at the same time.</p>
-         * <p>*   **OR**: The conditions are in the logical OR relation. At least one of the conditions must be met.</p>
+         * <ul>
+         * <li><strong>AND</strong>: The conditions are in the logical AND relation. All conditions must be met at the same time.</li>
+         * <li><strong>OR</strong>: The conditions are in the logical OR relation. At least one of the conditions must be met.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OR</p>
          */
         @NameInMap("condition")
         public String condition;
@@ -604,6 +725,9 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
 
         /**
          * <p>The path of the canary release rule of the Spring Cloud application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/path</p>
          */
         @NameInMap("path")
         public String path;
@@ -645,12 +769,18 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
 
         /**
          * <p>The timestamp when the canary release rule was created. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1619007592013</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
          * <p>The description of the canary release rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Description")
         public String description;
@@ -663,12 +793,18 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the canary release rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("GreyTagRouteId")
         public Long greyTagRouteId;
 
         /**
          * <p>The name of the canary release rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rule-name</p>
          */
         @NameInMap("Name")
         public String name;
@@ -681,6 +817,9 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
 
         /**
          * <p>The timestamp when the canary release rule was updated. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1609434061000</p>
          */
         @NameInMap("UpdateTime")
         public Long updateTime;
@@ -759,12 +898,18 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
     public static class ListGreyTagRouteResponseBodyData extends TeaModel {
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
-         * <p>The number of entries returned on each page. Valid value: **1**.</p>
+         * <p>The number of entries returned on each page. Valid value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
@@ -776,7 +921,10 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
         public java.util.List<ListGreyTagRouteResponseBodyDataResult> result;
 
         /**
-         * <p>The total number of canary release rules. Valid value: **1**.</p>
+         * <p>The total number of canary release rules. Valid value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("TotalSize")
         public Long totalSize;

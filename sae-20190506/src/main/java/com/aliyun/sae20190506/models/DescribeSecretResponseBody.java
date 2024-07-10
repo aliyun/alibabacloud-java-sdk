@@ -6,11 +6,15 @@ import com.aliyun.tea.*;
 public class DescribeSecretResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code. Valid values:</p>
-     * <br>
-     * <p>*   **2xx**: The call was successful.</p>
-     * <p>*   **3xx**: The call was redirected.</p>
-     * <p>*   **4xx**: The call failed.</p>
-     * <p>*   **5xx**: A server error occurred.</p>
+     * <ul>
+     * <li><strong>2xx</strong>: The call was successful.</li>
+     * <li><strong>3xx</strong>: The call was redirected.</li>
+     * <li><strong>4xx</strong>: The call failed.</li>
+     * <li><strong>5xx</strong>: A server error occurred.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -23,39 +27,57 @@ public class DescribeSecretResponseBody extends TeaModel {
 
     /**
      * <p>The error code returned. Valid values:</p>
-     * <br>
-     * <p>*   The **ErrorCode** parameter is not returned if the request succeeds.</p>
-     * <p>*   If the call fails, the **ErrorCode** parameter is returned. For more information, see **Error codes** in this topic.</p>
+     * <ul>
+     * <li>The <strong>ErrorCode</strong> parameter is not returned if the request succeeds.</li>
+     * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see <strong>Error codes</strong> in this topic.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Null</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The additional information that is returned. Valid values:</p>
-     * <br>
-     * <p>*   success: If the call is successful, **success** is returned.</p>
-     * <p>*   An error code: If the call fails, an error code is returned.</p>
+     * <ul>
+     * <li>success: If the call is successful, <strong>success</strong> is returned.</li>
+     * <li>An error code: If the call fails, an error code is returned.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the details of the Secret instance are successfully queried. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The information was queried.</p>
-     * <p>*   **false**: The image failed to be found.</p>
+     * <ul>
+     * <li><strong>true</strong>: The information was queried.</li>
+     * <li><strong>false</strong>: The image failed to be found.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The trace ID that is used to query the details of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0a98a02315955564772843261e****</p>
      */
     @NameInMap("TraceId")
     public String traceId;
@@ -124,12 +146,18 @@ public class DescribeSecretResponseBody extends TeaModel {
     public static class DescribeSecretResponseBodyDataRelateApps extends TeaModel {
         /**
          * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f16b4000-9058-4c22-a49d-49a28f0b****</p>
          */
         @NameInMap("AppId")
         public String appId;
 
         /**
          * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-app</p>
          */
         @NameInMap("AppName")
         public String appName;
@@ -160,12 +188,18 @@ public class DescribeSecretResponseBody extends TeaModel {
     public static class DescribeSecretResponseBodyData extends TeaModel {
         /**
          * <p>The time when the task was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1593746835111</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
          * <p>The ID of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing:test</p>
          */
         @NameInMap("NamespaceId")
         public String namespaceId;
@@ -184,24 +218,36 @@ public class DescribeSecretResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the Secret instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16</p>
          */
         @NameInMap("SecretId")
         public Long secretId;
 
         /**
          * <p>The name of the Secret instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>registry-auth</p>
          */
         @NameInMap("SecretName")
         public String secretName;
 
         /**
          * <p>The type of the Secret instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kubernetes.io/dockerconfigjson</p>
          */
         @NameInMap("SecretType")
         public String secretType;
 
         /**
          * <p>The time when the task was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1593746835111</p>
          */
         @NameInMap("UpdateTime")
         public Long updateTime;

@@ -6,11 +6,15 @@ import com.aliyun.tea.*;
 public class ListNamespacedConfigMapsResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code. Valid values:</p>
-     * <br>
-     * <p>*   **2xx**: indicates that the call was successful.</p>
-     * <p>*   **3xx**: indicates that the call was redirected.</p>
-     * <p>*   **4xx**: indicates that the call failed.</p>
-     * <p>*   **5xx**: indicates that a server error occurred.</p>
+     * <ul>
+     * <li><strong>2xx</strong>: indicates that the call was successful.</li>
+     * <li><strong>3xx</strong>: indicates that the call was redirected.</li>
+     * <li><strong>4xx</strong>: indicates that the call failed.</li>
+     * <li><strong>5xx</strong>: indicates that a server error occurred.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -23,39 +27,54 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
 
     /**
      * <p>The returned error code. Valid values:</p>
-     * <br>
-     * <p>- If the call is successful, the **ErrorCode** parameter is not returned.</p>
-     * <p>- If the call fails, the **ErrorCode** parameter is returned. For more information, see the "**Error codes**" section of this topic.</p>
+     * <ul>
+     * <li>If the call is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+     * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the &quot;<strong>Error codes</strong>&quot; section of this topic.</li>
+     * </ul>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The returned information. Valid values:</p>
-     * <br>
-     * <p>*   If the call is successful, **success** is returned.</p>
-     * <p>*   If the call fails, an error code is returned.</p>
+     * <ul>
+     * <li>If the call is successful, <strong>success</strong> is returned.</li>
+     * <li>If the call fails, an error code is returned.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the ConfigMap instances were obtained. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The instances were obtained.</p>
-     * <p>*   **false**: The instances failed to be obtained.</p>
+     * <ul>
+     * <li><strong>true</strong>: The instances were obtained.</li>
+     * <li><strong>false</strong>: The instances failed to be obtained.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The ID of the trace. The ID is used to query the details of a request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0a98a02315955564772843261e****</p>
      */
     @NameInMap("TraceId")
     public String traceId;
@@ -124,12 +143,18 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
     public static class ListNamespacedConfigMapsResponseBodyDataConfigMapsRelateApps extends TeaModel {
         /**
          * <p>The ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f16b4000-9058-4c22-a49d-49a28f0b****</p>
          */
         @NameInMap("AppId")
         public String appId;
 
         /**
          * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-app</p>
          */
         @NameInMap("AppName")
         public String appName;
@@ -160,40 +185,56 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
     public static class ListNamespacedConfigMapsResponseBodyDataConfigMaps extends TeaModel {
         /**
          * <p>The ID of the ConfigMap instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ConfigMapId")
         public Long configMapId;
 
         /**
          * <p>The time when the instance was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1593760185111</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
          * <p>The data of ConfigMap key-value pairs. Format:</p>
-         * <br>
-         * <p>{"k1":"v1", "k2":"v2"}</p>
-         * <br>
-         * <p>k specifies a key and v specifies a value. For more information, see [Manage and use configurations](https://help.aliyun.com/document_detail/171326.html).</p>
+         * <p>{&quot;k1&quot;:&quot;v1&quot;, &quot;k2&quot;:&quot;v2&quot;}</p>
+         * <p>k specifies a key and v specifies a value. For more information, see <a href="https://help.aliyun.com/document_detail/171326.html">Manage and use configurations</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;k1&quot;:&quot;v1&quot;,&quot;k2&quot;:&quot;v2&quot;}</p>
          */
         @NameInMap("Data")
         public java.util.Map<String, ?> data;
 
         /**
          * <p>The description of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-desc</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the ConfigMap instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-name</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The ID of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("NamespaceId")
         public String namespaceId;
@@ -206,6 +247,9 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
 
         /**
          * <p>The time when the instance was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1593760185111</p>
          */
         @NameInMap("UpdateTime")
         public Long updateTime;

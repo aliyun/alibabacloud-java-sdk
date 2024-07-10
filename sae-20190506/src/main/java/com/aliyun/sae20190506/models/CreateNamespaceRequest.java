@@ -9,31 +9,43 @@ public class CreateNamespaceRequest extends TeaModel {
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("NameSpaceShortId")
     public String nameSpaceShortId;
 
     /**
      * <p>The name of the namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>desc</p>
      */
     @NameInMap("NamespaceDescription")
     public String namespaceDescription;
 
     /**
      * <p>The HTTP status code. Valid values:</p>
-     * <br>
-     * <p>*   **2xx**: indicates that the request was successful.</p>
-     * <p>*   **3xx**: indicates that the request was redirected.</p>
-     * <p>*   **4xx**: indicates that the request was invalid.</p>
-     * <p>*   **5xx**: indicates that a server error occurred.</p>
+     * <ul>
+     * <li><strong>2xx</strong>: indicates that the request was successful.</li>
+     * <li><strong>3xx</strong>: indicates that the request was redirected.</li>
+     * <li><strong>4xx</strong>: indicates that the request was invalid.</li>
+     * <li><strong>5xx</strong>: indicates that a server error occurred.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing:test</p>
      */
     @NameInMap("NamespaceId")
     public String namespaceId;
 
     /**
      * <p>cn-beijing:test</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>name</p>
      */
     @NameInMap("NamespaceName")
     public String namespaceName;

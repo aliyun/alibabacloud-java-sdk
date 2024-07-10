@@ -6,11 +6,17 @@ import com.aliyun.tea.*;
 public class ListNamespaceChangeOrdersRequest extends TeaModel {
     /**
      * <p>2</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("CoStatus")
     public String coStatus;
 
     /**
+     * <p>CoBatchStartApplication</p>
+     * 
+     * <strong>example:</strong>
      * <p>CoBatchStartApplication</p>
      */
     @NameInMap("CoType")
@@ -18,11 +24,17 @@ public class ListNamespaceChangeOrdersRequest extends TeaModel {
 
     /**
      * <p>1</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
+     * <p>test</p>
+     * 
+     * <strong>example:</strong>
      * <p>test</p>
      */
     @NameInMap("Key")
@@ -30,13 +42,18 @@ public class ListNamespaceChangeOrdersRequest extends TeaModel {
 
     /**
      * <p>cn-shanghai:test</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai:test</p>
      */
     @NameInMap("NamespaceId")
     public String namespaceId;
 
     /**
+     * <p>20</p>
+     * 
+     * <strong>example:</strong>
      * <p>20</p>
      */
     @NameInMap("PageSize")

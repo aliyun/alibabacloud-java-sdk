@@ -4,10 +4,17 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class DeleteNamespaceRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("NameSpaceShortId")
     public String nameSpaceShortId;
 
     /**
+     * <p>cn-beijing:test</p>
+     * 
+     * <strong>example:</strong>
      * <p>cn-beijing:test</p>
      */
     @NameInMap("NamespaceId")

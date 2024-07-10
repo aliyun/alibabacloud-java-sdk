@@ -6,11 +6,15 @@ import com.aliyun.tea.*;
 public class GetScaleAppMetricResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code. The following limits are imposed on the ID:</p>
-     * <br>
-     * <p>*   **2xx**: The call was successful.</p>
-     * <p>*   **3xx**: The call was redirected.</p>
-     * <p>*   **4xx**: The call failed.</p>
-     * <p>*   **5xx**: A server error occurred.</p>
+     * <ul>
+     * <li><strong>2xx</strong>: The call was successful.</li>
+     * <li><strong>3xx</strong>: The call was redirected.</li>
+     * <li><strong>4xx</strong>: The call failed.</li>
+     * <li><strong>5xx</strong>: A server error occurred.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -23,24 +27,35 @@ public class GetScaleAppMetricResponseBody extends TeaModel {
 
     /**
      * <p>The additional information that is returned. The following limits are imposed on the ID:</p>
-     * <br>
-     * <p>*   success: If the call is successful, **success** is returned.</p>
-     * <p>*   An error code: If the call fails, an error code is returned.</p>
+     * <ul>
+     * <li>success: If the call is successful, <strong>success</strong> is returned.</li>
+     * <li>An error code: If the call fails, an error code is returned.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3B763F98-0BA2-5C23-B6B8-558568D2C1C2</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the microservice list was obtained. The following limits are imposed on the ID:</p>
-     * <br>
-     * <p>*   **true**: The namespaces were obtained.</p>
-     * <p>*   **false**: no</p>
+     * <ul>
+     * <li><strong>true</strong>: The namespaces were obtained.</li>
+     * <li><strong>false</strong>: no</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -92,31 +107,46 @@ public class GetScaleAppMetricResponseBody extends TeaModel {
 
     public static class GetScaleAppMetricResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the application.</p>
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7171a6ca-d1cd-4928-8642-7d5cfe69****</p>
          */
         @NameInMap("AppId")
         public String appId;
 
         /**
          * <p>The maximum number of instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("MaxReplicas")
         public Long maxReplicas;
 
         /**
-         * <p>The name of the application.</p>
+         * <p>The application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The ID of the namespace.</p>
+         * <p>The namespace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The current number of instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("Runnings")
         public Long runnings;

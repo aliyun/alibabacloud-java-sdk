@@ -6,11 +6,17 @@ import com.aliyun.tea.*;
 public class DescribeNamespaceListRequest extends TeaModel {
     /**
      * <p>true</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("ContainCustom")
     public Boolean containCustom;
 
     /**
+     * <p>true</p>
+     * 
+     * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("HybridCloudExclude")

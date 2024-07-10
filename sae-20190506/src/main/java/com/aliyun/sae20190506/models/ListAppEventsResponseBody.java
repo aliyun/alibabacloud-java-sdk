@@ -6,11 +6,15 @@ import com.aliyun.tea.*;
 public class ListAppEventsResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code. Valid values:</p>
-     * <br>
-     * <p>*   **2xx**: The call was successful.</p>
-     * <p>*   **3xx**: The call was redirected.</p>
-     * <p>*   **4xx**: The call failed.</p>
-     * <p>*   **5xx**: A server error occurred.</p>
+     * <ul>
+     * <li><strong>2xx</strong>: The call was successful.</li>
+     * <li><strong>3xx</strong>: The call was redirected.</li>
+     * <li><strong>4xx</strong>: The call failed.</li>
+     * <li><strong>5xx</strong>: A server error occurred.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -23,30 +27,41 @@ public class ListAppEventsResponseBody extends TeaModel {
 
     /**
      * <p>The error code returned if the call failed. Take note of the following rules:</p>
-     * <br>
-     * <p>*   If the call is successful, the **ErrorCode** parameter is not returned.</p>
-     * <p>*   If the call fails, the **ErrorCode** parameter is returned. For more information, see the "**Error codes**" section in this topic.</p>
+     * <ul>
+     * <li>If the call is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+     * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the &quot;<strong>Error codes</strong>&quot; section in this topic.</li>
+     * </ul>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B4D805CA-926D-41B1-8E63-7AD0C1ED****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the events that occurred in the application were queried. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The events were queried.</p>
-     * <p>*   **false**: The events failed to be queried.</p>
+     * <ul>
+     * <li><strong>true</strong>: The events were queried.</li>
+     * <li><strong>false</strong>: The events failed to be queried.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -107,42 +122,63 @@ public class ListAppEventsResponseBody extends TeaModel {
     public static class ListAppEventsResponseBodyDataAppEventEntity extends TeaModel {
         /**
          * <p>The type of the event. Valid values:</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         @NameInMap("EventType")
         public String eventType;
 
         /**
          * <p>The timestamp of the first occurrence of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-02-19T05:01:28Z</p>
          */
         @NameInMap("FirstTimestamp")
         public String firstTimestamp;
 
         /**
          * <p>The timestamp of the last occurrence of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-02-19T05:01:28Z</p>
          */
         @NameInMap("LastTimestamp")
         public String lastTimestamp;
 
         /**
          * <p>The information about the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Created container</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
          * <p>The type of the object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Pod</p>
          */
         @NameInMap("ObjectKind")
         public String objectKind;
 
         /**
          * <p>The name of the object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>errew-b86bf540-b4dc-47d8-a42f-b4997c14bd8f-5595cbddd6-2****</p>
          */
         @NameInMap("ObjectName")
         public String objectName;
 
         /**
          * <p>The cause of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Created</p>
          */
         @NameInMap("Reason")
         public String reason;
@@ -219,18 +255,27 @@ public class ListAppEventsResponseBody extends TeaModel {
 
         /**
          * <p>The number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of events that occurred in an application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("TotalSize")
         public Integer totalSize;

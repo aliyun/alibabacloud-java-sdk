@@ -6,11 +6,15 @@ import com.aliyun.tea.*;
 public class ListNamespaceChangeOrdersResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code. Valid values:</p>
-     * <br>
-     * <p>*   **2xx**: indicates that the request was successful.</p>
-     * <p>*   **3xx**: indicates that the request was redirected.</p>
-     * <p>*   **4xx**: indicates that the request was invalid.</p>
-     * <p>*   **5xx**: indicates that a server error occurred.</p>
+     * <ul>
+     * <li><strong>2xx</strong>: indicates that the request was successful.</li>
+     * <li><strong>3xx</strong>: indicates that the request was redirected.</li>
+     * <li><strong>4xx</strong>: indicates that the request was invalid.</li>
+     * <li><strong>5xx</strong>: indicates that a server error occurred.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -23,36 +27,50 @@ public class ListNamespaceChangeOrdersResponseBody extends TeaModel {
 
     /**
      * <p>The error code.</p>
-     * <br>
-     * <p>*   The **ErrorCode** parameter is not returned when the request succeeds.</p>
-     * <p>*   The **ErrorCode** parameter is returned when the request fails. For more information, see **Error codes** in this topic.</p>
+     * <ul>
+     * <li>The <strong>ErrorCode</strong> parameter is not returned when the request succeeds.</li>
+     * <li>The <strong>ErrorCode</strong> parameter is returned when the request fails. For more information, see <strong>Error codes</strong> in this topic.</li>
+     * </ul>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0bc3915638507554994370d****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the list of change orders was obtained. Valid values:</p>
-     * <br>
-     * <p>*   **true**: indicates that the list was obtained.</p>
-     * <p>*   **false**: indicates that the list could not be obtained.</p>
+     * <ul>
+     * <li><strong>true</strong>: indicates that the list was obtained.</li>
+     * <li><strong>false</strong>: indicates that the list could not be obtained.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The ID of the trace. It is used to query the details of a request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0bc3915638507554994370d****</p>
      */
     @NameInMap("TraceId")
     public String traceId;
@@ -121,48 +139,68 @@ public class ListNamespaceChangeOrdersResponseBody extends TeaModel {
     public static class ListNamespaceChangeOrdersResponseBodyDataChangeOrderList extends TeaModel {
         /**
          * <p>The number of release batches.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("BatchCount")
         public Integer batchCount;
 
         /**
          * <p>The mode in which the release batches are determined. Valid values:</p>
-         * <br>
-         * <p>*   **auto**: SAE automatically determines the release batches.</p>
-         * <p>*   **manual**: You must manually determine the release batches.</p>
+         * <ul>
+         * <li><strong>auto</strong>: SAE automatically determines the release batches.</li>
+         * <li><strong>manual</strong>: You must manually determine the release batches.</li>
+         * </ul>
          */
         @NameInMap("BatchType")
         public String batchType;
 
         /**
          * <p>The ID of the change order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7fa5c0-9ebb-4bb4-b383-1f885447****</p>
          */
         @NameInMap("ChangeOrderId")
         public String changeOrderId;
 
         /**
-         * <p>The type of the change order, which corresponds the **CoTypeCode** parameter.</p>
+         * <p>The type of the change order, which corresponds the <strong>CoTypeCode</strong> parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>msg.docker.app.actions.CoBatchStartApplication</p>
          */
         @NameInMap("CoType")
         public String coType;
 
         /**
          * <p>The code of the change order type. Valid values:</p>
-         * <br>
-         * <p>*   **CoBatchStartApplication**: starts multiple applications concurrently.</p>
-         * <p>*   **CoBatchStopApplication**: stops multiple applications concurrently.</p>
+         * <ul>
+         * <li><strong>CoBatchStartApplication</strong>: starts multiple applications concurrently.</li>
+         * <li><strong>CoBatchStopApplication</strong>: stops multiple applications concurrently.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CoBatchStartApplication</p>
          */
         @NameInMap("CoTypeCode")
         public String coTypeCode;
 
         /**
          * <p>The time when the change order was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-07-11 15:54:49</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The ID of the user who created the change order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:test@aliyun.com">test@aliyun.com</a></p>
          */
         @NameInMap("CreateUserId")
         public String createUserId;
@@ -175,49 +213,71 @@ public class ListNamespaceChangeOrdersResponseBody extends TeaModel {
 
         /**
          * <p>The time when the change order was completed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-07-11 20:12:58</p>
          */
         @NameInMap("FinishTime")
         public String finishTime;
 
         /**
          * <p>The ID of the group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c9ecd2-cf6c-46c3-9f20-525de202****</p>
          */
         @NameInMap("GroupId")
         public String groupId;
 
         /**
          * <p>The ID of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai:test</p>
          */
         @NameInMap("NamespaceId")
         public String namespaceId;
 
         /**
          * <p>The information about release batches.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx</p>
          */
         @NameInMap("Pipelines")
         public String pipelines;
 
         /**
          * <p>The source of the change order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>console</p>
          */
         @NameInMap("Source")
         public String source;
 
         /**
          * <p>The status of the change order. Valid values:</p>
-         * <br>
-         * <p>*   **0**: The change order is being prepared.</p>
-         * <p>*   **1**: The change order is being executed.</p>
-         * <p>*   **2**: The change order was executed.</p>
-         * <p>*   **3**: The change order could not be executed.</p>
-         * <p>*   **6**: The change order was terminated.</p>
-         * <p>*   **10**: The change order could not be executed due to a system exception.</p>
+         * <ul>
+         * <li><strong>0</strong>: The change order is being prepared.</li>
+         * <li><strong>1</strong>: The change order is being executed.</li>
+         * <li><strong>2</strong>: The change order was executed.</li>
+         * <li><strong>3</strong>: The change order could not be executed.</li>
+         * <li><strong>6</strong>: The change order was terminated.</li>
+         * <li><strong>10</strong>: The change order could not be executed due to a system exception.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Status")
         public Integer status;
 
         /**
          * <p>The ID of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_sae</p>
          */
         @NameInMap("UserId")
         public String userId;
@@ -358,18 +418,27 @@ public class ListNamespaceChangeOrdersResponseBody extends TeaModel {
 
         /**
          * <p>The number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
          * <p>The number of entries returned on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of change orders.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32</p>
          */
         @NameInMap("TotalSize")
         public Integer totalSize;

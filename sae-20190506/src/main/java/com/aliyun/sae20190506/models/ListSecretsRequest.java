@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class ListSecretsRequest extends TeaModel {
     /**
      * <p>The ID of the namespace in which the Secrets reside. By default, the namespace ID is the same as the region ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing:test</p>
      */
     @NameInMap("NamespaceId")
     public String namespaceId;

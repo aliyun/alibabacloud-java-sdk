@@ -6,11 +6,15 @@ import com.aliyun.tea.*;
 public class QueryResourceStaticsResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code. Valid values:</p>
-     * <br>
-     * <p>*   **2xx**: indicates that the request was successful.</p>
-     * <p>*   **3xx**: indicates that the request was redirected.</p>
-     * <p>*   **4xx**: indicates that the request was invalid.</p>
-     * <p>*   **5xx**: indicates that a server error occurred.</p>
+     * <ul>
+     * <li><strong>2xx</strong>: indicates that the request was successful.</li>
+     * <li><strong>3xx</strong>: indicates that the request was redirected.</li>
+     * <li><strong>4xx</strong>: indicates that the request was invalid.</li>
+     * <li><strong>5xx</strong>: indicates that a server error occurred.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -23,39 +27,54 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
 
     /**
      * <p>The error code. </p>
-     * <br>
-     * <p>- The **ErrorCode** parameter is not returned when the request succeeds.</p>
-     * <p>- The **ErrorCode** parameter is returned when the request fails. For more information, see **Error codes** in this topic.</p>
+     * <ul>
+     * <li>The <strong>ErrorCode</strong> parameter is not returned when the request succeeds.</li>
+     * <li>The <strong>ErrorCode</strong> parameter is returned when the request fails. For more information, see <strong>Error codes</strong> in this topic.</li>
+     * </ul>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The returned message.</p>
-     * <br>
-     * <p>*   **success** is returned when the request succeeds.</p>
-     * <p>*   An error code is returned when the request fails.</p>
+     * <ul>
+     * <li><strong>success</strong> is returned when the request succeeds.</li>
+     * <li>An error code is returned when the request fails.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7CCF7092-72CA-4431-90D6-C7D98752****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the resource usage of an application was obtained. Valid values:</p>
-     * <br>
-     * <p>*   **true**: indicates that the resource usage was obtained.</p>
-     * <p>*   **false**: indicates that the resource usage could not be obtained.</p>
+     * <ul>
+     * <li><strong>true</strong>: indicates that the resource usage was obtained.</li>
+     * <li><strong>false</strong>: indicates that the resource usage could not be obtained.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The ID of the trace. It can be used to query the details of a request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ac1a08a015623098794277264e****</p>
      */
     @NameInMap("TraceId")
     public String traceId;
@@ -124,12 +143,18 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
     public static class QueryResourceStaticsResponseBodyDataRealTimeRes extends TeaModel {
         /**
          * <p>The CPU usage. Unit: core per minute.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13</p>
          */
         @NameInMap("Cpu")
         public Float cpu;
 
         /**
          * <p>The memory usage. Unit: GiB per minute.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>26</p>
          */
         @NameInMap("Memory")
         public Float memory;
@@ -160,12 +185,18 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
     public static class QueryResourceStaticsResponseBodyDataSummary extends TeaModel {
         /**
          * <p>The CPU usage. Unit: core per minute.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3354</p>
          */
         @NameInMap("Cpu")
         public Float cpu;
 
         /**
          * <p>The memory usage. Unit: GiB per minute.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6708</p>
          */
         @NameInMap("Memory")
         public Float memory;

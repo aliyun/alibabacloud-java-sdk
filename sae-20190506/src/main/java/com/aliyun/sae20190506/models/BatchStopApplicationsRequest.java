@@ -6,14 +6,19 @@ import com.aliyun.tea.*;
 public class BatchStopApplicationsRequest extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ebf491f0-c1a5-45e2-b2c4-710dbe2a****，ebf491f0-c1a5-45e2-b2c4-71025e2a****</p>
      */
     @NameInMap("AppIds")
     public String appIds;
 
     /**
-     * <p>ebf491f0-c1a5-45e2-b2c4-710dbe2a\\*\\*\\*\\*,ebf491f0-c1a5-45e2-b2c4-71025e2a\\*\\*\\*\\*</p>
-     * <br>
+     * <p>ebf491f0-c1a5-45e2-b2c4-710dbe2a\<em>\</em>\<em>\</em>,ebf491f0-c1a5-45e2-b2c4-71025e2a\<em>\</em>\<em>\</em></p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("NamespaceId")
     public String namespaceId;

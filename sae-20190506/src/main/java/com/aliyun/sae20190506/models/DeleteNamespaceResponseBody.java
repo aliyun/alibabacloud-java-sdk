@@ -6,47 +6,65 @@ import com.aliyun.tea.*;
 public class DeleteNamespaceResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code. Valid values:</p>
-     * <br>
-     * <p>*   **2xx**: indicates that the request was successful.</p>
-     * <p>*   **3xx**: indicates that the request was redirected.</p>
-     * <p>*   **4xx**: indicates that the request was invalid.</p>
-     * <p>*   **5xx**: indicates that a server error occurred.</p>
+     * <ul>
+     * <li><strong>2xx</strong>: indicates that the request was successful.</li>
+     * <li><strong>3xx</strong>: indicates that the request was redirected.</li>
+     * <li><strong>4xx</strong>: indicates that the request was invalid.</li>
+     * <li><strong>5xx</strong>: indicates that a server error occurred.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The error code.</p>
-     * <br>
-     * <p>*   The **ErrorCode** parameter is not returned when the request succeeds.</p>
-     * <p>*   The **ErrorCode** parameter is returned when the request fails. For more information, see **Error codes** in this topic.</p>
+     * <ul>
+     * <li>The <strong>ErrorCode</strong> parameter is not returned when the request succeeds.</li>
+     * <li>The <strong>ErrorCode</strong> parameter is returned when the request fails. For more information, see <strong>Error codes</strong> in this topic.</li>
+     * </ul>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the namespace was deleted. Valid values:</p>
-     * <br>
-     * <p>*   **true**: indicates that the namespace was deleted.</p>
-     * <p>*   **false**: indicates that the namespace could not be deleted.</p>
+     * <ul>
+     * <li><strong>true</strong>: indicates that the namespace was deleted.</li>
+     * <li><strong>false</strong>: indicates that the namespace could not be deleted.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The ID of the trace. It can be used to query the details of a request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0a981dd515966966104121683d****</p>
      */
     @NameInMap("TraceId")
     public String traceId;

@@ -10,6 +10,10 @@ public class PriceEstimateOutput extends TeaModel {
     @NameInMap("Items")
     public java.util.List<PriceEstimateOutputItems> items;
 
+    /**
+     * <strong>example:</strong>
+     * <p>235.66</p>
+     */
     @NameInMap("TotalPrice")
     public Float totalPrice;
 
@@ -43,12 +47,24 @@ public class PriceEstimateOutput extends TeaModel {
     }
 
     public static class PriceEstimateOutputAppsUsages extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>3600.00</p>
+         */
         @NameInMap("Amount")
         public Float amount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Microservice_cpuUsage</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>核*秒</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
@@ -87,6 +103,10 @@ public class PriceEstimateOutput extends TeaModel {
         @NameInMap("Feature")
         public PriceEstimateFeature feature;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Id")
         public Long id;
 
@@ -125,18 +145,34 @@ public class PriceEstimateOutput extends TeaModel {
     }
 
     public static class PriceEstimateOutputItemsSteps extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Begin")
         public Long begin;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10000</p>
+         */
         @NameInMap("End")
         public Long end;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.0001</p>
+         */
         @NameInMap("Price")
         public Float price;
 
         @NameInMap("RegionIds")
         public java.util.List<String> regionIds;
 
+        /**
+         * <strong>example:</strong>
+         * <p>核*秒</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
@@ -188,24 +224,48 @@ public class PriceEstimateOutput extends TeaModel {
     }
 
     public static class PriceEstimateOutputItems extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>3600.00</p>
+         */
         @NameInMap("Amount")
         public Float amount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Count")
         public Long count;
 
+        /**
+         * <strong>example:</strong>
+         * <p>p_micro_service_cpu</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.00</p>
+         */
         @NameInMap("Price")
         public Float price;
 
         @NameInMap("Steps")
         public java.util.List<PriceEstimateOutputItemsSteps> steps;
 
+        /**
+         * <strong>example:</strong>
+         * <p>pack/post</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>核*秒</p>
+         */
         @NameInMap("Unit")
         public String unit;
 

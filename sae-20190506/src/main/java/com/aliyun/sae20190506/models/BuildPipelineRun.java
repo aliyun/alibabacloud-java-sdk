@@ -197,14 +197,25 @@ public class BuildPipelineRun extends TeaModel {
     }
 
     public static class BuildPipelineRunBuildConfigTrigger extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>master</p>
+         */
         @NameInMap("BranchName")
         public String branchName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>v1</p>
+         */
         @NameInMap("TagName")
         public String tagName;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PUSH</p>
          */
         @NameInMap("Type")
         public String type;
@@ -241,18 +252,33 @@ public class BuildPipelineRun extends TeaModel {
     }
 
     public static class BuildPipelineRunBuildConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>mvn clean package</p>
+         */
         @NameInMap("BeforeBuildCommand")
         public String beforeBuildCommand;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>buildpacks/dockerfile</p>
          */
         @NameInMap("BuildType")
         public String buildType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>code/Dockerfile</p>
+         */
         @NameInMap("DockerfilePath")
         public String dockerfilePath;
 
+        /**
+         * <strong>example:</strong>
+         * <p>java -jar target/app.jar</p>
+         */
         @NameInMap("RunCommand")
         public String runCommand;
 
@@ -271,6 +297,10 @@ public class BuildPipelineRun extends TeaModel {
         @NameInMap("Trigger")
         public BuildPipelineRunBuildConfigTrigger trigger;
 
+        /**
+         * <strong>example:</strong>
+         * <p>code</p>
+         */
         @NameInMap("WorkingDir")
         public String workingDir;
 
@@ -356,12 +386,18 @@ public class BuildPipelineRun extends TeaModel {
     public static class BuildPipelineRunCodeConfig extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         @NameInMap("AccountId")
         public String accountId;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>master</p>
          */
         @NameInMap("BranchName")
         public String branchName;
@@ -377,18 +413,27 @@ public class BuildPipelineRun extends TeaModel {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>github/gitee/gitlab等</p>
          */
         @NameInMap("Provider")
         public String provider;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sae-samples/java-maven-demo</p>
          */
         @NameInMap("RepoFullName")
         public String repoFullName;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3001</p>
          */
         @NameInMap("RepoId")
         public String repoId;
@@ -477,6 +522,9 @@ public class BuildPipelineRun extends TeaModel {
         @NameInMap("UpdateApplicationInput")
         public String updateApplicationInput;
 
+        @NameInMap("UpdateTraffic")
+        public Boolean updateTraffic;
+
         public static BuildPipelineRunDeployConfig build(java.util.Map<String, ?> map) throws Exception {
             BuildPipelineRunDeployConfig self = new BuildPipelineRunDeployConfig();
             return TeaModel.build(map, self);
@@ -512,6 +560,14 @@ public class BuildPipelineRun extends TeaModel {
         }
         public String getUpdateApplicationInput() {
             return this.updateApplicationInput;
+        }
+
+        public BuildPipelineRunDeployConfig setUpdateTraffic(Boolean updateTraffic) {
+            this.updateTraffic = updateTraffic;
+            return this;
+        }
+        public Boolean getUpdateTraffic() {
+            return this.updateTraffic;
         }
 
     }
