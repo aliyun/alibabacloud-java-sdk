@@ -2985,6 +2985,114 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询版权水印提取任务</p>
+     * 
+     * @param request QueryCopyrightExtractJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryCopyrightExtractJobResponse
+     */
+    public QueryCopyrightExtractJobResponse queryCopyrightExtractJobWithOptions(QueryCopyrightExtractJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
+            query.put("JobId", request.jobId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryCopyrightExtractJob"),
+            new TeaPair("version", "2014-06-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryCopyrightExtractJobResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询版权水印提取任务</p>
+     * 
+     * @param request QueryCopyrightExtractJobRequest
+     * @return QueryCopyrightExtractJobResponse
+     */
+    public QueryCopyrightExtractJobResponse queryCopyrightExtractJob(QueryCopyrightExtractJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryCopyrightExtractJobWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询视频版权水印任务</p>
+     * 
+     * @param request QueryCopyrightJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryCopyrightJobResponse
+     */
+    public QueryCopyrightJobResponse queryCopyrightJobWithOptions(QueryCopyrightJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.createTimeEnd)) {
+            query.put("CreateTimeEnd", request.createTimeEnd);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.createTimeStart)) {
+            query.put("CreateTimeStart", request.createTimeStart);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
+            query.put("JobId", request.jobId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.level)) {
+            query.put("Level", request.level);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryCopyrightJob"),
+            new TeaPair("version", "2014-06-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryCopyrightJobResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询视频版权水印任务</p>
+     * 
+     * @param request QueryCopyrightJobRequest
+     * @return QueryCopyrightJobResponse
+     */
+    public QueryCopyrightJobResponse queryCopyrightJob(QueryCopyrightJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryCopyrightJobWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>You can call this operation to query the specified jobs of clearing or deleting a media fingerprint library based on the job IDs. If you do not specify job IDs, the system returns the latest 20 jobs that are submitted.</p>
      * <h3>QPS limit</h3>
@@ -4305,6 +4413,158 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询视频溯源水印ab流任务</p>
+     * 
+     * @param request QueryTraceAbJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryTraceAbJobResponse
+     */
+    public QueryTraceAbJobResponse queryTraceAbJobWithOptions(QueryTraceAbJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
+            query.put("JobId", request.jobId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mediaId)) {
+            query.put("MediaId", request.mediaId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryTraceAbJob"),
+            new TeaPair("version", "2014-06-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryTraceAbJobResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询视频溯源水印ab流任务</p>
+     * 
+     * @param request QueryTraceAbJobRequest
+     * @return QueryTraceAbJobResponse
+     */
+    public QueryTraceAbJobResponse queryTraceAbJob(QueryTraceAbJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryTraceAbJobWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询溯源水印提取任务</p>
+     * 
+     * @param request QueryTraceExtractJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryTraceExtractJobResponse
+     */
+    public QueryTraceExtractJobResponse queryTraceExtractJobWithOptions(QueryTraceExtractJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
+            query.put("JobId", request.jobId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryTraceExtractJob"),
+            new TeaPair("version", "2014-06-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryTraceExtractJobResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询溯源水印提取任务</p>
+     * 
+     * @param request QueryTraceExtractJobRequest
+     * @return QueryTraceExtractJobResponse
+     */
+    public QueryTraceExtractJobResponse queryTraceExtractJob(QueryTraceExtractJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryTraceExtractJobWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询视频溯源水印m3u8任务</p>
+     * 
+     * @param request QueryTraceM3u8JobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryTraceM3u8JobResponse
+     */
+    public QueryTraceM3u8JobResponse queryTraceM3u8JobWithOptions(QueryTraceM3u8JobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.createTimeEnd)) {
+            query.put("CreateTimeEnd", request.createTimeEnd);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.createTimeStart)) {
+            query.put("CreateTimeStart", request.createTimeStart);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
+            query.put("JobId", request.jobId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryTraceM3u8Job"),
+            new TeaPair("version", "2014-06-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryTraceM3u8JobResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询视频溯源水印m3u8任务</p>
+     * 
+     * @param request QueryTraceM3u8JobRequest
+     * @return QueryTraceM3u8JobResponse
+     */
+    public QueryTraceM3u8JobResponse queryTraceM3u8Job(QueryTraceM3u8JobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryTraceM3u8JobWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>You can call this operation to query up to 10 watermark templates at a time.</p>
      * <h3>QPS limit</h3>
@@ -4922,6 +5182,150 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SubmitAnalysisJobResponse submitAnalysisJob(SubmitAnalysisJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.submitAnalysisJobWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>提交版权水印提取任务</p>
+     * 
+     * @param request SubmitCopyrightExtractJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitCopyrightExtractJobResponse
+     */
+    public SubmitCopyrightExtractJobResponse submitCopyrightExtractJobWithOptions(SubmitCopyrightExtractJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.callBack)) {
+            query.put("CallBack", request.callBack);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.input)) {
+            query.put("Input", request.input);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.params)) {
+            query.put("Params", request.params);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.url)) {
+            query.put("Url", request.url);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userData)) {
+            query.put("UserData", request.userData);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SubmitCopyrightExtractJob"),
+            new TeaPair("version", "2014-06-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitCopyrightExtractJobResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>提交版权水印提取任务</p>
+     * 
+     * @param request SubmitCopyrightExtractJobRequest
+     * @return SubmitCopyrightExtractJobResponse
+     */
+    public SubmitCopyrightExtractJobResponse submitCopyrightExtractJob(SubmitCopyrightExtractJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.submitCopyrightExtractJobWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>提交视频版权水印</p>
+     * 
+     * @param request SubmitCopyrightJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitCopyrightJobResponse
+     */
+    public SubmitCopyrightJobResponse submitCopyrightJobWithOptions(SubmitCopyrightJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.callBack)) {
+            query.put("CallBack", request.callBack);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.input)) {
+            query.put("Input", request.input);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.level)) {
+            query.put("Level", request.level);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.message)) {
+            query.put("Message", request.message);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.output)) {
+            query.put("Output", request.output);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.params)) {
+            query.put("Params", request.params);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.totalTime)) {
+            query.put("TotalTime", request.totalTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.url)) {
+            query.put("Url", request.url);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userData)) {
+            query.put("UserData", request.userData);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SubmitCopyrightJob"),
+            new TeaPair("version", "2014-06-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitCopyrightJobResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>提交视频版权水印</p>
+     * 
+     * @param request SubmitCopyrightJobRequest
+     * @return SubmitCopyrightJobResponse
+     */
+    public SubmitCopyrightJobResponse submitCopyrightJob(SubmitCopyrightJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.submitCopyrightJobWithOptions(request, runtime);
     }
 
     /**
@@ -5776,6 +6180,202 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SubmitSnapshotJobResponse submitSnapshotJob(SubmitSnapshotJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.submitSnapshotJobWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>提交视频溯源水印ab流任务</p>
+     * 
+     * @param request SubmitTraceAbJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitTraceAbJobResponse
+     */
+    public SubmitTraceAbJobResponse submitTraceAbJobWithOptions(SubmitTraceAbJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.callBack)) {
+            query.put("CallBack", request.callBack);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cipherBase64ed)) {
+            query.put("CipherBase64ed", request.cipherBase64ed);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.input)) {
+            query.put("Input", request.input);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.level)) {
+            query.put("Level", request.level);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.output)) {
+            query.put("Output", request.output);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.totalTime)) {
+            query.put("TotalTime", request.totalTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.url)) {
+            query.put("Url", request.url);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userData)) {
+            query.put("UserData", request.userData);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SubmitTraceAbJob"),
+            new TeaPair("version", "2014-06-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitTraceAbJobResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>提交视频溯源水印ab流任务</p>
+     * 
+     * @param request SubmitTraceAbJobRequest
+     * @return SubmitTraceAbJobResponse
+     */
+    public SubmitTraceAbJobResponse submitTraceAbJob(SubmitTraceAbJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.submitTraceAbJobWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>提交溯源水印提取任务</p>
+     * 
+     * @param request SubmitTraceExtractJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitTraceExtractJobResponse
+     */
+    public SubmitTraceExtractJobResponse submitTraceExtractJobWithOptions(SubmitTraceExtractJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.callBack)) {
+            query.put("CallBack", request.callBack);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.input)) {
+            query.put("Input", request.input);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.params)) {
+            query.put("Params", request.params);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.url)) {
+            query.put("Url", request.url);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userData)) {
+            query.put("UserData", request.userData);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SubmitTraceExtractJob"),
+            new TeaPair("version", "2014-06-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitTraceExtractJobResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>提交溯源水印提取任务</p>
+     * 
+     * @param request SubmitTraceExtractJobRequest
+     * @return SubmitTraceExtractJobResponse
+     */
+    public SubmitTraceExtractJobResponse submitTraceExtractJob(SubmitTraceExtractJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.submitTraceExtractJobWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>提交视频溯源水印m3u8文件任务</p>
+     * 
+     * @param request SubmitTraceM3u8JobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitTraceM3u8JobResponse
+     */
+    public SubmitTraceM3u8JobResponse submitTraceM3u8JobWithOptions(SubmitTraceM3u8JobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.keyUri)) {
+            query.put("KeyUri", request.keyUri);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mediaId)) {
+            query.put("MediaId", request.mediaId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.output)) {
+            query.put("Output", request.output);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.params)) {
+            query.put("Params", request.params);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.trace)) {
+            query.put("Trace", request.trace);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SubmitTraceM3u8Job"),
+            new TeaPair("version", "2014-06-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitTraceM3u8JobResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>提交视频溯源水印m3u8文件任务</p>
+     * 
+     * @param request SubmitTraceM3u8JobRequest
+     * @return SubmitTraceM3u8JobResponse
+     */
+    public SubmitTraceM3u8JobResponse submitTraceM3u8Job(SubmitTraceM3u8JobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.submitTraceM3u8JobWithOptions(request, runtime);
     }
 
     /**
