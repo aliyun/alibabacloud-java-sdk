@@ -10,6 +10,10 @@ public class RecognizeMixedInvoicesRequest extends TeaModel {
     @NameInMap("PageNo")
     public Integer pageNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://img.alicdn.com/tfs/TB1.bnGbRWD3KVjSZFsXXcqkpXa-1654-2341.jpg">https://img.alicdn.com/tfs/TB1.bnGbRWD3KVjSZFsXXcqkpXa-1654-2341.jpg</a></p>
+     */
     @NameInMap("Url")
     public String url;
 

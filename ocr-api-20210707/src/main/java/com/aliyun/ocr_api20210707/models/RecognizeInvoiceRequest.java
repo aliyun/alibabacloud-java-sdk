@@ -7,6 +7,10 @@ public class RecognizeInvoiceRequest extends TeaModel {
     @NameInMap("PageNo")
     public Integer pageNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://img.alicdn.com/tfs/TB1qIIfXAPoK1RjSZKbXXX1IXXa-808-523.jpg">https://img.alicdn.com/tfs/TB1qIIfXAPoK1RjSZKbXXX1IXXa-808-523.jpg</a></p>
+     */
     @NameInMap("Url")
     public String url;
 

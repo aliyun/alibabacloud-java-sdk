@@ -4,6 +4,10 @@ package com.aliyun.ocr_api20210707.models;
 import com.aliyun.tea.*;
 
 public class RecognizeHKIdcardRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://example.png">https://example.png</a></p>
+     */
     @NameInMap("Url")
     public String url;
 

@@ -4,6 +4,10 @@ package com.aliyun.ocr_api20210707.models;
 import com.aliyun.tea.*;
 
 public class DataSubImagesFigureInfoValue extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("FigureCount")
     public Integer figureCount;
 
@@ -32,9 +36,17 @@ public class DataSubImagesFigureInfoValue extends TeaModel {
     }
 
     public static class DataSubImagesFigureInfoValueFigureDetailsFigurePoints extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("X")
         public Integer x;
 
+        /**
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("Y")
         public Integer y;
 
@@ -62,15 +74,31 @@ public class DataSubImagesFigureInfoValue extends TeaModel {
     }
 
     public static class DataSubImagesFigureInfoValueFigureDetailsFigureRect extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("CenterX")
         public Integer centerX;
 
+        /**
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("CenterY")
         public Integer centerY;
 
+        /**
+         * <strong>example:</strong>
+         * <p>50</p>
+         */
         @NameInMap("Width")
         public Integer width;
 
+        /**
+         * <strong>example:</strong>
+         * <p>50</p>
+         */
         @NameInMap("Height")
         public Integer height;
 
@@ -114,9 +142,17 @@ public class DataSubImagesFigureInfoValue extends TeaModel {
     }
 
     public static class DataSubImagesFigureInfoValueFigureDetails extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>face</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>“”</p>
+         */
         @NameInMap("Data")
         public Object data;
 
@@ -126,6 +162,10 @@ public class DataSubImagesFigureInfoValue extends TeaModel {
         @NameInMap("FigureRect")
         public DataSubImagesFigureInfoValueFigureDetailsFigureRect figureRect;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("FigureAngle")
         public Integer figureAngle;
 

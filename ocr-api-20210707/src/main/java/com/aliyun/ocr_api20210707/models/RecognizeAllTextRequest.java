@@ -19,27 +19,68 @@ public class RecognizeAllTextRequest extends TeaModel {
     @NameInMap("MultiLanConfig")
     public RecognizeAllTextRequestMultiLanConfig multiLanConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("OutputBarCode")
     public Boolean outputBarCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("OutputCoordinate")
     public String outputCoordinate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
     @NameInMap("OutputFigure")
     public Boolean outputFigure;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("OutputKVExcel")
     public Boolean outputKVExcel;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("OutputOricoord")
     public Boolean outputOricoord;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
     @NameInMap("OutputQrcode")
     public Boolean outputQrcode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
     @NameInMap("OutputStamp")
     public Boolean outputStamp;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNo")
     public Integer pageNo;
 
@@ -48,10 +89,17 @@ public class RecognizeAllTextRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Advanced</p>
      */
     @NameInMap("Type")
     public String type;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://example.png">https://example.png</a></p>
+     */
     @NameInMap("Url")
     public String url;
 
@@ -200,27 +248,59 @@ public class RecognizeAllTextRequest extends TeaModel {
     }
 
     public static class RecognizeAllTextRequestAdvancedConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("IsHandWritingTable")
         public Boolean isHandWritingTable;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("IsLineLessTable")
         public Boolean isLineLessTable;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("OutputCharInfo")
         public Boolean outputCharInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("OutputParagraph")
         public Boolean outputParagraph;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("OutputRow")
         public Boolean outputRow;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("OutputTable")
         public Boolean outputTable;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("OutputTableExcel")
         public Boolean outputTableExcel;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("OutputTableHtml")
         public Boolean outputTableHtml;
 
@@ -296,6 +376,10 @@ public class RecognizeAllTextRequest extends TeaModel {
     }
 
     public static class RecognizeAllTextRequestIdCardConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("OutputIdCardQuality")
         public Boolean outputIdCardQuality;
 
@@ -334,6 +418,10 @@ public class RecognizeAllTextRequest extends TeaModel {
     }
 
     public static class RecognizeAllTextRequestInternationalIdCardConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>India</p>
+         */
         @NameInMap("Country")
         public String country;
 
@@ -353,6 +441,10 @@ public class RecognizeAllTextRequest extends TeaModel {
     }
 
     public static class RecognizeAllTextRequestMultiLanConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>eng,chn</p>
+         */
         @NameInMap("Languages")
         public String languages;
 

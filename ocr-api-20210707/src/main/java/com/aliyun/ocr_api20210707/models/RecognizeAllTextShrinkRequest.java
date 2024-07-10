@@ -19,27 +19,68 @@ public class RecognizeAllTextShrinkRequest extends TeaModel {
     @NameInMap("MultiLanConfig")
     public String multiLanConfigShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("OutputBarCode")
     public Boolean outputBarCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("OutputCoordinate")
     public String outputCoordinate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
     @NameInMap("OutputFigure")
     public Boolean outputFigure;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("OutputKVExcel")
     public Boolean outputKVExcel;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("OutputOricoord")
     public Boolean outputOricoord;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
     @NameInMap("OutputQrcode")
     public Boolean outputQrcode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
     @NameInMap("OutputStamp")
     public Boolean outputStamp;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNo")
     public Integer pageNo;
 
@@ -48,10 +89,17 @@ public class RecognizeAllTextShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Advanced</p>
      */
     @NameInMap("Type")
     public String type;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://example.png">https://example.png</a></p>
+     */
     @NameInMap("Url")
     public String url;
 

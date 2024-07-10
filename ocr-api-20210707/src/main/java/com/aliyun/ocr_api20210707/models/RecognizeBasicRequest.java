@@ -7,6 +7,10 @@ public class RecognizeBasicRequest extends TeaModel {
     @NameInMap("NeedRotate")
     public Boolean needRotate;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://img.alicdn.com/tfs/TB1Wo7eXAvoK1RjSZFDXXXY3pXa-2512-3509.jpg">https://img.alicdn.com/tfs/TB1Wo7eXAvoK1RjSZFDXXXY3pXa-2512-3509.jpg</a></p>
+     */
     @NameInMap("Url")
     public String url;
 

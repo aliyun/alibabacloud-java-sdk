@@ -27,8 +27,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 全文识别高精版
-     *
+     * <b>summary</b> : 
+     * <p>全文识别高精版</p>
+     * 
      * @param request RecognizeAdvancedRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RecognizeAdvancedResponse
@@ -92,8 +93,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 全文识别高精版
-     *
+     * <b>summary</b> : 
+     * <p>全文识别高精版</p>
+     * 
      * @param request RecognizeAdvancedRequest
      * @return RecognizeAdvancedResponse
      */
@@ -103,8 +105,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 航空行程单
-     *
+     * <b>summary</b> : 
+     * <p>航空行程单</p>
+     * 
      * @param request RecognizeAirItineraryRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RecognizeAirItineraryResponse
@@ -136,8 +139,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 航空行程单
-     *
+     * <b>summary</b> : 
+     * <p>航空行程单</p>
+     * 
      * @param request RecognizeAirItineraryRequest
      * @return RecognizeAirItineraryResponse
      */
@@ -147,8 +151,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 统一Api
-     *
+     * <b>summary</b> : 
+     * <p>统一Api</p>
+     * 
      * @param tmpReq RecognizeAllTextRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RecognizeAllTextResponse
@@ -266,8 +271,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 统一Api
-     *
+     * <b>summary</b> : 
+     * <p>统一Api</p>
+     * 
      * @param request RecognizeAllTextRequest
      * @return RecognizeAllTextResponse
      */
@@ -277,8 +283,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 银承汇票识别
-     *
+     * <b>summary</b> : 
+     * <p>银承汇票识别</p>
+     * 
      * @param request RecognizeBankAcceptanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RecognizeBankAcceptanceResponse
@@ -310,8 +317,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 银承汇票识别
-     *
+     * <b>summary</b> : 
+     * <p>银承汇票识别</p>
+     * 
      * @param request RecognizeBankAcceptanceRequest
      * @return RecognizeBankAcceptanceResponse
      */
@@ -321,8 +329,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 银行开户许可证识别
-     *
+     * <b>summary</b> : 
+     * <p>银行开户许可证识别</p>
+     * 
      * @param request RecognizeBankAccountLicenseRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RecognizeBankAccountLicenseResponse
@@ -354,8 +363,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 银行开户许可证识别
-     *
+     * <b>summary</b> : 
+     * <p>银行开户许可证识别</p>
+     * 
      * @param request RecognizeBankAccountLicenseRequest
      * @return RecognizeBankAccountLicenseResponse
      */
@@ -365,8 +375,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 银行卡识别
-     *
+     * <b>summary</b> : 
+     * <p>银行卡识别</p>
+     * 
      * @param request RecognizeBankCardRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RecognizeBankCardResponse
@@ -398,8 +409,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 银行卡识别
-     *
+     * <b>summary</b> : 
+     * <p>银行卡识别</p>
+     * 
      * @param request RecognizeBankCardRequest
      * @return RecognizeBankCardResponse
      */
@@ -409,8 +421,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 电商图片文字识别
-     *
+     * <b>summary</b> : 
+     * <p>电商图片文字识别</p>
+     * 
      * @param request RecognizeBasicRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RecognizeBasicResponse
@@ -446,8 +459,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 电商图片文字识别
-     *
+     * <b>summary</b> : 
+     * <p>电商图片文字识别</p>
+     * 
      * @param request RecognizeBasicRequest
      * @return RecognizeBasicResponse
      */
@@ -457,8 +471,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 出生证明
-     *
+     * <b>summary</b> : 
+     * <p>出生证明</p>
+     * 
      * @param request RecognizeBirthCertificationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RecognizeBirthCertificationResponse
@@ -490,8 +505,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 出生证明
-     *
+     * <b>summary</b> : 
+     * <p>出生证明</p>
+     * 
      * @param request RecognizeBirthCertificationRequest
      * @return RecognizeBirthCertificationResponse
      */
@@ -501,8 +517,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 客运车船票识别
-     *
+     * <b>summary</b> : 
+     * <p>客运车船票识别</p>
+     * 
      * @param request RecognizeBusShipTicketRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RecognizeBusShipTicketResponse
@@ -534,8 +551,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 客运车船票识别
-     *
+     * <b>summary</b> : 
+     * <p>客运车船票识别</p>
+     * 
      * @param request RecognizeBusShipTicketRequest
      * @return RecognizeBusShipTicketResponse
      */
@@ -545,8 +563,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 营业执照识别
-     *
+     * <b>summary</b> : 
+     * <p>营业执照识别</p>
+     * 
      * @param request RecognizeBusinessLicenseRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RecognizeBusinessLicenseResponse
@@ -578,8 +597,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 营业执照识别
-     *
+     * <b>summary</b> : 
+     * <p>营业执照识别</p>
+     * 
      * @param request RecognizeBusinessLicenseRequest
      * @return RecognizeBusinessLicenseResponse
      */
@@ -589,8 +609,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 机动车销售发票
-     *
+     * <b>summary</b> : 
+     * <p>机动车销售发票</p>
+     * 
      * @param request RecognizeCarInvoiceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RecognizeCarInvoiceResponse
@@ -622,8 +643,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 机动车销售发票
-     *
+     * <b>summary</b> : 
+     * <p>机动车销售发票</p>
+     * 
      * @param request RecognizeCarInvoiceRequest
      * @return RecognizeCarInvoiceResponse
      */
@@ -633,8 +655,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 车牌识别
-     *
+     * <b>summary</b> : 
+     * <p>车牌识别</p>
+     * 
      * @param request RecognizeCarNumberRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RecognizeCarNumberResponse
@@ -666,8 +689,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 车牌识别
-     *
+     * <b>summary</b> : 
+     * <p>车牌识别</p>
+     * 
      * @param request RecognizeCarNumberRequest
      * @return RecognizeCarNumberResponse
      */
@@ -677,8 +701,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 车辆vin码识别
-     *
+     * <b>summary</b> : 
+     * <p>车辆vin码识别</p>
+     * 
      * @param request RecognizeCarVinCodeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RecognizeCarVinCodeResponse
@@ -710,8 +735,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 车辆vin码识别
-     *
+     * <b>summary</b> : 
+     * <p>车辆vin码识别</p>
+     * 
      * @param request RecognizeCarVinCodeRequest
      * @return RecognizeCarVinCodeResponse
      */
@@ -721,8 +747,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 中国护照识别
-     *
+     * <b>summary</b> : 
+     * <p>中国护照识别</p>
+     * 
      * @param request RecognizeChinesePassportRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RecognizeChinesePassportResponse
@@ -758,8 +785,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 中国护照识别
-     *
+     * <b>summary</b> : 
+     * <p>中国护照识别</p>
+     * 
      * @param request RecognizeChinesePassportRequest
      * @return RecognizeChinesePassportResponse
      */
@@ -769,8 +797,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 通用机打发票识别
-     *
+     * <b>summary</b> : 
+     * <p>通用机打发票识别</p>
+     * 
      * @param request RecognizeCommonPrintedInvoiceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RecognizeCommonPrintedInvoiceResponse
@@ -802,8 +831,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 通用机打发票识别
-     *
+     * <b>summary</b> : 
+     * <p>通用机打发票识别</p>
+     * 
      * @param request RecognizeCommonPrintedInvoiceRequest
      * @return RecognizeCommonPrintedInvoiceResponse
      */
@@ -813,8 +843,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 化妆品生产许可证识别
-     *
+     * <b>summary</b> : 
+     * <p>化妆品生产许可证识别</p>
+     * 
      * @param request RecognizeCosmeticProduceLicenseRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RecognizeCosmeticProduceLicenseResponse
@@ -846,8 +877,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 化妆品生产许可证识别
-     *
+     * <b>summary</b> : 
+     * <p>化妆品生产许可证识别</p>
+     * 
      * @param request RecognizeCosmeticProduceLicenseRequest
      * @return RecognizeCosmeticProduceLicenseResponse
      */
@@ -857,8 +889,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 核算检测报告识别
-     *
+     * <b>summary</b> : 
+     * <p>核算检测报告识别</p>
+     * 
      * @param request RecognizeCovidTestReportRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RecognizeCovidTestReportResponse
@@ -894,8 +927,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 核算检测报告识别
-     *
+     * <b>summary</b> : 
+     * <p>核算检测报告识别</p>
+     * 
      * @param request RecognizeCovidTestReportRequest
      * @return RecognizeCovidTestReportResponse
      */
@@ -905,8 +939,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 第二类医疗器械经营备案凭证
-     *
+     * <b>summary</b> : 
+     * <p>第二类医疗器械经营备案凭证</p>
+     * 
      * @param request RecognizeCtwoMedicalDeviceManageLicenseRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RecognizeCtwoMedicalDeviceManageLicenseResponse
@@ -938,8 +973,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 第二类医疗器械经营备案凭证
-     *
+     * <b>summary</b> : 
+     * <p>第二类医疗器械经营备案凭证</p>
+     * 
      * @param request RecognizeCtwoMedicalDeviceManageLicenseRequest
      * @return RecognizeCtwoMedicalDeviceManageLicenseResponse
      */
@@ -949,8 +985,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 文档结构化识别
-     *
+     * <b>summary</b> : 
+     * <p>文档结构化识别</p>
+     * 
      * @param request RecognizeDocumentStructureRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RecognizeDocumentStructureResponse
@@ -1018,8 +1055,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 文档结构化识别
-     *
+     * <b>summary</b> : 
+     * <p>文档结构化识别</p>
+     * 
      * @param request RecognizeDocumentStructureRequest
      * @return RecognizeDocumentStructureResponse
      */
@@ -1029,8 +1067,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 驾驶证识别
-     *
+     * <b>summary</b> : 
+     * <p>驾驶证识别</p>
+     * 
      * @param request RecognizeDrivingLicenseRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RecognizeDrivingLicenseResponse
@@ -1062,8 +1101,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 驾驶证识别
-     *
+     * <b>summary</b> : 
+     * <p>驾驶证识别</p>
+     * 
      * @param request RecognizeDrivingLicenseRequest
      * @return RecognizeDrivingLicenseResponse
      */
@@ -1073,8 +1113,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 印刷体数学公式识别
-     *
+     * <b>summary</b> : 
+     * <p>印刷体数学公式识别</p>
+     * 
      * @param request RecognizeEduFormulaRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RecognizeEduFormulaResponse
@@ -1106,8 +1147,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 印刷体数学公式识别
-     *
+     * <b>summary</b> : 
+     * <p>印刷体数学公式识别</p>
+     * 
      * @param request RecognizeEduFormulaRequest
      * @return RecognizeEduFormulaResponse
      */
@@ -1117,8 +1159,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 口算判题
-     *
+     * <b>summary</b> : 
+     * <p>口算判题</p>
+     * 
      * @param request RecognizeEduOralCalculationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RecognizeEduOralCalculationResponse
@@ -1150,8 +1193,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 口算判题
-     *
+     * <b>summary</b> : 
+     * <p>口算判题</p>
+     * 
      * @param request RecognizeEduOralCalculationRequest
      * @return RecognizeEduOralCalculationResponse
      */
@@ -1161,8 +1205,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 试卷切题识别
-     *
+     * <b>summary</b> : 
+     * <p>试卷切题识别</p>
+     * 
      * @param request RecognizeEduPaperCutRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RecognizeEduPaperCutResponse
@@ -1206,8 +1251,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 试卷切题识别
-     *
+     * <b>summary</b> : 
+     * <p>试卷切题识别</p>
+     * 
      * @param request RecognizeEduPaperCutRequest
      * @return RecognizeEduPaperCutResponse
      */
@@ -1217,8 +1263,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 整页试卷识别
-     *
+     * <b>summary</b> : 
+     * <p>整页试卷识别</p>
+     * 
      * @param request RecognizeEduPaperOcrRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RecognizeEduPaperOcrResponse
@@ -1262,8 +1309,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 整页试卷识别
-     *
+     * <b>summary</b> : 
+     * <p>整页试卷识别</p>
+     * 
      * @param request RecognizeEduPaperOcrRequest
      * @return RecognizeEduPaperOcrResponse
      */
@@ -1273,8 +1321,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 精细版结构化切题
-     *
+     * <b>summary</b> : 
+     * <p>精细版结构化切题</p>
+     * 
      * @param request RecognizeEduPaperStructedRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RecognizeEduPaperStructedResponse
@@ -1314,8 +1363,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 精细版结构化切题
-     *
+     * <b>summary</b> : 
+     * <p>精细版结构化切题</p>
+     * 
      * @param request RecognizeEduPaperStructedRequest
      * @return RecognizeEduPaperStructedResponse
      */
@@ -1325,8 +1375,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 题目识别
-     *
+     * <b>summary</b> : 
+     * <p>题目识别</p>
+     * 
      * @param request RecognizeEduQuestionOcrRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RecognizeEduQuestionOcrResponse
@@ -1362,8 +1413,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 题目识别
-     *
+     * <b>summary</b> : 
+     * <p>题目识别</p>
+     * 
      * @param request RecognizeEduQuestionOcrRequest
      * @return RecognizeEduQuestionOcrResponse
      */
@@ -1373,8 +1425,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 英语专项识别
-     *
+     * <b>summary</b> : 
+     * <p>英语专项识别</p>
+     * 
      * @param request RecognizeEnglishRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RecognizeEnglishResponse
@@ -1414,8 +1467,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 英语专项识别
-     *
+     * <b>summary</b> : 
+     * <p>英语专项识别</p>
+     * 
      * @param request RecognizeEnglishRequest
      * @return RecognizeEnglishResponse
      */
@@ -1425,8 +1479,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 不动产权证
-     *
+     * <b>summary</b> : 
+     * <p>不动产权证</p>
+     * 
      * @param request RecognizeEstateCertificationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RecognizeEstateCertificationResponse
@@ -1458,8 +1513,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 不动产权证
-     *
+     * <b>summary</b> : 
+     * <p>不动产权证</p>
+     * 
      * @param request RecognizeEstateCertificationRequest
      * @return RecognizeEstateCertificationResponse
      */
@@ -1469,8 +1525,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 来往港澳台通行证识别
-     *
+     * <b>summary</b> : 
+     * <p>来往港澳台通行证识别</p>
+     * 
      * @param request RecognizeExitEntryPermitToHKRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RecognizeExitEntryPermitToHKResponse
@@ -1506,8 +1563,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 来往港澳台通行证识别
-     *
+     * <b>summary</b> : 
+     * <p>来往港澳台通行证识别</p>
+     * 
      * @param request RecognizeExitEntryPermitToHKRequest
      * @return RecognizeExitEntryPermitToHKResponse
      */
@@ -1517,8 +1575,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 来往大陆(内地)通行证识别
-     *
+     * <b>summary</b> : 
+     * <p>来往大陆(内地)通行证识别</p>
+     * 
      * @param request RecognizeExitEntryPermitToMainlandRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RecognizeExitEntryPermitToMainlandResponse
@@ -1554,8 +1613,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 来往大陆(内地)通行证识别
-     *
+     * <b>summary</b> : 
+     * <p>来往大陆(内地)通行证识别</p>
+     * 
      * @param request RecognizeExitEntryPermitToMainlandRequest
      * @return RecognizeExitEntryPermitToMainlandResponse
      */
@@ -1565,8 +1625,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 食品经营许可证
-     *
+     * <b>summary</b> : 
+     * <p>食品经营许可证</p>
+     * 
      * @param request RecognizeFoodManageLicenseRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RecognizeFoodManageLicenseResponse
@@ -1598,8 +1659,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 食品经营许可证
-     *
+     * <b>summary</b> : 
+     * <p>食品经营许可证</p>
+     * 
      * @param request RecognizeFoodManageLicenseRequest
      * @return RecognizeFoodManageLicenseResponse
      */
@@ -1609,8 +1671,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 食品生产许可证
-     *
+     * <b>summary</b> : 
+     * <p>食品生产许可证</p>
+     * 
      * @param request RecognizeFoodProduceLicenseRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RecognizeFoodProduceLicenseResponse
@@ -1642,8 +1705,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 食品生产许可证
-     *
+     * <b>summary</b> : 
+     * <p>食品生产许可证</p>
+     * 
      * @param request RecognizeFoodProduceLicenseRequest
      * @return RecognizeFoodProduceLicenseResponse
      */
@@ -1653,8 +1717,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 通用文字识别
-     *
+     * <b>summary</b> : 
+     * <p>通用文字识别</p>
+     * 
      * @param request RecognizeGeneralRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RecognizeGeneralResponse
@@ -1686,8 +1751,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 通用文字识别
-     *
+     * <b>summary</b> : 
+     * <p>通用文字识别</p>
+     * 
      * @param request RecognizeGeneralRequest
      * @return RecognizeGeneralResponse
      */
@@ -1697,8 +1763,65 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 香港身份证识别
-     *
+     * <b>summary</b> : 
+     * <p>DocMaster</p>
+     * 
+     * @param tmpReq RecognizeGeneralStructureRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RecognizeGeneralStructureResponse
+     */
+    public RecognizeGeneralStructureResponse recognizeGeneralStructureWithOptions(RecognizeGeneralStructureRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        RecognizeGeneralStructureShrinkRequest request = new RecognizeGeneralStructureShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.keys)) {
+            request.keysShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.keys, "Keys", "simple");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.keysShrink)) {
+            query.put("Keys", request.keysShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.url)) {
+            query.put("Url", request.url);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", request.body),
+            new TeaPair("stream", tmpReq.body)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RecognizeGeneralStructure"),
+            new TeaPair("version", "2021-07-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RecognizeGeneralStructureResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>DocMaster</p>
+     * 
+     * @param request RecognizeGeneralStructureRequest
+     * @return RecognizeGeneralStructureResponse
+     */
+    public RecognizeGeneralStructureResponse recognizeGeneralStructure(RecognizeGeneralStructureRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.recognizeGeneralStructureWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>香港身份证识别</p>
+     * 
      * @param request RecognizeHKIdcardRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RecognizeHKIdcardResponse
@@ -1730,8 +1853,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 香港身份证识别
-     *
+     * <b>summary</b> : 
+     * <p>香港身份证识别</p>
+     * 
      * @param request RecognizeHKIdcardRequest
      * @return RecognizeHKIdcardResponse
      */
@@ -1741,8 +1865,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 通用手写体识别
-     *
+     * <b>summary</b> : 
+     * <p>通用手写体识别</p>
+     * 
      * @param request RecognizeHandwritingRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RecognizeHandwritingResponse
@@ -1794,8 +1919,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 通用手写体识别
-     *
+     * <b>summary</b> : 
+     * <p>通用手写体识别</p>
+     * 
      * @param request RecognizeHandwritingRequest
      * @return RecognizeHandwritingResponse
      */
@@ -1805,8 +1931,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 防疫健康码识别
-     *
+     * <b>summary</b> : 
+     * <p>防疫健康码识别</p>
+     * 
      * @param request RecognizeHealthCodeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RecognizeHealthCodeResponse
@@ -1838,8 +1965,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 防疫健康码识别
-     *
+     * <b>summary</b> : 
+     * <p>防疫健康码识别</p>
+     * 
      * @param request RecognizeHealthCodeRequest
      * @return RecognizeHealthCodeResponse
      */
@@ -1849,8 +1977,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 酒店流水识别
-     *
+     * <b>summary</b> : 
+     * <p>酒店流水识别</p>
+     * 
      * @param request RecognizeHotelConsumeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RecognizeHotelConsumeResponse
@@ -1882,8 +2011,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 酒店流水识别
-     *
+     * <b>summary</b> : 
+     * <p>酒店流水识别</p>
+     * 
      * @param request RecognizeHotelConsumeRequest
      * @return RecognizeHotelConsumeResponse
      */
@@ -1893,8 +2023,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 户口本识别
-     *
+     * <b>summary</b> : 
+     * <p>户口本识别</p>
+     * 
      * @param request RecognizeHouseholdRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RecognizeHouseholdResponse
@@ -1930,8 +2061,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 户口本识别
-     *
+     * <b>summary</b> : 
+     * <p>户口本识别</p>
+     * 
      * @param request RecognizeHouseholdRequest
      * @return RecognizeHouseholdResponse
      */
@@ -1941,8 +2073,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 身份证识别
-     *
+     * <b>summary</b> : 
+     * <p>身份证识别</p>
+     * 
      * @param request RecognizeIdcardRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RecognizeIdcardResponse
@@ -1982,8 +2115,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 身份证识别
-     *
+     * <b>summary</b> : 
+     * <p>身份证识别</p>
+     * 
      * @param request RecognizeIdcardRequest
      * @return RecognizeIdcardResponse
      */
@@ -1993,8 +2127,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 国际营业执照识别
-     *
+     * <b>summary</b> : 
+     * <p>国际营业执照识别</p>
+     * 
      * @param request RecognizeInternationalBusinessLicenseRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RecognizeInternationalBusinessLicenseResponse
@@ -2030,8 +2165,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 国际营业执照识别
-     *
+     * <b>summary</b> : 
+     * <p>国际营业执照识别</p>
+     * 
      * @param request RecognizeInternationalBusinessLicenseRequest
      * @return RecognizeInternationalBusinessLicenseResponse
      */
@@ -2041,8 +2177,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 国际身份证识别
-     *
+     * <b>summary</b> : 
+     * <p>国际身份证识别</p>
+     * 
      * @param request RecognizeInternationalIdcardRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RecognizeInternationalIdcardResponse
@@ -2078,8 +2215,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 国际身份证识别
-     *
+     * <b>summary</b> : 
+     * <p>国际身份证识别</p>
+     * 
      * @param request RecognizeInternationalIdcardRequest
      * @return RecognizeInternationalIdcardResponse
      */
@@ -2089,8 +2227,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 增值税发票识别
-     *
+     * <b>summary</b> : 
+     * <p>增值税发票识别</p>
+     * 
      * @param request RecognizeInvoiceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RecognizeInvoiceResponse
@@ -2126,8 +2265,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 增值税发票识别
-     *
+     * <b>summary</b> : 
+     * <p>增值税发票识别</p>
+     * 
      * @param request RecognizeInvoiceRequest
      * @return RecognizeInvoiceResponse
      */
@@ -2137,8 +2277,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 日语识别
-     *
+     * <b>summary</b> : 
+     * <p>日语识别</p>
+     * 
      * @param request RecognizeJanpaneseRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RecognizeJanpaneseResponse
@@ -2182,8 +2323,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 日语识别
-     *
+     * <b>summary</b> : 
+     * <p>日语识别</p>
+     * 
      * @param request RecognizeJanpaneseRequest
      * @return RecognizeJanpaneseResponse
      */
@@ -2193,8 +2335,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 韩语识别
-     *
+     * <b>summary</b> : 
+     * <p>韩语识别</p>
+     * 
      * @param request RecognizeKoreanRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RecognizeKoreanResponse
@@ -2238,8 +2381,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 韩语识别
-     *
+     * <b>summary</b> : 
+     * <p>韩语识别</p>
+     * 
      * @param request RecognizeKoreanRequest
      * @return RecognizeKoreanResponse
      */
@@ -2249,8 +2393,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 拉丁语识别
-     *
+     * <b>summary</b> : 
+     * <p>拉丁语识别</p>
+     * 
      * @param request RecognizeLatinRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RecognizeLatinResponse
@@ -2294,8 +2439,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 拉丁语识别
-     *
+     * <b>summary</b> : 
+     * <p>拉丁语识别</p>
+     * 
      * @param request RecognizeLatinRequest
      * @return RecognizeLatinResponse
      */
@@ -2305,8 +2451,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 医疗器械经营许可证
-     *
+     * <b>summary</b> : 
+     * <p>医疗器械经营许可证</p>
+     * 
      * @param request RecognizeMedicalDeviceManageLicenseRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RecognizeMedicalDeviceManageLicenseResponse
@@ -2338,8 +2485,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 医疗器械经营许可证
-     *
+     * <b>summary</b> : 
+     * <p>医疗器械经营许可证</p>
+     * 
      * @param request RecognizeMedicalDeviceManageLicenseRequest
      * @return RecognizeMedicalDeviceManageLicenseResponse
      */
@@ -2349,8 +2497,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 医疗器械生产许可证
-     *
+     * <b>summary</b> : 
+     * <p>医疗器械生产许可证</p>
+     * 
      * @param request RecognizeMedicalDeviceProduceLicenseRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RecognizeMedicalDeviceProduceLicenseResponse
@@ -2382,8 +2531,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 医疗器械生产许可证
-     *
+     * <b>summary</b> : 
+     * <p>医疗器械生产许可证</p>
+     * 
      * @param request RecognizeMedicalDeviceProduceLicenseRequest
      * @return RecognizeMedicalDeviceProduceLicenseResponse
      */
@@ -2393,8 +2543,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 混贴发票识别
-     *
+     * <b>summary</b> : 
+     * <p>混贴发票识别</p>
+     * 
      * @param request RecognizeMixedInvoicesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RecognizeMixedInvoicesResponse
@@ -2434,8 +2585,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 混贴发票识别
-     *
+     * <b>summary</b> : 
+     * <p>混贴发票识别</p>
+     * 
      * @param request RecognizeMixedInvoicesRequest
      * @return RecognizeMixedInvoicesResponse
      */
@@ -2445,8 +2597,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 通用多语言识别
-     *
+     * <b>summary</b> : 
+     * <p>通用多语言识别</p>
+     * 
      * @param tmpReq RecognizeMultiLanguageRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RecognizeMultiLanguageResponse
@@ -2504,8 +2657,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 通用多语言识别
-     *
+     * <b>summary</b> : 
+     * <p>通用多语言识别</p>
+     * 
      * @param request RecognizeMultiLanguageRequest
      * @return RecognizeMultiLanguageResponse
      */
@@ -2515,8 +2669,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 非税收入票据识别
-     *
+     * <b>summary</b> : 
+     * <p>非税收入票据识别</p>
+     * 
      * @param request RecognizeNonTaxInvoiceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RecognizeNonTaxInvoiceResponse
@@ -2548,8 +2703,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 非税收入票据识别
-     *
+     * <b>summary</b> : 
+     * <p>非税收入票据识别</p>
+     * 
      * @param request RecognizeNonTaxInvoiceRequest
      * @return RecognizeNonTaxInvoiceResponse
      */
@@ -2559,8 +2715,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 护照识别
-     *
+     * <b>summary</b> : 
+     * <p>护照识别</p>
+     * 
      * @param request RecognizePassportRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RecognizePassportResponse
@@ -2592,8 +2749,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 护照识别
-     *
+     * <b>summary</b> : 
+     * <p>护照识别</p>
+     * 
      * @param request RecognizePassportRequest
      * @return RecognizePassportResponse
      */
@@ -2603,8 +2761,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 支付详情页识别
-     *
+     * <b>summary</b> : 
+     * <p>支付详情页识别</p>
+     * 
      * @param request RecognizePaymentRecordRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RecognizePaymentRecordResponse
@@ -2636,8 +2795,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 支付详情页识别
-     *
+     * <b>summary</b> : 
+     * <p>支付详情页识别</p>
+     * 
      * @param request RecognizePaymentRecordRequest
      * @return RecognizePaymentRecordResponse
      */
@@ -2647,8 +2807,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 电商订单页识别
-     *
+     * <b>summary</b> : 
+     * <p>电商订单页识别</p>
+     * 
      * @param request RecognizePurchaseRecordRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RecognizePurchaseRecordResponse
@@ -2684,8 +2845,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 电商订单页识别
-     *
+     * <b>summary</b> : 
+     * <p>电商订单页识别</p>
+     * 
      * @param request RecognizePurchaseRecordRequest
      * @return RecognizePurchaseRecordResponse
      */
@@ -2695,8 +2857,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 定额发票
-     *
+     * <b>summary</b> : 
+     * <p>定额发票</p>
+     * 
      * @param request RecognizeQuotaInvoiceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RecognizeQuotaInvoiceResponse
@@ -2728,8 +2891,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 定额发票
-     *
+     * <b>summary</b> : 
+     * <p>定额发票</p>
+     * 
      * @param request RecognizeQuotaInvoiceRequest
      * @return RecognizeQuotaInvoiceResponse
      */
@@ -2739,8 +2903,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 网约车行程单识别
-     *
+     * <b>summary</b> : 
+     * <p>网约车行程单识别</p>
+     * 
      * @param request RecognizeRideHailingItineraryRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RecognizeRideHailingItineraryResponse
@@ -2772,8 +2937,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 网约车行程单识别
-     *
+     * <b>summary</b> : 
+     * <p>网约车行程单识别</p>
+     * 
      * @param request RecognizeRideHailingItineraryRequest
      * @return RecognizeRideHailingItineraryResponse
      */
@@ -2783,8 +2949,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 增值税发票卷票
-     *
+     * <b>summary</b> : 
+     * <p>增值税发票卷票</p>
+     * 
      * @param request RecognizeRollTicketRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RecognizeRollTicketResponse
@@ -2816,8 +2983,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 增值税发票卷票
-     *
+     * <b>summary</b> : 
+     * <p>增值税发票卷票</p>
+     * 
      * @param request RecognizeRollTicketRequest
      * @return RecognizeRollTicketResponse
      */
@@ -2827,8 +2995,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 俄语识别
-     *
+     * <b>summary</b> : 
+     * <p>俄语识别</p>
+     * 
      * @param request RecognizeRussianRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RecognizeRussianResponse
@@ -2872,8 +3041,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 俄语识别
-     *
+     * <b>summary</b> : 
+     * <p>俄语识别</p>
+     * 
      * @param request RecognizeRussianRequest
      * @return RecognizeRussianResponse
      */
@@ -2883,8 +3053,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 购物小票识别
-     *
+     * <b>summary</b> : 
+     * <p>购物小票识别</p>
+     * 
      * @param request RecognizeShoppingReceiptRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RecognizeShoppingReceiptResponse
@@ -2916,8 +3087,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 购物小票识别
-     *
+     * <b>summary</b> : 
+     * <p>购物小票识别</p>
+     * 
      * @param request RecognizeShoppingReceiptRequest
      * @return RecognizeShoppingReceiptResponse
      */
@@ -2927,8 +3099,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 社会保障卡识别
-     *
+     * <b>summary</b> : 
+     * <p>社会保障卡识别</p>
+     * 
      * @param request RecognizeSocialSecurityCardRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RecognizeSocialSecurityCardResponse
@@ -2960,8 +3133,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 社会保障卡识别
-     *
+     * <b>summary</b> : 
+     * <p>社会保障卡识别</p>
+     * 
      * @param request RecognizeSocialSecurityCardRequest
      * @return RecognizeSocialSecurityCardResponse
      */
@@ -2971,8 +3145,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 社保卡识别
-     *
+     * <b>summary</b> : 
+     * <p>社保卡识别</p>
+     * 
      * @param request RecognizeSocialSecurityCardVersionIIRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RecognizeSocialSecurityCardVersionIIResponse
@@ -3004,8 +3179,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 社保卡识别
-     *
+     * <b>summary</b> : 
+     * <p>社保卡识别</p>
+     * 
      * @param request RecognizeSocialSecurityCardVersionIIRequest
      * @return RecognizeSocialSecurityCardVersionIIResponse
      */
@@ -3015,8 +3191,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 表格识别
-     *
+     * <b>summary</b> : 
+     * <p>表格识别</p>
+     * 
      * @param request RecognizeTableOcrRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RecognizeTableOcrResponse
@@ -3064,8 +3241,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 表格识别
-     *
+     * <b>summary</b> : 
+     * <p>表格识别</p>
+     * 
      * @param request RecognizeTableOcrRequest
      * @return RecognizeTableOcrResponse
      */
@@ -3075,8 +3253,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 税收完税证明识别
-     *
+     * <b>summary</b> : 
+     * <p>税收完税证明识别</p>
+     * 
      * @param request RecognizeTaxClearanceCertificateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RecognizeTaxClearanceCertificateResponse
@@ -3108,8 +3287,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 税收完税证明识别
-     *
+     * <b>summary</b> : 
+     * <p>税收完税证明识别</p>
+     * 
      * @param request RecognizeTaxClearanceCertificateRequest
      * @return RecognizeTaxClearanceCertificateResponse
      */
@@ -3119,8 +3299,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 出租车发票
-     *
+     * <b>summary</b> : 
+     * <p>出租车发票</p>
+     * 
      * @param request RecognizeTaxiInvoiceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RecognizeTaxiInvoiceResponse
@@ -3152,8 +3333,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 出租车发票
-     *
+     * <b>summary</b> : 
+     * <p>出租车发票</p>
+     * 
      * @param request RecognizeTaxiInvoiceRequest
      * @return RecognizeTaxiInvoiceResponse
      */
@@ -3163,8 +3345,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 泰语识别
-     *
+     * <b>summary</b> : 
+     * <p>泰语识别</p>
+     * 
      * @param request RecognizeThaiRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RecognizeThaiResponse
@@ -3208,8 +3391,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 泰语识别
-     *
+     * <b>summary</b> : 
+     * <p>泰语识别</p>
+     * 
      * @param request RecognizeThaiRequest
      * @return RecognizeThaiResponse
      */
@@ -3219,8 +3403,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 过路过桥费发票识别
-     *
+     * <b>summary</b> : 
+     * <p>过路过桥费发票识别</p>
+     * 
      * @param request RecognizeTollInvoiceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RecognizeTollInvoiceResponse
@@ -3252,8 +3437,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 过路过桥费发票识别
-     *
+     * <b>summary</b> : 
+     * <p>过路过桥费发票识别</p>
+     * 
      * @param request RecognizeTollInvoiceRequest
      * @return RecognizeTollInvoiceResponse
      */
@@ -3263,8 +3449,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 商标注册证
-     *
+     * <b>summary</b> : 
+     * <p>商标注册证</p>
+     * 
      * @param request RecognizeTradeMarkCertificationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RecognizeTradeMarkCertificationResponse
@@ -3296,8 +3483,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 商标注册证
-     *
+     * <b>summary</b> : 
+     * <p>商标注册证</p>
+     * 
      * @param request RecognizeTradeMarkCertificationRequest
      * @return RecognizeTradeMarkCertificationResponse
      */
@@ -3307,8 +3495,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 火车票
-     *
+     * <b>summary</b> : 
+     * <p>火车票</p>
+     * 
      * @param request RecognizeTrainInvoiceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RecognizeTrainInvoiceResponse
@@ -3340,8 +3529,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 火车票
-     *
+     * <b>summary</b> : 
+     * <p>火车票</p>
+     * 
      * @param request RecognizeTrainInvoiceRequest
      * @return RecognizeTrainInvoiceResponse
      */
@@ -3351,8 +3541,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 二手车统一销售发票识别
-     *
+     * <b>summary</b> : 
+     * <p>二手车统一销售发票识别</p>
+     * 
      * @param request RecognizeUsedCarInvoiceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RecognizeUsedCarInvoiceResponse
@@ -3384,8 +3575,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 二手车统一销售发票识别
-     *
+     * <b>summary</b> : 
+     * <p>二手车统一销售发票识别</p>
+     * 
      * @param request RecognizeUsedCarInvoiceRequest
      * @return RecognizeUsedCarInvoiceResponse
      */
@@ -3395,8 +3587,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 车辆合格证识别
-     *
+     * <b>summary</b> : 
+     * <p>车辆合格证识别</p>
+     * 
      * @param request RecognizeVehicleCertificationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RecognizeVehicleCertificationResponse
@@ -3428,8 +3621,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 车辆合格证识别
-     *
+     * <b>summary</b> : 
+     * <p>车辆合格证识别</p>
+     * 
      * @param request RecognizeVehicleCertificationRequest
      * @return RecognizeVehicleCertificationResponse
      */
@@ -3439,8 +3633,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 行驶证识别
-     *
+     * <b>summary</b> : 
+     * <p>行驶证识别</p>
+     * 
      * @param request RecognizeVehicleLicenseRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RecognizeVehicleLicenseResponse
@@ -3472,8 +3667,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 行驶证识别
-     *
+     * <b>summary</b> : 
+     * <p>行驶证识别</p>
+     * 
      * @param request RecognizeVehicleLicenseRequest
      * @return RecognizeVehicleLicenseResponse
      */
@@ -3483,8 +3679,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 机动车注册登记证识别
-     *
+     * <b>summary</b> : 
+     * <p>机动车注册登记证识别</p>
+     * 
      * @param request RecognizeVehicleRegistrationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RecognizeVehicleRegistrationResponse
@@ -3516,8 +3713,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 机动车注册登记证识别
-     *
+     * <b>summary</b> : 
+     * <p>机动车注册登记证识别</p>
+     * 
      * @param request RecognizeVehicleRegistrationRequest
      * @return RecognizeVehicleRegistrationResponse
      */
@@ -3527,8 +3725,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 电子面单识别
-     *
+     * <b>summary</b> : 
+     * <p>电子面单识别</p>
+     * 
      * @param request RecognizeWaybillRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RecognizeWaybillResponse
@@ -3560,8 +3759,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 电子面单识别
-     *
+     * <b>summary</b> : 
+     * <p>电子面单识别</p>
+     * 
      * @param request RecognizeWaybillRequest
      * @return RecognizeWaybillResponse
      */
@@ -3571,8 +3771,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 营业执照核验
-     *
+     * <b>summary</b> : 
+     * <p>营业执照核验</p>
+     * 
      * @param request VerifyBusinessLicenseRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return VerifyBusinessLicenseResponse
@@ -3610,8 +3811,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 营业执照核验
-     *
+     * <b>summary</b> : 
+     * <p>营业执照核验</p>
+     * 
      * @param request VerifyBusinessLicenseRequest
      * @return VerifyBusinessLicenseResponse
      */
@@ -3621,8 +3823,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 增值税发票核验
-     *
+     * <b>summary</b> : 
+     * <p>增值税发票核验</p>
+     * 
      * @param request VerifyVATInvoiceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return VerifyVATInvoiceResponse
@@ -3672,8 +3875,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 增值税发票核验
-     *
+     * <b>summary</b> : 
+     * <p>增值税发票核验</p>
+     * 
      * @param request VerifyVATInvoiceRequest
      * @return VerifyVATInvoiceResponse
      */
