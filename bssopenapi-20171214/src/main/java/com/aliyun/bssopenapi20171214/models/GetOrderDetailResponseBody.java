@@ -91,6 +91,257 @@ public class GetOrderDetailResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class GetOrderDetailResponseBodyDataOrderListOrderBillModuleConfigBillModuleConfigBillModulePropertiesBillModuleProperties extends TeaModel {
+        @NameInMap("AttrApiCode")
+        public String attrApiCode;
+
+        @NameInMap("ModuleApiCode")
+        public String moduleApiCode;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static GetOrderDetailResponseBodyDataOrderListOrderBillModuleConfigBillModuleConfigBillModulePropertiesBillModuleProperties build(java.util.Map<String, ?> map) throws Exception {
+            GetOrderDetailResponseBodyDataOrderListOrderBillModuleConfigBillModuleConfigBillModulePropertiesBillModuleProperties self = new GetOrderDetailResponseBodyDataOrderListOrderBillModuleConfigBillModuleConfigBillModulePropertiesBillModuleProperties();
+            return TeaModel.build(map, self);
+        }
+
+        public GetOrderDetailResponseBodyDataOrderListOrderBillModuleConfigBillModuleConfigBillModulePropertiesBillModuleProperties setAttrApiCode(String attrApiCode) {
+            this.attrApiCode = attrApiCode;
+            return this;
+        }
+        public String getAttrApiCode() {
+            return this.attrApiCode;
+        }
+
+        public GetOrderDetailResponseBodyDataOrderListOrderBillModuleConfigBillModuleConfigBillModulePropertiesBillModuleProperties setModuleApiCode(String moduleApiCode) {
+            this.moduleApiCode = moduleApiCode;
+            return this;
+        }
+        public String getModuleApiCode() {
+            return this.moduleApiCode;
+        }
+
+        public GetOrderDetailResponseBodyDataOrderListOrderBillModuleConfigBillModuleConfigBillModulePropertiesBillModuleProperties setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class GetOrderDetailResponseBodyDataOrderListOrderBillModuleConfigBillModuleConfigBillModuleProperties extends TeaModel {
+        @NameInMap("billModuleProperties")
+        public java.util.List<GetOrderDetailResponseBodyDataOrderListOrderBillModuleConfigBillModuleConfigBillModulePropertiesBillModuleProperties> billModuleProperties;
+
+        public static GetOrderDetailResponseBodyDataOrderListOrderBillModuleConfigBillModuleConfigBillModuleProperties build(java.util.Map<String, ?> map) throws Exception {
+            GetOrderDetailResponseBodyDataOrderListOrderBillModuleConfigBillModuleConfigBillModuleProperties self = new GetOrderDetailResponseBodyDataOrderListOrderBillModuleConfigBillModuleConfigBillModuleProperties();
+            return TeaModel.build(map, self);
+        }
+
+        public GetOrderDetailResponseBodyDataOrderListOrderBillModuleConfigBillModuleConfigBillModuleProperties setBillModuleProperties(java.util.List<GetOrderDetailResponseBodyDataOrderListOrderBillModuleConfigBillModuleConfigBillModulePropertiesBillModuleProperties> billModuleProperties) {
+            this.billModuleProperties = billModuleProperties;
+            return this;
+        }
+        public java.util.List<GetOrderDetailResponseBodyDataOrderListOrderBillModuleConfigBillModuleConfigBillModulePropertiesBillModuleProperties> getBillModuleProperties() {
+            return this.billModuleProperties;
+        }
+
+    }
+
+    public static class GetOrderDetailResponseBodyDataOrderListOrderBillModuleConfigBillModuleConfig extends TeaModel {
+        @NameInMap("ApiCode")
+        public String apiCode;
+
+        @NameInMap("BillModuleProperties")
+        public GetOrderDetailResponseBodyDataOrderListOrderBillModuleConfigBillModuleConfigBillModuleProperties billModuleProperties;
+
+        @NameInMap("Code")
+        public String code;
+
+        @NameInMap("Name")
+        public String name;
+
+        public static GetOrderDetailResponseBodyDataOrderListOrderBillModuleConfigBillModuleConfig build(java.util.Map<String, ?> map) throws Exception {
+            GetOrderDetailResponseBodyDataOrderListOrderBillModuleConfigBillModuleConfig self = new GetOrderDetailResponseBodyDataOrderListOrderBillModuleConfigBillModuleConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public GetOrderDetailResponseBodyDataOrderListOrderBillModuleConfigBillModuleConfig setApiCode(String apiCode) {
+            this.apiCode = apiCode;
+            return this;
+        }
+        public String getApiCode() {
+            return this.apiCode;
+        }
+
+        public GetOrderDetailResponseBodyDataOrderListOrderBillModuleConfigBillModuleConfig setBillModuleProperties(GetOrderDetailResponseBodyDataOrderListOrderBillModuleConfigBillModuleConfigBillModuleProperties billModuleProperties) {
+            this.billModuleProperties = billModuleProperties;
+            return this;
+        }
+        public GetOrderDetailResponseBodyDataOrderListOrderBillModuleConfigBillModuleConfigBillModuleProperties getBillModuleProperties() {
+            return this.billModuleProperties;
+        }
+
+        public GetOrderDetailResponseBodyDataOrderListOrderBillModuleConfigBillModuleConfig setCode(String code) {
+            this.code = code;
+            return this;
+        }
+        public String getCode() {
+            return this.code;
+        }
+
+        public GetOrderDetailResponseBodyDataOrderListOrderBillModuleConfigBillModuleConfig setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+    }
+
+    public static class GetOrderDetailResponseBodyDataOrderListOrderBillModuleConfig extends TeaModel {
+        @NameInMap("billModuleConfig")
+        public java.util.List<GetOrderDetailResponseBodyDataOrderListOrderBillModuleConfigBillModuleConfig> billModuleConfig;
+
+        public static GetOrderDetailResponseBodyDataOrderListOrderBillModuleConfig build(java.util.Map<String, ?> map) throws Exception {
+            GetOrderDetailResponseBodyDataOrderListOrderBillModuleConfig self = new GetOrderDetailResponseBodyDataOrderListOrderBillModuleConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public GetOrderDetailResponseBodyDataOrderListOrderBillModuleConfig setBillModuleConfig(java.util.List<GetOrderDetailResponseBodyDataOrderListOrderBillModuleConfigBillModuleConfig> billModuleConfig) {
+            this.billModuleConfig = billModuleConfig;
+            return this;
+        }
+        public java.util.List<GetOrderDetailResponseBodyDataOrderListOrderBillModuleConfigBillModuleConfig> getBillModuleConfig() {
+            return this.billModuleConfig;
+        }
+
+    }
+
+    public static class GetOrderDetailResponseBodyDataOrderListOrderOriginalModuleConfigOriginalModuleConfigModulePropertiesModuleProperties extends TeaModel {
+        @NameInMap("Code")
+        public String code;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static GetOrderDetailResponseBodyDataOrderListOrderOriginalModuleConfigOriginalModuleConfigModulePropertiesModuleProperties build(java.util.Map<String, ?> map) throws Exception {
+            GetOrderDetailResponseBodyDataOrderListOrderOriginalModuleConfigOriginalModuleConfigModulePropertiesModuleProperties self = new GetOrderDetailResponseBodyDataOrderListOrderOriginalModuleConfigOriginalModuleConfigModulePropertiesModuleProperties();
+            return TeaModel.build(map, self);
+        }
+
+        public GetOrderDetailResponseBodyDataOrderListOrderOriginalModuleConfigOriginalModuleConfigModulePropertiesModuleProperties setCode(String code) {
+            this.code = code;
+            return this;
+        }
+        public String getCode() {
+            return this.code;
+        }
+
+        public GetOrderDetailResponseBodyDataOrderListOrderOriginalModuleConfigOriginalModuleConfigModulePropertiesModuleProperties setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public GetOrderDetailResponseBodyDataOrderListOrderOriginalModuleConfigOriginalModuleConfigModulePropertiesModuleProperties setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class GetOrderDetailResponseBodyDataOrderListOrderOriginalModuleConfigOriginalModuleConfigModuleProperties extends TeaModel {
+        @NameInMap("moduleProperties")
+        public java.util.List<GetOrderDetailResponseBodyDataOrderListOrderOriginalModuleConfigOriginalModuleConfigModulePropertiesModuleProperties> moduleProperties;
+
+        public static GetOrderDetailResponseBodyDataOrderListOrderOriginalModuleConfigOriginalModuleConfigModuleProperties build(java.util.Map<String, ?> map) throws Exception {
+            GetOrderDetailResponseBodyDataOrderListOrderOriginalModuleConfigOriginalModuleConfigModuleProperties self = new GetOrderDetailResponseBodyDataOrderListOrderOriginalModuleConfigOriginalModuleConfigModuleProperties();
+            return TeaModel.build(map, self);
+        }
+
+        public GetOrderDetailResponseBodyDataOrderListOrderOriginalModuleConfigOriginalModuleConfigModuleProperties setModuleProperties(java.util.List<GetOrderDetailResponseBodyDataOrderListOrderOriginalModuleConfigOriginalModuleConfigModulePropertiesModuleProperties> moduleProperties) {
+            this.moduleProperties = moduleProperties;
+            return this;
+        }
+        public java.util.List<GetOrderDetailResponseBodyDataOrderListOrderOriginalModuleConfigOriginalModuleConfigModulePropertiesModuleProperties> getModuleProperties() {
+            return this.moduleProperties;
+        }
+
+    }
+
+    public static class GetOrderDetailResponseBodyDataOrderListOrderOriginalModuleConfigOriginalModuleConfig extends TeaModel {
+        @NameInMap("Code")
+        public String code;
+
+        @NameInMap("ModuleProperties")
+        public GetOrderDetailResponseBodyDataOrderListOrderOriginalModuleConfigOriginalModuleConfigModuleProperties moduleProperties;
+
+        @NameInMap("Name")
+        public String name;
+
+        public static GetOrderDetailResponseBodyDataOrderListOrderOriginalModuleConfigOriginalModuleConfig build(java.util.Map<String, ?> map) throws Exception {
+            GetOrderDetailResponseBodyDataOrderListOrderOriginalModuleConfigOriginalModuleConfig self = new GetOrderDetailResponseBodyDataOrderListOrderOriginalModuleConfigOriginalModuleConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public GetOrderDetailResponseBodyDataOrderListOrderOriginalModuleConfigOriginalModuleConfig setCode(String code) {
+            this.code = code;
+            return this;
+        }
+        public String getCode() {
+            return this.code;
+        }
+
+        public GetOrderDetailResponseBodyDataOrderListOrderOriginalModuleConfigOriginalModuleConfig setModuleProperties(GetOrderDetailResponseBodyDataOrderListOrderOriginalModuleConfigOriginalModuleConfigModuleProperties moduleProperties) {
+            this.moduleProperties = moduleProperties;
+            return this;
+        }
+        public GetOrderDetailResponseBodyDataOrderListOrderOriginalModuleConfigOriginalModuleConfigModuleProperties getModuleProperties() {
+            return this.moduleProperties;
+        }
+
+        public GetOrderDetailResponseBodyDataOrderListOrderOriginalModuleConfigOriginalModuleConfig setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+    }
+
+    public static class GetOrderDetailResponseBodyDataOrderListOrderOriginalModuleConfig extends TeaModel {
+        @NameInMap("originalModuleConfig")
+        public java.util.List<GetOrderDetailResponseBodyDataOrderListOrderOriginalModuleConfigOriginalModuleConfig> originalModuleConfig;
+
+        public static GetOrderDetailResponseBodyDataOrderListOrderOriginalModuleConfig build(java.util.Map<String, ?> map) throws Exception {
+            GetOrderDetailResponseBodyDataOrderListOrderOriginalModuleConfig self = new GetOrderDetailResponseBodyDataOrderListOrderOriginalModuleConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public GetOrderDetailResponseBodyDataOrderListOrderOriginalModuleConfig setOriginalModuleConfig(java.util.List<GetOrderDetailResponseBodyDataOrderListOrderOriginalModuleConfigOriginalModuleConfig> originalModuleConfig) {
+            this.originalModuleConfig = originalModuleConfig;
+            return this;
+        }
+        public java.util.List<GetOrderDetailResponseBodyDataOrderListOrderOriginalModuleConfigOriginalModuleConfig> getOriginalModuleConfig() {
+            return this.originalModuleConfig;
+        }
+
+    }
+
     public static class GetOrderDetailResponseBodyDataOrderListOrder extends TeaModel {
         /**
          * <p>The after-tax amount of the order.</p>
@@ -100,6 +351,9 @@ public class GetOrderDetailResponseBody extends TeaModel {
          */
         @NameInMap("AfterTaxAmount")
         public String afterTaxAmount;
+
+        @NameInMap("BillModuleConfig")
+        public GetOrderDetailResponseBodyDataOrderListOrderBillModuleConfig billModuleConfig;
 
         /**
          * <p>The service code.</p>
@@ -209,6 +463,9 @@ public class GetOrderDetailResponseBody extends TeaModel {
          */
         @NameInMap("OriginalConfig")
         public String originalConfig;
+
+        @NameInMap("OriginalModuleConfig")
+        public GetOrderDetailResponseBodyDataOrderListOrderOriginalModuleConfig originalModuleConfig;
 
         /**
          * <p>The currency of payment.</p>
@@ -376,6 +633,14 @@ public class GetOrderDetailResponseBody extends TeaModel {
             return this.afterTaxAmount;
         }
 
+        public GetOrderDetailResponseBodyDataOrderListOrder setBillModuleConfig(GetOrderDetailResponseBodyDataOrderListOrderBillModuleConfig billModuleConfig) {
+            this.billModuleConfig = billModuleConfig;
+            return this;
+        }
+        public GetOrderDetailResponseBodyDataOrderListOrderBillModuleConfig getBillModuleConfig() {
+            return this.billModuleConfig;
+        }
+
         public GetOrderDetailResponseBodyDataOrderListOrder setCommodityCode(String commodityCode) {
             this.commodityCode = commodityCode;
             return this;
@@ -462,6 +727,14 @@ public class GetOrderDetailResponseBody extends TeaModel {
         }
         public String getOriginalConfig() {
             return this.originalConfig;
+        }
+
+        public GetOrderDetailResponseBodyDataOrderListOrder setOriginalModuleConfig(GetOrderDetailResponseBodyDataOrderListOrderOriginalModuleConfig originalModuleConfig) {
+            this.originalModuleConfig = originalModuleConfig;
+            return this;
+        }
+        public GetOrderDetailResponseBodyDataOrderListOrderOriginalModuleConfig getOriginalModuleConfig() {
+            return this.originalModuleConfig;
         }
 
         public GetOrderDetailResponseBodyDataOrderListOrder setPaymentCurrency(String paymentCurrency) {
