@@ -70,6 +70,9 @@ public class DescribeOfficeSitesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("SecurityProtection")
+    public String securityProtection;
+
     /**
      * <p>The office network status.</p>
      * <p>Valid values:</p>
@@ -187,6 +190,14 @@ public class DescribeOfficeSitesRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeOfficeSitesRequest setSecurityProtection(String securityProtection) {
+        this.securityProtection = securityProtection;
+        return this;
+    }
+    public String getSecurityProtection() {
+        return this.securityProtection;
     }
 
     public DescribeOfficeSitesRequest setStatus(String status) {
