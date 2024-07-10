@@ -28,6 +28,9 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
     public static DescribeOfficeSitesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeOfficeSitesResponseBody self = new DescribeOfficeSitesResponseBody();
         return TeaModel.build(map, self);
@@ -55,6 +58,14 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeOfficeSitesResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public static class DescribeOfficeSitesResponseBodyOfficeSitesADConnectors extends TeaModel {
@@ -619,6 +630,9 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         @NameInMap("RdsLicenseStatus")
         public String rdsLicenseStatus;
 
+        @NameInMap("SecurityProtection")
+        public String securityProtection;
+
         /**
          * <p>Indicates whether single sign-on (SSO) is enabled.</p>
          * 
@@ -1038,6 +1052,14 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         }
         public String getRdsLicenseStatus() {
             return this.rdsLicenseStatus;
+        }
+
+        public DescribeOfficeSitesResponseBodyOfficeSites setSecurityProtection(String securityProtection) {
+            this.securityProtection = securityProtection;
+            return this;
+        }
+        public String getSecurityProtection() {
+            return this.securityProtection;
         }
 
         public DescribeOfficeSitesResponseBodyOfficeSites setSsoEnabled(Boolean ssoEnabled) {
