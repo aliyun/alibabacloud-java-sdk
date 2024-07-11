@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePortCcAttackTopIPRequest extends TeaModel {
     /**
+     * <p>The IP address of the Anti-DDoS Pro or Anti-DDoS Premium instance to query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class DescribePortCcAttackTopIPRequest extends TeaModel {
     public String ip;
 
     /**
+     * <p>The maximum number of entries to return.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -21,6 +24,7 @@ public class DescribePortCcAttackTopIPRequest extends TeaModel {
     public Long limit;
 
     /**
+     * <p>The attacked port.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,7 @@ public class DescribePortCcAttackTopIPRequest extends TeaModel {
     public String port;
 
     /**
+     * <p>The beginning of the time range to query. Unit: seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

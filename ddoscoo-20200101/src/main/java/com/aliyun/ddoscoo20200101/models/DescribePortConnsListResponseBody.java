@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePortConnsListResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of the connections established over the port.</p>
+     * <p>Details about the connections established over the port.</p>
      */
     @NameInMap("ConnsList")
     public java.util.List<DescribePortConnsListResponseBodyConnsList> connsList;
@@ -51,7 +51,9 @@ public class DescribePortConnsListResponseBody extends TeaModel {
         public Long actConns;
 
         /**
-         * <p>The number of concurrent connections.</p>
+         * <blockquote>
+         * <p> This parameter is in internal preview. Do not use this parameter.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -60,7 +62,7 @@ public class DescribePortConnsListResponseBody extends TeaModel {
         public Long conns;
 
         /**
-         * <p>The new connection creation rate.</p>
+         * <p>The number of new connections.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>

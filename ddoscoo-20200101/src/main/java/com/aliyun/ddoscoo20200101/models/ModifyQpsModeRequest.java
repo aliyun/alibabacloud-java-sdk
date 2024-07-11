@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class ModifyQpsModeRequest extends TeaModel {
     /**
+     * <p>The region ID of the Anti-DDoS Pro instance.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> operation to query the IDs of all instances.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +18,11 @@ public class ModifyQpsModeRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The metering method of QPS. Valid values:</p>
+     * <ul>
+     * <li><strong>month</strong>: monthly 95th percentile QPS.</li>
+     * <li><strong>day</strong>: daily 95th percentile QPS.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceExtResponseBody extends TeaModel {
     /**
-     * <p>The information about the instance.</p>
+     * <p>The extended information about the Anti-DDoS Proxy instance.</p>
      */
     @NameInMap("InstanceExtSpecs")
     public java.util.List<DescribeInstanceExtResponseBodyInstanceExtSpecs> instanceExtSpecs;
@@ -72,7 +72,7 @@ public class DescribeInstanceExtResponseBody extends TeaModel {
         public Long functionVersion;
 
         /**
-         * <p>The instance ID</p>
+         * <p>The ID of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>ddoscoo-cn-i7m25564****</p>
@@ -90,13 +90,13 @@ public class DescribeInstanceExtResponseBody extends TeaModel {
         public Long normalBandwidth;
 
         /**
-         * <p>The type of the instance. Valid value:</p>
+         * <p>The type of the instance. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: Anti-DDoS Premium instance of the Insurance mitigation plan</li>
-         * <li><strong>1</strong>: Anti-DDoS Premium instance of the Unlimited mitigation plan</li>
-         * <li><strong>2</strong>: Anti-DDoS Premium instance of the CMA mitigation plan</li>
-         * <li><strong>3</strong>: Anti-DDoS Premium instance of the Secure Chinese Mainland Acceleration (Sec-CMA) plan</li>
-         * <li><strong>9</strong>: Anti-DDoS Pro instance of the Profession mitigation plan</li>
+         * <li><strong>0</strong>: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Insurance mitigation plan</li>
+         * <li><strong>1</strong>: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Unlimited mitigation plan</li>
+         * <li><strong>2</strong>: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Chinese Mainland Acceleration (CMA) mitigation plan</li>
+         * <li><strong>3</strong>: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Secure Chinese Mainland Acceleration (Sec-CMA) mitigation plan</li>
+         * <li><strong>9</strong>: Anti-DDoS Proxy (Chinese Mainland) instance of the Profession mitigation plan</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -106,7 +106,7 @@ public class DescribeInstanceExtResponseBody extends TeaModel {
         public Long productPlan;
 
         /**
-         * <p>The Internet service provider (ISP) line resource of the Anti-DDoS Pro instance.</p>
+         * <p>The Internet service provider (ISP) line of the Anti-DDoS Proxy (Chinese Mainland) instance.</p>
          * 
          * <strong>example:</strong>
          * <p>coop-line-001</p>

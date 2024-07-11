@@ -42,7 +42,7 @@ public class ModifyDomainResourceRequest extends TeaModel {
     public java.util.List<String> instanceIds;
 
     /**
-     * <p>An array that consists of the details of the protocol type and port number.</p>
+     * <p>The details about the protocol type and port number.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ProxyTypes")
@@ -127,7 +127,7 @@ public class ModifyDomainResourceRequest extends TeaModel {
 
     public static class ModifyDomainResourceRequestProxyTypes extends TeaModel {
         /**
-         * <p>An array that consists of port numbers.</p>
+         * <p>The port numbers.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("ProxyPorts")

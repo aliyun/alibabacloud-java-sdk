@@ -16,7 +16,7 @@ public class DeleteAsyncTaskRequest extends TeaModel {
     /**
      * <p>The ID of the task that you want to delete.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/159405.html">DescribeAsyncTasks</a> operation to query the IDs of all asynchronous export tasks.</p>
+     * <p> You can call the <a href="~~DescribeAsyncTasks~~">DescribeAsyncTasks</a> operation to query the IDs of all asynchronous export tasks.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

@@ -66,12 +66,20 @@ public class ModifyWebCCRuleRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
+     * <p>The blocking duration. Valid values: <strong>60</strong> to <strong>86400</strong>. Unit: seconds.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60</p>
      */
     @NameInMap("Ttl")
     public Integer ttl;
 
     /**
+     * <p>The check path.</p>
+     * <blockquote>
+     * <p> You cannot modify the Uniform Resource Identifier (URI). The domain name of the website, the check path, and the rule name uniquely identify a rule.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

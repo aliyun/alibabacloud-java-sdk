@@ -48,10 +48,10 @@ public class ConfigUdpReflectRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The region ID of the instance. Valid values:</p>
+     * <p>The region ID of the Anti-DDoS Proxy instance. Valid values:</p>
      * <ul>
-     * <li><strong>cn-hangzhou</strong>: Chinese mainland, which indicates Anti-DDoS Pro instances. This is the default value.</li>
-     * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland, which indicates Anti-DDoS Premium instances.</li>
+     * <li><strong>cn-hangzhou</strong>: indicates an Anti-DDoS Proxy (Chinese Mainland) instance. This is the default value.</li>
+     * <li><strong>ap-southeast-1</strong>: indicates an Anti-DDoS Proxy (Outside Chinese Mainland) instance.</li>
      * </ul>
      * 
      * <strong>example:</strong>

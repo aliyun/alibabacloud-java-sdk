@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyWebCCGlobalSwitchResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>5AE2FC86-C840-41AE-9F1A-3A2747C7C1DF</p>
      */

@@ -42,13 +42,13 @@ public class DescribeNetworkRegionBlockResponseBody extends TeaModel {
 
     public static class DescribeNetworkRegionBlockResponseBodyConfig extends TeaModel {
         /**
-         * <p>An array consisting of the codes of the countries or areas from which the requests are blocked.</p>
+         * <p>The codes of the countries or areas from which the requests are blocked.</p>
          */
         @NameInMap("Countries")
         public java.util.List<Long> countries;
 
         /**
-         * <p>An array consisting of the codes of the administrative regions in China from which the requests are blocked.</p>
+         * <p>The codes of the administrative regions in China from which the requests are blocked.</p>
          */
         @NameInMap("Provinces")
         public java.util.List<Long> provinces;

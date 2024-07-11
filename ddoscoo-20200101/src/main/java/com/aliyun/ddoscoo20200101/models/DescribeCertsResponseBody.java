@@ -41,6 +41,12 @@ public class DescribeCertsResponseBody extends TeaModel {
     }
 
     public static class DescribeCertsResponseBodyCerts extends TeaModel {
+        /**
+         * <p>The global certificate ID, which is in the certificate ID-cn-hangzhou format. If the ID of the certificate is 123, CertIdentifier is 123-cn-hangzhou.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>126345-ap-southeast-1</p>
+         */
         @NameInMap("CertIdentifier")
         public String certIdentifier;
 
@@ -56,8 +62,8 @@ public class DescribeCertsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the certificate is associated with the domain name. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The certificate is associated with the domain name.</li>
-         * <li><strong>false</strong>: The certificate is not associated with the domain name.</li>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -67,7 +73,7 @@ public class DescribeCertsResponseBody extends TeaModel {
         public Boolean domainRelated;
 
         /**
-         * <p>The expiration date of the certificate. string</p>
+         * <p>The expiration date of the certificate. The value is a string.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-09-12</p>
@@ -76,7 +82,7 @@ public class DescribeCertsResponseBody extends TeaModel {
         public String endDate;
 
         /**
-         * <p>The ID of the certificate.</p>
+         * <p>The certificate ID.</p>
          * 
          * <strong>example:</strong>
          * <p>81</p>
@@ -103,7 +109,7 @@ public class DescribeCertsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The issuance date of the certificate. string</p>
+         * <p>The issuance date of the certificate. The value is a string.</p>
          * 
          * <strong>example:</strong>
          * <p>2019-09-12</p>

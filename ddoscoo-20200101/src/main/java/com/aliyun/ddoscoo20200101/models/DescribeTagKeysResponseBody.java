@@ -32,7 +32,7 @@ public class DescribeTagKeysResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>An array that consists of the details of the tag key.</p>
+     * <p>The details about the tag keys.</p>
      */
     @NameInMap("TagKeys")
     public java.util.List<DescribeTagKeysResponseBodyTagKeys> tagKeys;
@@ -93,7 +93,7 @@ public class DescribeTagKeysResponseBody extends TeaModel {
 
     public static class DescribeTagKeysResponseBodyTagKeys extends TeaModel {
         /**
-         * <p>The number of Anti-DDoS Pro instances to which the tag key is added.</p>
+         * <p>The number of Anti-DDoS Proxy (Chinese Mainland) instances to which the tag key is added.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>

@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class DescribeL7UsKeepaliveResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>39499F01-19D9-4EA4-A0E9-C6014BA5CDBE</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The value of the Back-to-origin Persistent Connections parameter.</p>
+     */
     @NameInMap("RsKeepalive")
     public DescribeL7UsKeepaliveResponseBodyRsKeepalive rsKeepalive;
 
@@ -37,6 +42,12 @@ public class DescribeL7UsKeepaliveResponseBody extends TeaModel {
 
     public static class DescribeL7UsKeepaliveResponseBodyRsKeepalive extends TeaModel {
         /**
+         * <p>Indicates whether Back-to-origin Persistent Connections is turned on. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -44,6 +55,8 @@ public class DescribeL7UsKeepaliveResponseBody extends TeaModel {
         public Boolean enabled;
 
         /**
+         * <p>The number of requests that reuse persistent connections.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -51,6 +64,8 @@ public class DescribeL7UsKeepaliveResponseBody extends TeaModel {
         public Long keepaliveRequests;
 
         /**
+         * <p>The timeout period of idle persistent connections.</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */

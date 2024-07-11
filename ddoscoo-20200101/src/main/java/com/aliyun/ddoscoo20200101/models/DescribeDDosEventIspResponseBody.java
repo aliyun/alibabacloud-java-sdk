@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDDosEventIspResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of the ISPs for the volumetric attack.</p>
+     * <p>The ISPs for the volumetric attack.</p>
      */
     @NameInMap("Isps")
     public java.util.List<DescribeDDosEventIspResponseBodyIsps> isps;

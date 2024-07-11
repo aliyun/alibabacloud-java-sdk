@@ -7,10 +7,10 @@ public class DescribeInstancesRequest extends TeaModel {
     /**
      * <p>The mitigation plan of the instance to query. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: Anti-DDoS Premium instance of the Insurance mitigation plan</li>
-     * <li><strong>1</strong>: Anti-DDoS Premium instance of the Unlimited mitigation plan</li>
-     * <li><strong>2</strong>: Anti-DDoS Premium instance of the Mainland China Acceleration (MCA) mitigation plan</li>
-     * <li><strong>9</strong>: Anti-DDoS Pro instance of the Profession mitigation plan</li>
+     * <li><strong>0</strong>: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Insurance mitigation plan</li>
+     * <li><strong>1</strong>: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Unlimited mitigation plan</li>
+     * <li><strong>2</strong>: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Chinese Mainland Acceleration (CMA) mitigation plan</li>
+     * <li><strong>9</strong>: Anti-DDoS Proxy (Chinese Mainland) instance of the Profession mitigation plan</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -50,6 +50,9 @@ public class DescribeInstancesRequest extends TeaModel {
     @NameInMap("ExpireStartTime")
     public Long expireStartTime;
 
+    /**
+     * <p>The IDs of the instances to query. You can specify up to 200 instance IDs.</p>
+     */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
@@ -101,9 +104,15 @@ public class DescribeInstancesRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The states of the instances to query. You can specify up to two states.</p>
+     */
     @NameInMap("Status")
     public java.util.List<Integer> status;
 
+    /**
+     * <p>The tags that are added to the instances to query.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<DescribeInstancesRequestTag> tag;
 
@@ -210,9 +219,9 @@ public class DescribeInstancesRequest extends TeaModel {
 
     public static class DescribeInstancesRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N that is added to the instance to query. The maximum value of N is 200. You can specify up to 200 tags. When you specify tags, take note of the following rules:</p>
+         * <p>The key of the tag that is added to the instance to query. You can specify up to 200 tag keys. When you specify tags, take note of the following rules:</p>
          * <ul>
-         * <li>Each tag consists of a key (<strong>Key</strong>) and a value (<strong>Value</strong>), which are separated by a comma (,).</li>
+         * <li>Each tag consists of a key (<strong>Key</strong>) and a value (<strong>Value</strong>), which are separated with a comma (,).</li>
          * <li>Separate multiple tags with commas (,).</li>
          * </ul>
          * <blockquote>
@@ -226,9 +235,9 @@ public class DescribeInstancesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N that is added to the instance to query. The maximum value of N is 200. You can specify up to 200 tags. When you specify tags, take note of the following rules:</p>
+         * <p>The value of the tag that is added to the instance to query. You can specify up to 200 tag values. When you specify tags, take note of the following rules:</p>
          * <ul>
-         * <li>Each tag consists of a key (<strong>Key</strong>) and a value (<strong>Value</strong>), which are separated by a comma (,).</li>
+         * <li>Each tag consists of a key (<strong>Key</strong>) and a value (<strong>Value</strong>), which are separated with a comma (,).</li>
          * <li>Separate multiple tags with commas (,).</li>
          * </ul>
          * <blockquote>

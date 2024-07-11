@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstancesResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of the details of the instances.</p>
+     * <p>The details about the instances.</p>
      */
     @NameInMap("Instances")
     public java.util.List<DescribeInstancesResponseBodyInstances> instances;
@@ -59,7 +59,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     public static class DescribeInstancesResponseBodyInstances extends TeaModel {
         /**
-         * <p>The time when the instance is created. This value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The time when the instance was created. The value is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1637751953000</p>
@@ -79,10 +79,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
         /**
          * <p>The mitigation plan of the instance. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: Anti-DDoS Premium instance of the Insurance mitigation plan</li>
-         * <li><strong>1</strong>: Anti-DDoS Premium instance of the Unlimited mitigation plan</li>
-         * <li><strong>2</strong>: Anti-DDoS Premium instance of the MCA mitigation plan</li>
-         * <li><strong>9</strong>: Anti-DDoS Pro instance of the Profession mitigation plan</li>
+         * <li><strong>0</strong>: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Insurance mitigation plan</li>
+         * <li><strong>1</strong>: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Unlimited mitigation plan</li>
+         * <li><strong>2</strong>: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Chinese Mainland Acceleration (CMA) mitigation plan</li>
+         * <li><strong>9</strong>: Anti-DDoS Proxy (Chinese Mainland) instance of the Profession mitigation plan</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -92,7 +92,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public Integer edition;
 
         /**
-         * <p>The forwarding status of the instance. Valid values:</p>
+         * <p>The traffic forwarding status of the instance. Valid values:</p>
          * <ul>
          * <li><strong>0</strong>: The instance no longer forwards service traffic.</li>
          * <li><strong>1</strong>: The instance forwards service traffic as expected.</li>
@@ -105,7 +105,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public Integer enabled;
 
         /**
-         * <p>The time when the instance expires. This value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The time when the instance expires. The value is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1640361600000</p>
@@ -147,8 +147,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
         /**
          * <p>The IP version of the instance. Valid values:</p>
          * <ul>
-         * <li><strong>Ipv4</strong>: IPv4</li>
-         * <li><strong>Ipv6</strong>: IPv6</li>
+         * <li><strong>Ipv4</strong></li>
+         * <li><strong>Ipv6</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -158,10 +158,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String ipVersion;
 
         /**
-         * <p>Indicates whether the 95th percentile metering method has been enabled for the instance. Valid values:</p>
+         * <p>Indicates whether the metering method of the 95th percentile burstable clean bandwidth is enabled for the instance. Valid values:</p>
          * <ul>
-         * <li>0: The 95th percentile metering method has not been enabled for the instance.</li>
-         * <li>1: The 95th percentile metering method has been enabled for the instance.</li>
+         * <li>0: no</li>
+         * <li>1: yes</li>
          * </ul>
          * 
          * <strong>example:</strong>

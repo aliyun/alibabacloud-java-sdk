@@ -45,12 +45,13 @@ public class ModifySchedulerRuleRequest extends TeaModel {
     public String ruleName;
 
     /**
-     * <p>The type of the rule. Valid values:</p>
+     * <p>The type of the scheduling rule. Valid values:</p>
      * <ul>
      * <li><strong>2</strong>: tiered protection</li>
      * <li><strong>3</strong>: network acceleration</li>
-     * <li><strong>5</strong>: Alibaba Cloud CDN (CDN) interaction</li>
+     * <li><strong>5</strong>: CDN interaction</li>
      * <li><strong>6</strong>: cloud service interaction</li>
+     * <li><strong>8</strong>: secure acceleration</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -61,7 +62,7 @@ public class ModifySchedulerRuleRequest extends TeaModel {
     public Integer ruleType;
 
     /**
-     * <p>The details of the scheduling rule. This parameter is a JSON string. The string contains the following fields:</p>
+     * <p>The details of the scheduling rule. This parameter is a JSON string. The following list describes the fields in the value of the parameter:</p>
      * <ul>
      * <li><p><strong>Type</strong>: the address type of the interaction resource that you want to use in the scheduling rule. This field is required and must be of the string type. Valid values:</p>
      * <ul>
@@ -80,6 +81,7 @@ public class ModifySchedulerRuleRequest extends TeaModel {
      * <li><strong>3</strong>: the IP address that is used to accelerate access in the network acceleration scenario</li>
      * <li><strong>5</strong>: the domain name that is configured in Alibaba Cloud CDN (CDN) in the CDN interaction scenario</li>
      * <li><strong>6</strong> the IP address of the interaction resource in the cloud service interaction scenario</li>
+     * <li><strong>8</strong>: the IP address of the Secure Chinese Mainland Acceleration (Sec-CMA) instance in the secure acceleration scenario</li>
      * </ul>
      * </li>
      * <li><p><strong>RegionId</strong>: the region where the interaction resource is deployed. This parameter must be specified when <strong>ValueType</strong> is set to <strong>2</strong>. The value must be of the string type.</p>

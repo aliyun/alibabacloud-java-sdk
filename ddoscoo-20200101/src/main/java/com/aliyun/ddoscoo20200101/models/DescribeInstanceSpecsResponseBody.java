@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceSpecsResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of the specifications of instances.</p>
+     * <p>The details of the specifications of the instance.</p>
      */
     @NameInMap("InstanceSpecs")
     public java.util.List<DescribeInstanceSpecsResponseBodyInstanceSpecs> instanceSpecs;
@@ -42,7 +42,7 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
 
     public static class DescribeInstanceSpecsResponseBodyInstanceSpecs extends TeaModel {
         /**
-         * <p>The clean bandwidth of normal services. Unit: Mbit/s.</p>
+         * <p>The clean bandwidth. Unit: Mbit/s.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -78,9 +78,9 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
         public Long cpsLimit;
 
         /**
-         * <p>The number of available advanced mitigation sessions for this month. If <strong>-1</strong> is returned, advanced mitigation capabilities are unlimited.</p>
+         * <p>The number of available advanced mitigation sessions for this month. <strong>-1</strong>: unlimited</p>
          * <blockquote>
-         * <p>This parameter is returned only when <strong>RegionId</strong> is set to <strong>ap-southeast-1</strong>. If RegionId is set to ap-southeast-1, the specifications of Anti-DDoS Premium instances are queried.</p>
+         * <p> This parameter is returned only when the request parameter <strong>RegionId</strong> is set to <strong>ap-southeast-1</strong>. If RegionId is set to ap-southeast-1, the specifications of Anti-DDoS Proxy (Outside Chinese Mainland) instances are queried.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -129,9 +129,25 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
         @NameInMap("ElasticBwModel")
         public String elasticBwModel;
 
+        /**
+         * <p>The burstable QPS. Unit: QPS</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("ElasticQps")
         public Long elasticQps;
 
+        /**
+         * <p>The metering method of the burstable QPS. Valid values:</p>
+         * <ul>
+         * <li><strong>day</strong>: the metering method of daily 95th percentile</li>
+         * <li><strong>month</strong>: the metering method of monthly 95th percentile</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>day</p>
+         */
         @NameInMap("ElasticQpsMode")
         public String elasticQpsMode;
 
@@ -141,8 +157,8 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
          * <li><strong>default</strong>: Standard</li>
          * <li><strong>enhance</strong>: Enhanced</li>
          * <li><strong>cnhk</strong>: Chinese Mainland Acceleration (CMA)</li>
-         * <li><strong>cnhk_default</strong>: Secure Chinese Mainland Acceleration (Sec-CMA) standard function plan</li>
-         * <li><strong>cnhk_enhance</strong>: Sec-CMA enhanced function plan</li>
+         * <li><strong>cnhk_default</strong>: Secure Chinese Mainland Acceleration (Sec-CMA) standard</li>
+         * <li><strong>cnhk_enhance</strong>: Sec-CMA enhanced</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -170,7 +186,7 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
         public Integer portLimit;
 
         /**
-         * <p>The clean queries per second (QPS) of normal services.</p>
+         * <p>The clean QPS.</p>
          * 
          * <strong>example:</strong>
          * <p>3000</p>
@@ -179,7 +195,7 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
         public Integer qpsLimit;
 
         /**
-         * <p>实例业务带宽限速值。取值：0～15360，0表示不限速。单位：mbps。</p>
+         * <p>The threshold of the clean bandwidth. Valid values: 0 to 15360. The value 0 indicates that rate limiting is never triggered. Unit: Mbit/s</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
