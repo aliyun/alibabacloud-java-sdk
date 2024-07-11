@@ -4,9 +4,17 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class ResizeMultiZoneClusterDiskSizeResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>123412341****</p>
+     */
     @NameInMap("OrderId")
     public String orderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>568339C4-9F71-43D0-994E-E039CD826E56</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

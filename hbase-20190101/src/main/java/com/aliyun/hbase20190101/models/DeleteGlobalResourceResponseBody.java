@@ -4,6 +4,10 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class DeleteGlobalResourceResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>BD0B0B9A-79E8-4FDD-9C51-93443490B784</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

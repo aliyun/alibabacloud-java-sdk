@@ -4,18 +4,40 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class CreateGlobalResourceRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>xxxxx-xxxxx-xxxxx</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hb-t4naqsay5gn****</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PubPhoenixSLBQueryServerVip</p>
+     */
     @NameInMap("ResourceName")
     public String resourceName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>GLOBAL_VIP</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 

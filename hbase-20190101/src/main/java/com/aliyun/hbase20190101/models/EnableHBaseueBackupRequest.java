@@ -4,15 +4,35 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class EnableHBaseueBackupRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>xxx</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>800</p>
+     */
     @NameInMap("ColdStorageSize")
     public Integer coldStorageSize;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ld-m5eznlga4k5bcxxxx</p>
+     */
     @NameInMap("HbaseueClusterId")
     public String hbaseueClusterId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("NodeCount")
     public Integer nodeCount;
 

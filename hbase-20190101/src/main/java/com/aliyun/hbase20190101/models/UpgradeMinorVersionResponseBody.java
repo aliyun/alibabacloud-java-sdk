@@ -4,9 +4,17 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class UpgradeMinorVersionResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>7B8EC240-BB13-4DBC-B955-F90170E82609</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>HADOOP</p>
+     */
     @NameInMap("UpgradingComponents")
     public String upgradingComponents;
 

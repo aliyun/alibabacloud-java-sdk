@@ -4,66 +4,166 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class RelateDbForHBaseHaRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bds-t4nj9v2x85******</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hb-bp1w6krp539******</p>
+     */
     @NameInMap("HaActive")
     public String haActive;
 
+    /**
+     * <strong>example:</strong>
+     * <p>hb-t4naqsay5gn******-master1-001.hbase.singapore.rds.aliyuncs.com,hb-t4naqsay5gn******-master3-001.hbase.singapore.rds.aliyuncs.com,hb-t4naqsay5gn******-master2-001.hbase.singapore.rds.aliyuncs.com:2181:/hbase</p>
+     */
     @NameInMap("HaActiveClusterKey")
     public String haActiveClusterKey;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hbase</p>
+     */
     @NameInMap("HaActiveDBType")
     public String haActiveDBType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>/hbase</p>
+     */
     @NameInMap("HaActiveHbaseFsDir")
     public String haActiveHbaseFsDir;
 
+    /**
+     * <strong>example:</strong>
+     * <p>hdfs://hb-t4naqsay5gn******-master1-001.hbase.rds.aliyuncs.com:8020,hb-t4naqsay5gn******-master2-001.hbase.rds.aliyuncs.com:8020</p>
+     */
     @NameInMap("HaActiveHdfsUri")
     public String haActiveHdfsUri;
 
+    /**
+     * <strong>example:</strong>
+     * <p>root</p>
+     */
     @NameInMap("HaActivePassword")
     public String haActivePassword;
 
+    /**
+     * <strong>example:</strong>
+     * <p>root</p>
+     */
     @NameInMap("HaActiveUser")
     public String haActiveUser;
 
+    /**
+     * <strong>example:</strong>
+     * <p>HBase2x</p>
+     */
     @NameInMap("HaActiveVersion")
     public String haActiveVersion;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CLUSTER</p>
+     */
     @NameInMap("HaMigrateType")
     public String haMigrateType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hb-bp1bl7iqzka******</p>
+     */
     @NameInMap("HaStandby")
     public String haStandby;
 
+    /**
+     * <strong>example:</strong>
+     * <p>hb-bp1w6krp539******-master1-001.hbase.singapore.rds.aliyuncs.com,hb-bp1w6krp539******-master3-001.hbase.singapore.rds.aliyuncs.com,hb-t4naqsay5gn******-master2-001.hbase.singapore.rds.aliyuncs.com:2181:/hbase</p>
+     */
     @NameInMap("HaStandbyClusterKey")
     public String haStandbyClusterKey;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hbase</p>
+     */
     @NameInMap("HaStandbyDBType")
     public String haStandbyDBType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>/hbase</p>
+     */
     @NameInMap("HaStandbyHbaseFsDir")
     public String haStandbyHbaseFsDir;
 
+    /**
+     * <strong>example:</strong>
+     * <p>hdfs://hb-bp1w6krp539******-master1-001.hbase.rds.aliyuncs.com:8020,hb-bp1w6krp539******-master2-001.hbase.rds.aliyuncs.com:8020</p>
+     */
     @NameInMap("HaStandbyHdfsUri")
     public String haStandbyHdfsUri;
 
+    /**
+     * <strong>example:</strong>
+     * <p>root</p>
+     */
     @NameInMap("HaStandbyPassword")
     public String haStandbyPassword;
 
+    /**
+     * <strong>example:</strong>
+     * <p>root</p>
+     */
     @NameInMap("HaStandbyUser")
     public String haStandbyUser;
 
+    /**
+     * <strong>example:</strong>
+     * <p>HBase2x</p>
+     */
     @NameInMap("HaStandbyVersion")
     public String haStandbyVersion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test,test1</p>
+     */
     @NameInMap("HaTables")
     public String haTables;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IsActiveStandard")
     public Boolean isActiveStandard;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IsStandbyStandard")
     public Boolean isStandbyStandard;
 

@@ -4,27 +4,61 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class ResizeMultiZoneClusterNodeCountRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>vsw-hangxzhouxb*****</p>
+     */
     @NameInMap("ArbiterVSwitchId")
     public String arbiterVSwitchId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ld-f5d8d6s4s2a1****</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6</p>
+     */
     @NameInMap("CoreNodeCount")
     public Integer coreNodeCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>8</p>
+     */
     @NameInMap("LogNodeCount")
     public Integer logNodeCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6</p>
+     */
     @NameInMap("PrimaryCoreNodeCount")
     public Integer primaryCoreNodeCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>vsw-hangxzhouxe*****</p>
+     */
     @NameInMap("PrimaryVSwitchId")
     public String primaryVSwitchId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6</p>
+     */
     @NameInMap("StandbyCoreNodeCount")
     public Integer standbyCoreNodeCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>vsw-hangxzhouxf****</p>
+     */
     @NameInMap("StandbyVSwitchId")
     public String standbyVSwitchId;
 

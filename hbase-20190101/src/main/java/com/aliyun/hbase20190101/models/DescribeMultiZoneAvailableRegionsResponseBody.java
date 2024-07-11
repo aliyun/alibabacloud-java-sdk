@@ -7,6 +7,10 @@ public class DescribeMultiZoneAvailableRegionsResponseBody extends TeaModel {
     @NameInMap("Regions")
     public DescribeMultiZoneAvailableRegionsResponseBodyRegions regions;
 
+    /**
+     * <strong>example:</strong>
+     * <p>F03BB273-45EE-4B6C-A329-A6E6A8D15856</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -51,6 +55,10 @@ public class DescribeMultiZoneAvailableRegionsResponseBody extends TeaModel {
     }
 
     public static class DescribeMultiZoneAvailableRegionsResponseBodyRegionsRegionAvailableCombinesAvailableCombine extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>cn-shenzhen-****-aliyun</p>
+         */
         @NameInMap("Id")
         public String id;
 
@@ -106,9 +114,17 @@ public class DescribeMultiZoneAvailableRegionsResponseBody extends TeaModel {
         @NameInMap("LocalName")
         public String localName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>hbase.aliyuncs.com</p>
+         */
         @NameInMap("RegionEndpoint")
         public String regionEndpoint;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-shenzhen</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 

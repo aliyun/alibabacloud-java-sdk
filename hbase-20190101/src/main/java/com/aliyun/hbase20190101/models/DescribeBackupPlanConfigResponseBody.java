@@ -4,15 +4,31 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupPlanConfigResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>7</p>
+     */
     @NameInMap("FullBackupCycle")
     public Integer fullBackupCycle;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("MinHFileBackupCount")
     public Integer minHFileBackupCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2020-11-09T18:00:00Z</p>
+     */
     @NameInMap("NextFullBackupDate")
     public String nextFullBackupDate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>33A23201-6038-4A6A-B76A-61047EA04E6A</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,9 +4,17 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDiskWarningLineResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>08DF8283-D290-4107-931E-7913D6D3480D</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>80</p>
+     */
     @NameInMap("WarningLine")
     public String warningLine;
 

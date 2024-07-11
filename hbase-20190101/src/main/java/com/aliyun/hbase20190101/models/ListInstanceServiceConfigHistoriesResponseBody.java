@@ -7,15 +7,31 @@ public class ListInstanceServiceConfigHistoriesResponseBody extends TeaModel {
     @NameInMap("ConfigureHistoryList")
     public ListInstanceServiceConfigHistoriesResponseBodyConfigureHistoryList configureHistoryList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>658C1549-2C02-4FD9-9490-EB3B285F9DCA</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalRecordCount")
     public Long totalRecordCount;
 
@@ -65,18 +81,38 @@ public class ListInstanceServiceConfigHistoriesResponseBody extends TeaModel {
     }
 
     public static class ListInstanceServiceConfigHistoriesResponseBodyConfigureHistoryListConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>hbase#hbase-site.xml#hbase.client.keyvalue.maxsize</p>
+         */
         @NameInMap("ConfigureName")
         public String configureName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1608708923000</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Effective")
         public String effective;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10485770</p>
+         */
         @NameInMap("NewValue")
         public String newValue;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10485760</p>
+         */
         @NameInMap("OldValue")
         public String oldValue;
 

@@ -4,6 +4,10 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class ModifySecurityGroupsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>F4AD2E65-482B-46B6-942E-765989B1C8A3</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

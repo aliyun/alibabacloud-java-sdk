@@ -4,6 +4,10 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class DeleteHBaseSlbServerResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>7242130A-82CF-49BF-AB32-30DCB819EBA6</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

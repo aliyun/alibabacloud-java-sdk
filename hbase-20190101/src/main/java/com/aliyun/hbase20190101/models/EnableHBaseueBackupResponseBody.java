@@ -4,12 +4,24 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class EnableHBaseueBackupResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>bds-m5e54q06ceyhxxxx</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1449xxx</p>
+     */
     @NameInMap("OrderId")
     public String orderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>15272D5D-46E8-4400-9CC8-A7E7B589F575</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

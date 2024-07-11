@@ -4,9 +4,19 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class UpgradeMinorVersionRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hb-t4naqsay5gn****</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>HADOOP</p>
+     */
     @NameInMap("Components")
     public String components;
 

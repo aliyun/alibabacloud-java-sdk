@@ -4,15 +4,33 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class ConvertInstanceRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hb-bp16o0pd52e3y****</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>7</p>
+     */
     @NameInMap("Duration")
     public Integer duration;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Prepaid</p>
+     */
     @NameInMap("PayType")
     public String payType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>month</p>
+     */
     @NameInMap("PricingCycle")
     public String pricingCycle;
 

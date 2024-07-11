@@ -4,15 +4,35 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class UnTagResourcesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("All")
     public Boolean all;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bds-bp15e022622fk0w1</p>
+     */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>key1</p>
+     */
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;
 

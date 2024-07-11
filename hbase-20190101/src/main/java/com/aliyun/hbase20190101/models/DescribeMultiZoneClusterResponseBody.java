@@ -4,156 +4,354 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeMultiZoneClusterResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>vsw-t4nax9mp3wk0czn****</p>
+     */
     @NameInMap("ArbiterVSwitchIds")
     public String arbiterVSwitchIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ap-southeast-1c</p>
+     */
     @NameInMap("ArbiterZoneId")
     public String arbiterZoneId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("AutoRenewal")
     public Boolean autoRenewal;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ld-t4nn71xa0yn****</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>mz_test</p>
+     */
     @NameInMap("ClusterName")
     public String clusterName;
 
     @NameInMap("ColdStorageSize")
     public Integer coldStorageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4</p>
+     */
     @NameInMap("CoreDiskCount")
     public String coreDiskCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("CoreDiskSize")
     public Integer coreDiskSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cloud_efficiency</p>
+     */
     @NameInMap("CoreDiskType")
     public String coreDiskType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>hbase.sn1.large</p>
+     */
     @NameInMap("CoreInstanceType")
     public String coreInstanceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6</p>
+     */
     @NameInMap("CoreNodeCount")
     public Integer coreNodeCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2020-10-15T18:04:52</p>
+     */
     @NameInMap("CreatedTime")
     public String createdTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2020-10-15T10:04:52Z</p>
+     */
     @NameInMap("CreatedTimeUTC")
     public String createdTimeUTC;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Duration")
     public Integer duration;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2a****</p>
+     */
     @NameInMap("EncryptionKey")
     public String encryptionKey;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CloudDisk</p>
+     */
     @NameInMap("EncryptionType")
     public String encryptionType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>hbaseue</p>
+     */
     @NameInMap("Engine")
     public String engine;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2020-11-16T08:00:00</p>
+     */
     @NameInMap("ExpireTime")
     public String expireTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2020-11-16T00:00:00Z</p>
+     */
     @NameInMap("ExpireTimeUTC")
     public String expireTimeUTC;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ld-t4nn71xa0yn****</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>mz_test</p>
+     */
     @NameInMap("InstanceName")
     public String instanceName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("IsDeletionProtection")
     public Boolean isDeletionProtection;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4</p>
+     */
     @NameInMap("LogDiskCount")
     public String logDiskCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("LogDiskSize")
     public Integer logDiskSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cloud_efficiency</p>
+     */
     @NameInMap("LogDiskType")
     public String logDiskType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>hbase.sn1.large</p>
+     */
     @NameInMap("LogInstanceType")
     public String logInstanceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4</p>
+     */
     @NameInMap("LogNodeCount")
     public Integer logNodeCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>06:00:00</p>
+     */
     @NameInMap("MaintainEndTime")
     public String maintainEndTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>02:00:00</p>
+     */
     @NameInMap("MaintainStartTime")
     public String maintainStartTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2.0</p>
+     */
     @NameInMap("MajorVersion")
     public String majorVersion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>50</p>
+     */
     @NameInMap("MasterDiskSize")
     public Integer masterDiskSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cloud_efficiency</p>
+     */
     @NameInMap("MasterDiskType")
     public String masterDiskType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>hbase.sn1.large</p>
+     */
     @NameInMap("MasterInstanceType")
     public String masterInstanceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("MasterNodeCount")
     public Integer masterNodeCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("ModuleId")
     public Integer moduleId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2.0</p>
+     */
     @NameInMap("ModuleStackVersion")
     public String moduleStackVersion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ap-southeast-1-abc-aliyun</p>
+     */
     @NameInMap("MultiZoneCombination")
     public String multiZoneCombination;
 
     @NameInMap("MultiZoneInstanceModels")
     public DescribeMultiZoneClusterResponseBodyMultiZoneInstanceModels multiZoneInstanceModels;
 
+    /**
+     * <strong>example:</strong>
+     * <p>VPC</p>
+     */
     @NameInMap("NetworkType")
     public String networkType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ld-fls1gf31y5s35****</p>
+     */
     @NameInMap("ParentId")
     public String parentId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Prepaid</p>
+     */
     @NameInMap("PayType")
     public String payType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>vsw-t4n3s1zd2gtidg****</p>
+     */
     @NameInMap("PrimaryVSwitchIds")
     public String primaryVSwitchIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ap-southeast-1a</p>
+     */
     @NameInMap("PrimaryZoneId")
     public String primaryZoneId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ap-southeast-1</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>A02C0E6D-3A47-4FA0-BA7E-60793CE256DA</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rg-lk51f5fer315e****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>vsw-t4nvvk7xur3rdi****</p>
+     */
     @NameInMap("StandbyVSwitchIds")
     public String standbyVSwitchIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ap-southeast-1b</p>
+     */
     @NameInMap("StandbyZoneId")
     public String standbyZoneId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ACTIVATION</p>
+     */
     @NameInMap("Status")
     public String status;
 
     @NameInMap("Tags")
     public DescribeMultiZoneClusterResponseBodyTags tags;
 
+    @NameInMap("TaskProgress")
+    public String taskProgress;
+
+    @NameInMap("TaskStatus")
+    public String taskStatus;
+
+    /**
+     * <strong>example:</strong>
+     * <p>vpc-t4nx81tmlixcq5****</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 
@@ -562,6 +760,22 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
         return this.tags;
     }
 
+    public DescribeMultiZoneClusterResponseBody setTaskProgress(String taskProgress) {
+        this.taskProgress = taskProgress;
+        return this;
+    }
+    public String getTaskProgress() {
+        return this.taskProgress;
+    }
+
+    public DescribeMultiZoneClusterResponseBody setTaskStatus(String taskStatus) {
+        this.taskStatus = taskStatus;
+        return this;
+    }
+    public String getTaskStatus() {
+        return this.taskStatus;
+    }
+
     public DescribeMultiZoneClusterResponseBody setVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
@@ -574,12 +788,20 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
         @NameInMap("HdfsMinorVersion")
         public String hdfsMinorVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ld-t4nn71xa0yn****-az-a</p>
+         */
         @NameInMap("InsName")
         public String insName;
 
         @NameInMap("IsHdfsLatestVersion")
         public String isHdfsLatestVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsLatestVersion")
         public Boolean isLatestVersion;
 
@@ -589,12 +811,24 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
         @NameInMap("LatestMinorVersion")
         public String latestMinorVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2.1.24</p>
+         */
         @NameInMap("MinorVersion")
         public String minorVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>primary</p>
+         */
         @NameInMap("Role")
         public String role;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ACTIVATION</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -697,9 +931,17 @@ public class DescribeMultiZoneClusterResponseBody extends TeaModel {
     }
 
     public static class DescribeMultiZoneClusterResponseBodyTagsTag extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>test_key</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test_value</p>
+         */
         @NameInMap("Value")
         public String value;
 

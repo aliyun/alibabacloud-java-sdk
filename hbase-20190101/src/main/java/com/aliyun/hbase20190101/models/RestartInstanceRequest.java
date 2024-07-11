@@ -4,9 +4,19 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class RestartInstanceRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ld-bp150tns0sjxs****</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>THRIFT</p>
+     */
     @NameInMap("Components")
     public String components;
 

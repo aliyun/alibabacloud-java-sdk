@@ -4,6 +4,10 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeRestoreFullDetailsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>CFE525CF-C691-4140-A981-D004DAA7A840</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,27 +36,59 @@ public class DescribeRestoreFullDetailsResponseBody extends TeaModel {
     }
 
     public static class DescribeRestoreFullDetailsResponseBodyRestoreFullRestoreFullDetailsRestoreFullDetail extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1.2 kB</p>
+         */
         @NameInMap("DataSize")
         public String dataSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-11-05T06:45:51Z</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <strong>example:</strong>
+         * <p>14/14</p>
+         */
         @NameInMap("Process")
         public String process;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.00 MB/s</p>
+         */
         @NameInMap("Speed")
         public String speed;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-11-05T06:45:45Z</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SUCCEEDED</p>
+         */
         @NameInMap("State")
         public String state;
 
+        /**
+         * <strong>example:</strong>
+         * <p>default:test1</p>
+         */
         @NameInMap("Table")
         public String table;
 
@@ -147,27 +183,55 @@ public class DescribeRestoreFullDetailsResponseBody extends TeaModel {
     }
 
     public static class DescribeRestoreFullDetailsResponseBodyRestoreFull extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1.2 kB</p>
+         */
         @NameInMap("DataSize")
         public String dataSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Fail")
         public Integer fail;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         @NameInMap("RestoreFullDetails")
         public DescribeRestoreFullDetailsResponseBodyRestoreFullRestoreFullDetails restoreFullDetails;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.00 MB/s</p>
+         */
         @NameInMap("Speed")
         public String speed;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Succeed")
         public Integer succeed;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Total")
         public Long total;
 

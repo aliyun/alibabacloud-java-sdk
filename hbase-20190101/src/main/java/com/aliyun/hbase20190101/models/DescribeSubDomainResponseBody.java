@@ -4,9 +4,17 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeSubDomainResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>F4208C83-B9BC-4A64-A739-8F88E98DA469</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-h-aliyun</p>
+     */
     @NameInMap("SubDomain")
     public String subDomain;
 

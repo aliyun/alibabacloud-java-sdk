@@ -4,6 +4,10 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class CreateGlobalResourceResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1AB9ABDF-7E1E-44AD-8610-70A005115DD1</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,6 +4,12 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class ListHBaseInstancesRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-t4nx81tmlixcq5i****</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 

@@ -4,9 +4,17 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class RenewInstanceResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>211235614240728</p>
+     */
     @NameInMap("OrderId")
     public Long orderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>729CB2A7-3065-53A9-B27C-7033CA4881D9</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

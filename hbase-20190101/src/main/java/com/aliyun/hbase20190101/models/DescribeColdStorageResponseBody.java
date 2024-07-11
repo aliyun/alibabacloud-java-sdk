@@ -4,27 +4,59 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeColdStorageResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ld-bp1uoihlf82e8****</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>800</p>
+     */
     @NameInMap("ColdStorageSize")
     public String coldStorageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>BdsColdStorage</p>
+     */
     @NameInMap("ColdStorageType")
     public String coldStorageType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20.00</p>
+     */
     @NameInMap("ColdStorageUseAmount")
     public String coldStorageUseAmount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20.00</p>
+     */
     @NameInMap("ColdStorageUsePercent")
     public String coldStorageUsePercent;
 
+    /**
+     * <strong>example:</strong>
+     * <p>open</p>
+     */
     @NameInMap("OpenStatus")
     public String openStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>POSTPAY</p>
+     */
     @NameInMap("PayType")
     public String payType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DCB9479E-F05F-4D1C-AFB7-C639B87764B7</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

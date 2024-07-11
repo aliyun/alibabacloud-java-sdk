@@ -4,57 +4,147 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class EnableHBaseueModuleRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("AutoRenewPeriod")
     public Integer autoRenewPeriod;
 
+    /**
+     * <strong>example:</strong>
+     * <p>bds-bp174pm3tsk3****</p>
+     */
     @NameInMap("BdsId")
     public String bdsId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ETnLKlblzczshOTUbOCz****</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hbase.sn1.large</p>
+     */
     @NameInMap("CoreInstanceType")
     public String coreInstanceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>400</p>
+     */
     @NameInMap("DiskSize")
     public Integer diskSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cloud_ssd</p>
+     */
     @NameInMap("DiskType")
     public String diskType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ld-bp150tns0sjxs****</p>
+     */
     @NameInMap("HbaseueClusterId")
     public String hbaseueClusterId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>hbase.sn1.large</p>
+     */
     @NameInMap("MasterInstanceType")
     public String masterInstanceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cluster-name</p>
+     */
     @NameInMap("ModuleClusterName")
     public String moduleClusterName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>solr</p>
+     */
     @NameInMap("ModuleTypeName")
     public String moduleTypeName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("NodeCount")
     public Integer nodeCount;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Prepaid</p>
+     */
     @NameInMap("PayType")
     public String payType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6</p>
+     */
     @NameInMap("Period")
     public Integer period;
 
+    /**
+     * <strong>example:</strong>
+     * <p>month</p>
+     */
     @NameInMap("PeriodUnit")
     public String periodUnit;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shenzhen</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-bp120k6ixs4eog*****</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-bp191ipotqj1ssyl*****</p>
+     */
     @NameInMap("VswitchId")
     public String vswitchId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shenzhen-e</p>
+     */
     @NameInMap("ZoneId")
     public String zoneId;
 

@@ -4,9 +4,17 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class ModifyMultiZoneClusterNodeTypeResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>12341234123****</p>
+     */
     @NameInMap("OrderId")
     public String orderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>06CF7A6F-A81C-431D-BACD-793F24A67C54</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

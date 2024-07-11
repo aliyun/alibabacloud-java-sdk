@@ -4,12 +4,24 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class CreateMultiZoneClusterResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ld-t4nn71xa0yn56****</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>23232453****</p>
+     */
     @NameInMap("OrderId")
     public String orderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>7F68E8F5-0377-4CF8-8B1D-FFFD6F5804D5</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

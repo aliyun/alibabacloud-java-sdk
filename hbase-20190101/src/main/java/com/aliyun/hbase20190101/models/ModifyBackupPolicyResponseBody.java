@@ -4,6 +4,10 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class ModifyBackupPolicyResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>17E3AC63-300D-4B69-9108-45EC20E50E85</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,9 +4,17 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstanceUsageResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>A2D841CE-D066-53E8-B9AC-3731DCC85397</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{\&quot;disk_usage_record\&quot;:{\&quot;disk_used\&quot;:\&quot;0.9GB\&quot;,\&quot;disk_total\&quot;:\&quot;1156.1GB\&quot;,\&quot;usage_rate\&quot;:\&quot;1%\&quot;}}</p>
+     */
     @NameInMap("Result")
     public String result;
 

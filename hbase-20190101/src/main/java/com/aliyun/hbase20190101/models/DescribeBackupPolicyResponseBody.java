@@ -4,21 +4,45 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupPolicyResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("BackupRetentionPeriod")
     public String backupRetentionPeriod;
 
+    /**
+     * <strong>example:</strong>
+     * <p>18:00Z</p>
+     */
     @NameInMap("PreferredBackupEndTimeUTC")
     public String preferredBackupEndTimeUTC;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Friday</p>
+     */
     @NameInMap("PreferredBackupPeriod")
     public String preferredBackupPeriod;
 
+    /**
+     * <strong>example:</strong>
+     * <p>17:00Z</p>
+     */
     @NameInMap("PreferredBackupStartTimeUTC")
     public String preferredBackupStartTimeUTC;
 
+    /**
+     * <strong>example:</strong>
+     * <p>01:00-02:00</p>
+     */
     @NameInMap("PreferredBackupTime")
     public String preferredBackupTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>94AC38B6-7C6D-45B2-BC03-B8750071A482</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

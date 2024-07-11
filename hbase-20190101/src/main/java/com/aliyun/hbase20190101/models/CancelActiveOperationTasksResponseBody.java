@@ -4,9 +4,17 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class CancelActiveOperationTasksResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>11111,22222</p>
+     */
     @NameInMap("Ids")
     public String ids;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AE4F6C34-065F-45AA-F5BN-4B8D816F6305</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

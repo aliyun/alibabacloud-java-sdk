@@ -4,6 +4,10 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class SwitchServiceResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>F1005DE4-D981-559F-9E37-5172DXXXXXX</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

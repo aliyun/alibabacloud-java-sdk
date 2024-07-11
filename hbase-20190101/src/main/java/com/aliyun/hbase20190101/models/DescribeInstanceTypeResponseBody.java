@@ -7,6 +7,10 @@ public class DescribeInstanceTypeResponseBody extends TeaModel {
     @NameInMap("InstanceTypeSpecList")
     public DescribeInstanceTypeResponseBodyInstanceTypeSpecList instanceTypeSpecList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DD23BBB4-64C2-42A4-B2E2-7E56C7AA815A</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +36,24 @@ public class DescribeInstanceTypeResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceTypeResponseBodyInstanceTypeSpecListInstanceTypeSpec extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>8</p>
+         */
         @NameInMap("CpuSize")
         public Long cpuSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>hbase.n2.4xlarge</p>
+         */
         @NameInMap("InstanceType")
         public String instanceType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>16</p>
+         */
         @NameInMap("MemSize")
         public Long memSize;
 

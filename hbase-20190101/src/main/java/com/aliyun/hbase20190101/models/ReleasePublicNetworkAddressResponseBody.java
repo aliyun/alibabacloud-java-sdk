@@ -4,6 +4,10 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class ReleasePublicNetworkAddressResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>B18D4390-A968-4444-B323-4360B8E5DA3E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

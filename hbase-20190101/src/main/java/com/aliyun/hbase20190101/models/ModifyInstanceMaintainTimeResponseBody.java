@@ -4,6 +4,10 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceMaintainTimeResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>C9085433-A56A-4089-B49A-DF5A4E2B7B06</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

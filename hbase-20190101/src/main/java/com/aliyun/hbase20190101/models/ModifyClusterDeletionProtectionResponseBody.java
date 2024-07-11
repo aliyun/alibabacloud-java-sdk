@@ -4,6 +4,10 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class ModifyClusterDeletionProtectionResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>24C80BD8-C710-4138-893A-D2AFED4FC13D</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

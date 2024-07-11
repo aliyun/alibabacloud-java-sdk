@@ -4,9 +4,19 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class ModifyActiveOperationTasksRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1111,2222</p>
+     */
     @NameInMap("Ids")
     public String ids;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("ImmediateStart")
     public Integer immediateStart;
 
@@ -25,6 +35,12 @@ public class ModifyActiveOperationTasksRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-02-17T18:50:00Z</p>
+     */
     @NameInMap("SwitchTime")
     public String switchTime;
 

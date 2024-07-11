@@ -7,6 +7,10 @@ public class DescribeIpWhitelistResponseBody extends TeaModel {
     @NameInMap("Groups")
     public DescribeIpWhitelistResponseBodyGroups groups;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AFAA617B-3268-5883-982B-DB8EC8CC1F1B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -51,12 +55,20 @@ public class DescribeIpWhitelistResponseBody extends TeaModel {
     }
 
     public static class DescribeIpWhitelistResponseBodyGroupsGroup extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>default</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
         @NameInMap("IpList")
         public DescribeIpWhitelistResponseBodyGroupsGroupIpList ipList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("IpVersion")
         public Integer ipVersion;
 

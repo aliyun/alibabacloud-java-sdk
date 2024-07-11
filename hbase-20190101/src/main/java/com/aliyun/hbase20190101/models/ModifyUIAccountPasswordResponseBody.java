@@ -4,6 +4,10 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class ModifyUIAccountPasswordResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>BED4ADEB-4EA9-507E-892C-84112D6AC7C1</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

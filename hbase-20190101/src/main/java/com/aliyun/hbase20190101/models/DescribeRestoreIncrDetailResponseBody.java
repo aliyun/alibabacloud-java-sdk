@@ -4,6 +4,10 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeRestoreIncrDetailResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>D0FE2717-E194-465A-B27B-7373F96E580B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,24 +36,52 @@ public class DescribeRestoreIncrDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeRestoreIncrDetailResponseBodyRestoreIncrDetail extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2020-11-05T06:45:44Z</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0/0</p>
+         */
         @NameInMap("Process")
         public String process;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0 ms</p>
+         */
         @NameInMap("RestoreDelay")
         public String restoreDelay;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-11-02T18:00:00Z</p>
+         */
         @NameInMap("RestoreStartTs")
         public String restoreStartTs;
 
+        /**
+         * <strong>example:</strong>
+         * <p>\&quot;\&quot;</p>
+         */
         @NameInMap("RestoredTs")
         public String restoredTs;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-11-05T06:45:44Z</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SUCCEEDED</p>
+         */
         @NameInMap("State")
         public String state;
 

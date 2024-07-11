@@ -4,6 +4,10 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class RelateDbForHBaseHaResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>DC654531-0799-4502-AFA5-80EE1C16829A</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,12 +4,24 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class GetMultimodeCmsUrlResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>hb-t4naqsay5gn******</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>htpp://***********</p>
+     */
     @NameInMap("MultimodCmsUrl")
     public String multimodCmsUrl;
 
+    /**
+     * <strong>example:</strong>
+     * <p>44183B05-852E-4716-B902-52977140190F</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

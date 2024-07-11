@@ -4,12 +4,30 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class SwitchServiceRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ld-uf6r2hn2zrxxxxxx</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>open</p>
+     */
     @NameInMap("Operate")
     public String operate;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>HBaseProxy</p>
+     */
     @NameInMap("ServiceName")
     public String serviceName;
 

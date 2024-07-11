@@ -4,6 +4,10 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class PurgeInstanceResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>276F899F-E952-496F-81B8-BD46D86854E3</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
