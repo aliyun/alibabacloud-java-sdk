@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>baas20181221</artifactId>
-  <version>1.0.2</version>
+  <version>1.0.3</version>
   <packaging>jar</packaging>
   <name>baas20181221</name>
   <description>Alibaba Cloud Blockchain as a Service (20181221) SDK for Java
@@ -46,7 +46,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-openapi</artifactId>
-      <version>0.3.3</version>
+      <version>0.3.4</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
