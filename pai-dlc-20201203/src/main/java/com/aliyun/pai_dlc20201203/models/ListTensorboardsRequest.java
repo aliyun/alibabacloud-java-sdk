@@ -49,6 +49,9 @@ public class ListTensorboardsRequest extends TeaModel {
     @NameInMap("PaymentType")
     public String paymentType;
 
+    @NameInMap("QuotaId")
+    public String quotaId;
+
     @NameInMap("ShowOwn")
     public Boolean showOwn;
 
@@ -173,6 +176,14 @@ public class ListTensorboardsRequest extends TeaModel {
     }
     public String getPaymentType() {
         return this.paymentType;
+    }
+
+    public ListTensorboardsRequest setQuotaId(String quotaId) {
+        this.quotaId = quotaId;
+        return this;
+    }
+    public String getQuotaId() {
+        return this.quotaId;
     }
 
     public ListTensorboardsRequest setShowOwn(Boolean showOwn) {

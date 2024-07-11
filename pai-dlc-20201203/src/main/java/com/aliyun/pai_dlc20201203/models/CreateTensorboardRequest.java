@@ -59,6 +59,12 @@ public class CreateTensorboardRequest extends TeaModel {
     @NameInMap("Options")
     public String options;
 
+    @NameInMap("Priority")
+    public String priority;
+
+    @NameInMap("QuotaId")
+    public String quotaId;
+
     /**
      * <strong>example:</strong>
      * <p>dlc-xxxxxx</p>
@@ -182,6 +188,22 @@ public class CreateTensorboardRequest extends TeaModel {
     }
     public String getOptions() {
         return this.options;
+    }
+
+    public CreateTensorboardRequest setPriority(String priority) {
+        this.priority = priority;
+        return this;
+    }
+    public String getPriority() {
+        return this.priority;
+    }
+
+    public CreateTensorboardRequest setQuotaId(String quotaId) {
+        this.quotaId = quotaId;
+        return this;
+    }
+    public String getQuotaId() {
+        return this.quotaId;
     }
 
     public CreateTensorboardRequest setSourceId(String sourceId) {
