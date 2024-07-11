@@ -7,15 +7,31 @@ public class CreateProcCorrectOrderResponseBody extends TeaModel {
     @NameInMap("CreateOrderResult")
     public java.util.List<Long> createOrderResult;
 
+    /**
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>427688B8-ADFB-4C4E-9D45-EF5C1FD6E23D</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

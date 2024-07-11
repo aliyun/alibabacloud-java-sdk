@@ -12,33 +12,49 @@ public class CreateAuthorityTemplateResponseBody extends TeaModel {
 
     /**
      * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0C1CB646-1DE4-4AD0-B4A4-7D47DD52E931</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request was successful.</p>
-     * <p>*   **false**: The request failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
-     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) or [ListUserTenants](https://help.aliyun.com/document_detail/198074.html) operation to query the tenant ID.</p>
+     * <p>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> or <a href="https://help.aliyun.com/document_detail/198074.html">ListUserTenants</a> operation to query the tenant ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3***</p>
      */
     @NameInMap("Tid")
     public Long tid;
@@ -99,30 +115,45 @@ public class CreateAuthorityTemplateResponseBody extends TeaModel {
     public static class CreateAuthorityTemplateResponseBodyAuthorityTemplateView extends TeaModel {
         /**
          * <p>The time when the permission template was created. The time is in the yyyy-MM-DD HH:mm:ss format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-01-11 14:17:33</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The ID of the user who created the permission template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12***</p>
          */
         @NameInMap("CreatorId")
         public Long creatorId;
 
         /**
          * <p>The description of the permission template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This template is used for business testing.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the permission template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test template.</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The ID of the permission template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1563</p>
          */
         @NameInMap("TemplateId")
         public Long templateId;

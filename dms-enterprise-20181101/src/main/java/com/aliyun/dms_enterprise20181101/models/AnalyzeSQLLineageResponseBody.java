@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class AnalyzeSQLLineageResponseBody extends TeaModel {
     /**
      * <p>The error code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
@@ -24,15 +30,22 @@ public class AnalyzeSQLLineageResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B4B07137-F6AE-4756-8474-7F92BB6C4E04</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,15 +98,22 @@ public class AnalyzeSQLLineageResponseBody extends TeaModel {
     public static class AnalyzeSQLLineageResponseBodyLineageResultLineagesProcessDetail extends TeaModel {
         /**
          * <p>The calculating method. Valid values:</p>
-         * <br>
-         * <p>*   **DIRECT**: No function or expression is used.</p>
-         * <p>*   **EXPR**: A function or expression is used.</p>
+         * <ul>
+         * <li><strong>DIRECT</strong>: No function or expression is used.</li>
+         * <li><strong>EXPR</strong>: A function or expression is used.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DIRECT</p>
          */
         @NameInMap("CalWay")
         public String calWay;
 
         /**
          * <p>The SQL code snippet for field processing.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dmstest.b.id</p>
          */
         @NameInMap("Code")
         public String code;
@@ -124,27 +144,38 @@ public class AnalyzeSQLLineageResponseBody extends TeaModel {
     public static class AnalyzeSQLLineageResponseBodyLineageResultLineages extends TeaModel {
         /**
          * <p>The target.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dmstest.a.id</p>
          */
         @NameInMap("Dst")
         public String dst;
 
         /**
          * <p>The type of the lineage. Valid values:</p>
-         * <br>
-         * <p>*   **FIELD_DEPEND_FIELD**: Fields depend on fields.</p>
-         * <p>*   **TABLE_DEPEND_TABLE**: Tables depend on tables.</p>
-         * <p>*   **FIELD_INFLU_TABLE**: Fields influence tables.</p>
-         * <p>*   **FIELD_INFLU_FIELD**: Fields influence fields.</p>
-         * <p>*   **FIELD_INFLU_TABLE**: Tables influence fields.</p>
-         * <p>*   **FIELD_JOIN_FIELD**: Fields are associated with fields.</p>
+         * <ul>
+         * <li><strong>FIELD_DEPEND_FIELD</strong>: Fields depend on fields.</li>
+         * <li><strong>TABLE_DEPEND_TABLE</strong>: Tables depend on tables.</li>
+         * <li><strong>FIELD_INFLU_TABLE</strong>: Fields influence tables.</li>
+         * <li><strong>FIELD_INFLU_FIELD</strong>: Fields influence fields.</li>
+         * <li><strong>FIELD_INFLU_TABLE</strong>: Tables influence fields.</li>
+         * <li><strong>FIELD_JOIN_FIELD</strong>: Fields are associated with fields.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>FIELD_DEPEND_FIELD</p>
          */
         @NameInMap("LineageType")
         public String lineageType;
 
         /**
          * <p>The operation type of the SQL statement in which the data lineage is generated. For example, if the operation type is SELECT, the data lineage is generated from a SELECT statement.</p>
-         * <br>
-         * <p>>  This field is an extended field which has no practical use.</p>
+         * <blockquote>
+         * <p> This field is an extended field which has no practical use.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>SELECT</p>
          */
         @NameInMap("OperType")
         public String operType;
@@ -157,6 +188,9 @@ public class AnalyzeSQLLineageResponseBody extends TeaModel {
 
         /**
          * <p>The source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dmstest.b.id</p>
          */
         @NameInMap("Src")
         public String src;
@@ -211,6 +245,9 @@ public class AnalyzeSQLLineageResponseBody extends TeaModel {
     public static class AnalyzeSQLLineageResponseBodyLineageResultObjectMetadataFields extends TeaModel {
         /**
          * <p>The name of the field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dmstest.a.id</p>
          */
         @NameInMap("Name")
         public String name;
@@ -239,25 +276,36 @@ public class AnalyzeSQLLineageResponseBody extends TeaModel {
 
         /**
          * <p>The object name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The source of metadata. Valid values:</p>
-         * <br>
-         * <p>*   **DDL**: The metadata comes from parsed SQL statements or definition of databases and tables collected by DMS.</p>
-         * <p>*   **LINEAGE**: The metadata comes from lineage analysis results.</p>
+         * <ul>
+         * <li><strong>DDL</strong>: The metadata comes from parsed SQL statements or definition of databases and tables collected by DMS.</li>
+         * <li><strong>LINEAGE</strong>: The metadata comes from lineage analysis results.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DDL</p>
          */
         @NameInMap("Source")
         public String source;
 
         /**
          * <p>The object type. Valid values:</p>
-         * <br>
-         * <p>*   **TABLE**</p>
-         * <p>*   **VIEW**</p>
-         * <p>*   **TMP_TABLE**</p>
+         * <ul>
+         * <li><strong>TABLE</strong></li>
+         * <li><strong>VIEW</strong></li>
+         * <li><strong>TMP_TABLE</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>TABLE</p>
          */
         @NameInMap("Type")
         public String type;

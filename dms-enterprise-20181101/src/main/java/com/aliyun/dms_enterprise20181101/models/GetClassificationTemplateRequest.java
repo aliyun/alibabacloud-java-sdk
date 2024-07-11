@@ -6,10 +6,17 @@ import com.aliyun.tea.*;
 public class GetClassificationTemplateRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>169****</p>
      */
     @NameInMap("InstanceId")
     public Long instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>23***</p>
+     */
     @NameInMap("Tid")
     public Long tid;
 

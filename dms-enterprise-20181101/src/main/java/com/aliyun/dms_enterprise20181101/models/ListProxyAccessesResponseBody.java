@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ListProxyAccessesResponseBody extends TeaModel {
     /**
      * <p>The error code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MissingProxyId</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ProxyId is mandatory for this action.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
@@ -24,15 +30,22 @@ public class ListProxyAccessesResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E53D178A-85E9-5E1F-88B6-3CB1FCF2****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>- **true**: The request was successful.</p>
-     * <p>- **false**: The request failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,63 +98,94 @@ public class ListProxyAccessesResponseBody extends TeaModel {
     public static class ListProxyAccessesResponseBodyProxyAccessList extends TeaModel {
         /**
          * <p>The username of the database account that is authorized to access the database instance by using the secure access proxy feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MXPL8HalI22m****</p>
          */
         @NameInMap("AccessId")
         public String accessId;
 
         /**
          * <p>The time when the user is authorized to access the database instance by using the secure access proxy feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-03-31 10:34:18</p>
          */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
         /**
          * <p>The username of the independent database account.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         @NameInMap("IndepAccount")
         public String indepAccount;
 
         /**
          * <p>The ID of the database instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>164****</p>
          */
         @NameInMap("InstanceId")
         public Long instanceId;
 
         /**
          * <p>The method that is used to authorize the user to access the database instance by using the secure access proxy feature. Valid values: </p>
-         * <br>
-         * <p>- **Authorization by the Alibaba Cloud Account ()**: The information in the parentheses () indicates the user ID (UID) of the Alibaba Cloud account.</p>
-         * <p>- **Authorization by submitting the ticket ()**:The information in the parentheses () indicates the number of the ticket that the user submits to apply for permissions.</p>
+         * <ul>
+         * <li><strong>Authorization by the Alibaba Cloud Account ()</strong>: The information in the parentheses () indicates the user ID (UID) of the Alibaba Cloud account.</li>
+         * <li><strong>Authorization by submitting the ticket ()</strong>:The information in the parentheses () indicates the number of the ticket that the user submits to apply for permissions.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Authorization by the Alibaba Cloud Account(29490401597700****)</p>
          */
         @NameInMap("OriginInfo")
         public String originInfo;
 
         /**
          * <p>The ID that DMS generates after the user is authorized to access the database instance by using the secure access proxy feature. The ID is unique in DMS.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         @NameInMap("ProxyAccessId")
         public Long proxyAccessId;
 
         /**
          * <p>The ID of the secure access proxy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47</p>
          */
         @NameInMap("ProxyId")
         public Long proxyId;
 
         /**
          * <p>The ID of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>26****</p>
          */
         @NameInMap("UserId")
         public Long userId;
 
         /**
          * <p>The nickname of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user</p>
          */
         @NameInMap("UserName")
         public String userName;
 
         /**
          * <p>The UID of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25936669186260****</p>
          */
         @NameInMap("UserUid")
         public String userUid;

@@ -11,15 +11,20 @@ public class UpdateTaskFlowConstantsRequest extends TeaModel {
     public java.util.List<UpdateTaskFlowConstantsRequestDagConstants> dagConstants;
 
     /**
-     * <p>The ID of the task flow. You can call the [ListTaskFlow](https://help.aliyun.com/document_detail/424565.html) or [ListLhTaskFlowAndScenario](https://help.aliyun.com/document_detail/426672.html) operation to query the task flow ID.</p>
-     * <br>
+     * <p>The ID of the task flow. You can call the <a href="https://help.aliyun.com/document_detail/424565.html">ListTaskFlow</a> or <a href="https://help.aliyun.com/document_detail/426672.html">ListLhTaskFlowAndScenario</a> operation to query the task flow ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3****</p>
      */
     @NameInMap("DagId")
     public Long dagId;
 
     /**
-     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) or [ListUserTenants](https://help.aliyun.com/document_detail/198074.html) operation to query the tenant ID.</p>
+     * <p>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> or <a href="https://help.aliyun.com/document_detail/198074.html">ListUserTenants</a> operation to query the tenant ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3***</p>
      */
     @NameInMap("Tid")
     public Long tid;
@@ -56,12 +61,18 @@ public class UpdateTaskFlowConstantsRequest extends TeaModel {
     public static class UpdateTaskFlowConstantsRequestDagConstants extends TeaModel {
         /**
          * <p>The key name of a constant for the task flow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>poc_test</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The key value of a constant for the task flow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>poc_test</p>
          */
         @NameInMap("Value")
         public String value;

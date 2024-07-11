@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class UpdateStandardGroupResponseBody extends TeaModel {
     /**
      * <p>The error code returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The request ID. You can use the request ID to locate logs and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4E1D2B4D-3E53-4ABC-999D-1D2520B3471A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -30,9 +39,13 @@ public class UpdateStandardGroupResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,40 +98,59 @@ public class UpdateStandardGroupResponseBody extends TeaModel {
     public static class UpdateStandardGroupResponseBodyStandardGroup extends TeaModel {
         /**
          * <p>The type of the database for which the security rules are used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql</p>
          */
         @NameInMap("DbType")
         public String dbType;
 
         /**
          * <p>The description of the security rule set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Production Environment test rules</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The security rule set ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>41****</p>
          */
         @NameInMap("GroupId")
         public Long groupId;
 
         /**
          * <p>The control mode. Valid values:</p>
-         * <br>
-         * <p>*   **NONE_CONTROL**: Flexible Management</p>
-         * <p>*   **STABLE**: Stable Change</p>
-         * <p>*   **COMMON**: Security Collaboration</p>
+         * <ul>
+         * <li><strong>NONE_CONTROL</strong>: Flexible Management</li>
+         * <li><strong>STABLE</strong>: Stable Change</li>
+         * <li><strong>COMMON</strong>: Security Collaboration</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>COMMON</p>
          */
         @NameInMap("GroupMode")
         public String groupMode;
 
         /**
          * <p>The name of the security rule set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>poc_test</p>
          */
         @NameInMap("GroupName")
         public String groupName;
 
         /**
          * <p>The ID of the user who last modified the security rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>51****</p>
          */
         @NameInMap("LastMenderId")
         public Long lastMenderId;

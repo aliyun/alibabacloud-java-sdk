@@ -7,15 +7,31 @@ public class GetDbExportDownloadURLResponseBody extends TeaModel {
     @NameInMap("DownloadURLResult")
     public GetDbExportDownloadURLResponseBodyDownloadURLResult downloadURLResult;
 
+    /**
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0C1CB646-1DE4-4AD0-B4A4-7D47DD52E931</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,12 +81,24 @@ public class GetDbExportDownloadURLResponseBody extends TeaModel {
     }
 
     public static class GetDbExportDownloadURLResponseBodyDownloadURLResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("HasResult")
         public Boolean hasResult;
 
+        /**
+         * <strong>example:</strong>
+         * <p>tip message</p>
+         */
         @NameInMap("TipMessage")
         public String tipMessage;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://dms-idb-hangzhou.oss-cn-hangzhou.aliyuncs.com/xxx.zip">https://dms-idb-hangzhou.oss-cn-hangzhou.aliyuncs.com/xxx.zip</a></p>
+         */
         @NameInMap("URL")
         public String URL;
 

@@ -6,22 +6,29 @@ import com.aliyun.tea.*;
 public class ModifyDataCorrectExecSQLRequest extends TeaModel {
     /**
      * <p>The new SQL script.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>update tb set id = 1 where id = 1;</p>
      */
     @NameInMap("ExecSQL")
     public String execSQL;
 
     /**
      * <p>The ID of the data change ticket.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4328****</p>
      */
     @NameInMap("OrderId")
     public Long orderId;
 
     /**
-     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) operation to query the tenant ID.</p>
+     * <p>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> operation to query the tenant ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4****</p>
      */
     @NameInMap("Tid")
     public Long tid;

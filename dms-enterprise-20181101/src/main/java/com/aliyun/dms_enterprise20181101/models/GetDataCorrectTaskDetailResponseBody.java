@@ -12,24 +12,36 @@ public class GetDataCorrectTaskDetailResponseBody extends TeaModel {
 
     /**
      * <p>The error code returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B5FD0BC8-2D90-4478-B8EC-A0E92E0B1773</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -82,33 +94,46 @@ public class GetDataCorrectTaskDetailResponseBody extends TeaModel {
     public static class GetDataCorrectTaskDetailResponseBodyDataCorrectTaskDetail extends TeaModel {
         /**
          * <p>The number of rows affected by the SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ActualAffectRows")
         public Long actualAffectRows;
 
         /**
          * <p>The time when the task was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-03-05 15:08:55</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The ID of the SQL task group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234235</p>
          */
         @NameInMap("DBTaskGroupId")
         public Long DBTaskGroupId;
 
         /**
          * <p>The state of the SQL task. Valid values:</p>
-         * <br>
-         * <p>*   **INIT**: The SQL task was initialized.</p>
-         * <p>*   **PENDING**: The SQL task waited to be run.</p>
-         * <p>*   **BE_SCHEDULED**: The SQL task waited to be scheduled.</p>
-         * <p>*   **FAIL**: The SQL task failed.</p>
-         * <p>*   **SUCCESS**: The SQL task was successful.</p>
-         * <p>*   **PAUSE**: The SQL task was paused.</p>
-         * <p>*   **DELETE**: The SQL task was deleted.</p>
-         * <p>*   **RUNNING**: The SQL task was being run.</p>
+         * <ul>
+         * <li><strong>INIT</strong>: The SQL task was initialized.</li>
+         * <li><strong>PENDING</strong>: The SQL task waited to be run.</li>
+         * <li><strong>BE_SCHEDULED</strong>: The SQL task waited to be scheduled.</li>
+         * <li><strong>FAIL</strong>: The SQL task failed.</li>
+         * <li><strong>SUCCESS</strong>: The SQL task was successful.</li>
+         * <li><strong>PAUSE</strong>: The SQL task was paused.</li>
+         * <li><strong>DELETE</strong>: The SQL task was deleted.</li>
+         * <li><strong>RUNNING</strong>: The SQL task was being run.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         @NameInMap("jobStatus")
         public String jobStatus;

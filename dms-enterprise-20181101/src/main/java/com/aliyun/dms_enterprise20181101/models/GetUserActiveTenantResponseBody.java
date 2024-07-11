@@ -6,27 +6,40 @@ import com.aliyun.tea.*;
 public class GetUserActiveTenantResponseBody extends TeaModel {
     /**
      * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TenantNotExist</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The specified tenant does not exist.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4B63CAC5-BD7F-5C7C-82C9-59DFFBC3C5C2</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request is successful.</p>
-     * <p>*   **false**: The request fails.</p>
+     * <ul>
+     * <li><strong>true</strong>: The request is successful.</li>
+     * <li><strong>false</strong>: The request fails.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,21 +98,31 @@ public class GetUserActiveTenantResponseBody extends TeaModel {
     public static class GetUserActiveTenantResponseBodyTenant extends TeaModel {
         /**
          * <p>The status of the tenant. Valid values:</p>
-         * <br>
-         * <p>*   **ACTIVE**: The tenant is used to access DMS.</p>
-         * <p>*   **IN_ACTIVE**: The tenant is not used.</p>
+         * <ul>
+         * <li><strong>ACTIVE</strong>: The tenant is used to access DMS.</li>
+         * <li><strong>IN_ACTIVE</strong>: The tenant is not used.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ACTIVE</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The name of the tenant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_name</p>
          */
         @NameInMap("TenantName")
         public String tenantName;
 
         /**
          * <p>The ID of the tenant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3***</p>
          */
         @NameInMap("Tid")
         public Long tid;

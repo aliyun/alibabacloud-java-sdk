@@ -5,22 +5,26 @@ import com.aliyun.tea.*;
 
 public class CreateStructSyncOrderShrinkRequest extends TeaModel {
     /**
-     * <p>The key of an attachment that is returned after the attachment is uploaded. You can call the [GetUserUploadFileJob](https://help.aliyun.com/document_detail/206069.html) operation to query the key of the attachment.</p>
+     * <p>The key of an attachment that is returned after the attachment is uploaded. You can call the <a href="https://help.aliyun.com/document_detail/206069.html">GetUserUploadFileJob</a> operation to query the key of the attachment.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>upload_3c7edea3-e4c3-4403-857d-737043036f69_test.sql</p>
      */
     @NameInMap("AttachmentKey")
     public String attachmentKey;
 
     /**
      * <p>The remarks of the ticket.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Comment")
     public String comment;
 
     /**
      * <p>The parameters of the ticket.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Param")
@@ -34,8 +38,12 @@ public class CreateStructSyncOrderShrinkRequest extends TeaModel {
 
     /**
      * <p>The ID of the tenant.</p>
-     * <br>
-     * <p>>  To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the DMS console. For more information, see [Manage DMS tenants](https://help.aliyun.com/document_detail/181330.html).</p>
+     * <blockquote>
+     * <p> To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the DMS console. For more information, see <a href="https://help.aliyun.com/document_detail/181330.html">Manage DMS tenants</a>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Tid")
     public Long tid;

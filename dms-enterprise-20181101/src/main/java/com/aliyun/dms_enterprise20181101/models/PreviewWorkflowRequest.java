@@ -6,10 +6,17 @@ import com.aliyun.tea.*;
 public class PreviewWorkflowRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1069****</p>
      */
     @NameInMap("OrderId")
     public Long orderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>23****</p>
+     */
     @NameInMap("Tid")
     public Long tid;
 

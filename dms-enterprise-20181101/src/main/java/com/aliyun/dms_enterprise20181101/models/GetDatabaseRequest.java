@@ -6,38 +6,51 @@ import com.aliyun.tea.*;
 public class GetDatabaseRequest extends TeaModel {
     /**
      * <p>The endpoint that is used to connect to the database.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.XX.XX</p>
      */
     @NameInMap("Host")
     public String host;
 
     /**
      * <p>The port that is used to connect to the database.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3306</p>
      */
     @NameInMap("Port")
     public Integer port;
 
     /**
      * <p>The name of the database.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mysql</p>
      */
     @NameInMap("SchemaName")
     public String schemaName;
 
     /**
      * <p>The system identifier (SID) of the database.</p>
-     * <br>
-     * <p>>  The SID uniquely identifies an Oracle database. After a database is created, a SID is generated for the database.</p>
+     * <blockquote>
+     * <p> The SID uniquely identifies an Oracle database. After a database is created, a SID is generated for the database.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>test_sid</p>
      */
     @NameInMap("Sid")
     public String sid;
 
     /**
-     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) operation to query the ID of the tenant.</p>
+     * <p>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> operation to query the ID of the tenant.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>-1</p>
      */
     @NameInMap("Tid")
     public Long tid;

@@ -12,27 +12,40 @@ public class GetApprovalDetailResponseBody extends TeaModel {
 
     /**
      * <p>The error code returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MissingWorkflowInstanceId</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>WorkflowInstanceId is mandatory for this action.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>66DE630B-ECA1-52A3-9198-602066F9****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request is successful.</p>
-     * <p>*   **false**: The request fails.</p>
+     * <ul>
+     * <li><strong>true</strong>: The request is successful.</li>
+     * <li><strong>false</strong>: The request fails.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,12 +98,18 @@ public class GetApprovalDetailResponseBody extends TeaModel {
     public static class GetApprovalDetailResponseBodyApprovalDetailCurrentHandlersCurrentHandler extends TeaModel {
         /**
          * <p>The ID of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The nickname of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nickName</p>
          */
         @NameInMap("NickName")
         public String nickName;
@@ -184,37 +203,53 @@ public class GetApprovalDetailResponseBody extends TeaModel {
 
         /**
          * <p>The name of the approval node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DBA</p>
          */
         @NameInMap("NodeName")
         public String nodeName;
 
         /**
          * <p>The remarks of the approval.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Reason: Approved</p>
          */
         @NameInMap("OperateComment")
         public String operateComment;
 
         /**
          * <p>The time when the ticket was submitted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-10-15 13:47:54</p>
          */
         @NameInMap("OperateTime")
         public String operateTime;
 
         /**
          * <p>The ID of the user who submitted the ticket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1****</p>
          */
         @NameInMap("OperatorId")
         public Long operatorId;
 
         /**
          * <p>The approval status of the ticket. Valid values:</p>
-         * <br>
-         * <p>*   **START**: The ticket was submitted.</p>
-         * <p>*   **ERROR**: An error occurred.</p>
-         * <p>*   **AUDITING**: The ticket is being reviewed.</p>
-         * <p>*   **REJECT**: The ticket was rejected.</p>
-         * <p>*   **CANCEL**: The ticket was revoked.</p>
-         * <p>*   **APPROVED**: The ticket was approved.</p>
+         * <ul>
+         * <li><strong>START</strong>: The ticket was submitted.</li>
+         * <li><strong>ERROR</strong>: An error occurred.</li>
+         * <li><strong>AUDITING</strong>: The ticket is being reviewed.</li>
+         * <li><strong>REJECT</strong>: The ticket was rejected.</li>
+         * <li><strong>CANCEL</strong>: The ticket was revoked.</li>
+         * <li><strong>APPROVED</strong>: The ticket was approved.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>APPROVED</p>
          */
         @NameInMap("WorkflowInsCode")
         public String workflowInsCode;
@@ -296,12 +331,18 @@ public class GetApprovalDetailResponseBody extends TeaModel {
     public static class GetApprovalDetailResponseBodyApprovalDetail extends TeaModel {
         /**
          * <p>The ID of the approval process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>184****</p>
          */
         @NameInMap("AuditId")
         public Long auditId;
 
         /**
          * <p>The time when the approval process was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-10-29 14:17:25</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
@@ -314,27 +355,37 @@ public class GetApprovalDetailResponseBody extends TeaModel {
 
         /**
          * <p>The description of the approval process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[Instance permissions] Application\<br/>Permission type: ⌈Logon⌋\<br/>Application period: 30.0 days\<br/>Background description: [Instance permissions] logon test\<br/>\<br/>[Application list]\<br/>\&lt;span style=\&quot;color:red\&quot;&gt;product\</span> rm-bp144d5ky4l4rli0417\<em>\</em>\<em>\</em>.mysql.rds.aliyuncs.com:3306 - PRODUCT\<br/></p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The ID of the ticket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>384****</p>
          */
         @NameInMap("OrderId")
         public Long orderId;
 
         /**
          * <p>The type of the ticket. Valid values:</p>
-         * <br>
-         * <p>*   **NDDL**: a schema design ticket</p>
-         * <p>*   **DATA_TRACK**: a data tracking ticket</p>
-         * <p>*   **TABLE_SYNC**: a table synchronization ticket</p>
-         * <p>*   **PERM_APPLY**: a permission application ticket</p>
-         * <p>*   **DATA_EXPORT**: a data export ticket</p>
-         * <p>*   **DATA_CORRECT**: a data change ticket</p>
-         * <p>*   **OWNER_APPLY**: an owner role application ticket</p>
-         * <p>*   **SENSITIVITY**: a column sensitivity level change ticket</p>
+         * <ul>
+         * <li><strong>NDDL</strong>: a schema design ticket</li>
+         * <li><strong>DATA_TRACK</strong>: a data tracking ticket</li>
+         * <li><strong>TABLE_SYNC</strong>: a table synchronization ticket</li>
+         * <li><strong>PERM_APPLY</strong>: a permission application ticket</li>
+         * <li><strong>DATA_EXPORT</strong>: a data export ticket</li>
+         * <li><strong>DATA_CORRECT</strong>: a data change ticket</li>
+         * <li><strong>OWNER_APPLY</strong>: an owner role application ticket</li>
+         * <li><strong>SENSITIVITY</strong>: a column sensitivity level change ticket</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PERM_APPLY</p>
          */
         @NameInMap("OrderType")
         public String orderType;
@@ -347,25 +398,36 @@ public class GetApprovalDetailResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the workflow template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         @NameInMap("TemplateId")
         public Long templateId;
 
         /**
          * <p>The title of the approval process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Permission application ticket - 384\<em>\</em>\<em>\</em></p>
          */
         @NameInMap("Title")
         public String title;
 
         /**
          * <p>The approval status of the ticket. Valid values:</p>
-         * <br>
-         * <p>*   **AUDITING**: The ticket is being reviewed.</p>
-         * <p>*   **REJECT**: The ticket was rejected.</p>
-         * <p>*   **CANCEL**: The ticket was revoked.</p>
-         * <p>*   **APPROVED**: The ticket was approved.</p>
-         * <br>
-         * <p>> An approval process contains multiple approval nodes, and this parameter is returned for each approval node.</p>
+         * <ul>
+         * <li><strong>AUDITING</strong>: The ticket is being reviewed.</li>
+         * <li><strong>REJECT</strong>: The ticket was rejected.</li>
+         * <li><strong>CANCEL</strong>: The ticket was revoked.</li>
+         * <li><strong>APPROVED</strong>: The ticket was approved.</li>
+         * </ul>
+         * <blockquote>
+         * <p>An approval process contains multiple approval nodes, and this parameter is returned for each approval node.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>APPROVED</p>
          */
         @NameInMap("WorkflowInsCode")
         public String workflowInsCode;

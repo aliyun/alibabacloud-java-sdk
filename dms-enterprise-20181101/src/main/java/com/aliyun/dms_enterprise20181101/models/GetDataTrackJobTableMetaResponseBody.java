@@ -6,27 +6,40 @@ import com.aliyun.tea.*;
 public class GetDataTrackJobTableMetaResponseBody extends TeaModel {
     /**
      * <p>The error code returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0C1CB646-1DE4-4AD0-B4A4-7D47DD52E931</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request was successful.</p>
-     * <p>*   **false**: The request failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,33 +98,49 @@ public class GetDataTrackJobTableMetaResponseBody extends TeaModel {
     public static class GetDataTrackJobTableMetaResponseBodyTableMetaListColumns extends TeaModel {
         /**
          * <p>The name of the character set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>utf8mb4</p>
          */
         @NameInMap("Charset")
         public String charset;
 
         /**
          * <p>The name of the column.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>claimantno</p>
          */
         @NameInMap("ColumnName")
         public String columnName;
 
         /**
          * <p>The position of the column.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ColumnPosition")
         public Integer columnPosition;
 
         /**
          * <p>The data type of the column. Examples: BIGINT, INT, and VARCHAR.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BIGINT</p>
          */
         @NameInMap("ColumnType")
         public String columnType;
 
         /**
          * <p>Indicates whether the column is a virtual column. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Fictive")
         public Boolean fictive;
@@ -172,12 +201,18 @@ public class GetDataTrackJobTableMetaResponseBody extends TeaModel {
 
         /**
          * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DB165</p>
          */
         @NameInMap("SchemaName")
         public String schemaName;
 
         /**
          * <p>The name of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>live_stat</p>
          */
         @NameInMap("TableName")
         public String tableName;

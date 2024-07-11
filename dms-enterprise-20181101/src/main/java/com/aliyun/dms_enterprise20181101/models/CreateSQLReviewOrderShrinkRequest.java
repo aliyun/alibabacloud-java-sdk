@@ -6,15 +6,16 @@ import com.aliyun.tea.*;
 public class CreateSQLReviewOrderShrinkRequest extends TeaModel {
     /**
      * <p>The purpose or objective of the SQL review. This reduces unnecessary communication.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Comment")
     public String comment;
 
     /**
      * <p>The parameters of the ticket.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Param")
@@ -27,7 +28,10 @@ public class CreateSQLReviewOrderShrinkRequest extends TeaModel {
     public String relatedUserListShrink;
 
     /**
-     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) or [ListUserTenants](https://help.aliyun.com/document_detail/198074.html) operation to obtain the tenant ID.</p>
+     * <p>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> or <a href="https://help.aliyun.com/document_detail/198074.html">ListUserTenants</a> operation to obtain the tenant ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Tid")
     public Long tid;

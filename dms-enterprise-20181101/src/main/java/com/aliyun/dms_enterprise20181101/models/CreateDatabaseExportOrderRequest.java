@@ -5,28 +5,35 @@ import com.aliyun.tea.*;
 
 public class CreateDatabaseExportOrderRequest extends TeaModel {
     /**
-     * <p>The key of the attachment that provides more instructions for the ticket. You can call the [GetUserUploadFileJob](https://help.aliyun.com/document_detail/206069.html) operation to obtain the attachment key.</p>
+     * <p>The key of the attachment that provides more instructions for the ticket. You can call the <a href="https://help.aliyun.com/document_detail/206069.html">GetUserUploadFileJob</a> operation to obtain the attachment key.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>order_attachment.txt</p>
      */
     @NameInMap("AttachmentKey")
     public String attachmentKey;
 
     /**
      * <p>The purpose or objective of the ticket. This parameter helps reduce unnecessary communication.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>document_test</p>
      */
     @NameInMap("Comment")
     public String comment;
 
     /**
      * <p>The ID of the parent ticket.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>877****</p>
      */
     @NameInMap("ParentId")
     public Long parentId;
 
     /**
      * <p>The parameters of the ticket.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("PluginParam")
@@ -40,8 +47,12 @@ public class CreateDatabaseExportOrderRequest extends TeaModel {
 
     /**
      * <p>The tenant ID.</p>
-     * <br>
-     * <p>> To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the DMS console. For more information, see the [View information about the current tenant](https://help.aliyun.com/document_detail/181330.html) section of the "Manage DMS tenants" topic.</p>
+     * <blockquote>
+     * <p>To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the DMS console. For more information, see the <a href="https://help.aliyun.com/document_detail/181330.html">View information about the current tenant</a> section of the &quot;Manage DMS tenants&quot; topic.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>3***</p>
      */
     @NameInMap("Tid")
     public Long tid;
@@ -102,7 +113,6 @@ public class CreateDatabaseExportOrderRequest extends TeaModel {
     public static class CreateDatabaseExportOrderRequestPluginParamConfig extends TeaModel {
         /**
          * <p>The export options for big data. The options are used to filter the big data to be exported. You can leave this parameter empty.</p>
-         * <br>
          * <p>This parameter is required.</p>
          */
         @NameInMap("DataOption")
@@ -110,12 +120,15 @@ public class CreateDatabaseExportOrderRequest extends TeaModel {
 
         /**
          * <p>The type of data that you want to export. Valid values:</p>
-         * <br>
-         * <p>*   **DATA**: The data of the database is exported.</p>
-         * <p>*   **STRUCT**: The schema of the database is exported.</p>
-         * <p>*   **DATA_STRUCT**: The data and schema of the database are exported.</p>
-         * <br>
+         * <ul>
+         * <li><strong>DATA</strong>: The data of the database is exported.</li>
+         * <li><strong>STRUCT</strong>: The schema of the database is exported.</li>
+         * <li><strong>DATA_STRUCT</strong>: The data and schema of the database are exported.</li>
+         * </ul>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DATA</p>
          */
         @NameInMap("ExportContent")
         public String exportContent;
@@ -128,7 +141,6 @@ public class CreateDatabaseExportOrderRequest extends TeaModel {
 
         /**
          * <p>The extension options of the SQL script. You can leave this parameter empty.</p>
-         * <br>
          * <p>This parameter is required.</p>
          */
         @NameInMap("SQLExtOption")
@@ -148,12 +160,15 @@ public class CreateDatabaseExportOrderRequest extends TeaModel {
 
         /**
          * <p>The format in which the database is exported. Valid values:</p>
-         * <br>
-         * <p>*   **SQL**</p>
-         * <p>*   **CSV**</p>
-         * <p>*   **XLSX**</p>
-         * <br>
+         * <ul>
+         * <li><strong>SQL</strong></li>
+         * <li><strong>CSV</strong></li>
+         * <li><strong>XLSX</strong></li>
+         * </ul>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SQL</p>
          */
         @NameInMap("TargetOption")
         public String targetOption;
@@ -224,15 +239,16 @@ public class CreateDatabaseExportOrderRequest extends TeaModel {
     public static class CreateDatabaseExportOrderRequestPluginParam extends TeaModel {
         /**
          * <p>The reason for the database export.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>document_test</p>
          */
         @NameInMap("Classify")
         public String classify;
 
         /**
          * <p>The configurations for database export.</p>
-         * <br>
          * <p>This parameter is required.</p>
          */
         @NameInMap("Config")
@@ -240,35 +256,44 @@ public class CreateDatabaseExportOrderRequest extends TeaModel {
 
         /**
          * <p>The database ID.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>17****</p>
          */
         @NameInMap("DbId")
         public Long dbId;
 
         /**
          * <p>The instance ID.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>137****</p>
          */
         @NameInMap("InstanceId")
         public Long instanceId;
 
         /**
          * <p>Specifies whether the database is a logical database. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
-         * <br>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Logic")
         public Boolean logic;
 
         /**
          * <p>The name that is used to search for the database.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:test@xxx.xxx.xxx.xxx">test@xxx.xxx.xxx.xxx</a>:3306</p>
          */
         @NameInMap("SearchName")
         public String searchName;

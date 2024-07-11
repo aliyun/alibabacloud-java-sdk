@@ -5,15 +5,20 @@ import com.aliyun.tea.*;
 
 public class GetDBTaskSQLJobLogRequest extends TeaModel {
     /**
-     * <p>The ID of the SQL task. You can call the [ListDBTaskSQLJob](https://help.aliyun.com/document_detail/207049.html) operation to query the ID of the SQL task.</p>
-     * <br>
+     * <p>The ID of the SQL task. You can call the <a href="https://help.aliyun.com/document_detail/207049.html">ListDBTaskSQLJob</a> operation to query the ID of the SQL task.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1276****</p>
      */
     @NameInMap("JobId")
     public Long jobId;
 
     /**
-     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) operation to query the tenant ID.</p>
+     * <p>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> operation to query the tenant ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3***</p>
      */
     @NameInMap("Tid")
     public Long tid;

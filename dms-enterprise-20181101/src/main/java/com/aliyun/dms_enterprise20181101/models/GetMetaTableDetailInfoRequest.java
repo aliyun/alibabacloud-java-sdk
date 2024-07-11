@@ -6,22 +6,30 @@ import com.aliyun.tea.*;
 public class GetMetaTableDetailInfoRequest extends TeaModel {
     /**
      * <p>The GUID of the table in Data Management (DMS).</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   You can call the [ListLogicTables](https://help.aliyun.com/document_detail/141875.html) operation with ReturnGuid set to true to query the GUIDs of logical tables in a specific logical database.</p>
-     * <br>
-     * <p>*   You can call the [ListTables](https://help.aliyun.com/document_detail/141878.html) operation with ReturnGuid set to true to query the GUIDs of tables in a specific physical database.</p>
-     * <br>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>You can call the <a href="https://help.aliyun.com/document_detail/141875.html">ListLogicTables</a> operation with ReturnGuid set to true to query the GUIDs of logical tables in a specific logical database.</p>
+     * </li>
+     * <li><p>You can call the <a href="https://help.aliyun.com/document_detail/141878.html">ListTables</a> operation with ReturnGuid set to true to query the GUIDs of tables in a specific physical database.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>IDB_L_9032.db-test.yuyang_test</p>
      */
     @NameInMap("TableGuid")
     public String tableGuid;
 
     /**
      * <p>The ID of the tenant.</p>
-     * <br>
-     * <p>> To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the [View information about the current tenant](https://help.aliyun.com/document_detail/181330.html) section of the Manage DMS tenants topic.</p>
+     * <blockquote>
+     * <p>To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the <a href="https://help.aliyun.com/document_detail/181330.html">View information about the current tenant</a> section of the Manage DMS tenants topic.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("Tid")
     public Long tid;

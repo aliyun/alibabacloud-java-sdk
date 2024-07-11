@@ -6,23 +6,26 @@ import com.aliyun.tea.*;
 public class CreateDataCronClearOrderRequest extends TeaModel {
     /**
      * <p>The key of the attachment for the ticket. The attachment provides more instructions for this operation.</p>
-     * <br>
-     * <p>You can call the [GetUserUploadFileJob](https://help.aliyun.com/document_detail/206069.html) operation to query the key of the attachment.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/206069.html">GetUserUploadFileJob</a> operation to query the key of the attachment.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>order_attachement.txt</p>
      */
     @NameInMap("AttachmentKey")
     public String attachmentKey;
 
     /**
      * <p>The purpose or objective of the data change. This reduces unnecessary communication.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Comment")
     public String comment;
 
     /**
      * <p>The parameters of the ticket.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Param")
@@ -36,8 +39,12 @@ public class CreateDataCronClearOrderRequest extends TeaModel {
 
     /**
      * <p>The ID of the tenant.</p>
-     * <br>
-     * <p>>  The ID of the tenant is displayed when you move the pointer over the profile picture in the upper-right corner of the DMS console. For more information, see the [View information about the current tenant](https://help.aliyun.com/document_detail/181330.html) section of the Manage DMS tenants topic.</p>
+     * <blockquote>
+     * <p> The ID of the tenant is displayed when you move the pointer over the profile picture in the upper-right corner of the DMS console. For more information, see the <a href="https://help.aliyun.com/document_detail/181330.html">View information about the current tenant</a> section of the Manage DMS tenants topic.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>123454324</p>
      */
     @NameInMap("Tid")
     public Long tid;
@@ -90,39 +97,52 @@ public class CreateDataCronClearOrderRequest extends TeaModel {
     public static class CreateDataCronClearOrderRequestParamCronClearItemList extends TeaModel {
         /**
          * <p>The name of the field.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gmt_create</p>
          */
         @NameInMap("ColumnName")
         public String columnName;
 
         /**
          * <p>The filter conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>where 1 = 1</p>
          */
         @NameInMap("FilterSQL")
         public String filterSQL;
 
         /**
          * <p>The retention period of the historical data. Unit: days. For example, if you set the parameter to 7, DMS deletes the data that is retained for more than seven days.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         @NameInMap("RemainDays")
         public Long remainDays;
 
         /**
-         * <p>The name of the table. You can call the [ListTables](https://help.aliyun.com/document_detail/141878.html) operation to query the name of the table.</p>
-         * <br>
+         * <p>The name of the table. You can call the <a href="https://help.aliyun.com/document_detail/141878.html">ListTables</a> operation to query the name of the table.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t1</p>
          */
         @NameInMap("TableName")
         public String tableName;
 
         /**
          * <p>The type of time granularity. If the ColumnName parameter specifies a field of a time type, this parameter is required. Valid values:</p>
-         * <br>
-         * <p>*   **MILLISECONDS**: milliseconds</p>
-         * <p>*   **SECONDS**: seconds</p>
+         * <ul>
+         * <li><strong>MILLISECONDS</strong>: milliseconds</li>
+         * <li><strong>SECONDS</strong>: seconds</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>MILLISECONDS</p>
          */
         @NameInMap("TimeUnit")
         public String timeUnit;
@@ -176,20 +196,25 @@ public class CreateDataCronClearOrderRequest extends TeaModel {
 
     public static class CreateDataCronClearOrderRequestParamDbItemList extends TeaModel {
         /**
-         * <p>The ID of the database. You can call the [SearchDatabases](https://help.aliyun.com/document_detail/141876.html) operation to query the ID of the database.</p>
-         * <br>
+         * <p>The ID of the database. You can call the <a href="https://help.aliyun.com/document_detail/141876.html">SearchDatabases</a> operation to query the ID of the database.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         @NameInMap("DbId")
         public Long dbId;
 
         /**
          * <p>Indicates whether the database is a logical database. Valid values:</p>
-         * <br>
-         * <p>*   **true**: The database is a logical database.</p>
-         * <p>*   **false**: The database is not a logical database.</p>
-         * <br>
+         * <ul>
+         * <li><strong>true</strong>: The database is a logical database.</li>
+         * <li><strong>false</strong>: The database is not a logical database.</li>
+         * </ul>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Logic")
         public Boolean logic;
@@ -220,29 +245,32 @@ public class CreateDataCronClearOrderRequest extends TeaModel {
     public static class CreateDataCronClearOrderRequestParam extends TeaModel {
         /**
          * <p>The reason for the data change.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Classify")
         public String classify;
 
         /**
          * <p>The tables for which you want to clear historical data.</p>
-         * <br>
          * <p>This parameter is required.</p>
          */
         @NameInMap("CronClearItemList")
         public java.util.List<CreateDataCronClearOrderRequestParamCronClearItemList> cronClearItemList;
 
         /**
-         * <p>The crontab expression that you can use to run the task at a specified time. For more information, see [Crontab expression](https://help.aliyun.com/document_detail/206581.html).</p>
-         * <br>
+         * <p>The crontab expression that you can use to run the task at a specified time. For more information, see <a href="https://help.aliyun.com/document_detail/206581.html">Crontab expression</a>.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0 0 2 * * ?</p>
          */
         @NameInMap("CronFormat")
         public String cronFormat;
 
         /**
          * <p>The databases for which you want to clear historical data.</p>
-         * <br>
          * <p>This parameter is required.</p>
          */
         @NameInMap("DbItemList")
@@ -250,19 +278,26 @@ public class CreateDataCronClearOrderRequest extends TeaModel {
 
         /**
          * <p>The amount of time taken to run the task. Unit: hours.</p>
-         * <br>
-         * <p>>  If the **specifyDuration** parameter is set to **true**, this parameter is required.</p>
+         * <blockquote>
+         * <p> If the <strong>specifyDuration</strong> parameter is set to <strong>true</strong>, this parameter is required.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         @NameInMap("DurationHour")
         public Long durationHour;
 
         /**
          * <p>Specifies whether to specify an end time for the task. Valid values:</p>
-         * <br>
-         * <p>*   **true**: specifies an end time for the task. The task is automatically suspended after this end time.</p>
-         * <p>*   **false**: does not specify an end time for the task. The task is stopped after the historical data is cleared.</p>
-         * <br>
+         * <ul>
+         * <li><strong>true</strong>: specifies an end time for the task. The task is automatically suspended after this end time.</li>
+         * <li><strong>false</strong>: does not specify an end time for the task. The task is stopped after the historical data is cleared.</li>
+         * </ul>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("specifyDuration")
         public Boolean specifyDuration;

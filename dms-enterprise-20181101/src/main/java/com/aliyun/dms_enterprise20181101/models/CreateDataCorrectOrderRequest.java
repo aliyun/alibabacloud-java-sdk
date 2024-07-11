@@ -5,26 +5,33 @@ import com.aliyun.tea.*;
 
 public class CreateDataCorrectOrderRequest extends TeaModel {
     /**
-     * <p>The key of the attachment that provides more instructions for the ticket. You can call the [GetUserUploadFileJob](https://help.aliyun.com/document_detail/206069.html) operation to obtain the attachment key from the value of the AttachmentKey parameter.</p>
+     * <p>The key of the attachment that provides more instructions for the ticket. You can call the <a href="https://help.aliyun.com/document_detail/206069.html">GetUserUploadFileJob</a> operation to obtain the attachment key from the value of the AttachmentKey parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>order_attachment.txt</p>
      */
     @NameInMap("AttachmentKey")
     public String attachmentKey;
 
     /**
      * <p>The purpose or objective of the data change. This parameter is used to help reduce unnecessary communication.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Comment")
     public String comment;
 
     /**
      * <p>The parameters of the ticket.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Param")
     public CreateDataCorrectOrderRequestParam param;
+
+    @NameInMap("RealLoginUserUid")
+    public String realLoginUserUid;
 
     /**
      * <p>The stakeholders of the data change. All stakeholders can view the ticket details and assist in the approval process. Irrelevant users other than DMS administrators and database administrators (DBAs) are not allowed to view the ticket details.</p>
@@ -33,7 +40,10 @@ public class CreateDataCorrectOrderRequest extends TeaModel {
     public java.util.List<Long> relatedUserList;
 
     /**
-     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) or [ListUserTenants](https://help.aliyun.com/document_detail/198074.html) operation to obtain the tenant ID.</p>
+     * <p>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> or <a href="https://help.aliyun.com/document_detail/198074.html">ListUserTenants</a> operation to obtain the tenant ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3***</p>
      */
     @NameInMap("Tid")
     public Long tid;
@@ -67,6 +77,14 @@ public class CreateDataCorrectOrderRequest extends TeaModel {
         return this.param;
     }
 
+    public CreateDataCorrectOrderRequest setRealLoginUserUid(String realLoginUserUid) {
+        this.realLoginUserUid = realLoginUserUid;
+        return this;
+    }
+    public String getRealLoginUserUid() {
+        return this.realLoginUserUid;
+    }
+
     public CreateDataCorrectOrderRequest setRelatedUserList(java.util.List<Long> relatedUserList) {
         this.relatedUserList = relatedUserList;
         return this;
@@ -86,22 +104,28 @@ public class CreateDataCorrectOrderRequest extends TeaModel {
     public static class CreateDataCorrectOrderRequestParamDbItemList extends TeaModel {
         /**
          * <p>The ID of the database. The database can be a physical database or a logical database.</p>
-         * <br>
-         * <p>*   To obtain the ID of a physical database, call the [ListDatabases](https://help.aliyun.com/document_detail/141873.html) or [SearchDatabase](https://help.aliyun.com/document_detail/141876.html) operation.</p>
-         * <p>*   To obtain the ID of a logical database, call the [ListLogicDatabases](https://help.aliyun.com/document_detail/141874.html) or [SearchDatabase](https://help.aliyun.com/document_detail/141876.html) operation.</p>
-         * <br>
+         * <ul>
+         * <li>To obtain the ID of a physical database, call the <a href="https://help.aliyun.com/document_detail/141873.html">ListDatabases</a> or <a href="https://help.aliyun.com/document_detail/141876.html">SearchDatabase</a> operation.</li>
+         * <li>To obtain the ID of a logical database, call the <a href="https://help.aliyun.com/document_detail/141874.html">ListLogicDatabases</a> or <a href="https://help.aliyun.com/document_detail/141876.html">SearchDatabase</a> operation.</li>
+         * </ul>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1860****</p>
          */
         @NameInMap("DbId")
         public Long dbId;
 
         /**
          * <p>Specifies whether the database is a logical database. Valid values:</p>
-         * <br>
-         * <p>*   **true**: The database is a logical database.</p>
-         * <p>*   **false**: The database is a physical database.</p>
-         * <br>
+         * <ul>
+         * <li><strong>true</strong>: The database is a logical database.</li>
+         * <li><strong>false</strong>: The database is a physical database.</li>
+         * </ul>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Logic")
         public Boolean logic;
@@ -131,22 +155,28 @@ public class CreateDataCorrectOrderRequest extends TeaModel {
 
     public static class CreateDataCorrectOrderRequestParam extends TeaModel {
         /**
-         * <p>The key of the attachment that contains the SQL statements used to change data. You can call the [GetUserUploadFileJob](https://help.aliyun.com/document_detail/206069.html) operation to obtain the attachment key from the value of the AttachmentKey parameter.</p>
-         * <br>
-         * <p>>  This parameter is required if you set the **SqlType** parameter to **ATTACHMENT**.</p>
+         * <p>The key of the attachment that contains the SQL statements used to change data. You can call the <a href="https://help.aliyun.com/document_detail/206069.html">GetUserUploadFileJob</a> operation to obtain the attachment key from the value of the AttachmentKey parameter.</p>
+         * <blockquote>
+         * <p> This parameter is required if you set the <strong>SqlType</strong> parameter to <strong>ATTACHMENT</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>test.sql</p>
          */
         @NameInMap("AttachmentName")
         public String attachmentName;
 
         /**
          * <p>The reason for the data change.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Classify")
         public String classify;
 
         /**
          * <p>The databases in which you want to change data.</p>
-         * <br>
          * <p>This parameter is required.</p>
          */
         @NameInMap("DbItemList")
@@ -154,62 +184,87 @@ public class CreateDataCorrectOrderRequest extends TeaModel {
 
         /**
          * <p>The estimated number of data rows to be affected by the data change.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("EstimateAffectRows")
         public Long estimateAffectRows;
 
         /**
          * <p>The execution mode of the ticket after the ticket is approved. Valid values:</p>
-         * <br>
-         * <p>*   **COMMITOR**: The data change is performed by the user who submits the ticket.</p>
-         * <p>*   **AUTO**: The data change is automatically performed after the ticket is approved.</p>
-         * <p>*   **LAST_AUDITOR**: The data change is performed by the last approver of the ticket.</p>
+         * <ul>
+         * <li><strong>COMMITOR</strong>: The data change is performed by the user who submits the ticket.</li>
+         * <li><strong>AUTO</strong>: The data change is automatically performed after the ticket is approved.</li>
+         * <li><strong>LAST_AUDITOR</strong>: The data change is performed by the last approver of the ticket.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>COMMITOR</p>
          */
         @NameInMap("ExecMode")
         public String execMode;
 
         /**
          * <p>The SQL statements that you want to execute to change data.</p>
-         * <br>
-         * <p>>  This parameter is required if you set the **SqlType** parameter to **TEXT**.</p>
+         * <blockquote>
+         * <p> This parameter is required if you set the <strong>SqlType</strong> parameter to <strong>TEXT</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>update base_user set id = 1 where id  = 1;</p>
          */
         @NameInMap("ExecSQL")
         public String execSQL;
 
         /**
-         * <p>The key of the attachment that contains the SQL statements used to roll back the data change. You can call the [GetUserUploadFileJob](https://help.aliyun.com/document_detail/206069.html) operation to the attachment key from the value of the AttachmentKey parameter.</p>
-         * <br>
-         * <p>>  This parameter is required if you set the **RollbackSqlType** parameter to **ATTACHMENT**.</p>
+         * <p>The key of the attachment that contains the SQL statements used to roll back the data change. You can call the <a href="https://help.aliyun.com/document_detail/206069.html">GetUserUploadFileJob</a> operation to the attachment key from the value of the AttachmentKey parameter.</p>
+         * <blockquote>
+         * <p> This parameter is required if you set the <strong>RollbackSqlType</strong> parameter to <strong>ATTACHMENT</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>test_rollback.sql</p>
          */
         @NameInMap("RollbackAttachmentName")
         public String rollbackAttachmentName;
 
         /**
          * <p>The SQL statements used to roll back the data change.</p>
-         * <br>
-         * <p>> This parameter is required if you set the **RollbackSqlType** parameter to **TEXT**.</p>
+         * <blockquote>
+         * <p>This parameter is required if you set the <strong>RollbackSqlType</strong> parameter to <strong>TEXT</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>update base_user set id = 1 where id  = 1;</p>
          */
         @NameInMap("RollbackSQL")
         public String rollbackSQL;
 
         /**
          * <p>The format of the SQL statements used to roll back the data change. Valid values:</p>
-         * <br>
-         * <p>*   **TEXT**: text</p>
-         * <p>*   **ATTACHMENT**: attachment</p>
+         * <ul>
+         * <li><strong>TEXT</strong>: text</li>
+         * <li><strong>ATTACHMENT</strong>: attachment</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>TEXT</p>
          */
         @NameInMap("RollbackSqlType")
         public String rollbackSqlType;
 
         /**
          * <p>The format of the SQL statements used to change data. Valid values:</p>
-         * <br>
-         * <p>*   **TEXT**: text</p>
-         * <p>*   **ATTACHMENT**: attachment</p>
-         * <br>
+         * <ul>
+         * <li><strong>TEXT</strong>: text</li>
+         * <li><strong>ATTACHMENT</strong>: attachment</li>
+         * </ul>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TEXT</p>
          */
         @NameInMap("SqlType")
         public String sqlType;

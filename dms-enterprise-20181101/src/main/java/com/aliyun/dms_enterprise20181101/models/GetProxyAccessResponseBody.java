@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class GetProxyAccessResponseBody extends TeaModel {
     /**
      * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UserNotExist</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The specified user not exists.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
@@ -24,15 +30,22 @@ public class GetProxyAccessResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3CDB8601-AD74-4A47-8114-08E08CD6****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request was successful.</p>
-     * <p>*   **false**: The request failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,65 +98,97 @@ public class GetProxyAccessResponseBody extends TeaModel {
     public static class GetProxyAccessResponseBodyProxyAccess extends TeaModel {
         /**
          * <p>The username of the database account that is authorized to enable the secure access proxy feature for an instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hObpgEXoca42q***</p>
          */
         @NameInMap("AccessId")
         public String accessId;
 
         /**
          * <p>The time when the user is authorized to enable the secure access proxy feature for an instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1643034647</p>
          */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
         /**
          * <p>The username of the independent database account.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         @NameInMap("IndepAccount")
         public String indepAccount;
 
         /**
          * <p>The ID of the instance for which the secure access proxy feature is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1922545</p>
          */
         @NameInMap("InstanceId")
         public Long instanceId;
 
         /**
          * <p>The method that is used to authorize the user to enable the secure access proxy feature for an instance. Valid values:</p>
-         * <br>
-         * <p>*   **Authorization by the Alibaba Cloud Account ()**: The information in the parentheses () indicates the ID of the Alibaba Cloud account.</p>
-         * <p>*   **Authorization by submitting the ticket ()**:The information in the parentheses () indicates the number of the ticket that the user submits to apply for permissions.</p>
+         * <ul>
+         * <li><strong>Authorization by the Alibaba Cloud Account ()</strong>: The information in the parentheses () indicates the ID of the Alibaba Cloud account.</li>
+         * <li><strong>Authorization by submitting the ticket ()</strong>:The information in the parentheses () indicates the number of the ticket that the user submits to apply for permissions.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Authorization by the Alibaba Cloud account (29490401597700\<em>\</em>\<em>\</em>)</p>
          */
         @NameInMap("OriginInfo")
         public String originInfo;
 
         /**
-         * <p>The ID that DMS generates after the user is authorized to enable the secure access proxy feature for an instance. The ID is unique in DMS. You can call the [ListProxyAccesses](https://help.aliyun.com/document_detail/295386.html) operation to query the ID.</p>
+         * <p>The ID that DMS generates after the user is authorized to enable the secure access proxy feature for an instance. The ID is unique in DMS. You can call the <a href="https://help.aliyun.com/document_detail/295386.html">ListProxyAccesses</a> operation to query the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2002</p>
          */
         @NameInMap("ProxyAccessId")
         public Long proxyAccessId;
 
         /**
          * <p>The ID of the secure access proxy.</p>
-         * <br>
-         * <p>>  You can call the [ListProxies](https://help.aliyun.com/document_detail/295371.html) operation to query the ID of the secure access proxy.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/295371.html">ListProxies</a> operation to query the ID of the secure access proxy.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1905</p>
          */
         @NameInMap("ProxyId")
         public Long proxyId;
 
         /**
          * <p>The ID of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12***</p>
          */
         @NameInMap("UserId")
         public Long userId;
 
         /**
          * <p>The nickname of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user</p>
          */
         @NameInMap("UserName")
         public String userName;
 
         /**
          * <p>The ID of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25936669186260****</p>
          */
         @NameInMap("UserUid")
         public String userUid;

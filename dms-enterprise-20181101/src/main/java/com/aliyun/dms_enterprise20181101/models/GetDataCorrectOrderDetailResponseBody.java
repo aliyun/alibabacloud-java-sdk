@@ -12,27 +12,40 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
 
     /**
      * <p>The error code returned if the request fails.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message returned if the request fails.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>427688B8-ADFB-4C4E-9D45-EF5C1FD6E23D</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful. Valid values:</p>
-     * <br>
-     * <p>- **true**: The request is successful.</p>
-     * <p>- **false**: The request fails.</p>
+     * <ul>
+     * <li><strong>true</strong>: The request is successful.</li>
+     * <li><strong>false</strong>: The request fails.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -329,42 +342,59 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
     public static class GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailDatabaseListDatabase extends TeaModel {
         /**
          * <p>The ID of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1860****</p>
          */
         @NameInMap("DbId")
         public Integer dbId;
 
         /**
          * <p>The engine of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql</p>
          */
         @NameInMap("DbType")
         public String dbType;
 
         /**
          * <p>The type of the environment to which the database belongs. Valid values:</p>
-         * <br>
-         * <p>- product: production environment</p>
-         * <p>- dev: development environment</p>
-         * <p>- pre: staging environment</p>
-         * <p>- test: test environment</p>
-         * <p>- sit: system integration testing (SIT) environment</p>
-         * <p>- uat: user acceptance testing (UAT) environment</p>
-         * <p>- pet: stress testing environment</p>
-         * <p>- stag: STAG environment</p>
+         * <ul>
+         * <li>product: production environment</li>
+         * <li>dev: development environment</li>
+         * <li>pre: staging environment</li>
+         * <li>test: test environment</li>
+         * <li>sit: system integration testing (SIT) environment</li>
+         * <li>uat: user acceptance testing (UAT) environment</li>
+         * <li>pet: stress testing environment</li>
+         * <li>stag: STAG environment</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>product</p>
          */
         @NameInMap("EnvType")
         public String envType;
 
         /**
          * <p>Indicates whether the database is a logical database. Valid values:</p>
-         * <br>
-         * <p>- **true**: The database is a logical database.</p>
-         * <p>- **false**: The database is a physical database.</p>
+         * <ul>
+         * <li><strong>true</strong>: The database is a logical database.</li>
+         * <li><strong>false</strong>: The database is a physical database.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Logic")
         public Boolean logic;
 
         /**
          * <p>The name that is used to search for the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx@xxx:3306</p>
          */
         @NameInMap("SearchName")
         public String searchName;
@@ -438,75 +468,111 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
     public static class GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailOrderDetail extends TeaModel {
         /**
          * <p>The number of affected rows that is obtained by the precheck.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("ActualAffectRows")
         public Long actualAffectRows;
 
         /**
          * <p>The name of the attachment that contains the SQL statements used to change data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         @NameInMap("AttachmentName")
         public String attachmentName;
 
         /**
          * <p>The category of the reason for the data change.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Classify")
         public String classify;
 
         /**
          * <p>The estimated number of affected rows.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("EstimateAffectRows")
         public Long estimateAffectRows;
 
         /**
          * <p>The executed SQL statements.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>update t1 set name = \&quot;xxx\&quot; where id &lt;= 100</p>
          */
         @NameInMap("ExeSQL")
         public String exeSQL;
 
         /**
          * <p>Indicates whether the precheck result is ignored. Valid values:</p>
-         * <br>
-         * <p>- **true**: The precheck result is ignored.</p>
-         * <p>- **false**: The precheck result is not ignored.</p>
+         * <ul>
+         * <li><strong>true</strong>: The precheck result is ignored.</li>
+         * <li><strong>false</strong>: The precheck result is not ignored.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("IgnoreAffectRows")
         public Boolean ignoreAffectRows;
 
         /**
          * <p>The reason why the precheck result is ignored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("IgnoreAffectRowsReason")
         public String ignoreAffectRowsReason;
 
         /**
          * <p>The name of the attachment that contains the SQL statements used to roll back the data change.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("RbAttachmentName")
         public String rbAttachmentName;
 
         /**
          * <p>The SQL statements used to roll back the data change.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>empty</p>
          */
         @NameInMap("RbSQL")
         public String rbSQL;
 
         /**
          * <p>The format of the SQL statements used to roll back the data change. Valid values:</p>
-         * <br>
-         * <p>- **TEXT**: text</p>
-         * <p>- **ATTACHMENT**: attachment</p>
+         * <ul>
+         * <li><strong>TEXT</strong>: text</li>
+         * <li><strong>ATTACHMENT</strong>: attachment</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>text</p>
          */
         @NameInMap("RbSQLType")
         public String rbSQLType;
 
         /**
          * <p>The format of the SQL statements used to change data. Valid values:</p>
-         * <br>
-         * <p>- **TEXT**: text</p>
-         * <p>- **ATTACHMENT**: attachment</p>
+         * <ul>
+         * <li><strong>TEXT</strong>: text</li>
+         * <li><strong>ATTACHMENT</strong>: attachment</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>text</p>
          */
         @NameInMap("SqlType")
         public String sqlType;
@@ -609,28 +675,39 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
     public static class GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailPreCheckDetailTaskCheckDO extends TeaModel {
         /**
          * <p>The status of the precheck. Valid values:</p>
-         * <br>
-         * <p>*   **WAITING**: The ticket is pending precheck.</p>
-         * <p>*   **RUNNING**: The ticket is being prechecked.</p>
-         * <p>*   **SUCCESS**: The ticket passes the precheck.</p>
-         * <p>*   **FAIL**: The ticket fails the precheck.</p>
+         * <ul>
+         * <li><strong>WAITING</strong>: The ticket is pending precheck.</li>
+         * <li><strong>RUNNING</strong>: The ticket is being prechecked.</li>
+         * <li><strong>SUCCESS</strong>: The ticket passes the precheck.</li>
+         * <li><strong>FAIL</strong>: The ticket fails the precheck.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         @NameInMap("CheckStatus")
         public String checkStatus;
 
         /**
          * <p>The check step of the precheck. Valid values:</p>
-         * <br>
-         * <p>*   **SQL_PARSE**: The system checks the syntax of the SQL statement.</p>
-         * <p>*   **SQL_TYPE_CHECK**: The system checks the type of the SQL statement.</p>
-         * <p>*   **PERMISSION_CHECK**: The system checks the permissions required for the data change.</p>
-         * <p>*   **ROW_CHECK**: The system checks the number of affected rows.</p>
+         * <ul>
+         * <li><strong>SQL_PARSE</strong>: The system checks the syntax of the SQL statement.</li>
+         * <li><strong>SQL_TYPE_CHECK</strong>: The system checks the type of the SQL statement.</li>
+         * <li><strong>PERMISSION_CHECK</strong>: The system checks the permissions required for the data change.</li>
+         * <li><strong>ROW_CHECK</strong>: The system checks the number of affected rows.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PERMISSION_CHECK</p>
          */
         @NameInMap("CheckStep")
         public String checkStep;
 
         /**
          * <p>The message that indicates a check step.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tip messsage</p>
          */
         @NameInMap("UserTip")
         public String userTip;
@@ -697,10 +774,14 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
 
         /**
          * <p>The execution mode of the ticket after the ticket is approved. Valid values:</p>
-         * <br>
-         * <p>- **COMMITOR**: The data change is performed by the user who submits the ticket.</p>
-         * <p>- **AUTO**: The data change is automatically performed after the ticket is approved.</p>
-         * <p>- **LAST_AUDITOR**: The data change is performed by the last approver of the ticket.</p>
+         * <ul>
+         * <li><strong>COMMITOR</strong>: The data change is performed by the user who submits the ticket.</li>
+         * <li><strong>AUTO</strong>: The data change is automatically performed after the ticket is approved.</li>
+         * <li><strong>LAST_AUDITOR</strong>: The data change is performed by the last approver of the ticket.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>COMMITOR</p>
          */
         @NameInMap("ExecMode")
         public String execMode;
@@ -719,18 +800,22 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
 
         /**
          * <p>The status of the ticket. Valid values:</p>
-         * <br>
-         * <p>- **new**: The ticket is created.</p>
-         * <p>- **precheck**: The ticket is being prechecked.</p>
-         * <p>- **precheck_fail**: The ticket fails the precheck.</p>
-         * <p>- **precheck_success**: The ticket passes the precheck and waits to be submitted for approval.</p>
-         * <p>- **toaudit**: The ticket is being reviewed.</p>
-         * <p>- **Approved**: The ticket is approved.</p>
-         * <p>- **reject**: The ticket is rejected.</p>
-         * <p>- **waiting**: The ticket is submitted and waits to be scheduled.</p>
-         * <p>- **processing**: The ticket is being executed.</p>
-         * <p>- **success**: The ticket is executed.</p>
-         * <p>- **closed**: The ticket is closed.</p>
+         * <ul>
+         * <li><strong>new</strong>: The ticket is created.</li>
+         * <li><strong>precheck</strong>: The ticket is being prechecked.</li>
+         * <li><strong>precheck_fail</strong>: The ticket fails the precheck.</li>
+         * <li><strong>precheck_success</strong>: The ticket passes the precheck and waits to be submitted for approval.</li>
+         * <li><strong>toaudit</strong>: The ticket is being reviewed.</li>
+         * <li><strong>Approved</strong>: The ticket is approved.</li>
+         * <li><strong>reject</strong>: The ticket is rejected.</li>
+         * <li><strong>waiting</strong>: The ticket is submitted and waits to be scheduled.</li>
+         * <li><strong>processing</strong>: The ticket is being executed.</li>
+         * <li><strong>success</strong>: The ticket is executed.</li>
+         * <li><strong>closed</strong>: The ticket is closed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>approved</p>
          */
         @NameInMap("Status")
         public String status;

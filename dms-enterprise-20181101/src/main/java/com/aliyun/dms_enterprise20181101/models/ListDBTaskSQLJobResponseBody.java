@@ -12,30 +12,45 @@ public class ListDBTaskSQLJobResponseBody extends TeaModel {
 
     /**
      * <p>The error code returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F6C47680-8D2D-43A4-8902-F2740D71A398</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The total number of the SQL tasks.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -96,81 +111,117 @@ public class ListDBTaskSQLJobResponseBody extends TeaModel {
     public static class ListDBTaskSQLJobResponseBodyDBTaskSQLJobList extends TeaModel {
         /**
          * <p>The description of the SQL task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Comment")
         public String comment;
 
         /**
          * <p>The time when the SQL task was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-02-18 17:49:20</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The ID of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>43214523</p>
          */
         @NameInMap("DbId")
         public Long dbId;
 
         /**
          * <p>The name that is used to search for the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test@xxx:3306【test】</p>
          */
         @NameInMap("DbSearchName")
         public String dbSearchName;
 
         /**
          * <p>The ID of the SQL task group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4324132</p>
          */
         @NameInMap("DbTaskGroupId")
         public Long dbTaskGroupId;
 
         /**
          * <p>The ID of the SQL task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123435</p>
          */
         @NameInMap("JobId")
         public Long jobId;
 
         /**
          * <p>The type of the SQL task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STRUCT_SYNC</p>
          */
         @NameInMap("JobType")
         public String jobType;
 
         /**
          * <p>The time when the SQL task was last executed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-02-18 17:49:31</p>
          */
         @NameInMap("LastExecTime")
         public String lastExecTime;
 
         /**
          * <p>Indicates whether the database is a logical database. Valid values:</p>
-         * <br>
-         * <p>*   **true**: The database is a logical database.</p>
-         * <p>*   **false**: The database is a logical database.</p>
+         * <ul>
+         * <li><strong>true</strong>: The database is a logical database.</li>
+         * <li><strong>false</strong>: The database is a logical database.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Logic")
         public Boolean logic;
 
         /**
          * <p>The state of the SQL task. Valid values:</p>
-         * <br>
-         * <p>*   **INIT**: The SQL task was initialized.</p>
-         * <p>*   **PENDING**: The SQL task waited to be run.</p>
-         * <p>*   **BE_SCHEDULED**: The SQL task waited to be scheduled.</p>
-         * <p>*   **FAIL**: The SQL task failed.</p>
-         * <p>*   **SUCCESS**: The SQL task was successful.</p>
-         * <p>*   **PAUSE**: The SQL task was paused.</p>
-         * <p>*   **DELETE**: The SQL task was deleted.</p>
-         * <p>*   **RUNNING**: The SQL task was being run.</p>
+         * <ul>
+         * <li><strong>INIT</strong>: The SQL task was initialized.</li>
+         * <li><strong>PENDING</strong>: The SQL task waited to be run.</li>
+         * <li><strong>BE_SCHEDULED</strong>: The SQL task waited to be scheduled.</li>
+         * <li><strong>FAIL</strong>: The SQL task failed.</li>
+         * <li><strong>SUCCESS</strong>: The SQL task was successful.</li>
+         * <li><strong>PAUSE</strong>: The SQL task was paused.</li>
+         * <li><strong>DELETE</strong>: The SQL task was deleted.</li>
+         * <li><strong>RUNNING</strong>: The SQL task was being run.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>Indicates whether the SQL task is executed as a transaction. Valid values:</p>
-         * <br>
-         * <p>*   **true**: The SQL task is executed as a transaction.</p>
-         * <p>*   **false**: The SQL task is not executed as a transaction.</p>
+         * <ul>
+         * <li><strong>true</strong>: The SQL task is executed as a transaction.</li>
+         * <li><strong>false</strong>: The SQL task is not executed as a transaction.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Transactional")
         public Boolean transactional;

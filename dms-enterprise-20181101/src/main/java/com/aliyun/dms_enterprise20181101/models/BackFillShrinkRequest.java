@@ -6,35 +6,50 @@ import com.aliyun.tea.*;
 public class BackFillShrinkRequest extends TeaModel {
     /**
      * <p>The running sequence of task flows for data backfill. Valid values:</p>
-     * <br>
-     * <p>*   **0**: reverse chronological order.</p>
-     * <p>*   **1**: chronological order. This is the default value.</p>
+     * <ul>
+     * <li><strong>0</strong>: reverse chronological order.</li>
+     * <li><strong>1</strong>: chronological order. This is the default value.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("Asc")
     public Boolean asc;
 
     /**
      * <p>The date for the data to be backfilled. This parameter is required if you specify a date for data backfill.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-01-14</p>
      */
     @NameInMap("BackFillDate")
     public String backFillDate;
 
     /**
      * <p>The start date of the date range for the data to be backfilled. This parameter is required if you specify a date range for data backfill.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-01-14</p>
      */
     @NameInMap("BackFillDateBegin")
     public String backFillDateBegin;
 
     /**
      * <p>The end date of the date range for the data to be backfilled. This parameter is required if you specify a date range for data backfill.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-09-29</p>
      */
     @NameInMap("BackFillDateEnd")
     public String backFillDateEnd;
 
     /**
-     * <p>The ID of the task flow. You can call the [ListTaskFlow](https://help.aliyun.com/document_detail/424565.html) or [ListLhTaskFlowAndScenario](https://help.aliyun.com/document_detail/426672.html) operation to query the task flow ID.</p>
-     * <br>
+     * <p>The ID of the task flow. You can call the <a href="https://help.aliyun.com/document_detail/424565.html">ListTaskFlow</a> or <a href="https://help.aliyun.com/document_detail/426672.html">ListLhTaskFlowAndScenario</a> operation to query the task flow ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>15***</p>
      */
     @NameInMap("DagId")
     public Long dagId;
@@ -47,18 +62,27 @@ public class BackFillShrinkRequest extends TeaModel {
 
     /**
      * <p>The ID of the historical task flow.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16***</p>
      */
     @NameInMap("HistoryDagId")
     public Long historyDagId;
 
     /**
      * <p>The interval at which data backfill is performed. Unit: hours. Minimum value: 1. Default value: 24.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>24</p>
      */
     @NameInMap("Interval")
     public Integer interval;
 
     /**
      * <p>Specifies whether to run descendant nodes. Default value: true.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IsTriggerSubTree")
     public Boolean isTriggerSubTree;
@@ -71,8 +95,12 @@ public class BackFillShrinkRequest extends TeaModel {
 
     /**
      * <p>The ID of the tenant.</p>
-     * <br>
-     * <p>>  To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](https://help.aliyun.com/document_detail/181330.html).</p>
+     * <blockquote>
+     * <p> To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see <a href="https://help.aliyun.com/document_detail/181330.html">View information about the current tenant</a>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>3***</p>
      */
     @NameInMap("Tid")
     public Long tid;

@@ -5,23 +5,32 @@ import com.aliyun.tea.*;
 
 public class UpdateTaskOutputRequest extends TeaModel {
     /**
-     * <p>The ID of the node. You can call the [GetTaskInstanceRelation](https://help.aliyun.com/document_detail/424711.html) operation to query the node ID.</p>
-     * <br>
+     * <p>The ID of the node. You can call the <a href="https://help.aliyun.com/document_detail/424711.html">GetTaskInstanceRelation</a> operation to query the node ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>14059</p>
      */
     @NameInMap("NodeId")
     public String nodeId;
 
     /**
      * <p>The output variables for the task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{“outputs”:[{&quot;row&quot;:0, &quot;column&quot;:-1,&quot;combiner&quot;:&quot;,&quot;}&quot;extractMethod&quot;:&quot;{\&quot;row\&quot;:0,\&quot;column\&quot;:-1,\&quot;combiner\&quot;:\&quot;,\&quot;}&quot;,   &quot;variableName&quot;:&quot;var&quot;, &quot;description&quot;:&quot;For demo&quot; }]}</p>
      */
     @NameInMap("NodeOutput")
     public String nodeOutput;
 
     /**
      * <p>The ID of the tenant.</p>
-     * <br>
-     * <p>>  To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](https://help.aliyun.com/document_detail/181330.html).</p>
+     * <blockquote>
+     * <p> To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see <a href="https://help.aliyun.com/document_detail/181330.html">View information about the current tenant</a>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>3***</p>
      */
     @NameInMap("Tid")
     public Long tid;

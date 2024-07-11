@@ -5,29 +5,41 @@ import com.aliyun.tea.*;
 
 public class GetDataCronClearTaskDetailListRequest extends TeaModel {
     /**
-     * <p>The ID of the ticket. You can query the ticket ID from the response parameters of the [CreateDataCronClearOrder](https://help.aliyun.com/document_detail/208385.html) operation.</p>
-     * <br>
+     * <p>The ID of the ticket. You can query the ticket ID from the response parameters of the <a href="https://help.aliyun.com/document_detail/208385.html">CreateDataCronClearOrder</a> operation.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>432532</p>
      */
     @NameInMap("OrderId")
     public Long orderId;
 
     /**
      * <p>The number of the page to return.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
      * <p>The number of entries to return on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
      * <p>The ID of the tenant.</p>
-     * <br>
-     * <p>> To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the "View information about the current tenant" section of the [Manage DMS tenants](https://help.aliyun.com/document_detail/181330.html) topic.</p>
+     * <blockquote>
+     * <p>To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the &quot;View information about the current tenant&quot; section of the <a href="https://help.aliyun.com/document_detail/181330.html">Manage DMS tenants</a> topic.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>12345</p>
      */
     @NameInMap("Tid")
     public Long tid;

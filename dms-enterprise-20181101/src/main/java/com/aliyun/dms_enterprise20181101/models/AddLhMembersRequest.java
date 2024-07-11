@@ -6,7 +6,6 @@ import com.aliyun.tea.*;
 public class AddLhMembersRequest extends TeaModel {
     /**
      * <p>The information about the users to be added.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Members")
@@ -14,28 +13,37 @@ public class AddLhMembersRequest extends TeaModel {
 
     /**
      * <p>The ID of the object.</p>
-     * <br>
-     * <p>*   If the object is a workspace, you can call the [GetLhSpaceByName](https://help.aliyun.com/document_detail/424379.html) operation to obtain the workspace ID.</p>
-     * <p>*   If the object is a task flow, you can call the [ListLhTaskFlowAndScenario](https://help.aliyun.com/document_detail/426672.html) operation to obtain the task flow ID.</p>
-     * <br>
+     * <ul>
+     * <li>If the object is a workspace, you can call the <a href="https://help.aliyun.com/document_detail/424379.html">GetLhSpaceByName</a> operation to obtain the workspace ID.</li>
+     * <li>If the object is a task flow, you can call the <a href="https://help.aliyun.com/document_detail/426672.html">ListLhTaskFlowAndScenario</a> operation to obtain the task flow ID.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("ObjectId")
     public Long objectId;
 
     /**
      * <p>The type of the object. Valid values:</p>
-     * <br>
-     * <p>*   **0**: workspace</p>
-     * <p>*   **1**: task flow</p>
-     * <br>
+     * <ul>
+     * <li><strong>0</strong>: workspace</li>
+     * <li><strong>1</strong>: task flow</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("ObjectType")
     public Integer objectType;
 
     /**
-     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) or [ListUserTenants](https://help.aliyun.com/document_detail/198074.html) operation to obtain the tenant ID.</p>
+     * <p>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> or <a href="https://help.aliyun.com/document_detail/198074.html">ListUserTenants</a> operation to obtain the tenant ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3000</p>
      */
     @NameInMap("Tid")
     public Long tid;
@@ -80,20 +88,22 @@ public class AddLhMembersRequest extends TeaModel {
     public static class AddLhMembersRequestMembers extends TeaModel {
         /**
          * <p>The role. Valid values:</p>
-         * <br>
-         * <p>*   **ADMIN**: workspace administrator. You can add a workspace administrator only as a DMS administrator or a DBA.</p>
-         * <p>*   **MEMBER**: workspace member.</p>
-         * <p>*   **DEVELOPER**: task flow developer. Only a workspace member can be added as a task flow developer.</p>
-         * <br>
+         * <ul>
+         * <li><strong>ADMIN</strong>: workspace administrator. You can add a workspace administrator only as a DMS administrator or a DBA.</li>
+         * <li><strong>MEMBER</strong>: workspace member.</li>
+         * <li><strong>DEVELOPER</strong>: task flow developer. Only a workspace member can be added as a task flow developer.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          */
         @NameInMap("Roles")
         public java.util.List<String> roles;
 
         /**
-         * <p>The ID of the user to be added. You can call the [ListUsers](https://help.aliyun.com/document_detail/141938.html) or [GetUser](https://help.aliyun.com/document_detail/147098.html) operation to obtain the user ID.</p>
-         * <br>
+         * <p>The ID of the user to be added. You can call the <a href="https://help.aliyun.com/document_detail/141938.html">ListUsers</a> or <a href="https://help.aliyun.com/document_detail/147098.html">GetUser</a> operation to obtain the user ID.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15****</p>
          */
         @NameInMap("UserId")
         public Long userId;

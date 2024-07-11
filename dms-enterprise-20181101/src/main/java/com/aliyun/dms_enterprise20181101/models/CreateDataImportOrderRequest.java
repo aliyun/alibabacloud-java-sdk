@@ -5,22 +5,26 @@ import com.aliyun.tea.*;
 
 public class CreateDataImportOrderRequest extends TeaModel {
     /**
-     * <p>The key of the attachment that provides more instructions for the ticket. You can call the [GetUserUploadFileJob](https://help.aliyun.com/document_detail/206069.html) operation to obtain the attachment key from the value of the AttachmentKey parameter.</p>
+     * <p>The key of the attachment that provides more instructions for the ticket. You can call the <a href="https://help.aliyun.com/document_detail/206069.html">GetUserUploadFileJob</a> operation to obtain the attachment key from the value of the AttachmentKey parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>order_attachment.txt</p>
      */
     @NameInMap("AttachmentKey")
     public String attachmentKey;
 
     /**
      * <p>The purpose or objective of the data import. This parameter is used to help reduce unnecessary communication.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Comment")
     public String comment;
 
     /**
      * <p>The parameters of the ticket.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Param")
@@ -33,7 +37,10 @@ public class CreateDataImportOrderRequest extends TeaModel {
     public java.util.List<Long> relatedUserList;
 
     /**
-     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) or [ListUserTenants](https://help.aliyun.com/document_detail/198074.html) operation to obtain the tenant ID.</p>
+     * <p>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> or <a href="https://help.aliyun.com/document_detail/198074.html">ListUserTenants</a> operation to obtain the tenant ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3***</p>
      */
     @NameInMap("Tid")
     public Long tid;
@@ -86,24 +93,31 @@ public class CreateDataImportOrderRequest extends TeaModel {
     public static class CreateDataImportOrderRequestParamDbItemList extends TeaModel {
         /**
          * <p>The ID of the database. The database can be a physical database or a logical database.</p>
-         * <br>
-         * <p>*   To obtain the ID of a physical database, call the [ListDatabases](https://help.aliyun.com/document_detail/141873.html) or [SearchDatabase](https://help.aliyun.com/document_detail/141876.html) operation.</p>
-         * <p>*   To obtain the ID of a logical database, call the [ListLogicDatabases](https://help.aliyun.com/document_detail/141874.html) or [SearchDatabase](https://help.aliyun.com/document_detail/141876.html) operation.</p>
-         * <br>
+         * <ul>
+         * <li>To obtain the ID of a physical database, call the <a href="https://help.aliyun.com/document_detail/141873.html">ListDatabases</a> or <a href="https://help.aliyun.com/document_detail/141876.html">SearchDatabase</a> operation.</li>
+         * <li>To obtain the ID of a logical database, call the <a href="https://help.aliyun.com/document_detail/141874.html">ListLogicDatabases</a> or <a href="https://help.aliyun.com/document_detail/141876.html">SearchDatabase</a> operation.</li>
+         * </ul>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1860****</p>
          */
         @NameInMap("DbId")
         public Long dbId;
 
         /**
          * <p>Specifies whether the database is a logical database. Valid values:</p>
-         * <br>
-         * <p>*   **true**: The database is a logical database.</p>
-         * <p>*   **false**: The database is a physical database.</p>
-         * <br>
-         * <p>>  If you set this parameter to **true**, the database that you specify must be a logical database.</p>
-         * <br>
+         * <ul>
+         * <li><strong>true</strong>: The database is a logical database.</li>
+         * <li><strong>false</strong>: The database is a physical database.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If you set this parameter to <strong>true</strong>, the database that you specify must be a logical database.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Logic")
         public Boolean logic;
@@ -133,33 +147,42 @@ public class CreateDataImportOrderRequest extends TeaModel {
 
     public static class CreateDataImportOrderRequestParam extends TeaModel {
         /**
-         * <p>The key of the attachment that contains the SQL statements used to import data. You can call the [GetUserUploadFileJob](https://help.aliyun.com/document_detail/206069.html) operation to the attachment key from the value of the AttachmentKey parameter.</p>
-         * <br>
+         * <p>The key of the attachment that contains the SQL statements used to import data. You can call the <a href="https://help.aliyun.com/document_detail/206069.html">GetUserUploadFileJob</a> operation to the attachment key from the value of the AttachmentKey parameter.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>order_text</p>
          */
         @NameInMap("AttachmentName")
         public String attachmentName;
 
         /**
          * <p>The reason for the data import.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Classify")
         public String classify;
 
         /**
          * <p>The type of the CSV file. Valid values:</p>
-         * <br>
-         * <p>*   **true**: The first row in the CSV file contains field names.</p>
-         * <p>*   **false**: The first row in the CSV file contains data.</p>
-         * <br>
-         * <p>>  This parameter is required if you set the **FileType** parameter to **CSV**.</p>
+         * <ul>
+         * <li><strong>true</strong>: The first row in the CSV file contains field names.</li>
+         * <li><strong>false</strong>: The first row in the CSV file contains data.</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is required if you set the <strong>FileType</strong> parameter to <strong>CSV</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("CsvFirstRowIsColumnDef")
         public Boolean csvFirstRowIsColumnDef;
 
         /**
          * <p>The database to which you want to import data. You can specify only one database.</p>
-         * <br>
          * <p>This parameter is required.</p>
          */
         @NameInMap("DbItemList")
@@ -167,85 +190,121 @@ public class CreateDataImportOrderRequest extends TeaModel {
 
         /**
          * <p>The encoding algorithm to be used by the destination database. Valid values:</p>
-         * <br>
-         * <p>*   **AUTO**: automatic identification</p>
-         * <p>*   **UTF-8**: UTF-8 encoding</p>
-         * <p>*   **GBK**: GBK encoding</p>
-         * <p>*   **ISO-8859-1**: ISO-8859-1 encoding</p>
+         * <ul>
+         * <li><strong>AUTO</strong>: automatic identification</li>
+         * <li><strong>UTF-8</strong>: UTF-8 encoding</li>
+         * <li><strong>GBK</strong>: GBK encoding</li>
+         * <li><strong>ISO-8859-1</strong>: ISO-8859-1 encoding</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>AUTO</p>
          */
         @NameInMap("FileEncoding")
         public String fileEncoding;
 
         /**
          * <p>The format of the file for the data import. Valid values:</p>
-         * <br>
-         * <p>*   **SQL**: an SQL file</p>
-         * <p>*   **CSV**: a CSV file</p>
-         * <br>
+         * <ul>
+         * <li><strong>SQL</strong>: an SQL file</li>
+         * <li><strong>CSV</strong>: a CSV file</li>
+         * </ul>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CSV</p>
          */
         @NameInMap("FileType")
         public String fileType;
 
         /**
          * <p>Specifies whether to skip an error that occurs. Valid values:</p>
-         * <br>
-         * <p>*   **true**: skips the error and continues to execute SQL statements.</p>
-         * <p>*   **false**: stops executing SQL statements.</p>
+         * <ul>
+         * <li><strong>true</strong>: skips the error and continues to execute SQL statements.</li>
+         * <li><strong>false</strong>: stops executing SQL statements.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("IgnoreError")
         public Boolean ignoreError;
 
         /**
          * <p>The import mode. Valid values:</p>
-         * <br>
-         * <p>*   **FAST_MODE**: In the Execute step, the uploaded file is read and SQL statements are executed to import data to the specified destination database. Compared with the security mode, this mode can be used to import data in a less secure but more efficient manner.</p>
-         * <p>*   **SAFE_MODE**: In the Precheck step, the uploaded file is parsed, and SQL statements or CSV file data is cached. In the Execute step, the cached SQL statements are read and executed to import data, or the cached CSV file data is read and imported to the specified destination database. This mode can be used to import data in a more secure but less efficient manner.</p>
+         * <ul>
+         * <li><strong>FAST_MODE</strong>: In the Execute step, the uploaded file is read and SQL statements are executed to import data to the specified destination database. Compared with the security mode, this mode can be used to import data in a less secure but more efficient manner.</li>
+         * <li><strong>SAFE_MODE</strong>: In the Precheck step, the uploaded file is parsed, and SQL statements or CSV file data is cached. In the Execute step, the cached SQL statements are read and executed to import data, or the cached CSV file data is read and imported to the specified destination database. This mode can be used to import data in a more secure but less efficient manner.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>FAST_MODE</p>
          */
         @NameInMap("ImportMode")
         public String importMode;
 
         /**
          * <p>The mode in which the data in the CSV format is to be written to the destination table. Valid values:</p>
-         * <br>
-         * <p>*   **INSERT**: The database checks the primary key when data is written. If a duplicate primary key value exists, an error message is returned.</p>
-         * <p>*   **INSERT_IGNORE**: If the imported data contains data records that are the same as those in the destination table, the new data records are ignored.</p>
-         * <p>*   **REPLACE_INTO**: If the imported data contains a row that has the same value for the primary key or unique index as one row in the destination table, the database deletes the existing row and inserts the new row into the destination table.</p>
-         * <br>
-         * <p>>  This parameter is required if you set the **FileType** parameter to **CSV**.</p>
+         * <ul>
+         * <li><strong>INSERT</strong>: The database checks the primary key when data is written. If a duplicate primary key value exists, an error message is returned.</li>
+         * <li><strong>INSERT_IGNORE</strong>: If the imported data contains data records that are the same as those in the destination table, the new data records are ignored.</li>
+         * <li><strong>REPLACE_INTO</strong>: If the imported data contains a row that has the same value for the primary key or unique index as one row in the destination table, the database deletes the existing row and inserts the new row into the destination table.</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is required if you set the <strong>FileType</strong> parameter to <strong>CSV</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>INSERT</p>
          */
         @NameInMap("InsertType")
         public String insertType;
 
         /**
-         * <p>The key of the attachment that contains the SQL statements used to roll back the data import. You can call the [GetUserUploadFileJob](https://help.aliyun.com/document_detail/206069.html) operation to obtain the attachment key from the value of the AttachmentKey parameter.</p>
-         * <br>
-         * <p>>  This parameter is required if you set the **RollbackSqlType** parameter to **ATTACHMENT**.</p>
+         * <p>The key of the attachment that contains the SQL statements used to roll back the data import. You can call the <a href="https://help.aliyun.com/document_detail/206069.html">GetUserUploadFileJob</a> operation to obtain the attachment key from the value of the AttachmentKey parameter.</p>
+         * <blockquote>
+         * <p> This parameter is required if you set the <strong>RollbackSqlType</strong> parameter to <strong>ATTACHMENT</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>rollback.sql</p>
          */
         @NameInMap("RollbackAttachmentName")
         public String rollbackAttachmentName;
 
         /**
          * <p>The SQL statements used to roll back the data import.</p>
-         * <br>
-         * <p>>  This parameter is required if you set the **RollbackSqlType** parameter to **TEXT**.</p>
+         * <blockquote>
+         * <p> This parameter is required if you set the <strong>RollbackSqlType</strong> parameter to <strong>TEXT</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>empty</p>
          */
         @NameInMap("RollbackSQL")
         public String rollbackSQL;
 
         /**
          * <p>The format of the SQL statements used to roll back the data import. Valid values:</p>
-         * <br>
-         * <p>*   **TEXT**: text</p>
-         * <p>*   **ATTACHMENT**: attachment</p>
+         * <ul>
+         * <li><strong>TEXT</strong>: text</li>
+         * <li><strong>ATTACHMENT</strong>: attachment</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>TEXT</p>
          */
         @NameInMap("RollbackSqlType")
         public String rollbackSqlType;
 
         /**
          * <p>The destination table to which you want to import the data in the CSV format.</p>
-         * <br>
-         * <p>>  This parameter is required if you set the **FileType** parameter to **CSV**.</p>
+         * <blockquote>
+         * <p> This parameter is required if you set the <strong>FileType</strong> parameter to <strong>CSV</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Table_text</p>
          */
         @NameInMap("TableName")
         public String tableName;

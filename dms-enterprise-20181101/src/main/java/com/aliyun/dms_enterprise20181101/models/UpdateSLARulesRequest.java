@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class UpdateSLARulesRequest extends TeaModel {
     /**
-     * <p>The ID of the task flow. You can call the [ListTaskFlow](https://help.aliyun.com/document_detail/424565.html) or [ListLhTaskFlowAndScenario](https://help.aliyun.com/document_detail/426672.html) operation to query the task flow ID.</p>
-     * <br>
+     * <p>The ID of the task flow. You can call the <a href="https://help.aliyun.com/document_detail/424565.html">ListTaskFlow</a> or <a href="https://help.aliyun.com/document_detail/426672.html">ListLhTaskFlowAndScenario</a> operation to query the task flow ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>11****</p>
      */
     @NameInMap("DagId")
     public Long dagId;
@@ -20,8 +22,12 @@ public class UpdateSLARulesRequest extends TeaModel {
 
     /**
      * <p>The ID of the tenant.</p>
-     * <br>
-     * <p>> :To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](https://help.aliyun.com/document_detail/181330.html).</p>
+     * <blockquote>
+     * <p>:To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see <a href="https://help.aliyun.com/document_detail/181330.html">View information about the current tenant</a>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>3***</p>
      */
     @NameInMap("Tid")
     public Long tid;
@@ -58,33 +64,43 @@ public class UpdateSLARulesRequest extends TeaModel {
     public static class UpdateSLARulesRequestSlaRuleList extends TeaModel {
         /**
          * <p>The ID of the task flow.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15***</p>
          */
         @NameInMap("DagId")
         public Long dagId;
 
         /**
          * <p>The timeout period. Unit: minutes.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1080</p>
          */
         @NameInMap("IntervalMinutes")
         public Integer intervalMinutes;
 
         /**
          * <p>The ID of the task node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("NodeId")
         public Long nodeId;
 
         /**
          * <p>The rule type. Valid values:</p>
-         * <br>
-         * <p>*   **0**: SLA rules for task flows</p>
-         * <p>*   **1**: SLA rules for nodes</p>
-         * <br>
+         * <ul>
+         * <li><strong>0</strong>: SLA rules for task flows</li>
+         * <li><strong>1</strong>: SLA rules for nodes</li>
+         * </ul>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Type")
         public Integer type;

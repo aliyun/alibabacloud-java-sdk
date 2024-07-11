@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
     /**
      * <p>The error code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
@@ -24,12 +30,18 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0C1CB646-1DE4-4AD0-B4A4-7D47DD52E931</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -82,18 +94,27 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
     public static class GetSQLReviewOptimizeDetailResponseBodyOptimizeDetailQualityResultResultsScripts extends TeaModel {
         /**
          * <p>The content of the SQL script.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alter table xxx add index idx_xx(yyy);</p>
          */
         @NameInMap("Content")
         public String content;
 
         /**
          * <p>The purpose of the SQL script. The value is set to AddIndex.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AddIndex</p>
          */
         @NameInMap("OpType")
         public String opType;
 
         /**
          * <p>The name of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         @NameInMap("TableName")
         public String tableName;
@@ -131,20 +152,27 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
 
     public static class GetSQLReviewOptimizeDetailResponseBodyOptimizeDetailQualityResultResults extends TeaModel {
         /**
-         * <p>The comment that is specified when you create the SQL review rule. For more information, see [SQL review optimization](https://help.aliyun.com/document_detail/194114.html).</p>
+         * <p>The comment that is specified when you create the SQL review rule. For more information, see <a href="https://help.aliyun.com/document_detail/194114.html">SQL review optimization</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx business rule: the query must have a where condition.</p>
          */
         @NameInMap("Comments")
         public String comments;
 
         /**
          * <p>The optimization suggestion for the SQL statement. Valid values:</p>
-         * <br>
-         * <p>*   **MUST_IMPROVE**: The SQL statement must be improved.</p>
-         * <p>*   **POTENTIAL_ISSUE**: The SQL statement contains potential issues.</p>
-         * <p>*   **SUGGEST_IMPROVE**: We recommend that you improve the SQL statement.</p>
-         * <p>*   **USEDMSTOOLKIT**: We recommend that you change schemas without locking tables.</p>
-         * <p>*   **USEDMSDML_UNLOCK**: We recommend that you change data without locking tables.</p>
-         * <p>*   **TABLEINDEXSUGGEST**: We recommend that you use SQL statements that use indexes.</p>
+         * <ul>
+         * <li><strong>MUST_IMPROVE</strong>: The SQL statement must be improved.</li>
+         * <li><strong>POTENTIAL_ISSUE</strong>: The SQL statement contains potential issues.</li>
+         * <li><strong>SUGGEST_IMPROVE</strong>: We recommend that you improve the SQL statement.</li>
+         * <li><strong>USEDMSTOOLKIT</strong>: We recommend that you change schemas without locking tables.</li>
+         * <li><strong>USEDMSDML_UNLOCK</strong>: We recommend that you change data without locking tables.</li>
+         * <li><strong>TABLEINDEXSUGGEST</strong>: We recommend that you use SQL statements that use indexes.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>MUST_IMPROVE</p>
          */
         @NameInMap("Feedback")
         public String feedback;
@@ -156,16 +184,23 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
         public java.util.List<String> messages;
 
         /**
-         * <p>The name of the rule. For more information, see [SQL review optimization](https://help.aliyun.com/document_detail/194114.html).</p>
+         * <p>The name of the rule. For more information, see <a href="https://help.aliyun.com/document_detail/194114.html">SQL review optimization</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SELECT_SUGGEST_ASSIGN_WHERE</p>
          */
         @NameInMap("RuleName")
         public String ruleName;
 
         /**
          * <p>The type of the SQL review rule. Valid values:</p>
-         * <br>
-         * <p>*   **REVIEW**: a rule that is used to review SQL statements based on standards.</p>
-         * <p>*   **OPTIMIZE**: a rule that is used to provide optimization suggestions.</p>
+         * <ul>
+         * <li><strong>REVIEW</strong>: a rule that is used to review SQL statements based on standards.</li>
+         * <li><strong>OPTIMIZE</strong>: a rule that is used to provide optimization suggestions.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>REVIEW</p>
          */
         @NameInMap("RuleType")
         public String ruleType;
@@ -234,15 +269,22 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
     public static class GetSQLReviewOptimizeDetailResponseBodyOptimizeDetailQualityResult extends TeaModel {
         /**
          * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>syntax error</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         /**
          * <p>Indicates whether an error occurs. Valid values:</p>
-         * <br>
-         * <p>*   **true**: An error occurs.</p>
-         * <p>*   **false**: No error occurs.</p>
+         * <ul>
+         * <li><strong>true</strong>: An error occurs.</li>
+         * <li><strong>false</strong>: No error occurs.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("OccurError")
         public Boolean occurError;
@@ -287,12 +329,18 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
     public static class GetSQLReviewOptimizeDetailResponseBodyOptimizeDetail extends TeaModel {
         /**
          * <p>The ID of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>111222</p>
          */
         @NameInMap("DbId")
         public Integer dbId;
 
         /**
          * <p>The ID of the instance to which the database belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123321</p>
          */
         @NameInMap("InstanceId")
         public Integer instanceId;
@@ -305,12 +353,18 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
 
         /**
          * <p>The key that is used to query the details of optimization suggestions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a57e54ec5433475ea3082d882fdb****</p>
          */
         @NameInMap("QueryKey")
         public String queryKey;
 
         /**
          * <p>The type of the SQL statement. Valid values: DELETE, UPDATE, and ALTER_TABLE.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UPDATE</p>
          */
         @NameInMap("SqlType")
         public String sqlType;

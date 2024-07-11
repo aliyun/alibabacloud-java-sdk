@@ -6,38 +6,47 @@ import com.aliyun.tea.*;
 public class CreateUploadOSSFileJobRequest extends TeaModel {
     /**
      * <p>The name of the file.</p>
-     * <br>
-     * <p>> The file name must end with .txt or .sql. For example, the file name can be text.txt.</p>
-     * <br>
+     * <blockquote>
+     * <p>The file name must end with .txt or .sql. For example, the file name can be text.txt.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test.sql</p>
      */
     @NameInMap("FileName")
     public String fileName;
 
     /**
      * <p>The purpose of the file upload task. Valid values:</p>
-     * <br>
-     * <p>*   **datacorrect**: The file is uploaded to change data.</p>
-     * <p>*   **order_info_attachment**: The file is uploaded as an attachment in a ticket.</p>
-     * <p>*   **big-file**: The file is uploaded to import multiple data records at a time.</p>
-     * <p>*   **sqlreview**: The file is uploaded for SQL review.</p>
-     * <br>
+     * <ul>
+     * <li><strong>datacorrect</strong>: The file is uploaded to change data.</li>
+     * <li><strong>order_info_attachment</strong>: The file is uploaded as an attachment in a ticket.</li>
+     * <li><strong>big-file</strong>: The file is uploaded to import multiple data records at a time.</li>
+     * <li><strong>sqlreview</strong>: The file is uploaded for SQL review.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>datacorrect</p>
      */
     @NameInMap("FileSource")
     public String fileSource;
 
     /**
      * <p>The ID of the tenant.</p>
-     * <br>
-     * <p>> To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the "View information about the current tenant" section of the [Manage DMS tenants](https://help.aliyun.com/document_detail/181330.html) topic.</p>
+     * <blockquote>
+     * <p>To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the &quot;View information about the current tenant&quot; section of the <a href="https://help.aliyun.com/document_detail/181330.html">Manage DMS tenants</a> topic.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>-1</p>
      */
     @NameInMap("Tid")
     public Long tid;
 
     /**
      * <p>The information about the OSS file to be uploaded.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UploadTarget")
@@ -83,24 +92,30 @@ public class CreateUploadOSSFileJobRequest extends TeaModel {
     public static class CreateUploadOSSFileJobRequestUploadTarget extends TeaModel {
         /**
          * <p>The name of the OSS bucket.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_bucket</p>
          */
         @NameInMap("BucketName")
         public String bucketName;
 
         /**
          * <p>The endpoint of the OSS bucket.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://oss-cn-hangzhou.aliyuncs.com">http://oss-cn-hangzhou.aliyuncs.com</a></p>
          */
         @NameInMap("Endpoint")
         public String endpoint;
 
         /**
          * <p>The name of the OSS object.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test.sql</p>
          */
         @NameInMap("ObjectName")
         public String objectName;

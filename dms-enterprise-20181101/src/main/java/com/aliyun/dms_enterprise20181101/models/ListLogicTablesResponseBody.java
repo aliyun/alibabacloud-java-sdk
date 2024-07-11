@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ListLogicTablesResponseBody extends TeaModel {
     /**
      * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
@@ -24,18 +30,27 @@ public class ListLogicTablesResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F1E6484F-9DF1-4406-9BDE-0861C4629B69</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The total number of logical tables that meet the query conditions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -134,12 +149,18 @@ public class ListLogicTablesResponseBody extends TeaModel {
     public static class ListLogicTablesResponseBodyLogicTableListLogicTable extends TeaModel {
         /**
          * <p>The ID of the logical database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("DatabaseId")
         public String databaseId;
 
         /**
          * <p>Indicates whether the table is a logical table. The value is fixed to true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Logic")
         public Boolean logic;
@@ -158,36 +179,54 @@ public class ListLogicTablesResponseBody extends TeaModel {
 
         /**
          * <p>The logical database to which the logical table belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yuyang_test</p>
          */
         @NameInMap("SchemaName")
         public String schemaName;
 
         /**
          * <p>The number of logical tables.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         @NameInMap("TableCount")
         public String tableCount;
 
         /**
          * <p>The expression of the logical table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test[1-4]</p>
          */
         @NameInMap("TableExpr")
         public String tableExpr;
 
         /**
          * <p>The GUID of the logical table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IDB_L_308302.yuyang_test.test_ch</p>
          */
         @NameInMap("TableGuid")
         public String tableGuid;
 
         /**
          * <p>The ID of the logical table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("TableId")
         public String tableId;
 
         /**
          * <p>The name of the logical table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("TableName")
         public String tableName;

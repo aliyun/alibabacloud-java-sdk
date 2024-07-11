@@ -6,26 +6,35 @@ import com.aliyun.tea.*;
 public class AnalyzeSQLLineageRequest extends TeaModel {
     /**
      * <p>The database ID.</p>
-     * <br>
-     * <p>>  You can call one of the [SearchDatabase](https://help.aliyun.com/document_detail/141876.html), [ListDatabases](https://help.aliyun.com/document_detail/141873.html), and [GetDatabase](https://help.aliyun.com/document_detail/141869.html) operations to obtain the database ID provided in the DatabaseId response parameter.</p>
-     * <br>
+     * <blockquote>
+     * <p> You can call one of the <a href="https://help.aliyun.com/document_detail/141876.html">SearchDatabase</a>, <a href="https://help.aliyun.com/document_detail/141873.html">ListDatabases</a>, and <a href="https://help.aliyun.com/document_detail/141869.html">GetDatabase</a> operations to obtain the database ID provided in the DatabaseId response parameter.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123***</p>
      */
     @NameInMap("DbId")
     public Long dbId;
 
     /**
      * <p>The SQL statement.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>insert into a (id) select id from b;</p>
      */
     @NameInMap("SqlContent")
     public String sqlContent;
 
     /**
      * <p>The tenant ID.</p>
-     * <br>
-     * <p>>  To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see [Manage DMS tenants](https://help.aliyun.com/document_detail/181330.html).</p>
+     * <blockquote>
+     * <p> To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see <a href="https://help.aliyun.com/document_detail/181330.html">Manage DMS tenants</a>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>3***</p>
      */
     @NameInMap("Tid")
     public Long tid;

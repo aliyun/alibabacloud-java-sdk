@@ -6,27 +6,40 @@ import com.aliyun.tea.*;
 public class ListClassificationTemplatesResponseBody extends TeaModel {
     /**
      * <p>The error code returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>90260530-565C-42B9-A6E8-893481FE6AB6</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request was successful.</p>
-     * <p>*   **false**: The request failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,27 +98,40 @@ public class ListClassificationTemplatesResponseBody extends TeaModel {
     public static class ListClassificationTemplatesResponseBodyTemplateList extends TeaModel {
         /**
          * <p>The name of the classification template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The remarks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Remark")
         public String remark;
 
         /**
          * <p>The ID of the classification template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3**</p>
          */
         @NameInMap("TemplateId")
         public Long templateId;
 
         /**
          * <p>The type of the classification template. Valid values:</p>
-         * <br>
-         * <p>*   **INNER**: built-in template</p>
-         * <p>*   **USER_DEFINE**: custom template</p>
+         * <ul>
+         * <li><strong>INNER</strong>: built-in template</li>
+         * <li><strong>USER_DEFINE</strong>: custom template</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>USER_DEFINE</p>
          */
         @NameInMap("TemplateType")
         public String templateType;

@@ -12,33 +12,49 @@ public class GetAuthorityTemplateItemResponseBody extends TeaModel {
 
     /**
      * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5B96E35F-A58E-5399-9041-09CF9A1E46EA</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request was successful.</p>
-     * <p>*   **false**: The request failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The ID of the tenant.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3***</p>
      */
     @NameInMap("Tid")
     public Long tid;
@@ -99,54 +115,81 @@ public class GetAuthorityTemplateItemResponseBody extends TeaModel {
     public static class GetAuthorityTemplateItemResponseBodyAuthorityTemplateItemListAuthorityTemplateItem extends TeaModel {
         /**
          * <p>The additional information. For example, permissions to log on to an instance are added to the permission template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;permissionTypes&quot;: [
+         *             &quot;LOGIN&quot;
+         *           ]</p>
          */
         @NameInMap("Attribute")
         public String attribute;
 
         /**
          * <p>The ID of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>43***</p>
          */
         @NameInMap("DbId")
         public Long dbId;
 
         /**
          * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>188****</p>
          */
         @NameInMap("InstanceId")
         public Long instanceId;
 
         /**
          * <p>The ID of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12***</p>
          */
         @NameInMap("ItemId")
         public Long itemId;
 
         /**
          * <p>The ID of the user who modifies the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>51***</p>
          */
         @NameInMap("ModifierId")
         public Long modifierId;
 
         /**
          * <p>The type of the resource. Valid values:</p>
-         * <br>
-         * <p>*   **INSTANCE**: instance</p>
-         * <p>*   **LOGIC_DB**: logical database</p>
-         * <p>*   **META_DB**: physical database</p>
-         * <p>*   **LOGIC_TABLE**: logical table</p>
-         * <p>*   **LOGIC_TABLE**: physical table</p>
+         * <ul>
+         * <li><strong>INSTANCE</strong>: instance</li>
+         * <li><strong>LOGIC_DB</strong>: logical database</li>
+         * <li><strong>META_DB</strong>: physical database</li>
+         * <li><strong>LOGIC_TABLE</strong>: logical table</li>
+         * <li><strong>LOGIC_TABLE</strong>: physical table</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>INSTANCE</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
          * <p>The name of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ExampleTable</p>
          */
         @NameInMap("TableName")
         public String tableName;
 
         /**
          * <p>The ID of the permission template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1563</p>
          */
         @NameInMap("TemplateId")
         public Long templateId;

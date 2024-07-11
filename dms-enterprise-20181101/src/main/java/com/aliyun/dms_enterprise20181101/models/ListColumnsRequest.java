@@ -6,23 +6,32 @@ import com.aliyun.tea.*;
 public class ListColumnsRequest extends TeaModel {
     /**
      * <p>Specifies whether the database is a logical database. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The database is a logical database.</p>
-     * <p>*   **false**: The database is a physical database.</p>
+     * <ul>
+     * <li><strong>true</strong>: The database is a logical database.</li>
+     * <li><strong>false</strong>: The database is a physical database.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("Logic")
     public Boolean logic;
 
     /**
-     * <p>The ID of the table. You can call the [ListTables](https://help.aliyun.com/document_detail/141878.html) operation to obtain the table ID.</p>
-     * <br>
+     * <p>The ID of the table. You can call the <a href="https://help.aliyun.com/document_detail/141878.html">ListTables</a> operation to obtain the table ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>39281****</p>
      */
     @NameInMap("TableId")
     public String tableId;
 
     /**
-     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) operation to obtain the tenant ID.</p>
+     * <p>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> operation to obtain the tenant ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3***</p>
      */
     @NameInMap("Tid")
     public Long tid;

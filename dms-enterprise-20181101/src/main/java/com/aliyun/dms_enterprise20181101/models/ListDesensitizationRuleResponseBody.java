@@ -12,35 +12,50 @@ public class ListDesensitizationRuleResponseBody extends TeaModel {
 
     /**
      * <p>The error code returned if the request failed.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E76DD2E7-EBAC-5724-B163-19AAC233F8F2</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   true: The request was successful.</p>
-     * <p>*   false: The request failed.</p>
+     * <ul>
+     * <li>true: The request was successful.</li>
+     * <li>false: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The total number of entries returned. By default, this parameter is not returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -101,60 +116,90 @@ public class ListDesensitizationRuleResponseBody extends TeaModel {
     public static class ListDesensitizationRuleResponseBodyDesensitizationRuleList extends TeaModel {
         /**
          * <p>The parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{paramName: salt, paramValue: 1}</p>
          */
         @NameInMap("FuncParams")
         public String funcParams;
 
         /**
          * <p>The example.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{paramName: testStr, paramValue: 1}]</p>
          */
         @NameInMap("FuncSample")
         public String funcSample;
 
         /**
          * <p>The algorithm type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MD5</p>
          */
         @NameInMap("FunctionType")
         public String functionType;
 
         /**
          * <p>The ID of the user who last modified the masking rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("LastModifierId")
         public String lastModifierId;
 
         /**
          * <p>The name of the user who last modified the masking rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test user</p>
          */
         @NameInMap("LastModifierName")
         public String lastModifierName;
 
         /**
          * <p>The number of times that the masking was used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ReferenceCount")
         public Integer referenceCount;
 
         /**
          * <p>The description of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hash desensitization algorithm</p>
          */
         @NameInMap("RuleDesc")
         public String ruleDesc;
 
         /**
          * <p>The ID of the masking rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23</p>
          */
         @NameInMap("RuleId")
         public Integer ruleId;
 
         /**
          * <p>The name of the masking rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default desensitization rule test</p>
          */
         @NameInMap("RuleName")
         public String ruleName;
 
         /**
          * <p>The algorithm used for masking.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HASH</p>
          */
         @NameInMap("RuleType")
         public String ruleType;

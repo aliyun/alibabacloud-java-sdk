@@ -4,11 +4,18 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class CreateProcCorrectOrderShrinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>order_attachment.txt</p>
+     */
     @NameInMap("AttachmentKey")
     public String attachmentKey;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Comment")
     public String comment;
@@ -22,6 +29,10 @@ public class CreateProcCorrectOrderShrinkRequest extends TeaModel {
     @NameInMap("RelatedUserList")
     public String relatedUserListShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4***</p>
+     */
     @NameInMap("Tid")
     public Long tid;
 

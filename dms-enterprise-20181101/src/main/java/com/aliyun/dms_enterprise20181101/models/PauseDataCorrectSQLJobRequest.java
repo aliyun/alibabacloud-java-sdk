@@ -5,34 +5,46 @@ import com.aliyun.tea.*;
 
 public class PauseDataCorrectSQLJobRequest extends TeaModel {
     /**
-     * <p>The ID of the SQL task. You can call the [GetDataCorrectTaskDetail](https://help.aliyun.com/document_detail/208481.html) or [ListDBTaskSQLJob](https://help.aliyun.com/document_detail/207049.html) operation to obtain the value of this parameter.</p>
-     * <br>
-     * <p>>  If Type is set to SINGLE, you must pass in the value of JobId to confirm the ID of the SQL task that you want to pause.</p>
+     * <p>The ID of the SQL task. You can call the <a href="https://help.aliyun.com/document_detail/208481.html">GetDataCorrectTaskDetail</a> or <a href="https://help.aliyun.com/document_detail/207049.html">ListDBTaskSQLJob</a> operation to obtain the value of this parameter.</p>
+     * <blockquote>
+     * <p> If Type is set to SINGLE, you must pass in the value of JobId to confirm the ID of the SQL task that you want to pause.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>43253</p>
      */
     @NameInMap("JobId")
     public Long jobId;
 
     /**
-     * <p>The ID of the data change ticket. You can call the [ListOrders](https://help.aliyun.com/document_detail/144643.html) operation to query the ID of the data change ticket.</p>
-     * <br>
+     * <p>The ID of the data change ticket. You can call the <a href="https://help.aliyun.com/document_detail/144643.html">ListOrders</a> operation to query the ID of the data change ticket.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>43253</p>
      */
     @NameInMap("OrderId")
     public Long orderId;
 
     /**
-     * <p>The tenant ID. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) operation to query the tenant ID.</p>
+     * <p>The tenant ID. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> operation to query the tenant ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4325</p>
      */
     @NameInMap("Tid")
     public Long tid;
 
     /**
      * <p>The type of the pause operation. Valid values:</p>
-     * <br>
-     * <p>*   ALL: pauses all SQL tasks.</p>
-     * <p>*   SINGLE: pauses a single SQL task.</p>
-     * <br>
+     * <ul>
+     * <li>ALL: pauses all SQL tasks.</li>
+     * <li>SINGLE: pauses a single SQL task.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SINGLE</p>
      */
     @NameInMap("Type")
     public String type;

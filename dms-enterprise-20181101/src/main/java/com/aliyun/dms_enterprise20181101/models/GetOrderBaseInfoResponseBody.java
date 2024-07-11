@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class GetOrderBaseInfoResponseBody extends TeaModel {
     /**
      * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
@@ -24,12 +30,18 @@ public class GetOrderBaseInfoResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7133DF67-5B25-460F-8285-C4CC93472C2F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -120,54 +132,81 @@ public class GetOrderBaseInfoResponseBody extends TeaModel {
     public static class GetOrderBaseInfoResponseBodyOrderBaseInfo extends TeaModel {
         /**
          * <p>The Key of the ticket attachment. This information is returned only when an attachment is uploaded when a ticket is created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>upload_order_info_856887_f356366f-f0f8-42fc-ba57-4a509303e814_18072d8a9bce876e3073bc655c2865f.png</p>
          */
         @NameInMap("AttachmentKey")
         public String attachmentKey;
 
         /**
          * <p>The remarks of the ticket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Comment")
         public String comment;
 
         /**
          * <p>The applicant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         @NameInMap("Committer")
         public String committer;
 
         /**
          * <p>The ID of the applicant. Note: The ID is different from the Alibaba Cloud account ID of the applicant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CommitterId")
         public Long committerId;
 
         /**
          * <p>The time when the ticket was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-10-10 00:00:00</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The time when the ticket was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-10-10 00:00:00</p>
          */
         @NameInMap("LastModifyTime")
         public String lastModifyTime;
 
         /**
          * <p>The ID of the ticket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         @NameInMap("OrderId")
         public Long orderId;
 
         /**
          * <p>The original file name of the ticket attachment. This information is returned only when an attachment is uploaded when a ticket is created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18072d8a9bce876e3073bc655c2865f.png</p>
          */
         @NameInMap("OriginAttachmentName")
         public String originAttachmentName;
 
         /**
-         * <p>The type of the ticket. For more information about the value of this parameter, see the request parameters of the [CreateOrder](https://help.aliyun.com/document_detail/465865.html) operation.</p>
+         * <p>The type of the ticket. For more information about the value of this parameter, see the request parameters of the <a href="https://help.aliyun.com/document_detail/465865.html">CreateOrder</a> operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DC_COMMON</p>
          */
         @NameInMap("PluginType")
         public String pluginType;
@@ -186,32 +225,45 @@ public class GetOrderBaseInfoResponseBody extends TeaModel {
 
         /**
          * <p>The status code of the ticket. Valid values:</p>
-         * <br>
-         * <p>*   **new**: The ticket is created.</p>
-         * <p>*   **toaudit**: The ticket is being reviewed.</p>
-         * <p>*   **Approved**: The ticket is approved.</p>
-         * <p>*   **reject**: The ticket is rejected.</p>
-         * <p>*   **processing**: The ticket is being executed.</p>
-         * <p>*   **success**: The ticket is executed.</p>
-         * <p>*   **closed**: The ticket is closed.</p>
+         * <ul>
+         * <li><strong>new</strong>: The ticket is created.</li>
+         * <li><strong>toaudit</strong>: The ticket is being reviewed.</li>
+         * <li><strong>Approved</strong>: The ticket is approved.</li>
+         * <li><strong>reject</strong>: The ticket is rejected.</li>
+         * <li><strong>processing</strong>: The ticket is being executed.</li>
+         * <li><strong>success</strong>: The ticket is executed.</li>
+         * <li><strong>closed</strong>: The ticket is closed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         @NameInMap("StatusCode")
         public String statusCode;
 
         /**
          * <p>The description of the status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         @NameInMap("StatusDesc")
         public String statusDesc;
 
         /**
          * <p>The ID of the approval process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("WorkflowInstanceId")
         public Long workflowInstanceId;
 
         /**
          * <p>The description of the approval process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>approved</p>
          */
         @NameInMap("WorkflowStatusDesc")
         public String workflowStatusDesc;

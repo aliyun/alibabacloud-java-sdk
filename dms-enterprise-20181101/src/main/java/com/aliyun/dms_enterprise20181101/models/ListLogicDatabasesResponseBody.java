@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ListLogicDatabasesResponseBody extends TeaModel {
     /**
      * <p>The error code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
@@ -24,21 +30,31 @@ public class ListLogicDatabasesResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8068AF82-8A1A-592C-AC2E-6B75338BAB87</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful. Valid values:</p>
-     * <br>
-     * <p>- **true**: The request is successful.</p>
-     * <p>- **false**: The request fails.</p>
+     * <ul>
+     * <li><strong>true</strong>: The request is successful.</li>
+     * <li><strong>false</strong>: The request fails.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The total number of logical databases.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -156,12 +172,18 @@ public class ListLogicDatabasesResponseBody extends TeaModel {
     public static class ListLogicDatabasesResponseBodyLogicDatabaseListLogicDatabase extends TeaModel {
         /**
          * <p>The alias of the logical database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>logic_db_alias</p>
          */
         @NameInMap("Alias")
         public String alias;
 
         /**
          * <p>The ID of the logical database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1***</p>
          */
         @NameInMap("DatabaseId")
         public String databaseId;
@@ -173,28 +195,38 @@ public class ListLogicDatabasesResponseBody extends TeaModel {
         public ListLogicDatabasesResponseBodyLogicDatabaseListLogicDatabaseDatabaseIds databaseIds;
 
         /**
-         * <p>The type of the logical database. For more information about the valid values of this parameter, see [DbType parameter](https://www.alibabacloud.com/help/en/data-management-service/latest/dbtype-parameter).</p>
+         * <p>The type of the logical database. For more information about the valid values of this parameter, see <a href="https://www.alibabacloud.com/help/en/data-management-service/latest/dbtype-parameter">DbType parameter</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>polardb</p>
          */
         @NameInMap("DbType")
         public String dbType;
 
         /**
          * <p>The type of the environment to which the logical database belongs. Valid values:</p>
-         * <br>
-         * <p>- **product**: production environment</p>
-         * <p>- **dev**: development environment</p>
-         * <p>- **pre**: staging environment</p>
-         * <p>- **test**: test environment</p>
-         * <p>- **sit**: system integration testing (SIT) environment</p>
-         * <p>- **uat**: user acceptance testing (UAT) environment</p>
-         * <p>- **pet**: stress testing environment</p>
-         * <p>- **stag**: STAG environment</p>
+         * <ul>
+         * <li><strong>product</strong>: production environment</li>
+         * <li><strong>dev</strong>: development environment</li>
+         * <li><strong>pre</strong>: staging environment</li>
+         * <li><strong>test</strong>: test environment</li>
+         * <li><strong>sit</strong>: system integration testing (SIT) environment</li>
+         * <li><strong>uat</strong>: user acceptance testing (UAT) environment</li>
+         * <li><strong>pet</strong>: stress testing environment</li>
+         * <li><strong>stag</strong>: STAG environment</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("EnvType")
         public String envType;
 
         /**
          * <p>Indicates whether the database is a logical database. The return value is true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Logic")
         public Boolean logic;
@@ -213,14 +245,21 @@ public class ListLogicDatabasesResponseBody extends TeaModel {
 
         /**
          * <p>The name of the logical database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>logic_db</p>
          */
         @NameInMap("SchemaName")
         public String schemaName;
 
         /**
          * <p>The name that is used to search for the logical database.</p>
-         * <br>
-         * <p>> We recommend that you do not use this parameter for business development. The format of the parameter value may be modified in later versions.</p>
+         * <blockquote>
+         * <p>We recommend that you do not use this parameter for business development. The format of the parameter value may be modified in later versions.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>logic_db[logic_db_alias]</p>
          */
         @NameInMap("SearchName")
         public String searchName;

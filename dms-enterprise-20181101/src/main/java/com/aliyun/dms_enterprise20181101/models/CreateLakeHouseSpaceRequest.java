@@ -6,67 +6,89 @@ import com.aliyun.tea.*;
 public class CreateLakeHouseSpaceRequest extends TeaModel {
     /**
      * <p>The description of the workspace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The ID of the development database. You can call the [ListDatabases](https://help.aliyun.com/document_detail/141873.html) or [SearchDatabase](https://help.aliyun.com/document_detail/141876.html) operation to obtain the ID.</p>
-     * <br>
+     * <p>The ID of the development database. You can call the <a href="https://help.aliyun.com/document_detail/141873.html">ListDatabases</a> or <a href="https://help.aliyun.com/document_detail/141876.html">SearchDatabase</a> operation to obtain the ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2435****</p>
      */
     @NameInMap("DevDbId")
     public String devDbId;
 
     /**
      * <p>The type of the database. Valid values:</p>
-     * <br>
-     * <p>*   **14**: AnalyticDB for MySQL</p>
-     * <p>*   **18**: AnalyticDB for PostgreSQL</p>
-     * <br>
+     * <ul>
+     * <li><strong>14</strong>: AnalyticDB for MySQL</li>
+     * <li><strong>18</strong>: AnalyticDB for PostgreSQL</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>14</p>
      */
     @NameInMap("DwDbType")
     public String dwDbType;
 
     /**
      * <p>The mode in which the workspace runs. Valid values:</p>
-     * <br>
-     * <p>*   **0**: basic mode. This mode is unavailable.</p>
-     * <p>*   **1**: standard mode.</p>
-     * <br>
+     * <ul>
+     * <li><strong>0</strong>: basic mode. This mode is unavailable.</li>
+     * <li><strong>1</strong>: standard mode.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Mode")
     public String mode;
 
     /**
-     * <p>The ID of the production database. You can call the [ListDatabases](https://help.aliyun.com/document_detail/141873.html) or [SearchDatabase](https://help.aliyun.com/document_detail/141876.html) operation to obtain the ID.</p>
+     * <p>The ID of the production database. You can call the <a href="https://help.aliyun.com/document_detail/141873.html">ListDatabases</a> or <a href="https://help.aliyun.com/document_detail/141876.html">SearchDatabase</a> operation to obtain the ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2442****</p>
      */
     @NameInMap("ProdDbId")
     public String prodDbId;
 
     /**
      * <p>The configuration of the workspace. Valid values:</p>
-     * <br>
-     * <p>*   **skipManualRunCheck**: No security rule check is required in the trial run phase.</p>
-     * <p>*   **skipPublishApprove**: No approval is required for publishing and O\\&M.</p>
-     * <br>
+     * <ul>
+     * <li><strong>skipManualRunCheck</strong>: No security rule check is required in the trial run phase.</li>
+     * <li><strong>skipPublishApprove</strong>: No approval is required for publishing and O\&amp;M.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;skipManualRunCheck\&quot;:true,\&quot;skipPublishApprove\&quot;:true}</p>
      */
     @NameInMap("SpaceConfig")
     public String spaceConfig;
 
     /**
      * <p>The name of the workspace.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test_space</p>
      */
     @NameInMap("SpaceName")
     public String spaceName;
 
     /**
-     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) or [ListUserTenants](https://help.aliyun.com/document_detail/198074.html) operation to obtain the tenant ID.</p>
+     * <p>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> or <a href="https://help.aliyun.com/document_detail/198074.html">ListUserTenants</a> operation to obtain the tenant ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3***</p>
      */
     @NameInMap("Tid")
     public Long tid;

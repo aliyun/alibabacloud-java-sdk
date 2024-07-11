@@ -6,30 +6,45 @@ import com.aliyun.tea.*;
 public class CreateUploadOSSFileJobResponseBody extends TeaModel {
     /**
      * <p>The error code returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
-     * <p>The key of the file upload task. You can query the upload progress and task details. For more information, see [GetUserUploadFileJob](https://help.aliyun.com/document_detail/206069.html).</p>
+     * <p>The key of the file upload task. You can query the upload progress and task details. For more information, see <a href="https://help.aliyun.com/document_detail/206069.html">GetUserUploadFileJob</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>65254a4c1614235217749100e</p>
      */
     @NameInMap("JobKey")
     public String jobKey;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4E1D2B4D-3E53-4ABC-999D-1D2520B3471A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

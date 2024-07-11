@@ -6,14 +6,21 @@ import com.aliyun.tea.*;
 public class ListWorkFlowTemplatesRequest extends TeaModel {
     /**
      * <p>The name that is used to query approval templates.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Admin</p>
      */
     @NameInMap("SearchName")
     public String searchName;
 
     /**
      * <p>The ID of the tenant.</p>
-     * <br>
-     * <p>> : To view the ID of the tenant, log on to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](https://help.aliyun.com/document_detail/181330.html).</p>
+     * <blockquote>
+     * <p>: To view the ID of the tenant, log on to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see <a href="https://help.aliyun.com/document_detail/181330.html">View information about the current tenant</a>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>-1</p>
      */
     @NameInMap("Tid")
     public Long tid;

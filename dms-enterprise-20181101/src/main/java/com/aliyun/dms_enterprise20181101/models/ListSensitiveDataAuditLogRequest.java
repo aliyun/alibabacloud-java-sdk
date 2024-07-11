@@ -6,65 +6,96 @@ import com.aliyun.tea.*;
 public class ListSensitiveDataAuditLogRequest extends TeaModel {
     /**
      * <p>The name of the column that contains sensitive data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ExampleColumnName</p>
      */
     @NameInMap("ColumnName")
     public String columnName;
 
     /**
      * <p>The name of the database that stores the sensitive data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ExampleDbName</p>
      */
     @NameInMap("DbName")
     public String dbName;
 
     /**
      * <p>The end of the time range for which you want to query the audit logs for sensitive information. Specify the time in the yyyy-MM-DD HH:mm:ss format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-11-18 11:00:00</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The function module whose audit logs you want to query for sensitive data. If you do not specify this parameter, all audit logs are queried. Valid values:</p>
-     * <br>
-     * <p>*   **SQL_CONSOLE**: data query</p>
-     * <p>*   **SQL_CONSOLE_EXPORT**: query result export</p>
-     * <p>*   **DATA_CHANGE**: data change</p>
-     * <p>*   **DATA_EXPORT**: data export</p>
+     * <ul>
+     * <li><strong>SQL_CONSOLE</strong>: data query</li>
+     * <li><strong>SQL_CONSOLE_EXPORT</strong>: query result export</li>
+     * <li><strong>DATA_CHANGE</strong>: data change</li>
+     * <li><strong>DATA_EXPORT</strong>: data export</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>SQL_CONSOLE</p>
      */
     @NameInMap("ModuleName")
     public String moduleName;
 
     /**
      * <p>The username of the requester.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ExampleOpUserName</p>
      */
     @NameInMap("OpUserName")
     public String opUserName;
 
     /**
      * <p>The number of the page to return.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page. Example: 100</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The beginning of the time range for which you want to query the audit logs for sensitive information. Specify the time in the yyyy-MM-DD HH:mm:ss format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-11-18 10:00:00</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
      * <p>The name of the table that stores the sensitive data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ExampleTableName</p>
      */
     @NameInMap("TableName")
     public String tableName;
 
     /**
      * <p>The ID of the tenant.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3***</p>
      */
     @NameInMap("Tid")
     public Long tid;

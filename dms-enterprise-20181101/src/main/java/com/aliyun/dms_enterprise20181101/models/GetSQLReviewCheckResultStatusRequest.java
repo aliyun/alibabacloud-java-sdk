@@ -5,15 +5,20 @@ import com.aliyun.tea.*;
 
 public class GetSQLReviewCheckResultStatusRequest extends TeaModel {
     /**
-     * <p>The ID of the ticket. You can obtain the ticket ID from the response parameters of the [CreateSQLReviewOrder](https://help.aliyun.com/document_detail/257777.html) operation.</p>
-     * <br>
+     * <p>The ID of the ticket. You can obtain the ticket ID from the response parameters of the <a href="https://help.aliyun.com/document_detail/257777.html">CreateSQLReviewOrder</a> operation.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123321</p>
      */
     @NameInMap("OrderId")
     public Long orderId;
 
     /**
-     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) or [ListUserTenants](https://help.aliyun.com/document_detail/198074.html) operation to obtain the ID of the tenant.</p>
+     * <p>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> or <a href="https://help.aliyun.com/document_detail/198074.html">ListUserTenants</a> operation to obtain the ID of the tenant.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Tid")
     public Long tid;

@@ -6,27 +6,40 @@ import com.aliyun.tea.*;
 public class SearchDataTrackResultResponseBody extends TeaModel {
     /**
      * <p>The error code returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0C1CB646-1DE4-4AD0-B4A4-7D47DD52E931</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request was successful.</p>
-     * <p>*   **false**: The request failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -97,37 +110,53 @@ public class SearchDataTrackResultResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("EventId")
         public Long eventId;
 
         /**
          * <p>The length of the event content. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4324</p>
          */
         @NameInMap("EventLength")
         public Long eventLength;
 
         /**
          * <p>The event time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-23 10:25:47</p>
          */
         @NameInMap("EventTimestamp")
         public String eventTimestamp;
 
         /**
          * <p>The type of the event. Valid values:</p>
-         * <br>
-         * <p>*   **WRITE_ROWS**: indicates an INSERT operation.</p>
-         * <p>*   **UPDATE_ROWS**: indicates an UPDATE operation.</p>
-         * <p>*   **DELETE_ROWS**: indicates a DELETE operation.</p>
-         * <p>*   **EXT_WRITE_ROWS**: indicates an INSERT operation, which is equivalent to WRITE_ROWS.</p>
-         * <p>*   **EXT_UPDATE_ROWS**: indicates an UPDATE operation, which is equivalent to UPDATE_ROWS.</p>
-         * <p>*   **EXT_DELETE_ROWS**: indicates a DELETE operation, which is equivalent to DELETE_ROWS.</p>
+         * <ul>
+         * <li><strong>WRITE_ROWS</strong>: indicates an INSERT operation.</li>
+         * <li><strong>UPDATE_ROWS</strong>: indicates an UPDATE operation.</li>
+         * <li><strong>DELETE_ROWS</strong>: indicates a DELETE operation.</li>
+         * <li><strong>EXT_WRITE_ROWS</strong>: indicates an INSERT operation, which is equivalent to WRITE_ROWS.</li>
+         * <li><strong>EXT_UPDATE_ROWS</strong>: indicates an UPDATE operation, which is equivalent to UPDATE_ROWS.</li>
+         * <li><strong>EXT_DELETE_ROWS</strong>: indicates a DELETE operation, which is equivalent to DELETE_ROWS.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>UPDATE_ROWS</p>
          */
         @NameInMap("EventType")
         public String eventType;
 
         /**
          * <p>The SQL statements used to roll back the data change.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-- Timestamp:2023-04-23 10:25:47 #1\r\nUPDATE <code>dc_test</code>.<code>tb_chunk_dml</code> SET <code>id</code>=1 , <code>gmt_create</code>=\&quot;2021-09-30T00:00:00\&quot; , <code>content</code>=\&quot;2023-03-30 14:51:50\&quot; , <code>c1</code>=\&quot;2023-04-17 13:42:03\&quot; , <code>c_id</code>=1 , <code>c13425</code>=\&quot;b\\\&quot;\&quot; , <code>c432532535</code>= null , <code>c1432</code>= null , <code>c143243253</code>= null , <code>c1432535</code>= null , <code>c43125325</code>= null , <code>c3425325</code>= null WHERE  (<code>id</code>=1)&quot;</p>
          */
         @NameInMap("RollSQL")
         public String rollSQL;
@@ -198,27 +227,40 @@ public class SearchDataTrackResultResponseBody extends TeaModel {
     public static class SearchDataTrackResultResponseBodyTrackResultTableInfoListColumns extends TeaModel {
         /**
          * <p>The name of the column.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>basic_platform</p>
          */
         @NameInMap("ColumnName")
         public String columnName;
 
         /**
          * <p>The position of the column.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ColumnPosition")
         public Integer columnPosition;
 
         /**
          * <p>The data type of the column. Examples: BIGINT, INT, and VARCHAR.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BIGINT</p>
          */
         @NameInMap("ColumnType")
         public String columnType;
 
         /**
          * <p>Indicates whether the column is a virtual column. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Fictive")
         public Boolean fictive;
@@ -271,18 +313,27 @@ public class SearchDataTrackResultResponseBody extends TeaModel {
 
         /**
          * <p>The description of the column.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>auto-description</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prod_eb_vas</p>
          */
         @NameInMap("SchemaName")
         public String schemaName;
 
         /**
          * <p>The name of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>import_table_test1</p>
          */
         @NameInMap("TableName")
         public String tableName;
@@ -341,6 +392,9 @@ public class SearchDataTrackResultResponseBody extends TeaModel {
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>109</p>
          */
         @NameInMap("TotalCount")
         public Long totalCount;

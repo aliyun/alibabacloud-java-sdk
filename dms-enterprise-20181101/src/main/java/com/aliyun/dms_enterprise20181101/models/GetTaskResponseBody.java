@@ -6,27 +6,40 @@ import com.aliyun.tea.*;
 public class GetTaskResponseBody extends TeaModel {
     /**
      * <p>The error code returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The ID of the request. You can use the ID to query logs and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7838266C-E17B-58F4-B072-4DC356B58258</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request was successful.</p>
-     * <p>*   **false**: The request failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,12 +98,18 @@ public class GetTaskResponseBody extends TeaModel {
     public static class GetTaskResponseBodyTask extends TeaModel {
         /**
          * <p>The ID of the task flow to which the node belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7321</p>
          */
         @NameInMap("DagId")
         public Long dagId;
 
         /**
          * <p>The position of the node on the Directed Acyclic Graph (DAG).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;{\&quot;x\&quot;:0,\&quot;y\&quot;:0,\&quot;layoutType\&quot;:\&quot;Horizontal\&quot;}&quot;,  &quot;id&quot;: 51***}</p>
          */
         @NameInMap("GraphParam")
         public String graphParam;
@@ -103,30 +122,45 @@ public class GetTaskResponseBody extends TeaModel {
 
         /**
          * <p>The configuration for the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;dbList\&quot;:[{\&quot;instanceId\&quot;:177****}&quot;   }</p>
          */
         @NameInMap("NodeContent")
         public String nodeContent;
 
         /**
          * <p>The name of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Cross-database Spark SQL-1</p>
          */
         @NameInMap("NodeName")
         public String nodeName;
 
         /**
          * <p>The output variables for the node. This parameter is available only for some types of nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{ &quot;outputs&quot;:[ &quot;extractMethod&quot;:&quot;json&quot; , &quot;variableName&quot;:&quot;var&quot;,   &quot;description&quot;:&quot;demo desc&quot; } ] }</p>
          */
         @NameInMap("NodeOutput")
         public String nodeOutput;
 
         /**
-         * <p>The type of the node. For more information about the valid values for this parameter, see [NodeType parameter](https://help.aliyun.com/document_detail/424705.html).</p>
+         * <p>The type of the node. For more information about the valid values for this parameter, see <a href="https://help.aliyun.com/document_detail/424705.html">NodeType parameter</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SPARK_SQL</p>
          */
         @NameInMap("NodeType")
         public String nodeType;
 
         /**
          * <p>The time variables configured for the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;variables\&quot;:[{\&quot;name\&quot;:\&quot;Today\&quot;,\&quot;pattern\&quot;:\&quot;yyyy-MM-dd|+1d\&quot;}]}</p>
          */
         @NameInMap("TimeVariables")
         public String timeVariables;

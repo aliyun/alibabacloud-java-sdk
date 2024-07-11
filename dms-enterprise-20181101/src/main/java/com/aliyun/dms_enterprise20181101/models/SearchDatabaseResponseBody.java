@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class SearchDatabaseResponseBody extends TeaModel {
     /**
      * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E0D21075-CD3E-4D98-8264-FD8AD04A63B6</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -30,15 +39,22 @@ public class SearchDatabaseResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the request is successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request is successful.</p>
-     * <p>*   **false**: The request fails.</p>
+     * <ul>
+     * <li><strong>true</strong>: The request is successful.</li>
+     * <li><strong>false</strong>: The request fails.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -137,65 +153,97 @@ public class SearchDatabaseResponseBody extends TeaModel {
     public static class SearchDatabaseResponseBodySearchDatabaseListSearchDatabase extends TeaModel {
         /**
          * <p>The alias of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_rds</p>
          */
         @NameInMap("Alias")
         public String alias;
 
         /**
          * <p>The name of the catalog to which the database belongs.</p>
-         * <br>
-         * <p>> If the type of the database engine is PostgreSQL, the name of the database is displayed.</p>
+         * <blockquote>
+         * <p>If the type of the database engine is PostgreSQL, the name of the database is displayed.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>dmstest</p>
          */
         @NameInMap("CatalogName")
         public String catalogName;
 
         /**
          * <p>The ID of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2528****</p>
          */
         @NameInMap("DatabaseId")
         public String databaseId;
 
         /**
          * <p>The name of the data link for cross-database queries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>datalink_name</p>
          */
         @NameInMap("DatalinkName")
         public String datalinkName;
 
         /**
          * <p>The type of the database engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql</p>
          */
         @NameInMap("DbType")
         public String dbType;
 
         /**
          * <p>The ID of the user who assumes the database administrator (DBA) role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10****</p>
          */
         @NameInMap("DbaId")
         public String dbaId;
 
         /**
          * <p>The encoding method of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>utf8</p>
          */
         @NameInMap("Encoding")
         public String encoding;
 
         /**
-         * <p>The environment type of the database. For more information, see [Change the environment type of an instance](https://help.aliyun.com/document_detail/163309.html).</p>
+         * <p>The environment type of the database. For more information, see <a href="https://help.aliyun.com/document_detail/163309.html">Change the environment type of an instance</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("EnvType")
         public String envType;
 
         /**
          * <p>The endpoint of the instance in which the database resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-xxxx.mysql.rds.aliyuncs.com</p>
          */
         @NameInMap("Host")
         public String host;
 
         /**
          * <p>Indicates whether the database is a logical database. Valid values:</p>
-         * <br>
-         * <p>*   **true**: The database is a logical database.</p>
-         * <p>*   **false**: The database is not a logical database.</p>
+         * <ul>
+         * <li><strong>true</strong>: The database is a logical database.</li>
+         * <li><strong>false</strong>: The database is not a logical database.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Logic")
         public Boolean logic;
@@ -214,24 +262,36 @@ public class SearchDatabaseResponseBody extends TeaModel {
 
         /**
          * <p>The port of the instance in which the database resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3306</p>
          */
         @NameInMap("Port")
         public Integer port;
 
         /**
          * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("SchemaName")
         public String schemaName;
 
         /**
          * <p>The name that is used to search for the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:test@xxx.xxx.xxx.xxx">test@xxx.xxx.xxx.xxx</a>:3306</p>
          */
         @NameInMap("SearchName")
         public String searchName;
 
         /**
          * <p>The system ID (SID) of the instance in which the database resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testSid</p>
          */
         @NameInMap("Sid")
         public String sid;

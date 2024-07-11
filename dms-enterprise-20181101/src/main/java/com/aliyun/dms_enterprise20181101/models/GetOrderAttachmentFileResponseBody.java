@@ -6,36 +6,53 @@ import com.aliyun.tea.*;
 public class GetOrderAttachmentFileResponseBody extends TeaModel {
     /**
      * <p>The error code returned. Take note of the following rules:</p>
-     * <br>
-     * <p>*   The **ErrorCode** parameter is not returned if the request is successful.</p>
-     * <p>*   The **ErrorCode** parameter is returned if the request fails. For more information, see the **Error codes** section of this topic.</p>
+     * <ul>
+     * <li>The <strong>ErrorCode</strong> parameter is not returned if the request is successful.</li>
+     * <li>The <strong>ErrorCode</strong> parameter is returned if the request fails. For more information, see the <strong>Error codes</strong> section of this topic.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The download URL of the attachment.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://dmsxxx">https://dmsxxx</a></p>
      */
     @NameInMap("FileUrl")
     public String fileUrl;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FE8EE2F1-4880-46BC-A704-5CF63EAF9A04</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request was successful.</p>
-     * <p>*   **false**: The request failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

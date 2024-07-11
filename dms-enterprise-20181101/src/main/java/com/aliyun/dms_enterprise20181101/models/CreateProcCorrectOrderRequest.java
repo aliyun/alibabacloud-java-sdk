@@ -4,11 +4,18 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class CreateProcCorrectOrderRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>order_attachment.txt</p>
+     */
     @NameInMap("AttachmentKey")
     public String attachmentKey;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Comment")
     public String comment;
@@ -22,6 +29,10 @@ public class CreateProcCorrectOrderRequest extends TeaModel {
     @NameInMap("RelatedUserList")
     public java.util.List<Long> relatedUserList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4***</p>
+     */
     @NameInMap("Tid")
     public Long tid;
 
@@ -73,12 +84,18 @@ public class CreateProcCorrectOrderRequest extends TeaModel {
     public static class CreateProcCorrectOrderRequestParamDbItemList extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>19721978</p>
          */
         @NameInMap("DbId")
         public Long dbId;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Logic")
         public Boolean logic;
@@ -107,6 +124,10 @@ public class CreateProcCorrectOrderRequest extends TeaModel {
     }
 
     public static class CreateProcCorrectOrderRequestParam extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Classify")
         public String classify;
 
@@ -121,16 +142,35 @@ public class CreateProcCorrectOrderRequest extends TeaModel {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DELIMITER ///
+         * CREATE PROCEDURE GetAllProducts()
+         * BEGIN
+         * SELECT *  FROM base_user;
+         * END ///</p>
          */
         @NameInMap("ExecSQL")
         public String execSQL;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test_rollback.sql</p>
+         */
         @NameInMap("RollbackAttachmentName")
         public String rollbackAttachmentName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>empty</p>
+         */
         @NameInMap("RollbackSQL")
         public String rollbackSQL;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TEXT</p>
+         */
         @NameInMap("RollbackSqlType")
         public String rollbackSqlType;
 

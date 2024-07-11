@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ListInstanceLoginAuditLogResponseBody extends TeaModel {
     /**
      * <p>The error code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>InvalidPageSize</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Specified parameter PageSize is not valid.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
@@ -24,21 +30,31 @@ public class ListInstanceLoginAuditLogResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>074CE7C9-4F9C-5B62-89BC-7B4914A3****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request was successful.</p>
-     * <p>*   **false**: The request failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -99,42 +115,63 @@ public class ListInstanceLoginAuditLogResponseBody extends TeaModel {
     public static class ListInstanceLoginAuditLogResponseBodyInstanceLoginAuditLogListInstanceLoginAuditLog extends TeaModel {
         /**
          * <p>The database account that is used to log on to the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_User</p>
          */
         @NameInMap("DbUser")
         public String dbUser;
 
         /**
          * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>177****</p>
          */
         @NameInMap("InstanceId")
         public Long instanceId;
 
         /**
          * <p>The name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-bp144d5ky4l4rli0417****.mysql.rds.aliyuncs.com:3306[rm-bp144d5ky4l4r****]</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
          * <p>The time when the user performed an operation on the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-11-18 11:13:26</p>
          */
         @NameInMap("OpTime")
         public String opTime;
 
         /**
          * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>117.36.XX.XX,100.104.XX.XX</p>
          */
         @NameInMap("RequestIp")
         public String requestIp;
 
         /**
          * <p>The ID of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12****</p>
          */
         @NameInMap("UserId")
         public Long userId;
 
         /**
          * <p>The alias of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_UserName</p>
          */
         @NameInMap("UserName")
         public String userName;

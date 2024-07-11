@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class ListSensitivityLevelResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4E1D2B4D-3E53-4ABC-999D-1D2520B3471A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -30,9 +39,13 @@ public class ListSensitivityLevelResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request was successful.</p>
-     * <p>*   **false**: The request failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,27 +98,40 @@ public class ListSensitivityLevelResponseBody extends TeaModel {
     public static class ListSensitivityLevelResponseBodySensitivityLevelList extends TeaModel {
         /**
          * <p>Indicates whether the fields of the sensitive level are displayed in plaintext.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("IsPlain")
         public Boolean isPlain;
 
         /**
          * <p>The name of the sensitive level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>S2</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The ID of the classification template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1070</p>
          */
         @NameInMap("TemplateId")
         public String templateId;
 
         /**
          * <p>The type of the classification template. Valid values:</p>
-         * <br>
-         * <p>*   **INNER**: a built-in template.</p>
-         * <p>*   **USER_DEFINE**: a custom template.</p>
+         * <ul>
+         * <li><strong>INNER</strong>: a built-in template.</li>
+         * <li><strong>USER_DEFINE</strong>: a custom template.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>INNER</p>
          */
         @NameInMap("TemplateType")
         public String templateType;

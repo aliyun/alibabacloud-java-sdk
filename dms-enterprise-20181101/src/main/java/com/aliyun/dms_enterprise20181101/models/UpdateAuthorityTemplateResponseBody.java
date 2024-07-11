@@ -12,33 +12,49 @@ public class UpdateAuthorityTemplateResponseBody extends TeaModel {
 
     /**
      * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4E1D2B4D-3E53-4ABC-999D-1D2520B3471A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request was successful.</p>
-     * <p>*   **false**: The request failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The ID of the tenant.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3***</p>
      */
     @NameInMap("Tid")
     public Long tid;
@@ -99,24 +115,36 @@ public class UpdateAuthorityTemplateResponseBody extends TeaModel {
     public static class UpdateAuthorityTemplateResponseBodyAuthorityTemplateView extends TeaModel {
         /**
          * <p>The ID of the user who created the permission template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12***</p>
          */
         @NameInMap("CreatorId")
         public Long creatorId;
 
         /**
          * <p>The description of the permission template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This template is used for business testing.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the permission template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test template.</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The ID of the permission template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1563</p>
          */
         @NameInMap("TemplateId")
         public Long templateId;

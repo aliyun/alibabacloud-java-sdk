@@ -12,33 +12,49 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
 
     /**
      * <p>The error code returned if the call failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NoPermission</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message that is returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>User [19929582****] not exist</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The ID of the request, which is used to query logs and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4161CE36-28DF-5191-8A6F-A17076A0B124</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>Tracks service requests.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0a06e1e316757357507896067d3780</p>
      */
     @NameInMap("TraceId")
     public String traceId;
@@ -99,125 +115,185 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
     public static class GetDataArchiveOrderDetailResponseBodyDataArchiveOrderDetailPluginExtraDataDagInfo extends TeaModel {
         /**
          * <p>The ID of the user who created the task flow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>59****</p>
          */
         @NameInMap("CreatorId")
         public String creatorId;
 
         /**
          * <p>The start time for scheduling. The task flow is not scheduled before this point in time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1970-01-01</p>
          */
         @NameInMap("CronBeginDate")
         public String cronBeginDate;
 
         /**
          * <p>The end time for scheduling. The task flow is not scheduled after this point in time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9999-01-01</p>
          */
         @NameInMap("CronEndDate")
         public String cronEndDate;
 
         /**
          * <p>Indicates whether the archiving task is a scheduled task. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("CronTrigger")
         public Boolean cronTrigger;
 
         /**
          * <p>Indicates whether the task is used to develop warehouses.</p>
-         * <br>
-         * <p>>  This field is a retained field that is not in use.</p>
+         * <blockquote>
+         * <p> This field is a retained field that is not in use.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("DWDevelop")
         public Boolean DWDevelop;
 
         /**
          * <p>The name of the workflow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>data-archive-9099197</p>
          */
         @NameInMap("DagName")
         public String dagName;
 
         /**
          * <p>The ID of the owner of the workflow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13****</p>
          */
         @NameInMap("DagOwnerId")
         public String dagOwnerId;
 
         /**
          * <p>The ID of the deployment record.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>93***</p>
          */
         @NameInMap("DeployId")
         public Long deployId;
 
         /**
          * <p>The description of the workflow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>order id:9099197</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The ID of the editable workflow version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24***</p>
          */
         @NameInMap("EditDagId")
         public Long editDagId;
 
         /**
          * <p>The time when the workflow was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-05-15 16:00:48</p>
          */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
         /**
          * <p>The time when the workflow was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-06-15 16:00:48</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
 
         /**
          * <p>The ID of the task flow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24***</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>Indicates whether the workflow is public. Valid values:</p>
-         * <br>
-         * <p>*   **0**: not public.</p>
-         * <p>*   **1**: public.</p>
+         * <ul>
+         * <li><strong>0</strong>: not public.</li>
+         * <li><strong>1</strong>: public.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("IsPublic")
         public Long isPublic;
 
         /**
          * <p>Indicates whether the task is a historical task. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Legacy")
         public Boolean legacy;
 
         /**
          * <p>Indicates whether the task was created by the system. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("System")
         public Boolean system;
 
         /**
          * <p>The tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5***</p>
          */
         @NameInMap("TenantId")
         public String tenantId;
 
         /**
          * <p>Indicates whether the workflow is triggered to run once. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("TriggerOnce")
         public Boolean triggerOnce;
@@ -375,62 +451,91 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
 
     public static class GetDataArchiveOrderDetailResponseBodyDataArchiveOrderDetailPluginExtraDataDbBaseInfoStandardGroup extends TeaModel {
         /**
-         * <p>The type of the instance engine. For information about the valid values of this parameter, see [DbType parameter](https://help.aliyun.com/document_detail/198106.html).</p>
+         * <p>The type of the instance engine. For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/198106.html">DbType parameter</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         @NameInMap("DbType")
         public String dbType;
 
         /**
          * <p>The description of the security rule set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adb_mysql default</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>Indicates whether the instance is managed in Flexible Management or Stable Change mode. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("FreeOrStable")
         public Boolean freeOrStable;
 
         /**
          * <p>The time when the security rule was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-05-24 14:12:32</p>
          */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
         /**
          * <p>The time when the security rule was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-05-25 14:12:32</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
 
         /**
          * <p>The type of the control mode of the instance. Valid values:</p>
-         * <br>
-         * <p>*   **COMMON**: The instance is managed in Security Collaboration mode.</p>
-         * <p>*   **NONE_CONTROL**: The instance is managed in Flexible Management mode.</p>
-         * <p>*   **STABLE**: The instance is managed in Stable Change mode.</p>
+         * <ul>
+         * <li><strong>COMMON</strong>: The instance is managed in Security Collaboration mode.</li>
+         * <li><strong>NONE_CONTROL</strong>: The instance is managed in Flexible Management mode.</li>
+         * <li><strong>STABLE</strong>: The instance is managed in Stable Change mode.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>COMMON</p>
          */
         @NameInMap("GroupMode")
         public String groupMode;
 
         /**
          * <p>The name of the security rule that corresponds to the control mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adb_mysql default</p>
          */
         @NameInMap("GroupName")
         public String groupName;
 
         /**
          * <p>The ID of the security rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24***</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The user ID of the last modified security rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12****</p>
          */
         @NameInMap("LastMenderId")
         public Long lastMenderId;
@@ -517,160 +622,230 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
     public static class GetDataArchiveOrderDetailResponseBodyDataArchiveOrderDetailPluginExtraDataDbBaseInfo extends TeaModel {
         /**
          * <p>The alias of the database instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tf-testAccDMSEnterpriseLogicDatabase853****</p>
          */
         @NameInMap("Alias")
         public String alias;
 
         /**
          * <p>The timeout period of queries on the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>600</p>
          */
         @NameInMap("AlterTimeout")
         public Long alterTimeout;
 
         /**
          * <p>Indicates whether access control is enabled for data assets. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("AssetControl")
         public Boolean assetControl;
 
         /**
          * <p>The name of the instance in the instance list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("CatalogName")
         public String catalogName;
 
         /**
          * <p>Indicates whether the instance is added to the DMS whitelist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>whitelist_done</p>
          */
         @NameInMap("ClusterNode")
         public String clusterNode;
 
         /**
-         * <p>The ID of the database. You can call the [SearchDatabase](https://help.aliyun.com/document_detail/141876.html) operation to query the ID of the database.</p>
-         * <br>
-         * <p>>  You can call the [ListDatabases](https://help.aliyun.com/document_detail/141873.html) operation to query the ID of a physical database or the [ListLogicDatabases](https://help.aliyun.com/document_detail/141874.html) operation to query the ID of a logical database.</p>
+         * <p>The ID of the database. You can call the <a href="https://help.aliyun.com/document_detail/141876.html">SearchDatabase</a> operation to query the ID of the database.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/141873.html">ListDatabases</a> operation to query the ID of a physical database or the <a href="https://help.aliyun.com/document_detail/141874.html">ListLogicDatabases</a> operation to query the ID of a logical database.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>348****</p>
          */
         @NameInMap("DbId")
         public Long dbId;
 
         /**
-         * <p>The type of the database. For information about the valid values of this parameter, see [DbType parameter](https://help.aliyun.com/document_detail/198106.html).</p>
+         * <p>The type of the database. For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/198106.html">DbType parameter</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         @NameInMap("DbType")
         public String dbType;
 
         /**
          * <p>The ID of the database administrator (DBA) of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16****</p>
          */
         @NameInMap("DbaId")
         public Long dbaId;
 
         /**
          * <p>The nickname of the DBA of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DBA</p>
          */
         @NameInMap("DbaName")
         public String dbaName;
 
         /**
          * <p>The complete endpoint of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test@rm-2ze756u8837****.mysql.rds.aliyuncs.com:3306 [test]</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The encoding format of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>utf8</p>
          */
         @NameInMap("Encoding")
         public String encoding;
 
         /**
          * <p>The type of the environment to which the database belongs. Valid values:</p>
-         * <br>
-         * <p>*   **product**: production environment</p>
-         * <p>*   **dev**: development environment</p>
-         * <p>*   **pre**: staging environment</p>
-         * <p>*   **test**: test environment</p>
-         * <p>*   **sit**: system integration testing (SIT) environment</p>
-         * <p>*   **uat**: user acceptance testing (UAT) environment</p>
-         * <p>*   **pet**: stress testing environment</p>
-         * <p>*   **stag**: STAG environment</p>
+         * <ul>
+         * <li><strong>product</strong>: production environment</li>
+         * <li><strong>dev</strong>: development environment</li>
+         * <li><strong>pre</strong>: staging environment</li>
+         * <li><strong>test</strong>: test environment</li>
+         * <li><strong>sit</strong>: system integration testing (SIT) environment</li>
+         * <li><strong>uat</strong>: user acceptance testing (UAT) environment</li>
+         * <li><strong>pet</strong>: stress testing environment</li>
+         * <li><strong>stag</strong>: STAG environment</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>product</p>
          */
         @NameInMap("EnvType")
         public String envType;
 
         /**
          * <p>Indicates whether the instance needs special attention. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Follow")
         public Boolean follow;
 
         /**
          * <p>The endpoint that is used to connect to the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-2ze756u8837****.mysql.rds.aliyuncs.com</p>
          */
         @NameInMap("Host")
         public String host;
 
         /**
          * <p>The region in which the database instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         @NameInMap("Idc")
         public String idc;
 
         /**
          * <p>The name of the region in which the database instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         @NameInMap("IdcTitle")
         public String idcTitle;
 
         /**
          * <p>The ID of the instance to which the database belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>175****</p>
          */
         @NameInMap("InstanceId")
         public Long instanceId;
 
         /**
          * <p>The source of the database instance.Valid values:</p>
-         * <br>
-         * <p>*   **RDS**: an ApsaraDB RDS instance.</p>
-         * <p>*   **ECS_OWN**: a self-managed database deployed on an Elastic Compute Service (ECS) instance.</p>
-         * <p>*   **PUBLIC_OWN**: a self-managed database instance that is connected over the Internet.</p>
-         * <p>*   **VPC_ID**: a self-managed database instance in a virtual private cloud (VPC) that is connected over Express Connect circuits.</p>
-         * <p>*   **GATEWAY**: a database instance connected by using a database gateway.</p>
+         * <ul>
+         * <li><strong>RDS</strong>: an ApsaraDB RDS instance.</li>
+         * <li><strong>ECS_OWN</strong>: a self-managed database deployed on an Elastic Compute Service (ECS) instance.</li>
+         * <li><strong>PUBLIC_OWN</strong>: a self-managed database instance that is connected over the Internet.</li>
+         * <li><strong>VPC_ID</strong>: a self-managed database instance in a virtual private cloud (VPC) that is connected over Express Connect circuits.</li>
+         * <li><strong>GATEWAY</strong>: a database instance connected by using a database gateway.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>RDS</p>
          */
         @NameInMap("InstanceSource")
         public String instanceSource;
 
         /**
          * <p>The time when the database information was last obtained.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-05-14 18:34:45</p>
          */
         @NameInMap("LastSyncTime")
         public String lastSyncTime;
 
         /**
          * <p>The instance level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>medium</p>
          */
         @NameInMap("Level")
         public String level;
 
         /**
          * <p>Indicates whether the database is logical. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Logic")
         public Boolean logic;
 
         /**
-         * <p>The IDs of the owners of the databases, which are stored as an array. You can call the [GetUser](https://help.aliyun.com/document_detail/147098.html) or [ListUsers](https://help.aliyun.com/document_detail/141938.html) operation to query the IDs of the owners.</p>
-         * <br>
-         * <p>>  The value of OwnerIds is the same as the value of UserId</p>
+         * <p>The IDs of the owners of the databases, which are stored as an array. You can call the <a href="https://help.aliyun.com/document_detail/147098.html">GetUser</a> or <a href="https://help.aliyun.com/document_detail/141938.html">ListUsers</a> operation to query the IDs of the owners.</p>
+         * <blockquote>
+         * <p> The value of OwnerIds is the same as the value of UserId</p>
+         * </blockquote>
          */
         @NameInMap("OwnerIds")
         public java.util.List<Long> ownerIds;
@@ -683,18 +858,27 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
 
         /**
          * <p>The port that is used to connect to the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3306</p>
          */
         @NameInMap("Port")
         public Long port;
 
         /**
          * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("SchemaName")
         public String schemaName;
 
         /**
          * <p>The name that is used to search for the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test@rm-2ze756u8837****.mysql.rds.aliyuncs.com:3306 [test]</p>
          */
         @NameInMap("SearchName")
         public String searchName;
@@ -707,29 +891,42 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
 
         /**
          * <p>The status of the database. Valid values:</p>
-         * <br>
-         * <p>*   **NORMAL**: The database is running as expected.</p>
-         * <p>*   **DISABLE**: The database is disabled.</p>
-         * <p>*   **OFFLINE**: The database is unpublished.</p>
-         * <p>*   **NOT_EXIST**: The database does not exist.</p>
+         * <ul>
+         * <li><strong>NORMAL</strong>: The database is running as expected.</li>
+         * <li><strong>DISABLE</strong>: The database is disabled.</li>
+         * <li><strong>OFFLINE</strong>: The database is unpublished.</li>
+         * <li><strong>NOT_EXIST</strong>: The database does not exist.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         @NameInMap("State")
         public String state;
 
         /**
          * <p>The number of tables.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>201</p>
          */
         @NameInMap("TableCount")
         public Long tableCount;
 
         /**
          * <p>The name of TNS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TNS_4010</p>
          */
         @NameInMap("TnsName")
         public String tnsName;
 
         /**
          * <p>The unit type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         @NameInMap("UnitType")
         public String unitType;
@@ -992,88 +1189,134 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
     public static class GetDataArchiveOrderDetailResponseBodyDataArchiveOrderDetailPluginExtraDataInstances extends TeaModel {
         /**
          * <p>The business time of the task flow. The time is in the yyyy-MM-DD HH:mm:ss format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-05-14 16:00:57</p>
          */
         @NameInMap("BusinessTime")
         public String businessTime;
 
         /**
-         * <p>The ID of the task. You can call the [ListTaskFlow](https://help.aliyun.com/document_detail/424565.html) or [ListLhTaskFlowAndScenario](https://help.aliyun.com/document_detail/426672.html) operation to query the task flow ID.</p>
+         * <p>The ID of the task. You can call the <a href="https://help.aliyun.com/document_detail/424565.html">ListTaskFlow</a> or <a href="https://help.aliyun.com/document_detail/426672.html">ListLhTaskFlowAndScenario</a> operation to query the task flow ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>37***</p>
          */
         @NameInMap("DagId")
         public Long dagId;
 
         /**
          * <p>The end time of the task flow. The time is in the yyyy-MM-DD HH:mm:ss format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-06-04 15:14:00</p>
          */
         @NameInMap("EndTime")
         public String endTime;
 
         /**
          * <p>The time when the task flow was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-05-14 16:00:57</p>
          */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
         /**
          * <p>The time when the task flow was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-05-14 16:00:57</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
 
         /**
          * <p>The ID of the historical task flow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32***</p>
          */
         @NameInMap("HistoryDagId")
         public Long historyDagId;
 
         /**
          * <p>The instance ID of the running task flow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24***</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The running scenario of the last task flow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *       &quot;nodes&quot;: [
+         *             48**
+         *       ],
+         *       &quot;edges&quot;: {}
+         * }</p>
          */
         @NameInMap("LastRunningContext")
         public String lastRunningContext;
 
         /**
          * <p>The running details of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-05-15 16:37:48[GMT+08:00] INFO - Resource Control is active!\n2023-05-15 16:37:48[GMT+08:00] INFO - Starting job j_4834 at Mon May 15 16:37:48 CST 2023</p>
          */
         @NameInMap("Msg")
         public String msg;
 
         /**
          * <p>The status of the task. Valid values:</p>
-         * <br>
-         * <p>*   **0**: waiting for execution.</p>
-         * <p>*   **1**: running.</p>
-         * <p>*   **2**: suspended.</p>
-         * <p>*   **3**: failed.</p>
-         * <p>*   **4**: successful.</p>
-         * <p>*   **5**: complete.</p>
+         * <ul>
+         * <li><strong>0</strong>: waiting for execution.</li>
+         * <li><strong>1</strong>: running.</li>
+         * <li><strong>2</strong>: suspended.</li>
+         * <li><strong>3</strong>: failed.</li>
+         * <li><strong>4</strong>: successful.</li>
+         * <li><strong>5</strong>: complete.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         @NameInMap("Status")
         public Long status;
 
         /**
          * <p>The tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5***</p>
          */
         @NameInMap("TenantId")
         public String tenantId;
 
         /**
          * <p>The mode in which the task flow was triggered. Valid values:</p>
-         * <br>
-         * <p>*   **0**: The task flow was triggered based on a schedule.</p>
-         * <p>*   **1**: The task flow was manually triggered.</p>
+         * <ul>
+         * <li><strong>0</strong>: The task flow was triggered based on a schedule.</li>
+         * <li><strong>1</strong>: The task flow was manually triggered.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("TriggerType")
         public Long triggerType;
 
         /**
          * <p>The version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Version")
         public String version;
@@ -1192,6 +1435,9 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
     public static class GetDataArchiveOrderDetailResponseBodyDataArchiveOrderDetailPluginExtraDataNextFireTimeResult extends TeaModel {
         /**
          * <p>The type of scheduled triggering.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NOT_SET</p>
          */
         @NameInMap("CronFireType")
         public String cronFireType;
@@ -1226,6 +1472,9 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
 
         /**
          * <p>The total number of archiving tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("InstanceTotal")
         public Long instanceTotal;
@@ -1244,18 +1493,31 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
 
         /**
          * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageIndex")
         public Long pageIndex;
 
         /**
          * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Long pageSize;
 
         /**
          * <p>The name of the temporary table that is generated by the archiving task (indicated by the archiving task ID).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *       &quot;803***&quot;: [
+         *             &quot;tmp_dms_21321_20230704144336_temp_test_check&quot;
+         *       ]
+         * }</p>
          */
         @NameInMap("TempTableNameMap")
         public java.util.Map<String, ?> tempTableNameMap;
@@ -1334,12 +1596,18 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
     public static class GetDataArchiveOrderDetailResponseBodyDataArchiveOrderDetailPluginParamTableIncludes extends TeaModel {
         /**
          * <p>The name of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tm_insured_cb</p>
          */
         @NameInMap("TableName")
         public String tableName;
 
         /**
          * <p>The filter conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>id&lt;1000 or gmt_create&lt;\&quot;2023-05-14 16:00:57\&quot;</p>
          */
         @NameInMap("TableWhere")
         public String tableWhere;
@@ -1370,21 +1638,31 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
     public static class GetDataArchiveOrderDetailResponseBodyDataArchiveOrderDetailPluginParam extends TeaModel {
         /**
          * <p>The type of the archiving destination.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>inner_oss</p>
          */
         @NameInMap("ArchiveMethod")
         public String archiveMethod;
 
         /**
          * <p>The schema of the database and table to be archived.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("DbSchema")
         public String dbSchema;
 
         /**
          * <p>Indicates whether the database is logical.</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Logic")
         public Boolean logic;
@@ -1397,12 +1675,18 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
 
         /**
          * <p>The running method, which indicates whether to run the task immediately or at a specific point in time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>now</p>
          */
         @NameInMap("RunMethod")
         public String runMethod;
 
         /**
          * <p>The ID of the source database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12***</p>
          */
         @NameInMap("SourceDatabaseId")
         public Long sourceDatabaseId;
@@ -1421,6 +1705,9 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the destination instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12***</p>
          */
         @NameInMap("TargetInstanceId")
         public String targetInstanceId;
@@ -1521,36 +1808,54 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
     public static class GetDataArchiveOrderDetailResponseBodyDataArchiveOrderDetail extends TeaModel {
         /**
          * <p>The description of the data archiving tickets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Archiving of test results</p>
          */
         @NameInMap("Comment")
         public String comment;
 
         /**
          * <p>The user who submitted the ticket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dmstest</p>
          */
         @NameInMap("Committer")
         public String committer;
 
         /**
          * <p>The ID of the user who submitted the ticket. The ID is a user ID and not the ID of an Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>26***</p>
          */
         @NameInMap("CommitterId")
         public Long committerId;
 
         /**
          * <p>The time when the ticket was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-05-15 16:00:48</p>
          */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
         /**
          * <p>The time when the ticket was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-05-23 16:00:48</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
 
         /**
          * <p>The ID of data archiving tickets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>868****</p>
          */
         @NameInMap("Id")
         public Long id;
@@ -1562,13 +1867,16 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
         public GetDataArchiveOrderDetailResponseBodyDataArchiveOrderDetailPluginExtraData pluginExtraData;
 
         /**
-         * <p>The ticket creation parameter. The value is a JSON string. For more information, see [PluginType parameter](https://help.aliyun.com/document_detail/429109.html).</p>
+         * <p>The ticket creation parameter. The value is a JSON string. For more information, see <a href="https://help.aliyun.com/document_detail/429109.html">PluginType parameter</a>.</p>
          */
         @NameInMap("PluginParam")
         public GetDataArchiveOrderDetailResponseBodyDataArchiveOrderDetailPluginParam pluginParam;
 
         /**
-         * <p>The plug-in type that corresponds to the type of the ticket. The plug-in type for data archiving is DATA_ARCHIVE. For more information, see [PluginType parameter](https://help.aliyun.com/document_detail/429109.html).</p>
+         * <p>The plug-in type that corresponds to the type of the ticket. The plug-in type for data archiving is DATA_ARCHIVE. For more information, see <a href="https://help.aliyun.com/document_detail/429109.html">PluginType parameter</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DATA_ARCHIVE</p>
          */
         @NameInMap("PluginType")
         public String pluginType;
@@ -1587,32 +1895,45 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
 
         /**
          * <p>The status code of the ticket. Valid values:</p>
-         * <br>
-         * <p>*   **new**: newly created.</p>
-         * <p>*   **toaudit**: being reviewed.</p>
-         * <p>*   **Approved**: approved.</p>
-         * <p>*   **reject**: rejected.</p>
-         * <p>*   **processing**: being executed.</p>
-         * <p>*   **Success**: successful.</p>
-         * <p>*   **closed**: disabled.</p>
+         * <ul>
+         * <li><strong>new</strong>: newly created.</li>
+         * <li><strong>toaudit</strong>: being reviewed.</li>
+         * <li><strong>Approved</strong>: approved.</li>
+         * <li><strong>reject</strong>: rejected.</li>
+         * <li><strong>processing</strong>: being executed.</li>
+         * <li><strong>Success</strong>: successful.</li>
+         * <li><strong>closed</strong>: disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>processing</p>
          */
         @NameInMap("StatusCode")
         public String statusCode;
 
         /**
          * <p>The status description of the ticket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a ticket task is being executed.</p>
          */
         @NameInMap("StatusDesc")
         public String statusDesc;
 
         /**
-         * <p>The ID of the approval process. You can call the [GetOrderBaseInfo](https://help.aliyun.com/document_detail/144642.html) operation to obtain the ID of the approval process.</p>
+         * <p>The ID of the approval process. You can call the <a href="https://help.aliyun.com/document_detail/144642.html">GetOrderBaseInfo</a> operation to obtain the ID of the approval process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>29****</p>
          */
         @NameInMap("WorkflowInstanceId")
         public Long workflowInstanceId;
 
         /**
          * <p>The description of the approval process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>approved</p>
          */
         @NameInMap("WorkflowStatusDesc")
         public String workflowStatusDesc;

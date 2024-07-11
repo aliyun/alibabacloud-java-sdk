@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ListSQLReviewOriginSQLResponseBody extends TeaModel {
     /**
      * <p>The error code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
@@ -24,18 +30,27 @@ public class ListSQLReviewOriginSQLResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0C1CB646-1DE4-4AD0-B4A4-7D47DD52E931</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The total number of the SQL statements.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -96,80 +111,115 @@ public class ListSQLReviewOriginSQLResponseBody extends TeaModel {
     public static class ListSQLReviewOriginSQLResponseBodyOriginSQLList extends TeaModel {
         /**
          * <p>The review status of the SQL statement. Valid values:</p>
-         * <br>
-         * <p>*   **new**: The SQL statement is pending for analysis.</p>
-         * <p>*   **unknown**: The SQL statement failed to be parsed.</p>
-         * <p>*   **check_not_pass**: The SQL statement failed the review.</p>
-         * <p>*   **check_pass**: The SQL statement passed the review.</p>
-         * <p>*   **force_pass**: The SQL statement passed the review by manual effort.</p>
-         * <p>*   **force_not_pass**: The SQL statement failed the review by manual effort.</p>
+         * <ul>
+         * <li><strong>new</strong>: The SQL statement is pending for analysis.</li>
+         * <li><strong>unknown</strong>: The SQL statement failed to be parsed.</li>
+         * <li><strong>check_not_pass</strong>: The SQL statement failed the review.</li>
+         * <li><strong>check_pass</strong>: The SQL statement passed the review.</li>
+         * <li><strong>force_pass</strong>: The SQL statement passed the review by manual effort.</li>
+         * <li><strong>force_not_pass</strong>: The SQL statement failed the review by manual effort.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>check_pass</p>
          */
         @NameInMap("CheckStatus")
         public String checkStatus;
 
         /**
          * <p>The time when the SQL statement is reviewed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-06-09 21:07:00</p>
          */
         @NameInMap("CheckedTime")
         public String checkedTime;
 
         /**
          * <p>The ID of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123321</p>
          */
         @NameInMap("FileId")
         public Long fileId;
 
         /**
          * <p>The name of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test.sql</p>
          */
         @NameInMap("FileName")
         public String fileName;
 
         /**
          * <p>The statistics of optimization suggestions for SQL statements. The value is a JSON string. The following optimization suggestions are involved:</p>
-         * <br>
-         * <p>*   **MUST_IMPROVE**: The SQL statement must be improved.</p>
-         * <p>*   **POTENTIAL_ISSUE**: The SQL statement contains potential issues.</p>
-         * <p>*   **SUGGEST_IMPROVE**: We recommend that you improve the SQL statement.</p>
-         * <p>*   **USEDMSTOOLKIT**: We recommend that you change schemas without locking tables.</p>
-         * <p>*   **USEDMSDML_UNLOCK**: We recommend that you change data without locking tables.</p>
-         * <p>*   **TABLEINDEXSUGGEST**: We recommend that you use SQL statements that use indexes.</p>
+         * <ul>
+         * <li><strong>MUST_IMPROVE</strong>: The SQL statement must be improved.</li>
+         * <li><strong>POTENTIAL_ISSUE</strong>: The SQL statement contains potential issues.</li>
+         * <li><strong>SUGGEST_IMPROVE</strong>: We recommend that you improve the SQL statement.</li>
+         * <li><strong>USEDMSTOOLKIT</strong>: We recommend that you change schemas without locking tables.</li>
+         * <li><strong>USEDMSDML_UNLOCK</strong>: We recommend that you change data without locking tables.</li>
+         * <li><strong>TABLEINDEXSUGGEST</strong>: We recommend that you use SQL statements that use indexes.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;POTENTIAL_ISSUE&quot;:1,&quot;SUGGEST_IMPROVE&quot;:1}</p>
          */
         @NameInMap("ReviewSummary")
         public String reviewSummary;
 
         /**
          * <p>The SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>select id from table_name</p>
          */
         @NameInMap("SQLContent")
         public String SQLContent;
 
         /**
          * <p>The ID of the SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1111</p>
          */
         @NameInMap("SQLId")
         public Long SQLId;
 
         /**
          * <p>SQLName.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>getByPk</p>
          */
         @NameInMap("SQLName")
         public String SQLName;
 
         /**
-         * <p>The key that is used to query the details of optimization suggestions. You can call the [GetSQLReviewOptimizeDetail](https://icms.alibaba-inc.com/content/dms/doc?l=1\\&m=61777\\&n=2712723\\&spm) operation to query the details of optimization suggestions based on the key.</p>
+         * <p>The key that is used to query the details of optimization suggestions. You can call the <a href="https://icms.alibaba-inc.com/content/dms/doc?l=1%5C&m=61777%5C&n=2712723%5C&spm">GetSQLReviewOptimizeDetail</a> operation to query the details of optimization suggestions based on the key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a57e54ec5433475ea3082d882fdb89c5</p>
          */
         @NameInMap("SQLReviewQueryKey")
         public String SQLReviewQueryKey;
 
         /**
          * <p>The MD5 hash value of the SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>95adb6e77a0884d9e50232cb8c5c969d</p>
          */
         @NameInMap("SqlHash")
         public String sqlHash;
 
         /**
          * <p>The description of the review status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>passed the test</p>
          */
         @NameInMap("StatusDesc")
         public String statusDesc;

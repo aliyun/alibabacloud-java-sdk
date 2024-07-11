@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class GetStructSyncJobAnalyzeResultResponseBody extends TeaModel {
     /**
      * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1810E635-A2D7-428B-BAA9-85DAEB9B1A77</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -30,6 +39,9 @@ public class GetStructSyncJobAnalyzeResultResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -88,12 +100,18 @@ public class GetStructSyncJobAnalyzeResultResponseBody extends TeaModel {
 
         /**
          * <p>The name of the source table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>helloz_bak</p>
          */
         @NameInMap("SourceTableName")
         public String sourceTableName;
 
         /**
          * <p>The name of the destination table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>helloz_bak</p>
          */
         @NameInMap("TargetTableName")
         public String targetTableName;
@@ -132,18 +150,25 @@ public class GetStructSyncJobAnalyzeResultResponseBody extends TeaModel {
     public static class GetStructSyncJobAnalyzeResultResponseBodyStructSyncJobAnalyzeResultSummaryList extends TeaModel {
         /**
          * <p>The type of the comparison. Valid values:</p>
-         * <br>
-         * <p>*   **CREATE_TABLE**: compares the created tables.</p>
-         * <p>*   **ALTER_TABLE**: compares the modified tables.</p>
-         * <p>*   **EQUAL_TABLE**: compares the identical tables.</p>
-         * <p>*   **PASS_TABLE**: compares the tables that are skipped during schema synchronization.</p>
-         * <p>*   **NOT_COMPARE**: does not compare tables.</p>
+         * <ul>
+         * <li><strong>CREATE_TABLE</strong>: compares the created tables.</li>
+         * <li><strong>ALTER_TABLE</strong>: compares the modified tables.</li>
+         * <li><strong>EQUAL_TABLE</strong>: compares the identical tables.</li>
+         * <li><strong>PASS_TABLE</strong>: compares the tables that are skipped during schema synchronization.</li>
+         * <li><strong>NOT_COMPARE</strong>: does not compare tables.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CREATE_TABLE</p>
          */
         @NameInMap("CompareType")
         public String compareType;
 
         /**
          * <p>The number of tables.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Count")
         public Long count;

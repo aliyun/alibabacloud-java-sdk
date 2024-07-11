@@ -5,87 +5,118 @@ import com.aliyun.tea.*;
 
 public class ModifyDesensitizationStrategyRequest extends TeaModel {
     /**
-     * <p>The name of the field. You can call the [ListSensitiveColumns](https://help.aliyun.com/document_detail/188103.html) operation to obtain the field name.</p>
-     * <br>
-     * <p>>  You can also call the [ListColumns](https://help.aliyun.com/document_detail/141870.html) operation to obtain the field name.</p>
-     * <br>
+     * <p>The name of the field. You can call the <a href="https://help.aliyun.com/document_detail/188103.html">ListSensitiveColumns</a> operation to obtain the field name.</p>
+     * <blockquote>
+     * <p> You can also call the <a href="https://help.aliyun.com/document_detail/141870.html">ListColumns</a> operation to obtain the field name.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test_column</p>
      */
     @NameInMap("ColumnName")
     public String columnName;
 
     /**
-     * <p>The ID of the database. You can call the [ListDatabases](https://help.aliyun.com/document_detail/141873.html) operation to obtain the ID.</p>
-     * <br>
+     * <p>The ID of the database. You can call the <a href="https://help.aliyun.com/document_detail/141873.html">ListDatabases</a> operation to obtain the ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("DbId")
     public Integer dbId;
 
     /**
      * <p>The desensitization algorithm of the field setting. The default value is false. The values are as follows:</p>
-     * <br>
-     * <p>- **true**: default desensitization algorithm.</p>
-     * <br>
-     * <p>- **false** :semi-desensitization algorithm.</p>
+     * <ul>
+     * <li><p><strong>true</strong>: default desensitization algorithm.</p>
+     * </li>
+     * <li><p><strong>false</strong> :semi-desensitization algorithm.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("IsDefault")
     public Boolean isDefault;
 
     /**
      * <p>Specifies whether the database is a logical database. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The database is a physical database.</p>
-     * <p>*   **false**: The database is a logical database.</p>
-     * <br>
+     * <ul>
+     * <li><strong>true</strong>: The database is a physical database.</li>
+     * <li><strong>false</strong>: The database is a logical database.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("IsLogic")
     public Boolean isLogic;
 
     /**
      * <p>Specifies whether to reset the masking rule. Valid value:</p>
-     * <br>
-     * <p>*   **true**: Reset the masking rule.</p>
-     * <p>*   **false**: Do not reset the masking rule. This is the default value.</p>
+     * <ul>
+     * <li><strong>true</strong>: Reset the masking rule.</li>
+     * <li><strong>false</strong>: Do not reset the masking rule. This is the default value.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("IsReset")
     public Boolean isReset;
 
     /**
      * <p>The ID of the masking rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>53</p>
      */
     @NameInMap("RuleId")
     public Integer ruleId;
 
     /**
-     * <p>The name of the database. You can call the [ListSensitiveColumns](https://help.aliyun.com/document_detail/188103.html) operation to obtain the database name.</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   If the database is a physical database, you can call the [ListDatabases](https://help.aliyun.com/document_detail/141873.html) or [SearchDatabase](https://help.aliyun.com/document_detail/141876.html) operation to obtain the database name.</p>
-     * <br>
-     * <p>*   If the database is a logical database, you can call the [ListLogicDatabases](https://help.aliyun.com/document_detail/141874.html) or [SearchDatabase](https://help.aliyun.com/document_detail/141876.html) operation to obtain the name of the database.</p>
-     * <br>
+     * <p>The name of the database. You can call the <a href="https://help.aliyun.com/document_detail/188103.html">ListSensitiveColumns</a> operation to obtain the database name.</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>If the database is a physical database, you can call the <a href="https://help.aliyun.com/document_detail/141873.html">ListDatabases</a> or <a href="https://help.aliyun.com/document_detail/141876.html">SearchDatabase</a> operation to obtain the database name.</p>
+     * </li>
+     * <li><p>If the database is a logical database, you can call the <a href="https://help.aliyun.com/document_detail/141874.html">ListLogicDatabases</a> or <a href="https://help.aliyun.com/document_detail/141876.html">SearchDatabase</a> operation to obtain the name of the database.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test_schema</p>
      */
     @NameInMap("SchemaName")
     public String schemaName;
 
     /**
-     * <p>The name of the table. You can call the [ListSensitiveColumns](https://help.aliyun.com/document_detail/188103.html) operation to obtain the table name.</p>
-     * <br>
-     * <p>>  You can also call the [ListTables](https://help.aliyun.com/document_detail/141878.html) operation to obtain the table name.</p>
-     * <br>
+     * <p>The name of the table. You can call the <a href="https://help.aliyun.com/document_detail/188103.html">ListSensitiveColumns</a> operation to obtain the table name.</p>
+     * <blockquote>
+     * <p> You can also call the <a href="https://help.aliyun.com/document_detail/141878.html">ListTables</a> operation to obtain the table name.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test_table</p>
      */
     @NameInMap("TableName")
     public String tableName;
 
     /**
      * <p>The ID of the tenant.</p>
-     * <br>
-     * <p>>  To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](https://help.aliyun.com/document_detail/181330.html) in the topic "Manage DMS tenants."</p>
+     * <blockquote>
+     * <p> To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see <a href="https://help.aliyun.com/document_detail/181330.html">View information about the current tenant</a> in the topic &quot;Manage DMS tenants.&quot;</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>3***</p>
      */
     @NameInMap("Tid")
     public Long tid;

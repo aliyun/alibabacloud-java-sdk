@@ -27,8 +27,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Adds a masking rule.
-     *
+     * <b>summary</b> : 
+     * <p>Adds a masking rule.</p>
+     * 
      * @param request AddDesensitizationRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AddDesensitizationRuleResponse
@@ -85,8 +86,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Adds a masking rule.
-     *
+     * <b>summary</b> : 
+     * <p>Adds a masking rule.</p>
+     * 
      * @param request AddDesensitizationRuleRequest
      * @return AddDesensitizationRuleResponse
      */
@@ -96,8 +98,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 添加实例
-     *
+     * <b>summary</b> : 
+     * <p>添加实例</p>
+     * 
      * @param request AddInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AddInstanceResponse
@@ -239,8 +242,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 添加实例
-     *
+     * <b>summary</b> : 
+     * <p>添加实例</p>
+     * 
      * @param request AddInstanceRequest
      * @return AddInstanceResponse
      */
@@ -250,14 +254,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Adds a workspace administrator, a workspace member, or a task flow developer in Data Management (DMS).
-     *
-     * @description You must call this operation as a DMS administrator, a database administrator (DBA), or a workspace administrator.
-     * Usage notes:
-     * *   Before you call this operation to add a user as a task flow developer, make sure that you have added the user as a workspace member.
-     * *   You cannot call this operation to transfer the ownership of a task flow. To transfer the ownership of a task flow, call the [ChangLhDagOwner](https://help.aliyun.com/document_detail/424761.html) operation.
-     * *   For more information about workspace roles and permissions, see [Manage permissions on a workspace](https://help.aliyun.com/document_detail/410893.html).
-     *
+     * <b>description</b> :
+     * <p>You must call this operation as a DMS administrator, a database administrator (DBA), or a workspace administrator.
+     * Usage notes:</p>
+     * <ul>
+     * <li>Before you call this operation to add a user as a task flow developer, make sure that you have added the user as a workspace member.</li>
+     * <li>You cannot call this operation to transfer the ownership of a task flow. To transfer the ownership of a task flow, call the <a href="https://help.aliyun.com/document_detail/424761.html">ChangLhDagOwner</a> operation.</li>
+     * <li>For more information about workspace roles and permissions, see <a href="https://help.aliyun.com/document_detail/410893.html">Manage permissions on a workspace</a>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Adds a workspace administrator, a workspace member, or a task flow developer in Data Management (DMS).</p>
+     * 
      * @param tmpReq AddLhMembersRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AddLhMembersResponse
@@ -305,14 +313,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Adds a workspace administrator, a workspace member, or a task flow developer in Data Management (DMS).
-     *
-     * @description You must call this operation as a DMS administrator, a database administrator (DBA), or a workspace administrator.
-     * Usage notes:
-     * *   Before you call this operation to add a user as a task flow developer, make sure that you have added the user as a workspace member.
-     * *   You cannot call this operation to transfer the ownership of a task flow. To transfer the ownership of a task flow, call the [ChangLhDagOwner](https://help.aliyun.com/document_detail/424761.html) operation.
-     * *   For more information about workspace roles and permissions, see [Manage permissions on a workspace](https://help.aliyun.com/document_detail/410893.html).
-     *
+     * <b>description</b> :
+     * <p>You must call this operation as a DMS administrator, a database administrator (DBA), or a workspace administrator.
+     * Usage notes:</p>
+     * <ul>
+     * <li>Before you call this operation to add a user as a task flow developer, make sure that you have added the user as a workspace member.</li>
+     * <li>You cannot call this operation to transfer the ownership of a task flow. To transfer the ownership of a task flow, call the <a href="https://help.aliyun.com/document_detail/424761.html">ChangLhDagOwner</a> operation.</li>
+     * <li>For more information about workspace roles and permissions, see <a href="https://help.aliyun.com/document_detail/410893.html">Manage permissions on a workspace</a>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Adds a workspace administrator, a workspace member, or a task flow developer in Data Management (DMS).</p>
+     * 
      * @param request AddLhMembersRequest
      * @return AddLhMembersResponse
      */
@@ -322,8 +334,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Adds a routing algorithm to a logical table.
-     *
+     * <b>summary</b> : 
+     * <p>Adds a routing algorithm to a logical table.</p>
+     * 
      * @param request AddLogicTableRouteConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AddLogicTableRouteConfigResponse
@@ -365,8 +378,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Adds a routing algorithm to a logical table.
-     *
+     * <b>summary</b> : 
+     * <p>Adds a routing algorithm to a logical table.</p>
+     * 
      * @param request AddLogicTableRouteConfigRequest
      * @return AddLogicTableRouteConfigResponse
      */
@@ -376,12 +390,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Adds directed edges for an existing task node.
-     *
-     * @description When you add directed edges for a task node, take note of the following limits:
-     * 1. The endpoints of the specified edge exist in the Directed Acyclic Graph (DAG) of the task flow specified by DagId.
-     * 2. After a backward edge is added, the DAG does not contain loops.
-     *
+     * <b>description</b> :
+     * <p>When you add directed edges for a task node, take note of the following limits:</p>
+     * <ol>
+     * <li>The endpoints of the specified edge exist in the Directed Acyclic Graph (DAG) of the task flow specified by DagId.</li>
+     * <li>After a backward edge is added, the DAG does not contain loops.</li>
+     * </ol>
+     * 
+     * <b>summary</b> : 
+     * <p>Adds directed edges for an existing task node.</p>
+     * 
      * @param tmpReq AddTaskFlowEdgesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AddTaskFlowEdgesResponse
@@ -425,12 +443,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Adds directed edges for an existing task node.
-     *
-     * @description When you add directed edges for a task node, take note of the following limits:
-     * 1. The endpoints of the specified edge exist in the Directed Acyclic Graph (DAG) of the task flow specified by DagId.
-     * 2. After a backward edge is added, the DAG does not contain loops.
-     *
+     * <b>description</b> :
+     * <p>When you add directed edges for a task node, take note of the following limits:</p>
+     * <ol>
+     * <li>The endpoints of the specified edge exist in the Directed Acyclic Graph (DAG) of the task flow specified by DagId.</li>
+     * <li>After a backward edge is added, the DAG does not contain loops.</li>
+     * </ol>
+     * 
+     * <b>summary</b> : 
+     * <p>Adds directed edges for an existing task node.</p>
+     * 
      * @param request AddTaskFlowEdgesRequest
      * @return AddTaskFlowEdgesResponse
      */
@@ -440,12 +462,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Analyzes the lineage (dependencies and influence) between tables and between fields in SQL statements.
-     *
-     * @description The following conditions must be met before you call this API operation.
-     * *   The database instance is of one of the following types: ApsaraDB RDS for MySQL, PolarDB for MySQL, AnalyticDB for MySQL, ApsaraDB RDS for PostgreSQL, PolarDB for PostgreSQL, AnalyticDB for PostgreSQL, Oracle, and openGauss.
-     * *   A database instance is managed in Security Collaboration mode. For more information about control modes, see [Control modes](https://help.aliyun.com/document_detail/151629.html).
-     *
+     * <b>description</b> :
+     * <p>The following conditions must be met before you call this API operation.</p>
+     * <ul>
+     * <li>The database instance is of one of the following types: ApsaraDB RDS for MySQL, PolarDB for MySQL, AnalyticDB for MySQL, ApsaraDB RDS for PostgreSQL, PolarDB for PostgreSQL, AnalyticDB for PostgreSQL, Oracle, and openGauss.</li>
+     * <li>A database instance is managed in Security Collaboration mode. For more information about control modes, see <a href="https://help.aliyun.com/document_detail/151629.html">Control modes</a>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Analyzes the lineage (dependencies and influence) between tables and between fields in SQL statements.</p>
+     * 
      * @param request AnalyzeSQLLineageRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AnalyzeSQLLineageResponse
@@ -483,12 +509,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Analyzes the lineage (dependencies and influence) between tables and between fields in SQL statements.
-     *
-     * @description The following conditions must be met before you call this API operation.
-     * *   The database instance is of one of the following types: ApsaraDB RDS for MySQL, PolarDB for MySQL, AnalyticDB for MySQL, ApsaraDB RDS for PostgreSQL, PolarDB for PostgreSQL, AnalyticDB for PostgreSQL, Oracle, and openGauss.
-     * *   A database instance is managed in Security Collaboration mode. For more information about control modes, see [Control modes](https://help.aliyun.com/document_detail/151629.html).
-     *
+     * <b>description</b> :
+     * <p>The following conditions must be met before you call this API operation.</p>
+     * <ul>
+     * <li>The database instance is of one of the following types: ApsaraDB RDS for MySQL, PolarDB for MySQL, AnalyticDB for MySQL, ApsaraDB RDS for PostgreSQL, PolarDB for PostgreSQL, AnalyticDB for PostgreSQL, Oracle, and openGauss.</li>
+     * <li>A database instance is managed in Security Collaboration mode. For more information about control modes, see <a href="https://help.aliyun.com/document_detail/151629.html">Control modes</a>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Analyzes the lineage (dependencies and influence) between tables and between fields in SQL statements.</p>
+     * 
      * @param request AnalyzeSQLLineageRequest
      * @return AnalyzeSQLLineageResponse
      */
@@ -498,8 +528,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Reviews a ticket.
-     *
+     * <b>summary</b> : 
+     * <p>Reviews a ticket.</p>
+     * 
      * @param request ApproveOrderRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ApproveOrderResponse
@@ -535,6 +566,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("OldApprover", request.oldApprover);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.realLoginUserUid)) {
+            query.put("RealLoginUserUid", request.realLoginUserUid);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.tid)) {
             query.put("Tid", request.tid);
         }
@@ -561,8 +596,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Reviews a ticket.
-     *
+     * <b>summary</b> : 
+     * <p>Reviews a ticket.</p>
+     * 
      * @param request ApproveOrderRequest
      * @return ApproveOrderResponse
      */
@@ -572,10 +608,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Backfills data for task orchestration.
-     *
-     * @description During a data backfill, task flows are run in sequence based on their dates. You can specify whether task flows are run in chronological or reverse chronological order. After the data backfill is complete, you can specify a date or date range, and a node range to run task flows.
-     *
+     * <b>description</b> :
+     * <p>During a data backfill, task flows are run in sequence based on their dates. You can specify whether task flows are run in chronological or reverse chronological order. After the data backfill is complete, you can specify a date or date range, and a node range to run task flows.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Backfills data for task orchestration.</p>
+     * 
      * @param tmpReq BackFillRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return BackFillResponse
@@ -655,10 +693,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Backfills data for task orchestration.
-     *
-     * @description During a data backfill, task flows are run in sequence based on their dates. You can specify whether task flows are run in chronological or reverse chronological order. After the data backfill is complete, you can specify a date or date range, and a node range to run task flows.
-     *
+     * <b>description</b> :
+     * <p>During a data backfill, task flows are run in sequence based on their dates. You can specify whether task flows are run in chronological or reverse chronological order. After the data backfill is complete, you can specify a date or date range, and a node range to run task flows.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Backfills data for task orchestration.</p>
+     * 
      * @param request BackFillRequest
      * @return BackFillResponse
      */
@@ -668,8 +708,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Purchases a pay-as-you-go Data Management (DMS) resource.
-     *
+     * <b>summary</b> : 
+     * <p>Purchases a pay-as-you-go Data Management (DMS) resource.</p>
+     * 
      * @param request BuyPayAsYouGoOrderRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return BuyPayAsYouGoOrderResponse
@@ -711,8 +752,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Purchases a pay-as-you-go Data Management (DMS) resource.
-     *
+     * <b>summary</b> : 
+     * <p>Purchases a pay-as-you-go Data Management (DMS) resource.</p>
+     * 
      * @param request BuyPayAsYouGoOrderRequest
      * @return BuyPayAsYouGoOrderResponse
      */
@@ -722,8 +764,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Adjusts the sensitivity level of one or more fields.
-     *
+     * <b>summary</b> : 
+     * <p>Adjusts the sensitivity level of one or more fields.</p>
+     * 
      * @param request ChangeColumnSecLevelRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ChangeColumnSecLevelResponse
@@ -777,8 +820,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Adjusts the sensitivity level of one or more fields.
-     *
+     * <b>summary</b> : 
+     * <p>Adjusts the sensitivity level of one or more fields.</p>
+     * 
      * @param request ChangeColumnSecLevelRequest
      * @return ChangeColumnSecLevelResponse
      */
@@ -788,8 +832,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 修改字段敏感序列
-     *
+     * <b>summary</b> : 
+     * <p>修改字段敏感序列</p>
+     * 
      * @param request ChangeColumnSecurityLevelRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ChangeColumnSecurityLevelResponse
@@ -843,8 +888,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 修改字段敏感序列
-     *
+     * <b>summary</b> : 
+     * <p>修改字段敏感序列</p>
+     * 
      * @param request ChangeColumnSecurityLevelRequest
      * @return ChangeColumnSecurityLevelResponse
      */
@@ -854,12 +900,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 移交数仓开发任务流
-     *
-     * @description Usage notes:
-     * *   If you call this operation to transfer the ownership of a published task flow, the ownership transfer does not take effect.
-     * *   You can call the [ReDeployLhDagVersion](https://help.aliyun.com/document_detail/424712.html) operation to redeploy a published version of a task flow.
-     *
+     * <b>description</b> :
+     * <p>Usage notes:</p>
+     * <ul>
+     * <li>If you call this operation to transfer the ownership of a published task flow, the ownership transfer does not take effect.</li>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/424712.html">ReDeployLhDagVersion</a> operation to redeploy a published version of a task flow.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>移交数仓开发任务流</p>
+     * 
      * @param request ChangeLhDagOwnerRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ChangeLhDagOwnerResponse
@@ -897,12 +947,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 移交数仓开发任务流
-     *
-     * @description Usage notes:
-     * *   If you call this operation to transfer the ownership of a published task flow, the ownership transfer does not take effect.
-     * *   You can call the [ReDeployLhDagVersion](https://help.aliyun.com/document_detail/424712.html) operation to redeploy a published version of a task flow.
-     *
+     * <b>description</b> :
+     * <p>Usage notes:</p>
+     * <ul>
+     * <li>If you call this operation to transfer the ownership of a published task flow, the ownership transfer does not take effect.</li>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/424712.html">ReDeployLhDagVersion</a> operation to redeploy a published version of a task flow.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>移交数仓开发任务流</p>
+     * 
      * @param request ChangeLhDagOwnerRequest
      * @return ChangeLhDagOwnerResponse
      */
@@ -912,8 +966,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Closes a ticket.
-     *
+     * <b>summary</b> : 
+     * <p>Closes a ticket.</p>
+     * 
      * @param request CloseOrderRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CloseOrderResponse
@@ -951,8 +1006,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Closes a ticket.
-     *
+     * <b>summary</b> : 
+     * <p>Closes a ticket.</p>
+     * 
      * @param request CloseOrderRequest
      * @return CloseOrderResponse
      */
@@ -962,10 +1018,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a permission template
-     *
-     * @description You are a database administrator (DBA) or a Data Management (DMS) administrator. For more information about how to view system roles, see [View system roles](https://help.aliyun.com/document_detail/324212.html).
-     *
+     * <b>description</b> :
+     * <p>You are a database administrator (DBA) or a Data Management (DMS) administrator. For more information about how to view system roles, see <a href="https://help.aliyun.com/document_detail/324212.html">View system roles</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a permission template</p>
+     * 
      * @param request CreateAuthorityTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateAuthorityTemplateResponse
@@ -1003,10 +1061,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a permission template
-     *
-     * @description You are a database administrator (DBA) or a Data Management (DMS) administrator. For more information about how to view system roles, see [View system roles](https://help.aliyun.com/document_detail/324212.html).
-     *
+     * <b>description</b> :
+     * <p>You are a database administrator (DBA) or a Data Management (DMS) administrator. For more information about how to view system roles, see <a href="https://help.aliyun.com/document_detail/324212.html">View system roles</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a permission template</p>
+     * 
      * @param request CreateAuthorityTemplateRequest
      * @return CreateAuthorityTemplateResponse
      */
@@ -1016,8 +1076,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates data archiving tickets.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation only for database instances that are managed in Security Collaboration mode.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a data archiving ticket to archive data to destinations such as dedicated storage space or ApsaraDB RDS for MySQL instances.</p>
+     * 
      * @param tmpReq CreateDataArchiveOrderRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateDataArchiveOrderResponse
@@ -1077,8 +1141,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates data archiving tickets.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation only for database instances that are managed in Security Collaboration mode.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a data archiving ticket to archive data to destinations such as dedicated storage space or ApsaraDB RDS for MySQL instances.</p>
+     * 
      * @param request CreateDataArchiveOrderRequest
      * @return CreateDataArchiveOrderResponse
      */
@@ -1088,10 +1156,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a ticket for changing data in Data Management (DMS).
-     *
-     * @description For more information about the Normal Data Modify feature, see [Change regular data](https://help.aliyun.com/document_detail/58419.html).
-     *
+     * <b>description</b> :
+     * <p>For more information about the Normal Data Modify feature, see <a href="https://help.aliyun.com/document_detail/58419.html">Change regular data</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a ticket for changing data in Data Management (DMS).</p>
+     * 
      * @param tmpReq CreateDataCorrectOrderRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateDataCorrectOrderResponse
@@ -1121,6 +1191,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Param", request.paramShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.realLoginUserUid)) {
+            query.put("RealLoginUserUid", request.realLoginUserUid);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.relatedUserListShrink)) {
             query.put("RelatedUserList", request.relatedUserListShrink);
         }
@@ -1147,10 +1221,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a ticket for changing data in Data Management (DMS).
-     *
-     * @description For more information about the Normal Data Modify feature, see [Change regular data](https://help.aliyun.com/document_detail/58419.html).
-     *
+     * <b>description</b> :
+     * <p>For more information about the Normal Data Modify feature, see <a href="https://help.aliyun.com/document_detail/58419.html">Change regular data</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a ticket for changing data in Data Management (DMS).</p>
+     * 
      * @param request CreateDataCorrectOrderRequest
      * @return CreateDataCorrectOrderResponse
      */
@@ -1160,11 +1236,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a ticket for clearing historical data.
-     *
-     * @description For more information about the historical data cleaning, see [Clear historical data](https://help.aliyun.com/document_detail/162507.html).
-     * This operation can be used only for MySQL databases.
-     *
+     * <b>description</b> :
+     * <p>For more information about the historical data cleaning, see <a href="https://help.aliyun.com/document_detail/162507.html">Clear historical data</a>.
+     * This operation can be used only for MySQL databases.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a ticket for clearing historical data.</p>
+     * 
      * @param tmpReq CreateDataCronClearOrderRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateDataCronClearOrderResponse
@@ -1220,11 +1298,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a ticket for clearing historical data.
-     *
-     * @description For more information about the historical data cleaning, see [Clear historical data](https://help.aliyun.com/document_detail/162507.html).
-     * This operation can be used only for MySQL databases.
-     *
+     * <b>description</b> :
+     * <p>For more information about the historical data cleaning, see <a href="https://help.aliyun.com/document_detail/162507.html">Clear historical data</a>.
+     * This operation can be used only for MySQL databases.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a ticket for clearing historical data.</p>
+     * 
      * @param request CreateDataCronClearOrderRequest
      * @return CreateDataCronClearOrderResponse
      */
@@ -1234,8 +1314,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a ticket to export an SQL result set.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a ticket to export an SQL result set.</p>
+     * 
      * @param tmpReq CreateDataExportOrderRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateDataExportOrderResponse
@@ -1269,6 +1350,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PluginParam", request.pluginParamShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.realLoginUserUid)) {
+            query.put("RealLoginUserUid", request.realLoginUserUid);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.relatedUserListShrink)) {
             query.put("RelatedUserList", request.relatedUserListShrink);
         }
@@ -1295,8 +1380,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a ticket to export an SQL result set.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a ticket to export an SQL result set.</p>
+     * 
      * @param request CreateDataExportOrderRequest
      * @return CreateDataExportOrderResponse
      */
@@ -1306,10 +1392,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a ticket for importing data to Data Management (DMS).
-     *
-     * @description For more information about the Large Data Import feature, see [Import data](https://help.aliyun.com/document_detail/161439.html).
-     *
+     * <b>description</b> :
+     * <p>For more information about the Large Data Import feature, see <a href="https://help.aliyun.com/document_detail/161439.html">Import data</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a ticket for importing data to Data Management (DMS).</p>
+     * 
      * @param tmpReq CreateDataImportOrderRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateDataImportOrderResponse
@@ -1365,10 +1453,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a ticket for importing data to Data Management (DMS).
-     *
-     * @description For more information about the Large Data Import feature, see [Import data](https://help.aliyun.com/document_detail/161439.html).
-     *
+     * <b>description</b> :
+     * <p>For more information about the Large Data Import feature, see <a href="https://help.aliyun.com/document_detail/161439.html">Import data</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a ticket for importing data to Data Management (DMS).</p>
+     * 
      * @param request CreateDataImportOrderRequest
      * @return CreateDataImportOrderResponse
      */
@@ -1378,10 +1468,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a data tracking ticket.
-     *
-     * @description This operation is available only for instances that are managed in Security Collaboration mode.
-     *
+     * <b>description</b> :
+     * <p>This operation is available only for instances that are managed in Security Collaboration mode.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a data tracking ticket.</p>
+     * 
      * @param tmpReq CreateDataTrackOrderRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateDataTrackOrderResponse
@@ -1433,10 +1525,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a data tracking ticket.
-     *
-     * @description This operation is available only for instances that are managed in Security Collaboration mode.
-     *
+     * <b>description</b> :
+     * <p>This operation is available only for instances that are managed in Security Collaboration mode.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a data tracking ticket.</p>
+     * 
      * @param request CreateDataTrackOrderRequest
      * @return CreateDataTrackOrderResponse
      */
@@ -1446,8 +1540,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a database export ticket.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a database export ticket.</p>
+     * 
      * @param tmpReq CreateDatabaseExportOrderRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateDatabaseExportOrderResponse
@@ -1507,8 +1602,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a database export ticket.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a database export ticket.</p>
+     * 
      * @param request CreateDatabaseExportOrderRequest
      * @return CreateDatabaseExportOrderResponse
      */
@@ -1518,11 +1614,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建无锁变更工单
-     *
-     * @description For more information about the lock-free change feature, see [Overview](https://help.aliyun.com/document_detail/207847.html).
-     * This operation can be used only for instances that are managed in Stable Change or Security Collaboration mode. For more information, see [Change data without the need to lock tables](https://help.aliyun.com/document_detail/96145.html) and [Change schemas without locking tables](https://help.aliyun.com/document_detail/98373.html).
-     *
+     * <b>description</b> :
+     * <p>For more information about the lock-free change feature, see <a href="https://help.aliyun.com/document_detail/207847.html">Overview</a>.
+     * This operation can be used only for instances that are managed in Stable Change or Security Collaboration mode. For more information, see <a href="https://help.aliyun.com/document_detail/96145.html">Change data without the need to lock tables</a> and <a href="https://help.aliyun.com/document_detail/98373.html">Change schemas without locking tables</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>创建无锁变更工单</p>
+     * 
      * @param tmpReq CreateFreeLockCorrectOrderRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateFreeLockCorrectOrderResponse
@@ -1578,11 +1676,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建无锁变更工单
-     *
-     * @description For more information about the lock-free change feature, see [Overview](https://help.aliyun.com/document_detail/207847.html).
-     * This operation can be used only for instances that are managed in Stable Change or Security Collaboration mode. For more information, see [Change data without the need to lock tables](https://help.aliyun.com/document_detail/96145.html) and [Change schemas without locking tables](https://help.aliyun.com/document_detail/98373.html).
-     *
+     * <b>description</b> :
+     * <p>For more information about the lock-free change feature, see <a href="https://help.aliyun.com/document_detail/207847.html">Overview</a>.
+     * This operation can be used only for instances that are managed in Stable Change or Security Collaboration mode. For more information, see <a href="https://help.aliyun.com/document_detail/96145.html">Change data without the need to lock tables</a> and <a href="https://help.aliyun.com/document_detail/98373.html">Change schemas without locking tables</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>创建无锁变更工单</p>
+     * 
      * @param request CreateFreeLockCorrectOrderRequest
      * @return CreateFreeLockCorrectOrderResponse
      */
@@ -1592,11 +1692,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a workspace for data warehouse development in Data Management (DMS).
-     *
-     * @description *   The workspace name must be unique within a tenant. If a workspace with the same name already exists within the tenant, the call may fail.
-     * *   You can call the [GetLhSpaceByName](https://help.aliyun.com/document_detail/424379.html) operation to query whether a workspace with a specific name already exists as a DMS administrator or database administrator (DBA).
-     *
+     * <b>description</b> :
+     * <p>  The workspace name must be unique within a tenant. If a workspace with the same name already exists within the tenant, the call may fail.</p>
+     * <ul>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/424379.html">GetLhSpaceByName</a> operation to query whether a workspace with a specific name already exists as a DMS administrator or database administrator (DBA).</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a workspace for data warehouse development in Data Management (DMS).</p>
+     * 
      * @param request CreateLakeHouseSpaceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateLakeHouseSpaceResponse
@@ -1654,11 +1758,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a workspace for data warehouse development in Data Management (DMS).
-     *
-     * @description *   The workspace name must be unique within a tenant. If a workspace with the same name already exists within the tenant, the call may fail.
-     * *   You can call the [GetLhSpaceByName](https://help.aliyun.com/document_detail/424379.html) operation to query whether a workspace with a specific name already exists as a DMS administrator or database administrator (DBA).
-     *
+     * <b>description</b> :
+     * <p>  The workspace name must be unique within a tenant. If a workspace with the same name already exists within the tenant, the call may fail.</p>
+     * <ul>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/424379.html">GetLhSpaceByName</a> operation to query whether a workspace with a specific name already exists as a DMS administrator or database administrator (DBA).</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a workspace for data warehouse development in Data Management (DMS).</p>
+     * 
      * @param request CreateLakeHouseSpaceRequest
      * @return CreateLakeHouseSpaceResponse
      */
@@ -1668,8 +1776,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a logical database in Database Management (DMS).
-     *
+     * <b>summary</b> : 
+     * <p>Creates a logical database in Database Management (DMS).</p>
+     * 
      * @param tmpReq CreateLogicDatabaseRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateLogicDatabaseResponse
@@ -1713,8 +1822,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a logical database in Database Management (DMS).
-     *
+     * <b>summary</b> : 
+     * <p>Creates a logical database in Database Management (DMS).</p>
+     * 
      * @param request CreateLogicDatabaseRequest
      * @return CreateLogicDatabaseResponse
      */
@@ -1724,14 +1834,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a ticket in Data Management (DMS).
-     *
-     * @description To facilitate ticket creation, you can call the following dedicated operations to create some types of tickets:
-     * *   [CreateDataCorrectOrder](https://help.aliyun.com/document_detail/208388.html): creates a regular data change ticket.
-     * *   [CreateDataCronClearOrder](https://help.aliyun.com/document_detail/208385.html): creates a ticket to clear historical data.
-     * *   [CreateDataImportOrder](https://help.aliyun.com/document_detail/208387.html): creates a data import ticket.
-     * *   [CreateFreeLockCorrectOrder](https://help.aliyun.com/document_detail/208386.html): creates a lock-free change ticket.
-     *
+     * <b>description</b> :
+     * <p>To facilitate ticket creation, you can call the following dedicated operations to create some types of tickets:</p>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/208388.html">CreateDataCorrectOrder</a>: creates a regular data change ticket.</li>
+     * <li><a href="https://help.aliyun.com/document_detail/208385.html">CreateDataCronClearOrder</a>: creates a ticket to clear historical data.</li>
+     * <li><a href="https://help.aliyun.com/document_detail/208387.html">CreateDataImportOrder</a>: creates a data import ticket.</li>
+     * <li><a href="https://help.aliyun.com/document_detail/208386.html">CreateFreeLockCorrectOrder</a>: creates a lock-free change ticket.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a ticket in Data Management (DMS).</p>
+     * 
      * @param tmpReq CreateOrderRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateOrderResponse
@@ -1789,14 +1903,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a ticket in Data Management (DMS).
-     *
-     * @description To facilitate ticket creation, you can call the following dedicated operations to create some types of tickets:
-     * *   [CreateDataCorrectOrder](https://help.aliyun.com/document_detail/208388.html): creates a regular data change ticket.
-     * *   [CreateDataCronClearOrder](https://help.aliyun.com/document_detail/208385.html): creates a ticket to clear historical data.
-     * *   [CreateDataImportOrder](https://help.aliyun.com/document_detail/208387.html): creates a data import ticket.
-     * *   [CreateFreeLockCorrectOrder](https://help.aliyun.com/document_detail/208386.html): creates a lock-free change ticket.
-     *
+     * <b>description</b> :
+     * <p>To facilitate ticket creation, you can call the following dedicated operations to create some types of tickets:</p>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/208388.html">CreateDataCorrectOrder</a>: creates a regular data change ticket.</li>
+     * <li><a href="https://help.aliyun.com/document_detail/208385.html">CreateDataCronClearOrder</a>: creates a ticket to clear historical data.</li>
+     * <li><a href="https://help.aliyun.com/document_detail/208387.html">CreateDataImportOrder</a>: creates a data import ticket.</li>
+     * <li><a href="https://help.aliyun.com/document_detail/208386.html">CreateFreeLockCorrectOrder</a>: creates a lock-free change ticket.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a ticket in Data Management (DMS).</p>
+     * 
      * @param request CreateOrderRequest
      * @return CreateOrderResponse
      */
@@ -1806,8 +1924,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建可编程对象变更工单
-     *
+     * <b>summary</b> : 
+     * <p>创建可编程对象变更工单</p>
+     * 
      * @param tmpReq CreateProcCorrectOrderRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateProcCorrectOrderResponse
@@ -1863,8 +1982,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建可编程对象变更工单
-     *
+     * <b>summary</b> : 
+     * <p>创建可编程对象变更工单</p>
+     * 
      * @param request CreateProcCorrectOrderRequest
      * @return CreateProcCorrectOrderResponse
      */
@@ -1874,12 +1994,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables the secure access proxy feature for a database instance.
-     *
-     * @description - The database instance runs the MySQL or MariaDB database engine. For example, the database instance can be an ApsaraDB RDS for MySQL instance, a PolarDB for MySQL cluster, a Distributed Relational Database Service (DRDS) cluster, or an AnalyticDB for MySQL cluster. The database instance can also be a self-managed MySQL or MariaDB database, or a MySQL or MariaDB database in a third-party cloud.
-     * - The database instance resides in the China (Hangzhou) or China (Beijing) region.
-     * - You are a Data Management (DMS) administrator, a database administrator (DBA), or the owner of the database instance.
-     *
+     * <b>description</b> :
+     * <ul>
+     * <li>The database instance runs the MySQL or MariaDB database engine. For example, the database instance can be an ApsaraDB RDS for MySQL instance, a PolarDB for MySQL cluster, a Distributed Relational Database Service (DRDS) cluster, or an AnalyticDB for MySQL cluster. The database instance can also be a self-managed MySQL or MariaDB database, or a MySQL or MariaDB database in a third-party cloud.</li>
+     * <li>The database instance resides in the China (Hangzhou) or China (Beijing) region.</li>
+     * <li>You are a Data Management (DMS) administrator, a database administrator (DBA), or the owner of the database instance.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables the secure access proxy feature for a database instance.</p>
+     * 
      * @param request CreateProxyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateProxyResponse
@@ -1921,12 +2045,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables the secure access proxy feature for a database instance.
-     *
-     * @description - The database instance runs the MySQL or MariaDB database engine. For example, the database instance can be an ApsaraDB RDS for MySQL instance, a PolarDB for MySQL cluster, a Distributed Relational Database Service (DRDS) cluster, or an AnalyticDB for MySQL cluster. The database instance can also be a self-managed MySQL or MariaDB database, or a MySQL or MariaDB database in a third-party cloud.
-     * - The database instance resides in the China (Hangzhou) or China (Beijing) region.
-     * - You are a Data Management (DMS) administrator, a database administrator (DBA), or the owner of the database instance.
-     *
+     * <b>description</b> :
+     * <ul>
+     * <li>The database instance runs the MySQL or MariaDB database engine. For example, the database instance can be an ApsaraDB RDS for MySQL instance, a PolarDB for MySQL cluster, a Distributed Relational Database Service (DRDS) cluster, or an AnalyticDB for MySQL cluster. The database instance can also be a self-managed MySQL or MariaDB database, or a MySQL or MariaDB database in a third-party cloud.</li>
+     * <li>The database instance resides in the China (Hangzhou) or China (Beijing) region.</li>
+     * <li>You are a Data Management (DMS) administrator, a database administrator (DBA), or the owner of the database instance.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables the secure access proxy feature for a database instance.</p>
+     * 
      * @param request CreateProxyRequest
      * @return CreateProxyResponse
      */
@@ -1936,11 +2064,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary You can call the CreateProxyAccess to authorize users to access the DB instance through the Data Security Protection agent.
-     *
-     * @description - The data security protection feature is enabled for the instance.
-     * - Your user role is the administrator role, DBA role, or the owner of data security protection for the current instance.
-     *
+     * <b>description</b> :
+     * <ul>
+     * <li>The data security protection feature is enabled for the instance.</li>
+     * <li>Your user role is the administrator role, DBA role, or the owner of data security protection for the current instance.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>You can call the CreateProxyAccess to authorize users to access the DB instance through the Data Security Protection agent.</p>
+     * 
      * @param request CreateProxyAccessRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateProxyAccessResponse
@@ -1986,11 +2118,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary You can call the CreateProxyAccess to authorize users to access the DB instance through the Data Security Protection agent.
-     *
-     * @description - The data security protection feature is enabled for the instance.
-     * - Your user role is the administrator role, DBA role, or the owner of data security protection for the current instance.
-     *
+     * <b>description</b> :
+     * <ul>
+     * <li>The data security protection feature is enabled for the instance.</li>
+     * <li>Your user role is the administrator role, DBA role, or the owner of data security protection for the current instance.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>You can call the CreateProxyAccess to authorize users to access the DB instance through the Data Security Protection agent.</p>
+     * 
      * @param request CreateProxyAccessRequest
      * @return CreateProxyAccessResponse
      */
@@ -2000,8 +2136,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Executes a schema design ticket.
-     *
+     * <b>summary</b> : 
+     * <p>Executes a schema design ticket.</p>
+     * 
      * @param request CreatePublishGroupTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreatePublishGroupTaskResponse
@@ -2051,8 +2188,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Executes a schema design ticket.
-     *
+     * <b>summary</b> : 
+     * <p>Executes a schema design ticket.</p>
+     * 
      * @param request CreatePublishGroupTaskRequest
      * @return CreatePublishGroupTaskResponse
      */
@@ -2062,11 +2200,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a SQL review ticket.
-     *
-     * @description You can call this operation only for database instances that are managed in Security Collaboration mode.
-     * For more information about the SQL review feature, see [SQL review](https://help.aliyun.com/document_detail/60374.html).
-     *
+     * <b>description</b> :
+     * <p>You can call this operation only for database instances that are managed in Security Collaboration mode.
+     * For more information about the SQL review feature, see <a href="https://help.aliyun.com/document_detail/60374.html">SQL review</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a SQL review ticket.</p>
+     * 
      * @param tmpReq CreateSQLReviewOrderRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateSQLReviewOrderResponse
@@ -2118,11 +2258,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a SQL review ticket.
-     *
-     * @description You can call this operation only for database instances that are managed in Security Collaboration mode.
-     * For more information about the SQL review feature, see [SQL review](https://help.aliyun.com/document_detail/60374.html).
-     *
+     * <b>description</b> :
+     * <p>You can call this operation only for database instances that are managed in Security Collaboration mode.
+     * For more information about the SQL review feature, see <a href="https://help.aliyun.com/document_detail/60374.html">SQL review</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a SQL review ticket.</p>
+     * 
      * @param request CreateSQLReviewOrderRequest
      * @return CreateSQLReviewOrderResponse
      */
@@ -2132,8 +2274,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a business scenario to group task flows by business scenario.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a business scenario to group task flows by business scenario.</p>
+     * 
      * @param request CreateScenarioRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateScenarioResponse
@@ -2171,8 +2314,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a business scenario to group task flows by business scenario.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a business scenario to group task flows by business scenario.</p>
+     * 
      * @param request CreateScenarioRequest
      * @return CreateScenarioResponse
      */
@@ -2182,8 +2326,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a security rule set.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a security rule set.</p>
+     * 
      * @param request CreateStandardGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateStandardGroupResponse
@@ -2225,8 +2370,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a security rule set.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a security rule set.</p>
+     * 
      * @param request CreateStandardGroupRequest
      * @return CreateStandardGroupResponse
      */
@@ -2236,8 +2382,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a schema synchronization ticket.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a schema synchronization ticket.</p>
+     * 
      * @param tmpReq CreateStructSyncOrderRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateStructSyncOrderResponse
@@ -2293,8 +2440,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a schema synchronization ticket.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a schema synchronization ticket.</p>
+     * 
      * @param request CreateStructSyncOrderRequest
      * @return CreateStructSyncOrderResponse
      */
@@ -2304,8 +2452,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a task node for a task flow.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a task node for a task flow.</p>
+     * 
      * @param request CreateTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateTaskResponse
@@ -2363,8 +2512,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a task node for a task flow.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a task node for a task flow.</p>
+     * 
      * @param request CreateTaskRequest
      * @return CreateTaskResponse
      */
@@ -2374,8 +2524,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a task flow.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a task flow.</p>
+     * 
      * @param request CreateTaskFlowRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateTaskFlowResponse
@@ -2417,8 +2568,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a task flow.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a task flow.</p>
+     * 
      * @param request CreateTaskFlowRequest
      * @return CreateTaskFlowResponse
      */
@@ -2428,8 +2580,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建上传附件任务
-     *
+     * <b>summary</b> : 
+     * <p>创建上传附件任务</p>
+     * 
      * @param request CreateUploadFileJobRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateUploadFileJobResponse
@@ -2471,8 +2624,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建上传附件任务
-     *
+     * <b>summary</b> : 
+     * <p>创建上传附件任务</p>
+     * 
      * @param request CreateUploadFileJobRequest
      * @return CreateUploadFileJobResponse
      */
@@ -2482,8 +2636,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a task to upload an Object Storage Service (OSS) file and obtain the key of the task.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a task to upload an Object Storage Service (OSS) file and obtain the key of the task.</p>
+     * 
      * @param tmpReq CreateUploadOSSFileJobRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateUploadOSSFileJobResponse
@@ -2531,8 +2686,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a task to upload an Object Storage Service (OSS) file and obtain the key of the task.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a task to upload an Object Storage Service (OSS) file and obtain the key of the task.</p>
+     * 
      * @param request CreateUploadOSSFileJobRequest
      * @return CreateUploadOSSFileJobResponse
      */
@@ -2542,8 +2698,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除权限模版
-     *
+     * <b>summary</b> : 
+     * <p>删除权限模版</p>
+     * 
      * @param request DeleteAuthorityTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteAuthorityTemplateResponse
@@ -2577,8 +2734,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除权限模版
-     *
+     * <b>summary</b> : 
+     * <p>删除权限模版</p>
+     * 
      * @param request DeleteAuthorityTemplateRequest
      * @return DeleteAuthorityTemplateResponse
      */
@@ -2588,10 +2746,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Removes a database instance from Data Management (DMS).
-     *
-     * @description Note: You can call this operation only to remove a database instance from the instance list of DMS. The instance is not deleted or shut down.
-     *
+     * <b>description</b> :
+     * <p>Note: You can call this operation only to remove a database instance from the instance list of DMS. The instance is not deleted or shut down.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Removes a database instance from Data Management (DMS).</p>
+     * 
      * @param request DeleteInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteInstanceResponse
@@ -2633,10 +2793,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Removes a database instance from Data Management (DMS).
-     *
-     * @description Note: You can call this operation only to remove a database instance from the instance list of DMS. The instance is not deleted or shut down.
-     *
+     * <b>description</b> :
+     * <p>Note: You can call this operation only to remove a database instance from the instance list of DMS. The instance is not deleted or shut down.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Removes a database instance from Data Management (DMS).</p>
+     * 
      * @param request DeleteInstanceRequest
      * @return DeleteInstanceResponse
      */
@@ -2646,8 +2808,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a workspace.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a workspace.</p>
+     * 
      * @param request DeleteLakeHouseSpaceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteLakeHouseSpaceResponse
@@ -2681,8 +2844,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a workspace.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a workspace.</p>
+     * 
      * @param request DeleteLakeHouseSpaceRequest
      * @return DeleteLakeHouseSpaceResponse
      */
@@ -2692,11 +2856,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除数仓空间成员
-     *
-     * @description You must call this operation as a DMS administrator, a database administrator (DBA), or a workspace administrator.
-     * You cannot call this operation to transfer the ownership of a task flow. To transfer the ownership of a task flow, call the [ChangLhDagOwner](https://help.aliyun.com/document_detail/424761.html) operation.
-     *
+     * <b>description</b> :
+     * <p>You must call this operation as a DMS administrator, a database administrator (DBA), or a workspace administrator.
+     * You cannot call this operation to transfer the ownership of a task flow. To transfer the ownership of a task flow, call the <a href="https://help.aliyun.com/document_detail/424761.html">ChangLhDagOwner</a> operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>删除数仓空间成员</p>
+     * 
      * @param tmpReq DeleteLhMembersRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteLhMembersResponse
@@ -2744,11 +2910,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除数仓空间成员
-     *
-     * @description You must call this operation as a DMS administrator, a database administrator (DBA), or a workspace administrator.
-     * You cannot call this operation to transfer the ownership of a task flow. To transfer the ownership of a task flow, call the [ChangLhDagOwner](https://help.aliyun.com/document_detail/424761.html) operation.
-     *
+     * <b>description</b> :
+     * <p>You must call this operation as a DMS administrator, a database administrator (DBA), or a workspace administrator.
+     * You cannot call this operation to transfer the ownership of a task flow. To transfer the ownership of a task flow, call the <a href="https://help.aliyun.com/document_detail/424761.html">ChangLhDagOwner</a> operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>删除数仓空间成员</p>
+     * 
      * @param request DeleteLhMembersRequest
      * @return DeleteLhMembersResponse
      */
@@ -2758,8 +2926,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a logical database in Database Management (DMS). This operation only deletes the specified logical database but does not delete physical databases.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a logical database in Database Management (DMS). This operation only deletes the specified logical database but does not delete physical databases.</p>
+     * 
      * @param request DeleteLogicDatabaseRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteLogicDatabaseResponse
@@ -2793,8 +2962,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a logical database in Database Management (DMS). This operation only deletes the specified logical database but does not delete physical databases.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a logical database in Database Management (DMS). This operation only deletes the specified logical database but does not delete physical databases.</p>
+     * 
      * @param request DeleteLogicDatabaseRequest
      * @return DeleteLogicDatabaseResponse
      */
@@ -2804,8 +2974,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes the routing algorithm of a logical table.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes the routing algorithm of a logical table.</p>
+     * 
      * @param request DeleteLogicTableRouteConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteLogicTableRouteConfigResponse
@@ -2843,8 +3014,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes the routing algorithm of a logical table.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes the routing algorithm of a logical table.</p>
+     * 
      * @param request DeleteLogicTableRouteConfigRequest
      * @return DeleteLogicTableRouteConfigResponse
      */
@@ -2854,10 +3026,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary You can call this operation to disable the data security protection proxy of a DB instance.
-     *
-     * @description After you disable this feature, your DB instance loses the JDBC protocol. All authorization information is recycled.
-     *
+     * <b>description</b> :
+     * <p>After you disable this feature, your DB instance loses the JDBC protocol. All authorization information is recycled.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>You can call this operation to disable the data security protection proxy of a DB instance.</p>
+     * 
      * @param request DeleteProxyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteProxyResponse
@@ -2891,10 +3065,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary You can call this operation to disable the data security protection proxy of a DB instance.
-     *
-     * @description After you disable this feature, your DB instance loses the JDBC protocol. All authorization information is recycled.
-     *
+     * <b>description</b> :
+     * <p>After you disable this feature, your DB instance loses the JDBC protocol. All authorization information is recycled.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>You can call this operation to disable the data security protection proxy of a DB instance.</p>
+     * 
      * @param request DeleteProxyRequest
      * @return DeleteProxyResponse
      */
@@ -2904,8 +3080,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary You can call this operation to DeleteProxyAccess reclaim the data security protection authorization of the target user.
-     *
+     * <b>summary</b> : 
+     * <p>You can call this operation to DeleteProxyAccess reclaim the data security protection authorization of the target user.</p>
+     * 
      * @param request DeleteProxyAccessRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteProxyAccessResponse
@@ -2939,8 +3116,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary You can call this operation to DeleteProxyAccess reclaim the data security protection authorization of the target user.
-     *
+     * <b>summary</b> : 
+     * <p>You can call this operation to DeleteProxyAccess reclaim the data security protection authorization of the target user.</p>
+     * 
      * @param request DeleteProxyAccessRequest
      * @return DeleteProxyAccessResponse
      */
@@ -2950,10 +3128,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a business scenario.
-     *
-     * @description When you call this operation, make sure that no task flow is specified in the business scenario.
-     *
+     * <b>description</b> :
+     * <p>When you call this operation, make sure that no task flow is specified in the business scenario.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a business scenario.</p>
+     * 
      * @param request DeleteScenarioRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteScenarioResponse
@@ -2987,10 +3167,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a business scenario.
-     *
-     * @description When you call this operation, make sure that no task flow is specified in the business scenario.
-     *
+     * <b>description</b> :
+     * <p>When you call this operation, make sure that no task flow is specified in the business scenario.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a business scenario.</p>
+     * 
      * @param request DeleteScenarioRequest
      * @return DeleteScenarioResponse
      */
@@ -3000,8 +3182,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除安全规则
-     *
+     * <b>summary</b> : 
+     * <p>删除安全规则</p>
+     * 
      * @param request DeleteStandardGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteStandardGroupResponse
@@ -3035,8 +3218,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除安全规则
-     *
+     * <b>summary</b> : 
+     * <p>删除安全规则</p>
+     * 
      * @param request DeleteStandardGroupRequest
      * @return DeleteStandardGroupResponse
      */
@@ -3046,8 +3230,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a task in a specified task flow.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a task in a specified task flow.</p>
+     * 
      * @param request DeleteTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteTaskResponse
@@ -3081,8 +3266,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a task in a specified task flow.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a task in a specified task flow.</p>
+     * 
      * @param request DeleteTaskRequest
      * @return DeleteTaskResponse
      */
@@ -3092,8 +3278,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a task flow.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a task flow.</p>
+     * 
      * @param request DeleteTaskFlowRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteTaskFlowResponse
@@ -3127,8 +3314,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a task flow.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a task flow.</p>
+     * 
      * @param request DeleteTaskFlowRequest
      * @return DeleteTaskFlowResponse
      */
@@ -3138,10 +3326,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes task flow edges based on multiple conditions.
-     *
-     * @description This operation is used for multi-condition query. You can call it to delete the edges of a specified task flow that meet all specified conditions.
-     *
+     * <b>description</b> :
+     * <p>This operation is used for multi-condition query. You can call it to delete the edges of a specified task flow that meet all specified conditions.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes task flow edges based on multiple conditions.</p>
+     * 
      * @param request DeleteTaskFlowEdgesByConditionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteTaskFlowEdgesByConditionResponse
@@ -3187,10 +3377,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes task flow edges based on multiple conditions.
-     *
-     * @description This operation is used for multi-condition query. You can call it to delete the edges of a specified task flow that meet all specified conditions.
-     *
+     * <b>description</b> :
+     * <p>This operation is used for multi-condition query. You can call it to delete the edges of a specified task flow that meet all specified conditions.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes task flow edges based on multiple conditions.</p>
+     * 
      * @param request DeleteTaskFlowEdgesByConditionRequest
      * @return DeleteTaskFlowEdgesByConditionResponse
      */
@@ -3200,11 +3392,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes an Alibaba Cloud account that is no longer used.
-     *
-     * @description The effect of deleting a user by calling this operation is the same as that of deleting a user by choosing System Management > User Management in the DMS Enterprise console. The administrator of DMS Enterprise can call this operation to delete a user that is no longer used from DMS Enterprise. After the user is deleted, the data source permission, data owner configuration, and database administrator (DBA) configuration of the corresponding Alibaba Cloud account or Resource Access Management (RAM) user are revoked and become invalid.
-     * >  This operation only removes the association of the Alibaba Cloud account or RAM user with DMS Enterprise of the enterprise, rather than actually deleting the Alibaba Cloud account or RAM user. After the user is deleted, the Alibaba Cloud account or RAM user cannot log on to DMS Enterprise, unless the user is added to DMS Enterprise again.
-     *
+     * <b>description</b> :
+     * <p>The effect of deleting a user by calling this operation is the same as that of deleting a user by choosing System Management &gt; User Management in the DMS Enterprise console. The administrator of DMS Enterprise can call this operation to delete a user that is no longer used from DMS Enterprise. After the user is deleted, the data source permission, data owner configuration, and database administrator (DBA) configuration of the corresponding Alibaba Cloud account or Resource Access Management (RAM) user are revoked and become invalid.</p>
+     * <blockquote>
+     * <p> This operation only removes the association of the Alibaba Cloud account or RAM user with DMS Enterprise of the enterprise, rather than actually deleting the Alibaba Cloud account or RAM user. After the user is deleted, the Alibaba Cloud account or RAM user cannot log on to DMS Enterprise, unless the user is added to DMS Enterprise again.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an Alibaba Cloud account that is no longer used.</p>
+     * 
      * @param request DeleteUserRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteUserResponse
@@ -3238,11 +3434,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes an Alibaba Cloud account that is no longer used.
-     *
-     * @description The effect of deleting a user by calling this operation is the same as that of deleting a user by choosing System Management > User Management in the DMS Enterprise console. The administrator of DMS Enterprise can call this operation to delete a user that is no longer used from DMS Enterprise. After the user is deleted, the data source permission, data owner configuration, and database administrator (DBA) configuration of the corresponding Alibaba Cloud account or Resource Access Management (RAM) user are revoked and become invalid.
-     * >  This operation only removes the association of the Alibaba Cloud account or RAM user with DMS Enterprise of the enterprise, rather than actually deleting the Alibaba Cloud account or RAM user. After the user is deleted, the Alibaba Cloud account or RAM user cannot log on to DMS Enterprise, unless the user is added to DMS Enterprise again.
-     *
+     * <b>description</b> :
+     * <p>The effect of deleting a user by calling this operation is the same as that of deleting a user by choosing System Management &gt; User Management in the DMS Enterprise console. The administrator of DMS Enterprise can call this operation to delete a user that is no longer used from DMS Enterprise. After the user is deleted, the data source permission, data owner configuration, and database administrator (DBA) configuration of the corresponding Alibaba Cloud account or Resource Access Management (RAM) user are revoked and become invalid.</p>
+     * <blockquote>
+     * <p> This operation only removes the association of the Alibaba Cloud account or RAM user with DMS Enterprise of the enterprise, rather than actually deleting the Alibaba Cloud account or RAM user. After the user is deleted, the Alibaba Cloud account or RAM user cannot log on to DMS Enterprise, unless the user is added to DMS Enterprise again.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an Alibaba Cloud account that is no longer used.</p>
+     * 
      * @param request DeleteUserRequest
      * @return DeleteUserResponse
      */
@@ -3252,11 +3452,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary You can call this operation to disable a user that is temporarily not used in Data Management (DMS) Enterprise.
-     *
-     * @description The effect of disabling a user by calling this operation is the same as that of disabling a user by choosing System Management > User Management in the DMS Enterprise console. The administrator of DMS Enterprise can call this operation to disable a user that is temporarily not used in DMS Enterprise. After the user is disabled, the data source permission, data owner configuration, and database administrator (DBA) configuration of the corresponding Alibaba Cloud account or Resource Access Management (RAM) user are revoked and become invalid.
-     * >  This operation only stops the Alibaba Cloud account or RAM user from logging on to DMS Enterprise of the enterprise, rather than actually disabling the Alibaba Cloud account or RAM user. After the user is disabled, the Alibaba Cloud account or RAM user cannot log on to DMS Enterprise, unless the user is enabled again. The disabled user, however, still exists in DMS Enterprise.
-     *
+     * <b>description</b> :
+     * <p>The effect of disabling a user by calling this operation is the same as that of disabling a user by choosing System Management &gt; User Management in the DMS Enterprise console. The administrator of DMS Enterprise can call this operation to disable a user that is temporarily not used in DMS Enterprise. After the user is disabled, the data source permission, data owner configuration, and database administrator (DBA) configuration of the corresponding Alibaba Cloud account or Resource Access Management (RAM) user are revoked and become invalid.</p>
+     * <blockquote>
+     * <p> This operation only stops the Alibaba Cloud account or RAM user from logging on to DMS Enterprise of the enterprise, rather than actually disabling the Alibaba Cloud account or RAM user. After the user is disabled, the Alibaba Cloud account or RAM user cannot log on to DMS Enterprise, unless the user is enabled again. The disabled user, however, still exists in DMS Enterprise.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>You can call this operation to disable a user that is temporarily not used in Data Management (DMS) Enterprise.</p>
+     * 
      * @param request DisableUserRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DisableUserResponse
@@ -3290,11 +3494,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary You can call this operation to disable a user that is temporarily not used in Data Management (DMS) Enterprise.
-     *
-     * @description The effect of disabling a user by calling this operation is the same as that of disabling a user by choosing System Management > User Management in the DMS Enterprise console. The administrator of DMS Enterprise can call this operation to disable a user that is temporarily not used in DMS Enterprise. After the user is disabled, the data source permission, data owner configuration, and database administrator (DBA) configuration of the corresponding Alibaba Cloud account or Resource Access Management (RAM) user are revoked and become invalid.
-     * >  This operation only stops the Alibaba Cloud account or RAM user from logging on to DMS Enterprise of the enterprise, rather than actually disabling the Alibaba Cloud account or RAM user. After the user is disabled, the Alibaba Cloud account or RAM user cannot log on to DMS Enterprise, unless the user is enabled again. The disabled user, however, still exists in DMS Enterprise.
-     *
+     * <b>description</b> :
+     * <p>The effect of disabling a user by calling this operation is the same as that of disabling a user by choosing System Management &gt; User Management in the DMS Enterprise console. The administrator of DMS Enterprise can call this operation to disable a user that is temporarily not used in DMS Enterprise. After the user is disabled, the data source permission, data owner configuration, and database administrator (DBA) configuration of the corresponding Alibaba Cloud account or Resource Access Management (RAM) user are revoked and become invalid.</p>
+     * <blockquote>
+     * <p> This operation only stops the Alibaba Cloud account or RAM user from logging on to DMS Enterprise of the enterprise, rather than actually disabling the Alibaba Cloud account or RAM user. After the user is disabled, the Alibaba Cloud account or RAM user cannot log on to DMS Enterprise, unless the user is enabled again. The disabled user, however, still exists in DMS Enterprise.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>You can call this operation to disable a user that is temporarily not used in Data Management (DMS) Enterprise.</p>
+     * 
      * @param request DisableUserRequest
      * @return DisableUserResponse
      */
@@ -3304,8 +3512,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Downloads the parsing result of a data tracking task.
-     *
+     * <b>summary</b> : 
+     * <p>Downloads the parsing result of a data tracking task.</p>
+     * 
      * @param tmpReq DownloadDataTrackResultRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DownloadDataTrackResultResponse
@@ -3385,8 +3594,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Downloads the parsing result of a data tracking task.
-     *
+     * <b>summary</b> : 
+     * <p>Downloads the parsing result of a data tracking task.</p>
+     * 
      * @param request DownloadDataTrackResultRequest
      * @return DownloadDataTrackResultResponse
      */
@@ -3396,8 +3606,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the information about a logical database.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the information about a logical database.</p>
+     * 
      * @param tmpReq EditLogicDatabaseRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return EditLogicDatabaseResponse
@@ -3445,8 +3656,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the information about a logical database.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the information about a logical database.</p>
+     * 
      * @param request EditLogicDatabaseRequest
      * @return EditLogicDatabaseResponse
      */
@@ -3456,11 +3668,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary You can call this operation to enable a user that has been disabled in Data Management (DMS) Enterprise.
-     *
-     * @description The effect of enabling a user by calling this operation is the same as that of enabling a user by choosing System Management > User Management in the DMS Enterprise console. The administrator of DMS Enterprise can call this operation to enable a user that has been disabled in DMS Enterprise. After the user is enabled, the corresponding Alibaba Cloud account or Resource Access Management (RAM) user can continue to log on to DMS Enterprise and perform relevant operations.
-     * >  This operation only enables the Alibaba Cloud account or RAM user to log on to DMS Enterprise of the enterprise and perform relevant operations, rather than granting other permissions to the Alibaba Cloud account or RAM user.
-     *
+     * <b>description</b> :
+     * <p>The effect of enabling a user by calling this operation is the same as that of enabling a user by choosing System Management &gt; User Management in the DMS Enterprise console. The administrator of DMS Enterprise can call this operation to enable a user that has been disabled in DMS Enterprise. After the user is enabled, the corresponding Alibaba Cloud account or Resource Access Management (RAM) user can continue to log on to DMS Enterprise and perform relevant operations.</p>
+     * <blockquote>
+     * <p> This operation only enables the Alibaba Cloud account or RAM user to log on to DMS Enterprise of the enterprise and perform relevant operations, rather than granting other permissions to the Alibaba Cloud account or RAM user.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>You can call this operation to enable a user that has been disabled in Data Management (DMS) Enterprise.</p>
+     * 
      * @param request EnableUserRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return EnableUserResponse
@@ -3494,11 +3710,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary You can call this operation to enable a user that has been disabled in Data Management (DMS) Enterprise.
-     *
-     * @description The effect of enabling a user by calling this operation is the same as that of enabling a user by choosing System Management > User Management in the DMS Enterprise console. The administrator of DMS Enterprise can call this operation to enable a user that has been disabled in DMS Enterprise. After the user is enabled, the corresponding Alibaba Cloud account or Resource Access Management (RAM) user can continue to log on to DMS Enterprise and perform relevant operations.
-     * >  This operation only enables the Alibaba Cloud account or RAM user to log on to DMS Enterprise of the enterprise and perform relevant operations, rather than granting other permissions to the Alibaba Cloud account or RAM user.
-     *
+     * <b>description</b> :
+     * <p>The effect of enabling a user by calling this operation is the same as that of enabling a user by choosing System Management &gt; User Management in the DMS Enterprise console. The administrator of DMS Enterprise can call this operation to enable a user that has been disabled in DMS Enterprise. After the user is enabled, the corresponding Alibaba Cloud account or Resource Access Management (RAM) user can continue to log on to DMS Enterprise and perform relevant operations.</p>
+     * <blockquote>
+     * <p> This operation only enables the Alibaba Cloud account or RAM user to log on to DMS Enterprise of the enterprise and perform relevant operations, rather than granting other permissions to the Alibaba Cloud account or RAM user.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>You can call this operation to enable a user that has been disabled in Data Management (DMS) Enterprise.</p>
+     * 
      * @param request EnableUserRequest
      * @return EnableUserResponse
      */
@@ -3508,8 +3728,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Submits a ticket for data change.
-     *
+     * <b>summary</b> : 
+     * <p>Submits a ticket for data change.</p>
+     * 
      * @param tmpReq ExecuteDataCorrectRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ExecuteDataCorrectResponse
@@ -3529,6 +3750,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.orderId)) {
             query.put("OrderId", request.orderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.realLoginUserUid)) {
+            query.put("RealLoginUserUid", request.realLoginUserUid);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.tid)) {
@@ -3553,8 +3778,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Submits a ticket for data change.
-     *
+     * <b>summary</b> : 
+     * <p>Submits a ticket for data change.</p>
+     * 
      * @param request ExecuteDataCorrectRequest
      * @return ExecuteDataCorrectResponse
      */
@@ -3564,8 +3790,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Executes a data export ticket.
-     *
+     * <b>summary</b> : 
+     * <p>Executes a data export ticket.</p>
+     * 
      * @param tmpReq ExecuteDataExportRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ExecuteDataExportResponse
@@ -3585,6 +3812,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.orderId)) {
             query.put("OrderId", request.orderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.realLoginUserUid)) {
+            query.put("RealLoginUserUid", request.realLoginUserUid);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.tid)) {
@@ -3609,8 +3840,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Executes a data export ticket.
-     *
+     * <b>summary</b> : 
+     * <p>Executes a data export ticket.</p>
+     * 
      * @param request ExecuteDataExportRequest
      * @return ExecuteDataExportResponse
      */
@@ -3620,10 +3852,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Executes SQL statements.
-     *
-     * @description You can call this operation only for instances that are managed in Security Collaboration mode.
-     *
+     * <b>description</b> :
+     * <p>You can call this operation only for instances that are managed in Security Collaboration mode.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Executes SQL statements.</p>
+     * 
      * @param request ExecuteScriptRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ExecuteScriptResponse
@@ -3665,10 +3899,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Executes SQL statements.
-     *
-     * @description You can call this operation only for instances that are managed in Security Collaboration mode.
-     *
+     * <b>description</b> :
+     * <p>You can call this operation only for instances that are managed in Security Collaboration mode.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Executes SQL statements.</p>
+     * 
      * @param request ExecuteScriptRequest
      * @return ExecuteScriptResponse
      */
@@ -3678,11 +3914,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Executes a schema synchronization task.
-     *
-     * @description If the security rules of an instance indicate that a ticket must be approved before you perform schema synchronization, you can call the [SubmitStructSyncOrderApproval](https://help.aliyun.com/document_detail/206166.html) operation to submit the ticket for approval.
-     * >  You can call the [GetStructSyncJobDetail](https://help.aliyun.com/document_detail/206160.html) operation to query whether you need to submit a ticket for approval.
-     *
+     * <b>description</b> :
+     * <p>If the security rules of an instance indicate that a ticket must be approved before you perform schema synchronization, you can call the <a href="https://help.aliyun.com/document_detail/206166.html">SubmitStructSyncOrderApproval</a> operation to submit the ticket for approval.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/206160.html">GetStructSyncJobDetail</a> operation to query whether you need to submit a ticket for approval.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Executes a schema synchronization task.</p>
+     * 
      * @param request ExecuteStructSyncRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ExecuteStructSyncResponse
@@ -3716,11 +3956,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Executes a schema synchronization task.
-     *
-     * @description If the security rules of an instance indicate that a ticket must be approved before you perform schema synchronization, you can call the [SubmitStructSyncOrderApproval](https://help.aliyun.com/document_detail/206166.html) operation to submit the ticket for approval.
-     * >  You can call the [GetStructSyncJobDetail](https://help.aliyun.com/document_detail/206160.html) operation to query whether you need to submit a ticket for approval.
-     *
+     * <b>description</b> :
+     * <p>If the security rules of an instance indicate that a ticket must be approved before you perform schema synchronization, you can call the <a href="https://help.aliyun.com/document_detail/206166.html">SubmitStructSyncOrderApproval</a> operation to submit the ticket for approval.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/206160.html">GetStructSyncJobDetail</a> operation to query whether you need to submit a ticket for approval.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Executes a schema synchronization task.</p>
+     * 
      * @param request ExecuteStructSyncRequest
      * @return ExecuteStructSyncResponse
      */
@@ -3730,8 +3974,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the approval details of a ticket.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the approval details of a ticket.</p>
+     * 
      * @param request GetApprovalDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetApprovalDetailResponse
@@ -3765,8 +4010,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the approval details of a ticket.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the approval details of a ticket.</p>
+     * 
      * @param request GetApprovalDetailRequest
      * @return GetApprovalDetailResponse
      */
@@ -3776,10 +4022,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about a permission template.
-     *
-     * @description You must be a Data Management (DMS) administrator or a database administrator (DBA). For more information about how to view system roles, see [View system roles](https://help.aliyun.com/document_detail/324212.html).
-     *
+     * <b>description</b> :
+     * <p>You must be a Data Management (DMS) administrator or a database administrator (DBA). For more information about how to view system roles, see <a href="https://help.aliyun.com/document_detail/324212.html">View system roles</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information about a permission template.</p>
+     * 
      * @param request GetAuthorityTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetAuthorityTemplateResponse
@@ -3813,10 +4061,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about a permission template.
-     *
-     * @description You must be a Data Management (DMS) administrator or a database administrator (DBA). For more information about how to view system roles, see [View system roles](https://help.aliyun.com/document_detail/324212.html).
-     *
+     * <b>description</b> :
+     * <p>You must be a Data Management (DMS) administrator or a database administrator (DBA). For more information about how to view system roles, see <a href="https://help.aliyun.com/document_detail/324212.html">View system roles</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information about a permission template.</p>
+     * 
      * @param request GetAuthorityTemplateRequest
      * @return GetAuthorityTemplateResponse
      */
@@ -3826,10 +4076,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the resources in a permission template.
-     *
-     * @description You are a database administrator (DBA) or a Data Management (DMS) administrator. For more information about how to view system roles, see [View system roles](https://help.aliyun.com/document_detail/324212.html).
-     *
+     * <b>description</b> :
+     * <p>You are a database administrator (DBA) or a Data Management (DMS) administrator. For more information about how to view system roles, see <a href="https://help.aliyun.com/document_detail/324212.html">View system roles</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the resources in a permission template.</p>
+     * 
      * @param request GetAuthorityTemplateItemRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetAuthorityTemplateItemResponse
@@ -3863,10 +4115,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the resources in a permission template.
-     *
-     * @description You are a database administrator (DBA) or a Data Management (DMS) administrator. For more information about how to view system roles, see [View system roles](https://help.aliyun.com/document_detail/324212.html).
-     *
+     * <b>description</b> :
+     * <p>You are a database administrator (DBA) or a Data Management (DMS) administrator. For more information about how to view system roles, see <a href="https://help.aliyun.com/document_detail/324212.html">View system roles</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the resources in a permission template.</p>
+     * 
      * @param request GetAuthorityTemplateItemRequest
      * @return GetAuthorityTemplateItemResponse
      */
@@ -3876,8 +4130,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取实例绑定的分类分级模板
-     *
+     * <b>summary</b> : 
+     * <p>获取实例绑定的分类分级模板</p>
+     * 
      * @param request GetClassificationTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetClassificationTemplateResponse
@@ -3911,8 +4166,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取实例绑定的分类分级模板
-     *
+     * <b>summary</b> : 
+     * <p>获取实例绑定的分类分级模板</p>
+     * 
      * @param request GetClassificationTemplateRequest
      * @return GetClassificationTemplateResponse
      */
@@ -3922,8 +4178,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the log that records the scheduling details of an SQL task.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the log that records the scheduling details of an SQL task.</p>
+     * 
      * @param request GetDBTaskSQLJobLogRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetDBTaskSQLJobLogResponse
@@ -3957,8 +4214,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the log that records the scheduling details of an SQL task.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the log that records the scheduling details of an SQL task.</p>
+     * 
      * @param request GetDBTaskSQLJobLogRequest
      * @return GetDBTaskSQLJobLogResponse
      */
@@ -3968,8 +4226,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the topologies of a logical database and its physical database shards.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the topologies of a logical database and its physical database shards.</p>
+     * 
      * @param request GetDBTopologyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetDBTopologyResponse
@@ -4003,8 +4262,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the topologies of a logical database and its physical database shards.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the topologies of a logical database and its physical database shards.</p>
+     * 
      * @param request GetDBTopologyRequest
      * @return GetDBTopologyResponse
      */
@@ -4014,8 +4274,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the statistics of data archiving orders, including the number of successful archiving tickets, the number of failed archiving tickets, the number of in-progress archiving tickets, and the total number of archiving tickets.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the statistics of data archiving orders, including the number of successful archiving tickets, the number of failed archiving tickets, the number of in-progress archiving tickets, and the total number of archiving tickets.</p>
+     * 
      * @param request GetDataArchiveCountRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetDataArchiveCountResponse
@@ -4057,8 +4318,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the statistics of data archiving orders, including the number of successful archiving tickets, the number of failed archiving tickets, the number of in-progress archiving tickets, and the total number of archiving tickets.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the statistics of data archiving orders, including the number of successful archiving tickets, the number of failed archiving tickets, the number of in-progress archiving tickets, and the total number of archiving tickets.</p>
+     * 
      * @param request GetDataArchiveCountRequest
      * @return GetDataArchiveCountResponse
      */
@@ -4068,8 +4330,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of a data archiving ticket.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details of a data archiving ticket.</p>
+     * 
      * @param request GetDataArchiveOrderDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetDataArchiveOrderDetailResponse
@@ -4103,8 +4366,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of a data archiving ticket.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details of a data archiving ticket.</p>
+     * 
      * @param request GetDataArchiveOrderDetailRequest
      * @return GetDataArchiveOrderDetailResponse
      */
@@ -4114,8 +4378,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the download URL of the backup file for a data change ticket in Data Management (DMS).
-     *
+     * <b>summary</b> : 
+     * <p>Queries the download URL of the backup file for a data change ticket in Data Management (DMS).</p>
+     * 
      * @param tmpReq GetDataCorrectBackupFilesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetDataCorrectBackupFilesResponse
@@ -4159,8 +4424,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the download URL of the backup file for a data change ticket in Data Management (DMS).
-     *
+     * <b>summary</b> : 
+     * <p>Queries the download URL of the backup file for a data change ticket in Data Management (DMS).</p>
+     * 
      * @param request GetDataCorrectBackupFilesRequest
      * @return GetDataCorrectBackupFilesResponse
      */
@@ -4170,8 +4436,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about a data change ticket in Data Management (DMS).
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about a data change ticket in Data Management (DMS).</p>
+     * 
      * @param request GetDataCorrectOrderDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetDataCorrectOrderDetailResponse
@@ -4205,8 +4472,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about a data change ticket in Data Management (DMS).
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about a data change ticket in Data Management (DMS).</p>
+     * 
      * @param request GetDataCorrectOrderDetailRequest
      * @return GetDataCorrectOrderDetailResponse
      */
@@ -4216,8 +4484,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the download URL of the rollback attachment submitted along with a data change ticket.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the download URL of the rollback attachment submitted along with a data change ticket.</p>
+     * 
      * @param request GetDataCorrectRollbackFileRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetDataCorrectRollbackFileResponse
@@ -4251,8 +4520,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the download URL of the rollback attachment submitted along with a data change ticket.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the download URL of the rollback attachment submitted along with a data change ticket.</p>
+     * 
      * @param request GetDataCorrectRollbackFileRequest
      * @return GetDataCorrectRollbackFileResponse
      */
@@ -4262,10 +4532,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the download URL of the SQL script for a data change task.
-     *
-     * @description This operation applies to [regular data change](https://help.aliyun.com/document_detail/58419.html) and [batch data import](https://help.aliyun.com/document_detail/144643.html).
-     *
+     * <b>description</b> :
+     * <p>This operation applies to <a href="https://help.aliyun.com/document_detail/58419.html">regular data change</a> and <a href="https://help.aliyun.com/document_detail/144643.html">batch data import</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the download URL of the SQL script for a data change task.</p>
+     * 
      * @param request GetDataCorrectSQLFileRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetDataCorrectSQLFileResponse
@@ -4299,10 +4571,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the download URL of the SQL script for a data change task.
-     *
-     * @description This operation applies to [regular data change](https://help.aliyun.com/document_detail/58419.html) and [batch data import](https://help.aliyun.com/document_detail/144643.html).
-     *
+     * <b>description</b> :
+     * <p>This operation applies to <a href="https://help.aliyun.com/document_detail/58419.html">regular data change</a> and <a href="https://help.aliyun.com/document_detail/144643.html">batch data import</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the download URL of the SQL script for a data change task.</p>
+     * 
      * @param request GetDataCorrectSQLFileRequest
      * @return GetDataCorrectSQLFileResponse
      */
@@ -4312,8 +4586,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about a data change, lock-free data change, or data import task.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about a data change, lock-free data change, or data import task.</p>
+     * 
      * @param request GetDataCorrectTaskDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetDataCorrectTaskDetailResponse
@@ -4347,8 +4622,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about a data change, lock-free data change, or data import task.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about a data change, lock-free data change, or data import task.</p>
+     * 
      * @param request GetDataCorrectTaskDetailRequest
      * @return GetDataCorrectTaskDetailResponse
      */
@@ -4358,8 +4634,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the scheduling configuration of a ticket for cleaning up historical data.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the scheduling configuration of a ticket for cleaning up historical data.</p>
+     * 
      * @param request GetDataCronClearConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetDataCronClearConfigResponse
@@ -4393,8 +4670,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the scheduling configuration of a ticket for cleaning up historical data.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the scheduling configuration of a ticket for cleaning up historical data.</p>
+     * 
      * @param request GetDataCronClearConfigRequest
      * @return GetDataCronClearConfigResponse
      */
@@ -4404,8 +4682,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of a historical data cleansing ticket.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details of a historical data cleansing ticket.</p>
+     * 
      * @param request GetDataCronClearTaskDetailListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetDataCronClearTaskDetailListResponse
@@ -4447,8 +4726,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of a historical data cleansing ticket.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details of a historical data cleansing ticket.</p>
+     * 
      * @param request GetDataCronClearTaskDetailListRequest
      * @return GetDataCronClearTaskDetailListResponse
      */
@@ -4458,8 +4738,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the download URL of the file that records the export results for a data export ticket in Data Management (DMS).
-     *
+     * <b>summary</b> : 
+     * <p>Queries the download URL of the file that records the export results for a data export ticket in Data Management (DMS).</p>
+     * 
      * @param request GetDataExportDownloadURLRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetDataExportDownloadURLResponse
@@ -4469,6 +4750,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.orderId)) {
             query.put("OrderId", request.orderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.realLoginUserUid)) {
+            query.put("RealLoginUserUid", request.realLoginUserUid);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.tid)) {
@@ -4493,8 +4778,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the download URL of the file that records the export results for a data export ticket in Data Management (DMS).
-     *
+     * <b>summary</b> : 
+     * <p>Queries the download URL of the file that records the export results for a data export ticket in Data Management (DMS).</p>
+     * 
      * @param request GetDataExportDownloadURLRequest
      * @return GetDataExportDownloadURLResponse
      */
@@ -4504,8 +4790,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about a data export ticket.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about a data export ticket.</p>
+     * 
      * @param request GetDataExportOrderDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetDataExportOrderDetailResponse
@@ -4541,8 +4828,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about a data export ticket.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about a data export ticket.</p>
+     * 
      * @param request GetDataExportOrderDetailRequest
      * @return GetDataExportOrderDetailResponse
      */
@@ -4552,8 +4840,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the precheck details of an SQL result set export ticket.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the precheck details of an SQL result set export ticket.</p>
+     * 
      * @param request GetDataExportPreCheckDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetDataExportPreCheckDetailResponse
@@ -4587,8 +4876,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the precheck details of an SQL result set export ticket.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the precheck details of an SQL result set export ticket.</p>
+     * 
      * @param request GetDataExportPreCheckDetailRequest
      * @return GetDataExportPreCheckDetailResponse
      */
@@ -4598,10 +4888,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the SQL statements used for data import in a ticket.
-     *
-     * @description You can call this operation only if the data is imported in security mode in your data import ticket.
-     *
+     * <b>description</b> :
+     * <p>You can call this operation only if the data is imported in security mode in your data import ticket.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the SQL statements used for data import in a ticket.</p>
+     * 
      * @param request GetDataImportSQLRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetDataImportSQLResponse
@@ -4639,10 +4931,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the SQL statements used for data import in a ticket.
-     *
-     * @description You can call this operation only if the data is imported in security mode in your data import ticket.
-     *
+     * <b>description</b> :
+     * <p>You can call this operation only if the data is imported in security mode in your data import ticket.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the SQL statements used for data import in a ticket.</p>
+     * 
      * @param request GetDataImportSQLRequest
      * @return GetDataImportSQLResponse
      */
@@ -4652,8 +4946,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the progress of a data tracking task.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the progress of a data tracking task.</p>
+     * 
      * @param request GetDataTrackJobDegreeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetDataTrackJobDegreeResponse
@@ -4687,8 +4982,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the progress of a data tracking task.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the progress of a data tracking task.</p>
+     * 
      * @param request GetDataTrackJobDegreeRequest
      * @return GetDataTrackJobDegreeResponse
      */
@@ -4698,8 +4994,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the metadata of tables involved in a data tracking task.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the metadata of tables involved in a data tracking task.</p>
+     * 
      * @param request GetDataTrackJobTableMetaRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetDataTrackJobTableMetaResponse
@@ -4733,8 +5030,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the metadata of tables involved in a data tracking task.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the metadata of tables involved in a data tracking task.</p>
+     * 
      * @param request GetDataTrackJobTableMetaRequest
      * @return GetDataTrackJobTableMetaResponse
      */
@@ -4744,8 +5042,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of a data tracking ticket.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details of a data tracking ticket.</p>
+     * 
      * @param request GetDataTrackOrderDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetDataTrackOrderDetailResponse
@@ -4779,8 +5078,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of a data tracking ticket.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details of a data tracking ticket.</p>
+     * 
      * @param request GetDataTrackOrderDetailRequest
      * @return GetDataTrackOrderDetailResponse
      */
@@ -4790,8 +5090,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries details of a specific database.
-     *
+     * <b>summary</b> : 
+     * <p>Queries details of a specific database.</p>
+     * 
      * @param request GetDatabaseRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetDatabaseResponse
@@ -4837,8 +5138,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries details of a specific database.
-     *
+     * <b>summary</b> : 
+     * <p>Queries details of a specific database.</p>
+     * 
      * @param request GetDatabaseRequest
      * @return GetDatabaseResponse
      */
@@ -4848,8 +5150,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of a database export ticket.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details of a database export ticket.</p>
+     * 
      * @param request GetDatabaseExportOrderDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetDatabaseExportOrderDetailResponse
@@ -4885,8 +5188,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of a database export ticket.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details of a database export ticket.</p>
+     * 
      * @param request GetDatabaseExportOrderDetailRequest
      * @return GetDatabaseExportOrderDetailResponse
      */
@@ -4896,8 +5200,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取数据库导出下载地址
-     *
+     * <b>summary</b> : 
+     * <p>获取数据库导出下载地址</p>
+     * 
      * @param request GetDbExportDownloadURLRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetDbExportDownloadURLResponse
@@ -4931,8 +5236,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取数据库导出下载地址
-     *
+     * <b>summary</b> : 
+     * <p>获取数据库导出下载地址</p>
+     * 
      * @param request GetDbExportDownloadURLRequest
      * @return GetDbExportDownloadURLResponse
      */
@@ -4942,8 +5248,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of a database instance.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details of a database instance.</p>
+     * 
      * @param request GetInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetInstanceResponse
@@ -4985,8 +5292,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of a database instance.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details of a database instance.</p>
+     * 
      * @param request GetInstanceRequest
      * @return GetInstanceResponse
      */
@@ -4996,10 +5304,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the minimum scheduling cycle of a task flow when a service level agreement (SLA) timeout rule is configured for the task flow.
-     *
-     * @description The scheduling cycle of a task flow must be greater than the minimum scheduling cycle configured in the SLA rule for the task flow.
-     *
+     * <b>description</b> :
+     * <p>The scheduling cycle of a task flow must be greater than the minimum scheduling cycle configured in the SLA rule for the task flow.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the minimum scheduling cycle of a task flow when a service level agreement (SLA) timeout rule is configured for the task flow.</p>
+     * 
      * @param request GetIntervalLimitOfSLARequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetIntervalLimitOfSLAResponse
@@ -5033,10 +5343,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the minimum scheduling cycle of a task flow when a service level agreement (SLA) timeout rule is configured for the task flow.
-     *
-     * @description The scheduling cycle of a task flow must be greater than the minimum scheduling cycle configured in the SLA rule for the task flow.
-     *
+     * <b>description</b> :
+     * <p>The scheduling cycle of a task flow must be greater than the minimum scheduling cycle configured in the SLA rule for the task flow.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the minimum scheduling cycle of a task flow when a service level agreement (SLA) timeout rule is configured for the task flow.</p>
+     * 
      * @param request GetIntervalLimitOfSLARequest
      * @return GetIntervalLimitOfSLAResponse
      */
@@ -5046,10 +5358,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about a workspace based on the workspace name in Data Management (DMS).
-     *
-     * @description You are a DMS administrator or a database administrator (DBA).
-     *
+     * <b>description</b> :
+     * <p>You are a DMS administrator or a database administrator (DBA).</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information about a workspace based on the workspace name in Data Management (DMS).</p>
+     * 
      * @param request GetLhSpaceByNameRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetLhSpaceByNameResponse
@@ -5083,10 +5397,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about a workspace based on the workspace name in Data Management (DMS).
-     *
-     * @description You are a DMS administrator or a database administrator (DBA).
-     *
+     * <b>description</b> :
+     * <p>You are a DMS administrator or a database administrator (DBA).</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information about a workspace based on the workspace name in Data Management (DMS).</p>
+     * 
      * @param request GetLhSpaceByNameRequest
      * @return GetLhSpaceByNameResponse
      */
@@ -5096,8 +5412,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of a logical database.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details of a logical database.</p>
+     * 
      * @param request GetLogicDatabaseRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetLogicDatabaseResponse
@@ -5131,8 +5448,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of a logical database.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details of a logical database.</p>
+     * 
      * @param request GetLogicDatabaseRequest
      * @return GetLogicDatabaseResponse
      */
@@ -5142,10 +5460,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of columns in a table.
-     *
-     * @description You can call this operation only for database instances whose control mode is Security Collaboration.
-     *
+     * <b>description</b> :
+     * <p>You can call this operation only for database instances whose control mode is Security Collaboration.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of columns in a table.</p>
+     * 
      * @param request GetMetaTableColumnRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetMetaTableColumnResponse
@@ -5179,10 +5499,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of columns in a table.
-     *
-     * @description You can call this operation only for database instances whose control mode is Security Collaboration.
-     *
+     * <b>description</b> :
+     * <p>You can call this operation only for database instances whose control mode is Security Collaboration.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of columns in a table.</p>
+     * 
      * @param request GetMetaTableColumnRequest
      * @return GetMetaTableColumnResponse
      */
@@ -5192,10 +5514,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of columns and indexes in a table.
-     *
-     * @description You can call this operation only for database instances whose control mode is Security Collaboration.
-     *
+     * <b>description</b> :
+     * <p>You can call this operation only for database instances whose control mode is Security Collaboration.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of columns and indexes in a table.</p>
+     * 
      * @param request GetMetaTableDetailInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetMetaTableDetailInfoResponse
@@ -5229,10 +5553,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of columns and indexes in a table.
-     *
-     * @description You can call this operation only for database instances whose control mode is Security Collaboration.
-     *
+     * <b>description</b> :
+     * <p>You can call this operation only for database instances whose control mode is Security Collaboration.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of columns and indexes in a table.</p>
+     * 
      * @param request GetMetaTableDetailInfoRequest
      * @return GetMetaTableDetailInfoResponse
      */
@@ -5242,8 +5568,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details and progress of an OnlineDDL task.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details and progress of an OnlineDDL task.</p>
+     * 
      * @param request GetOnlineDDLProgressRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetOnlineDDLProgressResponse
@@ -5277,8 +5604,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details and progress of an OnlineDDL task.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details and progress of an OnlineDDL task.</p>
+     * 
      * @param request GetOnlineDDLProgressRequest
      * @return GetOnlineDDLProgressResponse
      */
@@ -5288,10 +5616,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of operation logs that are generated in a specified period of time.
-     *
-     * @description Prerequisites: You are an administrator of Data Management (DMS) or a security administrator. You can call the [ListUsers](https://help.aliyun.com/document_detail/141938.html) or [GetUser](https://help.aliyun.com/document_detail/147098.html) operation to obtain your user role from the RoleIdList parameter that is returned.
-     *
+     * <b>description</b> :
+     * <p>Prerequisites: You are an administrator of Data Management (DMS) or a security administrator. You can call the <a href="https://help.aliyun.com/document_detail/141938.html">ListUsers</a> or <a href="https://help.aliyun.com/document_detail/147098.html">GetUser</a> operation to obtain your user role from the RoleIdList parameter that is returned.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of operation logs that are generated in a specified period of time.</p>
+     * 
      * @param request GetOpLogRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetOpLogResponse
@@ -5349,10 +5679,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of operation logs that are generated in a specified period of time.
-     *
-     * @description Prerequisites: You are an administrator of Data Management (DMS) or a security administrator. You can call the [ListUsers](https://help.aliyun.com/document_detail/141938.html) or [GetUser](https://help.aliyun.com/document_detail/147098.html) operation to obtain your user role from the RoleIdList parameter that is returned.
-     *
+     * <b>description</b> :
+     * <p>Prerequisites: You are an administrator of Data Management (DMS) or a security administrator. You can call the <a href="https://help.aliyun.com/document_detail/141938.html">ListUsers</a> or <a href="https://help.aliyun.com/document_detail/147098.html">GetUser</a> operation to obtain your user role from the RoleIdList parameter that is returned.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of operation logs that are generated in a specified period of time.</p>
+     * 
      * @param request GetOpLogRequest
      * @return GetOpLogResponse
      */
@@ -5362,8 +5694,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the download URL of the attachment of a ticket.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the download URL of the attachment of a ticket.</p>
+     * 
      * @param request GetOrderAttachmentFileRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetOrderAttachmentFileResponse
@@ -5397,8 +5730,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the download URL of the attachment of a ticket.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the download URL of the attachment of a ticket.</p>
+     * 
      * @param request GetOrderAttachmentFileRequest
      * @return GetOrderAttachmentFileResponse
      */
@@ -5408,8 +5742,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the basic information about a ticket.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the basic information about a ticket.</p>
+     * 
      * @param request GetOrderBaseInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetOrderBaseInfoResponse
@@ -5443,8 +5778,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the basic information about a ticket.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the basic information about a ticket.</p>
+     * 
      * @param request GetOrderBaseInfoRequest
      * @return GetOrderBaseInfoResponse
      */
@@ -5454,8 +5790,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of the Database-OWNER, Table-OWNER, and Instance-OWNER tickets.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details of the Database-OWNER, Table-OWNER, and Instance-OWNER tickets.</p>
+     * 
      * @param request GetOwnerApplyOrderDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetOwnerApplyOrderDetailResponse
@@ -5489,8 +5826,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of the Database-OWNER, Table-OWNER, and Instance-OWNER tickets.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details of the Database-OWNER, Table-OWNER, and Instance-OWNER tickets.</p>
+     * 
      * @param request GetOwnerApplyOrderDetailRequest
      * @return GetOwnerApplyOrderDetailResponse
      */
@@ -5500,8 +5838,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取数据归档工单任务实例
-     *
+     * <b>summary</b> : 
+     * <p>获取数据归档工单任务实例</p>
+     * 
      * @param request GetPagedInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetPagedInstanceResponse
@@ -5527,8 +5866,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取数据归档工单任务实例
-     *
+     * <b>summary</b> : 
+     * <p>获取数据归档工单任务实例</p>
+     * 
      * @param request GetPagedInstanceRequest
      * @return GetPagedInstanceResponse
      */
@@ -5538,10 +5878,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of a ticket that applies for permissions.
-     *
-     * @description You can call this operation to query the information about tickets that apply for permissions on databases, tables, and sensitive columns.
-     *
+     * <b>description</b> :
+     * <p>You can call this operation to query the information about tickets that apply for permissions on databases, tables, and sensitive columns.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of a ticket that applies for permissions.</p>
+     * 
      * @param request GetPermApplyOrderDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetPermApplyOrderDetailResponse
@@ -5575,10 +5917,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of a ticket that applies for permissions.
-     *
-     * @description You can call this operation to query the information about tickets that apply for permissions on databases, tables, and sensitive columns.
-     *
+     * <b>description</b> :
+     * <p>You can call this operation to query the information about tickets that apply for permissions on databases, tables, and sensitive columns.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of a ticket that applies for permissions.</p>
+     * 
      * @param request GetPermApplyOrderDetailRequest
      * @return GetPermApplyOrderDetailResponse
      */
@@ -5588,8 +5932,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of a physical database.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details of a physical database.</p>
+     * 
      * @param request GetPhysicalDatabaseRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetPhysicalDatabaseResponse
@@ -5623,8 +5968,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of a physical database.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details of a physical database.</p>
+     * 
      * @param request GetPhysicalDatabaseRequest
      * @return GetPhysicalDatabaseResponse
      */
@@ -5634,8 +5980,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of a secure access proxy.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details of a secure access proxy.</p>
+     * 
      * @param request GetProxyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetProxyResponse
@@ -5669,8 +6016,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of a secure access proxy.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details of a secure access proxy.</p>
+     * 
      * @param request GetProxyRequest
      * @return GetProxyResponse
      */
@@ -5680,8 +6028,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the authorization information about the secure access proxy feature.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the authorization information about the secure access proxy feature.</p>
+     * 
      * @param request GetProxyAccessRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetProxyAccessResponse
@@ -5715,8 +6064,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the authorization information about the secure access proxy feature.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the authorization information about the secure access proxy feature.</p>
+     * 
      * @param request GetProxyAccessRequest
      * @return GetProxyAccessResponse
      */
@@ -5726,8 +6076,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the maximum number of custom service-level agreement (SLA) rules for task orchestration.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the maximum number of custom service-level agreement (SLA) rules for task orchestration.</p>
+     * 
      * @param request GetRuleNumLimitOfSLARequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetRuleNumLimitOfSLAResponse
@@ -5761,8 +6112,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the maximum number of custom service-level agreement (SLA) rules for task orchestration.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the maximum number of custom service-level agreement (SLA) rules for task orchestration.</p>
+     * 
      * @param request GetRuleNumLimitOfSLARequest
      * @return GetRuleNumLimitOfSLAResponse
      */
@@ -5772,10 +6124,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the result of an SQL review.
-     *
-     * @description For more information about the SQL review feature, see [SQL review](https://help.aliyun.com/document_detail/60374.html).
-     *
+     * <b>description</b> :
+     * <p>For more information about the SQL review feature, see <a href="https://help.aliyun.com/document_detail/60374.html">SQL review</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the result of an SQL review.</p>
+     * 
      * @param request GetSQLReviewCheckResultStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetSQLReviewCheckResultStatusResponse
@@ -5809,10 +6163,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the result of an SQL review.
-     *
-     * @description For more information about the SQL review feature, see [SQL review](https://help.aliyun.com/document_detail/60374.html).
-     *
+     * <b>description</b> :
+     * <p>For more information about the SQL review feature, see <a href="https://help.aliyun.com/document_detail/60374.html">SQL review</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the result of an SQL review.</p>
+     * 
      * @param request GetSQLReviewCheckResultStatusRequest
      * @return GetSQLReviewCheckResultStatusResponse
      */
@@ -5822,10 +6178,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of optimization suggestions. The operation applies only to the tickets for the data changes and SQL review.
-     *
-     * @description For more information about the SQL review feature, see [SQL review](https://help.aliyun.com/document_detail/60374.html).
-     *
+     * <b>description</b> :
+     * <p>For more information about the SQL review feature, see <a href="https://help.aliyun.com/document_detail/60374.html">SQL review</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of optimization suggestions. The operation applies only to the tickets for the data changes and SQL review.</p>
+     * 
      * @param request GetSQLReviewOptimizeDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetSQLReviewOptimizeDetailResponse
@@ -5859,10 +6217,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of optimization suggestions. The operation applies only to the tickets for the data changes and SQL review.
-     *
-     * @description For more information about the SQL review feature, see [SQL review](https://help.aliyun.com/document_detail/60374.html).
-     *
+     * <b>description</b> :
+     * <p>For more information about the SQL review feature, see <a href="https://help.aliyun.com/document_detail/60374.html">SQL review</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of optimization suggestions. The operation applies only to the tickets for the data changes and SQL review.</p>
+     * 
      * @param request GetSQLReviewOptimizeDetailRequest
      * @return GetSQLReviewOptimizeDetailResponse
      */
@@ -5872,8 +6232,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取安全规则
-     *
+     * <b>summary</b> : 
+     * <p>获取安全规则</p>
+     * 
      * @param request GetStandardGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetStandardGroupResponse
@@ -5907,8 +6268,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取安全规则
-     *
+     * <b>summary</b> : 
+     * <p>获取安全规则</p>
+     * 
      * @param request GetStandardGroupRequest
      * @return GetStandardGroupResponse
      */
@@ -5918,8 +6280,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the SQL statements that are involved in a schema synchronization ticket.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the SQL statements that are involved in a schema synchronization ticket.</p>
+     * 
      * @param request GetStructSyncExecSqlDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetStructSyncExecSqlDetailResponse
@@ -5961,8 +6324,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the SQL statements that are involved in a schema synchronization ticket.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the SQL statements that are involved in a schema synchronization ticket.</p>
+     * 
      * @param request GetStructSyncExecSqlDetailRequest
      * @return GetStructSyncExecSqlDetailResponse
      */
@@ -5972,8 +6336,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the analysis result of a schema synchronization task.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the analysis result of a schema synchronization task.</p>
+     * 
      * @param request GetStructSyncJobAnalyzeResultRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetStructSyncJobAnalyzeResultResponse
@@ -6019,8 +6384,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the analysis result of a schema synchronization task.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the analysis result of a schema synchronization task.</p>
+     * 
      * @param request GetStructSyncJobAnalyzeResultRequest
      * @return GetStructSyncJobAnalyzeResultResponse
      */
@@ -6030,8 +6396,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information of a schema synchronization task.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information of a schema synchronization task.</p>
+     * 
      * @param request GetStructSyncJobDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetStructSyncJobDetailResponse
@@ -6065,8 +6432,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information of a schema synchronization task.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information of a schema synchronization task.</p>
+     * 
      * @param request GetStructSyncJobDetailRequest
      * @return GetStructSyncJobDetailResponse
      */
@@ -6076,8 +6444,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of a schema synchronization ticket.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details of a schema synchronization ticket.</p>
+     * 
      * @param request GetStructSyncOrderDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetStructSyncOrderDetailResponse
@@ -6111,8 +6480,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of a schema synchronization ticket.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details of a schema synchronization ticket.</p>
+     * 
      * @param request GetStructSyncOrderDetailRequest
      * @return GetStructSyncOrderDetailResponse
      */
@@ -6122,8 +6492,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the topology of a data table.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the topology of a data table.</p>
+     * 
      * @param request GetTableDBTopologyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetTableDBTopologyResponse
@@ -6157,8 +6528,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the topology of a data table.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the topology of a data table.</p>
+     * 
      * @param request GetTableDBTopologyRequest
      * @return GetTableDBTopologyResponse
      */
@@ -6168,8 +6540,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取结构设计项目的流程信息
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about a schema design ticket, such as the current node of the ticket, whether the ticket can be returned to the schema design node, and the publishing strategy.</p>
+     * 
      * @param request GetTableDesignProjectFlowRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetTableDesignProjectFlowResponse
@@ -6203,8 +6576,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取结构设计项目的流程信息
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about a schema design ticket, such as the current node of the ticket, whether the ticket can be returned to the schema design node, and the publishing strategy.</p>
+     * 
      * @param request GetTableDesignProjectFlowRequest
      * @return GetTableDesignProjectFlowResponse
      */
@@ -6214,8 +6588,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取结构设计项目的详细信息
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about the project and change base database of a schema design ticket, such as the state of the ticket, the ID of the user who created the ticket, and the name and ID of the change base database.</p>
+     * 
      * @param request GetTableDesignProjectInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetTableDesignProjectInfoResponse
@@ -6249,8 +6624,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取结构设计项目的详细信息
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about the project and change base database of a schema design ticket, such as the state of the ticket, the ID of the user who created the ticket, and the name and ID of the change base database.</p>
+     * 
      * @param request GetTableDesignProjectInfoRequest
      * @return GetTableDesignProjectInfoResponse
      */
@@ -6260,8 +6636,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the topology of a table.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the topology of a table.</p>
+     * 
      * @param request GetTableTopologyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetTableTopologyResponse
@@ -6295,8 +6672,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the topology of a table.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the topology of a table.</p>
+     * 
      * @param request GetTableTopologyRequest
      * @return GetTableTopologyResponse
      */
@@ -6306,8 +6684,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the configurations, including time variables, of a specified task node based on the task node ID.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the configurations, including time variables, of a specified task node based on the task node ID.</p>
+     * 
      * @param request GetTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetTaskResponse
@@ -6341,8 +6720,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the configurations, including time variables, of a specified task node based on the task node ID.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the configurations, including time variables, of a specified task node based on the task node ID.</p>
+     * 
      * @param request GetTaskRequest
      * @return GetTaskResponse
      */
@@ -6352,8 +6732,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the Directed Acyclic Graph (DAG) of a task flow.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the Directed Acyclic Graph (DAG) of a task flow.</p>
+     * 
      * @param request GetTaskFlowGraphRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetTaskFlowGraphResponse
@@ -6387,8 +6768,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the Directed Acyclic Graph (DAG) of a task flow.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the Directed Acyclic Graph (DAG) of a task flow.</p>
+     * 
      * @param request GetTaskFlowGraphRequest
      * @return GetTaskFlowGraphResponse
      */
@@ -6398,8 +6780,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the notification settings for task flows.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the notification settings for task flows.</p>
+     * 
      * @param request GetTaskFlowNotificationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetTaskFlowNotificationResponse
@@ -6433,8 +6816,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the notification settings for task flows.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the notification settings for task flows.</p>
+     * 
      * @param request GetTaskFlowNotificationRequest
      * @return GetTaskFlowNotificationResponse
      */
@@ -6444,8 +6828,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about the nodes in an execution record of a task flow.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about the nodes in an execution record of a task flow.</p>
+     * 
      * @param request GetTaskInstanceRelationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetTaskInstanceRelationResponse
@@ -6483,8 +6868,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about the nodes in an execution record of a task flow.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about the nodes in an execution record of a task flow.</p>
+     * 
      * @param request GetTaskInstanceRelationRequest
      * @return GetTaskInstanceRelationResponse
      */
@@ -6494,8 +6880,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about a user.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about a user.</p>
+     * 
      * @param request GetUserRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetUserResponse
@@ -6533,8 +6920,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about a user.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about a user.</p>
+     * 
      * @param request GetUserRequest
      * @return GetUserResponse
      */
@@ -6544,8 +6932,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries details of the active tenant.
-     *
+     * <b>summary</b> : 
+     * <p>Queries details of the active tenant.</p>
+     * 
      * @param request GetUserActiveTenantRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetUserActiveTenantResponse
@@ -6575,8 +6964,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries details of the active tenant.
-     *
+     * <b>summary</b> : 
+     * <p>Queries details of the active tenant.</p>
+     * 
      * @param request GetUserActiveTenantRequest
      * @return GetUserActiveTenantResponse
      */
@@ -6586,8 +6976,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the information of a file upload task.
-     *
+     * <b>summary</b> : 
+     * <p>Obtains the information of a file upload task.</p>
+     * 
      * @param request GetUserUploadFileJobRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetUserUploadFileJobResponse
@@ -6621,8 +7012,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the information of a file upload task.
-     *
+     * <b>summary</b> : 
+     * <p>Obtains the information of a file upload task.</p>
+     * 
      * @param request GetUserUploadFileJobRequest
      * @return GetUserUploadFileJobResponse
      */
@@ -6632,10 +7024,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Grants permissions on resources to users by using a permission template.
-     *
-     * @description You must be a database administrator (DBA) or a Data Management (DMS) administrator. For more information about how to view system roles, see [View system roles](https://help.aliyun.com/document_detail/324212.html).
-     *
+     * <b>description</b> :
+     * <p>You must be a database administrator (DBA) or a Data Management (DMS) administrator. For more information about how to view system roles, see <a href="https://help.aliyun.com/document_detail/324212.html">View system roles</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Grants permissions on resources to users by using a permission template.</p>
+     * 
      * @param request GrantTemplateAuthorityRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GrantTemplateAuthorityResponse
@@ -6681,10 +7075,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Grants permissions on resources to users by using a permission template.
-     *
-     * @description You must be a database administrator (DBA) or a Data Management (DMS) administrator. For more information about how to view system roles, see [View system roles](https://help.aliyun.com/document_detail/324212.html).
-     *
+     * <b>description</b> :
+     * <p>You must be a database administrator (DBA) or a Data Management (DMS) administrator. For more information about how to view system roles, see <a href="https://help.aliyun.com/document_detail/324212.html">View system roles</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Grants permissions on resources to users by using a permission template.</p>
+     * 
      * @param request GrantTemplateAuthorityRequest
      * @return GrantTemplateAuthorityResponse
      */
@@ -6694,8 +7090,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Grants permissions on an instance, a database, or a table to a user.
-     *
+     * <b>summary</b> : 
+     * <p>Grants permissions on an instance, a database, or a table to a user.</p>
+     * 
      * @param request GrantUserPermissionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GrantUserPermissionResponse
@@ -6761,8 +7158,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Grants permissions on an instance, a database, or a table to a user.
-     *
+     * <b>summary</b> : 
+     * <p>Grants permissions on an instance, a database, or a table to a user.</p>
+     * 
      * @param request GrantUserPermissionRequest
      * @return GrantUserPermissionResponse
      */
@@ -6772,8 +7170,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary You can call this operation to obtain the authorization password of the security protection agent InspectProxyAccessSecret.
-     *
+     * <b>summary</b> : 
+     * <p>You can call this operation to obtain the authorization password of the security protection agent InspectProxyAccessSecret.</p>
+     * 
      * @param request InspectProxyAccessSecretRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return InspectProxyAccessSecretResponse
@@ -6807,8 +7206,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary You can call this operation to obtain the authorization password of the security protection agent InspectProxyAccessSecret.
-     *
+     * <b>summary</b> : 
+     * <p>You can call this operation to obtain the authorization password of the security protection agent InspectProxyAccessSecret.</p>
+     * 
      * @param request InspectProxyAccessSecretRequest
      * @return InspectProxyAccessSecretResponse
      */
@@ -6818,8 +7218,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取权限模版列表
-     *
+     * <b>summary</b> : 
+     * <p>获取权限模版列表</p>
+     * 
      * @param request ListAuthorityTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListAuthorityTemplateResponse
@@ -6861,8 +7262,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取权限模版列表
-     *
+     * <b>summary</b> : 
+     * <p>获取权限模版列表</p>
+     * 
      * @param request ListAuthorityTemplateRequest
      * @return ListAuthorityTemplateResponse
      */
@@ -6872,8 +7274,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the classification templates.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the classification templates.</p>
+     * 
      * @param request ListClassificationTemplatesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListClassificationTemplatesResponse
@@ -6903,8 +7306,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the classification templates.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the classification templates.</p>
+     * 
      * @param request ListClassificationTemplatesRequest
      * @return ListClassificationTemplatesResponse
      */
@@ -6914,10 +7318,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Returns the column information of a table.
-     *
-     * @description You can call this operation only for database instances whose control mode is Security Collaboration.
-     *
+     * <b>description</b> :
+     * <p>You can call this operation only for database instances whose control mode is Security Collaboration.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Returns the column information of a table.</p>
+     * 
      * @param request ListColumnsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListColumnsResponse
@@ -6955,10 +7361,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Returns the column information of a table.
-     *
-     * @description You can call this operation only for database instances whose control mode is Security Collaboration.
-     *
+     * <b>description</b> :
+     * <p>You can call this operation only for database instances whose control mode is Security Collaboration.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Returns the column information of a table.</p>
+     * 
      * @param request ListColumnsRequest
      * @return ListColumnsResponse
      */
@@ -6968,8 +7376,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the published versions of a task flow.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the published versions of a task flow.</p>
+     * 
      * @param request ListDAGVersionsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListDAGVersionsResponse
@@ -7011,8 +7420,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the published versions of a task flow.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the published versions of a task flow.</p>
+     * 
      * @param request ListDAGVersionsRequest
      * @return ListDAGVersionsResponse
      */
@@ -7022,8 +7432,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a list of SQL tasks.
-     *
+     * <b>summary</b> : 
+     * <p>Queries a list of SQL tasks.</p>
+     * 
      * @param request ListDBTaskSQLJobRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListDBTaskSQLJobResponse
@@ -7065,8 +7476,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a list of SQL tasks.
-     *
+     * <b>summary</b> : 
+     * <p>Queries a list of SQL tasks.</p>
+     * 
      * @param request ListDBTaskSQLJobRequest
      * @return ListDBTaskSQLJobResponse
      */
@@ -7076,8 +7488,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of an SQL task.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details of an SQL task.</p>
+     * 
      * @param request ListDBTaskSQLJobDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListDBTaskSQLJobDetailResponse
@@ -7119,8 +7532,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of an SQL task.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details of an SQL task.</p>
+     * 
      * @param request ListDBTaskSQLJobDetailRequest
      * @return ListDBTaskSQLJobDetailResponse
      */
@@ -7130,8 +7544,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the publishing details of a schema design ticket.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the publishing details of a schema design ticket.</p>
+     * 
      * @param request ListDDLPublishRecordsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListDDLPublishRecordsResponse
@@ -7165,8 +7580,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the publishing details of a schema design ticket.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the publishing details of a schema design ticket.</p>
+     * 
      * @param request ListDDLPublishRecordsRequest
      * @return ListDDLPublishRecordsResponse
      */
@@ -7176,10 +7592,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the databases that are involved in the precheck of a data change ticket.
-     *
-     * @description For more information about the Normal Data Modify feature, see [Change regular data](https://help.aliyun.com/document_detail/58419.html).
-     *
+     * <b>description</b> :
+     * <p>For more information about the Normal Data Modify feature, see <a href="https://help.aliyun.com/document_detail/58419.html">Change regular data</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the databases that are involved in the precheck of a data change ticket.</p>
+     * 
      * @param request ListDataCorrectPreCheckDBRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListDataCorrectPreCheckDBResponse
@@ -7221,10 +7639,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the databases that are involved in the precheck of a data change ticket.
-     *
-     * @description For more information about the Normal Data Modify feature, see [Change regular data](https://help.aliyun.com/document_detail/58419.html).
-     *
+     * <b>description</b> :
+     * <p>For more information about the Normal Data Modify feature, see <a href="https://help.aliyun.com/document_detail/58419.html">Change regular data</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the databases that are involved in the precheck of a data change ticket.</p>
+     * 
      * @param request ListDataCorrectPreCheckDBRequest
      * @return ListDataCorrectPreCheckDBResponse
      */
@@ -7234,10 +7654,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the precheck information about an SQL statement that is specified in a data change ticket.
-     *
-     * @description For more information about the Normal Data Modify feature, see [Change regular data](https://help.aliyun.com/document_detail/58419.html).
-     *
+     * <b>description</b> :
+     * <p>For more information about the Normal Data Modify feature, see <a href="https://help.aliyun.com/document_detail/58419.html">Change regular data</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the precheck information about an SQL statement that is specified in a data change ticket.</p>
+     * 
      * @param request ListDataCorrectPreCheckSQLRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListDataCorrectPreCheckSQLResponse
@@ -7283,10 +7705,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the precheck information about an SQL statement that is specified in a data change ticket.
-     *
-     * @description For more information about the Normal Data Modify feature, see [Change regular data](https://help.aliyun.com/document_detail/58419.html).
-     *
+     * <b>description</b> :
+     * <p>For more information about the Normal Data Modify feature, see <a href="https://help.aliyun.com/document_detail/58419.html">Change regular data</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the precheck information about an SQL statement that is specified in a data change ticket.</p>
+     * 
      * @param request ListDataCorrectPreCheckSQLRequest
      * @return ListDataCorrectPreCheckSQLResponse
      */
@@ -7296,10 +7720,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the precheck information of SQL statements used for data import in a ticket.
-     *
-     * @description You can call this operation only if the data is imported in security mode in your data import ticket.
-     *
+     * <b>description</b> :
+     * <p>You can call this operation only if the data is imported in security mode in your data import ticket.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the precheck information of SQL statements used for data import in a ticket.</p>
+     * 
      * @param request ListDataImportSQLPreCheckDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListDataImportSQLPreCheckDetailResponse
@@ -7349,10 +7775,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the precheck information of SQL statements used for data import in a ticket.
-     *
-     * @description You can call this operation only if the data is imported in security mode in your data import ticket.
-     *
+     * <b>description</b> :
+     * <p>You can call this operation only if the data is imported in security mode in your data import ticket.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the precheck information of SQL statements used for data import in a ticket.</p>
+     * 
      * @param request ListDataImportSQLPreCheckDetailRequest
      * @return ListDataImportSQLPreCheckDetailResponse
      */
@@ -7362,10 +7790,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the types of SQL statements used for data import in a ticket.
-     *
-     * @description You can call this operation only if the data is imported in security mode in your data import ticket.
-     *
+     * <b>description</b> :
+     * <p>You can call this operation only if the data is imported in security mode in your data import ticket.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the types of SQL statements used for data import in a ticket.</p>
+     * 
      * @param request ListDataImportSQLTypeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListDataImportSQLTypeResponse
@@ -7399,10 +7829,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the types of SQL statements used for data import in a ticket.
-     *
-     * @description You can call this operation only if the data is imported in security mode in your data import ticket.
-     *
+     * <b>description</b> :
+     * <p>You can call this operation only if the data is imported in security mode in your data import ticket.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the types of SQL statements used for data import in a ticket.</p>
+     * 
      * @param request ListDataImportSQLTypeRequest
      * @return ListDataImportSQLTypeResponse
      */
@@ -7412,8 +7844,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the permissions of users on a database.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the permissions of users on a database.</p>
+     * 
      * @param request ListDatabaseUserPermssionsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListDatabaseUserPermssionsResponse
@@ -7467,8 +7900,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the permissions of users on a database.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the permissions of users on a database.</p>
+     * 
      * @param request ListDatabaseUserPermssionsRequest
      * @return ListDatabaseUserPermssionsResponse
      */
@@ -7478,8 +7912,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the databases in a database instance.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the databases in a database instance.</p>
+     * 
      * @param request ListDatabasesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListDatabasesResponse
@@ -7521,8 +7956,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the databases in a database instance.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the databases in a database instance.</p>
+     * 
      * @param request ListDatabasesRequest
      * @return ListDatabasesResponse
      */
@@ -7532,8 +7968,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the default service level agreement (SLA) timeout rules.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the default service level agreement (SLA) timeout rules.</p>
+     * 
      * @param request ListDefaultSLARulesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListDefaultSLARulesResponse
@@ -7567,8 +8004,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the default service level agreement (SLA) timeout rules.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the default service level agreement (SLA) timeout rules.</p>
+     * 
      * @param request ListDefaultSLARulesRequest
      * @return ListDefaultSLARulesResponse
      */
@@ -7578,8 +8016,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries masking rules.
-     *
+     * <b>summary</b> : 
+     * <p>Queries masking rules.</p>
+     * 
      * @param request ListDesensitizationRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListDesensitizationRuleResponse
@@ -7633,8 +8072,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries masking rules.
-     *
+     * <b>summary</b> : 
+     * <p>Queries masking rules.</p>
+     * 
      * @param request ListDesensitizationRuleRequest
      * @return ListDesensitizationRuleResponse
      */
@@ -7644,8 +8084,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries valid orders.
-     *
+     * <b>summary</b> : 
+     * <p>Queries valid orders.</p>
+     * 
      * @param request ListEffectiveOrdersRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListEffectiveOrdersResponse
@@ -7675,8 +8116,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries valid orders.
-     *
+     * <b>summary</b> : 
+     * <p>Queries valid orders.</p>
+     * 
      * @param request ListEffectiveOrdersRequest
      * @return ListEffectiveOrdersResponse
      */
@@ -7686,8 +8128,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the indexes of a table.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the indexes of a table.</p>
+     * 
      * @param request ListIndexesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListIndexesResponse
@@ -7725,8 +8168,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the indexes of a table.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the indexes of a table.</p>
+     * 
      * @param request ListIndexesRequest
      * @return ListIndexesResponse
      */
@@ -7736,8 +8180,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the logon records of an instance.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the logon records of an instance.</p>
+     * 
      * @param request ListInstanceLoginAuditLogRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListInstanceLoginAuditLogResponse
@@ -7791,8 +8236,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the logon records of an instance.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the logon records of an instance.</p>
+     * 
      * @param request ListInstanceLoginAuditLogRequest
      * @return ListInstanceLoginAuditLogResponse
      */
@@ -7802,8 +8248,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the permissions of a user on a specific instance.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the permissions of a user on a specific instance.</p>
+     * 
      * @param request ListInstanceUserPermissionsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListInstanceUserPermissionsResponse
@@ -7849,8 +8296,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the permissions of a user on a specific instance.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the permissions of a user on a specific instance.</p>
+     * 
      * @param request ListInstanceUserPermissionsRequest
      * @return ListInstanceUserPermissionsResponse
      */
@@ -7860,8 +8308,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about database instances.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about database instances.</p>
+     * 
      * @param request ListInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListInstancesResponse
@@ -7923,8 +8372,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about database instances.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about database instances.</p>
+     * 
      * @param request ListInstancesRequest
      * @return ListInstancesResponse
      */
@@ -7934,11 +8384,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the task flows corresponding to a specific business scenario in a workspace in Data Management (DMS).
-     *
-     * @description *   Before you call this operation, make sure that you have the access permissions on the workspace. If you do not have the access permissions on the workspace, you can contact a DMS administrator, database administrator (DBA), or workspace administrator to add you as a member of the workspace. The [AddLhMembers](https://help.aliyun.com/document_detail/424759.html) operation can be called to add a workspace member.
-     * *   If you are a DMS administrator or a workspace administrator, you can query the business scenarios and task flows related to a user in a workspace based on the user ID.
-     *
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you have the access permissions on the workspace. If you do not have the access permissions on the workspace, you can contact a DMS administrator, database administrator (DBA), or workspace administrator to add you as a member of the workspace. The <a href="https://help.aliyun.com/document_detail/424759.html">AddLhMembers</a> operation can be called to add a workspace member.</p>
+     * <ul>
+     * <li>If you are a DMS administrator or a workspace administrator, you can query the business scenarios and task flows related to a user in a workspace based on the user ID.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the task flows corresponding to a specific business scenario in a workspace in Data Management (DMS).</p>
+     * 
      * @param request ListLhTaskFlowAndScenarioRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListLhTaskFlowAndScenarioResponse
@@ -7976,11 +8430,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the task flows corresponding to a specific business scenario in a workspace in Data Management (DMS).
-     *
-     * @description *   Before you call this operation, make sure that you have the access permissions on the workspace. If you do not have the access permissions on the workspace, you can contact a DMS administrator, database administrator (DBA), or workspace administrator to add you as a member of the workspace. The [AddLhMembers](https://help.aliyun.com/document_detail/424759.html) operation can be called to add a workspace member.
-     * *   If you are a DMS administrator or a workspace administrator, you can query the business scenarios and task flows related to a user in a workspace based on the user ID.
-     *
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you have the access permissions on the workspace. If you do not have the access permissions on the workspace, you can contact a DMS administrator, database administrator (DBA), or workspace administrator to add you as a member of the workspace. The <a href="https://help.aliyun.com/document_detail/424759.html">AddLhMembers</a> operation can be called to add a workspace member.</p>
+     * <ul>
+     * <li>If you are a DMS administrator or a workspace administrator, you can query the business scenarios and task flows related to a user in a workspace based on the user ID.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the task flows corresponding to a specific business scenario in a workspace in Data Management (DMS).</p>
+     * 
      * @param request ListLhTaskFlowAndScenarioRequest
      * @return ListLhTaskFlowAndScenarioResponse
      */
@@ -7990,8 +8448,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of logical databases.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details of logical databases.</p>
+     * 
      * @param request ListLogicDatabasesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListLogicDatabasesResponse
@@ -8029,8 +8488,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of logical databases.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details of logical databases.</p>
+     * 
      * @param request ListLogicDatabasesRequest
      * @return ListLogicDatabasesResponse
      */
@@ -8040,8 +8500,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the routing algorithms of a logical table.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the routing algorithms of a logical table.</p>
+     * 
      * @param request ListLogicTableRouteConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListLogicTableRouteConfigResponse
@@ -8075,8 +8536,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the routing algorithms of a logical table.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the routing algorithms of a logical table.</p>
+     * 
      * @param request ListLogicTableRouteConfigRequest
      * @return ListLogicTableRouteConfigResponse
      */
@@ -8086,8 +8548,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of the logical tables in a logical database.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details of the logical tables in a logical database.</p>
+     * 
      * @param request ListLogicTablesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListLogicTablesResponse
@@ -8137,8 +8600,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of the logical tables in a logical database.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details of the logical tables in a logical database.</p>
+     * 
      * @param request ListLogicTablesRequest
      * @return ListLogicTablesResponse
      */
@@ -8148,8 +8612,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries tickets in Data Management (DMS).
-     *
+     * <b>summary</b> : 
+     * <p>Queries tickets in Data Management (DMS).</p>
+     * 
      * @param request ListOrdersRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListOrdersResponse
@@ -8215,8 +8680,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries tickets in Data Management (DMS).
-     *
+     * <b>summary</b> : 
+     * <p>Queries tickets in Data Management (DMS).</p>
+     * 
      * @param request ListOrdersRequest
      * @return ListOrdersResponse
      */
@@ -8226,8 +8692,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the proxies that are generated by the secure access proxy feature.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the proxies that are generated by the secure access proxy feature.</p>
+     * 
      * @param request ListProxiesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListProxiesResponse
@@ -8257,8 +8724,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the proxies that are generated by the secure access proxy feature.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the proxies that are generated by the secure access proxy feature.</p>
+     * 
      * @param request ListProxiesRequest
      * @return ListProxiesResponse
      */
@@ -8268,8 +8736,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries information about users that are authorized to access a database instance by using the secure access proxy feature.
-     *
+     * <b>summary</b> : 
+     * <p>Queries information about users that are authorized to access a database instance by using the secure access proxy feature.</p>
+     * 
      * @param request ListProxyAccessesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListProxyAccessesResponse
@@ -8303,8 +8772,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries information about users that are authorized to access a database instance by using the secure access proxy feature.
-     *
+     * <b>summary</b> : 
+     * <p>Queries information about users that are authorized to access a database instance by using the secure access proxy feature.</p>
+     * 
      * @param request ListProxyAccessesRequest
      * @return ListProxyAccessesResponse
      */
@@ -8314,8 +8784,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 操作审计-数据安全代理SQL执行列表
-     *
+     * <b>summary</b> : 
+     * <p>操作审计-数据安全代理SQL执行列表</p>
+     * 
      * @param request ListProxySQLExecAuditLogRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListProxySQLExecAuditLogResponse
@@ -8377,8 +8848,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 操作审计-数据安全代理SQL执行列表
-     *
+     * <b>summary</b> : 
+     * <p>操作审计-数据安全代理SQL执行列表</p>
+     * 
      * @param request ListProxySQLExecAuditLogRequest
      * @return ListProxySQLExecAuditLogResponse
      */
@@ -8388,8 +8860,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the custom service level agreement (SLA) rules.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the custom service level agreement (SLA) rules.</p>
+     * 
      * @param request ListSLARulesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListSLARulesResponse
@@ -8423,8 +8896,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the custom service level agreement (SLA) rules.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the custom service level agreement (SLA) rules.</p>
+     * 
      * @param request ListSLARulesRequest
      * @return ListSLARulesResponse
      */
@@ -8434,8 +8908,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries SQL statements that were written on the SQLConsole tab.
-     *
+     * <b>summary</b> : 
+     * <p>Queries SQL statements that were written on the SQLConsole tab.</p>
+     * 
      * @param request ListSQLExecAuditLogRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListSQLExecAuditLogResponse
@@ -8497,8 +8972,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries SQL statements that were written on the SQLConsole tab.
-     *
+     * <b>summary</b> : 
+     * <p>Queries SQL statements that were written on the SQLConsole tab.</p>
+     * 
      * @param request ListSQLExecAuditLogRequest
      * @return ListSQLExecAuditLogResponse
      */
@@ -8508,10 +8984,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of the SQL statements that are involved in an SQL review ticket.
-     *
-     * @description For more information about the SQL review feature, see [SQL review](https://help.aliyun.com/document_detail/60374.html).
-     *
+     * <b>description</b> :
+     * <p>For more information about the SQL review feature, see <a href="https://help.aliyun.com/document_detail/60374.html">SQL review</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of the SQL statements that are involved in an SQL review ticket.</p>
+     * 
      * @param tmpReq ListSQLReviewOriginSQLRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListSQLReviewOriginSQLResponse
@@ -8555,10 +9033,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of the SQL statements that are involved in an SQL review ticket.
-     *
-     * @description For more information about the SQL review feature, see [SQL review](https://help.aliyun.com/document_detail/60374.html).
-     *
+     * <b>description</b> :
+     * <p>For more information about the SQL review feature, see <a href="https://help.aliyun.com/document_detail/60374.html">SQL review</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of the SQL statements that are involved in an SQL review ticket.</p>
+     * 
      * @param request ListSQLReviewOriginSQLRequest
      * @return ListSQLReviewOriginSQLResponse
      */
@@ -8568,8 +9048,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries business scenarios.
-     *
+     * <b>summary</b> : 
+     * <p>Queries business scenarios.</p>
+     * 
      * @param request ListScenariosRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListScenariosResponse
@@ -8599,8 +9080,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries business scenarios.
-     *
+     * <b>summary</b> : 
+     * <p>Queries business scenarios.</p>
+     * 
      * @param request ListScenariosRequest
      * @return ListScenariosResponse
      */
@@ -8610,8 +9092,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取敏感字段信息
-     *
+     * <b>summary</b> : 
+     * <p>获取敏感字段信息</p>
+     * 
      * @param request ListSensitiveColumnInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListSensitiveColumnInfoResponse
@@ -8665,8 +9148,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取敏感字段信息
-     *
+     * <b>summary</b> : 
+     * <p>获取敏感字段信息</p>
+     * 
      * @param request ListSensitiveColumnInfoRequest
      * @return ListSensitiveColumnInfoResponse
      */
@@ -8676,8 +9160,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries sensitive fields in a table of a database.
-     *
+     * <b>summary</b> : 
+     * <p>Queries sensitive fields in a table of a database.</p>
+     * 
      * @param request ListSensitiveColumnsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListSensitiveColumnsResponse
@@ -8739,8 +9224,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries sensitive fields in a table of a database.
-     *
+     * <b>summary</b> : 
+     * <p>Queries sensitive fields in a table of a database.</p>
+     * 
      * @param request ListSensitiveColumnsRequest
      * @return ListSensitiveColumnsResponse
      */
@@ -8750,8 +9236,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of a sensitive field.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details of a sensitive field.</p>
+     * 
      * @param request ListSensitiveColumnsDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListSensitiveColumnsDetailResponse
@@ -8801,8 +9288,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of a sensitive field.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details of a sensitive field.</p>
+     * 
      * @param request ListSensitiveColumnsDetailRequest
      * @return ListSensitiveColumnsDetailResponse
      */
@@ -8812,8 +9300,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the audit logs for sensitive information.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the audit logs for sensitive information.</p>
+     * 
      * @param request ListSensitiveDataAuditLogRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListSensitiveDataAuditLogResponse
@@ -8879,8 +9368,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the audit logs for sensitive information.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the audit logs for sensitive information.</p>
+     * 
      * @param request ListSensitiveDataAuditLogRequest
      * @return ListSensitiveDataAuditLogResponse
      */
@@ -8890,8 +9380,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the sensitivity levels of a classification template.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the sensitivity levels of a classification template.</p>
+     * 
      * @param request ListSensitivityLevelRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListSensitivityLevelResponse
@@ -8917,8 +9408,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the sensitivity levels of a classification template.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the sensitivity levels of a classification template.</p>
+     * 
      * @param request ListSensitivityLevelRequest
      * @return ListSensitivityLevelResponse
      */
@@ -8928,8 +9420,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries security rule sets.
-     *
+     * <b>summary</b> : 
+     * <p>Queries security rule sets.</p>
+     * 
      * @param request ListStandardGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListStandardGroupsResponse
@@ -8959,8 +9452,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries security rule sets.
-     *
+     * <b>summary</b> : 
+     * <p>Queries security rule sets.</p>
+     * 
      * @param request ListStandardGroupsRequest
      * @return ListStandardGroupsResponse
      */
@@ -8970,10 +9464,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the tables in a database.
-     *
-     * @description You can call this operation only for database instances whose control mode is Security Collaboration.
-     *
+     * <b>description</b> :
+     * <p>You can call this operation only for database instances whose control mode is Security Collaboration.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the tables in a database.</p>
+     * 
      * @param request ListTablesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListTablesResponse
@@ -9023,10 +9519,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the tables in a database.
-     *
-     * @description You can call this operation only for database instances whose control mode is Security Collaboration.
-     *
+     * <b>description</b> :
+     * <p>You can call this operation only for database instances whose control mode is Security Collaboration.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the tables in a database.</p>
+     * 
      * @param request ListTablesRequest
      * @return ListTablesResponse
      */
@@ -9036,8 +9534,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 任务编排获取任务流列表
-     *
+     * <b>summary</b> : 
+     * <p>任务编排获取任务流列表</p>
+     * 
      * @param request ListTaskFlowRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListTaskFlowResponse
@@ -9067,8 +9566,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 任务编排获取任务流列表
-     *
+     * <b>summary</b> : 
+     * <p>任务编排获取任务流列表</p>
+     * 
      * @param request ListTaskFlowRequest
      * @return ListTaskFlowResponse
      */
@@ -9078,8 +9578,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the constants for a task flow.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the constants for a task flow.</p>
+     * 
      * @param request ListTaskFlowConstantsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListTaskFlowConstantsResponse
@@ -9113,8 +9614,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the constants for a task flow.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the constants for a task flow.</p>
+     * 
      * @param request ListTaskFlowConstantsRequest
      * @return ListTaskFlowConstantsResponse
      */
@@ -9124,8 +9626,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the users that are involved in a specified task flow.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the users that are involved in a specified task flow.</p>
+     * 
      * @param request ListTaskFlowCooperatorsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListTaskFlowCooperatorsResponse
@@ -9159,8 +9662,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the users that are involved in a specified task flow.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the users that are involved in a specified task flow.</p>
+     * 
      * @param request ListTaskFlowCooperatorsRequest
      * @return ListTaskFlowCooperatorsResponse
      */
@@ -9170,10 +9674,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the edges of the directed acyclic graph (DAG) for a specified task flow based on multiple conditions.
-     *
-     * @description This operation is used for multi-condition query. You can call this operation to query the edges of a specified task flow that meet all specified conditions.
-     *
+     * <b>description</b> :
+     * <p>This operation is used for multi-condition query. You can call this operation to query the edges of a specified task flow that meet all specified conditions.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the edges of the directed acyclic graph (DAG) for a specified task flow based on multiple conditions.</p>
+     * 
      * @param request ListTaskFlowEdgesByConditionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListTaskFlowEdgesByConditionResponse
@@ -9219,10 +9725,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the edges of the directed acyclic graph (DAG) for a specified task flow based on multiple conditions.
-     *
-     * @description This operation is used for multi-condition query. You can call this operation to query the edges of a specified task flow that meet all specified conditions.
-     *
+     * <b>description</b> :
+     * <p>This operation is used for multi-condition query. You can call this operation to query the edges of a specified task flow that meet all specified conditions.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the edges of the directed acyclic graph (DAG) for a specified task flow based on multiple conditions.</p>
+     * 
      * @param request ListTaskFlowEdgesByConditionRequest
      * @return ListTaskFlowEdgesByConditionResponse
      */
@@ -9232,8 +9740,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the execution records of a task flow.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the execution records of a task flow.</p>
+     * 
      * @param request ListTaskFlowInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListTaskFlowInstanceResponse
@@ -9295,8 +9804,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the execution records of a task flow.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the execution records of a task flow.</p>
+     * 
      * @param request ListTaskFlowInstanceRequest
      * @return ListTaskFlowInstanceResponse
      */
@@ -9306,8 +9816,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the time variables for a task flow.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the time variables for a task flow.</p>
+     * 
      * @param request ListTaskFlowTimeVariablesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListTaskFlowTimeVariablesResponse
@@ -9341,8 +9852,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the time variables for a task flow.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the time variables for a task flow.</p>
+     * 
      * @param request ListTaskFlowTimeVariablesRequest
      * @return ListTaskFlowTimeVariablesResponse
      */
@@ -9352,8 +9864,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries task flows by page.
-     *
+     * <b>summary</b> : 
+     * <p>Queries task flows by page.</p>
+     * 
      * @param tmpReq ListTaskFlowsByPageRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListTaskFlowsByPageResponse
@@ -9409,8 +9922,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries task flows by page.
-     *
+     * <b>summary</b> : 
+     * <p>Queries task flows by page.</p>
+     * 
      * @param request ListTaskFlowsByPageRequest
      * @return ListTaskFlowsByPageResponse
      */
@@ -9420,8 +9934,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the tasks in a specified task flow.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the tasks in a specified task flow.</p>
+     * 
      * @param request ListTasksInTaskFlowRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListTasksInTaskFlowResponse
@@ -9455,8 +9970,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the tasks in a specified task flow.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the tasks in a specified task flow.</p>
+     * 
      * @param request ListTasksInTaskFlowRequest
      * @return ListTasksInTaskFlowResponse
      */
@@ -9466,8 +9982,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the permissions of a specific user on a database or a table.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the permissions of a specific user on a database or a table.</p>
+     * 
      * @param request ListUserPermissionsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListUserPermissionsResponse
@@ -9533,8 +10050,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the permissions of a specific user on a database or a table.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the permissions of a specific user on a database or a table.</p>
+     * 
      * @param request ListUserPermissionsRequest
      * @return ListUserPermissionsResponse
      */
@@ -9544,8 +10062,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取用户租户列表
-     *
+     * <b>summary</b> : 
+     * <p>获取用户租户列表</p>
+     * 
      * @param request ListUserTenantsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListUserTenantsResponse
@@ -9575,8 +10094,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取用户租户列表
-     *
+     * <b>summary</b> : 
+     * <p>获取用户租户列表</p>
+     * 
      * @param request ListUserTenantsRequest
      * @return ListUserTenantsResponse
      */
@@ -9586,8 +10106,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of users.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details of users.</p>
+     * 
      * @param request ListUsersRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListUsersResponse
@@ -9637,8 +10158,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of users.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details of users.</p>
+     * 
      * @param request ListUsersRequest
      * @return ListUsersResponse
      */
@@ -9648,8 +10170,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries approval nodes.
-     *
+     * <b>summary</b> : 
+     * <p>Queries approval nodes.</p>
+     * 
      * @param request ListWorkFlowNodesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListWorkFlowNodesResponse
@@ -9683,8 +10206,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries approval nodes.
-     *
+     * <b>summary</b> : 
+     * <p>Queries approval nodes.</p>
+     * 
      * @param request ListWorkFlowNodesRequest
      * @return ListWorkFlowNodesResponse
      */
@@ -9694,8 +10218,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries approval templates.
-     *
+     * <b>summary</b> : 
+     * <p>Queries approval templates.</p>
+     * 
      * @param request ListWorkFlowTemplatesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListWorkFlowTemplatesResponse
@@ -9729,8 +10254,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries approval templates.
-     *
+     * <b>summary</b> : 
+     * <p>Queries approval templates.</p>
+     * 
      * @param request ListWorkFlowTemplatesRequest
      * @return ListWorkFlowTemplatesResponse
      */
@@ -9740,8 +10266,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Sets the status of a task flow to "Successful".
-     *
+     * <b>summary</b> : 
+     * <p>Sets the status of a task flow to &quot;Successful&quot;.</p>
+     * 
      * @param request MakeTaskFlowInstanceSuccessRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return MakeTaskFlowInstanceSuccessResponse
@@ -9779,8 +10306,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Sets the status of a task flow to "Successful".
-     *
+     * <b>summary</b> : 
+     * <p>Sets the status of a task flow to &quot;Successful&quot;.</p>
+     * 
      * @param request MakeTaskFlowInstanceSuccessRequest
      * @return MakeTaskFlowInstanceSuccessResponse
      */
@@ -9790,8 +10318,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the SQL script that is submitted by using a data change ticket.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the SQL script that is submitted by using a data change ticket.</p>
+     * 
      * @param request ModifyDataCorrectExecSQLRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyDataCorrectExecSQLResponse
@@ -9829,8 +10358,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the SQL script that is submitted by using a data change ticket.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the SQL script that is submitted by using a data change ticket.</p>
+     * 
      * @param request ModifyDataCorrectExecSQLRequest
      * @return ModifyDataCorrectExecSQLResponse
      */
@@ -9840,8 +10370,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the masking rule bound to a specified field.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the masking rule bound to a specified field.</p>
+     * 
      * @param request ModifyDesensitizationStrategyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyDesensitizationStrategyResponse
@@ -9903,8 +10434,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the masking rule bound to a specified field.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the masking rule bound to a specified field.</p>
+     * 
      * @param request ModifyDesensitizationStrategyRequest
      * @return ModifyDesensitizationStrategyResponse
      */
@@ -9914,8 +10446,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 修改实例信息，同时检查该实例连通性
-     *
+     * <b>summary</b> : 
+     * <p>修改实例信息，同时检查该实例连通性</p>
+     * 
      * @param request ModifyInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyInstanceResponse
@@ -10061,8 +10594,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 修改实例信息，同时检查该实例连通性
-     *
+     * <b>summary</b> : 
+     * <p>修改实例信息，同时检查该实例连通性</p>
+     * 
      * @param request ModifyInstanceRequest
      * @return ModifyInstanceResponse
      */
@@ -10072,8 +10606,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Migrates a task flow to a specified business scenario.
-     *
+     * <b>summary</b> : 
+     * <p>Migrates a task flow to a specified business scenario.</p>
+     * 
      * @param request MoveTaskFlowToScenarioRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return MoveTaskFlowToScenarioResponse
@@ -10111,8 +10646,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Migrates a task flow to a specified business scenario.
-     *
+     * <b>summary</b> : 
+     * <p>Migrates a task flow to a specified business scenario.</p>
+     * 
      * @param request MoveTaskFlowToScenarioRequest
      * @return MoveTaskFlowToScenarioResponse
      */
@@ -10122,8 +10658,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Unpublishes a published task flow.
-     *
+     * <b>summary</b> : 
+     * <p>Unpublishes a published task flow.</p>
+     * 
      * @param request OfflineTaskFlowRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return OfflineTaskFlowResponse
@@ -10157,8 +10694,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Unpublishes a published task flow.
-     *
+     * <b>summary</b> : 
+     * <p>Unpublishes a published task flow.</p>
+     * 
      * @param request OfflineTaskFlowRequest
      * @return OfflineTaskFlowResponse
      */
@@ -10168,10 +10706,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Pauses a SQL task for data change.
-     *
-     * @description You can call this operation only for database instances that are managed in Security Collaboration mode.
-     *
+     * <b>description</b> :
+     * <p>You can call this operation only for database instances that are managed in Security Collaboration mode.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Pauses a SQL task for data change.</p>
+     * 
      * @param request PauseDataCorrectSQLJobRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return PauseDataCorrectSQLJobResponse
@@ -10213,10 +10753,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Pauses a SQL task for data change.
-     *
-     * @description You can call this operation only for database instances that are managed in Security Collaboration mode.
-     *
+     * <b>description</b> :
+     * <p>You can call this operation only for database instances that are managed in Security Collaboration mode.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Pauses a SQL task for data change.</p>
+     * 
      * @param request PauseDataCorrectSQLJobRequest
      * @return PauseDataCorrectSQLJobResponse
      */
@@ -10226,8 +10768,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建工单审批流
-     *
+     * <b>summary</b> : 
+     * <p>创建工单审批流</p>
+     * 
      * @param request PreviewWorkflowRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return PreviewWorkflowResponse
@@ -10261,8 +10804,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建工单审批流
-     *
+     * <b>summary</b> : 
+     * <p>创建工单审批流</p>
+     * 
      * @param request PreviewWorkflowRequest
      * @return PreviewWorkflowResponse
      */
@@ -10272,8 +10816,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Publishes and deploys a task flow.
-     *
+     * <b>summary</b> : 
+     * <p>Publishes and deploys a task flow.</p>
+     * 
      * @param request PublishAndDeployTaskFlowRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return PublishAndDeployTaskFlowResponse
@@ -10311,8 +10856,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Publishes and deploys a task flow.
-     *
+     * <b>summary</b> : 
+     * <p>Publishes and deploys a task flow.</p>
+     * 
      * @param request PublishAndDeployTaskFlowRequest
      * @return PublishAndDeployTaskFlowResponse
      */
@@ -10322,8 +10868,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the download and parsing progress of data tracking logs.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the download and parsing progress of data tracking logs.</p>
+     * 
      * @param request QueryDataTrackResultDownloadStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryDataTrackResultDownloadStatusResponse
@@ -10361,8 +10908,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the download and parsing progress of data tracking logs.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the download and parsing progress of data tracking logs.</p>
+     * 
      * @param request QueryDataTrackResultDownloadStatusRequest
      * @return QueryDataTrackResultDownloadStatusResponse
      */
@@ -10372,8 +10920,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 部署任务流的历史版本
-     *
+     * <b>summary</b> : 
+     * <p>部署任务流的历史版本</p>
+     * 
      * @param request ReDeployLhDagVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ReDeployLhDagVersionResponse
@@ -10411,8 +10960,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 部署任务流的历史版本
-     *
+     * <b>summary</b> : 
+     * <p>部署任务流的历史版本</p>
+     * 
      * @param request ReDeployLhDagVersionRequest
      * @return ReDeployLhDagVersionResponse
      */
@@ -10422,8 +10972,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Reruns a task flow instance.
-     *
+     * <b>summary</b> : 
+     * <p>Reruns a task flow instance.</p>
+     * 
      * @param request ReRunTaskFlowInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ReRunTaskFlowInstanceResponse
@@ -10465,8 +11016,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Reruns a task flow instance.
-     *
+     * <b>summary</b> : 
+     * <p>Reruns a task flow instance.</p>
+     * 
      * @param request ReRunTaskFlowInstanceRequest
      * @return ReRunTaskFlowInstanceResponse
      */
@@ -10476,8 +11028,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Unsubscribes from a pay-as-you-go Data Management (DMS) resource.
-     *
+     * <b>summary</b> : 
+     * <p>Unsubscribes from a pay-as-you-go Data Management (DMS) resource.</p>
+     * 
      * @param request RefundPayAsYouGoOrderRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RefundPayAsYouGoOrderResponse
@@ -10515,8 +11068,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Unsubscribes from a pay-as-you-go Data Management (DMS) resource.
-     *
+     * <b>summary</b> : 
+     * <p>Unsubscribes from a pay-as-you-go Data Management (DMS) resource.</p>
+     * 
      * @param request RefundPayAsYouGoOrderRequest
      * @return RefundPayAsYouGoOrderResponse
      */
@@ -10526,10 +11080,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Registers a database instance in Data Management (DMS).
-     *
-     * @description Prerequisites: You are a DMS administrator or a database administrator (DBA). You can call the [ListUsers](https://help.aliyun.com/document_detail/141938.html) or [GetUser](https://help.aliyun.com/document_detail/147098.html) operation to query your user role from the RoleIdList parameter that is returned.
-     *
+     * <b>description</b> :
+     * <p>Prerequisites: You are a DMS administrator or a database administrator (DBA). You can call the <a href="https://help.aliyun.com/document_detail/141938.html">ListUsers</a> or <a href="https://help.aliyun.com/document_detail/147098.html">GetUser</a> operation to query your user role from the RoleIdList parameter that is returned.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Registers a database instance in Data Management (DMS).</p>
+     * 
      * @param request RegisterInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RegisterInstanceResponse
@@ -10659,10 +11215,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Registers a database instance in Data Management (DMS).
-     *
-     * @description Prerequisites: You are a DMS administrator or a database administrator (DBA). You can call the [ListUsers](https://help.aliyun.com/document_detail/141938.html) or [GetUser](https://help.aliyun.com/document_detail/147098.html) operation to query your user role from the RoleIdList parameter that is returned.
-     *
+     * <b>description</b> :
+     * <p>Prerequisites: You are a DMS administrator or a database administrator (DBA). You can call the <a href="https://help.aliyun.com/document_detail/141938.html">ListUsers</a> or <a href="https://help.aliyun.com/document_detail/147098.html">GetUser</a> operation to query your user role from the RoleIdList parameter that is returned.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Registers a database instance in Data Management (DMS).</p>
+     * 
      * @param request RegisterInstanceRequest
      * @return RegisterInstanceResponse
      */
@@ -10672,10 +11230,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Registers a user for your enterprise.
-     *
-     * @description If you are an **administrator** in Data Management (DMS), you can call this operation to register a user for your enterprise. To view users that are assigned the administrator role, perform the following steps: Log on to the DMS console. In the top navigation bar, click O&M. In the left-side navigation pane, click User.
-     *
+     * <b>description</b> :
+     * <p>If you are an <strong>administrator</strong> in Data Management (DMS), you can call this operation to register a user for your enterprise. To view users that are assigned the administrator role, perform the following steps: Log on to the DMS console. In the top navigation bar, click O&amp;M. In the left-side navigation pane, click User.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Registers a user for your enterprise.</p>
+     * 
      * @param request RegisterUserRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RegisterUserResponse
@@ -10721,10 +11281,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Registers a user for your enterprise.
-     *
-     * @description If you are an **administrator** in Data Management (DMS), you can call this operation to register a user for your enterprise. To view users that are assigned the administrator role, perform the following steps: Log on to the DMS console. In the top navigation bar, click O&M. In the left-side navigation pane, click User.
-     *
+     * <b>description</b> :
+     * <p>If you are an <strong>administrator</strong> in Data Management (DMS), you can call this operation to register a user for your enterprise. To view users that are assigned the administrator role, perform the following steps: Log on to the DMS console. In the top navigation bar, click O&amp;M. In the left-side navigation pane, click User.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Registers a user for your enterprise.</p>
+     * 
      * @param request RegisterUserRequest
      * @return RegisterUserResponse
      */
@@ -10734,8 +11296,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Reruns a failed SQL task for data change.
-     *
+     * <b>summary</b> : 
+     * <p>Reruns a failed SQL task for data change.</p>
+     * 
      * @param request RestartDataCorrectSQLJobRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RestartDataCorrectSQLJobResponse
@@ -10777,8 +11340,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Reruns a failed SQL task for data change.
-     *
+     * <b>summary</b> : 
+     * <p>Reruns a failed SQL task for data change.</p>
+     * 
      * @param request RestartDataCorrectSQLJobRequest
      * @return RestartDataCorrectSQLJobResponse
      */
@@ -10788,10 +11352,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Resumes a suspended task flow.
-     *
-     * @description You can call this operation only for task flows that are suspended.
-     *
+     * <b>description</b> :
+     * <p>You can call this operation only for task flows that are suspended.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Resumes a suspended task flow.</p>
+     * 
      * @param request ResumeTaskFlowInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ResumeTaskFlowInstanceResponse
@@ -10833,10 +11399,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Resumes a suspended task flow.
-     *
-     * @description You can call this operation only for task flows that are suspended.
-     *
+     * <b>description</b> :
+     * <p>You can call this operation only for task flows that are suspended.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Resumes a suspended task flow.</p>
+     * 
      * @param request ResumeTaskFlowInstanceRequest
      * @return ResumeTaskFlowInstanceResponse
      */
@@ -10846,8 +11414,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Reruns the precheck for a data change ticket.
-     *
+     * <b>summary</b> : 
+     * <p>Reruns the precheck for a data change ticket.</p>
+     * 
      * @param request RetryDataCorrectPreCheckRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RetryDataCorrectPreCheckResponse
@@ -10881,8 +11450,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Reruns the precheck for a data change ticket.
-     *
+     * <b>summary</b> : 
+     * <p>Reruns the precheck for a data change ticket.</p>
+     * 
      * @param request RetryDataCorrectPreCheckRequest
      * @return RetryDataCorrectPreCheckResponse
      */
@@ -10892,10 +11462,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Revokes permissions on resources from Data Management (DMS) users by using a permission template.
-     *
-     * @description You must be a database administrator (DBA) or a DMS administrator. For more information about how to view system roles, see [View system roles](https://help.aliyun.com/document_detail/324212.html).
-     *
+     * <b>description</b> :
+     * <p>You must be a database administrator (DBA) or a DMS administrator. For more information about how to view system roles, see <a href="https://help.aliyun.com/document_detail/324212.html">View system roles</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Revokes permissions on resources from Data Management (DMS) users by using a permission template.</p>
+     * 
      * @param request RevokeTemplateAuthorityRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RevokeTemplateAuthorityResponse
@@ -10933,10 +11505,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Revokes permissions on resources from Data Management (DMS) users by using a permission template.
-     *
-     * @description You must be a database administrator (DBA) or a DMS administrator. For more information about how to view system roles, see [View system roles](https://help.aliyun.com/document_detail/324212.html).
-     *
+     * <b>description</b> :
+     * <p>You must be a database administrator (DBA) or a DMS administrator. For more information about how to view system roles, see <a href="https://help.aliyun.com/document_detail/324212.html">View system roles</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Revokes permissions on resources from Data Management (DMS) users by using a permission template.</p>
+     * 
      * @param request RevokeTemplateAuthorityRequest
      * @return RevokeTemplateAuthorityResponse
      */
@@ -10946,8 +11520,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Revokes a permission on a resource from a user.
-     *
+     * <b>summary</b> : 
+     * <p>Revokes a permission on a resource from a user.</p>
+     * 
      * @param request RevokeUserPermissionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RevokeUserPermissionResponse
@@ -11013,8 +11588,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Revokes a permission on a resource from a user.
-     *
+     * <b>summary</b> : 
+     * <p>Revokes a permission on a resource from a user.</p>
+     * 
      * @param request RevokeUserPermissionRequest
      * @return RevokeUserPermissionResponse
      */
@@ -11024,8 +11600,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Searches for the parsing result of a data tracking task.
-     *
+     * <b>summary</b> : 
+     * <p>Searches for the parsing result of a data tracking task.</p>
+     * 
      * @param tmpReq SearchDataTrackResultRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SearchDataTrackResultResponse
@@ -11093,8 +11670,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Searches for the parsing result of a data tracking task.
-     *
+     * <b>summary</b> : 
+     * <p>Searches for the parsing result of a data tracking task.</p>
+     * 
      * @param request SearchDataTrackResultRequest
      * @return SearchDataTrackResultResponse
      */
@@ -11104,8 +11682,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of the databases.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details of the databases.</p>
+     * 
      * @param request SearchDatabaseRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SearchDatabaseResponse
@@ -11163,8 +11742,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of the databases.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details of the databases.</p>
+     * 
      * @param request SearchDatabaseRequest
      * @return SearchDatabaseResponse
      */
@@ -11174,10 +11754,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries detailed information about tables.
-     *
-     * @description You can call this operation only for database instances that are managed in Security Collaboration mode.
-     *
+     * <b>description</b> :
+     * <p>You can call this operation only for database instances that are managed in Security Collaboration mode.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries detailed information about tables.</p>
+     * 
      * @param request SearchTableRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SearchTableResponse
@@ -11239,10 +11821,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries detailed information about tables.
-     *
-     * @description You can call this operation only for database instances that are managed in Security Collaboration mode.
-     *
+     * <b>description</b> :
+     * <p>You can call this operation only for database instances that are managed in Security Collaboration mode.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries detailed information about tables.</p>
+     * 
      * @param request SearchTableRequest
      * @return SearchTableResponse
      */
@@ -11252,8 +11836,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Configures the owner of an instance, a database, or a table.
-     *
+     * <b>summary</b> : 
+     * <p>Configures the owner of an instance, a database, or a table.</p>
+     * 
      * @param request SetOwnersRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SetOwnersResponse
@@ -11295,8 +11880,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Configures the owner of an instance, a database, or a table.
-     *
+     * <b>summary</b> : 
+     * <p>Configures the owner of an instance, a database, or a table.</p>
+     * 
      * @param request SetOwnersRequest
      * @return SetOwnersResponse
      */
@@ -11306,8 +11892,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Skips the verification on the number of rows in the precheck for data change.
-     *
+     * <b>summary</b> : 
+     * <p>Skips the verification on the number of rows in the precheck for data change.</p>
+     * 
      * @param request SkipDataCorrectRowCheckRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SkipDataCorrectRowCheckResponse
@@ -11345,8 +11932,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Skips the verification on the number of rows in the precheck for data change.
-     *
+     * <b>summary</b> : 
+     * <p>Skips the verification on the number of rows in the precheck for data change.</p>
+     * 
      * @param request SkipDataCorrectRowCheckRequest
      * @return SkipDataCorrectRowCheckResponse
      */
@@ -11356,8 +11944,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Stops a task flow instance.
-     *
+     * <b>summary</b> : 
+     * <p>Stops a task flow instance.</p>
+     * 
      * @param request StopTaskFlowInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return StopTaskFlowInstanceResponse
@@ -11395,8 +11984,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Stops a task flow instance.
-     *
+     * <b>summary</b> : 
+     * <p>Stops a task flow instance.</p>
+     * 
      * @param request StopTaskFlowInstanceRequest
      * @return StopTaskFlowInstanceResponse
      */
@@ -11406,8 +11996,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Submits a ticket for approval.
-     *
+     * <b>summary</b> : 
+     * <p>Submits a ticket for approval.</p>
+     * 
      * @param request SubmitOrderApprovalRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SubmitOrderApprovalResponse
@@ -11417,6 +12008,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.orderId)) {
             query.put("OrderId", request.orderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.realLoginUserUid)) {
+            query.put("RealLoginUserUid", request.realLoginUserUid);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.tid)) {
@@ -11441,8 +12036,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Submits a ticket for approval.
-     *
+     * <b>summary</b> : 
+     * <p>Submits a ticket for approval.</p>
+     * 
      * @param request SubmitOrderApprovalRequest
      * @return SubmitOrderApprovalResponse
      */
@@ -11452,8 +12048,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Submits a schema synchronization ticket for approval.
-     *
+     * <b>summary</b> : 
+     * <p>Submits a schema synchronization ticket for approval.</p>
+     * 
      * @param request SubmitStructSyncOrderApprovalRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SubmitStructSyncOrderApprovalResponse
@@ -11487,8 +12084,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Submits a schema synchronization ticket for approval.
-     *
+     * <b>summary</b> : 
+     * <p>Submits a schema synchronization ticket for approval.</p>
+     * 
      * @param request SubmitStructSyncOrderApprovalRequest
      * @return SubmitStructSyncOrderApprovalResponse
      */
@@ -11498,8 +12096,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Suspends a task flow instance.
-     *
+     * <b>summary</b> : 
+     * <p>Suspends a task flow instance.</p>
+     * 
      * @param request SuspendTaskFlowInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SuspendTaskFlowInstanceResponse
@@ -11537,8 +12136,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Suspends a task flow instance.
-     *
+     * <b>summary</b> : 
+     * <p>Suspends a task flow instance.</p>
+     * 
      * @param request SuspendTaskFlowInstanceRequest
      * @return SuspendTaskFlowInstanceResponse
      */
@@ -11548,8 +12148,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Synchronizes the metadata of a database.
-     *
+     * <b>summary</b> : 
+     * <p>Synchronizes the metadata of a database.</p>
+     * 
      * @param request SyncDatabaseMetaRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SyncDatabaseMetaResponse
@@ -11587,8 +12188,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Synchronizes the metadata of a database.
-     *
+     * <b>summary</b> : 
+     * <p>Synchronizes the metadata of a database.</p>
+     * 
      * @param request SyncDatabaseMetaRequest
      * @return SyncDatabaseMetaResponse
      */
@@ -11598,10 +12200,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Synchronizes the metadata of all databases in a database instance.
-     *
-     * @description You can call this operation only for database instances whose control mode is Security Collaboration.
-     *
+     * <b>description</b> :
+     * <p>You can call this operation only for database instances whose control mode is Security Collaboration.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Synchronizes the metadata of all databases in a database instance.</p>
+     * 
      * @param request SyncInstanceMetaRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SyncInstanceMetaResponse
@@ -11639,10 +12243,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Synchronizes the metadata of all databases in a database instance.
-     *
-     * @description You can call this operation only for database instances whose control mode is Security Collaboration.
-     *
+     * <b>description</b> :
+     * <p>You can call this operation only for database instances whose control mode is Security Collaboration.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Synchronizes the metadata of all databases in a database instance.</p>
+     * 
      * @param request SyncInstanceMetaRequest
      * @return SyncInstanceMetaResponse
      */
@@ -11652,10 +12258,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies a permission template.
-     *
-     * @description You are a database administrator (DBA) or a Data Management (DMS) administrator. For more information about how to view system roles, see [View system roles](https://help.aliyun.com/document_detail/324212.html).
-     *
+     * <b>description</b> :
+     * <p>You are a database administrator (DBA) or a Data Management (DMS) administrator. For more information about how to view system roles, see <a href="https://help.aliyun.com/document_detail/324212.html">View system roles</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies a permission template.</p>
+     * 
      * @param request UpdateAuthorityTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateAuthorityTemplateResponse
@@ -11697,10 +12305,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies a permission template.
-     *
-     * @description You are a database administrator (DBA) or a Data Management (DMS) administrator. For more information about how to view system roles, see [View system roles](https://help.aliyun.com/document_detail/324212.html).
-     *
+     * <b>description</b> :
+     * <p>You are a database administrator (DBA) or a Data Management (DMS) administrator. For more information about how to view system roles, see <a href="https://help.aliyun.com/document_detail/324212.html">View system roles</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies a permission template.</p>
+     * 
      * @param request UpdateAuthorityTemplateRequest
      * @return UpdateAuthorityTemplateResponse
      */
@@ -11710,10 +12320,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the information about a database instance and checks the connectivity of the database instance.
-     *
-     * @description Before you call the UpdateInstance operation, call the [GetInstance](https://help.aliyun.com/document_detail/141567.html) or [ListInstances](https://help.aliyun.com/document_detail/141936.html) operation to obtain the complete information about the instance.
-     *
+     * <b>description</b> :
+     * <p>Before you call the UpdateInstance operation, call the <a href="https://help.aliyun.com/document_detail/141567.html">GetInstance</a> or <a href="https://help.aliyun.com/document_detail/141936.html">ListInstances</a> operation to obtain the complete information about the instance.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the information about a database instance and checks the connectivity of the database instance.</p>
+     * 
      * @param request UpdateInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateInstanceResponse
@@ -11839,10 +12451,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the information about a database instance and checks the connectivity of the database instance.
-     *
-     * @description Before you call the UpdateInstance operation, call the [GetInstance](https://help.aliyun.com/document_detail/141567.html) or [ListInstances](https://help.aliyun.com/document_detail/141936.html) operation to obtain the complete information about the instance.
-     *
+     * <b>description</b> :
+     * <p>Before you call the UpdateInstance operation, call the <a href="https://help.aliyun.com/document_detail/141567.html">GetInstance</a> or <a href="https://help.aliyun.com/document_detail/141936.html">ListInstances</a> operation to obtain the complete information about the instance.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the information about a database instance and checks the connectivity of the database instance.</p>
+     * 
      * @param request UpdateInstanceRequest
      * @return UpdateInstanceResponse
      */
@@ -11852,10 +12466,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the service level agreement (SLA) timeout reminder for a task flow.
-     *
-     * @description SLA rules take effect after task flows are deployed and published.
-     *
+     * <b>description</b> :
+     * <p>SLA rules take effect after task flows are deployed and published.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the service level agreement (SLA) timeout reminder for a task flow.</p>
+     * 
      * @param tmpReq UpdateSLARulesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateSLARulesResponse
@@ -11899,10 +12515,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the service level agreement (SLA) timeout reminder for a task flow.
-     *
-     * @description SLA rules take effect after task flows are deployed and published.
-     *
+     * <b>description</b> :
+     * <p>SLA rules take effect after task flows are deployed and published.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the service level agreement (SLA) timeout reminder for a task flow.</p>
+     * 
      * @param request UpdateSLARulesRequest
      * @return UpdateSLARulesResponse
      */
@@ -11912,8 +12530,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the name and description of the business scenario for a specified task flow.
-     *
+     * <b>summary</b> : 
+     * <p>Updates the name and description of the business scenario for a specified task flow.</p>
+     * 
      * @param request UpdateScenarioRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateScenarioResponse
@@ -11955,8 +12574,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the name and description of the business scenario for a specified task flow.
-     *
+     * <b>summary</b> : 
+     * <p>Updates the name and description of the business scenario for a specified task flow.</p>
+     * 
      * @param request UpdateScenarioRequest
      * @return UpdateScenarioResponse
      */
@@ -11966,8 +12586,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the name and description of a specific security rule set.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the name and description of a specific security rule set.</p>
+     * 
      * @param request UpdateStandardGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateStandardGroupResponse
@@ -12009,8 +12630,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the name and description of a specific security rule set.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the name and description of a specific security rule set.</p>
+     * 
      * @param request UpdateStandardGroupRequest
      * @return UpdateStandardGroupResponse
      */
@@ -12020,10 +12642,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the advanced configuration of a task node.
-     *
-     * @description You can call this operation to configure a failed task or rerun a task.
-     *
+     * <b>description</b> :
+     * <p>You can call this operation to configure a failed task or rerun a task.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the advanced configuration of a task node.</p>
+     * 
      * @param request UpdateTaskConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateTaskConfigResponse
@@ -12061,10 +12685,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the advanced configuration of a task node.
-     *
-     * @description You can call this operation to configure a failed task or rerun a task.
-     *
+     * <b>description</b> :
+     * <p>You can call this operation to configure a failed task or rerun a task.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the advanced configuration of a task node.</p>
+     * 
      * @param request UpdateTaskConfigRequest
      * @return UpdateTaskConfigResponse
      */
@@ -12074,10 +12700,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates tasks in a task flow.
-     *
-     * @description You can call this operation to modify node configurations.
-     *
+     * <b>description</b> :
+     * <p>You can call this operation to modify node configurations.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates tasks in a task flow.</p>
+     * 
      * @param request UpdateTaskContentRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateTaskContentResponse
@@ -12115,10 +12743,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates tasks in a task flow.
-     *
-     * @description You can call this operation to modify node configurations.
-     *
+     * <b>description</b> :
+     * <p>You can call this operation to modify node configurations.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates tasks in a task flow.</p>
+     * 
      * @param request UpdateTaskContentRequest
      * @return UpdateTaskContentResponse
      */
@@ -12128,8 +12758,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the constants for a specified task flow.
-     *
+     * <b>summary</b> : 
+     * <p>Updates the constants for a specified task flow.</p>
+     * 
      * @param tmpReq UpdateTaskFlowConstantsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateTaskFlowConstantsResponse
@@ -12173,8 +12804,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the constants for a specified task flow.
-     *
+     * <b>summary</b> : 
+     * <p>Updates the constants for a specified task flow.</p>
+     * 
      * @param request UpdateTaskFlowConstantsRequest
      * @return UpdateTaskFlowConstantsResponse
      */
@@ -12184,8 +12816,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the IDs of the users who are involved in the task flow.
-     *
+     * <b>summary</b> : 
+     * <p>Updates the IDs of the users who are involved in the task flow.</p>
+     * 
      * @param tmpReq UpdateTaskFlowCooperatorsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateTaskFlowCooperatorsResponse
@@ -12229,8 +12862,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the IDs of the users who are involved in the task flow.
-     *
+     * <b>summary</b> : 
+     * <p>Updates the IDs of the users who are involved in the task flow.</p>
+     * 
      * @param request UpdateTaskFlowCooperatorsRequest
      * @return UpdateTaskFlowCooperatorsResponse
      */
@@ -12240,14 +12874,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the start node and end node of multiple edges at a time for a task flow.
-     *
-     * @description ###
-     * The edges can be updated only when the following conditions are met:
-     * 1.  The specified edge exists in the directed acyclic graph (DAG) of the task flow specified by DagId.
-     * 2.  The specified edge nodes exist in the DAG of the task flow specified by DagId.
-     * 3.  After the update, rings do not exist in the DAG.
-     *
+     * <b>description</b> :
+     * <h3></h3>
+     * <p>The edges can be updated only when the following conditions are met:</p>
+     * <ol>
+     * <li>The specified edge exists in the directed acyclic graph (DAG) of the task flow specified by DagId.</li>
+     * <li>The specified edge nodes exist in the DAG of the task flow specified by DagId.</li>
+     * <li>After the update, rings do not exist in the DAG.</li>
+     * </ol>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the start node and end node of multiple edges at a time for a task flow.</p>
+     * 
      * @param tmpReq UpdateTaskFlowEdgesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateTaskFlowEdgesResponse
@@ -12291,14 +12929,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the start node and end node of multiple edges at a time for a task flow.
-     *
-     * @description ###
-     * The edges can be updated only when the following conditions are met:
-     * 1.  The specified edge exists in the directed acyclic graph (DAG) of the task flow specified by DagId.
-     * 2.  The specified edge nodes exist in the DAG of the task flow specified by DagId.
-     * 3.  After the update, rings do not exist in the DAG.
-     *
+     * <b>description</b> :
+     * <h3></h3>
+     * <p>The edges can be updated only when the following conditions are met:</p>
+     * <ol>
+     * <li>The specified edge exists in the directed acyclic graph (DAG) of the task flow specified by DagId.</li>
+     * <li>The specified edge nodes exist in the DAG of the task flow specified by DagId.</li>
+     * <li>After the update, rings do not exist in the DAG.</li>
+     * </ol>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the start node and end node of multiple edges at a time for a task flow.</p>
+     * 
      * @param request UpdateTaskFlowEdgesRequest
      * @return UpdateTaskFlowEdgesResponse
      */
@@ -12308,8 +12950,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the name and description of a task flow.
-     *
+     * <b>summary</b> : 
+     * <p>Updates the name and description of a task flow.</p>
+     * 
      * @param request UpdateTaskFlowNameAndDescRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateTaskFlowNameAndDescResponse
@@ -12351,8 +12994,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the name and description of a task flow.
-     *
+     * <b>summary</b> : 
+     * <p>Updates the name and description of a task flow.</p>
+     * 
      * @param request UpdateTaskFlowNameAndDescRequest
      * @return UpdateTaskFlowNameAndDescResponse
      */
@@ -12362,8 +13006,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the notification settings for task flows.
-     *
+     * <b>summary</b> : 
+     * <p>Updates the notification settings for task flows.</p>
+     * 
      * @param request UpdateTaskFlowNotificationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateTaskFlowNotificationResponse
@@ -12409,8 +13054,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the notification settings for task flows.
-     *
+     * <b>summary</b> : 
+     * <p>Updates the notification settings for task flows.</p>
+     * 
      * @param request UpdateTaskFlowNotificationRequest
      * @return UpdateTaskFlowNotificationResponse
      */
@@ -12420,10 +13066,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Changes the owner of a task flow.
-     *
-     * @description Note: The new owner of the task flow must belong to the same tenant as the previous owner.
-     *
+     * <b>description</b> :
+     * <p>Note: The new owner of the task flow must belong to the same tenant as the previous owner.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Changes the owner of a task flow.</p>
+     * 
      * @param request UpdateTaskFlowOwnerRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateTaskFlowOwnerResponse
@@ -12461,10 +13109,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Changes the owner of a task flow.
-     *
-     * @description Note: The new owner of the task flow must belong to the same tenant as the previous owner.
-     *
+     * <b>description</b> :
+     * <p>Note: The new owner of the task flow must belong to the same tenant as the previous owner.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Changes the owner of a task flow.</p>
+     * 
      * @param request UpdateTaskFlowOwnerRequest
      * @return UpdateTaskFlowOwnerResponse
      */
@@ -12474,10 +13124,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Fully updates the edges of a task flow.
-     *
-     * @description You can call this operation to perform a full update. For incremental updates, see AddTaskFlowEdges, UpdateTaskFlowEdges, and DeleteTaskFlowEdgesByMultiCondition.
-     *
+     * <b>description</b> :
+     * <p>You can call this operation to perform a full update. For incremental updates, see AddTaskFlowEdges, UpdateTaskFlowEdges, and DeleteTaskFlowEdgesByMultiCondition.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Fully updates the edges of a task flow.</p>
+     * 
      * @param tmpReq UpdateTaskFlowRelationsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateTaskFlowRelationsResponse
@@ -12521,10 +13173,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Fully updates the edges of a task flow.
-     *
-     * @description You can call this operation to perform a full update. For incremental updates, see AddTaskFlowEdges, UpdateTaskFlowEdges, and DeleteTaskFlowEdgesByMultiCondition.
-     *
+     * <b>description</b> :
+     * <p>You can call this operation to perform a full update. For incremental updates, see AddTaskFlowEdges, UpdateTaskFlowEdges, and DeleteTaskFlowEdgesByMultiCondition.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Fully updates the edges of a task flow.</p>
+     * 
      * @param request UpdateTaskFlowRelationsRequest
      * @return UpdateTaskFlowRelationsResponse
      */
@@ -12534,11 +13188,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the scheduling properties for a task flow.
-     *
-     * @description You can call this operation to update the scheduling properties for a task flow in the editing state. You can configure a **timed scheduling** task flow or an **event scheduling** task flow. When you configure a **timed scheduling** task flow, you can choose from one-time scheduling or periodic scheduling. When you configure an **event scheduling** task flow, you can subscribe to task flows or task flow nodes.****\\
-     * After you update the scheduling properties, you need to publish and deploy the task flow again. The new task flow instance will run based on the updated scheduling properties.
-     *
+     * <b>description</b> :
+     * <p>You can call this operation to update the scheduling properties for a task flow in the editing state. You can configure a <strong>timed scheduling</strong> task flow or an <strong>event scheduling</strong> task flow. When you configure a <strong>timed scheduling</strong> task flow, you can choose from one-time scheduling or periodic scheduling. When you configure an <strong>event scheduling</strong> task flow, you can subscribe to task flows or task flow nodes.****\
+     * After you update the scheduling properties, you need to publish and deploy the task flow again. The new task flow instance will run based on the updated scheduling properties.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the scheduling properties for a task flow.</p>
+     * 
      * @param request UpdateTaskFlowScheduleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateTaskFlowScheduleResponse
@@ -12604,11 +13260,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the scheduling properties for a task flow.
-     *
-     * @description You can call this operation to update the scheduling properties for a task flow in the editing state. You can configure a **timed scheduling** task flow or an **event scheduling** task flow. When you configure a **timed scheduling** task flow, you can choose from one-time scheduling or periodic scheduling. When you configure an **event scheduling** task flow, you can subscribe to task flows or task flow nodes.****\\
-     * After you update the scheduling properties, you need to publish and deploy the task flow again. The new task flow instance will run based on the updated scheduling properties.
-     *
+     * <b>description</b> :
+     * <p>You can call this operation to update the scheduling properties for a task flow in the editing state. You can configure a <strong>timed scheduling</strong> task flow or an <strong>event scheduling</strong> task flow. When you configure a <strong>timed scheduling</strong> task flow, you can choose from one-time scheduling or periodic scheduling. When you configure an <strong>event scheduling</strong> task flow, you can subscribe to task flows or task flow nodes.****\
+     * After you update the scheduling properties, you need to publish and deploy the task flow again. The new task flow instance will run based on the updated scheduling properties.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the scheduling properties for a task flow.</p>
+     * 
      * @param request UpdateTaskFlowScheduleRequest
      * @return UpdateTaskFlowScheduleResponse
      */
@@ -12618,8 +13276,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the time variables for a task flow.
-     *
+     * <b>summary</b> : 
+     * <p>Updates the time variables for a task flow.</p>
+     * 
      * @param request UpdateTaskFlowTimeVariablesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateTaskFlowTimeVariablesResponse
@@ -12657,8 +13316,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the time variables for a task flow.
-     *
+     * <b>summary</b> : 
+     * <p>Updates the time variables for a task flow.</p>
+     * 
      * @param request UpdateTaskFlowTimeVariablesRequest
      * @return UpdateTaskFlowTimeVariablesResponse
      */
@@ -12668,8 +13328,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the name of a specified task.
-     *
+     * <b>summary</b> : 
+     * <p>Updates the name of a specified task.</p>
+     * 
      * @param request UpdateTaskNameRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateTaskNameResponse
@@ -12707,8 +13368,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the name of a specified task.
-     *
+     * <b>summary</b> : 
+     * <p>Updates the name of a specified task.</p>
+     * 
      * @param request UpdateTaskNameRequest
      * @return UpdateTaskNameResponse
      */
@@ -12718,10 +13380,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the output variables for a specified task node.
-     *
-     * @description Only nodes of single-instance SQL assignment, script code, and ECS remote command have output variables.
-     *
+     * <b>description</b> :
+     * <p>Only nodes of single-instance SQL assignment, script code, and ECS remote command have output variables.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the output variables for a specified task node.</p>
+     * 
      * @param request UpdateTaskOutputRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateTaskOutputResponse
@@ -12759,10 +13423,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the output variables for a specified task node.
-     *
-     * @description Only nodes of single-instance SQL assignment, script code, and ECS remote command have output variables.
-     *
+     * <b>description</b> :
+     * <p>Only nodes of single-instance SQL assignment, script code, and ECS remote command have output variables.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the output variables for a specified task node.</p>
+     * 
      * @param request UpdateTaskOutputRequest
      * @return UpdateTaskOutputResponse
      */
@@ -12772,8 +13438,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates time variables for a task.
-     *
+     * <b>summary</b> : 
+     * <p>Updates time variables for a task.</p>
+     * 
      * @param request UpdateTaskTimeVariablesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateTaskTimeVariablesResponse
@@ -12811,8 +13478,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates time variables for a task.
-     *
+     * <b>summary</b> : 
+     * <p>Updates time variables for a task.</p>
+     * 
      * @param request UpdateTaskTimeVariablesRequest
      * @return UpdateTaskTimeVariablesResponse
      */
@@ -12822,8 +13490,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates user information.
-     *
+     * <b>summary</b> : 
+     * <p>Updates user information.</p>
+     * 
      * @param request UpdateUserRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateUserResponse
@@ -12877,8 +13546,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates user information.
-     *
+     * <b>summary</b> : 
+     * <p>Updates user information.</p>
+     * 
      * @param request UpdateUserRequest
      * @return UpdateUserResponse
      */

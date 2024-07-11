@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class GetTableTopologyResponseBody extends TeaModel {
     /**
      * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F5ED6A40-F344-4C7D-A8F0-5685CA584CA7</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -82,85 +94,122 @@ public class GetTableTopologyResponseBody extends TeaModel {
     public static class GetTableTopologyResponseBodyTableTopologyTableTopologyInfoList extends TeaModel {
         /**
          * <p>The ID of the physical database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>43215</p>
          */
         @NameInMap("DbId")
         public Long dbId;
 
         /**
          * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yuyang_test</p>
          */
         @NameInMap("DbName")
         public String dbName;
 
         /**
          * <p>The name that is used to search for the database.</p>
-         * <p>> We recommend that you do not use this parameter for business development. The format of the parameter value may be modified in later versions.</p>
+         * <blockquote>
+         * <p>We recommend that you do not use this parameter for business development. The format of the parameter value may be modified in later versions.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>yuyang_test@localhost:3306
+         * [yuyang_test_dev]</p>
          */
         @NameInMap("DbSearchName")
         public String dbSearchName;
 
         /**
          * <p>The database engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql</p>
          */
         @NameInMap("DbType")
         public String dbType;
 
         /**
          * <p>The ID of the instance to which the physical database belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4325325</p>
          */
         @NameInMap("InstanceId")
         public Long instanceId;
 
         /**
          * <p>The ID of the resource related to the instance. The resource corresponds with the database instance type returned in the InstanceSource parameter.</p>
-         * <br>
-         * <p>*   **RDS**:The ID of the ApsaraDB RDS instance.</p>
-         * <p>*   **ECS_OWN**: The ID of the Elastic Compute Service (ECS) instance.</p>
-         * <p>*   **PUBLIC_OWN**: This parameter is left empty for self-managed database instances that are connected over the Internet.</p>
-         * <p>*   **VPC_ID**:The ID of the virtual private cloud (VPC).</p>
-         * <p>*   **GATEWAY**: The ID of the database gateway.</p>
+         * <ul>
+         * <li><strong>RDS</strong>:The ID of the ApsaraDB RDS instance.</li>
+         * <li><strong>ECS_OWN</strong>: The ID of the Elastic Compute Service (ECS) instance.</li>
+         * <li><strong>PUBLIC_OWN</strong>: This parameter is left empty for self-managed database instances that are connected over the Internet.</li>
+         * <li><strong>VPC_ID</strong>:The ID of the virtual private cloud (VPC).</li>
+         * <li><strong>GATEWAY</strong>: The ID of the database gateway.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-xxx</p>
          */
         @NameInMap("InstanceResourceId")
         public String instanceResourceId;
 
         /**
          * <p>The type of the database instance. Valid values:</p>
-         * <br>
-         * <p>*   **RDS**: an ApsaraDB RDS instance.</p>
-         * <p>*   **ECS_OWN**: a self-managed database that is deployed on an ECS instance</p>
-         * <p>*   **PUBLIC_OWN**: a self-managed database instance that is connected over the Internet.</p>
-         * <p>*   **VPC_ID**: a self-managed database instance in a VPC that is connected over Express Connect circuits.</p>
-         * <p>*   **GATEWAY**: a database instance connected by using a database gateway.</p>
+         * <ul>
+         * <li><strong>RDS</strong>: an ApsaraDB RDS instance.</li>
+         * <li><strong>ECS_OWN</strong>: a self-managed database that is deployed on an ECS instance</li>
+         * <li><strong>PUBLIC_OWN</strong>: a self-managed database instance that is connected over the Internet.</li>
+         * <li><strong>VPC_ID</strong>: a self-managed database instance in a VPC that is connected over Express Connect circuits.</li>
+         * <li><strong>GATEWAY</strong>: a database instance connected by using a database gateway.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>RDS</p>
          */
         @NameInMap("InstanceSource")
         public String instanceSource;
 
         /**
          * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The number of tables.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         @NameInMap("TableCount")
         public Long tableCount;
 
         /**
          * <p>The expression of the names of logical tables.</p>
-         * <br>
          * <p>**</p>
-         * <br>
-         * <p>**Description** This parameter is not returned for physical tables.</p>
+         * <p><strong>Description</strong> This parameter is not returned for physical tables.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_ch_[0000-0005]</p>
          */
         @NameInMap("TableNameExpr")
         public String tableNameExpr;
 
         /**
          * <p>The names of tables.</p>
-         * <br>
-         * <p>> The table names are separated by commas (,).</p>
+         * <blockquote>
+         * <p>The table names are separated by commas (,).</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>test_ch_0000,test_ch_0001,test_ch_0002,test_ch_0003,test_ch_0004,test_ch_0005</p>
          */
         @NameInMap("TableNameList")
         public String tableNameList;
@@ -263,21 +312,31 @@ public class GetTableTopologyResponseBody extends TeaModel {
     public static class GetTableTopologyResponseBodyTableTopology extends TeaModel {
         /**
          * <p>Indicates whether the table is a logical table. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Logic")
         public Boolean logic;
 
         /**
          * <p>The GUID of the table in DMS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IDB_L_308302.yuyang_test.test_ch</p>
          */
         @NameInMap("TableGuid")
         public String tableGuid;
 
         /**
          * <p>The name of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_ch</p>
          */
         @NameInMap("TableName")
         public String tableName;

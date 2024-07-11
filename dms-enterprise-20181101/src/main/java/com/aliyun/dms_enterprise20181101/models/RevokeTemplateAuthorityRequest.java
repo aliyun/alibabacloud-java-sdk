@@ -6,22 +6,29 @@ import com.aliyun.tea.*;
 public class RevokeTemplateAuthorityRequest extends TeaModel {
     /**
      * <p>The ID of the permission template.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1563</p>
      */
     @NameInMap("TemplateId")
     public Long templateId;
 
     /**
-     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) or [ListUserTenants](https://help.aliyun.com/document_detail/198074.html) operation to query the tenant ID.</p>
+     * <p>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> or <a href="https://help.aliyun.com/document_detail/198074.html">ListUserTenants</a> operation to query the tenant ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3***</p>
      */
     @NameInMap("Tid")
     public Long tid;
 
     /**
      * <p>The IDs of users from whom you want to revoke permissions by using a permission template.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[12***,34***,56***]</p>
      */
     @NameInMap("UserIds")
     public String userIds;

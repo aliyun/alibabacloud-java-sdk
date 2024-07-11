@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ListDataCorrectPreCheckSQLResponseBody extends TeaModel {
     /**
      * <p>The error code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
@@ -24,15 +30,22 @@ public class ListDataCorrectPreCheckSQLResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>31853A2B-DC9D-5B39-8492-D2AC8BCF550E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request is successful.</p>
-     * <p>*   **false**: The request fails.</p>
+     * <ul>
+     * <li><strong>true</strong>: The request is successful.</li>
+     * <li><strong>false</strong>: The request fails.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,48 +98,70 @@ public class ListDataCorrectPreCheckSQLResponseBody extends TeaModel {
     public static class ListDataCorrectPreCheckSQLResponseBodyPreCheckSQLList extends TeaModel {
         /**
          * <p>The estimated number of affected rows.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("AffectRows")
         public Long affectRows;
 
         /**
          * <p>The SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OPTIMIZE TABLE <code>Text_TableNames</code></p>
          */
         @NameInMap("CheckSQL")
         public String checkSQL;
 
         /**
          * <p>The ID of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1930****</p>
          */
         @NameInMap("DbId")
         public Long dbId;
 
         /**
-         * <p>The key that is used to query the details of optimization suggestions. You can call the [GetSQLReviewOptimizeDetail](https://help.aliyun.com/document_detail/265977.html) operation to query the details of optimization suggestions based on the key.</p>
+         * <p>The key that is used to query the details of optimization suggestions. You can call the <a href="https://help.aliyun.com/document_detail/265977.html">GetSQLReviewOptimizeDetail</a> operation to query the details of optimization suggestions based on the key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b9e771fc6ec247dea6d06a32c777****</p>
          */
         @NameInMap("SQLReviewQueryKey")
         public String SQLReviewQueryKey;
 
         /**
          * <p>The review status of the SQL statement. Valid values:</p>
-         * <br>
-         * <p>*   **WAITING**: The SQL statement is pending for review.</p>
-         * <p>*   **RUNNING**: The SQL statement is being reviewed.</p>
-         * <p>*   **IGNORE**: The SQL statement review is skipped.</p>
-         * <p>*   **PASS**: The SQL statement passed the review.</p>
-         * <p>*   **BLOCK**: The SQL statement failed the review.</p>
+         * <ul>
+         * <li><strong>WAITING</strong>: The SQL statement is pending for review.</li>
+         * <li><strong>RUNNING</strong>: The SQL statement is being reviewed.</li>
+         * <li><strong>IGNORE</strong>: The SQL statement review is skipped.</li>
+         * <li><strong>PASS</strong>: The SQL statement passed the review.</li>
+         * <li><strong>BLOCK</strong>: The SQL statement failed the review.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>WAITING</p>
          */
         @NameInMap("SqlReviewStatus")
         public String sqlReviewStatus;
 
         /**
          * <p>The type of the SQL statement, such as DELETE, UPDATE, or ALTER_TABLE.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OPTIMIZE</p>
          */
         @NameInMap("SqlType")
         public String sqlType;
 
         /**
          * <p>The name of the table whose data is changed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Text_TableNames</p>
          */
         @NameInMap("TableNames")
         public String tableNames;

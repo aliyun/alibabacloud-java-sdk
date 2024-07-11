@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class GetLogicDatabaseResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
@@ -24,15 +30,22 @@ public class GetLogicDatabaseResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>90260530-565C-42B9-A6E8-893481FE6AB6</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   true: The request was successful.</p>
-     * <p>*   false: The request failed.</p>
+     * <ul>
+     * <li>true: The request was successful.</li>
+     * <li>false: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -142,12 +155,18 @@ public class GetLogicDatabaseResponseBody extends TeaModel {
     public static class GetLogicDatabaseResponseBodyLogicDatabase extends TeaModel {
         /**
          * <p>The alias of the logical database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_logic_alias</p>
          */
         @NameInMap("Alias")
         public String alias;
 
         /**
          * <p>The ID of the logical database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1***</p>
          */
         @NameInMap("DatabaseId")
         public String databaseId;
@@ -159,28 +178,38 @@ public class GetLogicDatabaseResponseBody extends TeaModel {
         public GetLogicDatabaseResponseBodyLogicDatabaseDatabaseIds databaseIds;
 
         /**
-         * <p>The database engine. For more information about the valid values of the DbType parameter, see [DbType parameter](https://help.aliyun.com/document_detail/198106.html).</p>
+         * <p>The database engine. For more information about the valid values of the DbType parameter, see <a href="https://help.aliyun.com/document_detail/198106.html">DbType parameter</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>POLARDB</p>
          */
         @NameInMap("DbType")
         public String dbType;
 
         /**
          * <p>The type of the environment to which the database belongs. Valid values:</p>
-         * <br>
-         * <p>*   product: production environment</p>
-         * <p>*   dev: development environment</p>
-         * <p>*   pre: pre-release environment</p>
-         * <p>*   test: test environment</p>
-         * <p>*   sit: system integration testing (SIT) environment</p>
-         * <p>*   uat: user acceptance testing (UAT) environment</p>
-         * <p>*   pet: stress testing environment</p>
-         * <p>*   stag: staging environment</p>
+         * <ul>
+         * <li>product: production environment</li>
+         * <li>dev: development environment</li>
+         * <li>pre: pre-release environment</li>
+         * <li>test: test environment</li>
+         * <li>sit: system integration testing (SIT) environment</li>
+         * <li>uat: user acceptance testing (UAT) environment</li>
+         * <li>pet: stress testing environment</li>
+         * <li>stag: staging environment</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>dev</p>
          */
         @NameInMap("EnvType")
         public String envType;
 
         /**
          * <p>Indicates whether the database is a logical database. The return value is true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Logic")
         public Boolean logic;
@@ -199,12 +228,18 @@ public class GetLogicDatabaseResponseBody extends TeaModel {
 
         /**
          * <p>The name of the logical database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_logic_db</p>
          */
         @NameInMap("SchemaName")
         public String schemaName;
 
         /**
          * <p>The name that is used to search for the logical database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_logic_db[test_logic_alias]</p>
          */
         @NameInMap("SearchName")
         public String searchName;

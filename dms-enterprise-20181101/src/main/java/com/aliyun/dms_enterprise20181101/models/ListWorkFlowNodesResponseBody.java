@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class ListWorkFlowNodesResponseBody extends TeaModel {
     /**
      * <p>The error code returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CFD8FE00-36D9-4C1B-940D-65A7B73D9066</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -82,18 +94,27 @@ public class ListWorkFlowNodesResponseBody extends TeaModel {
     public static class ListWorkFlowNodesResponseBodyWorkflowNodesWorkflowNodeAuditUsersAuditUser extends TeaModel {
         /**
          * <p>The nickname of the approver.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("NickName")
         public String nickName;
 
         /**
          * <p>The real name of the approver.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("RealName")
         public String realName;
 
         /**
          * <p>The ID of the approver. The ID is different from the ID of the Alibaba Cloud account of the approver.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("UserId")
         public Long userId;
@@ -157,39 +178,58 @@ public class ListWorkFlowNodesResponseBody extends TeaModel {
 
         /**
          * <p>The description of the approval template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Comment")
         public String comment;
 
         /**
          * <p>The ID of the creator. This ID is different from the ID of the Alibaba Cloud account of the creator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("CreateUserId")
         public Long createUserId;
 
         /**
          * <p>The name of the user who creates the approval node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("CreateUserNickName")
         public String createUserNickName;
 
         /**
          * <p>The ID of the approval node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("NodeId")
         public Long nodeId;
 
         /**
          * <p>The name of the approval node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("NodeName")
         public String nodeName;
 
         /**
          * <p>The type of the approval node. Valid values:</p>
-         * <br>
-         * <p>*   SYS: The approval node is predefined by the system.</p>
-         * <p>*   USER_LIST: The approval node is created by a user.</p>
+         * <ul>
+         * <li>SYS: The approval node is predefined by the system.</li>
+         * <li>USER_LIST: The approval node is created by a user.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SYS</p>
          */
         @NameInMap("NodeType")
         public String nodeType;

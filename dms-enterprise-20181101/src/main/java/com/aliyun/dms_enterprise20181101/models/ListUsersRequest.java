@@ -6,52 +6,71 @@ import com.aliyun.tea.*;
 public class ListUsersRequest extends TeaModel {
     /**
      * <p>The number of the page to return.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page.</p>
-     * <br>
      * <p>**</p>
-     * <br>
      * <p>Valid values: 10, 20, 50, and 100.**** Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The role that is assigned to the user. Valid values:</p>
-     * <br>
-     * <p>*   **USER**: a regular user.</p>
-     * <p>*   **DBA** : a database administrator (DBA).</p>
-     * <p>*   **ADMIN**: a Data Management (DMS) administrator.</p>
-     * <p>*   **SECURITY_ADMIN**: a security administrator.</p>
-     * <p>*   **STRUCT_READ_ONLY**: a schema read-only user.</p>
-     * <br>
-     * <p>>  To check your role, move the pointer over the profile picture in the upper-right corner of the DMS console.</p>
+     * <ul>
+     * <li><strong>USER</strong>: a regular user.</li>
+     * <li><strong>DBA</strong> : a database administrator (DBA).</li>
+     * <li><strong>ADMIN</strong>: a Data Management (DMS) administrator.</li>
+     * <li><strong>SECURITY_ADMIN</strong>: a security administrator.</li>
+     * <li><strong>STRUCT_READ_ONLY</strong>: a schema read-only user.</li>
+     * </ul>
+     * <blockquote>
+     * <p> To check your role, move the pointer over the profile picture in the upper-right corner of the DMS console.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>DBA</p>
      */
     @NameInMap("Role")
     public String role;
 
     /**
      * <p>The search keyword. Fuzzy match is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("SearchKey")
     public String searchKey;
 
     /**
-     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) operation to obtain the tenant ID.</p>
+     * <p>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> operation to obtain the tenant ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3***</p>
      */
     @NameInMap("Tid")
     public Long tid;
 
     /**
      * <p>The status of the user. Valid values:</p>
-     * <br>
-     * <p>*   **NORMAL**: The user is normal.</p>
-     * <p>*   **DISABLE**: The user is disabled.</p>
-     * <p>*   **DELETE**: The user is deleted.</p>
+     * <ul>
+     * <li><strong>NORMAL</strong>: The user is normal.</li>
+     * <li><strong>DISABLE</strong>: The user is disabled.</li>
+     * <li><strong>DELETE</strong>: The user is deleted.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>NORMAL</p>
      */
     @NameInMap("UserState")
     public String userState;

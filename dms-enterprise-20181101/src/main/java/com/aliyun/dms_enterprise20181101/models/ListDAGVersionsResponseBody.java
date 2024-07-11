@@ -12,33 +12,49 @@ public class ListDAGVersionsResponseBody extends TeaModel {
 
     /**
      * <p>The error code returned if the request fails.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>403</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message returned if the request fails.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C7775630-7901-51B9-8782-9B585EC0799A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request is successful.</p>
-     * <p>*   **false**: The request fails.</p>
+     * <ul>
+     * <li><strong>true</strong>: The request is successful.</li>
+     * <li><strong>false</strong>: The request fails.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -99,36 +115,54 @@ public class ListDAGVersionsResponseBody extends TeaModel {
     public static class ListDAGVersionsResponseBodyDagVersionListDagVersion extends TeaModel {
         /**
          * <p>The name of the task flow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Spark SQL</p>
          */
         @NameInMap("DagName")
         public String dagName;
 
         /**
          * <p>The ID of the task flow owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>51****</p>
          */
         @NameInMap("DagOwnerId")
         public String dagOwnerId;
 
         /**
          * <p>The name of the task flow owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         @NameInMap("DagOwnerNickName")
         public String dagOwnerNickName;
 
         /**
          * <p>The ID of the previously published version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2****</p>
          */
         @NameInMap("LastVersionId")
         public Long lastVersionId;
 
         /**
          * <p>The description of the version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_OSS</p>
          */
         @NameInMap("VersionComments")
         public String versionComments;
 
         /**
          * <p>The ID of the version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2****</p>
          */
         @NameInMap("VersionId")
         public Long versionId;

@@ -6,33 +6,49 @@ import com.aliyun.tea.*;
 public class ListUsersResponseBody extends TeaModel {
     /**
      * <p>The error code returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>InvalidTid</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Specified parameter Tid is not valid.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>69161997-6030-53BA-A333-DBEC83B732FF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request was successful.</p>
-     * <p>*   **false**: The request failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -137,90 +153,130 @@ public class ListUsersResponseBody extends TeaModel {
     public static class ListUsersResponseBodyUserListUser extends TeaModel {
         /**
          * <p>The number of queries that were performed on the current day.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("CurExecuteCount")
         public Long curExecuteCount;
 
         /**
          * <p>The number of rows that were queried on the current day.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("CurResultCount")
         public Long curResultCount;
 
         /**
          * <p>The DingTalk chatbot URL that is used to receive notifications.</p>
-         * <br>
-         * <p>> </p>
-         * <br>
-         * <p>*   The system returns this parameter if you have set a DingTalk chatbot URL in the console. To set a DingTalk chatbot URL in the console, move the pointer over the profile picture in the upper-right corner and click the Edit icon next to **Notice**.</p>
-         * <br>
-         * <p>*   The system does not return this parameter if you have not set a DingTalk chatbot URL.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>The system returns this parameter if you have set a DingTalk chatbot URL in the console. To set a DingTalk chatbot URL in the console, move the pointer over the profile picture in the upper-right corner and click the Edit icon next to <strong>Notice</strong>.</p>
+         * </li>
+         * <li><p>The system does not return this parameter if you have not set a DingTalk chatbot URL.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://XXX.dingtalk.com/robot/send?access_token=9b7a4a562cbe7fcdea9962afac7b9d7b4504d564948083419750f9cafa78e4ef">https://XXX.dingtalk.com/robot/send?access_token=9b7a4a562cbe7fcdea9962afac7b9d7b4504d564948083419750f9cafa78e4ef</a></p>
          */
         @NameInMap("DingRobot")
         public String dingRobot;
 
         /**
          * <p>The email address that is used to receive notifications.</p>
-         * <br>
-         * <p>> </p>
-         * <br>
-         * <p>*   The system returns this parameter if you have set an email address in the console. To set an email address in the console, move the pointer over the profile picture in the upper-right corner and click the Edit icon next to **Notice**.</p>
-         * <br>
-         * <p>*   The system does not return this parameter if you have not set an email address.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>The system returns this parameter if you have set an email address in the console. To set an email address in the console, move the pointer over the profile picture in the upper-right corner and click the Edit icon next to <strong>Notice</strong>.</p>
+         * </li>
+         * <li><p>The system does not return this parameter if you have not set an email address.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:username@example.com">username@example.com</a></p>
          */
         @NameInMap("Email")
         public String email;
 
         /**
          * <p>The time when the user last logged on to the console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-11-08 13:43:43</p>
          */
         @NameInMap("LastLoginTime")
         public String lastLoginTime;
 
         /**
          * <p>The maximum number of queries that can be performed on the current day.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2000</p>
          */
         @NameInMap("MaxExecuteCount")
         public Long maxExecuteCount;
 
         /**
          * <p>The maximum number of rows that can be queried on the current day.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50000</p>
          */
         @NameInMap("MaxResultCount")
         public Long maxResultCount;
 
         /**
          * <p>The mobile phone number of the user.</p>
-         * <br>
-         * <p>> </p>
-         * <br>
-         * <p>*   The system returns this parameter if you have set a mobile phone number in the console. To set a mobile phone number in the console, move the pointer over the profile picture in the upper-right corner and click the Edit icon next to **Notice**.</p>
-         * <br>
-         * <p>*   The system does not return this parameter if you have not set a mobile phone number.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>The system returns this parameter if you have set a mobile phone number in the console. To set a mobile phone number in the console, move the pointer over the profile picture in the upper-right corner and click the Edit icon next to <strong>Notice</strong>.</p>
+         * </li>
+         * <li><p>The system does not return this parameter if you have not set a mobile phone number.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1389999****</p>
          */
         @NameInMap("Mobile")
         public String mobile;
 
         /**
          * <p>The nickname of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_NickName</p>
          */
         @NameInMap("NickName")
         public String nickName;
 
         /**
          * <p>The notification method. The system returns one or more values. Valid values:</p>
-         * <br>
-         * <p>*   **SMS**: text message</p>
-         * <p>*   **EMAIL**: email.</p>
-         * <p>*   **DINGDING**: DingTalk.</p>
-         * <p>*   **DINGROBOT**: DingTalk chatbot.</p>
-         * <p>*   **WEBHOOK**: webhook.</p>
+         * <ul>
+         * <li><strong>SMS</strong>: text message</li>
+         * <li><strong>EMAIL</strong>: email.</li>
+         * <li><strong>DINGDING</strong>: DingTalk.</li>
+         * <li><strong>DINGROBOT</strong>: DingTalk chatbot.</li>
+         * <li><strong>WEBHOOK</strong>: webhook.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DINGROBOT</p>
          */
         @NameInMap("NotificationMode")
         public String notificationMode;
 
         /**
          * <p>The ID of the Alibaba Cloud account of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>140692647406****</p>
          */
         @NameInMap("ParentUid")
         public String parentUid;
@@ -239,43 +295,62 @@ public class ListUsersResponseBody extends TeaModel {
 
         /**
          * <p>The signature method that is used to secure connections when a webhook URL is used. Valid values:</p>
-         * <br>
-         * <p>*   **NONE**: no signature.</p>
-         * <p>*   **HMAC_SHA1**: HMAC_SHA1.</p>
+         * <ul>
+         * <li><strong>NONE</strong>: no signature.</li>
+         * <li><strong>HMAC_SHA1</strong>: HMAC_SHA1.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>HMAC_SHA1</p>
          */
         @NameInMap("SignatureMethod")
         public String signatureMethod;
 
         /**
          * <p>The status of the user. Valid values:</p>
-         * <br>
-         * <p>*   **NORMAL**: The user is normal.</p>
-         * <p>*   **DISABLE**: The user is disabled.</p>
-         * <p>*   **DELETE**: The user is deleted.</p>
+         * <ul>
+         * <li><strong>NORMAL</strong>: The user is normal.</li>
+         * <li><strong>DISABLE</strong>: The user is disabled.</li>
+         * <li><strong>DELETE</strong>: The user is deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         @NameInMap("State")
         public String state;
 
         /**
          * <p>The ID of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>167382665015****</p>
          */
         @NameInMap("Uid")
         public String uid;
 
         /**
          * <p>The ID of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8****</p>
          */
         @NameInMap("UserId")
         public String userId;
 
         /**
          * <p>The webhook URL that is used to receive notifications.</p>
-         * <br>
-         * <p>> </p>
-         * <br>
-         * <p>*   If you have set a webhook URL, DMS sends notifications to the specified URL.</p>
-         * <br>
-         * <p>*   The system does not return this parameter if you have not set a webhook URL.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>If you have set a webhook URL, DMS sends notifications to the specified URL.</p>
+         * </li>
+         * <li><p>The system does not return this parameter if you have not set a webhook URL.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://dms-XXX.aliyun.com:8">http://dms-XXX.aliyun.com:8</a>***</p>
          */
         @NameInMap("Webhook")
         public String webhook;

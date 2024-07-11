@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class GetLhSpaceByNameResponseBody extends TeaModel {
     /**
      * <p>The error code returned if the request fails.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message returned if the request fails.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
@@ -24,15 +30,22 @@ public class GetLhSpaceByNameResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FE8CA4A8-AB2D-55B7-BD30-01A4609F40D8</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request is successful.</p>
-     * <p>*   **false**: The request fails.</p>
+     * <ul>
+     * <li><strong>true</strong>: The request is successful.</li>
+     * <li><strong>false</strong>: The request fails.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,78 +98,115 @@ public class GetLhSpaceByNameResponseBody extends TeaModel {
     public static class GetLhSpaceByNameResponseBodyLakehouseSpace extends TeaModel {
         /**
          * <p>The ID of the user who creates the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>51***</p>
          */
         @NameInMap("CreatorId")
         public String creatorId;
 
         /**
          * <p>The description of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The ID of the development database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2435****</p>
          */
         @NameInMap("DevDbId")
         public Integer devDbId;
 
         /**
          * <p>The type of the database. Valid values:</p>
-         * <br>
-         * <p>*   **14**: AnalyticDB for MySQL</p>
-         * <p>*   **18**: AnalyticDB for PostgreSQL</p>
+         * <ul>
+         * <li><strong>14</strong>: AnalyticDB for MySQL</li>
+         * <li><strong>18</strong>: AnalyticDB for PostgreSQL</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>14</p>
          */
         @NameInMap("DwDbType")
         public String dwDbType;
 
         /**
          * <p>The ID of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>Indicates whether the workspace is deleted. Valid values:</p>
-         * <br>
-         * <p>*   **true**: The workspace is deleted.</p>
-         * <p>*   **false**: The workspace is not deleted.</p>
+         * <ul>
+         * <li><strong>true</strong>: The workspace is deleted.</li>
+         * <li><strong>false</strong>: The workspace is not deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("IsDeleted")
         public Boolean isDeleted;
 
         /**
          * <p>The mode in which the workspace runs. Valid values:</p>
-         * <br>
-         * <p>*   **0**: basic mode</p>
-         * <p>*   **1**: standard mode</p>
+         * <ul>
+         * <li><strong>0</strong>: basic mode</li>
+         * <li><strong>1</strong>: standard mode</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Mode")
         public Integer mode;
 
         /**
          * <p>The ID of the production database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2442****</p>
          */
         @NameInMap("ProdDbId")
         public Integer prodDbId;
 
         /**
          * <p>The configuration of the workspace. Valid values:</p>
-         * <br>
-         * <p>*   **skipManualRunCheck**: No security rule check is required in the trial run phase.</p>
-         * <p>*   **skipPublishApprove**: No approval is required for publishing and O\\&M.</p>
+         * <ul>
+         * <li><strong>skipManualRunCheck</strong>: No security rule check is required in the trial run phase.</li>
+         * <li><strong>skipPublishApprove</strong>: No approval is required for publishing and O\&amp;M.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;skipManualRunCheck\&quot;:true,\&quot;skipPublishApprove\&quot;:true}</p>
          */
         @NameInMap("SpaceConfig")
         public String spaceConfig;
 
         /**
          * <p>The name of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_space</p>
          */
         @NameInMap("SpaceName")
         public String spaceName;
 
         /**
          * <p>The ID of the tenant to which the workspace belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3***</p>
          */
         @NameInMap("TenantId")
         public String tenantId;

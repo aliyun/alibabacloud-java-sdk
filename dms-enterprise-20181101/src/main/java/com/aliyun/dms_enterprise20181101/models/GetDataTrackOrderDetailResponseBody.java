@@ -12,27 +12,40 @@ public class GetDataTrackOrderDetailResponseBody extends TeaModel {
 
     /**
      * <p>The error code returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>283C461F-11D8-48AA-B695-DF092DA32AF3</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request was successful.</p>
-     * <p>*   **false**: The request failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,61 +98,87 @@ public class GetDataTrackOrderDetailResponseBody extends TeaModel {
     public static class GetDataTrackOrderDetailResponseBodyDataTrackOrderDetail extends TeaModel {
         /**
          * <p>The name that is used to search for the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx@yyy:3306</p>
          */
         @NameInMap("DatabaseSearchName")
         public String databaseSearchName;
 
         /**
          * <p>The ID of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3431****</p>
          */
         @NameInMap("DbId")
         public Long dbId;
 
         /**
          * <p>The end time of the time range in which data operations are tracked. The time is in the yyyy-MM-dd HH:mm:ss format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-23 10:00:00</p>
          */
         @NameInMap("JobEndTime")
         public String jobEndTime;
 
         /**
          * <p>The start time of the time range in which data operations are tracked. The time is in the yyyy-MM-dd HH:mm:ss format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-23 00:00:00</p>
          */
         @NameInMap("JobStartTime")
         public String jobStartTime;
 
         /**
          * <p>The status of the data tracking task. Valid values:</p>
-         * <br>
-         * <p>*   **INIT**: The task is being initialized.</p>
-         * <p>*   **LISTING**: The binary logs are being obtained.</p>
-         * <p>*   **LIST_SUCCESS**: The binary logs are successfully obtained.</p>
-         * <p>*   **DOWNLOADING**: The binary logs are being downloaded.</p>
-         * <p>*   **DOWNLOAD_FAIL**: The binary logs failed to be downloaded.</p>
-         * <p>*   **DOWNLOAD_SUCCESS**: The binary logs are successfully downloaded.</p>
-         * <p>*   **FILTERING**: The binary logs are being parsed.</p>
-         * <p>*   **FILTER_FAIL**: The binary logs failed to be parsed.</p>
-         * <p>*   **FILTER_SUCCESS**: The binary logs are successfully parsed.</p>
+         * <ul>
+         * <li><strong>INIT</strong>: The task is being initialized.</li>
+         * <li><strong>LISTING</strong>: The binary logs are being obtained.</li>
+         * <li><strong>LIST_SUCCESS</strong>: The binary logs are successfully obtained.</li>
+         * <li><strong>DOWNLOADING</strong>: The binary logs are being downloaded.</li>
+         * <li><strong>DOWNLOAD_FAIL</strong>: The binary logs failed to be downloaded.</li>
+         * <li><strong>DOWNLOAD_SUCCESS</strong>: The binary logs are successfully downloaded.</li>
+         * <li><strong>FILTERING</strong>: The binary logs are being parsed.</li>
+         * <li><strong>FILTER_FAIL</strong>: The binary logs failed to be parsed.</li>
+         * <li><strong>FILTER_SUCCESS</strong>: The binary logs are successfully parsed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>FILTER_SUCCESS</p>
          */
         @NameInMap("JobStatus")
         public String jobStatus;
 
         /**
          * <p>Indicates whether the database is a logical database. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Logic")
         public Boolean logic;
 
         /**
          * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>as_task</p>
          */
         @NameInMap("SchemaName")
         public String schemaName;
 
         /**
          * <p>The description of the task status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>searching success</p>
          */
         @NameInMap("StatusDesc")
         public String statusDesc;

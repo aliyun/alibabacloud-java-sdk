@@ -4,18 +4,49 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class GetTableDesignProjectInfoResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The information about the schema design project.</p>
+     */
     @NameInMap("ProjectInfo")
     public GetTableDesignProjectInfoResponseBodyProjectInfo projectInfo;
 
+    /**
+     * <p>The request ID. You can use the request ID to query logs and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>48778434-5796-571A-8455-A59146588401</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,24 +96,80 @@ public class GetTableDesignProjectInfoResponseBody extends TeaModel {
     }
 
     public static class GetTableDesignProjectInfoResponseBodyProjectInfoBaseDatabase extends TeaModel {
+        /**
+         * <p>The alias of the database instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>poc_test</p>
+         */
         @NameInMap("Alias")
         public String alias;
 
+        /**
+         * <p>The database ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11****</p>
+         */
         @NameInMap("DbId")
         public Integer dbId;
 
+        /**
+         * <p>The type of the database. For more information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/198106.html">DbType parameter</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>POLARDB</p>
+         */
         @NameInMap("DbType")
         public String dbType;
 
+        /**
+         * <p>The type of the environment in which the database instance is deployed. Valid values:</p>
+         * <ul>
+         * <li><strong>product</strong>: production environment.</li>
+         * <li><strong>dev</strong>: development environment.</li>
+         * <li><strong>pre</strong>: pre-release environment.</li>
+         * <li><strong>test</strong>: test environment.</li>
+         * <li><strong>sit</strong>: system integration testing (SIT) environment.</li>
+         * <li><strong>uat</strong>: user acceptance testing (UAT) environment.</li>
+         * <li><strong>pet</strong>: stress testing environment.</li>
+         * <li><strong>stag</strong>: staging environment.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>dev</p>
+         */
         @NameInMap("EnvType")
         public String envType;
 
+        /**
+         * <p>Indicates whether the database is a logical database. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Logic")
         public Boolean logic;
 
+        /**
+         * <p>The database name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bk_atc020</p>
+         */
         @NameInMap("SchemaName")
         public String schemaName;
 
+        /**
+         * <p>The name that is used to search for the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:schema_name@127.0.XX.XX">schema_name@127.0.XX.XX</a></p>
+         */
         @NameInMap("SearchName")
         public String searchName;
 
@@ -150,30 +237,86 @@ public class GetTableDesignProjectInfoResponseBody extends TeaModel {
     }
 
     public static class GetTableDesignProjectInfoResponseBodyProjectInfo extends TeaModel {
+        /**
+         * <p>The information about the change base database of the schema design ticket.</p>
+         */
         @NameInMap("BaseDatabase")
         public GetTableDesignProjectInfoResponseBodyProjectInfoBaseDatabase baseDatabase;
 
+        /**
+         * <p>The ID of the user who created the ticket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>71****</p>
+         */
         @NameInMap("CreatorId")
         public Long creatorId;
 
+        /**
+         * <p>The description of the schema design project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The time when the ticket was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-04-23 02:57:01</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <p>The time when the ticket was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-04-23 02:57:01</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <p>The ticket ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>95****</p>
+         */
         @NameInMap("OrderId")
         public Long orderId;
 
+        /**
+         * <p>The project ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12****</p>
+         */
         @NameInMap("ProjectId")
         public Long projectId;
 
+        /**
+         * <p>The state of the schema design project. Valid values:</p>
+         * <ul>
+         * <li><strong>DESIGN</strong>: The schema is being designed.</li>
+         * <li><strong>PUBLISHED</strong>: The schema is published.</li>
+         * <li><strong>CLOSE</strong>: The ticket is closed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DESIGN</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The name of the schema design project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Title")
         public String title;
 

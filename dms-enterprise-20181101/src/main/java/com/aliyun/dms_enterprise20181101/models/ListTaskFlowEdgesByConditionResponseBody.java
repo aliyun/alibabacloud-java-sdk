@@ -12,27 +12,40 @@ public class ListTaskFlowEdgesByConditionResponseBody extends TeaModel {
 
     /**
      * <p>The error code returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The ID of the request. You can use the ID to locate logs and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D86249CD-422F-5ACF-85BA-9187C986AE0B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request was successful.</p>
-     * <p>*   **false**: The request failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,18 +98,27 @@ public class ListTaskFlowEdgesByConditionResponseBody extends TeaModel {
     public static class ListTaskFlowEdgesByConditionResponseBodyEdgesEdge extends TeaModel {
         /**
          * <p>The ID of the task flow edge.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24***</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The ID of the end node on the edge.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>44***</p>
          */
         @NameInMap("NodeEnd")
         public Long nodeEnd;
 
         /**
          * <p>The ID of the start node on the edge.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>44***</p>
          */
         @NameInMap("NodeFrom")
         public Long nodeFrom;

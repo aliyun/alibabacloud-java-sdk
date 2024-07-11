@@ -12,27 +12,40 @@ public class GetDataExportOrderDetailResponseBody extends TeaModel {
 
     /**
      * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>427688B8-ADFB-4C4E-9D45-EF5C1FD6E23D</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values: Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,23 +98,30 @@ public class GetDataExportOrderDetailResponseBody extends TeaModel {
     public static class GetDataExportOrderDetailResponseBodyDataExportOrderDetailKeyInfo extends TeaModel {
         /**
          * <p>The state of the data export ticket. Valid values:</p>
-         * <br>
-         * <p>*   **PRE_CHECKING**: The ticket was being prechecked.</p>
-         * <p>*   **PRE_CHECK_SUCCESS**: The ticket passed the precheck.</p>
-         * <p>*   **PRE_CHECK_FAIL**: The ticket failed to pass the prechecked.</p>
-         * <p>*   **WAITING_APPLY_AUDIT**: The ticket was to be submitted for approval.</p>
-         * <p>*   **APPLY_AUDIT_SUCCESS**: The ticket was submitted for approval.</p>
-         * <p>*   **ENABLE_EXPORT**: The ticket was approved. Data can be exported.</p>
-         * <p>*   **WAITING_EXPORT**: Data was to be scheduled for export.</p>
-         * <p>*   **DOING_EXPORT**: Data was being exported.</p>
-         * <p>*   **EXPORT_FAIL**: Data failed to be exported.</p>
-         * <p>*   **EXPORT_SUCCESS**: Data was exported.</p>
+         * <ul>
+         * <li><strong>PRE_CHECKING</strong>: The ticket was being prechecked.</li>
+         * <li><strong>PRE_CHECK_SUCCESS</strong>: The ticket passed the precheck.</li>
+         * <li><strong>PRE_CHECK_FAIL</strong>: The ticket failed to pass the prechecked.</li>
+         * <li><strong>WAITING_APPLY_AUDIT</strong>: The ticket was to be submitted for approval.</li>
+         * <li><strong>APPLY_AUDIT_SUCCESS</strong>: The ticket was submitted for approval.</li>
+         * <li><strong>ENABLE_EXPORT</strong>: The ticket was approved. Data can be exported.</li>
+         * <li><strong>WAITING_EXPORT</strong>: Data was to be scheduled for export.</li>
+         * <li><strong>DOING_EXPORT</strong>: Data was being exported.</li>
+         * <li><strong>EXPORT_FAIL</strong>: Data failed to be exported.</li>
+         * <li><strong>EXPORT_SUCCESS</strong>: Data was exported.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>EXPORT_SUCCESS</p>
          */
         @NameInMap("JobStatus")
         public String jobStatus;
 
         /**
          * <p>The precheck ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("PreCheckId")
         public Long preCheckId;
@@ -132,54 +152,81 @@ public class GetDataExportOrderDetailResponseBody extends TeaModel {
     public static class GetDataExportOrderDetailResponseBodyDataExportOrderDetailOrderDetail extends TeaModel {
         /**
          * <p>The number of rows that were affected by the SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ActualAffectRows")
         public Long actualAffectRows;
 
         /**
          * <p>The category of the reason for the data export.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>text</p>
          */
         @NameInMap("Classify")
         public String classify;
 
         /**
          * <p>The name of the database from which data was exported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx@xxx:3306</p>
          */
         @NameInMap("Database")
         public String database;
 
         /**
          * <p>The ID of the database from which data was exported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("DbId")
         public Integer dbId;
 
         /**
          * <p>The type of the environment to which the database belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("EnvType")
         public String envType;
 
         /**
          * <p>The SQL statement that was executed to export data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>select 1</p>
          */
         @NameInMap("ExeSQL")
         public String exeSQL;
 
         /**
          * <p>Indicates whether the affected rows are skipped.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("IgnoreAffectRows")
         public Boolean ignoreAffectRows;
 
         /**
          * <p>The reason why the affected rows are skipped.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>empty</p>
          */
         @NameInMap("IgnoreAffectRowsReason")
         public String ignoreAffectRowsReason;
 
         /**
          * <p>Indicates whether the database is a logical database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Logic")
         public Boolean logic;

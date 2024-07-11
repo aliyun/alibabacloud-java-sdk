@@ -6,27 +6,40 @@ import com.aliyun.tea.*;
 public class ListTablesResponseBody extends TeaModel {
     /**
      * <p>The error code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B16FB618-5E96-4FFD-BB0D-490C890A4030</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request was successful.</p>
-     * <p>*   **false**: The request failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -39,6 +52,9 @@ public class ListTablesResponseBody extends TeaModel {
 
     /**
      * <p>The total number of tables that meet the query conditions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -137,30 +153,45 @@ public class ListTablesResponseBody extends TeaModel {
     public static class ListTablesResponseBodyTableListTable extends TeaModel {
         /**
          * <p>The ID of the physical database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1860****</p>
          */
         @NameInMap("DatabaseId")
         public String databaseId;
 
         /**
          * <p>The description of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The encoding format of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>utf8</p>
          */
         @NameInMap("Encoding")
         public String encoding;
 
         /**
          * <p>The engine of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InnoDB</p>
          */
         @NameInMap("Engine")
         public String engine;
 
         /**
          * <p>The number of rows in the table. This is a statistical value and does not indicate the actual number of rows.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10085</p>
          */
         @NameInMap("NumRows")
         public Long numRows;
@@ -179,36 +210,54 @@ public class ListTablesResponseBody extends TeaModel {
 
         /**
          * <p>The storage space that is occupied by the table. This is a statistical value and does not indicate the accurate storage space. Unit: MB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
          */
         @NameInMap("StoreCapacity")
         public Long storeCapacity;
 
         /**
          * <p>The GUID of the table in DMS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IDB_44743****.qntest.consumption_records</p>
          */
         @NameInMap("TableGuid")
         public String tableGuid;
 
         /**
          * <p>The ID of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>44743****</p>
          */
         @NameInMap("TableId")
         public String tableId;
 
         /**
          * <p>The table name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>consumption_records</p>
          */
         @NameInMap("TableName")
         public String tableName;
 
         /**
          * <p>The database in which the table resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qntest</p>
          */
         @NameInMap("TableSchemaName")
         public String tableSchemaName;
 
         /**
          * <p>The type of the table. Default value: NORMAL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         @NameInMap("TableType")
         public String tableType;

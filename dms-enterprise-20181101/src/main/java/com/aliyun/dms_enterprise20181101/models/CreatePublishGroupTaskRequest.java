@@ -6,51 +6,68 @@ import com.aliyun.tea.*;
 public class CreatePublishGroupTaskRequest extends TeaModel {
     /**
      * <p>The ID of the database for which the schema design is executed.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12345</p>
      */
     @NameInMap("DbId")
     public Integer dbId;
 
     /**
      * <p>Indicates whether the database is a logical database.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("Logic")
     public Boolean logic;
 
     /**
      * <p>The ID of the ticket.</p>
-     * <br>
-     * <p>> : You can create a schema design ticket in the DMS console. For more information, see [Design schemas](https://help.aliyun.com/document_detail/69711.html). You can also create a schema design ticket by calling the [CreateOrder](https://help.aliyun.com/document_detail/144649.html) operation and obtain the ticket ID.</p>
-     * <br>
+     * <blockquote>
+     * <p>: You can create a schema design ticket in the DMS console. For more information, see <a href="https://help.aliyun.com/document_detail/69711.html">Design schemas</a>. You can also create a schema design ticket by calling the <a href="https://help.aliyun.com/document_detail/144649.html">CreateOrder</a> operation and obtain the ticket ID.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>142435</p>
      */
     @NameInMap("OrderId")
     public Long orderId;
 
     /**
      * <p>The time to execute the schema design ticket.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-10-10 00:00:00</p>
      */
     @NameInMap("PlanTime")
     public String planTime;
 
     /**
      * <p>The policy to execute the schema design ticket. Valid values:</p>
-     * <br>
-     * <p>*   IMMEDIATELY: immediately executes the schema design ticket.</p>
-     * <p>*   REGULARLY: executes the schema design ticket at a scheduled time.</p>
-     * <br>
+     * <ul>
+     * <li>IMMEDIATELY: immediately executes the schema design ticket.</li>
+     * <li>REGULARLY: executes the schema design ticket at a scheduled time.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>IMMEDIATELY</p>
      */
     @NameInMap("PublishStrategy")
     public String publishStrategy;
 
     /**
      * <p>The ID of the tenant.</p>
-     * <br>
-     * <p>> : To view the ID of the tenant, log on to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [Manage DMS tenants](https://help.aliyun.com/document_detail/181330.html).</p>
+     * <blockquote>
+     * <p>: To view the ID of the tenant, log on to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see <a href="https://help.aliyun.com/document_detail/181330.html">Manage DMS tenants</a>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>-1</p>
      */
     @NameInMap("Tid")
     public Long tid;

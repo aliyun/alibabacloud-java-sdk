@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ListIndexesResponseBody extends TeaModel {
     /**
      * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
@@ -24,12 +30,18 @@ public class ListIndexesResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1F4DE2F1-5B47-462A-A973-E02EB7AF386B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -82,36 +94,52 @@ public class ListIndexesResponseBody extends TeaModel {
     public static class ListIndexesResponseBodyIndexListIndex extends TeaModel {
         /**
          * <p>The description of the index.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("IndexComment")
         public String indexComment;
 
         /**
          * <p>The ID of the index.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("IndexId")
         public String indexId;
 
         /**
          * <p>The name of the index.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idx_test</p>
          */
         @NameInMap("IndexName")
         public String indexName;
 
         /**
          * <p>The type of the index. Valid values:</p>
-         * <br>
-         * <p>*   Primary</p>
-         * <p>*   Unique</p>
-         * <p>*   Normal</p>
-         * <p>*   FullText</p>
-         * <p>*   Spatial</p>
+         * <ul>
+         * <li>Primary</li>
+         * <li>Unique</li>
+         * <li>Normal</li>
+         * <li>FullText</li>
+         * <li>Spatial</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Primary</p>
          */
         @NameInMap("IndexType")
         public String indexType;
 
         /**
          * <p>The ID of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("TableId")
         public String tableId;
