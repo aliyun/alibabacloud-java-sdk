@@ -4,42 +4,98 @@ package com.aliyun.amqp_open20191212.models;
 import com.aliyun.tea.*;
 
 public class UpdateInstanceRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>c2c5d1274axxxxxxxx</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>amqp-cn-jtexxxxx</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>professional</p>
+     */
     @NameInMap("InstanceType")
     public String instanceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1000</p>
+     */
     @NameInMap("MaxConnections")
     public Integer maxConnections;
 
+    /**
+     * <strong>example:</strong>
+     * <p>128</p>
+     */
     @NameInMap("MaxEipTps")
     public Long maxEipTps;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1000</p>
+     */
     @NameInMap("MaxPrivateTps")
     public Long maxPrivateTps;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UPGRADE</p>
+     */
     @NameInMap("ModifyType")
     public String modifyType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1000</p>
+     */
     @NameInMap("QueueCapacity")
     public Integer queueCapacity;
 
+    /**
+     * <strong>example:</strong>
+     * <p>onDemand</p>
+     */
     @NameInMap("ServerlessChargeType")
     public String serverlessChargeType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>7</p>
+     */
     @NameInMap("StorageSize")
     public Integer storageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("SupportEip")
     public Boolean supportEip;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("SupportTracing")
     public Boolean supportTracing;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("TracingStorageTime")
     public Integer tracingStorageTime;
 

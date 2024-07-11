@@ -12,6 +12,9 @@ public class ListExchangesResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FEBA5E0C-50D0-4FA6-A794-4901E5465***</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,36 +43,54 @@ public class ListExchangesResponseBody extends TeaModel {
     public static class ListExchangesResponseBodyDataExchanges extends TeaModel {
         /**
          * <p>The attributes. This parameter is unavailable in the current version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Attributes")
         public java.util.Map<String, ?> attributes;
 
         /**
          * <p>Indicates whether the exchange was automatically deleted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("AutoDeleteState")
         public Boolean autoDeleteState;
 
         /**
          * <p>The timestamp that indicates when the exchange was created. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1580886216000</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
          * <p>The exchange type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DIRECT</p>
          */
         @NameInMap("ExchangeType")
         public String exchangeType;
 
         /**
          * <p>The exchange name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amq.direct</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The vhost name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("VHostName")
         public String VHostName;
@@ -138,15 +159,22 @@ public class ListExchangesResponseBody extends TeaModel {
 
         /**
          * <p>The maximum number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("MaxResults")
         public Integer maxResults;
 
         /**
          * <p>The token that marks the end of the current returned page.``</p>
-         * <br>
-         * <p>*   If the value of this parameter is empty, the next query is not required and the token used to start the next query is unavailable.``</p>
-         * <p>*   If the value of this parameter is not empty, the next query is required, and the value is the token used to start the next query.``</p>
+         * <ul>
+         * <li>If the value of this parameter is empty, the next query is not required and the token used to start the next query is unavailable.``</li>
+         * <li>If the value of this parameter is not empty, the next query is required, and the value is the token used to start the next query.``</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAANDQBYW1xcC1jbi03cHAybXdiY3AwMGEBdmhvc3QBAXNkZndhYWJhATE2NDkzMTM4OTU5NDIB4o3z1pPwWzk4aYuiRffi8R6-****</p>
          */
         @NameInMap("NextToken")
         public String nextToken;

@@ -6,32 +6,49 @@ import com.aliyun.tea.*;
 public class ListQueueConsumersRequest extends TeaModel {
     /**
      * <p>The ID of the ApsaraMQ for RabbitMQ instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>188077086902***</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The token that marks the end position of the previous returned page. To obtain the next batch of data, call the operation again by using the value of NextToken returned by the previous request. If you call this operation for the first time or want to query all results, set NextToken to an empty string.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The number of data entries to return. If you do not configure this parameter, the default value 1 is used.</p>
-     * <br>
      * <p>Valid values: 1 to 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("QueryCount")
     public Integer queryCount;
 
     /**
      * <p>The name of the queue for which you want to query online consumers.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>queue-rabbit-springboot-advance5</p>
      */
     @NameInMap("Queue")
     public String queue;
 
     /**
      * <p>The virtual host (vhost) name.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("VirtualHost")
     public String virtualHost;

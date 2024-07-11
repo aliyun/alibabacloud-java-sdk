@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteQueueResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>92385FD2-624A-48C9-8FB5-753F2AFA***</p>
      */
     @NameInMap("RequestId")
     public String requestId;

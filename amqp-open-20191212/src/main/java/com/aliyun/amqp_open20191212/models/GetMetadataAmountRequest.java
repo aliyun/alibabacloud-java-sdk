@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetMetadataAmountRequest extends TeaModel {
     /**
      * <p>The ID of the ApsaraMQ for RabbitMQ instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>amqp-cn-v0h1kb9n***</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

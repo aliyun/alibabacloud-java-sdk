@@ -6,39 +6,64 @@ import com.aliyun.tea.*;
 public class DeleteBindingRequest extends TeaModel {
     /**
      * <p>The binding key.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>.test.</p>
      */
     @NameInMap("BindingKey")
     public String bindingKey;
 
     /**
      * <p>The type of the object that you want to unbind from the source exchange. Valid values:</p>
-     * <br>
-     * <p>*   **QUEUE**</p>
-     * <p>*   **EXCHANGE**</p>
+     * <ul>
+     * <li><strong>QUEUE</strong></li>
+     * <li><strong>EXCHANGE</strong></li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>QUEUE</p>
      */
     @NameInMap("BindingType")
     public String bindingType;
 
     /**
      * <p>The name of the object that you want to unbind from the source exchange.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DemoQueue</p>
      */
     @NameInMap("DestinationName")
     public String destinationName;
 
     /**
      * <p>The instance ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>amqp-cn-v0h1kb9nu***</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The name of the source exchange.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NormalEX</p>
      */
     @NameInMap("SourceExchange")
     public String sourceExchange;
 
     /**
      * <p>The vhost name.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("VirtualHost")
     public String virtualHost;

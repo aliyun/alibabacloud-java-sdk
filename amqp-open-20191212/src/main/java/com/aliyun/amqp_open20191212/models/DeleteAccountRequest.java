@@ -6,14 +6,21 @@ import com.aliyun.tea.*;
 public class DeleteAccountRequest extends TeaModel {
     /**
      * <p>The timestamp that indicates when the pair of static username and password that you want to delete was created. Unit: milliseconds.</p>
-     * <br>
-     * <p>You can call the [ListAccounts](~~472730~~) operation to view the timestamp.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/472730.html">ListAccounts</a> operation to view the timestamp.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1671175303522</p>
      */
     @NameInMap("CreateTimestamp")
     public Long createTimestamp;
 
     /**
      * <p>The pair of username and password that you want to delete.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MjphbXFwLWNuLXVxbTJ5cjc3djAwMzpMVEFJNXQ4YmVNbVZNMWVSWnRFSjZ2Zm1=</p>
      */
     @NameInMap("UserName")
     public String userName;

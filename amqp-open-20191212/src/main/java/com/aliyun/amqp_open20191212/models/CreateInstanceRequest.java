@@ -4,39 +4,85 @@ package com.aliyun.amqp_open20191212.models;
 import com.aliyun.tea.*;
 
 public class CreateInstanceRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>AutoRenewal</p>
+     */
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("AutoRenewPeriod")
     public Integer autoRenewPeriod;
 
+    /**
+     * <strong>example:</strong>
+     * <p>c2c5d1274axxxxxxxx</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     @NameInMap("InstanceName")
     public String instanceName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>professional</p>
+     */
     @NameInMap("InstanceType")
     public String instanceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>50000</p>
+     */
     @NameInMap("MaxConnections")
     public Integer maxConnections;
 
+    /**
+     * <strong>example:</strong>
+     * <p>128</p>
+     */
     @NameInMap("MaxEipTps")
     public Long maxEipTps;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1000</p>
+     */
     @NameInMap("MaxPrivateTps")
     public Long maxPrivateTps;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Subscription</p>
+     */
     @NameInMap("PaymentType")
     public String paymentType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Period")
     public Integer period;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Month</p>
+     */
     @NameInMap("PeriodCycle")
     public String periodCycle;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1000</p>
+     */
     @NameInMap("QueueCapacity")
     public Integer queueCapacity;
 
@@ -49,18 +95,38 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("RenewalDurationUnit")
     public String renewalDurationUnit;
 
+    /**
+     * <strong>example:</strong>
+     * <p>onDemand</p>
+     */
     @NameInMap("ServerlessChargeType")
     public String serverlessChargeType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>7</p>
+     */
     @NameInMap("StorageSize")
     public Integer storageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("SupportEip")
     public Boolean supportEip;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("SupportTracing")
     public Boolean supportTracing;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("TracingStorageTime")
     public Integer tracingStorageTime;
 
