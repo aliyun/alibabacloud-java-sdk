@@ -105,6 +105,12 @@ public class DescribeMaskingRulesResponseBody extends TeaModel {
         @NameInMap("RuleList")
         public java.util.List<String> ruleList;
 
+        /**
+         * <p>The version of the masking rule. Valid values: v1 and v2. Default value: v1</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
+         */
         @NameInMap("RuleVersion")
         public String ruleVersion;
 
