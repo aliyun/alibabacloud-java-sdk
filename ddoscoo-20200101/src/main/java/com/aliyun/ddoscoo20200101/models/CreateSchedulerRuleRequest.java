@@ -45,12 +45,13 @@ public class CreateSchedulerRuleRequest extends TeaModel {
     public String ruleName;
 
     /**
-     * <p>The type of the custom defense rule. Valid values:</p>
+     * <p>The type of the rule. Valid values:</p>
      * <ul>
      * <li><strong>2</strong>: tiered protection</li>
      * <li><strong>3</strong>: network acceleration</li>
-     * <li><strong>5</strong>: CDN interaction</li>
+     * <li><strong>5</strong>: Alibaba Cloud CDN (CDN) interaction</li>
      * <li><strong>6</strong>: cloud service interaction</li>
+     * <li><strong>8</strong>: secure acceleration</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

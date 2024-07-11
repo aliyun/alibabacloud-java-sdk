@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class DescribePortCcAttackTopIPResponseBody extends TeaModel {
     /**
+     * <p>The request ID, which is used to locate and troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>24F36D81-5E2D-52E5-9DB6-A3ED23CF271A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information about the source IP address of the attack.</p>
+     */
     @NameInMap("TopIp")
     public java.util.List<DescribePortCcAttackTopIPResponseBodyTopIp> topIp;
 
@@ -37,6 +42,8 @@ public class DescribePortCcAttackTopIPResponseBody extends TeaModel {
 
     public static class DescribePortCcAttackTopIPResponseBodyTopIp extends TeaModel {
         /**
+         * <p>The code of the location from which the attack is initiated. For more information, see <a href="https://help.aliyun.com/document_detail/167926.html">Codes of administrative regions in China and codes of countries and areas</a>. For example, <strong>110000</strong> indicates Beijing, China, and <strong>us</strong> indicates the United States.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
          */
@@ -44,6 +51,8 @@ public class DescribePortCcAttackTopIPResponseBody extends TeaModel {
         public String areaId;
 
         /**
+         * <p>The number of attacks from the IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>33971</p>
          */
@@ -51,6 +60,8 @@ public class DescribePortCcAttackTopIPResponseBody extends TeaModel {
         public Long pv;
 
         /**
+         * <p>The source IP address of the attack.</p>
+         * 
          * <strong>example:</strong>
          * <p>172.18.XX.XX</p>
          */

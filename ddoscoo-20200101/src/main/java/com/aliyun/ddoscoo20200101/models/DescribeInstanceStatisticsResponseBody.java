@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceStatisticsResponseBody extends TeaModel {
     /**
-     * <p>The statistics on the instances.</p>
+     * <p>The statistics on the instance.</p>
      */
     @NameInMap("InstanceStatistics")
     public java.util.List<DescribeInstanceStatisticsResponseBodyInstanceStatistics> instanceStatistics;
@@ -44,7 +44,7 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
         /**
          * <p>The number of advanced mitigation sessions that are used in this month.</p>
          * <blockquote>
-         * <p>This parameter is returned only if Anti-DDoS Premium instances are queried.</p>
+         * <p> This parameter is returned only if Anti-DDoS Proxy (Outside Chinese Mainland) instances are queried.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

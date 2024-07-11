@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceStatusRequest extends TeaModel {
     /**
-     * <p>The ID of the instance to query.</p>
+     * <p>The ID of the Anti-DDoS Proxy instance to query.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> operation to query the IDs of all Anti-DDoS Pro or Anti-DDoS Premium instances.</p>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> operation to query the IDs of all Anti-DDoS Proxy (Chinese Mainland) or Anti-DDoS Proxy (Outside Chinese Mainland) instances.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,10 +18,10 @@ public class DescribeInstanceStatusRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The type of the instance to query. Valid values:</p>
+     * <p>The type of the Anti-DDoS Proxy instance to query. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: an Anti-DDoS Pro instance</li>
-     * <li><strong>2</strong>: an Anti-DDoS Premium instance</li>
+     * <li><strong>1</strong>: an Anti-DDoS Proxy (Chinese Mainland) instance</li>
+     * <li><strong>2</strong>: an Anti-DDoS Proxy (Outside Chinese Mainland) instance</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

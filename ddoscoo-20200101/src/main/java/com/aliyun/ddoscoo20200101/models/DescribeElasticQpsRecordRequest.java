@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeElasticQpsRecordRequest extends TeaModel {
     /**
+     * <p>The end of the time range to query. The value is a timestamp. Unit: milliseconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DescribeElasticQpsRecordRequest extends TeaModel {
     public Long endTime;
 
     /**
+     * <p>The IP address of the Anti-DDoS Proxy instance to query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class DescribeElasticQpsRecordRequest extends TeaModel {
     public String ip;
 
     /**
+     * <p>The beginning of the time range to query. The value is a timestamp. Unit: milliseconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

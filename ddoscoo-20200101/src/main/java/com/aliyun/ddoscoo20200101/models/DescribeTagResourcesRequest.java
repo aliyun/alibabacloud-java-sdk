@@ -17,7 +17,7 @@ public class DescribeTagResourcesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The region ID of the instance. Set the value to <strong>cn-hangzhou</strong>, which indicates an Anti-DDoS Pro instance in the Chinese mainland.</p>
+     * <p>The region ID of the instance. Set the value to <strong>cn-hangzhou</strong>, which indicates an Anti-DDoS Proxy (Chinese Mainland) instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,7 +37,7 @@ public class DescribeTagResourcesRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>An array consisting of IDs of the Anti-DDoS Pro instances that you want to query.</p>
+     * <p>The IDs of the Anti-DDoS Proxy (Chinese Mainland) instances that you want to query.</p>
      * 
      * <strong>example:</strong>
      * <p>ddoscoo-cn-mp91j1ao****</p>

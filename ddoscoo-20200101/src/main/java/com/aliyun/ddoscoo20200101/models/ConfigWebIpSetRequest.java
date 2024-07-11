@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ConfigWebIpSetRequest extends TeaModel {
     /**
-     * <p>IP address N or CIDR block N that you want to add to the blacklist. The maximum value of N is 200. You can add up to 200 IP addresses or CIDR blocks to the blacklist.</p>
+     * <p>The IP addresses and CIDR blocks in the blacklist. You can add up to 200 IP addresses or CIDR blocks to the blacklist.</p>
      * 
      * <strong>example:</strong>
      * <p>1.1.1.1</p>
@@ -36,7 +36,7 @@ public class ConfigWebIpSetRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>IP address N or CIDR block N that you want to add to the whitelist. The maximum value of N is 200. You can add up to 200 IP addresses or CIDR blocks to the whitelist.</p>
+     * <p>The IP addresses and CIDR blocks in the whitelist. You can add up to 200 IP addresses or CIDR blocks to the whitelist.</p>
      * 
      * <strong>example:</strong>
      * <p>2.2.2.2/24</p>

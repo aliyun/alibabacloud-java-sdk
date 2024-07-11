@@ -4,6 +4,9 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceIdsResponseBody extends TeaModel {
+    /**
+     * <p>The ID, type, description, and IP version of the instance.</p>
+     */
     @NameInMap("InstanceIds")
     public java.util.List<DescribeInstanceIdsResponseBodyInstanceIds> instanceIds;
 
@@ -37,6 +40,15 @@ public class DescribeInstanceIdsResponseBody extends TeaModel {
 
     public static class DescribeInstanceIdsResponseBodyInstanceIds extends TeaModel {
         /**
+         * <p>The type of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Insurance mitigation plan</li>
+         * <li><strong>1</strong>: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Unlimited mitigation plan</li>
+         * <li><strong>2</strong>: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the CMA mitigation plan</li>
+         * <li><strong>3</strong>: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Sec-CMA mitigation plan</li>
+         * <li><strong>9</strong>: Anti-DDoS Proxy (Chinese Mainland) instance of the Profession mitigation plan</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>9</p>
          */
@@ -44,6 +56,8 @@ public class DescribeInstanceIdsResponseBody extends TeaModel {
         public Integer edition;
 
         /**
+         * <p>The ID of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>ddoscoo-cn-zvp2eibz****</p>
          */
@@ -51,6 +65,12 @@ public class DescribeInstanceIdsResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The IP address-based forwarding mode of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>fnat</strong>: Requests from IPv4 addresses are forwarded to origin servers that use IPv4 addresses and requests from IPv6 addresses are forwarded to origin servers that use IPv6 addresses.</li>
+         * <li><strong>v6tov4</strong>: All requests are forwarded to origin servers that use IPv4 addresses.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>fnat</p>
          */
@@ -58,6 +78,12 @@ public class DescribeInstanceIdsResponseBody extends TeaModel {
         public String ipMode;
 
         /**
+         * <p>The IP version of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Ipv4</strong></li>
+         * <li><strong>Ipv6</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Ipv4</p>
          */
@@ -65,6 +91,8 @@ public class DescribeInstanceIdsResponseBody extends TeaModel {
         public String ipVersion;
 
         /**
+         * <p>The description of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */

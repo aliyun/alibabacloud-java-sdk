@@ -42,7 +42,7 @@ public class CreateDomainResourceRequest extends TeaModel {
     public java.util.List<String> instanceIds;
 
     /**
-     * <p>An array that consists of the details of the protocol type and port number.</p>
+     * <p>The details about the protocol type and port number.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ProxyTypes")
@@ -61,7 +61,7 @@ public class CreateDomainResourceRequest extends TeaModel {
      * <li><p><strong>0</strong>: IP address</p>
      * </li>
      * <li><p><strong>1</strong>: domain name</p>
-     * <p>If you deploy proxies, such as a Web Application Firewall (WAF) instance, between the origin server and the Anti-DDoS Pro or Anti-DDoS Premium instance, set the value to 1. If you use the domain name, you must enter the address of the proxy, such as the CNAME of WAF.</p>
+     * <p>This parameter is suitable for scenarios where another proxy service, such as Web Application Firewall (WAF), is deployed between the origin server and Anti-DDoS Pro or Anti-DDoS Premium. The address is the jump address of the proxy service, such as the CNAME address of WAF.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -127,7 +127,7 @@ public class CreateDomainResourceRequest extends TeaModel {
 
     public static class CreateDomainResourceRequestProxyTypes extends TeaModel {
         /**
-         * <p>An array that consists of port numbers.</p>
+         * <p>The port numbers.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("ProxyPorts")

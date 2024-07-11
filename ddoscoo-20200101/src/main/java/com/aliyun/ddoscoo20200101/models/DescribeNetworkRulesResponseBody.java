@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeNetworkRulesResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of the details of a port forwarding rule.</p>
+     * <p>The details of a port forwarding rule.</p>
      */
     @NameInMap("NetworkRules")
     public java.util.List<DescribeNetworkRulesResponseBodyNetworkRules> networkRules;
@@ -88,8 +88,8 @@ public class DescribeNetworkRulesResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the port forwarding rule is automatically created. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: yes</li>
-         * <li><strong>false</strong>: no</li>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -112,11 +112,17 @@ public class DescribeNetworkRulesResponseBody extends TeaModel {
         public String protocol;
 
         /**
-         * <p>An array that consists of IP addresses of origin servers.</p>
+         * <p>The IP addresses of origin servers.</p>
          */
         @NameInMap("RealServers")
         public java.util.List<String> realServers;
 
+        /**
+         * <p>The remarks of the port forwarding rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test</p>
+         */
         @NameInMap("Remark")
         public String remark;
 

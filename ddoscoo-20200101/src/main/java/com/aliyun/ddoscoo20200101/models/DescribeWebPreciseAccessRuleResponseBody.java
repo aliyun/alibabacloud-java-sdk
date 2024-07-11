@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
     /**
-     * <p>An array consisting of the configuration of the accurate access control rule that is created for the website.</p>
+     * <p>The configuration of the accurate access control rule that is created for the website.</p>
      */
     @NameInMap("PreciseAccessConfigList")
     public java.util.List<DescribeWebPreciseAccessRuleResponseBodyPreciseAccessConfigList> preciseAccessConfigList;
@@ -63,9 +63,9 @@ public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
         public String field;
 
         /**
-         * <p>The custom HTTP header.</p>
+         * <p>The custom HTTP request header.</p>
          * <blockquote>
-         * <p>This parameter takes effect only when <strong>Field</strong> is set to <strong>header</strong>.</p>
+         * <p> This parameter takes effect only when <strong>Field</strong> is set to <strong>header</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -134,9 +134,9 @@ public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
         /**
          * <p>The action triggered if the rule is matched. Valid values:</p>
          * <ul>
-         * <li><strong>accept</strong>: allows the requests that match the rule.</li>
-         * <li><strong>block</strong>: blocks the requests that match the rule.</li>
-         * <li><strong>challenge</strong>: implements Completely Automated Public Turing test to tell Computers and Humans Apart (CAPTCHA) verification for the requests that match the rule.</li>
+         * <li><strong>accept</strong>: The requests that match the rule are allowed.</li>
+         * <li><strong>block</strong>: The requests that match the rule are blocked.</li>
+         * <li><strong>challenge</strong>: Completely Automated Public Turing test to tell Computers and Humans Apart (CAPTCHA) verification for the requests that match the rule is implemented.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -152,7 +152,7 @@ public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
         public java.util.List<DescribeWebPreciseAccessRuleResponseBodyPreciseAccessConfigListRuleListConditionList> conditionList;
 
         /**
-         * <p>The validity period of the rule. Unit: seconds. This parameter takes effect only when <strong>action</strong> of a rule is <strong>block</strong>. Access requests that match the rule are blocked within the specified validity period of the rule. <strong>0</strong> indicates that the rule takes effect all the time.</p>
+         * <p>The validity period of the rule. Unit: seconds. This parameter takes effect only when <strong>action</strong> of a rule is <strong>block</strong>. Access requests that match the rule are blocked within the specified validity period of the rule. The value <strong>0</strong> indicates that the whitelist takes effect all the time.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -161,7 +161,7 @@ public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
         public Long expires;
 
         /**
-         * <p>The name of the rule.</p>
+         * <p>The name of the scheduling rule.</p>
          * 
          * <strong>example:</strong>
          * <p>testrule</p>
@@ -172,7 +172,7 @@ public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
         /**
          * <p>The source of the rule. Valid values:</p>
          * <ul>
-         * <li><strong>manual</strong>: manually created. This is the default value.</li>
+         * <li><strong>manual</strong> (default): manually created.</li>
          * <li><strong>auto</strong>: automatically generated.</li>
          * </ul>
          * 
@@ -240,7 +240,7 @@ public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
         public String domain;
 
         /**
-         * <p>An array that consists of the rules.</p>
+         * <p>The scheduling rules.</p>
          */
         @NameInMap("RuleList")
         public java.util.List<DescribeWebPreciseAccessRuleResponseBodyPreciseAccessConfigListRuleList> ruleList;

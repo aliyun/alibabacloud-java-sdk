@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeElasticQpsRequest extends TeaModel {
     /**
+     * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+     * <blockquote>
+     * <p> This UNIX timestamp must indicate a point in time that is accurate to the minute.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +18,8 @@ public class DescribeElasticQpsRequest extends TeaModel {
     public Long endTime;
 
     /**
+     * <p>The sampling interval. Unit: seconds. The value must be a multiple of 60. Default value: 60. Unit: seconds. The query result varies depending on the sampling interval.</p>
+     * 
      * <strong>example:</strong>
      * <p>60</p>
      */
@@ -21,6 +27,8 @@ public class DescribeElasticQpsRequest extends TeaModel {
     public String interval;
 
     /**
+     * <p>The IP address of the Anti-DDoS Proxy instance to query.</p>
+     * 
      * <strong>example:</strong>
      * <p>203.107.XX.XX</p>
      */
@@ -28,6 +36,11 @@ public class DescribeElasticQpsRequest extends TeaModel {
     public String ip;
 
     /**
+     * <p>The type of the service. Valid values:</p>
+     * <ul>
+     * <li><strong>cn</strong>: Anti-DDoS Proxy (Chinese Mainland)</li>
+     * <li><strong>cn-hongkong</strong>: Anti-DDoS Proxy (Outside Chinese Mainland)</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,6 +50,10 @@ public class DescribeElasticQpsRequest extends TeaModel {
     public String region;
 
     /**
+     * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+     * <blockquote>
+     * <p> This UNIX timestamp must indicate a point in time that is accurate to the minute.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

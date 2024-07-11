@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceIdsRequest extends TeaModel {
     /**
+     * <p>The type of the instance to query. Valid values:</p>
+     * <ul>
+     * <li><strong>0</strong>: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Insurance mitigation plan</li>
+     * <li><strong>1</strong>: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Unlimited mitigation plan</li>
+     * <li><strong>2</strong>: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Chinese Mainland Acceleration (CMA) mitigation plan</li>
+     * <li><strong>3</strong>: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Secure Chinese Mainland Acceleration (Sec-CMA) mitigation plan</li>
+     * <li><strong>9</strong>: Anti-DDoS Proxy (Chinese Mainland) instance of the Profession mitigation plan</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>9</p>
      */
@@ -12,6 +21,8 @@ public class DescribeInstanceIdsRequest extends TeaModel {
     public Integer edition;
 
     /**
+     * <p>The IDs of instances to query.</p>
+     * 
      * <strong>example:</strong>
      * <p>ddoscoo-cn-mp91j1ao****</p>
      */

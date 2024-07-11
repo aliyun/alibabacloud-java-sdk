@@ -4,10 +4,15 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeWebReportTopIpResponseBody extends TeaModel {
+    /**
+     * <p>The response parameters.</p>
+     */
     @NameInMap("DataList")
     public java.util.List<DescribeWebReportTopIpResponseBodyDataList> dataList;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D21BE0C4-8E83-5E32-86C6-AA6BE9B1B5BD</p>
      */
@@ -37,6 +42,8 @@ public class DescribeWebReportTopIpResponseBody extends TeaModel {
 
     public static class DescribeWebReportTopIpResponseBodyDataList extends TeaModel {
         /**
+         * <p>The ID of the location.</p>
+         * 
          * <strong>example:</strong>
          * <p>90998690</p>
          */
@@ -44,6 +51,8 @@ public class DescribeWebReportTopIpResponseBody extends TeaModel {
         public String areaId;
 
         /**
+         * <p>The number of entries returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -51,6 +60,28 @@ public class DescribeWebReportTopIpResponseBody extends TeaModel {
         public Long count;
 
         /**
+         * <p>The Internet service provider (ISP) for the attack. Valid values:</p>
+         * <ul>
+         * <li><strong>100017</strong>: China Telecom</li>
+         * <li><strong>100026</strong>: China Unicom</li>
+         * <li><strong>100025</strong>: China Mobile</li>
+         * <li><strong>100027</strong>: China Education and Research Network</li>
+         * <li><strong>100020</strong>: China Mobile Tietong</li>
+         * <li><strong>1000143</strong>: Dr.Peng Telecom &amp; Media Group</li>
+         * <li><strong>100080</strong>: Beijing Gehua CATV Network</li>
+         * <li><strong>1000139</strong>: National Radio and Television Administration</li>
+         * <li><strong>100023</strong>: Oriental Cable Network</li>
+         * <li><strong>100063</strong>: Founder Broadband</li>
+         * <li><strong>1000337</strong>: China Internet Exchange</li>
+         * <li><strong>100021</strong>: 21Vianet Group</li>
+         * <li><strong>1000333</strong>: Wasu Media Holding</li>
+         * <li><strong>100093</strong>: Wangsu Science &amp; Technology</li>
+         * <li><strong>1000401</strong>: Tencent</li>
+         * <li><strong>100099</strong>: Baidu</li>
+         * <li><strong>1000323</strong>: Alibaba Cloud</li>
+         * <li><strong>100098</strong>: Alibaba</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>100017</p>
          */
@@ -58,6 +89,8 @@ public class DescribeWebReportTopIpResponseBody extends TeaModel {
         public String isp;
 
         /**
+         * <p>The source IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>117.186.XX.XX</p>
          */

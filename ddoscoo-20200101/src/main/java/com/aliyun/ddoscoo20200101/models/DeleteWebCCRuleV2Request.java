@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class DeleteWebCCRuleV2Request extends TeaModel {
     /**
+     * <p>The domain name of the website.</p>
+     * <blockquote>
+     * <p> A forwarding rule must be configured for the domain name. You can call the <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> operation to query all domain names.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +18,12 @@ public class DeleteWebCCRuleV2Request extends TeaModel {
     public String domain;
 
     /**
+     * <p>The source of the rule. Valid values:</p>
+     * <ul>
+     * <li><strong>manual</strong> (default): manually created.</li>
+     * <li><strong>clover</strong>: automatically created. Specify this value when you want to delete intelligent protection rules.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>manual</p>
      */
@@ -21,6 +31,8 @@ public class DeleteWebCCRuleV2Request extends TeaModel {
     public String owner;
 
     /**
+     * <p>The names of the rules that you want to delete.</p>
+     * 
      * <strong>example:</strong>
      * <p>[\&quot;trdsss\&quot;]</p>
      */

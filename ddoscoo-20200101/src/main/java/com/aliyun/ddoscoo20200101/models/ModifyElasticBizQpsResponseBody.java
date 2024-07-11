@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyElasticBizQpsResponseBody extends TeaModel {
     /**
+     * <p>The request ID, which is used to locate and troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>0bcf28g5-d57c-11e7-9bs0-d89d6717dxbc</p>
      */

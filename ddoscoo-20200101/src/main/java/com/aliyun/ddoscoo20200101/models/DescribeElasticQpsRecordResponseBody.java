@@ -4,10 +4,15 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeElasticQpsRecordResponseBody extends TeaModel {
+    /**
+     * <p>The QPS information about the instance.</p>
+     */
     @NameInMap("ElasticQpsList")
     public java.util.List<DescribeElasticQpsRecordResponseBodyElasticQpsList> elasticQpsList;
 
     /**
+     * <p>The request ID, which is used to locate and troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>F68B34E2-570C-508D-95FD-DFB6611D518F</p>
      */
@@ -37,6 +42,8 @@ public class DescribeElasticQpsRecordResponseBody extends TeaModel {
 
     public static class DescribeElasticQpsRecordResponseBodyElasticQpsList extends TeaModel {
         /**
+         * <p>The timestamp. Unit: milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1688140799999</p>
          */
@@ -44,6 +51,8 @@ public class DescribeElasticQpsRecordResponseBody extends TeaModel {
         public Long date;
 
         /**
+         * <p>The ID of the Anti-DDoS Proxy instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>ddoscoo-cn-7e225i41****</p>
          */
@@ -51,6 +60,8 @@ public class DescribeElasticQpsRecordResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The IP address of the Anti-DDoS Proxy instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>203.<em><strong>.</strong></em>.199</p>
          */
@@ -58,6 +69,8 @@ public class DescribeElasticQpsRecordResponseBody extends TeaModel {
         public String ip;
 
         /**
+         * <p>The burstable QPS value. A value of 0 indicates that the burstable QPS feature is not enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>300000</p>
          */
@@ -65,6 +78,8 @@ public class DescribeElasticQpsRecordResponseBody extends TeaModel {
         public Long opsElasticQps;
 
         /**
+         * <p>The service QPS (active).</p>
+         * 
          * <strong>example:</strong>
          * <p>1345</p>
          */
@@ -72,6 +87,8 @@ public class DescribeElasticQpsRecordResponseBody extends TeaModel {
         public Long opsQps;
 
         /**
+         * <p>The service QPS (purchased).</p>
+         * 
          * <strong>example:</strong>
          * <p>1345</p>
          */
@@ -79,6 +96,8 @@ public class DescribeElasticQpsRecordResponseBody extends TeaModel {
         public Long originQps;
 
         /**
+         * <p>The daily peak 95th percentile QPS.</p>
+         * 
          * <strong>example:</strong>
          * <p>4367</p>
          */
@@ -86,6 +105,8 @@ public class DescribeElasticQpsRecordResponseBody extends TeaModel {
         public Long qps;
 
         /**
+         * <p>The daily peak traffic.</p>
+         * 
          * <strong>example:</strong>
          * <p>122</p>
          */
@@ -93,6 +114,13 @@ public class DescribeElasticQpsRecordResponseBody extends TeaModel {
         public Long qpsPeak;
 
         /**
+         * <p>Indicates whether the instance has expired or is released. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: The instance runs as expected.</li>
+         * <li><strong>2</strong>: The instance has expired.</li>
+         * <li><strong>4</strong>: The instance is released.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

@@ -23,7 +23,7 @@ public class DescribeTagKeysRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the instance. Set the value to <strong>cn-hangzhou</strong>, which indicates an Anti-DDoS Pro instance in the Chinese mainland.</p>
+     * <p>The region ID of the instance. Set the value to <strong>cn-hangzhou</strong>, which indicates an Anti-DDoS Proxy (Chinese Mainland) instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

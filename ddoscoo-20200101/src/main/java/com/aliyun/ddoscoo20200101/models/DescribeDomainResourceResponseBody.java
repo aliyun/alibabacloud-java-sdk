@@ -110,7 +110,7 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
         public java.util.List<String> blackList;
 
         /**
-         * <p>Indicates whether the Frequency Control policy is enabled. Valid values:</p>
+         * <p>Indicates whether Frequency Control is enabled. Valid values:</p>
          * <ul>
          * <li><strong>true</strong></li>
          * <li><strong>false</strong></li>
@@ -123,7 +123,7 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
         public Boolean ccEnabled;
 
         /**
-         * <p>Indicates whether the Custom Rule switch of the Frequency Control policy is turned on. Valid values:</p>
+         * <p>Indicates whether the Custom Rules switch of Frequency Control is turned on. Valid values:</p>
          * <ul>
          * <li><strong>true</strong></li>
          * <li><strong>false</strong></li>
@@ -136,7 +136,7 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
         public Boolean ccRuleEnabled;
 
         /**
-         * <p>The mode of the Frequency Control policy. Valid values:</p>
+         * <p>The mode of Frequency Control. Valid values:</p>
          * <ul>
          * <li><strong>default</strong>: the Normal mode</li>
          * <li><strong>gf_under_attack</strong>: the Emergency mode</li>
@@ -197,7 +197,7 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
         public Boolean http2Enable;
 
         /**
-         * <p>Indicates whether Enforce HTTPS Routing is turned on. Valid values:</p>
+         * <p>Indicates whether Enable HTTPS Redirection is turned on. Valid values:</p>
          * <ul>
          * <li><strong>true</strong></li>
          * <li><strong>false</strong></li>
@@ -210,7 +210,7 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
         public Boolean http2HttpsEnable;
 
         /**
-         * <p>Indicates whether Enable HTTP is turned on. Valid values:</p>
+         * <p>Indicates whether Enable HTTP Redirection of Back-to-origin Requests is turned on. Valid values:</p>
          * <ul>
          * <li><strong>true</strong></li>
          * <li><strong>false</strong></li>
@@ -225,9 +225,9 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
         /**
          * <p>The advanced HTTPS settings. This parameter takes effect only when the value of the <strong>ProxyType</strong> parameter includes <strong>https</strong>. The value is a string that consists of a JSON struct. The JSON struct contains the following fields:</p>
          * <ul>
-         * <li><strong>Http2https</strong>: indicates whether the feature of redirecting HTTP requests to HTTPS requests is enabled. Data type: integer. Valid values: <strong>0</strong> and <strong>1</strong>. The value 0 indicates that the feature is disabled. The value 1 indicates that the feature is enabled.</li>
-         * <li><strong>Https2http</strong>: indicates whether the feature of redirecting HTTPS requests to HTTP requests is enabled. Data type: integer. Valid values: <strong>0</strong> and <strong>1</strong>. The value 0 indicates that the feature is disabled. The value 1 indicates that the feature is enabled.</li>
-         * <li><strong>Http2</strong>: indicates whether HTTP/2 is supported. Data type: integer. Valid values: <strong>0</strong> and <strong>1</strong>. The value 0 indicates that HTTP/2 is not supported. The value 1 indicates that HTTP/2 is supported.</li>
+         * <li><strong>Http2https</strong>: indicates whether Enable HTTPS Redirection is turned on. Data type: integer. Valid values: <strong>0</strong> and <strong>1</strong>. The value 0 indicates that Enable HTTPS Redirection is turned on. The value 1 indicates that Enable HTTPS Redirection is turned off.</li>
+         * <li><strong>Https2http</strong>: indicates whether Enable HTTP Redirection of Back-to-origin Requests is turned on. Data type: integer. Valid values: <strong>0</strong> and <strong>1</strong>. The value 0 indicates that the feature is turned on. The value 1 indicates that the feature is turned off.</li>
+         * <li><strong>Http2</strong>: indicates whether Enable HTTP/2 is turned on. Data type: integer. Valid values: <strong>0</strong> and <strong>1</strong>. The value 0 indicates that Enable HTTP/2 is turned off. The value 1 indicates that Enable HTTP/2 is turned on.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -243,10 +243,10 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
         public java.util.List<String> instanceIds;
 
         /**
-         * <p>Indicates whether the Online Certificate Status Protocol (OCSP) feature is enabled. Valid values:</p>
+         * <p>Indicates whether the Online Certificate Status Protocol (OCSP) feature is turned on. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: yes</li>
-         * <li><strong>false</strong>: no</li>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -256,11 +256,11 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
         public Boolean ocspEnabled;
 
         /**
-         * <p>The load balancing algorithm for back-to-origin traffic. Valid values:</p>
+         * <p>The scheduling algorithm for back-to-origin traffic. Valid values:</p>
          * <ul>
          * <li><strong>ip_hash</strong>: the IP hash algorithm. This algorithm is used to redirect the requests from the same IP address to the same origin server.</li>
          * <li><strong>rr</strong>: the round-robin algorithm. This algorithm is used to redirect requests to origin servers in turn.</li>
-         * <li><strong>least_time</strong>: the least response time algorithm. This algorithm is used to minimize the latency when requests are forwarded from Anti-DDoS Pro or Anti-DDoS Premium instances to origin servers based on the intelligent DNS resolution feature.</li>
+         * <li><strong>least_time</strong>: the least response time algorithm. This algorithm is used to minimize the latency when requests are forwarded from the instance to origin servers based on the intelligent DNS resolution feature.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -272,8 +272,8 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the instance forwards the traffic that is destined for the website. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Anti-DDoS Pro or Anti-DDoS Premium forwards the traffic that is destined for the website.</li>
-         * <li><strong>false</strong>: no</li>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>

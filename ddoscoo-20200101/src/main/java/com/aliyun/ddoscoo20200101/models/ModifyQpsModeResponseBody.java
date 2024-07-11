@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyQpsModeResponseBody extends TeaModel {
     /**
+     * <p>The request ID, which is used to locate and troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>48859E14-A9FB-4100-99FF-AAB75CA46776</p>
      */

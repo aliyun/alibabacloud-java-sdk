@@ -29,8 +29,8 @@ public class ModifyCnameReuseRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable CNAME reuse. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: enables CNAME reuse.</li>
-     * <li><strong>2</strong>: disables CNAME reuse.</li>
+     * <li><strong>0:</strong> disabled</li>
+     * <li><strong>1:</strong> enabled</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

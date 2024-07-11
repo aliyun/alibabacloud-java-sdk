@@ -5,14 +5,11 @@ import com.aliyun.tea.*;
 
 public class ModifyWebIpSetSwitchRequest extends TeaModel {
     /**
-     * <p>The details of the Black Lists and White Lists (Domain Names) policy. This parameter is a JSON string. The string contains the following fields:</p>
+     * <p>The details of the Blacklist/Whitelist (Domain Names) feature. This parameter is a JSON string. The value consists of the following fields:</p>
+     * <p><strong>bwlist_enable</strong>: the status of the Blacklist/Whitelist (Domain Names) feature. This field is required and must be of the integer type. Valid values:</p>
      * <ul>
-     * <li><p><strong>Bwlist_Enable</strong>: the status of the Black Lists and White Lists (Domain Names) policy. This field is required and must be of the integer type. Valid values:</p>
-     * <ul>
-     * <li><strong>0</strong>: disabled</li>
-     * <li><strong>1</strong>: enabled</li>
-     * </ul>
-     * </li>
+     * <li>0: turned off</li>
+     * <li>1: turned on</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
