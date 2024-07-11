@@ -2249,6 +2249,86 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>渠道商创建企业</p>
+     * 
+     * @param request ChannelCorpCreateRequest
+     * @param headers ChannelCorpCreateHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ChannelCorpCreateResponse
+     */
+    public ChannelCorpCreateResponse channelCorpCreateWithOptions(ChannelCorpCreateRequest request, ChannelCorpCreateHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.administratorName)) {
+            body.put("administrator_name", request.administratorName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.administratorPhone)) {
+            body.put("administrator_phone", request.administratorPhone);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.city)) {
+            body.put("city", request.city);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.corpName)) {
+            body.put("corp_name", request.corpName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.province)) {
+            body.put("province", request.province);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scope)) {
+            body.put("scope", request.scope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.thirdCorpId)) {
+            body.put("third_corp_id", request.thirdCorpId);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsBtripCorpToken)) {
+            realHeaders.put("x-acs-btrip-corp-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsBtripCorpToken));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ChannelCorpCreate"),
+            new TeaPair("version", "2022-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/corp/v1/channelCorps"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ChannelCorpCreateResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>渠道商创建企业</p>
+     * 
+     * @param request ChannelCorpCreateRequest
+     * @return ChannelCorpCreateResponse
+     */
+    public ChannelCorpCreateResponse channelCorpCreate(ChannelCorpCreateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        ChannelCorpCreateHeaders headers = new ChannelCorpCreateHeaders();
+        return this.channelCorpCreateWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>查询行政区划（市，区）基础数据</p>
      * 
      * @param request CitySearchRequest
@@ -5058,6 +5138,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("order_id", request.orderId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.outModifyApplyId)) {
+            query.put("out_modify_apply_id", request.outModifyApplyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outOrderId)) {
+            query.put("out_order_id", request.outOrderId);
+        }
+
         java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
             realHeaders = headers.commonHeaders;
@@ -6258,6 +6346,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("order_id", request.orderId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.outOrderId)) {
+            query.put("out_order_id", request.outOrderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outRefundApplyId)) {
+            query.put("out_refund_apply_id", request.outRefundApplyId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.refundApplyId)) {
             query.put("refund_apply_id", request.refundApplyId);
         }
@@ -7338,6 +7434,152 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         HotelOrderCancelHeaders headers = new HotelOrderCancelHeaders();
         return this.hotelOrderCancelWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>酒店订单修改申请</p>
+     * 
+     * @param tmpReq HotelOrderChangeApplyRequest
+     * @param headers HotelOrderChangeApplyHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return HotelOrderChangeApplyResponse
+     */
+    public HotelOrderChangeApplyResponse hotelOrderChangeApplyWithOptions(HotelOrderChangeApplyRequest tmpReq, HotelOrderChangeApplyHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        HotelOrderChangeApplyShrinkRequest request = new HotelOrderChangeApplyShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.roomInfoList)) {
+            request.roomInfoListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.roomInfoList, "room_info_list", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.btripUserId)) {
+            body.put("btrip_user_id", request.btripUserId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.disOrderId)) {
+            body.put("dis_order_id", request.disOrderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reason)) {
+            body.put("reason", request.reason);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.roomInfoListShrink)) {
+            body.put("room_info_list", request.roomInfoListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.saleOrderId)) {
+            body.put("sale_order_id", request.saleOrderId);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsBtripCorpToken)) {
+            realHeaders.put("x-acs-btrip-corp-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsBtripCorpToken));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "HotelOrderChangeApply"),
+            new TeaPair("version", "2022-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dtb-hotel/v1/orders/action/change/apply"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new HotelOrderChangeApplyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>酒店订单修改申请</p>
+     * 
+     * @param request HotelOrderChangeApplyRequest
+     * @return HotelOrderChangeApplyResponse
+     */
+    public HotelOrderChangeApplyResponse hotelOrderChangeApply(HotelOrderChangeApplyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        HotelOrderChangeApplyHeaders headers = new HotelOrderChangeApplyHeaders();
+        return this.hotelOrderChangeApplyWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>酒店订单修改详情</p>
+     * 
+     * @param request HotelOrderChangeDetailRequest
+     * @param headers HotelOrderChangeDetailHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return HotelOrderChangeDetailResponse
+     */
+    public HotelOrderChangeDetailResponse hotelOrderChangeDetailWithOptions(HotelOrderChangeDetailRequest request, HotelOrderChangeDetailHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.btripUserId)) {
+            body.put("btrip_user_id", request.btripUserId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.changeOrderId)) {
+            body.put("change_order_id", request.changeOrderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.disOrderId)) {
+            body.put("dis_order_id", request.disOrderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.saleOrderId)) {
+            body.put("sale_order_id", request.saleOrderId);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsBtripCorpToken)) {
+            realHeaders.put("x-acs-btrip-corp-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsBtripCorpToken));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "HotelOrderChangeDetail"),
+            new TeaPair("version", "2022-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dtb-hotel/v1/orders/action/change/detail"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new HotelOrderChangeDetailResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>酒店订单修改详情</p>
+     * 
+     * @param request HotelOrderChangeDetailRequest
+     * @return HotelOrderChangeDetailResponse
+     */
+    public HotelOrderChangeDetailResponse hotelOrderChangeDetail(HotelOrderChangeDetailRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        HotelOrderChangeDetailHeaders headers = new HotelOrderChangeDetailHeaders();
+        return this.hotelOrderChangeDetailWithOptions(request, headers, runtime);
     }
 
     /**
