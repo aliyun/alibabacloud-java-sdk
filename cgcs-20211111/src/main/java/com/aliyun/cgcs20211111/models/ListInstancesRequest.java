@@ -4,24 +4,48 @@ package com.aliyun.cgcs20211111.models;
 import com.aliyun.tea.*;
 
 public class ListInstancesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>huadong</p>
+     */
     @NameInMap("DistrictId")
     public String districtId;
 
     @NameInMap("InstanceId")
     public java.util.List<String> instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>gcs.r1c1m1.1xlarge</p>
+     */
     @NameInMap("InstanceType")
     public String instanceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>BEXZPF01W23U46598WVf</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4820372607851300489003</p>
+     */
     @NameInMap("ProjectId")
     public String projectId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CREATING</p>
+     */
     @NameInMap("Status")
     public String status;
 

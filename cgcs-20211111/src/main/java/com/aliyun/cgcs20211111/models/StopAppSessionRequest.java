@@ -4,9 +4,17 @@ package com.aliyun.cgcs20211111.models;
 import com.aliyun.tea.*;
 
 public class StopAppSessionRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1ADE0XXXX</p>
+     */
     @NameInMap("CustomSessionId")
     public String customSessionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100XXXX</p>
+     */
     @NameInMap("PlatformSessionId")
     public String platformSessionId;
 
@@ -48,13 +56,21 @@ public class StopAppSessionRequest extends TeaModel {
     public static class StopAppSessionRequestStopParam extends TeaModel {
         /**
          * <p>目前支持的枚举值包括：</p>
-         * <p>- reason：停止原因。</p>
+         * <ul>
+         * <li>reason：停止原因。</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>reason</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>key对应的取值。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>exampleValue</p>
          */
         @NameInMap("Value")
         public Object value;

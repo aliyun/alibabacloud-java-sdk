@@ -4,33 +4,73 @@ package com.aliyun.cgcs20211111.models;
 import com.aliyun.tea.*;
 
 public class GetAppResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>4384****</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>example</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>end_game</p>
+     */
     @NameInMap("AppType")
     public String appType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-04-06 02:00:00</p>
+     */
     @NameInMap("GmtCreate")
     public String gmtCreate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-04-06 02:00:00</p>
+     */
     @NameInMap("GmtModified")
     public String gmtModified;
 
+    /**
+     * <strong>example:</strong>
+     * <p>46329898-489C-4E63-9BA1-C1DA5C5D0986</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>47d0bd4d-8815-48a2-b783-6cbba89d****</p>
+     */
     @NameInMap("StreamingAppId")
     public String streamingAppId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>self-have-streaming</p>
+     */
     @NameInMap("StreamingSolution")
     public String streamingSolution;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("VersionAdaptNum")
     public Long versionAdaptNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>28</p>
+     */
     @NameInMap("VersionTotalNum")
     public Long versionTotalNum;
 

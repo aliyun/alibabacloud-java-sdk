@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ModifyAppVersionRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1432****</p>
      */
     @NameInMap("AppVersionId")
     public String appVersionId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>exampleVersion</p>
      */
     @NameInMap("AppVersionName")
     public String appVersionName;

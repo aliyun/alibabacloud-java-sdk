@@ -4,12 +4,20 @@ package com.aliyun.cgcs20211111.models;
 import com.aliyun.tea.*;
 
 public class CreateAppSessionBatchSyncResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>6d4d****</p>
+     */
     @NameInMap("BatchId")
     public String batchId;
 
     @NameInMap("FailedList")
     public java.util.List<CreateAppSessionBatchSyncResponseBodyFailedList> failedList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>46329898-489C-4E63-9BA1-C1DA5C5D0986</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,9 +62,17 @@ public class CreateAppSessionBatchSyncResponseBody extends TeaModel {
     }
 
     public static class CreateAppSessionBatchSyncResponseBodyFailedListFailedInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>App type not support.</p>
+         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>400</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
@@ -84,9 +100,17 @@ public class CreateAppSessionBatchSyncResponseBody extends TeaModel {
     }
 
     public static class CreateAppSessionBatchSyncResponseBodyFailedList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>100****</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1ADE0****</p>
+         */
         @NameInMap("CustomSessionId")
         public String customSessionId;
 
@@ -125,21 +149,45 @@ public class CreateAppSessionBatchSyncResponseBody extends TeaModel {
     }
 
     public static class CreateAppSessionBatchSyncResponseBodyResultListBizInfoEndpoints extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>127.0.X.X</p>
+         */
         @NameInMap("AccessHost")
         public String accessHost;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8080</p>
+         */
         @NameInMap("AccessPort")
         public String accessPort;
 
+        /**
+         * <strong>example:</strong>
+         * <p>huadong</p>
+         */
         @NameInMap("DistrictId")
         public String districtId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>bgp</p>
+         */
         @NameInMap("Isp")
         public String isp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>exampleName</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Native</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -199,6 +247,10 @@ public class CreateAppSessionBatchSyncResponseBody extends TeaModel {
     }
 
     public static class CreateAppSessionBatchSyncResponseBodyResultListBizInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>authToken</p>
+         */
         @NameInMap("Biz")
         public java.util.Map<String, ?> biz;
 
@@ -229,18 +281,34 @@ public class CreateAppSessionBatchSyncResponseBody extends TeaModel {
     }
 
     public static class CreateAppSessionBatchSyncResponseBodyResultList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>13027****</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>35067****</p>
+         */
         @NameInMap("AppVersion")
         public String appVersion;
 
         @NameInMap("BizInfo")
         public CreateAppSessionBatchSyncResponseBodyResultListBizInfo bizInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1ADE0****</p>
+         */
         @NameInMap("CustomSessionId")
         public String customSessionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100****</p>
+         */
         @NameInMap("PlatformSessionId")
         public String platformSessionId;
 

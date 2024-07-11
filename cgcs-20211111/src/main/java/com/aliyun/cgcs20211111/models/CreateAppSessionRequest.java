@@ -6,39 +6,71 @@ import com.aliyun.tea.*;
 public class CreateAppSessionRequest extends TeaModel {
     /**
      * <p>适配文件ID。此功能灰度开放，如未约定使用请勿传入。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>501716211209548966XXXX</p>
      */
     @NameInMap("AdapterFileId")
     public String adapterFileId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>13027XXXX</p>
      */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>35067XXXX</p>
+     */
     @NameInMap("AppVersion")
     public String appVersion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>192.168.XXX.XXX</p>
+     */
     @NameInMap("ClientIp")
     public String clientIp;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1ADE0XXXX</p>
      */
     @NameInMap("CustomSessionId")
     public String customSessionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2YEF0XXXX</p>
+     */
     @NameInMap("CustomUserId")
     public String customUserId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>huadong</p>
+     */
     @NameInMap("DistrictId")
     public String districtId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("EnablePostpaid")
     public Boolean enablePostpaid;
 
     /**
      * <p>项目ID。如果已将应用关联到项目，创建会话时需填写正确的项目ID。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d9a8****</p>
      */
     @NameInMap("ProjectId")
     public String projectId;
@@ -49,6 +81,10 @@ public class CreateAppSessionRequest extends TeaModel {
     @NameInMap("SystemInfo")
     public java.util.List<CreateAppSessionRequestSystemInfo> systemInfo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1800</p>
+     */
     @NameInMap("Timeout")
     public Long timeout;
 
@@ -154,9 +190,17 @@ public class CreateAppSessionRequest extends TeaModel {
     }
 
     public static class CreateAppSessionRequestStartParameters extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>startArgument</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>exampleValue</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -184,9 +228,17 @@ public class CreateAppSessionRequest extends TeaModel {
     }
 
     public static class CreateAppSessionRequestSystemInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>utdid</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OE0usD+APXXXX</p>
+         */
         @NameInMap("Value")
         public String value;
 

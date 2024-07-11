@@ -4,9 +4,17 @@ package com.aliyun.cgcs20211111.models;
 import com.aliyun.tea.*;
 
 public class GetAppSessionResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>13027XXXX</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>35067XXXX</p>
+     */
     @NameInMap("AppVersion")
     public String appVersion;
 
@@ -16,15 +24,31 @@ public class GetAppSessionResponseBody extends TeaModel {
     @NameInMap("BizInfo")
     public GetAppSessionResponseBodyBizInfo bizInfo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1ADE0XXXX</p>
+     */
     @NameInMap("CustomSessionId")
     public String customSessionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100XXXX</p>
+     */
     @NameInMap("PlatformSessionId")
     public String platformSessionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>46329898-489C-4E63-9BA1-C1DA5C5D0986</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>running</p>
+     */
     @NameInMap("Status")
     public String status;
 
@@ -92,12 +116,18 @@ public class GetAppSessionResponseBody extends TeaModel {
     public static class GetAppSessionResponseBodyBizInfo extends TeaModel {
         /**
          * <p>会话启动时间</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-07-20 17:58:51</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
         /**
          * <p>会话停止时间</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-07-20 17:58:57</p>
          */
         @NameInMap("StopTime")
         public String stopTime;

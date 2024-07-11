@@ -7,12 +7,24 @@ public class ListInstancesResponseBody extends TeaModel {
     @NameInMap("Instances")
     public java.util.List<ListInstancesResponseBodyInstances> instances;
 
+    /**
+     * <strong>example:</strong>
+     * <p>50</p>
+     */
     @NameInMap("MaxResults")
     public String maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>BEXZPF01W23U46598WVf</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>46329898-489C-4E63-9BA1-C1DA5C5D0986</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,21 +66,45 @@ public class ListInstancesResponseBody extends TeaModel {
     }
 
     public static class ListInstancesResponseBodyInstances extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2023-12-13T11:12:11Z</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>huadong</p>
+         */
         @NameInMap("DistrictId")
         public String districtId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>gcs-bmt0kbn7e013aedg9</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>gcs.r1c1m1.1xlarge</p>
+         */
         @NameInMap("InstanceType")
         public String instanceType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4820372607851300489003</p>
+         */
         @NameInMap("ProjectId")
         public String projectId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CREATING</p>
+         */
         @NameInMap("Status")
         public String status;
 

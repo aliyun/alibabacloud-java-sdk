@@ -12,6 +12,9 @@ public class CreateAppSessionBatchSyncShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6d4d****</p>
      */
     @NameInMap("BatchId")
     public String batchId;

@@ -4,18 +4,38 @@ package com.aliyun.cgcs20211111.models;
 import com.aliyun.tea.*;
 
 public class StopAppSessionResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>13027XXXX</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>35067XXXX</p>
+     */
     @NameInMap("AppVersion")
     public String appVersion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1ADE0XXXX</p>
+     */
     @NameInMap("CustomSessionId")
     public String customSessionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100XXXX</p>
+     */
     @NameInMap("PlatformSessionId")
     public String platformSessionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>46329898-489C-4E63-9BA1-C1DA5C5D0986</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

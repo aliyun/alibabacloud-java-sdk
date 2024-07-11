@@ -4,12 +4,24 @@ package com.aliyun.cgcs20211111.models;
 import com.aliyun.tea.*;
 
 public class ListAppRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>example</p>
+     */
     @NameInMap("KeySearch")
     public String keySearch;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 

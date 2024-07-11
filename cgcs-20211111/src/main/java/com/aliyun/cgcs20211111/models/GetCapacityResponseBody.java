@@ -7,15 +7,31 @@ public class GetCapacityResponseBody extends TeaModel {
     @NameInMap("Capacities")
     public java.util.List<GetCapacityResponseBodyCapacities> capacities;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNum")
     public Integer pageNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>46329898-489C-4E63-9BA1-C1DA5C5D0986</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("Total")
     public Integer total;
 
@@ -65,18 +81,38 @@ public class GetCapacityResponseBody extends TeaModel {
     }
 
     public static class GetCapacityResponseBodyCapacities extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>13027****</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>35067****</p>
+         */
         @NameInMap("AppVersion")
         public String appVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>huadong</p>
+         */
         @NameInMap("DistrictId")
         public String districtId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>d9a8****</p>
+         */
         @NameInMap("ProjectId")
         public String projectId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("SessionCapacity")
         public Integer sessionCapacity;
 

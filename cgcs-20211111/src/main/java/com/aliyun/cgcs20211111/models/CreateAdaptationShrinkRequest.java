@@ -9,6 +9,9 @@ public class CreateAdaptationShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1432****</p>
      */
     @NameInMap("AppVersionId")
     public String appVersionId;

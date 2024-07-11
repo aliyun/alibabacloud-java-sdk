@@ -27,8 +27,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 批量检查异常会话
-     *
+     * <b>summary</b> : 
+     * <p>批量检查异常会话</p>
+     * 
      * @param tmpReq BatchCheckSessionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return BatchCheckSessionResponse
@@ -64,8 +65,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 批量检查异常会话
-     *
+     * <b>summary</b> : 
+     * <p>批量检查异常会话</p>
+     * 
      * @param request BatchCheckSessionRequest
      * @return BatchCheckSessionResponse
      */
@@ -75,8 +77,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 取消 session 资源预定任务
-     *
+     * <b>summary</b> : 
+     * <p>取消 session 资源预定任务</p>
+     * 
      * @param request CancelReserveTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CancelReserveTaskResponse
@@ -110,8 +113,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 取消 session 资源预定任务
-     *
+     * <b>summary</b> : 
+     * <p>取消 session 资源预定任务</p>
+     * 
      * @param request CancelReserveTaskRequest
      * @return CancelReserveTaskResponse
      */
@@ -121,8 +125,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 提交适配请求
-     *
+     * <b>summary</b> : 
+     * <p>提交适配请求</p>
+     * 
      * @param tmpReq CreateAdaptationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateAdaptationResponse
@@ -162,8 +167,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 提交适配请求
-     *
+     * <b>summary</b> : 
+     * <p>提交适配请求</p>
+     * 
      * @param request CreateAdaptationRequest
      * @return CreateAdaptationResponse
      */
@@ -173,8 +179,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 应用创建服务
-     *
+     * <b>summary</b> : 
+     * <p>应用创建服务</p>
+     * 
      * @param request CreateAppRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateAppResponse
@@ -216,8 +223,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 应用创建服务
-     *
+     * <b>summary</b> : 
+     * <p>应用创建服务</p>
+     * 
      * @param request CreateAppRequest
      * @return CreateAppResponse
      */
@@ -227,8 +235,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 增加实时生产资源的相关字段
-     *
+     * <b>summary</b> : 
+     * <p>增加实时生产资源的相关字段</p>
+     * 
      * @param request CreateAppSessionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateAppSessionResponse
@@ -302,8 +311,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 增加实时生产资源的相关字段
-     *
+     * <b>summary</b> : 
+     * <p>增加实时生产资源的相关字段</p>
+     * 
      * @param request CreateAppSessionRequest
      * @return CreateAppSessionResponse
      */
@@ -313,8 +323,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 批量创建会话
-     *
+     * <b>summary</b> : 
+     * <p>批量创建会话</p>
+     * 
      * @param tmpReq CreateAppSessionBatchRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateAppSessionBatchResponse
@@ -358,8 +369,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 批量创建会话
-     *
+     * <b>summary</b> : 
+     * <p>批量创建会话</p>
+     * 
      * @param request CreateAppSessionBatchRequest
      * @return CreateAppSessionBatchResponse
      */
@@ -369,8 +381,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 同步批量创建多个会话
-     *
+     * <b>summary</b> : 
+     * <p>同步批量创建多个会话</p>
+     * 
      * @param tmpReq CreateAppSessionBatchSyncRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateAppSessionBatchSyncResponse
@@ -410,8 +423,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 同步批量创建多个会话
-     *
+     * <b>summary</b> : 
+     * <p>同步批量创建多个会话</p>
+     * 
      * @param request CreateAppSessionBatchSyncRequest
      * @return CreateAppSessionBatchSyncResponse
      */
@@ -421,8 +435,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 同步创建会话
-     *
+     * <b>summary</b> : 
+     * <p>同步创建会话</p>
+     * 
      * @param request CreateAppSessionSyncRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateAppSessionSyncResponse
@@ -496,8 +511,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 同步创建会话
-     *
+     * <b>summary</b> : 
+     * <p>同步创建会话</p>
+     * 
      * @param request CreateAppSessionSyncRequest
      * @return CreateAppSessionSyncResponse
      */
@@ -507,8 +523,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 应用版本创建服务
-     *
+     * <b>summary</b> : 
+     * <p>应用版本创建服务</p>
+     * 
      * @param request CreateAppVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateAppVersionResponse
@@ -542,8 +559,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 应用版本创建服务
-     *
+     * <b>summary</b> : 
+     * <p>应用版本创建服务</p>
+     * 
      * @param request CreateAppVersionRequest
      * @return CreateAppVersionResponse
      */
@@ -553,8 +571,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 预定session资源
-     *
+     * <b>summary</b> : 
+     * <p>预定session资源</p>
+     * 
      * @param request CreateCapacityReservationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateCapacityReservationResponse
@@ -608,8 +627,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 预定session资源
-     *
+     * <b>summary</b> : 
+     * <p>预定session资源</p>
+     * 
      * @param request CreateCapacityReservationRequest
      * @return CreateCapacityReservationResponse
      */
@@ -619,8 +639,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 应用删除接口
-     *
+     * <b>summary</b> : 
+     * <p>应用删除接口</p>
+     * 
      * @param request DeleteAppRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteAppResponse
@@ -650,8 +671,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 应用删除接口
-     *
+     * <b>summary</b> : 
+     * <p>应用删除接口</p>
+     * 
      * @param request DeleteAppRequest
      * @return DeleteAppResponse
      */
@@ -661,8 +683,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 应用版本删除接口
-     *
+     * <b>summary</b> : 
+     * <p>应用版本删除接口</p>
+     * 
      * @param request DeleteAppVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteAppVersionResponse
@@ -692,8 +715,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 应用版本删除接口
-     *
+     * <b>summary</b> : 
+     * <p>应用版本删除接口</p>
+     * 
      * @param request DeleteAppVersionRequest
      * @return DeleteAppVersionResponse
      */
@@ -703,8 +727,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取适配申请详情
-     *
+     * @param request DescribeInstanceStatsInfoRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeInstanceStatsInfoResponse
+     */
+    public DescribeInstanceStatsInfoResponse describeInstanceStatsInfoWithOptions(DescribeInstanceStatsInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeInstanceStatsInfo"),
+            new TeaPair("version", "2021-11-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeInstanceStatsInfoResponse());
+    }
+
+    /**
+     * @param request DescribeInstanceStatsInfoRequest
+     * @return DescribeInstanceStatsInfoResponse
+     */
+    public DescribeInstanceStatsInfoResponse describeInstanceStatsInfo(DescribeInstanceStatsInfoRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeInstanceStatsInfoWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取适配申请详情</p>
+     * 
      * @param request GetAdaptationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetAdaptationResponse
@@ -738,8 +797,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取适配申请详情
-     *
+     * <b>summary</b> : 
+     * <p>获取适配申请详情</p>
+     * 
      * @param request GetAdaptationRequest
      * @return GetAdaptationResponse
      */
@@ -749,8 +809,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 应用详情接口
-     *
+     * <b>summary</b> : 
+     * <p>应用详情接口</p>
+     * 
      * @param request GetAppRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetAppResponse
@@ -780,8 +841,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 应用详情接口
-     *
+     * <b>summary</b> : 
+     * <p>应用详情接口</p>
+     * 
      * @param request GetAppRequest
      * @return GetAppResponse
      */
@@ -791,8 +853,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询会话并发数
-     *
+     * <b>summary</b> : 
+     * <p>查询会话并发数</p>
+     * 
      * @param request GetAppCcuRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetAppCcuResponse
@@ -818,8 +881,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询会话并发数
-     *
+     * <b>summary</b> : 
+     * <p>查询会话并发数</p>
+     * 
      * @param request GetAppCcuRequest
      * @return GetAppCcuResponse
      */
@@ -829,8 +893,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取App会话信息
-     *
+     * <b>summary</b> : 
+     * <p>获取App会话信息</p>
+     * 
      * @param request GetAppSessionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetAppSessionResponse
@@ -864,8 +929,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取App会话信息
-     *
+     * <b>summary</b> : 
+     * <p>获取App会话信息</p>
+     * 
      * @param request GetAppSessionRequest
      * @return GetAppSessionResponse
      */
@@ -875,8 +941,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 应用版本详情接口
-     *
+     * <b>summary</b> : 
+     * <p>应用版本详情接口</p>
+     * 
      * @param request GetAppVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetAppVersionResponse
@@ -906,8 +973,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 应用版本详情接口
-     *
+     * <b>summary</b> : 
+     * <p>应用版本详情接口</p>
+     * 
      * @param request GetAppVersionRequest
      * @return GetAppVersionResponse
      */
@@ -917,8 +985,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询 session 会话容量信息
-     *
+     * <b>summary</b> : 
+     * <p>查询 session 会话容量信息</p>
+     * 
      * @param request GetCapacityRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetCapacityResponse
@@ -968,8 +1037,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询 session 会话容量信息
-     *
+     * <b>summary</b> : 
+     * <p>查询 session 会话容量信息</p>
+     * 
      * @param request GetCapacityRequest
      * @return GetCapacityResponse
      */
@@ -979,8 +1049,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询预定任务的详情信息
-     *
+     * <b>summary</b> : 
+     * <p>查询预定任务的详情信息</p>
+     * 
      * @param request GetReserveTaskDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetReserveTaskDetailResponse
@@ -1010,8 +1081,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询预定任务的详情信息
-     *
+     * <b>summary</b> : 
+     * <p>查询预定任务的详情信息</p>
+     * 
      * @param request GetReserveTaskDetailRequest
      * @return GetReserveTaskDetailResponse
      */
@@ -1021,8 +1093,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询公网ip
-     *
+     * <b>summary</b> : 
+     * <p>查询公网ip</p>
+     * 
      * @param request GetResourcePublicIPsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetResourcePublicIPsResponse
@@ -1060,8 +1133,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询公网ip
-     *
+     * <b>summary</b> : 
+     * <p>查询公网ip</p>
+     * 
      * @param request GetResourcePublicIPsRequest
      * @return GetResourcePublicIPsResponse
      */
@@ -1071,8 +1145,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 应用列表接口
-     *
+     * <b>summary</b> : 
+     * <p>应用列表接口</p>
+     * 
      * @param request ListAppRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListAppResponse
@@ -1110,8 +1185,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 应用列表接口
-     *
+     * <b>summary</b> : 
+     * <p>应用列表接口</p>
+     * 
      * @param request ListAppRequest
      * @return ListAppResponse
      */
@@ -1121,8 +1197,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询App会话
-     *
+     * <b>summary</b> : 
+     * <p>查询App会话</p>
+     * 
      * @param request ListAppSessionsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListAppSessionsResponse
@@ -1172,8 +1249,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询App会话
-     *
+     * <b>summary</b> : 
+     * <p>查询App会话</p>
+     * 
      * @param request ListAppSessionsRequest
      * @return ListAppSessionsResponse
      */
@@ -1183,8 +1261,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 应用版本列表接口
-     *
+     * <b>summary</b> : 
+     * <p>应用版本列表接口</p>
+     * 
      * @param request ListAppVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListAppVersionResponse
@@ -1222,8 +1301,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 应用版本列表接口
-     *
+     * <b>summary</b> : 
+     * <p>应用版本列表接口</p>
+     * 
      * @param request ListAppVersionRequest
      * @return ListAppVersionResponse
      */
@@ -1233,8 +1313,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询GCS实例列表
-     *
+     * <b>summary</b> : 
+     * <p>查询GCS实例列表</p>
+     * 
      * @param request ListInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListInstancesResponse
@@ -1260,8 +1341,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询GCS实例列表
-     *
+     * <b>summary</b> : 
+     * <p>查询GCS实例列表</p>
+     * 
      * @param request ListInstancesRequest
      * @return ListInstancesResponse
      */
@@ -1271,8 +1353,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 应用修改服务
-     *
+     * <b>summary</b> : 
+     * <p>应用修改服务</p>
+     * 
      * @param request ModifyAppRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyAppResponse
@@ -1306,8 +1389,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 应用修改服务
-     *
+     * <b>summary</b> : 
+     * <p>应用修改服务</p>
+     * 
      * @param request ModifyAppRequest
      * @return ModifyAppResponse
      */
@@ -1317,8 +1401,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 应用版本修改服务
-     *
+     * <b>summary</b> : 
+     * <p>应用版本修改服务</p>
+     * 
      * @param request ModifyAppVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyAppVersionResponse
@@ -1352,8 +1437,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 应用版本修改服务
-     *
+     * <b>summary</b> : 
+     * <p>应用版本修改服务</p>
+     * 
      * @param request ModifyAppVersionRequest
      * @return ModifyAppVersionResponse
      */
@@ -1363,8 +1449,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 释放 session 资源预定的资源
-     *
+     * <b>summary</b> : 
+     * <p>释放 session 资源预定的资源</p>
+     * 
      * @param request ReleaseCapacityRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ReleaseCapacityResponse
@@ -1410,8 +1497,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 释放 session 资源预定的资源
-     *
+     * <b>summary</b> : 
+     * <p>释放 session 资源预定的资源</p>
+     * 
      * @param request ReleaseCapacityRequest
      * @return ReleaseCapacityResponse
      */
@@ -1421,8 +1509,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 根据资源批次号释放 session 资源预定的资源
-     *
+     * <b>summary</b> : 
+     * <p>根据资源批次号释放 session 资源预定的资源</p>
+     * 
      * @param request ReleaseCapacityByBatchRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ReleaseCapacityByBatchResponse
@@ -1452,8 +1541,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 根据资源批次号释放 session 资源预定的资源
-     *
+     * <b>summary</b> : 
+     * <p>根据资源批次号释放 session 资源预定的资源</p>
+     * 
      * @param request ReleaseCapacityByBatchRequest
      * @return ReleaseCapacityByBatchResponse
      */
@@ -1463,8 +1553,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 退订GCS实例
-     *
+     * <b>summary</b> : 
+     * <p>退订GCS实例</p>
+     * 
      * @param request ReleaseInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ReleaseInstancesResponse
@@ -1506,8 +1597,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 退订GCS实例
-     *
+     * <b>summary</b> : 
+     * <p>退订GCS实例</p>
+     * 
      * @param request ReleaseInstancesRequest
      * @return ReleaseInstancesResponse
      */
@@ -1517,8 +1609,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 预定GCS实例
-     *
+     * <b>summary</b> : 
+     * <p>预定GCS实例</p>
+     * 
      * @param request ReserveInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ReserveInstancesResponse
@@ -1560,8 +1653,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 预定GCS实例
-     *
+     * <b>summary</b> : 
+     * <p>预定GCS实例</p>
+     * 
      * @param request ReserveInstancesRequest
      * @return ReserveInstancesResponse
      */
@@ -1571,8 +1665,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 发送业务能力变更结果回调
-     *
+     * <b>summary</b> : 
+     * <p>发送业务能力变更结果回调</p>
+     * 
      * @param request SendBizCocChangeCallbackRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SendBizCocChangeCallbackResponse
@@ -1606,8 +1701,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 发送业务能力变更结果回调
-     *
+     * <b>summary</b> : 
+     * <p>发送业务能力变更结果回调</p>
+     * 
      * @param request SendBizCocChangeCallbackRequest
      * @return SendBizCocChangeCallbackResponse
      */
@@ -1617,8 +1713,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 停止App会话
-     *
+     * <b>summary</b> : 
+     * <p>停止App会话</p>
+     * 
      * @param tmpReq StopAppSessionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return StopAppSessionResponse
@@ -1662,8 +1759,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 停止App会话
-     *
+     * <b>summary</b> : 
+     * <p>停止App会话</p>
+     * 
      * @param request StopAppSessionRequest
      * @return StopAppSessionResponse
      */
@@ -1673,8 +1771,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 批量停止会话接口
-     *
+     * <b>summary</b> : 
+     * <p>批量停止会话接口</p>
+     * 
      * @param tmpReq StopAppSessionBatchRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return StopAppSessionBatchResponse
@@ -1730,8 +1829,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 批量停止会话接口
-     *
+     * <b>summary</b> : 
+     * <p>批量停止会话接口</p>
+     * 
      * @param request StopAppSessionBatchRequest
      * @return StopAppSessionBatchResponse
      */
@@ -1741,8 +1841,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新会话状态
-     *
+     * <b>summary</b> : 
+     * <p>更新会话状态</p>
+     * 
      * @param request UpdateSessionBizStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateSessionBizStatusResponse
@@ -1776,8 +1877,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新会话状态
-     *
+     * <b>summary</b> : 
+     * <p>更新会话状态</p>
+     * 
      * @param request UpdateSessionBizStatusRequest
      * @return UpdateSessionBizStatusResponse
      */

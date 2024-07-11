@@ -4,11 +4,18 @@ package com.aliyun.cgcs20211111.models;
 import com.aliyun.tea.*;
 
 public class CancelReserveTaskRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2YEF0****</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>b354****</p>
      */
     @NameInMap("TaskId")
     public String taskId;
