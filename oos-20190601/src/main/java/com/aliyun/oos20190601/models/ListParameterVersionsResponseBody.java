@@ -6,42 +6,63 @@ import com.aliyun.tea.*;
 public class ListParameterVersionsResponseBody extends TeaModel {
     /**
      * <p>The user who created the common parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>root(130900000)</p>
      */
     @NameInMap("CreatedBy")
     public String createdBy;
 
     /**
      * <p>The time when the common parameter was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-09-07T11:37:29Z</p>
      */
     @NameInMap("CreatedDate")
     public String createdDate;
 
     /**
      * <p>The description of the common parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>parameter-description</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The ID of the common parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>p-a483b520e0axxxxxxxxx</p>
      */
     @NameInMap("Id")
     public String id;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The name of the common parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MyParameter</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The pagination token that was used in the next request to retrieve a new page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MTRBMDc0NjAtRUJFNy00N0NBLTk3NTctMTJDQzQ3NjFENDdB</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -54,18 +75,27 @@ public class ListParameterVersionsResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FD08D89D-B6C8-4AA2-A2B4-521D3F4A39FA</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
     /**
      * <p>The data type of the common parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>String</p>
      */
     @NameInMap("Type")
     public String type;
@@ -166,24 +196,36 @@ public class ListParameterVersionsResponseBody extends TeaModel {
     public static class ListParameterVersionsResponseBodyParameterVersions extends TeaModel {
         /**
          * <p>The version number of the common parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ParameterVersion")
         public Integer parameterVersion;
 
         /**
          * <p>The user who updated the common parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>root(130900000)</p>
          */
         @NameInMap("UpdatedBy")
         public String updatedBy;
 
         /**
          * <p>The time when the common parameter was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-09-07T11:37:29Z</p>
          */
         @NameInMap("UpdatedDate")
         public String updatedDate;
 
         /**
          * <p>The value of the common parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyParameter</p>
          */
         @NameInMap("Value")
         public String value;

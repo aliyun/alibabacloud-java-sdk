@@ -12,6 +12,9 @@ public class StartExecutionResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>14A07460-EBE7-47CA-9757-12CC4761D47A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,18 +43,27 @@ public class StartExecutionResponseBody extends TeaModel {
     public static class StartExecutionResponseBodyExecutionCurrentTasks extends TeaModel {
         /**
          * <p>The action of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACS::TimerTrigger</p>
          */
         @NameInMap("TaskAction")
         public String taskAction;
 
         /**
          * <p>The execution ID of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>exec-dsadasdawq</p>
          */
         @NameInMap("TaskExecutionId")
         public String taskExecutionId;
 
         /**
          * <p>The name of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testTask</p>
          */
         @NameInMap("TaskName")
         public String taskName;
@@ -90,12 +102,18 @@ public class StartExecutionResponseBody extends TeaModel {
     public static class StartExecutionResponseBodyExecution extends TeaModel {
         /**
          * <p>The number of executions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Counters")
         public java.util.Map<String, ?> counters;
 
         /**
          * <p>The time when the execution was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-05-16T10:26:14Z</p>
          */
         @NameInMap("CreateDate")
         public String createDate;
@@ -108,126 +126,189 @@ public class StartExecutionResponseBody extends TeaModel {
 
         /**
          * <p>The description of the execution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test execution.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The time when the execution stopped.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-05-16T10:26:14Z</p>
          */
         @NameInMap("EndDate")
         public String endDate;
 
         /**
          * <p>The account ID of the user who started the execution of the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>root(13092080xx12344)</p>
          */
         @NameInMap("ExecutedBy")
         public String executedBy;
 
         /**
          * <p>The GUID of the execution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>exec-xxxyyy</p>
          */
         @NameInMap("ExecutionId")
         public String executionId;
 
         /**
          * <p>Indicates whether the execution is a parent execution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("IsParent")
         public Boolean isParent;
 
         /**
          * <p>The loop mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Automatic</p>
          */
         @NameInMap("LoopMode")
         public String loopMode;
 
         /**
          * <p>The execution mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Automatic</p>
          */
         @NameInMap("Mode")
         public String mode;
 
         /**
          * <p>The output of the execution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{ &quot;InstanceId&quot;:&quot;i-xxx&quot; }</p>
          */
         @NameInMap("Outputs")
         public String outputs;
 
         /**
          * <p>The input parameters of the execution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{ &quot;Status&quot;:&quot;Running&quot; }</p>
          */
         @NameInMap("Parameters")
         public String parameters;
 
         /**
          * <p>The ID of the parent execution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>exec-xxxx</p>
          */
         @NameInMap("ParentExecutionId")
         public String parentExecutionId;
 
         /**
          * <p>The role that started the execution of the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OOSServiceRole</p>
          */
         @NameInMap("RamRole")
         public String ramRole;
 
         /**
          * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxsn4m4******</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>The security check mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Skip</p>
          */
         @NameInMap("SafetyCheck")
         public String safetyCheck;
 
         /**
          * <p>The time when the execution was started.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-05-16T10:26:14Z</p>
          */
         @NameInMap("StartDate")
         public String startDate;
 
         /**
          * <p>The status of the execution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The status information of the execution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         @NameInMap("StatusMessage")
         public String statusMessage;
 
         /**
          * <p>The tags of the execution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;k1&quot;:&quot;v2&quot;,&quot;k2&quot;:&quot;v2&quot;}</p>
          */
         @NameInMap("Tags")
         public java.util.Map<String, ?> tags;
 
         /**
          * <p>The ID of the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-1bd341007f</p>
          */
         @NameInMap("TemplateId")
         public String templateId;
 
         /**
          * <p>The name of the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyTemplate</p>
          */
         @NameInMap("TemplateName")
         public String templateName;
 
         /**
          * <p>The version number of the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         @NameInMap("TemplateVersion")
         public String templateVersion;
 
         /**
          * <p>The time when the execution was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-05-16T10:26:14Z</p>
          */
         @NameInMap("UpdateDate")
         public String updateDate;

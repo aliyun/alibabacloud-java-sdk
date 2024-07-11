@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ListPatchBaselinesResponseBody extends TeaModel {
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The token that is used to retrieve the next page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The number of entries returned on each page.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -24,6 +30,9 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>432996A1-03C0-5C4C-A8E6-66C4110765B8</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,12 +77,18 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
     public static class ListPatchBaselinesResponseBodyPatchBaselinesTags extends TeaModel {
         /**
          * <p>The key of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
          * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value</p>
          */
         @NameInMap("TagValue")
         public String tagValue;
@@ -110,60 +125,90 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether the approved patch involves updates other than security-related updates.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("ApprovedPatchesEnableNonSecurity")
         public Boolean approvedPatchesEnableNonSecurity;
 
         /**
          * <p>The user who created the patch baseline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>root(130900000)</p>
          */
         @NameInMap("CreatedBy")
         public String createdBy;
 
         /**
          * <p>The time when the patch baseline was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-09-08T03:41:23Z</p>
          */
         @NameInMap("CreatedDate")
         public String createdDate;
 
         /**
          * <p>The description of the patch baseline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ListPatchBaseline</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The ID of the patch baseline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pb-c2838b5d89b540e19ee6</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>Indicates whether the patch baseline is set as the default patch baseline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("IsDefault")
         public Boolean isDefault;
 
         /**
          * <p>The name of the patch baseline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyPatchBaseline</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The type of the operating system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AliyunLinux</p>
          */
         @NameInMap("OperationSystem")
         public String operationSystem;
 
         /**
          * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek256ia6vhsndy</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>The share type of the patch baseline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Private</p>
          */
         @NameInMap("ShareType")
         public String shareType;
@@ -182,12 +227,18 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
 
         /**
          * <p>The user who last updated the patch baseline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>root(130900000)</p>
          */
         @NameInMap("UpdatedBy")
         public String updatedBy;
 
         /**
          * <p>The time when the patch baseline was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-09-08T03:44:34Z</p>
          */
         @NameInMap("UpdatedDate")
         public String updatedDate;

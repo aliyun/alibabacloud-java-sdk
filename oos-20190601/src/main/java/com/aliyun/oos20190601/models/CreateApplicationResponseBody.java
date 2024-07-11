@@ -12,6 +12,9 @@ public class CreateApplicationResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>274917E8-8E74-5928-A82F-4940F52F7ACB</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,30 +43,45 @@ public class CreateApplicationResponseBody extends TeaModel {
     public static class CreateApplicationResponseBodyApplication extends TeaModel {
         /**
          * <p>The time when the application was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-09-07T09:17:46Z</p>
          */
         @NameInMap("CreateDate")
         public String createDate;
 
         /**
          * <p>The description of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>application</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Myapplication</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;k1&quot;:&quot;v1&quot;,&quot;k2&quot;:&quot;v2&quot;}</p>
          */
         @NameInMap("Tags")
         public java.util.Map<String, String> tags;
 
         /**
          * <p>The time when the application was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-09-07T09:17:46Z</p>
          */
         @NameInMap("UpdateDate")
         public String updateDate;

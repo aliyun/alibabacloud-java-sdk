@@ -6,18 +6,28 @@ import com.aliyun.tea.*;
 public class DeleteStateConfigurationsRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>abcde3OARpx77No54nv6</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The IDs of desired-state configurations.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;sc-asfgdhj12345&quot;]</p>
      */
     @NameInMap("StateConfigurationIds")
     public String stateConfigurationIds;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListInventoryEntriesResponseBody extends TeaModel {
     /**
      * <p>The time when the request was sent.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-09-17T12:28:13Z</p>
      */
     @NameInMap("CaptureTime")
     public String captureTime;
@@ -18,36 +21,54 @@ public class ListInventoryEntriesResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the ECS instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-bp1cpoxxxwxxxxxxxxxx</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gAAAAABfTgv5ewUWmNdJ3g7JVLvX70sPH90GZOVGC</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A81E4B2E-6B33-4BAE-9856-55DB7C893E01</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The version number of the component.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.0</p>
      */
     @NameInMap("SchemaVersion")
     public String schemaVersion;
 
     /**
      * <p>The name of the component.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ACS:InstanceInformation</p>
      */
     @NameInMap("TypeName")
     public String typeName;

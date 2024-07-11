@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetServiceSettingsResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9F755DC9-C0CF-4598-B2E3-2CC763F18CB2</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,36 +43,54 @@ public class GetServiceSettingsResponseBody extends TeaModel {
     public static class GetServiceSettingsResponseBodyServiceSettings extends TeaModel {
         /**
          * <p>The name of OSS bucket to deliver.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OssBucketName</p>
          */
         @NameInMap("DeliveryOssBucketName")
         public String deliveryOssBucketName;
 
         /**
          * <p>Whether to enable OSS delivery.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("DeliveryOssEnabled")
         public Boolean deliveryOssEnabled;
 
         /**
          * <p>The key prefix of OSS to deliver.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oos/execution</p>
          */
         @NameInMap("DeliveryOssKeyPrefix")
         public String deliveryOssKeyPrefix;
 
         /**
          * <p>Whether to enable SLS delivery.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("DeliverySlsEnabled")
         public Boolean deliverySlsEnabled;
 
         /**
          * <p>The name of SLS project to deliver.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SlsProjectName</p>
          */
         @NameInMap("DeliverySlsProjectName")
         public String deliverySlsProjectName;
 
         /**
          * <p>The id of RDC Enterprise.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RdcEnterpriseId</p>
          */
         @NameInMap("RdcEnterpriseId")
         public String rdcEnterpriseId;

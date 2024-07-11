@@ -6,12 +6,19 @@ import com.aliyun.tea.*;
 public class GetApplicationRequest extends TeaModel {
     /**
      * <p>The application name.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MyApplication</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The region ID. Set the value to cn-hangzhou.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

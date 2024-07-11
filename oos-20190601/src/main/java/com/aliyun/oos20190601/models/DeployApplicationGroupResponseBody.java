@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeployApplicationGroupResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8AF4800A-A316-589A-90C4-313B1FEEB084</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -6,24 +6,38 @@ import com.aliyun.tea.*;
 public class UpdateApplicationGroupRequest extends TeaModel {
     /**
      * <p>The application name.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MyApplication</p>
      */
     @NameInMap("ApplicationName")
     public String applicationName;
 
     /**
      * <p>The name of the application group.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MyApplicationGroup</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The new name of the application group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UpdateMyApplicationGroup</p>
      */
     @NameInMap("NewName")
     public String newName;
 
     /**
      * <p>The region ID. Set the value to cn-hangzhou.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

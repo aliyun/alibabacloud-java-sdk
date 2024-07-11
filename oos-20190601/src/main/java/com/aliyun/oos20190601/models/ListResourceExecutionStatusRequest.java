@@ -6,24 +6,37 @@ import com.aliyun.tea.*;
 public class ListResourceExecutionStatusRequest extends TeaModel {
     /**
      * <p>The ID of the execution.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>exec-xxxxxxxxxxxx</p>
      */
     @NameInMap("ExecutionId")
     public String executionId;
 
     /**
      * <p>The number of entries to return on each page. Valid values: 10 to 100. Default value: 50.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MTRBMDc0NjAtRUJFNy00N0NBLTk3NTctMTJDQzQ</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the region.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

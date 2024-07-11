@@ -12,6 +12,9 @@ public class UpdatePatchBaselineResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1457F46C-7AAE-59FA-BD12-0BDB3751E6F8</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class UpdatePatchBaselineResponseBody extends TeaModel {
     public static class UpdatePatchBaselineResponseBodyPatchBaselineTags extends TeaModel {
         /**
          * <p>The key of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
          * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value</p>
          */
         @NameInMap("TagValue")
         public String tagValue;
@@ -76,6 +85,9 @@ public class UpdatePatchBaselineResponseBody extends TeaModel {
     public static class UpdatePatchBaselineResponseBodyPatchBaseline extends TeaModel {
         /**
          * <p>The rules of scanning and installing patches for the specified operating system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;PatchRules&quot;:[{&quot;PatchFilterGroup&quot;:[{&quot;Key&quot;:&quot;PatchSet&quot;,&quot;Values&quot;:[&quot;OS&quot;]},{&quot;Key&quot;:&quot;ProductFamily&quot;,&quot;Values&quot;:[&quot;Windows&quot;]},{&quot;Key&quot;:&quot;Product&quot;,&quot;Values&quot;:[&quot;Windows 10&quot;,&quot;Windows 7&quot;]},{&quot;Key&quot;:&quot;Classification&quot;,&quot;Values&quot;:[&quot;Security Updates&quot;,&quot;Updates&quot;,&quot;Update Rollups&quot;,&quot;Critical Updates&quot;]},{&quot;Key&quot;:&quot;Severity&quot;,&quot;Values&quot;:[&quot;Critical&quot;,&quot;Important&quot;,&quot;Moderate&quot;]}],&quot;ApproveAfterDays&quot;:7,&quot;ApproveUntilDate&quot;:&quot;&quot;,&quot;EnableNonSecurity&quot;:true,&quot;ComplianceLevel&quot;:&quot;Medium&quot;}]}</p>
          */
         @NameInMap("ApprovalRules")
         public String approvalRules;
@@ -88,42 +100,63 @@ public class UpdatePatchBaselineResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether the approved patch involves updates other than security-related updates.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("ApprovedPatchesEnableNonSecurity")
         public Boolean approvedPatchesEnableNonSecurity;
 
         /**
          * <p>The creator of the patch baseline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>root(130900000)</p>
          */
         @NameInMap("CreatedBy")
         public String createdBy;
 
         /**
          * <p>The time when the patch baseline was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-09-07T03:42:56Z</p>
          */
         @NameInMap("CreatedDate")
         public String createdDate;
 
         /**
          * <p>The description of the patch baseline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UpdatePatchBaseline</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The ID of the patch baseline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pb-445340b5c6504a85a300</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The name of the patch baseline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyPatchBaseline</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The operating system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Windows</p>
          */
         @NameInMap("OperationSystem")
         public String operationSystem;
@@ -136,18 +169,27 @@ public class UpdatePatchBaselineResponseBody extends TeaModel {
 
         /**
          * <p>The action of the rejected patch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALLOW_AS_DEPENDENCY</p>
          */
         @NameInMap("RejectedPatchesAction")
         public String rejectedPatchesAction;
 
         /**
          * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmy2zdbbjplii</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>The share type of the patch baseline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Private</p>
          */
         @NameInMap("ShareType")
         public String shareType;
@@ -166,12 +208,18 @@ public class UpdatePatchBaselineResponseBody extends TeaModel {
 
         /**
          * <p>The user who updated the patch baseline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>root(130900000)</p>
          */
         @NameInMap("UpdatedBy")
         public String updatedBy;
 
         /**
          * <p>The time when the patch baseline was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-09-08T07:26:37Z</p>
          */
         @NameInMap("UpdatedDate")
         public String updatedDate;

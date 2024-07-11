@@ -12,60 +12,88 @@ public class ListPatchBaselinesShrinkRequest extends TeaModel {
 
     /**
      * <p>Specifies whether the approved patch involves updates other than security-related updates.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("ApprovedPatchesEnableNonSecurity")
     public Boolean approvedPatchesEnableNonSecurity;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The name of the patch baseline.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MyPatchBaseline</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The token that is used to retrieve the next page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <ul>
+     * <li></li>
+     * </ul>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The type of the operating system. Valid values:</p>
-     * <br>
-     * <p>*   Windows</p>
-     * <p>*   Ubuntu</p>
-     * <p>*   CentOS</p>
-     * <p>*   Debian</p>
-     * <p>*   AliyunLinux</p>
-     * <p>*   RedhatEnterpriseLinux</p>
-     * <p>*   Anolis</p>
-     * <p>*   AlmaLinux</p>
+     * <ul>
+     * <li>Windows</li>
+     * <li>Ubuntu</li>
+     * <li>CentOS</li>
+     * <li>Debian</li>
+     * <li>AliyunLinux</li>
+     * <li>RedhatEnterpriseLinux</li>
+     * <li>Anolis</li>
+     * <li>AlmaLinux</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>AliyunLinux</p>
      */
     @NameInMap("OperationSystem")
     public String operationSystem;
 
     /**
      * <p>The ID of the region.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmxsn4m4******</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>The share type of the template. Valid values:</p>
-     * <br>
-     * <p>*   **Public**</p>
-     * <p>*   **Private**</p>
+     * <ul>
+     * <li><strong>Public</strong></li>
+     * <li><strong>Private</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Private</p>
      */
     @NameInMap("ShareType")
     public String shareType;

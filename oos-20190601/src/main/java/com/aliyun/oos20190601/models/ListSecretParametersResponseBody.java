@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ListSecretParametersResponseBody extends TeaModel {
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The token that is used to retrieve the next page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sPH90GZOVGC6KPDUL0FIIbEtMQHq_19S6_4O_XqA</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -24,6 +30,9 @@ public class ListSecretParametersResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CA9C6248-AF2A-4AE9-A166-88FD901BBB90</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,78 +77,117 @@ public class ListSecretParametersResponseBody extends TeaModel {
     public static class ListSecretParametersResponseBodyParameters extends TeaModel {
         /**
          * <p>The user who created the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>root(130900000)</p>
          */
         @NameInMap("CreatedBy")
         public String createdBy;
 
         /**
          * <p>The time when the parameter was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-09-01T09:28:47Z</p>
          */
         @NameInMap("CreatedDate")
         public String createdDate;
 
         /**
          * <p>The description of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SecretParameter</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The ID of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>p-14ed150fdcd048xxxxxx</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The ID of the KMS customer master key (CMK) that is used for encryption.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80e9409f-78fa-42ab-84bd-83f40c******</p>
          */
         @NameInMap("KeyId")
         public String keyId;
 
         /**
          * <p>The name of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySecretParameter</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The version number of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ParameterVersion")
         public String parameterVersion;
 
         /**
          * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxsn4m4******</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>The share type of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Private</p>
          */
         @NameInMap("ShareType")
         public String shareType;
 
         /**
          * <p>The tags of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;k1&quot;: &quot;v1&quot;, &quot;k2&quot;: &quot;v2&quot;}</p>
          */
         @NameInMap("Tags")
         public java.util.Map<String, ?> tags;
 
         /**
          * <p>The type of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Secret</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The user who updated the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>root(130900000)</p>
          */
         @NameInMap("UpdatedBy")
         public String updatedBy;
 
         /**
          * <p>The time when the parameter was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-09-01T09:35:17Z</p>
          */
         @NameInMap("UpdatedDate")
         public String updatedDate;

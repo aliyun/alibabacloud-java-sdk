@@ -12,30 +12,46 @@ public class UpdateApplicationRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to delete existing alert rules before applying the alert template. Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("DeleteAlarmRulesBeforeUpdate")
     public Boolean deleteAlarmRulesBeforeUpdate;
 
     /**
      * <p>The description to be updated for the application.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test application</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The application name.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>My-Application</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The region ID. Set the value to cn-hangzhou.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The tags.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;k1&quot;:&quot;v1&quot;,&quot;k2&quot;:&quot;v2&quot;}</p>
      */
     @NameInMap("Tags")
     public java.util.Map<String, ?> tags;
@@ -102,6 +118,9 @@ public class UpdateApplicationRequest extends TeaModel {
 
         /**
          * <p>The health check URL of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/healthcheck/tcp50122</p>
          */
         @NameInMap("HealthCheckUrl")
         public String healthCheckUrl;

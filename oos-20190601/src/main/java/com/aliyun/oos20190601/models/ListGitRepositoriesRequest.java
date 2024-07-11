@@ -10,6 +10,9 @@ public class ListGitRepositoriesRequest extends TeaModel {
     @NameInMap("OrgName")
     public String orgName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Owner")
     public String owner;
 
@@ -19,8 +22,14 @@ public class ListGitRepositoriesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Platform")
     public String platform;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static ListGitRepositoriesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListGitRepositoriesRequest self = new ListGitRepositoriesRequest();
@@ -73,6 +82,14 @@ public class ListGitRepositoriesRequest extends TeaModel {
     }
     public String getPlatform() {
         return this.platform;
+    }
+
+    public ListGitRepositoriesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

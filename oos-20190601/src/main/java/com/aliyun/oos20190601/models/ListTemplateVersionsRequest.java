@@ -6,30 +6,46 @@ import com.aliyun.tea.*;
 public class ListTemplateVersionsRequest extends TeaModel {
     /**
      * <p>The number of entries per page. Valid values: 10 to 100</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>H8xj9c-398djs9-39ajd9asdjjJ</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The type of the template. Valid values: Private and Public.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Private</p>
      */
     @NameInMap("ShareType")
     public String shareType;
 
     /**
      * <p>The name of the template.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>describeinstances</p>
      */
     @NameInMap("TemplateName")
     public String templateName;

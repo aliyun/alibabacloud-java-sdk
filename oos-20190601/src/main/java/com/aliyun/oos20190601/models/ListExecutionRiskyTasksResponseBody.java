@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListExecutionRiskyTasksResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C04B668D-D2DD-4B40-B6E9-0E3C4F53D5B5</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class ListExecutionRiskyTasksResponseBody extends TeaModel {
     public static class ListExecutionRiskyTasksResponseBodyRiskyTasks extends TeaModel {
         /**
          * <p>The name of the operation that the high-risk task calls.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DeleteInstance</p>
          */
         @NameInMap("API")
         public String API;
 
         /**
          * <p>The cloud service in which the high-risk task runs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS</p>
          */
         @NameInMap("Service")
         public String service;

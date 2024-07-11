@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class GetParametersByPathResponseBody extends TeaModel {
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gAAAAABfTgv5ewUWmNdJ3g7JVLvX70sPH90GZOVGC</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -24,12 +30,18 @@ public class GetParametersByPathResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>25156E99-7437-4590-AA58-2ACA17DE405C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of returned entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,78 +94,117 @@ public class GetParametersByPathResponseBody extends TeaModel {
     public static class GetParametersByPathResponseBodyParameters extends TeaModel {
         /**
          * <p>The constraints of the common parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;MaxLength\&quot;: 2}</p>
          */
         @NameInMap("Constraints")
         public String constraints;
 
         /**
          * <p>The user who created the common parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>root(130900000)</p>
          */
         @NameInMap("CreatedBy")
         public String createdBy;
 
         /**
          * <p>The time when the common parameter was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-10-21T04:03:12Z</p>
          */
         @NameInMap("CreatedDate")
         public String createdDate;
 
         /**
          * <p>The description of the common parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>parameter</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The ID of the common parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>p-7cdc0000000000000000</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The name of the common parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myParameter</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The version number of the common parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ParameterVersion")
         public Integer parameterVersion;
 
         /**
          * <p>The share type of the common parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Private</p>
          */
         @NameInMap("ShareType")
         public String shareType;
 
         /**
          * <p>The tags added to the common parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;k1&quot;: &quot;v1&quot;, &quot;k2&quot;: &quot;v2&quot;}</p>
          */
         @NameInMap("Tags")
         public java.util.Map<String, ?> tags;
 
         /**
          * <p>The type of the common parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>StringList</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The user who updated the common parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>root(130900000)</p>
          */
         @NameInMap("UpdatedBy")
         public String updatedBy;
 
         /**
          * <p>The time when the common parameter was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-10-21T04:03:12Z</p>
          */
         @NameInMap("UpdatedDate")
         public String updatedDate;
 
         /**
          * <p>The value of the common parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;parameter1,parameter2&quot;</p>
          */
         @NameInMap("Value")
         public String value;

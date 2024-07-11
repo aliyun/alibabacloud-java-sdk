@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class ListTagKeysRequest extends TeaModel {
     /**
      * <p>The maximum number of entries to return on each page. Valid value: 10 to 100. Default value: 50.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The token that is used to retrieve the next page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>djsdlkasd</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the region.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The type of the resource to which the tag is added.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>template</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

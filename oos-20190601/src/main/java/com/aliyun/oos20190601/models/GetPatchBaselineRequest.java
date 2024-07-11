@@ -6,12 +6,19 @@ import com.aliyun.tea.*;
 public class GetPatchBaselineRequest extends TeaModel {
     /**
      * <p>The name of the patch baseline.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MyPatchBaseline</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The ID of the region in which the patch baseline whose details you want to query resides.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

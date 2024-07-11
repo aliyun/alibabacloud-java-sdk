@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class ValidateTemplateContentResponseBody extends TeaModel {
     /**
      * <p>The outputs of the template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
      */
     @NameInMap("Outputs")
     public String outputs;
 
     /**
      * <p>The parameters of the template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{ &quot;Status&quot;: { &quot;Description&quot;: &quot;(Required) The status of the Ecs instance.&quot;, &quot;Type&quot;: &quot;String&quot; } }</p>
      */
     @NameInMap("Parameters")
     public String parameters;
 
     /**
      * <p>The RAM role.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OOSServiceRole</p>
      */
     @NameInMap("RamRole")
     public String ramRole;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D5EE9591-1F2D-573E-8751-7F08BBB388D4</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -82,30 +94,45 @@ public class ValidateTemplateContentResponseBody extends TeaModel {
     public static class ValidateTemplateContentResponseBodyTasks extends TeaModel {
         /**
          * <p>The description of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>(Required) The status of the Ecs instance.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>foo</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The outputs of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>.instanceId</p>
          */
         @NameInMap("Outputs")
         public String outputs;
 
         /**
          * <p>The properties of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;API&quot;: &quot;DescribeInstances&quot;,&quot;Parameters&quot;: {&quot;Status&quot;: &quot;{{ Status }}&quot;},&quot;Service&quot;: &quot;Ecs&quot;}</p>
          */
         @NameInMap("Properties")
         public String properties;
 
         /**
          * <p>The type of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACS::ExecuteAPI</p>
          */
         @NameInMap("Type")
         public String type;

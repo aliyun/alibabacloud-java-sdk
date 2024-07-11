@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class GetInventorySchemaResponseBody extends TeaModel {
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("MaxResults")
     public String maxResults;
 
     /**
      * <p>The pagination token that was used in the next request to retrieve a new page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gAAAAABfh8MVLQI9AuKGACLgjbsXbWs-Mna47IDM6tr6wK7TZ1</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>89117642-7167-4F4D-B7F1-876582279E3E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,12 +77,18 @@ public class GetInventorySchemaResponseBody extends TeaModel {
     public static class GetInventorySchemaResponseBodySchemasAttributes extends TeaModel {
         /**
          * <p>The data type of the property.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STRING</p>
          */
         @NameInMap("DataType")
         public String dataType;
 
         /**
          * <p>The name of the property.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ApplicationType</p>
          */
         @NameInMap("Name")
         public String name;
@@ -110,12 +125,18 @@ public class GetInventorySchemaResponseBody extends TeaModel {
 
         /**
          * <p>The name of the configuration list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACS:Application</p>
          */
         @NameInMap("TypeName")
         public String typeName;
 
         /**
          * <p>The version of the configuration list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0</p>
          */
         @NameInMap("Version")
         public String version;

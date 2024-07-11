@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class GenerateExecutionPolicyResponseBody extends TeaModel {
     /**
      * <p>The policies that are missing.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{\&quot;Action\&quot;: [\&quot;ecs:DescribeInvocationResults\&quot;, \&quot;ecs:DescribeInstances\&quot;, \&quot;ecs:RunCommand\&quot;, \&quot;ecs:DescribeInvocations\&quot;], \&quot;ServiceName\&quot;: \&quot;ecs\&quot;, \&quot;Resources\&quot;: \&quot;*\&quot;}]</p>
      */
     @NameInMap("MissingPolicy")
     public String missingPolicy;
 
     /**
      * <p>The RAM policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
      */
     @NameInMap("Policy")
     public String policy;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>14A07460-EBE7-47CA-9757-12CC4761D47A</p>
      */
     @NameInMap("RequestId")
     public String requestId;

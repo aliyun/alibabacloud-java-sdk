@@ -12,18 +12,27 @@ public class ListActionsResponseBody extends TeaModel {
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The token that is used to retrieve the next page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxx</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F9154C02-F847-4563-BB6A-6DD01A4F0</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,59 +77,85 @@ public class ListActionsResponseBody extends TeaModel {
     public static class ListActionsResponseBodyActions extends TeaModel {
         /**
          * <p>The type of the action.</p>
-         * <br>
-         * <p>1.  Atomic actions</p>
-         * <br>
-         * <p>    *   Atomic.API</p>
-         * <p>    *   Atomic.Trigger</p>
-         * <p>    *   Atomic.Control</p>
-         * <p>    *   Atomic.Embedded</p>
-         * <br>
-         * <p>2.  Cloud product actions</p>
-         * <br>
-         * <p>    *   Product.ECS</p>
-         * <p>    *   Product.RDS</p>
-         * <p>    *   Product.VPC</p>
-         * <p>    *   Product.FC</p>
-         * <p>    *   ...</p>
+         * <ol>
+         * <li><p>Atomic actions</p>
+         * <ul>
+         * <li>Atomic.API</li>
+         * <li>Atomic.Trigger</li>
+         * <li>Atomic.Control</li>
+         * <li>Atomic.Embedded</li>
+         * </ul>
+         * </li>
+         * <li><p>Cloud product actions</p>
+         * <ul>
+         * <li>Product.ECS</li>
+         * <li>Product.RDS</li>
+         * <li>Product.VPC</li>
+         * <li>Product.FC</li>
+         * <li>...</li>
+         * </ul>
+         * </li>
+         * </ol>
+         * 
+         * <strong>example:</strong>
+         * <p>ACS::Template</p>
          */
         @NameInMap("ActionType")
         public String actionType;
 
         /**
          * <p>The time when the action was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-05-16T10:26:14Z</p>
          */
         @NameInMap("CreatedDate")
         public String createdDate;
 
         /**
          * <p>The description of the action.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ReplaceSystemDisk</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the action.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACS::ECS::ReplaceSystemDisk</p>
          */
         @NameInMap("OOSActionName")
         public String OOSActionName;
 
         /**
          * <p>The number of times that the action is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("Popularity")
         public Integer popularity;
 
         /**
          * <p>The parameters of the action.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{ &quot;ImageId&quot;: { &quot;Description&quot;: &quot;The mirror ID you will use when resetting the system&quot;, &quot;Type&quot;: &quot;String&quot; }, &quot;InstanceId&quot;: { &quot;Description&quot;: &quot;the instance id that you will handle .&quot;, &quot;Type&quot;: &quot;String&quot; } }</p>
          */
         @NameInMap("Properties")
         public String properties;
 
         /**
          * <p>The version of the template that corresponds to the action.</p>
-         * <br>
-         * <p>>  For atomic actions, this parameter is not returned.</p>
+         * <blockquote>
+         * <p> For atomic actions, this parameter is not returned.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         @NameInMap("TemplateVersion")
         public String templateVersion;

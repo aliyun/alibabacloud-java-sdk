@@ -6,30 +6,46 @@ import com.aliyun.tea.*;
 public class ListParameterVersionsRequest extends TeaModel {
     /**
      * <p>The number of entries per page. Valid values: 10 to 100. Default value: 50.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The name of the common parameter.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MyParameter</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MTRBMDc0NjAtRUJFNy00N0NBLTk3NTctMTJDQzQ3NjFENDdB</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The share type of the common parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Private</p>
      */
     @NameInMap("ShareType")
     public String shareType;

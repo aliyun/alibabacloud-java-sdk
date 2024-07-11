@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class ListResourceExecutionStatusResponseBody extends TeaModel {
     /**
      * <p>The number of entries returned on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MTRBMDc0NjAtRUJFNy00N0NBLTk3NTctMTJDQzQ</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ED571CBD-9F96-419D-B919-CF340BBCA157</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,30 +77,45 @@ public class ListResourceExecutionStatusResponseBody extends TeaModel {
     public static class ListResourceExecutionStatusResponseBodyResourceExecutionStatus extends TeaModel {
         /**
          * <p>The ID of the execution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>exec-6be6d6ff805349d9ac13</p>
          */
         @NameInMap("ExecutionId")
         public String executionId;
 
         /**
          * <p>The time when the execution started running.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-13T08:48:34Z</p>
          */
         @NameInMap("ExecutionTime")
         public String executionTime;
 
         /**
          * <p>The output of the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{ 				&quot;commandOutput&quot;: &quot;hello\n&quot; 			}</p>
          */
         @NameInMap("Outputs")
         public String outputs;
 
         /**
          * <p>The ID of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1e1bxxxxxxxxxxxxxx</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
          * <p>The status of the execution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         @NameInMap("Status")
         public String status;

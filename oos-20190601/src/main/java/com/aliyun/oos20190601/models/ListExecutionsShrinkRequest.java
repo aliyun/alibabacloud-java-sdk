@@ -6,160 +6,238 @@ import com.aliyun.tea.*;
 public class ListExecutionsShrinkRequest extends TeaModel {
     /**
      * <p>The types of the execution template. Valid values: Other, TimerTrigger, EventTrigger, and AlarmTrigger. You can specify only one of the Categories and Category parameters. We recommend that you specify Categories.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;TimerTrigger&quot;、&quot;EventTrigger&quot;]</p>
      */
     @NameInMap("Categories")
     public String categories;
 
     /**
      * <p>The type of the execution template. Valid values: Other, TimerTrigger, EventTrigger, and AlarmTrigger.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Other</p>
      */
     @NameInMap("Category")
     public String category;
 
     /**
      * <p>The depth of execution. Valid values: RootDepth and FirstChildDepth. If you set this parameter to RootDepth, only the parent execution is returned. If you set this parameter to FirstChildDepth, only the child executions at the first level are returned. You can specify only one of the Depth and IncludeChildExecution parameters. We recommend that you specify Depth.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RootDepth</p>
      */
     @NameInMap("Depth")
     public String depth;
 
     /**
      * <p>The description of the execution.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MyDescription</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The earliest end time. The executions that stop running at or later than the specified time are queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-05-16T10:26:14Z</p>
      */
     @NameInMap("EndDateAfter")
     public String endDateAfter;
 
     /**
      * <p>The latest end time. The executions that stop running at or earlier than the specified time are queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-05-16T10:26:14Z</p>
      */
     @NameInMap("EndDateBefore")
     public String endDateBefore;
 
     /**
      * <p>The executor.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vme</p>
      */
     @NameInMap("ExecutedBy")
     public String executedBy;
 
     /**
      * <p>The ID of the execution.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>exec-xxx</p>
      */
     @NameInMap("ExecutionId")
     public String executionId;
 
     /**
      * <p>Specifies whether to include child executions. Default value: False.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IncludeChildExecution")
     public Boolean includeChildExecution;
 
     /**
      * <p>The number of entries to return on each page. Valid values: 10 to 100. Default value: 50.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The execution mode. Valid values:</p>
-     * <br>
-     * <p>*   **Automatic**</p>
-     * <p>*   **Debug**</p>
+     * <ul>
+     * <li><strong>Automatic</strong></li>
+     * <li><strong>Debug</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Automatic</p>
      */
     @NameInMap("Mode")
     public String mode;
 
     /**
      * <p>The token that is used to retrieve the next page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MTRBMDc0NjAtRUJFNy00N0NBLTk3NTctMTJDQzQ</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the parent execution.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>exec-xxx</p>
      */
     @NameInMap("ParentExecutionId")
     public String parentExecutionId;
 
     /**
      * <p>The RAM role.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OOSServiceRole</p>
      */
     @NameInMap("RamRole")
     public String ramRole;
 
     /**
      * <p>The ID of the region.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group to which the instances you want to query belong.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmxsn4m4******</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>The ID of the Elastic Compute Service (ECS) resource.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-xxx</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;
 
     /**
      * <p>The name of the resource template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ACS-ECS-TEST</p>
      */
     @NameInMap("ResourceTemplateName")
     public String resourceTemplateName;
 
     /**
      * <p>The field that is used to sort the executions to query. Valid values:</p>
-     * <br>
-     * <p>*   **StartDate**: specifies that the executions are sorted based on the time when they are created. This is the default value.</p>
-     * <p>*   **EndDate**: specifies that the executions are sorted based on the time when they stop running.</p>
-     * <p>*   **Status**: specifies that the executions are sorted based on their states.</p>
+     * <ul>
+     * <li><strong>StartDate</strong>: specifies that the executions are sorted based on the time when they are created. This is the default value.</li>
+     * <li><strong>EndDate</strong>: specifies that the executions are sorted based on the time when they stop running.</li>
+     * <li><strong>Status</strong>: specifies that the executions are sorted based on their states.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>StartDate</p>
      */
     @NameInMap("SortField")
     public String sortField;
 
     /**
      * <p>The order in which you want to sort the results. Valid values:</p>
-     * <br>
-     * <p>*   **Ascending**: ascending order.</p>
-     * <p>*   **Descending**: descending order. This is the default value.</p>
+     * <ul>
+     * <li><strong>Ascending</strong>: ascending order.</li>
+     * <li><strong>Descending</strong>: descending order. This is the default value.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Ascending</p>
      */
     @NameInMap("SortOrder")
     public String sortOrder;
 
     /**
      * <p>The earliest start time. The executions that start to run at or later than the specified time are queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-05-16T10:26:14Z</p>
      */
     @NameInMap("StartDateAfter")
     public String startDateAfter;
 
     /**
      * <p>The latest start time. The executions that start to run at or earlier than the specified point in time are queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-05-16T10:26:14Z</p>
      */
     @NameInMap("StartDateBefore")
     public String startDateBefore;
 
     /**
      * <p>The status of the execution. Valid values: Running, Started, Success, Failed, Waiting, Cancelled, Pending, and Skipped.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Running</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
      * <p>The tags for the execution.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;k1&quot;:&quot;v2&quot;,&quot;k2&quot;:&quot;v2&quot;}</p>
      */
     @NameInMap("Tags")
     public String tagsShrink;
 
     /**
      * <p>The name of the template. All templates whose names contain the specified template name are queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MyTemplate</p>
      */
     @NameInMap("TemplateName")
     public String templateName;
