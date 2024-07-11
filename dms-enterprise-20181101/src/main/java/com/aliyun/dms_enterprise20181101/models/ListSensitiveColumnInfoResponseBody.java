@@ -4,21 +4,41 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListSensitiveColumnInfoResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0C1CB646-1DE4-4AD0-B4A4-7D47DD52E931</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("SensitiveColumnList")
     public ListSensitiveColumnInfoResponseBodySensitiveColumnList sensitiveColumnList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -76,9 +96,17 @@ public class ListSensitiveColumnInfoResponseBody extends TeaModel {
     }
 
     public static class ListSensitiveColumnInfoResponseBodySensitiveColumnListSensitiveColumnDefaultDesensitizationRule extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>101**</p>
+         */
         @NameInMap("RuleId")
         public Long ruleId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("RuleName")
         public String ruleName;
 
@@ -106,9 +134,17 @@ public class ListSensitiveColumnInfoResponseBody extends TeaModel {
     }
 
     public static class ListSensitiveColumnInfoResponseBodySensitiveColumnListSensitiveColumnSemiDesensitizationRuleListSemiDesensitizationRule extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>10***</p>
+         */
         @NameInMap("RuleId")
         public Long ruleId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test01</p>
+         */
         @NameInMap("RuleName")
         public String ruleName;
 
@@ -158,21 +194,37 @@ public class ListSensitiveColumnInfoResponseBody extends TeaModel {
         @NameInMap("CategoryName")
         public String categoryName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test_column</p>
+         */
         @NameInMap("ColumnName")
         public String columnName;
 
         @NameInMap("DefaultDesensitizationRule")
         public ListSensitiveColumnInfoResponseBodySensitiveColumnListSensitiveColumnDefaultDesensitizationRule defaultDesensitizationRule;
 
+        /**
+         * <strong>example:</strong>
+         * <p>183****</p>
+         */
         @NameInMap("InstanceId")
         public Integer instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>False</p>
+         */
         @NameInMap("IsPlain")
         public Boolean isPlain;
 
         @NameInMap("SampleData")
         public String sampleData;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test_schema</p>
+         */
         @NameInMap("SchemaName")
         public String schemaName;
 
@@ -182,9 +234,17 @@ public class ListSensitiveColumnInfoResponseBody extends TeaModel {
         @NameInMap("SemiDesensitizationRuleList")
         public ListSensitiveColumnInfoResponseBodySensitiveColumnListSensitiveColumnSemiDesensitizationRuleList semiDesensitizationRuleList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test_table</p>
+         */
         @NameInMap("TableName")
         public String tableName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>S1</p>
+         */
         @NameInMap("UserSensitivityLevel")
         public String userSensitivityLevel;
 

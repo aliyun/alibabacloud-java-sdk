@@ -6,41 +6,58 @@ import com.aliyun.tea.*;
 public class RegisterUserRequest extends TeaModel {
     /**
      * <p>The mobile number of the user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>130000000xx</p>
      */
     @NameInMap("Mobile")
     public String mobile;
 
     /**
      * <p>The role that you want to assign to the user. Valid values:</p>
-     * <br>
-     * <p>*   **USER**: a regular user role</p>
-     * <p>*   **DBA**: a database administrator (DBA) role</p>
-     * <p>*   **ADMIN**: a DMS administrator role</p>
-     * <p>*   **SECURITY_ADMIN**: a security administrator role</p>
-     * <br>
-     * <p>>  If you do not specify this parameter, the regular user role is assigned to the user by default. You can assign one or more roles to the user. Separate multiple roles with commas (,).</p>
+     * <ul>
+     * <li><strong>USER</strong>: a regular user role</li>
+     * <li><strong>DBA</strong>: a database administrator (DBA) role</li>
+     * <li><strong>ADMIN</strong>: a DMS administrator role</li>
+     * <li><strong>SECURITY_ADMIN</strong>: a security administrator role</li>
+     * </ul>
+     * <blockquote>
+     * <p> If you do not specify this parameter, the regular user role is assigned to the user by default. You can assign one or more roles to the user. Separate multiple roles with commas (,).</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>USER,DBA</p>
      */
     @NameInMap("RoleNames")
     public String roleNames;
 
     /**
      * <p>The ID of the tenant.</p>
-     * <br>
-     * <p>>  To query ID of the tenant, move the pointer over the profile picture in the upper-right corner of the DMS console. For more information, see the "View information about the current tenant" section of the [Manage DMS tenants](https://help.aliyun.com/document_detail/181330.html) topic.</p>
+     * <blockquote>
+     * <p> To query ID of the tenant, move the pointer over the profile picture in the upper-right corner of the DMS console. For more information, see the &quot;View information about the current tenant&quot; section of the <a href="https://help.aliyun.com/document_detail/181330.html">Manage DMS tenants</a> topic.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>-1</p>
      */
     @NameInMap("Tid")
     public Long tid;
 
     /**
      * <p>The UID of the Alibaba Cloud account of the user that you want to register.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12345678</p>
      */
     @NameInMap("Uid")
     public String uid;
 
     /**
      * <p>The nickname of the user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dmstest</p>
      */
     @NameInMap("UserNick")
     public String userNick;

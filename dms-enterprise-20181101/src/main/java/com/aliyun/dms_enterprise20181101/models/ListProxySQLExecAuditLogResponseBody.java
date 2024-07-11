@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ListProxySQLExecAuditLogResponseBody extends TeaModel {
     /**
      * <p>The error code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>InvalidStartTime</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Specified parameter StartTime is not valid.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
@@ -24,21 +30,31 @@ public class ListProxySQLExecAuditLogResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50ECB006-2C35-5FCA-91B9-01987A0B****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request was successful.</p>
-     * <p>*   **false**: The request failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -99,83 +115,122 @@ public class ListProxySQLExecAuditLogResponseBody extends TeaModel {
     public static class ListProxySQLExecAuditLogResponseBodyProxySQLExecAuditLogListProxySQLExecAuditLog extends TeaModel {
         /**
          * <p>Indicates the total number of rows returned after the SQL statement was executed. If an SELECT SQL statement is executed, the return value of this parameter indicates the total number of the queried data rows.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("AffectRows")
         public Long affectRows;
 
         /**
          * <p>The amount of time that is consumed to execute the SQL statement. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1324</p>
          */
         @NameInMap("ElapsedTime")
         public Long elapsedTime;
 
         /**
          * <p>The execution status of the SQL statement. Valid values:</p>
-         * <br>
-         * <p>*   **FAIL**: The execution of the SQL statement fails.</p>
-         * <p>*   **CANCEL**: The execution of the SQL statement is canceled.</p>
-         * <p>*   **SUCCESS**: The SQL statement is executed.</p>
+         * <ul>
+         * <li><strong>FAIL</strong>: The execution of the SQL statement fails.</li>
+         * <li><strong>CANCEL</strong>: The execution of the SQL statement is canceled.</li>
+         * <li><strong>SUCCESS</strong>: The SQL statement is executed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         @NameInMap("ExecState")
         public String execState;
 
         /**
          * <p>The ID of the database instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4***</p>
          */
         @NameInMap("InstanceId")
         public Long instanceId;
 
         /**
          * <p>The name of the database instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-uf662nrg017c6****.mysql.polardb.rds.aliyuncs.com:3306【test】</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
          * <p>The time at which the user executes the SQL statement on the database instance. The value of this parameter must be a timestamp that follows the UNIX time format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1636876446000</p>
          */
         @NameInMap("OpTime")
         public String opTime;
 
         /**
          * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         @NameInMap("Remark")
         public String remark;
 
         /**
          * <p>The SQL statement that was executed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>select 1;</p>
          */
         @NameInMap("SQL")
         public String SQL;
 
         /**
          * <p>The type of the SQL statement. Valid values:</p>
-         * <br>
-         * <p>*   **SELECT**</p>
-         * <p>*   **INSERT**</p>
-         * <p>*   **DELETE**</p>
-         * <p>*   **CREATE_TABLE**</p>
-         * <br>
-         * <p>>  You can choose Operation Audit > Secure Access Proxy in the top navigation bar of the DMS console to view more types of SQL statements.</p>
+         * <ul>
+         * <li><strong>SELECT</strong></li>
+         * <li><strong>INSERT</strong></li>
+         * <li><strong>DELETE</strong></li>
+         * <li><strong>CREATE_TABLE</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p> You can choose Operation Audit &gt; Secure Access Proxy in the top navigation bar of the DMS console to view more types of SQL statements.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>SELECT</p>
          */
         @NameInMap("SQLType")
         public String SQLType;
 
         /**
          * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_db</p>
          */
         @NameInMap("SchemaName")
         public String schemaName;
 
         /**
          * <p>The ID of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4****</p>
          */
         @NameInMap("UserId")
         public Long userId;
 
         /**
          * <p>The nickname of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testNickName</p>
          */
         @NameInMap("UserName")
         public String userName;

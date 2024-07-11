@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class SearchTableResponseBody extends TeaModel {
     /**
      * <p>The error code returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1489257F-1B5D-4B5B-89EF-923C12CEEBD1</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -30,12 +39,18 @@ public class SearchTableResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The total number of entries that are returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -134,66 +149,95 @@ public class SearchTableResponseBody extends TeaModel {
     public static class SearchTableResponseBodySearchTableListSearchTable extends TeaModel {
         /**
          * <p>The name that is used to search for the database to which the table belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("DBSearchName")
         public String DBSearchName;
 
         /**
          * <p>The ID of the database to which the table belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("DatabaseId")
         public String databaseId;
 
         /**
          * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("DbName")
         public String dbName;
 
         /**
          * <p>The type of the database. Valid values:</p>
-         * <br>
-         * <p>*   **MySQL**</p>
-         * <p>*   **SQLServer**</p>
-         * <p>*   **PostgreSQL**</p>
-         * <p>*   **Oracle**</p>
-         * <p>*   **DRDS**</p>
-         * <p>*   **OceanBase**</p>
-         * <p>*   **Mongo**</p>
-         * <p>*   **Redis**</p>
+         * <ul>
+         * <li><strong>MySQL</strong></li>
+         * <li><strong>SQLServer</strong></li>
+         * <li><strong>PostgreSQL</strong></li>
+         * <li><strong>Oracle</strong></li>
+         * <li><strong>DRDS</strong></li>
+         * <li><strong>OceanBase</strong></li>
+         * <li><strong>Mongo</strong></li>
+         * <li><strong>Redis</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql</p>
          */
         @NameInMap("DbType")
         public String dbType;
 
         /**
          * <p>The description of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The encoding format of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>utf8</p>
          */
         @NameInMap("Encoding")
         public String encoding;
 
         /**
          * <p>The engine of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>innodb</p>
          */
         @NameInMap("Engine")
         public String engine;
 
         /**
          * <p>The type of the environment to which the database belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("EnvType")
         public String envType;
 
         /**
          * <p>Indicates whether the table is a logical table. Valid values:</p>
-         * <br>
-         * <p>*   **true**: The table is a logical table.</p>
-         * <p>*   **false**: The table is not a logical table.</p>
+         * <ul>
+         * <li><strong>true</strong>: The table is a logical table.</li>
+         * <li><strong>false</strong>: The table is not a logical table.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Logic")
         public Boolean logic;
@@ -212,24 +256,36 @@ public class SearchTableResponseBody extends TeaModel {
 
         /**
          * <p>The GUID of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IDB_L_9032.db-test.yuyang_test</p>
          */
         @NameInMap("TableGuid")
         public String tableGuid;
 
         /**
          * <p>The ID of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("TableId")
         public String tableId;
 
         /**
          * <p>The name of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_table</p>
          */
         @NameInMap("TableName")
         public String tableName;
 
         /**
          * <p>The name of the database to which the table belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:test@xxx.xxx.xxx.xxx">test@xxx.xxx.xxx.xxx</a>:3306</p>
          */
         @NameInMap("TableSchemaName")
         public String tableSchemaName;

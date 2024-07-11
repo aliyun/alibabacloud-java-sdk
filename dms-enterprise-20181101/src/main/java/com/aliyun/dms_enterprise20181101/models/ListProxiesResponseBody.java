@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ListProxiesResponseBody extends TeaModel {
     /**
      * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>User can not access to Tenant [123445]</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
@@ -24,15 +30,22 @@ public class ListProxiesResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5812180E-555F-5F90-BE4F-280576F4****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request was successful.</p>
-     * <p>*   **false**: The request failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,81 +98,120 @@ public class ListProxiesResponseBody extends TeaModel {
     public static class ListProxiesResponseBodyProxyList extends TeaModel {
         /**
          * <p>The ID of the user who enabled the secure access proxy feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12****</p>
          */
         @NameInMap("CreatorId")
         public Long creatorId;
 
         /**
          * <p>The nickname of the user who enabled the secure access proxy feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_name</p>
          */
         @NameInMap("CreatorName")
         public String creatorName;
 
         /**
          * <p>The number of the port that was used by HTTPS clients to connect to the database instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>443</p>
          */
         @NameInMap("HttpsPort")
         public Integer httpsPort;
 
         /**
          * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>183****</p>
          */
         @NameInMap("InstanceId")
         public Long instanceId;
 
         /**
-         * <p>Indicates whether the internal endpoint is enabled. Default value: **true**.</p>
+         * <p>Indicates whether the internal endpoint is enabled. Default value: <strong>true</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("PrivateEnable")
         public Boolean privateEnable;
 
         /**
          * <p>The internal endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dphzmy-5j8oimjsz6ze****.proxy.dms.aliyuncs.com</p>
          */
         @NameInMap("PrivateHost")
         public String privateHost;
 
         /**
          * <p>The number of the port that is used to connect the database instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3306</p>
          */
         @NameInMap("ProtocolPort")
         public Integer protocolPort;
 
         /**
          * <p>The type of the database. Example: MYSQL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MYSQL</p>
          */
         @NameInMap("ProtocolType")
         public String protocolType;
 
         /**
          * <p>The ID of the secure access proxy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4**</p>
          */
         @NameInMap("ProxyId")
         public Long proxyId;
 
         /**
          * <p>Indicates whether the public endpoint is enabled. Valid values:</p>
-         * <br>
-         * <p>*   **true**: The public endpoint is enabled.</p>
-         * <p>*   **false**: The public endpoint is disabled.</p>
+         * <ul>
+         * <li><strong>true</strong>: The public endpoint is enabled.</li>
+         * <li><strong>false</strong>: The public endpoint is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("PublicEnable")
         public Boolean publicEnable;
 
         /**
          * <p>The public endpoint. A public endpoint is returned no matter whether the public endpoint is enabled or disabled.</p>
-         * <br>
-         * <p>> </p>
-         * <br>
-         * <p>*   If the value of the PublicEnable parameter is **true**, a valid public endpoint that can be resolved by using Alibaba Cloud DNS (DNS) is returned.</p>
-         * <br>
-         * <p>*   If the value of the PublicEnable parameter is **false**, an invalid public endpoint that cannot be resolved by using DNS is returned.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>If the value of the PublicEnable parameter is <strong>true</strong>, a valid public endpoint that can be resolved by using Alibaba Cloud DNS (DNS) is returned.</p>
+         * </li>
+         * <li><p>If the value of the PublicEnable parameter is <strong>false</strong>, an invalid public endpoint that cannot be resolved by using DNS is returned.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>dphzmy-5j8oimjsz6ze****-pub.proxy.dms.aliyuncs.com</p>
          */
         @NameInMap("PublicHost")
         public String publicHost;
 
         /**
          * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;

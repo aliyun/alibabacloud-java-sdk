@@ -6,27 +6,40 @@ import com.aliyun.tea.*;
 public class ListTaskFlowsByPageResponseBody extends TeaModel {
     /**
      * <p>The error code returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6CB28697-BFE2-5739-9228-3971990E982C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request was successful.</p>
-     * <p>*   **false**: The request failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -39,6 +52,9 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>24</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -99,134 +115,200 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
     public static class ListTaskFlowsByPageResponseBodyTaskFlowListTaskFlow extends TeaModel {
         /**
          * <p>The ID of the user who created the task flow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>51****</p>
          */
         @NameInMap("CreatorId")
         public String creatorId;
 
         /**
          * <p>The username of the user who created the task flow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Creator_NickName</p>
          */
         @NameInMap("CreatorNickName")
         public String creatorNickName;
 
         /**
          * <p>The start time of scheduled scheduling. The task flow is not scheduled before this point in time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1970-01-01</p>
          */
         @NameInMap("CronBeginDate")
         public String cronBeginDate;
 
         /**
          * <p>The end time of scheduled scheduling. The task flow is not scheduled after this point in time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-01-01</p>
          */
         @NameInMap("CronEndDate")
         public String cronEndDate;
 
         /**
          * <p>Scheduled Cron.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0 0 1 * * ? *</p>
          */
         @NameInMap("CronStr")
         public String cronStr;
 
         /**
          * <p>Whether to enable scheduled scheduling.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("CronSwitch")
         public Boolean cronSwitch;
 
         /**
          * <p>Scheduling cycle type. Valid values:</p>
-         * <p>- **2**: Hourly scheduling</p>
-         * <p>- **3**: Daily scheduling</p>
-         * <p>- **4**: Weekly scheduling</p>
-         * <p>- **5**: Monthly scheduling</p>
+         * <ul>
+         * <li><strong>2</strong>: Hourly scheduling</li>
+         * <li><strong>3</strong>: Daily scheduling</li>
+         * <li><strong>4</strong>: Weekly scheduling</li>
+         * <li><strong>5</strong>: Monthly scheduling</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("CronType")
         public Integer cronType;
 
         /**
          * <p>The name of the task flow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>poc_task_test</p>
          */
         @NameInMap("DagName")
         public String dagName;
 
         /**
          * <p>The user ID of the task flow owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12***89</p>
          */
         @NameInMap("DagOwnerId")
         public String dagOwnerId;
 
         /**
          * <p>The username of the owner of the task flow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Owner_NickName</p>
          */
         @NameInMap("DagOwnerNickName")
         public String dagOwnerNickName;
 
         /**
          * <p>The ID of the last deployment record of the task flow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>65***</p>
          */
         @NameInMap("DeployId")
         public Long deployId;
 
         /**
          * <p>The description of the task flow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The ID of the task flow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7***</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The status of the last execution of the task flow. Valid values:</p>
-         * <br>
-         * <p>*   **0**: invalid</p>
-         * <p>*   **1**: scheduling disabled</p>
-         * <p>*   **2**: waiting to be scheduled</p>
+         * <ul>
+         * <li><strong>0</strong>: invalid</li>
+         * <li><strong>1</strong>: scheduling disabled</li>
+         * <li><strong>2</strong>: waiting to be scheduled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("LatestInstanceStatus")
         public Integer latestInstanceStatus;
 
         /**
          * <p>The time when the last execution record was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-04-13</p>
          */
         @NameInMap("LatestInstanceTime")
         public String latestInstanceTime;
 
         /**
          * <p>The ID of the application scenario.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1245</p>
          */
         @NameInMap("ScenarioId")
         public String scenarioId;
 
         /**
          * <p>Event scheduling configuration, JSON string format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;triggerType\&quot;:\&quot;1\&quot;,\&quot;specificTime\&quot;:\&quot;2022-11-15 11:59\&quot;}</p>
          */
         @NameInMap("ScheduleParam")
         public String scheduleParam;
 
         /**
          * <p>The status of the task flow. Valid values:</p>
-         * <br>
-         * <p>*   **0**: invalid</p>
-         * <p>*   **1**: scheduling disabled</p>
-         * <p>*   **2**: waiting to be scheduled</p>
+         * <ul>
+         * <li><strong>0</strong>: invalid</li>
+         * <li><strong>1</strong>: scheduling disabled</li>
+         * <li><strong>2</strong>: waiting to be scheduled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Status")
         public Integer status;
 
         /**
          * <p>Time zone setting. Default value: East 8(Asia/Shanghai).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Asia/Shanghai</p>
          */
         @NameInMap("TimeZoneId")
         public String timeZoneId;
 
         /**
          * <p>The trigger type. Valid values:</p>
-         * <p>- **0**: Periodic scheduling</p>
-         * <p>- **1**: Run manually</p>
+         * <ul>
+         * <li><strong>0</strong>: Periodic scheduling</li>
+         * <li><strong>1</strong>: Run manually</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("TriggerType")
         public Integer triggerType;

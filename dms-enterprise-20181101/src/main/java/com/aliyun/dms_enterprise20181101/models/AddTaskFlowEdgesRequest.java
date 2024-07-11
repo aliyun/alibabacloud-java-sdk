@@ -5,16 +5,17 @@ import com.aliyun.tea.*;
 
 public class AddTaskFlowEdgesRequest extends TeaModel {
     /**
-     * <p>The ID of the task flow. You can call the [ListTaskFlow](https://help.aliyun.com/document_detail/424565.html) or [ListLhTaskFlowAndScenario](https://help.aliyun.com/document_detail/426672.html) operation to query the task flow ID.</p>
-     * <br>
+     * <p>The ID of the task flow. You can call the <a href="https://help.aliyun.com/document_detail/424565.html">ListTaskFlow</a> or <a href="https://help.aliyun.com/document_detail/426672.html">ListLhTaskFlowAndScenario</a> operation to query the task flow ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>15***</p>
      */
     @NameInMap("DagId")
     public Long dagId;
 
     /**
      * <p>The list of edges of the task flow.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Edges")
@@ -22,8 +23,12 @@ public class AddTaskFlowEdgesRequest extends TeaModel {
 
     /**
      * <p>The ID of the tenant.</p>
-     * <br>
-     * <p>> : To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](https://help.aliyun.com/document_detail/181330.html).</p>
+     * <blockquote>
+     * <p>: To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see <a href="https://help.aliyun.com/document_detail/181330.html">View information about the current tenant</a>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>3***</p>
      */
     @NameInMap("Tid")
     public Long tid;
@@ -60,16 +65,20 @@ public class AddTaskFlowEdgesRequest extends TeaModel {
     public static class AddTaskFlowEdgesRequestEdges extends TeaModel {
         /**
          * <p>The ID of the node where the end node of the edge is located.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>44***</p>
          */
         @NameInMap("NodeEnd")
         public Long nodeEnd;
 
         /**
          * <p>The ID of the node where the start node of the edge is located.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>44***</p>
          */
         @NameInMap("NodeFrom")
         public Long nodeFrom;

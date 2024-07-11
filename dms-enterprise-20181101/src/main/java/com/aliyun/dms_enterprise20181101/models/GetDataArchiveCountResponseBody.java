@@ -12,15 +12,22 @@ public class GetDataArchiveCountResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4B63CAC5-BD7F-5C7C-82C9-59DFFBC3C5C2</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -57,24 +64,36 @@ public class GetDataArchiveCountResponseBody extends TeaModel {
     public static class GetDataArchiveCountResponseBodyData extends TeaModel {
         /**
          * <p>The number of failed archiving tickets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1**</p>
          */
         @NameInMap("FailCount")
         public Long failCount;
 
         /**
          * <p>The number of in-progress archiving tickets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2**</p>
          */
         @NameInMap("ProcessingCount")
         public Long processingCount;
 
         /**
          * <p>The number of successful archiving tickets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3**</p>
          */
         @NameInMap("SuccessCount")
         public Long successCount;
 
         /**
          * <p>The total number of archiving tickets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6**</p>
          */
         @NameInMap("TotalCount")
         public Long totalCount;

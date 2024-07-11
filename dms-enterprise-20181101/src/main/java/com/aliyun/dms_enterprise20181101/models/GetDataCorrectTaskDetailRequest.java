@@ -5,17 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetDataCorrectTaskDetailRequest extends TeaModel {
     /**
-     * <p>The ID of the ticket. You can call the [CreateDataCorrectOrder](https://help.aliyun.com/document_detail/208388.html), [CreateDataImportOrder](https://help.aliyun.com/document_detail/208387.html), or [CreateFreeLockCorrectOrder](https://help.aliyun.com/document_detail/208386.html) operation to obtain the ticket ID.</p>
-     * <br>
+     * <p>The ID of the ticket. You can call the <a href="https://help.aliyun.com/document_detail/208388.html">CreateDataCorrectOrder</a>, <a href="https://help.aliyun.com/document_detail/208387.html">CreateDataImportOrder</a>, or <a href="https://help.aliyun.com/document_detail/208386.html">CreateFreeLockCorrectOrder</a> operation to obtain the ticket ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12435523</p>
      */
     @NameInMap("OrderId")
     public Long orderId;
 
     /**
      * <p>The ID of the tenant.</p>
-     * <br>
-     * <p>> : To view the ID of the tenant, log on to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see the "View information about the current tenant" section of the [Manage DMS tenants](https://help.aliyun.com/document_detail/181330.html) topic.</p>
+     * <blockquote>
+     * <p>: To view the ID of the tenant, log on to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see the &quot;View information about the current tenant&quot; section of the <a href="https://help.aliyun.com/document_detail/181330.html">Manage DMS tenants</a> topic.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>14325432</p>
      */
     @NameInMap("Tid")
     public Long tid;

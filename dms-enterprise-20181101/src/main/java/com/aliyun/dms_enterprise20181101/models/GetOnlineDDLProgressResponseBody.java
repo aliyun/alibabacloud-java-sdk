@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class GetOnlineDDLProgressResponseBody extends TeaModel {
     /**
      * <p>The error code returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>403</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
@@ -24,15 +30,22 @@ public class GetOnlineDDLProgressResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>34E01EDD-6A16-4CF0-9541-C644D1BE01AA</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request was successful.</p>
-     * <p>*   **false**: The request failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,98 +98,141 @@ public class GetOnlineDDLProgressResponseBody extends TeaModel {
     public static class GetOnlineDDLProgressResponseBodyOnlineDDLTaskDetail extends TeaModel {
         /**
          * <p>The cleanup policy of the original table after the cut-over. Valid values:</p>
-         * <br>
-         * <p>*   **DROP**: Invalid original tables are deleted.</p>
-         * <p>*   **MOVE**: Invalid original tables are moved to the test database. You can delete the tables manually.</p>
-         * <p>*   **NOTHING**: Invalid original tables are retained in the original database. You can delete the tables manually.</p>
+         * <ul>
+         * <li><strong>DROP</strong>: Invalid original tables are deleted.</li>
+         * <li><strong>MOVE</strong>: Invalid original tables are moved to the test database. You can delete the tables manually.</li>
+         * <li><strong>NOTHING</strong>: Invalid original tables are retained in the original database. You can delete the tables manually.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DROP</p>
          */
         @NameInMap("CleanStrategy")
         public String cleanStrategy;
 
         /**
          * <p>The policy of full replication. Valid values:</p>
-         * <br>
-         * <p>*   **AUTO**: DMS dynamically adjusts the chunk size based on the performance of the database. Tables are locked for less than 1.5 seconds during a single replication operation.</p>
-         * <p>*   **RUNNING**: DMS uses the specified value of the CopyChunkSize parameter. The valid value of the CopyChunkSize parameter ranges from 1 to 60000. If you set this parameter to RUNNING, you must specify the CopyChunkSize parameter.</p>
+         * <ul>
+         * <li><strong>AUTO</strong>: DMS dynamically adjusts the chunk size based on the performance of the database. Tables are locked for less than 1.5 seconds during a single replication operation.</li>
+         * <li><strong>RUNNING</strong>: DMS uses the specified value of the CopyChunkSize parameter. The valid value of the CopyChunkSize parameter ranges from 1 to 60000. If you set this parameter to RUNNING, you must specify the CopyChunkSize parameter.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>AUTO</p>
          */
         @NameInMap("CopyChunkMode")
         public String copyChunkMode;
 
         /**
          * <p>The size of each chunk that is used to replicate data. This parameter is used to specify the size of each chunk. A larger chunk size increases the replication efficiency and decreases the business performance.</p>
-         * <br>
-         * <p>> During full replication, the original table is divided into N small chunks and each chunk is replicated to the temporary table one by one. By default, DMS dynamically adjusts the size of each chunk.</p>
+         * <blockquote>
+         * <p>During full replication, the original table is divided into N small chunks and each chunk is replicated to the temporary table one by one. By default, DMS dynamically adjusts the size of each chunk.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         @NameInMap("CopyChunkSize")
         public Long copyChunkSize;
 
         /**
          * <p>The actual amount of data replicated from the original table in the lock-free change operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9</p>
          */
         @NameInMap("CopyCount")
         public Long copyCount;
 
         /**
          * <p>The estimated total number of rows of the data. The value is obtained from the statistical data in the information_schema database. In most cases, the estimated total number of rows is smaller than the actual number of rows in a table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("CopyTotal")
         public Long copyTotal;
 
         /**
          * <p>The number of retries when the cut-over fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("CutoverFailRetryTimes")
         public Long cutoverFailRetryTimes;
 
         /**
          * <p>The maximum period of time that a table can be locked during cut-over. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("CutoverLockTimeSeconds")
         public Long cutoverLockTimeSeconds;
 
         /**
          * <p>The end of the time window of the cut-over operation. This value is at least 30 minutes later than the CutoverWindowStartTime parameter. Default value: 23:59:59</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13:00:00</p>
          */
         @NameInMap("CutoverWindowEndTime")
         public String cutoverWindowEndTime;
 
         /**
          * <p>The beginning of the time window of the cut-over operation. Default value: 00:00:00. This parameter controls the time window of the cut-over. Cut-over can be performed only when the cut-over conditions are met and the time is within the specified time window. If the time is not within the time window, the cut-over operation is not performed until the time reaches the beginning of the time window.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12:00:00</p>
          */
         @NameInMap("CutoverWindowStartTime")
         public String cutoverWindowStartTime;
 
         /**
          * <p>The replay latency of DMS. Unit: seconds. The replay latency is the period of time that is taken to replay the binary logs of the table to the temporary table. The latency does not indicate the data migration latency between a primary database and a secondary database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("DelaySeconds")
         public Long delaySeconds;
 
         /**
          * <p>The state of the task. Valid values:</p>
-         * <br>
-         * <p>*   **INIT**: The task is being initialized.</p>
-         * <p>*   **SUCCESS**: The task is complete.</p>
-         * <p>*   **RUNNING**: The task is being executed.</p>
-         * <p>*   **WAITING_CUTOVER**: The task is waiting for cut-over.</p>
-         * <p>*   **RESTARTING**: The task is restarting.</p>
-         * <p>*   **PAUSE**: The task is suspended.</p>
-         * <p>*   **UNSUPPORTED**: The task is not supported.</p>
-         * <p>*   **CANCELED**: The task is canceled.</p>
-         * <p>*   **FAIL**: The task failed.</p>
-         * <p>*   **INTERRUPT**: The task is interrupted.</p>
+         * <ul>
+         * <li><strong>INIT</strong>: The task is being initialized.</li>
+         * <li><strong>SUCCESS</strong>: The task is complete.</li>
+         * <li><strong>RUNNING</strong>: The task is being executed.</li>
+         * <li><strong>WAITING_CUTOVER</strong>: The task is waiting for cut-over.</li>
+         * <li><strong>RESTARTING</strong>: The task is restarting.</li>
+         * <li><strong>PAUSE</strong>: The task is suspended.</li>
+         * <li><strong>UNSUPPORTED</strong>: The task is not supported.</li>
+         * <li><strong>CANCELED</strong>: The task is canceled.</li>
+         * <li><strong>FAIL</strong>: The task failed.</li>
+         * <li><strong>INTERRUPT</strong>: The task is interrupted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         @NameInMap("JobStatus")
         public String jobStatus;
 
         /**
          * <p>The estimated execution progress. The actual progress is subject to the task status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90%</p>
          */
         @NameInMap("ProgressRatio")
         public String progressRatio;
 
         /**
          * <p>The description of the task status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         @NameInMap("StatusDesc")
         public String statusDesc;

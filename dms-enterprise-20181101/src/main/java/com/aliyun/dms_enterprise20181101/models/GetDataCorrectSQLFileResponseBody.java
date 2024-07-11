@@ -6,30 +6,45 @@ import com.aliyun.tea.*;
 public class GetDataCorrectSQLFileResponseBody extends TeaModel {
     /**
      * <p>The error code returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The download URL of the SQL script.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://dmsxxx">https://dmsxxx</a></p>
      */
     @NameInMap("FileUrl")
     public String fileUrl;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>283C461F-11D8-48AA-B695-DF092DA32AF3</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

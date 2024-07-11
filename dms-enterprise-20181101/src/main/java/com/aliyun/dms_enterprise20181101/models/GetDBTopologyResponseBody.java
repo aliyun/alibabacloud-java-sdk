@@ -12,27 +12,40 @@ public class GetDBTopologyResponseBody extends TeaModel {
 
     /**
      * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C5B8E84B-42B6-4374-AD5A-6264E1753378</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request is successful.</p>
-     * <p>*   **false**: The request fails.</p>
+     * <ul>
+     * <li><strong>true</strong>: The request is successful.</li>
+     * <li><strong>false</strong>: The request fails.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,78 +98,112 @@ public class GetDBTopologyResponseBody extends TeaModel {
     public static class GetDBTopologyResponseBodyDBTopologyDBTopologyInfoList extends TeaModel {
         /**
          * <p>The name of the catalog to which the database belongs.</p>
-         * <br>
-         * <p>> If the database is a PostgreSQL database, the value of this parameter is the name of the database.</p>
+         * <blockquote>
+         * <p>If the database is a PostgreSQL database, the value of this parameter is the name of the database.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>def</p>
          */
         @NameInMap("CatalogName")
         public String catalogName;
 
         /**
          * <p>The ID of the database for which the schema design is executed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>423532</p>
          */
         @NameInMap("DbId")
         public Long dbId;
 
         /**
          * <p>The type of the database engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>polardb</p>
          */
         @NameInMap("DbType")
         public String dbType;
 
         /**
          * <p>The type of the environment to which the database belongs. Valid values:</p>
-         * <br>
-         * <p>*   product: production environment</p>
-         * <p>*   dev: development environment</p>
-         * <p>*   pre: staging environment</p>
-         * <p>*   test: test environment</p>
-         * <p>*   sit: SIT environment</p>
-         * <p>*   uat: user acceptance testing (UAT) environment</p>
-         * <p>*   pet: stress testing environment</p>
-         * <p>*   stag: STAG environment</p>
+         * <ul>
+         * <li>product: production environment</li>
+         * <li>dev: development environment</li>
+         * <li>pre: staging environment</li>
+         * <li>test: test environment</li>
+         * <li>sit: SIT environment</li>
+         * <li>uat: user acceptance testing (UAT) environment</li>
+         * <li>pet: stress testing environment</li>
+         * <li>stag: STAG environment</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>dev</p>
          */
         @NameInMap("EnvType")
         public String envType;
 
         /**
          * <p>The ID of the instance. The valid value is returned if you call the ListInstances operation. The instance ID is not the ID of the RDS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4325325</p>
          */
         @NameInMap("InstanceId")
         public Long instanceId;
 
         /**
          * <p>Instance resource ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-xxx</p>
          */
         @NameInMap("InstanceResourceId")
         public String instanceResourceId;
 
         /**
          * <p>The source of the database instance. Valid values:</p>
-         * <br>
-         * <p>*   **PUBLIC_OWN:** a self-managed database instance that is deployed on the Internet</p>
-         * <p>*   **RDS:** an ApsaraDB RDS instance</p>
-         * <p>*   **ECS_OWN:** a self-managed database that is deployed on an Elastic Compute Service (ECS) instance</p>
-         * <p>*   **VPC_IDC:** a self-managed database instance that is deployed in a data center connected over a virtual private cloud (VPC)</p>
+         * <ul>
+         * <li><strong>PUBLIC_OWN:</strong> a self-managed database instance that is deployed on the Internet</li>
+         * <li><strong>RDS:</strong> an ApsaraDB RDS instance</li>
+         * <li><strong>ECS_OWN:</strong> a self-managed database that is deployed on an Elastic Compute Service (ECS) instance</li>
+         * <li><strong>VPC_IDC:</strong> a self-managed database instance that is deployed in a data center connected over a virtual private cloud (VPC)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>RDS</p>
          */
         @NameInMap("InstanceSource")
         public String instanceSource;
 
         /**
          * <p>The ID of the region in which the instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The name of the logical database.</p>
-         * <br>
-         * <p>> If the database is a PostgreSQL database, the value of this parameter is the name of the database schema.</p>
+         * <blockquote>
+         * <p>If the database is a PostgreSQL database, the value of this parameter is the name of the database schema.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>db_test@rm-xxx:3306</p>
          */
         @NameInMap("SchemaName")
         public String schemaName;
 
         /**
          * <p>The name of the saved search.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>db_test</p>
          */
         @NameInMap("SearchName")
         public String searchName;
@@ -251,6 +298,9 @@ public class GetDBTopologyResponseBody extends TeaModel {
     public static class GetDBTopologyResponseBodyDBTopology extends TeaModel {
         /**
          * <p>The alias of the access point.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>logic_db_test</p>
          */
         @NameInMap("Alias")
         public String alias;
@@ -263,39 +313,55 @@ public class GetDBTopologyResponseBody extends TeaModel {
 
         /**
          * <p>The type of the database engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>polardb</p>
          */
         @NameInMap("DbType")
         public String dbType;
 
         /**
          * <p>The type of the environment in which the database instance is deployed. Valid values:</p>
-         * <br>
-         * <p>*   product: production environment</p>
-         * <p>*   dev: development environment</p>
-         * <p>*   pre: pre-release environment</p>
-         * <p>*   test: test environment</p>
-         * <p>*   sit: system integration testing (SIT) environment</p>
-         * <p>*   uat: user acceptance testing (UAT) environment</p>
-         * <p>*   pet: stress testing environment</p>
-         * <p>*   stag: staging environment</p>
+         * <ul>
+         * <li>product: production environment</li>
+         * <li>dev: development environment</li>
+         * <li>pre: pre-release environment</li>
+         * <li>test: test environment</li>
+         * <li>sit: system integration testing (SIT) environment</li>
+         * <li>uat: user acceptance testing (UAT) environment</li>
+         * <li>pet: stress testing environment</li>
+         * <li>stag: staging environment</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>dev</p>
          */
         @NameInMap("EnvType")
         public String envType;
 
         /**
          * <p>The ID of the logical database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         @NameInMap("LogicDbId")
         public Long logicDbId;
 
         /**
          * <p>Logical database name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>logic_db_test</p>
          */
         @NameInMap("LogicDbName")
         public String logicDbName;
 
         /**
          * <p>The name of the saved search.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>logic_db_test</p>
          */
         @NameInMap("SearchName")
         public String searchName;

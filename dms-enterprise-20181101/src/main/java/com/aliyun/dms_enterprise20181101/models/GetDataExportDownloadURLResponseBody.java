@@ -12,27 +12,40 @@ public class GetDataExportDownloadURLResponseBody extends TeaModel {
 
     /**
      * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4BF24EA5-9013-4C85-AE68-6C23AF5E0097</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request was successful.</p>
-     * <p>*   **false**: The request failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,21 +98,31 @@ public class GetDataExportDownloadURLResponseBody extends TeaModel {
     public static class GetDataExportDownloadURLResponseBodyDownloadURLResult extends TeaModel {
         /**
          * <p>Indicates whether export results are available for download. Valid values:</p>
-         * <br>
-         * <p>*   **true**: Export results are available for download.</p>
-         * <p>*   **false**: No export results are available for download.</p>
+         * <ul>
+         * <li><strong>true</strong>: Export results are available for download.</li>
+         * <li><strong>false</strong>: No export results are available for download.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("HasResult")
         public Boolean hasResult;
 
         /**
          * <p>The message that indicates an exception.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tip message</p>
          */
         @NameInMap("TipMessage")
         public String tipMessage;
 
         /**
          * <p>The download URL of the file that records the export results for the ticket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://dms-idb-hangzhou.oss-cn-hangzhou.aliyuncs.com/xxx.zip">https://dms-idb-hangzhou.oss-cn-hangzhou.aliyuncs.com/xxx.zip</a></p>
          */
         @NameInMap("URL")
         public String URL;

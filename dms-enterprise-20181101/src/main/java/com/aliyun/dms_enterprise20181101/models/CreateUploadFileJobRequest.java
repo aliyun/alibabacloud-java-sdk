@@ -6,41 +6,54 @@ import com.aliyun.tea.*;
 public class CreateUploadFileJobRequest extends TeaModel {
     /**
      * <p>The name of the attachment file.</p>
-     * <br>
-     * <p>>  The file name must end with .txt or .sql. For example, the file name can be test.txt or test.sql.</p>
-     * <br>
+     * <blockquote>
+     * <p> The file name must end with .txt or .sql. For example, the file name can be test.txt or test.sql.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test.txt</p>
      */
     @NameInMap("FileName")
     public String fileName;
 
     /**
      * <p>The purpose of the attachment file. Valid values:</p>
-     * <br>
-     * <p>*   **datacorrect**: The file is uploaded to change data.</p>
-     * <p>*   **order_info_attachment**: The file is uploaded as an attachment in a ticket.</p>
-     * <p>*   **big-file**: The file is uploaded to import multiple data records at a time.</p>
-     * <p>*   **sqlreview**: The file is uploaded for SQL review.</p>
-     * <br>
+     * <ul>
+     * <li><strong>datacorrect</strong>: The file is uploaded to change data.</li>
+     * <li><strong>order_info_attachment</strong>: The file is uploaded as an attachment in a ticket.</li>
+     * <li><strong>big-file</strong>: The file is uploaded to import multiple data records at a time.</li>
+     * <li><strong>sqlreview</strong>: The file is uploaded for SQL review.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>datacorrect</p>
      */
     @NameInMap("FileSource")
     public String fileSource;
 
     /**
      * <p>The ID of the tenant.</p>
-     * <br>
-     * <p>>  You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) operation to query the tenant ID.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> operation to query the tenant ID.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>3***</p>
      */
     @NameInMap("Tid")
     public Long tid;
 
     /**
      * <p>The URL of the attachment file. The URL must be an HTTP URL or an HTTPS URL.</p>
-     * <br>
-     * <p>>  You can upload the attachment file to an Object Storage Service (OSS) bucket and obtain the URL of the file in the OSS console. For more information, see [Share objects](https://help.aliyun.com/document_detail/195674.html).</p>
-     * <br>
+     * <blockquote>
+     * <p> You can upload the attachment file to an Object Storage Service (OSS) bucket and obtain the URL of the file in the OSS console. For more information, see <a href="https://help.aliyun.com/document_detail/195674.html">Share objects</a>.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://XXX.oss-cn-hangzhou.aliyuncs.com/test.txt">https://XXX.oss-cn-hangzhou.aliyuncs.com/test.txt</a></p>
      */
     @NameInMap("UploadURL")
     public String uploadURL;

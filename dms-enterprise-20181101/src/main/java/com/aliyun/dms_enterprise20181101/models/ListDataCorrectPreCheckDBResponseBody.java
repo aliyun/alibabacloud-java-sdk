@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ListDataCorrectPreCheckDBResponseBody extends TeaModel {
     /**
      * <p>The error code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
@@ -24,12 +30,18 @@ public class ListDataCorrectPreCheckDBResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>95A972AF-FAED-4768-9360-7C0DF5D594D0</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -82,18 +94,27 @@ public class ListDataCorrectPreCheckDBResponseBody extends TeaModel {
     public static class ListDataCorrectPreCheckDBResponseBodyPreCheckDBList extends TeaModel {
         /**
          * <p>The ID of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>43***</p>
          */
         @NameInMap("DbId")
         public Long dbId;
 
         /**
          * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test@localhost:3306</p>
          */
         @NameInMap("SearchName")
         public String searchName;
 
         /**
          * <p>The number of SQL statements.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("SqlNum")
         public Long sqlNum;

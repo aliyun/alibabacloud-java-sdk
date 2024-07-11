@@ -6,74 +6,105 @@ import com.aliyun.tea.*;
 public class SearchTableRequest extends TeaModel {
     /**
      * <p>The type of database. Valid values:</p>
-     * <br>
-     * <p>*   **MySQL**</p>
-     * <p>*   **SQLServer**</p>
-     * <p>*   **PostgreSQL**</p>
-     * <p>*   **Oracle**</p>
-     * <p>*   **DRDS**</p>
-     * <p>*   **OceanBase**</p>
-     * <p>*   **Mongo**</p>
-     * <p>*   **Redis**</p>
+     * <ul>
+     * <li><strong>MySQL</strong></li>
+     * <li><strong>SQLServer</strong></li>
+     * <li><strong>PostgreSQL</strong></li>
+     * <li><strong>Oracle</strong></li>
+     * <li><strong>DRDS</strong></li>
+     * <li><strong>OceanBase</strong></li>
+     * <li><strong>Mongo</strong></li>
+     * <li><strong>Redis</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>MySQL</p>
      */
     @NameInMap("DbType")
     public String dbType;
 
     /**
-     * <p>The type of the environment to which databases belong. For more information, see [Change the environment type of an instance](https://help.aliyun.com/document_detail/163309.html).</p>
+     * <p>The type of the environment to which databases belong. For more information, see <a href="https://help.aliyun.com/document_detail/163309.html">Change the environment type of an instance</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PRODUCT</p>
      */
     @NameInMap("EnvType")
     public String envType;
 
     /**
      * <p>The number of the page to return.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>Specifies whether to return the GUID of each table.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("ReturnGuid")
     public Boolean returnGuid;
 
     /**
      * <p>The keyword that is used to query tables.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("SearchKey")
     public String searchKey;
 
     /**
      * <p>The scope of tables that you want to query. Valid values:</p>
-     * <br>
-     * <p>*   **HAS_PERMSSION**: the tables on which the current account has permissions.</p>
-     * <p>*   **OWNER**: the tables owned by the current account.</p>
-     * <p>*   **MY_FOCUS**: the tables that the current account follows.</p>
-     * <p>*   **UNKNOWN**: all tables.</p>
+     * <ul>
+     * <li><strong>HAS_PERMSSION</strong>: the tables on which the current account has permissions.</li>
+     * <li><strong>OWNER</strong>: the tables owned by the current account.</li>
+     * <li><strong>MY_FOCUS</strong>: the tables that the current account follows.</li>
+     * <li><strong>UNKNOWN</strong>: all tables.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>OWNER</p>
      */
     @NameInMap("SearchRange")
     public String searchRange;
 
     /**
      * <p>The type of table that you want to query. Valid values:</p>
-     * <br>
-     * <p>*   **TABLE**: physical and logical tables</p>
-     * <p>*   **SINGLE_TABLE**: physical tables</p>
-     * <p>*   **LOGIC_TABLE**: logical tables</p>
+     * <ul>
+     * <li><strong>TABLE</strong>: physical and logical tables</li>
+     * <li><strong>SINGLE_TABLE</strong>: physical tables</li>
+     * <li><strong>LOGIC_TABLE</strong>: logical tables</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>LOGIC_TABLE</p>
      */
     @NameInMap("SearchTarget")
     public String searchTarget;
 
     /**
      * <p>The ID of the tenant.</p>
-     * <br>
-     * <p>> To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the [View information about the current tenant](https://help.aliyun.com/document_detail/181330.html) section of the "Manage DMS tenants" topic.</p>
+     * <blockquote>
+     * <p>To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see the <a href="https://help.aliyun.com/document_detail/181330.html">View information about the current tenant</a> section of the &quot;Manage DMS tenants&quot; topic.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Tid")
     public Long tid;

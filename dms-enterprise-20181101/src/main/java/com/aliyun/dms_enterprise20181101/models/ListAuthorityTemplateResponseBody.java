@@ -7,21 +7,45 @@ public class ListAuthorityTemplateResponseBody extends TeaModel {
     @NameInMap("AuthorityTemplateViewList")
     public ListAuthorityTemplateResponseBodyAuthorityTemplateViewList authorityTemplateViewList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>31853A2B-DC9D-5B39-8492-D2AC8BCF550E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3***</p>
+     */
     @NameInMap("Tid")
     public Long tid;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -87,9 +111,17 @@ public class ListAuthorityTemplateResponseBody extends TeaModel {
     }
 
     public static class ListAuthorityTemplateResponseBodyAuthorityTemplateViewListAuthorityTemplateView extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2023-10-26 11:37:47</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>522****</p>
+         */
         @NameInMap("CreatorId")
         public Long creatorId;
 
@@ -99,6 +131,10 @@ public class ListAuthorityTemplateResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2592</p>
+         */
         @NameInMap("TemplateId")
         public Long templateId;
 

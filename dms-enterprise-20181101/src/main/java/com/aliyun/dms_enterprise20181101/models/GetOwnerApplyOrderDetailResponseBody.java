@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class GetOwnerApplyOrderDetailResponseBody extends TeaModel {
     /**
      * <p>The error code returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
@@ -24,12 +30,18 @@ public class GetOwnerApplyOrderDetailResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CB784055-E8CB-4461-AB0B-483A1DA32BB5</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -82,12 +94,18 @@ public class GetOwnerApplyOrderDetailResponseBody extends TeaModel {
     public static class GetOwnerApplyOrderDetailResponseBodyOwnerApplyOrderDetailResourcesResourceDetail extends TeaModel {
         /**
          * <p>The type of the database engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MYSQL</p>
          */
         @NameInMap("DbType")
         public String dbType;
 
         /**
-         * <p>The type of the environment to which the instance belongs. For more information, see [Change the environment type of an instance](https://help.aliyun.com/document_detail/163309.html).</p>
+         * <p>The type of the environment to which the instance belongs. For more information, see <a href="https://help.aliyun.com/document_detail/163309.html">Change the environment type of an instance</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PRODUCT</p>
          */
         @NameInMap("EnvType")
         public String envType;
@@ -106,14 +124,21 @@ public class GetOwnerApplyOrderDetailResponseBody extends TeaModel {
 
         /**
          * <p>The search name of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yuyang【test】</p>
          */
         @NameInMap("SearchName")
         public String searchName;
 
         /**
          * <p>The name of the table.</p>
-         * <br>
-         * <p>> : This parameter is returned when you submit a Database-OWNER ticket.</p>
+         * <blockquote>
+         * <p>: This parameter is returned when you submit a Database-OWNER ticket.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("TableName")
         public String tableName;
@@ -176,9 +201,13 @@ public class GetOwnerApplyOrderDetailResponseBody extends TeaModel {
     public static class GetOwnerApplyOrderDetailResponseBodyOwnerApplyOrderDetailResources extends TeaModel {
         /**
          * <p>Indicates whether the database is a logical database. Valid values:</p>
-         * <br>
-         * <p>*   **true**: The instance is a logical database.</p>
-         * <p>*   **false**: The instance is not a logical database.</p>
+         * <ul>
+         * <li><strong>true</strong>: The instance is a logical database.</li>
+         * <li><strong>false</strong>: The instance is not a logical database.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Logic")
         public Boolean logic;
@@ -191,6 +220,9 @@ public class GetOwnerApplyOrderDetailResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         @NameInMap("TargetId")
         public String targetId;
@@ -229,10 +261,14 @@ public class GetOwnerApplyOrderDetailResponseBody extends TeaModel {
     public static class GetOwnerApplyOrderDetailResponseBodyOwnerApplyOrderDetail extends TeaModel {
         /**
          * <p>The type of the submitted ticket. Valid values:</p>
-         * <br>
-         * <p>*   **INSTANCE**: the ticket that applies for the permissions to be an instance owner</p>
-         * <p>*   **DB**: the ticket that applies for the permissions to be a database owner</p>
-         * <p>*   **TABLE**: the ticket that applies for the permissions to be a table owner</p>
+         * <ul>
+         * <li><strong>INSTANCE</strong>: the ticket that applies for the permissions to be an instance owner</li>
+         * <li><strong>DB</strong>: the ticket that applies for the permissions to be a database owner</li>
+         * <li><strong>TABLE</strong>: the ticket that applies for the permissions to be a table owner</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DB</p>
          */
         @NameInMap("ApplyType")
         public String applyType;

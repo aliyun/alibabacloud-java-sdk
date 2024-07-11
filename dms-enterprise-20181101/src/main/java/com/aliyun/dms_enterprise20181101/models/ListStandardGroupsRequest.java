@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListStandardGroupsRequest extends TeaModel {
     /**
      * <p>The ID of the tenant.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3***</p>
      */
     @NameInMap("Tid")
     public Long tid;

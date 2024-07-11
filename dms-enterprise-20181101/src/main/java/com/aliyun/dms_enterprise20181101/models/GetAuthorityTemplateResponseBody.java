@@ -12,33 +12,49 @@ public class GetAuthorityTemplateResponseBody extends TeaModel {
 
     /**
      * <p>The error code returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0C1CB646-1DE4-4AD0-B4A4-7D47DD52E931</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request was successful.</p>
-     * <p>*   **false**: The request failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The ID of the tenant.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3***</p>
      */
     @NameInMap("Tid")
     public Long tid;
@@ -99,54 +115,81 @@ public class GetAuthorityTemplateResponseBody extends TeaModel {
     public static class GetAuthorityTemplateResponseBodyAuthorityTemplateViewAuthorityTemplateItemListAuthorityTemplateItem extends TeaModel {
         /**
          * <p>Other information. For example, you can add the logon permission on an instance to the permission template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;permissionTypes&quot;: [
+         *             &quot;LOGIN&quot;
+         *           ]</p>
          */
         @NameInMap("Attribute")
         public String attribute;
 
         /**
          * <p>The ID of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>43***</p>
          */
         @NameInMap("DbId")
         public Long dbId;
 
         /**
          * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>188****</p>
          */
         @NameInMap("InstanceId")
         public Long instanceId;
 
         /**
          * <p>The ID of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12***</p>
          */
         @NameInMap("ItemId")
         public Long itemId;
 
         /**
          * <p>The ID of the user who modified the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>51***</p>
          */
         @NameInMap("ModifierId")
         public Long modifierId;
 
         /**
          * <p>The type of the resource. Valid values:</p>
-         * <br>
-         * <p>*   **INSTANCE**: instance</p>
-         * <p>*   **LOGIC_DB**: logical database</p>
-         * <p>*   **META_DB**: physical database</p>
-         * <p>*   **LOGIC_TABLE**: logical table</p>
-         * <p>*   **SINGLE_TABLE**: physical table</p>
+         * <ul>
+         * <li><strong>INSTANCE</strong>: instance</li>
+         * <li><strong>LOGIC_DB</strong>: logical database</li>
+         * <li><strong>META_DB</strong>: physical database</li>
+         * <li><strong>LOGIC_TABLE</strong>: logical table</li>
+         * <li><strong>SINGLE_TABLE</strong>: physical table</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>INSTANCE</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
          * <p>The name of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ExampleTable</p>
          */
         @NameInMap("TableName")
         public String tableName;
 
         /**
          * <p>The ID of the permission template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1563</p>
          */
         @NameInMap("TemplateId")
         public Long templateId;
@@ -250,30 +293,45 @@ public class GetAuthorityTemplateResponseBody extends TeaModel {
 
         /**
          * <p>The time when the permission template was created. The time is in the yyyy-MM-DD HH:mm:ss format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-01-01 00:00:00</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The ID of the user who created the permission template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12***</p>
          */
         @NameInMap("CreatorId")
         public Long creatorId;
 
         /**
          * <p>The description of the permission template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This template is used for business testing.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the permission template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestTemplate</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The ID of the permission template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1563</p>
          */
         @NameInMap("TemplateId")
         public Long templateId;

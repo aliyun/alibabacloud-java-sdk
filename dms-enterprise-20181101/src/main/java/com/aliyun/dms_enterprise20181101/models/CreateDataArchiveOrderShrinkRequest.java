@@ -6,15 +6,16 @@ import com.aliyun.tea.*;
 public class CreateDataArchiveOrderShrinkRequest extends TeaModel {
     /**
      * <p>The description of the task.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Comment")
     public String comment;
 
     /**
      * <p>The parameters for archiving data.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Param")
@@ -22,12 +23,18 @@ public class CreateDataArchiveOrderShrinkRequest extends TeaModel {
 
     /**
      * <p>The ID of the parent ticket. A parent ticket is generated only when a child ticket is created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123****</p>
      */
     @NameInMap("ParentId")
     public Long parentId;
 
     /**
      * <p>The type of the plug-in. Default value: DATA_ARCHIVE.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DATA_ARCHIVE</p>
      */
     @NameInMap("PluginType")
     public String pluginType;
@@ -39,7 +46,10 @@ public class CreateDataArchiveOrderShrinkRequest extends TeaModel {
     public String relatedUserListShrink;
 
     /**
-     * <p>The tenant ID. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) or [ListUserTenants](https://help.aliyun.com/document_detail/198074.html) operation to obtain the tenant ID.</p>
+     * <p>The tenant ID. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> or <a href="https://help.aliyun.com/document_detail/198074.html">ListUserTenants</a> operation to obtain the tenant ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3***</p>
      */
     @NameInMap("Tid")
     public Long tid;

@@ -18,12 +18,18 @@ public class DownloadDataTrackResultShrinkRequest extends TeaModel {
 
     /**
      * <p>The end time of the time range in which you want to track data operations. The time must be specified in the yyyy-MM-dd HH:mm:ss format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-04-23 10:00:00</p>
      */
     @NameInMap("FilterEndTime")
     public String filterEndTime;
 
     /**
      * <p>The start time of the time range in which you want to track data operations. The time must be specified in the yyyy-MM-dd HH:mm:ss format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-04-23 00:00:00</p>
      */
     @NameInMap("FilterStartTime")
     public String filterStartTime;
@@ -41,26 +47,34 @@ public class DownloadDataTrackResultShrinkRequest extends TeaModel {
     public String filterTypeListShrink;
 
     /**
-     * <p>The ID of the ticket. You can call the [ListOrders](https://help.aliyun.com/document_detail/144643.html) operation to obtain the ticket ID.</p>
-     * <br>
+     * <p>The ID of the ticket. You can call the <a href="https://help.aliyun.com/document_detail/144643.html">ListOrders</a> operation to obtain the ticket ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>406****</p>
      */
     @NameInMap("OrderId")
     public Long orderId;
 
     /**
      * <p>The type of the SQL statement.</p>
-     * <br>
-     * <p>*   **REVERSE**: undoes or rolls back an executed SQL statement, which is equivalent to the UNDO SQL statement.</p>
-     * <p>*   **FORWARD**: redoes or re-executes an SQL statement that failed to be executed, which is equivalent to the REDO SQL statement.</p>
-     * <br>
+     * <ul>
+     * <li><strong>REVERSE</strong>: undoes or rolls back an executed SQL statement, which is equivalent to the UNDO SQL statement.</li>
+     * <li><strong>FORWARD</strong>: redoes or re-executes an SQL statement that failed to be executed, which is equivalent to the REDO SQL statement.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>REVERSE</p>
      */
     @NameInMap("RollbackSQLType")
     public String rollbackSQLType;
 
     /**
-     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) or [ListUserTenants](https://help.aliyun.com/document_detail/198074.html) operation to query the tenant ID.</p>
+     * <p>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> or <a href="https://help.aliyun.com/document_detail/198074.html">ListUserTenants</a> operation to query the tenant ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3***</p>
      */
     @NameInMap("Tid")
     public Long tid;

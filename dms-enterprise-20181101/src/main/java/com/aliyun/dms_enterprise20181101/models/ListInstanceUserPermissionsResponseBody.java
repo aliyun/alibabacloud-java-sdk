@@ -6,33 +6,49 @@ import com.aliyun.tea.*;
 public class ListInstanceUserPermissionsResponseBody extends TeaModel {
     /**
      * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7D162AAE-6501-5691-BF14-D7018F662895</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful. Valid values:</p>
-     * <br>
-     * <p>- true: The request is successful.</p>
-     * <p>- false: The request fails.</p>
+     * <ul>
+     * <li>true: The request is successful.</li>
+     * <li>false: The request fails.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The total number of returned entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -99,39 +115,58 @@ public class ListInstanceUserPermissionsResponseBody extends TeaModel {
     public static class ListInstanceUserPermissionsResponseBodyUserPermissionsUserPermissionPermDetailsPermDetail extends TeaModel {
         /**
          * <p>The time when the permissions were granted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-12-12 00:00:00</p>
          */
         @NameInMap("CreateDate")
         public String createDate;
 
         /**
          * <p>The time when the permissions expire.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-12-12 00:00:00</p>
          */
         @NameInMap("ExpireDate")
         public String expireDate;
 
         /**
          * <p>This parameter is reserved.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>XXX</p>
          */
         @NameInMap("ExtraData")
         public String extraData;
 
         /**
          * <p>The user who grants the permissions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx authorization</p>
          */
         @NameInMap("OriginFrom")
         public String originFrom;
 
         /**
          * <p>The type of the permissions. Valid values:</p>
-         * <br>
-         * <p>*   LOGIN: the logon permissions</p>
-         * <p>*   PERF: the query permissions on the instance</p>
+         * <ul>
+         * <li>LOGIN: the logon permissions</li>
+         * <li>PERF: the query permissions on the instance</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>LOGIN</p>
          */
         @NameInMap("PermType")
         public String permType;
 
         /**
          * <p>The ID of the authorization record.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>773****</p>
          */
         @NameInMap("UserAccessId")
         public String userAccessId;
@@ -213,6 +248,9 @@ public class ListInstanceUserPermissionsResponseBody extends TeaModel {
     public static class ListInstanceUserPermissionsResponseBodyUserPermissionsUserPermission extends TeaModel {
         /**
          * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>174****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
@@ -225,12 +263,18 @@ public class ListInstanceUserPermissionsResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>51****</p>
          */
         @NameInMap("UserId")
         public String userId;
 
         /**
          * <p>The nickname of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_nick_name</p>
          */
         @NameInMap("UserNickName")
         public String userNickName;

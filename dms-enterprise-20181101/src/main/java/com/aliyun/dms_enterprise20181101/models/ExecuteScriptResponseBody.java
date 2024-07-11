@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class ExecuteScriptResponseBody extends TeaModel {
     /**
      * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message about the gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FE8EE2F1-4880-46BC-A704-5CF63EAF9A04</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -30,6 +39,9 @@ public class ExecuteScriptResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -88,12 +100,18 @@ public class ExecuteScriptResponseBody extends TeaModel {
 
         /**
          * <p>The error message that is returned if the SQL statement fails to be executed. For example, an error message is returned because the SQL statement is invalid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UnknownError</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
          * <p>The total number of entries that are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("RowCount")
         public Long rowCount;
@@ -106,6 +124,9 @@ public class ExecuteScriptResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether the SQL statement is executed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Success")
         public Boolean success;

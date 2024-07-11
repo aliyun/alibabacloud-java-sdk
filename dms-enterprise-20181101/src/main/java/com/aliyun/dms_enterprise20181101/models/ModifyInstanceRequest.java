@@ -4,96 +4,207 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>dblink_test</p>
+     */
     @NameInMap("DataLinkName")
     public String dataLinkName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test***</p>
+     */
     @NameInMap("DatabasePassword")
     public String databasePassword;
 
+    /**
+     * <strong>example:</strong>
+     * <p>testsdb</p>
+     */
     @NameInMap("DatabaseUser")
     public String databaseUser;
 
+    /**
+     * <strong>example:</strong>
+     * <p>27****</p>
+     */
     @NameInMap("DbaId")
     public Long dbaId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("DdlOnline")
     public Integer ddlOnline;
 
+    /**
+     * <strong>example:</strong>
+     * <p>i-2zei9gs1t7h8l7ac****</p>
+     */
     @NameInMap("EcsInstanceId")
     public String ecsInstanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("EcsRegion")
     public String ecsRegion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Y</p>
+     */
     @NameInMap("EnableSellCommon")
     public String enableSellCommon;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Y</p>
+     */
     @NameInMap("EnableSellSitd")
     public String enableSellSitd;
 
+    /**
+     * <strong>example:</strong>
+     * <p>NULL</p>
+     */
     @NameInMap("EnableSellStable")
     public String enableSellStable;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Y</p>
+     */
     @NameInMap("EnableSellTrust")
     public String enableSellTrust;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dev</p>
+     */
     @NameInMap("EnvType")
     public String envType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>86400</p>
+     */
     @NameInMap("ExportTimeout")
     public Integer exportTimeout;
 
+    /**
+     * <strong>example:</strong>
+     * <p>192.XXX.0.56</p>
+     */
     @NameInMap("Host")
     public String host;
 
+    /**
+     * <strong>example:</strong>
+     * <p>instance_test</p>
+     */
     @NameInMap("InstanceAlias")
     public String instanceAlias;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>183****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>RDS</p>
+     */
     @NameInMap("InstanceSource")
     public String instanceSource;
 
+    /**
+     * <strong>example:</strong>
+     * <p>MySQL</p>
+     */
     @NameInMap("InstanceType")
     public String instanceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>VPC</p>
+     */
     @NameInMap("NetworkType")
     public String networkType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3306</p>
+     */
     @NameInMap("Port")
     public Integer port;
 
+    /**
+     * <strong>example:</strong>
+     * <p>7200</p>
+     */
     @NameInMap("QueryTimeout")
     public Integer queryTimeout;
 
     @NameInMap("SafeRule")
     public String safeRule;
 
+    /**
+     * <strong>example:</strong>
+     * <p>testSid</p>
+     */
     @NameInMap("Sid")
     public String sid;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("SkipTest")
     public Boolean skipTest;
 
+    /**
+     * <strong>example:</strong>
+     * <p>31***</p>
+     */
     @NameInMap("TemplateId")
     public Long templateId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>INNER</p>
+     */
     @NameInMap("TemplateType")
     public String templateType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>23****</p>
+     */
     @NameInMap("Tid")
     public Long tid;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("UseDsql")
     public Integer useDsql;
 
     @NameInMap("UseSsl")
     public Integer useSsl;
 
+    /**
+     * <strong>example:</strong>
+     * <p>vpc-bp10wnlcmor****</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 

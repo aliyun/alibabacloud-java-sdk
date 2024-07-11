@@ -6,26 +6,37 @@ import com.aliyun.tea.*;
 public class CreateTaskFlowRequest extends TeaModel {
     /**
      * <p>The name of the task flow.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Dag_Name</p>
      */
     @NameInMap("DagName")
     public String dagName;
 
     /**
      * <p>The description of the task flow.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>zht_test</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The ID of the scenario.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2**</p>
      */
     @NameInMap("ScenarioId")
     public Long scenarioId;
 
     /**
-     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) or [ListUserTenants](https://help.aliyun.com/document_detail/198074.html) operation to query the tenant ID.</p>
+     * <p>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> or <a href="https://help.aliyun.com/document_detail/198074.html">ListUserTenants</a> operation to query the tenant ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3***</p>
      */
     @NameInMap("Tid")
     public Long tid;

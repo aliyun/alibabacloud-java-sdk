@@ -4,18 +4,49 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class GetTableDesignProjectFlowResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The information about the schema design process.</p>
+     */
     @NameInMap("ProjectFlow")
     public GetTableDesignProjectFlowResponseBodyProjectFlow projectFlow;
 
+    /**
+     * <p>The request ID. You can use the request ID to query logs and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B5FD0BC8-2D90-4478-B8EC-A0E92E0B1773</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,24 +96,74 @@ public class GetTableDesignProjectFlowResponseBody extends TeaModel {
     }
 
     public static class GetTableDesignProjectFlowResponseBodyProjectFlowFlowNodeArray extends TeaModel {
+        /**
+         * <p>Indicates whether the ticket can be returned to the schema design node. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: The ticket can be returned to the schema design node.</li>
+         * <li><strong>0</strong>: The ticket cannot be returned to the schema design node. This value can be returned only for the PUBLISH node.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("BackToDesign")
         public Boolean backToDesign;
 
+        /**
+         * <p>Indicates whether the current node can be skipped. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: The current node can be skipped.</li>
+         * <li><strong>0</strong>: The current node cannot be skipped. This value can be returned only for the PUBLISH node.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("CanSkip")
         public Boolean canSkip;
 
+        /**
+         * <p>The role of the node in the process.</p>
+         * <ul>
+         * <li>START: The ticket was created.</li>
+         * <li>DESIGN: The schema is being created.</li>
+         * <li>PUBLISH: The schema is published.</li>
+         * <li>END: The ticket is complete.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DESIGN</p>
+         */
         @NameInMap("NodeRole")
         public String nodeRole;
 
+        /**
+         * <p>The title of the node.</p>
+         */
         @NameInMap("NodeTitle")
         public String nodeTitle;
 
+        /**
+         * <p>The position of the node in the process. The value starts from 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Position")
         public Integer position;
 
+        /**
+         * <p>Indicates whether the node is the anchor node. A schema design process has only one anchor node, on which the schema is published. After the schema is published on the anchor node, a post-publish image is generated and the DDL metadata lock is released.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("PublishAnchor")
         public Boolean publishAnchor;
 
+        /**
+         * <p>The available publishing strategies.</p>
+         */
         @NameInMap("PublishStrategies")
         public java.util.List<String> publishStrategies;
 
@@ -150,15 +231,36 @@ public class GetTableDesignProjectFlowResponseBody extends TeaModel {
     }
 
     public static class GetTableDesignProjectFlowResponseBodyProjectFlow extends TeaModel {
+        /**
+         * <p>The position of the current node in the process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("CurrentPosition")
         public Integer currentPosition;
 
+        /**
+         * <p>The nodes in the process.</p>
+         */
         @NameInMap("FlowNodeArray")
         public java.util.List<GetTableDesignProjectFlowResponseBodyProjectFlowFlowNodeArray> flowNodeArray;
 
+        /**
+         * <p>The description of the security rule set that is applied to the schema design ticket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysq_test</p>
+         */
         @NameInMap("RuleComment")
         public String ruleComment;
 
+        /**
+         * <p>The name of the security rule set that is applied to the schema design ticket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql default</p>
+         */
         @NameInMap("RuleName")
         public String ruleName;
 

@@ -12,24 +12,36 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
 
     /**
      * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>853F7FD4-D922-4EFB-931C-D253EF159E06</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -82,18 +94,27 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
     public static class GetTableDBTopologyResponseBodyDBTopologyDataSourceListDatabaseListTableList extends TeaModel {
         /**
          * <p>The ID of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         @NameInMap("TableId")
         public String tableId;
 
         /**
          * <p>The name of the physical table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>151977812</p>
          */
         @NameInMap("TableName")
         public String tableName;
 
         /**
          * <p>The type of the table. This is a reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yuyang_test_0000</p>
          */
         @NameInMap("TableType")
         public String tableType;
@@ -132,35 +153,49 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
     public static class GetTableDBTopologyResponseBodyDBTopologyDataSourceListDatabaseList extends TeaModel {
         /**
          * <p>The ID of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>489347</p>
          */
         @NameInMap("DbId")
         public String dbId;
 
         /**
          * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>db-test</p>
          */
         @NameInMap("DbName")
         public String dbName;
 
         /**
-         * <p>The type of the database. For more information about the valid values of this parameter, see [DbType parameter](https://help.aliyun.com/document_detail/198106.html).</p>
+         * <p>The type of the database. For more information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/198106.html">DbType parameter</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         @NameInMap("DbType")
         public String dbType;
 
         /**
          * <p>The type of the environment to which the database belongs. Valid values:</p>
-         * <br>
-         * <p>*   **product**: production environment</p>
-         * <p>*   **dev**: development environment</p>
-         * <p>*   **pre**: pre-release environment</p>
-         * <p>*   **test**: test environment</p>
-         * <p>*   **sit**: system integration testing (SIT) environment</p>
-         * <p>*   **uat**: user acceptance testing (UAT) environment</p>
-         * <p>*   **pet**: stress testing environment</p>
-         * <p>*   **stag**: staging environment</p>
-         * <br>
-         * <p>> For more information, see [Change the environment type of an instance](https://help.aliyun.com/document_detail/163309.html).</p>
+         * <ul>
+         * <li><strong>product</strong>: production environment</li>
+         * <li><strong>dev</strong>: development environment</li>
+         * <li><strong>pre</strong>: pre-release environment</li>
+         * <li><strong>test</strong>: test environment</li>
+         * <li><strong>sit</strong>: system integration testing (SIT) environment</li>
+         * <li><strong>uat</strong>: user acceptance testing (UAT) environment</li>
+         * <li><strong>pet</strong>: stress testing environment</li>
+         * <li><strong>stag</strong>: staging environment</li>
+         * </ul>
+         * <blockquote>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/163309.html">Change the environment type of an instance</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>pre</p>
          */
         @NameInMap("EnvType")
         public String envType;
@@ -226,25 +261,37 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
         public java.util.List<GetTableDBTopologyResponseBodyDBTopologyDataSourceListDatabaseList> databaseList;
 
         /**
-         * <p>The type of the database. For more information about the valid values of this parameter, see [DbType parameter](https://help.aliyun.com/document_detail/198106.html).</p>
+         * <p>The type of the database. For more information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/198106.html">DbType parameter</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         @NameInMap("DbType")
         public String dbType;
 
         /**
          * <p>The endpoint of the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx.mysql.polardb.rds.aliyuncs.com</p>
          */
         @NameInMap("Host")
         public String host;
 
         /**
          * <p>The port that is used to connect to the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3306</p>
          */
         @NameInMap("Port")
         public Integer port;
 
         /**
          * <p>The system ID (SID) of the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>def</p>
          */
         @NameInMap("Sid")
         public String sid;
@@ -305,18 +352,26 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
 
         /**
          * <p>The GUID of the table in DMS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IDB_L_9032.db-test.yuyang_test</p>
          */
         @NameInMap("TableGuid")
         public String tableGuid;
 
         /**
          * <p>The name of the table.</p>
-         * <br>
-         * <p>> </p>
-         * <br>
-         * <p>*   If a logical table is queried, the name of the logical table is returned.</p>
-         * <br>
-         * <p>*   If a physical table is queried, the name of the physical table is returned.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>If a logical table is queried, the name of the logical table is returned.</p>
+         * </li>
+         * <li><p>If a physical table is queried, the name of the physical table is returned.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>yuyang_test</p>
          */
         @NameInMap("TableName")
         public String tableName;

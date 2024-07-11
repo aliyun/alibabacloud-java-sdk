@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class GetUserUploadFileJobResponseBody extends TeaModel {
     /**
      * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BDEFE9F2-B3B4-42D0-83AE-ECF9FC067DCD</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -82,18 +94,27 @@ public class GetUserUploadFileJobResponseBody extends TeaModel {
     public static class GetUserUploadFileJobResponseBodyUploadFileJobDetailUploadOSSParam extends TeaModel {
         /**
          * <p>The name of the OSS bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_bucket</p>
          */
         @NameInMap("BucketName")
         public String bucketName;
 
         /**
          * <p>The endpoint of the OSS bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://oss-cn-hangzhou.aliyuncs.com">http://oss-cn-hangzhou.aliyuncs.com</a></p>
          */
         @NameInMap("Endpoint")
         public String endpoint;
 
         /**
          * <p>The name of the OSS object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test.sql</p>
          */
         @NameInMap("ObjectName")
         public String objectName;
@@ -132,85 +153,120 @@ public class GetUserUploadFileJobResponseBody extends TeaModel {
     public static class GetUserUploadFileJobResponseBodyUploadFileJobDetail extends TeaModel {
         /**
          * <p>The key of the file that is returned after the file is uploaded. You can use this key when you upload the file as an attachment in a ticket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>upload_3c7edea3-e4c3-4403-857d-737043036f69_test.sql</p>
          */
         @NameInMap("AttachmentKey")
         public String attachmentKey;
 
         /**
          * <p>The name of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test.sql</p>
          */
         @NameInMap("FileName")
         public String fileName;
 
         /**
          * <p>The size of the file. Unit: byte.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2968269</p>
          */
         @NameInMap("FileSize")
         public Long fileSize;
 
         /**
          * <p>The purpose of the uploaded file. Valid values:</p>
-         * <br>
-         * <p>*   **datacorrect**: The file is uploaded to change data.</p>
-         * <p>*   **order_info_attachment**: The file is uploaded as an attachment in a ticket.</p>
-         * <p>*   **big-file**: The file is uploaded to import multiple data records at a time.</p>
-         * <p>*   **sqlreview**: The file is uploaded for SQL review.</p>
+         * <ul>
+         * <li><strong>datacorrect</strong>: The file is uploaded to change data.</li>
+         * <li><strong>order_info_attachment</strong>: The file is uploaded as an attachment in a ticket.</li>
+         * <li><strong>big-file</strong>: The file is uploaded to import multiple data records at a time.</li>
+         * <li><strong>sqlreview</strong>: The file is uploaded for SQL review.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>datacorrect</p>
          */
         @NameInMap("FileSource")
         public String fileSource;
 
         /**
          * <p>The key of the file upload task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>65254a4c1614235217749100e</p>
          */
         @NameInMap("JobKey")
         public String jobKey;
 
         /**
          * <p>The status of the file upload task. Valid values:</p>
-         * <br>
-         * <p>*   **INIT**: The file upload task was initialized.</p>
-         * <p>*   **PENDING**: The file upload task waited to be run.</p>
-         * <p>*   **BE_SCHEDULED**: The file upload task waited to be scheduled.</p>
-         * <p>*   **FAIL**: The file upload task failed.</p>
-         * <p>*   **SUCCESS**: The file upload task was successful.</p>
-         * <p>*   **RUNNING**: The file upload task was being run.</p>
+         * <ul>
+         * <li><strong>INIT</strong>: The file upload task was initialized.</li>
+         * <li><strong>PENDING</strong>: The file upload task waited to be run.</li>
+         * <li><strong>BE_SCHEDULED</strong>: The file upload task waited to be scheduled.</li>
+         * <li><strong>FAIL</strong>: The file upload task failed.</li>
+         * <li><strong>SUCCESS</strong>: The file upload task was successful.</li>
+         * <li><strong>RUNNING</strong>: The file upload task was being run.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         @NameInMap("JobStatus")
         public String jobStatus;
 
         /**
          * <p>The information about the status of the file upload task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         @NameInMap("JobStatusDesc")
         public String jobStatusDesc;
 
         /**
          * <p>The information about the Object Storage Service (OSS) bucket from which the file is uploaded.</p>
-         * <br>
-         * <p>> This parameter is returned if the value of **UploadType** is **OSS**.</p>
+         * <blockquote>
+         * <p>This parameter is returned if the value of <strong>UploadType</strong> is <strong>OSS</strong>.</p>
+         * </blockquote>
          */
         @NameInMap("UploadOSSParam")
         public GetUserUploadFileJobResponseBodyUploadFileJobDetailUploadOSSParam uploadOSSParam;
 
         /**
          * <p>The method used to upload the file. Valid values:</p>
-         * <br>
-         * <p>*   **URL**</p>
-         * <p>*   **OSS**</p>
+         * <ul>
+         * <li><strong>URL</strong></li>
+         * <li><strong>OSS</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>URL</p>
          */
         @NameInMap("UploadType")
         public String uploadType;
 
         /**
          * <p>The URL of the file.</p>
-         * <br>
-         * <p>> This parameter is returned if the value of **UploadType** is **URL**.</p>
+         * <blockquote>
+         * <p>This parameter is returned if the value of <strong>UploadType</strong> is <strong>URL</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://xxxx/test.sql">http://xxxx/test.sql</a></p>
          */
         @NameInMap("UploadURL")
         public String uploadURL;
 
         /**
          * <p>The size of the uploaded file. Unit: byte.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2968269</p>
          */
         @NameInMap("UploadedSize")
         public Long uploadedSize;

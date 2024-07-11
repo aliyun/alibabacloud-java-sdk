@@ -6,40 +6,62 @@ import com.aliyun.tea.*;
 public class ChangeColumnSecurityLevelRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test_column</p>
      */
     @NameInMap("ColumnName")
     public String columnName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>325**</p>
      */
     @NameInMap("DbId")
     public Long dbId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("IsLogic")
     public Boolean isLogic;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>S2</p>
      */
     @NameInMap("NewSensitivityLevel")
     public String newSensitivityLevel;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test_schema</p>
      */
     @NameInMap("SchemaName")
     public String schemaName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test_table</p>
      */
     @NameInMap("TableName")
     public String tableName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10****</p>
+     */
     @NameInMap("Tid")
     public Long tid;
 

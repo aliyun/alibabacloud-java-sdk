@@ -4,15 +4,27 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListAuthorityTemplateRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("SearchKey")
     public String searchKey;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3***</p>
+     */
     @NameInMap("Tid")
     public Long tid;
 

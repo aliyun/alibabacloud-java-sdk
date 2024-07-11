@@ -6,10 +6,17 @@ import com.aliyun.tea.*;
 public class GetPagedInstanceRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>868*****</p>
      */
     @NameInMap("OrderId")
     public Long orderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3***</p>
+     */
     @NameInMap("Tid")
     public Long tid;
 

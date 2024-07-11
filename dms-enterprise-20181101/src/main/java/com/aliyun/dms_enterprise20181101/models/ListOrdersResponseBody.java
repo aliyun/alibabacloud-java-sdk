@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ListOrdersResponseBody extends TeaModel {
     /**
      * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
@@ -24,21 +30,31 @@ public class ListOrdersResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>427688B8-ADFB-4C4E-9D45-EF5C1FD6E23D</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>- **true**: The request was successful.</p>
-     * <p>- **false**: The request failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The total number of entries that are returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -99,63 +115,91 @@ public class ListOrdersResponseBody extends TeaModel {
     public static class ListOrdersResponseBodyOrdersOrder extends TeaModel {
         /**
          * <p>The remarks of the ticket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Comment")
         public String comment;
 
         /**
          * <p>The user who submitted the ticket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Committer")
         public String committer;
 
         /**
          * <p>The ID of the user who submitted the ticket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>51****</p>
          */
         @NameInMap("CommitterId")
         public Long committerId;
 
         /**
          * <p>The time when the ticket was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-04-08 11:15:46</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The time when the ticket was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-04-08 11:27:45</p>
          */
         @NameInMap("LastModifyTime")
         public String lastModifyTime;
 
         /**
          * <p>The ID of the ticket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>51****</p>
          */
         @NameInMap("OrderId")
         public Long orderId;
 
         /**
          * <p>The type of the ticket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DC_COMMON</p>
          */
         @NameInMap("PluginType")
         public String pluginType;
 
         /**
          * <p>The status code of the ticket. Valid values:</p>
-         * <br>
-         * <p>*   **fail**: The ticket fails to be executed.</p>
-         * <p>*   **toaudit**: The ticket is waiting for approval.</p>
-         * <p>*   **cancel**: The ticket is cancelled.</p>
-         * <p>*   **processing**: The ticket is being executed.</p>
-         * <p>*   **approved**: The ticket is approved.</p>
-         * <p>*   **reject**: The ticket is rejected.</p>
-         * <p>*   **success**: The ticket is executed.</p>
-         * <p>*   **closed**: The ticket is closed.</p>
+         * <ul>
+         * <li><strong>fail</strong>: The ticket fails to be executed.</li>
+         * <li><strong>toaudit</strong>: The ticket is waiting for approval.</li>
+         * <li><strong>cancel</strong>: The ticket is cancelled.</li>
+         * <li><strong>processing</strong>: The ticket is being executed.</li>
+         * <li><strong>approved</strong>: The ticket is approved.</li>
+         * <li><strong>reject</strong>: The ticket is rejected.</li>
+         * <li><strong>success</strong>: The ticket is executed.</li>
+         * <li><strong>closed</strong>: The ticket is closed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         @NameInMap("StatusCode")
         public String statusCode;
 
         /**
          * <p>The status description of the ticket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>changed successfully</p>
          */
         @NameInMap("StatusDesc")
         public String statusDesc;

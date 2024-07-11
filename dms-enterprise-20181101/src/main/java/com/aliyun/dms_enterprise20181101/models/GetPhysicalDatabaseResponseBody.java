@@ -12,24 +12,36 @@ public class GetPhysicalDatabaseResponseBody extends TeaModel {
 
     /**
      * <p>The error code returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7FAD400F-7A5C-4193-8F9A-39D86C4F0231</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -120,62 +132,93 @@ public class GetPhysicalDatabaseResponseBody extends TeaModel {
     public static class GetPhysicalDatabaseResponseBodyDatabase extends TeaModel {
         /**
          * <p>The name of the catalog to which the database belongs.</p>
-         * <br>
-         * <p>> : If the database is a PostgreSQL database, the name of the database is displayed.</p>
+         * <blockquote>
+         * <p>: If the database is a PostgreSQL database, the name of the database is displayed.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>def</p>
          */
         @NameInMap("CatalogName")
         public String catalogName;
 
         /**
          * <p>The ID of the physical database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>43125312</p>
          */
         @NameInMap("DatabaseId")
         public String databaseId;
 
         /**
          * <p>The type of the database engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql</p>
          */
         @NameInMap("DbType")
         public String dbType;
 
         /**
          * <p>The user ID of the DBA in the destination database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>43253</p>
          */
         @NameInMap("DbaId")
         public String dbaId;
 
         /**
          * <p>The nickname of the database administrator (DBA) in the destination database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dmstest</p>
          */
         @NameInMap("DbaName")
         public String dbaName;
 
         /**
          * <p>The encoding format of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>utf8mb4</p>
          */
         @NameInMap("Encoding")
         public String encoding;
 
         /**
-         * <p>The type of the environment to which the database belongs. For more information, see [Change the environment type of an instance](https://help.aliyun.com/document_detail/163309.html).</p>
+         * <p>The type of the environment to which the database belongs. For more information, see <a href="https://help.aliyun.com/document_detail/163309.html">Change the environment type of an instance</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>product</p>
          */
         @NameInMap("EnvType")
         public String envType;
 
         /**
          * <p>The endpoint that is used to connect to the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-xxxab3r272.mysql.rds.aliyuncs.com</p>
          */
         @NameInMap("Host")
         public String host;
 
         /**
          * <p>The alias of the database instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("InstanceAlias")
         public String instanceAlias;
 
         /**
          * <p>The instance ID of the destination database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>43215325</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
@@ -194,39 +237,57 @@ public class GetPhysicalDatabaseResponseBody extends TeaModel {
 
         /**
          * <p>The port that is used to connect to the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3306</p>
          */
         @NameInMap("Port")
         public Integer port;
 
         /**
          * <p>The name of the database.</p>
-         * <br>
-         * <p>> : If the database is a PostgreSQL database, the name of the mode is displayed.</p>
+         * <blockquote>
+         * <p>: If the database is a PostgreSQL database, the name of the mode is displayed.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>dmstest</p>
          */
         @NameInMap("SchemaName")
         public String schemaName;
 
         /**
          * <p>The name that is used for searching the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:dmstest@rm-xxxab3r272.mysql.rds.aliyuncs.com">dmstest@rm-xxxab3r272.mysql.rds.aliyuncs.com</a>:3306</p>
          */
         @NameInMap("SearchName")
         public String searchName;
 
         /**
          * <p>The system ID (SID) of the database.</p>
-         * <br>
-         * <p>> : The value of the parameter is returned only for Oracle databases.</p>
+         * <blockquote>
+         * <p>: The value of the parameter is returned only for Oracle databases.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>def</p>
          */
         @NameInMap("Sid")
         public String sid;
 
         /**
          * <p>The state of the database. Valid values:</p>
-         * <br>
-         * <p>*   **NORMAL**: The database is normal.</p>
-         * <p>*   **DISABLE**: The database is disabled.</p>
-         * <p>*   **OFFLINE**: The database is unpublished.</p>
-         * <p>*   **NOT_EXIST**: The database does not exist.</p>
+         * <ul>
+         * <li><strong>NORMAL</strong>: The database is normal.</li>
+         * <li><strong>DISABLE</strong>: The database is disabled.</li>
+         * <li><strong>OFFLINE</strong>: The database is unpublished.</li>
+         * <li><strong>NOT_EXIST</strong>: The database does not exist.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         @NameInMap("State")
         public String state;

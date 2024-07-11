@@ -12,24 +12,36 @@ public class GetMetaTableDetailInfoResponseBody extends TeaModel {
 
     /**
      * <p>The error code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E881CB2F-DE42-42E5-90EB-8B3173DCB9B9</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -82,66 +94,98 @@ public class GetMetaTableDetailInfoResponseBody extends TeaModel {
     public static class GetMetaTableDetailInfoResponseBodyDetailInfoColumnList extends TeaModel {
         /**
          * <p>Indicates whether the column is an auto-increment column. Valid values:</p>
-         * <br>
-         * <p>*   true: The column is an auto-increment column.</p>
-         * <p>*   false: The column is not an auto-increment column.</p>
+         * <ul>
+         * <li>true: The column is an auto-increment column.</li>
+         * <li>false: The column is not an auto-increment column.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("AutoIncrement")
         public Boolean autoIncrement;
 
         /**
          * <p>The ID of the column.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>191234849</p>
          */
         @NameInMap("ColumnId")
         public String columnId;
 
         /**
          * <p>The name of the column.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>id</p>
          */
         @NameInMap("ColumnName")
         public String columnName;
 
         /**
          * <p>The data type of the column. Examples: Bigint, Int, and Varchar.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bigint(20) unsigned</p>
          */
         @NameInMap("ColumnType")
         public String columnType;
 
         /**
          * <p>The length of the field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("DataLength")
         public Long dataLength;
 
         /**
          * <p>The precision of the field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("DataPrecision")
         public Integer dataPrecision;
 
         /**
          * <p>The scale of the column.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("DataScale")
         public Integer dataScale;
 
         /**
          * <p>The description of the column.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>Indicates whether the column is nullable. Valid values:</p>
-         * <br>
-         * <p>*   true: The column is nullable.</p>
-         * <p>*   false: The column is not nullable.</p>
+         * <ul>
+         * <li>true: The column is nullable.</li>
+         * <li>false: The column is not nullable.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Nullable")
         public Boolean nullable;
 
         /**
          * <p>The position of the field in the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Position")
         public String position;
@@ -242,27 +286,40 @@ public class GetMetaTableDetailInfoResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the index.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("IndexId")
         public String indexId;
 
         /**
          * <p>The name of the index.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PRIMARY</p>
          */
         @NameInMap("IndexName")
         public String indexName;
 
         /**
          * <p>The type of the index. Examples: Primary, Unique, and Normal.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Primary</p>
          */
         @NameInMap("IndexType")
         public String indexType;
 
         /**
          * <p>Indicates whether the index is unique. Valid values:</p>
-         * <br>
-         * <p>*   true: The index is unique.</p>
-         * <p>*   false: The index is not unique.</p>
+         * <ul>
+         * <li>true: The index is unique.</li>
+         * <li>false: The index is not unique.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Unique")
         public Boolean unique;

@@ -7,29 +7,60 @@ public class GetPagedInstanceResponseBody extends TeaModel {
     @NameInMap("Data")
     public GetPagedInstanceResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageIndex")
     public Long pageIndex;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>7FAD400F-7A5C-4193-8F9A-39D86C4F0231</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("Total")
     public Long total;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0a06e1e316757357507896067d3780</p>
      */
     @NameInMap("TraceId")
     public String traceId;
@@ -112,51 +143,111 @@ public class GetPagedInstanceResponseBody extends TeaModel {
     }
 
     public static class GetPagedInstanceResponseBodyDataInstance extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2023-05-14 16:00:57</p>
+         */
         @NameInMap("BusinessTime")
         public String businessTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("CheckStatus")
         public Long checkStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>33753</p>
+         */
         @NameInMap("DagId")
         public Long dagId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Delete")
         public String delete;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-04-23 10:23:20</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-03-28 10:50:45</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-04-18 15:28:16</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <strong>example:</strong>
+         * <p>6851</p>
+         */
         @NameInMap("HistoryDagId")
         public Long historyDagId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>24271</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{”nodes&quot;:[11694,11695]&quot;}</p>
+         */
         @NameInMap("LastRunningContext")
         public String lastRunningContext;
 
         @NameInMap("Msg")
         public String msg;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Status")
         public Long status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TaskType")
         public Long taskType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3406</p>
+         */
         @NameInMap("TenantId")
         public String tenantId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TriggerType")
         public Long triggerType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Version")
         public String version;
 

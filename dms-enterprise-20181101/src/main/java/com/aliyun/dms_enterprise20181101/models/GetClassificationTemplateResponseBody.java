@@ -7,15 +7,31 @@ public class GetClassificationTemplateResponseBody extends TeaModel {
     @NameInMap("ClassificationResourceTemplateMap")
     public GetClassificationTemplateResponseBodyClassificationResourceTemplateMap classificationResourceTemplateMap;
 
+    /**
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>427688B8-ADFB-4C4E-9D45-EF5C1FD6E23D</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,15 +81,31 @@ public class GetClassificationTemplateResponseBody extends TeaModel {
     }
 
     public static class GetClassificationTemplateResponseBodyClassificationResourceTemplateMap extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>24****</p>
+         */
         @NameInMap("ResourceId")
         public Long resourceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>INSTANCE</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3***</p>
+         */
         @NameInMap("TemplateId")
         public Long templateId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>INNER</p>
+         */
         @NameInMap("TemplateType")
         public String templateType;
 

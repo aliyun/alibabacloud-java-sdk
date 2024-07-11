@@ -6,18 +6,25 @@ import com.aliyun.tea.*;
 public class ListDDLPublishRecordsRequest extends TeaModel {
     /**
      * <p>The ID of the ticket.</p>
-     * <br>
-     * <p>> You can create a schema design ticket in the Data Management (DMS) console. For more information, see [Design schemas](https://help.aliyun.com/document_detail/69711.html). You can also call the [CreateOrder](https://help.aliyun.com/document_detail/144649.html) operation to create a schema design ticket and obtain the ID of the ticket.</p>
-     * <br>
+     * <blockquote>
+     * <p>You can create a schema design ticket in the Data Management (DMS) console. For more information, see <a href="https://help.aliyun.com/document_detail/69711.html">Design schemas</a>. You can also call the <a href="https://help.aliyun.com/document_detail/144649.html">CreateOrder</a> operation to create a schema design ticket and obtain the ID of the ticket.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3214325</p>
      */
     @NameInMap("OrderId")
     public Long orderId;
 
     /**
      * <p>The ID of the tenant.</p>
-     * <br>
-     * <p>> To view the ID of the tenant, log on to the DMS console and move the pointer over the profile picture in the upper-right corner. For more information, see [Manage DMS tenants](https://help.aliyun.com/document_detail/181330.html).</p>
+     * <blockquote>
+     * <p>To view the ID of the tenant, log on to the DMS console and move the pointer over the profile picture in the upper-right corner. For more information, see <a href="https://help.aliyun.com/document_detail/181330.html">Manage DMS tenants</a>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Tid")
     public Long tid;

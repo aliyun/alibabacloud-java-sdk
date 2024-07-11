@@ -12,24 +12,36 @@ public class GetSQLReviewCheckResultStatusResponseBody extends TeaModel {
 
     /**
      * <p>The error code returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0C1CB646-1DE4-4AD0-B4A4-7D47DD52E931</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -82,36 +94,54 @@ public class GetSQLReviewCheckResultStatusResponseBody extends TeaModel {
     public static class GetSQLReviewCheckResultStatusResponseBodyCheckResultStatusCheckStatusResult extends TeaModel {
         /**
          * <p>The number of SQL statements that failed to pass the review.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CheckNotPass")
         public Long checkNotPass;
 
         /**
          * <p>The number of SQL statements that passed the review.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         @NameInMap("CheckPass")
         public Long checkPass;
 
         /**
          * <p>The number of SQL statements that failed to pass the manual review.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ForceNotPass")
         public Long forceNotPass;
 
         /**
          * <p>The number of SQL statements that passed the manual review.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ForcePass")
         public Long forcePass;
 
         /**
          * <p>The number of SQL statements to be reviewed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("New")
         public Long _new;
 
         /**
          * <p>The number of abnormal SQL statements.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Unknown")
         public Long unknown;
@@ -174,36 +204,54 @@ public class GetSQLReviewCheckResultStatusResponseBody extends TeaModel {
     public static class GetSQLReviewCheckResultStatusResponseBodyCheckResultStatusSQLReviewResult extends TeaModel {
         /**
          * <p>The number of SQL statements that must be modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("MustImprove")
         public Long mustImprove;
 
         /**
          * <p>The number of SQL statements that have potential issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("PotentialIssue")
         public Long potentialIssue;
 
         /**
          * <p>The number of SQL statements that can be modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("SuggestImprove")
         public Long suggestImprove;
 
         /**
          * <p>The number of SQL statements that can use indexes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("TableIndexSuggest")
         public Long tableIndexSuggest;
 
         /**
          * <p>The number of SQL statements that can be used for lock-free data changes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("UseDmsDmlUnlock")
         public Long useDmsDmlUnlock;
 
         /**
          * <p>The number of SQL statements that can be used for lock-free schema changes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("UseDmsToolkit")
         public Long useDmsToolkit;
@@ -272,6 +320,9 @@ public class GetSQLReviewCheckResultStatusResponseBody extends TeaModel {
 
         /**
          * <p>The number of SQL statements that were reviewed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("CheckedCount")
         public Long checkedCount;
@@ -284,6 +335,9 @@ public class GetSQLReviewCheckResultStatusResponseBody extends TeaModel {
 
         /**
          * <p>The total number of SQL statements.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("TotalSQLCount")
         public Long totalSQLCount;

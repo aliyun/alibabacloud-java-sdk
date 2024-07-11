@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class ListSensitiveDataAuditLogResponseBody extends TeaModel {
     /**
      * <p>The error code returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>403</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E0D21075-CD3E-4D98-8264-FD8AD04A63B6</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -30,15 +39,22 @@ public class ListSensitiveDataAuditLogResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request was successful.</p>
-     * <p>*   **false**: The request failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -99,41 +115,58 @@ public class ListSensitiveDataAuditLogResponseBody extends TeaModel {
     public static class ListSensitiveDataAuditLogResponseBodySensitiveDataAuditLogListSensitiveDataLog extends TeaModel {
         /**
          * <p>The name of the column that contains sensitive data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ExampleColumnName</p>
          */
         @NameInMap("ColumnName")
         public String columnName;
 
         /**
          * <p>The permission that the user has on the column. Valid values:</p>
-         * <br>
-         * <p>*   **No permission**</p>
-         * <p>*   **Partial redaction**</p>
-         * <p>*   **Plaintext**</p>
-         * <p>*   **Change**</p>
-         * <p>*   **Enable data masking**</p>
-         * <p>*   **Disable data masking**</p>
+         * <ul>
+         * <li><strong>No permission</strong></li>
+         * <li><strong>Partial redaction</strong></li>
+         * <li><strong>Plaintext</strong></li>
+         * <li><strong>Change</strong></li>
+         * <li><strong>Enable data masking</strong></li>
+         * <li><strong>Disable data masking</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Change</p>
          */
         @NameInMap("ColumnPermissionType")
         public String columnPermissionType;
 
         /**
          * <p>The algorithm used for data masking.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Default - Full redaction</p>
          */
         @NameInMap("DesensitizationRule")
         public String desensitizationRule;
 
         /**
          * <p>The sensitivity level of the data. Valid values:</p>
-         * <br>
-         * <p>*   **Low**</p>
-         * <p>*   **Medium**</p>
-         * <p>*   **High**</p>
+         * <ul>
+         * <li><strong>Low</strong></li>
+         * <li><strong>Medium</strong></li>
+         * <li><strong>High</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Low</p>
          */
         @NameInMap("SecurityLevel")
         public String securityLevel;
 
         /**
          * <p>The name of the table that stores the sensitive data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ExampleTableName</p>
          */
         @NameInMap("TableName")
         public String tableName;
@@ -188,24 +221,36 @@ public class ListSensitiveDataAuditLogResponseBody extends TeaModel {
     public static class ListSensitiveDataAuditLogResponseBodySensitiveDataAuditLogList extends TeaModel {
         /**
          * <p>The name of the database that stores the sensitive data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:ExampleDbName@xxx.xxx.xxx.xxx">ExampleDbName@xxx.xxx.xxx.xxx</a>:3306</p>
          */
         @NameInMap("DbDisplayName")
         public String dbDisplayName;
 
         /**
          * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12****</p>
          */
         @NameInMap("InstanceId")
         public Long instanceId;
 
         /**
          * <p>The name of the function module whose audit logs were queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SQL_CONSOLE</p>
          */
         @NameInMap("ModuleName")
         public String moduleName;
 
         /**
          * <p>The time when the operation was performed. The time is in the yyyy-MM-DD HH:mm:ss format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-11-18 10:01:00</p>
          */
         @NameInMap("OpTime")
         public String opTime;
@@ -218,21 +263,31 @@ public class ListSensitiveDataAuditLogResponseBody extends TeaModel {
 
         /**
          * <p>The details of the object on which the operation was performed. The value of this parameter is in one of the following formats:</p>
-         * <br>
-         * <p>*   Object name - object ID</p>
-         * <p>*   Object name (object ID)</p>
+         * <ul>
+         * <li>Object name - object ID</li>
+         * <li>Object name (object ID)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Ticket - 1\<em>\</em>\<em>\</em></p>
          */
         @NameInMap("TargetName")
         public String targetName;
 
         /**
          * <p>The user ID of the requester.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1**</p>
          */
         @NameInMap("UserId")
         public Long userId;
 
         /**
          * <p>The username of the requester.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ExampleUserName</p>
          */
         @NameInMap("UserName")
         public String userName;

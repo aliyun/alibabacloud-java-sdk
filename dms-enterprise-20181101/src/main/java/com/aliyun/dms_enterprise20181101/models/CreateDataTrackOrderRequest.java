@@ -6,15 +6,16 @@ import com.aliyun.tea.*;
 public class CreateDataTrackOrderRequest extends TeaModel {
     /**
      * <p>The purpose or objective of the data tracking ticket. This parameter is used to help reduce unnecessary communication.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Comment")
     public String comment;
 
     /**
      * <p>The parameters of the ticket.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Param")
@@ -27,7 +28,10 @@ public class CreateDataTrackOrderRequest extends TeaModel {
     public java.util.List<String> relatedUserList;
 
     /**
-     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) operation to query the tenant ID.</p>
+     * <p>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> operation to query the tenant ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3***</p>
      */
     @NameInMap("Tid")
     public Long tid;
@@ -71,34 +75,40 @@ public class CreateDataTrackOrderRequest extends TeaModel {
 
     public static class CreateDataTrackOrderRequestParam extends TeaModel {
         /**
-         * <p>The ID of the database. You can call the [SearchDatabases](https://help.aliyun.com/document_detail/141876.html) operation to query the ID of the database.</p>
-         * <br>
-         * <p>> You can call this operation to create a data tracking ticket for only physical databases. This operation is not applicable to logical databases.</p>
-         * <br>
+         * <p>The ID of the database. You can call the <a href="https://help.aliyun.com/document_detail/141876.html">SearchDatabases</a> operation to query the ID of the database.</p>
+         * <blockquote>
+         * <p>You can call this operation to create a data tracking ticket for only physical databases. This operation is not applicable to logical databases.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123***</p>
          */
         @NameInMap("DbId")
         public String dbId;
 
         /**
          * <p>The end time of the time range in which you want to track data operations. The time must be in the yyyy-MM-dd HH:mm:ss format.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-23 10:00:00</p>
          */
         @NameInMap("JobEndTime")
         public String jobEndTime;
 
         /**
          * <p>The start time of the time range in which you want to track data operations. The time must be in the yyyy-MM-dd HH:mm:ss format.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-23 00:00:00</p>
          */
         @NameInMap("JobStartTime")
         public String jobStartTime;
 
         /**
          * <p>The names of the tables for which you want to track data operations.</p>
-         * <br>
          * <p>This parameter is required.</p>
          */
         @NameInMap("TableNames")
@@ -106,7 +116,6 @@ public class CreateDataTrackOrderRequest extends TeaModel {
 
         /**
          * <p>The types of data operations that you want to track.</p>
-         * <br>
          * <p>This parameter is required.</p>
          */
         @NameInMap("TrackTypes")

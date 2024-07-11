@@ -6,26 +6,39 @@ import com.aliyun.tea.*;
 public class GetDataArchiveCountRequest extends TeaModel {
     /**
      * <p>The type of the identity. Default value: AS_ADMIN.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AS_ADMIN</p>
      */
     @NameInMap("OrderResultType")
     public String orderResultType;
 
     /**
      * <p>The plugin type. Default value: DATA_ARCHIVE.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DATA_ARCHIVE</p>
      */
     @NameInMap("PluginType")
     public String pluginType;
 
     /**
      * <p>The time when the ticket is modified or created. The statistics of data archiving tickets are calculated based on the creation time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CREATE_TIME</p>
      */
     @NameInMap("SearchDateType")
     public String searchDateType;
 
     /**
      * <p>The tenant ID.</p>
-     * <br>
-     * <p>>  To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see [Manage DMS tenants](https://help.aliyun.com/document_detail/181330.html).</p>
+     * <blockquote>
+     * <p> To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see <a href="https://help.aliyun.com/document_detail/181330.html">Manage DMS tenants</a>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>2****</p>
      */
     @NameInMap("Tid")
     public Long tid;

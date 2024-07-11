@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class GetDataImportSQLResponseBody extends TeaModel {
     /**
      * <p>The error code returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The request ID. You can use the ID to locate logs and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B43AD641-49C2-5299-9E06-1B37EC1B****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -30,9 +39,13 @@ public class GetDataImportSQLResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,6 +98,9 @@ public class GetDataImportSQLResponseBody extends TeaModel {
     public static class GetDataImportSQLResponseBodySQLDetail extends TeaModel {
         /**
          * <p>The SQL script.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>insert into t1 values (1);</p>
          */
         @NameInMap("ExecSql")
         public String execSql;

@@ -12,24 +12,36 @@ public class ListDDLPublishRecordsResponseBody extends TeaModel {
 
     /**
      * <p>The error code returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A1549FB0-D4B8-4140-919F-17322C1072B8</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -82,40 +94,59 @@ public class ListDDLPublishRecordsResponseBody extends TeaModel {
     public static class ListDDLPublishRecordsResponseBodyDDLPublishRecordListPublishTaskInfoListPublishJobList extends TeaModel {
         /**
          * <p>The ID of the SQL task group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>423515</p>
          */
         @NameInMap("DBTaskGroupId")
         public Long DBTaskGroupId;
 
         /**
          * <p>The number of SQL statements that are executed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ExecuteCount")
         public Long executeCount;
 
         /**
          * <p>The script for data changes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALTER TABLE test_toolkit_rename_table_after_rename MODIFY COLUMN gmt_modified datetime NOT NULL</p>
          */
         @NameInMap("Scripts")
         public String scripts;
 
         /**
          * <p>The description of the state.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NONE</p>
          */
         @NameInMap("StatusDesc")
         public String statusDesc;
 
         /**
          * <p>The name of the table after the change.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_toolkit_rename_table_after_rename</p>
          */
         @NameInMap("TableName")
         public String tableName;
 
         /**
          * <p>The state of the publishing task. Valid values:</p>
-         * <br>
-         * <p>*   **NONE**: The state of the task is unknown.</p>
-         * <p>*   **SUCCESS**: The task is successful.</p>
-         * <p>*   **FAIL**: The task fails.</p>
+         * <ul>
+         * <li><strong>NONE</strong>: The state of the task is unknown.</li>
+         * <li><strong>SUCCESS</strong>: The task is successful.</li>
+         * <li><strong>FAIL</strong>: The task fails.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NONE</p>
          */
         @NameInMap("TaskJobStatus")
         public String taskJobStatus;
@@ -178,21 +209,31 @@ public class ListDDLPublishRecordsResponseBody extends TeaModel {
     public static class ListDDLPublishRecordsResponseBodyDDLPublishRecordListPublishTaskInfoList extends TeaModel {
         /**
          * <p>The ID of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4325</p>
          */
         @NameInMap("DbId")
         public Long dbId;
 
         /**
          * <p>Indicates whether the database is a logical database. Valid values:</p>
-         * <br>
-         * <p>*   **true**: The database is a logical database.</p>
-         * <p>*   **false**: the database is not a logical database.</p>
+         * <ul>
+         * <li><strong>true</strong>: The database is a logical database.</li>
+         * <li><strong>false</strong>: the database is not a logical database.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Logic")
         public Boolean logic;
 
         /**
          * <p>The time to publish the ticket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-12-14 20:52:38</p>
          */
         @NameInMap("PlanTime")
         public String planTime;
@@ -205,21 +246,31 @@ public class ListDDLPublishRecordsResponseBody extends TeaModel {
 
         /**
          * <p>The publishing policy. Valid values:</p>
-         * <br>
-         * <p>*   **IMMEDIATELY**: immediately publishes the ticket.</p>
-         * <p>*   **REGULARLY**: publishes the ticket at a scheduled time.</p>
+         * <ul>
+         * <li><strong>IMMEDIATELY</strong>: immediately publishes the ticket.</li>
+         * <li><strong>REGULARLY</strong>: publishes the ticket at a scheduled time.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>IMMEDIATELY</p>
          */
         @NameInMap("PublishStrategy")
         public String publishStrategy;
 
         /**
          * <p>The description of the state.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NONE</p>
          */
         @NameInMap("StatusDesc")
         public String statusDesc;
 
         /**
          * <p>The state of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NONE</p>
          */
         @NameInMap("TaskJobStatus")
         public String taskJobStatus;
@@ -290,59 +341,84 @@ public class ListDDLPublishRecordsResponseBody extends TeaModel {
     public static class ListDDLPublishRecordsResponseBodyDDLPublishRecordList extends TeaModel {
         /**
          * <p>The time when the approval expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-12-14 20:52:38</p>
          */
         @NameInMap("AuditExpireTime")
         public String auditExpireTime;
 
         /**
          * <p>The approval state of the ticket. Valid values:</p>
-         * <br>
-         * <p>*   **EXEMPT_PASS**: The ticket passes without approval.</p>
-         * <p>*   **TO_AUDIT**: The ticket is pending for approval.</p>
-         * <p>*   **CANCEL**: The ticket is canceled.</p>
-         * <p>*   **SUCCESS**: The ticket is approved.</p>
-         * <p>*   **FAIL**: The ticket fails to pass the approval.</p>
+         * <ul>
+         * <li><strong>EXEMPT_PASS</strong>: The ticket passes without approval.</li>
+         * <li><strong>TO_AUDIT</strong>: The ticket is pending for approval.</li>
+         * <li><strong>CANCEL</strong>: The ticket is canceled.</li>
+         * <li><strong>SUCCESS</strong>: The ticket is approved.</li>
+         * <li><strong>FAIL</strong>: The ticket fails to pass the approval.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CANCEL</p>
          */
         @NameInMap("AuditStatus")
         public String auditStatus;
 
         /**
          * <p>Release remarks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Release remarks</p>
          */
         @NameInMap("Comment")
         public String comment;
 
         /**
-         * <p>The ID of the user who creates the ticket. You can obtain the user ID by calling the [GetUser](https://help.aliyun.com/document_detail/147098.html) operation and querying the value of the UserId parameter. The value is not the unique ID (UID) of the Alibaba Cloud account.</p>
+         * <p>The ID of the user who creates the ticket. You can obtain the user ID by calling the <a href="https://help.aliyun.com/document_detail/147098.html">GetUser</a> operation and querying the value of the UserId parameter. The value is not the unique ID (UID) of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1423</p>
          */
         @NameInMap("CreatorId")
         public Long creatorId;
 
         /**
          * <p>Indicates whether the approval is terminated. Valid values:</p>
-         * <br>
-         * <p>*   **true**: The approval is terminated.</p>
-         * <p>*   **false**: The approval is not terminated.</p>
-         * <br>
-         * <p>> Multiple reasons can terminate the approval. For example, you withdraw the application or your ticket is not approved before the specified time.</p>
+         * <ul>
+         * <li><strong>true</strong>: The approval is terminated.</li>
+         * <li><strong>false</strong>: The approval is not terminated.</li>
+         * </ul>
+         * <blockquote>
+         * <p>Multiple reasons can terminate the approval. For example, you withdraw the application or your ticket is not approved before the specified time.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Finality")
         public Boolean finality;
 
         /**
          * <p>The reason for the termination.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CANCEL</p>
          */
         @NameInMap("FinalityReason")
         public String finalityReason;
 
         /**
          * <p>The publishing state of the ticket. Valid values:</p>
-         * <br>
-         * <p>*   **START**: The ticket is created.</p>
-         * <p>*   **ANALYZE**: The ticket is under analysis.</p>
-         * <p>*   **AUDIT**: The ticket is under approval.</p>
-         * <p>*   **DISPATCH**: A task is generated for the ticket.</p>
-         * <p>*   **SUCCESS**: The task is successful.</p>
+         * <ul>
+         * <li><strong>START</strong>: The ticket is created.</li>
+         * <li><strong>ANALYZE</strong>: The ticket is under analysis.</li>
+         * <li><strong>AUDIT</strong>: The ticket is under approval.</li>
+         * <li><strong>DISPATCH</strong>: A task is generated for the ticket.</li>
+         * <li><strong>SUCCESS</strong>: The task is successful.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>AUDIT</p>
          */
         @NameInMap("PublishStatus")
         public String publishStatus;
@@ -355,23 +431,33 @@ public class ListDDLPublishRecordsResponseBody extends TeaModel {
 
         /**
          * <p>The risk level of the operation. Valid values:</p>
-         * <br>
-         * <p>*   **NONE_RISK**: The operation does not have risks.</p>
-         * <p>*   **LOW_RISK**: The operation is at low risk.</p>
-         * <p>*   **MIDDLE_RISK**: The operation is at medium risk.</p>
-         * <p>*   **HIGH_RISK**: The operation is at high risk.</p>
+         * <ul>
+         * <li><strong>NONE_RISK</strong>: The operation does not have risks.</li>
+         * <li><strong>LOW_RISK</strong>: The operation is at low risk.</li>
+         * <li><strong>MIDDLE_RISK</strong>: The operation is at medium risk.</li>
+         * <li><strong>HIGH_RISK</strong>: The operation is at high risk.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>LOW_RISK</p>
          */
         @NameInMap("RiskLevel")
         public String riskLevel;
 
         /**
          * <p>The description of the publishing state.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CANCEL</p>
          */
         @NameInMap("StatusDesc")
         public String statusDesc;
 
         /**
          * <p>The ID of the approval process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>432153</p>
          */
         @NameInMap("WorkflowInstanceId")
         public Long workflowInstanceId;

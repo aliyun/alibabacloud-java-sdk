@@ -18,12 +18,18 @@ public class DownloadDataTrackResultRequest extends TeaModel {
 
     /**
      * <p>The end time of the time range in which you want to track data operations. The time must be specified in the yyyy-MM-dd HH:mm:ss format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-04-23 10:00:00</p>
      */
     @NameInMap("FilterEndTime")
     public String filterEndTime;
 
     /**
      * <p>The start time of the time range in which you want to track data operations. The time must be specified in the yyyy-MM-dd HH:mm:ss format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-04-23 00:00:00</p>
      */
     @NameInMap("FilterStartTime")
     public String filterStartTime;
@@ -41,26 +47,34 @@ public class DownloadDataTrackResultRequest extends TeaModel {
     public java.util.List<String> filterTypeList;
 
     /**
-     * <p>The ID of the ticket. You can call the [ListOrders](https://help.aliyun.com/document_detail/144643.html) operation to obtain the ticket ID.</p>
-     * <br>
+     * <p>The ID of the ticket. You can call the <a href="https://help.aliyun.com/document_detail/144643.html">ListOrders</a> operation to obtain the ticket ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>406****</p>
      */
     @NameInMap("OrderId")
     public Long orderId;
 
     /**
      * <p>The type of the SQL statement.</p>
-     * <br>
-     * <p>*   **REVERSE**: undoes or rolls back an executed SQL statement, which is equivalent to the UNDO SQL statement.</p>
-     * <p>*   **FORWARD**: redoes or re-executes an SQL statement that failed to be executed, which is equivalent to the REDO SQL statement.</p>
-     * <br>
+     * <ul>
+     * <li><strong>REVERSE</strong>: undoes or rolls back an executed SQL statement, which is equivalent to the UNDO SQL statement.</li>
+     * <li><strong>FORWARD</strong>: redoes or re-executes an SQL statement that failed to be executed, which is equivalent to the REDO SQL statement.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>REVERSE</p>
      */
     @NameInMap("RollbackSQLType")
     public String rollbackSQLType;
 
     /**
-     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) or [ListUserTenants](https://help.aliyun.com/document_detail/198074.html) operation to query the tenant ID.</p>
+     * <p>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> or <a href="https://help.aliyun.com/document_detail/198074.html">ListUserTenants</a> operation to query the tenant ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3***</p>
      */
     @NameInMap("Tid")
     public Long tid;
@@ -145,18 +159,27 @@ public class DownloadDataTrackResultRequest extends TeaModel {
     public static class DownloadDataTrackResultRequestColumnFilter extends TeaModel {
         /**
          * <p>The end value of the range used in the filter condition. This parameter takes effect only when Operator is set to BETWEEN.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("BetweenEnd")
         public String betweenEnd;
 
         /**
          * <p>The start value of the range used in the filter condition. This parameter takes effect only when Operator is set to BETWEEN.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("BetweenStart")
         public String betweenStart;
 
         /**
          * <p>The name of the column.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>account_name</p>
          */
         @NameInMap("ColumnName")
         public String columnName;
@@ -169,20 +192,27 @@ public class DownloadDataTrackResultRequest extends TeaModel {
 
         /**
          * <p>The type of the operator used to configure the filter condition. Valid values:</p>
-         * <br>
-         * <p>*   **EQUAL**: retrieves the column whose value is equal to the specified value.</p>
-         * <p>*   **NOT_EQUAL**: retrieves the column whose value is not equal to the specified value.</p>
-         * <p>*   **IN**: retrieves the column whose value is in the IN list.</p>
-         * <p>*   **BETWEEN**: retrieves the column whose value is in the specified range.</p>
-         * <p>*   **LESS**: retrieves the column whose value is less than the specified value.</p>
-         * <p>*   **MORE**: retrieves the column whose value is greater than the specified value.</p>
-         * <p>*   **NOT_IN**: retrieves the column whose value is not in the IN list.</p>
+         * <ul>
+         * <li><strong>EQUAL</strong>: retrieves the column whose value is equal to the specified value.</li>
+         * <li><strong>NOT_EQUAL</strong>: retrieves the column whose value is not equal to the specified value.</li>
+         * <li><strong>IN</strong>: retrieves the column whose value is in the IN list.</li>
+         * <li><strong>BETWEEN</strong>: retrieves the column whose value is in the specified range.</li>
+         * <li><strong>LESS</strong>: retrieves the column whose value is less than the specified value.</li>
+         * <li><strong>MORE</strong>: retrieves the column whose value is greater than the specified value.</li>
+         * <li><strong>NOT_IN</strong>: retrieves the column whose value is not in the IN list.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>EQUAL</p>
          */
         @NameInMap("Operator")
         public String operator;
 
         /**
          * <p>The value used in the filter condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Value")
         public String value;

@@ -12,30 +12,45 @@ public class ListDatabasesResponseBody extends TeaModel {
 
     /**
      * <p>The error code returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5541CDA6-F674-435C-81BD-40C2FB926CE3</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The number of databases that belong to an instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -134,54 +149,81 @@ public class ListDatabasesResponseBody extends TeaModel {
     public static class ListDatabasesResponseBodyDatabaseListDatabase extends TeaModel {
         /**
          * <p>The name of the catalog to which the database belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CatalogName")
         public String catalogName;
 
         /**
          * <p>The ID of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("DatabaseId")
         public String databaseId;
 
         /**
          * <p>The type of the database engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql</p>
          */
         @NameInMap("DbType")
         public String dbType;
 
         /**
          * <p>The ID of the DBA.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("DbaId")
         public String dbaId;
 
         /**
          * <p>The nickname of the Database administrator (DBA) to which the database belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dba_user</p>
          */
         @NameInMap("DbaName")
         public String dbaName;
 
         /**
          * <p>The encoding format of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>utf-8</p>
          */
         @NameInMap("Encoding")
         public String encoding;
 
         /**
          * <p>The type of the environment to which the database belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dev</p>
          */
         @NameInMap("EnvType")
         public String envType;
 
         /**
          * <p>The endpoint of the instance to which the database belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx.xxx.xxx.xxx</p>
          */
         @NameInMap("Host")
         public String host;
 
         /**
          * <p>The ID of the instance to which the database belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
@@ -200,35 +242,51 @@ public class ListDatabasesResponseBody extends TeaModel {
 
         /**
          * <p>The connection port of the instance to which the database belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3306</p>
          */
         @NameInMap("Port")
         public Integer port;
 
         /**
          * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("SchemaName")
         public String schemaName;
 
         /**
          * <p>The name that is used for searching the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:test@xxx.xxx.xxx.xxx">test@xxx.xxx.xxx.xxx</a>:3306</p>
          */
         @NameInMap("SearchName")
         public String searchName;
 
         /**
          * <p>The system ID (SID) of the instance to which the database belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Sid")
         public String sid;
 
         /**
          * <p>The state of the database. Valid values:</p>
-         * <br>
-         * <p>*   NORMAL: The database is normal.</p>
-         * <p>*   DISABLE: The database is disabled.</p>
-         * <p>*   OFFLINE: The database is unpublished.</p>
-         * <p>*   NOT_EXIST: The database does not exist.</p>
+         * <ul>
+         * <li>NORMAL: The database is normal.</li>
+         * <li>DISABLE: The database is disabled.</li>
+         * <li>OFFLINE: The database is unpublished.</li>
+         * <li>NOT_EXIST: The database does not exist.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         @NameInMap("State")
         public String state;

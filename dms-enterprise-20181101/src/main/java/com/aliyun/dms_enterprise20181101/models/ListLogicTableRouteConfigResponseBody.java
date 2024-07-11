@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ListLogicTableRouteConfigResponseBody extends TeaModel {
     /**
      * <p>The error code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MissingTableId</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TableId is mandatory for this action.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
@@ -24,15 +30,22 @@ public class ListLogicTableRouteConfigResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7C6A0D7D-B034-59F6-854C-32425AC6****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>- **true**: The request was successful.</p>
-     * <p>- **false**: The request failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,18 +98,27 @@ public class ListLogicTableRouteConfigResponseBody extends TeaModel {
     public static class ListLogicTableRouteConfigResponseBodyLogicTableRouteConfigListLogicTableRouteConfig extends TeaModel {
         /**
          * <p>The routing algorithm expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>#id#%16\t</p>
          */
         @NameInMap("RouteExpr")
         public String routeExpr;
 
         /**
          * <p>The unique key of the routing algorithm.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("RouteKey")
         public String routeKey;
 
         /**
          * <p>The ID of the logical table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4****</p>
          */
         @NameInMap("TableId")
         public Long tableId;

@@ -6,44 +6,66 @@ import com.aliyun.tea.*;
 public class ListDesensitizationRuleRequest extends TeaModel {
     /**
      * <p>The type of the masking algorithm.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MD5</p>
      */
     @NameInMap("FuncType")
     public String funcType;
 
     /**
      * <p>The number of the page to return.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page. The maximum value is 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the masking rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("RuleId")
     public Integer ruleId;
 
     /**
      * <p>The name of the masking rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default desensitization rule test</p>
      */
     @NameInMap("RuleName")
     public String ruleName;
 
     /**
      * <p>The algorithm used for masking.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>HASH</p>
      */
     @NameInMap("RuleType")
     public String ruleType;
 
     /**
      * <p>The ID of the tenant.</p>
-     * <br>
-     * <p>>  To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see [View information about the current tenant](https://help.aliyun.com/document_detail/181330.html).</p>
+     * <blockquote>
+     * <p> To view the ID of the tenant, move the pointer over the profile picture in the upper-right corner of the Data Management (DMS) console. For more information, see <a href="https://help.aliyun.com/document_detail/181330.html">View information about the current tenant</a>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>3***</p>
      */
     @NameInMap("Tid")
     public Long tid;

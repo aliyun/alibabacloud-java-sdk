@@ -6,18 +6,25 @@ import com.aliyun.tea.*;
 public class ListProxyAccessesRequest extends TeaModel {
     /**
      * <p>The ID of the secure access proxy. </p>
-     * <br>
-     * <p>>  You can call the [ListProxies](https://www.alibabacloud.com/help/en/data-management-service/latest/listproxies) operation to query the ID of the secure access proxy.</p>
-     * <br>
+     * <blockquote>
+     * <p> You can call the <a href="https://www.alibabacloud.com/help/en/data-management-service/latest/listproxies">ListProxies</a> operation to query the ID of the secure access proxy.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>47</p>
      */
     @NameInMap("ProxyId")
     public Long proxyId;
 
     /**
      * <p>The ID of the tenant. </p>
-     * <br>
-     * <p>>  You can call the [GetUserActiveTenant](https://www.alibabacloud.com/help/en/data-management-service/latest/getuseractivetenant) operation to query the ID of the tenant.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://www.alibabacloud.com/help/en/data-management-service/latest/getuseractivetenant">GetUserActiveTenant</a> operation to query the ID of the tenant.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>3***</p>
      */
     @NameInMap("Tid")
     public Long tid;

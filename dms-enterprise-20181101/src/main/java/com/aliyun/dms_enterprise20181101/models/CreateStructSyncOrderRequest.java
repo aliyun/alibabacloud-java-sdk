@@ -5,22 +5,26 @@ import com.aliyun.tea.*;
 
 public class CreateStructSyncOrderRequest extends TeaModel {
     /**
-     * <p>The key of an attachment that is returned after the attachment is uploaded. You can call the [GetUserUploadFileJob](https://help.aliyun.com/document_detail/206069.html) operation to query the key of the attachment.</p>
+     * <p>The key of an attachment that is returned after the attachment is uploaded. You can call the <a href="https://help.aliyun.com/document_detail/206069.html">GetUserUploadFileJob</a> operation to query the key of the attachment.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>upload_3c7edea3-e4c3-4403-857d-737043036f69_test.sql</p>
      */
     @NameInMap("AttachmentKey")
     public String attachmentKey;
 
     /**
      * <p>The remarks of the ticket.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Comment")
     public String comment;
 
     /**
      * <p>The parameters of the ticket.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Param")
@@ -34,8 +38,12 @@ public class CreateStructSyncOrderRequest extends TeaModel {
 
     /**
      * <p>The ID of the tenant.</p>
-     * <br>
-     * <p>>  To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the DMS console. For more information, see [Manage DMS tenants](https://help.aliyun.com/document_detail/181330.html).</p>
+     * <blockquote>
+     * <p> To view the tenant ID, move the pointer over the profile picture in the upper-right corner of the DMS console. For more information, see <a href="https://help.aliyun.com/document_detail/181330.html">Manage DMS tenants</a>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Tid")
     public Long tid;
@@ -87,32 +95,43 @@ public class CreateStructSyncOrderRequest extends TeaModel {
 
     public static class CreateStructSyncOrderRequestParamSource extends TeaModel {
         /**
-         * <p>The ID of the database. You can call the [SearchDatabases](https://help.aliyun.com/document_detail/141876.html) operation to query the ID of the database.</p>
-         * <br>
+         * <p>The ID of the database. You can call the <a href="https://help.aliyun.com/document_detail/141876.html">SearchDatabases</a> operation to query the ID of the database.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4324532</p>
          */
         @NameInMap("DbId")
         public Long dbId;
 
         /**
-         * <p>The name that is used to search for the database. You can call the [SearchDatabases](https://help.aliyun.com/document_detail/141876.html) operation to query the name of the database.</p>
-         * <br>
+         * <p>The name that is used to search for the database. You can call the <a href="https://help.aliyun.com/document_detail/141876.html">SearchDatabases</a> operation to query the name of the database.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("DbSearchName")
         public String dbSearchName;
 
         /**
          * <p>Specifies whether the database is a logical database. Valid values:</p>
-         * <br>
-         * <p>*   **true**: The database is a logical database.</p>
-         * <p>*   **false**: The database is not a logical database.</p>
+         * <ul>
+         * <li><strong>true</strong>: The database is a logical database.</li>
+         * <li><strong>false</strong>: The database is not a logical database.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Logic")
         public Boolean logic;
 
         /**
-         * <p>The version number of the schema. The default value is the latest schema version number. For more information, see [Manage schema versions](https://help.aliyun.com/document_detail/202275.html).</p>
+         * <p>The version number of the schema. The default value is the latest schema version number. For more information, see <a href="https://help.aliyun.com/document_detail/202275.html">Manage schema versions</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e179bbb8163dcdcfacda24858bedb4d8006ae2b8</p>
          */
         @NameInMap("VersionId")
         public String versionId;
@@ -159,12 +178,18 @@ public class CreateStructSyncOrderRequest extends TeaModel {
     public static class CreateStructSyncOrderRequestParamTableInfoList extends TeaModel {
         /**
          * <p>The name of the source table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_tbl</p>
          */
         @NameInMap("SourceTableName")
         public String sourceTableName;
 
         /**
          * <p>The name of the destination table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_tbl</p>
          */
         @NameInMap("TargetTableName")
         public String targetTableName;
@@ -194,34 +219,46 @@ public class CreateStructSyncOrderRequest extends TeaModel {
 
     public static class CreateStructSyncOrderRequestParamTarget extends TeaModel {
         /**
-         * <p>The ID of the database. You can call the [SearchDatabases](https://help.aliyun.com/document_detail/141876.html) operation to query the ID of the database.</p>
-         * <br>
+         * <p>The ID of the database. You can call the <a href="https://help.aliyun.com/document_detail/141876.html">SearchDatabases</a> operation to query the ID of the database.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>432432</p>
          */
         @NameInMap("DbId")
         public Long dbId;
 
         /**
-         * <p>The name that is used to search for the database. You can call the [SearchDatabases](https://help.aliyun.com/document_detail/141876.html) operation to query the name of the database.</p>
-         * <br>
+         * <p>The name that is used to search for the database. You can call the <a href="https://help.aliyun.com/document_detail/141876.html">SearchDatabases</a> operation to query the name of the database.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("DbSearchName")
         public String dbSearchName;
 
         /**
          * <p>Specifies whether the database is a logical database. Valid values:</p>
-         * <br>
-         * <p>*   **true**: The database is a logical database.</p>
-         * <p>*   **false**: The database is not a logical database.</p>
+         * <ul>
+         * <li><strong>true</strong>: The database is a logical database.</li>
+         * <li><strong>false</strong>: The database is not a logical database.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Logic")
         public Boolean logic;
 
         /**
          * <p>The version number. By default, this parameter is left empty.</p>
-         * <br>
-         * <p>>  If you specify the schema version number of the destination database, Data Management (DMS) only compares the schemas of the two databases.</p>
+         * <blockquote>
+         * <p> If you specify the schema version number of the destination database, Data Management (DMS) only compares the schemas of the two databases.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>e179bbb8163dcdcfacda24858bedb4d8006ae2b8</p>
          */
         @NameInMap("VersionId")
         public String versionId;
@@ -268,16 +305,19 @@ public class CreateStructSyncOrderRequest extends TeaModel {
     public static class CreateStructSyncOrderRequestParam extends TeaModel {
         /**
          * <p>Specifies whether to skip an error that occurs in executing an SQL statement. Valid values:</p>
-         * <br>
-         * <p>*   **true**: continues to execute subsequent SQL statements if an error occurs in executing an SQL statement.</p>
-         * <p>*   **false**: stops executing subsequent SQL statements if an error occurs in executing an SQL statement.</p>
+         * <ul>
+         * <li><strong>true</strong>: continues to execute subsequent SQL statements if an error occurs in executing an SQL statement.</li>
+         * <li><strong>false</strong>: stops executing subsequent SQL statements if an error occurs in executing an SQL statement.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("IgnoreError")
         public Boolean ignoreError;
 
         /**
          * <p>The information about the base database.</p>
-         * <br>
          * <p>This parameter is required.</p>
          */
         @NameInMap("Source")
@@ -291,7 +331,6 @@ public class CreateStructSyncOrderRequest extends TeaModel {
 
         /**
          * <p>The information about the database to which you want to synchronize the schema of a table.</p>
-         * <br>
          * <p>This parameter is required.</p>
          */
         @NameInMap("Target")

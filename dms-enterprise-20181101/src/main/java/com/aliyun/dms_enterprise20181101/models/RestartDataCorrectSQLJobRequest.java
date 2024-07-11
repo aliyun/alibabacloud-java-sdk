@@ -5,34 +5,44 @@ import com.aliyun.tea.*;
 
 public class RestartDataCorrectSQLJobRequest extends TeaModel {
     /**
-     * <p>The ID of the SQL task. You can call the [GetDataCorrectTaskDetail](https://help.aliyun.com/document_detail/208481.html) and [ListDBTaskSQLJob](https://help.aliyun.com/document_detail/207049.html) operations to obtain the value of this parameter.</p>
-     * <br>
+     * <p>The ID of the SQL task. You can call the <a href="https://help.aliyun.com/document_detail/208481.html">GetDataCorrectTaskDetail</a> and <a href="https://help.aliyun.com/document_detail/207049.html">ListDBTaskSQLJob</a> operations to obtain the value of this parameter.</p>
      * <p>If the Type parameter is set to SINGLE, you must pass the value of the JobId parameter to confirm the ID of the SQL task that you want to rerun.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>43253</p>
      */
     @NameInMap("JobId")
     public Long jobId;
 
     /**
-     * <p>The ID of the data change ticket. You can call the [ListOrders](https://help.aliyun.com/document_detail/144643.html) operation to query the ID of the data change ticket.</p>
-     * <br>
+     * <p>The ID of the data change ticket. You can call the <a href="https://help.aliyun.com/document_detail/144643.html">ListOrders</a> operation to query the ID of the data change ticket.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>453****</p>
      */
     @NameInMap("OrderId")
     public Long orderId;
 
     /**
-     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) operation to query the tenant ID.</p>
+     * <p>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> operation to query the tenant ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3***</p>
      */
     @NameInMap("Tid")
     public Long tid;
 
     /**
      * <p>The type of the rerun operation. Valid values:</p>
-     * <br>
-     * <p>*   **ALL**: reruns all SQL tasks.</p>
-     * <p>*   **SINGLE**: reruns a single SQL task.</p>
-     * <br>
+     * <ul>
+     * <li><strong>ALL</strong>: reruns all SQL tasks.</li>
+     * <li><strong>SINGLE</strong>: reruns a single SQL task.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ALL</p>
      */
     @NameInMap("Type")
     public String type;

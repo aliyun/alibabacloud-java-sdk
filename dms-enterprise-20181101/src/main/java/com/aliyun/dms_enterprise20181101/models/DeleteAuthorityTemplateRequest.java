@@ -6,10 +6,17 @@ import com.aliyun.tea.*;
 public class DeleteAuthorityTemplateRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2592</p>
      */
     @NameInMap("TemplateId")
     public Long templateId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3***</p>
+     */
     @NameInMap("Tid")
     public Long tid;
 

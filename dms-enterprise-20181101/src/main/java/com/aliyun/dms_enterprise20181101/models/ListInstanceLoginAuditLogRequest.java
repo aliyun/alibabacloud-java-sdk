@@ -6,52 +6,74 @@ import com.aliyun.tea.*;
 public class ListInstanceLoginAuditLogRequest extends TeaModel {
     /**
      * <p>The end of the time range to query.</p>
-     * <br>
-     * <p>>  The end time supports fuzzy match. Specify the time in the YYYY-MM-DD hh:mm:ss format. We recommend that you use the StartTime and EndTime parameters to specify a time range that does not exceed one day. This way, the returned entries can be displayed by page to increase query efficiency.</p>
-     * <br>
+     * <blockquote>
+     * <p> The end time supports fuzzy match. Specify the time in the YYYY-MM-DD hh:mm:ss format. We recommend that you use the StartTime and EndTime parameters to specify a time range that does not exceed one day. This way, the returned entries can be displayed by page to increase query efficiency.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-11-18 18:00:00</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The alias of the user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test_OpUserName</p>
      */
     @NameInMap("OpUserName")
     public String opUserName;
 
     /**
      * <p>The number of the page to return.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page. Maximum value: 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The name of the database or instance whose logon records you want to query.</p>
-     * <br>
-     * <p>>  If SQL statements are executed at the instance level, you can set this parameter to an instance name. If SQL statements are executed at the database level, you can set this parameter to a database name.</p>
+     * <blockquote>
+     * <p> If SQL statements are executed at the instance level, you can set this parameter to an instance name. If SQL statements are executed at the database level, you can set this parameter to a database name.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>test_SearchName</p>
      */
     @NameInMap("SearchName")
     public String searchName;
 
     /**
      * <p>The beginning of the time range to query.</p>
-     * <br>
-     * <p>>  The start time supports fuzzy match. Specify the time in the YYYY-MM-DD hh:mm:ss format.</p>
-     * <br>
+     * <blockquote>
+     * <p> The start time supports fuzzy match. Specify the time in the YYYY-MM-DD hh:mm:ss format.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-11-18 11:00:00</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
-     * <p>The ID of the tenant. You can call the [GetUserActiveTenant](https://help.aliyun.com/document_detail/198073.html) operation to query the tenant ID.</p>
+     * <p>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> operation to query the tenant ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3***</p>
      */
     @NameInMap("Tid")
     public Long tid;

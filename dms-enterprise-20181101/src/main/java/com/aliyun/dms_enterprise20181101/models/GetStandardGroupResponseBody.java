@@ -4,18 +4,34 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class GetStandardGroupResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>BF7E9543-F431-566A-991A-B5C493EA36C2</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("StandardGroup")
     public GetStandardGroupResponseBodyStandardGroup standardGroup;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,21 +81,41 @@ public class GetStandardGroupResponseBody extends TeaModel {
     }
 
     public static class GetStandardGroupResponseBodyStandardGroup extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>mysql</p>
+         */
         @NameInMap("DbType")
         public String dbType;
 
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>41****</p>
+         */
         @NameInMap("GroupId")
         public Long groupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>COMMON</p>
+         */
         @NameInMap("GroupMode")
         public String groupMode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>poc_test</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>51****</p>
+         */
         @NameInMap("LastMenderId")
         public Long lastMenderId;
 

@@ -6,29 +6,39 @@ import com.aliyun.tea.*;
 public class ExecuteDataExportShrinkRequest extends TeaModel {
     /**
      * <p>The parameters that are required to perform the operation:</p>
-     * <br>
-     * <p>```json</p>
-     * <p>{</p>
-     * <p>   "fileType": "CSV", // The format of the exported file.</p>
-     * <p>   "encoding": "" // The encoding format.</p>
-     * <p> }</p>
-     * <p>```</p>
+     * <pre><code class="language-json">{
+     *    &quot;fileType&quot;: &quot;CSV&quot;, // The format of the exported file.
+     *    &quot;encoding&quot;: &quot;&quot; // The encoding format.
+     *  }
+     * </code></pre>
+     * 
+     * <strong>example:</strong>
+     * <p>{    &quot;fileType&quot;: &quot;CSV&quot;,    &quot;encoding&quot;: &quot;&quot;  }</p>
      */
     @NameInMap("ActionDetail")
     public String actionDetailShrink;
 
     /**
      * <p>The ID of the ticket.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234</p>
      */
     @NameInMap("OrderId")
     public Long orderId;
 
+    @NameInMap("RealLoginUserUid")
+    public String realLoginUserUid;
+
     /**
      * <p>The ID of the tenant.</p>
-     * <br>
-     * <p>> : To view the ID of the tenant, log on to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [Manage DMS tenants](https://help.aliyun.com/document_detail/181330.html).</p>
+     * <blockquote>
+     * <p>: To view the ID of the tenant, log on to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see <a href="https://help.aliyun.com/document_detail/181330.html">Manage DMS tenants</a>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>-1</p>
      */
     @NameInMap("Tid")
     public Long tid;
@@ -52,6 +62,14 @@ public class ExecuteDataExportShrinkRequest extends TeaModel {
     }
     public Long getOrderId() {
         return this.orderId;
+    }
+
+    public ExecuteDataExportShrinkRequest setRealLoginUserUid(String realLoginUserUid) {
+        this.realLoginUserUid = realLoginUserUid;
+        return this;
+    }
+    public String getRealLoginUserUid() {
+        return this.realLoginUserUid;
     }
 
     public ExecuteDataExportShrinkRequest setTid(Long tid) {

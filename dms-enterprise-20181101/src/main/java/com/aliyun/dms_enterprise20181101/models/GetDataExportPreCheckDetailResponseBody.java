@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class GetDataExportPreCheckDetailResponseBody extends TeaModel {
     /**
      * <p>The error code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
@@ -24,15 +30,22 @@ public class GetDataExportPreCheckDetailResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C1D39814-9808-47F8-AFE0-AF167239AC9B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request was successful.</p>
-     * <p>*   **false**: The request failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,12 +98,18 @@ public class GetDataExportPreCheckDetailResponseBody extends TeaModel {
     public static class GetDataExportPreCheckDetailResponseBodyPreCheckResultPreCheckDetailListPreCheckDetailList extends TeaModel {
         /**
          * <p>The estimated number of data rows to be affected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("AffectRows")
         public Long affectRows;
 
         /**
          * <p>The SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SELECT * FROM tmp_table LIMIT 1</p>
          */
         @NameInMap("SQL")
         public String SQL;
@@ -140,9 +159,13 @@ public class GetDataExportPreCheckDetailResponseBody extends TeaModel {
     public static class GetDataExportPreCheckDetailResponseBodyPreCheckResult extends TeaModel {
         /**
          * <p>Specifies whether to skip verification. Valid values:</p>
-         * <br>
-         * <p>- true</p>
-         * <p>- false</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("IgnoreAffectRows")
         public Boolean ignoreAffectRows;

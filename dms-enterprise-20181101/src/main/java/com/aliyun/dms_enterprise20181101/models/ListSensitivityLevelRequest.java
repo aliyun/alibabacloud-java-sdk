@@ -5,26 +5,36 @@ import com.aliyun.tea.*;
 
 public class ListSensitivityLevelRequest extends TeaModel {
     /**
-     * <p>The ID of the classification template. You can call the [ListClassificationTemplates](https://help.aliyun.com/document_detail/460613.html) operation to query the ID of the classification template.</p>
+     * <p>The ID of the classification template. You can call the <a href="https://help.aliyun.com/document_detail/460613.html">ListClassificationTemplates</a> operation to query the ID of the classification template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>15**</p>
      */
     @NameInMap("TemplateId")
     public Long templateId;
 
     /**
-     * <p>The type of the classification template. You can call the [ListClassificationTemplates](https://help.aliyun.com/document_detail/460613.html) operation to query the type of the classification template.</p>
-     * <br>
+     * <p>The type of the classification template. You can call the <a href="https://help.aliyun.com/document_detail/460613.html">ListClassificationTemplates</a> operation to query the type of the classification template.</p>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   USER_DEFINE: a custom template.</p>
-     * <p>*   INNER: a built-in template.</p>
+     * <ul>
+     * <li>USER_DEFINE: a custom template.</li>
+     * <li>INNER: a built-in template.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>INNER</p>
      */
     @NameInMap("TemplateType")
     public String templateType;
 
     /**
      * <p>The ID of the tenant.</p>
-     * <br>
-     * <p>>  To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](https://help.aliyun.com/document_detail/181330.html) in the topic "Manage DMS tenants."</p>
+     * <blockquote>
+     * <p> To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see <a href="https://help.aliyun.com/document_detail/181330.html">View information about the current tenant</a> in the topic &quot;Manage DMS tenants.&quot;</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>20***</p>
      */
     @NameInMap("Tid")
     public Long tid;

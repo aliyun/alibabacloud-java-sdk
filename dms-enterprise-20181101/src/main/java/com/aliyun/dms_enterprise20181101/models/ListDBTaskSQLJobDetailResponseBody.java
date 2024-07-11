@@ -12,33 +12,49 @@ public class ListDBTaskSQLJobDetailResponseBody extends TeaModel {
 
     /**
      * <p>The error code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MissingJobId</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>JobId is mandatory for this action.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3F044E33-FE09-58F1-8C61-A0F612EC****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request is successful.</p>
-     * <p>*   **false**: The request fails.</p>
+     * <ul>
+     * <li><strong>true</strong>: The request is successful.</li>
+     * <li><strong>false</strong>: The request fails.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The total number of SQL tasks.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -99,99 +115,144 @@ public class ListDBTaskSQLJobDetailResponseBody extends TeaModel {
     public static class ListDBTaskSQLJobDetailResponseBodyDBTaskSQLJobDetailList extends TeaModel {
         /**
          * <p>The number of rows affected by the SQL task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("AffectRows")
         public Long affectRows;
 
         /**
          * <p>The SQL statement that was executed in the SQL task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>update a set id = 1 where id  = 1;</p>
          */
         @NameInMap("CurrentSql")
         public String currentSql;
 
         /**
          * <p>The ID of the physical database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1988****</p>
          */
         @NameInMap("DbId")
         public Long dbId;
 
         /**
          * <p>The point in time when the SQL task ended.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-16 00:00:01</p>
          */
         @NameInMap("EndTime")
         public String endTime;
 
         /**
          * <p>The number of times that the SQL statement was executed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ExecuteCount")
         public Long executeCount;
 
         /**
          * <p>The ID of the details of the SQL task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24723****</p>
          */
         @NameInMap("JobDetailId")
         public Long jobDetailId;
 
         /**
          * <p>The ID of the SQL task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1276****</p>
          */
         @NameInMap("JobId")
         public Long jobId;
 
         /**
          * <p>The details of the operational log.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>log_info</p>
          */
         @NameInMap("Log")
         public String log;
 
         /**
          * <p>Indicates whether the database is a logical database. Valid values:</p>
-         * <br>
-         * <p>*   **true**: The database is a logical database.</p>
-         * <p>*   **false**: The database is a physical database.</p>
+         * <ul>
+         * <li><strong>true</strong>: The database is a logical database.</li>
+         * <li><strong>false</strong>: The database is a physical database.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Logic")
         public Boolean logic;
 
         /**
          * <p>Indicates whether the SQL statement was skipped. Valid values:</p>
-         * <br>
-         * <p>*   **true**: The SQL statement was skipped.</p>
-         * <p>*   **false**: The SQL statement was not skipped.</p>
+         * <ul>
+         * <li><strong>true</strong>: The SQL statement was skipped.</li>
+         * <li><strong>false</strong>: The SQL statement was not skipped.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Skip")
         public Boolean skip;
 
         /**
          * <p>The type of the SQL statement, such as DELETE, UPDATE, or ALTER_TABLE.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CREATE_TABLE</p>
          */
         @NameInMap("SqlType")
         public String sqlType;
 
         /**
          * <p>The point in time when the SQL task started.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-16 00:00:00</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
         /**
          * <p>The status of the SQL task. Valid values:</p>
-         * <br>
-         * <p>*   **INIT**: The SQL task was initialized.</p>
-         * <p>*   **PENDING**: The SQL task waited to be run.</p>
-         * <p>*   **BE_SCHEDULED**: The SQL task waited to be scheduled.</p>
-         * <p>*   **FAIL**: The SQL task failed.</p>
-         * <p>*   **SUCCESS**: The SQL task was successful.</p>
-         * <p>*   **PAUSE**: The SQL task was paused.</p>
-         * <p>*   **DELETE**: The SQL task was deleted.</p>
-         * <p>*   **RUNNING**: The SQL task was being run.</p>
+         * <ul>
+         * <li><strong>INIT</strong>: The SQL task was initialized.</li>
+         * <li><strong>PENDING</strong>: The SQL task waited to be run.</li>
+         * <li><strong>BE_SCHEDULED</strong>: The SQL task waited to be scheduled.</li>
+         * <li><strong>FAIL</strong>: The SQL task failed.</li>
+         * <li><strong>SUCCESS</strong>: The SQL task was successful.</li>
+         * <li><strong>PAUSE</strong>: The SQL task was paused.</li>
+         * <li><strong>DELETE</strong>: The SQL task was deleted.</li>
+         * <li><strong>RUNNING</strong>: The SQL task was being run.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The duration of the SQL task. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>38</p>
          */
         @NameInMap("TimeDelay")
         public Long timeDelay;

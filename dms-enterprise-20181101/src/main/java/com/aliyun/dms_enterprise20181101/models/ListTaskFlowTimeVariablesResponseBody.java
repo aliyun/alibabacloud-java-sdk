@@ -6,27 +6,40 @@ import com.aliyun.tea.*;
 public class ListTaskFlowTimeVariablesResponseBody extends TeaModel {
     /**
      * <p>The error code returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EC12A3BE-149F-5365-AF33-12CC8C963923</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request was successful.</p>
-     * <p>*   **false**: The request failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,12 +98,18 @@ public class ListTaskFlowTimeVariablesResponseBody extends TeaModel {
     public static class ListTaskFlowTimeVariablesResponseBodyTimeVariablesTimeVariable extends TeaModel {
         /**
          * <p>The name of the time variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>time_test</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The format of the time variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-09-26|+7h</p>
          */
         @NameInMap("Pattern")
         public String pattern;

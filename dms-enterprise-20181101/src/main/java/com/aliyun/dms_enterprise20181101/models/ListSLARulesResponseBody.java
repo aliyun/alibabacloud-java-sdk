@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class ListSLARulesResponseBody extends TeaModel {
     /**
      * <p>The error code returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The ID of the request. You can use the ID to query logs and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3D1A59F4-EB2B-5D24-80A5-90C446A00DE2</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -30,9 +39,13 @@ public class ListSLARulesResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request was successful.</p>
-     * <p>*   **false**: The request failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,33 +98,49 @@ public class ListSLARulesResponseBody extends TeaModel {
     public static class ListSLARulesResponseBodySLARuleListSLARule extends TeaModel {
         /**
          * <p>The ID of the task flow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11****</p>
          */
         @NameInMap("DagId")
         public Long dagId;
 
         /**
          * <p>The ID of the SLA rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The timeout period. Unit: minutes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1080</p>
          */
         @NameInMap("IntervalMinutes")
         public Integer intervalMinutes;
 
         /**
          * <p>The ID of the task node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("NodeId")
         public Long nodeId;
 
         /**
          * <p>The type of the rule. Valid values:</p>
-         * <br>
-         * <p>*   **0**: an SLA rule for a task flow</p>
-         * <p>*   **1**: an SLA rule for a task node</p>
+         * <ul>
+         * <li><strong>0</strong>: an SLA rule for a task flow</li>
+         * <li><strong>1</strong>: an SLA rule for a task node</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("RuleType")
         public Integer ruleType;

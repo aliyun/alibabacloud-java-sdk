@@ -12,27 +12,40 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
 
     /**
      * <p>The error code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MissingTableGuid</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TableGuid is mandatory for this action.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>087DFBA1-378B-5D25-B13B-31F6409F****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request was successful.</p>
-     * <p>*   **false**: The request failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,89 +98,131 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
     public static class GetMetaTableColumnResponseBodyColumnList extends TeaModel {
         /**
          * <p>Indicates whether the column is an auto-increment column. Valid values:</p>
-         * <br>
-         * <p>*   **true**: The column is an auto-increment column.</p>
-         * <p>*   **false**: The column is not an auto-increment column.</p>
+         * <ul>
+         * <li><strong>true</strong>: The column is an auto-increment column.</li>
+         * <li><strong>false</strong>: The column is not an auto-increment column.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("AutoIncrement")
         public Boolean autoIncrement;
 
         /**
          * <p>The ID of the column.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>63513****</p>
          */
         @NameInMap("ColumnId")
         public String columnId;
 
         /**
          * <p>The name of the column.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>has_promotion</p>
          */
         @NameInMap("ColumnName")
         public String columnName;
 
         /**
          * <p>The data type of the column.</p>
-         * <br>
-         * <p>> The return value of a column is not unique, such as **bigint** or **int**.</p>
+         * <blockquote>
+         * <p>The return value of a column is not unique, such as <strong>bigint</strong> or <strong>int</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>bigint(1)</p>
          */
         @NameInMap("ColumnType")
         public String columnType;
 
         /**
          * <p>The length of the field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("DataLength")
         public Long dataLength;
 
         /**
          * <p>The precision of the field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>19</p>
          */
         @NameInMap("DataPrecision")
         public Integer dataPrecision;
 
         /**
          * <p>The number of decimal places for the field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("DataScale")
         public Integer dataScale;
 
         /**
          * <p>The description of the column.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Whether discounts are provided</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>Indicates whether the field can be empty. Valid values:</p>
-         * <br>
-         * <p>*   **true**: The field can be empty.</p>
-         * <p>*   **false**: The field cannot be empty.</p>
+         * <ul>
+         * <li><strong>true</strong>: The field can be empty.</li>
+         * <li><strong>false</strong>: The field cannot be empty.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Nullable")
         public Boolean nullable;
 
         /**
          * <p>The position of the field in the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Position")
         public Integer position;
 
         /**
          * <p>Indicates whether the field is the primary key. Valid values:</p>
-         * <br>
-         * <p>*   **true**: The field is the primary key.</p>
-         * <p>*   **false**: The field is not the primary key.</p>
+         * <ul>
+         * <li><strong>true</strong>: The field is the primary key.</li>
+         * <li><strong>false</strong>: The field is not the primary key.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("PrimaryKey")
         public String primaryKey;
 
         /**
          * <p>The sensitivity level of the column. Valid values:</p>
-         * <br>
-         * <p>*   **INNER**: The column is not sensitive.</p>
-         * <p>*   **SENSITIVE**: The column is sensitive.</p>
-         * <p>*   **CONFIDENTIAL**: The column is confidential.</p>
-         * <br>
-         * <p>> For more information, see [Sensitivity levels of columns](https://help.aliyun.com/document_detail/66091.html).</p>
+         * <ul>
+         * <li><strong>INNER</strong>: The column is not sensitive.</li>
+         * <li><strong>SENSITIVE</strong>: The column is sensitive.</li>
+         * <li><strong>CONFIDENTIAL</strong>: The column is confidential.</li>
+         * </ul>
+         * <blockquote>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/66091.html">Sensitivity levels of columns</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>INNER</p>
          */
         @NameInMap("SecurityLevel")
         public String securityLevel;

@@ -12,27 +12,40 @@ public class GetDatabaseExportOrderDetailResponseBody extends TeaModel {
 
     /**
      * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CFD8FE00-36D9-4C1B-940D-65A7B73D9066</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -142,16 +155,23 @@ public class GetDatabaseExportOrderDetailResponseBody extends TeaModel {
     public static class GetDatabaseExportOrderDetailResponseBodyDatabaseExportOrderDetailKeyInfoConfig extends TeaModel {
         /**
          * <p>The database name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dmstest</p>
          */
         @NameInMap("DbName")
         public String dbName;
 
         /**
          * <p>The type of data that was exported. Valid values:</p>
-         * <br>
-         * <p>*   **DATA**: The data of the database was exported.</p>
-         * <p>*   **STRUCT**: The schema of the database was exported.</p>
-         * <p>*   **DATA_STRUCT**: The data and schema of the database were exported.</p>
+         * <ul>
+         * <li><strong>DATA</strong>: The data of the database was exported.</li>
+         * <li><strong>STRUCT</strong>: The schema of the database was exported.</li>
+         * <li><strong>DATA_STRUCT</strong>: The data and schema of the database were exported.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DATA</p>
          */
         @NameInMap("ExportContent")
         public String exportContent;
@@ -176,10 +196,14 @@ public class GetDatabaseExportOrderDetailResponseBody extends TeaModel {
 
         /**
          * <p>The format in which the database was exported. Valid values:</p>
-         * <br>
-         * <p>*   **SQL**</p>
-         * <p>*   **CSV**</p>
-         * <p>*   **XLSX**</p>
+         * <ul>
+         * <li><strong>SQL</strong></li>
+         * <li><strong>CSV</strong></li>
+         * <li><strong>XLSX</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SQL</p>
          */
         @NameInMap("TargetOption")
         public String targetOption;
@@ -242,6 +266,9 @@ public class GetDatabaseExportOrderDetailResponseBody extends TeaModel {
     public static class GetDatabaseExportOrderDetailResponseBodyDatabaseExportOrderDetailKeyInfo extends TeaModel {
         /**
          * <p>The time when the ticket was submitted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-13 13:44:59</p>
          */
         @NameInMap("AuditDate")
         public String auditDate;
@@ -254,12 +281,18 @@ public class GetDatabaseExportOrderDetailResponseBody extends TeaModel {
 
         /**
          * <p>The database ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2583****</p>
          */
         @NameInMap("DbId")
         public Long dbId;
 
         /**
          * <p>The URL that is used to download the export result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://oss.xxx.com">https://oss.xxx.com</a></p>
          */
         @NameInMap("DownloadURL")
         public String downloadURL;
@@ -306,24 +339,36 @@ public class GetDatabaseExportOrderDetailResponseBody extends TeaModel {
     public static class GetDatabaseExportOrderDetailResponseBodyDatabaseExportOrderDetail extends TeaModel {
         /**
          * <p>The business background information of the database export ticket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Comment")
         public String comment;
 
         /**
          * <p>The user who submitted the ticket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dmsuser</p>
          */
         @NameInMap("Committer")
         public String committer;
 
         /**
          * <p>The ID of the user who submitted the ticket. This ID is a user ID and is not the ID of an Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12***</p>
          */
         @NameInMap("CommitterId")
         public String committerId;
 
         /**
          * <p>The ticket ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>821****</p>
          */
         @NameInMap("Id")
         public Long id;
@@ -336,24 +381,37 @@ public class GetDatabaseExportOrderDetailResponseBody extends TeaModel {
 
         /**
          * <p>The execution logs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-12 14:58:32:015 Database Dump Start.
+         * 2023-04-12 14:58:32:096 set server side query timeout, sql : set max_execution_time = 0</p>
          */
         @NameInMap("Log")
         public String log;
 
         /**
          * <p>The name that is used to search for the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:test@xxx.xxx.xxx.xxx">test@xxx.xxx.xxx.xxx</a>:3306</p>
          */
         @NameInMap("SearchName")
         public String searchName;
 
         /**
          * <p>The status description of the ticket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ticket approval</p>
          */
         @NameInMap("StatusDesc")
         public String statusDesc;
 
         /**
          * <p>The status description of the workflow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ticket approval</p>
          */
         @NameInMap("WorkflowStatusDesc")
         public String workflowStatusDesc;

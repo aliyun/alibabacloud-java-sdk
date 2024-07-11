@@ -4,15 +4,31 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class PreviewWorkflowResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>UnknownError</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0C1CB646-1DE4-4AD0-B4A4-7D47DD52E931</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,12 +81,24 @@ public class PreviewWorkflowResponseBody extends TeaModel {
     }
 
     public static class PreviewWorkflowResponseBodyWorkflowDetailWorkflowNodeListWorkflowNodeAuditUserListAuditUser extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Owner</p>
+         */
         @NameInMap("NickName")
         public String nickName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>db_test</p>
+         */
         @NameInMap("RealName")
         public String realName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>16***</p>
+         */
         @NameInMap("UserId")
         public Long userId;
 
@@ -131,9 +159,17 @@ public class PreviewWorkflowResponseBody extends TeaModel {
         @NameInMap("Comment")
         public String comment;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Owner</p>
+         */
         @NameInMap("NodeName")
         public String nodeName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SYS</p>
+         */
         @NameInMap("NodeType")
         public String nodeType;
 
