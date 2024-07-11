@@ -53,6 +53,15 @@ public class Tensorboard extends TeaModel {
     @NameInMap("JobId")
     public String jobId;
 
+    @NameInMap("Priority")
+    public String priority;
+
+    @NameInMap("QuotaId")
+    public String quotaId;
+
+    @NameInMap("QuotaName")
+    public String quotaName;
+
     /**
      * <strong>example:</strong>
      * <p>Delete by user</p>
@@ -181,6 +190,30 @@ public class Tensorboard extends TeaModel {
     }
     public String getJobId() {
         return this.jobId;
+    }
+
+    public Tensorboard setPriority(String priority) {
+        this.priority = priority;
+        return this;
+    }
+    public String getPriority() {
+        return this.priority;
+    }
+
+    public Tensorboard setQuotaId(String quotaId) {
+        this.quotaId = quotaId;
+        return this;
+    }
+    public String getQuotaId() {
+        return this.quotaId;
+    }
+
+    public Tensorboard setQuotaName(String quotaName) {
+        this.quotaName = quotaName;
+        return this;
+    }
+    public String getQuotaName() {
+        return this.quotaName;
     }
 
     public Tensorboard setReasonCode(String reasonCode) {
