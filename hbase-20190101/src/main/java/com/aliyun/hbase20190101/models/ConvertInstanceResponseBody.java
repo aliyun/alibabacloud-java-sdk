@@ -4,9 +4,17 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class ConvertInstanceResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>54124548879</p>
+     */
     @NameInMap("OrderId")
     public Long orderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>50373857-C47B-4B64-9332-D0B5280B59EA</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

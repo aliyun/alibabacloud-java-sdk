@@ -7,18 +7,38 @@ public class DescribeEndpointsResponseBody extends TeaModel {
     @NameInMap("ConnAddrs")
     public DescribeEndpointsResponseBodyConnAddrs connAddrs;
 
+    /**
+     * <strong>example:</strong>
+     * <p>hbaseue</p>
+     */
     @NameInMap("Engine")
     public String engine;
 
+    /**
+     * <strong>example:</strong>
+     * <p>VPC</p>
+     */
     @NameInMap("NetType")
     public String netType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>F072593C-5234-5B56-9F63-3C7A3AD85D66</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>vsw-bp1foll427ze3d4ps****</p>
+     */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>vpc-bp15s22y1a7sff5gj****</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 
@@ -76,15 +96,31 @@ public class DescribeEndpointsResponseBody extends TeaModel {
     }
 
     public static class DescribeEndpointsResponseBodyConnAddrsConnAddrInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("ConnAddr")
         public String connAddr;
 
+        /**
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("ConnAddrPort")
         public String connAddrPort;
 
+        /**
+         * <strong>example:</strong>
+         * <p>zkConn</p>
+         */
         @NameInMap("ConnType")
         public String connType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("NetType")
         public String netType;
 

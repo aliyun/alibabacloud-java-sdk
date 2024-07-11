@@ -7,15 +7,31 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
     @NameInMap("Items")
     public java.util.List<DescribeActiveOperationTasksResponseBodyItems> items;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>C634E813-42FA-53D2-A7EB-B881C4B264CC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
 
@@ -65,78 +81,166 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
     }
 
     public static class DescribeActiveOperationTasksResponseBodyItems extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("AllowCancel")
         public String allowCancel;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("AllowChange")
         public String allowChange;
 
+        /**
+         * <strong>example:</strong>
+         * <p>all</p>
+         */
         @NameInMap("ChangeLevel")
         public String changeLevel;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Risk repairment</p>
+         */
         @NameInMap("ChangeLevelEn")
         public String changeLevelEn;
 
         @NameInMap("ChangeLevelZh")
         public String changeLevelZh;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-02-15 23:59:59</p>
+         */
         @NameInMap("CreatedTime")
         public String createdTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-shanghai-et-a</p>
+         */
         @NameInMap("CurrentAVZ")
         public String currentAVZ;
 
+        /**
+         * <strong>example:</strong>
+         * <p>hbaseue</p>
+         */
         @NameInMap("DbType")
         public String dbType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2.0</p>
+         */
         @NameInMap("DbVersion")
         public String dbVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-02-19 23:59:59</p>
+         */
         @NameInMap("Deadline")
         public String deadline;
 
+        /**
+         * <strong>example:</strong>
+         * <p>111111</p>
+         */
         @NameInMap("Id")
         public Integer id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Transient instance disconnection</p>
+         */
         @NameInMap("ImpactEn")
         public String impactEn;
 
         @NameInMap("ImpactZh")
         public String impactZh;
 
+        /**
+         * <strong>example:</strong>
+         * <p>--</p>
+         */
         @NameInMap("InsComment")
         public String insComment;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ld-bp150tns0sjxs****</p>
+         */
         @NameInMap("InsName")
         public String insName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-02-19 14:00:00</p>
+         */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>14:00:00</p>
+         */
         @NameInMap("PrepareInterval")
         public String prepareInterval;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hanghzou</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <strong>example:</strong>
+         * <p>--</p>
+         */
         @NameInMap("ResultInfo")
         public String resultInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-02-19 10:00:00</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
         @NameInMap("SubInsNames")
         public java.util.List<String> subInsNames;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-02-19 14:00:00</p>
+         */
         @NameInMap("SwitchTime")
         public String switchTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>rds_apsaradb_upgrade</p>
+         */
         @NameInMap("TaskType")
         public String taskType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>rds_apsaradb_upgrade</p>
+         */
         @NameInMap("TaskTypeEn")
         public String taskTypeEn;
 

@@ -4,12 +4,28 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class QueryXpackRelateDBRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ap-bp1qtz9rcbbt3p6ng</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("HasSingleNode")
     public Boolean hasSingleNode;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hbase</p>
+     */
     @NameInMap("RelateDbType")
     public String relateDbType;
 

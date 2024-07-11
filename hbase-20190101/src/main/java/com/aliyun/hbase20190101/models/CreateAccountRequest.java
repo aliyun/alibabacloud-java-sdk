@@ -4,12 +4,30 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class CreateAccountRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test01</p>
+     */
     @NameInMap("AccountName")
     public String accountName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <hr>
+     */
     @NameInMap("AccountPassword")
     public String accountPassword;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ld-bp150tns0sjxs****</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 

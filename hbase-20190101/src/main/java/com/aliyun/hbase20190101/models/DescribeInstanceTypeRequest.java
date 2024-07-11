@@ -4,6 +4,10 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceTypeRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>hbase.n2.4xlarge</p>
+     */
     @NameInMap("InstanceType")
     public String instanceType;
 

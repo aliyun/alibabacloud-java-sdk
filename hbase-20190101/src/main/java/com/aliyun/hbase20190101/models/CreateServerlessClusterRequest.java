@@ -4,57 +4,135 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class CreateServerlessClusterRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("AutoRenewPeriod")
     public Integer autoRenewPeriod;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ETnLKlblzczshOTUbOCz****</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>xx</p>
+     */
     @NameInMap("ClientType")
     public String clientType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>serverless-name</p>
+     */
     @NameInMap("ClusterName")
     public String clusterName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cloud_ssd</p>
+     */
     @NameInMap("DiskType")
     public String diskType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>serverlesshbase</p>
+     */
     @NameInMap("Engine")
     public String engine;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2.0</p>
+     */
     @NameInMap("EngineVersion")
     public String engineVersion;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Prepaid</p>
+     */
     @NameInMap("PayType")
     public String payType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6</p>
+     */
     @NameInMap("Period")
     public Integer period;
 
+    /**
+     * <strong>example:</strong>
+     * <p>month</p>
+     */
     @NameInMap("PeriodUnit")
     public String periodUnit;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rg-j4d53glb3****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1000</p>
+     */
     @NameInMap("ServerlessCapability")
     public Integer serverlessCapability;
 
+    /**
+     * <strong>example:</strong>
+     * <p>serverless.small</p>
+     */
     @NameInMap("ServerlessSpec")
     public String serverlessSpec;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("ServerlessStorage")
     public Integer serverlessStorage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>vsw-bp191ipotqj1ssyl*****</p>
+     */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>vpc-bp120k6ixs4eog****</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-f</p>
+     */
     @NameInMap("ZoneId")
     public String zoneId;
 

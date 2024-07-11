@@ -4,9 +4,19 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class DeleteInstanceRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hb-bp16o0pd52e3y****</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("ImmediateDeleteFlag")
     public Boolean immediateDeleteFlag;
 

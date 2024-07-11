@@ -4,6 +4,12 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class CloseBackupRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hb-t4naqsay5gn****</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 

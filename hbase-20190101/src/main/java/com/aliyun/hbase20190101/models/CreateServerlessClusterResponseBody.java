@@ -4,15 +4,31 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class CreateServerlessClusterResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>sh-bp1a969y7681****</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>23232453233*****</p>
+     */
     @NameInMap("OrderId")
     public String orderId;
 
+    /**
+     * <strong>example:</strong>
+     * <hr>
+     */
     @NameInMap("PassWord")
     public String passWord;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3E19E345-101D-4014-946C-************</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

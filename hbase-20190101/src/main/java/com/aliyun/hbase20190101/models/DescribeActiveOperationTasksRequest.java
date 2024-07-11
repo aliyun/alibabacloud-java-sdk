@@ -4,18 +4,38 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeActiveOperationTasksRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("AllowCancel")
     public Integer allowCancel;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("AllowChange")
     public Integer allowChange;
 
+    /**
+     * <strong>example:</strong>
+     * <p>S1</p>
+     */
     @NameInMap("ChangeLevel")
     public String changeLevel;
 
+    /**
+     * <strong>example:</strong>
+     * <p>hbaseue</p>
+     */
     @NameInMap("DbType")
     public String dbType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ld-bp150tns0sjxs****</p>
+     */
     @NameInMap("InsName")
     public String insName;
 
@@ -25,15 +45,31 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>hbase</p>
+     */
     @NameInMap("ProductId")
     public String productId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("Region")
     public String region;
 
@@ -46,9 +82,17 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("Status")
     public Integer status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rds_apsaradb_upgrade</p>
+     */
     @NameInMap("TaskType")
     public String taskType;
 

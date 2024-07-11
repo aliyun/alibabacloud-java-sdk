@@ -4,87 +4,235 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class EvaluateMultiZoneResourceRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-hangxzhouxb****</p>
+     */
     @NameInMap("ArbiterVSwitchId")
     public String arbiterVSwitchId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-b</p>
+     */
     @NameInMap("ArbiterZoneId")
     public String arbiterZoneId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2.0</p>
+     */
     @NameInMap("ArchVersion")
     public String archVersion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("AutoRenewPeriod")
     public Integer autoRenewPeriod;
 
+    /**
+     * <strong>example:</strong>
+     * <p>f4g8t5rd2gr94****</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>hbaseue_test</p>
+     */
     @NameInMap("ClusterName")
     public String clusterName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>400</p>
+     */
     @NameInMap("CoreDiskSize")
     public Integer coreDiskSize;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cloud_ssd</p>
+     */
     @NameInMap("CoreDiskType")
     public String coreDiskType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hbase.sn1.medium</p>
+     */
     @NameInMap("CoreInstanceType")
     public String coreInstanceType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
+     */
     @NameInMap("CoreNodeCount")
     public Integer coreNodeCount;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hbaseue</p>
+     */
     @NameInMap("Engine")
     public String engine;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2.0</p>
+     */
     @NameInMap("EngineVersion")
     public String engineVersion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>400</p>
+     */
     @NameInMap("LogDiskSize")
     public Integer logDiskSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cloud_ssd</p>
+     */
     @NameInMap("LogDiskType")
     public String logDiskType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>hbase.sn1.medium</p>
+     */
     @NameInMap("LogInstanceType")
     public String logInstanceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4</p>
+     */
     @NameInMap("LogNodeCount")
     public Integer logNodeCount;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hbase.sn1.medium</p>
+     */
     @NameInMap("MasterInstanceType")
     public String masterInstanceType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-bef-aliyun-com</p>
+     */
     @NameInMap("MultiZoneCombination")
     public String multiZoneCombination;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Postpaid</p>
+     */
     @NameInMap("PayType")
     public String payType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Period")
     public Integer period;
 
+    /**
+     * <strong>example:</strong>
+     * <p>month</p>
+     */
     @NameInMap("PeriodUnit")
     public String periodUnit;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-hangxzhouxe*****</p>
+     */
     @NameInMap("PrimaryVSwitchId")
     public String primaryVSwitchId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-e</p>
+     */
     @NameInMap("PrimaryZoneId")
     public String primaryZoneId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>127.0.0.1</p>
+     */
     @NameInMap("SecurityIPList")
     public String securityIPList;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-hangxzhouxf****</p>
+     */
     @NameInMap("StandbyVSwitchId")
     public String standbyVSwitchId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-f</p>
+     */
     @NameInMap("StandbyZoneId")
     public String standbyZoneId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-bp120k6ixs4eog*****</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 

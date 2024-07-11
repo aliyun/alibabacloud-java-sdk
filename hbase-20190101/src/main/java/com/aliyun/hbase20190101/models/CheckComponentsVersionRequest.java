@@ -4,9 +4,21 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class CheckComponentsVersionRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hb-t4naqsay5gn****</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>HBASE,HADOOP</p>
+     */
     @NameInMap("Components")
     public String components;
 

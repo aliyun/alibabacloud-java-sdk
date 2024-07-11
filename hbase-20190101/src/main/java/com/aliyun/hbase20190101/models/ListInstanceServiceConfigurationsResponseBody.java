@@ -7,15 +7,31 @@ public class ListInstanceServiceConfigurationsResponseBody extends TeaModel {
     @NameInMap("ConfigureList")
     public ListInstanceServiceConfigurationsResponseBodyConfigureList configureList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5B381E36-BCA3-4377-8638-B65C236617D5</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>42</p>
+     */
     @NameInMap("TotalRecordCount")
     public Long totalRecordCount;
 
@@ -65,24 +81,52 @@ public class ListInstanceServiceConfigurationsResponseBody extends TeaModel {
     }
 
     public static class ListInstanceServiceConfigurationsResponseBodyConfigureListConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>hbase#hbase-site.xml#hbase.client.keyvalue.maxsize</p>
+         */
         @NameInMap("ConfigureName")
         public String configureName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>INT</p>
+         */
         @NameInMap("ConfigureUnit")
         public String configureUnit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10485760</p>
+         */
         @NameInMap("DefaultValue")
         public String defaultValue;
 
+        /**
+         * <strong>example:</strong>
+         * <p>hbase client keyvalue maxsize</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("NeedRestart")
         public String needRestart;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10485760</p>
+         */
         @NameInMap("RunningValue")
         public String runningValue;
 
+        /**
+         * <strong>example:</strong>
+         * <p>R[10485760,52428800]</p>
+         */
         @NameInMap("ValueRange")
         public String valueRange;
 

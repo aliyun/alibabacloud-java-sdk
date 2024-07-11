@@ -4,6 +4,10 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class MoveResourceGroupResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>8CD9BFBC-D575-5FCC-BA7E-956BF0D0****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

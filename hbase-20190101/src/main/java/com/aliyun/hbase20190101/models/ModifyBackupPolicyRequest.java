@@ -4,18 +4,44 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class ModifyBackupPolicyRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hb-t4naqsay5gn****</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>18:00Z</p>
+     */
     @NameInMap("PreferredBackupEndTimeUTC")
     public String preferredBackupEndTimeUTC;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Thursday</p>
+     */
     @NameInMap("PreferredBackupPeriod")
     public String preferredBackupPeriod;
 
+    /**
+     * <strong>example:</strong>
+     * <p>17:00Z</p>
+     */
     @NameInMap("PreferredBackupStartTimeUTC")
     public String preferredBackupStartTimeUTC;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>01:00-02:00</p>
+     */
     @NameInMap("PreferredBackupTime")
     public String preferredBackupTime;
 

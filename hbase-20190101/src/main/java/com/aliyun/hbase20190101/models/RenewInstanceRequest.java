@@ -4,12 +4,30 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class RenewInstanceRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hb-bp1u0639js2h7****</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("Duration")
     public Integer duration;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>month</p>
+     */
     @NameInMap("PricingCycle")
     public String pricingCycle;
 

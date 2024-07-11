@@ -7,15 +7,31 @@ public class DescribeInstancesResponseBody extends TeaModel {
     @NameInMap("Instances")
     public DescribeInstancesResponseBodyInstances instances;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>EBECBF12-2E34-41BE-8DE9-FC3700D4****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>18</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -65,9 +81,17 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyInstancesInstanceTagsTag extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>test-key</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test-value</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -114,117 +138,265 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyInstancesInstance extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("AutoRenewal")
         public Boolean autoRenewal;
 
+        /**
+         * <strong>example:</strong>
+         * <p>open</p>
+         */
         @NameInMap("BackupStatus")
         public String backupStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>hb-bp1u0639js2h7****</p>
+         */
         @NameInMap("ClusterId")
         public String clusterId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("ClusterName")
         public String clusterName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cluster</p>
+         */
         @NameInMap("ClusterType")
         public String clusterType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>open</p>
+         */
         @NameInMap("ColdStorageStatus")
         public String coldStorageStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("CoreDiskCount")
         public String coreDiskCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("CoreDiskSize")
         public Integer coreDiskSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cloud_efficiency</p>
+         */
         @NameInMap("CoreDiskType")
         public String coreDiskType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>hbase.sn1.large</p>
+         */
         @NameInMap("CoreInstanceType")
         public String coreInstanceType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("CoreNodeCount")
         public Integer coreNodeCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2019-09-12T14:40:46</p>
+         */
         @NameInMap("CreatedTime")
         public String createdTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2019-09-12T14:40:46Z</p>
+         */
         @NameInMap("CreatedTimeUTC")
         public String createdTimeUTC;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("Duration")
         public Integer duration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>hbase</p>
+         */
         @NameInMap("Engine")
         public String engine;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2019-10-12T14:40:46</p>
+         */
         @NameInMap("ExpireTime")
         public String expireTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2019-10-12T14:40:46Z</p>
+         */
         @NameInMap("ExpireTimeUTC")
         public String expireTimeUTC;
 
+        /**
+         * <strong>example:</strong>
+         * <p>hb-bp1u0639js2h7****</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsDeletionProtection")
         public Boolean isDeletionProtection;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsHa")
         public Boolean isHa;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2.0</p>
+         */
         @NameInMap("MajorVersion")
         public String majorVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("MasterDiskSize")
         public Integer masterDiskSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cloud_efficiency</p>
+         */
         @NameInMap("MasterDiskType")
         public String masterDiskType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>hbase.sn1.large</p>
+         */
         @NameInMap("MasterInstanceType")
         public String masterInstanceType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("MasterNodeCount")
         public Integer masterNodeCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ModuleId")
         public Integer moduleId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.0</p>
+         */
         @NameInMap("ModuleStackVersion")
         public String moduleStackVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>VPC</p>
+         */
         @NameInMap("NetworkType")
         public String networkType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2980****2123</p>
+         */
         @NameInMap("ParentId")
         public String parentId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Prepaid</p>
+         */
         @NameInMap("PayType")
         public String payType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>rg-4f51d54g5****</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ACTIVATION</p>
+         */
         @NameInMap("Status")
         public String status;
 
         @NameInMap("Tags")
         public DescribeInstancesResponseBodyInstancesInstanceTags tags;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vpc-bp120k6ixs4eoghz*****</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vsw-bp191ipotq****dbqf</p>
+         */
         @NameInMap("VswitchId")
         public String vswitchId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-f</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 

@@ -4,6 +4,10 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceServiceConfigResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>F008B7AB-025D-4C20-AE12-047C8F8C3D97</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,15 +4,31 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeClusterConnectionResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>hbaseue</p>
+     */
     @NameInMap("DbType")
     public String dbType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IsMultimod")
     public String isMultimod;
 
+    /**
+     * <strong>example:</strong>
+     * <p>VPC</p>
+     */
     @NameInMap("NetType")
     public String netType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>70220050-A465-5DCC-8C0C-C38C6E3DB24D</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -28,9 +44,17 @@ public class DescribeClusterConnectionResponseBody extends TeaModel {
     @NameInMap("UiProxyConnAddrInfo")
     public DescribeClusterConnectionResponseBodyUiProxyConnAddrInfo uiProxyConnAddrInfo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>vsw-bp1foll427ze3d4ps****</p>
+     */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>vpc-bp15s22y1a7sff5gj****</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 
@@ -131,12 +155,24 @@ public class DescribeClusterConnectionResponseBody extends TeaModel {
     }
 
     public static class DescribeClusterConnectionResponseBodyServiceConnAddrsServiceConnAddrConnAddrInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>hb-****-proxy-phoenix.hbase.rds.aliyuncs.com</p>
+         */
         @NameInMap("ConnAddr")
         public String connAddr;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8765</p>
+         */
         @NameInMap("ConnAddrPort")
         public String connAddrPort;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("NetType")
         public String netType;
 
@@ -175,6 +211,10 @@ public class DescribeClusterConnectionResponseBody extends TeaModel {
         @NameInMap("ConnAddrInfo")
         public DescribeClusterConnectionResponseBodyServiceConnAddrsServiceConnAddrConnAddrInfo connAddrInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PhoenixConnAddr</p>
+         */
         @NameInMap("ConnType")
         public String connType;
 
@@ -221,12 +261,24 @@ public class DescribeClusterConnectionResponseBody extends TeaModel {
     }
 
     public static class DescribeClusterConnectionResponseBodySlbConnAddrsSlbConnAddrConnAddrInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>ld-bp150tns0sjxs****-proxy-hbaseue-pub.hbaseue.rds.aliyuncs.com</p>
+         */
         @NameInMap("ConnAddr")
         public String connAddr;
 
+        /**
+         * <strong>example:</strong>
+         * <p>9190</p>
+         */
         @NameInMap("ConnAddrPort")
         public String connAddrPort;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("NetType")
         public String netType;
 
@@ -265,6 +317,10 @@ public class DescribeClusterConnectionResponseBody extends TeaModel {
         @NameInMap("ConnAddrInfo")
         public DescribeClusterConnectionResponseBodySlbConnAddrsSlbConnAddrConnAddrInfo connAddrInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>hbaseue</p>
+         */
         @NameInMap("SlbType")
         public String slbType;
 
@@ -311,12 +367,24 @@ public class DescribeClusterConnectionResponseBody extends TeaModel {
     }
 
     public static class DescribeClusterConnectionResponseBodyThriftConn extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>hb-bp1u0639js2h7****-proxy-thrift.hbase.rds.aliyuncs.com</p>
+         */
         @NameInMap("ConnAddr")
         public String connAddr;
 
+        /**
+         * <strong>example:</strong>
+         * <p>9099</p>
+         */
         @NameInMap("ConnAddrPort")
         public String connAddrPort;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("NetType")
         public String netType;
 
@@ -352,12 +420,24 @@ public class DescribeClusterConnectionResponseBody extends TeaModel {
     }
 
     public static class DescribeClusterConnectionResponseBodyUiProxyConnAddrInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>ld-bp150tns0sjxs****-master1-001.hbaseue.rds.aliyuncs.com</p>
+         */
         @NameInMap("ConnAddr")
         public String connAddr;
 
+        /**
+         * <strong>example:</strong>
+         * <p>443</p>
+         */
         @NameInMap("ConnAddrPort")
         public String connAddrPort;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PUBLIC</p>
+         */
         @NameInMap("NetType")
         public String netType;
 
@@ -393,12 +473,24 @@ public class DescribeClusterConnectionResponseBody extends TeaModel {
     }
 
     public static class DescribeClusterConnectionResponseBodyZkConnAddrsZkConnAddr extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>ld-bp150tns0sjxs****-master1-001.hbaseue.rds.aliyuncs.com</p>
+         */
         @NameInMap("ConnAddr")
         public String connAddr;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2181</p>
+         */
         @NameInMap("ConnAddrPort")
         public String connAddrPort;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("NetType")
         public String netType;
 

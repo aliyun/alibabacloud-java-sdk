@@ -10,6 +10,10 @@ public class DescribeBackupSummaryResponseBody extends TeaModel {
     @NameInMap("Incr")
     public DescribeBackupSummaryResponseBodyIncr incr;
 
+    /**
+     * <strong>example:</strong>
+     * <p>168793CB-7B31-43E7-ADAB-FE3E8D584D6E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,24 +47,52 @@ public class DescribeBackupSummaryResponseBody extends TeaModel {
     }
 
     public static class DescribeBackupSummaryResponseBodyFullRecordsRecord extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2020-11-02T18:00:00Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.2 kB</p>
+         */
         @NameInMap("DataSize")
         public String dataSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-11-02T18:02:04Z</p>
+         */
         @NameInMap("FinishTime")
         public String finishTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1/1</p>
+         */
         @NameInMap("Process")
         public String process;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20201103020000</p>
+         */
         @NameInMap("RecordId")
         public String recordId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.00 MB/s</p>
+         */
         @NameInMap("Speed")
         public String speed;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -147,21 +179,41 @@ public class DescribeBackupSummaryResponseBody extends TeaModel {
     }
 
     public static class DescribeBackupSummaryResponseBodyFull extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("HasMore")
         public String hasMore;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-11-09T18:00:00Z</p>
+         */
         @NameInMap("NextFullBackupDate")
         public String nextFullBackupDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         @NameInMap("Records")
         public DescribeBackupSummaryResponseBodyFullRecords records;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("Total")
         public Integer total;
 
@@ -221,21 +273,45 @@ public class DescribeBackupSummaryResponseBody extends TeaModel {
     }
 
     public static class DescribeBackupSummaryResponseBodyIncr extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>266 B</p>
+         */
         @NameInMap("BackupLogSize")
         public String backupLogSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-11-05T01:20:31Z</p>
+         */
         @NameInMap("Pos")
         public String pos;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("QueueLogNum")
         public String queueLogNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("RunningLogNum")
         public String runningLogNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.00 MB/s</p>
+         */
         @NameInMap("Speed")
         public String speed;
 
+        /**
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
+         */
         @NameInMap("Status")
         public String status;
 

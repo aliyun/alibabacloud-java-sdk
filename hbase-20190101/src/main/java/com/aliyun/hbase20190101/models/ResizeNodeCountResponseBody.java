@@ -4,9 +4,17 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class ResizeNodeCountResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>20470860005****</p>
+     */
     @NameInMap("OrderId")
     public String orderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>B288B41F-6681-42A6-8905-47C3C42B19B0</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

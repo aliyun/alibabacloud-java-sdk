@@ -4,6 +4,12 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeMultiZoneClusterRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ld-t4nn71xa0yn****</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 

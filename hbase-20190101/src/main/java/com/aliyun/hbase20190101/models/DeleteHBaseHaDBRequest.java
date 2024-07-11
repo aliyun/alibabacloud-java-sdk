@@ -4,9 +4,21 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class DeleteHBaseHaDBRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bds-bp14112fd7g52s1****</p>
+     */
     @NameInMap("BdsId")
     public String bdsId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ha-sw2o0l01s4r76****</p>
+     */
     @NameInMap("HaId")
     public String haId;
 

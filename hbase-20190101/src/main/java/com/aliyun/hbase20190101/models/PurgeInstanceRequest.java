@@ -4,6 +4,12 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class PurgeInstanceRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hb-m5ek15uzs7613xxxx</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 

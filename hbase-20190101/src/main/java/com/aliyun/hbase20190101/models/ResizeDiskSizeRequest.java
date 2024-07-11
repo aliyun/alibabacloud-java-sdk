@@ -4,9 +4,21 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class ResizeDiskSizeRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hb-bp16o0pd52e3y****</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>120</p>
+     */
     @NameInMap("NodeDiskSize")
     public Integer nodeDiskSize;
 

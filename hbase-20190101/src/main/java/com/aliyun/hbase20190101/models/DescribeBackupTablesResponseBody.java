@@ -7,18 +7,34 @@ public class DescribeBackupTablesResponseBody extends TeaModel {
     @NameInMap("BackupRecords")
     public DescribeBackupTablesResponseBodyBackupRecords backupRecords;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>01262E9C-B0CC-4663-82FA-D50173649F92</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Tables")
     public DescribeBackupTablesResponseBodyTables tables;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Total")
     public Long total;
 
@@ -76,27 +92,59 @@ public class DescribeBackupTablesResponseBody extends TeaModel {
     }
 
     public static class DescribeBackupTablesResponseBodyBackupRecordsBackupRecord extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1.2 kB</p>
+         */
         @NameInMap("DataSize")
         public String dataSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-11-02T18:00:05Z</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <strong>example:</strong>
+         * <p>14/14</p>
+         */
         @NameInMap("Process")
         public String process;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.00 MB/s</p>
+         */
         @NameInMap("Speed")
         public String speed;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-11-02T18:00:00Z</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SUCCEEDED</p>
+         */
         @NameInMap("State")
         public String state;
 
+        /**
+         * <strong>example:</strong>
+         * <p>default:test1</p>
+         */
         @NameInMap("Table")
         public String table;
 

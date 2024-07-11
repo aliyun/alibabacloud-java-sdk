@@ -4,6 +4,10 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeRestoreTablesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>18D9CC47-D913-48BF-AB6B-4FA9B28FBDB1</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -76,27 +80,59 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
     }
 
     public static class DescribeRestoreTablesResponseBodyRestoreFullRestoreFullDetailsRestoreFullDetail extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1.2 kB</p>
+         */
         @NameInMap("DataSize")
         public String dataSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-11-05T06:45:51Z</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>“”</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <strong>example:</strong>
+         * <p>14/14</p>
+         */
         @NameInMap("Process")
         public String process;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.00 MB/s</p>
+         */
         @NameInMap("Speed")
         public String speed;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-11-05T06:45:45Z</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SUCCEEDED</p>
+         */
         @NameInMap("State")
         public String state;
 
+        /**
+         * <strong>example:</strong>
+         * <p>default:test1</p>
+         */
         @NameInMap("Table")
         public String table;
 
@@ -191,27 +227,55 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
     }
 
     public static class DescribeRestoreTablesResponseBodyRestoreFull extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1.2 kB</p>
+         */
         @NameInMap("DataSize")
         public String dataSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Fail")
         public Integer fail;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         @NameInMap("RestoreFullDetails")
         public DescribeRestoreTablesResponseBodyRestoreFullRestoreFullDetails restoreFullDetails;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.00 MB/s</p>
+         */
         @NameInMap("Speed")
         public String speed;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Succeed")
         public Integer succeed;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Total")
         public Long total;
 
@@ -287,24 +351,52 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
     }
 
     public static class DescribeRestoreTablesResponseBodyRestoreIncrDetail extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2020-11-05T06:45:44Z</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0/0</p>
+         */
         @NameInMap("Process")
         public String process;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0 ms</p>
+         */
         @NameInMap("RestoreDelay")
         public String restoreDelay;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-11-02T18:00:00Z</p>
+         */
         @NameInMap("RestoreStartTs")
         public String restoreStartTs;
 
+        /**
+         * <strong>example:</strong>
+         * <p>“”</p>
+         */
         @NameInMap("RestoredTs")
         public String restoredTs;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-11-05T06:45:44Z</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SUCCEEDED</p>
+         */
         @NameInMap("State")
         public String state;
 
@@ -372,18 +464,38 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
     }
 
     public static class DescribeRestoreTablesResponseBodyRestoreSchemaRestoreSchemaDetailsRestoreSchemaDetail extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2020-11-05T06:45:18Z</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-11-05T06:45:14Z</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SUCCEEDED</p>
+         */
         @NameInMap("State")
         public String state;
 
+        /**
+         * <strong>example:</strong>
+         * <p>default:test1</p>
+         */
         @NameInMap("Table")
         public String table;
 
@@ -454,21 +566,41 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
     }
 
     public static class DescribeRestoreTablesResponseBodyRestoreSchema extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Fail")
         public Integer fail;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         @NameInMap("RestoreSchemaDetails")
         public DescribeRestoreTablesResponseBodyRestoreSchemaRestoreSchemaDetails restoreSchemaDetails;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Succeed")
         public Integer succeed;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Total")
         public Long total;
 
@@ -528,21 +660,45 @@ public class DescribeRestoreTablesResponseBody extends TeaModel {
     }
 
     public static class DescribeRestoreTablesResponseBodyRestoreSummary extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2020-11-05T06:45:51Z</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20201105144514</p>
+         */
         @NameInMap("RecordId")
         public String recordId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-11-04T05:15:00Z</p>
+         */
         @NameInMap("RestoreToDate")
         public String restoreToDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-11-05T06:45:14Z</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SUCCEEDED</p>
+         */
         @NameInMap("State")
         public String state;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ld-m5e2t34kr54wgxxxx</p>
+         */
         @NameInMap("TargetCluster")
         public String targetCluster;
 

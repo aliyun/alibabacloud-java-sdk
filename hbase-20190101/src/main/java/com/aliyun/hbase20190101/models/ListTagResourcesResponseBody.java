@@ -4,9 +4,17 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class ListTagResourcesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1d2db86sca4384811e0b5e8707e68****</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>74F02441-9A8D-48F6-933F-E317AEB28DBF</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,15 +51,31 @@ public class ListTagResourcesResponseBody extends TeaModel {
     }
 
     public static class ListTagResourcesResponseBodyTagResourcesTagResource extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>bds-bp15e022622f****</p>
+         */
         @NameInMap("ResourceId")
         public String resourceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ALIYUN::MULTIMOD::CLUSTER</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>k1</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>v2</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 

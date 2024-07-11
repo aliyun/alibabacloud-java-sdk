@@ -4,9 +4,17 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class UpgradeMultiZoneClusterResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>C532A4D4-9451-4460-BB3E-300FEC852D3F</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>LINDORM</p>
+     */
     @NameInMap("UpgradingComponents")
     public String upgradingComponents;
 

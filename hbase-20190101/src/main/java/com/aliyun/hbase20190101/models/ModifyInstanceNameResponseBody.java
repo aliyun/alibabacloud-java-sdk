@@ -4,6 +4,10 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceNameResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>959DA199-54E5-569D-AD46-92BED8515E62</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

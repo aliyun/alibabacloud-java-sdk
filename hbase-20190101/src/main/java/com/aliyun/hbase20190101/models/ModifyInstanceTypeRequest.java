@@ -4,12 +4,26 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceTypeRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hb-bp1x940uh********</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>hbase.sn1.8xlarge</p>
+     */
     @NameInMap("CoreInstanceType")
     public String coreInstanceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>hbase.sn1.large</p>
+     */
     @NameInMap("MasterInstanceType")
     public String masterInstanceType;
 

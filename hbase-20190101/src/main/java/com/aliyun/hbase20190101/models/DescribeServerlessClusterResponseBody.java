@@ -4,81 +4,181 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeServerlessClusterResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("AutoRenew")
     public String autoRenew;
 
+    /**
+     * <strong>example:</strong>
+     * <p>single</p>
+     */
     @NameInMap("ClusterType")
     public String clusterType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2019-10-12T14:40:46</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>150</p>
+     */
     @NameInMap("CuSize")
     public String cuSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("DiskSize")
     public String diskSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2019-10-12T14:40:46</p>
+     */
     @NameInMap("ExpireTime")
     public String expireTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("HaType")
     public String haType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("HasUser")
     public String hasUser;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://sh-wz91452kg946i****-lindorm-serverless-in.lindorm.rds.aliyuncs.com:443">https://sh-wz91452kg946i****-lindorm-serverless-in.lindorm.rds.aliyuncs.com:443</a></p>
+     */
     @NameInMap("InnerEndpoint")
     public String innerEndpoint;
 
+    /**
+     * <strong>example:</strong>
+     * <p>hb-bp16f1441y6p2****</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("InstanceName")
     public String instanceName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IsDeletionProtection")
     public String isDeletionProtection;
 
     @NameInMap("LockMode")
     public String lockMode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2.0.8</p>
+     */
     @NameInMap("MainVersion")
     public String mainVersion;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://sh-wz91452kg946i****-lindorm-serverless.lindorm.rds.aliyuncs.com:443">https://sh-wz91452kg946i****-lindorm-serverless.lindorm.rds.aliyuncs.com:443</a></p>
+     */
     @NameInMap("OuterEndpoint")
     public String outerEndpoint;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Postpaid</p>
+     */
     @NameInMap("PayType")
     public String payType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>89F81C30-320B-4550-91DB-C37C81D2358F</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("ReserverMaxQpsNum")
     public String reserverMaxQpsNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>50</p>
+     */
     @NameInMap("ReserverMinQpsNum")
     public String reserverMinQpsNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rg-fjm2d4v7sf****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ACTIVATION</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>NO</p>
+     */
     @NameInMap("UpdateStatus")
     public String updateStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>vsw-bp191ipotqf****</p>
+     */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>vpc-bp120k6ixs4eoghz****</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-f</p>
+     */
     @NameInMap("ZoneId")
     public String zoneId;
 

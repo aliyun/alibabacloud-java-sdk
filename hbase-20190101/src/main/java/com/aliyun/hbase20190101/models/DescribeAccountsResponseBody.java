@@ -7,6 +7,10 @@ public class DescribeAccountsResponseBody extends TeaModel {
     @NameInMap("Accounts")
     public DescribeAccountsResponseBodyAccounts accounts;
 
+    /**
+     * <strong>example:</strong>
+     * <p>F744E939-D08D-5623-82C8-9D1F9F7685D1</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

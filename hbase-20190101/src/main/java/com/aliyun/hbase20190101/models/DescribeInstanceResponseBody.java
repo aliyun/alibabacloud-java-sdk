@@ -4,162 +4,371 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("AutoRenewal")
     public Boolean autoRenewal;
 
+    /**
+     * <strong>example:</strong>
+     * <p>open</p>
+     */
     @NameInMap("BackupStatus")
     public String backupStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ld-bp150tns0sjxs****</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>testhbase</p>
+     */
     @NameInMap("ClusterName")
     public String clusterName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cluster</p>
+     */
     @NameInMap("ClusterType")
     public String clusterType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>800</p>
+     */
     @NameInMap("ColdStorageSize")
     public Integer coldStorageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>open</p>
+     */
     @NameInMap("ColdStorageStatus")
     public String coldStorageStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("ConfirmMaintainTime")
     public String confirmMaintainTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4</p>
+     */
     @NameInMap("CoreDiskCount")
     public String coreDiskCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("CoreDiskSize")
     public Integer coreDiskSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cloud_ssd</p>
+     */
     @NameInMap("CoreDiskType")
     public String coreDiskType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>hbase.sn2.2xlarge</p>
+     */
     @NameInMap("CoreInstanceType")
     public String coreInstanceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("CoreNodeCount")
     public Integer coreNodeCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-07-19T11:23:22</p>
+     */
     @NameInMap("CreatedTime")
     public String createdTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-07-19T03:23:22Z</p>
+     */
     @NameInMap("CreatedTimeUTC")
     public String createdTimeUTC;
 
+    /**
+     * <strong>example:</strong>
+     * <p>12</p>
+     */
     @NameInMap("Duration")
     public Integer duration;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("EnableHbaseProxy")
     public Boolean enableHbaseProxy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0d2470df-da7b-4786-b981-9a164dae****</p>
+     */
     @NameInMap("EncryptionKey")
     public String encryptionKey;
 
+    /**
+     * <strong>example:</strong>
+     * <p>NoEncryption</p>
+     */
     @NameInMap("EncryptionType")
     public String encryptionType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>hbaseue</p>
+     */
     @NameInMap("Engine")
     public String engine;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-02-24T00:00:00</p>
+     */
     @NameInMap("ExpireTime")
     public String expireTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-02-23T16:00:00Z</p>
+     */
     @NameInMap("ExpireTimeUTC")
     public String expireTimeUTC;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ld-bp150tns0sjxs****</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>testhbase</p>
+     */
     @NameInMap("InstanceName")
     public String instanceName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("IsDeletionProtection")
     public Boolean isDeletionProtection;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IsHa")
     public Boolean isHa;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IsLatestVersion")
     public Boolean isLatestVersion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IsMultiModel")
     public Boolean isMultiModel;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2.3.2</p>
+     */
     @NameInMap("LproxyMinorVersion")
     public String lproxyMinorVersion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>22:00Z</p>
+     */
     @NameInMap("MaintainEndTime")
     public String maintainEndTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>18:00Z</p>
+     */
     @NameInMap("MaintainStartTime")
     public String maintainStartTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2.0</p>
+     */
     @NameInMap("MajorVersion")
     public String majorVersion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("MasterDiskSize")
     public Integer masterDiskSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cloud_efficiency</p>
+     */
     @NameInMap("MasterDiskType")
     public String masterDiskType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>hbase.sn2.large</p>
+     */
     @NameInMap("MasterInstanceType")
     public String masterInstanceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("MasterNodeCount")
     public Integer masterNodeCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2.2.9.1</p>
+     */
     @NameInMap("MinorVersion")
     public String minorVersion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("ModuleId")
     public Integer moduleId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>phoenxi:4.0</p>
+     */
     @NameInMap("ModuleStackVersion")
     public String moduleStackVersion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("NeedUpgrade")
     public Boolean needUpgrade;
 
     @NameInMap("NeedUpgradeComps")
     public DescribeInstanceResponseBodyNeedUpgradeComps needUpgradeComps;
 
+    /**
+     * <strong>example:</strong>
+     * <p>VPC</p>
+     */
     @NameInMap("NetworkType")
     public String networkType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ld-uf699153o1m2l****</p>
+     */
     @NameInMap("ParentId")
     public String parentId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Prepaid</p>
+     */
     @NameInMap("PayType")
     public String payType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3F429923-B6F6-52C5-9C2A-5B8A8C6BBA66</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rg-acfmyiu4ekp****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ACTIVATION</p>
+     */
     @NameInMap("Status")
     public String status;
 
     @NameInMap("Tags")
     public DescribeInstanceResponseBodyTags tags;
 
+    /**
+     * <strong>example:</strong>
+     * <p>25.00</p>
+     */
     @NameInMap("TaskProgress")
     public String taskProgress;
 
+    @NameInMap("TaskStatus")
+    public String taskStatus;
+
+    /**
+     * <strong>example:</strong>
+     * <p>vpc-bp15s22y1a7sff5gj****</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>vsw-bp1foll427ze3d4ps****</p>
+     */
     @NameInMap("VswitchId")
     public String vswitchId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-f</p>
+     */
     @NameInMap("ZoneId")
     public String zoneId;
 
@@ -568,6 +777,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
         return this.taskProgress;
     }
 
+    public DescribeInstanceResponseBody setTaskStatus(String taskStatus) {
+        this.taskStatus = taskStatus;
+        return this;
+    }
+    public String getTaskStatus() {
+        return this.taskStatus;
+    }
+
     public DescribeInstanceResponseBody setVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
@@ -612,9 +829,17 @@ public class DescribeInstanceResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceResponseBodyTagsTag extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>test_key</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test_value</p>
+         */
         @NameInMap("Value")
         public String value;
 

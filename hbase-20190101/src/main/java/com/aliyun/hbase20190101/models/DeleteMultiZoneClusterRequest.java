@@ -4,9 +4,19 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class DeleteMultiZoneClusterRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d-t4nn71xa0yn56****</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("ImmediateDeleteFlag")
     public Boolean immediateDeleteFlag;
 

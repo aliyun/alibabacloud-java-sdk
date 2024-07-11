@@ -4,18 +4,44 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceServiceConfigRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hb-t4naqsay5gn****</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hbase#hbase-site.xml#hbase.client.keyvalue.maxsize</p>
+     */
     @NameInMap("ConfigureName")
     public String configureName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10485770</p>
+     */
     @NameInMap("ConfigureValue")
     public String configureValue;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;key1=value1&quot;, &quot;key2=value2&quot;}</p>
+     */
     @NameInMap("Parameters")
     public String parameters;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("Restart")
     public Boolean restart;
 

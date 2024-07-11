@@ -4,12 +4,26 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class ResizeMultiZoneClusterDiskSizeRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ld-f5d6vc2r8d6****</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>480</p>
+     */
     @NameInMap("CoreDiskSize")
     public Integer coreDiskSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>440</p>
+     */
     @NameInMap("LogDiskSize")
     public Integer logDiskSize;
 

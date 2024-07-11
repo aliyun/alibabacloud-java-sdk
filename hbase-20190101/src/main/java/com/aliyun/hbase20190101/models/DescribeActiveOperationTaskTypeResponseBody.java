@@ -4,6 +4,10 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeActiveOperationTaskTypeResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>EC7E27FC-58F8-4722-89CF-D1B6B0971956</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +36,24 @@ public class DescribeActiveOperationTaskTypeResponseBody extends TeaModel {
     }
 
     public static class DescribeActiveOperationTaskTypeResponseBodyTypeList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <strong>example:</strong>
+         * <p>rds_apsaradb_upgrade</p>
+         */
         @NameInMap("TaskType")
         public String taskType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>rds_apsaradb_upgrade</p>
+         */
         @NameInMap("TaskTypeInfoEn")
         public String taskTypeInfoEn;
 

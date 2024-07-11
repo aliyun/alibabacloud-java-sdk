@@ -4,21 +4,55 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class CreateRestorePlanRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ld-bp150tns0sjxs****</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("RestoreAllTable")
     public Boolean restoreAllTable;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("RestoreByCopy")
     public Boolean restoreByCopy;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-11-05T05:49:42Z</p>
+     */
     @NameInMap("RestoreToDate")
     public String restoreToDate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test_ns:test_table/test_ns:test_table2</p>
+     */
     @NameInMap("Tables")
     public String tables;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ld-bp169l540vc6c****</p>
+     */
     @NameInMap("TargetClusterId")
     public String targetClusterId;
 

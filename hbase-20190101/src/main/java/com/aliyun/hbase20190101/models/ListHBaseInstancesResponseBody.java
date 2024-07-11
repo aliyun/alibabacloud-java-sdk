@@ -7,6 +7,10 @@ public class ListHBaseInstancesResponseBody extends TeaModel {
     @NameInMap("Instances")
     public ListHBaseInstancesResponseBodyInstances instances;
 
+    /**
+     * <strong>example:</strong>
+     * <p>89F81C30-320B-4550-91DB-C37C81D2358F</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +36,24 @@ public class ListHBaseInstancesResponseBody extends TeaModel {
     }
 
     public static class ListHBaseInstancesResponseBodyInstancesInstance extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>hb-t4naqsay5gn****</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>name_test</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("IsDefault")
         public Boolean isDefault;
 

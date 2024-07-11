@@ -4,6 +4,10 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class ModifyDiskWarningLineResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>FC4A930D-3AEE-4C9D-BC70-C0F2EEEAA174</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

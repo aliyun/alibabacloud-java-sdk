@@ -4,6 +4,10 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class CreateRestorePlanResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>A0598673-EB6E-4F6D-9961-E0F2012090C0</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

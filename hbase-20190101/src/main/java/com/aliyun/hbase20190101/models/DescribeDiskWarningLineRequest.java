@@ -4,6 +4,12 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDiskWarningLineRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hb-bp1bl7iqzkahmyxxxx</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 

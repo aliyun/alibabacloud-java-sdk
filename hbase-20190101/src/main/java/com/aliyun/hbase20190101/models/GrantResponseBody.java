@@ -4,6 +4,10 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class GrantResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>9CBF8DF0-4931-4A54-9B60-4C6E1AB5****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

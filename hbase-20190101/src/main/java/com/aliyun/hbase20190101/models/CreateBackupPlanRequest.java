@@ -4,6 +4,12 @@ package com.aliyun.hbase20190101.models;
 import com.aliyun.tea.*;
 
 public class CreateBackupPlanRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ld-wz94lbcqc****4x93</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
