@@ -50,6 +50,9 @@ public class DescribeDBClusterPerformanceRequest extends TeaModel {
     @NameInMap("StartTime")
     public String startTime;
 
+    @NameInMap("Type")
+    public String type;
+
     public static DescribeDBClusterPerformanceRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBClusterPerformanceRequest self = new DescribeDBClusterPerformanceRequest();
         return TeaModel.build(map, self);
@@ -93,6 +96,14 @@ public class DescribeDBClusterPerformanceRequest extends TeaModel {
     }
     public String getStartTime() {
         return this.startTime;
+    }
+
+    public DescribeDBClusterPerformanceRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
 }

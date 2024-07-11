@@ -85,6 +85,16 @@ public class ModifyMaskingRulesRequest extends TeaModel {
     @NameInMap("RuleNameList")
     public String ruleNameList;
 
+    /**
+     * <p>The version of the masking rule. Default value: v1. Valid values:</p>
+     * <ul>
+     * <li>v1</li>
+     * <li>v2</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>v2</p>
+     */
     @NameInMap("RuleVersion")
     public String ruleVersion;
 
