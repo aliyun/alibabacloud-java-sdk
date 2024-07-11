@@ -32,6 +32,12 @@ public class FlightModifyOrderDetailV2Request extends TeaModel {
     @NameInMap("order_id")
     public String orderId;
 
+    @NameInMap("out_modify_apply_id")
+    public String outModifyApplyId;
+
+    @NameInMap("out_order_id")
+    public String outOrderId;
+
     public static FlightModifyOrderDetailV2Request build(java.util.Map<String, ?> map) throws Exception {
         FlightModifyOrderDetailV2Request self = new FlightModifyOrderDetailV2Request();
         return TeaModel.build(map, self);
@@ -67,6 +73,22 @@ public class FlightModifyOrderDetailV2Request extends TeaModel {
     }
     public String getOrderId() {
         return this.orderId;
+    }
+
+    public FlightModifyOrderDetailV2Request setOutModifyApplyId(String outModifyApplyId) {
+        this.outModifyApplyId = outModifyApplyId;
+        return this;
+    }
+    public String getOutModifyApplyId() {
+        return this.outModifyApplyId;
+    }
+
+    public FlightModifyOrderDetailV2Request setOutOrderId(String outOrderId) {
+        this.outOrderId = outOrderId;
+        return this;
+    }
+    public String getOutOrderId() {
+        return this.outOrderId;
     }
 
 }

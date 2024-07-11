@@ -18,6 +18,12 @@ public class FlightRefundDetailV2Request extends TeaModel {
     @NameInMap("order_id")
     public String orderId;
 
+    @NameInMap("out_order_id")
+    public String outOrderId;
+
+    @NameInMap("out_refund_apply_id")
+    public String outRefundApplyId;
+
     /**
      * <strong>example:</strong>
      * <p>1002039195025156700</p>
@@ -44,6 +50,22 @@ public class FlightRefundDetailV2Request extends TeaModel {
     }
     public String getOrderId() {
         return this.orderId;
+    }
+
+    public FlightRefundDetailV2Request setOutOrderId(String outOrderId) {
+        this.outOrderId = outOrderId;
+        return this;
+    }
+    public String getOutOrderId() {
+        return this.outOrderId;
+    }
+
+    public FlightRefundDetailV2Request setOutRefundApplyId(String outRefundApplyId) {
+        this.outRefundApplyId = outRefundApplyId;
+        return this;
+    }
+    public String getOutRefundApplyId() {
+        return this.outRefundApplyId;
     }
 
     public FlightRefundDetailV2Request setRefundApplyId(String refundApplyId) {
