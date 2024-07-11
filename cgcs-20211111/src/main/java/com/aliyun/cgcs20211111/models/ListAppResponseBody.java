@@ -7,9 +7,17 @@ public class ListAppResponseBody extends TeaModel {
     @NameInMap("Apps")
     public java.util.List<ListAppResponseBodyApps> apps;
 
+    /**
+     * <strong>example:</strong>
+     * <p>46329898-489C-4E63-9BA1-C1DA5C5D0986</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>12</p>
+     */
     @NameInMap("Total")
     public Long total;
 
@@ -43,24 +51,52 @@ public class ListAppResponseBody extends TeaModel {
     }
 
     public static class ListAppResponseBodyApps extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>4384****</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>example</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>end_game</p>
+         */
         @NameInMap("AppType")
         public String appType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-04-06 02:00:00</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-04-06 02:00:00</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("VersionAdaptNum")
         public Long versionAdaptNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>28</p>
+         */
         @NameInMap("VersionTotalNum")
         public Long versionTotalNum;
 

@@ -7,15 +7,31 @@ public class ListAppSessionsResponseBody extends TeaModel {
     @NameInMap("AppSessions")
     public java.util.List<ListAppSessionsResponseBodyAppSessions> appSessions;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>46329898-489C-4E63-9BA1-C1DA5C5D0986</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -67,12 +83,18 @@ public class ListAppSessionsResponseBody extends TeaModel {
     public static class ListAppSessionsResponseBodyAppSessionsBizInfo extends TeaModel {
         /**
          * <p>会话启动时间</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-07-20 17:58:51</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
         /**
          * <p>会话停止时间</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-07-20 17:58:57</p>
          */
         @NameInMap("StopTime")
         public String stopTime;
@@ -101,9 +123,17 @@ public class ListAppSessionsResponseBody extends TeaModel {
     }
 
     public static class ListAppSessionsResponseBodyAppSessions extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>13027XXXX</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>35067XXXX</p>
+         */
         @NameInMap("AppVersion")
         public String appVersion;
 
@@ -113,15 +143,31 @@ public class ListAppSessionsResponseBody extends TeaModel {
         @NameInMap("BizInfo")
         public ListAppSessionsResponseBodyAppSessionsBizInfo bizInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1ADE0XXXX</p>
+         */
         @NameInMap("CustomSessionId")
         public String customSessionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100XXXX</p>
+         */
         @NameInMap("PlatformSessionId")
         public String platformSessionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>d9a8****</p>
+         */
         @NameInMap("ProjectId")
         public String projectId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>running</p>
+         */
         @NameInMap("Status")
         public String status;
 

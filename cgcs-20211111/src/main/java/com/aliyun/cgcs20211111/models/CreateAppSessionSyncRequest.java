@@ -4,36 +4,66 @@ package com.aliyun.cgcs20211111.models;
 import com.aliyun.tea.*;
 
 public class CreateAppSessionSyncRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>501716211209548966XXXX</p>
+     */
     @NameInMap("AdapterFileId")
     public String adapterFileId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>13027****</p>
      */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>35067****</p>
+     */
     @NameInMap("AppVersion")
     public String appVersion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>192.168.XX.XX</p>
+     */
     @NameInMap("ClientIp")
     public String clientIp;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1ADE0****</p>
      */
     @NameInMap("CustomSessionId")
     public String customSessionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2YEF0****</p>
+     */
     @NameInMap("CustomUserId")
     public String customUserId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>huadong</p>
+     */
     @NameInMap("DistrictId")
     public String districtId;
 
     @NameInMap("MatchRules")
     public java.util.List<CreateAppSessionSyncRequestMatchRules> matchRules;
 
+    /**
+     * <strong>example:</strong>
+     * <p>d9a8****</p>
+     */
     @NameInMap("ProjectId")
     public String projectId;
 
@@ -148,9 +178,17 @@ public class CreateAppSessionSyncRequest extends TeaModel {
     }
 
     public static class CreateAppSessionSyncRequestMatchRules extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>component</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>in</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -189,9 +227,17 @@ public class CreateAppSessionSyncRequest extends TeaModel {
     }
 
     public static class CreateAppSessionSyncRequestStartParameters extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>startArgument</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>exampleValue</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -219,9 +265,17 @@ public class CreateAppSessionSyncRequest extends TeaModel {
     }
 
     public static class CreateAppSessionSyncRequestSystemInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>utdid</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OE0usD+AP****</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -249,9 +303,17 @@ public class CreateAppSessionSyncRequest extends TeaModel {
     }
 
     public static class CreateAppSessionSyncRequestTags extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>exampleTag</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>exampleValue</p>
+         */
         @NameInMap("Value")
         public String value;
 

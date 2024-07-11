@@ -7,6 +7,10 @@ public class GetAppCcuResponseBody extends TeaModel {
     @NameInMap("DetailList")
     public java.util.List<GetAppCcuResponseBodyDetailList> detailList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>46329898-489C-4E63-9BA1-C1DA5C5D0986</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,18 +47,38 @@ public class GetAppCcuResponseBody extends TeaModel {
     }
 
     public static class GetAppCcuResponseBodyDetailList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>13027****</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>35067****</p>
+         */
         @NameInMap("AppVersion")
         public String appVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Ccu")
         public String ccu;
 
+        /**
+         * <strong>example:</strong>
+         * <p>huadong</p>
+         */
         @NameInMap("DistrictId")
         public String districtId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>d9a8****</p>
+         */
         @NameInMap("ProjectId")
         public String projectId;
 

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ReleaseCapacityByBatchRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>726573XXXX</p>
      */
     @NameInMap("ResBatchId")
     public String resBatchId;

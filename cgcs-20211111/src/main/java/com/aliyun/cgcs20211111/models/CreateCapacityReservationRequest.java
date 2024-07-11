@@ -6,34 +6,58 @@ import com.aliyun.tea.*;
 public class CreateCapacityReservationRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>13027****</p>
      */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>35067****</p>
+     */
     @NameInMap("AppVersion")
     public String appVersion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2YEF0****</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>huadong</p>
      */
     @NameInMap("DistrictId")
     public String districtId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-02-02 22:22:22</p>
+     */
     @NameInMap("ExpectResourceReadyTime")
     @Deprecated
     public String expectResourceReadyTime;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("ExpectSessionCapacity")
     public Integer expectSessionCapacity;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d9a8****</p>
      */
     @NameInMap("ProjectId")
     public String projectId;

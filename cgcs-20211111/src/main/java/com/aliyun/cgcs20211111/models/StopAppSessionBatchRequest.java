@@ -4,18 +4,33 @@ package com.aliyun.cgcs20211111.models;
 import com.aliyun.tea.*;
 
 public class StopAppSessionBatchRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>13027****</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>35067****</p>
+     */
     @NameInMap("AppVersion")
     public String appVersion;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6d4d****</p>
      */
     @NameInMap("BatchId")
     public String batchId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>d9a8****</p>
+     */
     @NameInMap("ProjectId")
     public String projectId;
 
@@ -79,9 +94,17 @@ public class StopAppSessionBatchRequest extends TeaModel {
     }
 
     public static class StopAppSessionBatchRequestStopParam extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>reason</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>exampleValue</p>
+         */
         @NameInMap("Value")
         public Object value;
 
@@ -109,9 +132,17 @@ public class StopAppSessionBatchRequest extends TeaModel {
     }
 
     public static class StopAppSessionBatchRequestTags extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>exampleTag</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>exampleValue</p>
+         */
         @NameInMap("Value")
         public String value;
 

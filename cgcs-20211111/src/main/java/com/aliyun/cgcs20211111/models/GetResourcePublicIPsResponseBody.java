@@ -7,15 +7,31 @@ public class GetResourcePublicIPsResponseBody extends TeaModel {
     @NameInMap("IpList")
     public java.util.List<GetResourcePublicIPsResponseBodyIpList> ipList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageNum")
     public Integer pageNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>46329898-489C-4E63-9BA1-C1DA5C5D0986</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("Total")
     public Integer total;
 
@@ -65,9 +81,17 @@ public class GetResourcePublicIPsResponseBody extends TeaModel {
     }
 
     public static class GetResourcePublicIPsResponseBodyIpList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>127.0.X.X</p>
+         */
         @NameInMap("Ip")
         public String ip;
 
+        /**
+         * <strong>example:</strong>
+         * <p>d9a8****</p>
+         */
         @NameInMap("ProjectId")
         public String projectId;
 

@@ -6,19 +6,33 @@ import com.aliyun.tea.*;
 public class CreateAppRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example</p>
      */
     @NameInMap("AppName")
     public String appName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>end_game</p>
      */
     @NameInMap("AppType")
     public String appType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>47d0bd4d-8815-48a2-b783-6cbba89d****</p>
+     */
     @NameInMap("StreamingAppId")
     public String streamingAppId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>self-have-streaming</p>
+     */
     @NameInMap("StreamingSolution")
     public String streamingSolution;
 

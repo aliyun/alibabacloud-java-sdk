@@ -4,21 +4,41 @@ package com.aliyun.cgcs20211111.models;
 import com.aliyun.tea.*;
 
 public class CreateAppSessionSyncResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>13027****</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>35067****</p>
+     */
     @NameInMap("AppVersion")
     public String appVersion;
 
     @NameInMap("BizInfo")
     public CreateAppSessionSyncResponseBodyBizInfo bizInfo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1ADE0****</p>
+     */
     @NameInMap("CustomSessionId")
     public String customSessionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100****</p>
+     */
     @NameInMap("PlatformSessionId")
     public String platformSessionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>46329898-489C-4E63-9BA1-C1DA5C5D0986</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -76,21 +96,45 @@ public class CreateAppSessionSyncResponseBody extends TeaModel {
     }
 
     public static class CreateAppSessionSyncResponseBodyBizInfoEndpoints extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>127.0.X.X</p>
+         */
         @NameInMap("AccessHost")
         public String accessHost;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8080</p>
+         */
         @NameInMap("AccessPort")
         public String accessPort;
 
+        /**
+         * <strong>example:</strong>
+         * <p>huabei</p>
+         */
         @NameInMap("DistrictId")
         public String districtId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>BGP</p>
+         */
         @NameInMap("Isp")
         public String isp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>exampleName</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Native</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -150,6 +194,10 @@ public class CreateAppSessionSyncResponseBody extends TeaModel {
     }
 
     public static class CreateAppSessionSyncResponseBodyBizInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>authToken</p>
+         */
         @NameInMap("Biz")
         public java.util.Map<String, ?> biz;
 

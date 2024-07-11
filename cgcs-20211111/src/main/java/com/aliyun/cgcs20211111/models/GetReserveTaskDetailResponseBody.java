@@ -4,36 +4,76 @@ package com.aliyun.cgcs20211111.models;
 import com.aliyun.tea.*;
 
 public class GetReserveTaskDetailResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>13027****</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>35067****</p>
+     */
     @NameInMap("AppVersion")
     public String appVersion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("CurrCompletedSessionCapacity")
     public Integer currCompletedSessionCapacity;
 
+    /**
+     * <strong>example:</strong>
+     * <p>huadong</p>
+     */
     @NameInMap("DistrictId")
     public String districtId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-02-02 22:22:22</p>
+     */
     @NameInMap("ExpectResourceReadyTime")
     public String expectResourceReadyTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("ExpectSessionCapacity")
     public Integer expectSessionCapacity;
 
+    /**
+     * <strong>example:</strong>
+     * <p>d9a8****</p>
+     */
     @NameInMap("ProjectId")
     public String projectId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>46329898-489C-4E63-9BA1-C1DA5C5D0986</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("ResBatchList")
     public java.util.List<GetReserveTaskDetailResponseBodyResBatchList> resBatchList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>b354****</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>created</p>
+     */
     @NameInMap("TaskStatus")
     public String taskStatus;
 
@@ -131,9 +171,17 @@ public class GetReserveTaskDetailResponseBody extends TeaModel {
     }
 
     public static class GetReserveTaskDetailResponseBodyResBatchList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>726573XXXX</p>
+         */
         @NameInMap("ResBatchId")
         public String resBatchId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>resBatchId</p>
+         */
         @NameInMap("ResBatchTagName")
         public String resBatchTagName;
 

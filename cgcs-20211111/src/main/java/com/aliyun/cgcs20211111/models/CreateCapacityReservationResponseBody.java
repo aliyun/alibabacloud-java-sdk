@@ -4,12 +4,24 @@ package com.aliyun.cgcs20211111.models;
 import com.aliyun.tea.*;
 
 public class CreateCapacityReservationResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>10000</p>
+     */
     @NameInMap("CurrMaxAllocatableSessionCapacity")
     public Integer currMaxAllocatableSessionCapacity;
 
+    /**
+     * <strong>example:</strong>
+     * <p>46329898-489C-4E63-9BA1-C1DA5C5D0986</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>b354****</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 

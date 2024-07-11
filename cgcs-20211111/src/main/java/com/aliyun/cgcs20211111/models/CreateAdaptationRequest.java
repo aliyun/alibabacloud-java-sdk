@@ -9,6 +9,9 @@ public class CreateAdaptationRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1432****</p>
      */
     @NameInMap("AppVersionId")
     public String appVersionId;
@@ -35,15 +38,31 @@ public class CreateAdaptationRequest extends TeaModel {
     }
 
     public static class CreateAdaptationRequestAdaptTarget extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("BitRate")
         public Integer bitRate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("FrameRate")
         public Integer frameRate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1080p</p>
+         */
         @NameInMap("Resolution")
         public String resolution;
 
+        /**
+         * <strong>example:</strong>
+         * <p>/example/example.exe</p>
+         */
         @NameInMap("StartProgram")
         public String startProgram;
 

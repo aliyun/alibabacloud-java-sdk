@@ -203,6 +203,9 @@ public class CreateAppSessionBatchRequest extends TeaModel {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>if can be null:</strong>
+         * <p>false</p>
          */
         @NameInMap("CustomerSessionId")
         public String customerSessionId;

@@ -4,9 +4,17 @@ package com.aliyun.cgcs20211111.models;
 import com.aliyun.tea.*;
 
 public class ListAppVersionResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>46329898-489C-4E63-9BA1-C1DA5C5D0986</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>16</p>
+     */
     @NameInMap("Total")
     public Long total;
 
@@ -43,39 +51,83 @@ public class ListAppVersionResponseBody extends TeaModel {
     }
 
     public static class ListAppVersionResponseBodyVersions extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>4384****</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1432****</p>
+         */
         @NameInMap("AppVersionId")
         public String appVersionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>exampleVersion</p>
+         */
         @NameInMap("AppVersionName")
         public String appVersionName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>file_uploading</p>
+         */
         @NameInMap("AppVersionStatus")
         public String appVersionStatus;
 
         @NameInMap("AppVersionStatusMemo")
         public String appVersionStatusMemo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.31</p>
+         */
         @NameInMap("ConsumeCu")
         public Double consumeCu;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://www.example.com/exampleFile.tar">https://www.example.com/exampleFile.tar</a></p>
+         */
         @NameInMap("FileAddress")
         public String fileAddress;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1024</p>
+         */
         @NameInMap("FileSize")
         public Long fileSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-04-06 02:00:00</p>
+         */
         @NameInMap("FileUploadFinishTime")
         public String fileUploadFinishTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cloud_file_download</p>
+         */
         @NameInMap("FileUploadType")
         public String fileUploadType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-04-06 02:00:00</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-04-06 02:00:00</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 

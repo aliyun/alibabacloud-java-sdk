@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class ReleaseInstancesRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Amount")
     public Integer amount;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>huadong</p>
      */
     @NameInMap("DistrictId")
     public String districtId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gcs.r1c1m1.1xlarge</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4820372607851300489003</p>
      */
     @NameInMap("ProjectId")
     public String projectId;

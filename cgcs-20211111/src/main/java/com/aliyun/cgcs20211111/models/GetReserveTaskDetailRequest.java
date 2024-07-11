@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetReserveTaskDetailRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>b354****</p>
      */
     @NameInMap("TaskId")
     public String taskId;

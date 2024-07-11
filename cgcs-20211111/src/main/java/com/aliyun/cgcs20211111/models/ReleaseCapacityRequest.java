@@ -6,27 +6,43 @@ import com.aliyun.tea.*;
 public class ReleaseCapacityRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>13027****</p>
      */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>35067****</p>
+     */
     @NameInMap("AppVersion")
     public String appVersion;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>huadong</p>
      */
     @NameInMap("DistrictId")
     public String districtId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("ExpectReleaseSessionCapacity")
     public Integer expectReleaseSessionCapacity;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d9a8****</p>
      */
     @NameInMap("ProjectId")
     public String projectId;

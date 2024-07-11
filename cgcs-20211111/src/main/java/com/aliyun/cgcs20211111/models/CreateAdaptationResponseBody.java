@@ -4,9 +4,17 @@ package com.aliyun.cgcs20211111.models;
 import com.aliyun.tea.*;
 
 public class CreateAdaptationResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>5435****</p>
+     */
     @NameInMap("AdaptApplyId")
     public Long adaptApplyId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>46329898-489C-4E63-9BA1-C1DA5C5D0986</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

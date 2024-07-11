@@ -12,6 +12,9 @@ public class CreateAppSessionBatchSyncRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6d4d****</p>
      */
     @NameInMap("BatchId")
     public String batchId;
@@ -38,9 +41,17 @@ public class CreateAppSessionBatchSyncRequest extends TeaModel {
     }
 
     public static class CreateAppSessionBatchSyncRequestAppInfosMatchRules extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>component</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>in</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -79,9 +90,17 @@ public class CreateAppSessionBatchSyncRequest extends TeaModel {
     }
 
     public static class CreateAppSessionBatchSyncRequestAppInfosStartParameters extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>startArgument</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>exampleValue</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -109,9 +128,17 @@ public class CreateAppSessionBatchSyncRequest extends TeaModel {
     }
 
     public static class CreateAppSessionBatchSyncRequestAppInfosSystemInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>utdid</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OE0usD+AP****</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -139,9 +166,17 @@ public class CreateAppSessionBatchSyncRequest extends TeaModel {
     }
 
     public static class CreateAppSessionBatchSyncRequestAppInfosTags extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>exampleTag</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>exampleValue</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -169,36 +204,69 @@ public class CreateAppSessionBatchSyncRequest extends TeaModel {
     }
 
     public static class CreateAppSessionBatchSyncRequestAppInfos extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>501716211209548966XXXX</p>
+         */
         @NameInMap("AdapterFileId")
         public String adapterFileId;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13027****</p>
          */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>35067****</p>
+         */
         @NameInMap("AppVersion")
         public String appVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
+         */
         @NameInMap("ClientIp")
         public String clientIp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2YEF0****</p>
+         */
         @NameInMap("CustomUserId")
         public String customUserId;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1ADE0****</p>
+         * 
+         * <strong>if can be null:</strong>
+         * <p>false</p>
          */
         @NameInMap("CustomerSessionId")
         public String customerSessionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>huadong</p>
+         */
         @NameInMap("DistrictId")
         public String districtId;
 
         @NameInMap("MatchRules")
         public java.util.List<CreateAppSessionBatchSyncRequestAppInfosMatchRules> matchRules;
 
+        /**
+         * <strong>example:</strong>
+         * <p>d9a8****</p>
+         */
         @NameInMap("ProjectId")
         public String projectId;
 
