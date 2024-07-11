@@ -12,6 +12,9 @@ public class RegisterDefaultPatchBaselineResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D6850689-348D-59FC-AE13-BB0EDB7C4BE8</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,66 +43,99 @@ public class RegisterDefaultPatchBaselineResponseBody extends TeaModel {
     public static class RegisterDefaultPatchBaselineResponseBodyPatchBaseline extends TeaModel {
         /**
          * <p>The rules of scanning and installing patches for the specified operating system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;PatchRules&quot;:[{&quot;PatchFilterGroup&quot;:[{&quot;Key&quot;:&quot;PatchSet&quot;,&quot;Values&quot;:[&quot;OS&quot;]},{&quot;Key&quot;:&quot;ProductFamily&quot;,&quot;Values&quot;:[&quot;Windows&quot;]},{&quot;Key&quot;:&quot;Product&quot;,&quot;Values&quot;:[&quot;Windows 10&quot;,&quot;Windows 7&quot;]},{&quot;Key&quot;:&quot;Classification&quot;,&quot;Values&quot;:[&quot;Security Updates&quot;,&quot;Updates&quot;,&quot;Update Rollups&quot;,&quot;Critical Updates&quot;]},{&quot;Key&quot;:&quot;Severity&quot;,&quot;Values&quot;:[&quot;Critical&quot;,&quot;Important&quot;,&quot;Moderate&quot;]}],&quot;ApproveAfterDays&quot;:7,&quot;ApproveUntilDate&quot;:&quot;&quot;,&quot;EnableNonSecurity&quot;:true,&quot;ComplianceLevel&quot;:&quot;Medium&quot;}]}</p>
          */
         @NameInMap("ApprovalRules")
         public String approvalRules;
 
         /**
          * <p>The user who created the patch baseline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>root(130900000)</p>
          */
         @NameInMap("CreatedBy")
         public String createdBy;
 
         /**
          * <p>The time when the patch baseline was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-09-07T03:42:56Z</p>
          */
         @NameInMap("CreatedDate")
         public String createdDate;
 
         /**
          * <p>The description of the patch baseline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RegisterPatchBaseline</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The ID of the patch baseline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pb-445340b5c6504a85a300</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The name of the patch baseline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyPatchBaseline</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The operating system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Windows</p>
          */
         @NameInMap("OperationSystem")
         public String operationSystem;
 
         /**
          * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm4dpaq2yox6q</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>The share type of the patch baseline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Private</p>
          */
         @NameInMap("ShareType")
         public String shareType;
 
         /**
          * <p>The user who last updated the patch baseline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>root(130900000)</p>
          */
         @NameInMap("UpdatedBy")
         public String updatedBy;
 
         /**
          * <p>The time when the patch baseline was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-09-07T03:42:56Z</p>
          */
         @NameInMap("UpdatedDate")
         public String updatedDate;

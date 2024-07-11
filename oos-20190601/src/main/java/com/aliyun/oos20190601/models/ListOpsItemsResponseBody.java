@@ -6,30 +6,42 @@ import com.aliyun.tea.*;
 public class ListOpsItemsResponseBody extends TeaModel {
     /**
      * <p>The number of entries returned on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The pagination token that can be used in the next request to retrieve a new page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gAAAAABfTgv5ewUWmNdJ3g7JVLvX70sPH90GZOVGC6KPDUL0FIIb</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The list of O\&M items.</p>
+     * <p>The list of O\&amp;M items.</p>
      */
     @NameInMap("OpsItems")
     public java.util.List<ListOpsItemsResponseBodyOpsItems> opsItems;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>113DD533-389C-5F83-9C69-F64D5BAB10B2</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,24 +94,36 @@ public class ListOpsItemsResponseBody extends TeaModel {
     public static class ListOpsItemsResponseBodyOpsItems extends TeaModel {
         /**
          * <p>The category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Security</p>
          */
         @NameInMap("Category")
         public String category;
 
         /**
-         * <p>The time when the O\&M item was created.</p>
+         * <p>The time when the O\&amp;M item was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-07-09T10:01Z</p>
          */
         @NameInMap("CreateDate")
         public String createDate;
 
         /**
-         * <p>The ID of the O\&M item.</p>
+         * <p>The ID of the O\&amp;M item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oi-d52b08695e2b46ae8413</p>
          */
         @NameInMap("OpsItemId")
         public String opsItemId;
 
         /**
          * <p>The priority.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Priority")
         public Integer priority;
@@ -112,36 +136,54 @@ public class ListOpsItemsResponseBody extends TeaModel {
 
         /**
          * <p>The severity level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Medium</p>
          */
         @NameInMap("Severity")
         public String severity;
 
         /**
          * <p>The source business.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/aliyun/ecs</p>
          */
         @NameInMap("Source")
         public String source;
 
         /**
-         * <p>The status of the O\&M item.</p>
+         * <p>The status of the O\&amp;M item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Open</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;k1&quot;:&quot;v1&quot;}</p>
          */
         @NameInMap("Tags")
         public java.util.Map<String, ?> tags;
 
         /**
-         * <p>The title of the O\&M item.</p>
+         * <p>The title of the O\&amp;M item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test</p>
          */
         @NameInMap("Title")
         public String title;
 
         /**
-         * <p>The time when the O\&M item was updated.</p>
+         * <p>The time when the O\&amp;M item was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-07-09T10:01Z</p>
          */
         @NameInMap("UpdateDate")
         public String updateDate;

@@ -6,26 +6,42 @@ import com.aliyun.tea.*;
 public class DeleteApplicationGroupRequest extends TeaModel {
     /**
      * <p>The name of the application.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MyApplication</p>
      */
     @NameInMap("ApplicationName")
     public String applicationName;
 
     /**
      * <p>The name of the application group.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MyApplicationGroup</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The ID of the region. Set the value to cn-hangzhou.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>Specifies whether to retain resources created by application manager when deleting the application. Valid values:</p>
-     * <p>- true</p>
-     * <p>- false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("RetainResource")
     public Boolean retainResource;

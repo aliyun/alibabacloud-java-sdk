@@ -6,12 +6,20 @@ import com.aliyun.tea.*;
 public class ListInstancePatchesResponseBody extends TeaModel {
     /**
      * <p>The number of entries returned on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The token that is used to retrieve the next page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <ul>
+     * <li></li>
+     * </ul>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -24,6 +32,9 @@ public class ListInstancePatchesResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0A615755-9C86-5EA6-BF9E-6E8F1AFF9403</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,36 +79,54 @@ public class ListInstancePatchesResponseBody extends TeaModel {
     public static class ListInstancePatchesResponseBodyPatches extends TeaModel {
         /**
          * <p>The classification of the patch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>“”</p>
          */
         @NameInMap("Classification")
         public String classification;
 
         /**
          * <p>The time when the patch was installed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-28T07:07:20Z</p>
          */
         @NameInMap("InstalledTime")
         public String installedTime;
 
         /**
          * <p>The Id of KBId.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apt-utils.amd64</p>
          */
         @NameInMap("KBId")
         public String KBId;
 
         /**
          * <p>The level of the severity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>important</p>
          */
         @NameInMap("Severity")
         public String severity;
 
         /**
          * <p>The status of the installation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Installed</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The name of the patch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>isc-dhcp-common.amd64:4.3.5-3ubuntu7.3</p>
          */
         @NameInMap("Title")
         public String title;

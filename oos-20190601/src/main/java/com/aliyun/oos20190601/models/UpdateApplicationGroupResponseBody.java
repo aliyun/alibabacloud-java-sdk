@@ -12,6 +12,9 @@ public class UpdateApplicationGroupResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AA9FA778-AE4B-55EC-81CC-C46BAF08A166</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,48 +43,72 @@ public class UpdateApplicationGroupResponseBody extends TeaModel {
     public static class UpdateApplicationGroupResponseBodyApplicationGroup extends TeaModel {
         /**
          * <p>The application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyApplication</p>
          */
         @NameInMap("ApplicationName")
         public String applicationName;
 
         /**
          * <p>The time when the application group was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-09-07T10:28:25Z</p>
          */
         @NameInMap("CreatedDate")
         public String createdDate;
 
         /**
          * <p>The ID of the region in which the related resources reside.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("DeployRegionId")
         public String deployRegionId;
 
         /**
          * <p>The description of the application group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ApplicationGroup</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The key of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>k1</p>
          */
         @NameInMap("ImportTagKey")
         public String importTagKey;
 
         /**
          * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         @NameInMap("ImportTagValue")
         public String importTagValue;
 
         /**
          * <p>The name of the application group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UpdateMyApplicationGroup</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The time when the application group was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-09-08T03:01:53Z</p>
          */
         @NameInMap("UpdatedDate")
         public String updatedDate;

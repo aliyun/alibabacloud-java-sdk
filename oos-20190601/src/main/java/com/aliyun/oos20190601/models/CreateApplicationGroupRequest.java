@@ -6,54 +6,86 @@ import com.aliyun.tea.*;
 public class CreateApplicationGroupRequest extends TeaModel {
     /**
      * <p>The application name.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MyApplication</p>
      */
     @NameInMap("ApplicationName")
     public String applicationName;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <ul>
+     * <li></li>
+     * </ul>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The ID of the application group in CloudMonitor.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>218026174</p>
      */
     @NameInMap("CmsGroupId")
     public String cmsGroupId;
 
     /**
      * <p>The ID of the region in which the related sources reside.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("DeployRegionId")
     public String deployRegionId;
 
     /**
      * <p>The description of the application group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ApplicationGroup</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The key of the tag. You must set both the ImportTagKey and the ImportTagValue parameters, or leave both of them empty. If you do not set the ImportTagKey and ImportTagValue parameters, the application name is used for this parameter by default.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>k1</p>
      */
     @NameInMap("ImportTagKey")
     public String importTagKey;
 
     /**
      * <p>The value of the tag. You must set both the ImportTagKey and the ImportTagValue parameters, or leave both of them empty. If you do not set the ImportTagKey and ImportTagValue parameters, the application group name is used for this parameter by default.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>v1</p>
      */
     @NameInMap("ImportTagValue")
     public String importTagValue;
 
     /**
      * <p>The name of the application group.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MyApplicationGroup</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The region ID. Set the value to cn-hangzhou.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

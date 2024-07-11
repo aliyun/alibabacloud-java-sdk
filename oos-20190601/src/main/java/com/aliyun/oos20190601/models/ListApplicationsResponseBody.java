@@ -12,18 +12,29 @@ public class ListApplicationsResponseBody extends TeaModel {
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <ul>
+     * <li></li>
+     * </ul>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12067D53-56A9-561B-ADD6-61429D207117</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,42 +79,63 @@ public class ListApplicationsResponseBody extends TeaModel {
     public static class ListApplicationsResponseBodyApplications extends TeaModel {
         /**
          * <p>The type of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DingTalk</p>
          */
         @NameInMap("ApplicationType")
         public String applicationType;
 
         /**
          * <p>The time when the application was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-09-07T09:09:59Z</p>
          */
         @NameInMap("CreateDate")
         public String createDate;
 
         /**
          * <p>The description of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Application</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyApplication</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxsn4m******</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>The tags added to the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;k1&quot;: &quot;v1&quot;,&quot;k2&quot;: &quot;v2&quot;}</p>
          */
         @NameInMap("Tags")
         public java.util.Map<String, ?> tags;
 
         /**
          * <p>The time when the application was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-09-07T09:09:59Z</p>
          */
         @NameInMap("UpdateDate")
         public String updateDate;

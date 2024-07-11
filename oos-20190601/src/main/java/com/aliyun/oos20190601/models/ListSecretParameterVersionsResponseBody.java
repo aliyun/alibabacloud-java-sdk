@@ -6,42 +6,63 @@ import com.aliyun.tea.*;
 public class ListSecretParameterVersionsResponseBody extends TeaModel {
     /**
      * <p>The user who created the encryption parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>root(130900000)</p>
      */
     @NameInMap("CreatedBy")
     public String createdBy;
 
     /**
      * <p>The time when the encryption parameter was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-09-01T08:01:43Z</p>
      */
     @NameInMap("CreatedDate")
     public String createdDate;
 
     /**
      * <p>The description of the encryption parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SecretParameter</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The ID of the encryption parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>p-4c4b401cab6747xxxxxx</p>
      */
     @NameInMap("Id")
     public String id;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The name of the encryption parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MySecretParameter</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MTRBMDc0NjAtRUJFNy00N0NBLTk3NTctMTJDQzQ3NjFENDdB</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -54,18 +75,27 @@ public class ListSecretParameterVersionsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DBA6E6C8-F75D-41DE-AFF5-1FA03F551CA3</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
     /**
      * <p>The type of the encryption parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Secret</p>
      */
     @NameInMap("Type")
     public String type;
@@ -166,24 +196,36 @@ public class ListSecretParameterVersionsResponseBody extends TeaModel {
     public static class ListSecretParameterVersionsResponseBodyParameterVersions extends TeaModel {
         /**
          * <p>The version number of the encryption parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ParameterVersion")
         public Integer parameterVersion;
 
         /**
          * <p>The user who updated the encryption parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>root(130900000)</p>
          */
         @NameInMap("UpdatedBy")
         public String updatedBy;
 
         /**
          * <p>The time when the encryption parameter was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-09-01T08:01:43Z</p>
          */
         @NameInMap("UpdatedDate")
         public String updatedDate;
 
         /**
          * <p>The value of the encryption parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SecretParameter</p>
          */
         @NameInMap("Value")
         public String value;

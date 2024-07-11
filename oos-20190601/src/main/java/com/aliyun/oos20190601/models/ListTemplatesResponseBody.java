@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class ListTemplatesResponseBody extends TeaModel {
     /**
      * <p>The number of entries returned on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The token that is used to retrieve the next page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxx</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BEF54BA-17B6-449F-A219-49ACB157E3</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,133 +77,204 @@ public class ListTemplatesResponseBody extends TeaModel {
     public static class ListTemplatesResponseBodyTemplates extends TeaModel {
         /**
          * <p>The template type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TimerTrigger</p>
          */
         @NameInMap("Category")
         public String category;
 
         /**
          * <p>The constraints of template</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;InstanceTypeFamilies&quot;: [&quot;ecs.g8y&quot;, &quot;ecs.c8y&quot;],
+         *   &quot;ImageTypes&quot;: [&quot;system&quot;],
+         *   &quot;OSPlatforms&quot;: [&quot;CentOS&quot;, &quot;Ubuntu&quot;],
+         *   &quot;OSVersions&quot;: [&quot;CentOS7.9 64bit&quot;]
+         * }</p>
          */
         @NameInMap("Constraints")
         public String constraints;
 
         /**
          * <p>The user who created the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>root(1309200)</p>
          */
         @NameInMap("CreatedBy")
         public String createdBy;
 
         /**
          * <p>The time when the template was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-05-16T10:26:14Z</p>
          */
         @NameInMap("CreatedDate")
         public String createdDate;
 
         /**
          * <p>The template description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Describe instances of given status</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>Indicates whether the template was configured with a trigger.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("HasTrigger")
         public Boolean hasTrigger;
 
         /**
          * <p>The SHA-256 value of the template content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4bc7d7a21b3e003434b9c223f6e6d2578b5ebfeb5be28c1fcf8a8a1b11907bb4</p>
          */
         @NameInMap("Hash")
         public String hash;
 
         /**
          * <p>The template is favorite or not.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("IsFavorite")
         public Boolean isFavorite;
 
         /**
-         * <p>The popularity of the public template. Valid values: **1-10**. A greater value indicates higher popularity. If **ShareType** is set to **Private**, the value of this parameter is `-1`.</p>
-         * <br>
-         * <p>>  This parameter is valid only if the value of **ShareType** is set to **Public**.</p>
+         * <p>The popularity of the public template. Valid values: <strong>1-10</strong>. A greater value indicates higher popularity. If <strong>ShareType</strong> is set to <strong>Private</strong>, the value of this parameter is <code>-1</code>.</p>
+         * <blockquote>
+         * <p> This parameter is valid only if the value of <strong>ShareType</strong> is set to <strong>Public</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         @NameInMap("Popularity")
         public Integer popularity;
 
         /**
          * <p>The publisher of template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliyun</p>
          */
         @NameInMap("Publisher")
         public String publisher;
 
         /**
          * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxsn4m4******</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
-         * <p>The share type of the template. The share type of a template created by a user is **Private**. Valid values:</p>
-         * <br>
-         * <p>*   **Public**</p>
-         * <p>*   **Private**</p>
+         * <p>The share type of the template. The share type of a template created by a user is <strong>Private</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>Public</strong></li>
+         * <li><strong>Private</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Public</p>
          */
         @NameInMap("ShareType")
         public String shareType;
 
         /**
          * <p>The tag keys and values. The number of key-value pairs ranges from 1 to 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;k1&quot;:&quot;v1&quot;,&quot;k2&quot;:&quot;v2&quot;}</p>
          */
         @NameInMap("Tags")
         public java.util.Map<String, ?> tags;
 
         /**
          * <p>The template format. The system automatically determines whether the format is JSON or YAML.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>JSON</p>
          */
         @NameInMap("TemplateFormat")
         public String templateFormat;
 
         /**
          * <p>The template ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-94753deed38</p>
          */
         @NameInMap("TemplateId")
         public String templateId;
 
         /**
          * <p>The template name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyTemplate</p>
          */
         @NameInMap("TemplateName")
         public String templateName;
 
         /**
          * <p>The template type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>private</p>
          */
         @NameInMap("TemplateType")
         public String templateType;
 
         /**
          * <p>The template version. The name of the version consists of the letter v and a number. The number starts from 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         @NameInMap("TemplateVersion")
         public String templateVersion;
 
         /**
-         * <p>The number of times for which the private template is executed. If **ShareType** is set to **Public**, the value of this parameter is `-1`.</p>
-         * <br>
-         * <p>>  This parameter is valid only if the value of **ShareType** is **Private**.</p>
+         * <p>The number of times for which the private template is executed. If <strong>ShareType</strong> is set to <strong>Public</strong>, the value of this parameter is <code>-1</code>.</p>
+         * <blockquote>
+         * <p> This parameter is valid only if the value of <strong>ShareType</strong> is <strong>Private</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("TotalExecutionCount")
         public Integer totalExecutionCount;
 
         /**
          * <p>The user who last updated the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>root(13092000)</p>
          */
         @NameInMap("UpdatedBy")
         public String updatedBy;
 
         /**
          * <p>The time when the template was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-05-16T10:26:14Z</p>
          */
         @NameInMap("UpdatedDate")
         public String updatedDate;

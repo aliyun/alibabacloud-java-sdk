@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class ListTemplateVersionsResponseBody extends TeaModel {
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NJSNDKLJS-SJKJDO090k30-JSDK232</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E6CD612B-5889-4F1A-823F-8A4029E46</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,36 +77,54 @@ public class ListTemplateVersionsResponseBody extends TeaModel {
     public static class ListTemplateVersionsResponseBodyTemplateVersions extends TeaModel {
         /**
          * <p>The description of the version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Detach the eip from the special instance.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The format of the template content. Valid values: YAML and JSON.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>YAML</p>
          */
         @NameInMap("TemplateFormat")
         public String templateFormat;
 
         /**
          * <p>The number of the version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v2</p>
          */
         @NameInMap("TemplateVersion")
         public String templateVersion;
 
         /**
          * <p>The user who last updated the version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>foo</p>
          */
         @NameInMap("UpdatedBy")
         public String updatedBy;
 
         /**
          * <p>The time when the version was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-05-19T06:05:41Z</p>
          */
         @NameInMap("UpdatedDate")
         public String updatedDate;
 
         /**
          * <p>The name of the version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>baz</p>
          */
         @NameInMap("VersionName")
         public String versionName;

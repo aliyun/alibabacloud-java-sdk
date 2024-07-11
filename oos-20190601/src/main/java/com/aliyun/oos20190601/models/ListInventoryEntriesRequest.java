@@ -12,39 +12,57 @@ public class ListInventoryEntriesRequest extends TeaModel {
 
     /**
      * <p>The ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-bp1cpoxxxwxxxxxxxxxx</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The number of entries per page. Valid values: 1 to 100. Default value: 50.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MTRBMDc0NjAtRUJFNy00N0NBLTk3NTctMTJDQzA</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the region in which the instance resides.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The name of the component. Valid values:</p>
-     * <br>
-     * <p>*   ACS:InstanceInformation</p>
-     * <p>*   ACS:Application</p>
-     * <p>*   ACS:File</p>
-     * <p>*   ACS:Network</p>
-     * <p>*   ACS:WindowsRole</p>
-     * <p>*   ACS:Service</p>
-     * <p>*   ACS:WindowsRegistry</p>
-     * <p>*   ACS:WindowsUpdate</p>
+     * <ul>
+     * <li>ACS:InstanceInformation</li>
+     * <li>ACS:Application</li>
+     * <li>ACS:File</li>
+     * <li>ACS:Network</li>
+     * <li>ACS:WindowsRole</li>
+     * <li>ACS:Service</li>
+     * <li>ACS:WindowsRegistry</li>
+     * <li>ACS:WindowsUpdate</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ACS:InstanceInformation</p>
      */
     @NameInMap("TypeName")
     public String typeName;
@@ -105,24 +123,34 @@ public class ListInventoryEntriesRequest extends TeaModel {
     public static class ListInventoryEntriesRequestFilter extends TeaModel {
         /**
          * <p>The name of the component property. Valid values of N: 1 to 5.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PlatformName</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The comparison operator that is used to filter property values. Valid values of N: 1 to 5. Valid values:</p>
-         * <br>
-         * <p>*   Equal</p>
-         * <p>*   NotEqual</p>
-         * <p>*   BeginWith</p>
-         * <p>*   LessThan</p>
-         * <p>*   GreaterThan</p>
+         * <ul>
+         * <li>Equal</li>
+         * <li>NotEqual</li>
+         * <li>BeginWith</li>
+         * <li>LessThan</li>
+         * <li>GreaterThan</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Equal</p>
          */
         @NameInMap("Operator")
         public String operator;
 
         /**
          * <p>The values of properties. Valid values of the first N: 1 to 5. Valid values of the second N: 1 to 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Value")
         public java.util.List<String> value;

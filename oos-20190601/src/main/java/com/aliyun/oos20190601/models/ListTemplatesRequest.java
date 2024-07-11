@@ -6,128 +6,186 @@ import com.aliyun.tea.*;
 public class ListTemplatesRequest extends TeaModel {
     /**
      * <p>The type of the template. Valid values include TimerTrigger, EventTrigger, AlarmTrigger, and Other.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TimerTrigger</p>
      */
     @NameInMap("Category")
     public String category;
 
     /**
      * <p>The creator of the template.</p>
-     * <br>
-     * <p>*   To query the template provided by Alibaba Cloud, set this parameter to **ACS**.</p>
-     * <p>*   To query the template created by a user, set this parameter to the **ID** of the template or the **name of the user** who creates the template.</p>
+     * <ul>
+     * <li>To query the template provided by Alibaba Cloud, set this parameter to <strong>ACS</strong>.</li>
+     * <li>To query the template created by a user, set this parameter to the <strong>ID</strong> of the template or the <strong>name of the user</strong> who creates the template.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ACS</p>
      */
     @NameInMap("CreatedBy")
     public String createdBy;
 
     /**
      * <p>Specifies to query the template that is created at or later than the specified time.</p>
-     * <br>
      * <p>The value must be in the YYYY-MM-DDThh:mm:ssZ format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-05-16T10:26:14Z</p>
      */
     @NameInMap("CreatedDateAfter")
     public String createdDateAfter;
 
     /**
      * <p>Specifies to query the template that is created at or before the specified time.</p>
-     * <br>
      * <p>The value must be in the YYYY-MM-DDThh:mm::ssZ format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-05-16T10:26:14Z</p>
      */
     @NameInMap("CreatedDateBefore")
     public String createdDateBefore;
 
     /**
      * <p>Specifies whether to query the template that is configured with a trigger.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("HasTrigger")
     public Boolean hasTrigger;
 
+    @NameInMap("IsExample")
+    public Boolean isExample;
+
     /**
      * <p>The template is favorite or not.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IsFavorite")
     public Boolean isFavorite;
 
     /**
      * <p>The number of entries to return on each page. Valid values: 10 to 100. Default value: 50.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The token that is used to retrieve the next page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxx</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the region in which you want to query templates.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmxsn4m4******</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>The share type of the template. Valid values:</p>
-     * <br>
-     * <p>*   **Public**</p>
-     * <p>*   **Private**</p>
+     * <ul>
+     * <li><strong>Public</strong></li>
+     * <li><strong>Private</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Private</p>
      */
     @NameInMap("ShareType")
     public String shareType;
 
     /**
      * <p>The field that is used to sort the templates to be queried. Valid values:</p>
-     * <br>
-     * <p>*   **TotalExecutionCount** (default): The system sorts the returned templates based on the total number of times that the templates are used.</p>
-     * <p>*   **Popularity**: The system sorts the returned templates based on the popularity of the templates.</p>
-     * <p>*   **TemplateName**: The system sorts the returned templates based on the names of the templates.</p>
-     * <p>*   **CreatedDate**: The system sorts the returned templates based on the points in time when the templates are created.</p>
-     * <p>*   **UpdatedDate**: The system sorts the returned templates based on the points in time when the templates are updated.</p>
+     * <ul>
+     * <li><strong>TotalExecutionCount</strong> (default): The system sorts the returned templates based on the total number of times that the templates are used.</li>
+     * <li><strong>Popularity</strong>: The system sorts the returned templates based on the popularity of the templates.</li>
+     * <li><strong>TemplateName</strong>: The system sorts the returned templates based on the names of the templates.</li>
+     * <li><strong>CreatedDate</strong>: The system sorts the returned templates based on the points in time when the templates are created.</li>
+     * <li><strong>UpdatedDate</strong>: The system sorts the returned templates based on the points in time when the templates are updated.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Popularity</p>
      */
     @NameInMap("SortField")
     public String sortField;
 
     /**
      * <p>The order in which you want to sort the results. Valid values:</p>
-     * <br>
-     * <p>*   **Ascending**: ascending order.</p>
-     * <p>*   **Descending**: descending order. This is the default value.</p>
+     * <ul>
+     * <li><strong>Ascending</strong>: ascending order.</li>
+     * <li><strong>Descending</strong>: descending order. This is the default value.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Descending</p>
      */
     @NameInMap("SortOrder")
     public String sortOrder;
 
     /**
      * <p>The tag keys and values. The number of key-value pairs ranges from 1 to 20.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;k1&quot;:&quot;k2&quot;,&quot;k2&quot;:&quot;v2&quot;}</p>
      */
     @NameInMap("Tags")
     public java.util.Map<String, ?> tags;
 
     /**
      * <p>The format of the template. Valid values:</p>
-     * <br>
-     * <p>*   **JSON**</p>
-     * <p>*   **YAML**</p>
+     * <ul>
+     * <li><strong>JSON</strong></li>
+     * <li><strong>YAML</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>YAML</p>
      */
     @NameInMap("TemplateFormat")
     public String templateFormat;
 
     /**
      * <p>The name of the template. All templates whose names contain the specified template name are to be returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MyTemplate</p>
      */
     @NameInMap("TemplateName")
     public String templateName;
 
     /**
      * <p>The type of the template. Valid values:</p>
-     * <br>
-     * <p>*   Automation: the template for automated tasks.</p>
-     * <p>*   State: the template for configuration inventories.</p>
-     * <p>*   Package: the template for software packages.</p>
+     * <ul>
+     * <li>Automation: the template for automated tasks.</li>
+     * <li>State: the template for configuration inventories.</li>
+     * <li>Package: the template for software packages.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>private</p>
      */
     @NameInMap("TemplateType")
     public String templateType;
@@ -175,6 +233,14 @@ public class ListTemplatesRequest extends TeaModel {
     }
     public Boolean getHasTrigger() {
         return this.hasTrigger;
+    }
+
+    public ListTemplatesRequest setIsExample(Boolean isExample) {
+        this.isExample = isExample;
+        return this;
+    }
+    public Boolean getIsExample() {
+        return this.isExample;
     }
 
     public ListTemplatesRequest setIsFavorite(Boolean isFavorite) {

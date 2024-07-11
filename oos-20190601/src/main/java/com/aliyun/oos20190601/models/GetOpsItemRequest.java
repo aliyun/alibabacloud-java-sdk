@@ -5,13 +5,20 @@ import com.aliyun.tea.*;
 
 public class GetOpsItemRequest extends TeaModel {
     /**
-     * <p>The O\&M item ID.</p>
+     * <p>The O\&amp;M item ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oi-d52b08695e2b46ae8413</p>
      */
     @NameInMap("OpsItemId")
     public String opsItemId;
 
     /**
      * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateStateConfigurationResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1306108F-610C-40FD-AAD5-DA13E8B00BE9</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,78 +43,117 @@ public class CreateStateConfigurationResponseBody extends TeaModel {
     public static class CreateStateConfigurationResponseBodyStateConfiguration extends TeaModel {
         /**
          * <p>The configuration mode. Valid values:</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ApplyAndAutoCorrect</p>
          */
         @NameInMap("ConfigureMode")
         public String configureMode;
 
         /**
          * <p>The time when the desired-state configuration was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-03-22T03:13:32Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>collect inventory data</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;policy&quot;: {&quot;ACS:Network&quot;: {&quot;Collection&quot;: &quot;Enabled&quot;}, &quot;ACS:Application&quot;: {&quot;Collection&quot;: &quot;Enabled&quot;}}}</p>
          */
         @NameInMap("Parameters")
         public java.util.Map<String, ?> parameters;
 
         /**
          * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxsn4m4******</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>The schedule expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1 hour</p>
          */
         @NameInMap("ScheduleExpression")
         public String scheduleExpression;
 
         /**
          * <p>The schedule type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rate</p>
          */
         @NameInMap("ScheduleType")
         public String scheduleType;
 
         /**
          * <p>The ID of the desired-state configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sc-a538febe18fabcdef</p>
          */
         @NameInMap("StateConfigurationId")
         public String stateConfigurationId;
 
         /**
          * <p>The tags added to the configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Key&quot;: &quot;oos&quot;, &quot;Value&quot;: &quot;inventory&quot;}</p>
          */
         @NameInMap("Tags")
         public java.util.Map<String, ?> tags;
 
         /**
          * <p>The queried resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{     &quot;ResourceType&quot;: &quot;ALIYUN::ECS::Instance&quot;,     &quot;Filters&quot;: [       {         &quot;Type&quot;: &quot;All&quot;,         &quot;RegionId&quot;: &quot;cn-hangzhou&quot;,         &quot;Parameters&quot;: {           &quot;RegionId&quot;: &quot;cn-hangzhou&quot;,           &quot;Status&quot;: &quot;Running&quot;         }       }     ]   }</p>
          */
         @NameInMap("Targets")
         public String targets;
 
         /**
          * <p>The template ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-1234asadf</p>
          */
         @NameInMap("TemplateId")
         public String templateId;
 
         /**
          * <p>The name of the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACS-ECS-InventoryDataCollection</p>
          */
         @NameInMap("TemplateName")
         public String templateName;
 
         /**
          * <p>The name of the template version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         @NameInMap("TemplateVersion")
         public String templateVersion;

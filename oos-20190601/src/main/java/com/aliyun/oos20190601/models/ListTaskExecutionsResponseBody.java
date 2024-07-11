@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class ListTaskExecutionsResponseBody extends TeaModel {
     /**
      * <p>The details of the task executions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MTRBMDc0NjAtRUJFNy00N0NBLTk3NTctMTJDQzQ3NjFENDdB</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The number of entries returned on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CDABABABAB-FC28-4D9C-8FB5-68DC6F0486FC</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,114 +77,171 @@ public class ListTaskExecutionsResponseBody extends TeaModel {
     public static class ListTaskExecutionsResponseBodyTaskExecutions extends TeaModel {
         /**
          * <p>The output of the execution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>exec-xxx</p>
          */
         @NameInMap("ChildExecutionId")
         public String childExecutionId;
 
         /**
          * <p>The ID of the execution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-05-16T10:26:14Z</p>
          */
         @NameInMap("CreateDate")
         public String createDate;
 
         /**
          * <p>The execution ID of the parent node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-05-16T10:26:14Z</p>
          */
         @NameInMap("EndDate")
         public String endDate;
 
         /**
          * <p>The action of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>exec-44d32b45d2a449e49899</p>
          */
         @NameInMap("ExecutionId")
         public String executionId;
 
         /**
          * <p>The Input parameters of the task execution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{                     &quot;NotifyNote&quot;:&quot;&quot;                 }</p>
          */
         @NameInMap("ExtraData")
         public java.util.Map<String, ?> extraData;
 
         /**
          * <p>The ID of the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         @NameInMap("Loop")
         public java.util.Map<String, ?> loop;
 
         /**
          * <p>The status information of the task execution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("LoopBatchNumber")
         public Integer loopBatchNumber;
 
         /**
          * <p>The time when the execution was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-1234566zxcvvb</p>
          */
         @NameInMap("LoopItem")
         public String loopItem;
 
         /**
          * <p>The status of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{ &quot;InstanceId&quot;:&quot;i-xxx&quot; }</p>
          */
         @NameInMap("Outputs")
         public String outputs;
 
         /**
          * <p>The name of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>task-exec-xxx</p>
          */
         @NameInMap("ParentTaskExecutionId")
         public String parentTaskExecutionId;
 
         /**
          * <p>Queries task executions. Multiple methods are supported to filter task executions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{ &quot;Status&quot;:&quot;Running&quot; }</p>
          */
         @NameInMap("Properties")
         public String properties;
 
         /**
          * <p>The elements in the loop task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-05-16T10:26:14Z</p>
          */
         @NameInMap("StartDate")
         public String startDate;
 
         /**
          * <p>The time when the task execution stopped running.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The additional information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         @NameInMap("StatusMessage")
         public String statusMessage;
 
         /**
          * <p>The execution ID of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACS::Sleep</p>
          */
         @NameInMap("TaskAction")
         public String taskAction;
 
         /**
          * <p>The time when the execution was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>task-exec-xxx</p>
          */
         @NameInMap("TaskExecutionId")
         public String taskExecutionId;
 
         /**
          * <p>The time when the execution started.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>describeInstance</p>
          */
         @NameInMap("TaskName")
         public String taskName;
 
         /**
          * <p>The number of times for which the loop task is run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         @NameInMap("TemplateId")
         public String templateId;
 
         /**
          * <p>The configuration and statistics information of the loop task. This parameter is returned only for the parent node of the loop task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-05-16T10:26:14Z</p>
          */
         @NameInMap("UpdateDate")
         public String updateDate;

@@ -6,12 +6,19 @@ import com.aliyun.tea.*;
 public class ListExecutionRiskyTasksRequest extends TeaModel {
     /**
      * <p>The ID of the region.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The name of the template.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>myTemplate</p>
      */
     @NameInMap("TemplateName")
     public String templateName;

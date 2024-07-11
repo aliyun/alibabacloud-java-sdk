@@ -18,6 +18,9 @@ public class GetSecretParametersResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A5320F1D-92D9-44BB-A416-5FC525ED6D57</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,90 +57,135 @@ public class GetSecretParametersResponseBody extends TeaModel {
     public static class GetSecretParametersResponseBodyParameters extends TeaModel {
         /**
          * <p>The constraints of the encryption parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;AllowedValues\&quot;: [\&quot;test\&quot;]}</p>
          */
         @NameInMap("Constraints")
         public String constraints;
 
         /**
          * <p>The user who created the encryption parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>root(130900000)</p>
          */
         @NameInMap("CreatedBy")
         public String createdBy;
 
         /**
          * <p>The time when the encryption parameter was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-10-22T03:11:13Z</p>
          */
         @NameInMap("CreatedDate")
         public String createdDate;
 
         /**
          * <p>The description of the encryption parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>secretParameter</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The ID of the encryption parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>p-7cdc0000000000000000</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The ID of the key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ssh-bp67acfmxazb4p****</p>
          */
         @NameInMap("KeyId")
         public String keyId;
 
         /**
          * <p>The name of the encryption parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySecretParameter</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The version number of the encryption parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ParameterVersion")
         public Integer parameterVersion;
 
         /**
          * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxsn4m4******</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>The share type of the encryption parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Private</p>
          */
         @NameInMap("ShareType")
         public String shareType;
 
         /**
          * <p>The tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;k1&quot;: &quot;v1&quot;, &quot;k2&quot;: &quot;v2&quot;}</p>
          */
         @NameInMap("Tags")
         public java.util.Map<String, ?> tags;
 
         /**
          * <p>The data type of the encryption parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Secret</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The user who updated the encryption parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>root(130900000)</p>
          */
         @NameInMap("UpdatedBy")
         public String updatedBy;
 
         /**
          * <p>The time when the encryption parameter was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-10-22T03:11:13Z</p>
          */
         @NameInMap("UpdatedDate")
         public String updatedDate;
 
         /**
          * <p>The value of the encryption parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>secretParameter,secretParameter1</p>
          */
         @NameInMap("Value")
         public String value;

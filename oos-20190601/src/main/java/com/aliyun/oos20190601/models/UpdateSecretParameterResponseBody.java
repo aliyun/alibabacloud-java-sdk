@@ -12,6 +12,9 @@ public class UpdateSecretParameterResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0B419FF3-ABC6-4DF0-95E5-636DC8CBB8AF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,84 +43,126 @@ public class UpdateSecretParameterResponseBody extends TeaModel {
     public static class UpdateSecretParameterResponseBodyParameter extends TeaModel {
         /**
          * <p>The constraints of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>\&quot;{\&quot;\&quot;AllowedValues&quot;:[&quot;secretparameter&quot;],&quot;AllowedPattern&quot;:&quot;.*&quot;,&quot;MinLength&quot;:0,&quot;MaxLength&quot;:20}\&quot;</p>
          */
         @NameInMap("Constraints")
         public String constraints;
 
         /**
          * <p>The user who created the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>root(130900000)</p>
          */
         @NameInMap("CreatedBy")
         public String createdBy;
 
         /**
          * <p>The time when the parameter was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-09-01T09:30:36Z</p>
          */
         @NameInMap("CreatedDate")
         public String createdDate;
 
         /**
          * <p>The description of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SecretParameter</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The ID of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>p-0b0fff9919c946xxxxxx</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The ID of customer master key (CMK) of Key Management Service (KMS) that is used for encryption.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80e9409f-78fa-42ab-84bd-83f40c******</p>
          */
         @NameInMap("KeyId")
         public String keyId;
 
         /**
          * <p>The name of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyParameter</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The version number of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("ParameterVersion")
         public Integer parameterVersion;
 
         /**
          * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxsn4m4******</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>The share type of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Private</p>
          */
         @NameInMap("ShareType")
         public String shareType;
 
         /**
          * <p>The tags of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;k1&quot;: &quot;v1&quot;, &quot;k2&quot;: &quot;v2&quot;}</p>
          */
         @NameInMap("Tags")
         public String tags;
 
         /**
          * <p>The type of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Secret</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The user who updated the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>root(130900000)</p>
          */
         @NameInMap("UpdatedBy")
         public String updatedBy;
 
         /**
          * <p>The time when the parameter was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-09-01T09:33:11Z</p>
          */
         @NameInMap("UpdatedDate")
         public String updatedDate;

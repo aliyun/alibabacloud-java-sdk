@@ -6,42 +6,64 @@ import com.aliyun.tea.*;
 public class UpdateExecutionRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-42665544****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The description of the execution.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Execution description</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The ID of the execution.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>exec-c223xxxxxxxxxxxxxxxx</p>
      */
     @NameInMap("ExecutionId")
     public String executionId;
 
     /**
      * <p>The information about the parameters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;Status&quot;:&quot;Running&quot;}</p>
      */
     @NameInMap("Parameters")
     public String parameters;
 
     /**
      * <p>The ID of the region.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmxsn4m*****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>The tags of the execution.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;k1&quot;: &quot;v1&quot;, &quot;k2&quot;: &quot;v2&quot;}</p>
      */
     @NameInMap("Tags")
     public String tags;

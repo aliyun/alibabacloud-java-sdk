@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class GetOpsItemResponseBody extends TeaModel {
     /**
-     * <p>The information about the O\&M item.</p>
+     * <p>The information about the O\&amp;M item.</p>
      */
     @NameInMap("OpsItem")
     public GetOpsItemResponseBodyOpsItem opsItem;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8BED4C16-BD30-5E27-94D4-7EBCCECF70C1</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,55 +42,79 @@ public class GetOpsItemResponseBody extends TeaModel {
 
     public static class GetOpsItemResponseBodyOpsItem extends TeaModel {
         /**
-         * <p>The information about the attributes of the O\&M item.</p>
+         * <p>The information about the attributes of the O\&amp;M item.</p>
          */
         @NameInMap("Attributes")
         public java.util.Map<String, ?> attributes;
 
         /**
-         * <p>The category of the O\&M item.</p>
+         * <p>The category of the O\&amp;M item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Security</p>
          */
         @NameInMap("Category")
         public String category;
 
         /**
-         * <p>The user who created the O\&M item.</p>
+         * <p>The user who created the O\&amp;M item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>root(130900000)</p>
          */
         @NameInMap("CreateBy")
         public String createBy;
 
         /**
-         * <p>The time when the O\&M item was created.</p>
+         * <p>The time when the O\&amp;M item was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-10T06:15Z</p>
          */
         @NameInMap("CreateDate")
         public String createDate;
 
         /**
          * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-update</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The user who last modified the O\&M item.</p>
+         * <p>The user who last modified the O\&amp;M item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>modifiedBy</p>
          */
         @NameInMap("LastModifiedBy")
         public String lastModifiedBy;
 
         /**
-         * <p>The O\&M item ID.</p>
+         * <p>The O\&amp;M item ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oi-d52b08695e2b46ae8413</p>
          */
         @NameInMap("OpsItemId")
         public String opsItemId;
 
         /**
-         * <p>The priority of the O\&M item.</p>
+         * <p>The priority of the O\&amp;M item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Priority")
         public Integer priority;
 
         /**
          * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekzxkofnlxtn2i</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
@@ -99,43 +126,61 @@ public class GetOpsItemResponseBody extends TeaModel {
         public java.util.List<String> resources;
 
         /**
-         * <p>The severity level of the O\&M item.</p>
+         * <p>The severity level of the O\&amp;M item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Medium</p>
          */
         @NameInMap("Severity")
         public String severity;
 
         /**
-         * <p>The solutions to the O\&M item.</p>
+         * <p>The solutions to the O\&amp;M item.</p>
          */
         @NameInMap("Solutions")
         public java.util.List<java.util.Map<String, ?>> solutions;
 
         /**
-         * <p>The source business of the O\&M item.</p>
+         * <p>The source business of the O\&amp;M item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/aliyun/appManager</p>
          */
         @NameInMap("Source")
         public String source;
 
         /**
-         * <p>The status of the O\&M item.</p>
+         * <p>The status of the O\&amp;M item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Open</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The tags attached to the O\&M item.</p>
+         * <p>The tags attached to the O\&amp;M item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;K1&quot;:&quot;V1&quot;}</p>
          */
         @NameInMap("Tags")
         public java.util.Map<String, ?> tags;
 
         /**
-         * <p>The title of the O\&M item.</p>
+         * <p>The title of the O\&amp;M item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Title")
         public String title;
 
         /**
-         * <p>The time when the O\&M item was updated.</p>
+         * <p>The time when the O\&amp;M item was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-10T06:15Z</p>
          */
         @NameInMap("UpdateDate")
         public String updateDate;

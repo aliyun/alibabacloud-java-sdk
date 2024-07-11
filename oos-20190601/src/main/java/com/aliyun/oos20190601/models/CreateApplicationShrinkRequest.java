@@ -12,42 +12,64 @@ public class CreateApplicationShrinkRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TF-CreateApplication-1647587475-84104b89-eba5-47a8-b2fd-807b8b7d</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The description of the application.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>application</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The application name.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MyApplication</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The region ID. Set the value to cn-hangzhou.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmxsn4m******</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>The ID of the service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>service-79538e30e44541b699d8</p>
      */
     @NameInMap("ServiceId")
     public String serviceId;
 
     /**
      * <p>The tags.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;k1&quot;:&quot;v1&quot;,&quot;k2&quot;:&quot;v2&quot;}</p>
      */
     @NameInMap("Tags")
     public String tagsShrink;

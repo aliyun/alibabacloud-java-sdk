@@ -5,22 +5,33 @@ import com.aliyun.tea.*;
 
 public class GetSecretParametersRequest extends TeaModel {
     /**
-     * <p>The name of the encryption parameter. Multiple encryption parameters can form a JSON array in the format of \["xxxxxxxxx", "yyyyyyyyy", … "zzzzzzzzz"]. Each JSON array can contain a maximum of 10 encryption parameters. Multiple encryption parameters in the array are separated by commas (,).</p>
+     * <p>The name of the encryption parameter. Multiple encryption parameters can form a JSON array in the format of [&quot;xxxxxxxxx&quot;, &quot;yyyyyyyyy&quot;, … &quot;zzzzzzzzz&quot;]. Each JSON array can contain a maximum of 10 encryption parameters. Multiple encryption parameters in the array are separated by commas (,).</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;secretParameter&quot;,&quot;secretParameter1&quot;]</p>
      */
     @NameInMap("Names")
     public String names;
 
     /**
      * <p>The ID of the region.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>Specifies whether to decrypt the parameter value. Default value: false. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("WithDecryption")
     public Boolean withDecryption;

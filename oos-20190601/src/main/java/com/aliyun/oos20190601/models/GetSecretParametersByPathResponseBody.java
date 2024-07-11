@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class GetSecretParametersByPathResponseBody extends TeaModel {
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gAAAAABfTgv5ewUWmNdJ3g7JVLvX70sPH90GZOVGC</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -24,12 +30,18 @@ public class GetSecretParametersByPathResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>25156E99-7437-4590-AA58-2ACA17DE405C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of returned entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,78 +94,117 @@ public class GetSecretParametersByPathResponseBody extends TeaModel {
     public static class GetSecretParametersByPathResponseBodyParameters extends TeaModel {
         /**
          * <p>The constraints of the encryption parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;AllowedPattern\&quot;: \&quot;^[a-g]*$\&quot;}</p>
          */
         @NameInMap("Constraints")
         public String constraints;
 
         /**
          * <p>The user who created the encryption parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>root(130900000)</p>
          */
         @NameInMap("CreatedBy")
         public String createdBy;
 
         /**
          * <p>The time when the encryption parameter was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-10-21T06:22:48Z</p>
          */
         @NameInMap("CreatedDate")
         public String createdDate;
 
         /**
          * <p>The description of the encryption parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>secretParameter</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The ID of the encryption parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>p-7cdc0000000000000000</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The ID of the key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>090xxbex-xexx-xxxx-axfc-ddxxcxxxxcex</p>
          */
         @NameInMap("KeyId")
         public String keyId;
 
         /**
          * <p>The name of the encryption parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mySecretParameter</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The version number of the encryption parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ParameterVersion")
         public Integer parameterVersion;
 
         /**
          * <p>The share type of the encryption parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Private</p>
          */
         @NameInMap("ShareType")
         public String shareType;
 
         /**
          * <p>The data type of the encryption parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Secret</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The user who updated the encryption parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>root(130900000)</p>
          */
         @NameInMap("UpdatedBy")
         public String updatedBy;
 
         /**
          * <p>The time when the encryption parameter was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-10-21T06:22:48Z</p>
          */
         @NameInMap("UpdatedDate")
         public String updatedDate;
 
         /**
          * <p>The value of the encryption parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>secretParameter</p>
          */
         @NameInMap("Value")
         public String value;

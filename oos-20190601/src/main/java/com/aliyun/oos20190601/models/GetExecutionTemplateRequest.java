@@ -6,12 +6,19 @@ import com.aliyun.tea.*;
 public class GetExecutionTemplateRequest extends TeaModel {
     /**
      * <p>The ID of the execution.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>exec-046490ff88f242</p>
      */
     @NameInMap("ExecutionId")
     public String executionId;
 
     /**
      * <p>The ID of the region.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

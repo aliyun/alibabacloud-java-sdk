@@ -12,18 +12,29 @@ public class ListInstancePatchStatesResponseBody extends TeaModel {
 
     /**
      * <p>The number of entries returned on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The token that is used to retrieve the next page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <ul>
+     * <li></li>
+     * </ul>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9A47C086-E64D-52EE-8B2C-EFD23877C55E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,78 +79,117 @@ public class ListInstancePatchStatesResponseBody extends TeaModel {
     public static class ListInstancePatchStatesResponseBodyInstancePatchStates extends TeaModel {
         /**
          * <p>The ID of the patch baseline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pb-f9393021b7a049e1b34e</p>
          */
         @NameInMap("BaselineId")
         public String baselineId;
 
         /**
          * <p>The number of patches that failed to be installed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("FailedCount")
         public String failedCount;
 
         /**
          * <p>The number of installed patches.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("InstalledCount")
         public String installedCount;
 
         /**
          * <p>The number of patches that do not meet the baseline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("InstalledOtherCount")
         public String installedOtherCount;
 
         /**
          * <p>The number of patches that have been installed but require a restart to take effect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("InstalledPendingRebootCount")
         public String installedPendingRebootCount;
 
         /**
          * <p>The number of patches that are rejected by the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("InstalledRejectedCount")
         public String installedRejectedCount;
 
         /**
          * <p>The ID of the ECS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1jaxa2bs4bps7*****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The number of patches that are not installed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("MissingCount")
         public String missingCount;
 
         /**
          * <p>The time when the operation ended.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-09-10T11:42:22Z</p>
          */
         @NameInMap("OperationEndTime")
         public String operationEndTime;
 
         /**
          * <p>The time when the operation was initiated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-09-10T11:42:22Z</p>
          */
         @NameInMap("OperationStartTime")
         public String operationStartTime;
 
         /**
          * <p>The operation type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>scan</p>
          */
         @NameInMap("OperationType")
         public String operationType;
 
         /**
          * <p>The information about the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>“”</p>
          */
         @NameInMap("OwnerInformation")
         public String ownerInformation;
 
         /**
          * <p>The patch group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("PatchGroup")
         public String patchGroup;

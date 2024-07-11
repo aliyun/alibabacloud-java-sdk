@@ -5,37 +5,54 @@ import com.aliyun.tea.*;
 
 public class ChangeResourceGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the resource group to which the cloud resource is to be moved. You can use resource groups to manage resources owned by your Alibaba Cloud account. Resource groups simplify the resource and permission management of your Alibaba Cloud account. For more information, see [What is Resource Management?](~~94475~~)</p>
+     * <p>The ID of the resource group to which the cloud resource is to be moved. You can use resource groups to manage resources owned by your Alibaba Cloud account. Resource groups simplify the resource and permission management of your Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/94475.html">What is Resource Management?</a></p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfm3peow3k****</p>
      */
     @NameInMap("NewResourceGroupId")
     public String newResourceGroupId;
 
     /**
      * <p>The ID of the region.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the cloud resource that you want to move to another resource group.</p>
-     * <br>
-     * <p>*   If the ResourceType parameter is set to template, set the ResourceId parameter to the name of the template.</p>
-     * <p>*   If the ResourceType parameter is set to parameter, set the ResourceId parameter to the name of the parameter.</p>
-     * <p>*   If the ResourceType parameter is set to secretparameter, set the ResourceId parameter to the name of the encryption parameter.</p>
-     * <p>*   If the ResourceType parameter is set to stateconfiguration, set the ResourceId parameter to the ID of the desired-state configuration.</p>
-     * <p>*   If the ResourceType parameter is set to application, set the ResourceId parameter to the name of the application.</p>
+     * <ul>
+     * <li>If the ResourceType parameter is set to template, set the ResourceId parameter to the name of the template.</li>
+     * <li>If the ResourceType parameter is set to parameter, set the ResourceId parameter to the name of the parameter.</li>
+     * <li>If the ResourceType parameter is set to secretparameter, set the ResourceId parameter to the name of the encryption parameter.</li>
+     * <li>If the ResourceType parameter is set to stateconfiguration, set the ResourceId parameter to the ID of the desired-state configuration.</li>
+     * <li>If the ResourceType parameter is set to application, set the ResourceId parameter to the name of the application.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TemplateName</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;
 
     /**
      * <p>The type of the cloud resource. Valid values:</p>
-     * <br>
-     * <p>*   template: template</p>
-     * <p>*   parameter: parameter</p>
-     * <p>*   secretparameter: encryption parameter</p>
-     * <p>*   stateconfiguration: desired-state configuration</p>
-     * <p>*   application: application</p>
+     * <ul>
+     * <li>template: template</li>
+     * <li>parameter: parameter</li>
+     * <li>secretparameter: encryption parameter</li>
+     * <li>stateconfiguration: desired-state configuration</li>
+     * <li>application: application</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>template</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

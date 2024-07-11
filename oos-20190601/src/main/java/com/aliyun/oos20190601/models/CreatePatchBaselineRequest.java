@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class CreatePatchBaselineRequest extends TeaModel {
     /**
      * <p>The rules of scanning and installing patches for the specified operating system.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;PatchRules&quot;:[{&quot;PatchFilterGroup&quot;:[{&quot;Key&quot;:&quot;PatchSet&quot;,&quot;Values&quot;:[&quot;OS&quot;]},{&quot;Key&quot;:&quot;ProductFamily&quot;,&quot;Values&quot;:[&quot;Windows&quot;]},{&quot;Key&quot;:&quot;Product&quot;,&quot;Values&quot;:[&quot;Windows 10&quot;,&quot;Windows 7&quot;]},{&quot;Key&quot;:&quot;Classification&quot;,&quot;Values&quot;:[&quot;Security Updates&quot;,&quot;Updates&quot;,&quot;Update Rollups&quot;,&quot;Critical Updates&quot;]},{&quot;Key&quot;:&quot;Severity&quot;,&quot;Values&quot;:[&quot;Critical&quot;,&quot;Important&quot;,&quot;Moderate&quot;]}],&quot;ApproveAfterDays&quot;:7,&quot;ApproveUntilDate&quot;:&quot;&quot;,&quot;EnableNonSecurity&quot;:true,&quot;ComplianceLevel&quot;:&quot;Medium&quot;}]}</p>
      */
     @NameInMap("ApprovalRules")
     public String approvalRules;
@@ -18,45 +22,68 @@ public class CreatePatchBaselineRequest extends TeaModel {
 
     /**
      * <p>Specifies whether the approved patch involves updates other than security-related updates.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("ApprovedPatchesEnableNonSecurity")
     public Boolean approvedPatchesEnableNonSecurity;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <ul>
+     * <li></li>
+     * </ul>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The description of the patch baseline.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PatchBaseline</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The name of the patch baseline.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MyPatchBaseline</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The type of the operating system. Valid values:</p>
-     * <br>
-     * <p>*   Windows</p>
-     * <p>*   Ubuntu</p>
-     * <p>*   CentOS</p>
-     * <p>*   Debian</p>
-     * <p>*   AliyunLinux</p>
-     * <p>*   RedhatEnterpriseLinux</p>
-     * <p>*   Anolis</p>
-     * <p>*   AlmaLinux</p>
+     * <ul>
+     * <li>Windows</li>
+     * <li>Ubuntu</li>
+     * <li>CentOS</li>
+     * <li>Debian</li>
+     * <li>AliyunLinux</li>
+     * <li>RedhatEnterpriseLinux</li>
+     * <li>Anolis</li>
+     * <li>AlmaLinux</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Windows</p>
      */
     @NameInMap("OperationSystem")
     public String operationSystem;
 
     /**
      * <p>The ID of the region in which you want to create a patch baseline.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -69,12 +96,18 @@ public class CreatePatchBaselineRequest extends TeaModel {
 
     /**
      * <p>The action of the rejected patch.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ALLOW_AS_DEPENDENCY</p>
      */
     @NameInMap("RejectedPatchesAction")
     public String rejectedPatchesAction;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmxsn4m4******</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -203,12 +236,18 @@ public class CreatePatchBaselineRequest extends TeaModel {
     public static class CreatePatchBaselineRequestTags extends TeaModel {
         /**
          * <p>The key of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value</p>
          */
         @NameInMap("Value")
         public String value;

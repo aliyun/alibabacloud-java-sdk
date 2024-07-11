@@ -12,18 +12,27 @@ public class ListTagKeysResponseBody extends TeaModel {
 
     /**
      * <p>The maximum number of entries to return on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The token that is used to retrieve the next page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>87y29h80h20h3f2</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>36210B73-8262-4D08-9D3A-7F96789733C8</p>
      */
     @NameInMap("RequestId")
     public String requestId;

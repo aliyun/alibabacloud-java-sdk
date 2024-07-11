@@ -12,6 +12,9 @@ public class GetApplicationResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>51004B8A-6D9A-5ACB-9158-6C6794496AD0</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -46,6 +49,9 @@ public class GetApplicationResponseBody extends TeaModel {
 
         /**
          * <p>The health check URL of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/api/health/</p>
          */
         @NameInMap("HealthCheckUrl")
         public String healthCheckUrl;
@@ -96,74 +102,95 @@ public class GetApplicationResponseBody extends TeaModel {
 
         /**
          * <p>The type of the application.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   ComputeNest</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   Custom</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   DingTalk</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <ul>
+         * <li><p>ComputeNest</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>Custom</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>DingTalk</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DingTalk</p>
          */
         @NameInMap("ApplicationType")
         public String applicationType;
 
         /**
          * <p>The time when the application was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-09-07T09:17:46Z</p>
          */
         @NameInMap("CreateDate")
         public String createDate;
 
         /**
          * <p>The description of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Application</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyApplication</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxsn4m******</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>The ID of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>service-79538e30e44541b699d8</p>
          */
         @NameInMap("ServiceId")
         public String serviceId;
 
         /**
          * <p>The tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;k1&quot;: &quot;v1&quot;, &quot;k2&quot;: &quot;v2&quot;}</p>
          */
         @NameInMap("Tags")
         public java.util.Map<String, ?> tags;
 
         /**
          * <p>The time when the application was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-09-07T09:17:46Z</p>
          */
         @NameInMap("UpdateDate")
         public String updateDate;

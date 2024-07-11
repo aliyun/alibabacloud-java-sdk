@@ -6,36 +6,56 @@ import com.aliyun.tea.*;
 public class UpdateParameterRequest extends TeaModel {
     /**
      * <p>The description of the common parameter. The description must be 1 to 200 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>update</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The name of the common parameter. The name must be 1 to 200 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_). It cannot start with ALIYUN, ACS, ALIBABA, ALICLOUD, or OOS.</p>
+     * <p>The name of the common parameter. The name must be 1 to 200 characters in length, and can contain letters, digits, hyphens (-), and underscores (_). It cannot start with ALIYUN, ACS, ALIBABA, ALICLOUD, or OOS.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MyParameter</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmxsn4m4******</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>The tags to be added to common parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;k1&quot;: &quot;v1&quot;, &quot;k2&quot;: &quot;v2&quot;}</p>
      */
     @NameInMap("Tags")
     public String tags;
 
     /**
      * <p>The value of the common parameter. The value must be 1 to 4,096 characters in length.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>update</p>
      */
     @NameInMap("Value")
     public String value;

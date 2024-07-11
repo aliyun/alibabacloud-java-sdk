@@ -12,18 +12,27 @@ public class ListExecutionsResponseBody extends TeaModel {
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The token that is used to retrieve the next page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MTRBMDc0NjAtRUJFNy00N0NBLTk3NTctMTJDQzQ</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>14A074-47CA-9757-12CC4761D47A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,18 +77,27 @@ public class ListExecutionsResponseBody extends TeaModel {
     public static class ListExecutionsResponseBodyExecutionsCurrentTasks extends TeaModel {
         /**
          * <p>The execution template of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs::Template</p>
          */
         @NameInMap("TaskAction")
         public String taskAction;
 
         /**
          * <p>The ID of the task execution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>task-exec-44d32b45d2a49899#1</p>
          */
         @NameInMap("TaskExecutionId")
         public String taskExecutionId;
 
         /**
          * <p>The name of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>installSLSILogtail</p>
          */
         @NameInMap("TaskName")
         public String taskName;
@@ -118,18 +136,27 @@ public class ListExecutionsResponseBody extends TeaModel {
     public static class ListExecutionsResponseBodyExecutions extends TeaModel {
         /**
          * <p>The type of the execution template. Valid values: Other, TimerTrigger, EventTrigger, and AlarmTrigger.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Other</p>
          */
         @NameInMap("Category")
         public String category;
 
         /**
          * <p>The number of tasks that are counted by execution status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Failed&quot;: 0,&quot;Success&quot;: 1,&quot;Total&quot;: 2}</p>
          */
         @NameInMap("Counters")
         public java.util.Map<String, ?> counters;
 
         /**
          * <p>The time when the execution was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-05-16T10:26:14Z</p>
          */
         @NameInMap("CreateDate")
         public String createDate;
@@ -142,174 +169,263 @@ public class ListExecutionsResponseBody extends TeaModel {
 
         /**
          * <p>The description of the execution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test execution.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The time when the execution stops running.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-05-16T10:26:14Z</p>
          */
         @NameInMap("EndDate")
         public String endDate;
 
         /**
          * <p>The account ID of the user who started the execution of the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1309252800</p>
          */
         @NameInMap("ExecutedBy")
         public String executedBy;
 
         /**
          * <p>The unique ID of the execution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>exec-44d32b45d2a449e</p>
          */
         @NameInMap("ExecutionId")
         public String executionId;
 
         /**
          * <p>Indicates whether the execution contains child executions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("IsParent")
         public Boolean isParent;
 
         /**
          * <p>The time when the template was last successfully triggered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-05-27T09:29:18Z</p>
          */
         @NameInMap("LastSuccessfulTriggerTime")
         public String lastSuccessfulTriggerTime;
 
         /**
          * <p>The outputs of last trigger.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *       &quot;InstanceId&quot;: &quot;i-xxx&quot;
+         * }</p>
          */
         @NameInMap("LastTriggerOutputs")
         public String lastTriggerOutputs;
 
         /**
          * <p>The status of the execution after the template was last triggered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         @NameInMap("LastTriggerStatus")
         public String lastTriggerStatus;
 
         /**
          * <p>The status message of last trigger.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         @NameInMap("LastTriggerStatusMessage")
         public String lastTriggerStatusMessage;
 
         /**
          * <p>The time when the template was last successfully triggered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-05-27T09:29:18Z</p>
          */
         @NameInMap("LastTriggerTime")
         public String lastTriggerTime;
 
         /**
          * <p>The execution mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Automatic</p>
          */
         @NameInMap("Mode")
         public String mode;
 
         /**
          * <p>The output of the execution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{ &quot;InstanceId&quot;:&quot;i-xxx&quot; }</p>
          */
         @NameInMap("Outputs")
         public String outputs;
 
         /**
          * <p>The input parameters of the execution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{ &quot;Status&quot;:&quot;Running&quot; }</p>
          */
         @NameInMap("Parameters")
         public java.util.Map<String, ?> parameters;
 
         /**
          * <p>The ID of the parent execution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>exec-xxx</p>
          */
         @NameInMap("ParentExecutionId")
         public String parentExecutionId;
 
         /**
          * <p>The role that started the execution of the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OOSServiceRole</p>
          */
         @NameInMap("RamRole")
         public String ramRole;
 
         /**
          * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxsn4m4******</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>The status of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{ 			&quot;Success&quot;: 1 		}</p>
          */
         @NameInMap("ResourceStatus")
         public String resourceStatus;
 
         /**
          * <p>The security check mode. Valid values: Skip, and ConfirmEveryHighRiskAction.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Skip</p>
          */
         @NameInMap("SafetyCheck")
         public String safetyCheck;
 
         /**
          * <p>The time when the execution was started.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-05-16T10:26:14Z</p>
          */
         @NameInMap("StartDate")
         public String startDate;
 
         /**
          * <p>The status of the execution. Valid values: Started, Queued, Running, Waiting, Success, Failed, and Cancelled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The status of the task execution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>“”</p>
          */
         @NameInMap("StatusMessage")
         public String statusMessage;
 
         /**
          * <p>The reason for which the status occurs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         @NameInMap("StatusReason")
         public String statusReason;
 
         /**
          * <p>The tags of the execution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         @NameInMap("Tags")
         public java.util.Map<String, ?> tags;
 
         /**
          * <p>The target resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;{&quot;ResourceType&quot;: &quot;ALIYUN::ECS::Instance&quot;, &quot;Filters&quot;: [{&quot;ResourceIds&quot;: [&quot;i-bp14z07dg3464980x72o&quot;], &quot;RegionId&quot;: &quot;cn-hangzhou&quot;, &quot;Type&quot;: &quot;ResourceIds&quot;}]}&quot;</p>
          */
         @NameInMap("Targets")
         public String targets;
 
         /**
          * <p>The ID of the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("TemplateId")
         public String templateId;
 
         /**
          * <p>The name of the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyTemplate</p>
          */
         @NameInMap("TemplateName")
         public String templateName;
 
         /**
          * <p>The version number of the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         @NameInMap("TemplateVersion")
         public String templateVersion;
 
         /**
          * <p>The time when the execution was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-05-16T10:26:14Z</p>
          */
         @NameInMap("UpdateDate")
         public String updateDate;
 
         /**
          * <p>The Waiting state.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         @NameInMap("WaitingStatus")
         public String waitingStatus;

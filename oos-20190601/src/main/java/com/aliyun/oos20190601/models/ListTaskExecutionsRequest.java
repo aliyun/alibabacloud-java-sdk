@@ -6,103 +6,153 @@ import com.aliyun.tea.*;
 public class ListTaskExecutionsRequest extends TeaModel {
     /**
      * <p>The execution ID of the task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-05-16T10:26:14Z</p>
      */
     @NameInMap("EndDateAfter")
     public String endDateAfter;
 
     /**
      * <p>Specifies to query task executions that stop running at or later than the specified time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-05-16T10:26:14Z</p>
      */
     @NameInMap("EndDateBefore")
     public String endDateBefore;
 
     /**
      * <p>The status of the execution. Valid values: Running, Started, Success, Failed, Waiting, Cancelled, Pending, and Skipped.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>exec-xxx</p>
      */
     @NameInMap("ExecutionId")
     public String executionId;
 
     /**
      * <p>The number of entries to return on each page. Valid values: 20 to 100. Default value: 50.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("IncludeChildTaskExecution")
     public Boolean includeChildTaskExecution;
 
     /**
      * <p>The token that is used to retrieve the next page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>Sorts the task executions to query. Valid values:</p>
-     * <br>
-     * <p>*   **StartDate**: specifies that the task executions are sorted based on the time when they are created. This is the default value.</p>
-     * <p>*   **EndDate**: specifies that the task executions are sorted based on the time when the time when they stop running.</p>
-     * <p>*   **Status**: specifies that the task executions are sorted based on their statuses.</p>
+     * <ul>
+     * <li><strong>StartDate</strong>: specifies that the task executions are sorted based on the time when they are created. This is the default value.</li>
+     * <li><strong>EndDate</strong>: specifies that the task executions are sorted based on the time when the time when they stop running.</li>
+     * <li><strong>Status</strong>: specifies that the task executions are sorted based on their statuses.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>MTRBMDc0NjAtRUJFNy00N0NBLTk3NTctMTJDQzQ3NjFENDdB</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>Specifies whether to show the child nodes in the loop task. Default value: False.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>task-exec-xxx</p>
      */
     @NameInMap("ParentTaskExecutionId")
     public String parentTaskExecutionId;
 
     /**
      * <p>The ID of the execution.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The order in which you want to sort the task executions to query. Valid values:</p>
-     * <br>
-     * <p>*   **Ascending**: ascending order.</p>
-     * <p>*   **Descending**: descending order. This is the default value.</p>
+     * <ul>
+     * <li><strong>Ascending</strong>: ascending order.</li>
+     * <li><strong>Descending</strong>: descending order. This is the default value.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>StartDate</p>
      */
     @NameInMap("SortField")
     public String sortField;
 
     /**
      * <p>The token that is used to retrieve the next page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Ascending</p>
      */
     @NameInMap("SortOrder")
     public String sortOrder;
 
     /**
      * <p>Specifies to query task executions that stop running at or before the specified time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-05-16T10:26:14Z</p>
      */
     @NameInMap("StartDateAfter")
     public String startDateAfter;
 
     /**
      * <p>Specifies to query task executions that start to run at or later than the specified time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-05-16T10:26:14Z</p>
      */
     @NameInMap("StartDateBefore")
     public String startDateBefore;
 
     /**
      * <p>Specifies to query task executions that start to run at or before the specified time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Running</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
      * <p>The execution ID of the parent node. In a loop task, set this parameter to the execution ID of the parent node.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ACS::Sleep</p>
      */
     @NameInMap("TaskAction")
     public String taskAction;
 
     /**
      * <p>The name of the task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>task-exec-xxx</p>
      */
     @NameInMap("TaskExecutionId")
     public String taskExecutionId;
 
     /**
      * <p>The action of the task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>describeInstance</p>
      */
     @NameInMap("TaskName")
     public String taskName;

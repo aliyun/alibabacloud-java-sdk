@@ -6,29 +6,45 @@ import com.aliyun.tea.*;
 public class DeleteApplicationRequest extends TeaModel {
     /**
      * <p>Specifies whether to forcibly delete the application. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>False</p>
      */
     @NameInMap("Force")
     public Boolean force;
 
     /**
      * <p>The application name.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MyApplication</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The region ID. Set the value to cn-hangzhou.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>Specifies whether to retain resources created by application manager when deleting the application. Valid values:</p>
-     * <p>- true</p>
-     * <p>- false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("RetainResource")
     public Boolean retainResource;
