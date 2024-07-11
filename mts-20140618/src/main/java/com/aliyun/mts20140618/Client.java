@@ -5709,6 +5709,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>提交图片版权水印任务</p>
+     * 
+     * @param request SubmitImageCopyrightRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitImageCopyrightResponse
+     */
+    public SubmitImageCopyrightResponse submitImageCopyrightWithOptions(SubmitImageCopyrightRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.message)) {
+            query.put("Message", request.message);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.output)) {
+            query.put("Output", request.output);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.params)) {
+            query.put("Params", request.params);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SubmitImageCopyright"),
+            new TeaPair("version", "2014-06-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitImageCopyrightResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>提交图片版权水印任务</p>
+     * 
+     * @param request SubmitImageCopyrightRequest
+     * @return SubmitImageCopyrightResponse
+     */
+    public SubmitImageCopyrightResponse submitImageCopyright(SubmitImageCopyrightRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.submitImageCopyrightWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>  SubmitJobs is an asynchronous operation. After you submit transcoding jobs, the jobs are added to an MPS queue to be scheduled and run. The transcoding jobs may not have been complete when the response is returned. After you call this operation, you can call the <a href="https://help.aliyun.com/document_detail/602836.html">QueryJobList</a> operation to query the job results. You can also associate a Message Service (MNS) queue or topic with the MPS queue to receive notifications on the jobs. For more information, see <a href="https://www.alibabacloud.com/help/zh/apsaravideo-for-media-processing/latest/receive-message-notifications">Receive notifications</a>.</p>
      * <ul>
