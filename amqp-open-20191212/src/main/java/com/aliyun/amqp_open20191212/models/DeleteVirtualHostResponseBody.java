@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteVirtualHostResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4311050D-BD63-48F9-822B-947A75A1***</p>
      */
     @NameInMap("RequestId")
     public String requestId;

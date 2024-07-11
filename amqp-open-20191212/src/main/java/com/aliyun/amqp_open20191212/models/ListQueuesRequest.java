@@ -6,24 +6,39 @@ import com.aliyun.tea.*;
 public class ListQueuesRequest extends TeaModel {
     /**
      * <p>The ID of the ApsaraMQ for RabbitMQ instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1880770869023***</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The maximum number of entries to return.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The token that marks the end position of the previous returned page. To obtain the next batch of data, call the operation again by using the value of NextToken returned by the previous request. If you call this operation for the first time or want to query all results, set NextToken to an empty string.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The virtual host (vhost) name.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("VirtualHost")
     public String virtualHost;

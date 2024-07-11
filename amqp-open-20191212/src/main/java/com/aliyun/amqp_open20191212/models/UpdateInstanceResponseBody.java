@@ -4,21 +4,45 @@ package com.aliyun.amqp_open20191212.models;
 import com.aliyun.tea.*;
 
 public class UpdateInstanceResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{“instanceId”: “amqp-cn-jtexxxxx”, “orderId”: 2222222}</p>
+     */
     @NameInMap("Data")
     public Object data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>InstanceNotExist</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>628705FD-03EE-4ABE-BB21-E1672960***</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("StatusCode")
     public String statusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public String success;
 

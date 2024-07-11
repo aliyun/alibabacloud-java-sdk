@@ -12,6 +12,9 @@ public class ListInstancesResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CCBB1225-C392-480E-8C7F-D09AB2CD2***</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class ListInstancesResponseBody extends TeaModel {
     public static class ListInstancesResponseBodyDataInstancesTags extends TeaModel {
         /**
          * <p>标签键。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>region</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>标签值。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hangzhou</p>
          */
         @NameInMap("Value")
         public String value;
@@ -76,116 +85,171 @@ public class ListInstancesResponseBody extends TeaModel {
     public static class ListInstancesResponseBodyDataInstances extends TeaModel {
         /**
          * <p>Indicates whether the instance is automatically renewed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("AutoRenewInstance")
         public Boolean autoRenewInstance;
 
         /**
          * <p>The endpoint that is used to access the instance over the classic network. This parameter is no longer available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amqp-cn-st21x7kv****.not-support</p>
          */
         @NameInMap("ClassicEndpoint")
         public String classicEndpoint;
 
         /**
          * <p>The timestamp that indicates when the instance expires. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1651507200000</p>
          */
         @NameInMap("ExpireTime")
         public Long expireTime;
 
         /**
          * <p>The instance ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amqp-cn-st21x7kv****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amqp-cn-st21x7kv****</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
          * <p>The instance type.</p>
-         * <br>
-         * <p>*   PROFESSIONAL: Professional Edition</p>
-         * <p>*   ENTERPRISE: Enterprise Edition</p>
-         * <p>*   VIP: Enterprise Platinum Edition</p>
+         * <ul>
+         * <li>PROFESSIONAL: Professional Edition</li>
+         * <li>ENTERPRISE: Enterprise Edition</li>
+         * <li>VIP: Enterprise Platinum Edition</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>professional</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
 
         /**
          * <p>The maximum number of Internet-based transactions per second (TPS) for the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24832</p>
          */
         @NameInMap("MaxEipTps")
         public Integer maxEipTps;
 
         /**
          * <p>The maximum number of queues on the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         @NameInMap("MaxQueue")
         public Integer maxQueue;
 
         /**
          * <p>The maximum number of VPC-based TPS for the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5000</p>
          */
         @NameInMap("MaxTps")
         public Integer maxTps;
 
         /**
          * <p>The maximum number of vhosts on the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         @NameInMap("MaxVhost")
         public Integer maxVhost;
 
         /**
          * <p>The timestamp that indicates when the order was created. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1572441939000</p>
          */
         @NameInMap("OrderCreateTime")
         public Long orderCreateTime;
 
         /**
          * <p>The billing method. Valid values:</p>
-         * <br>
-         * <p>*   PrePaid: the subscription billing method.</p>
-         * <p>*   POST_PAID: the pay-as-you-go billing method.</p>
+         * <ul>
+         * <li>PrePaid: the subscription billing method.</li>
+         * <li>POST_PAID: the pay-as-you-go billing method.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PRE_PAID</p>
          */
         @NameInMap("OrderType")
         public String orderType;
 
         /**
          * <p>The virtual private cloud (VPC) endpoint of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amqp-cn-st21x7kv****.mq-amqp.cn-hangzhou-a.aliyuncs.com</p>
          */
         @NameInMap("PrivateEndpoint")
         public String privateEndpoint;
 
         /**
          * <p>The public endpoint of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amqp-cn-st21x7kv****.mq-amqp.cn-hangzhou-a.aliyuncs.com</p>
          */
         @NameInMap("PublicEndpoint")
         public String publicEndpoint;
 
         /**
          * <p>The instance status. Valid values:</p>
-         * <br>
-         * <p>*   DEPLOYING: The instance is being deployed.</p>
-         * <p>*   EXPIRED: The instance is expired.</p>
-         * <p>*   SERVING: The instance is running.</p>
-         * <p>*   RELEASED: The instance is released.</p>
+         * <ul>
+         * <li>DEPLOYING: The instance is being deployed.</li>
+         * <li>EXPIRED: The instance is expired.</li>
+         * <li>SERVING: The instance is running.</li>
+         * <li>RELEASED: The instance is released.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SERVING</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The disk size. Unit: GB.</p>
-         * <br>
-         * <p>>  For Professional Edition instances and Enterprise Edition instances, this parameter is unavailable and \*\*-1\*\* is returned.</p>
+         * <blockquote>
+         * <p> For Professional Edition instances and Enterprise Edition instances, this parameter is unavailable and \<em>\</em>-1\<em>\</em> is returned.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         @NameInMap("StorageSize")
         public Integer storageSize;
 
         /**
          * <p>Indicates whether the instance supports elastic IP addresses (EIPs).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("SupportEIP")
         public Boolean supportEIP;
@@ -356,12 +420,18 @@ public class ListInstancesResponseBody extends TeaModel {
 
         /**
          * <p>The maximum number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("MaxResults")
         public Integer maxResults;
 
         /**
          * <p>The token that marks the end of the current returned page. If this parameter is empty, all data is retrieved.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caebacccb2be03f84eb48b699f0a****</p>
          */
         @NameInMap("NextToken")
         public String nextToken;

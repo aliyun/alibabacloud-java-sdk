@@ -12,6 +12,9 @@ public class ListQueueConsumersResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4409B7D5-E4EC-4EB5-804A-385DCDFCD***</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,6 +43,9 @@ public class ListQueueConsumersResponseBody extends TeaModel {
     public static class ListQueueConsumersResponseBodyDataConsumers extends TeaModel {
         /**
          * <p>The consumer tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sgen-1</p>
          */
         @NameInMap("ConsumerTag")
         public String consumerTag;
@@ -68,12 +74,18 @@ public class ListQueueConsumersResponseBody extends TeaModel {
 
         /**
          * <p>The maximum number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("MaxResults")
         public Integer maxResults;
 
         /**
          * <p>The token that marks the end of the current returned page. If this parameter is empty, all data is retrieved.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caebacccb2be03f84eb48b699f0a****</p>
          */
         @NameInMap("NextToken")
         public String nextToken;

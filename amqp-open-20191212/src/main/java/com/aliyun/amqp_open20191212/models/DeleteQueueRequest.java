@@ -6,18 +6,30 @@ import com.aliyun.tea.*;
 public class DeleteQueueRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1880770869023***</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The queue name.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DemoQueue</p>
      */
     @NameInMap("QueueName")
     public String queueName;
 
     /**
      * <p>The vhost name.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Test</p>
      */
     @NameInMap("VirtualHost")
     public String virtualHost;

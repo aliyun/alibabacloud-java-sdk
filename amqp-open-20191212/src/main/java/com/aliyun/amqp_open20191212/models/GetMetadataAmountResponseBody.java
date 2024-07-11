@@ -12,6 +12,9 @@ public class GetMetadataAmountResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B75ACF23-2BEB-44AC-A0B6-AE14EDCA***</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,36 +43,54 @@ public class GetMetadataAmountResponseBody extends TeaModel {
     public static class GetMetadataAmountResponseBodyData extends TeaModel {
         /**
          * <p>The number of created exchanges on the ApsaraMQ for RabbitMQ instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         @NameInMap("CurrentExchanges")
         public Integer currentExchanges;
 
         /**
          * <p>The number of created queues on the ApsaraMQ for RabbitMQ instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentQueues")
         public Integer currentQueues;
 
         /**
          * <p>The number of created vhosts on the ApsaraMQ for RabbitMQ instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentVirtualHosts")
         public Integer currentVirtualHosts;
 
         /**
          * <p>The maximum number of exchanges that can be created on the ApsaraMQ for RabbitMQ instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("MaxExchanges")
         public Integer maxExchanges;
 
         /**
          * <p>The maximum number of queues that can be created on the ApsaraMQ for RabbitMQ instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("MaxQueues")
         public Integer maxQueues;
 
         /**
          * <p>The maximum number of vhosts that can be created on the ApsaraMQ for RabbitMQ instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("MaxVirtualHosts")
         public Integer maxVirtualHosts;

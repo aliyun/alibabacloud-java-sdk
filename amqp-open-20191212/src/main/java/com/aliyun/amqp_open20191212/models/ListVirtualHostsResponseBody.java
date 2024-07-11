@@ -12,6 +12,9 @@ public class ListVirtualHostsResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EF4DB019-DA4A-4CE3-B220-223BBC93F***</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,6 +43,9 @@ public class ListVirtualHostsResponseBody extends TeaModel {
     public static class ListVirtualHostsResponseBodyDataVirtualHosts extends TeaModel {
         /**
          * <p>The vhost name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Name")
         public String name;
@@ -62,12 +68,18 @@ public class ListVirtualHostsResponseBody extends TeaModel {
     public static class ListVirtualHostsResponseBodyData extends TeaModel {
         /**
          * <p>The maximum number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("MaxResults")
         public Integer maxResults;
 
         /**
          * <p>The token that marks the end of the current returned page. If this parameter is empty, all data is retrieved.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caebacccb2be03f84eb48b699f0a****</p>
          */
         @NameInMap("NextToken")
         public String nextToken;
