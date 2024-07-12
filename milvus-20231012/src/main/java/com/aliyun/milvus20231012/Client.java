@@ -403,6 +403,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdatePublicNetworkStatusResponse updatePublicNetworkStatusWithOptions(UpdatePublicNetworkStatusRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.cidr)) {
+            query.put("Cidr", request.cidr);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.componentType)) {
             query.put("ComponentType", request.componentType);
         }
