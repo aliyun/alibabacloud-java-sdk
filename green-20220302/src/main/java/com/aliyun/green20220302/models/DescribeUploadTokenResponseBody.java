@@ -4,15 +4,27 @@ package com.aliyun.green20220302.models;
 import com.aliyun.tea.*;
 
 public class DescribeUploadTokenResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
     @NameInMap("Data")
     public DescribeUploadTokenResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Msg")
     public String msg;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,27 +66,59 @@ public class DescribeUploadTokenResponseBody extends TeaModel {
     }
 
     public static class DescribeUploadTokenResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>STS.NUEUjvDqMuvH6oQA1TXxxH4wVR</p>
+         */
         @NameInMap("AccessKeyId")
         public String accessKeyId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxxx</p>
+         */
         @NameInMap("AccessKeySecret")
         public String accessKeySecret;
 
+        /**
+         * <strong>example:</strong>
+         * <p>oss-cip-shanghai</p>
+         */
         @NameInMap("BucketName")
         public String bucketName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1720577200</p>
+         */
         @NameInMap("Expiration")
         public Integer expiration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>upload/1xxb89/</p>
+         */
         @NameInMap("FileNamePrefix")
         public String fileNamePrefix;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://oss-cn-shanghai-internal.aliyuncs.com">https://oss-cn-shanghai-internal.aliyuncs.com</a></p>
+         */
         @NameInMap("OssInternalEndPoint")
         public String ossInternalEndPoint;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://oss-cn-shanghai.aliyuncs.com">https://oss-cn-shanghai.aliyuncs.com</a></p>
+         */
         @NameInMap("OssInternetEndPoint")
         public String ossInternetEndPoint;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxxx</p>
+         */
         @NameInMap("SecurityToken")
         public String securityToken;
 
