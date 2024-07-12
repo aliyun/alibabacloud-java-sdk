@@ -7,27 +7,54 @@ public class ListFeatureEntitiesShrinkRequest extends TeaModel {
     @NameInMap("FeatureEntityIds")
     public String featureEntityIdsShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>feature_entity_1</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Desc</p>
+     */
     @NameInMap("Order")
     public String order;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1231432*****</p>
+     */
     @NameInMap("Owner")
     public String owner;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("ProjectId")
     public String projectId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>GmtModifiedTime</p>
+     */
     @NameInMap("SortBy")
     public String sortBy;
 

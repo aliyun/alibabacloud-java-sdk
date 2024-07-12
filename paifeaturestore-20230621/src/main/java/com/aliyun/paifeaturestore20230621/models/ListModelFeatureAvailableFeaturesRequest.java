@@ -4,6 +4,10 @@ package com.aliyun.paifeaturestore20230621.models;
 import com.aliyun.tea.*;
 
 public class ListModelFeatureAvailableFeaturesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>f1</p>
+     */
     @NameInMap("FeatureName")
     public String featureName;
 

@@ -7,6 +7,10 @@ public class ListFeatureViewFieldRelationshipsResponseBody extends TeaModel {
     @NameInMap("Relationships")
     public java.util.List<ListFeatureViewFieldRelationshipsResponseBodyRelationships> relationships;
 
+    /**
+     * <strong>example:</strong>
+     * <p>BF349686-C932-55B5-9B31-DAFA395C0E06</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +36,17 @@ public class ListFeatureViewFieldRelationshipsResponseBody extends TeaModel {
     }
 
     public static class ListFeatureViewFieldRelationshipsResponseBodyRelationshipsModels extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("ModelId")
         public String modelId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>dbmtl</p>
+         */
         @NameInMap("ModelName")
         public String modelName;
 
@@ -62,15 +74,27 @@ public class ListFeatureViewFieldRelationshipsResponseBody extends TeaModel {
     }
 
     public static class ListFeatureViewFieldRelationshipsResponseBodyRelationships extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>featureView1</p>
+         */
         @NameInMap("FeatureName")
         public String featureName;
 
         @NameInMap("Models")
         public java.util.List<ListFeatureViewFieldRelationshipsResponseBodyRelationshipsModels> models;
 
+        /**
+         * <strong>example:</strong>
+         * <p>table2</p>
+         */
         @NameInMap("OfflineTableName")
         public String offlineTableName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>table1</p>
+         */
         @NameInMap("OnlineTableName")
         public String onlineTableName;
 

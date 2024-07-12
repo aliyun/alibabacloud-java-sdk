@@ -4,63 +4,135 @@ package com.aliyun.paifeaturestore20230621.models;
 import com.aliyun.tea.*;
 
 public class GetProjectFeatureViewResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("Config")
     public String config;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4</p>
+     */
     @NameInMap("FeatureEntityId")
     public String featureEntityId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>entity1</p>
+     */
     @NameInMap("FeatureEntityName")
     public String featureEntityName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("FeatureViewId")
     public String featureViewId;
 
     @NameInMap("Fields")
     public java.util.List<GetProjectFeatureViewResponseBodyFields> fields;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-12-15T23:24:33.132+08:00</p>
+     */
     @NameInMap("GmtSyncTime")
     public String gmtSyncTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>user_id</p>
+     */
     @NameInMap("JoinId")
     public String joinId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("LastSyncConfig")
     public String lastSyncConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>feature_view1</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1231421342****</p>
+     */
     @NameInMap("Owner")
     public String owner;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("ProjectId")
     public String projectId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>project1</p>
+     */
     @NameInMap("ProjectName")
     public String projectName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4</p>
+     */
     @NameInMap("RegisterDatasourceId")
     public String registerDatasourceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>table1</p>
+     */
     @NameInMap("RegisterTable")
     public String registerTable;
 
+    /**
+     * <strong>example:</strong>
+     * <p>BFD68AD5-398C-5AC4-A357-C7EA8DF33C26</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("SyncOnlineTable")
     public Boolean syncOnlineTable;
 
+    /**
+     * <strong>example:</strong>
+     * <p>90</p>
+     */
     @NameInMap("TTL")
     public Integer TTL;
 
     @NameInMap("Tags")
     public java.util.List<String> tags;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Batch</p>
+     */
     @NameInMap("Type")
     public String type;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Custom</p>
+     */
     @NameInMap("WriteMethod")
     public String writeMethod;
 
@@ -233,9 +305,17 @@ public class GetProjectFeatureViewResponseBody extends TeaModel {
         @NameInMap("Attributes")
         public java.util.List<String> attributes;
 
+        /**
+         * <strong>example:</strong>
+         * <p>field1</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>INT32</p>
+         */
         @NameInMap("Type")
         public String type;
 

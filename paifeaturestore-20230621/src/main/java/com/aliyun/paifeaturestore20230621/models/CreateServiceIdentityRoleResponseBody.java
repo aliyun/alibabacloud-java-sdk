@@ -4,12 +4,24 @@ package com.aliyun.paifeaturestore20230621.models;
 import com.aliyun.tea.*;
 
 public class CreateServiceIdentityRoleResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ServiceLinkedRoleAlreadyExistsErrorProblem</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>C03B2680-AC9C-59CD-93C5-8142B92537FA</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AliyunServiceRoleForFeatureStore</p>
+     */
     @NameInMap("RoleName")
     public String roleName;
 

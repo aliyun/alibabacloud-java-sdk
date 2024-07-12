@@ -7,9 +7,17 @@ public class ListInstancesResponseBody extends TeaModel {
     @NameInMap("Instances")
     public java.util.List<ListInstancesResponseBodyInstances> instances;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2CA11923-2A3D-5E5A-8314-E699D2DD15DE</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -43,21 +51,45 @@ public class ListInstancesResponseBody extends TeaModel {
     }
 
     public static class ListInstancesResponseBodyInstances extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2023-07-04T11:26:09.036+08:00</p>
+         */
         @NameInMap("GmtCreateTime")
         public String gmtCreateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-07-04T11:26:09.036+08:00</p>
+         */
         @NameInMap("GmtModifiedTime")
         public String gmtModifiedTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>featureStore-cn-7mz2xfu****</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Initializing</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Basic</p>
+         */
         @NameInMap("Type")
         public String type;
 

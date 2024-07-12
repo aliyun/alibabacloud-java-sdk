@@ -4,42 +4,102 @@ package com.aliyun.paifeaturestore20230621.models;
 import com.aliyun.tea.*;
 
 public class GetTaskResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>{
+     *     &quot;mode&quot;: &quot;overwrite&quot;,
+     *     &quot;partitions&quot;: {
+     *         &quot;dt&quot;: &quot;20230820&quot;
+     *     },
+     *     &quot;event_time&quot;: &quot;&quot;,
+     *     &quot;config&quot;: {},
+     *     &quot;offline_to_online&quot;: true
+     * }</p>
+     */
     @NameInMap("Config")
     public String config;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-07-04T11:26:09.036+08:00</p>
+     */
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-07-04T11:26:09.036+08:00</p>
+     */
     @NameInMap("GmtExecutedTime")
     public String gmtExecutedTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-07-04T11:26:09.036+08:00</p>
+     */
     @NameInMap("GmtFinishedTime")
     public String gmtFinishedTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-07-04T11:26:09.036+08:00</p>
+     */
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("ObjectId")
     public String objectId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ModelFeature</p>
+     */
     @NameInMap("ObjectType")
     public String objectType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("ProjectId")
     public String projectId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>project_1</p>
+     */
     @NameInMap("ProjectName")
     public String projectName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>37D19490-AB69-567D-A852-407C94E510E9</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DROP TABLE IF EXISTS public.fsxxx</p>
+     */
     @NameInMap("RunningConfig")
     public String runningConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Running</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OfflineToOnline</p>
+     */
     @NameInMap("Type")
     public String type;
 

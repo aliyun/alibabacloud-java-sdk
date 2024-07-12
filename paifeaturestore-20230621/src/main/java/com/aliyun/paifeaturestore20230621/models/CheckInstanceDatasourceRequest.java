@@ -4,17 +4,27 @@ package com.aliyun.paifeaturestore20230621.models;
 import com.aliyun.tea.*;
 
 public class CheckInstanceDatasourceRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;address&quot;: &quot;&quot;}</p>
+     */
     @NameInMap("Config")
     public String config;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Hologres</p>
      */
     @NameInMap("Type")
     public String type;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>igraph1</p>
      */
     @NameInMap("Uri")
     public String uri;

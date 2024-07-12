@@ -4,9 +4,17 @@ package com.aliyun.paifeaturestore20230621.models;
 import com.aliyun.tea.*;
 
 public class CreateFeatureViewRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;save_original_field&quot;:true}</p>
+     */
     @NameInMap("Config")
     public String config;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4</p>
+     */
     @NameInMap("FeatureEntityId")
     public String featureEntityId;
 
@@ -15,28 +23,49 @@ public class CreateFeatureViewRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FeatureView1</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("ProjectId")
     public String projectId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("RegisterDatasourceId")
     public String registerDatasourceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>table1</p>
+     */
     @NameInMap("RegisterTable")
     public String registerTable;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("SyncOnlineTable")
     public Boolean syncOnlineTable;
 
+    /**
+     * <strong>example:</strong>
+     * <p>90</p>
+     */
     @NameInMap("TTL")
     public Integer TTL;
 
@@ -45,12 +74,18 @@ public class CreateFeatureViewRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Batch</p>
      */
     @NameInMap("Type")
     public String type;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Custom</p>
      */
     @NameInMap("WriteMethod")
     public String writeMethod;
@@ -171,9 +206,17 @@ public class CreateFeatureViewRequest extends TeaModel {
         @NameInMap("Attributes")
         public java.util.List<String> attributes;
 
+        /**
+         * <strong>example:</strong>
+         * <p>age</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>INT32</p>
+         */
         @NameInMap("Type")
         public String type;
 

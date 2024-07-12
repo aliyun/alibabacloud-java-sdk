@@ -4,9 +4,17 @@ package com.aliyun.paifeaturestore20230621.models;
 import com.aliyun.tea.*;
 
 public class CreateDatasourceResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("DatasourceId")
     public String datasourceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1C5B1511-8A5B-59C3-90AF-513F9210E882</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

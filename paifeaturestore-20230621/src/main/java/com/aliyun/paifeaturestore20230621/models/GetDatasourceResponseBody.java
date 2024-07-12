@@ -4,30 +4,66 @@ package com.aliyun.paifeaturestore20230621.models;
 import com.aliyun.tea.*;
 
 public class GetDatasourceResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;address&quot;: &quot;&quot;}</p>
+     */
     @NameInMap("Config")
     public String config;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("DatasourceId")
     public String datasourceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-07-04T11:26:09.036+08:00</p>
+     */
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-07-04T11:26:09.036+08:00</p>
+     */
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>datasource1</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AD7D9E95-BD31-53F2-B710-6C01866FCB05</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Hologres</p>
+     */
     @NameInMap("Type")
     public String type;
 
+    /**
+     * <strong>example:</strong>
+     * <p>igraph_instance1</p>
+     */
     @NameInMap("Uri")
     public String uri;
 
+    /**
+     * <strong>example:</strong>
+     * <p>32244</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

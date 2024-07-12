@@ -4,6 +4,10 @@ package com.aliyun.paifeaturestore20230621.models;
 import com.aliyun.tea.*;
 
 public class ListDatasourceTablesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>table1</p>
+     */
     @NameInMap("TableName")
     public String tableName;
 

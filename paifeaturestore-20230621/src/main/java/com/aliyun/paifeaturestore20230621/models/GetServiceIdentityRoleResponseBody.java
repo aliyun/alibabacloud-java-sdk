@@ -4,12 +4,27 @@ package com.aliyun.paifeaturestore20230621.models;
 import com.aliyun.tea.*;
 
 public class GetServiceIdentityRoleResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>{
+     * &quot;Version&quot;: &quot;1&quot;,
+     * &quot;Statement&quot;:[]
+     * }</p>
+     */
     @NameInMap("Policy")
     public String policy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6F629E92-F64D-502D-85AA-A9C54894CA3D</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AliyunServiceRoleForPaiFeatureStore</p>
+     */
     @NameInMap("RoleName")
     public String roleName;
 

@@ -59,42 +59,63 @@ public class UpdateModelFeatureFGFeatureRequest extends TeaModel {
     public static class UpdateModelFeatureFGFeatureRequestLookupFeatures extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-1024</p>
          */
         @NameInMap("DefaultValue")
         public String defaultValue;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>item_id</p>
          */
         @NameInMap("FeatureName")
         public String featureName;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Item</p>
          */
         @NameInMap("KeyFeatureDomain")
         public String keyFeatureDomain;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("KeyFeatureName")
         public String keyFeatureName;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>User</p>
          */
         @NameInMap("MapFeatureDomain")
         public String mapFeatureDomain;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>item_id</p>
          */
         @NameInMap("MapFeatureName")
         public String mapFeatureName;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STRING</p>
          */
         @NameInMap("ValueType")
         public String valueType;
@@ -165,36 +186,54 @@ public class UpdateModelFeatureFGFeatureRequest extends TeaModel {
     public static class UpdateModelFeatureFGFeatureRequestRawFeatures extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-1024</p>
          */
         @NameInMap("DefaultValue")
         public String defaultValue;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>User</p>
          */
         @NameInMap("FeatureDomain")
         public String featureDomain;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>item_id</p>
          */
         @NameInMap("FeatureName")
         public String featureName;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IdFeature</p>
          */
         @NameInMap("FeatureType")
         public String featureType;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>item_id</p>
          */
         @NameInMap("InputFeatureName")
         public String inputFeatureName;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STRING</p>
          */
         @NameInMap("ValueType")
         public String valueType;
@@ -257,36 +296,54 @@ public class UpdateModelFeatureFGFeatureRequest extends TeaModel {
     public static class UpdateModelFeatureFGFeatureRequestSequenceFeaturesSubFeatures extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-1024</p>
          */
         @NameInMap("DefaultValue")
         public String defaultValue;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>User</p>
          */
         @NameInMap("FeatureDomain")
         public String featureDomain;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>item_id</p>
          */
         @NameInMap("FeatureName")
         public String featureName;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RawFeature</p>
          */
         @NameInMap("FeatureType")
         public String featureType;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>item_id</p>
          */
         @NameInMap("InputFeatureName")
         public String inputFeatureName;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STRING</p>
          */
         @NameInMap("ValueType")
         public String valueType;
@@ -349,24 +406,36 @@ public class UpdateModelFeatureFGFeatureRequest extends TeaModel {
     public static class UpdateModelFeatureFGFeatureRequestSequenceFeatures extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <h1></h1>
          */
         @NameInMap("AttributeDelim")
         public String attributeDelim;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>item_id</p>
          */
         @NameInMap("FeatureName")
         public String featureName;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>;</p>
          */
         @NameInMap("SequenceDelim")
         public String sequenceDelim;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         @NameInMap("SequenceLength")
         public Long sequenceLength;

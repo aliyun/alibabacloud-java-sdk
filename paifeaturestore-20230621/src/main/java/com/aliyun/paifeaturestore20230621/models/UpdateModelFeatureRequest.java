@@ -7,6 +7,10 @@ public class UpdateModelFeatureRequest extends TeaModel {
     @NameInMap("Features")
     public java.util.List<UpdateModelFeatureRequestFeatures> features;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4</p>
+     */
     @NameInMap("LabelTableId")
     public String labelTableId;
 
@@ -43,23 +47,36 @@ public class UpdateModelFeatureRequest extends TeaModel {
     }
 
     public static class UpdateModelFeatureRequestFeatures extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>sex</p>
+         */
         @NameInMap("AliasName")
         public String aliasName;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("FeatureViewId")
         public String featureViewId;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gender</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STRING</p>
          */
         @NameInMap("Type")
         public String type;

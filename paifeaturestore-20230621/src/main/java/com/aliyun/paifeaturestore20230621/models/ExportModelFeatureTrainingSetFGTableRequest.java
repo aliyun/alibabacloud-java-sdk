@@ -24,9 +24,17 @@ public class ExportModelFeatureTrainingSetFGTableRequest extends TeaModel {
     }
 
     public static class ExportModelFeatureTrainingSetFGTableRequestTrainingSetFgConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>rank_v1_fg.json</p>
+         */
         @NameInMap("FgJsonName")
         public String fgJsonName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>fg_on_odps-1.3.60-jar-with-dependencies.jar</p>
+         */
         @NameInMap("JarName")
         public String jarName;
 

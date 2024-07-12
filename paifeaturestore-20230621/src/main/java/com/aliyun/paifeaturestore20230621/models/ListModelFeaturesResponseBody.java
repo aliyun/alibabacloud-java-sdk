@@ -7,9 +7,17 @@ public class ListModelFeaturesResponseBody extends TeaModel {
     @NameInMap("ModelFeatures")
     public java.util.List<ListModelFeaturesResponseBodyModelFeatures> modelFeatures;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2CA11923-2A3D-5E5A-8314-E699D2DD15DE</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -43,27 +51,59 @@ public class ListModelFeaturesResponseBody extends TeaModel {
     }
 
     public static class ListModelFeaturesResponseBodyModelFeatures extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2023-07-04T14:46:22.227+08:00</p>
+         */
         @NameInMap("GmtCreateTime")
         public String gmtCreateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-07-04T14:46:22.227+08:00</p>
+         */
         @NameInMap("GmtModifiedTime")
         public String gmtModifiedTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>label_table_1</p>
+         */
         @NameInMap("LabelTableName")
         public String labelTableName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("ModelFeatureId")
         public String modelFeatureId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>model_feature1</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1231243253****</p>
+         */
         @NameInMap("Owner")
         public String owner;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("ProjectId")
         public String projectId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>project1</p>
+         */
         @NameInMap("ProjectName")
         public String projectName;
 

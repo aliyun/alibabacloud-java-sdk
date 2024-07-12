@@ -7,9 +7,17 @@ public class ListDatasourcesResponseBody extends TeaModel {
     @NameInMap("Datasources")
     public java.util.List<ListDatasourcesResponseBodyDatasources> datasources;
 
+    /**
+     * <strong>example:</strong>
+     * <p>44933189-493B-5C43-A5C6-11EEC2A43520</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -43,27 +51,59 @@ public class ListDatasourcesResponseBody extends TeaModel {
     }
 
     public static class ListDatasourcesResponseBodyDatasources extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;address&quot;: &quot;&quot;}</p>
+         */
         @NameInMap("Config")
         public String config;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("DatasourceId")
         public String datasourceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-12-15T23:24:33.132+08:00</p>
+         */
         @NameInMap("GmtCreateTime")
         public String gmtCreateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-12-15T23:24:33.132+08:00</p>
+         */
         @NameInMap("GmtModifiedTime")
         public String gmtModifiedTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>datasource1</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Hologres</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>igraph_instance1</p>
+         */
         @NameInMap("Uri")
         public String uri;
 
+        /**
+         * <strong>example:</strong>
+         * <p>32324</p>
+         */
         @NameInMap("WorkspaceId")
         public String workspaceId;
 

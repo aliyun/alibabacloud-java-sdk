@@ -7,9 +7,17 @@ public class ListModelFeatureAvailableFeaturesResponseBody extends TeaModel {
     @NameInMap("AvaliableFeatures")
     public java.util.List<ListModelFeatureAvailableFeaturesResponseBodyAvaliableFeatures> avaliableFeatures;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ED4DEA2F-F216-57F0-AE28-08D791233280</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
@@ -43,15 +51,31 @@ public class ListModelFeatureAvailableFeaturesResponseBody extends TeaModel {
     }
 
     public static class ListModelFeatureAvailableFeaturesResponseBodyAvaliableFeatures extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>age</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>user_fea</p>
+         */
         @NameInMap("SourceName")
         public String sourceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>FeatureView</p>
+         */
         @NameInMap("SourceType")
         public String sourceType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>STRING</p>
+         */
         @NameInMap("Type")
         public String type;
 

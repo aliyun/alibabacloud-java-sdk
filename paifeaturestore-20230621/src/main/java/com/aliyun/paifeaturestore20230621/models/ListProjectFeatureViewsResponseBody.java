@@ -7,9 +7,17 @@ public class ListProjectFeatureViewsResponseBody extends TeaModel {
     @NameInMap("FeatureViews")
     public java.util.List<ListProjectFeatureViewsResponseBodyFeatureViews> featureViews;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AE2AF33E-0C0D-51A8-B89B-C5F1DF261D92</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -46,9 +54,17 @@ public class ListProjectFeatureViewsResponseBody extends TeaModel {
         @NameInMap("Attributes")
         public java.util.List<String> attributes;
 
+        /**
+         * <strong>example:</strong>
+         * <p>f1</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>INT32</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -84,12 +100,20 @@ public class ListProjectFeatureViewsResponseBody extends TeaModel {
     }
 
     public static class ListProjectFeatureViewsResponseBodyFeatureViews extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("FeatureViewId")
         public String featureViewId;
 
         @NameInMap("Features")
         public java.util.List<ListProjectFeatureViewsResponseBodyFeatureViewsFeatures> features;
 
+        /**
+         * <strong>example:</strong>
+         * <p>feature_view1</p>
+         */
         @NameInMap("Name")
         public String name;
 

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ChangeProjectFeatureEntityHotIdVersionRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20221213</p>
      */
     @NameInMap("Version")
     public String version;

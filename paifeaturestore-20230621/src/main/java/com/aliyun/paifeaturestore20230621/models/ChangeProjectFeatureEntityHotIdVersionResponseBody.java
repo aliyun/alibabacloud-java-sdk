@@ -4,6 +4,10 @@ package com.aliyun.paifeaturestore20230621.models;
 import com.aliyun.tea.*;
 
 public class ChangeProjectFeatureEntityHotIdVersionResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>CD377C31-372F-5CCD-ADB9-A31D6E118CA1</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

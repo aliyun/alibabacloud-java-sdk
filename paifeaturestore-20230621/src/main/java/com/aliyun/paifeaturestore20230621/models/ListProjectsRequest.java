@@ -4,27 +4,55 @@ package com.aliyun.paifeaturestore20230621.models;
 import com.aliyun.tea.*;
 
 public class ListProjectsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>fs1</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Asc</p>
+     */
     @NameInMap("Order")
     public String order;
 
+    /**
+     * <strong>example:</strong>
+     * <p>134324352****</p>
+     */
     @NameInMap("Owner")
     public String owner;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("ProjectIds")
     public java.util.List<String> projectIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>GmtModifiedTime</p>
+     */
     @NameInMap("SortBy")
     public String sortBy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>234</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

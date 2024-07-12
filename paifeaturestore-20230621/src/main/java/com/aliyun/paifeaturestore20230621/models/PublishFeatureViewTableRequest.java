@@ -4,20 +4,34 @@ package com.aliyun.paifeaturestore20230621.models;
 import com.aliyun.tea.*;
 
 public class PublishFeatureViewTableRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("Config")
     public String config;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-12-15T23:24:33.132+08:00</p>
+     */
     @NameInMap("EventTime")
     public String eventTime;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Overwrite</p>
      */
     @NameInMap("Mode")
     public String mode;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("OfflineToOnline")
     public Boolean offlineToOnline;

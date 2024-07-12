@@ -4,9 +4,17 @@ package com.aliyun.paifeaturestore20230621.models;
 import com.aliyun.tea.*;
 
 public class CheckInstanceDatasourceResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>C03B2680-AC9C-59CD-93C5-8142B92537FA</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Status")
     public String status;
 

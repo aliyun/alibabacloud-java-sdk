@@ -4,12 +4,20 @@ package com.aliyun.paifeaturestore20230621.models;
 import com.aliyun.tea.*;
 
 public class ListDatasourceTablesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>C03B2680-AC9C-59CD-93C5-8142B92537FA</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Tables")
     public java.util.List<String> tables;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 

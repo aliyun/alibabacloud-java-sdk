@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class CreateFeatureEntityRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>user_id</p>
      */
     @NameInMap("JoinId")
     public String joinId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>feature_entity_1</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("ProjectId")
     public String projectId;

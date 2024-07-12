@@ -7,27 +7,54 @@ public class ListLabelTablesRequest extends TeaModel {
     @NameInMap("LabelTableIds")
     public java.util.List<String> labelTableIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>label_table1</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Asc</p>
+     */
     @NameInMap("Order")
     public String order;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1231432432****</p>
+     */
     @NameInMap("Owner")
     public String owner;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>project1</p>
      */
     @NameInMap("ProjectId")
     public String projectId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>GmtModifiedTime</p>
+     */
     @NameInMap("SortBy")
     public String sortBy;
 

@@ -7,9 +7,17 @@ public class ListFeatureViewsResponseBody extends TeaModel {
     @NameInMap("FeatureViews")
     public java.util.List<ListFeatureViewsResponseBodyFeatureViews> featureViews;
 
+    /**
+     * <strong>example:</strong>
+     * <p>C03B2680-AC9C-59CD-93C5-8142B92537FA</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -43,42 +51,94 @@ public class ListFeatureViewsResponseBody extends TeaModel {
     }
 
     public static class ListFeatureViewsResponseBodyFeatureViews extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>featureEntity1</p>
+         */
         @NameInMap("FeatureEntityName")
         public String featureEntityName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("FeatureViewId")
         public String featureViewId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-12-15T23:24:33.132+08:00</p>
+         */
         @NameInMap("GmtCreateTime")
         public String gmtCreateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-12-15T23:24:33.132+08:00</p>
+         */
         @NameInMap("GmtModifiedTime")
         public String gmtModifiedTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>featureView1</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12321421412****</p>
+         */
         @NameInMap("Owner")
         public String owner;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("ProjectId")
         public String projectId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>project1</p>
+         */
         @NameInMap("ProjectName")
         public String projectName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("RegisterDatasourceId")
         public String registerDatasourceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>datasource1</p>
+         */
         @NameInMap("RegisterDatasourceName")
         public String registerDatasourceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>table1</p>
+         */
         @NameInMap("RegisterTable")
         public String registerTable;
 
+        /**
+         * <strong>example:</strong>
+         * <p>90</p>
+         */
         @NameInMap("TTL")
         public Integer TTL;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Batch</p>
+         */
         @NameInMap("Type")
         public String type;
 
