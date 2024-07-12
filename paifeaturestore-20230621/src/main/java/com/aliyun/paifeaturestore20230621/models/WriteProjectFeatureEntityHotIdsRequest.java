@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class WriteProjectFeatureEntityHotIdsRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1,2,3</p>
      */
     @NameInMap("HotIds")
     public String hotIds;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20221213</p>
      */
     @NameInMap("Version")
     public String version;

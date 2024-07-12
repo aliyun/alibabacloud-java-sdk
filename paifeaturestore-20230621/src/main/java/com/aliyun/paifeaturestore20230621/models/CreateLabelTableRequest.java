@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateLabelTableRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("DatasourceId")
     public String datasourceId;
@@ -18,12 +21,18 @@ public class CreateLabelTableRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rec_test</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("ProjectId")
     public String projectId;
@@ -74,12 +83,18 @@ public class CreateLabelTableRequest extends TeaModel {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lat</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INT32</p>
          */
         @NameInMap("Type")
         public String type;

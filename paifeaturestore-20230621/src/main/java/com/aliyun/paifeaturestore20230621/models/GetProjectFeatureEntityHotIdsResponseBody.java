@@ -4,15 +4,31 @@ package com.aliyun.paifeaturestore20230621.models;
 import com.aliyun.tea.*;
 
 public class GetProjectFeatureEntityHotIdsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("Count")
     public Integer count;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1,2,3</p>
+     */
     @NameInMap("HotIds")
     public String hotIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("NextSeqNumber")
     public String nextSeqNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>FFD39C0F-DD8D-51B2-864E-2842206DB0E8</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

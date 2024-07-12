@@ -4,45 +4,93 @@ package com.aliyun.paifeaturestore20230621.models;
 import com.aliyun.tea.*;
 
 public class GetModelFeatureResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>from feature_store_py.fs_client import FeatureStoreClient\nfrom feature_store_py.fs_project import FeatureStoreProject\nfrom feature_store_py.fs_datasource import LabelInput, MaxComputeDataSource, TrainingSetOutput\nfrom feature_store_py.fs_features import FeatureSelector\nfrom feature_store_py.fs_config import LabelInputConfig, PartitionConfig, FeatureViewConfig\nfrom feature_store_py.fs_config import TrainSetOutputConfig, EASDeployConfig\nimport datetime\nimport sys\n\ncur_day = args[&quot;dt&quot;]\nprint(&quot;cur_day = &quot;, cur_day)\noffset = datetime.timedelta(days=-1)\npre_day = (datetime.datetime.strptime(cur_day, &quot;%Y%m%d&quot;) + offset).strftime(&quot;%Y%m%d&quot;)\nprint(&quot;pre_day = &quot;, pre_day)\n\n\naccess_key_id = o.account.access_id\naccess_key_secret = o.account.secret_access_key\nfs = FeatureStoreClient(access_key_id=access_key_id, access_key_secret=access_key_secret, region=&quot;cn-beijing&quot;)\ncur_project_name = &quot;p1&quot;\nproject = fs.get_project(cur_project_name)\n\nlabel_partitions = PartitionConfig(name = &quot;ds&quot;, value = cur_day)\nlabel_input_config = LabelInputConfig(partition_config=label_partitions)\n\nfeature_view_1_partitions = PartitionConfig(name = &quot;ds&quot;, value = pre_day)\nfeature_view_1_config = FeatureViewConfig(name = &quot;user_fea&quot;,\npartition_config=feature_view_1_partitions)\n\nfeature_view_2_partitions = PartitionConfig(name = &quot;ds&quot;, value = pre_day)\nfeature_view_2_config = FeatureViewConfig(name = &quot;seq_fea&quot;,\npartition_config=feature_view_2_partitions)\n\nfeature_view_3_partitions = PartitionConfig(name = &quot;ds&quot;, value = pre_day)\nfeature_view_3_config = FeatureViewConfig(name = &quot;item_fea&quot;,\npartition_config=feature_view_3_partitions)\n\nfeature_view_config_list = [feature_view_1_config,feature_view_2_config,feature_view_3_config]\ntrain_set_partitions = PartitionConfig(name = &quot;ds&quot;, value = cur_day)\ntrain_set_output_config = TrainSetOutputConfig(partition_config=train_set_partitions)\n\n\nmodel_name = &quot;rank_v1&quot;\ncur_model = project.get_model(model_name)\ntask = cur_model.export_train_set(label_input_config, feature_view_config_list, train_set_output_config)\ntask.wait()\nprint(&quot;task_summary = &quot;, task.task_summary)\n</p>
+     */
     @NameInMap("ExportTrainingSetTableScript")
     public String exportTrainingSetTableScript;
 
     @NameInMap("Features")
     public java.util.List<GetModelFeatureResponseBodyFeatures> features;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-07-04T14:46:22.227+08:00</p>
+     */
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-07-04T14:46:22.227+08:00</p>
+     */
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("LabelTableId")
     public String labelTableId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>label_table1</p>
+     */
     @NameInMap("LabelTableName")
     public String labelTableName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>model_feature1</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1231243253****</p>
+     */
     @NameInMap("Owner")
     public String owner;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("ProjectId")
     public String projectId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>project1</p>
+     */
     @NameInMap("ProjectName")
     public String projectName;
 
     @NameInMap("Relations")
     public GetModelFeatureResponseBodyRelations relations;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0C89F5E1-7F24-5EEC-9F05-508A39278CC8</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>table2</p>
+     */
     @NameInMap("TrainingSetFGTable")
     public String trainingSetFGTable;
 
+    /**
+     * <strong>example:</strong>
+     * <p>table1</p>
+     */
     @NameInMap("TrainingSetTable")
     public String trainingSetTable;
 
@@ -164,18 +212,38 @@ public class GetModelFeatureResponseBody extends TeaModel {
     }
 
     public static class GetModelFeatureResponseBodyFeatures extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>feature2</p>
+         */
         @NameInMap("AliasName")
         public String aliasName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("FeatureViewId")
         public String featureViewId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>feature_view_1</p>
+         */
         @NameInMap("FeatureViewName")
         public String featureViewName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>feature1</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>INT32</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -227,15 +295,26 @@ public class GetModelFeatureResponseBody extends TeaModel {
     }
 
     public static class GetModelFeatureResponseBodyRelationsDomains extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>FeatureEntity</p>
+         */
         @NameInMap("DomainType")
         public String domainType;
 
         /**
          * <p>Domain ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>feature_entity_1</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -271,12 +350,24 @@ public class GetModelFeatureResponseBody extends TeaModel {
     }
 
     public static class GetModelFeatureResponseBodyRelationsLinks extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>model_feature_2</p>
+         */
         @NameInMap("From")
         public String from;
 
+        /**
+         * <strong>example:</strong>
+         * <p>user_id</p>
+         */
         @NameInMap("Link")
         public String link;
 
+        /**
+         * <strong>example:</strong>
+         * <p>feature_entity_3</p>
+         */
         @NameInMap("To")
         public String to;
 

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class WriteFeatureViewTableRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Merge</p>
      */
     @NameInMap("Mode")
     public String mode;
@@ -46,12 +49,24 @@ public class WriteFeatureViewTableRequest extends TeaModel {
     }
 
     public static class WriteFeatureViewTableRequestUrlDatasource extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>,</p>
+         */
         @NameInMap("Delimiter")
         public String delimiter;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("OmitHeader")
         public Boolean omitHeader;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxx.xxx.com/file.csv</p>
+         */
         @NameInMap("Path")
         public String path;
 

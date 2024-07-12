@@ -4,36 +4,72 @@ package com.aliyun.paifeaturestore20230621.models;
 import com.aliyun.tea.*;
 
 public class GetLabelTableResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("DatasourceId")
     public String datasourceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>datasource1</p>
+     */
     @NameInMap("DatasourceName")
     public String datasourceName;
 
     @NameInMap("Fields")
     public java.util.List<GetLabelTableResponseBodyFields> fields;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-12-15T23:24:33.132+08:00</p>
+     */
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-12-15T23:24:33.132+08:00</p>
+     */
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>label_table1</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>12321312*****</p>
+     */
     @NameInMap("Owner")
     public String owner;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("ProjectId")
     public String projectId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>project1</p>
+     */
     @NameInMap("ProjectName")
     public String projectName;
 
     @NameInMap("RelatedModelFeatures")
     public java.util.List<String> relatedModelFeatures;
 
+    /**
+     * <strong>example:</strong>
+     * <p>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -134,9 +170,17 @@ public class GetLabelTableResponseBody extends TeaModel {
         @NameInMap("Attributes")
         public java.util.List<String> attributes;
 
+        /**
+         * <strong>example:</strong>
+         * <p>field1</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>INT32</p>
+         */
         @NameInMap("Type")
         public String type;
 

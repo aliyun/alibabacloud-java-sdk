@@ -4,30 +4,57 @@ package com.aliyun.paifeaturestore20230621.models;
 import com.aliyun.tea.*;
 
 public class ListTasksRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>4</p>
+     */
     @NameInMap("ObjectId")
     public String objectId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ModelFeature</p>
+     */
     @NameInMap("ObjectType")
     public String objectType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
      */
     @NameInMap("ProjectId")
     public String projectId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Running</p>
+     */
     @NameInMap("Status")
     public String status;
 
     @NameInMap("TaskIds")
     public java.util.List<String> taskIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OfflineToOnline</p>
+     */
     @NameInMap("Type")
     public String type;
 

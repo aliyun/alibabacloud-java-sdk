@@ -10,6 +10,9 @@ public class ExportModelFeatureTrainingSetTableRequest extends TeaModel {
     @NameInMap("LabelInputConfig")
     public ExportModelFeatureTrainingSetTableRequestLabelInputConfig labelInputConfig;
 
+    @NameInMap("RealTimeIterateInterval")
+    public Long realTimeIterateInterval;
+
     @NameInMap("TrainingSetConfig")
     public ExportModelFeatureTrainingSetTableRequestTrainingSetConfig trainingSetConfig;
 
@@ -34,6 +37,14 @@ public class ExportModelFeatureTrainingSetTableRequest extends TeaModel {
         return this.labelInputConfig;
     }
 
+    public ExportModelFeatureTrainingSetTableRequest setRealTimeIterateInterval(Long realTimeIterateInterval) {
+        this.realTimeIterateInterval = realTimeIterateInterval;
+        return this;
+    }
+    public Long getRealTimeIterateInterval() {
+        return this.realTimeIterateInterval;
+    }
+
     public ExportModelFeatureTrainingSetTableRequest setTrainingSetConfig(ExportModelFeatureTrainingSetTableRequestTrainingSetConfig trainingSetConfig) {
         this.trainingSetConfig = trainingSetConfig;
         return this;
@@ -43,6 +54,10 @@ public class ExportModelFeatureTrainingSetTableRequest extends TeaModel {
     }
 
     public static class ExportModelFeatureTrainingSetTableRequestLabelInputConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2022-07-02 00:00:00</p>
+         */
         @NameInMap("EventTime")
         public String eventTime;
 

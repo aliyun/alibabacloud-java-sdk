@@ -4,6 +4,10 @@ package com.aliyun.paifeaturestore20230621.models;
 import com.aliyun.tea.*;
 
 public class CreateInstanceRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Basic</p>
+     */
     @NameInMap("Type")
     public String type;
 

@@ -4,9 +4,17 @@ package com.aliyun.paifeaturestore20230621.models;
 import com.aliyun.tea.*;
 
 public class ExportModelFeatureTrainingSetFGTableResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>514F82AF-3C04-5C3D-8F38-A11261BF37B0</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 

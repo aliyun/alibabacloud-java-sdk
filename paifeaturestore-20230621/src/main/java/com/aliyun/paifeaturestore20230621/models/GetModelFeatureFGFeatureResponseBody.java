@@ -10,6 +10,10 @@ public class GetModelFeatureFGFeatureResponseBody extends TeaModel {
     @NameInMap("RawFeatures")
     public java.util.List<GetModelFeatureFGFeatureResponseBodyRawFeatures> rawFeatures;
 
+    /**
+     * <strong>example:</strong>
+     * <p>E23EFF09-58AA-5420-934F-8453AE01548D</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -65,24 +69,52 @@ public class GetModelFeatureFGFeatureResponseBody extends TeaModel {
     }
 
     public static class GetModelFeatureFGFeatureResponseBodyLookupFeatures extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>-1024</p>
+         */
         @NameInMap("DefaultValue")
         public String defaultValue;
 
+        /**
+         * <strong>example:</strong>
+         * <p>item_id</p>
+         */
         @NameInMap("FeatureName")
         public String featureName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Item</p>
+         */
         @NameInMap("KeyFeatureDomain")
         public String keyFeatureDomain;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("KeyFeatureName")
         public String keyFeatureName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>User</p>
+         */
         @NameInMap("MapFeatureDomain")
         public String mapFeatureDomain;
 
+        /**
+         * <strong>example:</strong>
+         * <p>item_id</p>
+         */
         @NameInMap("MapFeatureName")
         public String mapFeatureName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>STRING</p>
+         */
         @NameInMap("ValueType")
         public String valueType;
 
@@ -150,21 +182,45 @@ public class GetModelFeatureFGFeatureResponseBody extends TeaModel {
     }
 
     public static class GetModelFeatureFGFeatureResponseBodyRawFeatures extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>-1024</p>
+         */
         @NameInMap("DefaultValue")
         public String defaultValue;
 
+        /**
+         * <strong>example:</strong>
+         * <p>User</p>
+         */
         @NameInMap("FeatureDomain")
         public String featureDomain;
 
+        /**
+         * <strong>example:</strong>
+         * <p>item_id</p>
+         */
         @NameInMap("FeatureName")
         public String featureName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>IdFeature</p>
+         */
         @NameInMap("FeatureType")
         public String featureType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>item_id</p>
+         */
         @NameInMap("InputFeatureName")
         public String inputFeatureName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>STRING</p>
+         */
         @NameInMap("ValueType")
         public String valueType;
 
@@ -224,21 +280,45 @@ public class GetModelFeatureFGFeatureResponseBody extends TeaModel {
     }
 
     public static class GetModelFeatureFGFeatureResponseBodySequenceFeaturesSubFeatures extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>-1024</p>
+         */
         @NameInMap("DefaultValue")
         public String defaultValue;
 
+        /**
+         * <strong>example:</strong>
+         * <p>User</p>
+         */
         @NameInMap("FeatureDomain")
         public String featureDomain;
 
+        /**
+         * <strong>example:</strong>
+         * <p>item_id</p>
+         */
         @NameInMap("FeatureName")
         public String featureName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>IdFeature</p>
+         */
         @NameInMap("FeatureType")
         public String featureType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>item_id</p>
+         */
         @NameInMap("InputFeatureName")
         public String inputFeatureName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>STRING</p>
+         */
         @NameInMap("ValueType")
         public String valueType;
 
@@ -298,15 +378,31 @@ public class GetModelFeatureFGFeatureResponseBody extends TeaModel {
     }
 
     public static class GetModelFeatureFGFeatureResponseBodySequenceFeatures extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <h1></h1>
+         */
         @NameInMap("AttributeDelim")
         public String attributeDelim;
 
+        /**
+         * <strong>example:</strong>
+         * <p>item_id</p>
+         */
         @NameInMap("FeatureName")
         public String featureName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>;</p>
+         */
         @NameInMap("SequenceDelim")
         public String sequenceDelim;
 
+        /**
+         * <strong>example:</strong>
+         * <p>50</p>
+         */
         @NameInMap("SequenceLength")
         public Long sequenceLength;
 

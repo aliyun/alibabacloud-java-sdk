@@ -12,18 +12,27 @@ public class CreateModelFeatureRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
      */
     @NameInMap("LabelTableId")
     public String labelTableId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>model_feature_1</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("ProjectId")
     public String projectId;
@@ -77,23 +86,36 @@ public class CreateModelFeatureRequest extends TeaModel {
     }
 
     public static class CreateModelFeatureRequestFeatures extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>userid</p>
+         */
         @NameInMap("AliasName")
         public String aliasName;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("FeatureViewId")
         public String featureViewId;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user_id</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STRING</p>
          */
         @NameInMap("Type")
         public String type;

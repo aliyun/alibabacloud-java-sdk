@@ -4,6 +4,10 @@ package com.aliyun.paifeaturestore20230621.models;
 import com.aliyun.tea.*;
 
 public class UpdateLabelTableRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("DatasourceId")
     public String datasourceId;
 
@@ -13,6 +17,10 @@ public class UpdateLabelTableRequest extends TeaModel {
     @NameInMap("Fields")
     public java.util.List<UpdateLabelTableRequestFields> fields;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rec_test</p>
+     */
     @NameInMap("Name")
     public String name;
 
@@ -54,12 +62,18 @@ public class UpdateLabelTableRequest extends TeaModel {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lat</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DOUBLE</p>
          */
         @NameInMap("Type")
         public String type;

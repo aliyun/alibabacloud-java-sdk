@@ -4,32 +4,52 @@ package com.aliyun.paifeaturestore20230621.models;
 import com.aliyun.tea.*;
 
 public class CreateProjectRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>This is a test.</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>project1</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
      */
     @NameInMap("OfflineDatasourceId")
     public String offlineDatasourceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>90</p>
+     */
     @NameInMap("OfflineLifeCycle")
     public Integer offlineLifeCycle;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("OnlineDatasourceId")
     public String onlineDatasourceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>324</p>
      */
     @NameInMap("WorkspaceId")
     public String workspaceId;

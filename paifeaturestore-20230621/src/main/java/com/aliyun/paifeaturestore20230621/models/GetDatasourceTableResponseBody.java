@@ -7,9 +7,17 @@ public class GetDatasourceTableResponseBody extends TeaModel {
     @NameInMap("Fields")
     public java.util.List<GetDatasourceTableResponseBodyFields> fields;
 
+    /**
+     * <strong>example:</strong>
+     * <p>D7B2F8C4-49C7-5CFA-8075-9D715A114873</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>table1</p>
+     */
     @NameInMap("TableName")
     public String tableName;
 
@@ -46,9 +54,17 @@ public class GetDatasourceTableResponseBody extends TeaModel {
         @NameInMap("Attributes")
         public java.util.List<String> attributes;
 
+        /**
+         * <strong>example:</strong>
+         * <p>field1</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>INT32</p>
+         */
         @NameInMap("Type")
         public String type;
 

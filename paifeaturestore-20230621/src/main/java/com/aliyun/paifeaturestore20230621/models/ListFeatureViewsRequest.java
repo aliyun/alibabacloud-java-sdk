@@ -4,39 +4,78 @@ package com.aliyun.paifeaturestore20230621.models;
 import com.aliyun.tea.*;
 
 public class ListFeatureViewsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>feature1</p>
+     */
     @NameInMap("FeatureName")
     public String featureName;
 
     @NameInMap("FeatureViewIds")
     public java.util.List<String> featureViewIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>fv1</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Desc</p>
+     */
     @NameInMap("Order")
     public String order;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1232143243242****</p>
+     */
     @NameInMap("Owner")
     public String owner;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("ProjectId")
     public String projectId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>GmtCreateTime</p>
+     */
     @NameInMap("SortBy")
     public String sortBy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>tag1</p>
+     */
     @NameInMap("Tag")
     public String tag;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Batch</p>
+     */
     @NameInMap("Type")
     public String type;
 

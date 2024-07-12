@@ -4,9 +4,17 @@ package com.aliyun.paifeaturestore20230621.models;
 import com.aliyun.tea.*;
 
 public class UpdateProjectRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>This is a test.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>project1</p>
+     */
     @NameInMap("Name")
     public String name;
 

@@ -7,6 +7,10 @@ public class ListFeatureViewRelationshipsResponseBody extends TeaModel {
     @NameInMap("Relationships")
     public java.util.List<ListFeatureViewRelationshipsResponseBodyRelationships> relationships;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0FBBE454-9BD1-5D8F-9129-D14DB7FAFE0B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +36,17 @@ public class ListFeatureViewRelationshipsResponseBody extends TeaModel {
     }
 
     public static class ListFeatureViewRelationshipsResponseBodyRelationshipsModels extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("ModelId")
         public String modelId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>dbmtl</p>
+         */
         @NameInMap("ModelName")
         public String modelName;
 
@@ -62,12 +74,20 @@ public class ListFeatureViewRelationshipsResponseBody extends TeaModel {
     }
 
     public static class ListFeatureViewRelationshipsResponseBodyRelationships extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>fv1</p>
+         */
         @NameInMap("FeatureViewName")
         public String featureViewName;
 
         @NameInMap("Models")
         public java.util.List<ListFeatureViewRelationshipsResponseBodyRelationshipsModels> models;
 
+        /**
+         * <strong>example:</strong>
+         * <p>project1</p>
+         */
         @NameInMap("ProjectName")
         public String projectName;
 

@@ -4,6 +4,10 @@ package com.aliyun.paifeaturestore20230621.models;
 import com.aliyun.tea.*;
 
 public class PublishFeatureViewTableResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>627B5776-4D06-5A49-8A04-508AA39653F4</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

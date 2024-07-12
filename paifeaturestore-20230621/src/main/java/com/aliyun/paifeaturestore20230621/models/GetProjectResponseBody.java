@@ -4,51 +4,115 @@ package com.aliyun.paifeaturestore20230621.models;
 import com.aliyun.tea.*;
 
 public class GetProjectResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>This is a test.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("FeatureEntityCount")
     public Integer featureEntityCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("FeatureViewCount")
     public Integer featureViewCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-12-15T23:24:33.132+08:00</p>
+     */
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-12-15T23:24:33.132+08:00</p>
+     */
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("ModelCount")
     public Integer modelCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>project1</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4</p>
+     */
     @NameInMap("OfflineDatasourceId")
     public String offlineDatasourceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>datasource1</p>
+     */
     @NameInMap("OfflineDatasourceName")
     public String offlineDatasourceName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>MaxCompute</p>
+     */
     @NameInMap("OfflineDatasourceType")
     public String offlineDatasourceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>90</p>
+     */
     @NameInMap("OfflineLifecycle")
     public Integer offlineLifecycle;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("OnlineDatasourceId")
     public String onlineDatasourceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>datasource2</p>
+     */
     @NameInMap("OnlineDatasourceName")
     public String onlineDatasourceName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Hologres</p>
+     */
     @NameInMap("OnlineDatasourceType")
     public String onlineDatasourceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1232132543543****</p>
+     */
     @NameInMap("Owner")
     public String owner;
 
+    /**
+     * <strong>example:</strong>
+     * <p>C33E160C-BFCA-5719-B958-942850E949F6</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

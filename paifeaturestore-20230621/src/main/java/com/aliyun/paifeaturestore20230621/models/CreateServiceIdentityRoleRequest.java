@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateServiceIdentityRoleRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AliyunServiceRoleForFeatureStore</p>
      */
     @NameInMap("RoleName")
     public String roleName;
