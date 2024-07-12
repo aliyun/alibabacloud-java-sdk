@@ -4,12 +4,18 @@ package com.aliyun.oosops20190601.models;
 import com.aliyun.tea.*;
 
 public class GetUserTemplateRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AliUid")
     public String aliUid;
 
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TemplateName")
     public String templateName;
 

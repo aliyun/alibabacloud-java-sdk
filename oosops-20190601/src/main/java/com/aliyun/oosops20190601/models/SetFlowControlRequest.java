@@ -10,12 +10,18 @@ public class SetFlowControlRequest extends TeaModel {
     @NameInMap("Service")
     public String service;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Type")
     public Integer type;
 
     @NameInMap("Uid")
     public String uid;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Value")
     public Integer value;
 

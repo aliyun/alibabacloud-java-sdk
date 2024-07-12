@@ -7,6 +7,9 @@ public class UpdatePublicTemplateRequest extends TeaModel {
     @NameInMap("Category")
     public String category;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Content")
     public String content;
 
@@ -19,6 +22,9 @@ public class UpdatePublicTemplateRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TemplateName")
     public String templateName;
 
