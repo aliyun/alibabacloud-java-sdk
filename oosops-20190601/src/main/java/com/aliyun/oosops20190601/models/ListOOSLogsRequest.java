@@ -4,6 +4,9 @@ package com.aliyun.oosops20190601.models;
 import com.aliyun.tea.*;
 
 public class ListOOSLogsRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
@@ -22,6 +25,9 @@ public class ListOOSLogsRequest extends TeaModel {
     @NameInMap("RequestFingerprint")
     public String requestFingerprint;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

@@ -4,6 +4,9 @@ package com.aliyun.oosops20190601.models;
 import com.aliyun.tea.*;
 
 public class ListUserTemplatesRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AliUid")
     public String aliUid;
 

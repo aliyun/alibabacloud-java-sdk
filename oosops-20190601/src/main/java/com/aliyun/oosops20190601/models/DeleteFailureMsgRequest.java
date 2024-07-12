@@ -4,9 +4,15 @@ package com.aliyun.oosops20190601.models;
 import com.aliyun.tea.*;
 
 public class DeleteFailureMsgRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Operation")
     public String operation;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RequestFingerprint")
     public String requestFingerprint;
 

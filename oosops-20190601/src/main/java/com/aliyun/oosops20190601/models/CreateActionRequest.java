@@ -4,12 +4,21 @@ package com.aliyun.oosops20190601.models;
 import com.aliyun.tea.*;
 
 public class CreateActionRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ActionName")
     public String actionName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ActionType")
     public String actionType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Content")
     public String content;
 

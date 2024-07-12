@@ -57,11 +57,17 @@ public class ListPublicTemplateRegistrationsResponseBody extends TeaModel {
         @NameInMap("Comment")
         public String comment;
 
+        @NameInMap("CreatedDate")
+        public String createdDate;
+
         @NameInMap("Detail")
         public String detail;
 
         @NameInMap("RegistrationId")
         public String registrationId;
+
+        @NameInMap("ShowPages")
+        public String showPages;
 
         @NameInMap("Status")
         public String status;
@@ -75,6 +81,9 @@ public class ListPublicTemplateRegistrationsResponseBody extends TeaModel {
         @NameInMap("TemplateVersion")
         public String templateVersion;
 
+        @NameInMap("UpdatedDate")
+        public String updatedDate;
+
         public static ListPublicTemplateRegistrationsResponseBodyRegistrations build(java.util.Map<String, ?> map) throws Exception {
             ListPublicTemplateRegistrationsResponseBodyRegistrations self = new ListPublicTemplateRegistrationsResponseBodyRegistrations();
             return TeaModel.build(map, self);
@@ -86,6 +95,14 @@ public class ListPublicTemplateRegistrationsResponseBody extends TeaModel {
         }
         public String getComment() {
             return this.comment;
+        }
+
+        public ListPublicTemplateRegistrationsResponseBodyRegistrations setCreatedDate(String createdDate) {
+            this.createdDate = createdDate;
+            return this;
+        }
+        public String getCreatedDate() {
+            return this.createdDate;
         }
 
         public ListPublicTemplateRegistrationsResponseBodyRegistrations setDetail(String detail) {
@@ -102,6 +119,14 @@ public class ListPublicTemplateRegistrationsResponseBody extends TeaModel {
         }
         public String getRegistrationId() {
             return this.registrationId;
+        }
+
+        public ListPublicTemplateRegistrationsResponseBodyRegistrations setShowPages(String showPages) {
+            this.showPages = showPages;
+            return this;
+        }
+        public String getShowPages() {
+            return this.showPages;
         }
 
         public ListPublicTemplateRegistrationsResponseBodyRegistrations setStatus(String status) {
@@ -134,6 +159,14 @@ public class ListPublicTemplateRegistrationsResponseBody extends TeaModel {
         }
         public String getTemplateVersion() {
             return this.templateVersion;
+        }
+
+        public ListPublicTemplateRegistrationsResponseBodyRegistrations setUpdatedDate(String updatedDate) {
+            this.updatedDate = updatedDate;
+            return this;
+        }
+        public String getUpdatedDate() {
+            return this.updatedDate;
         }
 
     }

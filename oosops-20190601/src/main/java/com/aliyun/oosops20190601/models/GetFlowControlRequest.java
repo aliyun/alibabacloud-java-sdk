@@ -10,6 +10,9 @@ public class GetFlowControlRequest extends TeaModel {
     @NameInMap("Service")
     public String service;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Type")
     public Integer type;
 

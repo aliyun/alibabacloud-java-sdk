@@ -4,6 +4,9 @@ package com.aliyun.oosops20190601.models;
 import com.aliyun.tea.*;
 
 public class ValidatePublicTemplateContentRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Content")
     public String content;
 
@@ -13,6 +16,9 @@ public class ValidatePublicTemplateContentRequest extends TeaModel {
     @NameInMap("TemplateName")
     public String templateName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Type")
     public String type;
 

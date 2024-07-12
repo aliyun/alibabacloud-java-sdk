@@ -4,12 +4,18 @@ package com.aliyun.oosops20190601.models;
 import com.aliyun.tea.*;
 
 public class ListUserInventoryEntriesRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AliUid")
     public String aliUid;
 
     @NameInMap("Filter")
     public java.util.List<ListUserInventoryEntriesRequestFilter> filter;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -22,6 +28,9 @@ public class ListUserInventoryEntriesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TypeName")
     public String typeName;
 

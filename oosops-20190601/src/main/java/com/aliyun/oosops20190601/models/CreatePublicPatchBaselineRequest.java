@@ -4,6 +4,9 @@ package com.aliyun.oosops20190601.models;
 import com.aliyun.tea.*;
 
 public class CreatePublicPatchBaselineRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ApprovalRules")
     public String approvalRules;
 
@@ -13,9 +16,15 @@ public class CreatePublicPatchBaselineRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("OperationSystem")
     public String operationSystem;
 

@@ -4,12 +4,18 @@ package com.aliyun.oosops20190601.models;
 import com.aliyun.tea.*;
 
 public class GetQuotaRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("QuotaName")
     public String quotaName;
 
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Uid")
     public String uid;
 

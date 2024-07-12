@@ -4,9 +4,15 @@ package com.aliyun.oosops20190601.models;
 import com.aliyun.tea.*;
 
 public class TerminateUserExecutionRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AliUid")
     public String aliUid;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ExecutionId")
     public String executionId;
 

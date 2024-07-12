@@ -7,8 +7,14 @@ public class CreatePublicTemplateRequest extends TeaModel {
     @NameInMap("Category")
     public String category;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Content")
     public String content;
+
+    @NameInMap("IsExample")
+    public Boolean isExample;
 
     @NameInMap("Popularity")
     public Integer popularity;
@@ -19,6 +25,9 @@ public class CreatePublicTemplateRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TemplateName")
     public String templateName;
 
@@ -41,6 +50,14 @@ public class CreatePublicTemplateRequest extends TeaModel {
     }
     public String getContent() {
         return this.content;
+    }
+
+    public CreatePublicTemplateRequest setIsExample(Boolean isExample) {
+        this.isExample = isExample;
+        return this;
+    }
+    public Boolean getIsExample() {
+        return this.isExample;
     }
 
     public CreatePublicTemplateRequest setPopularity(Integer popularity) {

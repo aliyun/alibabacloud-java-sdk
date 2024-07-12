@@ -13,6 +13,9 @@ public class ListPublicTemplatesRequest extends TeaModel {
     @NameInMap("CreatedDateBefore")
     public String createdDateBefore;
 
+    @NameInMap("IsExample")
+    public Boolean isExample;
+
     @NameInMap("MaxResults")
     public Integer maxResults;
 
@@ -67,6 +70,14 @@ public class ListPublicTemplatesRequest extends TeaModel {
     }
     public String getCreatedDateBefore() {
         return this.createdDateBefore;
+    }
+
+    public ListPublicTemplatesRequest setIsExample(Boolean isExample) {
+        this.isExample = isExample;
+        return this;
+    }
+    public Boolean getIsExample() {
+        return this.isExample;
     }
 
     public ListPublicTemplatesRequest setMaxResults(Integer maxResults) {
