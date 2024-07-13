@@ -5,11 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateApplicationConfigsRequest extends TeaModel {
     /**
-     * <p>The application configurations.</p>
+     * <p>应用配置列表。</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>CLUSTER</p>
      */
     @NameInMap("ApplicationConfigs")
     public java.util.List<UpdateApplicationConfig> applicationConfigs;

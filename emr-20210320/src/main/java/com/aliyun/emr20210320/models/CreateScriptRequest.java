@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateScriptRequest extends TeaModel {
     /**
-     * <p>集群ID。</p>
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CreateScriptRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>区域ID。</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,11 @@ public class CreateScriptRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>集群脚本类型。</p>
+     * <p>The type of the script. Valid values:</p>
+     * <ul>
+     * <li>BOOTSTRAP: indicates a bootstrap action of the Elastic Compute Service (ECS) instance.</li>
+     * <li>NORMAL: indicates a common script.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +39,7 @@ public class CreateScriptRequest extends TeaModel {
     public String scriptType;
 
     /**
-     * <p>集群脚本列表。</p>
+     * <p>The scripts.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Scripts")
