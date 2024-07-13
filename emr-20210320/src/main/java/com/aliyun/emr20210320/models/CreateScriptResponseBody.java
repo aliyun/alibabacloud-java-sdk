@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateScriptResponseBody extends TeaModel {
     /**
-     * <p>请求ID。</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
@@ -14,6 +14,8 @@ public class CreateScriptResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The script ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cs-d6d6bc841c0d415fb81808bc6d09****</p>
      */

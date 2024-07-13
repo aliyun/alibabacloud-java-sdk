@@ -287,6 +287,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Adds a bootstrap action or a common script of an E-MapReduce (EMR) cluster.</p>
+     * 
      * @param request CreateScriptRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateScriptResponse
@@ -328,6 +331,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Adds a bootstrap action or a common script of an E-MapReduce (EMR) cluster.</p>
+     * 
      * @param request CreateScriptRequest
      * @return CreateScriptResponse
      */
@@ -495,6 +501,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes a bootstrap action or a common script of an E-MapReduce (EMR) cluster.</p>
+     * 
      * @param request DeleteScriptRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteScriptResponse
@@ -536,6 +545,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes a bootstrap action or a common script of an E-MapReduce (EMR) cluster.</p>
+     * 
      * @param request DeleteScriptRequest
      * @return DeleteScriptResponse
      */
@@ -4252,10 +4264,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateApplicationConfigsResponse updateApplicationConfigsWithOptions(UpdateApplicationConfigsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.applicationConfigs)) {
-            query.put("ApplicationConfigs", request.applicationConfigs);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.applicationName)) {
             query.put("ApplicationName", request.applicationName);
         }
@@ -4292,8 +4300,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationConfigs)) {
+            bodyFlat.put("ApplicationConfigs", request.applicationConfigs);
+        }
+
+        body = TeaConverter.merge(Object.class,
+            body,
+            com.aliyun.openapiutil.Client.query(bodyFlat)
+        );
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "UpdateApplicationConfigs"),
@@ -4319,6 +4338,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Updates a bootstrap action or a common script of an E-MapReduce (EMR) cluster.</p>
+     * 
      * @param tmpReq UpdateScriptRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateScriptResponse
@@ -4370,6 +4392,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Updates a bootstrap action or a common script of an E-MapReduce (EMR) cluster.</p>
+     * 
      * @param request UpdateScriptRequest
      * @return UpdateScriptResponse
      */
