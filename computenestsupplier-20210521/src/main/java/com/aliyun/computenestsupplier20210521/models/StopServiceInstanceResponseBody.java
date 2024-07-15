@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class StopServiceInstanceResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>49A369EF-A302-5006-B0CE-94CED47C38CF</p>
      */

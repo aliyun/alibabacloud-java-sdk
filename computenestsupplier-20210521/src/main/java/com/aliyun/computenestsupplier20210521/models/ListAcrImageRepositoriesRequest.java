@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class ListAcrImageRepositoriesRequest extends TeaModel {
     /**
+     * <p>The type of the artifact. Default value: AcrImage. Valid values:</p>
+     * <ul>
+     * <li>HelmChart: Helm chart image.</li>
+     * <li>AcrImage: container image.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>AcrImage</p>
      */
@@ -12,6 +18,8 @@ public class ListAcrImageRepositoriesRequest extends TeaModel {
     public String artifactType;
 
     /**
+     * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -19,6 +27,8 @@ public class ListAcrImageRepositoriesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAWns8w4MmhzeptXVRG0PUEU=</p>
      */
@@ -26,6 +36,8 @@ public class ListAcrImageRepositoriesRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The name of the image repository.</p>
+     * 
      * <strong>example:</strong>
      * <p>wordpress</p>
      */

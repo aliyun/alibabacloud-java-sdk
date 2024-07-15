@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class PushMeteringDataResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>94E89857-B994-44B6-9C4F-DBD200E9XXXX</p>
      */

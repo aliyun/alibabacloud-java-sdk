@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class GetArtifactRepositoryCredentialsRequest extends TeaModel {
     /**
+     * <p>The type of the deployment package. Valid values:</p>
+     * <ul>
+     * <li>File: Object Storage Service (OSS) object.</li>
+     * <li>AcrImage: container image.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +19,8 @@ public class GetArtifactRepositoryCredentialsRequest extends TeaModel {
     public String artifactType;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */

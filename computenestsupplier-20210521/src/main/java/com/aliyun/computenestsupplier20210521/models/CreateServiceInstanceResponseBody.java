@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateServiceInstanceResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>4DB0F536-B3BE-4F0D-BD29-E83FB56D****</p>
      */
@@ -12,6 +14,8 @@ public class CreateServiceInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The ID of the service instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>si-d6ab3a63ccbb4b17****</p>
      */
@@ -19,6 +23,18 @@ public class CreateServiceInstanceResponseBody extends TeaModel {
     public String serviceInstanceId;
 
     /**
+     * <p>The status of the service instance. Valid values:</p>
+     * <ul>
+     * <li>Created</li>
+     * <li>Deploying</li>
+     * <li>DeployedFailed</li>
+     * <li>Deployed</li>
+     * <li>Upgrading</li>
+     * <li>Deleting</li>
+     * <li>Deleted</li>
+     * <li>DeletedFailed</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Created</p>
      */

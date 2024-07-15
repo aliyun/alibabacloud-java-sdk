@@ -4,13 +4,21 @@ package com.aliyun.computenestsupplier20210521.models;
 import com.aliyun.tea.*;
 
 public class GetServiceTemplateParameterConstraintsResponseBody extends TeaModel {
+    /**
+     * <p>The constraint families.</p>
+     */
     @NameInMap("FamilyConstraints")
     public java.util.List<String> familyConstraints;
 
+    /**
+     * <p>The parameters in the template.</p>
+     */
     @NameInMap("ParameterConstraints")
     public java.util.List<GetServiceTemplateParameterConstraintsResponseBodyParameterConstraints> parameterConstraints;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>C81C0732-DEBC-559C-B563-7EB2BEB21088</p>
      */
@@ -47,10 +55,15 @@ public class GetServiceTemplateParameterConstraintsResponseBody extends TeaModel
     }
 
     public static class GetServiceTemplateParameterConstraintsResponseBodyParameterConstraintsOriginalConstraints extends TeaModel {
+        /**
+         * <p>The valid values of the parameter.</p>
+         */
         @NameInMap("AllowedValues")
         public java.util.List<String> allowedValues;
 
         /**
+         * <p>The property name.</p>
+         * 
          * <strong>example:</strong>
          * <p>lnch_Source</p>
          */
@@ -58,6 +71,8 @@ public class GetServiceTemplateParameterConstraintsResponseBody extends TeaModel
         public String propertyName;
 
         /**
+         * <p>The resource name.</p>
+         * 
          * <strong>example:</strong>
          * <p>i-8vb0smn1lf6g77md****</p>
          */
@@ -65,6 +80,8 @@ public class GetServiceTemplateParameterConstraintsResponseBody extends TeaModel
         public String resourceName;
 
         /**
+         * <p>The resource type.</p>
+         * 
          * <strong>example:</strong>
          * <p>serviceinstance</p>
          */
@@ -111,13 +128,29 @@ public class GetServiceTemplateParameterConstraintsResponseBody extends TeaModel
     }
 
     public static class GetServiceTemplateParameterConstraintsResponseBodyParameterConstraints extends TeaModel {
+        /**
+         * <p>The valid values of the parameter.</p>
+         */
         @NameInMap("AllowedValues")
         public java.util.List<String> allowedValues;
 
+        /**
+         * <p>The names of the associated parameters.</p>
+         */
         @NameInMap("AssociationParameterNames")
         public java.util.List<String> associationParameterNames;
 
         /**
+         * <p>The behavior of the parameter. Valid values:</p>
+         * <ul>
+         * <li>NoLimit: The value of this parameter is not limited.</li>
+         * <li>NotSupport: The value of this parameter cannot be queried.</li>
+         * <li>QueryError: The query failed.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If AllowedValues is not returned, Behavior and BehaviorReason are returned.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>NoLimit</p>
          */
@@ -125,16 +158,23 @@ public class GetServiceTemplateParameterConstraintsResponseBody extends TeaModel
         public String behavior;
 
         /**
+         * <p>The reason why the behavior of the parameter is returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>none</p>
          */
         @NameInMap("BehaviorReason")
         public String behaviorReason;
 
+        /**
+         * <p>The original constraint information.</p>
+         */
         @NameInMap("OriginalConstraints")
         public java.util.List<GetServiceTemplateParameterConstraintsResponseBodyParameterConstraintsOriginalConstraints> originalConstraints;
 
         /**
+         * <p>The name of the parameter.</p>
+         * 
          * <strong>example:</strong>
          * <p>PayType</p>
          */
@@ -142,6 +182,8 @@ public class GetServiceTemplateParameterConstraintsResponseBody extends TeaModel
         public String parameterKey;
 
         /**
+         * <p>The type of the parameter.</p>
+         * 
          * <strong>example:</strong>
          * <p>String</p>
          */

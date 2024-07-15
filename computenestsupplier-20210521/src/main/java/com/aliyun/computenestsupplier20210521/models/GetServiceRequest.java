@@ -4,10 +4,18 @@ package com.aliyun.computenestsupplier20210521.models;
 import com.aliyun.tea.*;
 
 public class GetServiceRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to filter information based on Alibaba Cloud account IDs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("FilterAliUid")
     public Boolean filterAliUid;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -15,6 +23,7 @@ public class GetServiceRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The service ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,15 +33,30 @@ public class GetServiceRequest extends TeaModel {
     public String serviceId;
 
     /**
+     * <p>The service version.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("ServiceVersion")
     public String serviceVersion;
 
+    /**
+     * <p>The share type of the service. Default value: SharedAccount. Valid values:</p>
+     * <ul>
+     * <li>SharedAccount: The service is shared by multiple accounts.</li>
+     * <li>Resell: The service is distributed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>SharedAccount</p>
+     */
     @NameInMap("SharedAccountType")
     public String sharedAccountType;
 
+    /**
+     * <p>The information that you want to query.</p>
+     */
     @NameInMap("ShowDetail")
     public java.util.List<String> showDetail;
 

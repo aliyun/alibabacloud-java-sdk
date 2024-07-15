@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RegisterServiceResponseBody extends TeaModel {
     /**
+     * <p>The registration ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>sr-72dd5071e90c40xxxxxx</p>
      */
@@ -12,6 +14,8 @@ public class RegisterServiceResponseBody extends TeaModel {
     public String registrationId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>A361BA9E-2713-52C8-AFFC-C26E5180456E</p>
      */

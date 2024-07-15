@@ -4,13 +4,21 @@ package com.aliyun.computenestsupplier20210521.models;
 import com.aliyun.tea.*;
 
 public class GetArtifactRepositoryCredentialsResponseBody extends TeaModel {
+    /**
+     * <p>The information about the resources that can be uploaded.</p>
+     */
     @NameInMap("AvailableResources")
     public java.util.List<GetArtifactRepositoryCredentialsResponseBodyAvailableResources> availableResources;
 
+    /**
+     * <p>The credentials.</p>
+     */
     @NameInMap("Credentials")
     public GetArtifactRepositoryCredentialsResponseBodyCredentials credentials;
 
     /**
+     * <p>The time when the credentials expired.</p>
+     * 
      * <strong>example:</strong>
      * <p>1526549792000</p>
      */
@@ -18,6 +26,8 @@ public class GetArtifactRepositoryCredentialsResponseBody extends TeaModel {
     public String expireDate;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>94E89857-B994-44B6-9C4F-DBD200E9XXXX</p>
      */
@@ -63,6 +73,8 @@ public class GetArtifactRepositoryCredentialsResponseBody extends TeaModel {
 
     public static class GetArtifactRepositoryCredentialsResponseBodyAvailableResources extends TeaModel {
         /**
+         * <p>The path.</p>
+         * 
          * <strong>example:</strong>
          * <p>&quot;/xxx/&quot;</p>
          */
@@ -70,6 +82,8 @@ public class GetArtifactRepositoryCredentialsResponseBody extends TeaModel {
         public String path;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>oss-cn-hangzhou</p>
          */
@@ -77,6 +91,8 @@ public class GetArtifactRepositoryCredentialsResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The repository name.</p>
+         * 
          * <strong>example:</strong>
          * <p>computenest-artifacts-draft-cn-hangzhou</p>
          */
@@ -116,6 +132,8 @@ public class GetArtifactRepositoryCredentialsResponseBody extends TeaModel {
 
     public static class GetArtifactRepositoryCredentialsResponseBodyCredentials extends TeaModel {
         /**
+         * <p>The AccessKey ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>STS.xxx</p>
          */
@@ -123,6 +141,8 @@ public class GetArtifactRepositoryCredentialsResponseBody extends TeaModel {
         public String accessKeyId;
 
         /**
+         * <p>The AccessKey secret.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -130,6 +150,8 @@ public class GetArtifactRepositoryCredentialsResponseBody extends TeaModel {
         public String accessKeySecret;
 
         /**
+         * <p>The password.</p>
+         * 
          * <strong>example:</strong>
          * <p>eyJ0aW1lIjoiMTUyNjU0OTc5:0705733****</p>
          */
@@ -137,6 +159,8 @@ public class GetArtifactRepositoryCredentialsResponseBody extends TeaModel {
         public String password;
 
         /**
+         * <p>The Security Token Service (STS) token.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -144,6 +168,8 @@ public class GetArtifactRepositoryCredentialsResponseBody extends TeaModel {
         public String securityToken;
 
         /**
+         * <p>The username.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */

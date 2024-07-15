@@ -5,11 +5,21 @@ import com.aliyun.tea.*;
 
 public class GetUploadCredentialsRequest extends TeaModel {
     /**
+     * <p>The file name to upload.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>template.yaml</p>
      */
     @NameInMap("FileName")
     public String fileName;
 
+    /**
+     * <p>Specifies whether the file is publicly accessible. Valid values: <strong>public</strong> or <strong>private</strong>. The default value is <strong>private</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>public</p>
+     */
     @NameInMap("Visibility")
     public String visibility;
 

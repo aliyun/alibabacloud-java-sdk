@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteArtifactRequest extends TeaModel {
     /**
+     * <p>The ID of the artifact.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class DeleteArtifactRequest extends TeaModel {
     public String artifactId;
 
     /**
+     * <p>The version of the artifact.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */

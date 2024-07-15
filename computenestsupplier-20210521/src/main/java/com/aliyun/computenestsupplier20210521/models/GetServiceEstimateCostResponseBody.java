@@ -4,10 +4,18 @@ package com.aliyun.computenestsupplier20210521.models;
 import com.aliyun.tea.*;
 
 public class GetServiceEstimateCostResponseBody extends TeaModel {
+    /**
+     * <p>The subscription duration information about the purchase order of Alibaba Cloud Marketplace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;PayPeriodUnit\&quot;:Month,\&quot;PayPeriod\&quot;:1}</p>
+     */
     @NameInMap("Commodity")
     public java.util.Map<String, ?> commodity;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>E73F09DC-6C13-5CB1-A10F-7A4E125ABD2C</p>
      */
@@ -15,6 +23,8 @@ public class GetServiceEstimateCostResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The list of resources.</p>
+     * 
      * <strong>example:</strong>
      * <p>{
      *       &quot;ECSInstances&quot;:{

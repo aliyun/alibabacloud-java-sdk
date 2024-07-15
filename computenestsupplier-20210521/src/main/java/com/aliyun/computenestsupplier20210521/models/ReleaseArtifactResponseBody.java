@@ -42,6 +42,9 @@ public class ReleaseArtifactResponseBody extends TeaModel {
 
     /**
      * <p>The description of the artifact.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Description</p>
      */
     @NameInMap("Description")
     public String description;
@@ -83,6 +86,9 @@ public class ReleaseArtifactResponseBody extends TeaModel {
 
     /**
      * <p>The version name of the artifact.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>V1.0</p>
      */
     @NameInMap("VersionName")
     public String versionName;
