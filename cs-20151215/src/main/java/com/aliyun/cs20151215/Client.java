@@ -518,6 +518,110 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>清理某个用户在某个集群的证书以及权限</p>
+     * 
+     * @param request CleanClusterUserPermissionsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CleanClusterUserPermissionsResponse
+     */
+    public CleanClusterUserPermissionsResponse cleanClusterUserPermissionsWithOptions(String ClusterId, String Uid, CleanClusterUserPermissionsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.force)) {
+            query.put("Force", request.force);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CleanClusterUserPermissions"),
+            new TeaPair("version", "2015-12-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/cluster/" + com.aliyun.openapiutil.Client.getEncodeParam(ClusterId) + "/user/" + com.aliyun.openapiutil.Client.getEncodeParam(Uid) + "/permissions"),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CleanClusterUserPermissionsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>清理某个用户在某个集群的证书以及权限</p>
+     * 
+     * @param request CleanClusterUserPermissionsRequest
+     * @return CleanClusterUserPermissionsResponse
+     */
+    public CleanClusterUserPermissionsResponse cleanClusterUserPermissions(String ClusterId, String Uid, CleanClusterUserPermissionsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.cleanClusterUserPermissionsWithOptions(ClusterId, Uid, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>清除某个用户的证书以及相关RBAC权限</p>
+     * 
+     * @param tmpReq CleanUserPermissionsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CleanUserPermissionsResponse
+     */
+    public CleanUserPermissionsResponse cleanUserPermissionsWithOptions(String Uid, CleanUserPermissionsRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CleanUserPermissionsShrinkRequest request = new CleanUserPermissionsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.clusterIds)) {
+            request.clusterIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.clusterIds, "ClusterIds", "simple");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterIdsShrink)) {
+            query.put("ClusterIds", request.clusterIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.force)) {
+            query.put("Force", request.force);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CleanUserPermissions"),
+            new TeaPair("version", "2015-12-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/users/" + com.aliyun.openapiutil.Client.getEncodeParam(Uid) + "/permissions"),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CleanUserPermissionsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>清除某个用户的证书以及相关RBAC权限</p>
+     * 
+     * @param request CleanUserPermissionsRequest
+     * @return CleanUserPermissionsResponse
+     */
+    public CleanUserPermissionsResponse cleanUserPermissions(String Uid, CleanUserPermissionsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.cleanUserPermissionsWithOptions(Uid, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Creates a scaling configuration to allow the system to scale resources based on the given scaling rules. When you create a scaling configuration, you can specify the scaling metrics, thresholds, scaling order, and scaling interval.</p>
      * 
      * @param request CreateAutoscalingConfigRequest
@@ -4843,6 +4947,57 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取当前集群已下发的用户Kubeconfig的状态列表</p>
+     * 
+     * @param request ListClusterKubeconfigStatesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListClusterKubeconfigStatesResponse
+     */
+    public ListClusterKubeconfigStatesResponse listClusterKubeconfigStatesWithOptions(String ClusterId, ListClusterKubeconfigStatesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("pageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListClusterKubeconfigStates"),
+            new TeaPair("version", "2015-12-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/clusters/" + com.aliyun.openapiutil.Client.getEncodeParam(ClusterId) + "/kubeconfig/states"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListClusterKubeconfigStatesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取当前集群已下发的用户Kubeconfig的状态列表</p>
+     * 
+     * @param request ListClusterKubeconfigStatesRequest
+     * @return ListClusterKubeconfigStatesResponse
+     */
+    public ListClusterKubeconfigStatesResponse listClusterKubeconfigStates(String ClusterId, ListClusterKubeconfigStatesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listClusterKubeconfigStatesWithOptions(ClusterId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>获取自动运维执行计划列表</p>
      * 
      * @param request ListOperationPlansRequest
@@ -4963,6 +5118,57 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listTagResourcesWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询单用户所有集群的证书状态</p>
+     * 
+     * @param request ListUserKubeConfigStatesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListUserKubeConfigStatesResponse
+     */
+    public ListUserKubeConfigStatesResponse listUserKubeConfigStatesWithOptions(String Uid, ListUserKubeConfigStatesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("page_number", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("page_size", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListUserKubeConfigStates"),
+            new TeaPair("version", "2015-12-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/users/" + com.aliyun.openapiutil.Client.getEncodeParam(Uid) + "/kubeconfig/states"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListUserKubeConfigStatesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询单用户所有集群的证书状态</p>
+     * 
+     * @param request ListUserKubeConfigStatesRequest
+     * @return ListUserKubeConfigStatesResponse
+     */
+    public ListUserKubeConfigStatesResponse listUserKubeConfigStates(String Uid, ListUserKubeConfigStatesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listUserKubeConfigStatesWithOptions(Uid, request, headers, runtime);
     }
 
     /**
