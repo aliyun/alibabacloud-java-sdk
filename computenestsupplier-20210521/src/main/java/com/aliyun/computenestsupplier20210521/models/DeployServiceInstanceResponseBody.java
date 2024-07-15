@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeployServiceInstanceResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>B8A6AEA6-0D8F-589A-A7FF-B44FD842456E</p>
      */

@@ -28,6 +28,9 @@ public class UpdateServiceInstanceSpecRequest extends TeaModel {
 
     /**
      * <p>The name of the configuration update operation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>package modify</p>
      */
     @NameInMap("OperationName")
     public String operationName;
@@ -43,6 +46,9 @@ public class UpdateServiceInstanceSpecRequest extends TeaModel {
 
     /**
      * <p>The name of the specification package.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>package one</p>
      */
     @NameInMap("PredefinedParametersName")
     public String predefinedParametersName;

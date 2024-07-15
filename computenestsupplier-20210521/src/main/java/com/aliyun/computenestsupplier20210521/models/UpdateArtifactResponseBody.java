@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateArtifactResponseBody extends TeaModel {
     /**
+     * <p>The ID of the deployment package.</p>
+     * 
      * <strong>example:</strong>
      * <p>artifact-eea08d1e2d3a43aexxxx</p>
      */
@@ -12,6 +14,8 @@ public class UpdateArtifactResponseBody extends TeaModel {
     public String artifactId;
 
     /**
+     * <p>The properties of the deployment package.</p>
+     * 
      * <strong>example:</strong>
      * <p>{\&quot;CommodityCode\&quot;:\&quot;cmjj0005xxxx\&quot;,\&quot;CommodityVersion\&quot;:\&quot;V2022xxxx\&quot;}</p>
      */
@@ -19,6 +23,8 @@ public class UpdateArtifactResponseBody extends TeaModel {
     public String artifactProperty;
 
     /**
+     * <p>The type of the deployment package.</p>
+     * 
      * <strong>example:</strong>
      * <p>EcsImage</p>
      */
@@ -26,16 +32,26 @@ public class UpdateArtifactResponseBody extends TeaModel {
     public String artifactType;
 
     /**
+     * <p>The version of the deployment package.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
     @NameInMap("ArtifactVersion")
     public String artifactVersion;
 
+    /**
+     * <p>The description of the deployment package.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Description</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>The time when the deployment package was modified.</p>
+     * 
      * <strong>example:</strong>
      * <p>2022-10-20T02:19:55Z</p>
      */
@@ -43,6 +59,8 @@ public class UpdateArtifactResponseBody extends TeaModel {
     public String gmtModified;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>B1A0198B-F316-1B72-B8DD-28B6F6D6XXXX</p>
      */
@@ -50,6 +68,16 @@ public class UpdateArtifactResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The status of the deployment package. Valid values:</p>
+     * <ul>
+     * <li>Created: The deployment package is created.</li>
+     * <li>Scanning: The deployment package is being scanned.</li>
+     * <li>ScanFailed: The deployment package failed to be scanned.</li>
+     * <li>Delivering: The deployment package is being distributed.</li>
+     * <li>Available: The deployment package is available.</li>
+     * <li>Deleted: The deployment package is deleted.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Available</p>
      */
@@ -57,6 +85,8 @@ public class UpdateArtifactResponseBody extends TeaModel {
     public String status;
 
     /**
+     * <p>The ID of the region that supports the deployment package.</p>
+     * 
      * <strong>example:</strong>
      * <p>[
      *             &quot;cn-beijing&quot;,
@@ -68,6 +98,8 @@ public class UpdateArtifactResponseBody extends TeaModel {
     public String supportRegionIds;
 
     /**
+     * <p>The name of the deployment package.</p>
+     * 
      * <strong>example:</strong>
      * <p>v1</p>
      */

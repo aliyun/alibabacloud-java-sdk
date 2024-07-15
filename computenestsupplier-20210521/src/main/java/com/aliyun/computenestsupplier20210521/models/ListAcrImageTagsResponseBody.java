@@ -4,10 +4,15 @@ package com.aliyun.computenestsupplier20210521.models;
 import com.aliyun.tea.*;
 
 public class ListAcrImageTagsResponseBody extends TeaModel {
+    /**
+     * <p>The list of images.</p>
+     */
     @NameInMap("Images")
     public java.util.List<ListAcrImageTagsResponseBodyImages> images;
 
     /**
+     * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -15,6 +20,8 @@ public class ListAcrImageTagsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * 
      * <strong>example:</strong>
      * <p>ey14..</p>
      */
@@ -22,6 +29,8 @@ public class ListAcrImageTagsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>FEF343B9-1A15-5789-BE88-7B36190F5BF6</p>
      */
@@ -29,6 +38,8 @@ public class ListAcrImageTagsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -82,6 +93,8 @@ public class ListAcrImageTagsResponseBody extends TeaModel {
 
     public static class ListAcrImageTagsResponseBodyImages extends TeaModel {
         /**
+         * <p>The time when the image was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-05-20T00:00:00Z</p>
          */
@@ -89,6 +102,8 @@ public class ListAcrImageTagsResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The image size. Unit: bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>188394616</p>
          */
@@ -96,6 +111,8 @@ public class ListAcrImageTagsResponseBody extends TeaModel {
         public String imageSize;
 
         /**
+         * <p>The time when the image was modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-05-20T00:00:00Z</p>
          */
@@ -103,6 +120,8 @@ public class ListAcrImageTagsResponseBody extends TeaModel {
         public String modifiedTime;
 
         /**
+         * <p>The image version.</p>
+         * 
          * <strong>example:</strong>
          * <p>5.7.2</p>
          */

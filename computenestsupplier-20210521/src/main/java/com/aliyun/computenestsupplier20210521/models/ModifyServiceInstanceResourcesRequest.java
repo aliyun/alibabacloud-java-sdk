@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyServiceInstanceResourcesRequest extends TeaModel {
     /**
+     * <p>The imported resources.</p>
+     * 
      * <strong>example:</strong>
      * <p>{
      *   &quot;RegionId&quot;: &quot;cn-hangzhou&quot;,
@@ -21,6 +23,7 @@ public class ModifyServiceInstanceResourcesRequest extends TeaModel {
     public String resources;
 
     /**
+     * <p>The ID of the service instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +33,12 @@ public class ModifyServiceInstanceResourcesRequest extends TeaModel {
     public String serviceInstanceId;
 
     /**
+     * <p>The type of operation performed on the service instance resource. Valid values:</p>
+     * <ul>
+     * <li>Import: The resource is imported.</li>
+     * <li>UnImport: The resource import is canceled.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Import</p>
      */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateArtifactShrinkRequest extends TeaModel {
     /**
+     * <p>The ID of the deployment package.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,18 +15,29 @@ public class UpdateArtifactShrinkRequest extends TeaModel {
     public String artifactId;
 
     /**
+     * <p>The properties of the deployment package.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ArtifactProperty")
     public String artifactPropertyShrink;
 
+    /**
+     * <p>The description of the deployment package.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Description</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The IDs of the regions that support the deployment package.</p>
+     */
     @NameInMap("SupportRegionIds")
     public java.util.List<String> supportRegionIds;
 
     /**
+     * <p>The version name of the deployment package.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

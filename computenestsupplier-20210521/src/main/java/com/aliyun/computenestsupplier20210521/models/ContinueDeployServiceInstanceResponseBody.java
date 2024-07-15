@@ -4,10 +4,15 @@ package com.aliyun.computenestsupplier20210521.models;
 import com.aliyun.tea.*;
 
 public class ContinueDeployServiceInstanceResponseBody extends TeaModel {
+    /**
+     * <p>The dry run result.</p>
+     */
     @NameInMap("DryRunResult")
     public ContinueDeployServiceInstanceResponseBodyDryRunResult dryRunResult;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>82DF27ED-E538-5AC0-A11C-39334A873189</p>
      */
@@ -15,6 +20,8 @@ public class ContinueDeployServiceInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The ID of the service instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>si-d6ab3a63ccbb4b17****</p>
      */
@@ -51,12 +58,30 @@ public class ContinueDeployServiceInstanceResponseBody extends TeaModel {
     }
 
     public static class ContinueDeployServiceInstanceResponseBodyDryRunResult extends TeaModel {
+        /**
+         * <p>The parameters that can be modified. The operation that is performed to modify the parameters does not cause a validation error.</p>
+         * <blockquote>
+         * <p> This parameter is returned only if DryRun is set to true.</p>
+         * </blockquote>
+         */
         @NameInMap("ParametersAllowedToBeModified")
         public java.util.List<String> parametersAllowedToBeModified;
 
+        /**
+         * <p>The parameters that can be modified under specific conditions. The new values of the parameters determine whether the operation that is performed to modify the parameters causes a validation error.</p>
+         * <blockquote>
+         * <p> This parameter is returned only if DryRun is set to true.</p>
+         * </blockquote>
+         */
         @NameInMap("ParametersConditionallyAllowedToBeModified")
         public java.util.List<String> parametersConditionallyAllowedToBeModified;
 
+        /**
+         * <p>The parameters that cannot be modified. The operation that is performed to modify the parameters causes a validation error.</p>
+         * <blockquote>
+         * <p> This parameter is returned only if DryRun is set to true.</p>
+         * </blockquote>
+         */
         @NameInMap("ParametersNotAllowedToBeModified")
         public java.util.List<String> parametersNotAllowedToBeModified;
 

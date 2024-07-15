@@ -4,10 +4,15 @@ package com.aliyun.computenestsupplier20210521.models;
 import com.aliyun.tea.*;
 
 public class ListArtifactVersionsResponseBody extends TeaModel {
+    /**
+     * <p>The version information about the deployment package.</p>
+     */
     @NameInMap("Artifacts")
     public java.util.List<ListArtifactVersionsResponseBodyArtifacts> artifacts;
 
     /**
+     * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -15,6 +20,8 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAc3HCuYhJi/wvpk4xOr0VLbfVwapgMwCN1wYzPVzLbItEdB0uWSY7AGnM3qCgm/YnjuEfwSnMwiMkcUoI0hRQzE=</p>
      */
@@ -22,6 +29,8 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>46577928-3162-15A6-9084-69820EB9xxxx</p>
      */
@@ -29,6 +38,8 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -82,6 +93,8 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
 
     public static class ListArtifactVersionsResponseBodyArtifacts extends TeaModel {
         /**
+         * <p>The ID of the deployment package.</p>
+         * 
          * <strong>example:</strong>
          * <p>artifact-eea08d1e2d3a43aexxxx</p>
          */
@@ -89,6 +102,8 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
         public String artifactId;
 
         /**
+         * <p>The properties of the deployment package.</p>
+         * 
          * <strong>example:</strong>
          * <p>{\&quot;CommodityCode\&quot;:\&quot;cmjj0005xxxx\&quot;,\&quot;CommodityVersion\&quot;:\&quot;V2022xxxx\&quot;}</p>
          */
@@ -96,6 +111,8 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
         public String artifactProperty;
 
         /**
+         * <p>The type of the deployment package.</p>
+         * 
          * <strong>example:</strong>
          * <p>EcsImage</p>
          */
@@ -103,6 +120,8 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
         public String artifactType;
 
         /**
+         * <p>The version of the deployment package.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -110,6 +129,8 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
         public String artifactVersion;
 
         /**
+         * <p>The time when the certificate was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-10-20T02:19:53Z</p>
          */
@@ -117,26 +138,46 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>The time when the deployment package was modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-10-20T02:19:55Z</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <p>The distribution result of the image.</p>
+         */
         @NameInMap("ImageDelivery")
         public java.util.Map<String, String> imageDelivery;
 
         /**
+         * <p>The distribution progress of the deployment package.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
         @NameInMap("Progress")
         public String progress;
 
+        /**
+         * <p>The result file of the security scan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://compute-nest-security-audit-bucket-ap-southeast-1.oss-ap-southeast-1.aliyuncs.com/51416747xxxx/xxxx">https://compute-nest-security-audit-bucket-ap-southeast-1.oss-ap-southeast-1.aliyuncs.com/51416747xxxx/xxxx</a></p>
+         */
         @NameInMap("ResultFile")
         public String resultFile;
 
         /**
+         * <p>The result of the security scan. Valid values:</p>
+         * <ul>
+         * <li>Normal: No risks exist on the deployment package.</li>
+         * <li>AtRisk: Risks exist on the deployment package.</li>
+         * <li>Processing: The deployment package is being scanned.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Normal</p>
          */
@@ -144,6 +185,16 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
         public String securityAuditResult;
 
         /**
+         * <p>The status of the deployment package. Valid values:</p>
+         * <ul>
+         * <li>Created: The deployment package is created.</li>
+         * <li>Scanning: The deployment package is being scanned.</li>
+         * <li>ScanFailed: The deployment package failed to be scanned.</li>
+         * <li>Delivering: The deployment package is being distributed.</li>
+         * <li>Available: The deployment package is available.</li>
+         * <li>Deleted: The deployment package is deleted.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Available</p>
          */
@@ -151,6 +202,8 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The ID of the region that supports the deployment package.</p>
+         * 
          * <strong>example:</strong>
          * <p>[
          *                     &quot;cn-beijing&quot;,
@@ -162,6 +215,8 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
         public String supportRegionIds;
 
         /**
+         * <p>The version name of the deployment package.</p>
+         * 
          * <strong>example:</strong>
          * <p>v1</p>
          */

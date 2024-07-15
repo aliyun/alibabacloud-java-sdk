@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateArtifactResponseBody extends TeaModel {
     /**
+     * <p>The ID of the deployment package.</p>
+     * 
      * <strong>example:</strong>
      * <p>artifact-eea08d1e2d3a43aexxxx</p>
      */
@@ -12,6 +14,8 @@ public class CreateArtifactResponseBody extends TeaModel {
     public String artifactId;
 
     /**
+     * <p>The properties of the deployment object.</p>
+     * 
      * <strong>example:</strong>
      * <p>{\&quot;CommodityCode\&quot;:\&quot;cmjj0005xxxx\&quot;,\&quot;CommodityVersion\&quot;:\&quot;V2022xxxx\&quot;}</p>
      */
@@ -19,6 +23,8 @@ public class CreateArtifactResponseBody extends TeaModel {
     public String artifactProperty;
 
     /**
+     * <p>The type of the deployment package.</p>
+     * 
      * <strong>example:</strong>
      * <p>EcsImage</p>
      */
@@ -26,16 +32,26 @@ public class CreateArtifactResponseBody extends TeaModel {
     public String artifactType;
 
     /**
+     * <p>The version of the deployment package.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
     @NameInMap("ArtifactVersion")
     public String artifactVersion;
 
+    /**
+     * <p>The description of the deployment package.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Test artifact</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>The time when the deployment package was modified.</p>
+     * 
      * <strong>example:</strong>
      * <p>2022-11-11T12:00:00Z</p>
      */
@@ -43,16 +59,26 @@ public class CreateArtifactResponseBody extends TeaModel {
     public String gmtModified;
 
     /**
+     * <p>The latest version of the deployment package.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("MaxVersion")
     public Long maxVersion;
 
+    /**
+     * <p>The name of the deployment package.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Name</p>
+     */
     @NameInMap("Name")
     public String name;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>B1A0198B-F316-1B72-B8DD-28B6F6D6XXXX</p>
      */
@@ -60,6 +86,8 @@ public class CreateArtifactResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The status of the deployment package. Valid values:</p>
+     * 
      * <strong>example:</strong>
      * <p>Created</p>
      */
@@ -67,6 +95,8 @@ public class CreateArtifactResponseBody extends TeaModel {
     public String status;
 
     /**
+     * <p>The ID of the region that supports the deployment package.</p>
+     * 
      * <strong>example:</strong>
      * <p>[
      *             &quot;cn-beijing&quot;,
@@ -78,6 +108,8 @@ public class CreateArtifactResponseBody extends TeaModel {
     public String supportRegionIds;
 
     /**
+     * <p>The name of the deployment package.</p>
+     * 
      * <strong>example:</strong>
      * <p>v1</p>
      */

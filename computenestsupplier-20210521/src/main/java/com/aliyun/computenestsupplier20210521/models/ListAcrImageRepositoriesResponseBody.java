@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListAcrImageRepositoriesResponseBody extends TeaModel {
     /**
+     * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -12,16 +14,23 @@ public class ListAcrImageRepositoriesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>A pagination token.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAfu+XtuBE55iRLHEYYuojI4=</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The images.</p>
+     */
     @NameInMap("Repositories")
     public java.util.List<ListAcrImageRepositoriesResponseBodyRepositories> repositories;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>C4A145D8-6F6C-532A-9001-9730CDA27578</p>
      */
@@ -29,6 +38,8 @@ public class ListAcrImageRepositoriesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>4</p>
      */
@@ -82,6 +93,8 @@ public class ListAcrImageRepositoriesResponseBody extends TeaModel {
 
     public static class ListAcrImageRepositoriesResponseBodyRepositories extends TeaModel {
         /**
+         * <p>The time when the image was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-05-20T00:00:00Z</p>
          */
@@ -89,6 +102,8 @@ public class ListAcrImageRepositoriesResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The time when the image was modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-05-20T00:00:00Z</p>
          */
@@ -96,6 +111,8 @@ public class ListAcrImageRepositoriesResponseBody extends TeaModel {
         public String modifiedTime;
 
         /**
+         * <p>The image repo ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>crr-3gqhkza0wbxxxxxx</p>
          */
@@ -103,6 +120,8 @@ public class ListAcrImageRepositoriesResponseBody extends TeaModel {
         public String repoId;
 
         /**
+         * <p>The image repo name.</p>
+         * 
          * <strong>example:</strong>
          * <p>wordpress</p>
          */

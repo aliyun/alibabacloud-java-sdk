@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateServiceInstanceAttributeRequest extends TeaModel {
     /**
+     * <p>The time when the service instance expires.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
      * 
      * <strong>example:</strong>
@@ -13,7 +14,11 @@ public class UpdateServiceInstanceAttributeRequest extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
+    @NameInMap("LicenseData")
+    public UpdateServiceInstanceAttributeRequestLicenseData licenseData;
+
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +28,7 @@ public class UpdateServiceInstanceAttributeRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The service instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,6 +50,14 @@ public class UpdateServiceInstanceAttributeRequest extends TeaModel {
         return this.endTime;
     }
 
+    public UpdateServiceInstanceAttributeRequest setLicenseData(UpdateServiceInstanceAttributeRequestLicenseData licenseData) {
+        this.licenseData = licenseData;
+        return this;
+    }
+    public UpdateServiceInstanceAttributeRequestLicenseData getLicenseData() {
+        return this.licenseData;
+    }
+
     public UpdateServiceInstanceAttributeRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
@@ -58,6 +72,25 @@ public class UpdateServiceInstanceAttributeRequest extends TeaModel {
     }
     public String getServiceInstanceId() {
         return this.serviceInstanceId;
+    }
+
+    public static class UpdateServiceInstanceAttributeRequestLicenseData extends TeaModel {
+        @NameInMap("CustomData")
+        public String customData;
+
+        public static UpdateServiceInstanceAttributeRequestLicenseData build(java.util.Map<String, ?> map) throws Exception {
+            UpdateServiceInstanceAttributeRequestLicenseData self = new UpdateServiceInstanceAttributeRequestLicenseData();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateServiceInstanceAttributeRequestLicenseData setCustomData(String customData) {
+            this.customData = customData;
+            return this;
+        }
+        public String getCustomData() {
+            return this.customData;
+        }
+
     }
 
 }

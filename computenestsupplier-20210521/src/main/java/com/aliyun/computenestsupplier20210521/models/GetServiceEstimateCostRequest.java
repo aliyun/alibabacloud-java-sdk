@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetServiceEstimateCostRequest extends TeaModel {
     /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
      * <strong>example:</strong>
      * <p>mRdxWuW2ts</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The subscription duration information about the purchase order of Alibaba Cloud Marketplace.</p>
+     */
     @NameInMap("Commodity")
     public GetServiceEstimateCostRequestCommodity commodity;
 
     /**
+     * <p>The parameters that are specified to deploy the service instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>{\&quot;PayType\&quot;:\&quot;PostPaid\&quot;,\&quot;InstancePassword\&quot;:\&quot;xxxxxxxxxx\&quot;,\&quot;EcsInstanceType\&quot;:\&quot;ecs.g6.large\&quot;,\&quot;VSwitchId\&quot;:\&quot;vsw-0jlueyydpuekoxxxxxxxx\&quot;,\&quot;VpcId\&quot;:\&quot;vpc-0jlps6mjbgvpqxxxxxxxx\&quot;,\&quot;ZoneId\&quot;:\&quot;cn-wulanchabu-a\&quot;,\&quot;Enable\&quot;:false,\&quot;RegionId\&quot;:\&quot;cn-wulanchabu\&quot;}</p>
      */
@@ -22,6 +29,8 @@ public class GetServiceEstimateCostRequest extends TeaModel {
     public java.util.Map<String, ?> parameters;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-wulanchabu</p>
      */
@@ -29,6 +38,7 @@ public class GetServiceEstimateCostRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The service ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,6 +48,8 @@ public class GetServiceEstimateCostRequest extends TeaModel {
     public String serviceId;
 
     /**
+     * <p>The ID of the service instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>si-d6ab3a63ccbb4b17****</p>
      */
@@ -45,16 +57,26 @@ public class GetServiceEstimateCostRequest extends TeaModel {
     public String serviceInstanceId;
 
     /**
+     * <p>The service version.</p>
+     * 
      * <strong>example:</strong>
      * <p>draft</p>
      */
     @NameInMap("ServiceVersion")
     public String serviceVersion;
 
+    /**
+     * <p>The package name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Package 1</p>
+     */
     @NameInMap("SpecificationName")
     public String specificationName;
 
     /**
+     * <p>The template name.</p>
+     * 
      * <strong>example:</strong>
      * <p>Custom_Image_Ecs</p>
      */
@@ -139,9 +161,26 @@ public class GetServiceEstimateCostRequest extends TeaModel {
     }
 
     public static class GetServiceEstimateCostRequestCommodity extends TeaModel {
+        /**
+         * <p>The subscription duration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PayPeriod")
         public Integer payPeriod;
 
+        /**
+         * <p>The unit of the subscription duration. Valid values:</p>
+         * <ul>
+         * <li>Year</li>
+         * <li>Month</li>
+         * <li>Day</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
+         */
         @NameInMap("PayPeriodUnit")
         public String payPeriodUnit;
 

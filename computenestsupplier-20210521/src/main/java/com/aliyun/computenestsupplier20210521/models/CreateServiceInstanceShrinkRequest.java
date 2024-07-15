@@ -5,22 +5,47 @@ import com.aliyun.tea.*;
 
 public class CreateServiceInstanceShrinkRequest extends TeaModel {
     /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>Specifies whether to perform only a dry run for the request to check information such as the permissions and instance status. Valid values:</p>
+     * <ul>
+     * <li>true: performs a dry run for the request, but does not create a service instance.</li>
+     * <li>false: performs a dry run for the request, and creates a service instance if the request passes the dry run.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
+     * <p>The time when the service instance was released.</p>
+     * <blockquote>
+     * <p> This parameter is available only for the service instances that are managed by service providers.</p>
+     * </blockquote>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-12-12T03:13:05Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
+     * <p>The name of the service instance. The value must meet the following requirements:</p>
+     * <ul>
+     * <li>The name cannot exceed 64 characters in length.</li>
+     * <li>It can contain digits, letters, hyphens (-), and underscores (_). It must start with a digit or a letter.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>TestName</p>
      */
@@ -28,6 +53,11 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The parameters that are specified for service instance deployment.</p>
+     * <blockquote>
+     * <p> If you want to specify the region in which the service instance is deployed, you must specify the information in Parameters.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;NodeCount&quot;: 3, &quot;SystemDiskSize&quot;: 40, &quot;InstancePassword&quot;: &quot;******&quot;}</p>
      */
@@ -35,6 +65,11 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
     public String parametersShrink;
 
     /**
+     * <p>The region ID. Valid values:</p>
+     * <ul>
+     * <li>cn-hangzhou: China (Hangzhou)</li>
+     * <li>ap-southeast-1: Singapore</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,6 +79,8 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The ID of the resource group.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-aekzuqyxxxxxx</p>
      */
@@ -51,6 +88,7 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
+     * <p>The service ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -60,22 +98,41 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
     public String serviceId;
 
     /**
+     * <p>The service version.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("ServiceVersion")
     public String serviceVersion;
 
+    /**
+     * <p>The name of the package specification.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>套餐一</p>
+     */
     @NameInMap("SpecificationName")
     public String specificationName;
 
+    /**
+     * <p>The custom tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreateServiceInstanceShrinkRequestTag> tag;
 
+    /**
+     * <p>The template name. You must specify a template name if the service supports multiple templates.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>模板1</p>
+     */
     @NameInMap("TemplateName")
     public String templateName;
 
     /**
+     * <p>The user ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1563457855xxxxxx</p>
      */
@@ -193,6 +250,8 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
 
     public static class CreateServiceInstanceShrinkRequestTag extends TeaModel {
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>key1</p>
          */
@@ -200,6 +259,8 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>value1</p>
          */

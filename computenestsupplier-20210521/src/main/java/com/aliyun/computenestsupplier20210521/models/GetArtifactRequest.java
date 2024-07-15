@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetArtifactRequest extends TeaModel {
     /**
+     * <p>The ID of the deployment package.</p>
+     * 
      * <strong>example:</strong>
      * <p>artifact-eea08d1e2d3a43aexxxx</p>
      */
@@ -12,6 +14,8 @@ public class GetArtifactRequest extends TeaModel {
     public String artifactId;
 
     /**
+     * <p>The name of the deployment package.</p>
+     * 
      * <strong>example:</strong>
      * <p>gpu-test</p>
      */
@@ -19,6 +23,8 @@ public class GetArtifactRequest extends TeaModel {
     public String artifactName;
 
     /**
+     * <p>The version of the deployment package.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

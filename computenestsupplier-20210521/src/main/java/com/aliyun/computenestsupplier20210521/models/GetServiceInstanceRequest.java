@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetServiceInstanceRequest extends TeaModel {
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetServiceInstanceRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The ID of the service instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

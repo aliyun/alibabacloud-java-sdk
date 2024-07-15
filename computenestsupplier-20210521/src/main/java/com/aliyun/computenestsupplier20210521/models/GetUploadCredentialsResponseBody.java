@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetUploadCredentialsResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The response parameters.</p>
+     */
     @NameInMap("Data")
     public GetUploadCredentialsResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetUploadCredentialsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The message returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success.</p>
      */
@@ -29,6 +38,8 @@ public class GetUploadCredentialsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>FCC3321E-D518-1BC4-861E-588E9D4DAFB7</p>
      */
@@ -36,6 +47,8 @@ public class GetUploadCredentialsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. A value of true indicates the request was successful. A value of false indicates the request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +110,8 @@ public class GetUploadCredentialsResponseBody extends TeaModel {
 
     public static class GetUploadCredentialsResponseBodyData extends TeaModel {
         /**
+         * <p>The AccessKey ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>STS.NUCe19W1FKaHAYAhe********</p>
          */
@@ -104,6 +119,8 @@ public class GetUploadCredentialsResponseBody extends TeaModel {
         public String accessKeyId;
 
         /**
+         * <p>The AccessKey secret.</p>
+         * 
          * <strong>example:</strong>
          * <p>8LQGp59mY23pcXeTdcvSA1cUQZBeD92sFrXi********</p>
          */
@@ -111,6 +128,8 @@ public class GetUploadCredentialsResponseBody extends TeaModel {
         public String accessKeySecret;
 
         /**
+         * <p>The bucket name.</p>
+         * 
          * <strong>example:</strong>
          * <p>service-info-private</p>
          */
@@ -118,6 +137,8 @@ public class GetUploadCredentialsResponseBody extends TeaModel {
         public String bucketName;
 
         /**
+         * <p>The time when the AccessKey pair expires.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-05-18T12:27:59Z</p>
          */
@@ -125,6 +146,8 @@ public class GetUploadCredentialsResponseBody extends TeaModel {
         public String expireDate;
 
         /**
+         * <p>The name of the key.</p>
+         * 
          * <strong>example:</strong>
          * <p>221514575922756034/cn-hangzhou/d57c62fbd508xxxxxxxx.json</p>
          */
@@ -132,6 +155,8 @@ public class GetUploadCredentialsResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -139,6 +164,8 @@ public class GetUploadCredentialsResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The security token.</p>
+         * 
          * <strong>example:</strong>
          * <p>CAISzQN1q6Ft5B2yfSjIr5b2LouNuu5n/KOjQ3/wjGUHYdlagYGdmzz2IH1Le3NrBO8esfgymGFU6v8dlo1dYLQeHhadQI5cs80HtFqLSNaE65LswPlZ2M2ISETPJzfV9pCK</p>
          */

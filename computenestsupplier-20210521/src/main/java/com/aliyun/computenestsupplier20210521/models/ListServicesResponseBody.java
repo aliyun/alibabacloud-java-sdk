@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListServicesResponseBody extends TeaModel {
     /**
+     * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class ListServicesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>A pagination token.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAfu+XtuBE55iRLHEYYuojI4=</p>
      */
@@ -19,16 +23,23 @@ public class ListServicesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>51945B04-6AA6-410D-93BA-236E0248B104</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The services.</p>
+     */
     @NameInMap("Services")
     public java.util.List<ListServicesResponseBodyServices> services;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -81,12 +92,35 @@ public class ListServicesResponseBody extends TeaModel {
     }
 
     public static class ListServicesResponseBodyServicesCommodity extends TeaModel {
+        /**
+         * <p>The commodity code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cmjj00xxxx</p>
+         */
         @NameInMap("CommodityCode")
         public String commodityCode;
 
+        /**
+         * <p>The configuration metadata related to Saas Boost.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{ // Specifies whether to associate the service with the SaaS Boost commodity. Default value: false. &quot;Enabled&quot;:true/false // The public endpoint of the SaaS Boost instance. &quot;PublicAccessUrl&quot;:&quot;<a href="https://example.com">https://example.com</a>&quot; }</p>
+         */
         @NameInMap("SaasBoostMetadata")
         public String saasBoostMetadata;
 
+        /**
+         * <p>The platform type. Valid values:</p>
+         * <ul>
+         * <li>marketplace: Alibaba Cloud Marketplace.</li>
+         * <li>Css: Lingxiao.</li>
+         * <li>SaasBoost: Saas Boost.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Marketplace</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -123,6 +157,8 @@ public class ListServicesResponseBody extends TeaModel {
 
     public static class ListServicesResponseBodyServicesServiceInfos extends TeaModel {
         /**
+         * <p>The URL of the service icon.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://img.tidb.oss.url">http://img.tidb.oss.url</a></p>
          */
@@ -130,15 +166,33 @@ public class ListServicesResponseBody extends TeaModel {
         public String image;
 
         /**
+         * <p>The language of the service. Valid values:</p>
+         * <ul>
+         * <li>zh-CN: Chinese.</li>
+         * <li>en-US: English.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>zh-CN</p>
          */
         @NameInMap("Locale")
         public String locale;
 
+        /**
+         * <p>The name of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SpringBoot-ECS容器版</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The description of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B是A公司自主设计并研发的开源分布式的关系型数据库</p>
+         */
         @NameInMap("ShortDescription")
         public String shortDescription;
 
@@ -183,6 +237,8 @@ public class ListServicesResponseBody extends TeaModel {
 
     public static class ListServicesResponseBodyServicesTags extends TeaModel {
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>key1</p>
          */
@@ -190,6 +246,8 @@ public class ListServicesResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>value1</p>
          */
@@ -221,6 +279,12 @@ public class ListServicesResponseBody extends TeaModel {
 
     public static class ListServicesResponseBodyServices extends TeaModel {
         /**
+         * <p>The approval type for applications for using the service. Valid values:</p>
+         * <ul>
+         * <li>Manual: The applications are manual reviewed.</li>
+         * <li>AutoPass: The applications are automatically approved.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>AutoPass</p>
          */
@@ -228,6 +292,8 @@ public class ListServicesResponseBody extends TeaModel {
         public String approvalType;
 
         /**
+         * <p>The ID of the artifact.</p>
+         * 
          * <strong>example:</strong>
          * <p>artifact-21ca53ac16a643xxxxxx</p>
          */
@@ -235,22 +301,41 @@ public class ListServicesResponseBody extends TeaModel {
         public String artifactId;
 
         /**
+         * <p>The version of the artifact.</p>
+         * 
          * <strong>example:</strong>
          * <p>draft</p>
          */
         @NameInMap("ArtifactVersion")
         public String artifactVersion;
 
+        /**
+         * <p>The informathon for build service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{ &quot;RepoUrl&quot;: &quot;<a href="https://github.com/user/repo.git">https://github.com/user/repo.git</a>&quot;, &quot;Brancn&quot;: &quot;main&quot;}</p>
+         */
         @NameInMap("BuildInfo")
         public String buildInfo;
 
+        /**
+         * <p>The category of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OpenSource</p>
+         */
         @NameInMap("Categories")
         public String categories;
 
+        /**
+         * <p>The commodity details.</p>
+         */
         @NameInMap("Commodity")
         public ListServicesResponseBodyServicesCommodity commodity;
 
         /**
+         * <p>The commodity code of the service in Alibaba Cloud Marketplace.</p>
+         * 
          * <strong>example:</strong>
          * <p>cmjj00xxxx</p>
          */
@@ -258,6 +343,8 @@ public class ListServicesResponseBody extends TeaModel {
         public String commodityCode;
 
         /**
+         * <p>The time when the service was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-05-20T00:00:00Z</p>
          */
@@ -265,6 +352,12 @@ public class ListServicesResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>Indicates whether the version is the default version. Valid values:</p>
+         * <ul>
+         * <li>false</li>
+         * <li>true</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -272,22 +365,60 @@ public class ListServicesResponseBody extends TeaModel {
         public Boolean defaultVersion;
 
         /**
+         * <p>The deployment type of the service. Valid values:</p>
+         * <ul>
+         * <li>ros: The service is deployed by using Resource Orchestration Service (ROS).</li>
+         * <li>terraform: The service is deployed by using Terraform.</li>
+         * <li>spi: The service is deployed by calling the Service Provider Interface (SPI).</li>
+         * <li>operation: The service is deployed by using a hosted O\&amp;M service.</li>
+         * <li>container: The service is deployed by using a container.</li>
+         * <li></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ros</p>
          */
         @NameInMap("DeployType")
         public String deployType;
 
+        /**
+         * <p>Indicates whether the service has a beta version. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("HasBeta")
         public Boolean hasBeta;
 
+        /**
+         * <p>Indicates whether the service has a draft version. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("HasDraft")
         public Boolean hasDraft;
 
+        /**
+         * <p>The latest version of the distribution source service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("LatestResellSourceServiceVersion")
         public String latestResellSourceServiceVersion;
 
         /**
+         * <p>The time when the service was published.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-05-21T00:00:00Z</p>
          */
@@ -295,35 +426,86 @@ public class ListServicesResponseBody extends TeaModel {
         public String publishTime;
 
         /**
+         * <p>The purpose of the artifact. Valid values:</p>
+         * <ul>
+         * <li>ServiceDeployment: The artifact is used to create service instances.</li>
+         * <li>ServiceUpgrade: The artifact is used to upgrade service instances.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ServiceDeployment</p>
          */
         @NameInMap("RelationType")
         public String relationType;
 
+        /**
+         * <p>The state of distribution authorization of the service. Valid values:</p>
+         * <ul>
+         * <li>CanApply: Distributors can apply for distribution permissions.</li>
+         * <li>Applied: The application for distribution permissions is submitted.</li>
+         * <li>Approved: The application for distribution permissions is approved.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CanApply</p>
+         */
         @NameInMap("ResellApplyStatus")
         public String resellApplyStatus;
 
+        /**
+         * <p>The ID of the distribution service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>service-70a3b15bb62643xxxxxx</p>
+         */
         @NameInMap("ResellServiceId")
         public String resellServiceId;
 
+        /**
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekz5b555xxxxxx</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>Indicates whether the service is visible. Valid values:</p>
+         * <ul>
+         * <li>INVISIBLE</li>
+         * <li>DISCOVERABLE</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>INVISIBLE</p>
+         */
         @NameInMap("ServiceDiscoverable")
         public String serviceDiscoverable;
 
         /**
+         * <p>The service ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>service-70a3b15bb62643xxxxxx</p>
          */
         @NameInMap("ServiceId")
         public String serviceId;
 
+        /**
+         * <p>The information about the service.</p>
+         */
         @NameInMap("ServiceInfos")
         public java.util.List<ListServicesResponseBodyServicesServiceInfos> serviceInfos;
 
         /**
+         * <p>The type of the service. Valid values:</p>
+         * <ul>
+         * <li>private: The service is a private service and is deployed within the account of a customer.</li>
+         * <li>managed: The service is a fully managed service and is deployed within the account of a service provider.</li>
+         * <li>operation: The service is a hosted O\&amp;M service.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>private</p>
          */
@@ -331,6 +513,15 @@ public class ListServicesResponseBody extends TeaModel {
         public String serviceType;
 
         /**
+         * <p>The permission type of the deployment URL. Valid values:</p>
+         * <ul>
+         * <li>Public: All users can go to the URL to create a formal service instance or a trial service instance.</li>
+         * <li>Restricted: Only users in the whitelist can go to the URL to create a formal service instance or a trial service instance.</li>
+         * <li>OnlyFormalRestricted: Only users in the whitelist can go to the URL to create a formal service instance.</li>
+         * <li>OnlyTrailRestricted: Only users in the whitelist can go to the URL to create a trial service instance.</li>
+         * <li>Hidden: Users not in the whitelist cannot see the service details page when they go to the URL and cannot request deployment permissions.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Public</p>
          */
@@ -338,42 +529,89 @@ public class ListServicesResponseBody extends TeaModel {
         public String shareType;
 
         /**
+         * <p>The source image.</p>
+         * 
          * <strong>example:</strong>
          * <p>centos_7</p>
          */
         @NameInMap("SourceImage")
         public String sourceImage;
 
+        /**
+         * <p>The ID of the distribution source service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>service-70a3b15bb62643xxxxxx</p>
+         */
         @NameInMap("SourceServiceId")
         public String sourceServiceId;
 
+        /**
+         * <p>The version of the distribution source service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("SourceServiceVersion")
         public String sourceServiceVersion;
 
+        /**
+         * <p>The name of the distribution source service provider.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SourceSupplier</p>
+         */
         @NameInMap("SourceSupplierName")
         public String sourceSupplierName;
 
         /**
+         * <p>The state of the service. Valid values:</p>
+         * <ul>
+         * <li>Draft: The service is a draft.</li>
+         * <li>Submitted: The service is submitted for review. You cannot modify services in this state.</li>
+         * <li>Approved: The service is approved. You cannot modify services in this state. You can publish services in this state.</li>
+         * <li>Launching: The service is being published.</li>
+         * <li>Online: The service is published.</li>
+         * <li>Offline: The service is unpublished.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Online</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The name of the service provider.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alibaba Cloud</p>
+         */
         @NameInMap("SupplierName")
         public String supplierName;
 
         /**
+         * <p>The URL of the service provider.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://example.com">http://example.com</a></p>
          */
         @NameInMap("SupplierUrl")
         public String supplierUrl;
 
+        /**
+         * <p>The service tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<ListServicesResponseBodyServicesTags> tags;
 
         /**
+         * <p>The tenant type of the managed service. Valid values:</p>
+         * <ul>
+         * <li>SingleTenant</li>
+         * <li>MultiTenant</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>SingleTenant</p>
          */
@@ -381,6 +619,12 @@ public class ListServicesResponseBody extends TeaModel {
         public String tenantType;
 
         /**
+         * <p>The trial policy. Valid values:</p>
+         * <ul>
+         * <li>Trial: Trials are supported.</li>
+         * <li>NotTrial: Trials are not supported.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Trial</p>
          */
@@ -388,6 +632,8 @@ public class ListServicesResponseBody extends TeaModel {
         public String trialType;
 
         /**
+         * <p>The time when the service was modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-05-21T00:00:00Z</p>
          */
@@ -395,6 +641,8 @@ public class ListServicesResponseBody extends TeaModel {
         public String updateTime;
 
         /**
+         * <p>The version of the service.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.0</p>
          */
@@ -402,12 +650,24 @@ public class ListServicesResponseBody extends TeaModel {
         public String version;
 
         /**
+         * <p>The custom version name defined by the service provider.</p>
+         * 
          * <strong>example:</strong>
          * <p>v2.0.0</p>
          */
         @NameInMap("VersionName")
         public String versionName;
 
+        /**
+         * <p>Indicates whether the service is a virtual Internet service. Valid values:</p>
+         * <ul>
+         * <li>false</li>
+         * <li>true</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("VirtualInternetService")
         public String virtualInternetService;
 
