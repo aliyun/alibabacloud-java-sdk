@@ -4,9 +4,17 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class GPUConfig extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2048</p>
+     */
     @NameInMap("gpuMemorySize")
     public Integer gpuMemorySize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>fc.gpu.ampere.1</p>
+     */
     @NameInMap("gpuType")
     public String gpuType;
 

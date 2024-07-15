@@ -7,6 +7,10 @@ public class CustomDomain extends TeaModel {
     @NameInMap("accountId")
     public String accountId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-03-30</p>
+     */
     @NameInMap("apiVersion")
     public String apiVersion;
 
@@ -16,21 +20,41 @@ public class CustomDomain extends TeaModel {
     @NameInMap("certConfig")
     public CertConfig certConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-03-30T08:02:19Z</p>
+     */
     @NameInMap("createdTime")
     public String createdTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>example.com</p>
+     */
     @NameInMap("domainName")
     public String domainName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-03-30T08:02:19Z</p>
+     */
     @NameInMap("lastModifiedTime")
     public String lastModifiedTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>HTTP</p>
+     */
     @NameInMap("protocol")
     public String protocol;
 
     @NameInMap("routeConfig")
     public RouteConfig routeConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("subdomainCount")
     public String subdomainCount;
 

@@ -4,9 +4,17 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class Resource extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ALIYUN::FC::FUNCTION</p>
+     */
     @NameInMap("resouceType")
     public String resouceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>acs:fc:cn-shanghai:****:functions/demo</p>
+     */
     @NameInMap("resourceArn")
     public String resourceArn;
 

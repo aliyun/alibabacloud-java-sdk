@@ -4,15 +4,27 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class PutAsyncInvokeConfigInput extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("asyncTask")
     public Boolean asyncTask;
 
     @NameInMap("destinationConfig")
     public DestinationConfig destinationConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>300</p>
+     */
     @NameInMap("maxAsyncEventAgeInSeconds")
     public Long maxAsyncEventAgeInSeconds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("maxAsyncRetryAttempts")
     public Long maxAsyncRetryAttempts;
 

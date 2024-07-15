@@ -4,27 +4,59 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class SourceDTSParameters extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>dts-cn-shanghai-vpc.com:18003</p>
+     */
     @NameInMap("BrokerUrl")
     public String brokerUrl;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1677340805</p>
+     */
     @NameInMap("InitCheckPoint")
     public Integer initCheckPoint;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dtsTest123</p>
+     */
     @NameInMap("Password")
     public String password;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dtse34j22j025a****</p>
+     */
     @NameInMap("Sid")
     public String sid;
 
+    /**
+     * <strong>example:</strong>
+     * <p>e34z2gm325q****</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn_shanghai_vpc_rm_uf6398ykj0218****_dts_trigger_upgrade_from_old_version2</p>
+     */
     @NameInMap("Topic")
     public String topic;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dts_trigger</p>
+     */
     @NameInMap("Username")
     public String username;
 

@@ -4,9 +4,17 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class AuthConfig extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("authInfo")
     public String authInfo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>anonymous, function, jwt</p>
+     */
     @NameInMap("authType")
     public String authType;
 

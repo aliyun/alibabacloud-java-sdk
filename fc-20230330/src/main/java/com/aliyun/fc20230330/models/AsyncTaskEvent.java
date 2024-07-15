@@ -4,15 +4,31 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class AsyncTaskEvent extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>body</p>
+     */
     @NameInMap("eventDetail")
     public String eventDetail;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("eventId")
     public Long eventId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Succeeded</p>
+     */
     @NameInMap("status")
     public String status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1647420449721</p>
+     */
     @NameInMap("timestamp")
     public Long timestamp;
 

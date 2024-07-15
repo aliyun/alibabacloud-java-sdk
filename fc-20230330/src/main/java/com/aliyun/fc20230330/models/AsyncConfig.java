@@ -4,24 +4,48 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class AsyncConfig extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("asyncTask")
     public Boolean asyncTask;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2006-01-02T15:04:05Z07:00</p>
+     */
     @NameInMap("createdTime")
     public String createdTime;
 
     @NameInMap("destinationConfig")
     public DestinationConfig destinationConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>acs:fc:cn-shanghai:1234/functions/my-func</p>
+     */
     @NameInMap("functionArn")
     public String functionArn;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2006-01-02T15:04:05Z07:00</p>
+     */
     @NameInMap("lastModifiedTime")
     public String lastModifiedTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3600</p>
+     */
     @NameInMap("maxAsyncEventAgeInSeconds")
     public Long maxAsyncEventAgeInSeconds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("maxAsyncRetryAttempts")
     public Long maxAsyncRetryAttempts;
 

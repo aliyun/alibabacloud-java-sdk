@@ -4,9 +4,17 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class InstanceInfo extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1ef6b6ff-7f7b-485e-ab49-501ac681****</p>
+     */
     @NameInMap("instanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>LATEST</p>
+     */
     @NameInMap("versionId")
     public String versionId;
 

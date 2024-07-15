@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ListTagResourcesShrinkRequest extends TeaModel {
     /**
      * <p>The number of resources to return.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("Limit")
     public Integer limit;
 
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MTIzNCNhYmM=</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -24,13 +30,16 @@ public class ListTagResourcesShrinkRequest extends TeaModel {
 
     /**
      * <p>The resource type.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ALIYUN::FC:FUNCTION</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
      * <p>The tags.</p>
-     * <br>
      * <p>You can query up to 20 tags at a time.</p>
      */
     @NameInMap("Tag")

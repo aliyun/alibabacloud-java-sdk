@@ -4,6 +4,10 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class Destination extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>acs:fc:cn-shanghai:xxx:functions/f1</p>
+     */
     @NameInMap("destination")
     public String destination;
 

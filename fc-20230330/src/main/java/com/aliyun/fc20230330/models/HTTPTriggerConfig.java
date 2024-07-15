@@ -4,12 +4,24 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class HTTPTriggerConfig extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;JWKS&quot;:{&quot;foo&quot;:&quot;bar&quot;},&quot;TokenLookup&quot;:&quot;header:Authorization:Bearer,cookie:AuthorizationCookie&quot;,&quot;ClaimPassBy&quot;:&quot;query:uid:uid,header:name:name&quot;}</p>
+     */
     @NameInMap("authConfig")
     public String authConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>anonymous</p>
+     */
     @NameInMap("authType")
     public String authType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("disableURLInternet")
     public Boolean disableURLInternet;
 

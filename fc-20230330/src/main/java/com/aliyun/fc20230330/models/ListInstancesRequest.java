@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ListInstancesRequest extends TeaModel {
     /**
      * <p>The function version or alias.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LATEST</p>
      */
     @NameInMap("qualifier")
     public String qualifier;
 
     /**
      * <p>Specifies whether to list all instances. Valid values: true and false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("withAllActive")
     public Boolean withAllActive;

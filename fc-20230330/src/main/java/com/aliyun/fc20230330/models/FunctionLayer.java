@@ -4,9 +4,17 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class FunctionLayer extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>acs:fc:cn-beijing:186824xxxxxx:layers/fc_layer/versions/1</p>
+     */
     @NameInMap("arn")
     public String arn;
 
+    /**
+     * <strong>example:</strong>
+     * <p>421</p>
+     */
     @NameInMap("size")
     public Long size;
 

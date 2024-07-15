@@ -13,6 +13,10 @@ public class CustomRuntimeConfig extends TeaModel {
     @NameInMap("healthCheckConfig")
     public CustomHealthCheckConfig healthCheckConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>9000</p>
+     */
     @NameInMap("port")
     public Integer port;
 

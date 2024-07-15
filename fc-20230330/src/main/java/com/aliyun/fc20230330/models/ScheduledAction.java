@@ -4,18 +4,44 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class ScheduledAction extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2024-03-10T10:10:10Z</p>
+     */
     @NameInMap("endTime")
     public String endTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test_1</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cron(0 0 22 * * *)</p>
+     */
     @NameInMap("scheduleExpression")
     public String scheduleExpression;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-03-10T10:10:10Z</p>
+     */
     @NameInMap("startTime")
     public String startTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
+     */
     @NameInMap("target")
     public Long target;
 

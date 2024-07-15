@@ -4,15 +4,31 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class PathConfig extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>myFunction</p>
+     */
     @NameInMap("functionName")
     public String functionName;
 
     @NameInMap("methods")
     public java.util.List<String> methods;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/api/*</p>
+     */
     @NameInMap("path")
     public String path;
 
+    /**
+     * <strong>example:</strong>
+     * <p>myAlias</p>
+     */
     @NameInMap("qualifier")
     public String qualifier;
 

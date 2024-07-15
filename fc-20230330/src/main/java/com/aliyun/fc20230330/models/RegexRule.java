@@ -4,9 +4,21 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class RegexRule extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>^/api/.+?/(.*)</p>
+     */
     @NameInMap("match")
     public String match;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/api/v2/$1</p>
+     */
     @NameInMap("replacement")
     public String replacement;
 

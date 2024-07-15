@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class ListProvisionConfigsRequest extends TeaModel {
     /**
      * <p>The name of the function. If this parameter is not specified, the provisioned configurations of all functions are listed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my-func</p>
      */
     @NameInMap("functionName")
     public String functionName;
 
     /**
      * <p>Number of provisioned configurations to return.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("limit")
     public Integer limit;
 
     /**
      * <p>A pagination token.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MTIzNCNhYmM=</p>
      */
     @NameInMap("nextToken")
     public String nextToken;

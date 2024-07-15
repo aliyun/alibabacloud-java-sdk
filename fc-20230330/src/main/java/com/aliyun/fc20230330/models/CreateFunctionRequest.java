@@ -6,6 +6,7 @@ import com.aliyun.tea.*;
 public class CreateFunctionRequest extends TeaModel {
     /**
      * <p>The information about function configurations.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("body")
     public CreateFunctionInput body;

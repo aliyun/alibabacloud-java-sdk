@@ -4,15 +4,31 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class TagResource extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>acs:fc:cn-shanghai:****:functions/demo</p>
+     */
     @NameInMap("ResourceId")
     public String resourceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ALIYUN::FC::FUNCTION</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>key1</p>
+     */
     @NameInMap("TagKey")
     public String tagKey;
 
+    /**
+     * <strong>example:</strong>
+     * <p>key1</p>
+     */
     @NameInMap("TagValue")
     public String tagValue;
 

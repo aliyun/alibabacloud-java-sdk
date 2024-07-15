@@ -4,12 +4,24 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class Error extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>FunctionNotFound</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>function not found</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1-64e70cf1-5cbef92ea8fc8c42899cf5d1</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

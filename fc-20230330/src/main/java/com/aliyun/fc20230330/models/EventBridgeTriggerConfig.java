@@ -7,6 +7,10 @@ public class EventBridgeTriggerConfig extends TeaModel {
     @NameInMap("asyncInvocationType")
     public Boolean asyncInvocationType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("eventRuleFilterPattern")
     public String eventRuleFilterPattern;
 
@@ -19,6 +23,10 @@ public class EventBridgeTriggerConfig extends TeaModel {
     @NameInMap("runOptions")
     public RunOptions runOptions;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("triggerEnable")
     public Boolean triggerEnable;
 

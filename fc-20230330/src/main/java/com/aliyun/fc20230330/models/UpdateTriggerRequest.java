@@ -6,6 +6,7 @@ import com.aliyun.tea.*;
 public class UpdateTriggerRequest extends TeaModel {
     /**
      * <p>The trigger configurations.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("body")
     public UpdateTriggerInput body;

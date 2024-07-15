@@ -4,6 +4,12 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class CreateVpcBindingInput extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-8vb8x8dggvr0axxxxxxxx</p>
+     */
     @NameInMap("vpcId")
     public String vpcId;
 

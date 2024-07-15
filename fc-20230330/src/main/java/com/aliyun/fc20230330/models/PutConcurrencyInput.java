@@ -4,6 +4,12 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class PutConcurrencyInput extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("reservedConcurrency")
     public Long reservedConcurrency;
 

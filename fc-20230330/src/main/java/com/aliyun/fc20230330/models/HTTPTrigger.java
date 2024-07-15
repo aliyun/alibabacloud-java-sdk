@@ -4,9 +4,17 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class HTTPTrigger extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://svc-func-xxxxxxxx.cn-hangzhou.fcapp.run">https://svc-func-xxxxxxxx.cn-hangzhou.fcapp.run</a></p>
+     */
     @NameInMap("urlInternet")
     public String urlInternet;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://svc-func-xxxxxxxx.cn-hangzhou-vpc.fcapp.run">https://svc-func-xxxxxxxx.cn-hangzhou-vpc.fcapp.run</a></p>
+     */
     @NameInMap("urlIntranet")
     public String urlIntranet;
 

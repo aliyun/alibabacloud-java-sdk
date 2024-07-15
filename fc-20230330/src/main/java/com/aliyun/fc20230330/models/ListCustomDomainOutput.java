@@ -7,6 +7,10 @@ public class ListCustomDomainOutput extends TeaModel {
     @NameInMap("customDomains")
     public java.util.List<CustomDomain> customDomains;
 
+    /**
+     * <strong>example:</strong>
+     * <p>next_domain_name</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 

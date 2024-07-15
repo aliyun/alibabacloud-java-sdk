@@ -10,9 +10,19 @@ public class CreateCustomDomainInput extends TeaModel {
     @NameInMap("certConfig")
     public CertConfig certConfig;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
+     */
     @NameInMap("domainName")
     public String domainName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>HTTP</p>
+     */
     @NameInMap("protocol")
     public String protocol;
 

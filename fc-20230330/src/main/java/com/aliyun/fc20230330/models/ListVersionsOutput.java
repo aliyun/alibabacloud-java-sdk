@@ -4,9 +4,17 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class ListVersionsOutput extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>FORWARD</p>
+     */
     @NameInMap("direction")
     public String direction;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 

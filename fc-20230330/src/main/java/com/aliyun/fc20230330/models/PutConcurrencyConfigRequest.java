@@ -6,6 +6,7 @@ import com.aliyun.tea.*;
 public class PutConcurrencyConfigRequest extends TeaModel {
     /**
      * <p>The concurrency configurations.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("body")
     public PutConcurrencyInput body;

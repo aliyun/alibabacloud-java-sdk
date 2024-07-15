@@ -10,6 +10,10 @@ public class UpdateCustomDomainInput extends TeaModel {
     @NameInMap("certConfig")
     public CertConfig certConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>HTTP</p>
+     */
     @NameInMap("protocol")
     public String protocol;
 

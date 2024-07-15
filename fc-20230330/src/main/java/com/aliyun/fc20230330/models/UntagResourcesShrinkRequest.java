@@ -6,18 +6,26 @@ import com.aliyun.tea.*;
 public class UntagResourcesShrinkRequest extends TeaModel {
     /**
      * <p>Specifies whether to delete all tags.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("All")
     public Boolean all;
 
     /**
      * <p>The resource identifiers.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
     public String resourceIdShrink;
 
     /**
      * <p>The resource type.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>function</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

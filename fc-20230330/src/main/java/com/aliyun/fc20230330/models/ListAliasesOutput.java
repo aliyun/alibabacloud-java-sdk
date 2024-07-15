@@ -7,6 +7,10 @@ public class ListAliasesOutput extends TeaModel {
     @NameInMap("aliases")
     public java.util.List<Alias> aliases;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 

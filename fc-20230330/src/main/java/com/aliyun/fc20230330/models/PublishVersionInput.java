@@ -4,6 +4,10 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class PublishVersionInput extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>my version</p>
+     */
     @NameInMap("description")
     public String description;
 

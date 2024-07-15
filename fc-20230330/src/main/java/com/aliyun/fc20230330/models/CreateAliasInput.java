@@ -7,12 +7,28 @@ public class CreateAliasInput extends TeaModel {
     @NameInMap("additionalVersionWeight")
     public java.util.Map<String, Float> additionalVersionWeight;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>prod</p>
+     */
     @NameInMap("aliasName")
     public String aliasName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>my alias</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("versionId")
     public String versionId;
 

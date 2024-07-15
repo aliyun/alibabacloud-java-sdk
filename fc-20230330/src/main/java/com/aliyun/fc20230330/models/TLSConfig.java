@@ -4,12 +4,25 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class TLSConfig extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("cipherSuites")
     public java.util.List<String> cipherSuites;
 
+    /**
+     * <strong>example:</strong>
+     * <p>TLSv1.3</p>
+     */
     @NameInMap("maxVersion")
     public String maxVersion;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TLSv1.0</p>
+     */
     @NameInMap("minVersion")
     public String minVersion;
 

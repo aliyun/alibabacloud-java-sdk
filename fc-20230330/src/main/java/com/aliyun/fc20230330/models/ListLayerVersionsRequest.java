@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ListLayerVersionsRequest extends TeaModel {
     /**
      * <p>The number of versions to be returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("limit")
     public Integer limit;
 
     /**
      * <p>The initial version of the layer.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("startVersion")
     public String startVersion;

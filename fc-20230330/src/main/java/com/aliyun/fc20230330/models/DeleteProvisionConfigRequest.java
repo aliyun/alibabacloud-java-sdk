@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteProvisionConfigRequest extends TeaModel {
     /**
      * <p>The function alias or LATEST.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LATEST</p>
      */
     @NameInMap("qualifier")
     public String qualifier;

@@ -4,18 +4,38 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class OSSMountPoint extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>my-bucket</p>
+     */
     @NameInMap("bucketName")
     public String bucketName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>/my-dir</p>
+     */
     @NameInMap("bucketPath")
     public String bucketPath;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="http://oss-cn-shanghai.aliyuncs.com">http://oss-cn-shanghai.aliyuncs.com</a></p>
+     */
     @NameInMap("endpoint")
     public String endpoint;
 
+    /**
+     * <strong>example:</strong>
+     * <p>/mnt/dir</p>
+     */
     @NameInMap("mountDir")
     public String mountDir;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("readOnly")
     public Boolean readOnly;
 

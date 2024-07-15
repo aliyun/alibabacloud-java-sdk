@@ -4,18 +4,38 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class LogConfig extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("enableInstanceMetrics")
     public Boolean enableInstanceMetrics;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("enableRequestMetrics")
     public Boolean enableRequestMetrics;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DefaultRegex</p>
+     */
     @NameInMap("logBeginRule")
     public String logBeginRule;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test-logstore</p>
+     */
     @NameInMap("logstore")
     public String logstore;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test-project</p>
+     */
     @NameInMap("project")
     public String project;
 

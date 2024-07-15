@@ -4,6 +4,10 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class ListTagResourcesOutput extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>next_token</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 

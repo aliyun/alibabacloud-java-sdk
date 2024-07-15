@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class ListFunctionVersionsRequest extends TeaModel {
     /**
      * <p>The sorting mode of function versions. Valid values: BACKWARD and FORWARD.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BACKWARD</p>
      */
     @NameInMap("direction")
     public String direction;
 
     /**
      * <p>The number of function versions that are returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("limit")
     public Integer limit;
 
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MTIzNCNhYmM=</p>
      */
     @NameInMap("nextToken")
     public String nextToken;

@@ -4,15 +4,31 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class Function extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2825179536350****</p>
+     */
     @NameInMap("codeChecksum")
     public String codeChecksum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>412</p>
+     */
     @NameInMap("codeSize")
     public Long codeSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("cpu")
     public Float cpu;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-04-01T08:15:27Z</p>
+     */
     @NameInMap("createdTime")
     public String createdTime;
 
@@ -25,48 +41,96 @@ public class Function extends TeaModel {
     @NameInMap("customRuntimeConfig")
     public CustomRuntimeConfig customRuntimeConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>my function</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>512</p>
+     */
     @NameInMap("diskSize")
     public Integer diskSize;
 
     @NameInMap("environmentVariables")
     public java.util.Map<String, String> environmentVariables;
 
+    /**
+     * <strong>example:</strong>
+     * <p>acs:fc:cn-shanghai:123:functions/functionName</p>
+     */
     @NameInMap("functionArn")
     public String functionArn;
 
+    /**
+     * <strong>example:</strong>
+     * <p>aa715851-1c20-4b89-a8fb-***</p>
+     */
     @NameInMap("functionId")
     public String functionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>my-function-1</p>
+     */
     @NameInMap("functionName")
     public String functionName;
 
     @NameInMap("gpuConfig")
     public GPUConfig gpuConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>index.handler</p>
+     */
     @NameInMap("handler")
     public String handler;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("instanceConcurrency")
     public Integer instanceConcurrency;
 
     @NameInMap("instanceLifecycleConfig")
     public InstanceLifecycleConfig instanceLifecycleConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("internetAccess")
     public Boolean internetAccess;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-05-01T08:15:27Z</p>
+     */
     @NameInMap("lastModifiedTime")
     public String lastModifiedTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>InProgress</p>
+     */
     @NameInMap("lastUpdateStatus")
     public String lastUpdateStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>The system is currently processing the acceleration optimization for the image.</p>
+     */
     @NameInMap("lastUpdateStatusReason")
     public String lastUpdateStatusReason;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ImageOptimizing</p>
+     */
     @NameInMap("lastUpdateStatusReasonCode")
     public String lastUpdateStatusReasonCode;
 
@@ -76,6 +140,10 @@ public class Function extends TeaModel {
     @NameInMap("logConfig")
     public LogConfig logConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>512</p>
+     */
     @NameInMap("memorySize")
     public Integer memorySize;
 
@@ -85,21 +153,45 @@ public class Function extends TeaModel {
     @NameInMap("ossMountConfig")
     public OSSMountConfig ossMountConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>acs:ram::188077086902****:role/fc-test</p>
+     */
     @NameInMap("role")
     public String role;
 
+    /**
+     * <strong>example:</strong>
+     * <p>python3.10</p>
+     */
     @NameInMap("runtime")
     public String runtime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Pending</p>
+     */
     @NameInMap("state")
     public String state;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Function creating</p>
+     */
     @NameInMap("stateReason")
     public String stateReason;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Creating</p>
+     */
     @NameInMap("stateReasonCode")
     public String stateReasonCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>60</p>
+     */
     @NameInMap("timeout")
     public Integer timeout;
 

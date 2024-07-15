@@ -4,15 +4,31 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class InputCodeLocation extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2825179536350****</p>
+     */
     @NameInMap("checksum")
     public String checksum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>demo-bucket</p>
+     */
     @NameInMap("ossBucketName")
     public String ossBucketName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>demo-object</p>
+     */
     @NameInMap("ossObjectName")
     public String ossObjectName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>UEsDBAoAAAAAANF</p>
+     */
     @NameInMap("zipFile")
     public String zipFile;
 

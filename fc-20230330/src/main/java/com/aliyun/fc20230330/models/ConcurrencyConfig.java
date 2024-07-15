@@ -4,9 +4,17 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class ConcurrencyConfig extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>acs:fc:cn-shanghai:123:functions/demo</p>
+     */
     @NameInMap("functionArn")
     public String functionArn;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("reservedConcurrency")
     public Long reservedConcurrency;
 
