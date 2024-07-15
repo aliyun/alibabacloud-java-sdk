@@ -4,9 +4,17 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class Key extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>serverless_</p>
+     */
     @NameInMap("prefix")
     public String prefix;
 
+    /**
+     * <strong>example:</strong>
+     * <p>.zip</p>
+     */
     @NameInMap("suffix")
     public String suffix;
 

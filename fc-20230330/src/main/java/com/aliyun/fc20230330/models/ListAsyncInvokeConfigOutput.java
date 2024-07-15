@@ -7,6 +7,10 @@ public class ListAsyncInvokeConfigOutput extends TeaModel {
     @NameInMap("configs")
     public java.util.List<AsyncConfig> configs;
 
+    /**
+     * <strong>example:</strong>
+     * <p>8bj81uI8n****</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 

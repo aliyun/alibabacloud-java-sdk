@@ -4,12 +4,30 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class CertConfig extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my-cert</p>
+     */
     @NameInMap("certName")
     public String certName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PEM format</p>
+     */
     @NameInMap("certificate")
     public String certificate;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PEM format</p>
+     */
     @NameInMap("privateKey")
     public String privateKey;
 

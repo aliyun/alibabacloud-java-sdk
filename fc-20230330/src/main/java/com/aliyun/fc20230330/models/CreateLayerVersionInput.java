@@ -10,9 +10,17 @@ public class CreateLayerVersionInput extends TeaModel {
     @NameInMap("compatibleRuntime")
     public java.util.List<String> compatibleRuntime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>my first layer</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Apache</p>
+     */
     @NameInMap("license")
     public String license;
 

@@ -4,15 +4,27 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class CDNTriggerConfig extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>CdnDomainStarted</p>
+     */
     @NameInMap("eventName")
     public String eventName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1.0.0</p>
+     */
     @NameInMap("eventVersion")
     public String eventVersion;
 
     @NameInMap("filter")
     public java.util.Map<String, java.util.List<String>> filter;
 
+    /**
+     * <strong>example:</strong>
+     * <p>缓存事件触发器</p>
+     */
     @NameInMap("notes")
     public String notes;
 

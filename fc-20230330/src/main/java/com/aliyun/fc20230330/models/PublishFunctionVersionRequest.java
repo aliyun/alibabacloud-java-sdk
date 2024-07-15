@@ -6,6 +6,7 @@ import com.aliyun.tea.*;
 public class PublishFunctionVersionRequest extends TeaModel {
     /**
      * <p>The information about the function version.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("body")
     public PublishVersionInput body;

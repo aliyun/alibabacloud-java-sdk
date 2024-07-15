@@ -4,9 +4,17 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class OutputFuncCode extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1234567890</p>
+     */
     @NameInMap("checksum")
     public String checksum;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="http://func-code.oss-cn-shanghai.aliyuncs.com/1a2b3c4d5e6f">http://func-code.oss-cn-shanghai.aliyuncs.com/1a2b3c4d5e6f</a></p>
+     */
     @NameInMap("url")
     public String url;
 

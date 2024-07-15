@@ -4,9 +4,17 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class LifecycleHook extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>index.initializer</p>
+     */
     @NameInMap("handler")
     public String handler;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("timeout")
     public Integer timeout;
 

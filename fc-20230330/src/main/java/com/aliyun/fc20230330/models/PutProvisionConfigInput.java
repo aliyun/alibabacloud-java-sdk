@@ -4,12 +4,29 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class PutProvisionConfigInput extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("alwaysAllocateCPU")
     public Boolean alwaysAllocateCPU;
+
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("alwaysAllocateGPU")
+    public Boolean alwaysAllocateGPU;
 
     @NameInMap("scheduledActions")
     public java.util.List<ScheduledAction> scheduledActions;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("target")
     public Long target;
 
@@ -27,6 +44,14 @@ public class PutProvisionConfigInput extends TeaModel {
     }
     public Boolean getAlwaysAllocateCPU() {
         return this.alwaysAllocateCPU;
+    }
+
+    public PutProvisionConfigInput setAlwaysAllocateGPU(Boolean alwaysAllocateGPU) {
+        this.alwaysAllocateGPU = alwaysAllocateGPU;
+        return this;
+    }
+    public Boolean getAlwaysAllocateGPU() {
+        return this.alwaysAllocateGPU;
     }
 
     public PutProvisionConfigInput setScheduledActions(java.util.List<ScheduledAction> scheduledActions) {

@@ -7,6 +7,10 @@ public class ListLayersOutput extends TeaModel {
     @NameInMap("layers")
     public java.util.List<Layer> layers;
 
+    /**
+     * <strong>example:</strong>
+     * <p>next-layer-name</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 

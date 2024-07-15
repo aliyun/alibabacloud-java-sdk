@@ -4,12 +4,20 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class VPCConfig extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>sg-bp18hj1wtxgy3b0***</p>
+     */
     @NameInMap("securityGroupId")
     public String securityGroupId;
 
     @NameInMap("vSwitchIds")
     public java.util.List<String> vSwitchIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>vpc-***</p>
+     */
     @NameInMap("vpcId")
     public String vpcId;
 

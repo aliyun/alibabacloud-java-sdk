@@ -4,12 +4,24 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class SourceMNSParameters extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IsBase64Decode")
     public Boolean isBase64Decode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>demo</p>
+     */
     @NameInMap("QueueName")
     public String queueName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

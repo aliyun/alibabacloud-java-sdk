@@ -4,12 +4,24 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class TimerTriggerConfig extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0 0 4 * * *</p>
+     */
     @NameInMap("cronExpression")
     public String cronExpression;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("enable")
     public Boolean enable;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;workflowInstanceId&quot;:&quot;39639&quot;}</p>
+     */
     @NameInMap("payload")
     public String payload;
 

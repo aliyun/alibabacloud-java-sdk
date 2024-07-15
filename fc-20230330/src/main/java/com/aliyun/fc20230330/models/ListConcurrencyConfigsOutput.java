@@ -7,6 +7,10 @@ public class ListConcurrencyConfigsOutput extends TeaModel {
     @NameInMap("configs")
     public java.util.List<ConcurrencyConfig> configs;
 
+    /**
+     * <strong>example:</strong>
+     * <p>next_token</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 

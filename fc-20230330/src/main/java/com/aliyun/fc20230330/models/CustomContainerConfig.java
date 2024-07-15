@@ -7,9 +7,17 @@ public class CustomContainerConfig extends TeaModel {
     @NameInMap("accelerationInfo")
     public AccelerationInfo accelerationInfo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>deprecated</p>
+     */
     @NameInMap("accelerationType")
     public String accelerationType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>deprecated</p>
+     */
     @NameInMap("acrInstanceId")
     public String acrInstanceId;
 
@@ -22,12 +30,24 @@ public class CustomContainerConfig extends TeaModel {
     @NameInMap("healthCheckConfig")
     public CustomHealthCheckConfig healthCheckConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>registry-vpc.cn-hangzhou.aliyuncs.com/fc-demo/helloworld:v1</p>
+     */
     @NameInMap("image")
     public String image;
 
+    /**
+     * <strong>example:</strong>
+     * <p>9000</p>
+     */
     @NameInMap("port")
     public Integer port;
 
+    /**
+     * <strong>example:</strong>
+     * <p>stand-sh-registry-vpc.cn-shanghai.cr.aliyuncs.com/fc-demo2/springboot-helloworld@sha256:68d1****0d64d6</p>
+     */
     @NameInMap("resolvedImageUri")
     public String resolvedImageUri;
 

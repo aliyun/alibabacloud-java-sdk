@@ -4,24 +4,62 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class TargetTrackingPolicy extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2024-03-10T10:10:10Z</p>
+     */
     @NameInMap("endTime")
     public String endTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("maxCapacity")
     public Long maxCapacity;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.6</p>
+     */
     @NameInMap("metricTarget")
     public Float metricTarget;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CPUUtilization</p>
+     */
     @NameInMap("metricType")
     public String metricType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("minCapacity")
     public Long minCapacity;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test_1</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-03-10T10:10:10Z</p>
+     */
     @NameInMap("startTime")
     public String startTime;
 

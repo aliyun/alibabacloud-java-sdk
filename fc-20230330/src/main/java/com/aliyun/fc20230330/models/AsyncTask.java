@@ -4,48 +4,104 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class AsyncTask extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("alreadyRetriedTimes")
     public Long alreadyRetriedTimes;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Succeeded</p>
+     */
     @NameInMap("destinationStatus")
     public String destinationStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1000</p>
+     */
     @NameInMap("durationMs")
     public Long durationMs;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1633449590000</p>
+     */
     @NameInMap("endTime")
     public Long endTime;
 
     @NameInMap("events")
     public java.util.List<AsyncTaskEvent> events;
 
+    /**
+     * <strong>example:</strong>
+     * <p>acs:fc:cn-shanghai:1234/functions/my-func</p>
+     */
     @NameInMap("functionArn")
     public String functionArn;
 
+    /**
+     * <strong>example:</strong>
+     * <p>D4-*******9FD1-882707E</p>
+     */
     @NameInMap("instanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>prod</p>
+     */
     @NameInMap("qualifier")
     public String qualifier;
 
+    /**
+     * <strong>example:</strong>
+     * <p>e026ae92-61e5-472f-b32d-1c9e3c4e****</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>result</p>
+     */
     @NameInMap("returnPayload")
     public String returnPayload;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1633449590000</p>
+     */
     @NameInMap("startedTime")
     public Long startedTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Running</p>
+     */
     @NameInMap("status")
     public String status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>UnhandledInvocationError</p>
+     */
     @NameInMap("taskErrorMessage")
     public String taskErrorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>e026ae92-61e5-472f-b32d-1c9e3c4e****</p>
+     */
     @NameInMap("taskId")
     public String taskId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>body</p>
+     */
     @NameInMap("taskPayload")
     public String taskPayload;
 

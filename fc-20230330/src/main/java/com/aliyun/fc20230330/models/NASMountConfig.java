@@ -7,9 +7,17 @@ public class NASMountConfig extends TeaModel {
     @NameInMap("enableTLS")
     public Boolean enableTLS;
 
+    /**
+     * <strong>example:</strong>
+     * <p>/home/test</p>
+     */
     @NameInMap("mountDir")
     public String mountDir;
 
+    /**
+     * <strong>example:</strong>
+     * <p>***-uni85.cn-hangzhou.nas.com:/</p>
+     */
     @NameInMap("serverAddr")
     public String serverAddr;
 

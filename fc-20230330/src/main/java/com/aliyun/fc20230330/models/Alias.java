@@ -7,18 +7,38 @@ public class Alias extends TeaModel {
     @NameInMap("additionalVersionWeight")
     public java.util.Map<String, Float> additionalVersionWeight;
 
+    /**
+     * <strong>example:</strong>
+     * <p>prod</p>
+     */
     @NameInMap("aliasName")
     public String aliasName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2006-01-02T15:04:05Z07:00</p>
+     */
     @NameInMap("createdTime")
     public String createdTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>alias for pre env</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2006-01-02T15:04:05Z07:00</p>
+     */
     @NameInMap("lastModifiedTime")
     public String lastModifiedTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("versionId")
     public String versionId;
 

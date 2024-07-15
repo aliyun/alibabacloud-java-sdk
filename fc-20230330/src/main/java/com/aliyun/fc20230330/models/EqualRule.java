@@ -4,9 +4,21 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class EqualRule extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/old</p>
+     */
     @NameInMap("match")
     public String match;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/new</p>
+     */
     @NameInMap("replacement")
     public String replacement;
 

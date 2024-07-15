@@ -4,36 +4,74 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class Layer extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("acl")
     public String acl;
 
     @NameInMap("code")
     public OutputCodeLocation code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2825179536350****</p>
+     */
     @NameInMap("codeChecksum")
     public String codeChecksum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>421</p>
+     */
     @NameInMap("codeSize")
     public Long codeSize;
 
     @NameInMap("compatibleRuntime")
     public java.util.List<String> compatibleRuntime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-03-30T11:08:00Z</p>
+     */
     @NameInMap("createTime")
     public String createTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>My first layer</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MyLayer</p>
+     */
     @NameInMap("layerName")
     public String layerName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>acs:fc:cn-beijing:186824xxxxxx:layers/fc_layer/versions/1</p>
+     */
     @NameInMap("layerVersionArn")
     public String layerVersionArn;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Apache</p>
+     */
     @NameInMap("license")
     public String license;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("version")
     public Integer version;
 

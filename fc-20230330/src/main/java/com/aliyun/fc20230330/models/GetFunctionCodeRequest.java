@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetFunctionCodeRequest extends TeaModel {
     /**
      * <p>The version or alias of the function.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LATEST</p>
      */
     @NameInMap("qualifier")
     public String qualifier;

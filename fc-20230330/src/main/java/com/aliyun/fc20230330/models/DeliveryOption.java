@@ -4,9 +4,17 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class DeliveryOption extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("concurrency")
     public Long concurrency;
 
+    /**
+     * <strong>example:</strong>
+     * <p>RawData</p>
+     */
     @NameInMap("eventSchema")
     public String eventSchema;
 

@@ -4,12 +4,22 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class TagResourcesInput extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>FUNCTION</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<Tag> tag;
 

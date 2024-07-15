@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class ListFunctionsRequest extends TeaModel {
     /**
      * <p>The number of functions to return. The minimum value is 1 and the maximum value is 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("limit")
     public Integer limit;
 
     /**
      * <p>The pagination token.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MTIzNCNhYmM=</p>
      */
     @NameInMap("nextToken")
     public String nextToken;
 
     /**
      * <p>The prefix of the function name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my-func</p>
      */
     @NameInMap("prefix")
     public String prefix;

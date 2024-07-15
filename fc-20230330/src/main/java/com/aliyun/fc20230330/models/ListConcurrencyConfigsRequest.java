@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class ListConcurrencyConfigsRequest extends TeaModel {
     /**
      * <p>The function name. If you leave this parameter empty, the concurrency configurations of all functions are returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my-func</p>
      */
     @NameInMap("functionName")
     public String functionName;
 
     /**
      * <p>The maximum number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("limit")
     public Integer limit;
 
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MTIzNCNhYmM=</p>
      */
     @NameInMap("nextToken")
     public String nextToken;

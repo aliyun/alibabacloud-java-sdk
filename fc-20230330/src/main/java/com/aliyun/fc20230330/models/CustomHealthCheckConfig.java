@@ -4,21 +4,45 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class CustomHealthCheckConfig extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("failureThreshold")
     public Integer failureThreshold;
 
+    /**
+     * <strong>example:</strong>
+     * <p>/ready</p>
+     */
     @NameInMap("httpGetUrl")
     public String httpGetUrl;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("initialDelaySeconds")
     public Integer initialDelaySeconds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("periodSeconds")
     public Integer periodSeconds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("successThreshold")
     public Integer successThreshold;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("timeoutSeconds")
     public Integer timeoutSeconds;
 

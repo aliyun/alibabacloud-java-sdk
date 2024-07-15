@@ -4,21 +4,48 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class ProvisionConfig extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("alwaysAllocateCPU")
     public Boolean alwaysAllocateCPU;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("alwaysAllocateGPU")
+    public Boolean alwaysAllocateGPU;
+
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("current")
     public Long current;
 
+    /**
+     * <strong>example:</strong>
+     * <p>image not found</p>
+     */
     @NameInMap("currentError")
     public String currentError;
 
+    /**
+     * <strong>example:</strong>
+     * <p>acs:fc:cn-shanghai:124:functions/myFunction</p>
+     */
     @NameInMap("functionArn")
     public String functionArn;
 
     @NameInMap("scheduledActions")
     public java.util.List<ScheduledAction> scheduledActions;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("target")
     public Long target;
 
@@ -36,6 +63,14 @@ public class ProvisionConfig extends TeaModel {
     }
     public Boolean getAlwaysAllocateCPU() {
         return this.alwaysAllocateCPU;
+    }
+
+    public ProvisionConfig setAlwaysAllocateGPU(Boolean alwaysAllocateGPU) {
+        this.alwaysAllocateGPU = alwaysAllocateGPU;
+        return this;
+    }
+    public Boolean getAlwaysAllocateGPU() {
+        return this.alwaysAllocateGPU;
     }
 
     public ProvisionConfig setCurrent(Long current) {

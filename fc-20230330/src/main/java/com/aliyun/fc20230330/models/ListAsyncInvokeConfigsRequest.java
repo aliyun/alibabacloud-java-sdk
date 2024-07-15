@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class ListAsyncInvokeConfigsRequest extends TeaModel {
     /**
      * <p>The function name. If you do not configure this parameter, the asynchronous invocation configurations of all functions are displayed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my-func</p>
      */
     @NameInMap("functionName")
     public String functionName;
 
     /**
      * <p>The maximum number of entries to be returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("limit")
     public Integer limit;
 
     /**
      * <p>The paging information. This parameter specifies the start point of the query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MTIzNCNhYmM=</p>
      */
     @NameInMap("nextToken")
     public String nextToken;

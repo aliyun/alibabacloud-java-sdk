@@ -4,6 +4,12 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class StopAsyncTaskRequest extends TeaModel {
+    /**
+     * <p>The function version or alias.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LATEST</p>
+     */
     @NameInMap("qualifier")
     public String qualifier;
 

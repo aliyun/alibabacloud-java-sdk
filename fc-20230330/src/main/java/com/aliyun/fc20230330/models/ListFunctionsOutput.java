@@ -7,6 +7,10 @@ public class ListFunctionsOutput extends TeaModel {
     @NameInMap("functions")
     public java.util.List<Function> functions;
 
+    /**
+     * <strong>example:</strong>
+     * <p>next_function_name</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 

@@ -7,6 +7,10 @@ public class UpdateFunctionInput extends TeaModel {
     @NameInMap("code")
     public InputCodeLocation code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("cpu")
     public Float cpu;
 
@@ -19,9 +23,17 @@ public class UpdateFunctionInput extends TeaModel {
     @NameInMap("customRuntimeConfig")
     public CustomRuntimeConfig customRuntimeConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>my function</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>512</p>
+     */
     @NameInMap("diskSize")
     public Integer diskSize;
 
@@ -31,15 +43,27 @@ public class UpdateFunctionInput extends TeaModel {
     @NameInMap("gpuConfig")
     public GPUConfig gpuConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>index.handler</p>
+     */
     @NameInMap("handler")
     public String handler;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("instanceConcurrency")
     public Integer instanceConcurrency;
 
     @NameInMap("instanceLifecycleConfig")
     public InstanceLifecycleConfig instanceLifecycleConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("internetAccess")
     public Boolean internetAccess;
 
@@ -49,6 +73,10 @@ public class UpdateFunctionInput extends TeaModel {
     @NameInMap("logConfig")
     public LogConfig logConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>512</p>
+     */
     @NameInMap("memorySize")
     public Integer memorySize;
 
@@ -58,12 +86,20 @@ public class UpdateFunctionInput extends TeaModel {
     @NameInMap("ossMountConfig")
     public OSSMountConfig ossMountConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>acs:ram::188077086902****:role/fc-test</p>
+     */
     @NameInMap("role")
     public String role;
 
     @NameInMap("runtime")
     public String runtime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>60</p>
+     */
     @NameInMap("timeout")
     public Integer timeout;
 

@@ -7,6 +7,10 @@ public class ListLayerVersionOutput extends TeaModel {
     @NameInMap("layers")
     public java.util.List<Layer> layers;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("nextVersion")
     public Integer nextVersion;
 

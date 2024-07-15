@@ -4,6 +4,10 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class RetryStrategy extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>BACKOFF_RETRY</p>
+     */
     @NameInMap("PushRetryStrategy")
     public String pushRetryStrategy;
 

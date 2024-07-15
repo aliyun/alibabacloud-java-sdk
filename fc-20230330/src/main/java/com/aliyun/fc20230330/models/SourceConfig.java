@@ -4,9 +4,17 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class SourceConfig extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>my-sls-logstore-name</p>
+     */
     @NameInMap("logstore")
     public String logstore;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1704790317</p>
+     */
     @NameInMap("startTime")
     public Long startTime;
 

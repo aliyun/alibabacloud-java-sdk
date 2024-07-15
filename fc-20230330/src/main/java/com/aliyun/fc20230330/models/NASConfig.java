@@ -4,12 +4,20 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class NASConfig extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("groupId")
     public Integer groupId;
 
     @NameInMap("mountPoints")
     public java.util.List<NASMountConfig> mountPoints;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("userId")
     public Integer userId;
 

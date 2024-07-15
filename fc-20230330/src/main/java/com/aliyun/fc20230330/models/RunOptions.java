@@ -10,9 +10,17 @@ public class RunOptions extends TeaModel {
     @NameInMap("deadLetterQueue")
     public DeadLetterQueue deadLetterQueue;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ALL</p>
+     */
     @NameInMap("errorsTolerance")
     public String errorsTolerance;
 
+    /**
+     * <strong>example:</strong>
+     * <p>event-streaming</p>
+     */
     @NameInMap("mode")
     public String mode;
 

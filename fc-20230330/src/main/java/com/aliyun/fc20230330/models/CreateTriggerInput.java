@@ -4,24 +4,58 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class CreateTriggerInput extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>trigger for test</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>acs:ram::1234567890:role/fc-test</p>
+     */
     @NameInMap("invocationRole")
     public String invocationRole;
 
+    /**
+     * <strong>example:</strong>
+     * <p>LATEST</p>
+     */
     @NameInMap("qualifier")
     public String qualifier;
 
+    /**
+     * <strong>example:</strong>
+     * <p>acs:oss:cn-shanghai:12345:mybucket</p>
+     */
     @NameInMap("sourceArn")
     public String sourceArn;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;events&quot;:[&quot;oss:ObjectCreated:*&quot;],&quot;filter&quot;:{&quot;key&quot;:{&quot;prefix&quot;:&quot;/prefix&quot;,&quot;suffix&quot;:&quot;.zip&quot;}}}</p>
+     */
     @NameInMap("triggerConfig")
     public String triggerConfig;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss_create_object_demo</p>
+     */
     @NameInMap("triggerName")
     public String triggerName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss</p>
+     */
     @NameInMap("triggerType")
     public String triggerType;
 

@@ -4,30 +4,66 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class SourceKafkaParameters extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>DEFAULT_GROUP</p>
+     */
     @NameInMap("ConsumerGroup")
     public String consumerGroup;
 
+    /**
+     * <strong>example:</strong>
+     * <p>r-8vb64581862c****</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Default</p>
+     */
     @NameInMap("Network")
     public String network;
 
+    /**
+     * <strong>example:</strong>
+     * <p>latest</p>
+     */
     @NameInMap("OffsetReset")
     public String offsetReset;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>sg-bp1iv19sp1msc7zot4****</p>
+     */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>popvip_center_robot_order</p>
+     */
     @NameInMap("Topic")
     public String topic;
 
+    /**
+     * <strong>example:</strong>
+     * <p>vsw-bp179l3llg3jjxwrq72****</p>
+     */
     @NameInMap("VSwitchIds")
     public String vSwitchIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>vpc-8vblalsi0vbhizr77****</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 

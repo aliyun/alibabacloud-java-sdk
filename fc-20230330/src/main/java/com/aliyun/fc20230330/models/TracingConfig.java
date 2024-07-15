@@ -7,6 +7,10 @@ public class TracingConfig extends TeaModel {
     @NameInMap("params")
     public java.util.Map<String, String> params;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Jaeger</p>
+     */
     @NameInMap("type")
     public String type;
 

@@ -6,6 +6,7 @@ import com.aliyun.tea.*;
 public class UpdateCustomDomainRequest extends TeaModel {
     /**
      * <p>The information about the custom domain name.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("body")
     public UpdateCustomDomainInput body;

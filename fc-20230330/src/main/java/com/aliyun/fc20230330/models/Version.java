@@ -4,15 +4,31 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class Version extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2006-01-02T15:04:05Z07:00</p>
+     */
     @NameInMap("createdTime")
     public String createdTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>my version</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2006-01-02T15:04:05Z07:00</p>
+     */
     @NameInMap("lastModifiedTime")
     public String lastModifiedTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("versionId")
     public String versionId;
 
