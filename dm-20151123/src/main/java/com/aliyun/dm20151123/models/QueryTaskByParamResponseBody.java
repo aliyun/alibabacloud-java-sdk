@@ -4,15 +4,31 @@ package com.aliyun.dm20151123.models;
 import com.aliyun.tea.*;
 
 public class QueryTaskByParamResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10A1AD70-E48E-476D-98D9-39BD92193837</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>15</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -71,24 +87,52 @@ public class QueryTaskByParamResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TKP000442-333</p>
+         */
         @NameInMap("ReceiversName")
         public String receiversName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("RequestCount")
         public String requestCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>202201</p>
+         */
         @NameInMap("TagName")
         public String tagName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1054296</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TaskStatus")
         public String taskStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Short Simple</p>
+         */
         @NameInMap("TemplateName")
         public String templateName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1569734892</p>
+         */
         @NameInMap("UtcCreateTime")
         public Long utcCreateTime;
 

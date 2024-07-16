@@ -4,18 +4,38 @@ package com.aliyun.dm20151123.models;
 import com.aliyun.tea.*;
 
 public class DescDomainResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CnameAuthStatus")
     public String cnameAuthStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("CnameConfirmStatus")
     public String cnameConfirmStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dmtrace</p>
+     */
     @NameInMap("CnameRecord")
     public String cnameRecord;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2019-09-29T12:49Z</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("DefaultDomain")
     public String defaultDomain;
 
@@ -40,54 +60,114 @@ public class DescDomainResponseBody extends TeaModel {
     @NameInMap("DnsDmarc")
     public String dnsDmarc;
 
+    /**
+     * <strong>example:</strong>
+     * <p>abc-com.xxxx.com</p>
+     */
     @NameInMap("DnsMx")
     public String dnsMx;
 
+    /**
+     * <strong>example:</strong>
+     * <p>v=xxxx</p>
+     */
     @NameInMap("DnsSpf")
     public String dnsSpf;
 
+    /**
+     * <strong>example:</strong>
+     * <p>121309ohdsa</p>
+     */
     @NameInMap("DnsTxt")
     public String dnsTxt;
 
+    /**
+     * <strong>example:</strong>
+     * <p>158910</p>
+     */
     @NameInMap("DomainId")
     public String domainId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>abc.com</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("DomainStatus")
     public String domainStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0c40d5f125af4e42892a</p>
+     */
     @NameInMap("DomainType")
     public String domainType;
 
     @NameInMap("HostRecord")
     public String hostRecord;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("IcpStatus")
     public String icpStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("MxAuthStatus")
     public String mxAuthStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>mx01.dm.aliyun.com</p>
+     */
     @NameInMap("MxRecord")
     public String mxRecord;
 
+    /**
+     * <strong>example:</strong>
+     * <p>51B74264-46B4-43C8-A9A0-6B8E8BC04F34</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("SpfAuthStatus")
     public String spfAuthStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>include:spf1.dm.aliyun.com</p>
+     */
     @NameInMap("SpfRecord")
     public String spfRecord;
 
     @NameInMap("SpfRecordV2")
     public String spfRecordV2;
 
+    /**
+     * <strong>example:</strong>
+     * <p>abc.com</p>
+     */
     @NameInMap("TlDomainName")
     public String tlDomainName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>tracedm.aliyuncs.com</p>
+     */
     @NameInMap("TracefRecord")
     public String tracefRecord;
 

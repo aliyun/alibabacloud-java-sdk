@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyMailAddressRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1344565</p>
      */
     @NameInMap("MailAddressId")
     public Integer mailAddressId;
@@ -13,9 +16,17 @@ public class ModifyMailAddressRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>pwd129WDCft9</p>
+     */
     @NameInMap("Password")
     public String password;
 
+    /**
+     * <strong>example:</strong>
+     * <p>a***@example.net</p>
+     */
     @NameInMap("ReplyAddress")
     public String replyAddress;
 

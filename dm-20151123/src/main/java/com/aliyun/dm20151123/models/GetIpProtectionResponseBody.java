@@ -4,9 +4,17 @@ package com.aliyun.dm20151123.models;
 import com.aliyun.tea.*;
 
 public class GetIpProtectionResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("IpProtection")
     public String ipProtection;
 
+    /**
+     * <strong>example:</strong>
+     * <p>B30E5A62-2E64-577D-A70E-8C6781D6C975</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

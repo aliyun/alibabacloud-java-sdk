@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteDomainRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>326***</p>
      */
     @NameInMap("DomainId")
     public Integer domainId;

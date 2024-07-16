@@ -13,6 +13,10 @@ public class CreateMailAddressRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="mailto:reply@aliyun.com">reply@aliyun.com</a></p>
+     */
     @NameInMap("ReplyAddress")
     public String replyAddress;
 
@@ -24,6 +28,9 @@ public class CreateMailAddressRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>batch</p>
      */
     @NameInMap("Sendtype")
     public String sendtype;

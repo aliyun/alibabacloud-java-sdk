@@ -9,6 +9,9 @@ public class CheckReplyToMailAddressRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>126545</p>
      */
     @NameInMap("MailAddressId")
     public Integer mailAddressId;
@@ -16,6 +19,10 @@ public class CheckReplyToMailAddressRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("Region")
     public String region;
 

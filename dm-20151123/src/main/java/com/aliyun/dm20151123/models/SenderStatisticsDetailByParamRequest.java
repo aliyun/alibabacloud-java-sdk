@@ -4,15 +4,31 @@ package com.aliyun.dm20151123.models;
 import com.aliyun.tea.*;
 
 public class SenderStatisticsDetailByParamRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>s***@example.net</p>
+     */
     @NameInMap("AccountName")
     public String accountName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-04-29 00:00</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("Length")
     public Integer length;
 
+    /**
+     * <strong>example:</strong>
+     * <p>90f0243616#203#a***@example.net-1658817837#a***@example.net.247475288187</p>
+     */
     @NameInMap("NextStart")
     public String nextStart;
 
@@ -25,15 +41,31 @@ public class SenderStatisticsDetailByParamRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-04-28 00:00</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("Status")
     public Integer status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>EmailQuestionnaireHelioscam</p>
+     */
     @NameInMap("TagName")
     public String tagName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>b***@example.net</p>
+     */
     @NameInMap("ToAddress")
     public String toAddress;
 

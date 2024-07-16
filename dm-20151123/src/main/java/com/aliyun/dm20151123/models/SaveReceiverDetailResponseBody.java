@@ -7,12 +7,24 @@ public class SaveReceiverDetailResponseBody extends TeaModel {
     @NameInMap("Data")
     public SaveReceiverDetailResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>638</p>
+     */
     @NameInMap("ErrorCount")
     public Integer errorCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10A1AD70-E48E-476D-98D9-39BD92193837</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>274</p>
+     */
     @NameInMap("SuccessCount")
     public Integer successCount;
 
@@ -54,6 +66,10 @@ public class SaveReceiverDetailResponseBody extends TeaModel {
     }
 
     public static class SaveReceiverDetailResponseBodyDataDetail extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:test@mail.com">test@mail.com</a></p>
+         */
         @NameInMap("Email")
         public String email;
 

@@ -4,6 +4,10 @@ package com.aliyun.dm20151123.models;
 import com.aliyun.tea.*;
 
 public class UpdateIpProtectionResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>B653A6FC-D1AD-5936-A262-F50994ED2574</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

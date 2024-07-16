@@ -4,9 +4,17 @@ package com.aliyun.dm20151123.models;
 import com.aliyun.tea.*;
 
 public class CreateReceiverResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>xxxx</p>
+     */
     @NameInMap("ReceiverId")
     public String receiverId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10A1AD70-E48E-476D-98D9-39BD92193837</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

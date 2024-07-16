@@ -4,15 +4,31 @@ package com.aliyun.dm20151123.models;
 import com.aliyun.tea.*;
 
 public class GetIpfilterListResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>84DD77C7-A091-5139-9530-2D1F7CCE59E0</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,9 +81,17 @@ public class GetIpfilterListResponseBody extends TeaModel {
     }
 
     public static class GetIpfilterListResponseBodyDataIpfilters extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1653547140</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10083</p>
+         */
         @NameInMap("Id")
         public String id;
 

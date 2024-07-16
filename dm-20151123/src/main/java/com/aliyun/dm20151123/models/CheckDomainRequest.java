@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class CheckDomainRequest extends TeaModel {
     /**
      * <p>The ID of the domain name.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>153345</p>
      */
     @NameInMap("DomainId")
     public Integer domainId;

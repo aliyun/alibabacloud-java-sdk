@@ -4,21 +4,41 @@ package com.aliyun.dm20151123.models;
 import com.aliyun.tea.*;
 
 public class ListUserSuppressionRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p><a href="mailto:test@example.net">test@example.net</a></p>
+     */
     @NameInMap("Address")
     public String address;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1715669077</p>
+     */
     @NameInMap("EndBounceTime")
     public Integer endBounceTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1715669077</p>
+     */
     @NameInMap("EndCreateTime")
     public Integer endCreateTime;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNo")
     public Integer pageNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -28,9 +48,17 @@ public class ListUserSuppressionRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1715668852</p>
+     */
     @NameInMap("StartBounceTime")
     public Integer startBounceTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1715668852</p>
+     */
     @NameInMap("StartCreateTime")
     public Integer startCreateTime;
 

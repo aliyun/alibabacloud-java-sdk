@@ -21,6 +21,10 @@ public class UpdateUserRequest extends TeaModel {
     }
 
     public static class UpdateUserRequestUser extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("EnableEventbridge")
         public Boolean enableEventbridge;
 

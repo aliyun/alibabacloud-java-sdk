@@ -18,6 +18,9 @@ public class CreateTagRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vme</p>
      */
     @NameInMap("TagName")
     public String tagName;

@@ -4,15 +4,31 @@ package com.aliyun.dm20151123.models;
 import com.aliyun.tea.*;
 
 public class QueryMailAddressByParamResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>95A7D497-F8DD-4834-B81E-C1783236E55F</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -68,36 +84,80 @@ public class QueryMailAddressByParamResponseBody extends TeaModel {
         @NameInMap("AccountName")
         public String accountName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("AccountStatus")
         public String accountStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2019-09-29T13:28Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10000</p>
+         */
         @NameInMap("DailyCount")
         public String dailyCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("DailyReqCount")
         public String dailyReqCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("DomainStatus")
         public String domainStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12122</p>
+         */
         @NameInMap("MailAddressId")
         public String mailAddressId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>300000</p>
+         */
         @NameInMap("MonthCount")
         public String monthCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20000</p>
+         */
         @NameInMap("MonthReqCount")
         public String monthReqCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:112@aliyun.com">112@aliyun.com</a></p>
+         */
         @NameInMap("ReplyAddress")
         public String replyAddress;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ReplyStatus")
         public String replyStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>batch</p>
+         */
         @NameInMap("Sendtype")
         public String sendtype;
 

@@ -4,54 +4,118 @@ package com.aliyun.dm20151123.models;
 import com.aliyun.tea.*;
 
 public class DescAccountSummaryResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2000</p>
+     */
     @NameInMap("DailyQuota")
     public Integer dailyQuota;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("DayuStatus")
     public Integer dayuStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Domains")
     public Integer domains;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("EnableTimes")
     public Integer enableTimes;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("MailAddresses")
     public Integer mailAddresses;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("MaxQuotaLevel")
     public Integer maxQuotaLevel;
 
+    /**
+     * <strong>example:</strong>
+     * <p>60000</p>
+     */
     @NameInMap("MonthQuota")
     public Integer monthQuota;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("QuotaLevel")
     public Integer quotaLevel;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("Receivers")
     public Integer receivers;
 
     @NameInMap("RemainFreeQuota")
     public Integer remainFreeQuota;
 
+    /**
+     * <strong>example:</strong>
+     * <p>82B295BB-7E69-491F-9896-ECEAFF09E1A4</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("SmsRecord")
     public Integer smsRecord;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("SmsSign")
     public Integer smsSign;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("SmsTemplates")
     public Integer smsTemplates;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("Tags")
     public Integer tags;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Templates")
     public Integer templates;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("UserStatus")
     public Integer userStatus;
 

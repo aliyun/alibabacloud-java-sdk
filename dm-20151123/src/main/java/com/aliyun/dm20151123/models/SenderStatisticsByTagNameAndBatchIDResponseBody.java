@@ -4,9 +4,17 @@ package com.aliyun.dm20151123.models;
 import com.aliyun.tea.*;
 
 public class SenderStatisticsByTagNameAndBatchIDResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>10A1AD70-E48E-476D-98D9-39BD92193837</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -43,24 +51,52 @@ public class SenderStatisticsByTagNameAndBatchIDResponseBody extends TeaModel {
     }
 
     public static class SenderStatisticsByTagNameAndBatchIDResponseBodyDataStat extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2021-07-02</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("faildCount")
         public String faildCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("requestCount")
         public String requestCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100.00%</p>
+         */
         @NameInMap("succeededPercent")
         public String succeededPercent;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("successCount")
         public String successCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("unavailableCount")
         public String unavailableCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0%</p>
+         */
         @NameInMap("unavailablePercent")
         public String unavailablePercent;
 

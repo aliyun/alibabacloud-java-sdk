@@ -10,9 +10,17 @@ public class QueryMailAddressByParamRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNo")
     public Integer pageNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -22,6 +30,10 @@ public class QueryMailAddressByParamRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>batch</p>
+     */
     @NameInMap("Sendtype")
     public String sendtype;
 

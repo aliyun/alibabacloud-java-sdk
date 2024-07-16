@@ -4,6 +4,10 @@ package com.aliyun.dm20151123.models;
 import com.aliyun.tea.*;
 
 public class UpdateIpProtectionRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("IpProtection")
     public String ipProtection;
 

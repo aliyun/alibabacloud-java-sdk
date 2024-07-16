@@ -6,28 +6,46 @@ import com.aliyun.tea.*;
 public class SingleSendMailRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="mailto:test@example.com">test@example.com</a></p>
      */
     @NameInMap("AccountName")
     public String accountName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("AddressType")
     public Integer addressType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("ClickTrace")
     public String clickTrace;
 
     @NameInMap("FromAlias")
     public String fromAlias;
 
+    /**
+     * <strong>example:</strong>
+     * <p>body</p>
+     */
     @NameInMap("HtmlBody")
     public String htmlBody;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="mailto:111@aliyun.com">111@aliyun.com</a></p>
+     */
     @NameInMap("ReplyAddress")
     public String replyAddress;
 
@@ -36,6 +54,9 @@ public class SingleSendMailRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("ReplyToAddress")
     public Boolean replyToAddress;
@@ -48,18 +69,32 @@ public class SingleSendMailRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Subject</p>
      */
     @NameInMap("Subject")
     public String subject;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("TagName")
     public String tagName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>12121</p>
+     */
     @NameInMap("TextBody")
     public String textBody;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="mailto:test1@example.com">test1@example.com</a></p>
      */
     @NameInMap("ToAddress")
     public String toAddress;

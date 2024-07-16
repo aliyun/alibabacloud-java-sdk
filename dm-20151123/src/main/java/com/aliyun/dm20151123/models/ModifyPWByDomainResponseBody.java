@@ -4,15 +4,27 @@ package com.aliyun.dm20151123.models;
 import com.aliyun.tea.*;
 
 public class ModifyPWByDomainResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>02B2A890-CBD8-4806-9BCA-C93190CE7EF6</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
