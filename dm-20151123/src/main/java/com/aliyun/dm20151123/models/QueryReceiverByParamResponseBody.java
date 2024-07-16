@@ -4,15 +4,31 @@ package com.aliyun.dm20151123.models;
 import com.aliyun.tea.*;
 
 public class QueryReceiverByParamResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>6aec200853#102#1638894326#<a href="mailto:rdwilbur@verizon.net">rdwilbur@verizon.net</a></p>
+     */
     @NameInMap("NextStart")
     public String nextStart;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10A1AD70-E48E-476D-98D9-39BD92193837</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>15</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,27 +81,55 @@ public class QueryReceiverByParamResponseBody extends TeaModel {
     }
 
     public static class QueryReceiverByParamResponseBodyDataReceiver extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("Count")
         public String count;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2019-09-29T13:28Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
         @NameInMap("Desc")
         public String desc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0c910a7143044b1e116719eb678907b3</p>
+         */
         @NameInMap("ReceiverId")
         public String receiverId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10***@163.com</p>
+         */
         @NameInMap("ReceiversAlias")
         public String receiversAlias;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TKP000442-333</p>
+         */
         @NameInMap("ReceiversName")
         public String receiversName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ReceiversStatus")
         public String receiversStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1569734892</p>
+         */
         @NameInMap("UtcCreateTime")
         public Long utcCreateTime;
 

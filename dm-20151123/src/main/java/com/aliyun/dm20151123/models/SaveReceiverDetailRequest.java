@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class SaveReceiverDetailRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{“b”:” birthday”,”e”:”<a href="mailto:xxx@alibaba-inc.com">xxx@alibaba-inc.com</a>”,”g”:” gender”,”m”:” mobile “,”n”:” nickname “,”u”:”name “}]</p>
      */
     @NameInMap("Detail")
     public String detail;
@@ -15,6 +18,9 @@ public class SaveReceiverDetailRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>34642</p>
      */
     @NameInMap("ReceiverId")
     public String receiverId;

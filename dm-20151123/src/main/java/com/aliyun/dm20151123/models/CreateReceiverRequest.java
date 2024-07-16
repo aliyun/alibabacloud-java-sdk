@@ -12,12 +12,18 @@ public class CreateReceiverRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vme</p>
      */
     @NameInMap("ReceiversAlias")
     public String receiversAlias;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xme</p>
      */
     @NameInMap("ReceiversName")
     public String receiversName;

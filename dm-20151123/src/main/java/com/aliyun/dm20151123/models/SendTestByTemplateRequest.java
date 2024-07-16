@@ -10,6 +10,10 @@ public class SendTestByTemplateRequest extends TeaModel {
     @NameInMap("AccountName")
     public String accountName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2000/01/01</p>
+     */
     @NameInMap("Birthday")
     public String birthday;
 
@@ -22,6 +26,10 @@ public class SendTestByTemplateRequest extends TeaModel {
     @NameInMap("Gender")
     public String gender;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1380000****</p>
+     */
     @NameInMap("Mobile")
     public String mobile;
 
@@ -39,6 +47,9 @@ public class SendTestByTemplateRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("TemplateId")
     public Integer templateId;

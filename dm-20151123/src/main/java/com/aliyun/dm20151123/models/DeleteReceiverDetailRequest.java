@@ -12,6 +12,9 @@ public class DeleteReceiverDetailRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123534</p>
      */
     @NameInMap("ReceiverId")
     public String receiverId;

@@ -7,6 +7,10 @@ public class DeleteIpfilterByEdmIdRequest extends TeaModel {
     @NameInMap("FromType")
     public Integer fromType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10120</p>
+     */
     @NameInMap("Id")
     public String id;
 

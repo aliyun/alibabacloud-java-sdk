@@ -4,15 +4,27 @@ package com.aliyun.dm20151123.models;
 import com.aliyun.tea.*;
 
 public class QueryTagByParamRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1aTag</p>
+     */
     @NameInMap("KeyWord")
     public String keyWord;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNo")
     public Integer pageNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 

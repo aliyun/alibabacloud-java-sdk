@@ -15,8 +15,10 @@ public class DeleteTagRequest extends TeaModel {
 
     /**
      * <p>The ID of the tag.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("TagId")
     public Integer tagId;

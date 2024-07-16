@@ -4,9 +4,17 @@ package com.aliyun.dm20151123.models;
 import com.aliyun.tea.*;
 
 public class BatchSendMailResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>xxx</p>
+     */
     @NameInMap("EnvId")
     public String envId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>12D086F6-8F31-4658-84C1-006DED011A85</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

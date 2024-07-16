@@ -4,8 +4,14 @@ package com.aliyun.dm20151123.models;
 import com.aliyun.tea.*;
 
 public class GetTrackListRequest extends TeaModel {
+    @NameInMap("AccountName")
+    public String accountName;
+
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-09-29</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -22,9 +28,17 @@ public class GetTrackListRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public String pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public String pageSize;
 
@@ -36,9 +50,15 @@ public class GetTrackListRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-09-29</p>
      */
     @NameInMap("StartTime")
     public String startTime;
+
+    @NameInMap("TagName")
+    public String tagName;
 
     @NameInMap("Total")
     public String total;
@@ -46,6 +66,14 @@ public class GetTrackListRequest extends TeaModel {
     public static GetTrackListRequest build(java.util.Map<String, ?> map) throws Exception {
         GetTrackListRequest self = new GetTrackListRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetTrackListRequest setAccountName(String accountName) {
+        this.accountName = accountName;
+        return this;
+    }
+    public String getAccountName() {
+        return this.accountName;
     }
 
     public GetTrackListRequest setEndTime(String endTime) {
@@ -126,6 +154,14 @@ public class GetTrackListRequest extends TeaModel {
     }
     public String getStartTime() {
         return this.startTime;
+    }
+
+    public GetTrackListRequest setTagName(String tagName) {
+        this.tagName = tagName;
+        return this;
+    }
+    public String getTagName() {
+        return this.tagName;
     }
 
     public GetTrackListRequest setTotal(String total) {

@@ -6,16 +6,26 @@ import com.aliyun.tea.*;
 public class BatchSendMailRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="mailto:test@example.com">test@example.com</a></p>
      */
     @NameInMap("AccountName")
     public String accountName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("AddressType")
     public Integer addressType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("ClickTrace")
     public String clickTrace;
 
@@ -24,6 +34,9 @@ public class BatchSendMailRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test2</p>
      */
     @NameInMap("ReceiversName")
     public String receiversName;
@@ -40,11 +53,18 @@ public class BatchSendMailRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test3</p>
+     */
     @NameInMap("TagName")
     public String tagName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test1</p>
      */
     @NameInMap("TemplateName")
     public String templateName;

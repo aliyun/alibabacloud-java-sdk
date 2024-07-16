@@ -4,11 +4,18 @@ package com.aliyun.dm20151123.models;
 import com.aliyun.tea.*;
 
 public class SenderStatisticsByTagNameAndBatchIDRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>xxx</p>
+     */
     @NameInMap("AccountName")
     public String accountName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-09-29</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -24,10 +31,17 @@ public class SenderStatisticsByTagNameAndBatchIDRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-09-29</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>xxx</p>
+     */
     @NameInMap("TagName")
     public String tagName;
 

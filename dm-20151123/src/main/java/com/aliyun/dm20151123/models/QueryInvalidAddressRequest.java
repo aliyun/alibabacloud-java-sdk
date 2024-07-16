@@ -4,15 +4,31 @@ package com.aliyun.dm20151123.models;
 import com.aliyun.tea.*;
 
 public class QueryInvalidAddressRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2019-09-29</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>info</p>
+     */
     @NameInMap("KeyWord")
     public String keyWord;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("Length")
     public Integer length;
 
+    /**
+     * <strong>example:</strong>
+     * <hr>
+     */
     @NameInMap("NextStart")
     public String nextStart;
 
@@ -25,6 +41,10 @@ public class QueryInvalidAddressRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2019-09-29</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

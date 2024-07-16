@@ -4,20 +4,35 @@ package com.aliyun.dm20151123.models;
 import com.aliyun.tea.*;
 
 public class QueryReceiverDetailRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>b***@example.net</p>
+     */
     @NameInMap("KeyWord")
     public String keyWord;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("NextStart")
     public String nextStart;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1235</p>
      */
     @NameInMap("ReceiverId")
     public String receiverId;

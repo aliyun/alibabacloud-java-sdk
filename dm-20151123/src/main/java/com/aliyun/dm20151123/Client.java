@@ -27,8 +27,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 添加IP防护信息
-     *
+     * <b>summary</b> : 
+     * <p>添加IP防护信息</p>
+     * 
      * @param request AddIpfilterRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AddIpfilterResponse
@@ -70,8 +71,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 添加IP防护信息
-     *
+     * <b>summary</b> : 
+     * <p>添加IP防护信息</p>
+     * 
      * @param request AddIpfilterRequest
      * @return AddIpfilterResponse
      */
@@ -81,8 +83,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 验证回信地址
-     *
+     * <b>summary</b> : 
+     * <p>验证回信地址</p>
+     * 
      * @param request ApproveReplyMailAddressRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ApproveReplyMailAddressResponse
@@ -124,8 +127,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 验证回信地址
-     *
+     * <b>summary</b> : 
+     * <p>验证回信地址</p>
+     * 
      * @param request ApproveReplyMailAddressRequest
      * @return ApproveReplyMailAddressResponse
      */
@@ -135,8 +139,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 批量发送邮件
-     *
+     * <b>summary</b> : 
+     * <p>批量发送邮件</p>
+     * 
      * @param request BatchSendMailRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return BatchSendMailResponse
@@ -214,8 +219,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 批量发送邮件
-     *
+     * <b>summary</b> : 
+     * <p>批量发送邮件</p>
+     * 
      * @param request BatchSendMailRequest
      * @return BatchSendMailResponse
      */
@@ -225,8 +231,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 校验域名状态
-     *
+     * <b>summary</b> : 
+     * <p>校验域名状态</p>
+     * 
      * @param request CheckDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CheckDomainResponse
@@ -268,8 +275,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 校验域名状态
-     *
+     * <b>summary</b> : 
+     * <p>校验域名状态</p>
+     * 
      * @param request CheckDomainRequest
      * @return CheckDomainResponse
      */
@@ -279,8 +287,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 校验回信地址
-     *
+     * <b>summary</b> : 
+     * <p>校验回信地址</p>
+     * 
      * @param request CheckReplyToMailAddressRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CheckReplyToMailAddressResponse
@@ -330,8 +339,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 校验回信地址
-     *
+     * <b>summary</b> : 
+     * <p>校验回信地址</p>
+     * 
      * @param request CheckReplyToMailAddressRequest
      * @return CheckReplyToMailAddressResponse
      */
@@ -341,8 +351,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建域名
-     *
+     * <b>summary</b> : 
+     * <p>创建域名</p>
+     * 
      * @param request CreateDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateDomainResponse
@@ -384,8 +395,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建域名
-     *
+     * <b>summary</b> : 
+     * <p>创建域名</p>
+     * 
      * @param request CreateDomainRequest
      * @return CreateDomainResponse
      */
@@ -453,8 +465,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建收件人列表
-     *
+     * <b>summary</b> : 
+     * <p>创建收件人列表</p>
+     * 
      * @param request CreateReceiverRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateReceiverResponse
@@ -504,8 +517,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建收件人列表
-     *
+     * <b>summary</b> : 
+     * <p>创建收件人列表</p>
+     * 
      * @param request CreateReceiverRequest
      * @return CreateReceiverResponse
      */
@@ -515,8 +529,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建标签
-     *
+     * <b>summary</b> : 
+     * <p>创建标签</p>
+     * 
      * @param request CreateTagRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateTagResponse
@@ -562,8 +577,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建标签
-     *
+     * <b>summary</b> : 
+     * <p>创建标签</p>
+     * 
      * @param request CreateTagRequest
      * @return CreateTagResponse
      */
@@ -573,8 +589,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建用户无效地址
-     *
+     * <b>summary</b> : 
+     * <p>创建用户无效地址</p>
+     * 
      * @param request CreateUserSuppressionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateUserSuppressionResponse
@@ -616,8 +633,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建用户无效地址
-     *
+     * <b>summary</b> : 
+     * <p>创建用户无效地址</p>
+     * 
      * @param request CreateUserSuppressionRequest
      * @return CreateUserSuppressionResponse
      */
@@ -627,8 +645,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除域名
-     *
+     * <b>summary</b> : 
+     * <p>删除域名</p>
+     * 
      * @param request DeleteDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteDomainResponse
@@ -670,8 +689,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除域名
-     *
+     * <b>summary</b> : 
+     * <p>删除域名</p>
+     * 
      * @param request DeleteDomainRequest
      * @return DeleteDomainResponse
      */
@@ -681,8 +701,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 从无效地址库删除无效地址
-     *
+     * <b>summary</b> : 
+     * <p>从无效地址库删除无效地址</p>
+     * 
      * @param request DeleteInvalidAddressRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteInvalidAddressResponse
@@ -724,8 +745,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 从无效地址库删除无效地址
-     *
+     * <b>summary</b> : 
+     * <p>从无效地址库删除无效地址</p>
+     * 
      * @param request DeleteInvalidAddressRequest
      * @return DeleteInvalidAddressResponse
      */
@@ -735,8 +757,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除IP保护信息
-     *
+     * <b>summary</b> : 
+     * <p>删除IP保护信息</p>
+     * 
      * @param request DeleteIpfilterByEdmIdRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteIpfilterByEdmIdResponse
@@ -782,8 +805,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除IP保护信息
-     *
+     * <b>summary</b> : 
+     * <p>删除IP保护信息</p>
+     * 
      * @param request DeleteIpfilterByEdmIdRequest
      * @return DeleteIpfilterByEdmIdResponse
      */
@@ -793,8 +817,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除发信地址
-     *
+     * <b>summary</b> : 
+     * <p>删除发信地址</p>
+     * 
      * @param request DeleteMailAddressRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteMailAddressResponse
@@ -836,8 +861,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除发信地址
-     *
+     * <b>summary</b> : 
+     * <p>删除发信地址</p>
+     * 
      * @param request DeleteMailAddressRequest
      * @return DeleteMailAddressResponse
      */
@@ -847,8 +873,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除收件人列表
-     *
+     * <b>summary</b> : 
+     * <p>删除收件人列表</p>
+     * 
      * @param request DeleteReceiverRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteReceiverResponse
@@ -890,8 +917,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除收件人列表
-     *
+     * <b>summary</b> : 
+     * <p>删除收件人列表</p>
+     * 
      * @param request DeleteReceiverRequest
      * @return DeleteReceiverResponse
      */
@@ -901,8 +929,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除单个收件人
-     *
+     * <b>summary</b> : 
+     * <p>删除单个收件人</p>
+     * 
      * @param request DeleteReceiverDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteReceiverDetailResponse
@@ -948,8 +977,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除单个收件人
-     *
+     * <b>summary</b> : 
+     * <p>删除单个收件人</p>
+     * 
      * @param request DeleteReceiverDetailRequest
      * @return DeleteReceiverDetailResponse
      */
@@ -959,8 +989,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除标签
-     *
+     * <b>summary</b> : 
+     * <p>删除标签</p>
+     * 
      * @param request DeleteTagRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteTagResponse
@@ -1002,8 +1033,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除标签
-     *
+     * <b>summary</b> : 
+     * <p>删除标签</p>
+     * 
      * @param request DeleteTagRequest
      * @return DeleteTagResponse
      */
@@ -1059,8 +1091,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取域名详情
-     *
+     * <b>summary</b> : 
+     * <p>获取域名详情</p>
+     * 
      * @param request DescDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescDomainResponse
@@ -1106,8 +1139,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取域名详情
-     *
+     * <b>summary</b> : 
+     * <p>获取域名详情</p>
+     * 
      * @param request DescDomainRequest
      * @return DescDomainResponse
      */
@@ -1117,8 +1151,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取IP保护信息
-     *
+     * <b>summary</b> : 
+     * <p>获取IP保护信息</p>
+     * 
      * @param request GetIpProtectionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetIpProtectionResponse
@@ -1156,8 +1191,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取IP保护信息
-     *
+     * <b>summary</b> : 
+     * <p>获取IP保护信息</p>
+     * 
      * @param request GetIpProtectionRequest
      * @return GetIpProtectionResponse
      */
@@ -1167,8 +1203,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取IP防护信息
-     *
+     * <b>summary</b> : 
+     * <p>获取IP防护信息</p>
+     * 
      * @param request GetIpfilterListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetIpfilterListResponse
@@ -1206,8 +1243,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取IP防护信息
-     *
+     * <b>summary</b> : 
+     * <p>获取IP防护信息</p>
+     * 
      * @param request GetIpfilterListRequest
      * @return GetIpfilterListResponse
      */
@@ -1217,8 +1255,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取用户无效地址级别配置
-     *
+     * <b>summary</b> : 
+     * <p>获取用户无效地址级别配置</p>
+     * 
      * @param request GetSuppressionListLevelRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetSuppressionListLevelResponse
@@ -1256,8 +1295,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取用户无效地址级别配置
-     *
+     * <b>summary</b> : 
+     * <p>获取用户无效地址级别配置</p>
+     * 
      * @param request GetSuppressionListLevelRequest
      * @return GetSuppressionListLevelResponse
      */
@@ -1267,8 +1307,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取跟踪信息
-     *
+     * <b>summary</b> : 
+     * <p>获取跟踪信息</p>
+     * 
      * @param request GetTrackListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetTrackListResponse
@@ -1276,6 +1317,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetTrackListResponse getTrackListWithOptions(GetTrackListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accountName)) {
+            query.put("AccountName", request.accountName);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
             query.put("EndTime", request.endTime);
         }
@@ -1316,6 +1361,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("StartTime", request.startTime);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tagName)) {
+            query.put("TagName", request.tagName);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.total)) {
             query.put("Total", request.total);
         }
@@ -1338,8 +1387,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取跟踪信息
-     *
+     * <b>summary</b> : 
+     * <p>获取跟踪信息</p>
+     * 
      * @param request GetTrackListRequest
      * @return GetTrackListResponse
      */
@@ -1349,8 +1399,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 根据发信地址和Tag名称获取跟踪信息
-     *
+     * <b>summary</b> : 
+     * <p>根据发信地址和Tag名称获取跟踪信息</p>
+     * 
      * @param request GetTrackListByMailFromAndTagNameRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetTrackListByMailFromAndTagNameResponse
@@ -1428,8 +1479,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 根据发信地址和Tag名称获取跟踪信息
-     *
+     * <b>summary</b> : 
+     * <p>根据发信地址和Tag名称获取跟踪信息</p>
+     * 
      * @param request GetTrackListByMailFromAndTagNameRequest
      * @return GetTrackListByMailFromAndTagNameResponse
      */
@@ -1439,8 +1491,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取账号详情
-     *
+     * <b>summary</b> : 
+     * <p>获取账号详情</p>
+     * 
      * @param request GetUserRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetUserResponse
@@ -1462,8 +1515,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取账号详情
-     *
+     * <b>summary</b> : 
+     * <p>获取账号详情</p>
      * @return GetUserResponse
      */
     public GetUserResponse getUser() throws Exception {
@@ -1472,8 +1525,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 列出用户无效地址
-     *
+     * <b>summary</b> : 
+     * <p>列出用户无效地址</p>
+     * 
      * @param request ListUserSuppressionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListUserSuppressionResponse
@@ -1539,8 +1593,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 列出用户无效地址
-     *
+     * <b>summary</b> : 
+     * <p>列出用户无效地址</p>
+     * 
      * @param request ListUserSuppressionRequest
      * @return ListUserSuppressionResponse
      */
@@ -1550,8 +1605,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 修改发信地址
-     *
+     * <b>summary</b> : 
+     * <p>修改发信地址</p>
+     * 
      * @param request ModifyMailAddressRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyMailAddressResponse
@@ -1601,8 +1657,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 修改发信地址
-     *
+     * <b>summary</b> : 
+     * <p>修改发信地址</p>
+     * 
      * @param request ModifyMailAddressRequest
      * @return ModifyMailAddressResponse
      */
@@ -1612,8 +1669,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 修改域级别密码
-     *
+     * <b>summary</b> : 
+     * <p>修改域级别密码</p>
+     * 
      * @param request ModifyPWByDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyPWByDomainResponse
@@ -1659,8 +1717,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 修改域级别密码
-     *
+     * <b>summary</b> : 
+     * <p>修改域级别密码</p>
+     * 
      * @param request ModifyPWByDomainRequest
      * @return ModifyPWByDomainResponse
      */
@@ -1670,8 +1729,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 修改标签
-     *
+     * <b>summary</b> : 
+     * <p>修改标签</p>
+     * 
      * @param request ModifyTagRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyTagResponse
@@ -1721,8 +1781,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 修改标签
-     *
+     * <b>summary</b> : 
+     * <p>修改标签</p>
+     * 
      * @param request ModifyTagRequest
      * @return ModifyTagResponse
      */
@@ -1732,8 +1793,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询域名信息
-     *
+     * <b>summary</b> : 
+     * <p>查询域名信息</p>
+     * 
      * @param request QueryDomainByParamRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryDomainByParamResponse
@@ -1787,8 +1849,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询域名信息
-     *
+     * <b>summary</b> : 
+     * <p>查询域名信息</p>
+     * 
      * @param request QueryDomainByParamRequest
      * @return QueryDomainByParamResponse
      */
@@ -1798,8 +1861,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary NextStart修改为string
-     *
+     * <b>summary</b> : 
+     * <p>NextStart修改为string</p>
+     * 
      * @param request QueryInvalidAddressRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryInvalidAddressResponse
@@ -1857,8 +1921,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary NextStart修改为string
-     *
+     * <b>summary</b> : 
+     * <p>NextStart修改为string</p>
+     * 
      * @param request QueryInvalidAddressRequest
      * @return QueryInvalidAddressResponse
      */
@@ -1930,8 +1995,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询收信人列表详情
-     *
+     * <b>summary</b> : 
+     * <p>查询收信人列表详情</p>
+     * 
      * @param request QueryReceiverByParamRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryReceiverByParamResponse
@@ -1985,8 +2051,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询收信人列表详情
-     *
+     * <b>summary</b> : 
+     * <p>查询收信人列表详情</p>
+     * 
      * @param request QueryReceiverByParamRequest
      * @return QueryReceiverByParamResponse
      */
@@ -1996,8 +2063,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询收信人列表详情信息
-     *
+     * <b>summary</b> : 
+     * <p>查询收信人列表详情信息</p>
+     * 
      * @param request QueryReceiverDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryReceiverDetailResponse
@@ -2051,8 +2119,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询收信人列表详情信息
-     *
+     * <b>summary</b> : 
+     * <p>查询收信人列表详情信息</p>
+     * 
      * @param request QueryReceiverDetailRequest
      * @return QueryReceiverDetailResponse
      */
@@ -2182,8 +2251,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除用户无效地址
-     *
+     * <b>summary</b> : 
+     * <p>删除用户无效地址</p>
+     * 
      * @param request RemoveUserSuppressionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RemoveUserSuppressionResponse
@@ -2225,8 +2295,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除用户无效地址
-     *
+     * <b>summary</b> : 
+     * <p>删除用户无效地址</p>
+     * 
      * @param request RemoveUserSuppressionRequest
      * @return RemoveUserSuppressionResponse
      */
@@ -2236,8 +2307,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 建单个收件人
-     *
+     * <b>summary</b> : 
+     * <p>建单个收件人</p>
+     * 
      * @param request SaveReceiverDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SaveReceiverDetailResponse
@@ -2283,8 +2355,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 建单个收件人
-     *
+     * <b>summary</b> : 
+     * <p>建单个收件人</p>
+     * 
      * @param request SaveReceiverDetailRequest
      * @return SaveReceiverDetailResponse
      */
@@ -2294,8 +2367,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 发送模板测试邮件
-     *
+     * <b>summary</b> : 
+     * <p>发送模板测试邮件</p>
+     * 
      * @param request SendTestByTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SendTestByTemplateResponse
@@ -2365,8 +2439,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 发送模板测试邮件
-     *
+     * <b>summary</b> : 
+     * <p>发送模板测试邮件</p>
+     * 
      * @param request SendTestByTemplateRequest
      * @return SendTestByTemplateResponse
      */
@@ -2376,8 +2451,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取指定条件下的发送数据
-     *
+     * <b>summary</b> : 
+     * <p>获取指定条件下的发送数据</p>
+     * 
      * @param request SenderStatisticsByTagNameAndBatchIDRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SenderStatisticsByTagNameAndBatchIDResponse
@@ -2431,8 +2507,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取指定条件下的发送数据
-     *
+     * <b>summary</b> : 
+     * <p>获取指定条件下的发送数据</p>
+     * 
      * @param request SenderStatisticsByTagNameAndBatchIDRequest
      * @return SenderStatisticsByTagNameAndBatchIDResponse
      */
@@ -2442,8 +2519,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询投递结果详情
-     *
+     * <b>summary</b> : 
+     * <p>查询投递结果详情</p>
+     * 
      * @param request SenderStatisticsDetailByParamRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SenderStatisticsDetailByParamResponse
@@ -2513,8 +2591,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询投递结果详情
-     *
+     * <b>summary</b> : 
+     * <p>查询投递结果详情</p>
+     * 
      * @param request SenderStatisticsDetailByParamRequest
      * @return SenderStatisticsDetailByParamResponse
      */
@@ -2524,8 +2603,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 设置用户无效地址级别配置
-     *
+     * <b>summary</b> : 
+     * <p>设置用户无效地址级别配置</p>
+     * 
      * @param request SetSuppressionListLevelRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SetSuppressionListLevelResponse
@@ -2567,8 +2647,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 设置用户无效地址级别配置
-     *
+     * <b>summary</b> : 
+     * <p>设置用户无效地址级别配置</p>
+     * 
      * @param request SetSuppressionListLevelRequest
      * @return SetSuppressionListLevelResponse
      */
@@ -2578,8 +2659,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary API发信
-     *
+     * <b>summary</b> : 
+     * <p>API发信</p>
+     * 
      * @param request SingleSendMailRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SingleSendMailResponse
@@ -2673,8 +2755,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary API发信
-     *
+     * <b>summary</b> : 
+     * <p>API发信</p>
+     * 
      * @param request SingleSendMailRequest
      * @return SingleSendMailResponse
      */
@@ -2684,8 +2767,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新IP防护API
-     *
+     * <b>summary</b> : 
+     * <p>更新IP防护API</p>
+     * 
      * @param request UpdateIpProtectionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateIpProtectionResponse
@@ -2727,8 +2811,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新IP防护API
-     *
+     * <b>summary</b> : 
+     * <p>更新IP防护API</p>
+     * 
      * @param request UpdateIpProtectionRequest
      * @return UpdateIpProtectionResponse
      */
@@ -2738,8 +2823,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新帐号信息
-     *
+     * <b>summary</b> : 
+     * <p>更新帐号信息</p>
+     * 
      * @param tmpReq UpdateUserRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateUserResponse
@@ -2775,8 +2861,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新帐号信息
-     *
+     * <b>summary</b> : 
+     * <p>更新帐号信息</p>
+     * 
      * @param request UpdateUserRequest
      * @return UpdateUserResponse
      */

@@ -4,11 +4,18 @@ package com.aliyun.dm20151123.models;
 import com.aliyun.tea.*;
 
 public class GetTrackListByMailFromAndTagNameRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p><a href="mailto:e-service@amegroups.cn">e-service@amegroups.cn</a></p>
+     */
     @NameInMap("AccountName")
     public String accountName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-09-29</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -25,9 +32,17 @@ public class GetTrackListByMailFromAndTagNameRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public String pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public String pageSize;
 
@@ -39,10 +54,17 @@ public class GetTrackListByMailFromAndTagNameRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-09-29</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Subscription</p>
+     */
     @NameInMap("TagName")
     public String tagName;
 

@@ -4,12 +4,24 @@ package com.aliyun.dm20151123.models;
 import com.aliyun.tea.*;
 
 public class QueryInvalidAddressResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("NextStart")
     public String nextStart;
 
+    /**
+     * <strong>example:</strong>
+     * <p>95A7D497-F8DD-4834-B81E-C1783236E55F</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -54,12 +66,24 @@ public class QueryInvalidAddressResponseBody extends TeaModel {
     }
 
     public static class QueryInvalidAddressResponseBodyDataMailDetail extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2021-04-28T17:11Z</p>
+         */
         @NameInMap("LastUpdateTime")
         public String lastUpdateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:toaddress@test.com">toaddress@test.com</a></p>
+         */
         @NameInMap("ToAddress")
         public String toAddress;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1619601108</p>
+         */
         @NameInMap("UtcLastUpdateTime")
         public Long utcLastUpdateTime;
 

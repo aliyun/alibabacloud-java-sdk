@@ -4,15 +4,31 @@ package com.aliyun.dm20151123.models;
 import com.aliyun.tea.*;
 
 public class QueryReceiverDetailResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>UserName,NickName,Gender,Birthday,Mobile</p>
+     */
     @NameInMap("DataSchema")
     public String dataSchema;
 
+    /**
+     * <strong>example:</strong>
+     * <p>90f0243616#401#b68c2af70b9664b2843f90fd3630b1a3-1650779410#<a href="mailto:xxx@demo.aliyun.com">xxx@demo.aliyun.com</a></p>
+     */
     @NameInMap("NextStart")
     public String nextStart;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10A1AD70-E48E-476D-98D9-39BD92193837</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>361</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,15 +81,31 @@ public class QueryReceiverDetailResponseBody extends TeaModel {
     }
 
     public static class QueryReceiverDetailResponseBodyDataDetail extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2019-09-29T13:28Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{\&quot;Domains\&quot;: [\&quot;a.example.net\&quot;, \&quot;b.example.net\&quot;, \&quot;c.example.net\&quot;, \&quot;d.example.net\&quot;]}</p>
+         */
         @NameInMap("Data")
         public String data;
 
+        /**
+         * <strong>example:</strong>
+         * <p>a***@example.net</p>
+         */
         @NameInMap("Email")
         public String email;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1569734892</p>
+         */
         @NameInMap("UtcCreateTime")
         public Long utcCreateTime;
 

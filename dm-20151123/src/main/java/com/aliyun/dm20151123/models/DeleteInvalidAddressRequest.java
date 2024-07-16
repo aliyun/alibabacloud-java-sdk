@@ -13,6 +13,10 @@ public class DeleteInvalidAddressRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test1***@example.net</p>
+     */
     @NameInMap("ToAddress")
     public String toAddress;
 

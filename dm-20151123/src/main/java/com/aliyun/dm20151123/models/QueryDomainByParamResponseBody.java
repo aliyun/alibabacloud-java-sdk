@@ -4,15 +4,31 @@ package com.aliyun.dm20151123.models;
 import com.aliyun.tea.*;
 
 public class QueryDomainByParamResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>50</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>8C90CCD3-627C-4F87-AD8C-2F03146071EB</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,36 +81,80 @@ public class QueryDomainByParamResponseBody extends TeaModel {
     }
 
     public static class QueryDomainByParamResponseBodyDataDomain extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("CnameAuthStatus")
         public String cnameAuthStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ConfirmStatus")
         public String confirmStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2019-09-29T13:28Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>158923</p>
+         */
         @NameInMap("DomainId")
         public String domainId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vmeixme.com</p>
+         */
         @NameInMap("DomainName")
         public String domainName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>6bd86901b9fe4618a046</p>
+         */
         @NameInMap("DomainRecord")
         public String domainRecord;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("DomainStatus")
         public String domainStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("IcpStatus")
         public String icpStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("MxAuthStatus")
         public String mxAuthStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("SpfAuthStatus")
         public String spfAuthStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1569734892</p>
+         */
         @NameInMap("UtcCreateTime")
         public Long utcCreateTime;
 

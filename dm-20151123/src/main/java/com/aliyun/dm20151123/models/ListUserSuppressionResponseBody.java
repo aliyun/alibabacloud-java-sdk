@@ -7,15 +7,31 @@ public class ListUserSuppressionResponseBody extends TeaModel {
     @NameInMap("Data")
     public ListUserSuppressionResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1A846D66-5EC7-551B-9687-5BF1963DCFC1</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,18 +81,41 @@ public class ListUserSuppressionResponseBody extends TeaModel {
     }
 
     public static class ListUserSuppressionResponseBodyDataUserSuppressions extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:test@example.net">test@example.net</a></p>
+         */
         @NameInMap("Address")
         public String address;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1715667435</p>
+         */
         @NameInMap("CreateTime")
         public Integer createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1715667451</p>
+         */
         @NameInMap("LastBounceTime")
         public Integer lastBounceTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>59511</p>
+         */
         @NameInMap("SuppressionId")
         public Integer suppressionId;
 
+        /**
+         * <strong>example:</strong>
+         * <ul>
+         * <li>system</li>
+         * <li>user</li>
+         * </ul>
+         */
         @NameInMap("Type")
         public String type;
 
