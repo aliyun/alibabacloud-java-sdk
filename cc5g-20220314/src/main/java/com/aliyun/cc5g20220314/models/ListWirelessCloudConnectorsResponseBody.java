@@ -4,15 +4,31 @@ package com.aliyun.cc5g20220314.models;
 import com.aliyun.tea.*;
 
 public class ListWirelessCloudConnectorsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("MaxResults")
     public String maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>iou001238joojjaere</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1651FBB6-4FBF-49FF-A9F5-DF5D696C7EC6</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("TotalCount")
     public String totalCount;
 
@@ -65,38 +81,76 @@ public class ListWirelessCloudConnectorsResponseBody extends TeaModel {
     }
 
     public static class ListWirelessCloudConnectorsResponseBodyWirelessCloudConnectors extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Business</p>
+         */
         @NameInMap("BusinessType")
         public String businessType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20000</p>
+         */
         @NameInMap("CardCount")
         public String cardCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-3-15 22:20:00</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>dp-xxxx</p>
+         */
         @NameInMap("DataPackageId")
         public String dataPackageId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("DataPackageType")
         public String dataPackageType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cc5g-test</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>代表创建时间的资源属性字段</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CC5G</p>
+         */
         @NameInMap("ServiceType")
         public String serviceType;
 
         /**
          * <p>代表资源名称的资源属性字段</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
          */
         @NameInMap("Status")
         public String status;
@@ -104,11 +158,18 @@ public class ListWirelessCloudConnectorsResponseBody extends TeaModel {
         @NameInMap("UseCase")
         public String useCase;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cc5gg-****</p>
+         */
         @NameInMap("WirelessCloudConnectorGroupId")
         public String wirelessCloudConnectorGroupId;
 
         /**
          * <p>代表资源一级ID的资源属性字段</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc5g-xxxx</p>
          */
         @NameInMap("WirelessCloudConnectorId")
         public String wirelessCloudConnectorId;

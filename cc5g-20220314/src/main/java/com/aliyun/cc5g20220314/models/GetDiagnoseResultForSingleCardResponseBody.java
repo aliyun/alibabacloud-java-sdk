@@ -4,36 +4,72 @@ package com.aliyun.cc5g20220314.models;
 import com.aliyun.tea.*;
 
 public class GetDiagnoseResultForSingleCardResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1646100223024</p>
+     */
     @NameInMap("BeginTime")
     public Long beginTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10.176.78.61</p>
+     */
     @NameInMap("CardIp")
     public String cardIp;
 
+    /**
+     * <strong>example:</strong>
+     * <p>106.14.175.4</p>
+     */
     @NameInMap("Destination")
     public String destination;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Domain</p>
+     */
     @NameInMap("DestinationType")
     public String destinationType;
 
     @NameInMap("DiagnoseItem")
     public java.util.List<GetDiagnoseResultForSingleCardResponseBodyDiagnoseItem> diagnoseItem;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1646100223264</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
     @NameInMap("ErrorResult")
     public java.util.List<GetDiagnoseResultForSingleCardResponseBodyErrorResult> errorResult;
 
+    /**
+     * <strong>example:</strong>
+     * <p>89860477102170127555</p>
+     */
     @NameInMap("IccId")
     public String iccId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>94032572-8758-575E-B306-86F59D1B826E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>failed</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cc5g-xxxx</p>
+     */
     @NameInMap("WirelessCloudConnectorId")
     public String wirelessCloudConnectorId;
 
@@ -131,12 +167,24 @@ public class GetDiagnoseResultForSingleCardResponseBody extends TeaModel {
     }
 
     public static class GetDiagnoseResultForSingleCardResponseBodyDiagnoseItemSubItems extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>CardStatus</p>
+         */
         @NameInMap("SubItem")
         public String subItem;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Card status is real-time</p>
+         */
         @NameInMap("SubItemInfo")
         public String subItemInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Normal</p>
+         */
         @NameInMap("SubItemStatus")
         public String subItemStatus;
 
@@ -172,9 +220,17 @@ public class GetDiagnoseResultForSingleCardResponseBody extends TeaModel {
     }
 
     public static class GetDiagnoseResultForSingleCardResponseBodyDiagnoseItem extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Terminal</p>
+         */
         @NameInMap("Part")
         public String part;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Wrong</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -213,18 +269,38 @@ public class GetDiagnoseResultForSingleCardResponseBody extends TeaModel {
     }
 
     public static class GetDiagnoseResultForSingleCardResponseBodyErrorResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Terminal abnormal</p>
+         */
         @NameInMap("ErrorDesc")
         public String errorDesc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CardStatus</p>
+         */
         @NameInMap("ErrorItem")
         public String errorItem;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Warning</p>
+         */
         @NameInMap("ErrorLevel")
         public String errorLevel;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Terminal</p>
+         */
         @NameInMap("ErrorPart")
         public String errorPart;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Please check whether the terminal and card are compatible or whether the terminal can send messages</p>
+         */
         @NameInMap("ErrorSuggestion")
         public String errorSuggestion;
 

@@ -4,12 +4,24 @@ package com.aliyun.cc5g20220314.models;
 import com.aliyun.tea.*;
 
 public class GetCreateCustomerInformationResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("CanBuyCard")
     public String canBuyCard;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AE0BA8E5-1E0C-5171-852F-826301C76BBE</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>https://*******</p>
+     */
     @NameInMap("URL")
     public String URL;
 

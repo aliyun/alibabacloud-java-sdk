@@ -4,18 +4,40 @@ package com.aliyun.cc5g20220314.models;
 import com.aliyun.tea.*;
 
 public class ListAPNsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>CMWAP</p>
+     */
     @NameInMap("APN")
     public String APN;
 
+    /**
+     * <strong>example:</strong>
+     * <p>unicom</p>
+     */
     @NameInMap("ISP")
     public String ISP;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("MaxResults")
     public Long maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

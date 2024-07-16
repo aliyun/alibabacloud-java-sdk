@@ -4,15 +4,35 @@ package com.aliyun.cc5g20220314.models;
 import com.aliyun.tea.*;
 
 public class DeleteGroupAuthorizationRuleRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ar5gg-12fnojjtkkre28t08j</p>
+     */
     @NameInMap("AuthorizationRuleId")
     public String authorizationRuleId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>TF-******-1633255280-43c94bf7-2dd3-4c14-8</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cc5gg-****</p>
+     */
     @NameInMap("WirelessCloudConnectorGroupId")
     public String wirelessCloudConnectorGroupId;
 

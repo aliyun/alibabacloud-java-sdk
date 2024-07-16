@@ -4,9 +4,17 @@ package com.aliyun.cc5g20220314.models;
 import com.aliyun.tea.*;
 
 public class ListIoTCloudConnectorBackhaulRouteResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>cciot-xxxx</p>
+     */
     @NameInMap("NetLinkId")
     public String netLinkId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>94032572-8758-575E-B306-86F59D1B826E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -45,30 +53,45 @@ public class ListIoTCloudConnectorBackhaulRouteResponseBody extends TeaModel {
     public static class ListIoTCloudConnectorBackhaulRouteResponseBodyRoutes extends TeaModel {
         /**
          * <p>代表创建时间的资源属性字段</p>
+         * 
+         * <strong>example:</strong>
+         * <p>full cidr block route</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>代表资源名称的资源属性字段</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.33.190.0/24</p>
          */
         @NameInMap("DestinationCidrBlock")
         public String destinationCidrBlock;
 
         /**
          * <p>代表创建时间的资源属性字段</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eni-uf677iw3xihqxiz2ssir</p>
          */
         @NameInMap("NextHopId")
         public String nextHopId;
 
         /**
          * <p>代表创建时间的资源属性字段</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NetworkInterface</p>
          */
         @NameInMap("NextHopType")
         public String nextHopType;
 
         /**
          * <p>代表创建时间的资源属性字段</p>
+         * 
+         * <strong>example:</strong>
+         * <p>published</p>
          */
         @NameInMap("Status")
         public String status;

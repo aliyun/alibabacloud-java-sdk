@@ -7,15 +7,31 @@ public class ListAPNsResponseBody extends TeaModel {
     @NameInMap("APNs")
     public java.util.List<ListAPNsResponseBodyAPNs> APNs;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("MaxResults")
     public String maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>vhNxI+jwQfkLCUChCQ+iOoiRkyUbtAilGSvWuwktFBxF+bar2HpV0efI6n1+GkMv</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>A175C091-3910-51AF-8D84-D5717B9B8D38</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("TotalCount")
     public String totalCount;
 
@@ -67,6 +83,9 @@ public class ListAPNsResponseBody extends TeaModel {
     public static class ListAPNsResponseBodyAPNs extends TeaModel {
         /**
          * <p>代表资源名称的资源属性字段</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zjhzaliyun01s.5gjs.njiot</p>
          */
         @NameInMap("APN")
         public String APN;
@@ -76,6 +95,9 @@ public class ListAPNsResponseBody extends TeaModel {
 
         /**
          * <p>代表资源一级ID的资源属性字段</p>
+         * 
+         * <strong>example:</strong>
+         * <p>unicom</p>
          */
         @NameInMap("ISP")
         public String ISP;

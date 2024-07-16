@@ -4,6 +4,10 @@ package com.aliyun.cc5g20220314.models;
 import com.aliyun.tea.*;
 
 public class FailCardsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>186B6E37-D9D1-5E64-ACDE-E89F7E68A37B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

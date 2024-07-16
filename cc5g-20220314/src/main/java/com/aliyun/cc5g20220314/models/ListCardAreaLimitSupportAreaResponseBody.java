@@ -7,6 +7,10 @@ public class ListCardAreaLimitSupportAreaResponseBody extends TeaModel {
     @NameInMap("Provinces")
     public java.util.List<String> provinces;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1651FBB6-4FBF-49FF-A9F5-DF5D696C7EC6</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

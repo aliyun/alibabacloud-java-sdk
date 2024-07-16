@@ -4,6 +4,10 @@ package com.aliyun.cc5g20220314.models;
 import com.aliyun.tea.*;
 
 public class RebindCardsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>D2A9864E-BB8D-5A5C-90FC-E2FBD5D0BF9B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

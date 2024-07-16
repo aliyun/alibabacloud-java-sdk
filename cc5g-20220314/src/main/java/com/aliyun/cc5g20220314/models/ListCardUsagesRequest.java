@@ -7,6 +7,12 @@ public class ListCardUsagesRequest extends TeaModel {
     @NameInMap("Iccids")
     public java.util.List<String> iccids;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cc5g-xxxx</p>
+     */
     @NameInMap("WirelessCloudConnectorId")
     public String wirelessCloudConnectorId;
 

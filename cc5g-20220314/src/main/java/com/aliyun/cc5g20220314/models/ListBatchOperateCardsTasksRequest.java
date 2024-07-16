@@ -7,15 +7,27 @@ public class ListBatchOperateCardsTasksRequest extends TeaModel {
     @NameInMap("BatchOperateCardsTaskIds")
     public java.util.List<String> batchOperateCardsTaskIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("MaxResults")
     public Long maxResults;
 
     @NameInMap("Names")
     public java.util.List<String> names;
 
+    /**
+     * <strong>example:</strong>
+     * <p>iou001238joojjaere</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

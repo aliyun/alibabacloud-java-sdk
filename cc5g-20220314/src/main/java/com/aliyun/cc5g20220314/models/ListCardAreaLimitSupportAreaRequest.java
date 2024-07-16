@@ -4,12 +4,20 @@ package com.aliyun.cc5g20220314.models;
 import com.aliyun.tea.*;
 
 public class ListCardAreaLimitSupportAreaRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>en</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     @NameInMap("ProvinceName")
     public String provinceName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

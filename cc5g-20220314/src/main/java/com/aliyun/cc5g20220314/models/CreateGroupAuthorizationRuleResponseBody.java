@@ -4,9 +4,17 @@ package com.aliyun.cc5g20220314.models;
 import com.aliyun.tea.*;
 
 public class CreateGroupAuthorizationRuleResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ar5gg-xxxx</p>
+     */
     @NameInMap("AuthorizationRuleId")
     public String authorizationRuleId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AA93A076-3D94-51AB-AC70-4C94AF003B03</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

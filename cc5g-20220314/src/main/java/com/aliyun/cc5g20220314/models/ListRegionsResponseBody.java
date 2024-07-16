@@ -7,6 +7,10 @@ public class ListRegionsResponseBody extends TeaModel {
     @NameInMap("Regions")
     public java.util.List<ListRegionsResponseBodyRegions> regions;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2DCFA69E-A161-512D-99A7-108022580719</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -40,6 +44,9 @@ public class ListRegionsResponseBody extends TeaModel {
 
         /**
          * <p>代表资源一级ID的资源属性字段</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;

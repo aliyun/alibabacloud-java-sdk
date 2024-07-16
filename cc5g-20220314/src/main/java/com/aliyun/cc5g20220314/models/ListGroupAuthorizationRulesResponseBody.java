@@ -7,15 +7,31 @@ public class ListGroupAuthorizationRulesResponseBody extends TeaModel {
     @NameInMap("GroupAuthorizationRules")
     public java.util.List<ListGroupAuthorizationRulesResponseBodyGroupAuthorizationRules> groupAuthorizationRules;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("MaxResults")
     public String maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>iou001238joojjaere</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1651FBB6-4FBF-49FF-A9F5-DF5D696C7EC6</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("TotalCount")
     public String totalCount;
 
@@ -67,49 +83,98 @@ public class ListGroupAuthorizationRulesResponseBody extends TeaModel {
     public static class ListGroupAuthorizationRulesResponseBodyGroupAuthorizationRules extends TeaModel {
         /**
          * <p>代表资源一级ID的资源属性字段</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ar5gg-y5g4rp2w1tl1w7zg59</p>
          */
         @NameInMap("AuthorizationRuleId")
         public String authorizationRuleId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-06-21 15:27:24</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ar5gg-test</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>47.103.184.100/32</p>
+         */
         @NameInMap("Destination")
         public String destination;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0-65535</p>
+         */
         @NameInMap("DestinationPort")
         public String destinationPort;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Cidr</p>
+         */
         @NameInMap("DestinationType")
         public String destinationType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Dns")
         public Boolean dns;
 
         /**
          * <p>代表创建时间的资源属性字段</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Permit</p>
+         */
         @NameInMap("Policy")
         public String policy;
 
+        /**
+         * <strong>example:</strong>
+         * <p>all</p>
+         */
         @NameInMap("Protocol")
         public String protocol;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.0.0.0/0</p>
+         */
         @NameInMap("SourceCidr")
         public String sourceCidr;
 
         /**
          * <p>代表资源名称的资源属性字段</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Creating</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Default</p>
+         */
         @NameInMap("Type")
         public String type;
 

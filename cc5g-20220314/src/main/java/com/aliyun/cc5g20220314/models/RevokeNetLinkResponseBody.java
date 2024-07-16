@@ -4,6 +4,10 @@ package com.aliyun.cc5g20220314.models;
 import com.aliyun.tea.*;
 
 public class RevokeNetLinkResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1E781588-69D4-56C3-93BA-DEFECF2596B8</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

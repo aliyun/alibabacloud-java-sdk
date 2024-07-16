@@ -4,18 +4,40 @@ package com.aliyun.cc5g20220314.models;
 import com.aliyun.tea.*;
 
 public class UpdateBatchOperateCardsTaskRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>boct-xxxx</p>
+     */
     @NameInMap("BatchOperateCardsTaskId")
     public String batchOperateCardsTaskId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>TF-******-1633255280-43c94bf7-2dd3-4c14-8</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>task-test</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CurrentMonth</p>
+     */
     @NameInMap("EffectType")
     public String effectType;
 
@@ -25,15 +47,31 @@ public class UpdateBatchOperateCardsTaskRequest extends TeaModel {
     @NameInMap("IccidsOssFilePath")
     public String iccidsOssFilePath;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>BreakNetwork</p>
+     */
     @NameInMap("OperateType")
     public String operateType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("Threshold")
     public Long threshold;
 

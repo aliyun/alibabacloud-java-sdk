@@ -7,15 +7,31 @@ public class ListBatchOperateCardsTasksResponseBody extends TeaModel {
     @NameInMap("BatchOperateCardsTasks")
     public java.util.List<ListBatchOperateCardsTasksResponseBodyBatchOperateCardsTasks> batchOperateCardsTasks;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("MaxResults")
     public String maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>iou001238joojjaere</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1651FBB6-4FBF-49FF-A9F5-DF5D696C7EC6</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("TotalCount")
     public String totalCount;
 
@@ -65,9 +81,17 @@ public class ListBatchOperateCardsTasksResponseBody extends TeaModel {
     }
 
     public static class ListBatchOperateCardsTasksResponseBodyBatchOperateCardsTasksWirelessCloudConnectors extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Deleted</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cc5g-xxxx</p>
+         */
         @NameInMap("WirelessCloudConnectorId")
         public String wirelessCloudConnectorId;
 
@@ -97,37 +121,75 @@ public class ListBatchOperateCardsTasksResponseBody extends TeaModel {
     public static class ListBatchOperateCardsTasksResponseBodyBatchOperateCardsTasks extends TeaModel {
         /**
          * <p>代表资源一级ID的资源属性字段</p>
+         * 
+         * <strong>example:</strong>
+         * <p>boct-xxxx</p>
          */
         @NameInMap("BatchOperateCardsTaskId")
         public String batchOperateCardsTaskId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-3-15 22:20:00</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>task-test</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CurrentMonth</p>
+         */
         @NameInMap("EffectType")
         public String effectType;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://examplebucket.oss-eu-central-1.aliyuncs.com/">https://examplebucket.oss-eu-central-1.aliyuncs.com/</a>***</p>
+         */
         @NameInMap("IccidsOssFilePath")
         public String iccidsOssFilePath;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://examplebucket.oss-eu-central-1.aliyuncs.com/">https://examplebucket.oss-eu-central-1.aliyuncs.com/</a>***</p>
+         */
         @NameInMap("OperateResultOssFilePath")
         public String operateResultOssFilePath;
 
         /**
          * <p>代表创建时间的资源属性字段</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BreakNetwork</p>
          */
         @NameInMap("OperateType")
         public String operateType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Available</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Threshold")
         public String threshold;
 

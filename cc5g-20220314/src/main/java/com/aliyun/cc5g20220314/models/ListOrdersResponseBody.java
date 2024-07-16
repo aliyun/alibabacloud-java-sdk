@@ -4,18 +4,34 @@ package com.aliyun.cc5g20220314.models;
 import com.aliyun.tea.*;
 
 public class ListOrdersResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("MaxResults")
     public String maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>iou001238joojjaere</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
     @NameInMap("Orders")
     public java.util.List<ListOrdersResponseBodyOrders> orders;
 
+    /**
+     * <strong>example:</strong>
+     * <p>88C2F32F-B641-5980-B7A5-6907050ABCD1</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("TotalCount")
     public String totalCount;
 
@@ -67,57 +83,115 @@ public class ListOrdersResponseBody extends TeaModel {
     public static class ListOrdersResponseBodyOrders extends TeaModel {
         /**
          * <p>代表创建时间的资源属性字段</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NewBuy</p>
          */
         @NameInMap("Action")
         public String action;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20000</p>
+         */
         @NameInMap("CardCount")
         public String cardCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5G</p>
+         */
         @NameInMap("CardNetType")
         public String cardNetType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CONSUMER_THREE_IN_ONE</p>
+         */
         @NameInMap("CardType")
         public String cardType;
 
         @NameInMap("ContactName")
         public String contactName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>139000*******</p>
+         */
         @NameInMap("ContactPhone")
         public String contactPhone;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-3-15 21:20:00</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>order-test</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SF14*********</p>
+         */
         @NameInMap("LogisticsId")
         public String logisticsId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Signed</p>
+         */
         @NameInMap("LogisticsStatus")
         public String logisticsStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SF</p>
+         */
         @NameInMap("LogisticsType")
         public String logisticsType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-3-15 22:20:00</p>
+         */
         @NameInMap("LogisticsUpdateTime")
         public String logisticsUpdateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>89************</p>
+         */
         @NameInMap("OrderId")
         public String orderId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-3-15 21:30:00</p>
+         */
         @NameInMap("PayTime")
         public String payTime;
 
         @NameInMap("PostAddress")
         public String postAddress;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>代表资源名称的资源属性字段</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Pending</p>
          */
         @NameInMap("Status")
         public String status;

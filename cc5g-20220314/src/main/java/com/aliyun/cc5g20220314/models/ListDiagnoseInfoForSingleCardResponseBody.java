@@ -7,15 +7,31 @@ public class ListDiagnoseInfoForSingleCardResponseBody extends TeaModel {
     @NameInMap("DiagnoseInfo")
     public java.util.List<ListDiagnoseInfoForSingleCardResponseBodyDiagnoseInfo> diagnoseInfo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("MaxResults")
     public Long maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>E1E237B1-EED7-55D5-AE5F-671E642DB3B5</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>50</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -65,39 +81,87 @@ public class ListDiagnoseInfoForSingleCardResponseBody extends TeaModel {
     }
 
     public static class ListDiagnoseInfoForSingleCardResponseBodyDiagnoseInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1662307200000</p>
+         */
         @NameInMap("BeginTime")
         public Long beginTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10.176.78.61</p>
+         */
         @NameInMap("CardIp")
         public String cardIp;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://www.xxx.com">www.xxx.com</a></p>
+         */
         @NameInMap("Destination")
         public String destination;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Domain</p>
+         */
         @NameInMap("DestinationType")
         public String destinationType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>diagnoseTask-bp2x7tzkdl655liw3mhbg</p>
+         */
         @NameInMap("DiagnoseTaskId")
         public String diagnoseTaskId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1662307202400</p>
+         */
         @NameInMap("DiagnoseTime")
         public Long diagnoseTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1662307201200</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>89860477102170127555</p>
+         */
         @NameInMap("IccId")
         public String iccId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>89860477102170127555</p>
+         */
         @NameInMap("Source")
         public String source;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Iccid</p>
+         */
         @NameInMap("SourceType")
         public String sourceType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>failed</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cc5g-xxxx</p>
+         */
         @NameInMap("WirelessCloudConnectorId")
         public String wirelessCloudConnectorId;
 

@@ -4,27 +4,63 @@ package com.aliyun.cc5g20220314.models;
 import com.aliyun.tea.*;
 
 public class UpdateDNSAuthorizationRuleRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ar5g-xxxx</p>
+     */
     @NameInMap("AuthorizationRuleId")
     public String authorizationRuleId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>TF-******-1633255280-43c94bf7-2dd3-4c14-8</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ar5g-test</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10.0.0.1</p>
+     */
     @NameInMap("DestinationIp")
     public String destinationIp;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0.0.0.0</p>
+     */
     @NameInMap("SourceDNSIp")
     public String sourceDNSIp;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cc5g-xxxx</p>
+     */
     @NameInMap("WirelessCloudConnectorId")
     public String wirelessCloudConnectorId;
 
