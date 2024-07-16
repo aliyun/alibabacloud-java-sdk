@@ -4,6 +4,9 @@ package com.aliyun.dm20170622.models;
 import com.aliyun.tea.*;
 
 public class CheckDomainDnsRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DomainId")
     public Integer domainId;
 

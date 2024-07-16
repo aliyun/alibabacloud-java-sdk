@@ -4,15 +4,31 @@ package com.aliyun.dm20170622.models;
 import com.aliyun.tea.*;
 
 public class QueryTagByParamResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10A1AD70-E48E-476D-98D9-39BD92193837</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,12 +81,24 @@ public class QueryTagByParamResponseBody extends TeaModel {
     }
 
     public static class QueryTagByParamResponseBodyDataTag extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>test description</p>
+         */
         @NameInMap("TagDescription")
         public String tagDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>52366</p>
+         */
         @NameInMap("TagId")
         public String tagId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("TagName")
         public String tagName;
 

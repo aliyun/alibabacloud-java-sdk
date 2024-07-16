@@ -4,18 +4,38 @@ package com.aliyun.dm20170622.models;
 import com.aliyun.tea.*;
 
 public class SingleSendMailV2ShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test***@example.net</p>
+     */
     @NameInMap("AccountName")
     public String accountName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("AddressType")
     public Integer addressType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("ClickTrace")
     public String clickTrace;
 
     @NameInMap("FromAlias")
     public String fromAlias;
 
+    /**
+     * <strong>example:</strong>
+     * <p>body</p>
+     */
     @NameInMap("HtmlBody")
     public String htmlBody;
 
@@ -25,12 +45,22 @@ public class SingleSendMailV2ShrinkRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test2***@example.net</p>
+     */
     @NameInMap("ReplyAddress")
     public String replyAddress;
 
     @NameInMap("ReplyAddressAlias")
     public String replyAddressAlias;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("ReplyToAddress")
     public Boolean replyToAddress;
 
@@ -40,15 +70,35 @@ public class SingleSendMailV2ShrinkRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Subject</p>
+     */
     @NameInMap("Subject")
     public String subject;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("TagName")
     public String tagName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>body</p>
+     */
     @NameInMap("TextBody")
     public String textBody;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test1***@example.net</p>
+     */
     @NameInMap("ToAddress")
     public String toAddress;
 

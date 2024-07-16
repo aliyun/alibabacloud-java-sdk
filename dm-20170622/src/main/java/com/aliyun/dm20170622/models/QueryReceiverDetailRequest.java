@@ -16,6 +16,9 @@ public class QueryReceiverDetailRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ReceiverId")
     public String receiverId;
 

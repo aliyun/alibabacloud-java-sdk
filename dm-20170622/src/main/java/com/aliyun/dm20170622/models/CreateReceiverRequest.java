@@ -10,9 +10,15 @@ public class CreateReceiverRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ReceiversAlias")
     public String receiversAlias;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ReceiversName")
     public String receiversName;
 

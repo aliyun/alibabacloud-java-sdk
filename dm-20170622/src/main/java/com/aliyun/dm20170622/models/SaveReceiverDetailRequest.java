@@ -4,12 +4,18 @@ package com.aliyun.dm20170622.models;
 import com.aliyun.tea.*;
 
 public class SaveReceiverDetailRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Detail")
     public String detail;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ReceiverId")
     public String receiverId;
 
