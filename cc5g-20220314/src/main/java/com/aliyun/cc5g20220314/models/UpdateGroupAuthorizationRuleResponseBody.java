@@ -4,6 +4,10 @@ package com.aliyun.cc5g20220314.models;
 import com.aliyun.tea.*;
 
 public class UpdateGroupAuthorizationRuleResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>79B01B1A-7089-552F-9798-DEDFFBAAED5F</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

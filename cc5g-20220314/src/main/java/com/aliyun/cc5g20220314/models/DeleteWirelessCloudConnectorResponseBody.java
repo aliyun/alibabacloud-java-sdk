@@ -4,6 +4,10 @@ package com.aliyun.cc5g20220314.models;
 import com.aliyun.tea.*;
 
 public class DeleteWirelessCloudConnectorResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1651FBB6-4FBF-49FF-A9F5-DF5D696C7EC6</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

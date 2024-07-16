@@ -4,12 +4,25 @@ package com.aliyun.cc5g20220314.models;
 import com.aliyun.tea.*;
 
 public class ListCardDayUsagesRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Iccids")
     public java.util.List<String> iccids;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("LatestMonthNum")
     public Integer latestMonthNum;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cc5g-xxxx</p>
+     */
     @NameInMap("WirelessCloudConnectorId")
     public String wirelessCloudConnectorId;
 

@@ -7,18 +7,32 @@ public class ListDataPackagesRequest extends TeaModel {
     @NameInMap("DataPackageIds")
     public java.util.List<String> dataPackageIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("MaxResults")
     public Long maxResults;
 
     @NameInMap("Names")
     public java.util.List<String> names;
 
+    /**
+     * <strong>example:</strong>
+     * <p>iou001238joojjaere</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
     @NameInMap("Statuses")
     public java.util.List<String> statuses;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cc5g-xxxx</p>
+     */
     @NameInMap("WirelessCloudConnectorId")
     public String wirelessCloudConnectorId;
 

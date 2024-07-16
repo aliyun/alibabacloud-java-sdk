@@ -4,6 +4,10 @@ package com.aliyun.cc5g20220314.models;
 import com.aliyun.tea.*;
 
 public class UnlockCardsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>81CB64DF-E328-50A3-B386-03CAD604C114</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

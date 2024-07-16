@@ -4,9 +4,17 @@ package com.aliyun.cc5g20220314.models;
 import com.aliyun.tea.*;
 
 public class AddDNSAuthorizationRuleResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ar5g-xxxx</p>
+     */
     @NameInMap("AuthorizationRuleId")
     public String authorizationRuleId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1651FBB6-4FBF-49FF-A9F5-DF5D696C7EC6</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

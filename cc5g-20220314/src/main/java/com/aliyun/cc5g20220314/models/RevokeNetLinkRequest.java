@@ -4,15 +4,35 @@ package com.aliyun.cc5g20220314.models;
 import com.aliyun.tea.*;
 
 public class RevokeNetLinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>8278082c-0b8c-412c-b0ad-876a3cf0d0f8</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iotcc-ua6xy4vpmi24y114ws</p>
+     */
     @NameInMap("NetLinkId")
     public String netLinkId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cc5g-xxxx</p>
+     */
     @NameInMap("WirelessCloudConnectorId")
     public String wirelessCloudConnectorId;
 

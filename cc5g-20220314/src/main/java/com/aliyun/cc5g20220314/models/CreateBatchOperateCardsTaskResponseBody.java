@@ -4,12 +4,24 @@ package com.aliyun.cc5g20220314.models;
 import com.aliyun.tea.*;
 
 public class CreateBatchOperateCardsTaskResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>boct-xxxx</p>
+     */
     @NameInMap("BatchOperateCardsTaskId")
     public String batchOperateCardsTaskId;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://examplebucket.oss-eu-central-1.aliyuncs.com/">https://examplebucket.oss-eu-central-1.aliyuncs.com/</a>***</p>
+     */
     @NameInMap("OperateResultOssFilePath")
     public String operateResultOssFilePath;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1651FBB6-4FBF-49FF-A9F5-DF5D696C7EC6</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

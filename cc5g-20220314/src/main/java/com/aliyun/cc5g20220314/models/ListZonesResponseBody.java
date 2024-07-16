@@ -4,6 +4,10 @@ package com.aliyun.cc5g20220314.models;
 import com.aliyun.tea.*;
 
 public class ListZonesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>C2C1DE7C-E14C-53DE-920D-D63ACD7421A4</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -40,6 +44,9 @@ public class ListZonesResponseBody extends TeaModel {
 
         /**
          * <p>代表资源名称的资源属性字段</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;

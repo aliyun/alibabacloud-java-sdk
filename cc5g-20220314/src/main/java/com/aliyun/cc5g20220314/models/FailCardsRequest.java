@@ -4,15 +4,33 @@ package com.aliyun.cc5g20220314.models;
 import com.aliyun.tea.*;
 
 public class FailCardsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>TF-CreateServerlessDBInstance-1639649079-51d933f6-0251-4057-9276</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FailCards</p>
+     */
     @NameInMap("Iccids")
     public java.util.List<String> iccids;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

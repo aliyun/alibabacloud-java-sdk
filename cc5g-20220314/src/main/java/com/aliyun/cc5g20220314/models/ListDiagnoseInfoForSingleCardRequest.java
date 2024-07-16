@@ -4,24 +4,54 @@ package com.aliyun.cc5g20220314.models;
 import com.aliyun.tea.*;
 
 public class ListDiagnoseInfoForSingleCardRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionNo")
     public String regionNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>89860477102170127555</p>
+     */
     @NameInMap("Source")
     public String source;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Iccid</p>
+     */
     @NameInMap("SourceType")
     public String sourceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cc5g-xxxx</p>
+     */
     @NameInMap("WirelessCloudConnectorId")
     public String wirelessCloudConnectorId;
 

@@ -4,18 +4,44 @@ package com.aliyun.cc5g20220314.models;
 import com.aliyun.tea.*;
 
 public class GrantNetLinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>f0ba469f-de7f-4dde-8390-0966a1a0ef9a</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>False</p>
+     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>11111111111</p>
+     */
     @NameInMap("GrantAliUid")
     public Long grantAliUid;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cciot-xxxx</p>
+     */
     @NameInMap("NetLinkId")
     public String netLinkId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cc5g-xxxx</p>
+     */
     @NameInMap("WirelessCloudConnectorId")
     public String wirelessCloudConnectorId;
 

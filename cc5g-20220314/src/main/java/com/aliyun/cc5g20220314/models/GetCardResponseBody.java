@@ -4,75 +4,171 @@ package com.aliyun.cc5g20220314.models;
 import com.aliyun.tea.*;
 
 public class GetCardResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>zjalyjs01s.5gjs.njiot</p>
+     */
     @NameInMap("APN")
     public String APN;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-08-25 17:34:57</p>
+     */
     @NameInMap("ActivatedTime")
     public String activatedTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1000</p>
+     */
     @NameInMap("AlarmThreshold")
     public Long alarmThreshold;
 
+    /**
+     * <strong>example:</strong>
+     * <p>iotcc-xxxxxxxx</p>
+     */
     @NameInMap("CloudConnectorId")
     public String cloudConnectorId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>task-test</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Unicom</p>
+     */
     @NameInMap("ISP")
     public String ISP;
 
+    /**
+     * <strong>example:</strong>
+     * <p>111111111</p>
+     */
     @NameInMap("Iccid")
     public String iccid;
 
+    /**
+     * <strong>example:</strong>
+     * <p>23412313513512</p>
+     */
     @NameInMap("Imei")
     public String imei;
 
+    /**
+     * <strong>example:</strong>
+     * <p>12123123</p>
+     */
     @NameInMap("Imsi")
     public String imsi;
 
+    /**
+     * <strong>example:</strong>
+     * <p>172.24.2.121</p>
+     */
     @NameInMap("IpAddress")
     public String ipAddress;
 
+    /**
+     * <strong>example:</strong>
+     * <p>50</p>
+     */
     @NameInMap("LimitThreshold")
     public Long limitThreshold;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Lock")
     public String lock;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2312341231235</p>
+     */
     @NameInMap("Msisdn")
     public String msisdn;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5G</p>
+     */
     @NameInMap("NetType")
     public String netType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>12312341234124</p>
+     */
     @NameInMap("OrderId")
     public String orderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0B28B72A-BD16-51F7-AAEE-55247FE02729</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Deactivated</p>
+     */
     @NameInMap("SimStatus")
     public String simStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CONSUMER_THREE_IN_ONE</p>
+     */
     @NameInMap("Spec")
     public String spec;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Available</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4096</p>
+     */
     @NameInMap("StopThreshold")
     public Long stopThreshold;
 
+    /**
+     * <strong>example:</strong>
+     * <p>50</p>
+     */
     @NameInMap("UsageDataMonth")
     public Integer usageDataMonth;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1000</p>
+     */
     @NameInMap("UsageDataTotal")
     public Long usageDataTotal;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cc5g-xxxxxxx</p>
+     */
     @NameInMap("WirelessCloudConnectorId")
     public String wirelessCloudConnectorId;
 

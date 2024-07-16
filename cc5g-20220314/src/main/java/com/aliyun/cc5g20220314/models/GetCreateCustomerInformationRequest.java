@@ -4,9 +4,17 @@ package com.aliyun.cc5g20220314.models;
 import com.aliyun.tea.*;
 
 public class GetCreateCustomerInformationRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cc5g-xxx</p>
+     */
     @NameInMap("WirelessCloudConnectorId")
     public String wirelessCloudConnectorId;
 

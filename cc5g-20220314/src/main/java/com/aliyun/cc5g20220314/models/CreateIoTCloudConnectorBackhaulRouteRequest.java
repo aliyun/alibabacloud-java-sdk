@@ -4,15 +4,33 @@ package com.aliyun.cc5g20220314.models;
 import com.aliyun.tea.*;
 
 public class CreateIoTCloudConnectorBackhaulRouteRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>TF-******-1633255280-43c94bf7-2dd3-4c14-8</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cciot-xxxx</p>
+     */
     @NameInMap("NetLinkId")
     public String netLinkId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cc5g-xxxx</p>
+     */
     @NameInMap("WirelessCloudConnectorId")
     public String wirelessCloudConnectorId;
 

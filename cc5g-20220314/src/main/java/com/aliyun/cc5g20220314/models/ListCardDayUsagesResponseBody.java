@@ -7,6 +7,10 @@ public class ListCardDayUsagesResponseBody extends TeaModel {
     @NameInMap("Cards")
     public java.util.List<ListCardDayUsagesResponseBodyCards> cards;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AA93A076-3D94-51AB-AC70-4C94AF003B03</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +36,17 @@ public class ListCardDayUsagesResponseBody extends TeaModel {
     }
 
     public static class ListCardDayUsagesResponseBodyCardsUsageDataMonthsCardDayUsages extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>20220701</p>
+         */
         @NameInMap("Day")
         public String day;
 
+        /**
+         * <strong>example:</strong>
+         * <p>40</p>
+         */
         @NameInMap("UsageData")
         public String usageData;
 
@@ -65,9 +77,17 @@ public class ListCardDayUsagesResponseBody extends TeaModel {
         @NameInMap("CardDayUsages")
         public java.util.List<ListCardDayUsagesResponseBodyCardsUsageDataMonthsCardDayUsages> cardDayUsages;
 
+        /**
+         * <strong>example:</strong>
+         * <p>202207</p>
+         */
         @NameInMap("Month")
         public String month;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1030</p>
+         */
         @NameInMap("UsageDataMonth")
         public String usageDataMonth;
 
@@ -105,6 +125,9 @@ public class ListCardDayUsagesResponseBody extends TeaModel {
     public static class ListCardDayUsagesResponseBodyCards extends TeaModel {
         /**
          * <p>代表资源一级ID的资源属性字段</p>
+         * 
+         * <strong>example:</strong>
+         * <p>89091231231219123</p>
          */
         @NameInMap("Iccid")
         public String iccid;

@@ -4,9 +4,17 @@ package com.aliyun.cc5g20220314.models;
 import com.aliyun.tea.*;
 
 public class CreateWirelessCloudConnectorResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>E1E237B1-EED7-55D5-AE5F-671E642DB3B5</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cc5g-xxxx</p>
+     */
     @NameInMap("WirelessCloudConnectorId")
     public String wirelessCloudConnectorId;
 

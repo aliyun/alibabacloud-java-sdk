@@ -4,6 +4,12 @@ package com.aliyun.cc5g20220314.models;
 import com.aliyun.tea.*;
 
 public class GetCardRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>11111111111</p>
+     */
     @NameInMap("Iccid")
     public String iccid;
 

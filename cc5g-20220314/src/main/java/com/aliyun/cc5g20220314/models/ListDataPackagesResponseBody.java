@@ -7,15 +7,31 @@ public class ListDataPackagesResponseBody extends TeaModel {
     @NameInMap("DataPackages")
     public java.util.List<ListDataPackagesResponseBodyDataPackages> dataPackages;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("MaxResults")
     public String maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>iou001238joojjaere</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>8734B5B2-FC84-54C4-8038-D40228CF01FE</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("TotalCount")
     public String totalCount;
 
@@ -65,18 +81,38 @@ public class ListDataPackagesResponseBody extends TeaModel {
     }
 
     public static class ListDataPackagesResponseBodyDataPackages extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>20000</p>
+         */
         @NameInMap("CardCount")
         public String cardCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-3-15 22:20:00</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>dp-xxxx</p>
+         */
         @NameInMap("DataPackageId")
         public String dataPackageId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2099-3-15 22:20:00</p>
+         */
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Telecom</p>
+         */
         @NameInMap("ISP")
         public String ISP;
 
@@ -86,11 +122,18 @@ public class ListDataPackagesResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("Size")
         public String size;
 
         /**
          * <p>代表资源名称的资源属性字段</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
          */
         @NameInMap("Status")
         public String status;

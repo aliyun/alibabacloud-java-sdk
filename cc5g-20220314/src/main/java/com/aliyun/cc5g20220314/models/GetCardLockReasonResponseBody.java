@@ -4,9 +4,17 @@ package com.aliyun.cc5g20220314.models;
 import com.aliyun.tea.*;
 
 public class GetCardLockReasonResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ForceTwoWayStop</p>
+     */
     @NameInMap("LockReason")
     public String lockReason;
 
+    /**
+     * <strong>example:</strong>
+     * <p>F32C0BBE-5025-5561-8976-7BD096BA21FB</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

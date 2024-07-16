@@ -4,27 +4,51 @@ package com.aliyun.cc5g20220314.models;
 import com.aliyun.tea.*;
 
 public class ListWirelessCloudConnectorsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Business</p>
+     */
     @NameInMap("BusinessType")
     public String businessType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("IsInGroup")
     public String isInGroup;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("MaxResults")
     public Long maxResults;
 
     @NameInMap("Names")
     public java.util.List<String> names;
 
+    /**
+     * <strong>example:</strong>
+     * <p>iou001238joojjaere</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     @NameInMap("Statuses")
     public java.util.List<String> statuses;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cc5gg-****</p>
+     */
     @NameInMap("WirelessCloudConnectorGroupId")
     public String wirelessCloudConnectorGroupId;
 

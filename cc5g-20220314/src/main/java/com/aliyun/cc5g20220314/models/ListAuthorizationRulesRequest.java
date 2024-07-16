@@ -7,39 +7,81 @@ public class ListAuthorizationRulesRequest extends TeaModel {
     @NameInMap("AuthorizationRuleIds")
     public java.util.List<String> authorizationRuleIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10.0.0.1</p>
+     */
     @NameInMap("Destination")
     public String destination;
 
+    /**
+     * <strong>example:</strong>
+     * <p>-1/-1</p>
+     */
     @NameInMap("DestinationPort")
     public String destinationPort;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Cidr</p>
+     */
     @NameInMap("DestinationType")
     public String destinationType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Dns")
     public Boolean dns;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("MaxResults")
     public Long maxResults;
 
     @NameInMap("Names")
     public java.util.List<String> names;
 
+    /**
+     * <strong>example:</strong>
+     * <p>iou001238joojjaere</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Permit</p>
+     */
     @NameInMap("Policy")
     public String policy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>all</p>
+     */
     @NameInMap("Protocol")
     public String protocol;
 
     @NameInMap("Statuses")
     public java.util.List<String> statuses;
 
+    /**
+     * <strong>example:</strong>
+     * <p>System</p>
+     */
     @NameInMap("Type")
     public String type;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cc5g-xxxx</p>
+     */
     @NameInMap("WirelessCloudConnectorId")
     public String wirelessCloudConnectorId;
 

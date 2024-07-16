@@ -7,9 +7,17 @@ public class ListCardUsagesResponseBody extends TeaModel {
     @NameInMap("Cards")
     public java.util.List<ListCardUsagesResponseBodyCards> cards;
 
+    /**
+     * <strong>example:</strong>
+     * <p>186B6E37-D9D1-5E64-ACDE-E89F7E68A37B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("TotalCount")
     public String totalCount;
 
@@ -45,10 +53,17 @@ public class ListCardUsagesResponseBody extends TeaModel {
     public static class ListCardUsagesResponseBodyCards extends TeaModel {
         /**
          * <p>代表资源一级ID的资源属性字段</p>
+         * 
+         * <strong>example:</strong>
+         * <p>89091231231219123</p>
          */
         @NameInMap("Iccid")
         public String iccid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("UsageDataMonth")
         public Long usageDataMonth;
 

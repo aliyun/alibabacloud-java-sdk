@@ -4,6 +4,10 @@ package com.aliyun.cc5g20220314.models;
 import com.aliyun.tea.*;
 
 public class GrantNetLinkResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>E6B58AF9-F1BF-5894-B898-6CE2108463C5</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

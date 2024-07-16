@@ -4,12 +4,24 @@ package com.aliyun.cc5g20220314.models;
 import com.aliyun.tea.*;
 
 public class ListWirelessCloudConnectorGroupsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("MaxResults")
     public Long maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>iou001238joojjaere</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

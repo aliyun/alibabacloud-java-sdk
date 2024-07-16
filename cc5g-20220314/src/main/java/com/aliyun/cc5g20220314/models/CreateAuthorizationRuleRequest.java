@@ -4,36 +4,88 @@ package com.aliyun.cc5g20220314.models;
 import com.aliyun.tea.*;
 
 public class CreateAuthorizationRuleRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>TF-******-1633255280-43c94bf7-2dd3-4c14-8</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ar5g-test</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10.0.0.1</p>
+     */
     @NameInMap("Destination")
     public String destination;
 
+    /**
+     * <strong>example:</strong>
+     * <p>-1/-1</p>
+     */
     @NameInMap("DestinationPort")
     public String destinationPort;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Cidr</p>
+     */
     @NameInMap("DestinationType")
     public String destinationType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Test</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Permit</p>
+     */
     @NameInMap("Policy")
     public String policy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>all</p>
+     */
     @NameInMap("Protocol")
     public String protocol;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0.0.0.0/0</p>
+     */
     @NameInMap("SourceCidr")
     public String sourceCidr;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cc5g-xxxx</p>
+     */
     @NameInMap("WirelessCloudConnectorId")
     public String wirelessCloudConnectorId;
 

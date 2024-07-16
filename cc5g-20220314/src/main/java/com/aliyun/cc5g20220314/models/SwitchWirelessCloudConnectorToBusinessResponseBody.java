@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class SwitchWirelessCloudConnectorToBusinessResponseBody extends TeaModel {
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>74ADDCF3-E3FE-5200-9290-1320125D71DC</p>
      */
     @NameInMap("RequestId")
     public String requestId;

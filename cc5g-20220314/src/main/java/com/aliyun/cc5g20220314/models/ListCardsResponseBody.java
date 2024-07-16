@@ -7,15 +7,31 @@ public class ListCardsResponseBody extends TeaModel {
     @NameInMap("Cards")
     public java.util.List<ListCardsResponseBodyCards> cards;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("MaxResults")
     public String maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>iou001238joojjaere</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>88C2F32F-B641-5980-B7A5-6907050ABCD1</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("TotalCount")
     public String totalCount;
 
@@ -67,64 +83,129 @@ public class ListCardsResponseBody extends TeaModel {
     public static class ListCardsResponseBodyCards extends TeaModel {
         /**
          * <p>代表创建时间的资源属性字段</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bjaliyun01s.5gbj.bjiot</p>
          */
         @NameInMap("APN")
         public String APN;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-3-15 22:20:00</p>
+         */
         @NameInMap("ActivatedTime")
         public String activatedTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Available</p>
+         */
         @NameInMap("BusinessStatus")
         public String businessStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Telecom</p>
+         */
         @NameInMap("ISP")
         public String ISP;
 
         /**
          * <p>代表资源一级ID的资源属性字段</p>
+         * 
+         * <strong>example:</strong>
+         * <p>89091231231219123</p>
          */
         @NameInMap("Iccid")
         public String iccid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>7896129300</p>
+         */
         @NameInMap("Imei")
         public String imei;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8912039123</p>
+         */
         @NameInMap("Imsi")
         public String imsi;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10.0.0.118</p>
+         */
         @NameInMap("IpAddress")
         public String ipAddress;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Lock")
         public Boolean lock;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1441204374591</p>
+         */
         @NameInMap("Msisdn")
         public String msisdn;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>代表资源名称的资源属性字段</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5G</p>
          */
         @NameInMap("NetType")
         public String netType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>89099123012</p>
+         */
         @NameInMap("OrderId")
         public String orderId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CONSUMER_THREE_IN_ONE</p>
+         */
         @NameInMap("Spec")
         public String spec;
 
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("UsageDataMonth")
         public Long usageDataMonth;
 
+        /**
+         * <strong>example:</strong>
+         * <p>50</p>
+         */
         @NameInMap("UsageDataTotal")
         public String usageDataTotal;
 
