@@ -4,6 +4,9 @@ package com.aliyun.dm20170622.models;
 import com.aliyun.tea.*;
 
 public class GetMailAddressMsgCallBackUrlRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("MailFrom")
     public String mailFrom;
 

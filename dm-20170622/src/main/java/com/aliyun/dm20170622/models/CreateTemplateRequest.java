@@ -25,6 +25,9 @@ public class CreateTemplateRequest extends TeaModel {
     @NameInMap("SmsType")
     public Integer smsType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TemplateName")
     public String templateName;
 

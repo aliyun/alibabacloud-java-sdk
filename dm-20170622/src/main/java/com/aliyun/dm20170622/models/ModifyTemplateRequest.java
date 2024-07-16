@@ -25,9 +25,15 @@ public class ModifyTemplateRequest extends TeaModel {
     @NameInMap("SmsType")
     public Integer smsType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TemplateId")
     public Integer templateId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TemplateName")
     public String templateName;
 

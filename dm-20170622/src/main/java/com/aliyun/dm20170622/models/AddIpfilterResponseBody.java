@@ -4,9 +4,17 @@ package com.aliyun.dm20170622.models;
 import com.aliyun.tea.*;
 
 public class AddIpfilterResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>10795</p>
+     */
     @NameInMap("IpFilterId")
     public String ipFilterId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>F814E960-5AEE-5CB1-881B-6F1A3250B55A</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

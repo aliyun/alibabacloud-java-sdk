@@ -4,6 +4,9 @@ package com.aliyun.dm20170622.models;
 import com.aliyun.tea.*;
 
 public class CreateMailAddressRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AccountName")
     public String accountName;
 
@@ -19,6 +22,9 @@ public class CreateMailAddressRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Sendtype")
     public String sendtype;
 
