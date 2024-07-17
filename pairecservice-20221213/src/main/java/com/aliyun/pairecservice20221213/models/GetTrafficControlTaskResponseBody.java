@@ -343,6 +343,9 @@ public class GetTrafficControlTaskResponseBody extends TeaModel {
         @NameInMap("SetPoints")
         public java.util.List<Integer> setPoints;
 
+        @NameInMap("SetValues")
+        public java.util.List<Long> setValues;
+
         @NameInMap("TimePoints")
         public java.util.List<Integer> timePoints;
 
@@ -357,6 +360,14 @@ public class GetTrafficControlTaskResponseBody extends TeaModel {
         }
         public java.util.List<Integer> getSetPoints() {
             return this.setPoints;
+        }
+
+        public GetTrafficControlTaskResponseBodyTrafficControlTargetsSplitParts setSetValues(java.util.List<Long> setValues) {
+            this.setValues = setValues;
+            return this;
+        }
+        public java.util.List<Long> getSetValues() {
+            return this.setValues;
         }
 
         public GetTrafficControlTaskResponseBodyTrafficControlTargetsSplitParts setTimePoints(java.util.List<Integer> timePoints) {

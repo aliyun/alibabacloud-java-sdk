@@ -5648,6 +5648,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("InstanceId", request.instanceId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.setPoints)) {
+            body.put("SetPoints", request.setPoints);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.setValues)) {
             body.put("SetValues", request.setValues);
         }
