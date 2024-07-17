@@ -6,19 +6,38 @@ import com.aliyun.tea.*;
 public class SearchRequest extends TeaModel {
     /**
      * <p>catalogid</p>
+     * 
+     * <strong>example:</strong>
+     * <p>默认是空，在多catalogid下填写对应的id</p>
      */
     @NameInMap("CatalogId")
     public String catalogId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1000</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>tags:tag1 or comment:^iso and name=aliyun and (createTime &gt; &quot;20211111&quot; and createTime &lt; &quot;20211117&quot;) and has category</p>
+     */
     @NameInMap("SearchText")
     public String searchText;
 
+    /**
+     * <strong>example:</strong>
+     * <p>TABLE/DATABASE/CATALOG</p>
+     */
     @NameInMap("SearchType")
     public String searchType;
 

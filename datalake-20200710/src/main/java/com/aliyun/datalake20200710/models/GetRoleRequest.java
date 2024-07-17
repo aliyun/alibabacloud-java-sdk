@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetRoleRequest extends TeaModel {
     /**
      * <p>roleName</p>
+     * 
+     * <strong>example:</strong>
+     * <p>role_name</p>
      */
     @NameInMap("RoleName")
     public String roleName;

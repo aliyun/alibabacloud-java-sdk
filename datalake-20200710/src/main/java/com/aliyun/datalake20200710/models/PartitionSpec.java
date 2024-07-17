@@ -35,6 +35,10 @@ public class PartitionSpec extends TeaModel {
         @NameInMap("Cols")
         public java.util.List<FieldSchema> cols;
 
+        /**
+         * <strong>example:</strong>
+         * <p>相对路径</p>
+         */
         @NameInMap("Location")
         public String location;
 

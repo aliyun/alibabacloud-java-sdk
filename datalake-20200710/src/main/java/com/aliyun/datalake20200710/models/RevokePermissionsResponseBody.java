@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class RevokePermissionsResponseBody extends TeaModel {
     /**
      * <p>Response Code</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>Message Code</p>
+     * 
+     * <strong>example:</strong>
+     * <p>.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>RequestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7CB5765C-F209-5B10-8792-D2BE9156ABE8</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Success</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

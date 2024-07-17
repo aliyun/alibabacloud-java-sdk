@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class GetRoleResponseBody extends TeaModel {
     /**
      * <p>code</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4316D7DA-9816-596D-A3D7-12676FA59BDA</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -30,6 +39,9 @@ public class GetRoleResponseBody extends TeaModel {
 
     /**
      * <p>success</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

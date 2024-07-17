@@ -6,13 +6,24 @@ import com.aliyun.tea.*;
 public class ListRolesRequest extends TeaModel {
     /**
      * <p>Next PageToken</p>
+     * 
+     * <strong>example:</strong>
+     * <p>token!</p>
      */
     @NameInMap("NextPageToken")
     public String nextPageToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>-1/100</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>.<em>test.</em></p>
+     */
     @NameInMap("RoleNamePattern")
     public String roleNamePattern;
 

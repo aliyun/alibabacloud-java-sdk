@@ -9,12 +9,18 @@ public class GetLifecycleRuleResponseBody extends TeaModel {
 
     /**
      * <p>RequestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EDBC848F-7CC7-52E3-9FBF-924D09B5C27A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Success</p>
+     * 
+     * <strong>example:</strong>
+     * <p>True</p>
      */
     @NameInMap("Success")
     public Boolean success;

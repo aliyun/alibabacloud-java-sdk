@@ -6,12 +6,19 @@ import com.aliyun.tea.*;
 public class GetDatabaseProfileRequest extends TeaModel {
     /**
      * <p>CatalogId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>可不填</p>
      */
     @NameInMap("CatalogId")
     public String catalogId;
 
     /**
      * <p>DatabaseName</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>530_db</p>
      */
     @NameInMap("DatabaseName")
     public String databaseName;

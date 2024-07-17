@@ -4,15 +4,27 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class GetTableColumnStatisticsShrinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1344371</p>
+     */
     @NameInMap("CatalogId")
     public String catalogId;
 
     @NameInMap("ColumnNames")
     public String columnNamesShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>database_test</p>
+     */
     @NameInMap("DatabaseName")
     public String databaseName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test_table_20201223</p>
+     */
     @NameInMap("TableName")
     public String tableName;
 

@@ -7,9 +7,17 @@ public class ColumnResource extends TeaModel {
     @NameInMap("ColumnNames")
     public java.util.List<String> columnNames;
 
+    /**
+     * <strong>example:</strong>
+     * <p>default</p>
+     */
     @NameInMap("DatabaseName")
     public String databaseName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("TableName")
     public String tableName;
 

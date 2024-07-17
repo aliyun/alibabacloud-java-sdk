@@ -4,63 +4,139 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class PartitionProfile extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("AccessNum")
     public Long accessNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("AccessNumMonthly")
     public Long accessNumMonthly;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("AccessNumWeekly")
     public Long accessNumWeekly;
 
+    /**
+     * <strong>example:</strong>
+     * <p>STANDARD</p>
+     */
     @NameInMap("ArchiveStatus")
     public String archiveStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-08-16 18:02:22</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OSS_HDFS</p>
+     */
     @NameInMap("DataSourceType")
     public String dataSourceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test_db</p>
+     */
     @NameInMap("DatabaseName")
     public String databaseName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("FileCnt")
     public Long fileCnt;
 
+    /**
+     * <strong>example:</strong>
+     * <p>13</p>
+     */
     @NameInMap("FileSize")
     public Long fileSize;
 
     @NameInMap("LastAccessNumTime")
     public String lastAccessNumTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-08-22 12:14:42</p>
+     */
     @NameInMap("LastAccessTime")
     public String lastAccessTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-08-16 18:02:25</p>
+     */
     @NameInMap("LastModifyTime")
     public String lastModifyTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>oss://mybucket.cn-hangzhou.oss-dls.aliyuncs.com/test_tb/test_tbl/year=2023/month=1</p>
+     */
     @NameInMap("Location")
     public String location;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("ObjectAccessNum")
     public Long objectAccessNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4</p>
+     */
     @NameInMap("ObjectAccessNumMonthly")
     public Long objectAccessNumMonthly;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4</p>
+     */
     @NameInMap("ObjectAccessNumWeekly")
     public Long objectAccessNumWeekly;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("ObjectCnt")
     public Long objectCnt;
 
+    /**
+     * <strong>example:</strong>
+     * <p>13</p>
+     */
     @NameInMap("ObjectSize")
     public Long objectSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>year=2023/month=1</p>
+     */
     @NameInMap("PartitionName")
     public String partitionName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test_tbl</p>
+     */
     @NameInMap("TableName")
     public String tableName;
 

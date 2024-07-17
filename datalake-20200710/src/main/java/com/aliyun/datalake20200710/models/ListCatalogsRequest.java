@@ -4,12 +4,24 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class ListCatalogsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>.*</p>
+     */
     @NameInMap("IdPattern")
     public String idPattern;
 
+    /**
+     * <strong>example:</strong>
+     * <p>‘’</p>
+     */
     @NameInMap("NextPageToken")
     public String nextPageToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 

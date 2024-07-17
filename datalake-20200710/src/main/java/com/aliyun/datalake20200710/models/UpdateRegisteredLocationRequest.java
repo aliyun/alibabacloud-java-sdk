@@ -4,12 +4,26 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class UpdateRegisteredLocationRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("InventoryCollectEnabled")
     public Boolean inventoryCollectEnabled;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LOC-AB8FBC17F95A4AF5</p>
+     */
     @NameInMap("LocationId")
     public String locationId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("OssLogCollectEnabled")
     public Boolean ossLogCollectEnabled;
 

@@ -16,6 +16,10 @@ public class MetaResource extends TeaModel {
     @NameInMap("FunctionResource")
     public FunctionResource functionResource;
 
+    /**
+     * <strong>example:</strong>
+     * <p>TABLE</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 

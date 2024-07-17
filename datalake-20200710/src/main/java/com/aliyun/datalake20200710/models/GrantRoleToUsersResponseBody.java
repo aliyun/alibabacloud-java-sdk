@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class GrantRoleToUsersResponseBody extends TeaModel {
     /**
      * <p>Code</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>Message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>RequestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4316D7DA-9816-596D-A3D7-12676FA59BDA</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Success</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

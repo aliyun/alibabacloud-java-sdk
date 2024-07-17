@@ -4,6 +4,12 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class StopMigrationWorkflowRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>M-6DCF5D8EF92E2195</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

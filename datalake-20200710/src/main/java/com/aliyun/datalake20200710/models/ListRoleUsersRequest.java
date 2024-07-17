@@ -6,21 +6,34 @@ import com.aliyun.tea.*;
 public class ListRoleUsersRequest extends TeaModel {
     /**
      * <p>NextPageToken</p>
+     * 
+     * <strong>example:</strong>
+     * <p>token!</p>
      */
     @NameInMap("NextPageToken")
     public String nextPageToken;
 
     /**
      * <p>PageSize</p>
+     * 
+     * <strong>example:</strong>
+     * <p>-1/100</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>admin</p>
+     */
     @NameInMap("RoleName")
     public String roleName;
 
     /**
      * <p>use name pattern filter</p>
+     * 
+     * <strong>example:</strong>
+     * <p>.<em>user.</em></p>
      */
     @NameInMap("UserNamePattern")
     public String userNamePattern;

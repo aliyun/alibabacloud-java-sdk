@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class UpdateRoleResponseBody extends TeaModel {
     /**
      * <p>code</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>604E5919-C6FF-54CE-9C23-C5350E6F5415</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>success</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

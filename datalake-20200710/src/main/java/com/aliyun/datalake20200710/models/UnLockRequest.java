@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UnLockRequest extends TeaModel {
     /**
      * <p>LockId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>11709</p>
      */
     @NameInMap("LockId")
     public Long lockId;

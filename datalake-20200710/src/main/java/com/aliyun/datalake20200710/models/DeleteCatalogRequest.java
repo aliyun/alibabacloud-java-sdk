@@ -6,10 +6,18 @@ import com.aliyun.tea.*;
 public class DeleteCatalogRequest extends TeaModel {
     /**
      * <p>CatalogId</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>catalog_test</p>
      */
     @NameInMap("CatalogId")
     public String catalogId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IsAsync")
     public Boolean isAsync;
 

@@ -4,9 +4,17 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class HighLight extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>name</p>
+     */
     @NameInMap("Key")
     public String key;
 
+    /**
+     * <strong>example:</strong>
+     * <p><em>tab</em>2</p>
+     */
     @NameInMap("Value")
     public String value;
 

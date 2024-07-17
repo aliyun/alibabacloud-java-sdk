@@ -4,21 +4,43 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class ListPartitionsProfileShrinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1344371</p>
+     */
     @NameInMap("CatalogId")
     public String catalogId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test_db</p>
+     */
     @NameInMap("DatabaseName")
     public String databaseName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("PartitionNames")
     public String partitionNamesShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test_tbl</p>
+     */
     @NameInMap("TableName")
     public String tableName;
 

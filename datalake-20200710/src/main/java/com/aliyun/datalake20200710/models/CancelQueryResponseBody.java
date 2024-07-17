@@ -4,12 +4,24 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class CancelQueryResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Q-BCA5E96CB84BB8B8</p>
+     */
     @NameInMap("Data")
     public String data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DB07AAE9-4B88-5DEA-8F1D-4D1A9A864A85</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

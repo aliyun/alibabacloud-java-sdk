@@ -13,6 +13,10 @@ public class Function extends TeaModel {
     @NameInMap("CreateTime")
     public Integer createTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CreatedBy</p>
+     */
     @NameInMap("CreatedBy")
     public String createdBy;
 

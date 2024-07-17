@@ -4,12 +4,24 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class GetServiceStatusResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>{ 			&quot;AccountStatus&quot;:&quot;&quot;, 			&quot;RegionStatus&quot;:&quot;READY&quot;, 			&quot;RegionId&quot;:&quot;cn-shanghai&quot;, 			&quot;IsDependencyReady&quot;:true, 			&quot;IsDlfServiceOpen&quot;:true 		}</p>
+     */
     @NameInMap("Data")
     public GetServiceStatusResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>B7F4B621-E41E-4C84-B97F-42B5380A32BB</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -43,12 +55,24 @@ public class GetServiceStatusResponseBody extends TeaModel {
     }
 
     public static class GetServiceStatusResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("HasRamPermissions")
         public Boolean hasRamPermissions;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsDlfServiceOpen")
         public Boolean isDlfServiceOpen;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsOssOpen")
         public Boolean isOssOpen;
 

@@ -10,9 +10,15 @@ public class PrincipalResourcePermissions extends TeaModel {
     @NameInMap("DelegateAccesses")
     public java.util.List<String> delegateAccesses;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("MetaResource")
     public MetaResource metaResource;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Principal")
     public Principal principal;
 

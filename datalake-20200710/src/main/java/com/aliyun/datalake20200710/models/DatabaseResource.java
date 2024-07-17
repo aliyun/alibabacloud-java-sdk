@@ -4,6 +4,10 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class DatabaseResource extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>default</p>
+     */
     @NameInMap("DatabaseName")
     public String databaseName;
 

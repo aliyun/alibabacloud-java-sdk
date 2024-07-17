@@ -4,9 +4,15 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class RevokeRolesFromUserRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RoleNames")
     public java.util.List<String> roleNames;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("User")
     public Principal user;
 

@@ -7,12 +7,24 @@ public class DeleteDatabaseRequest extends TeaModel {
     @NameInMap("Async")
     public Boolean async;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("Cascade")
     public Boolean cascade;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1344371</p>
+     */
     @NameInMap("CatalogId")
     public String catalogId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>database_test</p>
+     */
     @NameInMap("Name")
     public String name;
 

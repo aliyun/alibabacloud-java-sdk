@@ -6,18 +6,29 @@ import com.aliyun.tea.*;
 public class GetTableProfileRequest extends TeaModel {
     /**
      * <p>CatalogId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>可不填</p>
      */
     @NameInMap("CatalogId")
     public String catalogId;
 
     /**
      * <p>DatabaseName</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>exp_table</p>
      */
     @NameInMap("DatabaseName")
     public String databaseName;
 
     /**
      * <p>TableName</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>admin_user</p>
      */
     @NameInMap("TableName")
     public String tableName;

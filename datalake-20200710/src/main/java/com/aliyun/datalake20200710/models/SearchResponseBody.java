@@ -4,18 +4,34 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class SearchResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("DatabaseResult")
     public SearchResponseBodyDatabaseResult databaseResult;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>460C862F-BB91-5C04-BC3F-946EEF467862</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -109,6 +125,10 @@ public class SearchResponseBody extends TeaModel {
         @NameInMap("Databases")
         public java.util.List<SearchResponseBodyDatabaseResultDatabases> databases;
 
+        /**
+         * <strong>example:</strong>
+         * <p>11000</p>
+         */
         @NameInMap("TotalCount")
         public Long totalCount;
 
@@ -169,6 +189,10 @@ public class SearchResponseBody extends TeaModel {
         @NameInMap("Tables")
         public java.util.List<SearchResponseBodyTableResultTables> tables;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1100</p>
+         */
         @NameInMap("TotalCount")
         public Long totalCount;
 

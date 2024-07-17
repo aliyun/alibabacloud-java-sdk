@@ -10,6 +10,10 @@ public class DatabaseInput extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>oss://examplebuket/exampledb</p>
+     */
     @NameInMap("LocationUri")
     public String locationUri;
 

@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class UnLockResponseBody extends TeaModel {
     /**
      * <p>Code</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>Message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>RequestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>37C8470A-5E6D-5E4E-AEF0-EA3EBE9C89EE</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Success</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

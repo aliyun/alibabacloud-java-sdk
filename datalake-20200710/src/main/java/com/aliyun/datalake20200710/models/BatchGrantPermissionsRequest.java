@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class BatchGrantPermissionsRequest extends TeaModel {
     /**
      * <p>catalogId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1344371</p>
      */
     @NameInMap("CatalogId")
     public String catalogId;
@@ -13,6 +16,12 @@ public class BatchGrantPermissionsRequest extends TeaModel {
     @NameInMap("GrantRevokeEntries")
     public java.util.List<GrantRevokeEntry> grantRevokeEntries;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Hive</p>
+     */
     @NameInMap("Type")
     public String type;
 

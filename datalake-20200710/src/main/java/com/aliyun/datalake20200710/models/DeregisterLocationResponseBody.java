@@ -7,9 +7,17 @@ public class DeregisterLocationResponseBody extends TeaModel {
     @NameInMap("Data")
     public DeregisterLocationResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>E47920CD-BAE6-1305-88DF-FBDD3D300845</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -45,6 +53,9 @@ public class DeregisterLocationResponseBody extends TeaModel {
     public static class DeregisterLocationResponseBodyData extends TeaModel {
         /**
          * <p>Location ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LOC-AB8FBC17F95A4AF5</p>
          */
         @NameInMap("LocationId")
         public String locationId;
