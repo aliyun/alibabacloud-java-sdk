@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetClusterRunTimeInfoResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>E45380E8-994A-5402-9806-F114B3295FCF</p>
@@ -14,7 +14,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The result set.</p>
+     * <p>The result.</p>
      */
     @NameInMap("result")
     public java.util.List<GetClusterRunTimeInfoResponseBodyResult> result;
@@ -42,7 +42,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
 
     public static class GetClusterRunTimeInfoResponseBodyResultDataNodesConfigStatusList extends TeaModel {
         /**
-         * <p>The time when the cluster was updated.</p>
+         * <p>The time when the configuration was last updated.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
@@ -51,7 +51,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
         public String configUpdateTime;
 
         /**
-         * <p>The overall progress.</p>
+         * <p>The configuration progress. Unit: percentage.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -60,7 +60,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
         public Integer donePercent;
 
         /**
-         * <p>The number of nodes that are configured.</p>
+         * <p>The number of processed Searcher workers in the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -69,7 +69,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
         public Integer doneSize;
 
         /**
-         * <p>The name of the cluster.</p>
+         * <p>The cluster name.</p>
          * 
          * <strong>example:</strong>
          * <p>test_0704</p>
@@ -78,7 +78,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The total number of nodes that you specify when you create the cluster.</p>
+         * <p>The total number of Searcher workers in the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -219,13 +219,13 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
 
     public static class GetClusterRunTimeInfoResponseBodyResultDataNodesDataStatusList extends TeaModel {
         /**
-         * <p>The information about advanced configurations.</p>
+         * <p>The information about the advanced configuration.</p>
          */
         @NameInMap("advanceConfigInfo")
         public GetClusterRunTimeInfoResponseBodyResultDataNodesDataStatusListAdvanceConfigInfo advanceConfigInfo;
 
         /**
-         * <p>The name of the worker that failed because of a deployment failure.</p>
+         * <p>The name of the worker that failed due to a deployment failure.</p>
          */
         @NameInMap("deployFailedWorker")
         public java.util.List<String> deployFailedWorker;
@@ -240,7 +240,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
         public Integer docSize;
 
         /**
-         * <p>The overall progress.</p>
+         * <p>The configuration progress. Unit: percentage.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -249,7 +249,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
         public Integer donePercent;
 
         /**
-         * <p>The number of nodes that are configured.</p>
+         * <p>The number of processed QRS workers in the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -267,7 +267,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
         public String errorMsg;
 
         /**
-         * <p>The time when the full data was updated.</p>
+         * <p>The time when full data in the index was last updated.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot; &quot;</p>
@@ -276,7 +276,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
         public String fullUpdateTime;
 
         /**
-         * <p>The full version.</p>
+         * <p>The time when the full index version was generated.</p>
          * 
          * <strong>example:</strong>
          * <p>123423</p>
@@ -285,7 +285,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
         public Long fullVersion;
 
         /**
-         * <p>The time when the incremental data was updated.</p>
+         * <p>The time when incremental data in the index was last updated.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
@@ -294,7 +294,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
         public String incUpdateTime;
 
         /**
-         * <p>The incremental version.</p>
+         * <p>The time when the incremental index version was generated.</p>
          * 
          * <strong>example:</strong>
          * <p>123423</p>
@@ -303,13 +303,13 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
         public Long incVersion;
 
         /**
-         * <p>The configuration information of the index.</p>
+         * <p>The information about the index configuration.</p>
          */
         @NameInMap("indexConfigInfo")
         public GetClusterRunTimeInfoResponseBodyResultDataNodesDataStatusListIndexConfigInfo indexConfigInfo;
 
         /**
-         * <p>The size of the index.</p>
+         * <p>The index size.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -318,19 +318,19 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
         public Long indexSize;
 
         /**
-         * <p>The name of the worker that failed because of insufficient disk space.</p>
+         * <p>The name of the worker that failed due to insufficient disks.</p>
          */
         @NameInMap("lackDiskWorker")
         public java.util.List<String> lackDiskWorker;
 
         /**
-         * <p>The name of the worker that failed because of insufficient memory.</p>
+         * <p>The name of the worker that failed due to insufficient memory.</p>
          */
         @NameInMap("lackMemWorker")
         public java.util.List<String> lackMemWorker;
 
         /**
-         * <p>The name of the node.</p>
+         * <p>The name of the QRS worker.</p>
          * 
          * <strong>example:</strong>
          * <p>ha-cn-c4d2rq7nt04_qrs</p>
@@ -339,7 +339,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The total number of nodes that you specify when you create the cluster.</p>
+         * <p>The total number of QRS workers in the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -484,7 +484,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
 
     public static class GetClusterRunTimeInfoResponseBodyResultDataNodesServiceStatus extends TeaModel {
         /**
-         * <p>The overall progress.</p>
+         * <p>The process progress of QRS workers in the cluster. Unit: percentage.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -493,7 +493,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
         public Integer donePercent;
 
         /**
-         * <p>The number of nodes being processed in the cluster.</p>
+         * <p>The number of processed QRS workers in the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -502,7 +502,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
         public Integer doneSize;
 
         /**
-         * <p>The name.</p>
+         * <p>The name of the QRS worker.</p>
          * 
          * <strong>example:</strong>
          * <p>ha-cn-0ju2s170b03_qrs</p>
@@ -511,7 +511,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The total number of nodes in the cluster.</p>
+         * <p>The total number of QRS workers in the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -560,19 +560,19 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
 
     public static class GetClusterRunTimeInfoResponseBodyResultDataNodes extends TeaModel {
         /**
-         * <p>The configuration status list.</p>
+         * <p>The configuration status.</p>
          */
         @NameInMap("configStatusList")
         public java.util.List<GetClusterRunTimeInfoResponseBodyResultDataNodesConfigStatusList> configStatusList;
 
         /**
-         * <p>The dataStatusList.</p>
+         * <p>The data of the Searcher worker.</p>
          */
         @NameInMap("dataStatusList")
         public java.util.List<GetClusterRunTimeInfoResponseBodyResultDataNodesDataStatusList> dataStatusList;
 
         /**
-         * <p>The service status.</p>
+         * <p>The service status of the QRS worker.</p>
          */
         @NameInMap("serviceStatus")
         public GetClusterRunTimeInfoResponseBodyResultDataNodesServiceStatus serviceStatus;
@@ -610,7 +610,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
 
     public static class GetClusterRunTimeInfoResponseBodyResultQueryNodeConfigStatusList extends TeaModel {
         /**
-         * <p>The time when the cluster was updated.</p>
+         * <p>The time when the configuration was last updated.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot; &quot;</p>
@@ -619,7 +619,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
         public String configUpdateTime;
 
         /**
-         * <p>The progress.</p>
+         * <p>The process progress of QRS workers in the cluster. Unit: percentage.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -628,7 +628,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
         public Integer donePercent;
 
         /**
-         * <p>The number of nodes that are configured.</p>
+         * <p>The number of processed QRS workers in the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -637,7 +637,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
         public Integer doneSize;
 
         /**
-         * <p>The name of the cluster.</p>
+         * <p>The cluster name.</p>
          * 
          * <strong>example:</strong>
          * <p>ha-cn-zvp2qr1sk01_qrs</p>
@@ -646,7 +646,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The total number of nodes that you specify when you create the cluster.</p>
+         * <p>The total number of QRS workers in the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>6</p>
@@ -703,7 +703,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
 
     public static class GetClusterRunTimeInfoResponseBodyResultQueryNodeServiceStatus extends TeaModel {
         /**
-         * <p>The progress.</p>
+         * <p>The process progress of QRS workers in the cluster. Unit: percentage.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -712,7 +712,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
         public Integer donePercent;
 
         /**
-         * <p>The number of nodes that are configured.</p>
+         * <p>The number of processed QRS workers in the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -721,7 +721,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
         public Integer doneSize;
 
         /**
-         * <p>The name of the cluster.</p>
+         * <p>The cluster name.</p>
          * 
          * <strong>example:</strong>
          * <p>ha-cn-c4d2rq7nt04_qrs</p>
@@ -730,7 +730,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The total number of nodes that you specify when you create the cluster.</p>
+         * <p>The total number of QRS workers in the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -779,13 +779,13 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
 
     public static class GetClusterRunTimeInfoResponseBodyResultQueryNode extends TeaModel {
         /**
-         * <p>The dataStatusList.</p>
+         * <p>The configuration status.</p>
          */
         @NameInMap("configStatusList")
         public java.util.List<GetClusterRunTimeInfoResponseBodyResultQueryNodeConfigStatusList> configStatusList;
 
         /**
-         * <p>The service status.</p>
+         * <p>The service status of the QRS worker.</p>
          */
         @NameInMap("serviceStatus")
         public GetClusterRunTimeInfoResponseBodyResultQueryNodeServiceStatus serviceStatus;
@@ -815,7 +815,7 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
 
     public static class GetClusterRunTimeInfoResponseBodyResult extends TeaModel {
         /**
-         * <p>The name of the cluster.</p>
+         * <p>The cluster name.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc_hz_domain_1</p>
@@ -824,13 +824,13 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
         public String clusterName;
 
         /**
-         * <p>The information about the data node.</p>
+         * <p>The information about the Searcher workers.</p>
          */
         @NameInMap("dataNodes")
         public java.util.List<GetClusterRunTimeInfoResponseBodyResultDataNodes> dataNodes;
 
         /**
-         * <p>The information about the query node.</p>
+         * <p>The information about the Query Result Searcher (QRS) workers.</p>
          */
         @NameInMap("queryNode")
         public GetClusterRunTimeInfoResponseBodyResultQueryNode queryNode;

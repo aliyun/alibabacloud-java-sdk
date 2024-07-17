@@ -42,12 +42,17 @@ public class DeleteFolderResponseBody extends TeaModel {
 
     public static class DeleteFolderResponseBodyResult extends TeaModel {
         /**
+         * <p>The request ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>022F36C7-9FB4-5D67-BEBC-3D14B0984463</p>
          */
         @NameInMap("requestId")
         public String requestId;
 
+        /**
+         * <p>The result</p>
+         */
         @NameInMap("result")
         public java.util.Map<String, String> result;
 

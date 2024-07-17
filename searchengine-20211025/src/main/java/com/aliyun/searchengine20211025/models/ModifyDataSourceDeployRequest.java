@@ -5,25 +5,41 @@ import com.aliyun.tea.*;
 
 public class ModifyDataSourceDeployRequest extends TeaModel {
     /**
+     * <p>Specifies whether to enable the automatic full indexing feature.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("autoBuildIndex")
     public Boolean autoBuildIndex;
 
+    /**
+     * <p>The extended information.</p>
+     */
     @NameInMap("extend")
     public ModifyDataSourceDeployRequestExtend extend;
 
+    /**
+     * <p>The parameters of the process.</p>
+     */
     @NameInMap("processor")
     public ModifyDataSourceDeployRequestProcessor processor;
 
+    /**
+     * <p>The information about the data source.</p>
+     */
     @NameInMap("storage")
     public ModifyDataSourceDeployRequestStorage storage;
 
+    /**
+     * <p>The information about the incremental data source Swift.</p>
+     */
     @NameInMap("swift")
     public ModifyDataSourceDeployRequestSwift swift;
 
     /**
+     * <p>Specifies whether to perform only a dry run, without performing the actual request. The system only checks the validity of the data source. Valid values: true and false.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -31,7 +47,7 @@ public class ModifyDataSourceDeployRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>generationId</p>
+     * <p>The ID of the full index version.</p>
      * 
      * <strong>example:</strong>
      * <p>1708674867</p>
@@ -102,6 +118,8 @@ public class ModifyDataSourceDeployRequest extends TeaModel {
 
     public static class ModifyDataSourceDeployRequestExtendHdfs extends TeaModel {
         /**
+         * <p>The path of the Apsara File Storage for HDFS data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>ymsh-service/src/main/java/cn/ymsh/util/jd</p>
          */
@@ -124,6 +142,9 @@ public class ModifyDataSourceDeployRequest extends TeaModel {
     }
 
     public static class ModifyDataSourceDeployRequestExtendOdps extends TeaModel {
+        /**
+         * <p>The partitions in the MaxCompute table.</p>
+         */
         @NameInMap("partitions")
         public java.util.Map<String, String> partitions;
 
@@ -144,6 +165,8 @@ public class ModifyDataSourceDeployRequest extends TeaModel {
 
     public static class ModifyDataSourceDeployRequestExtendOss extends TeaModel {
         /**
+         * <p>The path of the OSS data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>oss://test</p>
          */
@@ -167,6 +190,8 @@ public class ModifyDataSourceDeployRequest extends TeaModel {
 
     public static class ModifyDataSourceDeployRequestExtendSaro extends TeaModel {
         /**
+         * <p>The path of the SARO data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>/</p>
          */
@@ -174,6 +199,8 @@ public class ModifyDataSourceDeployRequest extends TeaModel {
         public String path;
 
         /**
+         * <p>The version number of the SARO data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -204,15 +231,27 @@ public class ModifyDataSourceDeployRequest extends TeaModel {
     }
 
     public static class ModifyDataSourceDeployRequestExtend extends TeaModel {
+        /**
+         * <p>The information about the Apsara File Storage for HDFS data source.</p>
+         */
         @NameInMap("hdfs")
         public ModifyDataSourceDeployRequestExtendHdfs hdfs;
 
+        /**
+         * <p>The information about the MaxCompute data source.</p>
+         */
         @NameInMap("odps")
         public ModifyDataSourceDeployRequestExtendOdps odps;
 
+        /**
+         * <p>The information about the OSS data source.</p>
+         */
         @NameInMap("oss")
         public ModifyDataSourceDeployRequestExtendOss oss;
 
+        /**
+         * <p>The information about the SARO data source. This parameter is applicable to the SARO data source used in the intranet of Alibaba Group.</p>
+         */
         @NameInMap("saro")
         public ModifyDataSourceDeployRequestExtendSaro saro;
 
@@ -257,6 +296,8 @@ public class ModifyDataSourceDeployRequest extends TeaModel {
 
     public static class ModifyDataSourceDeployRequestProcessor extends TeaModel {
         /**
+         * <p>The startup parameters of the process.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -264,6 +305,8 @@ public class ModifyDataSourceDeployRequest extends TeaModel {
         public String args;
 
         /**
+         * <p>The resource information.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -295,7 +338,7 @@ public class ModifyDataSourceDeployRequest extends TeaModel {
 
     public static class ModifyDataSourceDeployRequestStorage extends TeaModel {
         /**
-         * <p>AK</p>
+         * <p>The AccessKey ID of the MaxCompute data source.</p>
          * 
          * <strong>example:</strong>
          * <p>ak</p>
@@ -304,7 +347,7 @@ public class ModifyDataSourceDeployRequest extends TeaModel {
         public String accessKey;
 
         /**
-         * <p>AS</p>
+         * <p>The AccessKey secret of the MaxCompute data source.</p>
          * 
          * <strong>example:</strong>
          * <p>as</p>
@@ -313,6 +356,8 @@ public class ModifyDataSourceDeployRequest extends TeaModel {
         public String accessSecret;
 
         /**
+         * <p>The name of the OSS bucket.</p>
+         * 
          * <strong>example:</strong>
          * <p>test-bucket</p>
          */
@@ -320,6 +365,8 @@ public class ModifyDataSourceDeployRequest extends TeaModel {
         public String bucket;
 
         /**
+         * <p>The endpoint of the MaxCompute data source.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://service.cn-hangzhou.maxcompute.aliyun-inc.com/api">http://service.cn-hangzhou.maxcompute.aliyun-inc.com/api</a></p>
          */
@@ -327,6 +374,8 @@ public class ModifyDataSourceDeployRequest extends TeaModel {
         public String endpoint;
 
         /**
+         * <p>The namespace. This parameter is applicable to the SARO data source used in the intranet of Alibaba Group.</p>
+         * 
          * <strong>example:</strong>
          * <p>dp-dev</p>
          */
@@ -334,6 +383,8 @@ public class ModifyDataSourceDeployRequest extends TeaModel {
         public String namespace;
 
         /**
+         * <p>The Object Storage Service (OSS) path.</p>
+         * 
          * <strong>example:</strong>
          * <p>/opensearch</p>
          */
@@ -341,6 +392,8 @@ public class ModifyDataSourceDeployRequest extends TeaModel {
         public String ossPath;
 
         /**
+         * <p>The partition in the MaxCompute table.</p>
+         * 
          * <strong>example:</strong>
          * <p>ds=20220713</p>
          */
@@ -348,6 +401,8 @@ public class ModifyDataSourceDeployRequest extends TeaModel {
         public String partition;
 
         /**
+         * <p>The file path in the Apsara File Storage for HDFS file system.</p>
+         * 
          * <strong>example:</strong>
          * <p>/ude_jobs/iflow_offline_data_access</p>
          */
@@ -355,6 +410,8 @@ public class ModifyDataSourceDeployRequest extends TeaModel {
         public String path;
 
         /**
+         * <p>The name of the MaxCompute project that is used as the data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>kubenest</p>
          */
@@ -362,6 +419,8 @@ public class ModifyDataSourceDeployRequest extends TeaModel {
         public String project;
 
         /**
+         * <p>The name of the MaxCompute table that is used as the data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>item</p>
          */
@@ -457,7 +516,7 @@ public class ModifyDataSourceDeployRequest extends TeaModel {
 
     public static class ModifyDataSourceDeployRequestSwift extends TeaModel {
         /**
-         * <p>topic</p>
+         * <p>The topic.</p>
          * 
          * <strong>example:</strong>
          * <p>ha-cn-0ju2rps6c08_api</p>

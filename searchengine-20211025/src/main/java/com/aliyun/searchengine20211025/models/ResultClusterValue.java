@@ -4,9 +4,21 @@ package com.aliyun.searchengine20211025.models;
 import com.aliyun.tea.*;
 
 public class ResultClusterValue extends TeaModel {
+    /**
+     * <p>The maximum number of full indexes that can be concurrently built.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("buildParallelNum")
     public Integer buildParallelNum;
 
+    /**
+     * <p>The maximum number of full indexes that can be concurrently merged.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("mergeParallelNum")
     public Integer mergeParallelNum;
 

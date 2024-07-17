@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ReindexRequest extends TeaModel {
     /**
+     * <p>The timestamp in seconds. The value must be of the INTEGER type. This parameter is required if you specify an API data source.</p>
+     * 
      * <strong>example:</strong>
      * <p>1640867288</p>
      */
@@ -12,6 +14,8 @@ public class ReindexRequest extends TeaModel {
     public Integer dataTimeSec;
 
     /**
+     * <p>oss data path</p>
+     * 
      * <strong>example:</strong>
      * <p>oss://opensearch</p>
      */
@@ -19,6 +23,8 @@ public class ReindexRequest extends TeaModel {
     public String ossDataPath;
 
     /**
+     * <p>The partition in the MaxCompute table. This parameter is required if type is set to odps.</p>
+     * 
      * <strong>example:</strong>
      * <p>ds=20220713</p>
      */

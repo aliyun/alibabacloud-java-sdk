@@ -14,7 +14,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The result returned</p>
+     * <p>The results returned.</p>
      */
     @NameInMap("result")
     public UpdateInstanceResponseBodyResult result;
@@ -42,7 +42,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
 
     public static class UpdateInstanceResponseBodyResult extends TeaModel {
         /**
-         * <p>The billing method</p>
+         * <p>The billing method.</p>
          * 
          * <strong>example:</strong>
          * <p>PrePaid</p>
@@ -51,7 +51,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
         public String chargeType;
 
         /**
-         * <p>The product code</p>
+         * <p>The commodity code of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>ha3-code</p>
@@ -96,7 +96,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
         public Boolean inDebt;
 
         /**
-         * <p>The ID of the resource</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ha-cn-0ju2s170b03</p>
@@ -114,7 +114,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
         public String lockMode;
 
         /**
-         * <p>The ID of the resource group</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-aeky6hthboewpuy</p>
@@ -123,7 +123,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The status of the instance</p>
+         * <p>The instance status.</p>
          * 
          * <strong>example:</strong>
          * <p>Running</p>

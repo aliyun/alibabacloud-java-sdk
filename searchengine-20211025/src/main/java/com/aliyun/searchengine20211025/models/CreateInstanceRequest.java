@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateInstanceRequest extends TeaModel {
     /**
-     * <p>The billing method of the instance. Valid values: PREPAY and POSTPAY. PREPAY indicates the instance is a subscription instance. When you set this parameter to PREPAY, make sure that your Alibaba Cloud account supports balance payment or credit card payment. Otherwise, the system returns the InvalidPayMethod error message. If you set this parameter to PREPAY, you must also specify the paymentInfo parameter. POSTPAY indicates that the instance is a pay-as-you-go instance. This billing method is not supported.</p>
+     * <p>The billing method of the instance. Valid values: PREPAY: subscription. If you set this parameter to PREPAY, make sure that your Alibaba Cloud account supports balance payment or credit card payment. Otherwise, the system returns the InvalidPayMethod error message. If you set this parameter to PREPAY, you must also specify paymentInfo. POSTPAY: pay-as-you-go. This billing method is not supported.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
@@ -14,7 +14,7 @@ public class CreateInstanceRequest extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>A list of instance-related specifications.</p>
+     * <p>The information about the instance specification.</p>
      */
     @NameInMap("components")
     public java.util.List<CreateInstanceRequestComponents> components;
@@ -56,7 +56,7 @@ public class CreateInstanceRequest extends TeaModel {
 
     public static class CreateInstanceRequestComponents extends TeaModel {
         /**
-         * <p>The specification code, which must be consistent with values of the corresponding module parameters.</p>
+         * <p>The code of the specification, which must be consistent with the value that you specify on the buy page.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
@@ -65,7 +65,7 @@ public class CreateInstanceRequest extends TeaModel {
         public String code;
 
         /**
-         * <p>Values that you specify for the corresponding module components on the buy page.</p>
+         * <p>The value of the specification.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>

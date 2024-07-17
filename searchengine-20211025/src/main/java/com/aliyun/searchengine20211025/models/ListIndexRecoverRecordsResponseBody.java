@@ -4,10 +4,18 @@ package com.aliyun.searchengine20211025.models;
 import com.aliyun.tea.*;
 
 public class ListIndexRecoverRecordsResponseBody extends TeaModel {
+    /**
+     * <p>The description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("desc")
     public String desc;
 
     /**
+     * <p>The time when the index version was published.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-06-07 16:43:00</p>
      */
@@ -15,7 +23,7 @@ public class ListIndexRecoverRecordsResponseBody extends TeaModel {
     public String finishedTime;
 
     /**
-     * <p>generationId</p>
+     * <p>The ID of the full index version.</p>
      * 
      * <strong>example:</strong>
      * <p>1708674867</p>

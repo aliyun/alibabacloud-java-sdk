@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BuildIndexRequest extends TeaModel {
     /**
-     * <p>The reindexing mode.</p>
+     * <p>The reindexing method. Valid values: api: API data source. indexRecover: data recovery by using indexing.</p>
      * 
      * <strong>example:</strong>
      * <p>indexRecover</p>
@@ -41,7 +41,7 @@ public class BuildIndexRequest extends TeaModel {
     public Integer dataTimeSec;
 
     /**
-     * <p>The data center in which the data source resides.</p>
+     * <p>The data center in which the data source is deployed.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -59,7 +59,7 @@ public class BuildIndexRequest extends TeaModel {
     public Long generation;
 
     /**
-     * <p>The data partition. This parameter is required if dataSourceType is set to odps.</p>
+     * <p>The partition in the MaxCompute table. This parameter is required if type is set to odps.</p>
      * 
      * <strong>example:</strong>
      * <p>20201010</p>

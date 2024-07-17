@@ -14,7 +14,7 @@ public class ListAdvanceConfigDirResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The file list in the advanced configuration directory.</p>
+     * <p>The advanced configuration files.</p>
      */
     @NameInMap("result")
     public java.util.List<ListAdvanceConfigDirResponseBodyResult> result;
@@ -42,7 +42,7 @@ public class ListAdvanceConfigDirResponseBody extends TeaModel {
 
     public static class ListAdvanceConfigDirResponseBodyResult extends TeaModel {
         /**
-         * <p>The name of the absolute path.</p>
+         * <p>The absolute path in which the file is stored.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;/path/wpd/nae&quot;</p>
@@ -51,7 +51,7 @@ public class ListAdvanceConfigDirResponseBody extends TeaModel {
         public String fullPathName;
 
         /**
-         * <p>Indicates whether it is a directory. Valid values: true and false. true indicates that it is a directory, and false indicates that it is not a directory.</p>
+         * <p>Indicates whether the file is a directory. Valid values: true and false.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -60,7 +60,7 @@ public class ListAdvanceConfigDirResponseBody extends TeaModel {
         public Boolean isDir;
 
         /**
-         * <p>Indicates whether it is a template. Valid values: <strong>true</strong> and <strong>false</strong>. true indicates that it is a template, and false indicates that it is not a template.</p>
+         * <p>Indicates whether the file is a template. Valid values: <strong>true</strong> and <strong>false</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -69,7 +69,7 @@ public class ListAdvanceConfigDirResponseBody extends TeaModel {
         public Boolean isTemplate;
 
         /**
-         * <p>The name of the cluster.</p>
+         * <p>The cluster name.</p>
          * 
          * <strong>example:</strong>
          * <p>file_name_1</p>

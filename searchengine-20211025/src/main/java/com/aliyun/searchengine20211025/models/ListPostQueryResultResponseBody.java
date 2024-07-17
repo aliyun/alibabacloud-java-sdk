@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPostQueryResultResponseBody extends TeaModel {
     /**
-     * <p>id of request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>022F36C7-9FB4-5D67-BEBC-3D14B0984463</p>
@@ -14,7 +14,7 @@ public class ListPostQueryResultResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Object</p>
+     * <p>The result.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>

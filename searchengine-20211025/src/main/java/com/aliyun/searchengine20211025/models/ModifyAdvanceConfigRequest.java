@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyAdvanceConfigRequest extends TeaModel {
     /**
+     * <p>The content of the advanced configuration that is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -12,19 +14,32 @@ public class ModifyAdvanceConfigRequest extends TeaModel {
     public String content;
 
     /**
+     * <p>The type of the configuration content. Valid values: FILE, GIT, HTTP, and ODPS.</p>
+     * 
      * <strong>example:</strong>
      * <p>FILE</p>
      */
     @NameInMap("contentType")
     public String contentType;
 
+    /**
+     * <p>The description of the advanced configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("desc")
     public String desc;
 
+    /**
+     * <p>The files.</p>
+     */
     @NameInMap("files")
     public java.util.List<ModifyAdvanceConfigRequestFiles> files;
 
     /**
+     * <p>The name of the advanced configuration.</p>
+     * 
      * <strong>example:</strong>
      * <p>ha-cn-zvp2qr1sk01_qrs</p>
      */
@@ -32,6 +47,8 @@ public class ModifyAdvanceConfigRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The status of the advanced configuration. Valid values: drafting: The advanced configuration is in the draft state. used: The advanced configuration is being used. unused: The advanced configuration is not used. trash: The advanced configuration is being deleted.</p>
+     * 
      * <strong>example:</strong>
      * <p>used</p>
      */
@@ -39,6 +56,8 @@ public class ModifyAdvanceConfigRequest extends TeaModel {
     public String status;
 
     /**
+     * <p>The time when the advanced configuration was updated.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-02-27T07:50:55Z</p>
      */
@@ -108,6 +127,8 @@ public class ModifyAdvanceConfigRequest extends TeaModel {
 
     public static class ModifyAdvanceConfigRequestFiles extends TeaModel {
         /**
+         * <p>The full path of the file.</p>
+         * 
          * <strong>example:</strong>
          * <p>/cluster.json</p>
          */
@@ -115,6 +136,8 @@ public class ModifyAdvanceConfigRequest extends TeaModel {
         public String fullPathName;
 
         /**
+         * <p>Specifies whether the file is a directory.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -122,6 +145,8 @@ public class ModifyAdvanceConfigRequest extends TeaModel {
         public Boolean isDir;
 
         /**
+         * <p>Specifies whether the file is a template.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -129,6 +154,8 @@ public class ModifyAdvanceConfigRequest extends TeaModel {
         public Boolean isTemplate;
 
         /**
+         * <p>The node name.</p>
+         * 
          * <strong>example:</strong>
          * <p>general</p>
          */

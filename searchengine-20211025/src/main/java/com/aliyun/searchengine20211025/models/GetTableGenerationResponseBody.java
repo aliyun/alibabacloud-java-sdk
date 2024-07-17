@@ -13,6 +13,9 @@ public class GetTableGenerationResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The result returned.</p>
+     */
     @NameInMap("result")
     public GetTableGenerationResponseBodyResult result;
 

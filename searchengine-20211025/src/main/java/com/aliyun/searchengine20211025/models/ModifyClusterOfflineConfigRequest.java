@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyClusterOfflineConfigRequest extends TeaModel {
     /**
-     * <p>The mode of reindexing. Valid values: api and indexRecover. api indicates to push incremental data to a data source by calling the API operations. indexRecover indicates that the data source is restored from the index.</p>
+     * <p>The reindexing method. Valid values: api: API data source. indexRecover: data recovery by using indexing.</p>
      * 
      * <strong>example:</strong>
      * <p>indexRecover</p>
@@ -29,7 +29,7 @@ public class ModifyClusterOfflineConfigRequest extends TeaModel {
     public String dataSourceName;
 
     /**
-     * <p>The type of the data source. Valid values: odps, swift, saro, and unKnow.</p>
+     * <p>The type of the data source. Valid values: odps: MaxCompute. swift: Swift. unKnow: unknown type.</p>
      * 
      * <strong>example:</strong>
      * <p>maxComputer</p>
@@ -47,7 +47,7 @@ public class ModifyClusterOfflineConfigRequest extends TeaModel {
     public Integer dataTimeSec;
 
     /**
-     * <p>The domain where the data source is deployed.</p>
+     * <p>The data center in which the data source is deployed.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc_hz_domain_1</p>
@@ -56,7 +56,7 @@ public class ModifyClusterOfflineConfigRequest extends TeaModel {
     public String domain;
 
     /**
-     * <p>The data restoration version.</p>
+     * <p>The ID of the full index version.</p>
      * 
      * <strong>example:</strong>
      * <p>160142641</p>
@@ -73,6 +73,12 @@ public class ModifyClusterOfflineConfigRequest extends TeaModel {
     @NameInMap("partition")
     public String partition;
 
+    /**
+     * <p>The push mode of the configuration. By default, only the configuration is pushed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PUSH_ONLY</p>
+     */
     @NameInMap("pushMode")
     public String pushMode;
 

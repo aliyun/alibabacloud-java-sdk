@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteIndexRequest extends TeaModel {
     /**
-     * <p>The data source</p>
+     * <p>The data source.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +14,12 @@ public class DeleteIndexRequest extends TeaModel {
     @NameInMap("dataSource")
     public String dataSource;
 
+    /**
+     * <p>Specifies whether to delete the data source.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("deleteDataSource")
     public Boolean deleteDataSource;
 

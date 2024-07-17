@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateInstanceRequest extends TeaModel {
     /**
-     * <p>A list of instance-related specifications.</p>
+     * <p>The information about the instance specification.</p>
      */
     @NameInMap("components")
     public java.util.List<UpdateInstanceRequestComponents> components;
@@ -20,7 +20,7 @@ public class UpdateInstanceRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Valid values: UPGRADE and DOWNGRADE. UPGRADE indicates to upgrade the instance specifications. DOWNGRADE indicates to downgrade the instance specifications.</p>
+     * <p>The type of the order. Valid values: UPGRADE and DOWNGRADE. UPGRADE upgrades the instance specifications. DOWNGRADE: downgrades the instance specifications.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
@@ -59,7 +59,7 @@ public class UpdateInstanceRequest extends TeaModel {
 
     public static class UpdateInstanceRequestComponents extends TeaModel {
         /**
-         * <p>The specification code, which must be consistent with the values of the corresponding module parameters.</p>
+         * <p>The code of the specification, which must be consistent with the value that you specify on the buy page.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -68,6 +68,8 @@ public class UpdateInstanceRequest extends TeaModel {
         public String code;
 
         /**
+         * <p>The value of the specification.</p>
+         * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
          */

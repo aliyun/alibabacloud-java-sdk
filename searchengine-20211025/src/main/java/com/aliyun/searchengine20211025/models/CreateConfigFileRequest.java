@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateConfigFileRequest extends TeaModel {
     /**
+     * <p>The name of the directory.</p>
+     * 
      * <strong>example:</strong>
      * <p>/schemas/device_event_xt_schema.json</p>
      */
@@ -12,6 +14,8 @@ public class CreateConfigFileRequest extends TeaModel {
     public String fileName;
 
     /**
+     * <p>The Object Storage Service (OSS) URL of the file.</p>
+     * 
      * <strong>example:</strong>
      * <p>oss://xxx/xxxx/xxx</p>
      */
@@ -19,6 +23,8 @@ public class CreateConfigFileRequest extends TeaModel {
     public String ossPath;
 
     /**
+     * <p>The path of the parent directory.</p>
+     * 
      * <strong>example:</strong>
      * <p>/</p>
      */

@@ -14,7 +14,7 @@ public class ListClusterTasksResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about the index.</p>
+     * <p>The index information.</p>
      */
     @NameInMap("result")
     public java.util.List<ListClusterTasksResponseBodyResult> result;
@@ -42,7 +42,7 @@ public class ListClusterTasksResponseBody extends TeaModel {
 
     public static class ListClusterTasksResponseBodyResultTags extends TeaModel {
         /**
-         * <p>The content of the tag.</p>
+         * <p>The tag content.</p>
          * 
          * <strong>example:</strong>
          * <p>succeed in handling request</p>
@@ -51,7 +51,7 @@ public class ListClusterTasksResponseBody extends TeaModel {
         public String msg;
 
         /**
-         * <p>The level of the tag.</p>
+         * <p>The tag level.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot; &quot;</p>
@@ -84,7 +84,7 @@ public class ListClusterTasksResponseBody extends TeaModel {
 
     public static class ListClusterTasksResponseBodyResultTaskNodes extends TeaModel {
         /**
-         * <p>The date when the task was completed.</p>
+         * <p>The time when the task was complete.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot; &quot;</p>
@@ -93,7 +93,7 @@ public class ListClusterTasksResponseBody extends TeaModel {
         public String finishDate;
 
         /**
-         * <p>The sequence number of the task.</p>
+         * <p>The ordinal number of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -102,7 +102,7 @@ public class ListClusterTasksResponseBody extends TeaModel {
         public Long index;
 
         /**
-         * <p>The name of the task.</p>
+         * <p>The task name.</p>
          * 
          * <strong>example:</strong>
          * <p>general</p>
@@ -111,7 +111,7 @@ public class ListClusterTasksResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The status of the task.</p>
+         * <p>The task status.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -169,7 +169,7 @@ public class ListClusterTasksResponseBody extends TeaModel {
         public String extraAttribute;
 
         /**
-         * <p>The field3 field that is passed through when you create a state machine.</p>
+         * <p>The field3 field that was passed when the FSM was created.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot; &quot;</p>
@@ -178,7 +178,7 @@ public class ListClusterTasksResponseBody extends TeaModel {
         public String field3;
 
         /**
-         * <p>fsmId</p>
+         * <p>The ID of the finite state machine (FSM).</p>
          * 
          * <strong>example:</strong>
          * <p>tisplus_opensearch@datasource_flow_fsm@1865410598556969-ha-cn-zvp2ljiwe01_api2@bj_vpc_domain_1@null@MANUAL-ha-cn-zvp2ljiwe01_api2@1649729867698@028315</p>
@@ -187,7 +187,7 @@ public class ListClusterTasksResponseBody extends TeaModel {
         public String fsmId;
 
         /**
-         * <p>Indicates whether the change is a data source task change or a cluster task change.</p>
+         * <p>The change group type.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot; &quot;</p>
@@ -196,7 +196,7 @@ public class ListClusterTasksResponseBody extends TeaModel {
         public String groupType;
 
         /**
-         * <p>The task name on the card.</p>
+         * <p>The card name.</p>
          * 
          * <strong>example:</strong>
          * <p>ha-cn-pl32rf0js04_qrs</p>
@@ -205,7 +205,7 @@ public class ListClusterTasksResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The overall status of FSM.</p>
+         * <p>The FSM status.</p>
          * 
          * <strong>example:</strong>
          * <p>onlyPublished</p>
@@ -214,19 +214,19 @@ public class ListClusterTasksResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The status tag of the progress bar chart.</p>
+         * <p>The tags of the progress bar.</p>
          */
         @NameInMap("tags")
         public java.util.List<ListClusterTasksResponseBodyResultTags> tags;
 
         /**
-         * <p>The information about the task.</p>
+         * <p>The task information.</p>
          */
         @NameInMap("taskNodes")
         public java.util.List<ListClusterTasksResponseBodyResultTaskNodes> taskNodes;
 
         /**
-         * <p>The timestamp of the task on the card.</p>
+         * <p>The timestamp of the card.</p>
          * 
          * <strong>example:</strong>
          * <p>1657610520</p>
@@ -235,7 +235,7 @@ public class ListClusterTasksResponseBody extends TeaModel {
         public String time;
 
         /**
-         * <p>The type of the task on the card.</p>
+         * <p>The card type.</p>
          * 
          * <strong>example:</strong>
          * <p>qrs</p>
@@ -244,7 +244,7 @@ public class ListClusterTasksResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The user who triggered the FSM process.</p>
+         * <p>The user who triggered the generation of the FSM process.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot; &quot;</p>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListRestQueryResultRequest extends TeaModel {
     /**
+     * <p>The instance endpoint.</p>
+     * 
      * <strong>example:</strong>
      * <p>127.0.0.1</p>
      */
@@ -12,6 +14,8 @@ public class ListRestQueryResultRequest extends TeaModel {
     public String address;
 
     /**
+     * <p>The name of the index table.</p>
+     * 
      * <strong>example:</strong>
      * <p>main_index</p>
      */
@@ -19,6 +23,8 @@ public class ListRestQueryResultRequest extends TeaModel {
     public String indexName;
 
     /**
+     * <p>The rest query statement.</p>
+     * 
      * <strong>example:</strong>
      * <p>query%3Drelation_id%3A%221151274675_2%22%26%26cluster%3Dgeneral%26%26config%3Dstart%3A0%2Chit%3A10%2Cformat%3Ajson</p>
      */

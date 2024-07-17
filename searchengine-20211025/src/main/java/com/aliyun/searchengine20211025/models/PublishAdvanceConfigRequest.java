@@ -4,9 +4,18 @@ package com.aliyun.searchengine20211025.models;
 import com.aliyun.tea.*;
 
 public class PublishAdvanceConfigRequest extends TeaModel {
+    /**
+     * <p>The description of the advanced configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Custom configuration</p>
+     */
     @NameInMap("desc")
     public String desc;
 
+    /**
+     * <p>The files.</p>
+     */
     @NameInMap("files")
     public java.util.List<PublishAdvanceConfigRequestFiles> files;
 
@@ -32,9 +41,18 @@ public class PublishAdvanceConfigRequest extends TeaModel {
     }
 
     public static class PublishAdvanceConfigRequestFilesConfig extends TeaModel {
+        /**
+         * <p>The file content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;url\&quot;:\&quot;<a href="http://xxxxxx.aliyuncs.com/outnet_hz/packages/xxxxx/opensearch_offline_plugins_xxxxx.tar%5C%5C%22%7D">http://xxxxxx.aliyuncs.com/outnet_hz/packages/xxxxx/opensearch_offline_plugins_xxxxx.tar\\&quot;}</a></p>
+         */
         @NameInMap("content")
         public String content;
 
+        /**
+         * <p>The variables.</p>
+         */
         @NameInMap("variables")
         public java.util.Map<String, FilesConfigVariablesValue> variables;
 
@@ -62,21 +80,54 @@ public class PublishAdvanceConfigRequest extends TeaModel {
     }
 
     public static class PublishAdvanceConfigRequestFiles extends TeaModel {
+        /**
+         * <p>The information about the advanced configuration.</p>
+         */
         @NameInMap("config")
         public PublishAdvanceConfigRequestFilesConfig config;
 
+        /**
+         * <p>The directory name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/clusters</p>
+         */
         @NameInMap("dirName")
         public String dirName;
 
+        /**
+         * <p>The file name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vector_question_schema.json</p>
+         */
         @NameInMap("fileName")
         public String fileName;
 
+        /**
+         * <p>The operation type. Valid values: UPDATE and DELETE. Default value: UPDATE.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UPDATE</p>
+         */
         @NameInMap("operateType")
         public String operateType;
 
+        /**
+         * <p>The path of the Object Storage Service (OSS) object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://opensearch/test.json</p>
+         */
         @NameInMap("ossPath")
         public String ossPath;
 
+        /**
+         * <p>The path of the parent directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
+         */
         @NameInMap("parentFullPath")
         public String parentFullPath;
 

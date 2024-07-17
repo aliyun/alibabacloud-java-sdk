@@ -4,21 +4,51 @@ package com.aliyun.searchengine20211025.models;
 import com.aliyun.tea.*;
 
 public class CreateDataSourceRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to automatically rebuild the index.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("autoBuildIndex")
     public Boolean autoBuildIndex;
 
+    /**
+     * <p>The configuration information.</p>
+     */
     @NameInMap("config")
     public CreateDataSourceRequestConfig config;
 
+    /**
+     * <p>The data center in which the data source is deployed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc_hz_domain_1</p>
+     */
     @NameInMap("domain")
     public String domain;
 
+    /**
+     * <p>The name of the data source.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ha-cn-pl32rf0****_test_api</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>The configurations of the SARO data source.</p>
+     */
     @NameInMap("saroConfig")
     public CreateDataSourceRequestSaroConfig saroConfig;
 
+    /**
+     * <p>The type of the data source. Valid values: odps, oss, and swift.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>odps</p>
+     */
     @NameInMap("type")
     public String type;
 
@@ -93,33 +123,93 @@ public class CreateDataSourceRequest extends TeaModel {
     }
 
     public static class CreateDataSourceRequestConfig extends TeaModel {
+        /**
+         * <p>The AccessKey ID of the MaxCompute data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>L***p</p>
+         */
         @NameInMap("accessKey")
         public String accessKey;
 
+        /**
+         * <p>The AccessKey secret of the MaxCompute data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5**9a6</p>
+         */
         @NameInMap("accessSecret")
         public String accessSecret;
 
+        /**
+         * <p>The name of the OSS bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>opensearch</p>
+         */
         @NameInMap("bucket")
         public String bucket;
 
+        /**
+         * <p>The endpoint of the MaxCompute or Object Storage Service (OSS) data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://service.cn-hangzhou.maxcompute.aliyun-inc.com/api">http://service.cn-hangzhou.maxcompute.aliyun-inc.com/api</a></p>
+         */
         @NameInMap("endpoint")
         public String endpoint;
 
+        /**
+         * <p>The namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aegis-ops</p>
+         */
         @NameInMap("namespace")
         public String namespace;
 
+        /**
+         * <p>The path of the OSS object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/opensearch/search</p>
+         */
         @NameInMap("ossPath")
         public String ossPath;
 
+        /**
+         * <p>The partition in the MaxCompute table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ds=20220713</p>
+         */
         @NameInMap("partition")
         public String partition;
 
+        /**
+         * <p>The file path in the Apsara File Storage for HDFS file system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-hdfs-path</p>
+         */
         @NameInMap("path")
         public String path;
 
+        /**
+         * <p>The name of the MaxCompute project that is used as the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kubenest</p>
+         */
         @NameInMap("project")
         public String project;
 
+        /**
+         * <p>The name of the MaxCompute table that is used as the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>item</p>
+         */
         @NameInMap("table")
         public String table;
 
@@ -211,9 +301,21 @@ public class CreateDataSourceRequest extends TeaModel {
     }
 
     public static class CreateDataSourceRequestSaroConfig extends TeaModel {
+        /**
+         * <p>The namespace of the SARO data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>igraph-cn-x0r3e3abe02</p>
+         */
         @NameInMap("namespace")
         public String namespace;
 
+        /**
+         * <p>The name of the SARO table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>index_hdfs</p>
+         */
         @NameInMap("tableName")
         public String tableName;
 

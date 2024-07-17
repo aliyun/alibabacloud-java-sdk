@@ -68,7 +68,7 @@ public class ModifyNodeConfigRequest extends TeaModel {
     public String clusterName;
 
     /**
-     * <p>The name of the data source. Valid values: search and not_search. search indicates to search data. not_search indicates not to search data.</p>
+     * <p>The name of the data source. Valid values: -search: search for data. -not_search: do not search for data.</p>
      * 
      * <strong>example:</strong>
      * <p>ha-cn-2r42ostoc01_0704</p>
@@ -77,7 +77,7 @@ public class ModifyNodeConfigRequest extends TeaModel {
     public String dataSourceName;
 
     /**
-     * <p>The original name of the node.</p>
+     * <p>The name of the configuration before the modification.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -87,13 +87,13 @@ public class ModifyNodeConfigRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The type of the algorithm. Valid values: pop, cp, hot, hint, and suggest.</p>
+     * <p>The type of the algorithm. Valid values:</p>
      * <ul>
-     * <li>pop indicates the popularity model.</li>
-     * <li>cp indicates the category prediction model.</li>
-     * <li>hot indicates the top search model.</li>
-     * <li>hint indicates the hint model.</li>
-     * <li>suggest indicates the drop-down suggestion model.</li>
+     * <li>pop: a popularity model.</li>
+     * <li>cp: a category prediction model.</li>
+     * <li>hot: a top search model.</li>
+     * <li>hint: a hint model.</li>
+     * <li>suggest: a drop-down suggestions model.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

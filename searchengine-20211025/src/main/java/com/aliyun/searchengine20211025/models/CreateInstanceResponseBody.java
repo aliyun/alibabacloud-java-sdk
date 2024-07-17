@@ -14,7 +14,7 @@ public class CreateInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The result returned</p>
+     * <p>The results returned.</p>
      */
     @NameInMap("result")
     public CreateInstanceResponseBodyResult result;
@@ -42,7 +42,7 @@ public class CreateInstanceResponseBody extends TeaModel {
 
     public static class CreateInstanceResponseBodyResult extends TeaModel {
         /**
-         * <p>The ID of the instance</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ha-cn-2r42ppr7901</p>

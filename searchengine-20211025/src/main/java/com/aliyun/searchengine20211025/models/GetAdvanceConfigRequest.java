@@ -4,6 +4,22 @@ package com.aliyun.searchengine20211025.models;
 import com.aliyun.tea.*;
 
 public class GetAdvanceConfigRequest extends TeaModel {
+    /**
+     * <ul>
+     * <li>The type of the advanced configuration. Valid values: -ONLINE: online configuration</li>
+     * <li>\-ONLINE_CAVA: online Cava configuration</li>
+     * <li>\-ONLINE_PLUGIN: online plug-in configuration</li>
+     * <li>\-ONLINE_QUERY: query configuration</li>
+     * <li>\-OFFLINE_DICT: offline dictionary configuration</li>
+     * <li>\-OFFLINE_TABLE: offline table configuration</li>
+     * <li>\-OFFLINE_COMMON: offline configuration</li>
+     * <li>\-OFFLINE_PLUGIN: offline plug-in configuration</li>
+     * <li>\-OFFLINE_INDEX: index configuration</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ONLINE</p>
+     */
     @NameInMap("type")
     public String type;
 

@@ -14,7 +14,7 @@ public class GetDataSourceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The list of information about the data source</p>
+     * <p>The information about the data source.</p>
      */
     @NameInMap("result")
     public GetDataSourceResponseBodyResult result;
@@ -57,13 +57,16 @@ public class GetDataSourceResponseBody extends TeaModel {
         public java.util.List<String> indexes;
 
         /**
-         * <p>The time when an index for full data was last built</p>
+         * <p>The time when the full data of the data source was last queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1718787219</p>
          */
         @NameInMap("lastFulTime")
         public Long lastFulTime;
 
         /**
-         * <p>The name of the data source</p>
+         * <p>The name of the data source.</p>
          * 
          * <strong>example:</strong>
          * <p>my_index</p>
@@ -72,7 +75,7 @@ public class GetDataSourceResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The state of the data source</p>
+         * <p>The status of the data source. Valid values: new: The data source is being created. publish: The data source is in the normal state. trash: The data source is being deleted.</p>
          * 
          * <strong>example:</strong>
          * <p>NEW</p>

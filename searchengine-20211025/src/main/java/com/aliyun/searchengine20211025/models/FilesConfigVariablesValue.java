@@ -4,18 +4,48 @@ package com.aliyun.searchengine20211025.models;
 import com.aliyun.tea.*;
 
 public class FilesConfigVariablesValue extends TeaModel {
+    /**
+     * <p>The description of the variable.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Custom variable</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>Specifies whether the variable is not allowed to be modified.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("disableModify")
     public Boolean disableModify;
 
+    /**
+     * <p>Specifies whether the variable is modified.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("isModify")
     public Boolean isModify;
 
+    /**
+     * <p>The variable type. Valid values: NORMAL: common variable. FUNCTION: function variable.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NORMAL</p>
+     */
     @NameInMap("type")
     public String type;
 
+    /**
+     * <p>The variable value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("value")
     public String value;
 

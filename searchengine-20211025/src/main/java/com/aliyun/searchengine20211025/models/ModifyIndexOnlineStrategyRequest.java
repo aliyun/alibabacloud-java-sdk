@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyIndexOnlineStrategyRequest extends TeaModel {
     /**
+     * <p>The index change rate.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */

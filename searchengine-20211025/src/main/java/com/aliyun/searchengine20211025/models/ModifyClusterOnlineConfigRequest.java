@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ModifyClusterOnlineConfigRequest extends TeaModel {
     /**
-     * <p>The information about the cluster</p>
+     * <p>The cluster information.</p>
      */
     @NameInMap("clusters")
     public java.util.List<String> clusters;
 
     /**
-     * <p>配置信息</p>
+     * <p>The configuration information.</p>
      */
     @NameInMap("config")
     public java.util.Map<String, Integer> config;

@@ -14,7 +14,7 @@ public class GetNodeConfigRequest extends TeaModel {
     public String clusterName;
 
     /**
-     * <p>The name of the cluster.</p>
+     * <p>The node name.</p>
      * 
      * <strong>example:</strong>
      * <p>ha-cn-30174dhoz53_qrs</p>
@@ -23,7 +23,13 @@ public class GetNodeConfigRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The type of the node. Valid values: qrs, search, index, and cluster. qrs indicates a query node, search indicates a data node, index indicates an index node, and cluster indicates a cluster node.</p>
+     * <p>The node type. Valid values:</p>
+     * <ul>
+     * <li>qrs: Query Result Searcher (QRS) worker</li>
+     * <li>search: Search worker</li>
+     * <li>index: index</li>
+     * <li>cluster: cluster</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>index</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RecoverIndexRequest extends TeaModel {
     /**
-     * <p>The ID of the index deployed in offline mode.</p>
+     * <p>The deployment ID of the data source.</p>
      * 
      * <strong>example:</strong>
      * <p>277</p>
@@ -14,7 +14,7 @@ public class RecoverIndexRequest extends TeaModel {
     public Integer buildDeployId;
 
     /**
-     * <p>The name of the data source</p>
+     * <p>The name of the data source.</p>
      * 
      * <strong>example:</strong>
      * <p>ha-cn-pl32rf0js04_odps_first</p>
@@ -23,7 +23,7 @@ public class RecoverIndexRequest extends TeaModel {
     public String dataSourceName;
 
     /**
-     * <p>The primary key of generation.</p>
+     * <p>The ID of the full index version.</p>
      * 
      * <strong>example:</strong>
      * <p>1653018575</p>
@@ -32,7 +32,7 @@ public class RecoverIndexRequest extends TeaModel {
     public String generation;
 
     /**
-     * <p>The name of the index</p>
+     * <p>The index name.</p>
      * 
      * <strong>example:</strong>
      * <p>main_index</p>

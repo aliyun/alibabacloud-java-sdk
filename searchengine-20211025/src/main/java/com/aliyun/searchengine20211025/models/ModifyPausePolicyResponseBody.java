@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyPausePolicyResponseBody extends TeaModel {
     /**
-     * <p>id of request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0B1FF998-BB8D-5182-BFC0-E471AA77095A</p>
@@ -14,7 +14,7 @@ public class ModifyPausePolicyResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Map</p>
+     * <p>The result.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>

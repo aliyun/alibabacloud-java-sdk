@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyPasswordRequest extends TeaModel {
     /**
-     * <p>The password</p>
+     * <p>The password.</p>
      * 
      * <strong>example:</strong>
      * <hr>
@@ -14,7 +14,7 @@ public class ModifyPasswordRequest extends TeaModel {
     public String password;
 
     /**
-     * <p>The username</p>
+     * <p>The username.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;username&quot;</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PublishIndexVersionRequest extends TeaModel {
     /**
-     * <p>The query result</p>
+     * <p>The request body.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>

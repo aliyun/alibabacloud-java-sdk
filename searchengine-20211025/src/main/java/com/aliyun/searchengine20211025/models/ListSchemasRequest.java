@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListSchemasRequest extends TeaModel {
     /**
-     * <p>AK</p>
+     * <p>The AccessKey ID of the MaxCompute data source.</p>
      * 
      * <strong>example:</strong>
      * <p>ak</p>
@@ -14,7 +14,7 @@ public class ListSchemasRequest extends TeaModel {
     public String accessKey;
 
     /**
-     * <p>AS</p>
+     * <p>The AccessKey secret of the MaxCompute data source.</p>
      * 
      * <strong>example:</strong>
      * <p>as</p>
@@ -23,7 +23,7 @@ public class ListSchemasRequest extends TeaModel {
     public String accessSecret;
 
     /**
-     * <p>odps endpoint</p>
+     * <p>The endpoint of the MaxCompute data source.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://service.cn-hangzhou.maxcompute.aliyun-inc.com/api">http://service.cn-hangzhou.maxcompute.aliyun-inc.com/api</a></p>
@@ -32,6 +32,8 @@ public class ListSchemasRequest extends TeaModel {
     public String endpoint;
 
     /**
+     * <p>The namespace of the SARO data source.</p>
+     * 
      * <strong>example:</strong>
      * <p>igraph-cn-tl32wnrhi04</p>
      */
@@ -39,6 +41,8 @@ public class ListSchemasRequest extends TeaModel {
     public String namespace;
 
     /**
+     * <p>The shard name.</p>
+     * 
      * <strong>example:</strong>
      * <p>dt=20230520</p>
      */
@@ -46,6 +50,8 @@ public class ListSchemasRequest extends TeaModel {
     public String partition;
 
     /**
+     * <p>The name of the MaxCompute project that is used as the data source.</p>
+     * 
      * <strong>example:</strong>
      * <p>start-flask-v3-obcc</p>
      */
@@ -53,6 +59,8 @@ public class ListSchemasRequest extends TeaModel {
     public String project;
 
     /**
+     * <p>The name of the MaxCompute table that is used as the data source.</p>
+     * 
      * <strong>example:</strong>
      * <p>item</p>
      */
@@ -60,7 +68,7 @@ public class ListSchemasRequest extends TeaModel {
     public String table;
 
     /**
-     * <p>odps, swift, saro, oss, unKnow</p>
+     * <p>The type of the data source. Valid values: odps, swift, saro, oss, and unKnow.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

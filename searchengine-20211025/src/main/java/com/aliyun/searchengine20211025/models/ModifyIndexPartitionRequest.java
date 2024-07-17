@@ -14,7 +14,7 @@ public class ModifyIndexPartitionRequest extends TeaModel {
     public String dataSourceName;
 
     /**
-     * <p>The name of the data center.</p>
+     * <p>The data center.</p>
      * 
      * <strong>example:</strong>
      * <p>pre_domain_1</p>
@@ -23,7 +23,7 @@ public class ModifyIndexPartitionRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The primary key of generation.</p>
+     * <p>The primary key.</p>
      * 
      * <strong>example:</strong>
      * <p>1633293829</p>
@@ -32,7 +32,7 @@ public class ModifyIndexPartitionRequest extends TeaModel {
     public Long generation;
 
     /**
-     * <p>The information about shards of the index.</p>
+     * <p>The index information.</p>
      */
     @NameInMap("indexInfos")
     public java.util.List<ModifyIndexPartitionRequestIndexInfos> indexInfos;
@@ -76,7 +76,7 @@ public class ModifyIndexPartitionRequest extends TeaModel {
 
     public static class ModifyIndexPartitionRequestIndexInfos extends TeaModel {
         /**
-         * <p>The name of the index.</p>
+         * <p>The index name.</p>
          * 
          * <strong>example:</strong>
          * <p>atest2</p>
@@ -85,7 +85,7 @@ public class ModifyIndexPartitionRequest extends TeaModel {
         public String indexName;
 
         /**
-         * <p>The number of concurrency. The default value is 1.</p>
+         * <p>The concurrency. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -94,7 +94,7 @@ public class ModifyIndexPartitionRequest extends TeaModel {
         public Integer parallelNum;
 
         /**
-         * <p>The number of shards of the index.</p>
+         * <p>The number of shards.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTasksResponseBody extends TeaModel {
     /**
-     * <p>id of request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>D39EE0F1-D7EF-5F46-B781-6BF4185308B0</p>
@@ -14,7 +14,7 @@ public class ListTasksResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Object</p>
+     * <p>The result.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>

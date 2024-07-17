@@ -14,7 +14,7 @@ public class GetInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The result returned.</p>
+     * <p>The results returned.</p>
      */
     @NameInMap("result")
     public GetInstanceResponseBodyResult result;
@@ -40,9 +40,228 @@ public class GetInstanceResponseBody extends TeaModel {
         return this.result;
     }
 
+    public static class GetInstanceResponseBodyResultNetwork extends TeaModel {
+        @NameInMap("allow")
+        public String allow;
+
+        @NameInMap("endpoint")
+        public String endpoint;
+
+        @NameInMap("publicEndpoint")
+        public String publicEndpoint;
+
+        @NameInMap("vSwitchId")
+        public String vSwitchId;
+
+        @NameInMap("vpcId")
+        public String vpcId;
+
+        public static GetInstanceResponseBodyResultNetwork build(java.util.Map<String, ?> map) throws Exception {
+            GetInstanceResponseBodyResultNetwork self = new GetInstanceResponseBodyResultNetwork();
+            return TeaModel.build(map, self);
+        }
+
+        public GetInstanceResponseBodyResultNetwork setAllow(String allow) {
+            this.allow = allow;
+            return this;
+        }
+        public String getAllow() {
+            return this.allow;
+        }
+
+        public GetInstanceResponseBodyResultNetwork setEndpoint(String endpoint) {
+            this.endpoint = endpoint;
+            return this;
+        }
+        public String getEndpoint() {
+            return this.endpoint;
+        }
+
+        public GetInstanceResponseBodyResultNetwork setPublicEndpoint(String publicEndpoint) {
+            this.publicEndpoint = publicEndpoint;
+            return this;
+        }
+        public String getPublicEndpoint() {
+            return this.publicEndpoint;
+        }
+
+        public GetInstanceResponseBodyResultNetwork setVSwitchId(String vSwitchId) {
+            this.vSwitchId = vSwitchId;
+            return this;
+        }
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
+        public GetInstanceResponseBodyResultNetwork setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+    }
+
+    public static class GetInstanceResponseBodyResultSpecQrsResource extends TeaModel {
+        @NameInMap("category")
+        public String category;
+
+        @NameInMap("cpu")
+        public Integer cpu;
+
+        @NameInMap("disk")
+        public Integer disk;
+
+        @NameInMap("mem")
+        public Integer mem;
+
+        @NameInMap("nodeCount")
+        public Integer nodeCount;
+
+        public static GetInstanceResponseBodyResultSpecQrsResource build(java.util.Map<String, ?> map) throws Exception {
+            GetInstanceResponseBodyResultSpecQrsResource self = new GetInstanceResponseBodyResultSpecQrsResource();
+            return TeaModel.build(map, self);
+        }
+
+        public GetInstanceResponseBodyResultSpecQrsResource setCategory(String category) {
+            this.category = category;
+            return this;
+        }
+        public String getCategory() {
+            return this.category;
+        }
+
+        public GetInstanceResponseBodyResultSpecQrsResource setCpu(Integer cpu) {
+            this.cpu = cpu;
+            return this;
+        }
+        public Integer getCpu() {
+            return this.cpu;
+        }
+
+        public GetInstanceResponseBodyResultSpecQrsResource setDisk(Integer disk) {
+            this.disk = disk;
+            return this;
+        }
+        public Integer getDisk() {
+            return this.disk;
+        }
+
+        public GetInstanceResponseBodyResultSpecQrsResource setMem(Integer mem) {
+            this.mem = mem;
+            return this;
+        }
+        public Integer getMem() {
+            return this.mem;
+        }
+
+        public GetInstanceResponseBodyResultSpecQrsResource setNodeCount(Integer nodeCount) {
+            this.nodeCount = nodeCount;
+            return this;
+        }
+        public Integer getNodeCount() {
+            return this.nodeCount;
+        }
+
+    }
+
+    public static class GetInstanceResponseBodyResultSpecSearchResource extends TeaModel {
+        @NameInMap("category")
+        public String category;
+
+        @NameInMap("cpu")
+        public Integer cpu;
+
+        @NameInMap("disk")
+        public Integer disk;
+
+        @NameInMap("mem")
+        public Integer mem;
+
+        @NameInMap("nodeCount")
+        public Integer nodeCount;
+
+        public static GetInstanceResponseBodyResultSpecSearchResource build(java.util.Map<String, ?> map) throws Exception {
+            GetInstanceResponseBodyResultSpecSearchResource self = new GetInstanceResponseBodyResultSpecSearchResource();
+            return TeaModel.build(map, self);
+        }
+
+        public GetInstanceResponseBodyResultSpecSearchResource setCategory(String category) {
+            this.category = category;
+            return this;
+        }
+        public String getCategory() {
+            return this.category;
+        }
+
+        public GetInstanceResponseBodyResultSpecSearchResource setCpu(Integer cpu) {
+            this.cpu = cpu;
+            return this;
+        }
+        public Integer getCpu() {
+            return this.cpu;
+        }
+
+        public GetInstanceResponseBodyResultSpecSearchResource setDisk(Integer disk) {
+            this.disk = disk;
+            return this;
+        }
+        public Integer getDisk() {
+            return this.disk;
+        }
+
+        public GetInstanceResponseBodyResultSpecSearchResource setMem(Integer mem) {
+            this.mem = mem;
+            return this;
+        }
+        public Integer getMem() {
+            return this.mem;
+        }
+
+        public GetInstanceResponseBodyResultSpecSearchResource setNodeCount(Integer nodeCount) {
+            this.nodeCount = nodeCount;
+            return this;
+        }
+        public Integer getNodeCount() {
+            return this.nodeCount;
+        }
+
+    }
+
+    public static class GetInstanceResponseBodyResultSpec extends TeaModel {
+        @NameInMap("qrsResource")
+        public GetInstanceResponseBodyResultSpecQrsResource qrsResource;
+
+        @NameInMap("searchResource")
+        public GetInstanceResponseBodyResultSpecSearchResource searchResource;
+
+        public static GetInstanceResponseBodyResultSpec build(java.util.Map<String, ?> map) throws Exception {
+            GetInstanceResponseBodyResultSpec self = new GetInstanceResponseBodyResultSpec();
+            return TeaModel.build(map, self);
+        }
+
+        public GetInstanceResponseBodyResultSpec setQrsResource(GetInstanceResponseBodyResultSpecQrsResource qrsResource) {
+            this.qrsResource = qrsResource;
+            return this;
+        }
+        public GetInstanceResponseBodyResultSpecQrsResource getQrsResource() {
+            return this.qrsResource;
+        }
+
+        public GetInstanceResponseBodyResultSpec setSearchResource(GetInstanceResponseBodyResultSpecSearchResource searchResource) {
+            this.searchResource = searchResource;
+            return this;
+        }
+        public GetInstanceResponseBodyResultSpecSearchResource getSearchResource() {
+            return this.searchResource;
+        }
+
+    }
+
     public static class GetInstanceResponseBodyResultTags extends TeaModel {
         /**
-         * <p>标签键</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>env</p>
@@ -51,7 +270,7 @@ public class GetInstanceResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>标签值</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>prod</p>
@@ -93,7 +312,7 @@ public class GetInstanceResponseBody extends TeaModel {
         public String chargeType;
 
         /**
-         * <p>The product code.</p>
+         * <p>The commodity code of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>commodityCode</p>
@@ -119,8 +338,11 @@ public class GetInstanceResponseBody extends TeaModel {
         @NameInMap("description")
         public String description;
 
+        @NameInMap("edition")
+        public String edition;
+
         /**
-         * <p>The expiration time.</p>
+         * <p>The time when the instance expires.</p>
          * 
          * <strong>example:</strong>
          * <p>1634609702</p>
@@ -138,7 +360,7 @@ public class GetInstanceResponseBody extends TeaModel {
         public Boolean inDebt;
 
         /**
-         * <p>The ID of the resource.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ha-cn-7mz2qsgq301</p>
@@ -155,6 +377,15 @@ public class GetInstanceResponseBody extends TeaModel {
         @NameInMap("lockMode")
         public String lockMode;
 
+        @NameInMap("network")
+        public GetInstanceResponseBodyResultNetwork network;
+
+        @NameInMap("newMode")
+        public Boolean newMode;
+
+        @NameInMap("noQrs")
+        public Boolean noQrs;
+
         /**
          * <p>The ID of the resource group.</p>
          * 
@@ -163,6 +394,9 @@ public class GetInstanceResponseBody extends TeaModel {
          */
         @NameInMap("resourceGroupId")
         public String resourceGroupId;
+
+        @NameInMap("spec")
+        public GetInstanceResponseBodyResultSpec spec;
 
         /**
          * <p>The status of the instance. Valid values:</p>
@@ -180,19 +414,25 @@ public class GetInstanceResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>标签。</p>
+         * <p>The tags of the instance.</p>
          */
         @NameInMap("tags")
         public java.util.List<GetInstanceResponseBodyResultTags> tags;
 
         /**
-         * <p>The time when the instance was last updated.</p>
+         * <p>The time when the instance was updated.</p>
          * 
          * <strong>example:</strong>
          * <p>1634609702</p>
          */
         @NameInMap("updateTime")
         public String updateTime;
+
+        @NameInMap("userName")
+        public String userName;
+
+        @NameInMap("version")
+        public String version;
 
         public static GetInstanceResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             GetInstanceResponseBodyResult self = new GetInstanceResponseBodyResult();
@@ -231,6 +471,14 @@ public class GetInstanceResponseBody extends TeaModel {
             return this.description;
         }
 
+        public GetInstanceResponseBodyResult setEdition(String edition) {
+            this.edition = edition;
+            return this;
+        }
+        public String getEdition() {
+            return this.edition;
+        }
+
         public GetInstanceResponseBodyResult setExpiredTime(String expiredTime) {
             this.expiredTime = expiredTime;
             return this;
@@ -263,12 +511,44 @@ public class GetInstanceResponseBody extends TeaModel {
             return this.lockMode;
         }
 
+        public GetInstanceResponseBodyResult setNetwork(GetInstanceResponseBodyResultNetwork network) {
+            this.network = network;
+            return this;
+        }
+        public GetInstanceResponseBodyResultNetwork getNetwork() {
+            return this.network;
+        }
+
+        public GetInstanceResponseBodyResult setNewMode(Boolean newMode) {
+            this.newMode = newMode;
+            return this;
+        }
+        public Boolean getNewMode() {
+            return this.newMode;
+        }
+
+        public GetInstanceResponseBodyResult setNoQrs(Boolean noQrs) {
+            this.noQrs = noQrs;
+            return this;
+        }
+        public Boolean getNoQrs() {
+            return this.noQrs;
+        }
+
         public GetInstanceResponseBodyResult setResourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
             return this;
         }
         public String getResourceGroupId() {
             return this.resourceGroupId;
+        }
+
+        public GetInstanceResponseBodyResult setSpec(GetInstanceResponseBodyResultSpec spec) {
+            this.spec = spec;
+            return this;
+        }
+        public GetInstanceResponseBodyResultSpec getSpec() {
+            return this.spec;
         }
 
         public GetInstanceResponseBodyResult setStatus(String status) {
@@ -293,6 +573,22 @@ public class GetInstanceResponseBody extends TeaModel {
         }
         public String getUpdateTime() {
             return this.updateTime;
+        }
+
+        public GetInstanceResponseBodyResult setUserName(String userName) {
+            this.userName = userName;
+            return this;
+        }
+        public String getUserName() {
+            return this.userName;
+        }
+
+        public GetInstanceResponseBodyResult setVersion(String version) {
+            this.version = version;
+            return this;
+        }
+        public String getVersion() {
+            return this.version;
         }
 
     }
