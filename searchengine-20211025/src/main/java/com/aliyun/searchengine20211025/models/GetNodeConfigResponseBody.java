@@ -14,7 +14,7 @@ public class GetNodeConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The configurations of the node.</p>
+     * <p>The result set.</p>
      */
     @NameInMap("result")
     public GetNodeConfigResponseBodyResult result;
@@ -42,7 +42,7 @@ public class GetNodeConfigResponseBody extends TeaModel {
 
     public static class GetNodeConfigResponseBodyResult extends TeaModel {
         /**
-         * <p>Indicates whether the expression is the default one.</p>
+         * <p>Indicates whether the index is effective online.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -87,7 +87,7 @@ public class GetNodeConfigResponseBody extends TeaModel {
         public Integer minServicePercent;
 
         /**
-         * <p>Indicates whether the node is associated with the cluster.</p>
+         * <p>Indicates whether the cluster is mounted.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListPostQueryResultRequest extends TeaModel {
     /**
+     * <p>The instance endpoint.</p>
+     * 
      * <strong>example:</strong>
      * <p>127.0.0.1</p>
      */
@@ -12,6 +14,8 @@ public class ListPostQueryResultRequest extends TeaModel {
     public String address;
 
     /**
+     * <p>The request body.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -19,6 +23,8 @@ public class ListPostQueryResultRequest extends TeaModel {
     public java.util.Map<String, ?> body;
 
     /**
+     * <p>The query type. Valid values: sql: SQL query. ha3: Havenask query.</p>
+     * 
      * <strong>example:</strong>
      * <p>ha3</p>
      */

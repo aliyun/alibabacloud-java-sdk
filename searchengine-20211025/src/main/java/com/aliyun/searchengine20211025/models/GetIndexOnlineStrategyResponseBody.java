@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetIndexOnlineStrategyResponseBody extends TeaModel {
     /**
-     * <p>id of request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>FE03180A-0E29-5474-8A86-33F0683294A4</p>
@@ -14,7 +14,7 @@ public class GetIndexOnlineStrategyResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>IndexOnlineStrategy</p>
+     * <p>The result.</p>
      */
     @NameInMap("result")
     public GetIndexOnlineStrategyResponseBodyResult result;
@@ -42,6 +42,8 @@ public class GetIndexOnlineStrategyResponseBody extends TeaModel {
 
     public static class GetIndexOnlineStrategyResponseBodyResult extends TeaModel {
         /**
+         * <p>The index change rate.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */

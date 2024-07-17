@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StopIndexResponseBody extends TeaModel {
     /**
-     * <p>id of request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>E7B7D598-B080-5C8E-AA35-D43EC0D5F886</p>
@@ -14,7 +14,7 @@ public class StopIndexResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Map</p>
+     * <p>The result.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>

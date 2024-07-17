@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPausePolicysResponseBody extends TeaModel {
     /**
-     * <p>id of request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2AE63638-5420-56DC-BF59-37D8174039A0</p>
@@ -14,7 +14,7 @@ public class ListPausePolicysResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Map</p>
+     * <p>The result.</p>
      */
     @NameInMap("result")
     public java.util.Map<String, ResultValue> result;

@@ -42,7 +42,7 @@ public class ListDateSourceGenerationsResponseBody extends TeaModel {
 
     public static class ListDateSourceGenerationsResponseBodyResult extends TeaModel {
         /**
-         * <p>buildDeployId</p>
+         * <p>The ID of the offline deployment.</p>
          * 
          * <strong>example:</strong>
          * <p>122</p>
@@ -51,7 +51,7 @@ public class ListDateSourceGenerationsResponseBody extends TeaModel {
         public Integer buildDeployId;
 
         /**
-         * <p>The time to start index building.</p>
+         * <p>The timestamp that was generated when the index building was started.</p>
          * 
          * <strong>example:</strong>
          * <p>1626143673</p>
@@ -60,7 +60,7 @@ public class ListDateSourceGenerationsResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The directory where the index file created by using the dump table is saved.</p>
+         * <p>The path of the dumped index in the Apsara File Storage for HDFS file system.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
@@ -69,7 +69,7 @@ public class ListDateSourceGenerationsResponseBody extends TeaModel {
         public String dataDumpRoot;
 
         /**
-         * <p>The primary key of the generation.</p>
+         * <p>The ID of the full index version.</p>
          * 
          * <strong>example:</strong>
          * <p>1626143930</p>
@@ -78,13 +78,13 @@ public class ListDateSourceGenerationsResponseBody extends TeaModel {
         public Long generation;
 
         /**
-         * <p>Key indicates the name of the index. value indicates the number of shards.</p>
+         * <p>The shards of the index version. The value is a key-value pair in which the key indicates the index name and the value indicates the number of shards. The number of value shards.</p>
          */
         @NameInMap("partition")
         public java.util.Map<String, Integer> partition;
 
         /**
-         * <p>The status.</p>
+         * <p>The status of the index version.</p>
          * 
          * <strong>example:</strong>
          * <p>STOPPED</p>
@@ -93,7 +93,7 @@ public class ListDateSourceGenerationsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The timestamp when the offline indexing was initiated.</p>
+         * <p>The start timestamp from which incremental data is retrieved.</p>
          * 
          * <strong>example:</strong>
          * <p>1626143673</p>

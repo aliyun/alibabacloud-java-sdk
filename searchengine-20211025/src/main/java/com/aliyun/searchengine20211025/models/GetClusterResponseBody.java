@@ -14,7 +14,7 @@ public class GetClusterResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The list of the cluster details.</p>
+     * <p>The clusters.</p>
      */
     @NameInMap("result")
     public GetClusterResponseBodyResult result;
@@ -42,7 +42,7 @@ public class GetClusterResponseBody extends TeaModel {
 
     public static class GetClusterResponseBodyResultDataNode extends TeaModel {
         /**
-         * <p>The name of the node.</p>
+         * <p>The name of the Searcher worker.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -101,7 +101,7 @@ public class GetClusterResponseBody extends TeaModel {
 
     public static class GetClusterResponseBodyResultQueryNode extends TeaModel {
         /**
-         * <p>The name of the node.</p>
+         * <p>The name of the QRS worker.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -159,6 +159,9 @@ public class GetClusterResponseBody extends TeaModel {
     }
 
     public static class GetClusterResponseBodyResult extends TeaModel {
+        /**
+         * <p>The configuration information.</p>
+         */
         @NameInMap("config")
         public java.util.Map<String, java.util.Map<String, ?>> config;
 
@@ -171,6 +174,12 @@ public class GetClusterResponseBody extends TeaModel {
         @NameInMap("configUpdateTime")
         public String configUpdateTime;
 
+        /**
+         * <p>The time when the cluster was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-05-21 16:05:26</p>
+         */
         @NameInMap("createTime")
         public String createTime;
 
@@ -193,7 +202,7 @@ public class GetClusterResponseBody extends TeaModel {
         public String currentOnlineConfigVersion;
 
         /**
-         * <p>The specifications of the data node.</p>
+         * <p>The specifications of Searcher workers.</p>
          */
         @NameInMap("dataNode")
         public GetClusterResponseBodyResultDataNode dataNode;
@@ -226,7 +235,7 @@ public class GetClusterResponseBody extends TeaModel {
         public String latestOnlineConfigVersion;
 
         /**
-         * <p>The name of the cluster.</p>
+         * <p>The cluster name.</p>
          * 
          * <strong>example:</strong>
          * <p>general</p>
@@ -235,7 +244,7 @@ public class GetClusterResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The specifications of the query node.</p>
+         * <p>The specifications of Query Result Searcher (QRS) workers.</p>
          */
         @NameInMap("queryNode")
         public GetClusterResponseBodyResultQueryNode queryNode;

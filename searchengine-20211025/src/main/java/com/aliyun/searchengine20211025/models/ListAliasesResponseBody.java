@@ -42,6 +42,8 @@ public class ListAliasesResponseBody extends TeaModel {
 
     public static class ListAliasesResponseBodyResult extends TeaModel {
         /**
+         * <p>alias name</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -49,6 +51,8 @@ public class ListAliasesResponseBody extends TeaModel {
         public String alias;
 
         /**
+         * <p>index name</p>
+         * 
          * <strong>example:</strong>
          * <p>index</p>
          */

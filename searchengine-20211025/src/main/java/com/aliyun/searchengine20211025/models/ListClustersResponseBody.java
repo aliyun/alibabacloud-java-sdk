@@ -159,6 +159,9 @@ public class ListClustersResponseBody extends TeaModel {
     }
 
     public static class ListClustersResponseBodyResult extends TeaModel {
+        /**
+         * <p>The configuration information.</p>
+         */
         @NameInMap("config")
         public java.util.Map<String, java.util.Map<String, ?>> config;
 
@@ -171,6 +174,12 @@ public class ListClustersResponseBody extends TeaModel {
         @NameInMap("configUpdateTime")
         public String configUpdateTime;
 
+        /**
+         * <p>The time when the cluster was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-05-21 16:05:26</p>
+         */
         @NameInMap("createTime")
         public String createTime;
 
@@ -185,6 +194,9 @@ public class ListClustersResponseBody extends TeaModel {
 
         /**
          * <p>The effective dictionary configuration version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-pl32rf0****_offline_adv_v1</p>
          */
         @NameInMap("currentOfflineDictConfigVersion")
         public String currentOfflineDictConfigVersion;
@@ -200,6 +212,9 @@ public class ListClustersResponseBody extends TeaModel {
 
         /**
          * <p>The effective query configuration version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-pl32rf0****_offline_adv_v1</p>
          */
         @NameInMap("currentOnlineQueryConfigVersion")
         public String currentOnlineQueryConfigVersion;
@@ -230,6 +245,9 @@ public class ListClustersResponseBody extends TeaModel {
 
         /**
          * <p>The latest dictionary configuration version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-pl32rf0****_offline_adv_v1</p>
          */
         @NameInMap("latestOfflineDictConfigVersion")
         public String latestOfflineDictConfigVersion;
@@ -245,6 +263,9 @@ public class ListClustersResponseBody extends TeaModel {
 
         /**
          * <p>The latest query configuration version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-pl32rf0****_offline_adv_v1</p>
          */
         @NameInMap("latestOnlineQueryConfigVersion")
         public String latestOnlineQueryConfigVersion;
@@ -265,7 +286,7 @@ public class ListClustersResponseBody extends TeaModel {
         public ListClustersResponseBodyResultQueryNode queryNode;
 
         /**
-         * <p>The status of the cluster. Valid values: running: The cluster is running. starting: The cluster is being started. stopping: The cluster is being stopped. stopped: The cluster is stopped.</p>
+         * <p>The cluster status. Valid values: running: The cluster is running. starting: The cluster is being started. stopping: The cluster is being stopped. stopped: The cluster is stopped.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;starting&quot;</p>

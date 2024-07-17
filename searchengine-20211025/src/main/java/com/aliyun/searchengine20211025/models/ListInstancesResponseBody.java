@@ -14,7 +14,7 @@ public class ListInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The result returned</p>
+     * <p>The results returned.</p>
      */
     @NameInMap("result")
     public java.util.List<ListInstancesResponseBodyResult> result;
@@ -58,8 +58,11 @@ public class ListInstancesResponseBody extends TeaModel {
     }
 
     public static class ListInstancesResponseBodyResultNetwork extends TeaModel {
+        @NameInMap("allow")
+        public String allow;
+
         /**
-         * <p>The access point of the gateway</p>
+         * <p>The instance endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
@@ -67,8 +70,11 @@ public class ListInstancesResponseBody extends TeaModel {
         @NameInMap("endpoint")
         public String endpoint;
 
+        @NameInMap("publicEndpoint")
+        public String publicEndpoint;
+
         /**
-         * <p>The ID of the virtual switch</p>
+         * <p>The vSwitch ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-bp11ldcf59q2nbwkqgj6z</p>
@@ -77,7 +83,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>The ID of the Virtual Private Cloud (VPC) network</p>
+         * <p>The ID of the virtual private cloud (VPC) in which the instance is deployed.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-wz9axk41d9vffoc79x0oe</p>
@@ -90,12 +96,28 @@ public class ListInstancesResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public ListInstancesResponseBodyResultNetwork setAllow(String allow) {
+            this.allow = allow;
+            return this;
+        }
+        public String getAllow() {
+            return this.allow;
+        }
+
         public ListInstancesResponseBodyResultNetwork setEndpoint(String endpoint) {
             this.endpoint = endpoint;
             return this;
         }
         public String getEndpoint() {
             return this.endpoint;
+        }
+
+        public ListInstancesResponseBodyResultNetwork setPublicEndpoint(String publicEndpoint) {
+            this.publicEndpoint = publicEndpoint;
+            return this;
+        }
+        public String getPublicEndpoint() {
+            return this.publicEndpoint;
         }
 
         public ListInstancesResponseBodyResultNetwork setVSwitchId(String vSwitchId) {
@@ -116,9 +138,165 @@ public class ListInstancesResponseBody extends TeaModel {
 
     }
 
+    public static class ListInstancesResponseBodyResultSpecQrsResource extends TeaModel {
+        @NameInMap("category")
+        public String category;
+
+        @NameInMap("cpu")
+        public Integer cpu;
+
+        @NameInMap("disk")
+        public Integer disk;
+
+        @NameInMap("mem")
+        public Integer mem;
+
+        @NameInMap("nodeCount")
+        public Integer nodeCount;
+
+        public static ListInstancesResponseBodyResultSpecQrsResource build(java.util.Map<String, ?> map) throws Exception {
+            ListInstancesResponseBodyResultSpecQrsResource self = new ListInstancesResponseBodyResultSpecQrsResource();
+            return TeaModel.build(map, self);
+        }
+
+        public ListInstancesResponseBodyResultSpecQrsResource setCategory(String category) {
+            this.category = category;
+            return this;
+        }
+        public String getCategory() {
+            return this.category;
+        }
+
+        public ListInstancesResponseBodyResultSpecQrsResource setCpu(Integer cpu) {
+            this.cpu = cpu;
+            return this;
+        }
+        public Integer getCpu() {
+            return this.cpu;
+        }
+
+        public ListInstancesResponseBodyResultSpecQrsResource setDisk(Integer disk) {
+            this.disk = disk;
+            return this;
+        }
+        public Integer getDisk() {
+            return this.disk;
+        }
+
+        public ListInstancesResponseBodyResultSpecQrsResource setMem(Integer mem) {
+            this.mem = mem;
+            return this;
+        }
+        public Integer getMem() {
+            return this.mem;
+        }
+
+        public ListInstancesResponseBodyResultSpecQrsResource setNodeCount(Integer nodeCount) {
+            this.nodeCount = nodeCount;
+            return this;
+        }
+        public Integer getNodeCount() {
+            return this.nodeCount;
+        }
+
+    }
+
+    public static class ListInstancesResponseBodyResultSpecSearchResource extends TeaModel {
+        @NameInMap("category")
+        public String category;
+
+        @NameInMap("cpu")
+        public Integer cpu;
+
+        @NameInMap("disk")
+        public Integer disk;
+
+        @NameInMap("mem")
+        public Integer mem;
+
+        @NameInMap("nodeCount")
+        public Integer nodeCount;
+
+        public static ListInstancesResponseBodyResultSpecSearchResource build(java.util.Map<String, ?> map) throws Exception {
+            ListInstancesResponseBodyResultSpecSearchResource self = new ListInstancesResponseBodyResultSpecSearchResource();
+            return TeaModel.build(map, self);
+        }
+
+        public ListInstancesResponseBodyResultSpecSearchResource setCategory(String category) {
+            this.category = category;
+            return this;
+        }
+        public String getCategory() {
+            return this.category;
+        }
+
+        public ListInstancesResponseBodyResultSpecSearchResource setCpu(Integer cpu) {
+            this.cpu = cpu;
+            return this;
+        }
+        public Integer getCpu() {
+            return this.cpu;
+        }
+
+        public ListInstancesResponseBodyResultSpecSearchResource setDisk(Integer disk) {
+            this.disk = disk;
+            return this;
+        }
+        public Integer getDisk() {
+            return this.disk;
+        }
+
+        public ListInstancesResponseBodyResultSpecSearchResource setMem(Integer mem) {
+            this.mem = mem;
+            return this;
+        }
+        public Integer getMem() {
+            return this.mem;
+        }
+
+        public ListInstancesResponseBodyResultSpecSearchResource setNodeCount(Integer nodeCount) {
+            this.nodeCount = nodeCount;
+            return this;
+        }
+        public Integer getNodeCount() {
+            return this.nodeCount;
+        }
+
+    }
+
+    public static class ListInstancesResponseBodyResultSpec extends TeaModel {
+        @NameInMap("qrsResource")
+        public ListInstancesResponseBodyResultSpecQrsResource qrsResource;
+
+        @NameInMap("searchResource")
+        public ListInstancesResponseBodyResultSpecSearchResource searchResource;
+
+        public static ListInstancesResponseBodyResultSpec build(java.util.Map<String, ?> map) throws Exception {
+            ListInstancesResponseBodyResultSpec self = new ListInstancesResponseBodyResultSpec();
+            return TeaModel.build(map, self);
+        }
+
+        public ListInstancesResponseBodyResultSpec setQrsResource(ListInstancesResponseBodyResultSpecQrsResource qrsResource) {
+            this.qrsResource = qrsResource;
+            return this;
+        }
+        public ListInstancesResponseBodyResultSpecQrsResource getQrsResource() {
+            return this.qrsResource;
+        }
+
+        public ListInstancesResponseBodyResultSpec setSearchResource(ListInstancesResponseBodyResultSpecSearchResource searchResource) {
+            this.searchResource = searchResource;
+            return this;
+        }
+        public ListInstancesResponseBodyResultSpecSearchResource getSearchResource() {
+            return this.searchResource;
+        }
+
+    }
+
     public static class ListInstancesResponseBodyResultTags extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>env</p>
@@ -127,7 +305,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>oboms-disk</p>
@@ -160,7 +338,7 @@ public class ListInstancesResponseBody extends TeaModel {
 
     public static class ListInstancesResponseBodyResult extends TeaModel {
         /**
-         * <p>The billing method</p>
+         * <p>The billing method.</p>
          * 
          * <strong>example:</strong>
          * <p>PrePaid</p>
@@ -169,7 +347,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String chargeType;
 
         /**
-         * <p>The product code</p>
+         * <p>The commodity code of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
@@ -178,7 +356,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String commodityCode;
 
         /**
-         * <p>The time when the instance was created</p>
+         * <p>The time when the instance was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-06-04T02:03:21Z</p>
@@ -187,7 +365,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The description of the instance</p>
+         * <p>The description of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>Emergency test</p>
@@ -195,8 +373,11 @@ public class ListInstancesResponseBody extends TeaModel {
         @NameInMap("description")
         public String description;
 
+        @NameInMap("edition")
+        public String edition;
+
         /**
-         * <p>The expiration time</p>
+         * <p>The time when the instance expires.</p>
          * 
          * <strong>example:</strong>
          * <p>1634885083</p>
@@ -205,7 +386,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String expiredTime;
 
         /**
-         * <p>Indicates whether an overdue payment is involved</p>
+         * <p>Indicates whether an overdue payment is involved.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -214,7 +395,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public Boolean inDebt;
 
         /**
-         * <p>The ID of the resource</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ha-cn-2r42n8oh001</p>
@@ -223,7 +404,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The lock status</p>
+         * <p>The lock state of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>Unlock</p>
@@ -232,13 +413,16 @@ public class ListInstancesResponseBody extends TeaModel {
         public String lockMode;
 
         /**
-         * <p>Information about the instance of the network search engine</p>
+         * <p>The network information of the instance.</p>
          */
         @NameInMap("network")
         public ListInstancesResponseBodyResultNetwork network;
 
+        @NameInMap("noQrs")
+        public Boolean noQrs;
+
         /**
-         * <p>The ID of the resource group</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-aekzgpiswzbksdi</p>
@@ -246,8 +430,11 @@ public class ListInstancesResponseBody extends TeaModel {
         @NameInMap("resourceGroupId")
         public String resourceGroupId;
 
+        @NameInMap("spec")
+        public ListInstancesResponseBodyResultSpec spec;
+
         /**
-         * <p>The status of the instance</p>
+         * <p>The instance status.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -256,19 +443,25 @@ public class ListInstancesResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The result returned.</p>
+         * <p>The tags of the instance.</p>
          */
         @NameInMap("tags")
         public java.util.List<ListInstancesResponseBodyResultTags> tags;
 
         /**
-         * <p>The time when the instance was last updated</p>
+         * <p>The time when the instance was updated.</p>
          * 
          * <strong>example:</strong>
          * <p>2018-12-06T11:17:49.0</p>
          */
         @NameInMap("updateTime")
         public String updateTime;
+
+        @NameInMap("userName")
+        public String userName;
+
+        @NameInMap("version")
+        public String version;
 
         public static ListInstancesResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             ListInstancesResponseBodyResult self = new ListInstancesResponseBodyResult();
@@ -305,6 +498,14 @@ public class ListInstancesResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public ListInstancesResponseBodyResult setEdition(String edition) {
+            this.edition = edition;
+            return this;
+        }
+        public String getEdition() {
+            return this.edition;
         }
 
         public ListInstancesResponseBodyResult setExpiredTime(String expiredTime) {
@@ -347,12 +548,28 @@ public class ListInstancesResponseBody extends TeaModel {
             return this.network;
         }
 
+        public ListInstancesResponseBodyResult setNoQrs(Boolean noQrs) {
+            this.noQrs = noQrs;
+            return this;
+        }
+        public Boolean getNoQrs() {
+            return this.noQrs;
+        }
+
         public ListInstancesResponseBodyResult setResourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
             return this;
         }
         public String getResourceGroupId() {
             return this.resourceGroupId;
+        }
+
+        public ListInstancesResponseBodyResult setSpec(ListInstancesResponseBodyResultSpec spec) {
+            this.spec = spec;
+            return this;
+        }
+        public ListInstancesResponseBodyResultSpec getSpec() {
+            return this.spec;
         }
 
         public ListInstancesResponseBodyResult setStatus(String status) {
@@ -377,6 +594,22 @@ public class ListInstancesResponseBody extends TeaModel {
         }
         public String getUpdateTime() {
             return this.updateTime;
+        }
+
+        public ListInstancesResponseBodyResult setUserName(String userName) {
+            this.userName = userName;
+            return this;
+        }
+        public String getUserName() {
+            return this.userName;
+        }
+
+        public ListInstancesResponseBodyResult setVersion(String version) {
+            this.version = version;
+            return this;
+        }
+        public String getVersion() {
+            return this.version;
         }
 
     }

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListIndexesResponseBody extends TeaModel {
     /**
-     * <p>id of request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4FB0325E-8C37-5525-96AC-0333523170A3</p>
@@ -14,7 +14,7 @@ public class ListIndexesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The index list.</p>
+     * <p>The details of indexes.</p>
      */
     @NameInMap("result")
     public java.util.List<ListIndexesResponseBodyResult> result;
@@ -42,7 +42,7 @@ public class ListIndexesResponseBody extends TeaModel {
 
     public static class ListIndexesResponseBodyResultDataSourceInfoConfig extends TeaModel {
         /**
-         * <p>odps数据源ak</p>
+         * <p>The AccessKey ID of the MaxCompute data source.</p>
          * 
          * <strong>example:</strong>
          * <p>root</p>
@@ -51,7 +51,7 @@ public class ListIndexesResponseBody extends TeaModel {
         public String accessKey;
 
         /**
-         * <p>odps数据源ak secret</p>
+         * <p>The AccessKey secret of the MaxCompute data source.</p>
          * 
          * <strong>example:</strong>
          * <p>root123</p>
@@ -60,7 +60,7 @@ public class ListIndexesResponseBody extends TeaModel {
         public String accessSecret;
 
         /**
-         * <p>oss命名空间</p>
+         * <p>The OSS bucket.</p>
          * 
          * <strong>example:</strong>
          * <p>ha3test-oss</p>
@@ -69,7 +69,7 @@ public class ListIndexesResponseBody extends TeaModel {
         public String bucket;
 
         /**
-         * <p>odps相关</p>
+         * <p>The endpoint of the MaxCompute data source.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://service.cn-hangzhou.maxcompute.aliyun-inc.com/api">http://service.cn-hangzhou.maxcompute.aliyun-inc.com/api</a></p>
@@ -78,7 +78,7 @@ public class ListIndexesResponseBody extends TeaModel {
         public String endpoint;
 
         /**
-         * <p>saro相关</p>
+         * <p>The namespace. This parameter is applicable to the SARO data source used in the intranet of Alibaba Group.</p>
          * 
          * <strong>example:</strong>
          * <p>TEST_dump_demo_sj_na61hunbu2_share_holo</p>
@@ -87,7 +87,7 @@ public class ListIndexesResponseBody extends TeaModel {
         public String namespace;
 
         /**
-         * <p>oss数据源相关</p>
+         * <p>The Object Storage Service (OSS) path.</p>
          * 
          * <strong>example:</strong>
          * <p>/test_opensearch/sift_oss_test.data</p>
@@ -96,7 +96,7 @@ public class ListIndexesResponseBody extends TeaModel {
         public String ossPath;
 
         /**
-         * <p>数据分片</p>
+         * <p>The shard name.</p>
          * 
          * <strong>example:</strong>
          * <p>ds=12345</p>
@@ -105,7 +105,7 @@ public class ListIndexesResponseBody extends TeaModel {
         public String partition;
 
         /**
-         * <p>hdfs相关</p>
+         * <p>The file path in the Apsara File Storage for HDFS file system.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://test_opensearch/sift_oss_test.data">http://test_opensearch/sift_oss_test.data</a></p>
@@ -114,7 +114,7 @@ public class ListIndexesResponseBody extends TeaModel {
         public String path;
 
         /**
-         * <p>odps数据源项目名称</p>
+         * <p>The name of the MaxCompute project that is used as the data source.</p>
          * 
          * <strong>example:</strong>
          * <p>tisplus_dev</p>
@@ -123,7 +123,7 @@ public class ListIndexesResponseBody extends TeaModel {
         public String project;
 
         /**
-         * <p>saro、odps相关</p>
+         * <p>The name of the MaxCompute table that is used as the data source.</p>
          * 
          * <strong>example:</strong>
          * <p>dump_odps_demo</p>
@@ -220,7 +220,7 @@ public class ListIndexesResponseBody extends TeaModel {
 
     public static class ListIndexesResponseBodyResultDataSourceInfoSaroConfig extends TeaModel {
         /**
-         * <p>saro数据源的namespace</p>
+         * <p>The namespace of the SARO data source.</p>
          * 
          * <strong>example:</strong>
          * <p>TEST_dump_demo_sj_na61hunbu2_share_holo</p>
@@ -229,7 +229,7 @@ public class ListIndexesResponseBody extends TeaModel {
         public String namespace;
 
         /**
-         * <p>saro数据表名称</p>
+         * <p>The name of the SARO table.</p>
          * 
          * <strong>example:</strong>
          * <p>dump_odps_demo</p>
@@ -262,7 +262,7 @@ public class ListIndexesResponseBody extends TeaModel {
 
     public static class ListIndexesResponseBodyResultDataSourceInfo extends TeaModel {
         /**
-         * <p>是否开启自动全量</p>
+         * <p>Indicates whether the automatic full indexing feature is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -271,13 +271,13 @@ public class ListIndexesResponseBody extends TeaModel {
         public Boolean autoBuildIndex;
 
         /**
-         * <p>odps 数据源配置</p>
+         * <p>The configuration of MaxCompute data sources.</p>
          */
         @NameInMap("config")
         public ListIndexesResponseBodyResultDataSourceInfoConfig config;
 
         /**
-         * <p>离线部署</p>
+         * <p>The data center in which the data source is deployed.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -286,7 +286,7 @@ public class ListIndexesResponseBody extends TeaModel {
         public String domain;
 
         /**
-         * <p>数据源名</p>
+         * <p>The name of the data source.</p>
          * 
          * <strong>example:</strong>
          * <p>index1</p>
@@ -295,7 +295,7 @@ public class ListIndexesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>数据更新资源数</p>
+         * <p>The number of resources used for data update.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -304,13 +304,13 @@ public class ListIndexesResponseBody extends TeaModel {
         public Integer processPartitionCount;
 
         /**
-         * <p>saro数据源配置</p>
+         * <p>The configurations of the SARO data source.</p>
          */
         @NameInMap("saroConfig")
         public ListIndexesResponseBodyResultDataSourceInfoSaroConfig saroConfig;
 
         /**
-         * <p>数据源类型 (odps, swift, saro, oss, unKnow)</p>
+         * <p>The type of the data source. Valid values: odps, swift, saro, oss, and unKnow.</p>
          * 
          * <strong>example:</strong>
          * <p>odps</p>
@@ -383,7 +383,7 @@ public class ListIndexesResponseBody extends TeaModel {
 
     public static class ListIndexesResponseBodyResultVersionsFiles extends TeaModel {
         /**
-         * <p>The name of the directory for the index.</p>
+         * <p>The full path of the file.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot; &quot;</p>
@@ -392,7 +392,7 @@ public class ListIndexesResponseBody extends TeaModel {
         public String fullPathName;
 
         /**
-         * <p>Indicates whether a directory exists.</p>
+         * <p>Indicates whether the file is a directory.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -401,7 +401,7 @@ public class ListIndexesResponseBody extends TeaModel {
         public Boolean isDir;
 
         /**
-         * <p>Indicates whether it is a template.</p>
+         * <p>Indicates whether the file is a template.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -410,7 +410,7 @@ public class ListIndexesResponseBody extends TeaModel {
         public Boolean isTemplate;
 
         /**
-         * <p>The name of the file.</p>
+         * <p>The file name.</p>
          * 
          * <strong>example:</strong>
          * <p>ha-cn-7mz2iv7sq01_qrs</p>
@@ -459,7 +459,7 @@ public class ListIndexesResponseBody extends TeaModel {
 
     public static class ListIndexesResponseBodyResultVersions extends TeaModel {
         /**
-         * <p>The description.</p>
+         * <p>The description of the index version.</p>
          * 
          * <strong>example:</strong>
          * <p>close alarm, by 3.9.2 hotfix workflow</p>
@@ -468,13 +468,13 @@ public class ListIndexesResponseBody extends TeaModel {
         public String desc;
 
         /**
-         * <p>The list of file names.</p>
+         * <p>The files.</p>
          */
         @NameInMap("files")
         public java.util.List<ListIndexesResponseBodyResultVersionsFiles> files;
 
         /**
-         * <p>The name of the version.</p>
+         * <p>The name of the index version.</p>
          * 
          * <strong>example:</strong>
          * <p>ha-cn-7pp2ngv4s02_qrs</p>
@@ -483,7 +483,16 @@ public class ListIndexesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The state of the version. Valid values: drafting, used, unused and trash. drafting indicates that the version is a draft, used indicates that the version is used online, unused indicates that the version is not used, and trash indicates that the version is being deleted.</p>
+         * <p>The status of the index version. Valid values:</p>
+         * <ul>
+         * <li>NEW: The index version is created.</li>
+         * <li>PUBLISH: The index version is normal.</li>
+         * <li>IN_USE: The index version is in use.</li>
+         * <li>NOT_USE: The index version is not used.</li>
+         * <li>STOP_USE: The index version is being stopped.</li>
+         * <li>RESTORE_USE: The index version is being restored.</li>
+         * <li>FAIL: The index version failed to be created.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -492,7 +501,7 @@ public class ListIndexesResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The time when the version was updated.</p>
+         * <p>The time when the index version was updated.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot; &quot;</p>
@@ -501,7 +510,7 @@ public class ListIndexesResponseBody extends TeaModel {
         public Long updateTime;
 
         /**
-         * <p>The ID of the version. The value of this parameter is null for the edit version.</p>
+         * <p>The ID of the index version. If the index version is modified, the returned value is null.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -566,7 +575,7 @@ public class ListIndexesResponseBody extends TeaModel {
 
     public static class ListIndexesResponseBodyResult extends TeaModel {
         /**
-         * <p>schema JSON</p>
+         * <p>The index schema, which is a JSON string.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;summarys&quot;:{&quot;parameter&quot;:{&quot;file_compressor&quot;:&quot;zstd&quot;},&quot;summary_fields&quot;:[&quot;id&quot;]},&quot;file_compress&quot;:[{&quot;name&quot;:&quot;file_compressor&quot;,&quot;type&quot;:&quot;zstd&quot;},{&quot;name&quot;:&quot;no_compressor&quot;,&quot;type&quot;:&quot;&quot;}],&quot;indexs&quot;:[{&quot;index_fields&quot;:&quot;name&quot;,&quot;index_name&quot;:&quot;ids&quot;,&quot;index_type&quot;:&quot;STRING&quot;},{&quot;has_primary_key_attribute&quot;:true,&quot;index_fields&quot;:&quot;id&quot;,&quot;is_primary_key_sorted&quot;:false,&quot;index_name&quot;:&quot;id&quot;,&quot;index_type&quot;:&quot;PRIMARYKEY64&quot;}],&quot;attributes&quot;:[{&quot;file_compress&quot;:&quot;no_compressor&quot;,&quot;field_name&quot;:&quot;id&quot;}],&quot;fields&quot;:[{&quot;user_defined_param&quot;:{},&quot;compress_type&quot;:&quot;uniq&quot;,&quot;field_type&quot;:&quot;STRING&quot;,&quot;field_name&quot;:&quot;id&quot;},{&quot;compress_type&quot;:&quot;uniq&quot;,&quot;field_type&quot;:&quot;STRING&quot;,&quot;field_name&quot;:&quot;name&quot;}],&quot;table_name&quot;:&quot;api&quot;}</p>
@@ -575,7 +584,7 @@ public class ListIndexesResponseBody extends TeaModel {
         public String content;
 
         /**
-         * <p>The data source.</p>
+         * <p>The name of the data source.</p>
          * 
          * <strong>example:</strong>
          * <p>ha-cn-7mz2kvu2c01_table4</p>
@@ -584,22 +593,22 @@ public class ListIndexesResponseBody extends TeaModel {
         public String dataSource;
 
         /**
-         * <p>数据源相关信息</p>
+         * <p>The information about the data source.</p>
          */
         @NameInMap("dataSourceInfo")
         public ListIndexesResponseBodyResultDataSourceInfo dataSourceInfo;
 
         /**
-         * <p>备注</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>备注</p>
+         * <p>Description</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
-         * <p>The name of the data center where the data source is deployed.</p>
+         * <p>The deployment name of the index.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -608,7 +617,7 @@ public class ListIndexesResponseBody extends TeaModel {
         public String domain;
 
         /**
-         * <p>全量切换时间</p>
+         * <p>The time when full data in the index was last updated.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-07-05 10:40:38</p>
@@ -617,7 +626,7 @@ public class ListIndexesResponseBody extends TeaModel {
         public String fullUpdateTime;
 
         /**
-         * <p>全量版本  即：索引版本</p>
+         * <p>The full version of the index.</p>
          * 
          * <strong>example:</strong>
          * <p>1688523414</p>
@@ -626,7 +635,7 @@ public class ListIndexesResponseBody extends TeaModel {
         public Long fullVersion;
 
         /**
-         * <p>增量更新时间</p>
+         * <p>The time when incremental data in the index was last updated.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-07-05 10:58:33</p>
@@ -635,7 +644,7 @@ public class ListIndexesResponseBody extends TeaModel {
         public String incUpdateTime;
 
         /**
-         * <p>索引大小</p>
+         * <p>The index size.</p>
          * 
          * <strong>example:</strong>
          * <p>4689</p>
@@ -644,7 +653,7 @@ public class ListIndexesResponseBody extends TeaModel {
         public Long indexSize;
 
         /**
-         * <p>NEW, PUBLISH</p>
+         * <p>The index ststus. Valid values: NEW and PUBLISH.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot; &quot;</p>
@@ -653,7 +662,7 @@ public class ListIndexesResponseBody extends TeaModel {
         public String indexStatus;
 
         /**
-         * <p>The name of the index.</p>
+         * <p>The index name.</p>
          * 
          * <strong>example:</strong>
          * <p>general</p>
@@ -662,7 +671,7 @@ public class ListIndexesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>数据分片</p>
+         * <p>The number of shards.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -671,7 +680,7 @@ public class ListIndexesResponseBody extends TeaModel {
         public Integer partition;
 
         /**
-         * <p>The list of version information.</p>
+         * <p>The index versions.</p>
          */
         @NameInMap("versions")
         public java.util.List<ListIndexesResponseBodyResultVersions> versions;

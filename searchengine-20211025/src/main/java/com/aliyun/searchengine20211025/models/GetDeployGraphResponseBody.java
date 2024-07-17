@@ -14,7 +14,7 @@ public class GetDeployGraphResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The result returned</p>
+     * <p>The results returned.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -44,21 +44,57 @@ public class GetDeployGraphResponseBody extends TeaModel {
     }
 
     public static class GetDeployGraphResponseBodyResultGraphIndexMetas extends TeaModel {
+        /**
+         * <p>The name of the data center.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hz_pre_vpc_domain_1</p>
+         */
         @NameInMap("domainName")
         public String domainName;
 
+        /**
+         * <p>The index name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_api</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The deployment ID of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2409</p>
+         */
         @NameInMap("tableDeployId")
         public Long tableDeployId;
 
+        /**
+         * <p>The name of the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-pl32rf0****_test_api</p>
+         */
         @NameInMap("tableName")
         public String tableName;
 
+        /**
+         * <p>The tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_api_hz_pre_vpc_domain_1</p>
+         */
         @NameInMap("tag")
         public String tag;
 
+        /**
+         * <p>The name of the QRS worker.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-pl32rf0****_qrs</p>
+         */
         @NameInMap("zoneName")
         public String zoneName;
 
@@ -118,15 +154,39 @@ public class GetDeployGraphResponseBody extends TeaModel {
     }
 
     public static class GetDeployGraphResponseBodyResultGraphOnlineMaster extends TeaModel {
+        /**
+         * <p>The name of the data center.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hz_pre_vpc_domain_1</p>
+         */
         @NameInMap("domainName")
         public String domainName;
 
+        /**
+         * <p>The resource ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5377</p>
+         */
         @NameInMap("hippoId")
         public String hippoId;
 
+        /**
+         * <p>The ID of the data center.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <p>The name of the online cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-pl32rf0****_hz_pre_vpc_domain_1</p>
+         */
         @NameInMap("name")
         public String name;
 
@@ -170,21 +230,57 @@ public class GetDeployGraphResponseBody extends TeaModel {
     }
 
     public static class GetDeployGraphResponseBodyResultGraphTableMetas extends TeaModel {
+        /**
+         * <p>The ID of the offline deployment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("buildDeployId")
         public Long buildDeployId;
 
+        /**
+         * <p>The name of the data center.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hz_pre_vpc_domain_1</p>
+         */
         @NameInMap("domainName")
         public String domainName;
 
+        /**
+         * <p>The name of the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-pl32rf0****_test_api</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The deployment ID of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2177</p>
+         */
         @NameInMap("tableDeployId")
         public Long tableDeployId;
 
+        /**
+         * <p>The tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-pl32rf0****_test_api_hz_pre_vpc_domain_1</p>
+         */
         @NameInMap("tag")
         public String tag;
 
+        /**
+         * <p>The type of the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>odps</p>
+         */
         @NameInMap("type")
         public String type;
 
@@ -244,18 +340,48 @@ public class GetDeployGraphResponseBody extends TeaModel {
     }
 
     public static class GetDeployGraphResponseBodyResultGraphZoneMetas extends TeaModel {
+        /**
+         * <p>The name of the data center.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hz_pre_vpc_domain_1</p>
+         */
         @NameInMap("domainInfo")
         public String domainInfo;
 
+        /**
+         * <p>The name of the Query Result Searcher (QRS) worker.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-pl32rf0****_qrs</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The name of the service that is used to manage the relationships between online clusters and indexes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-pl32rf0****_hz_pre_vpc_domain_1</p>
+         */
         @NameInMap("suezAdminName")
         public String suezAdminName;
 
+        /**
+         * <p>The tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-pl32rf0****_qrs_hz_pre_vpc_domain_1</p>
+         */
         @NameInMap("tag")
         public String tag;
 
+        /**
+         * <p>The node type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qrs</p>
+         */
         @NameInMap("type")
         public String type;
 
@@ -308,37 +434,37 @@ public class GetDeployGraphResponseBody extends TeaModel {
 
     public static class GetDeployGraphResponseBodyResultGraph extends TeaModel {
         /**
-         * <p>索引元信息</p>
+         * <p>The index metadata.</p>
          */
         @NameInMap("indexMetas")
         public java.util.List<GetDeployGraphResponseBodyResultGraphIndexMetas> indexMetas;
 
         /**
-         * <p>在线集群元信息</p>
+         * <p>The metadata of online clusters.</p>
          */
         @NameInMap("onlineMaster")
         public java.util.List<GetDeployGraphResponseBodyResultGraphOnlineMaster> onlineMaster;
 
         /**
-         * <p>数据源和索引关联关系</p>
+         * <p>The association relationships between data sources and indexes.</p>
          */
         @NameInMap("tableIndexRelation")
         public java.util.Map<String, java.util.List<String>> tableIndexRelation;
 
         /**
-         * <p>数据源元信息</p>
+         * <p>The metadata of data sources.</p>
          */
         @NameInMap("tableMetas")
         public java.util.List<GetDeployGraphResponseBodyResultGraphTableMetas> tableMetas;
 
         /**
-         * <p>zone和索引关联关系</p>
+         * <p>The association relationships between zones and indexes.</p>
          */
         @NameInMap("zoneIndexRelation")
         public java.util.Map<String, java.util.List<String>> zoneIndexRelation;
 
         /**
-         * <p>zone元信息</p>
+         * <p>The zone metadata.</p>
          */
         @NameInMap("zoneMetas")
         public java.util.List<GetDeployGraphResponseBodyResultGraphZoneMetas> zoneMetas;
@@ -399,6 +525,9 @@ public class GetDeployGraphResponseBody extends TeaModel {
     }
 
     public static class GetDeployGraphResponseBodyResult extends TeaModel {
+        /**
+         * <p>The deployment information.</p>
+         */
         @NameInMap("graph")
         public GetDeployGraphResponseBodyResultGraph graph;
 

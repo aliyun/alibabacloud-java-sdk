@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateConfigDirRequest extends TeaModel {
     /**
-     * <p>The name of the directory</p>
+     * <p>The directory name.</p>
      * 
      * <strong>example:</strong>
      * <p>/clusters</p>
@@ -14,7 +14,7 @@ public class CreateConfigDirRequest extends TeaModel {
     public String dirName;
 
     /**
-     * <p>Parent file path</p>
+     * <p>The path of the parent directory.</p>
      * 
      * <strong>example:</strong>
      * <p>/</p>

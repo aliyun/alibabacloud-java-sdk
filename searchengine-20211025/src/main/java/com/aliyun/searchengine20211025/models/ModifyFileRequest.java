@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyFileRequest extends TeaModel {
     /**
-     * <p>The content of the file.</p>
+     * <p>The file content.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
@@ -14,7 +14,7 @@ public class ModifyFileRequest extends TeaModel {
     public String content;
 
     /**
-     * <p>This parameter is required when index building for full data in a MaxCompute data source is triggered.</p>
+     * <p>The number of shards.</p>
      * 
      * <strong>example:</strong>
      * <p>ds=20220713</p>

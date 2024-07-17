@@ -14,7 +14,7 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Deploy</p>
+     * <p>The result.</p>
      */
     @NameInMap("result")
     public GetDataSourceDeployResponseBodyResult result;
@@ -197,6 +197,8 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
 
     public static class GetDataSourceDeployResponseBodyResultProcessor extends TeaModel {
         /**
+         * <p>The startup parameters of the process.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -204,6 +206,8 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
         public String args;
 
         /**
+         * <p>The resource information.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -235,7 +239,7 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
 
     public static class GetDataSourceDeployResponseBodyResultStorage extends TeaModel {
         /**
-         * <p>AK</p>
+         * <p>The AccessKey ID of the MaxCompute data source.</p>
          * 
          * <strong>example:</strong>
          * <p>ak</p>
@@ -244,7 +248,7 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
         public String accessKey;
 
         /**
-         * <p>AS</p>
+         * <p>The AccessKey secret of the MaxCompute data source.</p>
          * 
          * <strong>example:</strong>
          * <p>as</p>
@@ -253,7 +257,7 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
         public String accessSecret;
 
         /**
-         * <p>oss bucket</p>
+         * <p>The name of the OSS bucket.</p>
          * 
          * <strong>example:</strong>
          * <p>antsys-miniapp-chongwen-static</p>
@@ -262,7 +266,7 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
         public String bucket;
 
         /**
-         * <p>odps endpoint</p>
+         * <p>The endpoint of the MaxCompute data source.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://service.cn-hangzhou.maxcompute.aliyun-inc.com/api">http://service.cn-hangzhou.maxcompute.aliyun-inc.com/api</a></p>
@@ -278,6 +282,8 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
         public String namespace;
 
         /**
+         * <p>The Object Storage Service (OSS) path.</p>
+         * 
          * <strong>example:</strong>
          * <p>oss://opensearch</p>
          */
@@ -285,6 +291,8 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
         public String ossPath;
 
         /**
+         * <p>The partition in the MaxCompute table. Example: ds=20180102.</p>
+         * 
          * <strong>example:</strong>
          * <p>ds=20220926</p>
          */
@@ -401,7 +409,7 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
 
     public static class GetDataSourceDeployResponseBodyResultSwift extends TeaModel {
         /**
-         * <p>topic</p>
+         * <p>The topic.</p>
          * 
          * <strong>example:</strong>
          * <p>topic</p>
@@ -452,12 +460,21 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
         @NameInMap("extend")
         public GetDataSourceDeployResponseBodyResultExtend extend;
 
+        /**
+         * <p>The parameters of the process.</p>
+         */
         @NameInMap("processor")
         public GetDataSourceDeployResponseBodyResultProcessor processor;
 
+        /**
+         * <p>The information about the data source.</p>
+         */
         @NameInMap("storage")
         public GetDataSourceDeployResponseBodyResultStorage storage;
 
+        /**
+         * <p>The information about the incremental data source Swift.</p>
+         */
         @NameInMap("swift")
         public GetDataSourceDeployResponseBodyResultSwift swift;
 

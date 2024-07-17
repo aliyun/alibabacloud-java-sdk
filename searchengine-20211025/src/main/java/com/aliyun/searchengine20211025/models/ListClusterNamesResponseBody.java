@@ -14,7 +14,7 @@ public class ListClusterNamesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The result set</p>
+     * <p>The result set.</p>
      */
     @NameInMap("result")
     public ListClusterNamesResponseBodyResult result;
@@ -42,7 +42,7 @@ public class ListClusterNamesResponseBody extends TeaModel {
 
     public static class ListClusterNamesResponseBodyResult extends TeaModel {
         /**
-         * <p>The description of the cluster</p>
+         * <p>The description of the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>ha3_test</p>
@@ -51,7 +51,7 @@ public class ListClusterNamesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The ID of the cluster</p>
+         * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>25030</p>
@@ -60,7 +60,7 @@ public class ListClusterNamesResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The name of the cluster</p>
+         * <p>The cluster name.</p>
          * 
          * <strong>example:</strong>
          * <p>my_index</p>

@@ -14,7 +14,7 @@ public class ListInstancesShrinkRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The Instance type, vector (vector index version),engine (recall engine version)</p>
+     * <p>The instance type. Valid values: vector: OpenSearch Vector Search Edition instance. engine: OpenSearch Retrieval Engine Edition instance.</p>
      * 
      * <strong>example:</strong>
      * <p>vector</p>
@@ -23,7 +23,7 @@ public class ListInstancesShrinkRequest extends TeaModel {
     public String edition;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ha-cn-83570439y0n</p>
@@ -59,7 +59,7 @@ public class ListInstancesShrinkRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The tag dictionary.</p>
+     * <p>The tags of the instance.</p>
      */
     @NameInMap("tags")
     public String tagsShrink;

@@ -4,17 +4,35 @@ package com.aliyun.searchengine20211025.models;
 import com.aliyun.tea.*;
 
 public class ListAdvanceConfigsRequest extends TeaModel {
+    /**
+     * <p>The name of the data source.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ha-cn-pl32rf0****_test_api</p>
+     */
     @NameInMap("dataSourceName")
     public String dataSourceName;
 
+    /**
+     * <p>The index name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test_api</p>
+     */
     @NameInMap("indexName")
     public String indexName;
 
+    /**
+     * <p>Specifies whether the OpenSearch Vector Search Edition instance is of the new version.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("newMode")
     public Boolean newMode;
 
     /**
-     * <p>The type of the advanced configurations. Valid values: online and offline. - online The default value is offline.</p>
+     * <p>The type of advanced configurations that you want to query. Valid values: - online -offline (default)</p>
      * 
      * <strong>example:</strong>
      * <p>online</p>

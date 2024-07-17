@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListTablesRequest extends TeaModel {
     /**
+     * <p>Specifies whether the OpenSearch Vector Search Edition instance is of the new version.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

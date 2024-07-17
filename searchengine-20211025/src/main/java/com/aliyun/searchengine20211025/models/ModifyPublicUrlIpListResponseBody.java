@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyPublicUrlIpListResponseBody extends TeaModel {
     /**
-     * <p>id of request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>E45380E8-994A-5402-9806-F114B3295FCF</p>
@@ -14,7 +14,7 @@ public class ModifyPublicUrlIpListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Map</p>
+     * <p>The result.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>

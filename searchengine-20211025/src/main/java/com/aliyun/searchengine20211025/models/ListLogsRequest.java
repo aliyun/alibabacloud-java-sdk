@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListLogsRequest extends TeaModel {
     /**
+     * <p>The end tim. The value is a timestamp in seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1710432000</p>
      */
@@ -12,6 +14,8 @@ public class ListLogsRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The number of entries per num. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,8 @@ public class ListLogsRequest extends TeaModel {
     public String pageNum;
 
     /**
+     * <p>The number of entries per page. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -26,6 +32,8 @@ public class ListLogsRequest extends TeaModel {
     public String pageSize;
 
     /**
+     * <p>The query statement</p>
+     * 
      * <strong>example:</strong>
      * <p>status: 200 AND totalTime &gt; 0.01</p>
      */
@@ -33,6 +41,8 @@ public class ListLogsRequest extends TeaModel {
     public String query;
 
     /**
+     * <p>The start time. The value is a timestamp in seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1706340600</p>
      */
@@ -40,6 +50,8 @@ public class ListLogsRequest extends TeaModel {
     public String startTime;
 
     /**
+     * <p>-push   -select</p>
+     * 
      * <strong>example:</strong>
      * <p>push</p>
      */

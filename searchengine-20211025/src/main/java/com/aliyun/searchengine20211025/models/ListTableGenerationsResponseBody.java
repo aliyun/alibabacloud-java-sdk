@@ -14,7 +14,7 @@ public class ListTableGenerationsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>List</p>
+     * <p>The result.</p>
      */
     @NameInMap("result")
     public java.util.List<ListTableGenerationsResponseBodyResult> result;
@@ -42,7 +42,7 @@ public class ListTableGenerationsResponseBody extends TeaModel {
 
     public static class ListTableGenerationsResponseBodyResult extends TeaModel {
         /**
-         * <p>generationId</p>
+         * <p>The ID of the full index version.</p>
          * 
          * <strong>example:</strong>
          * <p>1708674867</p>

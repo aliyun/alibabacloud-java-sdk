@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateConfigFileResponseBody extends TeaModel {
     /**
-     * <p>id of request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>FE03180A-0E29-5474-8A86-33F0683294A4</p>
@@ -14,7 +14,7 @@ public class CreateConfigFileResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Map</p>
+     * <p>The result.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>

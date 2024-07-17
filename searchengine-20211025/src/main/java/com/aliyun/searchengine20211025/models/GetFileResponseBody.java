@@ -14,7 +14,7 @@ public class GetFileResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about the index.</p>
+     * <p>The index information.</p>
      */
     @NameInMap("result")
     public GetFileResponseBodyResult result;
@@ -42,7 +42,7 @@ public class GetFileResponseBody extends TeaModel {
 
     public static class GetFileResponseBodyResult extends TeaModel {
         /**
-         * <p>The content of the file.</p>
+         * <p>The file content.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>
@@ -60,7 +60,7 @@ public class GetFileResponseBody extends TeaModel {
         public String dataSource;
 
         /**
-         * <p>The name of the full path.</p>
+         * <p>The full path of the file.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
@@ -69,7 +69,7 @@ public class GetFileResponseBody extends TeaModel {
         public String fullPathName;
 
         /**
-         * <p>Indicates whether it is a directory.</p>
+         * <p>Indicates whether the file is a directory.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -78,7 +78,7 @@ public class GetFileResponseBody extends TeaModel {
         public Boolean isDir;
 
         /**
-         * <p>The name of the file.</p>
+         * <p>The file name.</p>
          * 
          * <strong>example:</strong>
          * <p>ha-cn-2r42ostoc01_qrs</p>

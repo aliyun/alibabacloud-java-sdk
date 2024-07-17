@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyClusterDescRequest extends TeaModel {
     /**
-     * <p>The parameters in the request body</p>
+     * <p>The request body.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>

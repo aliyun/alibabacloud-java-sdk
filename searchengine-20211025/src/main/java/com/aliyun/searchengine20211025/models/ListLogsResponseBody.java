@@ -41,10 +41,15 @@ public class ListLogsResponseBody extends TeaModel {
     }
 
     public static class ListLogsResponseBodyResult extends TeaModel {
+        /**
+         * <p>The result.</p>
+         */
         @NameInMap("result")
         public java.util.List<?> result;
 
         /**
+         * <p>The total number of entries returned</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */

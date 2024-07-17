@@ -4,10 +4,15 @@ package com.aliyun.searchengine20211025.models;
 import com.aliyun.tea.*;
 
 public class PushDocumentsRequest extends TeaModel {
+    /**
+     * <p>The request body.</p>
+     */
     @NameInMap("body")
     public java.util.List<?> body;
 
     /**
+     * <p>The primary key field.</p>
+     * 
      * <strong>example:</strong>
      * <p>id</p>
      */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyOnlineConfigRequest extends TeaModel {
     /**
-     * <p>ashortdescriptionofstruct</p>
+     * <p>The request body.</p>
      */
     @NameInMap("body")
     public java.util.Map<String, String> body;

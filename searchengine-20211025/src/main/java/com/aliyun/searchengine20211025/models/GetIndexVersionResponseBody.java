@@ -14,7 +14,7 @@ public class GetIndexVersionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The list of cluster details</p>
+     * <p>The clusters.</p>
      */
     @NameInMap("result")
     public GetIndexVersionResponseBodyResult result;
@@ -42,7 +42,7 @@ public class GetIndexVersionResponseBody extends TeaModel {
 
     public static class GetIndexVersionResponseBodyResultIndexVersions extends TeaModel {
         /**
-         * <p>The ID of the index deployed in offline mode</p>
+         * <p>The ID of the offline deployment.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot; &quot;</p>
@@ -50,11 +50,17 @@ public class GetIndexVersionResponseBody extends TeaModel {
         @NameInMap("buildDeployId")
         public String buildDeployId;
 
+        /**
+         * <p>The current online version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("currentVersion")
         public Long currentVersion;
 
         /**
-         * <p>The name of the index table</p>
+         * <p>The name of the index table.</p>
          * 
          * <strong>example:</strong>
          * <p>table4</p>
@@ -63,7 +69,7 @@ public class GetIndexVersionResponseBody extends TeaModel {
         public String indexName;
 
         /**
-         * <p>The version of the index</p>
+         * <p>The index versions.</p>
          */
         @NameInMap("versions")
         public java.util.List<Long> versions;
@@ -109,7 +115,7 @@ public class GetIndexVersionResponseBody extends TeaModel {
 
     public static class GetIndexVersionResponseBodyResult extends TeaModel {
         /**
-         * <p>The name of the cluster</p>
+         * <p>The cluster name.</p>
          * 
          * <strong>example:</strong>
          * <p>ayoss-cn-zhangjiakou-b</p>
@@ -118,7 +124,7 @@ public class GetIndexVersionResponseBody extends TeaModel {
         public String cluster;
 
         /**
-         * <p>The time when the cluster was updated</p>
+         * <p>The index versions.</p>
          */
         @NameInMap("indexVersions")
         public java.util.List<GetIndexVersionResponseBodyResultIndexVersions> indexVersions;

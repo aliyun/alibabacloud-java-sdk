@@ -14,7 +14,7 @@ public class ListInstanceSpecsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>List</p>
+     * <p>The result.</p>
      */
     @NameInMap("result")
     public java.util.List<ListInstanceSpecsResponseBodyResult> result;
@@ -42,7 +42,7 @@ public class ListInstanceSpecsResponseBody extends TeaModel {
 
     public static class ListInstanceSpecsResponseBodyResult extends TeaModel {
         /**
-         * <p>None</p>
+         * <p>The number of CPU cores.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -51,13 +51,16 @@ public class ListInstanceSpecsResponseBody extends TeaModel {
         public Integer cpu;
 
         /**
-         * <p>单数据节点存储空间最大值</p>
+         * <p>The maximum storage space of a Searcher worker.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>600</p>
          */
         @NameInMap("maxDisk")
         public Integer maxDisk;
 
         /**
-         * <p>Unit: GB</p>
+         * <p>The memory. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -66,7 +69,10 @@ public class ListInstanceSpecsResponseBody extends TeaModel {
         public Integer mem;
 
         /**
-         * <p>单数据节点存储空间最小值</p>
+         * <p>The minimum storage space of a Searcher worker.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("minDisk")
         public Integer minDisk;

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListVectorQueryResultRequest extends TeaModel {
     /**
+     * <p>The instance endpoint.</p>
+     * 
      * <strong>example:</strong>
      * <p>127.0.0.1</p>
      */
@@ -12,6 +14,8 @@ public class ListVectorQueryResultRequest extends TeaModel {
     public String address;
 
     /**
+     * <p>The request body.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -19,6 +23,8 @@ public class ListVectorQueryResultRequest extends TeaModel {
     public java.util.Map<String, ?> body;
 
     /**
+     * <p>The query type. Valid values: vector, primary_key, and vector_text.</p>
+     * 
      * <strong>example:</strong>
      * <p>primary_key</p>
      */
@@ -26,6 +32,8 @@ public class ListVectorQueryResultRequest extends TeaModel {
     public String queryType;
 
     /**
+     * <p>The vector query type. Valid values: vector, image, and text.</p>
+     * 
      * <strong>example:</strong>
      * <p>image</p>
      */

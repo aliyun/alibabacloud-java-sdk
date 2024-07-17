@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateIndexResponseBody extends TeaModel {
     /**
-     * <p>id of request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>407BFD91-DE7D-50BA-8F88-CDE52A3B5E46</p>
@@ -14,7 +14,7 @@ public class CreateIndexResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about the index</p>
+     * <p>The results returned.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>

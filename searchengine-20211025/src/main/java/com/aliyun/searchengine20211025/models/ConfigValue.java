@@ -4,9 +4,18 @@ package com.aliyun.searchengine20211025.models;
 import com.aliyun.tea.*;
 
 public class ConfigValue extends TeaModel {
+    /**
+     * <p>The description of the offline configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("desc")
     public String desc;
 
+    /**
+     * <p>The files to be modified.</p>
+     */
     @NameInMap("files")
     public java.util.List<ConfigValueFiles> files;
 
@@ -33,12 +42,17 @@ public class ConfigValue extends TeaModel {
 
     public static class ConfigValueFilesConfig extends TeaModel {
         /**
+         * <p>The file content.</p>
+         * 
          * <strong>example:</strong>
          * <p>$dictContent</p>
          */
         @NameInMap("content")
         public String content;
 
+        /**
+         * <p>The variables.</p>
+         */
         @NameInMap("variables")
         public java.util.Map<String, ConfigValueFilesConfigVariablesValue> variables;
 
@@ -67,6 +81,8 @@ public class ConfigValue extends TeaModel {
 
     public static class ConfigValueFiles extends TeaModel {
         /**
+         * <p>The operation type. Valid values: UPDATE and DELETE. Default value: UPDATE.</p>
+         * 
          * <strong>example:</strong>
          * <p>UPDATE</p>
          */
@@ -74,19 +90,32 @@ public class ConfigValue extends TeaModel {
         public String operateType;
 
         /**
+         * <p>The path of the parent directory.</p>
+         * 
          * <strong>example:</strong>
          * <p>/</p>
          */
         @NameInMap("parentFullPath")
         public String parentFullPath;
 
+        /**
+         * <p>The file name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/intervene_dict/中文-通用分析器.dict</p>
+         */
         @NameInMap("fileName")
         public String fileName;
 
+        /**
+         * <p>The configuration to be modified.</p>
+         */
         @NameInMap("config")
         public ConfigValueFilesConfig config;
 
         /**
+         * <p>The directory name.</p>
+         * 
          * <strong>example:</strong>
          * <p>/test</p>
          */

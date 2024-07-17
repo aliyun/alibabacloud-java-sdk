@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class VariablesValue extends TeaModel {
     /**
-     * <p>Specifies whether the variable cannot be modified.</p>
+     * <p>Specifies whether the variable is not allowed to be modified.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -23,7 +23,7 @@ public class VariablesValue extends TeaModel {
     public Boolean isModify;
 
     /**
-     * <p>The value of the variable.</p>
+     * <p>The variable value.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
@@ -32,7 +32,7 @@ public class VariablesValue extends TeaModel {
     public String value;
 
     /**
-     * <p>The description about the variable.</p>
+     * <p>The description of the variable.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
@@ -41,7 +41,7 @@ public class VariablesValue extends TeaModel {
     public String description;
 
     /**
-     * <p>The value of the template.</p>
+     * <p>The template value of the variable.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
@@ -50,10 +50,10 @@ public class VariablesValue extends TeaModel {
     public String templateValue;
 
     /**
-     * <p>The type of the variable. Valid values:</p>
+     * <p>The variable type. Valid values:</p>
      * <ul>
-     * <li>NORMAL: a normal variable</li>
-     * <li>FUNCTION: a function variable</li>
+     * <li>NORMAL: common variable</li>
+     * <li>FUNCTION: function variable</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -63,7 +63,7 @@ public class VariablesValue extends TeaModel {
     public String type;
 
     /**
-     * <p>The function variable.</p>
+     * <p>The function variables.</p>
      */
     @NameInMap("funcValue")
     public VariablesValueFuncValue funcValue;
@@ -131,7 +131,7 @@ public class VariablesValue extends TeaModel {
 
     public static class VariablesValueFuncValue extends TeaModel {
         /**
-         * <p>The class name.</p>
+         * <p>The class name of the function variable.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
@@ -140,7 +140,7 @@ public class VariablesValue extends TeaModel {
         public String funcClassName;
 
         /**
-         * <p>The template of the variable.</p>
+         * <p>The template of the function variable.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>

@@ -5,26 +5,38 @@ import com.aliyun.tea.*;
 
 public class ModifyIndexRequest extends TeaModel {
     /**
+     * <p>The maximum number of full indexes that can be concurrently built.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
     @NameInMap("buildParallelNum")
     public Integer buildParallelNum;
 
+    /**
+     * <p>The cluster information.</p>
+     */
     @NameInMap("cluster")
     public java.util.Map<String, java.util.Map<String, ?>> cluster;
 
     /**
+     * <p>The name of the configuration file.</p>
+     * 
      * <strong>example:</strong>
      * <p>ha-cn-35t3r02iq03@ha-cn-35t3r02iq03_test_api@hz_pre_vpc_domain_1@test_api@index_config_v1</p>
      */
     @NameInMap("clusterConfigName")
     public String clusterConfigName;
 
+    /**
+     * <p>The information about the offline configuration.</p>
+     */
     @NameInMap("config")
     public java.util.Map<String, ConfigValue> config;
 
     /**
+     * <p>The file content.</p>
+     * 
      * <strong>example:</strong>
      * <p>{\&quot;summarys\&quot;:{\&quot;summary_fields\&quot;:[\&quot;id\&quot;]},\&quot;indexs\&quot;:[{\&quot;index_name\&quot;:\&quot;index_id\&quot;,\&quot;index_type\&quot;:\&quot;PRIMARYKEY64\&quot;,\&quot;index_fields\&quot;:\&quot;id\&quot;,\&quot;has_primary_key_attribute\&quot;:true,\&quot;is_primary_key_sorted\&quot;:false}],\&quot;attributes\&quot;:[\&quot;id\&quot;],\&quot;fields\&quot;:[{\&quot;field_name\&quot;:\&quot;id\&quot;,\&quot;field_type\&quot;:\&quot;UINT16\&quot;}],\&quot;table_name\&quot;:\&quot;index_2\&quot;}</p>
      */
@@ -32,19 +44,32 @@ public class ModifyIndexRequest extends TeaModel {
     public String content;
 
     /**
+     * <p>The name of the data source.</p>
+     * 
      * <strong>example:</strong>
      * <p>ha-cn-35t3n1yuj0d_index_1</p>
      */
     @NameInMap("dataSource")
     public String dataSource;
 
+    /**
+     * <p>The information about the data source, which is required for the new version of OpenSearch Vector Search Edition.</p>
+     */
     @NameInMap("dataSourceInfo")
     public ModifyIndexRequestDataSourceInfo dataSourceInfo;
 
+    /**
+     * <p>The description of the data source.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("description")
     public String description;
 
     /**
+     * <p>The name of the data center in which the data source is deployed.</p>
+     * 
      * <strong>example:</strong>
      * <p>vpc_hz_domain_1</p>
      */
@@ -52,6 +77,8 @@ public class ModifyIndexRequest extends TeaModel {
     public String domain;
 
     /**
+     * <p>The maximum number of full indexes that can be concurrently merged.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -59,6 +86,8 @@ public class ModifyIndexRequest extends TeaModel {
     public Integer mergeParallelNum;
 
     /**
+     * <p>The number of shards.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -66,6 +95,8 @@ public class ModifyIndexRequest extends TeaModel {
     public Integer partition;
 
     /**
+     * <p>The push mode of the configuration. By default, only the configuration is pushed.</p>
+     * 
      * <strong>example:</strong>
      * <p>PUSH_ONLY</p>
      */
@@ -73,6 +104,13 @@ public class ModifyIndexRequest extends TeaModel {
     public String pushMode;
 
     /**
+     * <p>Specifies whether to check the validity of input parameters. Default value: false.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: checks only the validity of input parameters.</li>
+     * <li><strong>false</strong>: checks the validity of input parameters and creates an attribution configuration.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -190,6 +228,8 @@ public class ModifyIndexRequest extends TeaModel {
 
     public static class ModifyIndexRequestDataSourceInfoConfig extends TeaModel {
         /**
+         * <p>The AccessKey ID of the MaxCompute data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>L***p</p>
          */
@@ -197,6 +237,8 @@ public class ModifyIndexRequest extends TeaModel {
         public String accessKey;
 
         /**
+         * <p>The AccessKey secret of the MaxCompute data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>5**9a6</p>
          */
@@ -204,6 +246,8 @@ public class ModifyIndexRequest extends TeaModel {
         public String accessSecret;
 
         /**
+         * <p>The name of the OSS bucket.</p>
+         * 
          * <strong>example:</strong>
          * <p>test-bucket</p>
          */
@@ -211,6 +255,8 @@ public class ModifyIndexRequest extends TeaModel {
         public String bucket;
 
         /**
+         * <p>The endpoint of the MaxCompute data source.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://service.cn-hangzhou.maxcompute.aliyun-inc.com/api">http://service.cn-hangzhou.maxcompute.aliyun-inc.com/api</a></p>
          */
@@ -218,6 +264,8 @@ public class ModifyIndexRequest extends TeaModel {
         public String endpoint;
 
         /**
+         * <p>The namespace. This parameter is applicable to the SARO data source used in the intranet of Alibaba Group.</p>
+         * 
          * <strong>example:</strong>
          * <p>test-namespace</p>
          */
@@ -225,6 +273,8 @@ public class ModifyIndexRequest extends TeaModel {
         public String namespace;
 
         /**
+         * <p>The Object Storage Service (OSS) path.</p>
+         * 
          * <strong>example:</strong>
          * <p>/opensearch/oss.json</p>
          */
@@ -232,6 +282,8 @@ public class ModifyIndexRequest extends TeaModel {
         public String ossPath;
 
         /**
+         * <p>The partition in the MaxCompute table. Example: ds=20180102.</p>
+         * 
          * <strong>example:</strong>
          * <p>ds=20230114</p>
          */
@@ -239,6 +291,8 @@ public class ModifyIndexRequest extends TeaModel {
         public String partition;
 
         /**
+         * <p>The file path in the Apsara File Storage for HDFS file system.</p>
+         * 
          * <strong>example:</strong>
          * <p>test-hdfs-path</p>
          */
@@ -246,6 +300,8 @@ public class ModifyIndexRequest extends TeaModel {
         public String path;
 
         /**
+         * <p>The name of the MaxCompute project that is used as the data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>bbt_algo_pai</p>
          */
@@ -253,6 +309,8 @@ public class ModifyIndexRequest extends TeaModel {
         public String project;
 
         /**
+         * <p>The name of the MaxCompute table that is used as the data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>item</p>
          */
@@ -348,6 +406,8 @@ public class ModifyIndexRequest extends TeaModel {
 
     public static class ModifyIndexRequestDataSourceInfoSaroConfig extends TeaModel {
         /**
+         * <p>The namespace to which the SARO data source belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>flink-test-fjx-default</p>
          */
@@ -355,6 +415,8 @@ public class ModifyIndexRequest extends TeaModel {
         public String namespace;
 
         /**
+         * <p>The name of the SARO table.</p>
+         * 
          * <strong>example:</strong>
          * <p>device_event_shy_summary_</p>
          */
@@ -386,6 +448,8 @@ public class ModifyIndexRequest extends TeaModel {
 
     public static class ModifyIndexRequestDataSourceInfo extends TeaModel {
         /**
+         * <p>Specifies whether to enable the automatic full indexing feature.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -393,16 +457,23 @@ public class ModifyIndexRequest extends TeaModel {
         public Boolean autoBuildIndex;
 
         /**
+         * <p>The reindexing method. Valid values: api: API data source. indexRecover: data recovery by using indexing.</p>
+         * 
          * <strong>example:</strong>
          * <p>api</p>
          */
         @NameInMap("buildMode")
         public String buildMode;
 
+        /**
+         * <p>The configurations of the MaxCompute data source.</p>
+         */
         @NameInMap("config")
         public ModifyIndexRequestDataSourceInfoConfig config;
 
         /**
+         * <p>The start timestamp from which incremental data is retrieved.</p>
+         * 
          * <strong>example:</strong>
          * <p>1709715164</p>
          */
@@ -410,6 +481,8 @@ public class ModifyIndexRequest extends TeaModel {
         public Integer dataTimeSec;
 
         /**
+         * <p>The offline deployment name of the data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc_hz_domain_1</p>
          */
@@ -417,6 +490,8 @@ public class ModifyIndexRequest extends TeaModel {
         public String domain;
 
         /**
+         * <p>The ID of the index version from which data is restored.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -424,6 +499,8 @@ public class ModifyIndexRequest extends TeaModel {
         public Long generation;
 
         /**
+         * <p>The name of the data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>ha-cn-35t3n1yuj0d_index_1</p>
          */
@@ -431,6 +508,8 @@ public class ModifyIndexRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>The maximum number of full indexes that can be concurrently processed.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -438,16 +517,23 @@ public class ModifyIndexRequest extends TeaModel {
         public Integer processParallelNum;
 
         /**
+         * <p>The number of resources used for data update.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
         @NameInMap("processPartitionCount")
         public Integer processPartitionCount;
 
+        /**
+         * <p>The configurations of the SARO data source.</p>
+         */
         @NameInMap("saroConfig")
         public ModifyIndexRequestDataSourceInfoSaroConfig saroConfig;
 
         /**
+         * <p>The type of the data source. Valid values: odps, swift, saro, oss, and unKnow.</p>
+         * 
          * <strong>example:</strong>
          * <p>odps</p>
          */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyAdvanceConfigFileRequest extends TeaModel {
     /**
-     * <p>The content of the file.</p>
+     * <p>The file content.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;ha3&quot;</p>
@@ -14,7 +14,7 @@ public class ModifyAdvanceConfigFileRequest extends TeaModel {
     public String content;
 
     /**
-     * <p>The variable.</p>
+     * <p>The variables.</p>
      */
     @NameInMap("variables")
     public java.util.Map<String, VariablesValue> variables;

@@ -14,7 +14,7 @@ public class GetIndexResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about the index.</p>
+     * <p>The index information.</p>
      */
     @NameInMap("result")
     public GetIndexResponseBodyResult result;
@@ -41,47 +41,92 @@ public class GetIndexResponseBody extends TeaModel {
     }
 
     public static class GetIndexResponseBodyResultDataSourceInfoConfig extends TeaModel {
+        /**
+         * <p>The AccessKey ID of the MaxCompute data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>L***p</p>
+         */
         @NameInMap("accessKey")
         public String accessKey;
 
+        /**
+         * <p>The AccessKey secret of the MaxCompute data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5**9a6</p>
+         */
         @NameInMap("accessSecret")
         public String accessSecret;
 
+        /**
+         * <p>The name of the OSS bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha3test-oss</p>
+         */
         @NameInMap("bucket")
         public String bucket;
 
         /**
-         * <p>A parameter related to MaxCompute.</p>
+         * <p>The endpoint of the MaxCompute data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://service.cn-hangzhou.maxcompute.aliyun-inc.com/api">http://service.cn-hangzhou.maxcompute.aliyun-inc.com/api</a></p>
          */
         @NameInMap("endpoint")
         public String endpoint;
 
         /**
-         * <p>A parameter related to SARO.</p>
+         * <p>The namespace. This parameter is applicable to the SARO data source used in the intranet of Alibaba Group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TEST_dump_demo_sj_na61hunbu2_share_holo</p>
          */
         @NameInMap("namespace")
         public String namespace;
 
         /**
-         * <p>A parameter related to OSS.</p>
+         * <p>The Object Storage Service (OSS) path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/test_opensearch/sift_oss_test.data</p>
          */
         @NameInMap("ossPath")
         public String ossPath;
 
+        /**
+         * <p>The partition in the MaxCompute table. Example: ds=20180102.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ds=20220713</p>
+         */
         @NameInMap("partition")
         public String partition;
 
         /**
-         * <p>A parameter related to Apsara File Storage for HDFS.</p>
+         * <p>The file path in the Apsara File Storage for HDFS file system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://test_opensearch/sift_oss_test.data">http://test_opensearch/sift_oss_test.data</a></p>
          */
         @NameInMap("path")
         public String path;
 
+        /**
+         * <p>The name of the MaxCompute project that is used as the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tisplus_dev</p>
+         */
         @NameInMap("project")
         public String project;
 
         /**
-         * <p>A parameter related to SARO and MaxCompute.</p>
+         * <p>The name of the MaxCompute table that is used as the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dump_odps_demo</p>
          */
         @NameInMap("table")
         public String table;
@@ -174,9 +219,21 @@ public class GetIndexResponseBody extends TeaModel {
     }
 
     public static class GetIndexResponseBodyResultDataSourceInfoSaroConfig extends TeaModel {
+        /**
+         * <p>The namespace of the SARO data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TEST_dump_demo_sj_na61hunbu2_share_holo</p>
+         */
         @NameInMap("namespace")
         public String namespace;
 
+        /**
+         * <p>The name of the SARO table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>llm</p>
+         */
         @NameInMap("tableName")
         public String tableName;
 
@@ -206,6 +263,9 @@ public class GetIndexResponseBody extends TeaModel {
     public static class GetIndexResponseBodyResultDataSourceInfo extends TeaModel {
         /**
          * <p>Indicates whether the automatic full indexing feature is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("autoBuildIndex")
         public Boolean autoBuildIndex;
@@ -217,34 +277,52 @@ public class GetIndexResponseBody extends TeaModel {
         public GetIndexResponseBodyResultDataSourceInfoConfig config;
 
         /**
-         * <p>The offline deployment name of the data source.</p>
+         * <p>The data center in which the data source is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc_hz_domain_1</p>
          */
         @NameInMap("domain")
         public String domain;
 
         /**
          * <p>The name of the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha-cn-pl32rf0****_test_api</p>
          */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The maximum number of full indexes that can be concurrently processed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("processParallelNum")
         public Integer processParallelNum;
 
         /**
          * <p>The number of resources used for data update.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("processPartitionCount")
         public Integer processPartitionCount;
 
         /**
-         * <p>The configuration of SARO data sources.</p>
+         * <p>The configurations of the SARO data source.</p>
          */
         @NameInMap("saroConfig")
         public GetIndexResponseBodyResultDataSourceInfoSaroConfig saroConfig;
 
         /**
          * <p>The type of the data source. Valid values: odps, swift, saro, oss, and unKnow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>odps</p>
          */
         @NameInMap("type")
         public String type;
@@ -348,6 +426,12 @@ public class GetIndexResponseBody extends TeaModel {
         @NameInMap("isTemplate")
         public Boolean isTemplate;
 
+        /**
+         * <p>The file name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qrs.json</p>
+         */
         @NameInMap("name")
         public String name;
 
@@ -407,7 +491,7 @@ public class GetIndexResponseBody extends TeaModel {
         public java.util.List<GetIndexResponseBodyResultVersionsFiles> files;
 
         /**
-         * <p>The name of the version.</p>
+         * <p>The version name.</p>
          * 
          * <strong>example:</strong>
          * <p>ha-cn-7pp2ngv4s02_qrs</p>
@@ -416,7 +500,16 @@ public class GetIndexResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The status of the version.</p>
+         * <p>The status of the index version. Valid values:</p>
+         * <ul>
+         * <li>NEW: The index version is created.</li>
+         * <li>PUBLISH: The index version is normal.</li>
+         * <li>IN_USE: The index version is in use.</li>
+         * <li>NOT_USE: The index version is not used.</li>
+         * <li>STOP_USE: The index version is being stopped.</li>
+         * <li>RESTORE_USE: The index version is being restored.</li>
+         * <li>FAIL: The index version failed to be created.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -425,7 +518,7 @@ public class GetIndexResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The last time when the version was updated.</p>
+         * <p>The time when the index version was updated.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot; &quot;</p>
@@ -434,7 +527,7 @@ public class GetIndexResponseBody extends TeaModel {
         public Long updateTime;
 
         /**
-         * <p>The ID of the version.</p>
+         * <p>The version ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -498,22 +591,36 @@ public class GetIndexResponseBody extends TeaModel {
     }
 
     public static class GetIndexResponseBodyResult extends TeaModel {
+        /**
+         * <p>The cluster information.</p>
+         */
         @NameInMap("cluster")
         public java.util.Map<String, ResultClusterValue> cluster;
 
+        /**
+         * <p>The configuration information.</p>
+         */
         @NameInMap("config")
         public java.util.Map<String, java.util.Map<String, ?>> config;
 
+        /**
+         * <p>The configuration that takes effect next time.</p>
+         */
         @NameInMap("configWhenBuild")
         public java.util.Map<String, java.util.Map<String, ?>> configWhenBuild;
 
         /**
-         * <p>The content of the index.</p>
+         * <p>The file content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;summarys&quot;:{&quot;parameter&quot;:{&quot;file_compressor&quot;:&quot;zstd&quot;},&quot;summary_fields&quot;:[&quot;id&quot;]},&quot;file_compress&quot;:[{&quot;name&quot;:&quot;file_compressor&quot;,&quot;type&quot;:&quot;zstd&quot;},{&quot;name&quot;:&quot;no_compressor&quot;,&quot;type&quot;:&quot;&quot;}],&quot;indexs&quot;:[{&quot;index_fields&quot;:&quot;name&quot;,&quot;index_name&quot;:&quot;ids&quot;,&quot;index_type&quot;:&quot;STRING&quot;},{&quot;has_primary_key_attribute&quot;:true,&quot;index_fields&quot;:&quot;id&quot;,&quot;is_primary_key_sorted&quot;:false,&quot;index_name&quot;:&quot;id&quot;,&quot;index_type&quot;:&quot;PRIMARYKEY64&quot;}],&quot;attributes&quot;:[{&quot;file_compress&quot;:&quot;no_compressor&quot;,&quot;field_name&quot;:&quot;id&quot;}],&quot;fields&quot;:[{&quot;user_defined_param&quot;:{},&quot;compress_type&quot;:&quot;uniq&quot;,&quot;field_type&quot;:&quot;STRING&quot;,&quot;field_name&quot;:&quot;id&quot;},{&quot;compress_type&quot;:&quot;uniq&quot;,&quot;field_type&quot;:&quot;STRING&quot;,&quot;field_name&quot;:&quot;name&quot;}],&quot;table_name&quot;:&quot;api&quot;}</p>
          */
         @NameInMap("content")
         public String content;
 
         /**
+         * <p>The name of the data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>ha-cn-tl32nd2nq01_00</p>
          */
@@ -527,45 +634,80 @@ public class GetIndexResponseBody extends TeaModel {
         public GetIndexResponseBodyResultDataSourceInfo dataSourceInfo;
 
         /**
-         * <p>The remarks.</p>
+         * <p>The description of the index version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test index</p>
          */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>The deployment name of the index.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sz_vpc_domain_1</p>
+         */
         @NameInMap("domain")
         public String domain;
 
         /**
-         * <p>The last time when full data in the index was updated.</p>
+         * <p>The time when full data in the index was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-06-20 08:52:54</p>
          */
         @NameInMap("fullUpdateTime")
         public String fullUpdateTime;
 
         /**
-         * <p>The version of the data.</p>
+         * <p>The data version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1688523414</p>
          */
         @NameInMap("fullVersion")
         public Long fullVersion;
 
         /**
-         * <p>The last time when incremental data in the index was updated.</p>
+         * <p>The time when incremental data in the index was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-06-20 08:52:54</p>
          */
         @NameInMap("incUpdateTime")
         public String incUpdateTime;
 
         /**
          * <p>The index size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4689</p>
          */
         @NameInMap("indexSize")
         public Long indexSize;
 
         /**
-         * <p>The status of the index. Valid values: NEW, PUBLISH, IN_USE, NOT_USE, STOP_USE, and RESTORE_USE. After a Retrieval Engine Edition instance is created, it enters the IN_USE state.</p>
+         * <p>The status of the index version. Valid values:</p>
+         * <ul>
+         * <li>NEW: The index version is created.</li>
+         * <li>PUBLISH: The index version is normal.</li>
+         * <li>IN_USE: The index version is in use.</li>
+         * <li>NOT_USE: The index version is not used.</li>
+         * <li>STOP_USE: The index version is being stopped.</li>
+         * <li>RESTORE_USE: The index version is being restored.</li>
+         * <li>FAIL: The index version failed to be created.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>IN_USE</p>
          */
         @NameInMap("indexStatus")
         public String indexStatus;
 
         /**
+         * <p>The index name.</p>
+         * 
          * <strong>example:</strong>
          * <p>general</p>
          */
@@ -574,6 +716,9 @@ public class GetIndexResponseBody extends TeaModel {
 
         /**
          * <p>The number of shards.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("partition")
         public Integer partition;

@@ -14,7 +14,7 @@ public class GetAdvanceConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned results.</p>
+     * <p>The result.</p>
      */
     @NameInMap("result")
     public GetAdvanceConfigResponseBodyResult result;
@@ -42,7 +42,7 @@ public class GetAdvanceConfigResponseBody extends TeaModel {
 
     public static class GetAdvanceConfigResponseBodyResultFiles extends TeaModel {
         /**
-         * <p>The name of the file path.</p>
+         * <p>The file path.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
@@ -51,7 +51,7 @@ public class GetAdvanceConfigResponseBody extends TeaModel {
         public String fullPathName;
 
         /**
-         * <p>Indicates whether it is a directory.</p>
+         * <p>Indicates whether the file is a directory.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -60,7 +60,7 @@ public class GetAdvanceConfigResponseBody extends TeaModel {
         public Boolean isDir;
 
         /**
-         * <p>Indicates whether it is a template.</p>
+         * <p>Indicates whether the file is a container.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -69,7 +69,7 @@ public class GetAdvanceConfigResponseBody extends TeaModel {
         public Boolean isTemplate;
 
         /**
-         * <p>The name.</p>
+         * <p>The file name.</p>
          * 
          * <strong>example:</strong>
          * <p>ha-cn-2r42ostoc01_qrs</p>
@@ -118,19 +118,25 @@ public class GetAdvanceConfigResponseBody extends TeaModel {
 
     public static class GetAdvanceConfigResponseBodyResult extends TeaModel {
         /**
-         * <p>The content of the configuration that is returned.</p>
+         * <p>The content of the advanced configuration that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;url\&quot;:\&quot;<a href="http://xxxxxx.aliyuncs.com/outnet_hz/packages/xxxxx/opensearch_offline_plugins_xxxxx.tar%5C%5C%22%7D">http://xxxxxx.aliyuncs.com/outnet_hz/packages/xxxxx/opensearch_offline_plugins_xxxxx.tar\\&quot;}</a></p>
          */
         @NameInMap("content")
         public String content;
 
         /**
          * <p>The type of the configuration content. Valid values: FILE, GIT, HTTP, and ODPS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FILE</p>
          */
         @NameInMap("contentType")
         public String contentType;
 
         /**
-         * <p>The description.</p>
+         * <p>The description of the advanced configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>close alarm, chiji id 37080</p>
@@ -139,13 +145,13 @@ public class GetAdvanceConfigResponseBody extends TeaModel {
         public String desc;
 
         /**
-         * <p>The information about files.</p>
+         * <p>The files.</p>
          */
         @NameInMap("files")
         public java.util.List<GetAdvanceConfigResponseBodyResultFiles> files;
 
         /**
-         * <p>The name.</p>
+         * <p>The name of the advanced configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>ha-cn-0ju2s170b03_qrs</p>
@@ -154,7 +160,7 @@ public class GetAdvanceConfigResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The status.</p>
+         * <p>The status of the advanced configuration. Valid values: drafting: The advanced configuration is in the draft state. used: The advanced configuration is being used. unused: The advanced configuration is not used. trash: The advanced configuration is being deleted.</p>
          * 
          * <strong>example:</strong>
          * <p>0,1,3,6,8</p>
@@ -163,7 +169,7 @@ public class GetAdvanceConfigResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The update time.</p>
+         * <p>The time when the advanced configuration was updated.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>

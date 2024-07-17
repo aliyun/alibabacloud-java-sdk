@@ -14,7 +14,7 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The list of advanced configurations.</p>
+     * <p>The advanced configurations.</p>
      */
     @NameInMap("result")
     public java.util.List<ListAdvanceConfigsResponseBodyResult> result;
@@ -42,7 +42,7 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
 
     public static class ListAdvanceConfigsResponseBodyResultFiles extends TeaModel {
         /**
-         * <p>The name of the absolute path.</p>
+         * <p>The absolute path in which the file is stored.</p>
          * 
          * <strong>example:</strong>
          * <p>/path/wpd/nae</p>
@@ -51,7 +51,7 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
         public String fullPathName;
 
         /**
-         * <p>Indicates whether it is a directory. Valid values: true and false. true indicates that it is a directory, and false indicates that it is not a directory.</p>
+         * <p>Indicates whether the file is a directory. Valid values: true and false.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -60,7 +60,7 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
         public Boolean isDir;
 
         /**
-         * <p>Indicates whether it is a template. Valid values: true and false. true indicates that it is a directory, and false indicates that it is not a directory.</p>
+         * <p>Indicates whether the file is a template. Valid values: true and false.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -69,7 +69,7 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
         public Boolean isTemplate;
 
         /**
-         * <p>The name of the file.</p>
+         * <p>The file name.</p>
          * 
          * <strong>example:</strong>
          * <p>file_name_1</p>
@@ -117,20 +117,54 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
     }
 
     public static class ListAdvanceConfigsResponseBodyResult extends TeaModel {
+        /**
+         * <ul>
+         * <li>The type of the advanced configuration. Valid values: -ONLINE: online configuration</li>
+         * <li>\-ONLINE_CAVA: online Cava configuration</li>
+         * <li>\-ONLINE_PLUGIN: online plug-in configuration</li>
+         * <li>\-ONLINE_QUERY: query configuration</li>
+         * <li>\-OFFLINE_DICT: offline dictionary configuration</li>
+         * <li>\-OFFLINE_TABLE: offline table configuration</li>
+         * <li>\-OFFLINE_COMMON: offline configuration</li>
+         * <li>\-OFFLINE_PLUGIN: offline plug-in configuration</li>
+         * <li>\-OFFLINE_INDEX: index configuration</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ONLINE</p>
+         */
         @NameInMap("advanceConfigType")
         public String advanceConfigType;
 
+        /**
+         * <p>The content of the advanced configuration that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;url\&quot;:\&quot;<a href="http://xxxxxx.aliyuncs.com/outnet_hz/packages/xxxxx/opensearch_offline_plugins_xxxxx.tar%5C%5C%22%7D">http://xxxxxx.aliyuncs.com/outnet_hz/packages/xxxxx/opensearch_offline_plugins_xxxxx.tar\\&quot;}</a></p>
+         */
         @NameInMap("content")
         public String content;
 
+        /**
+         * <p>The type of the configuration content. Valid values: FILE, GIT, HTTP, and ODPS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FILE</p>
+         */
         @NameInMap("contentType")
         public String contentType;
 
+        /**
+         * <p>The Alibaba Cloud account ID of the user who created the advanced configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
+         */
         @NameInMap("creator")
         public String creator;
 
         /**
-         * <p>The description.</p>
+         * <p>The description of the advanced configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -139,7 +173,7 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
         public String desc;
 
         /**
-         * <p>The list of file names.</p>
+         * <p>The files.</p>
          */
         @NameInMap("files")
         public java.util.List<ListAdvanceConfigsResponseBodyResultFiles> files;
@@ -154,7 +188,7 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The state of the advanced configuration. Valid values: drafting, used, unused, and trash. drafting indicates that the advanced configuration is a draft. used indicates that the advanced configuration is in use. unused indicates that the advanced configuration is unused. trash indicates that the advanced configuration is being deleted.</p>
+         * <p>The status of the advanced configuration. Valid values: drafting: The advanced configuration is in the draft state. used: The advanced configuration is being used. unused: The advanced configuration is not used. trash: The advanced configuration is being deleted.</p>
          * 
          * <strong>example:</strong>
          * <p>drafting</p>
@@ -163,7 +197,7 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The update time.</p>
+         * <p>The time when the advanced configuration was updated.</p>
          * 
          * <strong>example:</strong>
          * <p>1631070464000</p>

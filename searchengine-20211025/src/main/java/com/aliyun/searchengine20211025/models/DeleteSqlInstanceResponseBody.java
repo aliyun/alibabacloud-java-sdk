@@ -42,12 +42,17 @@ public class DeleteSqlInstanceResponseBody extends TeaModel {
 
     public static class DeleteSqlInstanceResponseBodyResult extends TeaModel {
         /**
+         * <p>id of request</p>
+         * 
          * <strong>example:</strong>
          * <p>2AE63638-5420-56DC-BF59-37D8174039A0</p>
          */
         @NameInMap("requestId")
         public String requestId;
 
+        /**
+         * <p>The result.</p>
+         */
         @NameInMap("result")
         public java.util.Map<String, String> result;
 

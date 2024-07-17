@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateClusterResponseBody extends TeaModel {
     /**
-     * <p>id of request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>10D5E615-69F7-5F49-B850-00169ADE513C</p>
@@ -14,7 +14,7 @@ public class CreateClusterResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The result returned</p>
+     * <p>The result.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
