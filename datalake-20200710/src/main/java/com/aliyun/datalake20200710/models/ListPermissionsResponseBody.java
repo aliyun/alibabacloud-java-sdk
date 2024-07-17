@@ -6,33 +6,52 @@ import com.aliyun.tea.*;
 public class ListPermissionsResponseBody extends TeaModel {
     /**
      * <p>Response Code</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>Message Code</p>
+     * 
+     * <strong>example:</strong>
+     * <p>.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>NextPageToken</p>
+     * 
+     * <strong>example:</strong>
+     * <p>token!</p>
      */
     @NameInMap("NextPageToken")
     public String nextPageToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[]</p>
+     */
     @NameInMap("PrincipalResourcePermissionsList")
     public java.util.List<PrincipalResourcePermissions> principalResourcePermissionsList;
 
     /**
      * <p>RequestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>745EAAE2-5010-5C9F-A95C-B8FC5C1B03BF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Success</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

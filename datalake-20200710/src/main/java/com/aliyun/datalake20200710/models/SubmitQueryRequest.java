@@ -7,9 +7,17 @@ public class SubmitQueryRequest extends TeaModel {
     @NameInMap("catalogId")
     public String catalogId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>show databases</p>
+     */
     @NameInMap("sql")
     public String sql;
 
+    /**
+     * <strong>example:</strong>
+     * <p>WS-A129E61C4892D2B4</p>
+     */
     @NameInMap("workspaceId")
     public String workspaceId;
 

@@ -7,12 +7,24 @@ public class SearchAcrossCatalogRequest extends TeaModel {
     @NameInMap("CatalogIds")
     public java.util.List<String> catalogIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1000</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>tags:tag1 or comment:^iso and name=aliyun and (createTime &gt; &quot;20211111&quot; and createTime &lt; &quot;20211117&quot;) and has category</p>
+     */
     @NameInMap("SearchText")
     public String searchText;
 

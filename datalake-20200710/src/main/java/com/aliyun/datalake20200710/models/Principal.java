@@ -4,6 +4,10 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class Principal extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>acs:ram::[AliyunAccountId]:user/username_abc</p>
+     */
     @NameInMap("PrincipalArn")
     public String principalArn;
 

@@ -7,14 +7,23 @@ public class Catalog extends TeaModel {
     @NameInMap("CatalogId")
     public String catalogId;
 
+    @NameInMap("CatalogType")
+    public String catalogType;
+
     @NameInMap("CreateTime")
     public Long createTime;
 
     @NameInMap("CreatedBy")
     public String createdBy;
 
+    @NameInMap("DefaultCatalog")
+    public Boolean defaultCatalog;
+
     @NameInMap("Description")
     public String description;
+
+    @NameInMap("JdbcEnabled")
+    public Boolean jdbcEnabled;
 
     @NameInMap("LocationUri")
     public String locationUri;
@@ -24,6 +33,12 @@ public class Catalog extends TeaModel {
 
     @NameInMap("Status")
     public String status;
+
+    @NameInMap("StorageAccessConfig")
+    public String storageAccessConfig;
+
+    @NameInMap("ThriftEnabled")
+    public Boolean thriftEnabled;
 
     @NameInMap("UpdateTime")
     public Long updateTime;
@@ -39,6 +54,14 @@ public class Catalog extends TeaModel {
     }
     public String getCatalogId() {
         return this.catalogId;
+    }
+
+    public Catalog setCatalogType(String catalogType) {
+        this.catalogType = catalogType;
+        return this;
+    }
+    public String getCatalogType() {
+        return this.catalogType;
     }
 
     public Catalog setCreateTime(Long createTime) {
@@ -57,12 +80,28 @@ public class Catalog extends TeaModel {
         return this.createdBy;
     }
 
+    public Catalog setDefaultCatalog(Boolean defaultCatalog) {
+        this.defaultCatalog = defaultCatalog;
+        return this;
+    }
+    public Boolean getDefaultCatalog() {
+        return this.defaultCatalog;
+    }
+
     public Catalog setDescription(String description) {
         this.description = description;
         return this;
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public Catalog setJdbcEnabled(Boolean jdbcEnabled) {
+        this.jdbcEnabled = jdbcEnabled;
+        return this;
+    }
+    public Boolean getJdbcEnabled() {
+        return this.jdbcEnabled;
     }
 
     public Catalog setLocationUri(String locationUri) {
@@ -87,6 +126,22 @@ public class Catalog extends TeaModel {
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public Catalog setStorageAccessConfig(String storageAccessConfig) {
+        this.storageAccessConfig = storageAccessConfig;
+        return this;
+    }
+    public String getStorageAccessConfig() {
+        return this.storageAccessConfig;
+    }
+
+    public Catalog setThriftEnabled(Boolean thriftEnabled) {
+        this.thriftEnabled = thriftEnabled;
+        return this;
+    }
+    public Boolean getThriftEnabled() {
+        return this.thriftEnabled;
     }
 
     public Catalog setUpdateTime(Long updateTime) {

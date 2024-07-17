@@ -4,72 +4,164 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class GetQueryResultResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>8000</p>
+     */
     @NameInMap("Duration")
     public Long duration;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-05-09 16:19:09</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Table or view not found:</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-05-09 16:18:09</p>
+     */
     @NameInMap("GmtCreate")
     public String gmtCreate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-05-09 16:19:09</p>
+     */
     @NameInMap("GmtModified")
     public String gmtModified;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Q-41676378709440CE</p>
+     */
     @NameInMap("Id")
     public String id;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("JobCompleted")
     public Boolean jobCompleted;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[&quot;this is log&quot;]</p>
+     */
     @NameInMap("Logs")
     public String logs;
 
+    /**
+     * <strong>example:</strong>
+     * <p>229167306180609***</p>
+     */
     @NameInMap("Owner")
     public Long owner;
 
+    /**
+     * <strong>example:</strong>
+     * <p>99</p>
+     */
     @NameInMap("Progress")
     public Integer progress;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1D2BCFBA-7639-59A9-817B-944EC1339279</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>db</p>
+     */
     @NameInMap("ResultTmpDb")
     public String resultTmpDb;
 
+    /**
+     * <strong>example:</strong>
+     * <p>table</p>
+     */
     @NameInMap("ResultTmpTable")
     public String resultTmpTable;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("RowCount")
     public Integer rowCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("RowCountOverLimit")
     public Boolean rowCountOverLimit;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[[10,&quot;Tom&quot;],[11,&quot;Jerry&quot;]]</p>
+     */
     @NameInMap("Rows")
     public String rows;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;INT&quot;},{&quot;name&quot;:&quot;student_name&quot;,&quot;type&quot;:&quot;VARCHAR&quot;}]</p>
+     */
     @NameInMap("Schema")
     public String schema;
 
+    /**
+     * <strong>example:</strong>
+     * <p>select * from db.student</p>
+     */
     @NameInMap("Sql")
     public String sql;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-05-09 16:18:09</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AVAILABLE</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1024</p>
+     */
     @NameInMap("TotalBytesProcessed")
     public Long totalBytesProcessed;
 

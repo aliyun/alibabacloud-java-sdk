@@ -6,28 +6,53 @@ import com.aliyun.tea.*;
 public class ListPermissionsRequest extends TeaModel {
     /**
      * <p>CatalogId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1344371</p>
      */
     @NameInMap("CatalogId")
     public String catalogId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("IsListUserRolePermissions")
     public Boolean isListUserRolePermissions;
 
     @NameInMap("MetaResource")
     public MetaResource metaResource;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DATABASE</p>
+     */
     @NameInMap("MetaResourceType")
     public String metaResourceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>token!</p>
+     */
     @NameInMap("NextPageToken")
     public String nextPageToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("Principal")
     public Principal principal;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Hive</p>
+     */
     @NameInMap("Type")
     public String type;
 

@@ -4,12 +4,24 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class GetRegionStatusResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>{\&quot;RegionId\&quot;: \&quot;cn-shanghai\&quot;, \&quot;RegionStatus\&quot;: \&quot;SERVICE_INVALID\&quot;, \&quot;AccountStatus\&quot;: \&quot;\&quot;, \&quot;IsDlfServiceOpen\&quot;: False}</p>
+     */
     @NameInMap("Data")
     public GetRegionStatusResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CC58A776-0662-5C6D-B467-FFD4CF7F4C40</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public String success;
 
@@ -43,18 +55,38 @@ public class GetRegionStatusResponseBody extends TeaModel {
     }
 
     public static class GetRegionStatusResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>enabled</p>
+         */
         @NameInMap("AccountStatus")
         public String accountStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsDependencyReady")
         public Boolean isDependencyReady;
 
+        /**
+         * <strong>example:</strong>
+         * <p>True</p>
+         */
         @NameInMap("IsDlfServiceOpen")
         public Boolean isDlfServiceOpen;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn_hangzhou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>READY</p>
+         */
         @NameInMap("RegionStatus")
         public String regionStatus;
 

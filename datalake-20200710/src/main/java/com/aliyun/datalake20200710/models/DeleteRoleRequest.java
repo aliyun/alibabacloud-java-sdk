@@ -4,6 +4,10 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class DeleteRoleRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>roleId/roleName至少有一个是非空</p>
+     */
     @NameInMap("RoleName")
     public String roleName;
 

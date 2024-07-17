@@ -46,6 +46,10 @@ public class Table extends TeaModel {
     @NameInMap("Sd")
     public StorageDescriptor sd;
 
+    /**
+     * <strong>example:</strong>
+     * <p>59c6c8fefeaa46d8b599c1f790c59a19</p>
+     */
     @NameInMap("TableId")
     public String tableId;
 

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetCatalogRequest extends TeaModel {
     /**
      * <p>catalogId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>catalog_test</p>
      */
     @NameInMap("CatalogId")
     public String catalogId;

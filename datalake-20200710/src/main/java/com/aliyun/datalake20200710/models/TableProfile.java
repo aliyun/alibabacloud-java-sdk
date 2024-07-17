@@ -4,75 +4,159 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class TableProfile extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("AccessNum")
     public Long accessNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("AccessNumMonthly")
     public Long accessNumMonthly;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("AccessNumWeekly")
     public Long accessNumWeekly;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-08-14 10:44:13</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OSS_HDFS</p>
+     */
     @NameInMap("DataSourceType")
     public String dataSourceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test_db</p>
+     */
     @NameInMap("DatabaseName")
     public String databaseName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("FileCnt")
     public Long fileCnt;
 
+    /**
+     * <strong>example:</strong>
+     * <p>31</p>
+     */
     @NameInMap("FileSize")
     public Long fileSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IsPartitioned")
     public Boolean isPartitioned;
 
     @NameInMap("LastAccessNumTime")
     public String lastAccessNumTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-08-22 12:14:42</p>
+     */
     @NameInMap("LastAccessTime")
     public String lastAccessTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-08-16 18:02:24</p>
+     */
     @NameInMap("LastDdlTime")
     public String lastDdlTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-08-16 18:02:25</p>
+     */
     @NameInMap("LastModifyTime")
     public String lastModifyTime;
 
     @NameInMap("LatestAccessNumDate")
     public String latestAccessNumDate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-08-30 19:16:10</p>
+     */
     @NameInMap("LatestDate")
     public String latestDate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>oss://mybucket.cn-hangzhou.oss-dls.aliyuncs.com/test_db/test_tbl/</p>
+     */
     @NameInMap("Location")
     public String location;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("ObjectAccessNum")
     public Long objectAccessNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>18</p>
+     */
     @NameInMap("ObjectAccessNumMonthly")
     public Long objectAccessNumMonthly;
 
+    /**
+     * <strong>example:</strong>
+     * <p>18</p>
+     */
     @NameInMap("ObjectAccessNumWeekly")
     public Long objectAccessNumWeekly;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("ObjectCnt")
     public Long objectCnt;
 
+    /**
+     * <strong>example:</strong>
+     * <p>31</p>
+     */
     @NameInMap("ObjectSize")
     public Long objectSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("PartitionCnt")
     public Long partitionCnt;
 
     @NameInMap("RecordCnt")
     public Long recordCnt;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test_tbl</p>
+     */
     @NameInMap("TableName")
     public String tableName;
 

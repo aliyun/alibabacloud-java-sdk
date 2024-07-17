@@ -4,6 +4,10 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class CreateDatabaseRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1344371</p>
+     */
     @NameInMap("CatalogId")
     public String catalogId;
 

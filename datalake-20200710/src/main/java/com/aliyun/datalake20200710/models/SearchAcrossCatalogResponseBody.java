@@ -7,18 +7,34 @@ public class SearchAcrossCatalogResponseBody extends TeaModel {
     @NameInMap("CatalogResult")
     public SearchAcrossCatalogResponseBodyCatalogResult catalogResult;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("DatabaseResult")
     public SearchAcrossCatalogResponseBodyDatabaseResult databaseResult;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>460C862F-BB91-5C04-BC3F-946EEF467862</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -120,6 +136,10 @@ public class SearchAcrossCatalogResponseBody extends TeaModel {
         @NameInMap("Catalogs")
         public java.util.List<SearchAcrossCatalogResponseBodyCatalogResultCatalogs> catalogs;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("TotalCount")
         public Long totalCount;
 
@@ -180,6 +200,10 @@ public class SearchAcrossCatalogResponseBody extends TeaModel {
         @NameInMap("Databases")
         public java.util.List<SearchAcrossCatalogResponseBodyDatabaseResultDatabases> databases;
 
+        /**
+         * <strong>example:</strong>
+         * <p>11000</p>
+         */
         @NameInMap("TotalCount")
         public Long totalCount;
 
@@ -240,6 +264,10 @@ public class SearchAcrossCatalogResponseBody extends TeaModel {
         @NameInMap("Tables")
         public java.util.List<SearchAcrossCatalogResponseBodyTableResultTables> tables;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1100</p>
+         */
         @NameInMap("TotalCount")
         public Long totalCount;
 

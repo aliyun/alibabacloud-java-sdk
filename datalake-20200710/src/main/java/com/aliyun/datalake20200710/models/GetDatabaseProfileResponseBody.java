@@ -6,10 +6,20 @@ import com.aliyun.tea.*;
 public class GetDatabaseProfileResponseBody extends TeaModel {
     /**
      * <p>Code</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{
+     *     &quot;FileCnt&quot;: 213,
+     *     &quot;FileSize&quot;: 34324
+     * }</p>
+     */
     @NameInMap("DatabaseProfile")
     public DatabaseProfile databaseProfile;
 
@@ -21,12 +31,18 @@ public class GetDatabaseProfileResponseBody extends TeaModel {
 
     /**
      * <p>RequestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AEA7DCC8-DBF5-561B-A7FD-0747D7D51FEB</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Success</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

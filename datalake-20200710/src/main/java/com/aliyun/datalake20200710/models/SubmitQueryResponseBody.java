@@ -4,12 +4,24 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class SubmitQueryResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Q-14475CF9B51FCE5E</p>
+     */
     @NameInMap("Data")
     public String data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>279AA630-A8ED-5EA9-80A3-2E213D63548C</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

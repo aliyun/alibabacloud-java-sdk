@@ -4,24 +4,48 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class UpdateTableRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("AllowPartitionKeyChange")
     public Boolean allowPartitionKeyChange;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1344371</p>
+     */
     @NameInMap("CatalogId")
     public String catalogId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>database_test</p>
+     */
     @NameInMap("DatabaseName")
     public String databaseName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IsAsync")
     public Boolean isAsync;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("SkipArchive")
     public Boolean skipArchive;
 
     @NameInMap("TableInput")
     public TableInput tableInput;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test_table_20201223</p>
+     */
     @NameInMap("TableName")
     public String tableName;
 

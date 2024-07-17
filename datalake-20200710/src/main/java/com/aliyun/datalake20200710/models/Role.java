@@ -10,6 +10,10 @@ public class Role extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>显示名称，允许中文</p>
+     */
     @NameInMap("DisplayName")
     public String displayName;
 

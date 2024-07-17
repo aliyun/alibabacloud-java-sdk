@@ -7,9 +7,17 @@ public class UpdateRegisteredLocationResponseBody extends TeaModel {
     @NameInMap("Data")
     public UpdateRegisteredLocationResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>8030C902-C25B-1839-867D-E6F70A5B9810</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -45,6 +53,9 @@ public class UpdateRegisteredLocationResponseBody extends TeaModel {
     public static class UpdateRegisteredLocationResponseBodyData extends TeaModel {
         /**
          * <p>Location ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LOC-AB8FBC17F95A4AF5</p>
          */
         @NameInMap("LocationId")
         public String locationId;

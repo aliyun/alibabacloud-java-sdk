@@ -4,15 +4,35 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class RegisterLocationRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("InventoryCollectEnabled")
     public Boolean inventoryCollectEnabled;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss://mybucket/</p>
+     */
     @NameInMap("Location")
     public String location;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("OssLogCollectEnabled")
     public Boolean ossLogCollectEnabled;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AliyunDLFWorkFlowDefaultRole</p>
+     */
     @NameInMap("RoleName")
     public String roleName;
 

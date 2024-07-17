@@ -4,6 +4,12 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class RunMigrationWorkflowRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>M-EDD8BF959BB97345</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

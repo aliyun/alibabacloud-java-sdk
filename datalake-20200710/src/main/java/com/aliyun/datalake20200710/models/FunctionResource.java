@@ -4,9 +4,17 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class FunctionResource extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>default</p>
+     */
     @NameInMap("DatabaseName")
     public String databaseName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>default</p>
+     */
     @NameInMap("FunctionName")
     public String functionName;
 

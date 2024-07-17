@@ -4,9 +4,17 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class GetAsyncTaskStatusRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1344371</p>
+     */
     @NameInMap("CatalogId")
     public String catalogId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>f546c761570e5efc8146a1986f7890d2</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 
