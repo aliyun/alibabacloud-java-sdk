@@ -197,6 +197,9 @@ public class GetTrafficControlTargetResponseBody extends TeaModel {
     }
 
     public static class GetTrafficControlTargetResponseBodySplitParts extends TeaModel {
+        @NameInMap("SetPoints")
+        public java.util.List<Long> setPoints;
+
         @NameInMap("SetValues")
         public java.util.List<Long> setValues;
 
@@ -206,6 +209,14 @@ public class GetTrafficControlTargetResponseBody extends TeaModel {
         public static GetTrafficControlTargetResponseBodySplitParts build(java.util.Map<String, ?> map) throws Exception {
             GetTrafficControlTargetResponseBodySplitParts self = new GetTrafficControlTargetResponseBodySplitParts();
             return TeaModel.build(map, self);
+        }
+
+        public GetTrafficControlTargetResponseBodySplitParts setSetPoints(java.util.List<Long> setPoints) {
+            this.setPoints = setPoints;
+            return this;
+        }
+        public java.util.List<Long> getSetPoints() {
+            return this.setPoints;
         }
 
         public GetTrafficControlTargetResponseBodySplitParts setSetValues(java.util.List<Long> setValues) {

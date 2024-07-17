@@ -10,6 +10,9 @@ public class SplitTrafficControlTargetRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("SetPoints")
+    public java.util.List<Long> setPoints;
+
     @NameInMap("SetValues")
     public java.util.List<Long> setValues;
 
@@ -35,6 +38,14 @@ public class SplitTrafficControlTargetRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public SplitTrafficControlTargetRequest setSetPoints(java.util.List<Long> setPoints) {
+        this.setPoints = setPoints;
+        return this;
+    }
+    public java.util.List<Long> getSetPoints() {
+        return this.setPoints;
     }
 
     public SplitTrafficControlTargetRequest setSetValues(java.util.List<Long> setValues) {
