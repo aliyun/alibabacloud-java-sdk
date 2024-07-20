@@ -12,24 +12,36 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4B6DBBB0-2D01-4C6A-A384-4129266E6B78</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,12 +94,18 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
     public static class ListBandwidthackagesResponseBodyBandwidthPackagesTags extends TeaModel {
         /**
          * <p>The tag key of the bandwidth plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag-key</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value of the bandwidth plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag-value</p>
          */
         @NameInMap("Value")
         public String value;
@@ -124,72 +142,104 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
 
         /**
          * <p>The bandwidth of the bandwidth plan. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Bandwidth")
         public Integer bandwidth;
 
         /**
          * <p>The ID of the bandwidth plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gbwp-bp1sgzldyj6b4q7cx****</p>
          */
         @NameInMap("BandwidthPackageId")
         public String bandwidthPackageId;
 
         /**
          * <p>The billing method of the bandwidth plan. Valid values:</p>
-         * <br>
-         * <p>*   **PREPAY**: subscription. This is the default value.</p>
-         * <p>*   **POSTPAY**: pay-as-you-go.</p>
+         * <ul>
+         * <li><strong>PREPAY</strong>: subscription. This is the default value.</li>
+         * <li><strong>POSTPAY</strong>: pay-as-you-go.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PREPAY</p>
          */
         @NameInMap("ChargeType")
         public String chargeType;
 
         /**
          * <p>The time when the bandwidth plan was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1578966918000</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The description of the bandwidth plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testDescription</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The expiration time of the bandwidth plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1578966918000</p>
          */
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
         /**
          * <p>The name of the GA instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Accelerator</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DE77A7F3-3B74-41C0-A5BC-CAFD188C28B6</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekzzwgr7vz2liy</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>The status of the bandwidth plan. Valid values:</p>
-         * <br>
-         * <p>*   **init:** The bandwidth plan is being initialized.</p>
-         * <p>*   **active:** The bandwidth plan is available.</p>
-         * <p>*   **binded:** The bandwidth plan is associated with a GA instance.</p>
-         * <p>*   **binding:** The bandwidth plan is being associated with a GA instance.</p>
-         * <p>*   **unbinding:** The bandwidth plan is being disassociated from a GA instance.</p>
-         * <p>*   **updating:** The bandwidth plan is being updated.</p>
-         * <p>*   **finacialLocked:** The bandwidth plan is locked due to overdue payments.</p>
-         * <p>*   **locked:** The bandwidth plan is locked.</p>
+         * <ul>
+         * <li><strong>init:</strong> The bandwidth plan is being initialized.</li>
+         * <li><strong>active:</strong> The bandwidth plan is available.</li>
+         * <li><strong>binded:</strong> The bandwidth plan is associated with a GA instance.</li>
+         * <li><strong>binding:</strong> The bandwidth plan is being associated with a GA instance.</li>
+         * <li><strong>unbinding:</strong> The bandwidth plan is being disassociated from a GA instance.</li>
+         * <li><strong>updating:</strong> The bandwidth plan is being updated.</li>
+         * <li><strong>finacialLocked:</strong> The bandwidth plan is locked due to overdue payments.</li>
+         * <li><strong>locked:</strong> The bandwidth plan is locked.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>active</p>
          */
         @NameInMap("State")
         public String state;

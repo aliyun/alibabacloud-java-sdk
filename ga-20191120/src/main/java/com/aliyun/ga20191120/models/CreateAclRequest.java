@@ -6,54 +6,76 @@ import com.aliyun.tea.*;
 public class CreateAclRequest extends TeaModel {
     /**
      * <p>The entries of IP addresses or CIDR blocks to add to the ACL.</p>
-     * <br>
-     * <p>You can add up to 20 entries in each request.</p>
+     * <p>You can add a maximum of 50 entries at a time.</p>
      */
     @NameInMap("AclEntries")
     public java.util.List<CreateAclRequestAclEntries> aclEntries;
 
     /**
-     * <p>The name of the ACL. The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.</p>
+     * <p>The ACL name.</p>
+     * <p>The name must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-acl</p>
      */
     @NameInMap("AclName")
     public String aclName;
 
     /**
      * <p>The IP version of the ACL. Valid values:</p>
-     * <br>
-     * <p>*   **IPv4**</p>
-     * <p>*   **IPv6**</p>
+     * <ul>
+     * <li><strong>IPv4</strong></li>
+     * <li><strong>IPv6</strong></li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>IPv4</p>
      */
     @NameInMap("AddressIPVersion")
     public String addressIPVersion;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.</p>
-     * <br>
-     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <blockquote>
+     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF3898</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>Specifies whether to only precheck the request. Default value: false. Valid values:</p>
-     * <br>
-     * <p>*   **true**: prechecks the request without performing the operation. The system checks the required parameters, request syntax, and limits. If the request fails the precheck, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.</p>
-     * <p>*   **false**: sends the request. If the request passes the precheck, a 2xx HTTP status code is returned and the operation is performed.</p>
+     * <ul>
+     * <li><strong>true</strong>: prechecks the request without performing the operation. The system checks the required parameters, request syntax, and limits. If the request fails the precheck, an error message is returned. If the request passes the precheck, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong>: sends the request. If the request passes the precheck, a 2xx HTTP status code is returned and the operation is performed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
-     * <p>The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to **cn-hangzhou**.</p>
+     * <p>The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmwj7wvng3jbi</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -136,18 +158,21 @@ public class CreateAclRequest extends TeaModel {
     public static class CreateAclRequestAclEntries extends TeaModel {
         /**
          * <p>The IP addresses (192.168.XX.XX) or CIDR blocks (10.0.XX.XX/24) that you want to add to the ACL.</p>
-         * <br>
-         * <p>You can add up to 20 entries in each request.</p>
+         * <p>You can add a maximum of 50 entries at a time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0.XX.XX/24</p>
          */
         @NameInMap("Entry")
         public String entry;
 
         /**
          * <p>The description of the entry that you want to add to the ACL.</p>
-         * <br>
-         * <p>You can add the descriptions of up to 20 entries in each request.</p>
-         * <br>
-         * <p>The description must be 1 to 256 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), and underscores (\_).</p>
+         * <p>You can add a maximum of 50 entries at a time.</p>
+         * <p>The description must be 1 to 256 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), and underscores (_).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-entry</p>
          */
         @NameInMap("EntryDescription")
         public String entryDescription;
@@ -178,20 +203,22 @@ public class CreateAclRequest extends TeaModel {
     public static class CreateAclRequestTag extends TeaModel {
         /**
          * <p>The tag key of the ACL. The tag key cannot be an empty string.</p>
-         * <br>
-         * <p>The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.</p>
-         * <br>
+         * <p>The tag key can be up to 64 characters in length and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
          * <p>You can specify up to 20 tag keys.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag-key</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value of the ACL. The tag value cannot be an empty string.</p>
-         * <br>
-         * <p>The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.</p>
-         * <br>
+         * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
          * <p>You can specify up to 20 tag values.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag-value</p>
          */
         @NameInMap("Value")
         public String value;

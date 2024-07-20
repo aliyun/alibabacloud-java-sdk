@@ -6,45 +6,65 @@ import com.aliyun.tea.*;
 public class ListBandwidthPackagesRequest extends TeaModel {
     /**
      * <p>The ID of the bandwidth plan.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gbwp-bp1sgzldyj6b4q7cx****</p>
      */
     @NameInMap("BandwidthPackageId")
     public String bandwidthPackageId;
 
     /**
-     * <p>The page number. Default value: **1**.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Maximum value: **100**. Default value: **10**.</p>
+     * <p>The number of entries per page. Maximum value: <strong>100</strong>. Default value: <strong>10</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.</p>
+     * <p>The ID of the region where the GA instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-aek2ry6mp2c****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>The status of the bandwidth plan. Valid values:</p>
-     * <br>
-     * <p>*   **init**: The bandwidth plan is being initialized.</p>
-     * <p>*   **active**: The bandwidth plan is available.</p>
-     * <p>*   **binded**: The bandwidth plan is associated.</p>
-     * <p>*   **binding**: The bandwidth plan is being associated.</p>
-     * <p>*   **unbinding**: The bandwidth plan is being disassociated.</p>
-     * <p>*   **updating**: The bandwidth plan is being updated.</p>
-     * <p>*   **finacialLocked**: The bandwidth plan is locked due to overdue payments.</p>
-     * <p>*   **locked**: The bandwidth plan is locked.</p>
+     * <ul>
+     * <li><strong>init</strong>: The bandwidth plan is being initialized.</li>
+     * <li><strong>active</strong>: The bandwidth plan is available.</li>
+     * <li><strong>binded</strong>: The bandwidth plan is associated.</li>
+     * <li><strong>binding</strong>: The bandwidth plan is being associated.</li>
+     * <li><strong>unbinding</strong>: The bandwidth plan is being disassociated.</li>
+     * <li><strong>updating</strong>: The bandwidth plan is being updated.</li>
+     * <li><strong>finacialLocked</strong>: The bandwidth plan is locked due to overdue payments.</li>
+     * <li><strong>locked</strong>: The bandwidth plan is locked.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>active</p>
      */
     @NameInMap("State")
     public String state;
@@ -57,11 +77,14 @@ public class ListBandwidthPackagesRequest extends TeaModel {
 
     /**
      * <p>The type of the bandwidth plan. Valid values:</p>
-     * <br>
-     * <p>*   **Basic**: a basic bandwidth plan</p>
-     * <p>*   **CrossDomain**: a cross-border acceleration bandwidth plan</p>
-     * <br>
-     * <p>If you call this operation on the China site (aliyun.com), you can set Type only to **Basic**.</p>
+     * <ul>
+     * <li><strong>Basic</strong>: a basic bandwidth plan</li>
+     * <li><strong>CrossDomain</strong>: a cross-border acceleration bandwidth plan</li>
+     * </ul>
+     * <p>If you call this operation on the China site (aliyun.com), you can set Type only to <strong>Basic</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Basic</p>
      */
     @NameInMap("Type")
     public String type;
@@ -138,20 +161,22 @@ public class ListBandwidthPackagesRequest extends TeaModel {
     public static class ListBandwidthPackagesRequestTag extends TeaModel {
         /**
          * <p>The tag key of the bandwidth plan. The tag key cannot be an empty string.</p>
-         * <br>
-         * <p>The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.</p>
-         * <br>
+         * <p>The tag key can be up to 64 characters in length and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
          * <p>You can specify up to 20 tag keys.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag-key</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value of the bandwidth plan. The tag value can be an empty string.</p>
-         * <br>
-         * <p>The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.</p>
-         * <br>
+         * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
          * <p>You can specify up to 20 tag values.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag-value</p>
          */
         @NameInMap("Value")
         public String value;

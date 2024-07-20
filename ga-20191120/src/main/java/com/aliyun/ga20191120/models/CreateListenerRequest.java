@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class CreateListenerRequest extends TeaModel {
     /**
      * <p>The ID of the GA instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ga-bp1odcab8tmno0hdq****</p>
      */
     @NameInMap("AcceleratorId")
     public String acceleratorId;
@@ -18,170 +22,226 @@ public class CreateListenerRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to enable client affinity for the listener.</p>
-     * <br>
-     * <p>*   If this parameter is left empty, client affinity is disabled. After client affinity is disabled, requests from a specific client IP address may be forwarded to different endpoints.</p>
-     * <p>*   To enable client affinity, set this parameter to **SOURCE_IP**. In this case, when a client accesses stateful applications, requests from the same client are forwarded to the same endpoint regardless of the source port or protocol.</p>
+     * <ul>
+     * <li>If this parameter is left empty, client affinity is disabled. After client affinity is disabled, requests from a specific client IP address may be forwarded to different endpoints.</li>
+     * <li>To enable client affinity, set this parameter to <strong>SOURCE_IP</strong>. In this case, when a client accesses stateful applications, requests from the same client are forwarded to the same endpoint regardless of the source port or protocol.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>SOURCE_IP</p>
      */
     @NameInMap("ClientAffinity")
     public String clientAffinity;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
-     * <br>
-     * <p>> If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** is different for each API request.</p>
+     * <blockquote>
+     * <p>If you do not set this parameter, <strong>ClientToken</strong> is set to the value of <strong>RequestId</strong>. The value of <strong>RequestId</strong> is different for each API request.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The endpoint group that is associated with the custom routing listener.</p>
-     * <br>
      * <p>You can configure at most five endpoint groups for a custom routing listener.</p>
-     * <br>
-     * <p>> You can configure endpoint groups and endpoints for a custom routing listener only if the **Type** parameter is set to **CustomRouting**.</p>
+     * <blockquote>
+     * <p>You can configure endpoint groups and endpoints for a custom routing listener only if the <strong>Type</strong> parameter is set to <strong>CustomRouting</strong>.</p>
+     * </blockquote>
      */
     @NameInMap("CustomRoutingEndpointGroupConfigurations")
     public java.util.List<CreateListenerRequestCustomRoutingEndpointGroupConfigurations> customRoutingEndpointGroupConfigurations;
 
     /**
      * <p>The description of the listener. The description can be at most 200 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Listener</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The endpoint groups that are associated with the intelligent routing listener.</p>
-     * <br>
      * <p>You can configure up to 10 endpoint groups for an intelligent routing listener.</p>
-     * <br>
-     * <p>>  You can configure endpoint groups and endpoints only if you set **Type** to **Standard**.</p>
+     * <blockquote>
+     * <p> You can configure endpoint groups and endpoints only if you set <strong>Type</strong> to <strong>Standard</strong>.</p>
+     * </blockquote>
      */
     @NameInMap("EndpointGroupConfigurations")
     public java.util.List<CreateListenerRequestEndpointGroupConfigurations> endpointGroupConfigurations;
 
     /**
      * <p>The maximum version of the HTTP protocol. Valid values:</p>
-     * <br>
-     * <p>*   **http3**</p>
-     * <p>*   **http2** (default)</p>
-     * <p>*   **http1.1**</p>
-     * <br>
-     * <p>>  Only HTTPS listeners support this parameter.</p>
+     * <ul>
+     * <li><strong>http3</strong></li>
+     * <li><strong>http2</strong> (default)</li>
+     * <li><strong>http1.1</strong></li>
+     * </ul>
+     * <blockquote>
+     * <p> Only HTTPS listeners support this parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>http2</p>
      */
     @NameInMap("HttpVersion")
     public String httpVersion;
 
     /**
      * <p>The timeout period of idle connections. Unit: seconds.</p>
-     * <br>
-     * <p>*   TCP: 10-900. Default value: 900. Unit: seconds.</p>
-     * <p>*   UDP: 10-20. Default value: 20. Unit: seconds.</p>
-     * <p>*   HTTP/HTTPS: 1-60. Default value: 15. Unit: seconds.</p>
+     * <ul>
+     * <li>TCP: 10-900. Default value: 900. Unit: seconds.</li>
+     * <li>UDP: 10-20. Default value: 20. Unit: seconds.</li>
+     * <li>HTTP/HTTPS: 1-60. Default value: 15. Unit: seconds.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>900</p>
      */
     @NameInMap("IdleTimeout")
     public Integer idleTimeout;
 
     /**
      * <p>The name of the listener.</p>
-     * <br>
-     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.</p>
+     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Listener</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The listener ports. Valid values: **1** to **65499**. The maximum number of ports that can be configured depends on the routing type and protocol of the listener. For more information, see [Listener overview](~~153216~~).</p>
+     * <p>The listener ports. Valid values: <strong>1</strong> to <strong>65499</strong>. The maximum number of ports that can be configured depends on the routing type and protocol of the listener. For more information, see <a href="https://help.aliyun.com/document_detail/153216.html">Listener overview</a>.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PortRanges")
     public java.util.List<CreateListenerRequestPortRanges> portRanges;
 
     /**
      * <p>The network transmission protocol that you want to use for the listener. Valid values:</p>
-     * <br>
-     * <p>*   **tcp**: TCP</p>
-     * <p>*   **udp**: UDP</p>
-     * <p>*   **http**: HTTP</p>
-     * <p>*   **https**: HTTPS</p>
+     * <ul>
+     * <li><strong>tcp</strong>: TCP</li>
+     * <li><strong>udp</strong>: UDP</li>
+     * <li><strong>http</strong>: HTTP</li>
+     * <li><strong>https</strong>: HTTPS</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>tcp</p>
      */
     @NameInMap("Protocol")
     public String protocol;
 
     /**
      * <p>Specifies whether to preserve client IP addresses. Valid values:</p>
-     * <br>
-     * <p>*   **true**: enables the feature. After client IP addresses are preserved, you can view client IP addresses on the endpoints.</p>
-     * <p>*   **false** (default): disables the feature.</p>
-     * <br>
-     * <p>> This parameter will be deprecated in the API operations that are used to configure listeners. We recommend that you set this parameter when you call API operations to configure endpoint groups. For more information about the **ProxyProtocol** parameter, see [CreateEndpointGroup](~~153259~~) and [UpdateEndpointGroup](~~153262~~).</p>
+     * <ul>
+     * <li><strong>true</strong>: enables the feature. After client IP addresses are preserved, you can view client IP addresses on the endpoints.</li>
+     * <li><strong>false</strong> (default): disables the feature.</li>
+     * </ul>
+     * <blockquote>
+     * <p>This parameter will be deprecated in the API operations that are used to configure listeners. We recommend that you set this parameter when you call API operations to configure endpoint groups. For more information about the <strong>ProxyProtocol</strong> parameter, see <a href="https://help.aliyun.com/document_detail/153259.html">CreateEndpointGroup</a> and <a href="https://help.aliyun.com/document_detail/153262.html">UpdateEndpointGroup</a>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("ProxyProtocol")
     public Boolean proxyProtocol;
 
     /**
-     * <p>The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.</p>
+     * <p>The ID of the region where the GA instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The timeout period for HTTP or HTTPS requests. Unit: seconds.</p>
-     * <br>
      * <p>Valid values: 1 to 180. Default value: 60. Unit: seconds.</p>
-     * <br>
-     * <p>>  This parameter takes effect only for HTTP or HTTPS listeners. If the backend server does not respond within the timeout period, GA returns an HTTP 504 error code to the client.</p>
+     * <blockquote>
+     * <p> This parameter takes effect only for HTTP or HTTPS listeners. If the backend server does not respond within the timeout period, GA returns an HTTP 504 error code to the client.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>15</p>
      */
     @NameInMap("RequestTimeout")
     public Integer requestTimeout;
 
     /**
      * <p>The ID of the security policy. Valid values:</p>
-     * <br>
-     * <p>*   **tls_cipher_policy\_1\_0**</p>
-     * <br>
-     * <p>    *   Supported Transport Layer Security (TLS) versions: TLS 1.0, TLS 1.1, and TLS 1.2</p>
-     * <p>    *   Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA.</p>
-     * <br>
-     * <p>*   **tls_cipher_policy\_1\_1**</p>
-     * <br>
-     * <p>    *   Supported TLS versions: TLS 1.1 and TLS 1.2</p>
-     * <p>    *   Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA.</p>
-     * <br>
-     * <p>*   **tls_cipher_policy\_1\_2**</p>
-     * <br>
-     * <p>    *   Supported TLS version: TLS 1.2</p>
-     * <p>    *   Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA.</p>
-     * <br>
-     * <p>*   **tls_cipher_policy\_1\_2\_strict**</p>
-     * <br>
-     * <p>    *   Supported TLS version: TLS 1.2</p>
-     * <p>    *   Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, ECDHE-RSA-AES128-SHA, and ECDHE-RSA-AES256-SHA</p>
-     * <br>
-     * <p>*   **tls_cipher_policy\_1\_2\_strict_with\_1\_3**</p>
-     * <br>
-     * <p>    *   Supported TLS versions: TLS 1.2 and TLS 1.3</p>
-     * <p>    *   Supported cipher suites: TLS_AES\_128\_GCM_SHA256, TLS_AES\_256\_GCM_SHA384, TLS_CHACHA20\_POLY1305\_SHA256, TLS_AES\_128\_CCM_SHA256, TLS_AES\_128\_CCM\_8\_SHA256, ECDHE-ECDSA-AES128-GCM-SHA256, ECDHE-ECDSA-AES256-GCM-SHA384, ECDHE-ECDSA-AES128-SHA256, ECDHE-ECDSA-AES256-SHA384, ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, ECDHE-ECDSA-AES128-SHA, ECDHE-ECDSA-AES256-SHA, ECDHE-RSA-AES128-SHA, and ECDHE-RSA-AES256-SHA</p>
-     * <br>
-     * <p>> This parameter is available only when you create an HTTPS listener.</p>
+     * <ul>
+     * <li><p><strong>tls_cipher_policy_1_0</strong></p>
+     * <ul>
+     * <li>Supported Transport Layer Security (TLS) versions: TLS 1.0, TLS 1.1, and TLS 1.2</li>
+     * <li>Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA.</li>
+     * </ul>
+     * </li>
+     * <li><p><strong>tls_cipher_policy_1_1</strong></p>
+     * <ul>
+     * <li>Supported TLS versions: TLS 1.1 and TLS 1.2</li>
+     * <li>Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA.</li>
+     * </ul>
+     * </li>
+     * <li><p><strong>tls_cipher_policy_1_2</strong></p>
+     * <ul>
+     * <li>Supported TLS version: TLS 1.2</li>
+     * <li>Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA.</li>
+     * </ul>
+     * </li>
+     * <li><p><strong>tls_cipher_policy_1_2_strict</strong></p>
+     * <ul>
+     * <li>Supported TLS version: TLS 1.2</li>
+     * <li>Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, ECDHE-RSA-AES128-SHA, and ECDHE-RSA-AES256-SHA</li>
+     * </ul>
+     * </li>
+     * <li><p><strong>tls_cipher_policy_1_2_strict_with_1_3</strong></p>
+     * <ul>
+     * <li>Supported TLS versions: TLS 1.2 and TLS 1.3</li>
+     * <li>Supported cipher suites: TLS_AES_128_GCM_SHA256, TLS_AES_256_GCM_SHA384, TLS_CHACHA20_POLY1305_SHA256, TLS_AES_128_CCM_SHA256, TLS_AES_128_CCM_8_SHA256, ECDHE-ECDSA-AES128-GCM-SHA256, ECDHE-ECDSA-AES256-GCM-SHA384, ECDHE-ECDSA-AES128-SHA256, ECDHE-ECDSA-AES256-SHA384, ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, ECDHE-ECDSA-AES128-SHA, ECDHE-ECDSA-AES256-SHA, ECDHE-RSA-AES128-SHA, and ECDHE-RSA-AES256-SHA</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <p>This parameter is available only when you create an HTTPS listener.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>tls_cipher_policy_1_0</p>
      */
     @NameInMap("SecurityPolicyId")
     public String securityPolicyId;
 
     /**
      * <p>The routing type of the listener. Valid values:</p>
-     * <br>
-     * <p>*   **Standard** (default): intelligent routing</p>
-     * <p>*   **CustomRouting**: custom routing</p>
-     * <br>
-     * <p>> *   Custom routing listeners are in invitational preview. To use custom routing listeners, contact your account manager.</p>
-     * <p>> *   You can create only listeners of the same routing type for a standard GA instance. You cannot change the routing types of listeners. For more information, see [Listener overview](~~153216~~).</p>
+     * <ul>
+     * <li><strong>Standard</strong> (default): intelligent routing</li>
+     * <li><strong>CustomRouting</strong>: custom routing</li>
+     * </ul>
+     * <blockquote>
+     * <ul>
+     * <li>Custom routing listeners are in invitational preview. To use custom routing listeners, contact your account manager.</li>
+     * <li>You can create only listeners of the same routing type for a standard GA instance. You cannot change the routing types of listeners. For more information, see <a href="https://help.aliyun.com/document_detail/153216.html">Listener overview</a>.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Standard</p>
      */
     @NameInMap("Type")
     public String type;
 
     /**
-     * <p>The `XForward` headers.</p>
+     * <p>The <code>XForward</code> headers.</p>
      */
     @NameInMap("XForwardedForConfig")
     public CreateListenerRequestXForwardedForConfig XForwardedForConfig;
@@ -338,8 +398,12 @@ public class CreateListenerRequest extends TeaModel {
     public static class CreateListenerRequestCertificates extends TeaModel {
         /**
          * <p>The ID of the SSL certificate.</p>
-         * <br>
-         * <p>> This parameter is required only when you create an HTTPS listener.</p>
+         * <blockquote>
+         * <p>This parameter is required only when you create an HTTPS listener.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>449****-cn-hangzhou</p>
          */
         @NameInMap("Id")
         public String id;
@@ -362,34 +426,38 @@ public class CreateListenerRequest extends TeaModel {
     public static class CreateListenerRequestCustomRoutingEndpointGroupConfigurationsDestinationConfigurations extends TeaModel {
         /**
          * <p>The first port used by the endpoint group that is associated with the custom routing listener.</p>
-         * <br>
-         * <p>Valid values: **1** to **65499**. The value of **FromPort** must be equal to or smaller than the value of **ToPort**.</p>
-         * <br>
+         * <p>Valid values: <strong>1</strong> to <strong>65499</strong>. The value of <strong>FromPort</strong> must be equal to or smaller than the value of <strong>ToPort</strong>.</p>
          * <p>You can specify up to 20 first ports for an endpoint group of a custom routing listener.</p>
-         * <br>
-         * <p>> You can configure endpoint groups and endpoints for a custom routing listener only if the **Type** parameter is set to **CustomRouting**.</p>
+         * <blockquote>
+         * <p>You can configure endpoint groups and endpoints for a custom routing listener only if the <strong>Type</strong> parameter is set to <strong>CustomRouting</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("FromPort")
         public Integer fromPort;
 
         /**
          * <p>The protocol used by the endpoint group that is associated with the custom routing listener.</p>
-         * <br>
          * <p>You can specify up to four protocols in each mapping configuration for an endpoint group of a custom routing listener.</p>
-         * <br>
-         * <p>> You can configure endpoint groups and endpoints for a custom routing listener only if the **Type** parameter is set to **CustomRouting**.</p>
+         * <blockquote>
+         * <p>You can configure endpoint groups and endpoints for a custom routing listener only if the <strong>Type</strong> parameter is set to <strong>CustomRouting</strong>.</p>
+         * </blockquote>
          */
         @NameInMap("Protocols")
         public java.util.List<String> protocols;
 
         /**
          * <p>The last port used by the endpoint group that is associated with the custom routing listener.</p>
-         * <br>
-         * <p>Valid values: **1** to **65499**. The value of **FromPort** must be equal to or smaller than the value of **ToPort**.</p>
-         * <br>
+         * <p>Valid values: <strong>1</strong> to <strong>65499</strong>. The value of <strong>FromPort</strong> must be equal to or smaller than the value of <strong>ToPort</strong>.</p>
          * <p>You can specify up to 20 last ports for an endpoint group of a custom routing listener.</p>
-         * <br>
-         * <p>> You can configure endpoint groups and endpoints for a custom routing listener only if the **Type** parameter is set to **CustomRouting**.</p>
+         * <blockquote>
+         * <p>You can configure endpoint groups and endpoints for a custom routing listener only if the <strong>Type</strong> parameter is set to <strong>CustomRouting</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("ToPort")
         public Integer toPort;
@@ -428,24 +496,28 @@ public class CreateListenerRequest extends TeaModel {
     public static class CreateListenerRequestCustomRoutingEndpointGroupConfigurationsEndpointConfigurationsPolicyConfigurationsPortRanges extends TeaModel {
         /**
          * <p>The first port of the destination port range. The value of this parameter must be in the port range of the endpoint group.</p>
-         * <br>
-         * <p>This parameter takes effect only if **TrafficToEndpointPolicy** is set to **AllowCustom**.</p>
-         * <br>
+         * <p>This parameter takes effect only if <strong>TrafficToEndpointPolicy</strong> is set to <strong>AllowCustom</strong>.</p>
          * <p>You can specify port ranges for up to 20 destinations in each endpoint of a custom routing listener. You can specify up to five first ports for each destination.</p>
-         * <br>
-         * <p>> You can configure endpoint groups and endpoints for a custom routing listener only if the **Type** parameter is set to **CustomRouting**.</p>
+         * <blockquote>
+         * <p>You can configure endpoint groups and endpoints for a custom routing listener only if the <strong>Type</strong> parameter is set to <strong>CustomRouting</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("FromPort")
         public Integer fromPort;
 
         /**
          * <p>The last port of the destination port range. The value of this parameter must be in the port range of the endpoint group.</p>
-         * <br>
-         * <p>This parameter takes effect only if **TrafficToEndpointPolicy** is set to **AllowCustom**.</p>
-         * <br>
+         * <p>This parameter takes effect only if <strong>TrafficToEndpointPolicy</strong> is set to <strong>AllowCustom</strong>.</p>
          * <p>You can specify port ranges for up to 20 destinations in each endpoint of a custom routing listener. You can specify up to five end ports for each destination.</p>
-         * <br>
-         * <p>> You can configure endpoint groups and endpoints for a custom routing listener only if the **Type** parameter is set to **CustomRouting**.</p>
+         * <blockquote>
+         * <p>You can configure endpoint groups and endpoints for a custom routing listener only if the <strong>Type</strong> parameter is set to <strong>CustomRouting</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("ToPort")
         public Integer toPort;
@@ -476,26 +548,26 @@ public class CreateListenerRequest extends TeaModel {
     public static class CreateListenerRequestCustomRoutingEndpointGroupConfigurationsEndpointConfigurationsPolicyConfigurations extends TeaModel {
         /**
          * <p>The IP address of the destination to which traffic is forwarded.</p>
-         * <br>
-         * <p>This parameter takes effect only if **TrafficToEndpointPolicy** is set to **AllowCustom**.</p>
-         * <br>
+         * <p>This parameter takes effect only if <strong>TrafficToEndpointPolicy</strong> is set to <strong>AllowCustom</strong>.</p>
          * <p>You can specify up to 20 destination IP addresses for each endpoint of a custom routing listener.</p>
-         * <br>
-         * <p>> You can configure endpoint groups and endpoints for a custom routing listener only if the **Type** parameter is set to **CustomRouting**.</p>
+         * <blockquote>
+         * <p>You can configure endpoint groups and endpoints for a custom routing listener only if the <strong>Type</strong> parameter is set to <strong>CustomRouting</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0.XX.XX</p>
          */
         @NameInMap("Address")
         public String address;
 
         /**
          * <p>The port range of the destination to which traffic is forwarded. The value of this parameter must fall within the port range of the endpoint group.</p>
-         * <br>
          * <p>If you leave this parameter empty, traffic is distributed to all destination ports.</p>
-         * <br>
-         * <p>This parameter takes effect only if **TrafficToEndpointPolicy** is set to **AllowCustom**.</p>
-         * <br>
+         * <p>This parameter takes effect only if <strong>TrafficToEndpointPolicy</strong> is set to <strong>AllowCustom</strong>.</p>
          * <p>You can specify port ranges for up to 20 destinations in each endpoint of a custom routing listener. You can specify up to five port ranges for each destination.</p>
-         * <br>
-         * <p>> You can configure endpoint groups and endpoints for a custom routing listener only if the **Type** parameter is set to **CustomRouting**.</p>
+         * <blockquote>
+         * <p>You can configure endpoint groups and endpoints for a custom routing listener only if the <strong>Type</strong> parameter is set to <strong>CustomRouting</strong>.</p>
+         * </blockquote>
          */
         @NameInMap("PortRanges")
         public java.util.List<CreateListenerRequestCustomRoutingEndpointGroupConfigurationsEndpointConfigurationsPolicyConfigurationsPortRanges> portRanges;
@@ -526,42 +598,53 @@ public class CreateListenerRequest extends TeaModel {
     public static class CreateListenerRequestCustomRoutingEndpointGroupConfigurationsEndpointConfigurations extends TeaModel {
         /**
          * <p>The name of the vSwitch that is specified as an endpoint.</p>
-         * <br>
-         * <p>> You can configure endpoint groups and endpoints for a custom routing listener only if the **Type** parameter is set to **CustomRouting**.</p>
+         * <blockquote>
+         * <p>You can configure endpoint groups and endpoints for a custom routing listener only if the <strong>Type</strong> parameter is set to <strong>CustomRouting</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-test01</p>
          */
         @NameInMap("Endpoint")
         public String endpoint;
 
         /**
          * <p>The destination in the endpoint that is associated with the custom routing listener.</p>
-         * <br>
          * <p>You can specify at most 20 destinations in each endpoint of a custom routing listener.</p>
-         * <br>
-         * <p>> You can configure endpoint groups and endpoints for a custom routing listener only if the **Type** parameter is set to **CustomRouting**.</p>
+         * <blockquote>
+         * <p>You can configure endpoint groups and endpoints for a custom routing listener only if the <strong>Type</strong> parameter is set to <strong>CustomRouting</strong>.</p>
+         * </blockquote>
          */
         @NameInMap("PolicyConfigurations")
         public java.util.List<CreateListenerRequestCustomRoutingEndpointGroupConfigurationsEndpointConfigurationsPolicyConfigurations> policyConfigurations;
 
         /**
          * <p>The traffic policy for the endpoint that is associated with the custom routing listener. Valid values:</p>
-         * <br>
-         * <p>*   **DenyAll** (default): denies all traffic to the endpoint.</p>
-         * <p>*   **AllowAll**: allows all traffic to the endpoint.</p>
-         * <p>*   **AllowCustom**: allows traffic only to specified destinations in the endpoint.</p>
-         * <br>
+         * <ul>
+         * <li><strong>DenyAll</strong> (default): denies all traffic to the endpoint.</li>
+         * <li><strong>AllowAll</strong>: allows all traffic to the endpoint.</li>
+         * <li><strong>AllowCustom</strong>: allows traffic only to specified destinations in the endpoint.</li>
+         * </ul>
          * <p>If you set this parameter to AllowCustom, you must specify IP addresses and port ranges as the destinations to which traffic is distributed. If you specify only IP addresses and do not specify port ranges, GA can forward traffic to the specified IP addresses over all destination ports.</p>
-         * <br>
-         * <p>> You can configure endpoint groups and endpoints for a custom routing listener only if the **Type** parameter is set to **CustomRouting**.</p>
+         * <blockquote>
+         * <p>You can configure endpoint groups and endpoints for a custom routing listener only if the <strong>Type</strong> parameter is set to <strong>CustomRouting</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>DenyAll</p>
          */
         @NameInMap("TrafficToEndpointPolicy")
         public String trafficToEndpointPolicy;
 
         /**
          * <p>The service type of the endpoint that is associated with the custom routing listener.</p>
-         * <br>
-         * <p>Set the value to **PrivateSubNet**, which specifies a private CIDR block.</p>
-         * <br>
-         * <p>> You can configure endpoint groups and endpoints for a custom routing listener only if the **Type** parameter is set to **CustomRouting**.</p>
+         * <p>Set the value to <strong>PrivateSubNet</strong>, which specifies a private CIDR block.</p>
+         * <blockquote>
+         * <p>You can configure endpoint groups and endpoints for a custom routing listener only if the <strong>Type</strong> parameter is set to <strong>CustomRouting</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>PrivateSubNet</p>
          */
         @NameInMap("Type")
         public String type;
@@ -608,56 +691,62 @@ public class CreateListenerRequest extends TeaModel {
     public static class CreateListenerRequestCustomRoutingEndpointGroupConfigurations extends TeaModel {
         /**
          * <p>The description of the endpoint group that is associated with the custom routing listener.</p>
-         * <br>
-         * <p>The description cannot exceed 256 characters in length and cannot contain `http://` or `https://`.</p>
-         * <br>
+         * <p>The description cannot exceed 256 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * <p>You can specify at most five endpoint group descriptions.</p>
-         * <br>
-         * <p>> You can configure endpoint groups and endpoints for a custom routing listener only if the **Type** parameter is set to **CustomRouting**.</p>
+         * <blockquote>
+         * <p>You can configure endpoint groups and endpoints for a custom routing listener only if the <strong>Type</strong> parameter is set to <strong>CustomRouting</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The mapping configurations of the endpoint group that is associated with the custom routing listener.</p>
-         * <br>
          * <p>You need to specify the port ranges and protocols used by the endpoint group. The ports are mapped to listener ports.</p>
-         * <br>
          * <p>You can specify at most 20 mapping configurations for an endpoint group of a custom routing listener.</p>
-         * <br>
-         * <p>> You can configure endpoint groups and endpoints for a custom routing listener only if the **Type** parameter is set to **CustomRouting**.</p>
+         * <blockquote>
+         * <p>You can configure endpoint groups and endpoints for a custom routing listener only if the <strong>Type</strong> parameter is set to <strong>CustomRouting</strong>.</p>
+         * </blockquote>
          */
         @NameInMap("DestinationConfigurations")
         public java.util.List<CreateListenerRequestCustomRoutingEndpointGroupConfigurationsDestinationConfigurations> destinationConfigurations;
 
         /**
          * <p>The endpoint that is associated with the custom routing listener.</p>
-         * <br>
          * <p>You can configure at most 10 endpoints for an endpoint group of a custom routing listener.</p>
-         * <br>
-         * <p>> You can configure endpoint groups and endpoints for a custom routing listener only if the **Type** parameter is set to **CustomRouting**.</p>
+         * <blockquote>
+         * <p>You can configure endpoint groups and endpoints for a custom routing listener only if the <strong>Type</strong> parameter is set to <strong>CustomRouting</strong>.</p>
+         * </blockquote>
          */
         @NameInMap("EndpointConfigurations")
         public java.util.List<CreateListenerRequestCustomRoutingEndpointGroupConfigurationsEndpointConfigurations> endpointConfigurations;
 
         /**
          * <p>The region ID of the endpoint group that is associated with the custom routing listener.</p>
-         * <br>
          * <p>You can enter the region IDs of up to five endpoint groups.</p>
-         * <br>
-         * <p>> You can configure endpoint groups and endpoints for a custom routing listener only if the **Type** parameter is set to **CustomRouting**.</p>
+         * <blockquote>
+         * <p>You can configure endpoint groups and endpoints for a custom routing listener only if the <strong>Type</strong> parameter is set to <strong>CustomRouting</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("EndpointGroupRegion")
         public String endpointGroupRegion;
 
         /**
          * <p>The name of the endpoint group that is associated with the custom routing listener.</p>
-         * <br>
-         * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.</p>
-         * <br>
+         * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter.</p>
          * <p>You can specify at most five endpoint group names.</p>
-         * <br>
-         * <p>> You can configure endpoint groups and endpoints for a custom routing listener only if the **Type** parameter is set to **CustomRouting**.</p>
+         * <blockquote>
+         * <p>You can configure endpoint groups and endpoints for a custom routing listener only if the <strong>Type</strong> parameter is set to <strong>CustomRouting</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Name")
         public String name;
@@ -712,53 +801,69 @@ public class CreateListenerRequest extends TeaModel {
     public static class CreateListenerRequestEndpointGroupConfigurationsEndpointConfigurations extends TeaModel {
         /**
          * <p>The IP address or domain name of the endpoint that is associated with the intelligent routing listener.</p>
-         * <br>
          * <p>You can specify up to 100 endpoint IP addresses or domain names for an endpoint group of an intelligent routing listener.</p>
-         * <br>
-         * <p>>  If you set **Type** to **Standard**, you can configure endpoint groups and endpoints, and this parameter is required.</p>
+         * <blockquote>
+         * <p> If you set <strong>Type</strong> to <strong>Standard</strong>, you can configure endpoint groups and endpoints, and this parameter is required.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>47.0.XX.XX</p>
          */
         @NameInMap("Endpoint")
         public String endpoint;
 
         /**
          * <p>The private IP address of the elastic network interface (ENI).</p>
-         * <br>
-         * <p>>  If the endpoint type is **ENI**, you can specify this parameter. If you do not specify this parameter, the primary private IP address of the ENI is used.</p>
+         * <blockquote>
+         * <p> If the endpoint type is <strong>ENI</strong>, you can specify this parameter. If you do not specify this parameter, the primary private IP address of the ENI is used.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>172.168.XX.XX</p>
          */
         @NameInMap("SubAddress")
         public String subAddress;
 
         /**
          * <p>The type of the endpoint that is associated with the intelligent routing listener. Valid values:</p>
-         * <br>
-         * <p>*   **Domain**: a custom domain name</p>
-         * <p>*   **Ip**: a custom IP address</p>
-         * <p>*   **PublicIp**: a public IP address provided by Alibaba Cloud</p>
-         * <p>*   **ECS**: an Elastic Compute Service (ECS) instance</p>
-         * <p>*   **SLB**: a Server Load Balancer (SLB) instance</p>
-         * <p>*   **ALB**: an Application Load Balancer (ALB) instance</p>
-         * <p>*   **OSS**: an Object Storage Service (OSS) bucket</p>
-         * <br>
+         * <ul>
+         * <li><strong>Domain</strong>: a custom domain name</li>
+         * <li><strong>Ip</strong>: a custom IP address</li>
+         * <li><strong>PublicIp</strong>: a public IP address provided by Alibaba Cloud</li>
+         * <li><strong>ECS</strong>: an Elastic Compute Service (ECS) instance</li>
+         * <li><strong>SLB</strong>: a Server Load Balancer (SLB) instance</li>
+         * <li><strong>ALB</strong>: an Application Load Balancer (ALB) instance</li>
+         * <li><strong>OSS</strong>: an Object Storage Service (OSS) bucket</li>
+         * </ul>
          * <p>You can specify up to 100 endpoint types for an endpoint group of an intelligent routing listener.</p>
-         * <br>
-         * <p>> *   If you set **Type** to **Standard**, you can configure endpoint groups and endpoints for an intelligent routing listener, and this parameter is required.</p>
-         * <p>>*   If you set this parameter to **ECS** or **SLB** and the service-linked role AliyunServiceRoleForGaVpcEndpoint does not exist, the system automatically creates the service-linked role.</p>
-         * <p>>*   If you set this parameter to **ALB** and the service-linked role AliyunServiceRoleForGaAlb does not exist, the system automatically creates the service-linked role.</p>
-         * <p>>*   If you set this parameter to **OSS** and the service-linked role AliyunServiceRoleForGaOss does not exist, the system automatically creates the service-linked role.  </p>
-         * <p>> For more information, see [Service linked roles](~~178360~~).</p>
+         * <blockquote>
+         * <ul>
+         * <li>If you set <strong>Type</strong> to <strong>Standard</strong>, you can configure endpoint groups and endpoints for an intelligent routing listener, and this parameter is required.</li>
+         * <li>If you set this parameter to <strong>ECS</strong> or <strong>SLB</strong> and the service-linked role AliyunServiceRoleForGaVpcEndpoint does not exist, the system automatically creates the service-linked role.</li>
+         * <li>If you set this parameter to <strong>ALB</strong> and the service-linked role AliyunServiceRoleForGaAlb does not exist, the system automatically creates the service-linked role.</li>
+         * <li>If you set this parameter to <strong>OSS</strong> and the service-linked role AliyunServiceRoleForGaOss does not exist, the system automatically creates the service-linked role.<br>For more information, see <a href="https://help.aliyun.com/document_detail/178360.html">Service linked roles</a>.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Ip</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The weight of the endpoint that is associated with the intelligent routing listener.</p>
-         * <br>
-         * <p>Valid values: **0** to **255**.</p>
-         * <br>
+         * <p>Valid values: <strong>0</strong> to <strong>255</strong>.</p>
          * <p>You can specify the weights of up to 100 endpoints for an endpoint group of an intelligent routing listener.</p>
-         * <br>
-         * <p>> *   If you set **Type** to **Standard**, you can configure endpoint groups and endpoints for an intelligent routing listener, and this parameter is required.</p>
-         * <p>>*   If you set the weight of an endpoint to 0, GA does not route network traffic to the endpoint. Make sure that you are aware of the impact on your business before you set the endpoint weight to 0.</p>
+         * <blockquote>
+         * <ul>
+         * <li>If you set <strong>Type</strong> to <strong>Standard</strong>, you can configure endpoint groups and endpoints for an intelligent routing listener, and this parameter is required.</li>
+         * <li>If you set the weight of an endpoint to 0, GA does not route network traffic to the endpoint. Make sure that you are aware of the impact on your business before you set the endpoint weight to 0.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("Weight")
         public Long weight;
@@ -805,23 +910,33 @@ public class CreateListenerRequest extends TeaModel {
     public static class CreateListenerRequestEndpointGroupConfigurationsPortOverrides extends TeaModel {
         /**
          * <p>The endpoint port that is mapped to the listener port.</p>
-         * <br>
          * <p>You can specify up to five endpoint ports.</p>
-         * <br>
-         * <p>>*   You can configure endpoint groups and endpoints for an intelligent routing listener only if you set **Type** to **Standard**.</p>
-         * <p>>*   Only HTTP and HTTPS intelligent routing listeners support port mappings.</p>
+         * <blockquote>
+         * <ul>
+         * <li>You can configure endpoint groups and endpoints for an intelligent routing listener only if you set <strong>Type</strong> to <strong>Standard</strong>.</li>
+         * <li>Only HTTP and HTTPS intelligent routing listeners support port mappings.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("EndpointPort")
         public Long endpointPort;
 
         /**
          * <p>The listener port that is mapped to the endpoint port.</p>
-         * <br>
          * <p>You can specify up to five listener ports.</p>
-         * <br>
-         * <p>> *   You can configure endpoint groups and endpoints for an intelligent routing listener only if you set **Type** to **Standard**.</p>
-         * <p>>*   Only HTTP and HTTPS intelligent routing listeners support port mappings.</p>
-         * <p>>*   The listener port in a port mapping must be the port that is used by the current listener.</p>
+         * <blockquote>
+         * <ul>
+         * <li>You can configure endpoint groups and endpoints for an intelligent routing listener only if you set <strong>Type</strong> to <strong>Standard</strong>.</li>
+         * <li>Only HTTP and HTTPS intelligent routing listeners support port mappings.</li>
+         * <li>The listener port in a port mapping must be the port that is used by the current listener.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>443</p>
          */
         @NameInMap("ListenerPort")
         public Long listenerPort;
@@ -852,26 +967,34 @@ public class CreateListenerRequest extends TeaModel {
     public static class CreateListenerRequestEndpointGroupConfigurations extends TeaModel {
         /**
          * <p>Specifies whether to use the proxy protocol to preserve client IP addresses. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false** (default)</p>
-         * <br>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong> (default)</li>
+         * </ul>
          * <p>You can specify this parameter for up to 10 endpoint groups.</p>
-         * <br>
-         * <p>>  You can configure endpoint groups and endpoints only if you set **Type** to **Standard**.</p>
+         * <blockquote>
+         * <p> You can configure endpoint groups and endpoints only if you set <strong>Type</strong> to <strong>Standard</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("EnableClientIPPreservationProxyProtocol")
         public Boolean enableClientIPPreservationProxyProtocol;
 
         /**
          * <p>Specifies whether to preserve client IP addresses by using the TCP Option Address (TOA) module. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false** (default)</p>
-         * <br>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong> (default)</li>
+         * </ul>
          * <p>You can specify this parameter for up to 10 endpoint groups.</p>
-         * <br>
-         * <p>>  You can configure endpoint groups and endpoints only if you set **Type** to **Standard**.</p>
+         * <blockquote>
+         * <p> You can configure endpoint groups and endpoints only if you set <strong>Type</strong> to <strong>Standard</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("EnableClientIPPreservationToa")
         public Boolean enableClientIPPreservationToa;
@@ -884,120 +1007,159 @@ public class CreateListenerRequest extends TeaModel {
 
         /**
          * <p>The description of the endpoint group that is associated with the intelligent routing listener.</p>
-         * <br>
-         * <p>The description can be up to 256 characters in length and cannot contain `http://` or `https://`.</p>
-         * <br>
+         * <p>The description can be up to 256 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * <p>You can enter the descriptions of up to 10 endpoint groups.</p>
-         * <br>
-         * <p>>  You can configure endpoint groups and endpoints only if you set **Type** to **Standard**.</p>
+         * <blockquote>
+         * <p> You can configure endpoint groups and endpoints only if you set <strong>Type</strong> to <strong>Standard</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("EndpointGroupDescription")
         public String endpointGroupDescription;
 
         /**
          * <p>The name of the endpoint group that is associated with the intelligent routing listener.</p>
-         * <br>
-         * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.</p>
-         * <br>
+         * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter.</p>
          * <p>You can enter the names of up to 10 endpoint groups.</p>
-         * <br>
-         * <p>>  You can configure endpoint groups and endpoints only if you set **Type** to **Standard**.</p>
+         * <blockquote>
+         * <p> You can configure endpoint groups and endpoints only if you set <strong>Type</strong> to <strong>Standard</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("EndpointGroupName")
         public String endpointGroupName;
 
         /**
          * <p>The region ID of the endpoint group that is associated with the intelligent routing listener.</p>
-         * <br>
          * <p>You can enter the region IDs of up to 10 endpoint groups.</p>
-         * <br>
-         * <p>>  You can configure endpoint groups and endpoints only if you set **Type** to **Standard**.</p>
+         * <blockquote>
+         * <p> You can configure endpoint groups and endpoints only if you set <strong>Type</strong> to <strong>Standard</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("EndpointGroupRegion")
         public String endpointGroupRegion;
 
         /**
          * <p>The type of the endpoint group associated with the intelligent routing listener. Valid values:</p>
-         * <br>
-         * <p>*   **default** (default)</p>
-         * <p>*   **virtual**</p>
-         * <br>
+         * <ul>
+         * <li><strong>default</strong> (default)</li>
+         * <li><strong>virtual</strong></li>
+         * </ul>
          * <p>You can specify up to 10 endpoint group types.</p>
-         * <br>
-         * <p>> *   You can configure endpoint groups and endpoints for an intelligent routing listener only if you set **Type** to **Standard**.</p>
-         * <p>>*   Only HTTP intelligent routing listeners and HTTPS intelligent routing listeners support virtual endpoint groups.</p>
+         * <blockquote>
+         * <ul>
+         * <li>You can configure endpoint groups and endpoints for an intelligent routing listener only if you set <strong>Type</strong> to <strong>Standard</strong>.</li>
+         * <li>Only HTTP intelligent routing listeners and HTTPS intelligent routing listeners support virtual endpoint groups.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("EndpointGroupType")
         public String endpointGroupType;
 
+        @NameInMap("EndpointProtocolVersion")
+        public String endpointProtocolVersion;
+
         /**
          * <p>The backend service protocol of the endpoint that is associated with the intelligent routing listener. Valid values:</p>
-         * <br>
-         * <p>*   **HTTP** (default)</p>
-         * <p>*   **HTTPS**</p>
-         * <br>
+         * <ul>
+         * <li><strong>HTTP</strong> (default)</li>
+         * <li><strong>HTTPS</strong></li>
+         * </ul>
          * <p>You can specify up to 10 backend service protocols.</p>
-         * <br>
-         * <p>> *   You can configure endpoint groups and endpoints for an intelligent routing listener only if you set **Type** to **Standard**.</p>
-         * <p>>*   You can specify this parameter only for HTTP and HTTPS intelligent routing listeners.</p>
-         * <p>>*   For an HTTP listener, the protocol must be **HTTP**.</p>
+         * <blockquote>
+         * <ul>
+         * <li>You can configure endpoint groups and endpoints for an intelligent routing listener only if you set <strong>Type</strong> to <strong>Standard</strong>.</li>
+         * <li>You can specify this parameter only for HTTP and HTTPS intelligent routing listeners.</li>
+         * <li>For an HTTP listener, the protocol must be <strong>HTTP</strong>.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP</p>
          */
         @NameInMap("EndpointRequestProtocol")
         public String endpointRequestProtocol;
 
         /**
          * <p>Specifies whether to enable health checks for the endpoint group. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false** (default)</p>
-         * <br>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong> (default)</li>
+         * </ul>
          * <p>You can enable the health check feature for up to 10 endpoint groups.</p>
-         * <br>
-         * <p>>  You can configure endpoint groups and endpoints only if you set **Type** to **Standard**.</p>
+         * <blockquote>
+         * <p> You can configure endpoint groups and endpoints only if you set <strong>Type</strong> to <strong>Standard</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("HealthCheckEnabled")
         public Boolean healthCheckEnabled;
 
         /**
          * <p>The interval at which health checks are performed. Unit: seconds.</p>
-         * <br>
          * <p>You can specify up to 10 health check intervals.</p>
-         * <br>
-         * <p>>  You can configure endpoint groups and endpoints only if you set **Type** to **Standard**.</p>
+         * <blockquote>
+         * <p> You can configure endpoint groups and endpoints only if you set <strong>Type</strong> to <strong>Standard</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("HealthCheckIntervalSeconds")
         public Long healthCheckIntervalSeconds;
 
         /**
          * <p>The path to which health check requests are sent.</p>
-         * <br>
          * <p>You can specify up to 10 health check paths.</p>
-         * <br>
-         * <p>>  You can configure endpoint groups and endpoints only if you set **Type** to **Standard**.</p>
+         * <blockquote>
+         * <p> You can configure endpoint groups and endpoints only if you set <strong>Type</strong> to <strong>Standard</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>/healthcheck</p>
          */
         @NameInMap("HealthCheckPath")
         public String healthCheckPath;
 
         /**
-         * <p>The port that is used for health checks. Valid values: **1** to **65535**.</p>
-         * <br>
+         * <p>The port that is used for health checks. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
          * <p>You can specify up to 10 health check ports.</p>
-         * <br>
-         * <p>>  You can configure endpoint groups and endpoints only if you set **Type** to **Standard**.</p>
+         * <blockquote>
+         * <p> You can configure endpoint groups and endpoints only if you set <strong>Type</strong> to <strong>Standard</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("HealthCheckPort")
         public Long healthCheckPort;
 
         /**
          * <p>The protocol over which health check requests are sent. Valid values:</p>
-         * <br>
-         * <p>*   **tcp**</p>
-         * <p>*   **http**</p>
-         * <p>*   **https**</p>
-         * <br>
+         * <ul>
+         * <li><strong>tcp</strong></li>
+         * <li><strong>http</strong></li>
+         * <li><strong>https</strong></li>
+         * </ul>
          * <p>You can specify up to 10 health check protocols.</p>
-         * <br>
-         * <p>>  You can configure endpoint groups and endpoints only if you set **Type** to **Standard**.</p>
+         * <blockquote>
+         * <p> You can configure endpoint groups and endpoints only if you set <strong>Type</strong> to <strong>Standard</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>tcp</p>
          */
         @NameInMap("HealthCheckProtocol")
         public String healthCheckProtocol;
@@ -1009,23 +1171,28 @@ public class CreateListenerRequest extends TeaModel {
         public java.util.List<CreateListenerRequestEndpointGroupConfigurationsPortOverrides> portOverrides;
 
         /**
-         * <p>The number of consecutive health check failures that must occur before a healthy endpoint group is considered unhealthy, or the number of consecutive health check successes that must occur before an unhealthy endpoint group is considered healthy. Valid values: **2** to **10**. Default value: **3**.</p>
-         * <br>
+         * <p>The number of consecutive health check failures that must occur before a healthy endpoint group is considered unhealthy, or the number of consecutive health check successes that must occur before an unhealthy endpoint group is considered healthy. Valid values: <strong>2</strong> to <strong>10</strong>. Default value: <strong>3</strong>.</p>
          * <p>You can specify the number of successful consecutive health checks or failed consecutive health checks for up to 10 endpoint groups.</p>
-         * <br>
-         * <p>>  You can configure endpoint groups and endpoints only if you set **Type** to **Standard**.</p>
+         * <blockquote>
+         * <p> You can configure endpoint groups and endpoints only if you set <strong>Type</strong> to <strong>Standard</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("ThresholdCount")
         public Long thresholdCount;
 
         /**
          * <p>The traffic distribution ratio. If an intelligent routing listener is associated with multiple endpoint groups, you can configure this parameter to specify the ratio of traffic distributed to each endpoint group.</p>
-         * <br>
-         * <p>Valid values: **1** to **100**. Default value: **100**.</p>
-         * <br>
+         * <p>Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>100</strong>.</p>
          * <p>You can specify traffic distribution ratios for up to 10 endpoint groups.</p>
-         * <br>
-         * <p>>  You can configure endpoint groups and endpoints only if you set **Type** to **Standard**.</p>
+         * <blockquote>
+         * <p> You can configure endpoint groups and endpoints only if you set <strong>Type</strong> to <strong>Standard</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("TrafficPercentage")
         public Long trafficPercentage;
@@ -1089,6 +1256,14 @@ public class CreateListenerRequest extends TeaModel {
         }
         public String getEndpointGroupType() {
             return this.endpointGroupType;
+        }
+
+        public CreateListenerRequestEndpointGroupConfigurations setEndpointProtocolVersion(String endpointProtocolVersion) {
+            this.endpointProtocolVersion = endpointProtocolVersion;
+            return this;
+        }
+        public String getEndpointProtocolVersion() {
+            return this.endpointProtocolVersion;
         }
 
         public CreateListenerRequestEndpointGroupConfigurations setEndpointRequestProtocol(String endpointRequestProtocol) {
@@ -1168,24 +1343,30 @@ public class CreateListenerRequest extends TeaModel {
     public static class CreateListenerRequestPortRanges extends TeaModel {
         /**
          * <p>The first port of the listener port range that you want to use to receive and forward requests to endpoints.</p>
-         * <br>
-         * <p>Valid values: **1** to **65499**. The value of **FromPort** must be smaller than or equal to the value of **ToPort**.</p>
-         * <br>
-         * <p>The maximum number of ports that can be configured varies based on the routing type and protocol of the listener. For more information, see [Listener overview](~~153216~~).</p>
-         * <br>
-         * <p>> You can configure only one listener port for an HTTP or HTTPS listener. In this case, the first port is the same as the last port.</p>
+         * <p>Valid values: <strong>1</strong> to <strong>65499</strong>. The value of <strong>FromPort</strong> must be smaller than or equal to the value of <strong>ToPort</strong>.</p>
+         * <p>The maximum number of ports that can be configured varies based on the routing type and protocol of the listener. For more information, see <a href="https://help.aliyun.com/document_detail/153216.html">Listener overview</a>.</p>
+         * <blockquote>
+         * <p>You can configure only one listener port for an HTTP or HTTPS listener. In this case, the first port is the same as the last port.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("FromPort")
         public Integer fromPort;
 
         /**
          * <p>The last port of the listener port range that you want to use to receive and forward requests to endpoints.</p>
-         * <br>
-         * <p>Valid values: **1** to **65499**. The value of **FromPort** must be smaller than or equal to the value of **ToPort**.</p>
-         * <br>
-         * <p>The maximum number of ports that can be configured varies based on the routing type and protocol of the listener. For more information, see [Listener overview](~~153216~~).</p>
-         * <br>
-         * <p>> You can configure only one listener port for an HTTP or HTTPS listener. In this case, the first port is the same as the last port.</p>
+         * <p>Valid values: <strong>1</strong> to <strong>65499</strong>. The value of <strong>FromPort</strong> must be smaller than or equal to the value of <strong>ToPort</strong>.</p>
+         * <p>The maximum number of ports that can be configured varies based on the routing type and protocol of the listener. For more information, see <a href="https://help.aliyun.com/document_detail/153216.html">Listener overview</a>.</p>
+         * <blockquote>
+         * <p>You can configure only one listener port for an HTTP or HTTPS listener. In this case, the first port is the same as the last port.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("ToPort")
         public Integer toPort;
@@ -1215,56 +1396,81 @@ public class CreateListenerRequest extends TeaModel {
 
     public static class CreateListenerRequestXForwardedForConfig extends TeaModel {
         /**
-         * <p>Specifies whether to use the `GA-AP` header to retrieve the information about acceleration regions. Valid values:</p>
-         * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false** (default): no</p>
-         * <br>
-         * <p>> This parameter is available only when you create an HTTPS or HTTP listener.</p>
+         * <p>Specifies whether to use the <code>GA-AP</code> header to retrieve the information about acceleration regions. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong> (default): no</li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is available only when you create an HTTPS or HTTP listener.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("XForwardedForGaApEnabled")
         public Boolean XForwardedForGaApEnabled;
 
         /**
-         * <p>Specifies whether to use the `GA-ID` header to retrieve the ID of the GA instance. Valid values:</p>
-         * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false** (default): no</p>
-         * <br>
-         * <p>> This parameter is available only when you create an HTTPS or HTTP listener.</p>
+         * <p>Specifies whether to use the <code>GA-ID</code> header to retrieve the ID of the GA instance. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong> (default): no</li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is available only when you create an HTTPS or HTTP listener.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("XForwardedForGaIdEnabled")
         public Boolean XForwardedForGaIdEnabled;
 
         /**
-         * <p>Specifies whether to use the `GA-X-Forward-Port` header to retrieve the listener ports of the GA instance. Valid values:</p>
-         * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false** (default): no</p>
-         * <br>
-         * <p>> This parameter is available only when you create an HTTPS or HTTP listener.</p>
+         * <p>Specifies whether to use the <code>GA-X-Forward-Port</code> header to retrieve the listener ports of the GA instance. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong> (default): no</li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is available only when you create an HTTPS or HTTP listener.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("XForwardedForPortEnabled")
         public Boolean XForwardedForPortEnabled;
 
         /**
-         * <p>Specifies whether to use the `GA-X-Forward-Proto` header to retrieve the listener protocol of the GA instance. Valid values:</p>
-         * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false** (default): no</p>
-         * <br>
-         * <p>> This parameter is available only when you create an HTTPS or HTTP listener.</p>
+         * <p>Specifies whether to use the <code>GA-X-Forward-Proto</code> header to retrieve the listener protocol of the GA instance. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong> (default): no</li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is available only when you create an HTTPS or HTTP listener.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("XForwardedForProtoEnabled")
         public Boolean XForwardedForProtoEnabled;
 
         /**
-         * <p>Specifies whether to use the `X-Real-IP` header to retrieve client IP addresses. Valid values:</p>
-         * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false** (default): no</p>
-         * <br>
-         * <p>> This parameter is available only when you create an HTTPS or HTTP listener.</p>
+         * <p>Specifies whether to use the <code>X-Real-IP</code> header to retrieve client IP addresses. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong> (default): no</li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is available only when you create an HTTPS or HTTP listener.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("XRealIpEnabled")
         public Boolean XRealIpEnabled;

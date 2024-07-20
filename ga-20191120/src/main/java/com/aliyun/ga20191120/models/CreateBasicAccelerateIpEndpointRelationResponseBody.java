@@ -6,32 +6,48 @@ import com.aliyun.tea.*;
 public class CreateBasicAccelerateIpEndpointRelationResponseBody extends TeaModel {
     /**
      * <p>The ID of the accelerated IP address of the basic GA instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gaip-bp1****</p>
      */
     @NameInMap("AccelerateIpId")
     public String accelerateIpId;
 
     /**
      * <p>The ID of the basic GA instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ga-bp17frjjh0udz4qz****</p>
      */
     @NameInMap("AcceleratorId")
     public String acceleratorId;
 
     /**
      * <p>The ID of the endpoint that is associated with the basic GA instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ep-bp14sz7ftcwwjgrdm****</p>
      */
     @NameInMap("EndpointId")
     public String endpointId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The status of the mapping between the accelerated IP address and the endpoint.</p>
-     * <br>
-     * <p>>  This parameter is not in use.</p>
+     * <blockquote>
+     * <p> This parameter is not in use.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
      */
     @NameInMap("State")
     public String state;

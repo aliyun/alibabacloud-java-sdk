@@ -6,31 +6,49 @@ import com.aliyun.tea.*;
 public class CreateForwardingRulesRequest extends TeaModel {
     /**
      * <p>The ID of the GA instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ga-bp17frjjh0udz4q****</p>
      */
     @NameInMap("AcceleratorId")
     public String acceleratorId;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.</p>
-     * <br>
-     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.</p>
+     * <blockquote>
+     * <p> If you do not set this parameter, <strong>ClientToken</strong> is set to the value of <strong>RequestId</strong>. The value of <strong>RequestId</strong> may be different for each API request.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>02fb3da4****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ForwardingRules")
     public java.util.List<CreateForwardingRulesRequestForwardingRules> forwardingRules;
 
     /**
      * <p>The ID of the listener.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lsr-bp1s0vzbi5bxlx5****</p>
      */
     @NameInMap("ListenerId")
     public String listenerId;
 
     /**
-     * <p>The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.</p>
+     * <p>The ID of the region where the GA instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -81,6 +99,9 @@ public class CreateForwardingRulesRequest extends TeaModel {
     }
 
     public static class CreateForwardingRulesRequestForwardingRulesRuleActionsForwardGroupConfigServerGroupTuples extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("EndpointGroupId")
         public String endpointGroupId;
 
@@ -100,6 +121,9 @@ public class CreateForwardingRulesRequest extends TeaModel {
     }
 
     public static class CreateForwardingRulesRequestForwardingRulesRuleActionsForwardGroupConfig extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("ServerGroupTuples")
         public java.util.List<CreateForwardingRulesRequestForwardingRulesRuleActionsForwardGroupConfigServerGroupTuples> serverGroupTuples;
 
@@ -122,9 +146,15 @@ public class CreateForwardingRulesRequest extends TeaModel {
         @NameInMap("ForwardGroupConfig")
         public CreateForwardingRulesRequestForwardingRulesRuleActionsForwardGroupConfig forwardGroupConfig;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Order")
         public Integer order;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("RuleActionType")
         public String ruleActionType;
 
@@ -267,9 +297,15 @@ public class CreateForwardingRulesRequest extends TeaModel {
         @NameInMap("Priority")
         public Integer priority;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("RuleActions")
         public java.util.List<CreateForwardingRulesRequestForwardingRulesRuleActions> ruleActions;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("RuleConditions")
         public java.util.List<CreateForwardingRulesRequestForwardingRulesRuleConditions> ruleConditions;
 

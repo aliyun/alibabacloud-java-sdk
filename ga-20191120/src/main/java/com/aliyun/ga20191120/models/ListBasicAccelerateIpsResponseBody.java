@@ -12,27 +12,40 @@ public class ListBasicAccelerateIpsResponseBody extends TeaModel {
 
     /**
      * <p>The number of entries returned on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The token that determines the start point of the query. Valid values:</p>
-     * <br>
-     * <p>*   If **NextToken** was not returned, it indicates that no additional results exist.</p>
-     * <p>*   If **NextToken** was returned in the previous query, specify the value to obtain the next set of results.</p>
+     * <ul>
+     * <li>If <strong>NextToken</strong> was not returned, it indicates that no additional results exist.</li>
+     * <li>If <strong>NextToken</strong> was returned in the previous query, specify the value to obtain the next set of results.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -85,38 +98,55 @@ public class ListBasicAccelerateIpsResponseBody extends TeaModel {
     public static class ListBasicAccelerateIpsResponseBodyAccelerateIps extends TeaModel {
         /**
          * <p>The accelerated IP address of the basic GA instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>116.132.XX.XX</p>
          */
         @NameInMap("AccelerateIpAddress")
         public String accelerateIpAddress;
 
         /**
          * <p>The ID of the accelerated IP address of the basic GA instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gaip-bp1****</p>
          */
         @NameInMap("AccelerateIpId")
         public String accelerateIpId;
 
         /**
          * <p>The ID of the basic GA instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ga-bp17frjjh0udz4qz****</p>
          */
         @NameInMap("AcceleratorId")
         public String acceleratorId;
 
         /**
          * <p>The ID of the acceleration region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ips-bp11r5jb8ogp122xl****</p>
          */
         @NameInMap("IpSetId")
         public String ipSetId;
 
         /**
          * <p>The status of the accelerated IP address. Valid values:</p>
-         * <br>
-         * <p>*   **active**: The accelerated IP address is available.</p>
-         * <p>*   **binding**: The accelerated IP address is being associated.</p>
-         * <p>*   **bound**: The accelerated IP address is associated.</p>
-         * <p>*   **unbinding**: The accelerated IP address is being disassociated.</p>
-         * <p>*   **deleting**: The accelerated IP address is being deleted.</p>
-         * <br>
-         * <p>>  This parameter is unavailable when the accelerated IP address is being created.</p>
+         * <ul>
+         * <li><strong>active</strong>: The accelerated IP address is available.</li>
+         * <li><strong>binding</strong>: The accelerated IP address is being associated.</li>
+         * <li><strong>bound</strong>: The accelerated IP address is associated.</li>
+         * <li><strong>unbinding</strong>: The accelerated IP address is being disassociated.</li>
+         * <li><strong>deleting</strong>: The accelerated IP address is being deleted.</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is unavailable when the accelerated IP address is being created.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>active</p>
          */
         @NameInMap("State")
         public String state;

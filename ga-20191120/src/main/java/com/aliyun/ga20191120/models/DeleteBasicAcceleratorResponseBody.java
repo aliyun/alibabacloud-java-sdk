@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DeleteBasicAcceleratorResponseBody extends TeaModel {
     /**
      * <p>The ID of the basic GA instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ga-bp17frjjh0udz4qz****</p>
      */
     @NameInMap("AcceleratorId")
     public String acceleratorId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>54B48E3D-DF70-471B-AA93-08E683A1B45</p>
      */
     @NameInMap("RequestId")
     public String requestId;

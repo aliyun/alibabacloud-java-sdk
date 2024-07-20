@@ -12,6 +12,9 @@ public class ListAvailableBusiRegionsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DE77A7F3-3B74-41C0-A5BC-CAFD188C28B6</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,30 +43,44 @@ public class ListAvailableBusiRegionsResponseBody extends TeaModel {
     public static class ListAvailableBusiRegionsResponseBodyRegions extends TeaModel {
         /**
          * <p>Indicates whether the region is in the Chinese mainland. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("ChinaMainland")
         public Boolean chinaMainland;
 
         /**
          * <p>The name of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>China (Qingdao)</p>
          */
         @NameInMap("LocalName")
         public String localName;
 
         /**
          * <p>Indicates whether it is a point of presence (PoP) of Alibaba Cloud. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Pop")
         public Boolean pop;
 
         /**
          * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-qingdao</p>
          */
         @NameInMap("RegionId")
         public String regionId;

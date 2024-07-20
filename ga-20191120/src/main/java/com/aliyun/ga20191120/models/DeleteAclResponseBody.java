@@ -5,13 +5,19 @@ import com.aliyun.tea.*;
 
 public class DeleteAclResponseBody extends TeaModel {
     /**
-     * <p>The ID of the network ACL.</p>
+     * <p>The ID of the ACL.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>nacl-hp34s2h0xx1ht4nwo****</p>
      */
     @NameInMap("AclId")
     public String aclId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>365F4154-92F6-4AE4-92F8-7FF34B540710</p>
      */
     @NameInMap("RequestId")
     public String requestId;

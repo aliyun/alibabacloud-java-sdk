@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class DescribeCommodityPriceResponseBody extends TeaModel {
     /**
      * <p>The currency unit.</p>
-     * <br>
-     * <p>*   China site: **CNY**.</p>
-     * <p>*   International site: **USD**.</p>
+     * <ul>
+     * <li>China site: <strong>CNY</strong>.</li>
+     * <li>International site: <strong>USD</strong>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>CNY</p>
      */
     @NameInMap("Currency")
     public String currency;
 
     /**
      * <p>The discount.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>419.8</p>
      */
     @NameInMap("DiscountPrice")
     public Double discountPrice;
@@ -27,20 +34,27 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
 
     /**
      * <p>The original price.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2099</p>
      */
     @NameInMap("OriginalPrice")
     public Double originalPrice;
 
     /**
      * <p>The details of the coupon.</p>
-     * <br>
-     * <p>>  This parameter does not take effect for accounts registered on the China site (aliyun.com).</p>
+     * <blockquote>
+     * <p> This parameter does not take effect for accounts registered on the China site (aliyun.com).</p>
+     * </blockquote>
      */
     @NameInMap("Promotions")
     public java.util.List<DescribeCommodityPriceResponseBodyPromotions> promotions;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -53,6 +67,9 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
 
     /**
      * <p>The transaction price, which is equal to the original price minus the discount.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1679.2</p>
      */
     @NameInMap("TradePrice")
     public Double tradePrice;
@@ -129,30 +146,45 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
     public static class DescribeCommodityPriceResponseBodyOrderDetailsModuleDetails extends TeaModel {
         /**
          * <p>The discount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40000.0</p>
          */
         @NameInMap("DiscountPrice")
         public Double discountPrice;
 
         /**
          * <p>The code of the commodity module.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>spec</p>
          */
         @NameInMap("ModuleCode")
         public String moduleCode;
 
         /**
          * <p>The name of the commodity module.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Specification</p>
          */
         @NameInMap("ModuleName")
         public String moduleName;
 
         /**
          * <p>The original price.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200000.0</p>
          */
         @NameInMap("OriginalPrice")
         public Double originalPrice;
 
         /**
          * <p>The transaction price, which is equal to the original price minus the discount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>160000.0</p>
          */
         @NameInMap("TradePrice")
         public Double tradePrice;
@@ -207,40 +239,60 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
     public static class DescribeCommodityPriceResponseBodyOrderDetailsPromDetails extends TeaModel {
         /**
          * <p>The discounted price.</p>
-         * <br>
-         * <p>>  This parameter does not take effect for accounts registered on the China site (aliyun.com).</p>
+         * <blockquote>
+         * <p> This parameter does not take effect for accounts registered on the China site (aliyun.com).</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>0.01</p>
          */
         @NameInMap("FinalPromFee")
         public Double finalPromFee;
 
         /**
          * <p>The code of the discount option.</p>
-         * <br>
-         * <p>>  This parameter does not take effect for accounts registered on the China site (aliyun.com).</p>
+         * <blockquote>
+         * <p> This parameter does not take effect for accounts registered on the China site (aliyun.com).</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>youhui_quan</p>
          */
         @NameInMap("OptionCode")
         public String optionCode;
 
         /**
          * <p>The sub-type of the discount.</p>
-         * <br>
-         * <p>>  This parameter does not take effect for accounts registered on the China site (aliyun.com).</p>
+         * <blockquote>
+         * <p> This parameter does not take effect for accounts registered on the China site (aliyun.com).</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>deduct</p>
          */
         @NameInMap("PromType")
         public String promType;
 
         /**
          * <p>The ID of the discount item.</p>
-         * <br>
-         * <p>>  This parameter does not take effect for accounts registered on the China site (aliyun.com).</p>
+         * <blockquote>
+         * <p> This parameter does not take effect for accounts registered on the China site (aliyun.com).</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>50003298014****</p>
          */
         @NameInMap("PromotionId")
         public String promotionId;
 
         /**
          * <p>The name of the discount item.</p>
-         * <br>
-         * <p>>  This parameter does not take effect for accounts registered on the China site (aliyun.com).</p>
+         * <blockquote>
+         * <p> This parameter does not take effect for accounts registered on the China site (aliyun.com).</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>coupon</p>
          */
         @NameInMap("PromotionName")
         public String promotionName;
@@ -295,18 +347,27 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
     public static class DescribeCommodityPriceResponseBodyOrderDetails extends TeaModel {
         /**
          * <p>The code of the commodity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ga_gapluspre_public_cn</p>
          */
         @NameInMap("CommodityCode")
         public String commodityCode;
 
         /**
          * <p>The name of the commodity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Global Accelerator_Instance Type (Subscription)</p>
          */
         @NameInMap("CommodityName")
         public String commodityName;
 
         /**
          * <p>The discount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>419.8</p>
          */
         @NameInMap("DiscountPrice")
         public Double discountPrice;
@@ -319,20 +380,27 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
 
         /**
          * <p>The original price.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2099</p>
          */
         @NameInMap("OriginalPrice")
         public Double originalPrice;
 
         /**
          * <p>The details of the discount.</p>
-         * <br>
-         * <p>>  This parameter does not take effect for accounts registered on the China site (aliyun.com).</p>
+         * <blockquote>
+         * <p> This parameter does not take effect for accounts registered on the China site (aliyun.com).</p>
+         * </blockquote>
          */
         @NameInMap("PromDetails")
         public java.util.List<DescribeCommodityPriceResponseBodyOrderDetailsPromDetails> promDetails;
 
         /**
          * <p>The number of instances that are purchased.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Quantity")
         public Long quantity;
@@ -345,6 +413,9 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
 
         /**
          * <p>The transaction price, which is equal to the original price minus the discount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1679.2</p>
          */
         @NameInMap("TradePrice")
         public Double tradePrice;
@@ -431,43 +502,67 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
     public static class DescribeCommodityPriceResponseBodyPromotions extends TeaModel {
         /**
          * <p>The discounted amount.</p>
-         * <br>
-         * <p>>  This parameter does not take effect for accounts registered on the China site (aliyun.com).</p>
+         * <blockquote>
+         * <p> This parameter does not take effect for accounts registered on the China site (aliyun.com).</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("CanPromFee")
         public Double canPromFee;
 
         /**
          * <p>The code of the commodity to which the coupon can be applied.</p>
-         * <br>
-         * <p>>  This parameter does not take effect for accounts registered on the China site (aliyun.com).</p>
+         * <blockquote>
+         * <p> This parameter does not take effect for accounts registered on the China site (aliyun.com).</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>youhui_quan</p>
          */
         @NameInMap("OptionCode")
         public String optionCode;
 
         /**
          * <p>The name of the coupon.</p>
-         * <br>
-         * <p>>  This parameter does not take effect for accounts registered on the China site (aliyun.com).</p>
+         * <blockquote>
+         * <p> This parameter does not take effect for accounts registered on the China site (aliyun.com).</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>youhuiquan_promotion_option_id_for_blank</p>
          */
         @NameInMap("PromotionName")
         public String promotionName;
 
         /**
          * <p>The code of the coupon.</p>
-         * <p>> *   `youhuiquan_promotion_option_id_for_blank` indicates coupons that cannot be applied to the commodity.</p>
-         * <p>> *   This parameter does not take effect for accounts registered on the China site (aliyun.com).</p>
+         * <blockquote>
+         * <ul>
+         * <li><code>youhuiquan_promotion_option_id_for_blank</code> indicates coupons that cannot be applied to the commodity.</li>
+         * <li>This parameter does not take effect for accounts registered on the China site (aliyun.com).</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>50003298014****</p>
          */
         @NameInMap("PromotionOptionNo")
         public String promotionOptionNo;
 
         /**
          * <p>Indicates whether the coupon was selected.</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
-         * <br>
-         * <p>>  This parameter does not take effect for accounts registered on the China site (aliyun.com).</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter does not take effect for accounts registered on the China site (aliyun.com).</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Selected")
         public Boolean selected;
@@ -522,12 +617,18 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
     public static class DescribeCommodityPriceResponseBodyRuleDetails extends TeaModel {
         /**
          * <p>The ID of the discount rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>102104100786****</p>
          */
         @NameInMap("RuleId")
         public String ruleId;
 
         /**
          * <p>The name of the discount rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GA New Customers Small II Specification Monthly Subscription - 20% Discount</p>
          */
         @NameInMap("RuleName")
         public String ruleName;

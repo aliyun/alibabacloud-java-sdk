@@ -12,27 +12,40 @@ public class ListBasicEndpointsResponseBody extends TeaModel {
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxResults")
     public String maxResults;
 
     /**
      * <p>The token that determines the start point of the query. Valid values:</p>
-     * <br>
-     * <p>*   If **NextToken** is not returned, it indicates that no additional results exist.</p>
-     * <p>*   If a value is returned for **NextToken**, the value is the token that determines the start point of the next query.</p>
+     * <ul>
+     * <li>If <strong>NextToken</strong> is not returned, it indicates that no additional results exist.</li>
+     * <li>If a value is returned for <strong>NextToken</strong>, the value is the token that determines the start point of the next query.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public String totalCount;
@@ -85,86 +98,117 @@ public class ListBasicEndpointsResponseBody extends TeaModel {
     public static class ListBasicEndpointsResponseBodyEndpoints extends TeaModel {
         /**
          * <p>The ID of the basic GA instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ga-bp17frjjh0udz4qz****</p>
          */
         @NameInMap("AcceleratorId")
         public String acceleratorId;
 
         /**
          * <p>The address of the endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eni-bp1a05txelswuj8g****</p>
          */
         @NameInMap("EndpointAddress")
         public String endpointAddress;
 
         /**
          * <p>The ID of the endpoint group to which the endpoint belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>epg-bp1dmlohjjz4kqaun****</p>
          */
         @NameInMap("EndpointGroupId")
         public String endpointGroupId;
 
         /**
          * <p>The ID of the endpoint that is associated with the basic GA instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ep-bp14sz7ftcwwjgrdm****</p>
          */
         @NameInMap("EndpointId")
         public String endpointId;
 
         /**
          * <p>The secondary address of the endpoint.</p>
-         * <br>
-         * <p>This parameter is returned if the endpoint type is **ECS**, **ENI**, or **NLB**.</p>
-         * <br>
-         * <p>*   If the endpoint type is **ECS**, **EndpointSubAddress** returns the primary or secondary private IP address of the primary ENI.</p>
-         * <p>*   If the endpoint type is **ENI**, **EndpointSubAddress** returns the primary or secondary private IP address of the secondary ENI.</p>
-         * <p>*   If the endpoint type is **NLB**, **EndpointSubAddress** returns the primary private IP address of the NLB backend server.</p>
+         * <p>This parameter is returned if the endpoint type is <strong>ECS</strong>, <strong>ENI</strong>, or <strong>NLB</strong>.</p>
+         * <ul>
+         * <li>If the endpoint type is <strong>ECS</strong>, <strong>EndpointSubAddress</strong> returns the primary or secondary private IP address of the primary ENI.</li>
+         * <li>If the endpoint type is <strong>ENI</strong>, <strong>EndpointSubAddress</strong> returns the primary or secondary private IP address of the secondary ENI.</li>
+         * <li>If the endpoint type is <strong>NLB</strong>, <strong>EndpointSubAddress</strong> returns the primary private IP address of the NLB backend server.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>172.16.XX.XX</p>
          */
         @NameInMap("EndpointSubAddress")
         public String endpointSubAddress;
 
         /**
          * <p>The secondary address type of the endpoint.</p>
-         * <br>
-         * <p>*   **primary**: a primary private IP address.</p>
-         * <p>*   **secondary**: a secondary private IP address.</p>
-         * <br>
-         * <p>This parameter is returned if the type of the endpoint is set to **ECS**, **ENI**, or **NLB**. If the endpoint type is set to **NLB**, **primary** is returned.</p>
+         * <ul>
+         * <li><strong>primary</strong>: a primary private IP address.</li>
+         * <li><strong>secondary</strong>: a secondary private IP address.</li>
+         * </ul>
+         * <p>This parameter is returned if the type of the endpoint is set to <strong>ECS</strong>, <strong>ENI</strong>, or <strong>NLB</strong>. If the endpoint type is set to <strong>NLB</strong>, <strong>primary</strong> is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>primary</p>
          */
         @NameInMap("EndpointSubAddressType")
         public String endpointSubAddressType;
 
         /**
          * <p>The type of endpoint. Valid values:</p>
-         * <br>
-         * <p>*   **ENI**: ENI.</p>
-         * <p>*   **SLB**: CLB instance.</p>
-         * <p>*   **ECS**: ECS instance.</p>
-         * <p>*   **NLB**: NLB instance.</p>
+         * <ul>
+         * <li><strong>ENI</strong>: ENI.</li>
+         * <li><strong>SLB</strong>: CLB instance.</li>
+         * <li><strong>ECS</strong>: ECS instance.</li>
+         * <li><strong>NLB</strong>: NLB instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ENI</p>
          */
         @NameInMap("EndpointType")
         public String endpointType;
 
         /**
          * <p>The zone ID of the endpoint.</p>
-         * <br>
-         * <p>This parameter is returned only when the endpoint type is set to **NLB**.</p>
+         * <p>This parameter is returned only when the endpoint type is set to <strong>NLB</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-g</p>
          */
         @NameInMap("EndpointZoneId")
         public String endpointZoneId;
 
         /**
          * <p>The name of the endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ep01</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The status of the endpoint. Valid values:</p>
-         * <br>
-         * <p>*   **init**: The endpoint is being initialized.</p>
-         * <p>*   **active**: The endpoint is available.</p>
-         * <p>*   **updating**: The endpoint is being configured.</p>
-         * <p>*   **binding**: The endpoint is being associated.</p>
-         * <p>*   **unbinding**: The endpoint is being disassociated.</p>
-         * <p>*   **deleting**: The endpoint is being deleted.</p>
-         * <p>*   **bound**: The endpoint is associated.</p>
+         * <ul>
+         * <li><strong>init</strong>: The endpoint is being initialized.</li>
+         * <li><strong>active</strong>: The endpoint is available.</li>
+         * <li><strong>updating</strong>: The endpoint is being configured.</li>
+         * <li><strong>binding</strong>: The endpoint is being associated.</li>
+         * <li><strong>unbinding</strong>: The endpoint is being disassociated.</li>
+         * <li><strong>deleting</strong>: The endpoint is being deleted.</li>
+         * <li><strong>bound</strong>: The endpoint is associated.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>active</p>
          */
         @NameInMap("State")
         public String state;

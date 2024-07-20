@@ -12,24 +12,36 @@ public class ListApplicationMonitorDetectResultResponseBody extends TeaModel {
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,81 +94,115 @@ public class ListApplicationMonitorDetectResultResponseBody extends TeaModel {
     public static class ListApplicationMonitorDetectResultResponseBodyApplicationMonitorDetectResultList extends TeaModel {
         /**
          * <p>The ID of the GA instance on which the origin probing task runs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ga-bp1odcab8tmno0hdq****</p>
          */
         @NameInMap("AcceleratorId")
         public String acceleratorId;
 
         /**
          * <p>The response content returned by the origin probing task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>502 BadGateway</p>
          */
         @NameInMap("Content")
         public String content;
 
         /**
          * <p>The description of the diagnostic result. Valid values:</p>
-         * <br>
-         * <p>*   **All forward nodes work well.:** The origin server is normal.</p>
-         * <p>*   **Endpoint network error.:** The origin server is abnormal. You must check whether the origin server is running as expected.</p>
-         * <p>*   **Public network error.:** An Internet error occurred, which is a network error that occurred when the client connected to the acceleration region.</p>
-         * <p>*   **Ga internal error.:** An internal error occurred. For example, an exception occurred when GA processed a request.</p>
-         * <p>*   **Ga has been deleted.:** The current GA instance is deleted.</p>
-         * <p>*   **Ga state is not stable.:** The current GA instance is in an unstable state, such as the Configuring state.</p>
-         * <p>*   **Ga has no listener configuration.:** No listener is configured for the current GA instance.</p>
-         * <p>*   **Missing endpoint configuration.:** No endpoint is configured.</p>
-         * <p>*   **Missing acceleration region configuration.:** No acceleration region is configured.</p>
-         * <p>*   **Missing endpointgroup configuration.:** No endpoint group is configured.</p>
+         * <ul>
+         * <li><strong>All forward nodes work well.:</strong> The origin server is normal.</li>
+         * <li><strong>Endpoint network error.:</strong> The origin server is abnormal. You must check whether the origin server is running as expected.</li>
+         * <li><strong>Public network error.:</strong> An Internet error occurred, which is a network error that occurred when the client connected to the acceleration region.</li>
+         * <li><strong>Ga internal error.:</strong> An internal error occurred. For example, an exception occurred when GA processed a request.</li>
+         * <li><strong>Ga has been deleted.:</strong> The current GA instance is deleted.</li>
+         * <li><strong>Ga state is not stable.:</strong> The current GA instance is in an unstable state, such as the Configuring state.</li>
+         * <li><strong>Ga has no listener configuration.:</strong> No listener is configured for the current GA instance.</li>
+         * <li><strong>Missing endpoint configuration.:</strong> No endpoint is configured.</li>
+         * <li><strong>Missing acceleration region configuration.:</strong> No acceleration region is configured.</li>
+         * <li><strong>Missing endpointgroup configuration.:</strong> No endpoint group is configured.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>All forward nodes work well</p>
          */
         @NameInMap("Detail")
         public String detail;
 
         /**
          * <p>The time when the diagnosis of the origin probing task ends.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1663205460</p>
          */
         @NameInMap("DetectTime")
         public String detectTime;
 
         /**
          * <p>The diagnostic result of the origin probing task. Valid values:</p>
-         * <br>
-         * <p>*   **success:** The origin probing task succeeded.</p>
-         * <p>*   **failed:** The origin probing task failed.</p>
+         * <ul>
+         * <li><strong>success:</strong> The origin probing task succeeded.</li>
+         * <li><strong>failed:</strong> The origin probing task failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         @NameInMap("DiagStatus")
         public String diagStatus;
 
         /**
          * <p>The ID of the listener on which the origin probing task runs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lsr-bp1bpn0kn908w4nbw****</p>
          */
         @NameInMap("ListenerId")
         public String listenerId;
 
         /**
          * <p>The listener port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("Port")
         public String port;
 
         /**
          * <p>The network transmission protocol that is used by the listener. Valid values:</p>
-         * <br>
-         * <p>*   **tcp:** TCP.</p>
-         * <p>*   **udp:** UDP.</p>
-         * <p>*   **http:** HTTP.</p>
-         * <p>*   **https:** HTTPS.</p>
-         * <br>
-         * <p>>  UDP listeners do not support probing.</p>
+         * <ul>
+         * <li><strong>tcp:</strong> TCP.</li>
+         * <li><strong>udp:</strong> UDP.</li>
+         * <li><strong>http:</strong> HTTP.</li>
+         * <li><strong>https:</strong> HTTPS.</li>
+         * </ul>
+         * <blockquote>
+         * <p> UDP listeners do not support probing.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>http</p>
          */
         @NameInMap("Protocol")
         public String protocol;
 
         /**
          * <p>The error code returned by the origin probing task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>502</p>
          */
         @NameInMap("StatusCode")
         public String statusCode;
 
         /**
          * <p>The origin probing task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sm-bp1fpdjfju9k8yr1y****</p>
          */
         @NameInMap("TaskId")
         public String taskId;

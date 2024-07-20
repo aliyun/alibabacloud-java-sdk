@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DeleteBandwidthPackageResponseBody extends TeaModel {
     /**
      * <p>The bandwidth plan ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gbwp-bp1sgzldyj6b4q7cx****</p>
      */
     @NameInMap("BandwidthPackageId")
     public String bandwidthPackageId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6FEA0CF3-D3B9-43E5-A304-D217037876A8</p>
      */
     @NameInMap("RequestId")
     public String requestId;

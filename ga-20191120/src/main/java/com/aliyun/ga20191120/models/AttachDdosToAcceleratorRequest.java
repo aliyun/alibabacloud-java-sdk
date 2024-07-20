@@ -6,27 +6,43 @@ import com.aliyun.tea.*;
 public class AttachDdosToAcceleratorRequest extends TeaModel {
     /**
      * <p>The ID of the GA instance with which the Anti-DDoS Pro/Premium instance is associated.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ga-bp1odcab8tmno0hdq****</p>
      */
     @NameInMap("AcceleratorId")
     public String acceleratorId;
 
     /**
      * <p>The ID of the Anti-DDoS Pro/Premium instance to be associated with the GA instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ddoscoo-cn-zz11vq7j****</p>
      */
     @NameInMap("DdosId")
     public String ddosId;
 
     /**
      * <p>The region where the Anti-DDoS Pro/Premium instance is deployed. Valid values:</p>
-     * <br>
-     * <p>*   **cn-hangzhou**: regions in the Chinese mainland</p>
-     * <p>*   **ap-southeast-1**: regions outside the Chinese mainland</p>
+     * <ul>
+     * <li><strong>cn-hangzhou</strong>: regions in the Chinese mainland</li>
+     * <li><strong>ap-southeast-1</strong>: regions outside the Chinese mainland</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("DdosRegionId")
     public String ddosRegionId;
 
     /**
-     * <p>The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.</p>
+     * <p>The ID of the region where the GA instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

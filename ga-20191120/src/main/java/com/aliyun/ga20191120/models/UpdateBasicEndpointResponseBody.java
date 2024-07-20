@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class UpdateBasicEndpointResponseBody extends TeaModel {
     /**
      * <p>The ID of the endpoint group to which the endpoints belong.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>epg-bp1dmlohjjz4kqaun****</p>
      */
     @NameInMap("EndpointGroupId")
     public String endpointGroupId;
 
     /**
      * <p>The ID of the endpoint.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ep-bp14sz7ftcwwjgrdm****</p>
      */
     @NameInMap("EndpointId")
     public String endpointId;
 
     /**
      * <p>The name of the endpoint.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ep01</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6FEA0CF3-D3B9-43E5-A304-D217037876A8</p>
      */
     @NameInMap("RequestId")
     public String requestId;

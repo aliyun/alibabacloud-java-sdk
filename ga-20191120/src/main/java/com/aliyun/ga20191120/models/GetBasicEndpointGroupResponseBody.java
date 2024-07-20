@@ -6,76 +6,108 @@ import com.aliyun.tea.*;
 public class GetBasicEndpointGroupResponseBody extends TeaModel {
     /**
      * <p>The ID of the basic GA instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ga-bp17frjjh0udz4qz****</p>
      */
     @NameInMap("AcceleratorId")
     public String acceleratorId;
 
     /**
      * <p>The description of the endpoint group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BasicEndpointGroup</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The address of the endpoint.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eni-bp1a05txelswuj8g****</p>
      */
     @NameInMap("EndpointAddress")
     public String endpointAddress;
 
     /**
      * <p>The ID of the endpoint group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>epg-bp1dmlohjjz4kqaun****</p>
      */
     @NameInMap("EndpointGroupId")
     public String endpointGroupId;
 
     /**
      * <p>The ID of the region where the endpoint group resides.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("EndpointGroupRegion")
     public String endpointGroupRegion;
 
     /**
      * <p>The secondary address of the endpoint.</p>
-     * <br>
-     * <p>This parameter is returned if the endpoint type is **ECS**, **ENI**, or **NLB**.</p>
-     * <br>
-     * <p>*   If the endpoint type is **ECS**, **EndpointSubAddress** returns the primary or secondary private IP address of the primary ENI.</p>
-     * <p>*   If the endpoint type is **ENI**, **EndpointSubAddress** returns the primary or secondary private IP address of the secondary ENI.</p>
-     * <p>*   If the endpoint type is **NLB**, **EndpointSubAddress** returns the primary private IP address of the NLB backend server.</p>
+     * <p>This parameter is returned if the endpoint type is <strong>ECS</strong>, <strong>ENI</strong>, or <strong>NLB</strong>.</p>
+     * <ul>
+     * <li>If the endpoint type is <strong>ECS</strong>, <strong>EndpointSubAddress</strong> returns the primary or secondary private IP address of the primary ENI.</li>
+     * <li>If the endpoint type is <strong>ENI</strong>, <strong>EndpointSubAddress</strong> returns the primary or secondary private IP address of the secondary ENI.</li>
+     * <li>If the endpoint type is <strong>NLB</strong>, <strong>EndpointSubAddress</strong> returns the primary private IP address of the NLB backend server.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>172.16.XX.XX</p>
      */
     @NameInMap("EndpointSubAddress")
     public String endpointSubAddress;
 
     /**
      * <p>The type of endpoint. Valid values:</p>
-     * <br>
-     * <p>*   **ENI**: elastic network interface (ENI).</p>
-     * <p>*   **SLB**: Classic Load Balancer (CLB) instance.</p>
-     * <p>*   **ECS**: Elastic Compute Service (ECS) instance.</p>
-     * <p>*   **NLB**: Network Load Balancer (NLB) instance</p>
+     * <ul>
+     * <li><strong>ENI</strong>: elastic network interface (ENI).</li>
+     * <li><strong>SLB</strong>: Classic Load Balancer (CLB) instance.</li>
+     * <li><strong>ECS</strong>: Elastic Compute Service (ECS) instance.</li>
+     * <li><strong>NLB</strong>: Network Load Balancer (NLB) instance</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ENI</p>
      */
     @NameInMap("EndpointType")
     public String endpointType;
 
     /**
      * <p>The name of the endpoint group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>group1</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The status of the endpoint group. Valid values:</p>
-     * <br>
-     * <p>*   **init**: being initialized.</p>
-     * <p>*   **active**: running as expected.</p>
-     * <p>*   **updating**: being updated.</p>
-     * <p>*   **deleting**: being deleted.</p>
+     * <ul>
+     * <li><strong>init</strong>: being initialized.</li>
+     * <li><strong>active</strong>: running as expected.</li>
+     * <li><strong>updating</strong>: being updated.</li>
+     * <li><strong>deleting</strong>: being deleted.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>active</p>
      */
     @NameInMap("State")
     public String state;

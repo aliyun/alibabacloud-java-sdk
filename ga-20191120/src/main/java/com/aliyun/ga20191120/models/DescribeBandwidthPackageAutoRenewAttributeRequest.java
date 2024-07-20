@@ -6,12 +6,20 @@ import com.aliyun.tea.*;
 public class DescribeBandwidthPackageAutoRenewAttributeRequest extends TeaModel {
     /**
      * <p>The ID of the bandwidth plan.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gbwp-bp1iquvlp8khla5emb3ia</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to cn-hangzhou.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

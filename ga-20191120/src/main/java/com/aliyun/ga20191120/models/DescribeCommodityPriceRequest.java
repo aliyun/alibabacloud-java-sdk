@@ -6,20 +6,29 @@ import com.aliyun.tea.*;
 public class DescribeCommodityPriceRequest extends TeaModel {
     /**
      * <p>The commodity orders.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Orders")
     public java.util.List<DescribeCommodityPriceRequestOrders> orders;
 
     /**
      * <p>The coupon code.</p>
-     * <br>
-     * <p>>  This parameter is unavailable on the China site (aliyun.com).</p>
+     * <blockquote>
+     * <p> This parameter is unavailable on the China site (aliyun.com).</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>50003298014****</p>
      */
     @NameInMap("PromotionOptionNo")
     public String promotionOptionNo;
 
     /**
-     * <p>The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to **cn-hangzhou**.</p>
+     * <p>The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -56,16 +65,20 @@ public class DescribeCommodityPriceRequest extends TeaModel {
     public static class DescribeCommodityPriceRequestOrdersComponentsProperties extends TeaModel {
         /**
          * <p>The code of the attribute of the commodity module.</p>
-         * <br>
-         * <p>The information varies based on the commodity module. Examples: **instance** (GA instance) and **ord_time** (subscription duration).</p>
+         * <p>The information varies based on the commodity module. Examples: <strong>instance</strong> (GA instance) and <strong>ord_time</strong> (subscription duration).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance</p>
          */
         @NameInMap("Code")
         public String code;
 
         /**
          * <p>The value of the attribute.</p>
-         * <br>
-         * <p>The information varies based on the commodity module. Examples: **instance_fee** (GA instance fee) and **1:Month** (one-month subscription).</p>
+         * <p>The information varies based on the commodity module. Examples: <strong>instance_fee</strong> (GA instance fee) and <strong>1:Month</strong> (one-month subscription).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance_fee</p>
          */
         @NameInMap("Value")
         public String value;
@@ -96,15 +109,16 @@ public class DescribeCommodityPriceRequest extends TeaModel {
     public static class DescribeCommodityPriceRequestOrdersComponents extends TeaModel {
         /**
          * <p>The code of the commodity module.</p>
-         * <br>
-         * <p>The information varies based on the commodity module. Examples: **instance** (GA instance) and **ord_time** (subscription duration).</p>
+         * <p>The information varies based on the commodity module. Examples: <strong>instance</strong> (GA instance) and <strong>ord_time</strong> (subscription duration).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance</p>
          */
         @NameInMap("ComponentCode")
         public String componentCode;
 
         /**
          * <p>The attributes of commodity modules.</p>
-         * <br>
          * <p>The information varies based on the commodity module.</p>
          */
         @NameInMap("Properties")
@@ -135,30 +149,35 @@ public class DescribeCommodityPriceRequest extends TeaModel {
 
     public static class DescribeCommodityPriceRequestOrders extends TeaModel {
         /**
-         * <p>The billing method. Set the value to **PREPAY**, which specifies the subscription billing method.</p>
+         * <p>The billing method. Set the value to <strong>PREPAY</strong>, which specifies the subscription billing method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PREPAY</p>
          */
         @NameInMap("ChargeType")
         public String chargeType;
 
         /**
          * <p>The commodity code.</p>
-         * <br>
          * <p>Valid values on the China site (aliyun.com):</p>
-         * <br>
-         * <p>*   **ga_gapluspre_public_cn**: GA instance.</p>
-         * <p>*   **ga_plusbwppre_public_cn**: basic bandwidth plan.</p>
-         * <br>
+         * <ul>
+         * <li><strong>ga_gapluspre_public_cn</strong>: GA instance.</li>
+         * <li><strong>ga_plusbwppre_public_cn</strong>: basic bandwidth plan.</li>
+         * </ul>
          * <p>Valid values on the international site (alibabacloud.com):</p>
-         * <br>
-         * <p>*   **ga_pluspre_public_intl**: GA instance.</p>
-         * <p>*   **ga_bwppreintl_public_intl:** basic bandwidth plan.</p>
+         * <ul>
+         * <li><strong>ga_pluspre_public_intl</strong>: GA instance.</li>
+         * <li><strong>ga_bwppreintl_public_intl:</strong> basic bandwidth plan.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ga_gapluspre_public_cn</p>
          */
         @NameInMap("CommodityCode")
         public String commodityCode;
 
         /**
          * <p>The information about commodity modules.</p>
-         * <br>
          * <p>The information varies based on the commodity module.</p>
          */
         @NameInMap("Components")
@@ -166,34 +185,49 @@ public class DescribeCommodityPriceRequest extends TeaModel {
 
         /**
          * <p>The subscription duration.</p>
-         * <br>
-         * <p>*   Valid values if you set **PricingCycle** to **Month**: **1** to **9**.</p>
-         * <p>*   Valid values if you set **PricingCycle** to **Year**: **1** to **3**.</p>
+         * <ul>
+         * <li>Valid values if you set <strong>PricingCycle</strong> to <strong>Month</strong>: <strong>1</strong> to <strong>9</strong>.</li>
+         * <li>Valid values if you set <strong>PricingCycle</strong> to <strong>Year</strong>: <strong>1</strong> to <strong>3</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Duration")
         public Long duration;
 
         /**
          * <p>The type of the order. Valid values:</p>
-         * <br>
-         * <p>*   **BUY**: purchase order.</p>
-         * <p>*   **RENEW**: renewal order.</p>
-         * <p>*   **UPGRADE**: upgrade order.</p>
+         * <ul>
+         * <li><strong>BUY</strong>: purchase order.</li>
+         * <li><strong>RENEW</strong>: renewal order.</li>
+         * <li><strong>UPGRADE</strong>: upgrade order.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>BUY</p>
          */
         @NameInMap("OrderType")
         public String orderType;
 
         /**
          * <p>The billing cycle. Valid values:</p>
-         * <br>
-         * <p>*   **Month**</p>
-         * <p>*   **Year**</p>
+         * <ul>
+         * <li><strong>Month</strong></li>
+         * <li><strong>Year</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         @NameInMap("PricingCycle")
         public String pricingCycle;
 
         /**
          * <p>The number of instances that you want to purchase.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Quantity")
         public Long quantity;

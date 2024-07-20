@@ -6,63 +6,90 @@ import com.aliyun.tea.*;
 public class DescribeCustomRoutingEndpointGroupDestinationsResponseBody extends TeaModel {
     /**
      * <p>The ID of the Global Accelerator (GA) instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ga-bp1odcab8tmno0hdq****</p>
      */
     @NameInMap("AcceleratorId")
     public String acceleratorId;
 
     /**
      * <p>The ID of the endpoint group mapping configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dst-123abc****</p>
      */
     @NameInMap("DestinationId")
     public String destinationId;
 
     /**
      * <p>The ID of the endpoint group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>epg-bp14sz7ftcwwjgrdm****</p>
      */
     @NameInMap("EndpointGroupId")
     public String endpointGroupId;
 
     /**
      * <p>The start port of the backend service port range of the endpoint group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>80</p>
      */
     @NameInMap("FromPort")
     public Integer fromPort;
 
     /**
      * <p>The ID of the listener.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lsr-bp1bpn0kn908w4nbw****</p>
      */
     @NameInMap("ListenerId")
     public String listenerId;
 
     /**
      * <p>The backend service protocol of the endpoint group.</p>
-     * <br>
-     * <p>*   **TCP**: TCP</p>
-     * <p>*   **UDP**: UDP</p>
-     * <p>*   **TCP,UDP**: TCP and UDP</p>
+     * <ul>
+     * <li><strong>TCP</strong>: TCP</li>
+     * <li><strong>UDP</strong>: UDP</li>
+     * <li><strong>TCP,UDP</strong>: TCP and UDP</li>
+     * </ul>
      */
     @NameInMap("Protocols")
     public java.util.List<String> protocols;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The service ID to which the managed instance belongs.</p>
-     * <br>
-     * <p>>  Valid only when the ServiceManaged parameter is True.</p>
+     * <blockquote>
+     * <p> Valid only when the ServiceManaged parameter is True.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>ALB</p>
      */
     @NameInMap("ServiceId")
     public String serviceId;
 
     /**
      * <p>Is it a managed instance. Valid values:</p>
-     * <br>
-     * <p>- true</p>
-     * <p>- false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("ServiceManaged")
     public Boolean serviceManaged;
@@ -75,17 +102,24 @@ public class DescribeCustomRoutingEndpointGroupDestinationsResponseBody extends 
 
     /**
      * <p>The status of the endpoint group mapping configuration.</p>
-     * <br>
-     * <p>*   **init**: being initialized.</p>
-     * <p>*   **active**: normal.</p>
-     * <p>*   **updating**: being updated.</p>
-     * <p>*   **deleting**: being deleted.</p>
+     * <ul>
+     * <li><strong>init</strong>: being initialized.</li>
+     * <li><strong>active</strong>: normal.</li>
+     * <li><strong>updating</strong>: being updated.</li>
+     * <li><strong>deleting</strong>: being deleted.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>active</p>
      */
     @NameInMap("State")
     public String state;
 
     /**
      * <p>The end port of the backend service port range of the endpoint group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>80</p>
      */
     @NameInMap("ToPort")
     public Integer toPort;
@@ -194,39 +228,53 @@ public class DescribeCustomRoutingEndpointGroupDestinationsResponseBody extends 
     public static class DescribeCustomRoutingEndpointGroupDestinationsResponseBodyServiceManagedInfos extends TeaModel {
         /**
          * <p>Managed policy action name, Valid values:</p>
-         * <br>
-         * <p>- Create</p>
-         * <p>- Update</p>
-         * <p>- Delete</p>
-         * <p>- Associate</p>
-         * <p>- UserUnmanaged</p>
-         * <p>- CreateChild</p>
+         * <ul>
+         * <li>Create</li>
+         * <li>Update</li>
+         * <li>Delete</li>
+         * <li>Associate</li>
+         * <li>UserUnmanaged</li>
+         * <li>CreateChild</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Update</p>
          */
         @NameInMap("Action")
         public String action;
 
         /**
          * <p>Sub resource type, Valid values:</p>
-         * <br>
-         * <p>- Listener</p>
-         * <p>- IpSet</p>
-         * <p>- EndpointGroup</p>
-         * <p>- ForwardingRule</p>
-         * <p>- Endpoint</p>
-         * <p>- EndpointGroupDestination</p>
-         * <p>- EndpointPolicy</p>
-         * <br>
-         * <p>>Only valid when the Action parameter is CreateChild.</p>
+         * <ul>
+         * <li>Listener</li>
+         * <li>IpSet</li>
+         * <li>EndpointGroup</li>
+         * <li>ForwardingRule</li>
+         * <li>Endpoint</li>
+         * <li>EndpointGroupDestination</li>
+         * <li>EndpointPolicy</li>
+         * </ul>
+         * <blockquote>
+         * <p>Only valid when the Action parameter is CreateChild.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Listener</p>
          */
         @NameInMap("ChildType")
         public String childType;
 
         /**
          * <p>Is the managed policy action managed, Valid values:</p>
-         * <br>
-         * <p>- true: The managed policy action is managed, and users do not have permission to perform the operation specified in the Action on the managed instance.</p>
-         * <br>
-         * <p>- false: The managed policy action is not managed, and users have permission to perform the operation specified in the Action on the managed instance.</p>
+         * <ul>
+         * <li><p>true: The managed policy action is managed, and users do not have permission to perform the operation specified in the Action on the managed instance.</p>
+         * </li>
+         * <li><p>false: The managed policy action is not managed, and users have permission to perform the operation specified in the Action on the managed instance.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("IsManaged")
         public Boolean isManaged;

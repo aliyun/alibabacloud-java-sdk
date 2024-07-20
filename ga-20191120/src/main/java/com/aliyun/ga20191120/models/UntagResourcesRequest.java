@@ -6,63 +6,79 @@ import com.aliyun.tea.*;
 public class UntagResourcesRequest extends TeaModel {
     /**
      * <p>Specifies whether to remove all tags of the specified resource. Valid values:</p>
-     * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false** (default): no</p>
+     * <ul>
+     * <li><strong>true</strong>: yes</li>
+     * <li><strong>false</strong> (default): no</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("All")
     public Boolean all;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
-     * <br>
-     * <p>>  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
+     * <blockquote>
+     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.</p>
+     * <p>The ID of the region where the GA instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The IDs of the resources whose tags you want to remove.</p>
-     * <br>
-     * <p>*   If you set **ResourceType** to **accelerator**, set the value of ResourceId to the ID of a standard GA instance.</p>
-     * <p>*   If you set **ResourceType** to **basicaccelerator**, set the value of ResourceId to the ID of a basic GA instance.</p>
-     * <p>*   If you set **ResourceType** to **bandwidthpackage**, set the value of ResourceId to the ID of a bandwidth plan.</p>
-     * <p>*   If you set **ResourceType** to **acl**, set the value of ResourceId to the ID of an ACL.</p>
-     * <p>*   If you set **ResourceType** to **endpointgroup**, set the value of ResourceId to the ID of an endpoint group.</p>
-     * <br>
+     * <ul>
+     * <li>If you set <strong>ResourceType</strong> to <strong>accelerator</strong>, set the value of ResourceId to the ID of a standard GA instance.</li>
+     * <li>If you set <strong>ResourceType</strong> to <strong>basicaccelerator</strong>, set the value of ResourceId to the ID of a basic GA instance.</li>
+     * <li>If you set <strong>ResourceType</strong> to <strong>bandwidthpackage</strong>, set the value of ResourceId to the ID of a bandwidth plan.</li>
+     * <li>If you set <strong>ResourceType</strong> to <strong>acl</strong>, set the value of ResourceId to the ID of an ACL.</li>
+     * <li>If you set <strong>ResourceType</strong> to <strong>endpointgroup</strong>, set the value of ResourceId to the ID of an endpoint group.</li>
+     * </ul>
      * <p>You can specify up to 50 GA resource IDs.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
      * <p>The type of the resource whose tags you want to remove. Valid values:</p>
-     * <br>
-     * <p>*   **accelerator**: a standard GA instance</p>
-     * <p>*   **basicaccelerator**: a basic GA instance</p>
-     * <p>*   **bandwidthpackage**: a bandwidth plan</p>
-     * <p>*   **acl**: an access control list (ACL).</p>
-     * <p>*   **endpointgroup**: an endpoint group</p>
+     * <ul>
+     * <li><strong>accelerator</strong>: a standard GA instance</li>
+     * <li><strong>basicaccelerator</strong>: a basic GA instance</li>
+     * <li><strong>bandwidthpackage</strong>: a bandwidth plan</li>
+     * <li><strong>acl</strong>: an access control list (ACL).</li>
+     * <li><strong>endpointgroup</strong>: an endpoint group</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>accelerator</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
      * <p>The key of the tag to be removed.</p>
-     * <br>
      * <p>The system removes all tags with this tag key.</p>
-     * <br>
      * <p>You can specify up to 20 tag keys.</p>
-     * <br>
-     * <p>>  If the **All** parameter is set to **true**, this parameter does not take effect.</p>
+     * <blockquote>
+     * <p> If the <strong>All</strong> parameter is set to <strong>true</strong>, this parameter does not take effect.</p>
+     * </blockquote>
      */
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;

@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ListCustomRoutingEndpointTrafficPoliciesResponseBody extends TeaModel {
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -24,12 +30,18 @@ public class ListCustomRoutingEndpointTrafficPoliciesResponseBody extends TeaMod
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,12 +94,18 @@ public class ListCustomRoutingEndpointTrafficPoliciesResponseBody extends TeaMod
     public static class ListCustomRoutingEndpointTrafficPoliciesResponseBodyPoliciesPortRanges extends TeaModel {
         /**
          * <p>The first port of the port range used by the traffic destination to process requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("FromPort")
         public Integer fromPort;
 
         /**
          * <p>The last port of the port range used by the traffic destination to process requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("ToPort")
         public Integer toPort;
@@ -118,38 +136,51 @@ public class ListCustomRoutingEndpointTrafficPoliciesResponseBody extends TeaMod
     public static class ListCustomRoutingEndpointTrafficPoliciesResponseBodyPoliciesServiceManagedInfos extends TeaModel {
         /**
          * <p>The name of the action on the managed instance. Valid values:</p>
-         * <br>
-         * <p>*   **Create**: Create an instance.</p>
-         * <p>*   **Update**: Update the current instance.</p>
-         * <p>*   **Delete**: Delete the current instance.</p>
-         * <p>*   **Associate**: Reference the current instance.</p>
-         * <p>*   **UserUnmanaged**: Unmanage the instance.</p>
-         * <p>*   **CreateChild**: Create a child resource in the current instance.</p>
+         * <ul>
+         * <li><strong>Create</strong>: Create an instance.</li>
+         * <li><strong>Update</strong>: Update the current instance.</li>
+         * <li><strong>Delete</strong>: Delete the current instance.</li>
+         * <li><strong>Associate</strong>: Reference the current instance.</li>
+         * <li><strong>UserUnmanaged</strong>: Unmanage the instance.</li>
+         * <li><strong>CreateChild</strong>: Create a child resource in the current instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Update</p>
          */
         @NameInMap("Action")
         public String action;
 
         /**
          * <p>The type of the child resource. Valid values:</p>
-         * <br>
-         * <p>*   **Listener**: listener.</p>
-         * <p>*   **IpSet**: acceleration region.</p>
-         * <p>*   **EndpointGroup**: endpoint group.</p>
-         * <p>*   **ForwardingRule**: forwarding rule.</p>
-         * <p>*   **Endpoint**: endpoint.</p>
-         * <p>*   **EndpointGroupDestination**: protocol mapping of an endpoint group associated with a custom routing listener.</p>
-         * <p>*   **EndpointPolicy**: traffic policy of an endpoint associated with a custom routing listener.</p>
-         * <br>
-         * <p>>  This parameter takes effect only if **Action** is set to **CreateChild**.</p>
+         * <ul>
+         * <li><strong>Listener</strong>: listener.</li>
+         * <li><strong>IpSet</strong>: acceleration region.</li>
+         * <li><strong>EndpointGroup</strong>: endpoint group.</li>
+         * <li><strong>ForwardingRule</strong>: forwarding rule.</li>
+         * <li><strong>Endpoint</strong>: endpoint.</li>
+         * <li><strong>EndpointGroupDestination</strong>: protocol mapping of an endpoint group associated with a custom routing listener.</li>
+         * <li><strong>EndpointPolicy</strong>: traffic policy of an endpoint associated with a custom routing listener.</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is returned only if the value of <strong>Action</strong> is <strong>CreateChild</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Listener</p>
          */
         @NameInMap("ChildType")
         public String childType;
 
         /**
          * <p>Indicates whether the specified actions are managed. Valid values:</p>
-         * <br>
-         * <p>*   **true**: The specified actions are managed, and you cannot perform the specified actions on the managed instance.</p>
-         * <p>*   **false**: The specified actions are not managed, and you can perform the specified actions on the managed instance.</p>
+         * <ul>
+         * <li><strong>true</strong>: The specified actions are managed, and users cannot perform the specified actions on the managed instance.</li>
+         * <li><strong>false</strong>: The specified actions are not managed, and users can perform the specified actions on the managed instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("IsManaged")
         public Boolean isManaged;
@@ -187,37 +218,55 @@ public class ListCustomRoutingEndpointTrafficPoliciesResponseBody extends TeaMod
 
     public static class ListCustomRoutingEndpointTrafficPoliciesResponseBodyPolicies extends TeaModel {
         /**
-         * <p>The ID of the GA instance with which the endpoint is associated.</p>
+         * <p>The ID of the GA instance to which the endpoint belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ga-bp1odcab8tmno0hdq****</p>
          */
         @NameInMap("AcceleratorId")
         public String acceleratorId;
 
         /**
-         * <p>The IP address of the traffic destination.</p>
+         * <p>The IP addresses of the traffic policies.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0.XX.XX</p>
          */
         @NameInMap("Address")
         public String address;
 
         /**
          * <p>The ID of the endpoint group to which the endpoint belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lsr-bp1bpn0kn908w4nbw****</p>
          */
         @NameInMap("EndpointGroupId")
         public String endpointGroupId;
 
         /**
-         * <p>The ID of the endpoint to which the traffic destination belongs.</p>
+         * <p>The ID of the endpoint to which the traffic policy belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ep-bp14sz7ftcwwjgrdm****</p>
          */
         @NameInMap("EndpointId")
         public String endpointId;
 
         /**
-         * <p>The ID of the custom routing listener with which the endpoint is associated.</p>
+         * <p>The ID of the custom routing listener to which the endpoint belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lsr-bp1bpn0kn908w4nbw****</p>
          */
         @NameInMap("ListenerId")
         public String listenerId;
 
         /**
-         * <p>The traffic policy ID.</p>
+         * <p>The ID of the traffic policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ply-bp1dmlohjjz4kqaun****</p>
          */
         @NameInMap("PolicyId")
         public String policyId;
@@ -229,28 +278,38 @@ public class ListCustomRoutingEndpointTrafficPoliciesResponseBody extends TeaMod
         public java.util.List<ListCustomRoutingEndpointTrafficPoliciesResponseBodyPoliciesPortRanges> portRanges;
 
         /**
-         * <p>The ID of the service that manages the GA instance.</p>
-         * <br>
-         * <p>>  This parameter takes effect only if **ServiceManaged** is set to **True**.</p>
+         * <p>The ID of the service that manages the instance.</p>
+         * <blockquote>
+         * <p> This parameter is returned only if the value of <strong>ServiceManaged</strong> is <strong>true</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>ALB</p>
          */
         @NameInMap("ServiceId")
         public String serviceId;
 
         /**
-         * <p>Indicates whether the GA instance is managed. Valid values:</p>
-         * <br>
-         * <p>*   **true**: The GA instance is managed.</p>
-         * <p>*   **false**: The GA instance is not managed.</p>
+         * <p>Indicates whether the instance is managed. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The GA instance is managed.</li>
+         * <li><strong>false</strong>: The GA instance is not managed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("ServiceManaged")
         public Boolean serviceManaged;
 
         /**
-         * <p>The actions that you can perform on the managed instance.</p>
-         * <br>
-         * <p>>  This parameter takes effect only if **ServiceManaged** is set to **True**.</p>
-         * <br>
-         * <p>*   You can perform only specific actions on a managed instance.</p>
+         * <p>The actions that users can perform on the managed instance.</p>
+         * <blockquote>
+         * <ul>
+         * <li>This parameter is returned only if the value of <strong>ServiceManaged</strong> is <strong>true</strong>.</li>
+         * <li>Users can perform only specific actions on a managed instance.</li>
+         * </ul>
+         * </blockquote>
          */
         @NameInMap("ServiceManagedInfos")
         public java.util.List<ListCustomRoutingEndpointTrafficPoliciesResponseBodyPoliciesServiceManagedInfos> serviceManagedInfos;

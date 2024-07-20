@@ -6,41 +6,60 @@ import com.aliyun.tea.*;
 public class ListDomainsRequest extends TeaModel {
     /**
      * <p>The ID of the GA instance that you want to query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ga-bp1odcab8tmno0hdq****</p>
      */
     @NameInMap("AcceleratorId")
     public String acceleratorId;
 
     /**
      * <p>The accelerated domain name that you want to query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://www.example.com">www.example.com</a></p>
      */
     @NameInMap("Domain")
     public String domain;
 
     /**
-     * <p>The page number. Default value: **1**.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Maximum value: **50**. Default value: **10**.</p>
+     * <p>The number of entries per page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the GA instance. Set the value to **cn-hangzhou**.</p>
+     * <p>The region ID of the GA instance. Set the value to <strong>cn-hangzhou</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ICP filing status of the accelerated domain name that you want to query. Valid values:</p>
-     * <br>
-     * <p>*   **illegal:** The domain name is illegal.</p>
-     * <p>*   **inactive:** The domain name has not completed ICP filing.</p>
-     * <p>*   **active:** The domain name has a valid ICP filing.</p>
-     * <p>*   **unknown:** The ICP filing status is unknown.</p>
+     * <ul>
+     * <li><strong>illegal:</strong> The domain name is illegal.</li>
+     * <li><strong>inactive:</strong> The domain name has not completed ICP filing.</li>
+     * <li><strong>active:</strong> The domain name has a valid ICP filing.</li>
+     * <li><strong>unknown:</strong> The ICP filing status is unknown.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>active</p>
      */
     @NameInMap("State")
     public String state;

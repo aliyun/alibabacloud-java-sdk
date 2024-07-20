@@ -12,6 +12,9 @@ public class DeleteForwardingRulesResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CFC67ED9-4AB1-431F-B6E3-A752B7B8CCD4</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,6 +43,9 @@ public class DeleteForwardingRulesResponseBody extends TeaModel {
     public static class DeleteForwardingRulesResponseBodyForwardingRules extends TeaModel {
         /**
          * <p>The forwarding rule ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>frule-bp19a3t3yzr21q3****</p>
          */
         @NameInMap("ForwardingRuleId")
         public String forwardingRuleId;

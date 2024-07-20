@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class ListSystemSecurityPoliciesResponseBody extends TeaModel {
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A9B4E54C-9CCD-4002-91A9-D38C6C209192</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -30,6 +39,9 @@ public class ListSystemSecurityPoliciesResponseBody extends TeaModel {
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -81,39 +93,68 @@ public class ListSystemSecurityPoliciesResponseBody extends TeaModel {
 
     public static class ListSystemSecurityPoliciesResponseBodySecurityPolicies extends TeaModel {
         /**
-         * <p>The supported cipher suites. The value of this parameter is determined by the value of **TLSVersions**.</p>
-         * <br>
-         * <p>The specified cipher suites must be supported by at least one value of **TLSVersions**. For example, if you set TLSVersions to **TLSv1.3**, you must specify cipher suites that are supported by **TLSv1.3**.</p>
-         * <br>
-         * <p>*   Valid values when TLSVersions is set to **TLSv1.0** or **TLSv1.1**:</p>
-         * <br>
-         * <p>    *   ECDHE-ECDSA-AES128-SHA</p>
-         * <p>    *   ECDHE-ECDSA-AES256-SHA</p>
-         * <p>    *   ECDHE-RSA-AES128-SHA</p>
-         * <p>    *   ECDHE-RSA-AES256-SHA</p>
-         * <p>    *   AES128-SHA</p>
-         * <p>    *   AES256-SHA</p>
-         * <p>    *   DES-CBC3-SHA</p>
-         * <br>
-         * <p>*   Valid values when TLSVersions is set to **TLSv1.2**:</p>
-         * <br>
-         * <p>ECDHE-ECDSA-AES128-SHA ECDHE-ECDSA-AES256-SHA ECDHE-RSA-AES128-SHA ECDHE-RSA-AES256-SHA AES128-SHA AES256-SHA DES-CBC3-SHA ECDHE-ECDSA-AES128-GCM-SHA256 ECDHE-ECDSA-AES256-GCM-SHA384 ECDHE-ECDSA-AES128-SHA256 ECDHE-ECDSA-AES256-SHA384 ECDHE-RSA-AES128-GCM-SHA256 ECDHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES128-SHA256 ECDHE-RSA-AES256-SHA384 AES128-GCM-SHA256 AES256-GCM-SHA384 AES128-SHA256 AES256-SHA256</p>
-         * <br>
-         * <p>*   Valid values when TLSVersions is set to **TLSv1.3**:</p>
-         * <br>
-         * <p>TLS_AES\_128\_GCM_SHA256 TLS_AES\_256\_GCM_SHA384 TLS_CHACHA20\_POLY1305\_SHA256 TLS_AES\_128\_CCM_SHA256 TLS_AES\_128\_CCM\_8\_SHA256</p>
+         * <p>The supported cipher suites. The value of this parameter is determined by the value of <strong>TLSVersions</strong>.</p>
+         * <p>The specified cipher suites must be supported by at least one value of <strong>TLSVersions</strong>. For example, if you set TLSVersions to <strong>TLSv1.3</strong>, you must specify cipher suites that are supported by <strong>TLSv1.3</strong>.</p>
+         * <ul>
+         * <li><p>Valid values when TLSVersions is set to <strong>TLSv1.0</strong> or <strong>TLSv1.1</strong>:</p>
+         * <ul>
+         * <li>ECDHE-ECDSA-AES128-SHA</li>
+         * <li>ECDHE-ECDSA-AES256-SHA</li>
+         * <li>ECDHE-RSA-AES128-SHA</li>
+         * <li>ECDHE-RSA-AES256-SHA</li>
+         * <li>AES128-SHA</li>
+         * <li>AES256-SHA</li>
+         * <li>DES-CBC3-SHA</li>
+         * </ul>
+         * </li>
+         * <li><p>Valid values when TLSVersions is set to <strong>TLSv1.2</strong>:</p>
+         * <ul>
+         * <li>ECDHE-ECDSA-AES128-SHA</li>
+         * <li>ECDHE-ECDSA-AES256-SHA</li>
+         * <li>ECDHE-RSA-AES128-SHA</li>
+         * <li>ECDHE-RSA-AES256-SHA</li>
+         * <li>AES128-SHA</li>
+         * <li>AES256-SHA</li>
+         * <li>DES-CBC3-SHA</li>
+         * <li>ECDHE-ECDSA-AES128-GCM-SHA256</li>
+         * <li>ECDHE-ECDSA-AES256-GCM-SHA384</li>
+         * <li>ECDHE-ECDSA-AES128-SHA256</li>
+         * <li>ECDHE-ECDSA-AES256-SHA384</li>
+         * <li>ECDHE-RSA-AES128-GCM-SHA256</li>
+         * <li>ECDHE-RSA-AES256-GCM-SHA384</li>
+         * <li>ECDHE-RSA-AES128-SHA256</li>
+         * <li>ECDHE-RSA-AES256-SHA384</li>
+         * <li>AES128-GCM-SHA256</li>
+         * <li>AES256-GCM-SHA384</li>
+         * <li>AES128-SHA256</li>
+         * <li>AES256-SHA256</li>
+         * </ul>
+         * </li>
+         * <li><p>Valid values when TLSVersions is set to <strong>TLSv1.3</strong>:</p>
+         * <ul>
+         * <li>TLS_AES_128_GCM_SHA256</li>
+         * <li>TLS_AES_256_GCM_SHA384</li>
+         * <li>TLS_CHACHA20_POLY1305_SHA256</li>
+         * <li>TLS_AES_128_CCM_SHA256</li>
+         * <li>TLS_AES_128_CCM_8_SHA256</li>
+         * </ul>
+         * </li>
+         * </ul>
          */
         @NameInMap("Ciphers")
         public java.util.List<String> ciphers;
 
         /**
-         * <p>The TLS security policy ID.</p>
+         * <p>The ID of the TLS security policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tls_cipher_policy_1_1</p>
          */
         @NameInMap("SecurityPolicyId")
         public String securityPolicyId;
 
         /**
-         * <p>The supported TLS protocol versions. Valid values: **TLSv1.0**, **TLSv1.1**, **TLSv1.2**, and **TLSv1.3**.</p>
+         * <p>The supported TLS versions. Valid values: <strong>TLSv1.0</strong>, <strong>TLSv1.1</strong>, <strong>TLSv1.2</strong>, and <strong>TLSv1.3</strong>.</p>
          */
         @NameInMap("TlsVersions")
         public java.util.List<String> tlsVersions;

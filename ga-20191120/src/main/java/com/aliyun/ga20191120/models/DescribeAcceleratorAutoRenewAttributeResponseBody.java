@@ -6,37 +6,54 @@ import com.aliyun.tea.*;
 public class DescribeAcceleratorAutoRenewAttributeResponseBody extends TeaModel {
     /**
      * <p>The ID of the GA instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ga-bp17frjjh0udz4qz****</p>
      */
     @NameInMap("AcceleratorId")
     public String acceleratorId;
 
     /**
      * <p>Indicates whether auto-renewal is enabled. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
 
     /**
      * <p>The auto-renewal duration. Unit: month.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("AutoRenewDuration")
     public Integer autoRenewDuration;
 
     /**
      * <p>Indicates how the GA instance is renewed. Valid values:</p>
-     * <br>
-     * <p>*   **AutoRenewal**: The GA instance is automatically renewed.</p>
-     * <p>*   **Normal**: You must manually renew the GA instance.</p>
-     * <p>*   **NotRenewal**: The GA instance is not renewed after it expires. The system sends only a non-renewal reminder three days before the expiration date. The system no longer sends notifications to remind you to renew the GA instance.</p>
+     * <ul>
+     * <li><strong>AutoRenewal</strong>: The GA instance is automatically renewed.</li>
+     * <li><strong>Normal</strong>: You must manually renew the GA instance.</li>
+     * <li><strong>NotRenewal</strong>: The GA instance is not renewed after it expires. The system sends only a non-renewal reminder three days before the expiration date. The system no longer sends notifications to remind you to renew the GA instance.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Normal</p>
      */
     @NameInMap("RenewalStatus")
     public String renewalStatus;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F591955F-5CB5-4CCE-A75D-17CF2085CE22</p>
      */
     @NameInMap("RequestId")
     public String requestId;

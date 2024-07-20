@@ -12,24 +12,36 @@ public class ListApplicationMonitorResponseBody extends TeaModel {
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,78 +94,111 @@ public class ListApplicationMonitorResponseBody extends TeaModel {
     public static class ListApplicationMonitorResponseBodyApplicationMonitors extends TeaModel {
         /**
          * <p>The ID of the GA instance on which the origin probing task runs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ga-bp1odcab8tmno0hdq****</p>
          */
         @NameInMap("AcceleratorId")
         public String acceleratorId;
 
         /**
          * <p>The URL or IP address that was probed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://www.aliyun.com">https://www.aliyun.com</a></p>
          */
         @NameInMap("Address")
         public String address;
 
         /**
          * <p>Indicates whether the automatic diagnostics feature is enabled. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("DetectEnable")
         public Boolean detectEnable;
 
         /**
          * <p>The threshold that is used to trigger the automatic diagnostics feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>１</p>
          */
         @NameInMap("DetectThreshold")
         public Integer detectThreshold;
 
         /**
          * <p>The number of times that are required to reach the threshold before the automatic diagnostics feature can be triggered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>１</p>
          */
         @NameInMap("DetectTimes")
         public Integer detectTimes;
 
         /**
          * <p>The ID of the listener on which the origin probing task runs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lsr-bp1bpn0kn908w4nbw****</p>
          */
         @NameInMap("ListenerId")
         public String listenerId;
 
         /**
          * <p>The extended options of the listener protocol that is used by the origin probing task. The options vary based on the listener protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{ &quot;http_method&quot;: &quot;get&quot;,&quot;header&quot;: &quot;key:asd&quot;,&quot;acceptable_response_code&quot;: &quot;500&quot;,&quot;cert_verify&quot;: true }</p>
          */
         @NameInMap("OptionsJson")
         public String optionsJson;
 
         /**
          * <p>The silence period of the automatic diagnostics feature. This parameter indicates the interval at which the automatic diagnostics feature is triggered. If the availability rate does not return to normal after GA triggers an automatic diagnostic task, GA must wait until the silence period ends before GA can trigger another automatic diagnostic task.</p>
-         * <br>
-         * <p>If the number of consecutive times that the availability rate drops below the threshold of automatic diagnostics reaches the value of **DetectTimes** , the automatic diagnostics feature is triggered. The automatic diagnostics feature is not triggered again within the silence period even if the availability rate stays below the threshold. If the availability rate does not return to normal after the silence period ends, the automatic diagnostics feature is triggered again.</p>
-         * <br>
+         * <p>If the number of consecutive times that the availability rate drops below the threshold of automatic diagnostics reaches the value of <strong>DetectTimes</strong> , the automatic diagnostics feature is triggered. The automatic diagnostics feature is not triggered again within the silence period even if the availability rate stays below the threshold. If the availability rate does not return to normal after the silence period ends, the automatic diagnostics feature is triggered again.</p>
          * <p>Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         @NameInMap("SilenceTime")
         public Integer silenceTime;
 
         /**
          * <p>The status of the origin probing task. Valid values:</p>
-         * <br>
-         * <p>*   **active:** The origin probing task is running.</p>
-         * <p>*   **inactive:** The origin probing task is stopped.</p>
-         * <p>*   **init:** The origin probing task is being initialized.</p>
-         * <p>*   **deleting:** The origin probing task is being deleted.</p>
+         * <ul>
+         * <li><strong>active:</strong> The origin probing task is running.</li>
+         * <li><strong>inactive:</strong> The origin probing task is stopped.</li>
+         * <li><strong>init:</strong> The origin probing task is being initialized.</li>
+         * <li><strong>deleting:</strong> The origin probing task is being deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>active</p>
          */
         @NameInMap("State")
         public String state;
 
         /**
          * <p>The origin probing task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sm-bp1fpdjfju9k8yr1y****</p>
          */
         @NameInMap("TaskId")
         public String taskId;
 
         /**
          * <p>The origin probing task name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>task1</p>
          */
         @NameInMap("TaskName")
         public String taskName;

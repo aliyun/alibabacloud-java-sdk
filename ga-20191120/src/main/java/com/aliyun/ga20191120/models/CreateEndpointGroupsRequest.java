@@ -6,42 +6,65 @@ import com.aliyun.tea.*;
 public class CreateEndpointGroupsRequest extends TeaModel {
     /**
      * <p>The ID of the GA instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ga-bp1odcab8tmno0hdq****</p>
      */
     @NameInMap("AcceleratorId")
     public String acceleratorId;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
-     * <br>
-     * <p>>  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
+     * <blockquote>
+     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1F4B6A4A-C89E-489E-BAF1-52777EE148EF</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
-     * <br>
-     * <p>*   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
-     * <p>*   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
+     * <ul>
+     * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("EndpointGroupConfigurations")
     public java.util.List<CreateEndpointGroupsRequestEndpointGroupConfigurations> endpointGroupConfigurations;
 
     /**
      * <p>The ID of the listener.</p>
-     * <br>
-     * <p>>  If the listener protocol is **HTTP** or **HTTPS**, you can call the **CreateEndpointGroups** operation to create only one endpoint group.</p>
+     * <blockquote>
+     * <p> If the listener protocol is <strong>HTTP</strong> or <strong>HTTPS</strong>, you can call the <strong>CreateEndpointGroups</strong> operation to create only one endpoint group.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lsr-bp1bpn0kn908w4nbw****</p>
      */
     @NameInMap("ListenerId")
     public String listenerId;
 
     /**
-     * <p>The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.</p>
+     * <p>The ID of the region where the GA instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -268,11 +291,17 @@ public class CreateEndpointGroupsRequest extends TeaModel {
         @NameInMap("EndpointGroupName")
         public String endpointGroupName;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("EndpointGroupRegion")
         public String endpointGroupRegion;
 
         @NameInMap("EndpointGroupType")
         public String endpointGroupType;
+
+        @NameInMap("EndpointProtocolVersion")
+        public String endpointProtocolVersion;
 
         @NameInMap("EndpointRequestProtocol")
         public String endpointRequestProtocol;
@@ -366,6 +395,14 @@ public class CreateEndpointGroupsRequest extends TeaModel {
         }
         public String getEndpointGroupType() {
             return this.endpointGroupType;
+        }
+
+        public CreateEndpointGroupsRequestEndpointGroupConfigurations setEndpointProtocolVersion(String endpointProtocolVersion) {
+            this.endpointProtocolVersion = endpointProtocolVersion;
+            return this;
+        }
+        public String getEndpointProtocolVersion() {
+            return this.endpointProtocolVersion;
         }
 
         public CreateEndpointGroupsRequestEndpointGroupConfigurations setEndpointRequestProtocol(String endpointRequestProtocol) {

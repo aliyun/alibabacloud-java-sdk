@@ -18,148 +18,198 @@ public class UpdateListenerRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to enable client affinity for the listener.</p>
-     * <br>
-     * <p>*   If this parameter is left empty, client affinity is disabled. After client affinity is disabled, requests from a specific client IP address may be forwarded to different endpoints.</p>
-     * <p>*   To enable client affinity, set this parameter to **SOURCE_IP**. In this case, when a client accesses stateful applications, requests from the same client are always forwarded to the same endpoint regardless of the source port or protocol.</p>
+     * <ul>
+     * <li>If this parameter is left empty, client affinity is disabled. After client affinity is disabled, requests from a specific client IP address may be forwarded to different endpoints.</li>
+     * <li>To enable client affinity, set this parameter to <strong>SOURCE_IP</strong>. In this case, when a client accesses stateful applications, requests from the same client are always forwarded to the same endpoint regardless of the source port or protocol.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>SOURCE_IP</p>
      */
     @NameInMap("ClientAffinity")
     public String clientAffinity;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
-     * <p>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
-     * <br>
-     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <blockquote>
+     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The description of the listener. The description can be at most 200 characters in length.</p>
+     * <p>The description of the listener.</p>
+     * <p>The description can be up to 200 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Listener</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The maximum version of the HTTP protocol. Valid values:</p>
-     * <br>
-     * <p>*   **http3**</p>
-     * <p>*   **http2**</p>
-     * <p>*   **http1.1**</p>
-     * <br>
-     * <p>>  Only HTTPS listeners support this parameter.</p>
+     * <ul>
+     * <li><strong>http3</strong></li>
+     * <li><strong>http2</strong></li>
+     * <li><strong>http1.1</strong></li>
+     * </ul>
+     * <blockquote>
+     * <p> Only HTTPS listeners support this parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>http2</p>
      */
     @NameInMap("HttpVersion")
     public String httpVersion;
 
     /**
      * <p>The timeout period for idle connections. Unit: seconds.</p>
-     * <br>
-     * <p>*   TCP: 10-900. Default value: 900. Unit: seconds.</p>
-     * <p>*   UDP: 10-20. Default value: 20. Unit: seconds.</p>
-     * <p>*   HTTP/HTTPS: 1-60. Default value: 15. Unit: seconds.</p>
+     * <ul>
+     * <li>TCP: 10-900. Default value: 900. Unit: seconds.</li>
+     * <li>UDP: 10-20. Default value: 20. Unit: seconds.</li>
+     * <li>HTTP/HTTPS: 1-60. Default value: 15. Unit: seconds.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>900</p>
      */
     @NameInMap("IdleTimeout")
     public Integer idleTimeout;
 
     /**
      * <p>The ID of the listener.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lsr-bp1bpn0kn908w4nbw****</p>
      */
     @NameInMap("ListenerId")
     public String listenerId;
 
     /**
      * <p>The name of the listener.</p>
-     * <br>
-     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.</p>
+     * <p>The name must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Listener</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The listener ports that are used to receive requests and forward the requests to endpoints.</p>
-     * <br>
-     * <p>Valid values: **1** to **65499**.</p>
-     * <br>
-     * <p>The maximum number of ports that can be configured varies based on the routing type and protocol of the listener. For more information, see [Listener overview](~~153216~~).</p>
+     * <p>Valid values: <strong>1</strong> to <strong>65499</strong>.</p>
+     * <p>The maximum number of ports that can be configured varies based on the routing type and protocol of the listener. For more information, see <a href="https://help.aliyun.com/document_detail/153216.html">Listener overview</a>.</p>
      */
     @NameInMap("PortRanges")
     public java.util.List<UpdateListenerRequestPortRanges> portRanges;
 
     /**
      * <p>The network transmission protocol that is used by the listener. Valid values:</p>
-     * <br>
-     * <p>*   **tcp**: TCP</p>
-     * <p>*   **udp**: UDP</p>
-     * <p>*   **http**: HTTP</p>
-     * <p>*   **https**: HTTPS</p>
+     * <ul>
+     * <li><strong>tcp</strong>: TCP</li>
+     * <li><strong>udp</strong>: UDP</li>
+     * <li><strong>http</strong>: HTTP</li>
+     * <li><strong>https</strong>: HTTPS</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>tcp</p>
      */
     @NameInMap("Protocol")
     public String protocol;
 
     /**
      * <p>Specifies whether to reserve client IP addresses. Default value: false. Valid values:</p>
-     * <br>
-     * <p>*   **true**: enables client IP preservation. After client IP addresses are reserved, you can view client IP addresses on the endpoints.</p>
-     * <p>*   **false** (default): disables client IP preservation.</p>
-     * <br>
-     * <p>> This parameter will be deprecated in the API operations that are used to configure listeners. We recommend that you set this parameter when you call API operations to configure endpoint groups. For more information about the **ProxyProtocol** parameter, see [CreateEndpointGroup](~~153259~~) and [UpdateEndpointGroup](~~153262~~).</p>
+     * <ul>
+     * <li><strong>true</strong>: enables client IP preservation. After client IP addresses are reserved, you can view client IP addresses on the endpoints.</li>
+     * <li><strong>false</strong> (default): disables client IP preservation.</li>
+     * </ul>
+     * <blockquote>
+     * <p>This parameter will be deprecated in the API operations that are used to configure listeners. We recommend that you set this parameter when you call API operations to configure endpoint groups. For more information about the <strong>ProxyProtocol</strong> parameter, see <a href="https://help.aliyun.com/document_detail/153259.html">CreateEndpointGroup</a> and <a href="https://help.aliyun.com/document_detail/153262.html">UpdateEndpointGroup</a>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("ProxyProtocol")
     public String proxyProtocol;
 
     /**
-     * <p>The region ID of the GA instance. Set the value to **cn-hangzhou**.</p>
+     * <p>The region ID of the GA instance. Set the value to <strong>cn-hangzhou</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The timeout period for HTTP or HTTPS requests.</p>
-     * <br>
      * <p>Valid values: 1 to 180. Default value: 60. Unit: seconds.</p>
-     * <br>
-     * <p>>  This parameter takes effect only for HTTP or HTTPS listeners. If the backend server does not respond within the timeout period, GA returns an HTTP 504 error code to the client.</p>
+     * <blockquote>
+     * <p> This parameter takes effect only for HTTP or HTTPS listeners. If the backend server does not respond within the timeout period, GA returns an HTTP 504 error code to the client.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>60</p>
      */
     @NameInMap("RequestTimeout")
     public Integer requestTimeout;
 
     /**
      * <p>The ID of the security policy. Valid values:</p>
-     * <br>
-     * <p>*   **tls_cipher_policy\_1\_0**</p>
-     * <br>
-     * <p>    *   Supported Transport Layer Security (TLS) versions: TLS 1.0, TLS 1.1, and TLS 1.2</p>
-     * <p>    *   Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA</p>
-     * <br>
-     * <p>*   **tls_cipher_policy\_1\_1**</p>
-     * <br>
-     * <p>    *   Supported TLS versions: TLS 1.1 and TLS 1.2</p>
-     * <p>    *   Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA</p>
-     * <br>
-     * <p>*   **tls_cipher_policy\_1\_2**</p>
-     * <br>
-     * <p>    *   Supported TLS version: TLS 1.2</p>
-     * <p>    *   Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA</p>
-     * <br>
-     * <p>*   **tls_cipher_policy\_1\_2\_strict**</p>
-     * <br>
-     * <p>    *   Supported TLS version: TLS 1.2</p>
-     * <p>    *   Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, ECDHE-RSA-AES128-SHA, and ECDHE-RSA-AES256-SHA</p>
-     * <br>
-     * <p>*   **tls_cipher_policy\_1\_2\_strict_with\_1\_3**</p>
-     * <br>
-     * <p>    *   Supported TLS versions: TLS 1.2 and TLS 1.3</p>
-     * <p>    *   Supported cipher suites: TLS_AES\_128\_GCM_SHA256, TLS_AES\_256\_GCM_SHA384, TLS_CHACHA20\_POLY1305\_SHA256, TLS_AES\_128\_CCM_SHA256, TLS_AES\_128\_CCM\_8\_SHA256, ECDHE-ECDSA-AES128-GCM-SHA256, ECDHE-ECDSA-AES256-GCM-SHA384, ECDHE-ECDSA-AES128-SHA256, ECDHE-ECDSA-AES256-SHA384, ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, ECDHE-ECDSA-AES128-SHA, ECDHE-ECDSA-AES256-SHA, ECDHE-RSA-AES128-SHA, and ECDHE-RSA-AES256-SHA</p>
-     * <br>
-     * <p>> This parameter is available only when you create an HTTPS listener.</p>
+     * <ul>
+     * <li><p><strong>tls_cipher_policy_1_0</strong></p>
+     * <ul>
+     * <li>Supported Transport Layer Security (TLS) versions: TLS 1.0, TLS 1.1, and TLS 1.2</li>
+     * <li>Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA</li>
+     * </ul>
+     * </li>
+     * <li><p><strong>tls_cipher_policy_1_1</strong></p>
+     * <ul>
+     * <li>Supported TLS versions: TLS 1.1 and TLS 1.2</li>
+     * <li>Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA</li>
+     * </ul>
+     * </li>
+     * <li><p><strong>tls_cipher_policy_1_2</strong></p>
+     * <ul>
+     * <li>Supported TLS version: TLS 1.2</li>
+     * <li>Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA</li>
+     * </ul>
+     * </li>
+     * <li><p><strong>tls_cipher_policy_1_2_strict</strong></p>
+     * <ul>
+     * <li>Supported TLS version: TLS 1.2</li>
+     * <li>Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, ECDHE-RSA-AES128-SHA, and ECDHE-RSA-AES256-SHA</li>
+     * </ul>
+     * </li>
+     * <li><p><strong>tls_cipher_policy_1_2_strict_with_1_3</strong></p>
+     * <ul>
+     * <li>Supported TLS versions: TLS 1.2 and TLS 1.3</li>
+     * <li>Supported cipher suites: TLS_AES_128_GCM_SHA256, TLS_AES_256_GCM_SHA384, TLS_CHACHA20_POLY1305_SHA256, TLS_AES_128_CCM_SHA256, TLS_AES_128_CCM_8_SHA256, ECDHE-ECDSA-AES128-GCM-SHA256, ECDHE-ECDSA-AES256-GCM-SHA384, ECDHE-ECDSA-AES128-SHA256, ECDHE-ECDSA-AES256-SHA384, ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, ECDHE-ECDSA-AES128-SHA, ECDHE-ECDSA-AES256-SHA, ECDHE-RSA-AES128-SHA, and ECDHE-RSA-AES256-SHA</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <p>This parameter is available only when you create an HTTPS listener.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>tls_cipher_policy_1_0</p>
      */
     @NameInMap("SecurityPolicyId")
     public String securityPolicyId;
 
     /**
-     * <p>The `XForward` headers.</p>
+     * <p>The <code>XForward</code> headers.</p>
      */
     @NameInMap("XForwardedForConfig")
     public UpdateListenerRequestXForwardedForConfig XForwardedForConfig;
@@ -300,16 +350,24 @@ public class UpdateListenerRequest extends TeaModel {
     public static class UpdateListenerRequestBackendPorts extends TeaModel {
         /**
          * <p>The first port in the range of ports that are used by backend servers to receive requests.</p>
-         * <br>
-         * <p>> This parameter is required only when you configure an HTTPS or HTTP listener and the listener port is different from the service port of the backend servers. In this case, the first port that is used by the backend servers to receive requests must be the same as the last port.</p>
+         * <blockquote>
+         * <p>This parameter is required only when you configure an HTTPS or HTTP listener and the listener port is different from the service port of the backend servers. In this case, the first port that is used by the backend servers to receive requests must be the same as the last port.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("FromPort")
         public Integer fromPort;
 
         /**
          * <p>The last port in the range of ports that are used by backend servers to receive requests.</p>
-         * <br>
-         * <p>> This parameter is required only when you configure an HTTPS or HTTP listener and the listener port is different from the service port of the backend servers. In this case, the first port that is used by the backend servers to receive requests must be the same as the last port.</p>
+         * <blockquote>
+         * <p>This parameter is required only when you configure an HTTPS or HTTP listener and the listener port is different from the service port of the backend servers. In this case, the first port that is used by the backend servers to receive requests must be the same as the last port.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("ToPort")
         public Integer toPort;
@@ -340,8 +398,12 @@ public class UpdateListenerRequest extends TeaModel {
     public static class UpdateListenerRequestCertificates extends TeaModel {
         /**
          * <p>The ID of the SSL certificate.</p>
-         * <br>
-         * <p>> This parameter is required only when you configure an HTTPS listener.</p>
+         * <blockquote>
+         * <p>This parameter is required only when you configure an HTTPS listener.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>449****-cn-hangzhou</p>
          */
         @NameInMap("Id")
         public String id;
@@ -364,24 +426,30 @@ public class UpdateListenerRequest extends TeaModel {
     public static class UpdateListenerRequestPortRanges extends TeaModel {
         /**
          * <p>The first port of the listener port range that is used to receive and forward requests to endpoints.</p>
-         * <br>
-         * <p>Valid values: **1** to **65499**. The **FromPort** value must be smaller than or equal to the **ToPort** value.</p>
-         * <br>
-         * <p>The maximum number of ports that can be configured varies based on the routing type and protocol of the listener. For more information, see [Listener overview](~~153216~~).</p>
-         * <br>
-         * <p>> You can configure only one listener port for an HTTP or HTTPS listener. In this case, the first port is the same as the last port.</p>
+         * <p>Valid values: <strong>1</strong> to <strong>65499</strong>. The <strong>FromPort</strong> value must be smaller than or equal to the <strong>ToPort</strong> value.</p>
+         * <p>The maximum number of ports that can be configured varies based on the routing type and protocol of the listener. For more information, see <a href="https://help.aliyun.com/document_detail/153216.html">Listener overview</a>.</p>
+         * <blockquote>
+         * <p>You can configure only one listener port for an HTTP or HTTPS listener. In this case, the first port is the same as the last port.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("FromPort")
         public Integer fromPort;
 
         /**
          * <p>The last port of the listener port range that is used to receive and forward requests to endpoints.</p>
-         * <br>
-         * <p>Valid values: **1** to **65499**. The **FromPort** value must be smaller than or equal to the **ToPort** value.</p>
-         * <br>
-         * <p>The maximum number of ports that can be configured varies based on the routing type and protocol of the listener. For more information, see [Listener overview](~~153216~~).</p>
-         * <br>
-         * <p>> You can configure only one listener port for an HTTP or HTTPS listener. In this case, the first port is the same as the last port.</p>
+         * <p>Valid values: <strong>1</strong> to <strong>65499</strong>. The <strong>FromPort</strong> value must be smaller than or equal to the <strong>ToPort</strong> value.</p>
+         * <p>The maximum number of ports that can be configured varies based on the routing type and protocol of the listener. For more information, see <a href="https://help.aliyun.com/document_detail/153216.html">Listener overview</a>.</p>
+         * <blockquote>
+         * <p>You can configure only one listener port for an HTTP or HTTPS listener. In this case, the first port is the same as the last port.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21</p>
          */
         @NameInMap("ToPort")
         public Integer toPort;
@@ -411,56 +479,81 @@ public class UpdateListenerRequest extends TeaModel {
 
     public static class UpdateListenerRequestXForwardedForConfig extends TeaModel {
         /**
-         * <p>Specifies whether to use the `GA-AP` header to retrieve information about acceleration regions. Valid values:</p>
-         * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false** (default): no</p>
-         * <br>
-         * <p>> This parameter is available only when you create an HTTPS or HTTP listener.</p>
+         * <p>Specifies whether to use the <code>GA-AP</code> header to retrieve information about acceleration regions. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong> (default): no</li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is available only when you create an HTTPS or HTTP listener.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("XForwardedForGaApEnabled")
         public Boolean XForwardedForGaApEnabled;
 
         /**
-         * <p>Specifies whether to use the `GA-ID` header to retrieve the ID of the GA instance. Valid values:</p>
-         * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false** (default): no</p>
-         * <br>
-         * <p>> This parameter is available only when you create an HTTPS or HTTP listener.</p>
+         * <p>Specifies whether to use the <code>GA-ID</code> header to retrieve the ID of the GA instance. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong> (default): no</li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is available only when you create an HTTPS or HTTP listener.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("XForwardedForGaIdEnabled")
         public Boolean XForwardedForGaIdEnabled;
 
         /**
-         * <p>Specifies whether to use the `GA-X-Forward-Port` header to retrieve the listener ports of the GA instance. Valid values:</p>
-         * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false** (default): no</p>
-         * <br>
-         * <p>> This parameter is available only when you create an HTTPS or HTTP listener.</p>
+         * <p>Specifies whether to use the <code>GA-X-Forward-Port</code> header to retrieve the listener ports of the GA instance. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong> (default): no</li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is available only when you create an HTTPS or HTTP listener.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("XForwardedForPortEnabled")
         public Boolean XForwardedForPortEnabled;
 
         /**
-         * <p>Specifies whether to use the `GA-X-Forward-Proto` header to retrieve the listener protocol of the GA instance. Valid values:</p>
-         * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false** (default): no</p>
-         * <br>
-         * <p>> This parameter is available only when you create an HTTPS or HTTP listener.</p>
+         * <p>Specifies whether to use the <code>GA-X-Forward-Proto</code> header to retrieve the listener protocol of the GA instance. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong> (default): no</li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is available only when you create an HTTPS or HTTP listener.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("XForwardedForProtoEnabled")
         public Boolean XForwardedForProtoEnabled;
 
         /**
-         * <p>Specifies whether to use the `X-Real-IP` header to retrieve client IP addresses. Valid values:</p>
-         * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false** (default): no</p>
-         * <br>
-         * <p>> This parameter is available only when you create an HTTPS or HTTP listener.</p>
+         * <p>Specifies whether to use the <code>X-Real-IP</code> header to retrieve client IP addresses. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong> (default): no</li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is available only when you create an HTTPS or HTTP listener.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("XRealIpEnabled")
         public Boolean XRealIpEnabled;

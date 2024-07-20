@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DeleteBasicAccelerateIpResponseBody extends TeaModel {
     /**
      * <p>The ID of the accelerated IP address that is deleted.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gaip-bp1****</p>
      */
     @NameInMap("AccelerateIpId")
     public String accelerateIpId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
      */
     @NameInMap("RequestId")
     public String requestId;

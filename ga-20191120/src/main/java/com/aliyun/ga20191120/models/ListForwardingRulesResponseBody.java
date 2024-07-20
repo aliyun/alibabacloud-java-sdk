@@ -12,27 +12,40 @@ public class ListForwardingRulesResponseBody extends TeaModel {
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The token that is used for the next query. Valid values:</p>
-     * <br>
-     * <p>*   If **NextToken** is not returned, it indicates that no additional results exist.</p>
-     * <p>*   If **NextToken** is returned, the value indicates the token that is used for the next query.</p>
+     * <ul>
+     * <li>If <strong>NextToken</strong> is not returned, it indicates that no additional results exist.</li>
+     * <li>If <strong>NextToken</strong> is returned, the value indicates the token that is used for the next query.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CFC67ED9-4AB1-431F-B6E3-A752B7B8CCD4</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -85,8 +98,12 @@ public class ListForwardingRulesResponseBody extends TeaModel {
     public static class ListForwardingRulesResponseBodyForwardingRulesRuleActionsForwardGroupConfigServerGroupTuples extends TeaModel {
         /**
          * <p>The endpoint group ID.</p>
-         * <br>
-         * <p>>  GA instances created after July 12, 2022 support all forwarding condition types and action types. We recommend that you query forwarding conditions and actions by calling the **RuleActionType** and **RuleActionValue** operations.</p>
+         * <blockquote>
+         * <p> GA instances created after July 12, 2022 support all forwarding condition types and action types. We recommend that you query forwarding conditions and actions by calling the <strong>RuleActionType</strong> and <strong>RuleActionValue</strong> operations.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>epg-bp1enpdcrqhl78g6r****</p>
          */
         @NameInMap("EndpointGroupId")
         public String endpointGroupId;
@@ -109,8 +126,9 @@ public class ListForwardingRulesResponseBody extends TeaModel {
     public static class ListForwardingRulesResponseBodyForwardingRulesRuleActionsForwardGroupConfig extends TeaModel {
         /**
          * <p>The information about the endpoint groups.</p>
-         * <br>
-         * <p>>  GA instances created after July 12, 2022 support all forwarding condition types and action types. We recommend that you query forwarding conditions and actions by calling the **RuleActionType** and **RuleActionValue** operations.</p>
+         * <blockquote>
+         * <p> GA instances created after July 12, 2022 support all forwarding condition types and action types. We recommend that you query forwarding conditions and actions by calling the <strong>RuleActionType</strong> and <strong>RuleActionValue</strong> operations.</p>
+         * </blockquote>
          */
         @NameInMap("ServerGroupTuples")
         public java.util.List<ListForwardingRulesResponseBodyForwardingRulesRuleActionsForwardGroupConfigServerGroupTuples> serverGroupTuples;
@@ -133,71 +151,89 @@ public class ListForwardingRulesResponseBody extends TeaModel {
     public static class ListForwardingRulesResponseBodyForwardingRulesRuleActions extends TeaModel {
         /**
          * <p>The forwarding action configuration.</p>
-         * <br>
-         * <p>>  GA instances created after July 12, 2022 support all forwarding condition types and action types. We recommend that you query forwarding conditions and actions by calling the **RuleActionType** and **RuleActionValue** operations.</p>
+         * <blockquote>
+         * <p> GA instances created after July 12, 2022 support all forwarding condition types and action types. We recommend that you query forwarding conditions and actions by calling the <strong>RuleActionType</strong> and <strong>RuleActionValue</strong> operations.</p>
+         * </blockquote>
          */
         @NameInMap("ForwardGroupConfig")
         public ListForwardingRulesResponseBodyForwardingRulesRuleActionsForwardGroupConfig forwardGroupConfig;
 
         /**
          * <p>The forwarding priority.</p>
-         * <br>
-         * <p>>  This parameter does not take effect.</p>
+         * <blockquote>
+         * <p> This parameter does not take effect.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Order")
         public Integer order;
 
         /**
          * <p>The type of the forwarding action. Valid values:</p>
-         * <br>
-         * <p>*   **ForwardGroup:** forwards a request.</p>
-         * <p>*   **Redirect:** redirects a request.</p>
-         * <p>*   **FixResponse:** returns a fixed response.</p>
-         * <p>*   **Rewrite:** rewrites a request.</p>
-         * <p>*   **AddHeader:** adds a header to a request.</p>
-         * <p>*   **RemoveHeaderConfig:** deletes the header of a request.</p>
+         * <ul>
+         * <li><strong>ForwardGroup:</strong> forwards a request.</li>
+         * <li><strong>Redirect:</strong> redirects a request.</li>
+         * <li><strong>FixResponse:</strong> returns a fixed response.</li>
+         * <li><strong>Rewrite:</strong> rewrites a request.</li>
+         * <li><strong>AddHeader:</strong> adds a header to a request.</li>
+         * <li><strong>RemoveHeaderConfig:</strong> deletes the header of a request.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ForwardGroup</p>
          */
         @NameInMap("RuleActionType")
         public String ruleActionType;
 
         /**
          * <p>The value of the forwarding action type.</p>
-         * <br>
-         * <p>Different JSON strings are returned based on the value of the **RuleActionType** parameter.</p>
-         * <br>
-         * <p>*   If you set **RuleActionType** to **ForwardGroup**, the information about a virtual endpoint group is returned. Parameter configuration:</p>
-         * <br>
-         * <p>    *   `type:` the type of the resource that is returned. The value is `endpointgroup`.</p>
-         * <p>    *   `value:` the ID of the virtual endpoint group that is returned.</p>
-         * <br>
-         * <p>*   If you set **RuleActionType** to **Redirect**, the redirecting configuration is returned. Parameter configuration:</p>
-         * <br>
-         * <p>    *   `protocol:` the protocol of requests after the requests are redirected.</p>
-         * <p>    *   `domain:` the domain name to which requests are redirected.</p>
-         * <p>    *   `port:` the port to which requests are redirected.</p>
-         * <p>    *   `path:` the path to which requests are redirected.</p>
-         * <p>    *   `query:` the query string of the requests that are redirected.</p>
-         * <p>    *   `code:` the redirecting code.</p>
-         * <br>
-         * <p>*   If you set **RuleActionType** to **FixResponse**, the information about the fixed response that you configured is returned. Parameter configuration:</p>
-         * <br>
-         * <p>    *   `code:` the HTTP status code that is returned.</p>
-         * <p>    *   `type:` the type of the response content that is returned.</p>
-         * <p>    *   `content:` the response content that is returned.</p>
-         * <br>
-         * <p>*   If **RuleActionType** is set to **AddHeader**, the information about the HTTP header that is added is returned. Parameter configuration:</p>
-         * <br>
-         * <p>    *   `name:` the name of the HTTP header that is returned.</p>
-         * <p>    *   `type:` the content type of the HTTP header that is returned.</p>
-         * <p>    *   `value:` the content of the HTTP header that is returned.</p>
-         * <br>
-         * <p>*   If you set **RuleActionType** to **RemoveHeader**, the information about the HTTP header that is deleted is returned.</p>
-         * <br>
-         * <p>*   If you set **RuleActionType** to **Rewrite**, the rewriting configuration is returned. Parameter configuration:</p>
-         * <br>
-         * <p>    *   `domain:` the domain name to which requests are redirected.</p>
-         * <p>    *   `path:` the path to which requests are redirected.</p>
-         * <p>    *   `query:` the query string of the requests that are redirected.</p>
+         * <p>Different JSON strings are returned based on the value of the <strong>RuleActionType</strong> parameter.</p>
+         * <ul>
+         * <li><p>If you set <strong>RuleActionType</strong> to <strong>ForwardGroup</strong>, the information about a virtual endpoint group is returned. Parameter configuration:</p>
+         * <ul>
+         * <li><code>type:</code> the type of the resource that is returned. The value is <code>endpointgroup</code>.</li>
+         * <li><code>value:</code> the ID of the virtual endpoint group that is returned.</li>
+         * </ul>
+         * </li>
+         * <li><p>If you set <strong>RuleActionType</strong> to <strong>Redirect</strong>, the redirecting configuration is returned. Parameter configuration:</p>
+         * <ul>
+         * <li><code>protocol:</code> the protocol of requests after the requests are redirected.</li>
+         * <li><code>domain:</code> the domain name to which requests are redirected.</li>
+         * <li><code>port:</code> the port to which requests are redirected.</li>
+         * <li><code>path:</code> the path to which requests are redirected.</li>
+         * <li><code>query:</code> the query string of the requests that are redirected.</li>
+         * <li><code>code:</code> the redirecting code.</li>
+         * </ul>
+         * </li>
+         * <li><p>If you set <strong>RuleActionType</strong> to <strong>FixResponse</strong>, the information about the fixed response that you configured is returned. Parameter configuration:</p>
+         * <ul>
+         * <li><code>code:</code> the HTTP status code that is returned.</li>
+         * <li><code>type:</code> the type of the response content that is returned.</li>
+         * <li><code>content:</code> the response content that is returned.</li>
+         * </ul>
+         * </li>
+         * <li><p>If <strong>RuleActionType</strong> is set to <strong>AddHeader</strong>, the information about the HTTP header that is added is returned. Parameter configuration:</p>
+         * <ul>
+         * <li><code>name:</code> the name of the HTTP header that is returned.</li>
+         * <li><code>type:</code> the content type of the HTTP header that is returned.</li>
+         * <li><code>value:</code> the content of the HTTP header that is returned.</li>
+         * </ul>
+         * </li>
+         * <li><p>If you set <strong>RuleActionType</strong> to <strong>RemoveHeader</strong>, the information about the HTTP header that is deleted is returned.</p>
+         * </li>
+         * <li><p>If you set <strong>RuleActionType</strong> to <strong>Rewrite</strong>, the rewriting configuration is returned. Parameter configuration:</p>
+         * <ul>
+         * <li><code>domain:</code> the domain name to which requests are redirected.</li>
+         * <li><code>path:</code> the path to which requests are redirected.</li>
+         * <li><code>query:</code> the query string of the requests that are redirected.</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;type&quot;:&quot;endpointgroup&quot;, &quot;value&quot;:&quot;epg-bp1enpdcrqhl78g6r****&quot;}]</p>
          */
         @NameInMap("RuleActionValue")
         public String ruleActionValue;
@@ -244,8 +280,9 @@ public class ListForwardingRulesResponseBody extends TeaModel {
     public static class ListForwardingRulesResponseBodyForwardingRulesRuleConditionsHostConfig extends TeaModel {
         /**
          * <p>The domain name configuration.</p>
-         * <br>
-         * <p>>  GA instances created after July 12, 2022 support all forwarding condition types and action types. We recommend that you query forwarding conditions and actions by calling the **RuleActionType** and **RuleActionValue** operations.</p>
+         * <blockquote>
+         * <p> GA instances created after July 12, 2022 support all forwarding condition types and action types. We recommend that you query forwarding conditions and actions by calling the <strong>RuleActionType</strong> and <strong>RuleActionValue</strong> operations.</p>
+         * </blockquote>
          */
         @NameInMap("Values")
         public java.util.List<String> values;
@@ -268,8 +305,9 @@ public class ListForwardingRulesResponseBody extends TeaModel {
     public static class ListForwardingRulesResponseBodyForwardingRulesRuleConditionsPathConfig extends TeaModel {
         /**
          * <p>The path configuration.</p>
-         * <br>
-         * <p>>  GA instances created after July 12, 2022 support all forwarding condition types and action types. We recommend that you query forwarding conditions and actions by calling the **RuleActionType** and **RuleActionValue** operations.</p>
+         * <blockquote>
+         * <p> GA instances created after July 12, 2022 support all forwarding condition types and action types. We recommend that you query forwarding conditions and actions by calling the <strong>RuleActionType</strong> and <strong>RuleActionValue</strong> operations.</p>
+         * </blockquote>
          */
         @NameInMap("Values")
         public java.util.List<String> values;
@@ -292,46 +330,55 @@ public class ListForwardingRulesResponseBody extends TeaModel {
     public static class ListForwardingRulesResponseBodyForwardingRulesRuleConditions extends TeaModel {
         /**
          * <p>The domain name configuration.</p>
-         * <br>
-         * <p>>  GA instances created after July 12, 2022 support all forwarding condition types and action types. We recommend that you query forwarding conditions and actions by calling the **RuleActionType** and **RuleActionValue** operations.</p>
+         * <blockquote>
+         * <p> GA instances created after July 12, 2022 support all forwarding condition types and action types. We recommend that you query forwarding conditions and actions by calling the <strong>RuleActionType</strong> and <strong>RuleActionValue</strong> operations.</p>
+         * </blockquote>
          */
         @NameInMap("HostConfig")
         public ListForwardingRulesResponseBodyForwardingRulesRuleConditionsHostConfig hostConfig;
 
         /**
          * <p>The path configuration.</p>
-         * <br>
-         * <p>>  GA instances created after July 12, 2022 support all forwarding condition types and action types. We recommend that you query forwarding conditions and actions by calling the **RuleActionType** and **RuleActionValue** operations.</p>
+         * <blockquote>
+         * <p> GA instances created after July 12, 2022 support all forwarding condition types and action types. We recommend that you query forwarding conditions and actions by calling the <strong>RuleActionType</strong> and <strong>RuleActionValue</strong> operations.</p>
+         * </blockquote>
          */
         @NameInMap("PathConfig")
         public ListForwardingRulesResponseBodyForwardingRulesRuleConditionsPathConfig pathConfig;
 
         /**
          * <p>The type of the forwarding condition. Valid values:</p>
-         * <br>
-         * <p>*   **Host:** domain name.</p>
-         * <p>*   **Path:** path.</p>
-         * <p>*   **RequestHeader:** HTTP header.</p>
-         * <p>*   **Query:** query string.</p>
-         * <p>*   **Method:** HTTP method.</p>
-         * <p>*   **Cookie:** cookie.</p>
-         * <p>*   **SourceIP:** source IP address.</p>
+         * <ul>
+         * <li><strong>Host:</strong> domain name.</li>
+         * <li><strong>Path:</strong> path.</li>
+         * <li><strong>RequestHeader:</strong> HTTP header.</li>
+         * <li><strong>Query:</strong> query string.</li>
+         * <li><strong>Method:</strong> HTTP method.</li>
+         * <li><strong>Cookie:</strong> cookie.</li>
+         * <li><strong>SourceIP:</strong> source IP address.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Host</p>
          */
         @NameInMap("RuleConditionType")
         public String ruleConditionType;
 
         /**
          * <p>The value of the forwarding condition type.</p>
-         * <br>
-         * <p>Different JSON strings are returned based on the value of the **RuleConditionType** parameter.</p>
-         * <br>
-         * <p>*   If you set **RuleConditionType** to **Host**, a domain name condition is returned. If multiple domain names are returned in a forwarding condition, the relationship between the domain names is OR.</p>
-         * <p>*   If you set **RuleConditionType** to **Path**, a path condition is returned. If multiple forwarding conditions of the path type are returned in a forwarding rule, the relationship between the forwarding conditions is OR. If multiple paths are returned in a forwarding condition, the relationship between the paths is OR.</p>
-         * <p>*   If you set **RuleConditionType** to **RequestHeader**, an HTTP header condition that consists of key-value pairs is returned.</p>
-         * <p>*   If you set **RuleConditionType** to **Query**, a query string condition that consists of key-value pairs is returned.</p>
-         * <p>*   If you set **RuleConditionType** to **Method**, an HTTP method condition is returned.</p>
-         * <p>*   If you set **RuleConditionType** to **Cookie**, a cookie condition that consists of key-value pairs is returned.</p>
-         * <p>*   If you set **RuleConditionType** to **SourceIP**, a source IP address condition is returned. If multiple source IP addresses are returned in a forwarding condition, the relationship between the source IP addresses is OR.</p>
+         * <p>Different JSON strings are returned based on the value of the <strong>RuleConditionType</strong> parameter.</p>
+         * <ul>
+         * <li>If you set <strong>RuleConditionType</strong> to <strong>Host</strong>, a domain name condition is returned. If multiple domain names are returned in a forwarding condition, the relationship between the domain names is OR.</li>
+         * <li>If you set <strong>RuleConditionType</strong> to <strong>Path</strong>, a path condition is returned. If multiple forwarding conditions of the path type are returned in a forwarding rule, the relationship between the forwarding conditions is OR. If multiple paths are returned in a forwarding condition, the relationship between the paths is OR.</li>
+         * <li>If you set <strong>RuleConditionType</strong> to <strong>RequestHeader</strong>, an HTTP header condition that consists of key-value pairs is returned.</li>
+         * <li>If you set <strong>RuleConditionType</strong> to <strong>Query</strong>, a query string condition that consists of key-value pairs is returned.</li>
+         * <li>If you set <strong>RuleConditionType</strong> to <strong>Method</strong>, an HTTP method condition is returned.</li>
+         * <li>If you set <strong>RuleConditionType</strong> to <strong>Cookie</strong>, a cookie condition that consists of key-value pairs is returned.</li>
+         * <li>If you set <strong>RuleConditionType</strong> to <strong>SourceIP</strong>, a source IP address condition is returned. If multiple source IP addresses are returned in a forwarding condition, the relationship between the source IP addresses is OR.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;<a href="http://www.example.com">www.example.com</a>&quot;, &quot;<a href="http://www.aliyun.com%22%5D">www.aliyun.com&quot;]</a></p>
          */
         @NameInMap("RuleConditionValue")
         public String ruleConditionValue;
@@ -378,38 +425,53 @@ public class ListForwardingRulesResponseBody extends TeaModel {
     public static class ListForwardingRulesResponseBodyForwardingRulesServiceManagedInfos extends TeaModel {
         /**
          * <p>Managed policy action name, Valid values:</p>
-         * <p>- Create</p>
-         * <p>- Update</p>
-         * <p>- Delete</p>
-         * <p>- Associate</p>
-         * <p>- UserUnmanaged</p>
-         * <p>- CreateChild</p>
+         * <ul>
+         * <li>Create</li>
+         * <li>Update</li>
+         * <li>Delete</li>
+         * <li>Associate</li>
+         * <li>UserUnmanaged</li>
+         * <li>CreateChild</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Update</p>
          */
         @NameInMap("Action")
         public String action;
 
         /**
          * <p>Sub resource type, Valid values:</p>
-         * <br>
-         * <p>- Listener</p>
-         * <p>- IpSet</p>
-         * <p>- EndpointGroup</p>
-         * <p>- ForwardingRule</p>
-         * <p>- Endpoint</p>
-         * <p>- EndpointGroupDestination</p>
-         * <p>- EndpointPolicy</p>
-         * <br>
-         * <p>>Only valid when the Action parameter is CreateChild.</p>
+         * <ul>
+         * <li>Listener</li>
+         * <li>IpSet</li>
+         * <li>EndpointGroup</li>
+         * <li>ForwardingRule</li>
+         * <li>Endpoint</li>
+         * <li>EndpointGroupDestination</li>
+         * <li>EndpointPolicy</li>
+         * </ul>
+         * <blockquote>
+         * <p>Only valid when the Action parameter is CreateChild.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Listener</p>
          */
         @NameInMap("ChildType")
         public String childType;
 
         /**
          * <p>Is the managed policy action managed, Valid values:</p>
-         * <br>
-         * <p>- true: The managed policy action is managed, and users do not have permission to perform the operation specified in the Action on the managed instance.</p>
-         * <br>
-         * <p>- false: The managed policy action is not managed, and users have permission to perform the operation specified in the Action on the managed instance.</p>
+         * <ul>
+         * <li><p>true: The managed policy action is managed, and users do not have permission to perform the operation specified in the Action on the managed instance.</p>
+         * </li>
+         * <li><p>false: The managed policy action is not managed, and users have permission to perform the operation specified in the Action on the managed instance.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("IsManaged")
         public Boolean isManaged;
@@ -448,44 +510,61 @@ public class ListForwardingRulesResponseBody extends TeaModel {
     public static class ListForwardingRulesResponseBodyForwardingRules extends TeaModel {
         /**
          * <p>The direction in which the forwarding rule takes effect.</p>
-         * <br>
-         * <p>By default, **request** is returned, which indicates that the forwarding rule takes effect on requests.</p>
+         * <p>By default, <strong>request</strong> is returned, which indicates that the forwarding rule takes effect on requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>request</p>
          */
         @NameInMap("ForwardingRuleDirection")
         public String forwardingRuleDirection;
 
         /**
          * <p>The forwarding rule ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>frule-bp19a3t3yzr21q3****</p>
          */
         @NameInMap("ForwardingRuleId")
         public String forwardingRuleId;
 
         /**
          * <p>The forwarding rule name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>auto_named_rule</p>
          */
         @NameInMap("ForwardingRuleName")
         public String forwardingRuleName;
 
         /**
          * <p>The state of the forwarding rule. Valid values:</p>
-         * <br>
-         * <p>*   **active:** The forwarding rule is normal.</p>
-         * <p>*   **configuring:** The forwarding rule is being modified.</p>
-         * <p>*   **deleting:** The forwarding rule is being deleted.</p>
+         * <ul>
+         * <li><strong>active:</strong> The forwarding rule is normal.</li>
+         * <li><strong>configuring:</strong> The forwarding rule is being modified.</li>
+         * <li><strong>deleting:</strong> The forwarding rule is being deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>active</p>
          */
         @NameInMap("ForwardingRuleStatus")
         public String forwardingRuleStatus;
 
         /**
          * <p>The listener ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lsr-bp1s0vzbi5bxlx5****</p>
          */
         @NameInMap("ListenerId")
         public String listenerId;
 
         /**
          * <p>The priority of the forwarding rule.</p>
-         * <br>
-         * <p>A value between **1** and **10000** is returned. A smaller value indicates a higher priority.</p>
+         * <p>A value between <strong>1</strong> and <strong>10000</strong> is returned. A smaller value indicates a higher priority.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         @NameInMap("Priority")
         public Integer priority;
@@ -504,17 +583,25 @@ public class ListForwardingRulesResponseBody extends TeaModel {
 
         /**
          * <p>The service ID to which the managed instance belongs.</p>
-         * <br>
-         * <p>>  Valid only when the ServiceManaged parameter is True.</p>
+         * <blockquote>
+         * <p> Valid only when the ServiceManaged parameter is True.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>ALB</p>
          */
         @NameInMap("ServiceId")
         public String serviceId;
 
         /**
          * <p>Is it a managed instance. Valid values:</p>
-         * <br>
-         * <p>- true</p>
-         * <p>- false</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("ServiceManaged")
         public Boolean serviceManaged;

@@ -6,46 +6,69 @@ import com.aliyun.tea.*;
 public class ListListenerCertificatesRequest extends TeaModel {
     /**
      * <p>The ID of the GA instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ga-bp1odcab8tmno0hdq****</p>
      */
     @NameInMap("AcceleratorId")
     public String acceleratorId;
 
     /**
      * <p>The ID of the listener.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lsr-bp1bpn0kn908w4nbw****</p>
      */
     @NameInMap("ListenerId")
     public String listenerId;
 
     /**
-     * <p>The number of entries to return.</p>
-     * <br>
-     * <p>Valid values: **1** to **50**. Default value: **20**.</p>
+     * <p>The maximum number of entries to return. Valid values: <strong>1</strong> to <strong>50</strong>. Default value: <strong>20</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The token that determines the start point of the next query. Valid values:</p>
-     * <br>
-     * <p>*   If this is your first and only query, ignore this parameter.</p>
-     * <p>*   If a next query is to be performed, set the value to the NextToken value returned in the last call to the ListListenerCertificates operation.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+     * <ul>
+     * <li>You do not need to specify this parameter for the first request.</li>
+     * <li>You must specify the token that is obtained from the previous query as the value of NextToken.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to **cn-hangzhou**.</p>
+     * <p>The ID of the region where the GA instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The type of the certificate. Valid values:</p>
-     * <br>
-     * <p>*   **default**: a default certificate</p>
-     * <p>*   **additional**: an additional certificate</p>
-     * <br>
-     * <p>If you do not set this parameter, default and additional certificates are returned by default.</p>
+     * <ul>
+     * <li><strong>default</strong></li>
+     * <li><strong>additional</strong></li>
+     * </ul>
+     * <p>If you do not specify this parameter, default and additional certificates are returned by default.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
      */
     @NameInMap("Role")
     public String role;

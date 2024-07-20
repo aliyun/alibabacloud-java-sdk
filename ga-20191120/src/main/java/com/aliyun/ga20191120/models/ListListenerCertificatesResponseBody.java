@@ -5,34 +5,47 @@ import com.aliyun.tea.*;
 
 public class ListListenerCertificatesResponseBody extends TeaModel {
     /**
-     * <p>Details about the certificates.</p>
+     * <p>The certificates.</p>
      */
     @NameInMap("Certificates")
     public java.util.List<ListListenerCertificatesResponseBodyCertificates> certificates;
 
     /**
      * <p>The maximum number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The token that determines the start point of the next query. Valid values:</p>
-     * <br>
-     * <p>*   If **NextToken** is not returned, it indicates that no additional results exist.</p>
-     * <p>*   If **NextToken** is returned, the value is the token that is used for the next query.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+     * <ul>
+     * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+     * <li>If a value of <strong>NextToken</strong> is returned, the value indicates the token that is used for the next query.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6FEA0CF3-D3B9-43E5-A304-D217037876A8</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -84,33 +97,46 @@ public class ListListenerCertificatesResponseBody extends TeaModel {
 
     public static class ListListenerCertificatesResponseBodyCertificates extends TeaModel {
         /**
-         * <p>The ID of the certificate.</p>
+         * <p>The certificate ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6092**-cn-hangzhou</p>
          */
         @NameInMap("CertificateId")
         public String certificateId;
 
         /**
          * <p>The domain name associated with the additional certificate.</p>
-         * <br>
          * <p>This parameter is not returned if the certificate is a default one.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         @NameInMap("Domain")
         public String domain;
 
         /**
-         * <p>Indicates whether the certificate is a default one:</p>
-         * <br>
-         * <p>*   **true**: a default certificate</p>
-         * <p>*   **false**: an additional certificate</p>
+         * <p>Indicates whether the certificate is a default one.</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("IsDefault")
         public Boolean isDefault;
 
         /**
-         * <p>The state of the certificate.</p>
-         * <br>
-         * <p>*   **active**: The certificate is associated with a listener and takes effect.</p>
-         * <p>*   **updating**: The additional certificate is being replaced.</p>
+         * <p>The status of the certificate.</p>
+         * <ul>
+         * <li><strong>active</strong>: The certificate is associated with a listener and in effect.</li>
+         * <li><strong>updating</strong>: The additional certificate is being replaced.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>active</p>
          */
         @NameInMap("State")
         public String state;

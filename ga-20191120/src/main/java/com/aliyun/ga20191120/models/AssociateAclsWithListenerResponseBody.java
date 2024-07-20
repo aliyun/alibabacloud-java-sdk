@@ -12,12 +12,18 @@ public class AssociateAclsWithListenerResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the listener.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lsr-bp1bpn0kn908w4nbw****</p>
      */
     @NameInMap("ListenerId")
     public String listenerId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>64ADAB1E-0B7F-4FD8-A404-3BECC0E9CCFF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
