@@ -6,24 +6,40 @@ import com.aliyun.tea.*;
 public class DescribeLogStoreOfEndpointGroupRequest extends TeaModel {
     /**
      * <p>The ID of the GA instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ga-xxxxxxxxxxxxx</p>
      */
     @NameInMap("AcceleratorId")
     public String acceleratorId;
 
     /**
      * <p>The ID of the endpoint group.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>epg-xxxxxxxxxxxxxxx</p>
      */
     @NameInMap("EndpointGroupId")
     public String endpointGroupId;
 
     /**
      * <p>The ID of the listener.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lsr-xxxxxxxxxxxxxxx</p>
      */
     @NameInMap("ListenerId")
     public String listenerId;
 
     /**
-     * <p>The region where the GA instance is deployed. Set the value to **cn-hangzhou**.</p>
+     * <p>The region where the GA instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -6,48 +6,74 @@ import com.aliyun.tea.*;
 public class ListCustomRoutingEndpointTrafficPoliciesRequest extends TeaModel {
     /**
      * <p>The ID of the GA instance to which the traffic policies belong.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ga-bp1odcab8tmno0hdq****</p>
      */
     @NameInMap("AcceleratorId")
     public String acceleratorId;
 
     /**
      * <p>The IP address of the traffic destination.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10.0.XX.XX</p>
      */
     @NameInMap("Address")
     public String address;
 
     /**
      * <p>The ID of the endpoint group to which the traffic policies belong.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lsr-bp1bpn0kn908w4nbw****</p>
      */
     @NameInMap("EndpointGroupId")
     public String endpointGroupId;
 
     /**
      * <p>The ID of the endpoint to which the traffic policies belong.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ep-bp16jdc00bhe97sr5****</p>
      */
     @NameInMap("EndpointId")
     public String endpointId;
 
     /**
      * <p>The ID of the listener to which the traffic policies belong.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lsr-bp1bpn0kn908w4nbw****</p>
      */
     @NameInMap("ListenerId")
     public String listenerId;
 
     /**
-     * <p>The page number. Default value: **1**.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Maximum value: **50**. Default value: **10**.</p>
+     * <p>The number of entries per page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the Global Accelerator (GA) instance. Set the value to **cn-hangzhou**.</p>
+     * <p>The region ID of the Global Accelerator (GA) instance. Set the value to <strong>cn-hangzhou</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

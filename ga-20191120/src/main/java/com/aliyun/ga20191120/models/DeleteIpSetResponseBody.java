@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteIpSetResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DD61839A-5CC5-404B-8C6E-56066F0C432D</p>
      */
     @NameInMap("RequestId")
     public String requestId;

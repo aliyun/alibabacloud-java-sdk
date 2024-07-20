@@ -6,22 +6,29 @@ import com.aliyun.tea.*;
 public class CreateBasicAcceleratorResponseBody extends TeaModel {
     /**
      * <p>The ID of the basic GA instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ga-bp17frjjh0udz4qz****</p>
      */
     @NameInMap("AcceleratorId")
     public String acceleratorId;
 
     /**
      * <p>The order ID.</p>
-     * <br>
      * <p>This parameter is returned only if ChargeType is set to PREPAY.</p>
-     * <br>
-     * <p>If **AutoPay** is set to **false**, go to [Order Center](https://usercenter2-intl.aliyun.com/order/list) to complete the payment after an order is generated.</p>
+     * <p>If <strong>AutoPay</strong> is set to <strong>false</strong>, go to <a href="https://usercenter2-intl.aliyun.com/order/list">Order Center</a> to complete the payment after an order is generated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2082574365</p>
      */
     @NameInMap("OrderId")
     public String orderId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F591955F-5CB5-4CCE-A75D-17CF2085CE22</p>
      */
     @NameInMap("RequestId")
     public String requestId;

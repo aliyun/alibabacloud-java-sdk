@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateBasicEndpointsResponseBody extends TeaModel {
     /**
      * <p>The ID of the endpoint group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>epg-bp1dmlohjjz4kqaun****</p>
      */
     @NameInMap("EndpointGroupId")
     public String endpointGroupId;
@@ -18,6 +21,9 @@ public class CreateBasicEndpointsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,35 +60,48 @@ public class CreateBasicEndpointsResponseBody extends TeaModel {
     public static class CreateBasicEndpointsResponseBodyEndpoints extends TeaModel {
         /**
          * <p>The address of the endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eni-bp1a05txelswuj8g****</p>
          */
         @NameInMap("EndpointAddress")
         public String endpointAddress;
 
         /**
          * <p>The ID of the endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ep-bp14sz7ftcwwjgrdm****</p>
          */
         @NameInMap("EndpointId")
         public String endpointId;
 
         /**
          * <p>The secondary address of the endpoint.</p>
-         * <br>
-         * <p>This parameter is returned if the endpoint type is **ECS**, **ENI**, or **NLB**.</p>
-         * <br>
-         * <p>*   If the endpoint type is **ECS**, **EndpointSubAddress** returns the primary or secondary private IP address of the primary ENI.</p>
-         * <p>*   If the endpoint type is **ENI**, **EndpointSubAddress** returns the primary or secondary private IP address of the secondary ENI.</p>
-         * <p>*   If the endpoint type is **NLB**, **EndpointSubAddress** returns the primary private IP address of the NLB backend server.</p>
+         * <p>This parameter is returned if the endpoint type is <strong>ECS</strong>, <strong>ENI</strong>, or <strong>NLB</strong>.</p>
+         * <ul>
+         * <li>If the endpoint type is <strong>ECS</strong>, <strong>EndpointSubAddress</strong> returns the primary or secondary private IP address of the primary ENI.</li>
+         * <li>If the endpoint type is <strong>ENI</strong>, <strong>EndpointSubAddress</strong> returns the primary or secondary private IP address of the secondary ENI.</li>
+         * <li>If the endpoint type is <strong>NLB</strong>, <strong>EndpointSubAddress</strong> returns the primary private IP address of the NLB backend server.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>172.16.XX.XX</p>
          */
         @NameInMap("EndpointSubAddress")
         public String endpointSubAddress;
 
         /**
          * <p>The type of the endpoint. Valid values:</p>
-         * <br>
-         * <p>*   **ENI:** ENI.</p>
-         * <p>*   **SLB:** CLB instance.</p>
-         * <p>*   **ECS:** ECS instance.</p>
-         * <p>*   **NLB:** NLB instance.</p>
+         * <ul>
+         * <li><strong>ENI:</strong> ENI.</li>
+         * <li><strong>SLB:</strong> CLB instance.</li>
+         * <li><strong>ECS:</strong> ECS instance.</li>
+         * <li><strong>NLB:</strong> NLB instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ENI</p>
          */
         @NameInMap("EndpointType")
         public String endpointType;

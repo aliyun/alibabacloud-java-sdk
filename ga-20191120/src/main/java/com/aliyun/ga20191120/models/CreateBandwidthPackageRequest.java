@@ -6,155 +6,214 @@ import com.aliyun.tea.*;
 public class CreateBandwidthPackageRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable automatic payment. Valid values:</p>
-     * <br>
-     * <p>*   **false** (default): disables automatic payment. If you select this option, you must go to the Order Center to complete the payment after an order is generated.</p>
-     * <p>*   **true**: enables automatic payment. Payments are automatically completed.</p>
+     * <ul>
+     * <li><strong>false</strong> (default): disables automatic payment. If you select this option, you must go to the Order Center to complete the payment after an order is generated.</li>
+     * <li><strong>true</strong>: enables automatic payment. Payments are automatically completed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
     /**
      * <p>Specifies whether to enable auto-renewal for the bandwidth plan. Valid values:</p>
-     * <br>
-     * <p>*   **true**: enables auto-renewal.</p>
-     * <p>*   **false** (default): does not enable auto-renewal.</p>
+     * <ul>
+     * <li><strong>true</strong>: enables auto-renewal.</li>
+     * <li><strong>false</strong> (default): does not enable auto-renewal.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
 
     /**
      * <p>The auto-renewal duration. Unit: months.</p>
-     * <br>
-     * <p>Valid values: **1** to **12**. Default value: **1**.</p>
-     * <br>
-     * <p>>  This parameter is required only if **AutoRenew** is set to **true**.</p>
+     * <p>Valid values: <strong>1</strong> to <strong>12</strong>. Default value: <strong>1</strong>.</p>
+     * <blockquote>
+     * <p> This parameter is required only if <strong>AutoRenew</strong> is set to <strong>true</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("AutoRenewDuration")
     public Integer autoRenewDuration;
 
     /**
      * <p>Specifies whether to automatically pay bills by using coupons. Valid values:</p>
-     * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false** (default): no</p>
-     * <br>
-     * <p>>  This parameter is required only if **AutoPay** is set to **true**.</p>
+     * <ul>
+     * <li><strong>true</strong>: yes</li>
+     * <li><strong>false</strong> (default): no</li>
+     * </ul>
+     * <blockquote>
+     * <p> This parameter is required only if <strong>AutoPay</strong> is set to <strong>true</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("AutoUseCoupon")
     public String autoUseCoupon;
 
     /**
      * <p>The bandwidth of the bandwidth plan. Unit: Mbit/s.</p>
-     * <br>
-     * <p>Valid values: **2** to **2000**.</p>
+     * <p>Valid values: <strong>2</strong> to <strong>2000</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("Bandwidth")
     public Integer bandwidth;
 
     /**
      * <p>The type of the bandwidth. Valid values:</p>
-     * <br>
-     * <p>*   **Basic**: standard bandwidth</p>
-     * <p>*   **Enhanced**: enhanced bandwidth</p>
-     * <p>*   **Advanced**: premium bandwidth</p>
-     * <br>
-     * <p>If **Type** is set to **Basic**, this parameter is required.</p>
+     * <ul>
+     * <li><strong>Basic</strong>: standard bandwidth</li>
+     * <li><strong>Enhanced</strong>: enhanced bandwidth</li>
+     * <li><strong>Advanced</strong>: premium bandwidth</li>
+     * </ul>
+     * <p>If <strong>Type</strong> is set to <strong>Basic</strong>, this parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Basic</p>
      */
     @NameInMap("BandwidthType")
     public String bandwidthType;
 
     /**
      * <p>The metering method that is used when you use the pay-as-you-go billing method. Valid values:</p>
-     * <br>
-     * <p>*   **PayByTraffic** (default)</p>
-     * <p>*   **PayBY95** By default, the pay-by-95th-percentile metering method is unavailable. If you want to use the metering method, contact your account manager.</p>
-     * <br>
-     * <p>>  This parameter takes effect only if you set **ChargeType** to **POSTPAY**.</p>
+     * <ul>
+     * <li><strong>PayByTraffic</strong> (default)</li>
+     * <li><strong>PayBY95</strong> By default, the pay-by-95th-percentile metering method is unavailable. If you want to use the metering method, contact your account manager.</li>
+     * </ul>
+     * <blockquote>
+     * <p> This parameter takes effect only if you set <strong>ChargeType</strong> to <strong>POSTPAY</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>PayByTraffic</p>
      */
     @NameInMap("BillingType")
     public String billingType;
 
     /**
-     * <p>Area A to be connected. Set the value to **China-mainland**.</p>
-     * <br>
+     * <p>Area A to be connected. Set the value to <strong>China-mainland</strong>.</p>
      * <p>You can set this parameter only if you call this operation on the international site (alibabacloud.com).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>China-mainland</p>
      */
     @NameInMap("CbnGeographicRegionIdA")
     public String cbnGeographicRegionIdA;
 
     /**
-     * <p>Area B to be connected. Set the value to **Global**.</p>
-     * <br>
+     * <p>Area B to be connected. Set the value to <strong>Global</strong>.</p>
      * <p>You can set this parameter only if you call this operation on the international site (alibabacloud.com).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Global</p>
      */
     @NameInMap("CbnGeographicRegionIdB")
     public String cbnGeographicRegionIdB;
 
     /**
      * <p>The billing method of the bandwidth plan. Valid values:</p>
-     * <br>
-     * <p>*   **PREPAY** (default): subscription.</p>
-     * <p>*   **POSTPAY**: pay-as-you-go. By default, the pay-as-you-go billing method is unavailable. If you want to use the billing method, contact your account manager.</p>
+     * <ul>
+     * <li><strong>PREPAY</strong> (default): subscription.</li>
+     * <li><strong>POSTPAY</strong>: pay-as-you-go. By default, the pay-as-you-go billing method is unavailable. If you want to use the billing method, contact your account manager.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>PREPAY</p>
      */
     @NameInMap("ChargeType")
     public String chargeType;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
-     * <br>
-     * <p>>  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
+     * <blockquote>
+     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The subscription duration.</p>
-     * <br>
-     * <p>*   If the **PricingCycle** parameter is set to **Month**, the valid values for the **Duration** parameter are **1** to **9**.</p>
-     * <p>*   If the **PricingCycle** parameter is set to **Year**, the valid values for the **Duration** parameter are **1** to **3**.</p>
-     * <br>
-     * <p>If **ChargeType** is set to **PREPAY**, this parameter is required.</p>
+     * <ul>
+     * <li>If the <strong>PricingCycle</strong> parameter is set to <strong>Month</strong>, the valid values for the <strong>Duration</strong> parameter are <strong>1</strong> to <strong>9</strong>.</li>
+     * <li>If the <strong>PricingCycle</strong> parameter is set to <strong>Year</strong>, the valid values for the <strong>Duration</strong> parameter are <strong>1</strong> to <strong>3</strong>.</li>
+     * </ul>
+     * <p>If <strong>ChargeType</strong> is set to <strong>PREPAY</strong>, this parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Duration")
     public String duration;
 
     /**
      * <p>The billing cycle. Valid values:</p>
-     * <br>
-     * <p>*   **Month**: billed on a monthly basis.</p>
-     * <p>*   **Year**: billed on an annual basis.</p>
-     * <br>
-     * <p>If **ChargeType** is set to **PREPAY**, this parameter is required.</p>
+     * <ul>
+     * <li><strong>Month</strong>: billed on a monthly basis.</li>
+     * <li><strong>Year</strong>: billed on an annual basis.</li>
+     * </ul>
+     * <p>If <strong>ChargeType</strong> is set to <strong>PREPAY</strong>, this parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Month</p>
      */
     @NameInMap("PricingCycle")
     public String pricingCycle;
 
     /**
      * <p>The coupon code.</p>
-     * <br>
-     * <p>>  This parameter is only available on the international site (alibabacloud.com).</p>
+     * <blockquote>
+     * <p> This parameter is only available on the international site (alibabacloud.com).</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>50003298014****</p>
      */
     @NameInMap("PromotionOptionNo")
     public String promotionOptionNo;
 
     /**
-     * <p>The percentage of the minimum bandwidth guaranteed if the pay-by-95th-percentile-bandwidth metering method is used. Valid values: **30** to **100**.</p>
-     * <br>
-     * <p>>  This parameter is required only if **BillingType** is set to **PayBY95**.</p>
+     * <p>The percentage of the minimum bandwidth guaranteed if the pay-by-95th-percentile-bandwidth metering method is used. Valid values: <strong>30</strong> to <strong>100</strong>.</p>
+     * <blockquote>
+     * <p> This parameter is required only if <strong>BillingType</strong> is set to <strong>PayBY95</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("Ratio")
     public Integer ratio;
 
     /**
-     * <p>The ID of the region where the GA instance is deployed. **cn-hangzhou** is returned.</p>
+     * <p>The ID of the region where the GA instance is deployed. <strong>cn-hangzhou</strong> is returned.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-aekzrnd67gq****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -167,11 +226,15 @@ public class CreateBandwidthPackageRequest extends TeaModel {
 
     /**
      * <p>The type of the bandwidth plan. Valid values:</p>
-     * <br>
-     * <p>*   **Basic**: a basic bandwidth plan</p>
-     * <p>*   **CrossDomain**: a cross-region acceleration bandwidth plan</p>
-     * <br>
-     * <p>If you call this operation on the Alibaba Cloud China site, only **Basic** is supported.</p>
+     * <ul>
+     * <li><strong>Basic</strong>: a basic bandwidth plan</li>
+     * <li><strong>CrossDomain</strong>: a cross-region acceleration bandwidth plan</li>
+     * </ul>
+     * <p>If you call this operation on the Alibaba Cloud China site, only <strong>Basic</strong> is supported.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Basic</p>
      */
     @NameInMap("Type")
     public String type;
@@ -336,20 +399,22 @@ public class CreateBandwidthPackageRequest extends TeaModel {
     public static class CreateBandwidthPackageRequestTag extends TeaModel {
         /**
          * <p>The tag key.</p>
-         * <br>
-         * <p>The tag keys cannot be an empty string. The tag key can be up to 64 characters in length, and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
-         * <br>
+         * <p>The tag keys cannot be an empty string. The tag key can be up to 64 characters in length, and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * <p>You can specify at most 20 tag keys.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag-key</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value.</p>
-         * <br>
-         * <p>Each tag key corresponds to a tag value. Valid values of **N**: **1** to **20**.</p>
-         * <br>
-         * <p>The value cannot exceed 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.</p>
+         * <p>Each tag key corresponds to a tag value. Valid values of <strong>N</strong>: <strong>1</strong> to <strong>20</strong>.</p>
+         * <p>The value cannot exceed 128 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag-value</p>
          */
         @NameInMap("Value")
         public String value;

@@ -6,12 +6,17 @@ import com.aliyun.tea.*;
 public class UpdateIpSetsRequest extends TeaModel {
     /**
      * <p>The acceleration regions.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("IpSets")
     public java.util.List<UpdateIpSetsRequestIpSets> ipSets;
 
     /**
-     * <p>The region ID of the Global Accelerator (GA) instance. Set the value to **cn-hangzhou**.</p>
+     * <p>The region ID of the Global Accelerator (GA) instance. Set the value to <strong>cn-hangzhou</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -40,16 +45,22 @@ public class UpdateIpSetsRequest extends TeaModel {
     public static class UpdateIpSetsRequestIpSets extends TeaModel {
         /**
          * <p>The new bandwidth that you want to allocate to the acceleration regions. Unit: Mbit/s.</p>
-         * <br>
          * <p>You must allocate at least 2 Mbit/s of bandwidth to each acceleration region. You can specify the bandwidth for up to 100 acceleration regions.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         @NameInMap("Bandwidth")
         public Integer bandwidth;
 
         /**
          * <p>The IDs of the acceleration regions that you want to modify.</p>
-         * <br>
          * <p>You can specify the IDs of up to 100 acceleration regions.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ips-bp11c9mpphtb1xkds****</p>
          */
         @NameInMap("IpSetId")
         public String ipSetId;

@@ -5,25 +5,37 @@ import com.aliyun.tea.*;
 
 public class ListApplicationMonitorRequest extends TeaModel {
     /**
-     * <p>The page number. Default value: **1**.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>１</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Maximum value: **100**. Default value: **10**.</p>
+     * <p>The number of entries per page. Maximum value: <strong>100</strong>. Default value: <strong>10</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the GA instance. Set the value to **cn-hangzhou**.</p>
+     * <p>The region ID of the GA instance. Set the value to <strong>cn-hangzhou</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The keyword that is used to search for origin probing tasks. You can enter a URL, an IP address, a GA instance ID, or a listener ID to perform a fuzzy match.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>aliyun</p>
      */
     @NameInMap("SearchValue")
     public String searchValue;

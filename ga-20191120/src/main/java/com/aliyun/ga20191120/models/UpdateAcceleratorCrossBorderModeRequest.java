@@ -6,33 +6,49 @@ import com.aliyun.tea.*;
 public class UpdateAcceleratorCrossBorderModeRequest extends TeaModel {
     /**
      * <p>The GA instance ID.</p>
-     * <br>
-     * <p>> The bandwidth metering method of the GA instance must be pay-by-data-transfer.</p>
+     * <blockquote>
+     * <p>The bandwidth metering method of the GA instance must be pay-by-data-transfer.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ga-bp1odcab8tmno0hdq****</p>
      */
     @NameInMap("AcceleratorId")
     public String acceleratorId;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
-     * <br>
-     * <p>> If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
+     * <blockquote>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The type of transmission network of the GA instance. Valid values:</p>
-     * <br>
-     * <p>*   **bgpPro**: BGP (Multi-ISP) Pro. BGP (Multi-ISP) Pro lines are used for cross-border acceleration. You do not need to complete real-name verification.</p>
-     * <p>*   **private**: cross-border Express Connect circuit. Cross-border Express Connect circuits provide better acceleration performance but require real-name verification.</p>
+     * <ul>
+     * <li><strong>bgpPro</strong>: BGP (Multi-ISP) Pro. BGP (Multi-ISP) Pro lines are used for cross-border acceleration. You do not need to complete real-name verification.</li>
+     * <li><strong>private</strong>: cross-border Express Connect circuit. Cross-border Express Connect circuits provide better acceleration performance but require real-name verification.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bgpPro</p>
      */
     @NameInMap("CrossBorderMode")
     public String crossBorderMode;
 
     /**
-     * <p>The region ID of the GA instance. Set the value to **cn-hangzhou**.</p>
+     * <p>The region ID of the GA instance. Set the value to <strong>cn-hangzhou</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

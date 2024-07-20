@@ -6,12 +6,19 @@ import com.aliyun.tea.*;
 public class ListAvailableBusiRegionsRequest extends TeaModel {
     /**
      * <p>The ID of the GA instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ga-bp1odcab8tmno0hdq****</p>
      */
     @NameInMap("AcceleratorId")
     public String acceleratorId;
 
     /**
-     * <p>The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.</p>
+     * <p>The ID of the region where the GA instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

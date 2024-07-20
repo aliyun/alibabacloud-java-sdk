@@ -6,44 +6,65 @@ import com.aliyun.tea.*;
 public class ChangeResourceGroupRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The **client token** can contain only ASCII characters.</p>
-     * <br>
-     * <p>>  If you do not specify this parameter, the system automatically uses the value of **RequestId** as the value of **ClientToken**. The **request ID** may be different for each request.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <strong>client token</strong> can contain only ASCII characters.</p>
+     * <blockquote>
+     * <p> If you do not specify this parameter, the system automatically uses the value of <strong>RequestId</strong> as the value of <strong>ClientToken</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The ID of the new resource group.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-aekzrnd67gq****</p>
      */
     @NameInMap("NewResourceGroupId")
     public String newResourceGroupId;
 
     /**
-     * <p>The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.</p>
+     * <p>The ID of the region where the GA instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the GA resource.</p>
-     * <br>
-     * <p>*   If you set **ResourceType** to **accelerator**, set the value of ResourceId to the ID of a standard GA instance.</p>
-     * <p>*   If you set **ResourceType** to **basicaccelerator**, set the value of ResourceId to the ID of a basic GA instance.</p>
-     * <p>*   If you set **ResourceType** to **bandwidthpackage**, set the value of ResourceId to the ID of a bandwidth plan.</p>
-     * <p>*   If you set **ResourceType** to **acl**, set the value of ResourceId to the ID of an access control list (ACL).</p>
+     * <ul>
+     * <li>If you set <strong>ResourceType</strong> to <strong>accelerator</strong>, set the value of ResourceId to the ID of a standard GA instance.</li>
+     * <li>If you set <strong>ResourceType</strong> to <strong>basicaccelerator</strong>, set the value of ResourceId to the ID of a basic GA instance.</li>
+     * <li>If you set <strong>ResourceType</strong> to <strong>bandwidthpackage</strong>, set the value of ResourceId to the ID of a bandwidth plan.</li>
+     * <li>If you set <strong>ResourceType</strong> to <strong>acl</strong>, set the value of ResourceId to the ID of an access control list (ACL).</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ga-bp149u6o36qt1as9b****</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;
 
     /**
      * <p>The type of the GA resource. Valid values:</p>
-     * <br>
-     * <p>*   **accelerator:** a standard GA instance.</p>
-     * <p>*   **basicaccelerator:** a basic GA instance.</p>
-     * <p>*   **bandwidthpackage:** a bandwidth plan.</p>
-     * <p>*   **acl:** an ACL.</p>
+     * <ul>
+     * <li><strong>accelerator:</strong> a standard GA instance.</li>
+     * <li><strong>basicaccelerator:</strong> a basic GA instance.</li>
+     * <li><strong>bandwidthpackage:</strong> a bandwidth plan.</li>
+     * <li><strong>acl:</strong> an ACL.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>accelerator</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

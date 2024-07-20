@@ -12,119 +12,169 @@ public class DescribeBandwidthPackageResponseBody extends TeaModel {
 
     /**
      * <p>The bandwidth value of the bandwidth plan. Unit: Mbit/s.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("Bandwidth")
     public Integer bandwidth;
 
     /**
      * <p>The ID of the bandwidth plan.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gbwp-bp1sgzldyj6b4q7cx****</p>
      */
     @NameInMap("BandwidthPackageId")
     public String bandwidthPackageId;
 
     /**
      * <p>The type of the bandwidth. Valid values:</p>
-     * <br>
-     * <p>*   **Basic**: basic bandwidth</p>
-     * <p>*   **Enhanced**: enhanced bandwidth</p>
-     * <p>*   **Advanced**: premium bandwidth</p>
+     * <ul>
+     * <li><strong>Basic</strong>: basic bandwidth</li>
+     * <li><strong>Enhanced</strong>: enhanced bandwidth</li>
+     * <li><strong>Advanced</strong>: premium bandwidth</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Basic</p>
      */
     @NameInMap("BandwidthType")
     public String bandwidthType;
 
     /**
      * <p>The metering method that is used when you use the pay-as-you-go billing method. Valid values:</p>
-     * <br>
-     * <p>*   **PayByTraffic**: pay-by-data-transfer</p>
-     * <p>*   **PayBY95**: pay-by-95th-percentile</p>
+     * <ul>
+     * <li><strong>PayByTraffic</strong>: pay-by-data-transfer</li>
+     * <li><strong>PayBY95</strong>: pay-by-95th-percentile</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>PayByTraffic</p>
      */
     @NameInMap("BillingType")
     public String billingType;
 
     /**
-     * <p>Area A specified in the cross-region acceleration bandwidth plan. Only **China-mainland** (the Chinese mainland) is returned.</p>
-     * <br>
+     * <p>Area A specified in the cross-region acceleration bandwidth plan. Only <strong>China-mainland</strong> (the Chinese mainland) is returned.</p>
      * <p>This parameter is returned only if you call this operation on the International site (alibabacloud.com).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>China-mainland</p>
      */
     @NameInMap("CbnGeographicRegionIdA")
     public String cbnGeographicRegionIdA;
 
     /**
-     * <p>Area B specified in the cross-region acceleration bandwidth plan. Only **Global** (global) is returned.</p>
-     * <br>
+     * <p>Area B specified in the cross-region acceleration bandwidth plan. Only <strong>Global</strong> (global) is returned.</p>
      * <p>This parameter is returned only if you call this operation on the International site (alibabacloud.com).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Global</p>
      */
     @NameInMap("CbnGeographicRegionIdB")
     public String cbnGeographicRegionIdB;
 
     /**
      * <p>The billing method of the bandwidth plan.</p>
-     * <br>
-     * <p>*   **PREPAY**: subscription. This is the default value.</p>
-     * <p>*   **POSTPAY**: pay-as-you-go.</p>
+     * <ul>
+     * <li><strong>PREPAY</strong>: subscription. This is the default value.</li>
+     * <li><strong>POSTPAY</strong>: pay-as-you-go.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>PREPAY</p>
      */
     @NameInMap("ChargeType")
     public String chargeType;
 
     /**
      * <p>The timestamp that indicates when the bandwidth plan was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1578966918000</p>
      */
     @NameInMap("CreateTime")
     public String createTime;
 
     /**
      * <p>The description of the bandwidth plan.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testDescription</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The timestamp that indicates when the bandwidth plan expires.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1578966918000</p>
      */
     @NameInMap("ExpiredTime")
     public String expiredTime;
 
     /**
      * <p>The name of the bandwidth plan.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testName</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The percentage of the minimum bandwidth guaranteed if the pay-by-95th-percentile-bandwidth metering method is used. Valid values: **30** to **100**.</p>
+     * <p>The percentage of the minimum bandwidth guaranteed if the pay-by-95th-percentile-bandwidth metering method is used. Valid values: <strong>30</strong> to <strong>100</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("Ratio")
     public Integer ratio;
 
     /**
-     * <p>The ID of the region where GA instance is deployed. **cn-hangzhou** is returned.</p>
+     * <p>The ID of the region where GA instance is deployed. <strong>cn-hangzhou</strong> is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4B6DBBB0-2D01-4C6A-A384-4129266E6B78</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfnvueepcihjiq</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>The state of the bandwidth plan. Valid values:</p>
-     * <br>
-     * <p>*   **init**: The bandwidth plan is being initialized.</p>
-     * <p>*   **active**: The bandwidth plan is available.</p>
-     * <p>*   **binded**: The bandwidth plan is associated with a GA instance.</p>
-     * <p>*   **binding**: The bandwidth plan is being associated.</p>
-     * <p>*   **unbinding**: The bandwidth plan is being disassociated.</p>
-     * <p>*   **updating**: The bandwidth plan is being updated.</p>
-     * <p>*   **finacialLocked**: The bandwidth plan is locked due to overdue payments.</p>
-     * <p>*   **Locked**: The bandwidth plan is locked.</p>
+     * <ul>
+     * <li><strong>init</strong>: The bandwidth plan is being initialized.</li>
+     * <li><strong>active</strong>: The bandwidth plan is available.</li>
+     * <li><strong>binded</strong>: The bandwidth plan is associated with a GA instance.</li>
+     * <li><strong>binding</strong>: The bandwidth plan is being associated.</li>
+     * <li><strong>unbinding</strong>: The bandwidth plan is being disassociated.</li>
+     * <li><strong>updating</strong>: The bandwidth plan is being updated.</li>
+     * <li><strong>finacialLocked</strong>: The bandwidth plan is locked due to overdue payments.</li>
+     * <li><strong>Locked</strong>: The bandwidth plan is locked.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>active</p>
      */
     @NameInMap("State")
     public String state;
@@ -137,11 +187,14 @@ public class DescribeBandwidthPackageResponseBody extends TeaModel {
 
     /**
      * <p>The type of the bandwidth plan. Valid values:</p>
-     * <br>
-     * <p>*   **Basic**: a basic bandwidth plan</p>
-     * <p>*   **CrossDomain**: a cross-region acceleration bandwidth plan</p>
-     * <br>
-     * <p>If you call this operation on the Alibaba Cloud China Site (aliyun.com), only **Basic** is returned.</p>
+     * <ul>
+     * <li><strong>Basic</strong>: a basic bandwidth plan</li>
+     * <li><strong>CrossDomain</strong>: a cross-region acceleration bandwidth plan</li>
+     * </ul>
+     * <p>If you call this operation on the Alibaba Cloud China Site (aliyun.com), only <strong>Basic</strong> is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Basic</p>
      */
     @NameInMap("Type")
     public String type;
@@ -306,12 +359,18 @@ public class DescribeBandwidthPackageResponseBody extends TeaModel {
     public static class DescribeBandwidthPackageResponseBodyTags extends TeaModel {
         /**
          * <p>The key of tag N that is added to the bandwidth plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag-key</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of tag N that is added to the bandwidth plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag-value</p>
          */
         @NameInMap("Value")
         public String value;

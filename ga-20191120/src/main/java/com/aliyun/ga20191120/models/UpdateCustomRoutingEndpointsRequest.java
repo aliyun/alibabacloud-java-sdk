@@ -6,28 +6,40 @@ import com.aliyun.tea.*;
 public class UpdateCustomRoutingEndpointsRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.</p>
-     * <br>
-     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.</p>
+     * <blockquote>
+     * <p> If you do not set this parameter, <strong>ClientToken</strong> is set to the value of <strong>RequestId</strong>. The value of <strong>RequestId</strong> may be different for each API request.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The configurations of the endpoint.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EndpointConfigurations")
     public java.util.List<UpdateCustomRoutingEndpointsRequestEndpointConfigurations> endpointConfigurations;
 
     /**
      * <p>The ID of the endpoint group to which the endpoints that you want to modify belong.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>epg-bp1bpn0kn908w4nb****</p>
      */
     @NameInMap("EndpointGroupId")
     public String endpointGroupId;
 
     /**
-     * <p>The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.</p>
+     * <p>The ID of the region where the GA instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -72,20 +84,22 @@ public class UpdateCustomRoutingEndpointsRequest extends TeaModel {
     public static class UpdateCustomRoutingEndpointsRequestEndpointConfigurationsPolicyConfigurationsPortRanges extends TeaModel {
         /**
          * <p>The start port of the port range in the destination to which to allow traffic. The specified port must fall within the port range of the specified endpoint group.</p>
-         * <br>
-         * <p>This parameter takes effect only when **TrafficToEndpointPolicy** is set to **AllowCustom**.</p>
-         * <br>
+         * <p>This parameter takes effect only when <strong>TrafficToEndpointPolicy</strong> is set to <strong>AllowCustom</strong>.</p>
          * <p>You can specify port ranges for up to 20 destinations for each endpoint and specify up to 20 start ports for each destination.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("FromPort")
         public String fromPort;
 
         /**
          * <p>The end port of the port range in the destination to which to allow traffic. The specified port must fall within the port range of the specified endpoint group.</p>
-         * <br>
-         * <p>This parameter takes effect only when **TrafficToEndpointPolicy** is set to **AllowCustom**.</p>
-         * <br>
+         * <p>This parameter takes effect only when <strong>TrafficToEndpointPolicy</strong> is set to <strong>AllowCustom</strong>.</p>
          * <p>You can specify port ranges for up to 20 destinations for each endpoint and specify up to 20 end ports for each destination.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("ToPort")
         public String toPort;
@@ -116,21 +130,19 @@ public class UpdateCustomRoutingEndpointsRequest extends TeaModel {
     public static class UpdateCustomRoutingEndpointsRequestEndpointConfigurationsPolicyConfigurations extends TeaModel {
         /**
          * <p>The IP address of the destination to which to allow traffic.</p>
-         * <br>
-         * <p>This parameter takes effect only when **TrafficToEndpointPolicy** is set to **AllowCustom**.</p>
-         * <br>
+         * <p>This parameter takes effect only when <strong>TrafficToEndpointPolicy</strong> is set to <strong>AllowCustom</strong>.</p>
          * <p>You can specify up to 20 destination IP addresses for each endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0.XX.XX</p>
          */
         @NameInMap("Address")
         public String address;
 
         /**
          * <p>The port range of the destination to which traffic is forwarded. The value of this parameter must fall within the port range of the endpoint group.</p>
-         * <br>
          * <p>If you leave this parameter empty, traffic is forwarded to all destination ports.</p>
-         * <br>
-         * <p>This parameter takes effect only when **TrafficToEndpointPolicy** is set to **AllowCustom**.</p>
-         * <br>
+         * <p>This parameter takes effect only when <strong>TrafficToEndpointPolicy</strong> is set to <strong>AllowCustom</strong>.</p>
          * <p>You can specify port ranges for up to 20 destinations for each endpoint and specify up to 20 port ranges for each destination.</p>
          */
         @NameInMap("PortRanges")
@@ -162,8 +174,10 @@ public class UpdateCustomRoutingEndpointsRequest extends TeaModel {
     public static class UpdateCustomRoutingEndpointsRequestEndpointConfigurations extends TeaModel {
         /**
          * <p>The ID of the endpoint.</p>
-         * <br>
          * <p>You can specify up to 20 endpoint IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ep-bp1dmlohjjz4kqaun****</p>
          */
         @NameInMap("EndpointId")
         public String endpointId;
@@ -176,16 +190,19 @@ public class UpdateCustomRoutingEndpointsRequest extends TeaModel {
 
         /**
          * <p>The access policy of traffic for the specified endpoint. Default value: DenyAll. Valid values:</p>
-         * <br>
-         * <p>*   **DenyAll**: denies all traffic to the endpoint.</p>
-         * <br>
-         * <p>*   **AllowAll**: allows all traffic to the endpoint.</p>
-         * <br>
-         * <p>*   **AllowCustom**: allows traffic only to specified destinations.</p>
-         * <br>
-         * <p>    If you set this parameter to AllowCustom, you must specify IP addresses and port ranges of destinations to which to allow traffic. If you specify only IP addresses and do not specify port ranges, GA can forward traffic to all ports and the specified IP addresses in the destinations.</p>
-         * <br>
+         * <ul>
+         * <li><p><strong>DenyAll</strong>: denies all traffic to the endpoint.</p>
+         * </li>
+         * <li><p><strong>AllowAll</strong>: allows all traffic to the endpoint.</p>
+         * </li>
+         * <li><p><strong>AllowCustom</strong>: allows traffic only to specified destinations.</p>
+         * <p>If you set this parameter to AllowCustom, you must specify IP addresses and port ranges of destinations to which to allow traffic. If you specify only IP addresses and do not specify port ranges, GA can forward traffic to all ports and the specified IP addresses in the destinations.</p>
+         * </li>
+         * </ul>
          * <p>You can specify up to 20 access policies of traffic for the specified endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DenyAll</p>
          */
         @NameInMap("TrafficToEndpointPolicy")
         public String trafficToEndpointPolicy;

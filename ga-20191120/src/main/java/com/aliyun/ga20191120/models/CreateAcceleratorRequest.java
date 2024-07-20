@@ -6,86 +6,121 @@ import com.aliyun.tea.*;
 public class CreateAcceleratorRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable automatic payment. Default value: false. Valid values:</p>
-     * <br>
-     * <p>*   **false:** disables automatic payment. If you select this option, you must go to the Order Center to complete the payment after an order is generated.</p>
-     * <p>*   **true:** enables automatic payment. Payments are automatically completed.</p>
+     * <ul>
+     * <li><strong>false:</strong> disables automatic payment. If you select this option, you must go to the Order Center to complete the payment after an order is generated.</li>
+     * <li><strong>true:</strong> enables automatic payment. Payments are automatically completed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
     /**
      * <p>Specifies whether to enable auto-renewal for the GA instance. Default value: false. Valid values:</p>
-     * <br>
-     * <p>*   **true:** enables auto-renewal.</p>
-     * <p>*   **false:** disables auto-renewal.</p>
+     * <ul>
+     * <li><strong>true:</strong> enables auto-renewal.</li>
+     * <li><strong>false:</strong> disables auto-renewal.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
 
     /**
      * <p>The auto-renewal duration. Unit: months.</p>
-     * <br>
-     * <p>Valid values: **1** to **12**. Default value: **1**.</p>
-     * <br>
-     * <p>>  This parameter takes effect only when **AutoRenew** is set to **true**.</p>
+     * <p>Valid values: <strong>1</strong> to <strong>12</strong>. Default value: <strong>1</strong>.</p>
+     * <blockquote>
+     * <p> This parameter takes effect only when <strong>AutoRenew</strong> is set to <strong>true</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("AutoRenewDuration")
     public Integer autoRenewDuration;
 
     /**
      * <p>Specifies whether to automatically use coupons when making payments. Default value: false. Valid values:</p>
-     * <br>
-     * <p>*   **true:** automatically pays bill by using coupons.</p>
-     * <p>*   **false:** does not automatically pay bills by using coupons.</p>
-     * <br>
-     * <p>>  This parameter takes effect only when **AutoPay** is set to **true**.</p>
+     * <ul>
+     * <li><strong>true:</strong> automatically pays bill by using coupons.</li>
+     * <li><strong>false:</strong> does not automatically pay bills by using coupons.</li>
+     * </ul>
+     * <blockquote>
+     * <p> This parameter takes effect only when <strong>AutoPay</strong> is set to <strong>true</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("AutoUseCoupon")
     public String autoUseCoupon;
 
     /**
      * <p>The bandwidth billing method.</p>
-     * <br>
-     * <p>*   **BandwidthPackage:** billed based on bandwidth plans.</p>
-     * <p>*   **CDT:** billed based on data transfer.</p>
-     * <p>*   **CDT95:** billed based on the 95th percentile bandwidth. The billing is managed by Cloud Data Transfer (CDT). This bandwidth billing method is not available by default. Contact your Alibaba Cloud account manager for more information.</p>
+     * <ul>
+     * <li><strong>BandwidthPackage:</strong> billed based on bandwidth plans.</li>
+     * <li><strong>CDT:</strong> billed based on data transfer.</li>
+     * <li><strong>CDT95:</strong> billed based on the 95th percentile bandwidth. The billing is managed by Cloud Data Transfer (CDT). This bandwidth billing method is not available by default. Contact your Alibaba Cloud account manager for more information.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>BandwidthPackage</p>
      */
     @NameInMap("BandwidthBillingType")
     public String bandwidthBillingType;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate the value, but you must make sure that it is unique among all requests. The token can contain only ASCII characters.</p>
-     * <br>
-     * <p>>  If you do not set this parameter, the system sets **ClientToken** to the value of **RequestId**. The value of **RequestId** of each API request may be different.</p>
+     * <blockquote>
+     * <p> If you do not set this parameter, the system sets <strong>ClientToken</strong> to the value of <strong>RequestId</strong>. The value of <strong>RequestId</strong> of each API request may be different.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>Specifies whether only to precheck the request. Default value: false. Valid values:</p>
-     * <br>
-     * <p>*   **true**: prechecks the request without performing the operation. The system checks the required parameters, request syntax, and limits. If the request fails the precheck, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.</p>
-     * <p>*   **false**: sends the request. If the request passes the precheck, a 2xx HTTP status code is returned and the operation is performed.</p>
+     * <ul>
+     * <li><strong>true</strong>: prechecks the request without performing the operation. The system checks the required parameters, request syntax, and limits. If the request fails the precheck, an error message is returned. If the request passes the precheck, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong>: sends the request. If the request passes the precheck, a 2xx HTTP status code is returned and the operation is performed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
      * <p>The subscription duration of the GA instance.</p>
-     * <br>
-     * <p>*   If the **PricingCycle** parameter is set to **Month**, the valid values for the **Duration** parameter are **1** to **9**.</p>
-     * <p>*   If the **PricingCycle** parameter is set to **Year**, the valid values for the **Duration** parameter are **1** to **3**.</p>
+     * <ul>
+     * <li>If the <strong>PricingCycle</strong> parameter is set to <strong>Month</strong>, the valid values for the <strong>Duration</strong> parameter are <strong>1</strong> to <strong>9</strong>.</li>
+     * <li>If the <strong>PricingCycle</strong> parameter is set to <strong>Year</strong>, the valid values for the <strong>Duration</strong> parameter are <strong>1</strong> to <strong>3</strong>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Duration")
     public Integer duration;
 
     /**
      * <p>The billing method of the GA. Default value is PREPAY (subscription).</p>
-     * <br>
-     * <p>*   PREPAY : subscription.</p>
-     * <p>*   POSTPAY : pay-as-you-go</p>
+     * <ul>
+     * <li>PREPAY : subscription.</li>
+     * <li>POSTPAY : pay-as-you-go</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>PREPAY</p>
      */
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
@@ -98,64 +133,84 @@ public class CreateAcceleratorRequest extends TeaModel {
 
     /**
      * <p>The name of the GA instance.</p>
-     * <br>
-     * <p>The name must be 2 to 128 characters in length and can contain digits, underscores (\_), and hyphens (-). It must start with a letter.</p>
+     * <p>The name must be 2 to 128 characters in length and can contain digits, underscores (_), and hyphens (-). It must start with a letter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The billing cycle of the GA instance. Valid values:</p>
-     * <br>
-     * <p>*   **Month:** billed on a monthly basis.</p>
-     * <p>*   **Year:** billed on an annual basis.</p>
+     * <ul>
+     * <li><strong>Month:</strong> billed on a monthly basis.</li>
+     * <li><strong>Year:</strong> billed on an annual basis.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Month</p>
      */
     @NameInMap("PricingCycle")
     public String pricingCycle;
 
     /**
      * <p>The coupon code.</p>
-     * <br>
-     * <p>></p>
+     * <blockquote>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>50003298014****</p>
      */
     @NameInMap("PromotionOptionNo")
     public String promotionOptionNo;
 
     /**
-     * <p>The ID of the region in which to create the GA instance. Set the value to **cn-hangzhou**.</p>
+     * <p>The ID of the region in which to create the GA instance. Set the value to <strong>cn-hangzhou</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group to which the standard GA instance belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-aekzrnd67gq****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>The type of GA instance. Valid values:</p>
-     * <br>
-     * <p>*   **1:** Small Ⅰ</p>
-     * <p>*   **2:** Small Ⅱ</p>
-     * <p>*   **3:** Small Ⅲ</p>
-     * <p>*   **5:** Medium Ⅰ</p>
-     * <p>*   **8:** Medium Ⅱ</p>
-     * <p>*   **10:** Medium Ⅲ</p>
-     * <p>*   **20:** Large Ⅰ</p>
-     * <p>*   **30:** Large Ⅱ</p>
-     * <p>*   **40:** Large Ⅲ</p>
-     * <p>*   **50:** Large Ⅳ</p>
-     * <p>*   **60:** Large Ⅴ</p>
-     * <p>*   **70:** Large Ⅵ</p>
-     * <p>*   **80:** Large VⅡ</p>
-     * <p>*   **90:** Large VⅢ</p>
-     * <p>*   **100:** Super Large Ⅰ</p>
-     * <p>*   **200:** Super Large Ⅱ</p>
-     * <br>
-     * <p>>  GA instances Large III and above are not available by default. To use these instances , contact your Alibaba Cloud account manager.</p>
-     * <br>
-     * <p>Each instance type provides different capabilities. For more information, see [Instance specifications](~~153127~~).</p>
+     * <ul>
+     * <li><strong>1:</strong> Small Ⅰ</li>
+     * <li><strong>2:</strong> Small Ⅱ</li>
+     * <li><strong>3:</strong> Small Ⅲ</li>
+     * <li><strong>5:</strong> Medium Ⅰ</li>
+     * <li><strong>8:</strong> Medium Ⅱ</li>
+     * <li><strong>10:</strong> Medium Ⅲ</li>
+     * <li><strong>20:</strong> Large Ⅰ</li>
+     * <li><strong>30:</strong> Large Ⅱ</li>
+     * <li><strong>40:</strong> Large Ⅲ</li>
+     * <li><strong>50:</strong> Large Ⅳ</li>
+     * <li><strong>60:</strong> Large Ⅴ</li>
+     * <li><strong>70:</strong> Large Ⅵ</li>
+     * <li><strong>80:</strong> Large VⅡ</li>
+     * <li><strong>90:</strong> Large VⅢ</li>
+     * <li><strong>100:</strong> Super Large Ⅰ</li>
+     * <li><strong>200:</strong> Super Large Ⅱ</li>
+     * </ul>
+     * <blockquote>
+     * <p> GA instances Large III and above are not available by default. To use these instances , contact your Alibaba Cloud account manager.</p>
+     * </blockquote>
+     * <p>Each instance type provides different capabilities. For more information, see <a href="https://help.aliyun.com/document_detail/153127.html">Instance specifications</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Spec")
     public String spec;
@@ -310,9 +365,13 @@ public class CreateAcceleratorRequest extends TeaModel {
     public static class CreateAcceleratorRequestIpSetConfig extends TeaModel {
         /**
          * <p>The access mode of the acceleration area. Valid values:</p>
-         * <br>
-         * <p>*   **UserDefine:** custom nearby access mode. You can select acceleration areas and regions based on your business requirements. GA allocates a separate EIP to each acceleration region.</p>
-         * <p>*   **Anycast:** automatic nearby access mode. You do not need to specify an acceleration area. GA allocates an Anycast EIP to multiple regions across the globe. Users can connect to the nearest access point of the Alibaba Cloud global transmission network by sending requests to the Anycast EIP.</p>
+         * <ul>
+         * <li><strong>UserDefine:</strong> custom nearby access mode. You can select acceleration areas and regions based on your business requirements. GA allocates a separate EIP to each acceleration region.</li>
+         * <li><strong>Anycast:</strong> automatic nearby access mode. You do not need to specify an acceleration area. GA allocates an Anycast EIP to multiple regions across the globe. Users can connect to the nearest access point of the Alibaba Cloud global transmission network by sending requests to the Anycast EIP.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>UserDefine</p>
          */
         @NameInMap("AccessMode")
         public String accessMode;
@@ -335,20 +394,22 @@ public class CreateAcceleratorRequest extends TeaModel {
     public static class CreateAcceleratorRequestTag extends TeaModel {
         /**
          * <p>The tag key of the GA instance. The tag key cannot be an empty string.</p>
-         * <br>
-         * <p>The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.</p>
-         * <br>
+         * <p>The tag key can be up to 64 characters in length and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
          * <p>You can specify up to 20 tag keys.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag-key</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value of the GA instance. The tag value cannot be an empty string.</p>
-         * <br>
-         * <p>The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.</p>
-         * <br>
+         * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
          * <p>You can specify up to 20 tag values.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag-value</p>
          */
         @NameInMap("Value")
         public String value;

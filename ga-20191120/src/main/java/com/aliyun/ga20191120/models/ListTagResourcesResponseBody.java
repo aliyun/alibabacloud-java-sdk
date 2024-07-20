@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class ListTagResourcesResponseBody extends TeaModel {
     /**
      * <p>The token that determines the start point of the next query. Valid values:</p>
-     * <br>
-     * <p>*   If **NextToken** is empty, it indicates that no subsequent query is to be sent.</p>
-     * <p>*   If a value is returned for **NextToken**, the value is the token that determines the start point of the next query.</p>
+     * <ul>
+     * <li>If <strong>NextToken</strong> is empty, it indicates that no subsequent query is to be sent.</li>
+     * <li>If a value is returned for <strong>NextToken</strong>, the value is the token that determines the start point of the next query.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>54B48E3D-DF70-471B-AA93-08E683A1B45</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -27,6 +34,9 @@ public class ListTagResourcesResponseBody extends TeaModel {
 
     /**
      * <p>The number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -71,30 +81,43 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public static class ListTagResourcesResponseBodyTagResourcesTagResource extends TeaModel {
         /**
          * <p>The ID of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ga-bp149u6o36qt1as9b****</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
          * <p>The type of the resource.</p>
-         * <br>
-         * <p>*   **accelerator**: a standard GA instance</p>
-         * <p>*   **basicaccelerator**: a basic GA instance</p>
-         * <p>*   **bandwidthpackage**: a bandwidth plan</p>
-         * <p>*   **acl**: an ACL</p>
-         * <p>*   **endpointgroup**: an endpoint group</p>
+         * <ul>
+         * <li><strong>accelerator</strong>: a standard GA instance</li>
+         * <li><strong>basicaccelerator</strong>: a basic GA instance</li>
+         * <li><strong>bandwidthpackage</strong>: a bandwidth plan</li>
+         * <li><strong>acl</strong>: an ACL</li>
+         * <li><strong>endpointgroup</strong>: an endpoint group</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>accelerator</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>valueTest</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>KeyTest</p>
          */
         @NameInMap("TagValue")
         public String tagValue;

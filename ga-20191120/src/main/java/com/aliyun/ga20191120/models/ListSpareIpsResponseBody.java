@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListSpareIpsResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6FEA0CF3-D3B9-43E5-A304-D217037876A8</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,15 +43,22 @@ public class ListSpareIpsResponseBody extends TeaModel {
     public static class ListSpareIpsResponseBodySpareIps extends TeaModel {
         /**
          * <p>The secondary IP address that is associated with the CNAME. If the acceleration area becomes unavailable, GA redirects traffic to the secondary IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47.100.XX.XX</p>
          */
         @NameInMap("SpareIp")
         public String spareIp;
 
         /**
          * <p>The status of the secondary IP address. Valid values:</p>
-         * <br>
-         * <p>*   **active:** The secondary IP address is available.</p>
-         * <p>*   **inuse:** The secondary IP address is in use.</p>
+         * <ul>
+         * <li><strong>active:</strong> The secondary IP address is available.</li>
+         * <li><strong>inuse:</strong> The secondary IP address is in use.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>active</p>
          */
         @NameInMap("State")
         public String state;

@@ -6,92 +6,127 @@ import com.aliyun.tea.*;
 public class GetBasicAccelerateIpEndpointRelationResponseBody extends TeaModel {
     /**
      * <p>The ID of the accelerated IP address.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gaip-bp1****</p>
      */
     @NameInMap("AccelerateIpId")
     public String accelerateIpId;
 
     /**
      * <p>The ID of the basic GA instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ga-bp11v53zfftax68b0daws</p>
      */
     @NameInMap("AcceleratorId")
     public String acceleratorId;
 
     /**
      * <p>The address of the endpoint.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eni-bp1a05txelswuj8g****</p>
      */
     @NameInMap("EndpointAddress")
     public String endpointAddress;
 
     /**
      * <p>The ID of the endpoint.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ep-bp14sz7ftcwwjgrdm****</p>
      */
     @NameInMap("EndpointId")
     public String endpointId;
 
     /**
      * <p>The name of the endpoint.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ep01</p>
      */
     @NameInMap("EndpointName")
     public String endpointName;
 
     /**
      * <p>The secondary address of the endpoint.</p>
-     * <br>
-     * <p>This parameter is returned if the endpoint type is **ECS**, **ENI**, or **NLB**.</p>
-     * <br>
-     * <p>*   If the endpoint type is **ECS**, **EndpointSubAddress** returns the primary or secondary private IP address of the primary ENI.</p>
-     * <p>*   If the endpoint type is **ENI**, **EndpointSubAddress** returns the primary or secondary private IP address of the secondary ENI.</p>
-     * <p>*   If the endpoint type is **NLB**, **EndpointSubAddress** returns the primary private IP address of the NLB backend server.</p>
+     * <p>This parameter is returned if the endpoint type is <strong>ECS</strong>, <strong>ENI</strong>, or <strong>NLB</strong>.</p>
+     * <ul>
+     * <li>If the endpoint type is <strong>ECS</strong>, <strong>EndpointSubAddress</strong> returns the primary or secondary private IP address of the primary ENI.</li>
+     * <li>If the endpoint type is <strong>ENI</strong>, <strong>EndpointSubAddress</strong> returns the primary or secondary private IP address of the secondary ENI.</li>
+     * <li>If the endpoint type is <strong>NLB</strong>, <strong>EndpointSubAddress</strong> returns the primary private IP address of the NLB backend server.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>172.16.XX.XX</p>
      */
     @NameInMap("EndpointSubAddress")
     public String endpointSubAddress;
 
     /**
      * <p>The type of the secondary address of the endpoint.</p>
-     * <br>
-     * <p>*   **primary**: a primary private IP address.</p>
-     * <p>*   **secondary**: a secondary private IP address.</p>
-     * <br>
-     * <p>This parameter is returned if the endpoint type is **ECS**, **ENI**, or **NLB**. If the endpoint type is set to **NLB**, **primary** is returned.</p>
+     * <ul>
+     * <li><strong>primary</strong>: a primary private IP address.</li>
+     * <li><strong>secondary</strong>: a secondary private IP address.</li>
+     * </ul>
+     * <p>This parameter is returned if the endpoint type is <strong>ECS</strong>, <strong>ENI</strong>, or <strong>NLB</strong>. If the endpoint type is set to <strong>NLB</strong>, <strong>primary</strong> is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>primary</p>
      */
     @NameInMap("EndpointSubAddressType")
     public String endpointSubAddressType;
 
     /**
      * <p>The type of endpoint. Valid values:</p>
-     * <br>
-     * <p>*   **ENI**: elastic network interface (ENI).</p>
-     * <p>*   **SLB**: Classic Load Balancer (CLB) instance.</p>
-     * <p>*   **ECS**: Elastic Compute Service (ECS) instance.</p>
-     * <p>*   **NLB**: Network Load Balancer (NLB) instance.</p>
+     * <ul>
+     * <li><strong>ENI</strong>: elastic network interface (ENI).</li>
+     * <li><strong>SLB</strong>: Classic Load Balancer (CLB) instance.</li>
+     * <li><strong>ECS</strong>: Elastic Compute Service (ECS) instance.</li>
+     * <li><strong>NLB</strong>: Network Load Balancer (NLB) instance.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ENI</p>
      */
     @NameInMap("EndpointType")
     public String endpointType;
 
     /**
      * <p>The ID of the zone where the endpoint is created.</p>
-     * <br>
-     * <p>This parameter is returned only when the endpoint type is **NLB**.</p>
+     * <p>This parameter is returned only when the endpoint type is <strong>NLB</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-g</p>
      */
     @NameInMap("EndpointZoneId")
     public String endpointZoneId;
 
     /**
      * <p>The accelerated IP address of the basic GA instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>116.132.XX.XX</p>
      */
     @NameInMap("IpAddress")
     public String ipAddress;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The association status between the accelerated IP address and endpoint.</p>
-     * <br>
-     * <p>A value of **active** indicates that the accelerated IP address is associated with the endpoint.</p>
+     * <p>A value of <strong>active</strong> indicates that the accelerated IP address is associated with the endpoint.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>active</p>
      */
     @NameInMap("State")
     public String state;

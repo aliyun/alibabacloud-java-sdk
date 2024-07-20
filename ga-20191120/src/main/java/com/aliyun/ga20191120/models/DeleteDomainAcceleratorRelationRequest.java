@@ -6,7 +6,6 @@ import com.aliyun.tea.*;
 public class DeleteDomainAcceleratorRelationRequest extends TeaModel {
     /**
      * <p>The ID of the GA instance to be disassociated. You can specify up to 50 IDs.</p>
-     * <br>
      * <p>If you leave this parameter empty, all GA instances associated with the specified domain name are disassociated.</p>
      */
     @NameInMap("AcceleratorIds")
@@ -14,12 +13,19 @@ public class DeleteDomainAcceleratorRelationRequest extends TeaModel {
 
     /**
      * <p>The accelerated domain name to be disassociated.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://www.example.com">www.example.com</a></p>
      */
     @NameInMap("Domain")
     public String domain;
 
     /**
-     * <p>The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to **cn-hangzhou**.</p>
+     * <p>The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

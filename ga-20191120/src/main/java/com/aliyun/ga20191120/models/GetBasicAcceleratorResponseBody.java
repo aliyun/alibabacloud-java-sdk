@@ -6,16 +6,23 @@ import com.aliyun.tea.*;
 public class GetBasicAcceleratorResponseBody extends TeaModel {
     /**
      * <p>The ID of the basic GA instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ga-bp17frjjh0udz4qz****</p>
      */
     @NameInMap("AcceleratorId")
     public String acceleratorId;
 
     /**
      * <p>The bandwidth metering method.</p>
-     * <br>
-     * <p>*   **BandwidthPackage**: billed based on bandwidth plans.</p>
-     * <p>*   **CDT**: billed by Cloud Data Transfer (CDT) and based on data transfer.</p>
-     * <p>*   **CDT95**: billed by CDT and based on the 95th percentile bandwidth. This bandwidth metering method is available only to users that are included in the whitelist.</p>
+     * <ul>
+     * <li><strong>BandwidthPackage</strong>: billed based on bandwidth plans.</li>
+     * <li><strong>CDT</strong>: billed by Cloud Data Transfer (CDT) and based on data transfer.</li>
+     * <li><strong>CDT95</strong>: billed by CDT and based on the 95th percentile bandwidth. This bandwidth metering method is available only to users that are included in the whitelist.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>CDT</p>
      */
     @NameInMap("BandwidthBillingType")
     public String bandwidthBillingType;
@@ -28,40 +35,55 @@ public class GetBasicAcceleratorResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the endpoint group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>epg-bp1dmlohjjz4kqaun****</p>
      */
     @NameInMap("BasicEndpointGroupId")
     public String basicEndpointGroupId;
 
     /**
      * <p>The ID of the acceleration region.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ips-bp11ilwqjdkjeg9r7****</p>
      */
     @NameInMap("BasicIpSetId")
     public String basicIpSetId;
 
     /**
      * <p>The ID of the Cloud Enterprise Network (CEN) instance to which the basic GA instance is attached.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cen-hjkduu767hc****</p>
      */
     @NameInMap("CenId")
     public String cenId;
 
     /**
      * <p>The timestamp that indicates when the basic GA instance is created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1637734547</p>
      */
     @NameInMap("CreateTime")
     public Long createTime;
 
     /**
      * <p>Indicates whether cross-border acceleration is enabled for the basic GA instance. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("CrossBorderStatus")
     public Boolean crossBorderStatus;
 
     /**
      * <p>The details about the cross-border acceleration bandwidth plan that is associated with the GA instance.</p>
-     * <br>
      * <p>This array is returned only for GA instances that are created on the international site (alibabacloud.com).</p>
      */
     @NameInMap("CrossDomainBandwidthPackage")
@@ -69,67 +91,95 @@ public class GetBasicAcceleratorResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether cross-border acceleration is enabled.</p>
-     * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false**: no</p>
+     * <ul>
+     * <li><strong>true</strong>: yes</li>
+     * <li><strong>false</strong>: no</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("CrossPrivateState")
     public String crossPrivateState;
 
     /**
      * <p>The description of the basic GA instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BasicAccelerator</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The timestamp that indicates when the basic GA instance expires.</p>
-     * <br>
      * <p>The time follows the UNIX time format. It is the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1640326547</p>
      */
     @NameInMap("ExpiredTime")
     public Long expiredTime;
 
     /**
-     * <p>The billing method of the basic GA instance. Only **PREPAY** is returned, which indicates the subscription billing method.</p>
+     * <p>The billing method of the basic GA instance. Only <strong>PREPAY</strong> is returned, which indicates the subscription billing method.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PREPAY</p>
      */
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
 
     /**
      * <p>The name of the basic GA instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BasicAccelerator</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The ID of the region where the basic GA instance is deployed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F591955F-5CB5-4CCE-A75D-17CF2085CE22</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the resource group to which the basic GA instance belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-aekzrnd67gq****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>The status of the basic GA instance.</p>
-     * <br>
-     * <p>*   **init**: The GA instance is being initialized.</p>
-     * <p>*   **active**: The GA instance is available.</p>
-     * <p>*   **configuring**: The GA instance is being configured.</p>
-     * <p>*   **binding**: The GA instance is being associated.</p>
-     * <p>*   **unbinding**: The GA instance is being disassociated.</p>
-     * <p>*   **deleting**: The GA instance is being deleted.</p>
-     * <p>*   **finacialLocked**: The GA instance is locked due to overdue payments.</p>
+     * <ul>
+     * <li><strong>init</strong>: The GA instance is being initialized.</li>
+     * <li><strong>active</strong>: The GA instance is available.</li>
+     * <li><strong>configuring</strong>: The GA instance is being configured.</li>
+     * <li><strong>binding</strong>: The GA instance is being associated.</li>
+     * <li><strong>unbinding</strong>: The GA instance is being disassociated.</li>
+     * <li><strong>deleting</strong>: The GA instance is being deleted.</li>
+     * <li><strong>finacialLocked</strong>: The GA instance is locked due to overdue payments.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>active</p>
      */
     @NameInMap("State")
     public String state;
@@ -300,22 +350,32 @@ public class GetBasicAcceleratorResponseBody extends TeaModel {
     public static class GetBasicAcceleratorResponseBodyBasicBandwidthPackage extends TeaModel {
         /**
          * <p>The bandwidth value of the basic bandwidth plan. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Bandwidth")
         public Integer bandwidth;
 
         /**
          * <p>The type of the bandwidth that is provided by the basic bandwidth plan.</p>
-         * <br>
-         * <p>*   **Basic**: basic</p>
-         * <p>*   **Enhanced**: enhanced</p>
-         * <p>*   **Advanced**: premium</p>
+         * <ul>
+         * <li><strong>Basic</strong>: basic</li>
+         * <li><strong>Enhanced</strong>: enhanced</li>
+         * <li><strong>Advanced</strong>: premium</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Basic</p>
          */
         @NameInMap("BandwidthType")
         public String bandwidthType;
 
         /**
          * <p>The ID of the basic bandwidth plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gbwp-bp1d8xk8bg139j0fw****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
@@ -354,12 +414,18 @@ public class GetBasicAcceleratorResponseBody extends TeaModel {
     public static class GetBasicAcceleratorResponseBodyCrossDomainBandwidthPackage extends TeaModel {
         /**
          * <p>The bandwidth value of the cross-border acceleration bandwidth plan. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Bandwidth")
         public Integer bandwidth;
 
         /**
          * <p>The ID of the cross-border acceleration bandwidth plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gbwp-bp1d8xk8bg139j0fw****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
@@ -390,12 +456,18 @@ public class GetBasicAcceleratorResponseBody extends TeaModel {
     public static class GetBasicAcceleratorResponseBodyTags extends TeaModel {
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag-key</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag-value</p>
          */
         @NameInMap("Value")
         public String value;

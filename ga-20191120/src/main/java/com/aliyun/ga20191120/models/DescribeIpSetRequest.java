@@ -6,14 +6,21 @@ import com.aliyun.tea.*;
 public class DescribeIpSetRequest extends TeaModel {
     /**
      * <p>The ID of the acceleration region.</p>
-     * <br>
-     * <p>You can call the [ListIpSets](~~2253273~~) operation to query the IDs of acceleration regions of a specific GA instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2253273.html">ListIpSets</a> operation to query the IDs of acceleration regions of a specific GA instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ips-bp11ilwqjdkjeg9r7****</p>
      */
     @NameInMap("IpSetId")
     public String ipSetId;
 
     /**
-     * <p>The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to **cn-hangzhou**.</p>
+     * <p>The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

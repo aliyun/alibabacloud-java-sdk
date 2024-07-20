@@ -6,25 +6,29 @@ import com.aliyun.tea.*;
 public class UpdateEndpointGroupRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate the value, but you must make sure that it is unique among all requests. ClientToken can contain only ASCII characters.</p>
-     * <br>
-     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.</p>
+     * <blockquote>
+     * <p> If you do not set this parameter, <strong>ClientToken</strong> is set to the value of <strong>RequestId</strong>. The value of <strong>RequestId</strong> may be different for each API request.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The description of the endpoint group.</p>
-     * <br>
-     * <p>The description cannot exceed 256 characters in length and cannot contain `http://` or `https://`.</p>
+     * <p>The description cannot exceed 256 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EndpointGroup</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The information about the endpoints.</p>
-     * <br>
      * <p>You can specify information for up to 20 endpoints.</p>
      */
     @NameInMap("EndpointConfigurations")
@@ -32,69 +36,106 @@ public class UpdateEndpointGroupRequest extends TeaModel {
 
     /**
      * <p>The ID of the endpoint group.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>epg-bp1dmlohjjz4kqaun****</p>
      */
     @NameInMap("EndpointGroupId")
     public String endpointGroupId;
 
     /**
      * <p>The ID of the region where the endpoint group is created.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("EndpointGroupRegion")
     public String endpointGroupRegion;
 
+    @NameInMap("EndpointProtocolVersion")
+    public String endpointProtocolVersion;
+
     /**
      * <p>The protocol that is used by the backend service. Valid values:</p>
-     * <br>
-     * <p>*   **HTTP**</p>
-     * <p>*   **HTTPS**</p>
-     * <br>
-     * <p>> *   You can set this parameter only when the listener that is associated with the endpoint group uses the HTTP or HTTPS protocol.</p>
-     * <p>> *   For an HTTP listener, the backend service protocol must be HTTP.</p>
+     * <ul>
+     * <li><strong>HTTP</strong></li>
+     * <li><strong>HTTPS</strong></li>
+     * </ul>
+     * <blockquote>
+     * <ul>
+     * <li>You can set this parameter only when the listener that is associated with the endpoint group uses the HTTP or HTTPS protocol.</li>
+     * <li>For an HTTP listener, the backend service protocol must be HTTP.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>HTTP</p>
      */
     @NameInMap("EndpointRequestProtocol")
     public String endpointRequestProtocol;
 
     /**
      * <p>Specifies whether to enable the health check feature. Default value: true. Valid values:</p>
-     * <br>
-     * <p>*   **true**: enables the health check feature.</p>
-     * <p>*   **false**: disables the health check feature.</p>
+     * <ul>
+     * <li><strong>true</strong>: enables the health check feature.</li>
+     * <li><strong>false</strong>: disables the health check feature.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("HealthCheckEnabled")
     public Boolean healthCheckEnabled;
 
     /**
-     * <p>The interval between two consecutive health checks. Unit: seconds. Valid values: **1** to **50**.</p>
+     * <p>The interval between two consecutive health checks. Unit: seconds. Valid values: <strong>1</strong> to <strong>50</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("HealthCheckIntervalSeconds")
     public Integer healthCheckIntervalSeconds;
 
     /**
      * <p>The path to which health check requests are sent.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/healthcheck</p>
      */
     @NameInMap("HealthCheckPath")
     public String healthCheckPath;
 
     /**
-     * <p>The port that is used for health checks. Valid values: **1** to **65535**.</p>
+     * <p>The port that is used for health checks. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("HealthCheckPort")
     public Integer healthCheckPort;
 
     /**
      * <p>The protocol over which health check requests are sent. Valid values:</p>
-     * <br>
-     * <p>*   **tcp**: TCP</p>
-     * <p>*   **http**: HTTP</p>
-     * <p>*   **https**: HTTPS</p>
+     * <ul>
+     * <li><strong>tcp</strong>: TCP</li>
+     * <li><strong>http</strong>: HTTP</li>
+     * <li><strong>https</strong>: HTTPS</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>tcp</p>
      */
     @NameInMap("HealthCheckProtocol")
     public String healthCheckProtocol;
 
     /**
      * <p>The name of the endpoint group.</p>
-     * <br>
-     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.</p>
+     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>group1</p>
      */
     @NameInMap("Name")
     public String name;
@@ -106,21 +147,30 @@ public class UpdateEndpointGroupRequest extends TeaModel {
     public java.util.List<UpdateEndpointGroupRequestPortOverrides> portOverrides;
 
     /**
-     * <p>The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.</p>
+     * <p>The ID of the region where the GA instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The number of consecutive health check failures that must occur before a healthy endpoint group is considered unhealthy, or the number of consecutive health check successes that must occur before an unhealthy endpoint group is considered healthy.</p>
-     * <br>
-     * <p>Valid values: **2** to **10**.</p>
+     * <p>Valid values: <strong>2</strong> to <strong>10</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("ThresholdCount")
     public Integer thresholdCount;
 
     /**
      * <p>The weight of the endpoint group when the listener is associated with multiple endpoint groups.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("TrafficPercentage")
     public Integer trafficPercentage;
@@ -168,6 +218,14 @@ public class UpdateEndpointGroupRequest extends TeaModel {
     }
     public String getEndpointGroupRegion() {
         return this.endpointGroupRegion;
+    }
+
+    public UpdateEndpointGroupRequest setEndpointProtocolVersion(String endpointProtocolVersion) {
+        this.endpointProtocolVersion = endpointProtocolVersion;
+        return this;
+    }
+    public String getEndpointProtocolVersion() {
+        return this.endpointProtocolVersion;
     }
 
     public UpdateEndpointGroupRequest setEndpointRequestProtocol(String endpointRequestProtocol) {
@@ -261,64 +319,93 @@ public class UpdateEndpointGroupRequest extends TeaModel {
     public static class UpdateEndpointGroupRequestEndpointConfigurations extends TeaModel {
         /**
          * <p>Specifies whether to reserve client IP addresses. Default value: false. Valid values:</p>
-         * <br>
-         * <p>*   **true**: reserves client IP addresses.</p>
-         * <p>*   **false**: does not reserve client IP addresses.</p>
+         * <ul>
+         * <li><strong>true</strong>: reserves client IP addresses.</li>
+         * <li><strong>false</strong>: does not reserve client IP addresses.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("EnableClientIPPreservation")
         public Boolean enableClientIPPreservation;
 
         /**
          * <p>Specifies whether to preserve client IP addresses by using the ProxyProtocol module. Default value: false. Valid values:</p>
-         * <br>
-         * <p>*   **true**: preserves client IP addresses by using the ProxyProtocol module.</p>
-         * <p>*   **false**: does not preserve client IP addresses by using the ProxyProtocol module.</p>
+         * <ul>
+         * <li><strong>true</strong>: preserves client IP addresses by using the ProxyProtocol module.</li>
+         * <li><strong>false</strong>: does not preserve client IP addresses by using the ProxyProtocol module.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("EnableProxyProtocol")
         public Boolean enableProxyProtocol;
 
         /**
          * <p>The IP address or domain name of the endpoint.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120.XX.XX.21</p>
          */
         @NameInMap("Endpoint")
         public String endpoint;
 
         /**
          * <p>The private IP address of the ENI.</p>
-         * <br>
-         * <p>> - When the Endpoint type is ENI, this parameter can be configured. If not configured, it defaults to the primary private IP address of ENI.</p>
+         * <blockquote>
+         * <ul>
+         * <li>When the Endpoint type is ENI, this parameter can be configured. If not configured, it defaults to the primary private IP address of ENI.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>172.168.XX.XX</p>
          */
         @NameInMap("SubAddress")
         public String subAddress;
 
         /**
          * <p>The type of the endpoint. Valid values:</p>
-         * <br>
-         * <p>*   **Domain:** a custom domain name.</p>
-         * <p>*   **Ip:** a custom IP address.</p>
-         * <p>*   **PublicIp:** a public IP address provided by Alibaba Cloud.</p>
-         * <p>*   **ECS:** Elastic Compute Service (ECS) instance.</p>
-         * <p>*   **SLB:** Server Load Balancer (SLB) instance.</p>
-         * <p>*   **ALB:** Application Load Balancer (ALB) instance.</p>
-         * <p>*   **OSS:** Object Storage Service (OSS) bucket.</p>
-         * <p>*   **ENI:** Elastic Network interface (ENI).</p>
-         * <p>*   **NLB:** Network Load Balancer (NLB) instance.</p>
-         * <br>
-         * <p>> *   If you set this parameter to **ECS** or **SLB** and the service-linked role AliyunServiceRoleForGaVpcEndpoint does not exist, the system automatically creates the service-linked role.</p>
-         * <p>> *   If you set this parameter to **ALB** and the service-linked role AliyunServiceRoleForGaAlb does not exist, the system automatically creates the service-linked role.</p>
-         * <p>> *   If you set this parameter to **OSS** and the service-linked role AliyunServiceRoleForGaOss does not exist, the system automatically creates the service-linked role.</p>
-         * <br>
-         * <p>For more information, see [Service-linked roles](~~178360~~).</p>
+         * <ul>
+         * <li><strong>Domain:</strong> a custom domain name.</li>
+         * <li><strong>Ip:</strong> a custom IP address.</li>
+         * <li><strong>PublicIp:</strong> a public IP address provided by Alibaba Cloud.</li>
+         * <li><strong>ECS:</strong> Elastic Compute Service (ECS) instance.</li>
+         * <li><strong>SLB:</strong> Server Load Balancer (SLB) instance.</li>
+         * <li><strong>ALB:</strong> Application Load Balancer (ALB) instance.</li>
+         * <li><strong>OSS:</strong> Object Storage Service (OSS) bucket.</li>
+         * <li><strong>ENI:</strong> Elastic Network interface (ENI).</li>
+         * <li><strong>NLB:</strong> Network Load Balancer (NLB) instance.</li>
+         * </ul>
+         * <blockquote>
+         * <ul>
+         * <li>If you set this parameter to <strong>ECS</strong> or <strong>SLB</strong> and the service-linked role AliyunServiceRoleForGaVpcEndpoint does not exist, the system automatically creates the service-linked role.</li>
+         * <li>If you set this parameter to <strong>ALB</strong> and the service-linked role AliyunServiceRoleForGaAlb does not exist, the system automatically creates the service-linked role.</li>
+         * <li>If you set this parameter to <strong>OSS</strong> and the service-linked role AliyunServiceRoleForGaOss does not exist, the system automatically creates the service-linked role.</li>
+         * </ul>
+         * </blockquote>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/178360.html">Service-linked roles</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ip</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The weight of the endpoint.</p>
-         * <br>
-         * <p>Valid values: **0** to **255**.</p>
-         * <br>
-         * <p>>  If the weight of an endpoint is set to 0, GA stops distributing network traffic to the endpoint. Proceed with caution.</p>
+         * <p>Valid values: <strong>0</strong> to <strong>255</strong>.</p>
+         * <blockquote>
+         * <p> If the weight of an endpoint is set to 0, GA stops distributing network traffic to the endpoint. Proceed with caution.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("Weight")
         public Integer weight;
@@ -381,15 +468,24 @@ public class UpdateEndpointGroupRequest extends TeaModel {
     public static class UpdateEndpointGroupRequestPortOverrides extends TeaModel {
         /**
          * <p>The endpoint port that is mapped to the listener port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("EndpointPort")
         public Integer endpointPort;
 
         /**
          * <p>The listener port that is mapped to the endpoint port.</p>
-         * <br>
-         * <p>> *   Only HTTP and HTTPS listeners support port mappings.</p>
-         * <p>> *   The listener port in a port mapping must be the one used by the current listener.</p>
+         * <blockquote>
+         * <ul>
+         * <li>Only HTTP and HTTPS listeners support port mappings.</li>
+         * <li>The listener port in a port mapping must be the one used by the current listener.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>443</p>
          */
         @NameInMap("ListenerPort")
         public Integer listenerPort;

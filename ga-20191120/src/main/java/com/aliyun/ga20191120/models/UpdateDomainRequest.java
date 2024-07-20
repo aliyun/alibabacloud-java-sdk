@@ -6,20 +6,30 @@ import com.aliyun.tea.*;
 public class UpdateDomainRequest extends TeaModel {
     /**
      * <p>The new accelerated domain name.</p>
-     * <br>
-     * <p>Only primary domain names are supported, such as `example.net`.</p>
+     * <p>Only primary domain names are supported, such as <code>example.net</code>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.net</p>
      */
     @NameInMap("Domain")
     public String domain;
 
     /**
-     * <p>The region ID of the GA instance. Set the value to **cn-hangzhou**.</p>
+     * <p>The region ID of the GA instance. Set the value to <strong>cn-hangzhou</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The accelerated domain name to be modified.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("TargetDomain")
     public String targetDomain;

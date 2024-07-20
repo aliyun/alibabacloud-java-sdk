@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class GetBasicAccelerateIpIdleCountResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The number of entries returned, which indicates the number of idle accelerated IP addresses.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;

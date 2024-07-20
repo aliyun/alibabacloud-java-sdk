@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreateBasicIpSetResponseBody extends TeaModel {
     /**
      * <p>The region ID of the GA instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ips-bp11r5jb8ogp122xl****</p>
      */
     @NameInMap("IpSetId")
     public String ipSetId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
      */
     @NameInMap("RequestId")
     public String requestId;

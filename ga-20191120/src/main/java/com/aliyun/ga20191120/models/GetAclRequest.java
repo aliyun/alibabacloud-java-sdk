@@ -5,13 +5,21 @@ import com.aliyun.tea.*;
 
 public class GetAclRequest extends TeaModel {
     /**
-     * <p>The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to **cn-hangzhou**.</p>
+     * <p>The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>nacl-hp34s2h0xx1ht4nwo****</p>
      */
     @NameInMap("AclId")
     public String aclId;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **GetAcl**.</p>
+     * <p>The operation that you want to perform. Set the value to <strong>GetAcl</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

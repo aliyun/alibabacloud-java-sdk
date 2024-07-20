@@ -12,27 +12,40 @@ public class GetAclResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>nacl-hp34s2h0xx1ht4nwo****</p>
      */
     @NameInMap("AclId")
     public String aclId;
 
     /**
      * <p>The ID of the GA instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-acl</p>
      */
     @NameInMap("AclName")
     public String aclName;
 
     /**
      * <p>The IP version of the network ACL. Valid values:</p>
-     * <br>
-     * <p>*   **IPv4**</p>
-     * <p>*   **IPv6**</p>
+     * <ul>
+     * <li><strong>IPv4</strong></li>
+     * <li><strong>IPv6</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>active</p>
      */
     @NameInMap("AclStatus")
     public String aclStatus;
 
     /**
      * <p>The ID of the network ACL.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>IPv4</p>
      */
     @NameInMap("AddressIPVersion")
     public String addressIPVersion;
@@ -45,18 +58,24 @@ public class GetAclResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the network ACL.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The name of the network ACL.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmx7itmygzsza</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>The tags of the ACL.</p>
+     * <p>The tag of the ACL.</p>
      */
     @NameInMap("Tags")
     public java.util.List<GetAclResponseBodyTags> tags;
@@ -141,12 +160,18 @@ public class GetAclResponseBody extends TeaModel {
     public static class GetAclResponseBodyAclEntries extends TeaModel {
         /**
          * <p>An IP address entry (192.168.XX.XX) or a CIDR block entry (10.0.XX.XX/24).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0.XX.XX/24</p>
          */
         @NameInMap("Entry")
         public String entry;
 
         /**
          * <p>The description of the ACL entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-entry</p>
          */
         @NameInMap("EntryDescription")
         public String entryDescription;
@@ -177,21 +202,31 @@ public class GetAclResponseBody extends TeaModel {
     public static class GetAclResponseBodyRelatedListeners extends TeaModel {
         /**
          * <p>The ID of the GA instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ga-bp1odcab8tmno0hdq****</p>
          */
         @NameInMap("AcceleratorId")
         public String acceleratorId;
 
         /**
          * <p>The type of the ACL. Valid values:</p>
-         * <br>
-         * <p>*   **white**: a whitelist. Only requests from the IP addresses or CIDR blocks in the ACL are forwarded. Whitelists are suitable for scenarios in which you want to allow only specific IP addresses to access an application. Risks may arise if an IP address whitelist is improperly configured. After you configure a whitelist for a listener, only requests from the IP addresses that are added to the whitelist are distributed by the listener. If a whitelist is enabled but no IP address is added to the whitelist, the listener forwards all requests.</p>
-         * <p>*   **black**: a blacklist. All requests from the IP addresses or CIDR blocks in the ACL are blocked. Blacklists are suitable for scenarios in which you want to deny access from specific IP addresses to an application. If a blacklist is enabled but no IP address is added to the blacklist, the listener forwards all requests.</p>
+         * <ul>
+         * <li><strong>white</strong>: Only requests from the IP addresses or CIDR blocks in the ACL are forwarded. Whitelists are suitable for scenarios in which you want to allow access from specific IP addresses to an application. If a whitelist is improperly configured, risks may arise. After a whitelist is configured for a listener, only requests from the IP addresses that are added to the whitelist are distributed by the listener. If a whitelist is enabled but no IP address is added to the whitelist, the listener forwards all requests.</li>
+         * <li><strong>black</strong>: All requests from the IP addresses or CIDR blocks in the ACL are rejected. Blacklists are suitable for scenarios in which you want to deny access from specific IP addresses to an application. If a blacklist is enabled but no IP address is added to the blacklist, the listener forwards all requests.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>White</p>
          */
         @NameInMap("AclType")
         public String aclType;
 
         /**
          * <p>The ID of the listener.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lsr-bp1bpn0kn908w4nbw****</p>
          */
         @NameInMap("ListenerId")
         public String listenerId;
@@ -229,13 +264,19 @@ public class GetAclResponseBody extends TeaModel {
 
     public static class GetAclResponseBodyTags extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>The key of tag N that is add to the ACL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag-key</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The value of tag N that is add to the ACL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag-value</p>
          */
         @NameInMap("Value")
         public String value;

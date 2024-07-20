@@ -6,63 +6,95 @@ import com.aliyun.tea.*;
 public class ConfigEndpointProbeRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
-     * <br>
-     * <p>>  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
+     * <blockquote>
+     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>Specifies whether to enable latency monitoring. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false** (default)</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong> (default)</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Enable")
     public String enable;
 
     /**
      * <p>The endpoint.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>127.0.XX.XX</p>
      */
     @NameInMap("Endpoint")
     public String endpoint;
 
     /**
      * <p>The endpoint group ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>epg-bp1dmlohjjz4kqaun****</p>
      */
     @NameInMap("EndpointGroupId")
     public String endpointGroupId;
 
     /**
      * <p>The type of the endpoint. Valid values:</p>
-     * <br>
-     * <p>*   **Ip:** a custom IP address.</p>
-     * <p>*   **Domain:** a custom domain name.</p>
-     * <p>*   **EIP:** an Alibaba Cloud elastic IP address (EIP).</p>
-     * <p>*   **PublicIp:** an Alibaba Cloud public IP address.</p>
+     * <ul>
+     * <li><strong>Ip:</strong> a custom IP address.</li>
+     * <li><strong>Domain:</strong> a custom domain name.</li>
+     * <li><strong>EIP:</strong> an Alibaba Cloud elastic IP address (EIP).</li>
+     * <li><strong>PublicIp:</strong> an Alibaba Cloud public IP address.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Ip</p>
      */
     @NameInMap("EndpointType")
     public String endpointType;
 
     /**
-     * <p>The port that is used to monitor latency. Valid values: **0** to **65535**.</p>
+     * <p>The port that is used to monitor latency. Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>80</p>
      */
     @NameInMap("ProbePort")
     public String probePort;
 
     /**
      * <p>The protocol that is used to monitor latency. Valid values:</p>
-     * <br>
-     * <p>*   **tcp:** TCP.</p>
-     * <p>*   **icmp:** ICMP.</p>
+     * <ul>
+     * <li><strong>tcp:</strong> TCP.</li>
+     * <li><strong>icmp:</strong> ICMP.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>tcp</p>
      */
     @NameInMap("ProbeProtocol")
     public String probeProtocol;
 
     /**
-     * <p>The region ID of the GA instance. Set the value to **cn-hangzhou**.</p>
+     * <p>The region ID of the GA instance. Set the value to <strong>cn-hangzhou</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -6,22 +6,28 @@ import com.aliyun.tea.*;
 public class CreateDomainRequest extends TeaModel {
     /**
      * <p>The ID of the GA instance.</p>
-     * <br>
      * <p>You can enter up to 50 IDs.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AcceleratorIds")
     public java.util.List<String> acceleratorIds;
 
     /**
      * <p>The accelerated domain name to be added.</p>
-     * <br>
-     * <p>Wildcard domain names are supported. A wildcard domain name must start with `*.`, such as `*.example.com`.</p>
+     * <p>Wildcard domain names are supported. A wildcard domain name must start with <code>*.</code>, such as <code>*.example.com</code>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://www.example.com">www.example.com</a></p>
      */
     @NameInMap("Domain")
     public String domain;
 
     /**
-     * <p>The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.</p>
+     * <p>The ID of the region where the GA instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

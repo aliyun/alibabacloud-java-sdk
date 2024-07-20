@@ -6,85 +6,114 @@ import com.aliyun.tea.*;
 public class UpdateAcceleratorRequest extends TeaModel {
     /**
      * <p>The ID of the GA instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ga-bp1odcab8tmno0hdq****</p>
      */
     @NameInMap("AcceleratorId")
     public String acceleratorId;
 
     /**
      * <p>Specifies whether to enable automatic payment. Valid values:</p>
-     * <br>
-     * <p>*   **false**: disables automatic payment. This is the default value. After an order is generated, you must go to the [Order Center](https://usercenter2-intl.aliyun.com/order/list) to complete the payment.</p>
-     * <p>*   **true**: enables automatic payment. Payments are automatically completed.</p>
-     * <br>
-     * <p>>  This parameter takes effect only if you call the operation to upgrade a GA instance.</p>
+     * <ul>
+     * <li><strong>false</strong>: disables automatic payment. This is the default value. After an order is generated, you must go to the <a href="https://usercenter2-intl.aliyun.com/order/list">Order Center</a> to complete the payment.</li>
+     * <li><strong>true</strong>: enables automatic payment. Payments are automatically completed.</li>
+     * </ul>
+     * <blockquote>
+     * <p> This parameter takes effect only if you call the operation to upgrade a GA instance.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
     /**
      * <p>Specifies whether to automatically pay bills by using coupons. Default value: false. Valid values:</p>
-     * <br>
-     * <p>*   **true**: automatically pays bills by using coupons.</p>
-     * <p>*   **false**: does not automatically pay bills by using coupons.</p>
-     * <br>
-     * <p>>  This parameter takes effect only if the **AutoPay** parameter is set to **true**.</p>
+     * <ul>
+     * <li><strong>true</strong>: automatically pays bills by using coupons.</li>
+     * <li><strong>false</strong>: does not automatically pay bills by using coupons.</li>
+     * </ul>
+     * <blockquote>
+     * <p> This parameter takes effect only if the <strong>AutoPay</strong> parameter is set to <strong>true</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("AutoUseCoupon")
     public Boolean autoUseCoupon;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
-     * <br>
-     * <p>>  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
+     * <blockquote>
+     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The description of the GA instance. The description can be up to 200 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Accelerator</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The name of the GA instance.</p>
-     * <br>
-     * <p>The name must be 1 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.</p>
+     * <p>The name must be 1 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Accelerator</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The region where the GA instance is deployed. Set the value to **cn-hangzhou**.</p>
+     * <p>The region where the GA instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The specification of the GA instance. Valid values:</p>
-     * <br>
-     * <p>*   **1**: Small Ⅰ</p>
-     * <p>*   **2**: Small Ⅱ</p>
-     * <p>*   **3**: Small Ⅲ</p>
-     * <p>*   **5**: Medium Ⅰ</p>
-     * <p>*   **8**: Medium Ⅱ</p>
-     * <p>*   **10**: Medium Ⅲ</p>
-     * <p>*   **20**: Large Ⅰ</p>
-     * <p>*   **30**: Large Ⅱ</p>
-     * <p>*   **40**: Large Ⅲ</p>
-     * <p>*   **50**: Large Ⅳ</p>
-     * <p>*   **60**: Large Ⅴ</p>
-     * <p>*   **70**: Large Ⅵ</p>
-     * <p>*   **80**: Large VⅡ</p>
-     * <p>*   **90**: Large VⅢ</p>
-     * <p>*   **100**: Super Large Ⅰ</p>
-     * <p>*   **200**: Super Large Ⅱ</p>
-     * <br>
-     * <p>>  The Large Ⅲ specification and higher specifications are available only for accounts that are added to the whitelist. To use these specifications, contact your Alibaba Cloud account manager.</p>
-     * <br>
-     * <p>Different specifications provide different capabilities. For more information, see [Instance specifications](~~153127~~).</p>
+     * <ul>
+     * <li><strong>1</strong>: Small Ⅰ</li>
+     * <li><strong>2</strong>: Small Ⅱ</li>
+     * <li><strong>3</strong>: Small Ⅲ</li>
+     * <li><strong>5</strong>: Medium Ⅰ</li>
+     * <li><strong>8</strong>: Medium Ⅱ</li>
+     * <li><strong>10</strong>: Medium Ⅲ</li>
+     * <li><strong>20</strong>: Large Ⅰ</li>
+     * <li><strong>30</strong>: Large Ⅱ</li>
+     * <li><strong>40</strong>: Large Ⅲ</li>
+     * <li><strong>50</strong>: Large Ⅳ</li>
+     * <li><strong>60</strong>: Large Ⅴ</li>
+     * <li><strong>70</strong>: Large Ⅵ</li>
+     * <li><strong>80</strong>: Large VⅡ</li>
+     * <li><strong>90</strong>: Large VⅢ</li>
+     * <li><strong>100</strong>: Super Large Ⅰ</li>
+     * <li><strong>200</strong>: Super Large Ⅱ</li>
+     * </ul>
+     * <blockquote>
+     * <p> The Large Ⅲ specification and higher specifications are available only for accounts that are added to the whitelist. To use these specifications, contact your Alibaba Cloud account manager.</p>
+     * </blockquote>
+     * <p>Different specifications provide different capabilities. For more information, see <a href="https://help.aliyun.com/document_detail/153127.html">Instance specifications</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Spec")
     public String spec;

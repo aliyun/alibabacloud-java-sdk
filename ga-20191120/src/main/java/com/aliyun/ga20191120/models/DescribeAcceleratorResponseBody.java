@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class DescribeAcceleratorResponseBody extends TeaModel {
     /**
      * <p>The ID of the GA instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ga-bp1odcab8tmno0hdq****</p>
      */
     @NameInMap("AcceleratorId")
     public String acceleratorId;
 
     /**
      * <p>The bandwidth metering method. Valid values:</p>
-     * <br>
-     * <p>*   **BandwidthPackage:** billed based on bandwidth plans.</p>
-     * <p>*   **CDT**: billed based on data transfer.</p>
+     * <ul>
+     * <li><strong>BandwidthPackage:</strong> billed based on bandwidth plans.</li>
+     * <li><strong>CDT</strong>: billed based on data transfer.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>CDT</p>
      */
     @NameInMap("BandwidthBillingType")
     public String bandwidthBillingType;
@@ -27,35 +34,47 @@ public class DescribeAcceleratorResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the Cloud Enterprise Network (CEN) instance with which the GA instance is associated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cen-hjkduu767hc****</p>
      */
     @NameInMap("CenId")
     public String cenId;
 
     /**
      * <p>The timestamp that indicates when the GA instance is created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1650643200</p>
      */
     @NameInMap("CreateTime")
     public Long createTime;
 
     /**
      * <p>The type of cross-border acceleration. This parameter is returned for GA instances whose bandwidth metering method is pay-by-data-transfer (CDT).</p>
-     * <br>
-     * <p>Only **bpgPro** may be returned, which indicates BGP (Multi-ISP) Pro lines.</p>
+     * <p>Only <strong>bpgPro</strong> may be returned, which indicates BGP (Multi-ISP) Pro lines.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bpgPro</p>
      */
     @NameInMap("CrossBorderMode")
     public String crossBorderMode;
 
     /**
      * <p>Indicates whether cross-border acceleration is enabled.</p>
-     * <p>- **true**: yes</p>
-     * <p>- **false**: no</p>
+     * <ul>
+     * <li><strong>true</strong>: yes</li>
+     * <li><strong>false</strong>: no</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("CrossBorderStatus")
     public Boolean crossBorderStatus;
 
     /**
      * <p>The details about the cross-border acceleration bandwidth plan that is associated with the GA instance.</p>
-     * <br>
      * <p>This array is returned only for GA instances that are created on the international site (alibabacloud.com).</p>
      */
     @NameInMap("CrossDomainBandwidthPackage")
@@ -63,39 +82,58 @@ public class DescribeAcceleratorResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether cross-border acceleration is enabled.</p>
-     * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false**: no</p>
+     * <ul>
+     * <li><strong>true</strong>: yes</li>
+     * <li><strong>false</strong>: no</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("CrossPrivateState")
     public String crossPrivateState;
 
     /**
      * <p>The ID of the Anti-DDoS Pro/Premium instance that is associated with the GA instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ddoscoo-cn-zz11vq7j****</p>
      */
     @NameInMap("DdosId")
     public String ddosId;
 
     /**
      * <p>The description of the GA instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Accelerator</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The canonical name (CNAME) that is assigned to the GA instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ga-bp15u1i2hmtbk8c3i****.aliyunga0019.com</p>
      */
     @NameInMap("DnsName")
     public String dnsName;
 
     /**
      * <p>The timestamp that indicates when the GA instance expires.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1653235200</p>
      */
     @NameInMap("ExpiredTime")
     public Long expiredTime;
 
     /**
      * <p>The billing method of the GA instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PREPAY</p>
      */
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
@@ -108,97 +146,131 @@ public class DescribeAcceleratorResponseBody extends TeaModel {
 
     /**
      * <p>The name of the GA instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Accelerator</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The region ID of the GA instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6FEA0CF3-D3B9-43E5-A304-D217037876A8</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmw2vwdbujqbq</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>The CNAME that is used to integrate the GA instance with the Anti-DDoS service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ga-bp1f609c76zg6zuna****-1.aliyunga0047.com</p>
      */
     @NameInMap("SecondDnsName")
     public String secondDnsName;
 
     /**
      * <p>The ID of the service that manages the GA instance.</p>
-     * <br>
-     * <p>>  This parameter is returned only if the value of **ServiceManaged** is **true**.</p>
+     * <blockquote>
+     * <p> This parameter is returned only if the value of <strong>ServiceManaged</strong> is <strong>true</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>ALB</p>
      */
     @NameInMap("ServiceId")
     public String serviceId;
 
     /**
      * <p>Indicates whether the GA instance is managed. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("ServiceManaged")
     public Boolean serviceManaged;
 
     /**
      * <p>The actions that you can perform on the managed instance.</p>
-     * <br>
-     * <p>>  * This parameter is returned only if the value of **ServiceManaged** is **true**.</p>
-     * <p>>*   You can perform only specific actions on a managed instance.</p>
+     * <blockquote>
+     * <ul>
+     * <li>This parameter is returned only if the value of <strong>ServiceManaged</strong> is <strong>true</strong>.</li>
+     * <li>You can perform only specific actions on a managed instance.</li>
+     * </ul>
+     * </blockquote>
      */
     @NameInMap("ServiceManagedInfos")
     public java.util.List<DescribeAcceleratorResponseBodyServiceManagedInfos> serviceManagedInfos;
 
     /**
      * <p>The specification of the GA instance. Valid values:</p>
-     * <br>
-     * <p>*   **1**: Small Ⅰ</p>
-     * <p>*   **2**: Small Ⅱ</p>
-     * <p>*   **3**: Small Ⅲ</p>
-     * <p>*   **5**: Medium Ⅰ</p>
-     * <p>*   **8**: Medium Ⅱ</p>
-     * <p>*   **10**: Medium Ⅲ</p>
-     * <p>*   **20**: Large Ⅰ</p>
-     * <p>*   **30**: Large Ⅱ</p>
-     * <p>*   **40**: Large Ⅲ</p>
-     * <p>*   **50**: Large Ⅳ</p>
-     * <p>*   **60**: Large Ⅴ</p>
-     * <p>*   **70**: Large Ⅵ</p>
-     * <p>*   **80**: Large VⅡ</p>
-     * <p>*   **90**: Large VⅢ</p>
-     * <p>*   **100**: Super Large Ⅰ</p>
-     * <p>*   **200**: Super Large Ⅱ</p>
-     * <br>
-     * <p>>  The Large Ⅲ specification and higher specifications are available only to users that are added to the whitelist. To use these specifications, contact your Alibaba Cloud account manager.</p>
-     * <br>
-     * <p>Different specifications provide different capabilities. For more information, see [Instance specifications](~~153127~~).</p>
+     * <ul>
+     * <li><strong>1</strong>: Small Ⅰ</li>
+     * <li><strong>2</strong>: Small Ⅱ</li>
+     * <li><strong>3</strong>: Small Ⅲ</li>
+     * <li><strong>5</strong>: Medium Ⅰ</li>
+     * <li><strong>8</strong>: Medium Ⅱ</li>
+     * <li><strong>10</strong>: Medium Ⅲ</li>
+     * <li><strong>20</strong>: Large Ⅰ</li>
+     * <li><strong>30</strong>: Large Ⅱ</li>
+     * <li><strong>40</strong>: Large Ⅲ</li>
+     * <li><strong>50</strong>: Large Ⅳ</li>
+     * <li><strong>60</strong>: Large Ⅴ</li>
+     * <li><strong>70</strong>: Large Ⅵ</li>
+     * <li><strong>80</strong>: Large VⅡ</li>
+     * <li><strong>90</strong>: Large VⅢ</li>
+     * <li><strong>100</strong>: Super Large Ⅰ</li>
+     * <li><strong>200</strong>: Super Large Ⅱ</li>
+     * </ul>
+     * <blockquote>
+     * <p> The Large Ⅲ specification and higher specifications are available only to users that are added to the whitelist. To use these specifications, contact your Alibaba Cloud account manager.</p>
+     * </blockquote>
+     * <p>Different specifications provide different capabilities. For more information, see <a href="https://help.aliyun.com/document_detail/153127.html">Instance specifications</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Spec")
     public String spec;
 
     /**
      * <p>The status of the GA instance. Valid values:</p>
-     * <br>
-     * <p>*   **init**: The GA instance is being initialized.</p>
-     * <p>*   **active**: The GA instance is available.</p>
-     * <p>*   **configuring**: The GA instance is being configured.</p>
-     * <p>*   **binding**: The GA instance is being associated.</p>
-     * <p>*   **unbinding**: The GA instance is being disassociated.</p>
-     * <p>*   **deleting**: The GA instance is being deleted.</p>
-     * <p>*   **finacialLocked**: The GA instance is locked due to overdue payments.</p>
+     * <ul>
+     * <li><strong>init</strong>: The GA instance is being initialized.</li>
+     * <li><strong>active</strong>: The GA instance is available.</li>
+     * <li><strong>configuring</strong>: The GA instance is being configured.</li>
+     * <li><strong>binding</strong>: The GA instance is being associated.</li>
+     * <li><strong>unbinding</strong>: The GA instance is being disassociated.</li>
+     * <li><strong>deleting</strong>: The GA instance is being deleted.</li>
+     * <li><strong>finacialLocked</strong>: The GA instance is locked due to overdue payments.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>active</p>
      */
     @NameInMap("State")
     public String state;
@@ -211,10 +283,14 @@ public class DescribeAcceleratorResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the GA instance can be upgraded. Valid values:</p>
-     * <br>
-     * <p>*   **notUpgradable:** The GA instance does not need to be upgraded.</p>
-     * <p>*   **upgradable:** The GA instance can be upgraded to the latest version.</p>
-     * <p>*   **upgradeFailed:** The GA instance failed to be upgraded.</p>
+     * <ul>
+     * <li><strong>notUpgradable:</strong> The GA instance does not need to be upgraded.</li>
+     * <li><strong>upgradable:</strong> The GA instance can be upgraded to the latest version.</li>
+     * <li><strong>upgradeFailed:</strong> The GA instance failed to be upgraded.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>notUpgradable</p>
      */
     @NameInMap("UpgradableStatus")
     public String upgradableStatus;
@@ -443,22 +519,32 @@ public class DescribeAcceleratorResponseBody extends TeaModel {
     public static class DescribeAcceleratorResponseBodyBasicBandwidthPackage extends TeaModel {
         /**
          * <p>The bandwidth value of the basic bandwidth plan. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Bandwidth")
         public Integer bandwidth;
 
         /**
          * <p>The type of the bandwidth that is provided by the basic bandwidth plan. Valid values:</p>
-         * <br>
-         * <p>*   **Basic**: basic</p>
-         * <p>*   **Enhanced**: enhanced</p>
-         * <p>*   **Advanced**: premium</p>
+         * <ul>
+         * <li><strong>Basic</strong>: basic</li>
+         * <li><strong>Enhanced</strong>: enhanced</li>
+         * <li><strong>Advanced</strong>: premium</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Basic</p>
          */
         @NameInMap("BandwidthType")
         public String bandwidthType;
 
         /**
          * <p>The ID of the basic bandwidth plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gbwp-bp1d8xk8bg139j0fw****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
@@ -497,12 +583,18 @@ public class DescribeAcceleratorResponseBody extends TeaModel {
     public static class DescribeAcceleratorResponseBodyCrossDomainBandwidthPackage extends TeaModel {
         /**
          * <p>The bandwidth that is provided by the cross-border acceleration bandwidth plan. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Bandwidth")
         public Integer bandwidth;
 
         /**
          * <p>The ID of the cross-border acceleration bandwidth plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gbwp-bp1d8xk8bg139j0fw****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
@@ -533,9 +625,13 @@ public class DescribeAcceleratorResponseBody extends TeaModel {
     public static class DescribeAcceleratorResponseBodyIpSetConfig extends TeaModel {
         /**
          * <p>The access mode of the acceleration area. Valid values:</p>
-         * <br>
-         * <p>*   **UserDefine**: custom nearby access mode. You can select acceleration areas and regions based on your business requirements. GA allocates a separate elastic IP address (EIP) to each acceleration region.</p>
-         * <p>*   **Anycast**: automatic nearby access mode. You do not need to specify an acceleration area. GA allocates an Anycast EIP to multiple regions across the globe. Users can connect to the nearest access point of the Alibaba Cloud global transmission network by sending requests to the Anycast EIP.</p>
+         * <ul>
+         * <li><strong>UserDefine</strong>: custom nearby access mode. You can select acceleration areas and regions based on your business requirements. GA allocates a separate elastic IP address (EIP) to each acceleration region.</li>
+         * <li><strong>Anycast</strong>: automatic nearby access mode. You do not need to specify an acceleration area. GA allocates an Anycast EIP to multiple regions across the globe. Users can connect to the nearest access point of the Alibaba Cloud global transmission network by sending requests to the Anycast EIP.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>UserDefine</p>
          */
         @NameInMap("AccessMode")
         public String accessMode;
@@ -558,38 +654,51 @@ public class DescribeAcceleratorResponseBody extends TeaModel {
     public static class DescribeAcceleratorResponseBodyServiceManagedInfos extends TeaModel {
         /**
          * <p>The name of the action performed on the managed instance. Valid values:</p>
-         * <br>
-         * <p>*   **Create**</p>
-         * <p>*   **Update**</p>
-         * <p>*   **Delete**</p>
-         * <p>*   **Associate**</p>
-         * <p>*   **UserUnmanaged**</p>
-         * <p>*   **CreateChild**</p>
+         * <ul>
+         * <li><strong>Create</strong></li>
+         * <li><strong>Update</strong></li>
+         * <li><strong>Delete</strong></li>
+         * <li><strong>Associate</strong></li>
+         * <li><strong>UserUnmanaged</strong></li>
+         * <li><strong>CreateChild</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Update</p>
          */
         @NameInMap("Action")
         public String action;
 
         /**
          * <p>The type of the child resource. Valid values:</p>
-         * <br>
-         * <p>*   **Listener**: a listener.</p>
-         * <p>*   **IpSet**: an acceleration region.</p>
-         * <p>*   **EndpointGroup**: an endpoint group.</p>
-         * <p>*   **ForwardingRule**: a forwarding rule.</p>
-         * <p>*   **Endpoint**: an endpoint.</p>
-         * <p>*   **EndpointGroupDestination**: a protocol mapping of an endpoint group associated with a custom routing listener.</p>
-         * <p>*   **EndpointPolicy**: a traffic policy of an endpoint associated with a custom routing listener.</p>
-         * <br>
-         * <p>>  This parameter is returned only if the value of **Action** is **CreateChild**.</p>
+         * <ul>
+         * <li><strong>Listener</strong>: a listener.</li>
+         * <li><strong>IpSet</strong>: an acceleration region.</li>
+         * <li><strong>EndpointGroup</strong>: an endpoint group.</li>
+         * <li><strong>ForwardingRule</strong>: a forwarding rule.</li>
+         * <li><strong>Endpoint</strong>: an endpoint.</li>
+         * <li><strong>EndpointGroupDestination</strong>: a protocol mapping of an endpoint group associated with a custom routing listener.</li>
+         * <li><strong>EndpointPolicy</strong>: a traffic policy of an endpoint associated with a custom routing listener.</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is returned only if the value of <strong>Action</strong> is <strong>CreateChild</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Listener</p>
          */
         @NameInMap("ChildType")
         public String childType;
 
         /**
          * <p>Indicates whether the specified actions are managed. Valid values:</p>
-         * <br>
-         * <p>*   **true**: The specified actions are managed, and you cannot perform the specified actions on the managed instance.</p>
-         * <p>*   **false**: The specified actions are not managed, and you can perform the specified actions on the managed instance.</p>
+         * <ul>
+         * <li><strong>true</strong>: The specified actions are managed, and you cannot perform the specified actions on the managed instance.</li>
+         * <li><strong>false</strong>: The specified actions are not managed, and you can perform the specified actions on the managed instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("IsManaged")
         public Boolean isManaged;
@@ -628,12 +737,18 @@ public class DescribeAcceleratorResponseBody extends TeaModel {
     public static class DescribeAcceleratorResponseBodyTags extends TeaModel {
         /**
          * <p>The key of tag N that is added to the GA instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag-key</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of tag N that is added to the GA instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag-value</p>
          */
         @NameInMap("Value")
         public String value;

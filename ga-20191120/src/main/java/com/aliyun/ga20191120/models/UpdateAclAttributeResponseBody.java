@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class UpdateAclAttributeResponseBody extends TeaModel {
     /**
      * <p>The ACL ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>nacl-hp34s2h0xx1ht4nwo****</p>
      */
     @NameInMap("AclId")
     public String aclId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>64ADAB1E-0B7F-4FD8-A404-3BECC0E9CCFF</p>
      */
     @NameInMap("RequestId")
     public String requestId;

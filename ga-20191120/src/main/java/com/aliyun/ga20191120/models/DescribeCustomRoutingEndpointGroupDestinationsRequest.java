@@ -6,18 +6,29 @@ import com.aliyun.tea.*;
 public class DescribeCustomRoutingEndpointGroupDestinationsRequest extends TeaModel {
     /**
      * <p>The ID of the endpoint group mapping configuration.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dst-123abc****</p>
      */
     @NameInMap("DestinationId")
     public String destinationId;
 
     /**
      * <p>The ID of the endpoint group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>epg-bp1j184jhb9i9ubwf****</p>
      */
     @NameInMap("EndpointGroupId")
     public String endpointGroupId;
 
     /**
-     * <p>The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.</p>
+     * <p>The ID of the region where the GA instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

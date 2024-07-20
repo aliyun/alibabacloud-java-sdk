@@ -6,27 +6,39 @@ import com.aliyun.tea.*;
 public class ListCommonAreasRequest extends TeaModel {
     /**
      * <p>The IP version used to connect to the GA instance. Valid values:</p>
-     * <br>
-     * <p>*   **IPv4** (default)</p>
-     * <p>*   **IPv6**</p>
+     * <ul>
+     * <li><strong>IPv4</strong> (default)</li>
+     * <li><strong>IPv6</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>IPv4</p>
      */
     @NameInMap("IpVersion")
     public String ipVersion;
 
     /**
      * <p>Specifies whether to query regions where endpoint groups of GA can be deployed. Valid values:</p>
-     * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false** (default): no</p>
+     * <ul>
+     * <li><strong>true</strong>: yes</li>
+     * <li><strong>false</strong> (default): no</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IsEpg")
     public Boolean isEpg;
 
     /**
      * <p>Specifies whether to query regions supported by GA. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false** (default)</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong> (default)</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IsIpSet")
     public Boolean isIpSet;

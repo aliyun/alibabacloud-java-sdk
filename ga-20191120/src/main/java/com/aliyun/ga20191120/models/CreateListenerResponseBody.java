@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreateListenerResponseBody extends TeaModel {
     /**
      * <p>The ID of the listener.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lsr-bp1bpn0kn908w4nbw****</p>
      */
     @NameInMap("ListenerId")
     public String listenerId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
      */
     @NameInMap("RequestId")
     public String requestId;

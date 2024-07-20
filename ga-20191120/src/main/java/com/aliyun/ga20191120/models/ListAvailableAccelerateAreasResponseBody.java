@@ -12,6 +12,9 @@ public class ListAvailableAccelerateAreasResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A9B4E54C-9CCD-4002-91A9-D38C6C209192</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,48 +43,67 @@ public class ListAvailableAccelerateAreasResponseBody extends TeaModel {
     public static class ListAvailableAccelerateAreasResponseBodyAreasRegionList extends TeaModel {
         /**
          * <p>Indicates whether the region is in the Chinese mainland. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("ChinaMainland")
         public Boolean chinaMainland;
 
         /**
          * <p>The line type of the elastic IP address (EIP) in the acceleration region. Valid values:</p>
-         * <br>
-         * <p>*   **BGP**: BGP (Multi-ISP) lines.</p>
-         * <p>*   **BGP_PRO**: BGP (Multi-ISP) Pro lines.</p>
+         * <ul>
+         * <li><strong>BGP</strong>: BGP (Multi-ISP) lines.</li>
+         * <li><strong>BGP_PRO</strong>: BGP (Multi-ISP) Pro lines.</li>
+         * </ul>
          */
         @NameInMap("IspTypeList")
         public java.util.List<String> ispTypeList;
 
         /**
          * <p>The acceleration region name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>China (Qingdao)</p>
          */
         @NameInMap("LocalName")
         public String localName;
 
         /**
          * <p>Indicates whether multiple zones are supported. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("MultiAz")
         public Boolean multiAz;
 
         /**
          * <p>The ID of the acceleration region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-qingdao</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>Indicates whether IPv6 is supported. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("SupportIpv6")
         public Boolean supportIpv6;
@@ -144,12 +166,18 @@ public class ListAvailableAccelerateAreasResponseBody extends TeaModel {
     public static class ListAvailableAccelerateAreasResponseBodyAreas extends TeaModel {
         /**
          * <p>The ID of the acceleration area.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-huabei</p>
          */
         @NameInMap("AreaId")
         public String areaId;
 
         /**
          * <p>The acceleration area name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>North China</p>
          */
         @NameInMap("LocalName")
         public String localName;

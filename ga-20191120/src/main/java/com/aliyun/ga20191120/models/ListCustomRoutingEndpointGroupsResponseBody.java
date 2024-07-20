@@ -12,24 +12,36 @@ public class ListCustomRoutingEndpointGroupsResponseBody extends TeaModel {
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,38 +94,51 @@ public class ListCustomRoutingEndpointGroupsResponseBody extends TeaModel {
     public static class ListCustomRoutingEndpointGroupsResponseBodyEndpointGroupsServiceManagedInfos extends TeaModel {
         /**
          * <p>The name of the action on the managed instance. Valid values:</p>
-         * <br>
-         * <p>*   **Create**</p>
-         * <p>*   **Update**</p>
-         * <p>*   **Delete**</p>
-         * <p>*   **Associate**</p>
-         * <p>*   **UserUnmanaged**</p>
-         * <p>*   **CreateChild**</p>
+         * <ul>
+         * <li><strong>Create</strong></li>
+         * <li><strong>Update</strong></li>
+         * <li><strong>Delete</strong></li>
+         * <li><strong>Associate</strong></li>
+         * <li><strong>UserUnmanaged</strong></li>
+         * <li><strong>CreateChild</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Update</p>
          */
         @NameInMap("Action")
         public String action;
 
         /**
          * <p>The type of the child resource. Valid values:</p>
-         * <br>
-         * <p>*   **Listener**: listener</p>
-         * <p>*   **IpSet**: acceleration region</p>
-         * <p>*   **EndpointGroup**: endpoint group</p>
-         * <p>*   **ForwardingRule**: forwarding rule</p>
-         * <p>*   **Endpoint**: endpoint</p>
-         * <p>*   **EndpointGroupDestination**: protocol mapping of an endpoint group associated with a custom routing listener</p>
-         * <p>*   **EndpointPolicy**: traffic policy of an endpoint associated with a custom routing listener</p>
-         * <br>
-         * <p>>  This parameter takes effect only if **Action** is set to **CreateChild**.</p>
+         * <ul>
+         * <li><strong>Listener</strong>: listener</li>
+         * <li><strong>IpSet</strong>: acceleration region</li>
+         * <li><strong>EndpointGroup</strong>: endpoint group</li>
+         * <li><strong>ForwardingRule</strong>: forwarding rule</li>
+         * <li><strong>Endpoint</strong>: endpoint</li>
+         * <li><strong>EndpointGroupDestination</strong>: protocol mapping of an endpoint group associated with a custom routing listener</li>
+         * <li><strong>EndpointPolicy</strong>: traffic policy of an endpoint associated with a custom routing listener</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter takes effect only if <strong>Action</strong> is set to <strong>CreateChild</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Listener</p>
          */
         @NameInMap("ChildType")
         public String childType;
 
         /**
          * <p>Indicates whether the specified actions are managed.</p>
-         * <br>
-         * <p>*   **true**: Users cannot perform the specified actions on the managed instance.</p>
-         * <p>*   **false**: Users can perform the specified actions on the managed instance.</p>
+         * <ul>
+         * <li><strong>true</strong>: Users cannot perform the specified actions on the managed instance.</li>
+         * <li><strong>false</strong>: Users can perform the specified actions on the managed instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("IsManaged")
         public Boolean isManaged;
@@ -152,18 +177,27 @@ public class ListCustomRoutingEndpointGroupsResponseBody extends TeaModel {
     public static class ListCustomRoutingEndpointGroupsResponseBodyEndpointGroups extends TeaModel {
         /**
          * <p>The ID of the GA instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ga-bp1odcab8tmno0hdq****</p>
          */
         @NameInMap("AcceleratorId")
         public String acceleratorId;
 
         /**
          * <p>The description of the endpoint group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EndpointGroup</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The ID of the endpoint group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>epg-bp14sz7ftcwwjgrdm****</p>
          */
         @NameInMap("EndpointGroupId")
         public String endpointGroupId;
@@ -176,6 +210,9 @@ public class ListCustomRoutingEndpointGroupsResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the region where the endpoint group is created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("EndpointGroupRegion")
         public String endpointGroupRegion;
@@ -188,52 +225,72 @@ public class ListCustomRoutingEndpointGroupsResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the custom routing listener.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lsr-bp1bpn0kn908w4nbw****</p>
          */
         @NameInMap("ListenerId")
         public String listenerId;
 
         /**
          * <p>The name of the endpoint group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>group1</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The ID of the service that manages the instance.</p>
-         * <br>
-         * <p>>  This parameter takes effect only if **ServiceManaged** is set to **True**.</p>
+         * <blockquote>
+         * <p> This parameter takes effect only if <strong>ServiceManaged</strong> is set to <strong>True</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>ALB</p>
          */
         @NameInMap("ServiceId")
         public String serviceId;
 
         /**
          * <p>Indicates whether the GA instance is managed. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("ServiceManaged")
         public Boolean serviceManaged;
 
         /**
          * <p>The actions that users can perform on the managed instance.</p>
-         * <br>
-         * <p>> </p>
-         * <br>
-         * <p>*   This parameter takes effect only if **ServiceManaged** is set to **True**.</p>
-         * <br>
-         * <p>*   Users can perform only specific actions on a managed instance.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>This parameter takes effect only if <strong>ServiceManaged</strong> is set to <strong>True</strong>.</p>
+         * </li>
+         * <li><p>Users can perform only specific actions on a managed instance.</p>
+         * </li>
+         * </ul>
          */
         @NameInMap("ServiceManagedInfos")
         public java.util.List<ListCustomRoutingEndpointGroupsResponseBodyEndpointGroupsServiceManagedInfos> serviceManagedInfos;
 
         /**
          * <p>The status of the endpoint group. Valid values:</p>
-         * <br>
-         * <p>*   **init**</p>
-         * <p>*   **active**</p>
-         * <p>*   **updating**</p>
-         * <p>*   **deleting**</p>
+         * <ul>
+         * <li><strong>init</strong></li>
+         * <li><strong>active</strong></li>
+         * <li><strong>updating</strong></li>
+         * <li><strong>deleting</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>active</p>
          */
         @NameInMap("State")
         public String state;

@@ -6,38 +6,57 @@ import com.aliyun.tea.*;
 public class CreateBasicAccelerateIpResponseBody extends TeaModel {
     /**
      * <p>The accelerated IP address.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>116.132.XX.XX</p>
      */
     @NameInMap("AccelerateIpAddress")
     public String accelerateIpAddress;
 
     /**
      * <p>The ID of the accelerated IP address.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gaip-bp1****</p>
      */
     @NameInMap("AccelerateIpId")
     public String accelerateIpId;
 
     /**
      * <p>The ID of the basic GA instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ga-bp17frjjh0udz4qz****</p>
      */
     @NameInMap("AcceleratorId")
     public String acceleratorId;
 
     /**
      * <p>The ID of the acceleration region.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ips-bp11r5jb8ogp122xl****</p>
      */
     @NameInMap("IpSetId")
     public String ipSetId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The status of the accelerated IP address.</p>
-     * <br>
-     * <p>>  This parameter returns an empty string because the parameter is not in use.</p>
+     * <blockquote>
+     * <p> This parameter returns an empty string because the parameter is not in use.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
      */
     @NameInMap("State")
     public String state;

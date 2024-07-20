@@ -6,44 +6,64 @@ import com.aliyun.tea.*;
 public class ListBasicAcceleratorsRequest extends TeaModel {
     /**
      * <p>The ID of the basic GA instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ga-bp17frjjh0udz4qz****</p>
      */
     @NameInMap("AcceleratorId")
     public String acceleratorId;
 
     /**
-     * <p>The page number. Default value: **1**.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: **1 to 50**. Default value: **10**.</p>
+     * <p>The number of entries per page. Valid values: <strong>1 to 50</strong>. Default value: <strong>10</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region to which the basic GA instance belongs. Set the value to **cn-hangzhou**.</p>
+     * <p>The ID of the region to which the basic GA instance belongs. Set the value to <strong>cn-hangzhou</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group to which the basic GA instance belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-aekzrnd67gq****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>The state of the basic GA instance. Valid values:</p>
-     * <br>
-     * <p>*   **init**: The basic GA instance is being initialized.</p>
-     * <p>*   **active**: The basic GA instance is available.</p>
-     * <p>*   **configuring**: The basic GA instance is being configured.</p>
-     * <p>*   **binding**: The basic GA instance is being associated.</p>
-     * <p>*   **unbinding**: The basic GA instance is being disassociated.</p>
-     * <p>*   **deleting**: The basic GA instance is being deleted.</p>
-     * <p>*   **finacialLocked**: The basic GA instance is locked due to overdue payments.</p>
+     * <ul>
+     * <li><strong>init</strong>: The basic GA instance is being initialized.</li>
+     * <li><strong>active</strong>: The basic GA instance is available.</li>
+     * <li><strong>configuring</strong>: The basic GA instance is being configured.</li>
+     * <li><strong>binding</strong>: The basic GA instance is being associated.</li>
+     * <li><strong>unbinding</strong>: The basic GA instance is being disassociated.</li>
+     * <li><strong>deleting</strong>: The basic GA instance is being deleted.</li>
+     * <li><strong>finacialLocked</strong>: The basic GA instance is locked due to overdue payments.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>active</p>
      */
     @NameInMap("State")
     public String state;
@@ -118,20 +138,22 @@ public class ListBasicAcceleratorsRequest extends TeaModel {
     public static class ListBasicAcceleratorsRequestTag extends TeaModel {
         /**
          * <p>The key of tag N of the basic GA instance. The tag key cannot be an empty string.</p>
-         * <br>
-         * <p>The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.</p>
-         * <br>
+         * <p>The tag key can be up to 64 characters in length and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
          * <p>You can specify up to 20 tag keys.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Keytest</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of tag N of the basic GA instance. The tag value can be an empty string.</p>
-         * <br>
-         * <p>The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.</p>
-         * <br>
+         * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
          * <p>You can specify up to 20 tag values.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Valuetest</p>
          */
         @NameInMap("Value")
         public String value;

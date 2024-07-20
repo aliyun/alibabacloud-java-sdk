@@ -6,21 +6,32 @@ import com.aliyun.tea.*;
 public class ListIspTypesRequest extends TeaModel {
     /**
      * <p>The ID of the GA instance that you want to query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ga-bp1odcab8tmno0hdq****</p>
      */
     @NameInMap("AcceleratorId")
     public String acceleratorId;
 
     /**
      * <p>The type of the Global Accelerator (GA) instance to be queried. Valid values:</p>
-     * <br>
-     * <p>*   **basic**: basic GA instance</p>
-     * <p>*   **standard**: standard GA instance</p>
+     * <ul>
+     * <li><strong>basic</strong>: basic GA instance</li>
+     * <li><strong>standard</strong>: standard GA instance</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>basic</p>
      */
     @NameInMap("AcceleratorType")
     public String acceleratorType;
 
     /**
      * <p>The ID of the acceleration region to be queried.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("BusinessRegionId")
     public String businessRegionId;

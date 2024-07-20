@@ -6,36 +6,51 @@ import com.aliyun.tea.*;
 public class AssociateAdditionalCertificatesWithListenerRequest extends TeaModel {
     /**
      * <p>The GA instance ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ga-bp1odcab8tmno0hdq****</p>
      */
     @NameInMap("AcceleratorId")
     public String acceleratorId;
 
     /**
      * <p>The additional certificates.</p>
-     * <br>
      * <p>You can specify up to 10 certificates in each request.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Certificates")
     public java.util.List<AssociateAdditionalCertificatesWithListenerRequestCertificates> certificates;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
-     * <br>
-     * <p>>  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
+     * <blockquote>
+     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The listener ID. Only HTTPS listeners are supported.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lsr-bp1bpn0kn908w4nbw****</p>
      */
     @NameInMap("ListenerId")
     public String listenerId;
 
     /**
-     * <p>The region ID of the GA instance. Set the value to **cn-hangzhou**.</p>
+     * <p>The region ID of the GA instance. Set the value to <strong>cn-hangzhou</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -88,16 +103,22 @@ public class AssociateAdditionalCertificatesWithListenerRequest extends TeaModel
     public static class AssociateAdditionalCertificatesWithListenerRequestCertificates extends TeaModel {
         /**
          * <p>The domain name that is specified by the certificate. You can associate each domain name with only one additional certificate.</p>
-         * <br>
          * <p>You can specify up to 10 domain names in each request.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         @NameInMap("Domain")
         public String domain;
 
         /**
          * <p>The ID of the certificate. Only server certificates are supported.</p>
-         * <br>
          * <p>You can specify up to 10 certificate IDs in each request.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6092**-cn-hangzhou</p>
          */
         @NameInMap("Id")
         public String id;

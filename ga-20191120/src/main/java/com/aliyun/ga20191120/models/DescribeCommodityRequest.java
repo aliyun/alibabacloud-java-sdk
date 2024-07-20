@@ -6,32 +6,45 @@ import com.aliyun.tea.*;
 public class DescribeCommodityRequest extends TeaModel {
     /**
      * <p>The commodity code.</p>
-     * <br>
      * <p>Valid values on the China site (aliyun.com):</p>
-     * <br>
-     * <p>*   **ga_gapluspre_public_cn**: GA instance.</p>
-     * <p>*   **ga_plusbwppre_public_cn**: basic bandwidth plan.</p>
-     * <br>
+     * <ul>
+     * <li><strong>ga_gapluspre_public_cn</strong>: GA instance.</li>
+     * <li><strong>ga_plusbwppre_public_cn</strong>: basic bandwidth plan.</li>
+     * </ul>
      * <p>Valid values on the international site (alibabacloud.com):</p>
-     * <br>
-     * <p>*   **ga_pluspre_public_intl**: GA instance.</p>
-     * <p>*   **ga_bwppreintl_public_intl:** basic bandwidth plan.</p>
+     * <ul>
+     * <li><strong>ga_pluspre_public_intl</strong>: GA instance.</li>
+     * <li><strong>ga_bwppreintl_public_intl:</strong> basic bandwidth plan.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ga_gapluspre_public_cn</p>
      */
     @NameInMap("CommodityCode")
     public String commodityCode;
 
     /**
      * <p>The type of the order. Valid values:</p>
-     * <br>
-     * <p>*   **BUY**: purchase order.</p>
-     * <p>*   **RENEW**: renewal order.</p>
-     * <p>*   **UPGRADE**: upgrade order.</p>
+     * <ul>
+     * <li><strong>BUY</strong>: purchase order.</li>
+     * <li><strong>RENEW</strong>: renewal order.</li>
+     * <li><strong>UPGRADE</strong>: upgrade order.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BUY</p>
      */
     @NameInMap("OrderType")
     public String orderType;
 
     /**
-     * <p>The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to **cn-hangzhou**.</p>
+     * <p>The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

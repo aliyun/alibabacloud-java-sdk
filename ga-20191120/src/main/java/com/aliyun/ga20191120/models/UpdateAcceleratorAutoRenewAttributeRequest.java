@@ -6,67 +6,93 @@ import com.aliyun.tea.*;
 public class UpdateAcceleratorAutoRenewAttributeRequest extends TeaModel {
     /**
      * <p>The ID of the GA instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ga-bp17frjjh0udz4qz****</p>
      */
     @NameInMap("AcceleratorId")
     public String acceleratorId;
 
     /**
      * <p>Specifies whether to enable auto-renewal for the GA instance. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false** (default)</p>
-     * <br>
-     * <p>>  **AutoRenew** and **RenewalStatus** cannot be left empty at the same time.</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong> (default)</li>
+     * </ul>
+     * <blockquote>
+     * <p> <strong>AutoRenew</strong> and <strong>RenewalStatus</strong> cannot be left empty at the same time.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
 
     /**
      * <p>The auto-renewal duration. Unit: month.</p>
-     * <br>
-     * <p>Valid values: **1** to **12**.</p>
-     * <br>
-     * <p>>  This parameter takes effect only if you set **AutoRenew** to **true**.</p>
+     * <p>Valid values: <strong>1</strong> to <strong>12</strong>.</p>
+     * <blockquote>
+     * <p> This parameter takes effect only if you set <strong>AutoRenew</strong> to <strong>true</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("AutoRenewDuration")
     public Integer autoRenewDuration;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
-     * <br>
-     * <p>>  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
+     * <blockquote>
+     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The name of the GA instance.</p>
-     * <br>
-     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.</p>
+     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.</p>
+     * <p>The ID of the region where the GA instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>Specifies how to renew the GA instance. Valid values:</p>
-     * <br>
-     * <p>*   **AutoRenewal**: The system automatically renews the GA instance.</p>
-     * <p>*   **Normal**: You must manually renew the GA instance.</p>
-     * <p>*   **NotRenewal**: The GA instance is not renewed after the instance expires. The system sends only a non-renewal reminder three days before the expiration date. The system no longer reminds you to renew the GA instance. To renew a GA instance whose RenewalStatus is set to NotRenewal, change the value of RenewalStatus from NotRenewal to **Normal**, and then manually renew the instance. You can also set RenewalStatus to **AutoRenewal**.</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   **AutoRenew** and **RenewalStatus** cannot be left empty at the same time.</p>
-     * <br>
-     * <p>*   **RenewalStatus** takes precedence over **AutoRenew**. By default, if you do not specify **RenewalStatus**, **AutoRenew** is used.</p>
+     * <ul>
+     * <li><strong>AutoRenewal</strong>: The system automatically renews the GA instance.</li>
+     * <li><strong>Normal</strong>: You must manually renew the GA instance.</li>
+     * <li><strong>NotRenewal</strong>: The GA instance is not renewed after the instance expires. The system sends only a non-renewal reminder three days before the expiration date. The system no longer reminds you to renew the GA instance. To renew a GA instance whose RenewalStatus is set to NotRenewal, change the value of RenewalStatus from NotRenewal to <strong>Normal</strong>, and then manually renew the instance. You can also set RenewalStatus to <strong>AutoRenewal</strong>.</li>
+     * </ul>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p><strong>AutoRenew</strong> and <strong>RenewalStatus</strong> cannot be left empty at the same time.</p>
+     * </li>
+     * <li><p><strong>RenewalStatus</strong> takes precedence over <strong>AutoRenew</strong>. By default, if you do not specify <strong>RenewalStatus</strong>, <strong>AutoRenew</strong> is used.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Normal</p>
      */
     @NameInMap("RenewalStatus")
     public String renewalStatus;

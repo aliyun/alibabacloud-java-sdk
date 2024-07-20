@@ -6,28 +6,40 @@ import com.aliyun.tea.*;
 public class CreateIpSetsRequest extends TeaModel {
     /**
      * <p>The information about the acceleration regions.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("AccelerateRegion")
     public java.util.List<CreateIpSetsRequestAccelerateRegion> accelerateRegion;
 
     /**
      * <p>The GA instance ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ga-bp1yeeq8yfoyszmqy****</p>
      */
     @NameInMap("AcceleratorId")
     public String acceleratorId;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
-     * <br>
-     * <p>>  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
+     * <blockquote>
+     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1F4B6A4A-C89E-489E-BAF1-52777EE148EF</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The region ID of the GA instance. Set the value to **cn-hangzhou**.</p>
+     * <p>The region ID of the GA instance. Set the value to <strong>cn-hangzhou</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -72,42 +84,63 @@ public class CreateIpSetsRequest extends TeaModel {
     public static class CreateIpSetsRequestAccelerateRegion extends TeaModel {
         /**
          * <p>The ID of the acceleration region.</p>
-         * <br>
-         * <p>The number of regions that you can add varies based on the specification of the GA instance. For more information, see [Overview](~~153127~~).</p>
+         * <p>The number of regions that you can add varies based on the specification of the GA instance. For more information, see <a href="https://help.aliyun.com/document_detail/153127.html">Overview</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-huhehaote</p>
          */
         @NameInMap("AccelerateRegionId")
         public String accelerateRegionId;
 
         /**
-         * <p>The bandwidth that you want to allocate to the acceleration region. Unit: **Mbit/s**.</p>
-         * <br>
-         * <p>>*  This parameter is required.</p>
-         * <p>>*   You must allocate at least 2 Mbit/s of bandwidth to each acceleration region.</p>
-         * <p>>*   The total bandwidth of all acceleration regions cannot exceed the bandwidth limit of your basic bandwidth plan.</p>
+         * <p>The bandwidth that you want to allocate to the acceleration region. Unit: <strong>Mbit/s</strong>.</p>
+         * <blockquote>
+         * <ul>
+         * <li>This parameter is required.</li>
+         * <li>You must allocate at least 2 Mbit/s of bandwidth to each acceleration region.</li>
+         * <li>The total bandwidth of all acceleration regions cannot exceed the bandwidth limit of your basic bandwidth plan.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Bandwidth")
         public Integer bandwidth;
 
         /**
          * <p>The IP version used to connect to the GA instance. Valid values:</p>
-         * <br>
-         * <p>*   **IPv4** (default)</p>
-         * <p>*   **IPv6**</p>
-         * <p>*   **DUAL_STACK**: IPv4 and IPv6</p>
-         * <br>
-         * <p>> Only pay-as-you-go standard GA instances support DUAL_STACK.</p>
+         * <ul>
+         * <li><strong>IPv4</strong> (default)</li>
+         * <li><strong>IPv6</strong></li>
+         * <li><strong>DUAL_STACK</strong>: IPv4 and IPv6</li>
+         * </ul>
+         * <blockquote>
+         * <p>Only pay-as-you-go standard GA instances support DUAL_STACK.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>IPv6</p>
          */
         @NameInMap("IpVersion")
         public String ipVersion;
 
         /**
          * <p>The line type of the elastic IP address (EIP) in the acceleration region. Valid values:</p>
-         * <br>
-         * <p>*   **BGP**: BGP (Multi-ISP) lines.</p>
-         * <p>*   **BGP_PRO**: BGP (Multi-ISP) Pro lines</p>
-         * <br>
-         * <p>> *   This parameter is required only if the bandwidth metering method of the GA instance is **pay-by-data transfer**.</p>
-         * <p>>*   Different acceleration regions support different line types of EIPs.</p>
+         * <ul>
+         * <li><strong>BGP</strong>: BGP (Multi-ISP) lines.</li>
+         * <li><strong>BGP_PRO</strong>: BGP (Multi-ISP) Pro lines</li>
+         * </ul>
+         * <blockquote>
+         * <ul>
+         * <li>This parameter is required only if the bandwidth metering method of the GA instance is <strong>pay-by-data transfer</strong>.</li>
+         * <li>Different acceleration regions support different line types of EIPs.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>BGP</p>
          */
         @NameInMap("IspType")
         public String ispType;

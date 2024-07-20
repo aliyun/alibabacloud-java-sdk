@@ -6,49 +6,74 @@ import com.aliyun.tea.*;
 public class ListBasicAccelerateIpsRequest extends TeaModel {
     /**
      * <p>The accelerated IP address of the basic GA instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>116.132.XX.XX</p>
      */
     @NameInMap("AccelerateIpAddress")
     public String accelerateIpAddress;
 
     /**
      * <p>The ID of the accelerated IP address of the basic GA instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gaip-bp1****</p>
      */
     @NameInMap("AccelerateIpId")
     public String accelerateIpId;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.</p>
-     * <br>
-     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <blockquote>
+     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The ID of the acceleration region.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2253380.html">GetBasicAccelerator</a> operation to query the ID of the acceleration region.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ips-bp11r5jb8ogp122xl****</p>
      */
     @NameInMap("IpSetId")
     public String ipSetId;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: **1** to **50**. Default value: **10**.</p>
+     * <p>The number of entries to return on each page. Valid values: <strong>1</strong> to <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The token that determines the start point of the query. Valid values:</p>
-     * <br>
-     * <p>*   If this is your first query and no next queries are to be sent, ignore this parameter.</p>
-     * <p>*   If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</p>
+     * <ul>
+     * <li>If this is your first query and no next queries are to be sent, ignore this parameter.</li>
+     * <li>If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.</p>
+     * <p>The ID of the region where the GA instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

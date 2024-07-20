@@ -6,20 +6,28 @@ import com.aliyun.tea.*;
 public class CreateAcceleratorResponseBody extends TeaModel {
     /**
      * <p>The ID of the GA instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ga-bp17frjjh0udz4qz****</p>
      */
     @NameInMap("AcceleratorId")
     public String acceleratorId;
 
     /**
      * <p>The ID of the order.</p>
-     * <br>
-     * <p>If you did not configure automatic payment, you must go to the [Order Center](https://usercenter2-intl.aliyun.com/order/list) to complete the payments.</p>
+     * <p>If you did not configure automatic payment, you must go to the <a href="https://usercenter2-intl.aliyun.com/order/list">Order Center</a> to complete the payments.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>208257****</p>
      */
     @NameInMap("OrderId")
     public String orderId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F591955F-5CB5-4CCE-A75D-17CF2085CE22</p>
      */
     @NameInMap("RequestId")
     public String requestId;

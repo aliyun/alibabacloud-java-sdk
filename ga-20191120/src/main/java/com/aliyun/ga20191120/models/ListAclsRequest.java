@@ -5,58 +5,77 @@ import com.aliyun.tea.*;
 
 public class ListAclsRequest extends TeaModel {
     /**
-     * <p>The ID of the network ACL. You can specify up to 20 network ACL IDs in each request.</p>
+     * <p>The ACL IDs. You can specify a maximum of 20 ACL IDs in each request.</p>
      */
     @NameInMap("AclIds")
     public java.util.List<String> aclIds;
 
     /**
-     * <p>The name of the network ACL. You can specify up to 10 network ACL names in each request.</p>
-     * <br>
-     * <p>The name must be 2 to 128 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.</p>
+     * <p>The ACL name. You can specify a maximum of ACL names in each request.</p>
+     * <p>The name must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-acl</p>
      */
     @NameInMap("AclName")
     public String aclName;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.</p>
-     * <br>
-     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <blockquote>
+     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The number of entries per page. Valid values: **1** to **50**. Default value: **10**.</p>
+     * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The token that is used for the next query. Valid values:</p>
-     * <br>
-     * <p>*   If this is your first and only query, ignore this parameter.</p>
-     * <p>*   If a subsequent query is to be performed, set the parameter to the value of NextToken that is returned from the last call.</p>
+     * <ul>
+     * <li>If this is your first and only query, ignore this parameter.</li>
+     * <li>If a subsequent query is to be performed, set the parameter to the value of NextToken that is returned from the last call.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to **cn-hangzhou**.</p>
+     * <p>The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-aek2lgw4evw****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>The tags of the resource.</p>
+     * <p>The tag of the ACL.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListAclsRequestTag> tag;
@@ -132,21 +151,23 @@ public class ListAclsRequest extends TeaModel {
 
     public static class ListAclsRequestTag extends TeaModel {
         /**
-         * <p>The tag key of the network ACL. The tag key cannot be an empty string.</p>
-         * <br>
-         * <p>The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.</p>
-         * <br>
-         * <p>You can specify up to 20 tag keys.</p>
+         * <p>The tag key of the ACL. The value of this parameter cannot be an empty string.</p>
+         * <p>The tag key can be up to 64 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+         * <p>You can specify a maximum of 20 tag keys.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag-key</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The tag value of the network ACL. The tag value can be an empty string.</p>
-         * <br>
-         * <p>The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.</p>
-         * <br>
-         * <p>You can specify up to 20 tag values.</p>
+         * <p>The tag value of the ACL. The tag value can be an empty string.</p>
+         * <p>The tag value can be up to 128 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+         * <p>You can specify a maximum of 20 tag values.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag-value</p>
          */
         @NameInMap("Value")
         public String value;

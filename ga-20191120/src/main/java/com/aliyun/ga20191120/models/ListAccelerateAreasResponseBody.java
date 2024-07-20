@@ -12,6 +12,9 @@ public class ListAccelerateAreasResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6FEA0CF3-D3B9-43E5-A304-D217037876A8</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class ListAccelerateAreasResponseBody extends TeaModel {
     public static class ListAccelerateAreasResponseBodyAreasRegionList extends TeaModel {
         /**
          * <p>The name of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>China (Qingdao)</p>
          */
         @NameInMap("LocalName")
         public String localName;
 
         /**
          * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-qingdao</p>
          */
         @NameInMap("RegionId")
         public String regionId;
@@ -76,12 +85,18 @@ public class ListAccelerateAreasResponseBody extends TeaModel {
     public static class ListAccelerateAreasResponseBodyAreas extends TeaModel {
         /**
          * <p>The area ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-huabei</p>
          */
         @NameInMap("AreaId")
         public String areaId;
 
         /**
          * <p>The name of the area.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>North China</p>
          */
         @NameInMap("LocalName")
         public String localName;

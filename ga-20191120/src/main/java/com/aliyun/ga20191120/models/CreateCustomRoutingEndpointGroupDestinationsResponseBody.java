@@ -12,6 +12,9 @@ public class CreateCustomRoutingEndpointGroupDestinationsResponseBody extends Te
 
     /**
      * <p>The IDs of the endpoint group mappings.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -12,27 +12,40 @@ public class ListAclsResponseBody extends TeaModel {
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The token that is used for the next query. Valid values:</p>
-     * <br>
-     * <p>*   If **NextToken** is not returned, it indicates that no additional results exist.</p>
-     * <p>*   If **NextToken** is returned, the value is the token that is used for the next query.</p>
+     * <ul>
+     * <li>If <strong>NextToken</strong> is not returned, it indicates that no additional results exist.</li>
+     * <li>If <strong>NextToken</strong> is returned, the value is the token that is used for the next query.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>FFmyTO70t****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>64ADAB1E-0B7F-4FD8-A404-3BECC0E9CCFF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -85,12 +98,18 @@ public class ListAclsResponseBody extends TeaModel {
     public static class ListAclsResponseBodyAclsTags extends TeaModel {
         /**
          * <p>The tag key of the network ACL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag-key</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value of the network ACL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag-value</p>
          */
         @NameInMap("Value")
         public String value;
@@ -121,39 +140,56 @@ public class ListAclsResponseBody extends TeaModel {
     public static class ListAclsResponseBodyAcls extends TeaModel {
         /**
          * <p>The ID of the network ACL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nacl-hp34s2h0xx1ht4nwo****</p>
          */
         @NameInMap("AclId")
         public String aclId;
 
         /**
          * <p>The name of the network ACL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-acl</p>
          */
         @NameInMap("AclName")
         public String aclName;
 
         /**
          * <p>The status of the network ACL. Valid values:</p>
-         * <br>
-         * <p>*   **init**: The network ACL is being initialized.</p>
-         * <p>*   **active**: The network ACL is available.</p>
-         * <p>*   **configuring**: The network ACL is being configured.</p>
-         * <p>*   **updating**: The network ACL is being updated.</p>
-         * <p>*   **deleting:** The network ACL is being deleted.</p>
+         * <ul>
+         * <li><strong>init</strong>: The network ACL is being initialized.</li>
+         * <li><strong>active</strong>: The network ACL is available.</li>
+         * <li><strong>configuring</strong>: The network ACL is being configured.</li>
+         * <li><strong>updating</strong>: The network ACL is being updated.</li>
+         * <li><strong>deleting:</strong> The network ACL is being deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>active</p>
          */
         @NameInMap("AclStatus")
         public String aclStatus;
 
         /**
          * <p>The IP version of the network ACL. Valid values:</p>
-         * <br>
-         * <p>*   **IPv4**</p>
-         * <p>*   **IPv6**</p>
+         * <ul>
+         * <li><strong>IPv4</strong></li>
+         * <li><strong>IPv6</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>IPv4</p>
          */
         @NameInMap("AddressIPVersion")
         public String addressIPVersion;
 
         /**
          * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek2lgw4evw****</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;

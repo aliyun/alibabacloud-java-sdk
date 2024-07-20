@@ -6,61 +6,92 @@ import com.aliyun.tea.*;
 public class ListEndpointGroupsRequest extends TeaModel {
     /**
      * <p>The ID of the GA instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ga-bp1odcab8tmno0hdq****</p>
      */
     @NameInMap("AcceleratorId")
     public String acceleratorId;
 
     /**
      * <p>Specifies whether the access logging feature is enabled. Default value: off. Valid values:</p>
-     * <br>
-     * <p>*   **on**: The access logging feature is enabled.</p>
-     * <p>*   **off**: The access logging feature is disabled.</p>
+     * <ul>
+     * <li><strong>on</strong>: The access logging feature is enabled.</li>
+     * <li><strong>off</strong>: The access logging feature is disabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>on</p>
      */
     @NameInMap("AccessLogSwitch")
     public String accessLogSwitch;
 
     /**
      * <p>The ID of the endpoint group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>epg-bp16jdc00bhe97sr5****</p>
      */
     @NameInMap("EndpointGroupId")
     public String endpointGroupId;
 
     /**
      * <p>The type of the endpoint group. Valid values:</p>
-     * <br>
-     * <p>*   **default**: a default endpoint group</p>
-     * <p>*   **virtual**: a virtual endpoint group</p>
-     * <p>*   If you leave this parameter empty, all default and virtual endpoint groups are queried.</p>
+     * <ul>
+     * <li><strong>default</strong></li>
+     * <li><strong>virtual</strong></li>
+     * <li>If you leave this parameter empty, all default and virtual endpoint groups are queried.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>virtual</p>
      */
     @NameInMap("EndpointGroupType")
     public String endpointGroupType;
 
     /**
      * <p>The ID of the listener.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lsr-bp1bpn0kn908w4nbw****</p>
      */
     @NameInMap("ListenerId")
     public String listenerId;
 
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Maximum value: **50**. Default value: **10**.</p>
+     * <p>The number of entries per page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to **cn-hangzhou**.</p>
+     * <p>The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The tag of the endpoint group.</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>false</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListEndpointGroupsRequestTag> tag;
@@ -145,20 +176,22 @@ public class ListEndpointGroupsRequest extends TeaModel {
     public static class ListEndpointGroupsRequestTag extends TeaModel {
         /**
          * <p>The tag key of the endpoint group. It cannot be an empty string.</p>
-         * <br>
-         * <p>The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `aliyun` or `acs:`.</p>
-         * <br>
+         * <p>The tag key can be up to 64 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
          * <p>You can specify up to 20 tag keys.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-key</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value of the endpoint group. The tag value can be an empty string.</p>
-         * <br>
-         * <p>The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.</p>
-         * <br>
+         * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
          * <p>You can specify up to 20 tag values.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-value</p>
          */
         @NameInMap("Value")
         public String value;

@@ -6,115 +6,165 @@ import com.aliyun.tea.*;
 public class CreateBasicAcceleratorRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable automatic payment. Valid values:</p>
-     * <br>
-     * <p>*   **false:** disables automatic payment. If you select this option, you must go to the Order Center to complete the payment after an order is generated. This is the default value.</p>
-     * <p>*   **true:** enables automatic payment. Payments are automatically completed.</p>
+     * <ul>
+     * <li><strong>false:</strong> disables automatic payment. If you select this option, you must go to the Order Center to complete the payment after an order is generated. This is the default value.</li>
+     * <li><strong>true:</strong> enables automatic payment. Payments are automatically completed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
     /**
      * <p>Specifies whether to enable auto-renewal for the basic GA instance. Valid values:</p>
-     * <br>
-     * <p>*   **true:** enables auto-renewal for the basic GA instance.</p>
-     * <p>*   **false:** disables auto-renewal for the basic GA instance. This is the default value.</p>
+     * <ul>
+     * <li><strong>true:</strong> enables auto-renewal for the basic GA instance.</li>
+     * <li><strong>false:</strong> disables auto-renewal for the basic GA instance. This is the default value.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
 
     /**
      * <p>The auto-renewal duration. Unit: months.</p>
-     * <br>
-     * <p>Valid values: **1** to **12**. Default value: **1**.</p>
-     * <br>
-     * <p>>  This parameter takes effect only when the **AutoPay** parameter is set to **true**.</p>
+     * <p>Valid values: <strong>1</strong> to <strong>12</strong>. Default value: <strong>1</strong>.</p>
+     * <blockquote>
+     * <p> This parameter takes effect only when the <strong>AutoPay</strong> parameter is set to <strong>true</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("AutoRenewDuration")
     public Integer autoRenewDuration;
 
     /**
      * <p>Specifies whether to automatically apply coupons to your bills. Valid values:</p>
-     * <br>
-     * <p>*   **true:** automatically applies coupons to your bills.</p>
-     * <p>*   **false:** does not automatically apply coupons to your bills. This is the default value.</p>
-     * <br>
-     * <p>>  This parameter takes effect only when the **AutoPay** parameter is set to **true**.</p>
+     * <ul>
+     * <li><strong>true:</strong> automatically applies coupons to your bills.</li>
+     * <li><strong>false:</strong> does not automatically apply coupons to your bills. This is the default value.</li>
+     * </ul>
+     * <blockquote>
+     * <p> This parameter takes effect only when the <strong>AutoPay</strong> parameter is set to <strong>true</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("AutoUseCoupon")
     public String autoUseCoupon;
 
     /**
      * <p>The bandwidth billing method. Valid values:</p>
-     * <br>
-     * <p>*   **BandwidthPackage:** billed based on bandwidth plans.</p>
-     * <p>*   **CDT:** billed based on data transfer. The bills are managed by using Cloud Data Transfer (CDT).</p>
-     * <p>*   **CDT95:** billed based on the 95th percentile bandwidth. The bills are managed by using Cloud Data Transfer (CDT). This bandwidth billing method is not available by default. Contact your Alibaba Cloud account manager for more information.</p>
+     * <ul>
+     * <li><strong>BandwidthPackage:</strong> billed based on bandwidth plans.</li>
+     * <li><strong>CDT:</strong> billed based on data transfer. The bills are managed by using Cloud Data Transfer (CDT).</li>
+     * <li><strong>CDT95:</strong> billed based on the 95th percentile bandwidth. The bills are managed by using Cloud Data Transfer (CDT). This bandwidth billing method is not available by default. Contact your Alibaba Cloud account manager for more information.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>CDT</p>
      */
     @NameInMap("BandwidthBillingType")
     public String bandwidthBillingType;
 
     /**
      * <p>The billing method. Valid values:</p>
-     * <br>
-     * <p>*   **PREPAY** (default)</p>
-     * <p>*   **POSTPAY**</p>
+     * <ul>
+     * <li><strong>PREPAY</strong> (default)</li>
+     * <li><strong>POSTPAY</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>PREPAY</p>
      */
     @NameInMap("ChargeType")
     public String chargeType;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
-     * <br>
-     * <p>>  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
+     * <blockquote>
+     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>Specifies whether to perform a dry run. Valid values:</p>
-     * <br>
-     * <p>*   **true:** performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
-     * <p>*   **false**: performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed. This is the default value.</p>
+     * <ul>
+     * <li><strong>true:</strong> performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong>: performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed. This is the default value.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
      * <p>The subscription duration of the GA instance.</p>
-     * <br>
-     * <p>*   If you set **PricingCycle** to **Month**, the valid values for **Duration** are **1** to **9**.</p>
-     * <p>*   If you set **PricingCycle** to **Year**, the valid values for **Duration** are **1** to **3**.</p>
+     * <ul>
+     * <li>If you set <strong>PricingCycle</strong> to <strong>Month</strong>, the valid values for <strong>Duration</strong> are <strong>1</strong> to <strong>9</strong>.</li>
+     * <li>If you set <strong>PricingCycle</strong> to <strong>Year</strong>, the valid values for <strong>Duration</strong> are <strong>1</strong> to <strong>3</strong>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Duration")
     public Integer duration;
 
     /**
      * <p>The billing cycle. Valid values:</p>
-     * <br>
-     * <p>*   **Month**</p>
-     * <p>*   **Year**</p>
+     * <ul>
+     * <li><strong>Month</strong></li>
+     * <li><strong>Year</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Month</p>
      */
     @NameInMap("PricingCycle")
     public String pricingCycle;
 
     /**
      * <p>The code of the coupon.</p>
-     * <br>
-     * <p>>  This parameter takes effect only for accounts registered on the international site (alibabacloud.com).</p>
+     * <blockquote>
+     * <p> This parameter takes effect only for accounts registered on the international site (alibabacloud.com).</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>50003298014****</p>
      */
     @NameInMap("PromotionOptionNo")
     public String promotionOptionNo;
 
     /**
-     * <p>The ID of the region where the basic GA instance is deployed. Set the value to **cn-hangzhou**.</p>
+     * <p>The ID of the region where the basic GA instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group to which the basic GA instance belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmxshhcsn****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -245,20 +295,22 @@ public class CreateBasicAcceleratorRequest extends TeaModel {
     public static class CreateBasicAcceleratorRequestTag extends TeaModel {
         /**
          * <p>The tag key. The tag key cannot be an empty string.</p>
-         * <br>
-         * <p>The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `aliyun` or `acs:`.</p>
-         * <br>
+         * <p>The tag key can be up to 64 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
          * <p>You can specify up to 20 tag keys.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag-key</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value. The tag value cannot be an empty string.</p>
-         * <br>
-         * <p>The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. It cannot start with `acs:` or `aliyun`.</p>
-         * <br>
+         * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
          * <p>You can specify up to 20 tag values.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag-value</p>
          */
         @NameInMap("Value")
         public String value;

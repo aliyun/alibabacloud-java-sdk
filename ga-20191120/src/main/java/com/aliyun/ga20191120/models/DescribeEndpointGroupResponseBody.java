@@ -6,32 +6,46 @@ import com.aliyun.tea.*;
 public class DescribeEndpointGroupResponseBody extends TeaModel {
     /**
      * <p>The ID of the GA instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ga-bp1odcab8tmno0hdq****</p>
      */
     @NameInMap("AcceleratorId")
     public String acceleratorId;
 
     /**
      * <p>Indicates the status of the binding between the Log Service project and the endpoint group. Valid values:</p>
-     * <br>
-     * <p>*   **on**: The Log Service project is bound to the endpoint group.</p>
-     * <p>*   **off**: No Log Service projects are bound to the endpoint group.</p>
-     * <p>*   **binding**: The Log Service project is being bound to the endpoint group.</p>
-     * <p>*   **unbinding**: The Log Service project is being unbound from the endpoint group.</p>
+     * <ul>
+     * <li><strong>on</strong>: The Log Service project is bound to the endpoint group.</li>
+     * <li><strong>off</strong>: No Log Service projects are bound to the endpoint group.</li>
+     * <li><strong>binding</strong>: The Log Service project is being bound to the endpoint group.</li>
+     * <li><strong>unbinding</strong>: The Log Service project is being unbound from the endpoint group.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>on</p>
      */
     @NameInMap("AccessLogSwitch")
     public String accessLogSwitch;
 
     /**
      * <p>The description of the endpoint group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>group1</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>Indicates whether the access log feature is enabled. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("EnableAccessLog")
     public Boolean enableAccessLog;
@@ -44,6 +58,9 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the endpoint group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>epg-bp14sz7ftcwwjgrdm****</p>
      */
     @NameInMap("EndpointGroupId")
     public String endpointGroupId;
@@ -56,15 +73,22 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the region where the endpoint group is deployed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("EndpointGroupRegion")
     public String endpointGroupRegion;
 
     /**
      * <p>The type of endpoint group. Valid values:</p>
-     * <br>
-     * <p>*   **default**: a default endpoint group</p>
-     * <p>*   **virtual**: a virtual endpoint group</p>
+     * <ul>
+     * <li><strong>default</strong>: a default endpoint group</li>
+     * <li><strong>virtual</strong>: a virtual endpoint group</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
      */
     @NameInMap("EndpointGroupType")
     public String endpointGroupType;
@@ -75,11 +99,18 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
     @NameInMap("EndpointGroupUnconfirmedIpList")
     public java.util.List<String> endpointGroupUnconfirmedIpList;
 
+    @NameInMap("EndpointProtocolVersion")
+    public String endpointProtocolVersion;
+
     /**
      * <p>The protocol that is used by the backend service.</p>
-     * <br>
-     * <p>*   **HTTP**</p>
-     * <p>*   **HTTPS**</p>
+     * <ul>
+     * <li><strong>HTTP</strong></li>
+     * <li><strong>HTTPS</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>HTTP</p>
      */
     @NameInMap("EndpointRequestProtocol")
     public String endpointRequestProtocol;
@@ -92,49 +123,72 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the health check feature is enabled. Valid values:</p>
-     * <br>
-     * <p>*   **true**: enabled</p>
-     * <p>*   **false**: disabled</p>
+     * <ul>
+     * <li><strong>true</strong>: enabled</li>
+     * <li><strong>false</strong>: disabled</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("HealthCheckEnabled")
     public Boolean healthCheckEnabled;
 
     /**
      * <p>The interval between two consecutive health checks. Unit: seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("HealthCheckIntervalSeconds")
     public Integer healthCheckIntervalSeconds;
 
     /**
      * <p>The path to which health check probes are sent.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/healthcheck</p>
      */
     @NameInMap("HealthCheckPath")
     public String healthCheckPath;
 
     /**
      * <p>The port that is used for health checks.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("HealthCheckPort")
     public Integer healthCheckPort;
 
     /**
      * <p>The protocol over which health check requests are sent. Valid values:</p>
-     * <br>
-     * <p>*   **tcp**: TCP</p>
-     * <p>*   **http**: HTTP</p>
-     * <p>*   **https**: HTTPS</p>
+     * <ul>
+     * <li><strong>tcp</strong>: TCP</li>
+     * <li><strong>http</strong>: HTTP</li>
+     * <li><strong>https</strong>: HTTPS</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>tcp</p>
      */
     @NameInMap("HealthCheckProtocol")
     public String healthCheckProtocol;
 
     /**
      * <p>The ID of the listener.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lsr-bp1bpn0kn908w4nbw****</p>
      */
     @NameInMap("ListenerId")
     public String listenerId;
 
     /**
      * <p>The name of the endpoint group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>group1</p>
      */
     @NameInMap("Name")
     public String name;
@@ -147,62 +201,88 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6FEA0CF3-D3B9-43E5-A304-D217037876A8</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the service that manages the GA instance.</p>
-     * <br>
-     * <p>>  This parameter takes effect only if **ServiceManaged** is set to **True**.</p>
+     * <blockquote>
+     * <p> This parameter takes effect only if <strong>ServiceManaged</strong> is set to <strong>True</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>ALB</p>
      */
     @NameInMap("ServiceId")
     public String serviceId;
 
     /**
      * <p>Indicates whether the GA instance is managed. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("ServiceManaged")
     public Boolean serviceManaged;
 
     /**
      * <p>The actions that users can perform on the managed instance.</p>
-     * <br>
-     * <p>>  This parameter takes effect only if **ServiceManaged** is set to **True**.</p>
-     * <br>
-     * <p>*   Users can perform only specific actions on a managed instance.</p>
+     * <blockquote>
+     * <p> This parameter takes effect only if <strong>ServiceManaged</strong> is set to <strong>True</strong>.</p>
+     * </blockquote>
+     * <ul>
+     * <li>Users can perform only specific actions on a managed instance.</li>
+     * </ul>
      */
     @NameInMap("ServiceManagedInfos")
     public java.util.List<DescribeEndpointGroupResponseBodyServiceManagedInfos> serviceManagedInfos;
 
     /**
      * <p>The name of the Logstore.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lsn-01</p>
      */
     @NameInMap("SlsLogStoreName")
     public String slsLogStoreName;
 
     /**
      * <p>The name of the Log Service project.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pn-01</p>
      */
     @NameInMap("SlsProjectName")
     public String slsProjectName;
 
     /**
      * <p>The region of the Log Service project.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("SlsRegion")
     public String slsRegion;
 
     /**
      * <p>The status of the endpoint group. Valid values:</p>
-     * <br>
-     * <p>*   **init**: The endpoint group is being initialized.</p>
-     * <p>*   **active**: The endpoint group is running as expected.</p>
-     * <p>*   **updating**: The endpoint group is being updated.</p>
-     * <p>*   **deleting**: The endpoint group is being deleted.</p>
+     * <ul>
+     * <li><strong>init</strong>: The endpoint group is being initialized.</li>
+     * <li><strong>active</strong>: The endpoint group is running as expected.</li>
+     * <li><strong>updating</strong>: The endpoint group is being updated.</li>
+     * <li><strong>deleting</strong>: The endpoint group is being deleted.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>active</p>
      */
     @NameInMap("State")
     public String state;
@@ -215,12 +295,18 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
 
     /**
      * <p>The number of consecutive failed health checks that must occur before an endpoint is considered unhealthy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("ThresholdCount")
     public Integer thresholdCount;
 
     /**
      * <p>The weight of the endpoint group. If the listener is associated with multiple endpoint groups, this parameter indicates the weight of the current endpoint group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("TrafficPercentage")
     public Integer trafficPercentage;
@@ -308,6 +394,14 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
     }
     public java.util.List<String> getEndpointGroupUnconfirmedIpList() {
         return this.endpointGroupUnconfirmedIpList;
+    }
+
+    public DescribeEndpointGroupResponseBody setEndpointProtocolVersion(String endpointProtocolVersion) {
+        this.endpointProtocolVersion = endpointProtocolVersion;
+        return this;
+    }
+    public String getEndpointProtocolVersion() {
+        return this.endpointProtocolVersion;
     }
 
     public DescribeEndpointGroupResponseBody setEndpointRequestProtocol(String endpointRequestProtocol) {
@@ -481,62 +575,89 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
     public static class DescribeEndpointGroupResponseBodyEndpointConfigurations extends TeaModel {
         /**
          * <p>Indicates whether the client IP address preservation feature is enabled. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("EnableClientIPPreservation")
         public Boolean enableClientIPPreservation;
 
         /**
          * <p>Indicates whether the proxy protocol is used to preserve client IP addresses.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("EnableProxyProtocol")
         public Boolean enableProxyProtocol;
 
         /**
          * <p>The IP address or domain name of the endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120.XX.XX.21</p>
          */
         @NameInMap("Endpoint")
         public String endpoint;
 
         /**
          * <p>The port that is used to monitor latency.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("ProbePort")
         public Integer probePort;
 
         /**
          * <p>The protocol that is used to monitor latency. Valid values:</p>
-         * <br>
-         * <p>*   **tcp**</p>
-         * <p>*   **icmp**</p>
+         * <ul>
+         * <li><strong>tcp</strong></li>
+         * <li><strong>icmp</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>tcp</p>
          */
         @NameInMap("ProbeProtocol")
         public String probeProtocol;
 
         /**
          * <p>The private IP address of the ENI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.168.XX.XX</p>
          */
         @NameInMap("SubAddress")
         public String subAddress;
 
         /**
          * <p>The type of the endpoint. Valid values:</p>
-         * <br>
-         * <p>*   **Domain**: a custom domain name</p>
-         * <p>*   **Ip**: a custom IP address</p>
-         * <p>*   **PublicIp**: a public IP address provided by Alibaba Cloud</p>
-         * <p>*   **ECS**: an Elastic Compute Service (ECS) instance</p>
-         * <p>*   **SLB**: a Server Load Balancer (SLB) instance</p>
-         * <p>*   **ALB**: an Application Load Balancer (ALB) instance</p>
-         * <p>*   **OSS**: an Object Storage Service (OSS) bucket</p>
+         * <ul>
+         * <li><strong>Domain</strong>: a custom domain name</li>
+         * <li><strong>Ip</strong>: a custom IP address</li>
+         * <li><strong>PublicIp</strong>: a public IP address provided by Alibaba Cloud</li>
+         * <li><strong>ECS</strong>: an Elastic Compute Service (ECS) instance</li>
+         * <li><strong>SLB</strong>: a Server Load Balancer (SLB) instance</li>
+         * <li><strong>ALB</strong>: an Application Load Balancer (ALB) instance</li>
+         * <li><strong>OSS</strong>: an Object Storage Service (OSS) bucket</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Ip</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The weight of the endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("Weight")
         public Integer weight;
@@ -615,12 +736,18 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
     public static class DescribeEndpointGroupResponseBodyPortOverrides extends TeaModel {
         /**
          * <p>The endpoint port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("EndpointPort")
         public Integer endpointPort;
 
         /**
          * <p>The listener port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>443</p>
          */
         @NameInMap("ListenerPort")
         public Integer listenerPort;
@@ -651,38 +778,51 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
     public static class DescribeEndpointGroupResponseBodyServiceManagedInfos extends TeaModel {
         /**
          * <p>The name of the action on the managed instance. Valid values:</p>
-         * <br>
-         * <p>*   **Create**</p>
-         * <p>*   **Update**</p>
-         * <p>*   **Delete**</p>
-         * <p>*   **Associate**</p>
-         * <p>*   **UserUnmanaged**</p>
-         * <p>*   **CreateChild**</p>
+         * <ul>
+         * <li><strong>Create</strong></li>
+         * <li><strong>Update</strong></li>
+         * <li><strong>Delete</strong></li>
+         * <li><strong>Associate</strong></li>
+         * <li><strong>UserUnmanaged</strong></li>
+         * <li><strong>CreateChild</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Update</p>
          */
         @NameInMap("Action")
         public String action;
 
         /**
          * <p>The type of the child resource. Valid values:</p>
-         * <br>
-         * <p>*   **Listener**: listener</p>
-         * <p>*   **IpSet**: acceleration region</p>
-         * <p>*   **EndpointGroup**: endpoint group</p>
-         * <p>*   **ForwardingRule**: forwarding rule</p>
-         * <p>*   **Endpoint**: endpoint</p>
-         * <p>*   **EndpointGroupDestination**: protocol mapping of an endpoint group associated with a custom routing listener</p>
-         * <p>*   **EndpointPolicy**: traffic policy of an endpoint associated with a custom routing listener</p>
-         * <br>
-         * <p>>  This parameter takes effect only if **Action** is set to **CreateChild**.</p>
+         * <ul>
+         * <li><strong>Listener</strong>: listener</li>
+         * <li><strong>IpSet</strong>: acceleration region</li>
+         * <li><strong>EndpointGroup</strong>: endpoint group</li>
+         * <li><strong>ForwardingRule</strong>: forwarding rule</li>
+         * <li><strong>Endpoint</strong>: endpoint</li>
+         * <li><strong>EndpointGroupDestination</strong>: protocol mapping of an endpoint group associated with a custom routing listener</li>
+         * <li><strong>EndpointPolicy</strong>: traffic policy of an endpoint associated with a custom routing listener</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter takes effect only if <strong>Action</strong> is set to <strong>CreateChild</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Listener</p>
          */
         @NameInMap("ChildType")
         public String childType;
 
         /**
          * <p>Indicates whether the specified actions are managed. Valid values:</p>
-         * <br>
-         * <p>*   **true**: The specified actions are managed, and users cannot perform the specified actions on the managed instance.</p>
-         * <p>*   **false**: The specified actions are not managed, and users can perform the specified actions on the managed instance.</p>
+         * <ul>
+         * <li><strong>true</strong>: The specified actions are managed, and users cannot perform the specified actions on the managed instance.</li>
+         * <li><strong>false</strong>: The specified actions are not managed, and users can perform the specified actions on the managed instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("IsManaged")
         public Boolean isManaged;
@@ -721,12 +861,18 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
     public static class DescribeEndpointGroupResponseBodyTags extends TeaModel {
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-key</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-value</p>
          */
         @NameInMap("Value")
         public String value;

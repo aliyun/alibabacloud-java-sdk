@@ -6,12 +6,20 @@ import com.aliyun.tea.*;
 public class DeleteAcceleratorRequest extends TeaModel {
     /**
      * <p>The ID of the GA instance that you want to delete.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ga-bp1odcab8tmno0hdq****</p>
      */
     @NameInMap("AcceleratorId")
     public String acceleratorId;
 
     /**
-     * <p>The ID of the region where your GA instance is deployed. Set the value to **cn-hangzhou**.</p>
+     * <p>The ID of the region where your GA instance is deployed. Set the value to <strong>cn-hangzhou</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

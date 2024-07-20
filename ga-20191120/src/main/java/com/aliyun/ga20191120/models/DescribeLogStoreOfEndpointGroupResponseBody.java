@@ -6,51 +6,77 @@ import com.aliyun.tea.*;
 public class DescribeLogStoreOfEndpointGroupResponseBody extends TeaModel {
     /**
      * <p>The ID of the GA instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ga-xxxxxxxxxxxxx</p>
      */
     @NameInMap("AcceleratorId")
     public String acceleratorId;
 
     /**
      * <p>The ID of the endpoint group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>epg-xxxxxxxxxxxxxxx</p>
      */
     @NameInMap("EndpointGroupId")
     public String endpointGroupId;
 
     /**
      * <p>The ID of the listener.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lsr-xxxxxxxxxxxxxxx</p>
      */
     @NameInMap("ListenerId")
     public String listenerId;
 
     /**
      * <p>The response parameters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1777E713-8456-55F1-9A69-9AD9EAE2B3B6</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The name of the Logstore.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ga_log</p>
      */
     @NameInMap("SlsLogStoreName")
     public String slsLogStoreName;
 
     /**
      * <p>The name of the Simple Log Service project.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ga_project_name</p>
      */
     @NameInMap("SlsProjectName")
     public String slsProjectName;
 
     /**
      * <p>The region ID of the Simple Log Service project.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("SlsRegionId")
     public String slsRegionId;
 
     /**
      * <p>Indicates whether the endpoint group is bound to the Simple Log Service project.</p>
-     * <br>
-     * <p>*   **on:** The endpoint group is bound to the Simple Log Service project.</p>
-     * <p>*   **off:** The endpoint group is not bound to the Simple Log Service project.</p>
+     * <ul>
+     * <li><strong>on:</strong> The endpoint group is bound to the Simple Log Service project.</li>
+     * <li><strong>off:</strong> The endpoint group is not bound to the Simple Log Service project.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>on - binding
+     * off - unbinding</p>
      */
     @NameInMap("Status")
     public String status;

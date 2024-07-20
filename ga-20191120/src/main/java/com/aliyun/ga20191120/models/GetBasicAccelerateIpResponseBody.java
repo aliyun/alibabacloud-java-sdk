@@ -5,45 +5,65 @@ import com.aliyun.tea.*;
 
 public class GetBasicAccelerateIpResponseBody extends TeaModel {
     /**
-     * <p>The accelerated IP address.</p>
+     * <p>The accelerated IP address of the basic GA instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>116.132.XX.XX</p>
      */
     @NameInMap("AccelerateIpAddress")
     public String accelerateIpAddress;
 
     /**
      * <p>The ID of the accelerated IP address.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gaip-bp1****</p>
      */
     @NameInMap("AccelerateIpId")
     public String accelerateIpId;
 
     /**
      * <p>The ID of the basic GA instance to which the queried accelerated IP address belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ga-bp17frjjh0udz4qz****</p>
      */
     @NameInMap("AcceleratorId")
     public String acceleratorId;
 
     /**
      * <p>The ID of the acceleration region of the basic GA instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ips-bp11r5jb8ogp122xl****</p>
      */
     @NameInMap("IpSetId")
     public String ipSetId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The status of the accelerated IP address. Valid values:</p>
-     * <br>
-     * <p>*   **active**: The accelerated IP address is available.</p>
-     * <p>*   **binding**: The accelerated IP address is being associated.</p>
-     * <p>*   **bound**: The accelerated IP address is associated.</p>
-     * <p>*   **unbinding**: The basic GA instance is being disassociated.</p>
-     * <p>*   **deleting**: The accelerated IP address is being deleted.</p>
-     * <br>
-     * <p>>  This parameter is not returned when the queried accelerated IP address is being created.</p>
+     * <ul>
+     * <li><strong>active</strong>: The accelerated IP address is available.</li>
+     * <li><strong>binding</strong>: The accelerated IP address is being associated.</li>
+     * <li><strong>bound</strong>: The accelerated IP address is associated.</li>
+     * <li><strong>unbinding</strong>: The accelerated IP address is being disassociated.</li>
+     * <li><strong>deleting</strong>: The GA instance is being deleted.</li>
+     * </ul>
+     * <blockquote>
+     * <p> If the accelerated IP address is being created, this parameter is not returned.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>active</p>
      */
     @NameInMap("State")
     public String state;
