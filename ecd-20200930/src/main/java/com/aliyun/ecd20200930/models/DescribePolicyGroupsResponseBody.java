@@ -300,6 +300,110 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
 
     }
 
+    public static class DescribePolicyGroupsResponseBodyDescribePolicyGroupsDeviceRedirects extends TeaModel {
+        @NameInMap("DeviceType")
+        public String deviceType;
+
+        @NameInMap("RedirectType")
+        public String redirectType;
+
+        public static DescribePolicyGroupsResponseBodyDescribePolicyGroupsDeviceRedirects build(java.util.Map<String, ?> map) throws Exception {
+            DescribePolicyGroupsResponseBodyDescribePolicyGroupsDeviceRedirects self = new DescribePolicyGroupsResponseBodyDescribePolicyGroupsDeviceRedirects();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroupsDeviceRedirects setDeviceType(String deviceType) {
+            this.deviceType = deviceType;
+            return this;
+        }
+        public String getDeviceType() {
+            return this.deviceType;
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroupsDeviceRedirects setRedirectType(String redirectType) {
+            this.redirectType = redirectType;
+            return this;
+        }
+        public String getRedirectType() {
+            return this.redirectType;
+        }
+
+    }
+
+    public static class DescribePolicyGroupsResponseBodyDescribePolicyGroupsDeviceRules extends TeaModel {
+        @NameInMap("DeviceName")
+        public String deviceName;
+
+        @NameInMap("DevicePid")
+        public String devicePid;
+
+        @NameInMap("DeviceType")
+        public String deviceType;
+
+        @NameInMap("DeviceVid")
+        public String deviceVid;
+
+        @NameInMap("OptCommand")
+        public String optCommand;
+
+        @NameInMap("RedirectType")
+        public String redirectType;
+
+        public static DescribePolicyGroupsResponseBodyDescribePolicyGroupsDeviceRules build(java.util.Map<String, ?> map) throws Exception {
+            DescribePolicyGroupsResponseBodyDescribePolicyGroupsDeviceRules self = new DescribePolicyGroupsResponseBodyDescribePolicyGroupsDeviceRules();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroupsDeviceRules setDeviceName(String deviceName) {
+            this.deviceName = deviceName;
+            return this;
+        }
+        public String getDeviceName() {
+            return this.deviceName;
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroupsDeviceRules setDevicePid(String devicePid) {
+            this.devicePid = devicePid;
+            return this;
+        }
+        public String getDevicePid() {
+            return this.devicePid;
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroupsDeviceRules setDeviceType(String deviceType) {
+            this.deviceType = deviceType;
+            return this;
+        }
+        public String getDeviceType() {
+            return this.deviceType;
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroupsDeviceRules setDeviceVid(String deviceVid) {
+            this.deviceVid = deviceVid;
+            return this;
+        }
+        public String getDeviceVid() {
+            return this.deviceVid;
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroupsDeviceRules setOptCommand(String optCommand) {
+            this.optCommand = optCommand;
+            return this;
+        }
+        public String getOptCommand() {
+            return this.optCommand;
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroupsDeviceRules setRedirectType(String redirectType) {
+            this.redirectType = redirectType;
+            return this;
+        }
+        public String getRedirectType() {
+            return this.redirectType;
+        }
+
+    }
+
     public static class DescribePolicyGroupsResponseBodyDescribePolicyGroupsDomainResolveRule extends TeaModel {
         /**
          * <p>The rule description.</p>
@@ -696,6 +800,12 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
          */
         @NameInMap("CpuSingleRateLimit")
         public Integer cpuSingleRateLimit;
+
+        @NameInMap("DeviceRedirects")
+        public java.util.List<DescribePolicyGroupsResponseBodyDescribePolicyGroupsDeviceRedirects> deviceRedirects;
+
+        @NameInMap("DeviceRules")
+        public java.util.List<DescribePolicyGroupsResponseBodyDescribePolicyGroupsDeviceRules> deviceRules;
 
         @NameInMap("DisplayMode")
         public String displayMode;
@@ -1468,6 +1578,22 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         }
         public Integer getCpuSingleRateLimit() {
             return this.cpuSingleRateLimit;
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setDeviceRedirects(java.util.List<DescribePolicyGroupsResponseBodyDescribePolicyGroupsDeviceRedirects> deviceRedirects) {
+            this.deviceRedirects = deviceRedirects;
+            return this;
+        }
+        public java.util.List<DescribePolicyGroupsResponseBodyDescribePolicyGroupsDeviceRedirects> getDeviceRedirects() {
+            return this.deviceRedirects;
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setDeviceRules(java.util.List<DescribePolicyGroupsResponseBodyDescribePolicyGroupsDeviceRules> deviceRules) {
+            this.deviceRules = deviceRules;
+            return this;
+        }
+        public java.util.List<DescribePolicyGroupsResponseBodyDescribePolicyGroupsDeviceRules> getDeviceRules() {
+            return this.deviceRules;
         }
 
         public DescribePolicyGroupsResponseBodyDescribePolicyGroups setDisplayMode(String displayMode) {

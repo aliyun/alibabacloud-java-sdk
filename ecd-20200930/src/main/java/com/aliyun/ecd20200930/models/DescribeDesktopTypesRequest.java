@@ -203,6 +203,9 @@ public class DescribeDesktopTypesRequest extends TeaModel {
     @NameInMap("GpuCount")
     public Float gpuCount;
 
+    @NameInMap("GpuDriverType")
+    public String gpuDriverType;
+
     /**
      * <p>The name of the instance family.</p>
      * <blockquote>
@@ -345,6 +348,14 @@ public class DescribeDesktopTypesRequest extends TeaModel {
     }
     public Float getGpuCount() {
         return this.gpuCount;
+    }
+
+    public DescribeDesktopTypesRequest setGpuDriverType(String gpuDriverType) {
+        this.gpuDriverType = gpuDriverType;
+        return this;
+    }
+    public String getGpuDriverType() {
+        return this.gpuDriverType;
     }
 
     public DescribeDesktopTypesRequest setInstanceTypeFamily(String instanceTypeFamily) {
