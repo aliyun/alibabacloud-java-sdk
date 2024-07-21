@@ -114,6 +114,9 @@ public class DescribeBundlesRequest extends TeaModel {
     @NameInMap("GpuCount")
     public Float gpuCount;
 
+    @NameInMap("GpuDriverType")
+    public String gpuDriverType;
+
     /**
      * <p>The image ID.</p>
      */
@@ -315,6 +318,14 @@ public class DescribeBundlesRequest extends TeaModel {
     }
     public Float getGpuCount() {
         return this.gpuCount;
+    }
+
+    public DescribeBundlesRequest setGpuDriverType(String gpuDriverType) {
+        this.gpuDriverType = gpuDriverType;
+        return this;
+    }
+    public String getGpuDriverType() {
+        return this.gpuDriverType;
     }
 
     public DescribeBundlesRequest setImageId(java.util.List<String> imageId) {

@@ -76,6 +76,16 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     @NameInMap("Clipboard")
     public String clipboard;
 
+    @NameInMap("DeviceRedirects")
+    public java.util.List<ModifyPolicyGroupRequestDeviceRedirects> deviceRedirects;
+
+    /**
+     * <strong>if can be null:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("DeviceRules")
+    public java.util.List<ModifyPolicyGroupRequestDeviceRules> deviceRules;
+
     /**
      * <p>The domain blacklist or whitelist. Wildcard domains are supported. Separate domain names with commas (,). Valid values:</p>
      * <ul>
@@ -671,6 +681,22 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     }
     public String getClipboard() {
         return this.clipboard;
+    }
+
+    public ModifyPolicyGroupRequest setDeviceRedirects(java.util.List<ModifyPolicyGroupRequestDeviceRedirects> deviceRedirects) {
+        this.deviceRedirects = deviceRedirects;
+        return this;
+    }
+    public java.util.List<ModifyPolicyGroupRequestDeviceRedirects> getDeviceRedirects() {
+        return this.deviceRedirects;
+    }
+
+    public ModifyPolicyGroupRequest setDeviceRules(java.util.List<ModifyPolicyGroupRequestDeviceRules> deviceRules) {
+        this.deviceRules = deviceRules;
+        return this;
+    }
+    public java.util.List<ModifyPolicyGroupRequestDeviceRules> getDeviceRules() {
+        return this.deviceRules;
     }
 
     public ModifyPolicyGroupRequest setDomainList(String domainList) {
@@ -1323,6 +1349,110 @@ public class ModifyPolicyGroupRequest extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+    }
+
+    public static class ModifyPolicyGroupRequestDeviceRedirects extends TeaModel {
+        @NameInMap("DeviceType")
+        public String deviceType;
+
+        @NameInMap("RedirectType")
+        public String redirectType;
+
+        public static ModifyPolicyGroupRequestDeviceRedirects build(java.util.Map<String, ?> map) throws Exception {
+            ModifyPolicyGroupRequestDeviceRedirects self = new ModifyPolicyGroupRequestDeviceRedirects();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyPolicyGroupRequestDeviceRedirects setDeviceType(String deviceType) {
+            this.deviceType = deviceType;
+            return this;
+        }
+        public String getDeviceType() {
+            return this.deviceType;
+        }
+
+        public ModifyPolicyGroupRequestDeviceRedirects setRedirectType(String redirectType) {
+            this.redirectType = redirectType;
+            return this;
+        }
+        public String getRedirectType() {
+            return this.redirectType;
+        }
+
+    }
+
+    public static class ModifyPolicyGroupRequestDeviceRules extends TeaModel {
+        @NameInMap("DeviceName")
+        public String deviceName;
+
+        @NameInMap("DevicePid")
+        public String devicePid;
+
+        @NameInMap("DeviceType")
+        public String deviceType;
+
+        @NameInMap("DeviceVid")
+        public String deviceVid;
+
+        @NameInMap("OptCommand")
+        public String optCommand;
+
+        @NameInMap("RedirectType")
+        public String redirectType;
+
+        public static ModifyPolicyGroupRequestDeviceRules build(java.util.Map<String, ?> map) throws Exception {
+            ModifyPolicyGroupRequestDeviceRules self = new ModifyPolicyGroupRequestDeviceRules();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyPolicyGroupRequestDeviceRules setDeviceName(String deviceName) {
+            this.deviceName = deviceName;
+            return this;
+        }
+        public String getDeviceName() {
+            return this.deviceName;
+        }
+
+        public ModifyPolicyGroupRequestDeviceRules setDevicePid(String devicePid) {
+            this.devicePid = devicePid;
+            return this;
+        }
+        public String getDevicePid() {
+            return this.devicePid;
+        }
+
+        public ModifyPolicyGroupRequestDeviceRules setDeviceType(String deviceType) {
+            this.deviceType = deviceType;
+            return this;
+        }
+        public String getDeviceType() {
+            return this.deviceType;
+        }
+
+        public ModifyPolicyGroupRequestDeviceRules setDeviceVid(String deviceVid) {
+            this.deviceVid = deviceVid;
+            return this;
+        }
+        public String getDeviceVid() {
+            return this.deviceVid;
+        }
+
+        public ModifyPolicyGroupRequestDeviceRules setOptCommand(String optCommand) {
+            this.optCommand = optCommand;
+            return this;
+        }
+        public String getOptCommand() {
+            return this.optCommand;
+        }
+
+        public ModifyPolicyGroupRequestDeviceRules setRedirectType(String redirectType) {
+            this.redirectType = redirectType;
+            return this;
+        }
+        public String getRedirectType() {
+            return this.redirectType;
         }
 
     }
