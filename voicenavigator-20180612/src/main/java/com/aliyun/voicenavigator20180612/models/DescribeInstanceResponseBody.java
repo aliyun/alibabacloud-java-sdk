@@ -10,15 +10,27 @@ public class DescribeInstanceResponseBody extends TeaModel {
     @NameInMap("ApplicableOperations")
     public java.util.List<String> applicableOperations;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("Concurrency")
     public Long concurrency;
 
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test1_instanceId</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1532436395329</p>
+     */
     @NameInMap("ModifyTime")
     public Long modifyTime;
 
@@ -31,9 +43,17 @@ public class DescribeInstanceResponseBody extends TeaModel {
     @NameInMap("NluServiceParamsJson")
     public String nluServiceParamsJson;
 
+    /**
+     * <strong>example:</strong>
+     * <p>14C39896-AE6D-4643-9C9A-E0566B2C2DDD</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Drafted</p>
+     */
     @NameInMap("Status")
     public String status;
 

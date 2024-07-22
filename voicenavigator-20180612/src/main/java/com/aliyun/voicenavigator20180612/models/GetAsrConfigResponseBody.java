@@ -4,21 +4,41 @@ package com.aliyun.voicenavigator20180612.models;
 import com.aliyun.tea.*;
 
 public class GetAsrConfigResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public GetAsrConfigResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Not Found</p>
+     */
     @NameInMap("ErrorMsg")
     public String errorMsg;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>14C39896-AE6D-4643-9C9A-E0566B2C2DDD</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,15 +96,31 @@ public class GetAsrConfigResponseBody extends TeaModel {
     }
 
     public static class GetAsrConfigResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>3b1d3031-8b6e-460a-8640-d330f2ca50b8</p>
+         */
         @NameInMap("AsrAcousticModelId")
         public String asrAcousticModelId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3b1d3031-8b6e-460a-8640-d330f2ca50b8</p>
+         */
         @NameInMap("AsrClassVocabularyId")
         public String asrClassVocabularyId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3b1d3031-8b6e-460a-8640-d330f2ca50b8</p>
+         */
         @NameInMap("AsrCustomizationId")
         public String asrCustomizationId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3b1d3031-8b6e-460a-8640-d330f2ca50b8</p>
+         */
         @NameInMap("AsrVocabularyId")
         public String asrVocabularyId;
 

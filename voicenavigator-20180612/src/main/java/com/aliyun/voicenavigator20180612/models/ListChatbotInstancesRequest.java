@@ -4,6 +4,10 @@ package com.aliyun.voicenavigator20180612.models;
 import com.aliyun.tea.*;
 
 public class ListChatbotInstancesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>af81a389-91f0-4157-8d82-720edd02b66a</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -13,9 +17,19 @@ public class ListChatbotInstancesRequest extends TeaModel {
     @NameInMap("NluServiceType")
     public String nluServiceType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 

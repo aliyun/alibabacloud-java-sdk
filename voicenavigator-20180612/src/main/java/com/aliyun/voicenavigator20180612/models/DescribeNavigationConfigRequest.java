@@ -4,6 +4,12 @@ package com.aliyun.voicenavigator20180612.models;
 import com.aliyun.tea.*;
 
 public class DescribeNavigationConfigRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>287289b6-1510-4e64-9224-39b53ad89dd2</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

@@ -4,15 +4,31 @@ package com.aliyun.voicenavigator20180612.models;
 import com.aliyun.tea.*;
 
 public class CollectedNumberResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Broadcast</p>
+     */
     @NameInMap("Action")
     public String action;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{\&quot;duration\&quot;:31340,\&quot;endTime\&quot;:1638243934786,\&quot;hangUpDirection\&quot;:\&quot;ivr\&quot;,\&quot;startTime\&quot;:1638243903446}</p>
+     */
     @NameInMap("ActionParams")
     public String actionParams;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("Interruptible")
     public Boolean interruptible;
 
+    /**
+     * <strong>example:</strong>
+     * <p>da37319b-6c83-4268-9f19-814aed62e401</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

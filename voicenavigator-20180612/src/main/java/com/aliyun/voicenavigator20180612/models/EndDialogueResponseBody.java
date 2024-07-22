@@ -4,6 +4,10 @@ package com.aliyun.voicenavigator20180612.models;
 import com.aliyun.tea.*;
 
 public class EndDialogueResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>e48e45dd-e47a-4744-a063-f08cbebb1c5a</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

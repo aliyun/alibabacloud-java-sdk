@@ -4,21 +4,51 @@ package com.aliyun.voicenavigator20180612.models;
 import com.aliyun.tea.*;
 
 public class QueryConversationsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1582183381000</p>
+     */
     @NameInMap("BeginTimeLeftRange")
     public Long beginTimeLeftRange;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1582356181000</p>
+     */
     @NameInMap("BeginTimeRightRange")
     public Long beginTimeRightRange;
 
+    /**
+     * <strong>example:</strong>
+     * <p>02811111111</p>
+     */
     @NameInMap("CallingNumber")
     public String callingNumber;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12f407b22cbe4890ac595f09985848d5</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 

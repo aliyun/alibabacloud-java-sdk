@@ -7,15 +7,35 @@ public class CollectedNumberRequest extends TeaModel {
     @NameInMap("AdditionalContext")
     public String additionalContext;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0099b75d-60fd-4c63-8541-7fbba0ae6bb0</p>
+     */
     @NameInMap("ConversationId")
     public String conversationId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0099b75d-60fd-4c63-8541-7fbba0ae6bb0</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1426738157626835</p>
+     */
     @NameInMap("InstanceOwnerId")
     public Long instanceOwnerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1500060224</p>
+     */
     @NameInMap("Number")
     public String number;
 

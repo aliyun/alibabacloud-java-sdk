@@ -4,27 +4,73 @@ package com.aliyun.voicenavigator20180612.models;
 import com.aliyun.tea.*;
 
 public class SaveRecordingRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>390515b5-6115-4ccf-83e2-52d5bfaf2ddf</p>
+     */
     @NameInMap("ConversationId")
     public String conversationId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("Duration")
     public String duration;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>e6bef0db439d4048bfcf45322491becf.wav</p>
+     */
     @NameInMap("FileName")
     public String fileName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss://test/record/</p>
+     */
     @NameInMap("FilePath")
     public String filePath;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>af81a389-91f0-4157-8d82-720edd02b66a</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1971226538081821</p>
+     */
     @NameInMap("InstanceOwnerId")
     public Long instanceOwnerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1582267398628</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Source</p>
+     */
     @NameInMap("Type")
     public String type;
 

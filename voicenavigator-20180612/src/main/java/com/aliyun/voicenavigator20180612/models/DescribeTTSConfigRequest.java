@@ -4,9 +4,19 @@ package com.aliyun.voicenavigator20180612.models;
 import com.aliyun.tea.*;
 
 public class DescribeTTSConfigRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dc437bba-5a25-4bbc-b4c2-f268864bebb5</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1971226538081821</p>
+     */
     @NameInMap("InstanceOwnerId")
     public Long instanceOwnerId;
 

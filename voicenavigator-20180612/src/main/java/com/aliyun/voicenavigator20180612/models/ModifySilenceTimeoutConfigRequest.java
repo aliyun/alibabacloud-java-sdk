@@ -4,30 +4,74 @@ package com.aliyun.voicenavigator20180612.models;
 import com.aliyun.tea.*;
 
 public class ModifySilenceTimeoutConfigRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TransferToAgent</p>
+     */
     @NameInMap("FinalAction")
     public String finalAction;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("FinalActionParams")
     public String finalActionParams;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("FinalPrompt")
     public String finalPrompt;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12f407b22cbe4890ac595f09985848d5</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Timeout</p>
+     */
     @NameInMap("IntentTrigger")
     public String intentTrigger;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Prompt")
     public String prompt;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>chatbotIntent</p>
+     */
     @NameInMap("SourceType")
     public String sourceType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("Threshold")
     public Integer threshold;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("Timeout")
     public Long timeout;
 

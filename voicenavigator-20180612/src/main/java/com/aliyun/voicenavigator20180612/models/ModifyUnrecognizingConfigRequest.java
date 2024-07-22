@@ -4,21 +4,49 @@ package com.aliyun.voicenavigator20180612.models;
 import com.aliyun.tea.*;
 
 public class ModifyUnrecognizingConfigRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TransferToAgent</p>
+     */
     @NameInMap("FinalAction")
     public String finalAction;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("FinalActionParams")
     public String finalActionParams;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("FinalPrompt")
     public String finalPrompt;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12f407b22cbe4890ac595f09985848d5</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Prompt")
     public String prompt;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("Threshold")
     public Integer threshold;
 

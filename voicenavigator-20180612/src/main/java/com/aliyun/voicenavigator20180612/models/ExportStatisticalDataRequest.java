@@ -4,18 +4,44 @@ package com.aliyun.voicenavigator20180612.models;
 import com.aliyun.tea.*;
 
 public class ExportStatisticalDataRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1582266750353</p>
+     */
     @NameInMap("BeginTimeLeftRange")
     public Long beginTimeLeftRange;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1582266750353</p>
+     */
     @NameInMap("BeginTimeRightRange")
     public Long beginTimeRightRange;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>statistical</p>
+     */
     @NameInMap("ExportType")
     public String exportType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>29b52d70-d9fe-4fe0-8476-8aaacbcfdc84</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Hour</p>
+     */
     @NameInMap("TimeUnit")
     public String timeUnit;
 

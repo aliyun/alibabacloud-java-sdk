@@ -7,6 +7,10 @@ public class ListConversationDetailsResponseBody extends TeaModel {
     @NameInMap("ConversationDetails")
     public java.util.List<ListConversationDetailsResponseBodyConversationDetails> conversationDetails;
 
+    /**
+     * <strong>example:</strong>
+     * <p>14C39896-AE6D-4643-9C9A-E0566B2C2DDD</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,21 +36,45 @@ public class ListConversationDetailsResponseBody extends TeaModel {
     }
 
     public static class ListConversationDetailsResponseBodyConversationDetails extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Dialogue</p>
+         */
         @NameInMap("Action")
         public String action;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("ActionParams")
         public String actionParams;
 
+        /**
+         * <strong>example:</strong>
+         * <p>af81a389-91f0-4157-8d82-720edd02b66a</p>
+         */
         @NameInMap("ConversationId")
         public String conversationId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1582266750353</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>af81a389-91f0-4157-8d82-720edd02b66a</p>
+         */
         @NameInMap("SequenceId")
         public String sequenceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Chatbot</p>
+         */
         @NameInMap("Speaker")
         public String speaker;
 

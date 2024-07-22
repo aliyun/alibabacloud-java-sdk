@@ -4,30 +4,72 @@ package com.aliyun.voicenavigator20180612.models;
 import com.aliyun.tea.*;
 
 public class ListConversationsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1638288000000</p>
+     */
     @NameInMap("BeginTimeLeftRange")
     public Long beginTimeLeftRange;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1637547875311</p>
+     */
     @NameInMap("BeginTimeRightRange")
     public Long beginTimeRightRange;
 
+    /**
+     * <strong>example:</strong>
+     * <p>138106*****</p>
+     */
     @NameInMap("CallingNumber")
     public String callingNumber;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>da37319b-6c83-4268-9f19-814aed62e401</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("IsSandBox")
     public String isSandBox;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>13788914724</p>
+     */
     @NameInMap("Query")
     public String query;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("Result")
     public Long result;
 

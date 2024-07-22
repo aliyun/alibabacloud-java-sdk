@@ -7,15 +7,31 @@ public class ListChatbotInstancesResponseBody extends TeaModel {
     @NameInMap("Bots")
     public java.util.List<ListChatbotInstancesResponseBodyBots> bots;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>da37319b-6c83-4268-9f19-814aed62e401</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -65,24 +81,48 @@ public class ListChatbotInstancesResponseBody extends TeaModel {
     }
 
     public static class ListChatbotInstancesResponseBodyBots extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://dss0.ali.com/70cFuHS.jpg">https://dss0.ali.com/70cFuHS.jpg</a></p>
+         */
         @NameInMap("Avatar")
         public String avatar;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1582266750353</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>af81a389-91f0-4157-8d82-720edd02b66a</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>‘’</p>
+         */
         @NameInMap("Introduction")
         public String introduction;
 
+        /**
+         * <strong>example:</strong>
+         * <p>zh-cn</p>
+         */
         @NameInMap("LanguageCode")
         public String languageCode;
 
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>UTC+8</p>
+         */
         @NameInMap("TimeZone")
         public String timeZone;
 

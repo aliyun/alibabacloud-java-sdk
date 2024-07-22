@@ -4,9 +4,17 @@ package com.aliyun.voicenavigator20180612.models;
 import com.aliyun.tea.*;
 
 public class CreateInstanceResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>c28fc549-d88f-4f6e-85ad-a0806e5e39c0</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>9ab43460-c0b9-40e2-8447-48d82c97fc67</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

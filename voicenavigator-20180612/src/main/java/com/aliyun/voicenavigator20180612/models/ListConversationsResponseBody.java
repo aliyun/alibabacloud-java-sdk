@@ -7,15 +7,31 @@ public class ListConversationsResponseBody extends TeaModel {
     @NameInMap("Conversations")
     public java.util.List<ListConversationsResponseBodyConversations> conversations;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>a2c26e67-5984-4935-984e-bcee52971993</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -68,9 +84,17 @@ public class ListConversationsResponseBody extends TeaModel {
         @NameInMap("CalledNumber")
         public String calledNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>135815884***</p>
+         */
         @NameInMap("CallingNumber")
         public String callingNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>82b2eaae-ce5c-45f8-8231-f15b6b27e55c</p>
+         */
         @NameInMap("ConversationId")
         public String conversationId;
 
@@ -80,27 +104,51 @@ public class ListConversationsResponseBody extends TeaModel {
         @NameInMap("DsReportTitles")
         public java.util.List<String> dsReportTitles;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("EndReason")
         public Integer endReason;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1582266750353</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("HasLastPlaybackCompleted")
         public Boolean hasLastPlaybackCompleted;
 
         @NameInMap("HasToAgent")
         public Boolean hasToAgent;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("Rounds")
         public Integer rounds;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("SandBox")
         public Boolean sandBox;
 
         @NameInMap("SkillGroup")
         public String skillGroup;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1641625694286</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 

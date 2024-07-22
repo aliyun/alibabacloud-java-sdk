@@ -4,21 +4,45 @@ package com.aliyun.voicenavigator20180612.models;
 import com.aliyun.tea.*;
 
 public class ModifyAsrConfigRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>6cc9f5ca-2cb6-4cc7-a46b-2bbfd3e61b22</p>
+     */
     @NameInMap("AsrAcousticModelId")
     public String asrAcousticModelId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6cc9f5ca-2cb6-4cc7-a46b-2bbfd3e61b22</p>
+     */
     @NameInMap("AsrClassVocabularyId")
     public String asrClassVocabularyId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6cc9f5ca-2cb6-4cc7-a46b-2bbfd3e61b22</p>
+     */
     @NameInMap("AsrCustomizationId")
     public String asrCustomizationId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6cc9f5ca-2cb6-4cc7-a46b-2bbfd3e61b22</p>
+     */
     @NameInMap("AsrVocabularyId")
     public String asrVocabularyId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("ConfigLevel")
     public Integer configLevel;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6cc9f5ca-2cb6-4cc7-a46b-2bbfd3e61b22</p>
+     */
     @NameInMap("EntryId")
     public String entryId;
 
