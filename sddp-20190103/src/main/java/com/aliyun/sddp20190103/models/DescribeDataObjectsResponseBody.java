@@ -280,6 +280,9 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         @NameInMap("ProductId")
         public Long productId;
 
+        @NameInMap("RegionId")
+        public String regionId;
+
         /**
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -419,6 +422,14 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         }
         public Long getProductId() {
             return this.productId;
+        }
+
+        public DescribeDataObjectsResponseBodyItems setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
         }
 
         public DescribeDataObjectsResponseBodyItems setRegionName(String regionName) {

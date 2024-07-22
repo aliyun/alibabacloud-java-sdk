@@ -97,6 +97,9 @@ public class CreateDataLimitRequest extends TeaModel {
     @NameInMap("FeatureType")
     public Integer featureType;
 
+    @NameInMap("InstantlyScan")
+    public Boolean instantlyScan;
+
     /**
      * <p>The language of the content within the request and response. Default value: <strong>zh_cn</strong>. Valid values:</p>
      * <ul>
@@ -291,6 +294,14 @@ public class CreateDataLimitRequest extends TeaModel {
     }
     public Integer getFeatureType() {
         return this.featureType;
+    }
+
+    public CreateDataLimitRequest setInstantlyScan(Boolean instantlyScan) {
+        this.instantlyScan = instantlyScan;
+        return this;
+    }
+    public Boolean getInstantlyScan() {
+        return this.instantlyScan;
     }
 
     public CreateDataLimitRequest setLang(String lang) {
