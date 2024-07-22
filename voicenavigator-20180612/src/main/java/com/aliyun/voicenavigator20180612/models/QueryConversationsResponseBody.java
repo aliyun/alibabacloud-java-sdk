@@ -7,15 +7,31 @@ public class QueryConversationsResponseBody extends TeaModel {
     @NameInMap("Conversations")
     public java.util.List<QueryConversationsResponseBodyConversations> conversations;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>14C39896-AE6D-4643-9C9A-E0566B2C2DDD</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -65,27 +81,59 @@ public class QueryConversationsResponseBody extends TeaModel {
     }
 
     public static class QueryConversationsResponseBodyConversations extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1582183381000</p>
+         */
         @NameInMap("BeginTime")
         public Long beginTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>02811111111</p>
+         */
         @NameInMap("CallingNumber")
         public String callingNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>af81a389-91f0-4157-8d82-720edd02b66a</p>
+         */
         @NameInMap("ConversationId")
         public String conversationId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8</p>
+         */
         @NameInMap("EffectiveAnswerCount")
         public Integer effectiveAnswerCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1582183481000</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>AAA</p>
+         */
         @NameInMap("SkillGroupId")
         public String skillGroupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("TransferredToAgent")
         public Boolean transferredToAgent;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("UserUtteranceCount")
         public Integer userUtteranceCount;
 

@@ -4,27 +4,55 @@ package com.aliyun.voicenavigator20180612.models;
 import com.aliyun.tea.*;
 
 public class DescribeStatisticalDataResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("ConversationTotalNum")
     public Long conversationTotalNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>14C39896-AE6D-4643-9C9A-E0566B2C2DDD</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>80</p>
+     */
     @NameInMap("ResolvedQuestionTotalNum")
     public Long resolvedQuestionTotalNum;
 
     @NameInMap("StatisticalDataReports")
     public java.util.List<DescribeStatisticalDataResponseBodyStatisticalDataReports> statisticalDataReports;
 
+    /**
+     * <strong>example:</strong>
+     * <p>80.00%</p>
+     */
     @NameInMap("TotalDialoguePassRate")
     public String totalDialoguePassRate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>80.00%</p>
+     */
     @NameInMap("TotalKnowledgeHitRate")
     public String totalKnowledgeHitRate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>80.00%</p>
+     */
     @NameInMap("TotalResolutionRate")
     public String totalResolutionRate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>80.00%</p>
+     */
     @NameInMap("TotalValidAnswerRate")
     public String totalValidAnswerRate;
 
@@ -98,24 +126,52 @@ public class DescribeStatisticalDataResponseBody extends TeaModel {
     }
 
     public static class DescribeStatisticalDataResponseBodyStatisticalDataReports extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>80.00%</p>
+         */
         @NameInMap("DialoguePassRate")
         public String dialoguePassRate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>80.00%</p>
+         */
         @NameInMap("KnowledgeHitRate")
         public String knowledgeHitRate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>80.00%</p>
+         */
         @NameInMap("ResolutionRate")
         public String resolutionRate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>80</p>
+         */
         @NameInMap("ResolvedQuestionNum")
         public Integer resolvedQuestionNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>19:00:00</p>
+         */
         @NameInMap("StatisticalDate")
         public String statisticalDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("TotalConversationNum")
         public Integer totalConversationNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>80.0</p>
+         */
         @NameInMap("ValidAnswerRate")
         public String validAnswerRate;
 

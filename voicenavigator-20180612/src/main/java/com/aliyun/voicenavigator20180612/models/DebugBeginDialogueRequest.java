@@ -4,18 +4,44 @@ package com.aliyun.voicenavigator20180612.models;
 import com.aliyun.tea.*;
 
 public class DebugBeginDialogueRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>10086</p>
+     */
     @NameInMap("CalledNumber")
     public String calledNumber;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>135815*****</p>
+     */
     @NameInMap("CallingNumber")
     public String callingNumber;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8a503680-815d-473e-a9b0-e010f47a64d2</p>
+     */
     @NameInMap("ConversationId")
     public String conversationId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("InitialContext")
     public String initialContext;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8a503680-815d-473e-a9b0-e010f47a64d2</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

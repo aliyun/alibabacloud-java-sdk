@@ -4,6 +4,9 @@ package com.aliyun.voicenavigator20180612.models;
 import com.aliyun.tea.*;
 
 public class DescribeTTSConfigResponseBody extends TeaModel {
+    @NameInMap("AliCustomizedVoice")
+    public String aliCustomizedVoice;
+
     @NameInMap("AppKey")
     public String appKey;
 
@@ -19,21 +22,45 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
     @NameInMap("PitchRate")
     public Integer pitchRate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>F132DDBA-66C4-5BD3-BF7E-9642FE877158</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>-150</p>
+     */
     @NameInMap("SpeechRate")
     public Integer speechRate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>aixia</p>
+     */
     @NameInMap("Voice")
     public String voice;
 
+    /**
+     * <strong>example:</strong>
+     * <p>50</p>
+     */
     @NameInMap("Volume")
     public Integer volume;
 
     public static DescribeTTSConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeTTSConfigResponseBody self = new DescribeTTSConfigResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeTTSConfigResponseBody setAliCustomizedVoice(String aliCustomizedVoice) {
+        this.aliCustomizedVoice = aliCustomizedVoice;
+        return this;
+    }
+    public String getAliCustomizedVoice() {
+        return this.aliCustomizedVoice;
     }
 
     public DescribeTTSConfigResponseBody setAppKey(String appKey) {

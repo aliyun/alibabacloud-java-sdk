@@ -4,12 +4,24 @@ package com.aliyun.voicenavigator20180612.models;
 import com.aliyun.tea.*;
 
 public class DescribeExportProgressResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p><a href="http://ssml-test.oss-cn-shanghai.aliyuncs.com/key">http://ssml-test.oss-cn-shanghai.aliyuncs.com/key</a></p>
+     */
     @NameInMap("FileHttpUrl")
     public String fileHttpUrl;
 
+    /**
+     * <strong>example:</strong>
+     * <p>b19af5ce5314ac08108d1b33fe20e15</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>FINISHED</p>
+     */
     @NameInMap("Status")
     public String status;
 

@@ -4,6 +4,12 @@ package com.aliyun.voicenavigator20180612.models;
 import com.aliyun.tea.*;
 
 public class GetRealTimeConcurrencyRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c112c168ed664c0a851f9ca72d2f7999</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

@@ -4,15 +4,31 @@ package com.aliyun.voicenavigator20180612.models;
 import com.aliyun.tea.*;
 
 public class GetRealTimeConcurrencyResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("MaxConcurrency")
     public Long maxConcurrency;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("RealTimeConcurrency")
     public Long realTimeConcurrency;
 
+    /**
+     * <strong>example:</strong>
+     * <p>E6E61E1A-D2DC-5ACF-AED4-A115B6691F98</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1661584255029</p>
+     */
     @NameInMap("Timestamp")
     public Long timestamp;
 

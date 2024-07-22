@@ -4,6 +4,12 @@ package com.aliyun.voicenavigator20180612.models;
 import com.aliyun.tea.*;
 
 public class DisableInstanceRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>da37319b-6c83-4268-9f19-814aed62e401</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

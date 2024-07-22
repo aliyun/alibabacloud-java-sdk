@@ -7,6 +7,10 @@ public class DescribeNavigationConfigResponseBody extends TeaModel {
     @NameInMap("GreetingConfig")
     public DescribeNavigationConfigResponseBodyGreetingConfig greetingConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>14C39896-AE6D-4643-9C9A-E0566B2C2DDD</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -60,6 +64,10 @@ public class DescribeNavigationConfigResponseBody extends TeaModel {
         @NameInMap("IntentTrigger")
         public String intentTrigger;
 
+        /**
+         * <strong>example:</strong>
+         * <p>chatbotIntent</p>
+         */
         @NameInMap("SourceType")
         public String sourceType;
 
@@ -95,9 +103,17 @@ public class DescribeNavigationConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeNavigationConfigResponseBodySilenceTimeoutConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>HangUp</p>
+         */
         @NameInMap("FinalAction")
         public String finalAction;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("FinalActionParams")
         public String finalActionParams;
 
@@ -105,7 +121,10 @@ public class DescribeNavigationConfigResponseBody extends TeaModel {
         public String finalPrompt;
 
         /**
-         * <p>""</p>
+         * <p>&quot;&quot;</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         @NameInMap("IntentTrigger")
         public String intentTrigger;
@@ -113,12 +132,24 @@ public class DescribeNavigationConfigResponseBody extends TeaModel {
         @NameInMap("Prompt")
         public String prompt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>chatbotIntent</p>
+         */
         @NameInMap("SourceType")
         public String sourceType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("Threshold")
         public Integer threshold;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Timeout")
         public Long timeout;
 
@@ -194,9 +225,17 @@ public class DescribeNavigationConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeNavigationConfigResponseBodyUnrecognizingConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>TransferToAgent</p>
+         */
         @NameInMap("FinalAction")
         public String finalAction;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{ \&quot;skillGroupId\&quot;: \&quot;fallbackSkillGroup\&quot; }</p>
+         */
         @NameInMap("FinalActionParams")
         public String finalActionParams;
 
@@ -206,6 +245,10 @@ public class DescribeNavigationConfigResponseBody extends TeaModel {
         @NameInMap("Prompt")
         public String prompt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("Threshold")
         public Integer threshold;
 

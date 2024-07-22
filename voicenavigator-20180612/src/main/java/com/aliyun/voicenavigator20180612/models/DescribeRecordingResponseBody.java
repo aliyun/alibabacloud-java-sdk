@@ -4,12 +4,24 @@ package com.aliyun.voicenavigator20180612.models;
 import com.aliyun.tea.*;
 
 public class DescribeRecordingResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2019080913202222.wav</p>
+     */
     @NameInMap("FileName")
     public String fileName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>url</p>
+     */
     @NameInMap("FilePath")
     public String filePath;
 
+    /**
+     * <strong>example:</strong>
+     * <p>14C39896-AE6D-4643-9C9A-E0566B2C2DDD</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,30 +4,66 @@ package com.aliyun.voicenavigator20180612.models;
 import com.aliyun.tea.*;
 
 public class DescribeConversationResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1582103260434</p>
+     */
     @NameInMap("BeginTime")
     public Long beginTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>138106*****</p>
+     */
     @NameInMap("CallingNumber")
     public String callingNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2d5aa451-661f-4f08-b0c4-28eec78decc4</p>
+     */
     @NameInMap("ConversationId")
     public String conversationId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>8</p>
+     */
     @NameInMap("EffectiveAnswerCount")
     public Integer effectiveAnswerCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1582103299434</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>14C39896-AE6D-4643-9C9A-E0566B2C2DDD</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ABABCBAC</p>
+     */
     @NameInMap("SkillGroupId")
     public String skillGroupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("TransferredToAgent")
     public Boolean transferredToAgent;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("UserUtteranceCount")
     public Integer userUtteranceCount;
 

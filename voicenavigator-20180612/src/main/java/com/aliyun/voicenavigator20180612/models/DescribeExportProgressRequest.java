@@ -4,9 +4,21 @@ package com.aliyun.voicenavigator20180612.models;
 import com.aliyun.tea.*;
 
 public class DescribeExportProgressRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0de8e5ccc2b645039ae6fbda443da73f</p>
+     */
     @NameInMap("ExportTaskId")
     public String exportTaskId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>868eef14-7515-4856-8a50-5c9a22abdbcc</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

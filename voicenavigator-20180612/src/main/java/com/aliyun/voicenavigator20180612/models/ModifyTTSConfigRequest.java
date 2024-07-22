@@ -4,6 +4,9 @@ package com.aliyun.voicenavigator20180612.models;
 import com.aliyun.tea.*;
 
 public class ModifyTTSConfigRequest extends TeaModel {
+    @NameInMap("AliCustomizedVoice")
+    public String aliCustomizedVoice;
+
     @NameInMap("AppKey")
     public String appKey;
 
@@ -13,24 +16,50 @@ public class ModifyTTSConfigRequest extends TeaModel {
     @NameInMap("EngineXunfei")
     public String engineXunfei;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12f407b22cbe4890ac595f09985848d5</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("NlsServiceType")
     public String nlsServiceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("SpeechRate")
     public String speechRate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>aixia</p>
+     */
     @NameInMap("Voice")
     public String voice;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("Volume")
     public String volume;
 
     public static ModifyTTSConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyTTSConfigRequest self = new ModifyTTSConfigRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyTTSConfigRequest setAliCustomizedVoice(String aliCustomizedVoice) {
+        this.aliCustomizedVoice = aliCustomizedVoice;
+        return this;
+    }
+    public String getAliCustomizedVoice() {
+        return this.aliCustomizedVoice;
     }
 
     public ModifyTTSConfigRequest setAppKey(String appKey) {

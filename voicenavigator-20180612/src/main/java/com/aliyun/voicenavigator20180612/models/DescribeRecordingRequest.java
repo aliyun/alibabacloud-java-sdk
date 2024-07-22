@@ -4,9 +4,21 @@ package com.aliyun.voicenavigator20180612.models;
 import com.aliyun.tea.*;
 
 public class DescribeRecordingRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>abb4aa26-3a8e-43dd-82f8-0c3898c9c67f</p>
+     */
     @NameInMap("ConversationId")
     public String conversationId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7cefbff0-8d50-4d6f-b93c-73cee23c1555</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

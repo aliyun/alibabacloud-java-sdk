@@ -4,15 +4,31 @@ package com.aliyun.voicenavigator20180612.models;
 import com.aliyun.tea.*;
 
 public class SilenceTimeoutResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>TransferToAgent</p>
+     */
     @NameInMap("Action")
     public String action;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{ &quot;skillGroupId&quot;: &quot;ABC&quot;}</p>
+     */
     @NameInMap("ActionParams")
     public String actionParams;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("Interruptible")
     public Boolean interruptible;
 
+    /**
+     * <strong>example:</strong>
+     * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

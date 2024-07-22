@@ -10,15 +10,31 @@ public class ListInstancesRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[Managed]</p>
+     */
     @NameInMap("NluServiceTypeListJsonString")
     public String nluServiceTypeListJsonString;
 
     @NameInMap("Number")
     public String number;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 

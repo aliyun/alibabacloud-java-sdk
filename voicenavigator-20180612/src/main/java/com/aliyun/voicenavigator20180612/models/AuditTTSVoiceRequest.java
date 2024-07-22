@@ -13,6 +13,12 @@ public class AuditTTSVoiceRequest extends TeaModel {
     @NameInMap("Engine")
     public String engine;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>af81a389-91f0-4157-8d82-720edd02b66a</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -22,15 +28,36 @@ public class AuditTTSVoiceRequest extends TeaModel {
     @NameInMap("SecretKey")
     public String secretKey;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("SpeechRate")
     public String speechRate;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Text")
     public String text;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>aixia</p>
+     */
     @NameInMap("Voice")
     public String voice;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("Volume")
     public String volume;
 

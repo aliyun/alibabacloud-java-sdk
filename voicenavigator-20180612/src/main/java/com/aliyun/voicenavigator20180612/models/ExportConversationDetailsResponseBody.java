@@ -4,9 +4,17 @@ package com.aliyun.voicenavigator20180612.models;
 import com.aliyun.tea.*;
 
 public class ExportConversationDetailsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>6203fc87271a420c98eab6c2bbc2d856</p>
+     */
     @NameInMap("ExportTaskId")
     public String exportTaskId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>75BAAB9B-40B2-5FF5-A59A-7BCF8154C6EE</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

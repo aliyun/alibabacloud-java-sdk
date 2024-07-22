@@ -4,15 +4,33 @@ package com.aliyun.voicenavigator20180612.models;
 import com.aliyun.tea.*;
 
 public class ExportConversationDetailsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1582266750353</p>
+     */
     @NameInMap("BeginTimeLeftRange")
     public Long beginTimeLeftRange;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1640793599000</p>
+     */
     @NameInMap("BeginTimeRightRange")
     public Long beginTimeRightRange;
 
+    /**
+     * <strong>example:</strong>
+     * <p>13581588**</p>
+     */
     @NameInMap("CallingNumber")
     public String callingNumber;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6c01a99f-1b72-4f75-a8bd-3875766bd19d</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

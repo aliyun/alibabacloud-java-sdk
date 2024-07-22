@@ -7,15 +7,31 @@ public class ListInstancesResponseBody extends TeaModel {
     @NameInMap("Instances")
     public java.util.List<ListInstancesResponseBodyInstances> instances;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>A8AED3C8-F57B-5D71-9A34-4A170287533F</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -68,6 +84,10 @@ public class ListInstancesResponseBody extends TeaModel {
         @NameInMap("ApplicableOperations")
         public java.util.List<String> applicableOperations;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Concurrency")
         public Long concurrency;
 
@@ -77,12 +97,24 @@ public class ListInstancesResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>dc437bba-5a25-4bbc-b4c2-f268864bebb5</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1582266750353</p>
+         */
         @NameInMap("ModifyTime")
         public Long modifyTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("ModifyUserName")
         public String modifyUserName;
 
@@ -95,6 +127,10 @@ public class ListInstancesResponseBody extends TeaModel {
         @NameInMap("Numbers")
         public java.util.List<String> numbers;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Published</p>
+         */
         @NameInMap("Status")
         public String status;
 

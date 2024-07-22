@@ -4,9 +4,17 @@ package com.aliyun.voicenavigator20180612.models;
 import com.aliyun.tea.*;
 
 public class GetAsrConfigRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("ConfigLevel")
     public Integer configLevel;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3b1d3031-8b6e-460a-8640-d330f2ca50b8</p>
+     */
     @NameInMap("EntryId")
     public String entryId;
 

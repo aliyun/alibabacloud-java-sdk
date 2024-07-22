@@ -4,18 +4,38 @@ package com.aliyun.voicenavigator20180612.models;
 import com.aliyun.tea.*;
 
 public class DebugDialogueResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Broadcast</p>
+     */
     @NameInMap("Action")
     public String action;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("ActionParams")
     public String actionParams;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Interruptible")
     public Boolean interruptible;
 
+    /**
+     * <strong>example:</strong>
+     * <p>d74d6290-7cbe-4436-b5d7-014ebb0f4060</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>80d11be3-faad-4101-b4b0-59dbea28aaf0</p>
+     */
     @NameInMap("TextResponse")
     public String textResponse;
 

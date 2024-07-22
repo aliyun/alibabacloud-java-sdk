@@ -4,15 +4,30 @@ package com.aliyun.voicenavigator20180612.models;
 import com.aliyun.tea.*;
 
 public class ModifyGreetingConfigRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("GreetingWords")
     public String greetingWords;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12f407b22cbe4890ac595f09985848d5</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("IntentTrigger")
     public String intentTrigger;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>chatbotIntent</p>
+     */
     @NameInMap("SourceType")
     public String sourceType;
 

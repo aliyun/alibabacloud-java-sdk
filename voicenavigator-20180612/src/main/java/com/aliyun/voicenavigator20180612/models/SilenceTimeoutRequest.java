@@ -4,15 +4,35 @@ package com.aliyun.voicenavigator20180612.models;
 import com.aliyun.tea.*;
 
 public class SilenceTimeoutRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0099b75d-60fd-4c63-8541-7fbba0ae6bb0</p>
+     */
     @NameInMap("ConversationId")
     public String conversationId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("InitialContext")
     public String initialContext;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0099b75d-60fd-4c63-8541-7fbba0ae6bb0</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1231639035307976</p>
+     */
     @NameInMap("InstanceOwnerId")
     public Long instanceOwnerId;
 

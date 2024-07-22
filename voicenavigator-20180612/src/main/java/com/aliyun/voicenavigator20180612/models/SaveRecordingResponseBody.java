@@ -4,6 +4,10 @@ package com.aliyun.voicenavigator20180612.models;
 import com.aliyun.tea.*;
 
 public class SaveRecordingResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
