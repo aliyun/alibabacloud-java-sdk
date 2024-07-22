@@ -4,27 +4,68 @@ package com.aliyun.appstream_center20210220.models;
 import com.aliyun.tea.*;
 
 public class RefreshLoginTokenRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>f4a0dc8e-1702-4728-9a60-95b27a35****</p>
+     */
     @NameInMap("ClientId")
     public String clientId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>windows</p>
+     */
     @NameInMap("ClientType")
     public String clientType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>alice</p>
+     */
     @NameInMap("EndUserId")
     public String endUserId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Alibaba****</p>
+     */
     @NameInMap("LoginIdentifier")
     public String loginIdentifier;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>v1046341d8d4e2f05c4aa168196009613594aaf451499bfc75e54699efa7230bc968e1debb1fa4063b01e5d327b467****</p>
+     */
     @NameInMap("LoginToken")
     public String loginToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-shenzhen+dir-436909****</p>
+     */
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
+    @NameInMap("ProfileRegion")
+    public String profileRegion;
+
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6442b2fd-ed3e-423a-8e6e-352d26a4****</p>
+     */
     @NameInMap("SessionId")
     public String sessionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2943802884B27030B6759F9132B2****</p>
+     */
     @NameInMap("Uuid")
     public String uuid;
 
@@ -79,6 +120,14 @@ public class RefreshLoginTokenRequest extends TeaModel {
     }
     public String getOfficeSiteId() {
         return this.officeSiteId;
+    }
+
+    public RefreshLoginTokenRequest setProfileRegion(String profileRegion) {
+        this.profileRegion = profileRegion;
+        return this;
+    }
+    public String getProfileRegion() {
+        return this.profileRegion;
     }
 
     public RefreshLoginTokenRequest setSessionId(String sessionId) {
