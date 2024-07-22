@@ -147,6 +147,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("FeatureType", request.featureType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.instantlyScan)) {
+            query.put("InstantlyScan", request.instantlyScan);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
             query.put("Lang", request.lang);
         }
