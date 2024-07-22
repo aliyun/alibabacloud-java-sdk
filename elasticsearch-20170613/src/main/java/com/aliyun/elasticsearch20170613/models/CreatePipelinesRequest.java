@@ -4,12 +4,20 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class CreatePipelinesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF****</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     @NameInMap("body")
     public java.util.List<CreatePipelinesRequestBody> body;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("trigger")
     public Boolean trigger;
 
@@ -43,36 +51,70 @@ public class CreatePipelinesRequest extends TeaModel {
     }
 
     public static class CreatePipelinesRequestBody extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>50</p>
+         */
         @NameInMap("batchDelay")
         public Integer batchDelay;
 
+        /**
+         * <strong>example:</strong>
+         * <p>125</p>
+         */
         @NameInMap("batchSize")
         public Integer batchSize;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>input { } filter { } output { }</p>
          */
         @NameInMap("config")
         public String config;
 
+        /**
+         * <strong>example:</strong>
+         * <p>this is a test</p>
+         */
         @NameInMap("description")
         public String description;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pipeline-test</p>
          */
         @NameInMap("pipelineId")
         public String pipelineId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1024</p>
+         */
         @NameInMap("queueCheckPointWrites")
         public Integer queueCheckPointWrites;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1024</p>
+         */
         @NameInMap("queueMaxBytes")
         public Integer queueMaxBytes;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MEMORY</p>
+         */
         @NameInMap("queueType")
         public String queueType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("workers")
         public Integer workers;
 

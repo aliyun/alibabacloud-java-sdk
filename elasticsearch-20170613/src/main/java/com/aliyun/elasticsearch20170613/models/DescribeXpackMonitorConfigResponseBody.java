@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeXpackMonitorConfigResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,9 +43,13 @@ public class DescribeXpackMonitorConfigResponseBody extends TeaModel {
     public static class DescribeXpackMonitorConfigResponseBodyResult extends TeaModel {
         /**
          * <p>Indicates whether the X-Pack Monitoring feature is enabled. Valid values:</p>
-         * <br>
-         * <p>*   true: enabled</p>
-         * <p>*   false: disabled</p>
+         * <ul>
+         * <li>true: enabled</li>
+         * <li>false: disabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("enable")
         public Boolean enable;
@@ -52,6 +59,9 @@ public class DescribeXpackMonitorConfigResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the associated Elasticsearch cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-n6w1o1x0w001c****</p>
          */
         @NameInMap("esInstanceId")
         public String esInstanceId;
@@ -61,6 +71,9 @@ public class DescribeXpackMonitorConfigResponseBody extends TeaModel {
 
         /**
          * <p>The username that is used to access the associated Elasticsearch cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>elastic</p>
          */
         @NameInMap("userName")
         public String userName;

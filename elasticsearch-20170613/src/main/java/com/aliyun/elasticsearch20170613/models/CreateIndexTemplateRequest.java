@@ -4,6 +4,10 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class CreateIndexTemplateRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>E1136AE9-4E49-4585-9358-6FDD2A6D****</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -13,6 +17,10 @@ public class CreateIndexTemplateRequest extends TeaModel {
     @NameInMap("dataStream")
     public Boolean dataStream;
 
+    /**
+     * <strong>example:</strong>
+     * <p>policy-1</p>
+     */
     @NameInMap("ilmPolicy")
     public String ilmPolicy;
 
@@ -24,10 +32,17 @@ public class CreateIndexTemplateRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>index-template</p>
      */
     @NameInMap("indexTemplate")
     public String indexTemplate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("priority")
     public Integer priority;
 
@@ -96,12 +111,24 @@ public class CreateIndexTemplateRequest extends TeaModel {
     }
 
     public static class CreateIndexTemplateRequestTemplate extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;mydata&quot;: {}}</p>
+         */
         @NameInMap("aliases")
         public String aliases;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;properties&quot;: {&quot;created_at&quot;: {&quot;type&quot;: &quot;date&quot;,&quot;format&quot;: &quot;EEE MMM dd HH:mm:ss Z yyyy&quot;},&quot;host_name&quot;: {&quot;type&quot;: &quot;keyword&quot;}}}</p>
+         */
         @NameInMap("mappings")
         public String mappings;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;index.refresh_interval&quot;:&quot;1s&quot;}</p>
+         */
         @NameInMap("settings")
         public String settings;
 

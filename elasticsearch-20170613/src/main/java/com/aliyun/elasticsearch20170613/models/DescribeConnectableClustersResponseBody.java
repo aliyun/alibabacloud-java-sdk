@@ -4,6 +4,10 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class DescribeConnectableClustersResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D***</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +36,17 @@ public class DescribeConnectableClustersResponseBody extends TeaModel {
     }
 
     public static class DescribeConnectableClustersResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>es-cn-xxx</p>
+         */
         @NameInMap("instances")
         public String instances;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vpc</p>
+         */
         @NameInMap("networkType")
         public String networkType;
 

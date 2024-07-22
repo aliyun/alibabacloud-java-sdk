@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateLogstashDescriptionResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,6 +43,9 @@ public class UpdateLogstashDescriptionResponseBody extends TeaModel {
     public static class UpdateLogstashDescriptionResponseBodyResult extends TeaModel {
         /**
          * <p>The name of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>logstash_name</p>
          */
         @NameInMap("description")
         public String description;

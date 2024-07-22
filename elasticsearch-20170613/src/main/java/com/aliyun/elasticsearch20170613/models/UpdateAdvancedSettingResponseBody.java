@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class UpdateAdvancedSettingResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Return results:</p>
-     * <br>
-     * <p>*   true: garbage collector configuration changed successfully</p>
-     * <p>*   false: garbage collector configuration changed successfully failed</p>
+     * <ul>
+     * <li>true: garbage collector configuration changed successfully</li>
+     * <li>false: garbage collector configuration changed successfully failed</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Result")
     public Boolean result;

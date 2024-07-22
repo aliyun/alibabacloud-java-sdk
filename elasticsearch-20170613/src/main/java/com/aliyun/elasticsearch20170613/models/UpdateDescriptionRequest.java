@@ -4,11 +4,18 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class UpdateDescriptionRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>aliyunes_name_test</p>
+     */
     @NameInMap("description")
     public String description;
 
     /**
      * <p>The new name of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5A2CFF0E-5718-45B5-9D4D-70B350****</p>
      */
     @NameInMap("clientToken")
     public String clientToken;

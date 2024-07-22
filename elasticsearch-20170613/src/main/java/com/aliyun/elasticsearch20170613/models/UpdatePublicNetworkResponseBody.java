@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdatePublicNetworkResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2A88ECA1-D827-4581-AD39-05149586****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,6 +43,9 @@ public class UpdatePublicNetworkResponseBody extends TeaModel {
     public static class UpdatePublicNetworkResponseBodyResult extends TeaModel {
         /**
          * <p>The status of the public network access switch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("enablePublic")
         public Boolean enablePublic;

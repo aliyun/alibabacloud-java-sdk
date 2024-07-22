@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeLogstashResponseBody extends TeaModel {
     /**
      * <p>Detailed information about the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C9334241-4837-46C2-B24B-9BDC517318DE</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class DescribeLogstashResponseBody extends TeaModel {
     public static class DescribeLogstashResponseBodyResultTags extends TeaModel {
         /**
          * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env</p>
          */
         @NameInMap("tagKey")
         public String tagKey;
 
         /**
          * <p>The information about the zones.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dev</p>
          */
         @NameInMap("tagValue")
         public String tagValue;
@@ -76,12 +85,18 @@ public class DescribeLogstashResponseBody extends TeaModel {
     public static class DescribeLogstashResponseBodyResultZoneInfos extends TeaModel {
         /**
          * <p>The zone ID of the new instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         @NameInMap("status")
         public String status;
 
         /**
          * <p>The configuration of cluster extension parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-b</p>
          */
         @NameInMap("zoneId")
         public String zoneId;
@@ -112,18 +127,27 @@ public class DescribeLogstashResponseBody extends TeaModel {
     public static class DescribeLogstashResponseBodyResultEndpointList extends TeaModel {
         /**
          * <p>The tags added to the ALB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.16.**.**</p>
          */
         @NameInMap("host")
         public String host;
 
         /**
          * <p>The IP address of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9600</p>
          */
         @NameInMap("port")
         public String port;
 
         /**
          * <p>The port number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-b</p>
          */
         @NameInMap("zoneId")
         public String zoneId;
@@ -162,22 +186,35 @@ public class DescribeLogstashResponseBody extends TeaModel {
     public static class DescribeLogstashResponseBodyResultNetworkConfig extends TeaModel {
         /**
          * <p>The ID of the vSwitch to which the instance is connected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc</p>
          */
         @NameInMap("type")
         public String type;
 
         /**
          * <p>The zone where the cluster resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp16k1dvzxtmagcva****</p>
          */
         @NameInMap("vpcId")
         public String vpcId;
 
         /**
          * <p>The network type of the instance. Valid values: Currently, only Virtual Private Cloud (VPC) are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-*</p>
          */
         @NameInMap("vsArea")
         public String vsArea;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vsw-bp1k4ec6s7sjdbudw****</p>
+         */
         @NameInMap("vswitchId")
         public String vswitchId;
 
@@ -223,27 +260,40 @@ public class DescribeLogstashResponseBody extends TeaModel {
     public static class DescribeLogstashResponseBodyResultNodeSpec extends TeaModel {
         /**
          * <p>Whether to use disk encryption:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("disk")
         public Integer disk;
 
         /**
          * <p>The disk type of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("diskEncryption")
         public Boolean diskEncryption;
 
         /**
          * <p>The network configurations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_ssd</p>
          */
         @NameInMap("diskType")
         public String diskType;
 
         /**
          * <p>The disk size of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>elasticsearch.sn1ne.large</p>
          */
         @NameInMap("spec")
         public String spec;
@@ -296,6 +346,9 @@ public class DescribeLogstashResponseBody extends TeaModel {
 
         /**
          * <p>The number of data nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekzvowej3i****</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
@@ -308,35 +361,47 @@ public class DescribeLogstashResponseBody extends TeaModel {
 
         /**
          * <p>The status of the zone. Valid values:</p>
-         * <br>
-         * <p>*   ISOLATION: offline</p>
-         * <p>*   NORMAL</p>
+         * <ul>
+         * <li>ISOLATION: offline</li>
+         * <li>NORMAL</li>
+         * </ul>
          */
         @NameInMap("ZoneInfos")
         public java.util.List<DescribeLogstashResponseBodyResultZoneInfos> zoneInfos;
 
         /**
          * <p>The billing method of the instance. Valid values:</p>
-         * <br>
-         * <p>*   prepaid: subscription</p>
-         * <p>*   postpaid: pay-as-you-go</p>
+         * <ul>
+         * <li>prepaid: subscription</li>
+         * <li>postpaid: pay-as-you-go</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;slowlog.threshold.warn&quot;: &quot;2s&quot;,&quot;slowlog.threshold.info&quot;: &quot;1s&quot;,&quot;slowlog.threshold.debug&quot;: &quot;500ms&quot;,&quot;slowlog.threshold.trace&quot;: &quot;100ms&quot; }</p>
          */
         @NameInMap("config")
         public java.util.Map<String, ?> config;
 
         /**
          * <p>The state of the instance. Four states are supported:</p>
-         * <br>
-         * <p>*   Normal: active</p>
-         * <p>*   Active: activating</p>
-         * <p>*   Freeze: inactive</p>
-         * <p>*   Invalid: invalid</p>
+         * <ul>
+         * <li>Normal: active</li>
+         * <li>Active: activating</li>
+         * <li>Freeze: inactive</li>
+         * <li>Invalid: invalid</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-02-06T14:12:03.672Z</p>
          */
         @NameInMap("createdAt")
         public String createdAt;
 
         /**
          * <p>The time when the instance was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ls-cn-abc</p>
          */
         @NameInMap("description")
         public String description;
@@ -349,6 +414,9 @@ public class DescribeLogstashResponseBody extends TeaModel {
 
         /**
          * <p>The access information of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ls-cn-abc</p>
          */
         @NameInMap("instanceId")
         public String instanceId;
@@ -361,6 +429,9 @@ public class DescribeLogstashResponseBody extends TeaModel {
 
         /**
          * <p>The name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("nodeAmount")
         public Integer nodeAmount;
@@ -373,30 +444,45 @@ public class DescribeLogstashResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the resource group to which the instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prepaid</p>
          */
         @NameInMap("paymentType")
         public String paymentType;
 
         /**
          * <p>The ID of the virtual private cloud (VPC) to which the elastic container instances belong.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>active</p>
          */
         @NameInMap("status")
         public String status;
 
         /**
          * <p>The edition of the dedicated KMS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-02-06T14:22:36.850Z</p>
          */
         @NameInMap("updatedAt")
         public String updatedAt;
 
         /**
          * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7.4.0_with_X-Pack</p>
          */
         @NameInMap("version")
         public String version;
 
         /**
          * <p>The time when the instance was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp16k1dvzxtmagcva****</p>
          */
         @NameInMap("vpcInstanceId")
         public String vpcInstanceId;

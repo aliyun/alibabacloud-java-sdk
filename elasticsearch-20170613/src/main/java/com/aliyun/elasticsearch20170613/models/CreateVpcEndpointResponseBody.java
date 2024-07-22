@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateVpcEndpointResponseBody extends TeaModel {
     /**
      * <p>The endpoint domain name, which is used to configure the connection.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F99407AB-2FA9-489E-A259-40CF6DCC47D9</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -38,17 +41,32 @@ public class CreateVpcEndpointResponseBody extends TeaModel {
     }
 
     public static class CreateVpcEndpointResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>ep-bp1tah7zbrwmkjef****.epsrv-bp1w0p3jdirbfmt6****.cn-hangzhou.privatelink.aliyuncs.com</p>
+         */
         @NameInMap("endpointDomain")
         public String endpointDomain;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ep-bp1tah7zbrwmkjef****</p>
+         */
         @NameInMap("endpointId")
         public String endpointId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vpcElasticSearchABC</p>
+         */
         @NameInMap("endpointName")
         public String endpointName;
 
         /**
          * <p>The name of the service VPC-side endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>epsrv-bp1w0p3jdirbfmt6****</p>
          */
         @NameInMap("serviceId")
         public String serviceId;

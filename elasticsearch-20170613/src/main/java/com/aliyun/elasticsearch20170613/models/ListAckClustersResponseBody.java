@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListAckClustersResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F93EAA49-284F-4FCE-9E67-FA23FB4BB512</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,24 +43,36 @@ public class ListAckClustersResponseBody extends TeaModel {
     public static class ListAckClustersResponseBodyResult extends TeaModel {
         /**
          * <p>The ID of cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c5ea2c2d9a3cf499481292f60425d****</p>
          */
         @NameInMap("clusterId")
         public String clusterId;
 
         /**
          * <p>The type of the cluster. The value is fixed as ManagedKubernetes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ManagedKubernetes</p>
          */
         @NameInMap("clusterType")
         public String clusterType;
 
         /**
          * <p>The name of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>The ID of the VPC to which the cluster belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp12nu14urf0upaf4****</p>
          */
         @NameInMap("vpcId")
         public String vpcId;

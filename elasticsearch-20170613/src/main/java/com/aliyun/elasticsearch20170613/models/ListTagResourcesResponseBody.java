@@ -12,18 +12,24 @@ public class ListTagResourcesResponseBody extends TeaModel {
 
     /**
      * <p>The number of resources to query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>A list of resources that have tags.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F99407AB-2FA9-489E-A259-40CF6D******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The type of the resource. Fixed to `ALIYUN::ELASTICSEARCH::INSTANCE`.</p>
+     * <p>The type of the resource. Fixed to <code>ALIYUN::ELASTICSEARCH::INSTANCE</code>.</p>
      */
     @NameInMap("TagResources")
     public ListTagResourcesResponseBodyTagResources tagResources;
@@ -68,6 +74,9 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public static class ListTagResourcesResponseBodyHeaders extends TeaModel {
         /**
          * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("X-Total-Count")
         public Integer xTotalCount;
@@ -88,17 +97,32 @@ public class ListTagResourcesResponseBody extends TeaModel {
     }
 
     public static class ListTagResourcesResponseBodyTagResourcesTagResource extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>es-cn-oew1q8bev0002****</p>
+         */
         @NameInMap("ResourceId")
         public String resourceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ALIYUN::ELASTICSEARCH::INSTANCE</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>env</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dev</p>
          */
         @NameInMap("TagValue")
         public String tagValue;

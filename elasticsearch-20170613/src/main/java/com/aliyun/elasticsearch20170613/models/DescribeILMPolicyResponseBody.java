@@ -4,6 +4,10 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class DescribeILMPolicyResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>FF44681E-FD41-4FDE-B8DF-295DCDD6****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +36,17 @@ public class DescribeILMPolicyResponseBody extends TeaModel {
     }
 
     public static class DescribeILMPolicyResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>ilm-history-ilm-policy</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;cold&quot;:{&quot;minAge&quot;:&quot;30d&quot;,&quot;actions&quot;:{&quot;allocate&quot;:{&quot;numberOfReplicas&quot;:1,&quot;require&quot;:{&quot;boxType&quot;:&quot;warm&quot;}},&quot;setPriority&quot;:{&quot;priority&quot;:100}}},&quot;hot&quot;:{&quot;minAge&quot;:&quot;0s&quot;,&quot;actions&quot;:{&quot;rollover&quot;:{&quot;maxAge&quot;:&quot;30d&quot;,&quot;maxDocs&quot;:10000,&quot;maxSize&quot;:&quot;50gb&quot;},&quot;setPriority&quot;:{&quot;priority&quot;:1000}}},&quot;delete&quot;:{&quot;minAge&quot;:&quot;30d&quot;,&quot;actions&quot;:{&quot;delete&quot;:{}}}}</p>
+         */
         @NameInMap("phases")
         public java.util.Map<String, ?> phases;
 

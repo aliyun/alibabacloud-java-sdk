@@ -4,9 +4,17 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class DeleteILMPolicyResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>694FDC20-0FDD-47C4-B921-BFF902FA****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Result")
     public Boolean result;
 

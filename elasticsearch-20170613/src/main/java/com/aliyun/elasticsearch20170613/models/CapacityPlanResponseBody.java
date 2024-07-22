@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CapacityPlanResponseBody extends TeaModel {
     /**
      * <p>The response of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E91B7129-A669-4D9D-A743-F90A0FF1F5EF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,24 +43,35 @@ public class CapacityPlanResponseBody extends TeaModel {
     public static class CapacityPlanResponseBodyResultExtendConfigs extends TeaModel {
         /**
          * <p>The size of the disk. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sharedDisk</p>
          */
         @NameInMap("ConfigType")
         public String configType;
 
         /**
          * <p>The type of the disk. Valid value: CPFS_PREMIUM.</p>
-         * <br>
-         * <p>>  The extendConfigs attribute that may occur when the planned instance type is enhanced (advanced).</p>
+         * <blockquote>
+         * <p> The extendConfigs attribute that may occur when the planned instance type is enhanced (advanced).</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2048</p>
          */
         @NameInMap("Disk")
         public Long disk;
 
         /**
          * <p>The version type. Valid values:</p>
-         * <br>
-         * <p>*   advanced: enhanced edition</p>
-         * <p>*   x-pack: Commercial Edition</p>
-         * <p>*   community: community version</p>
+         * <ul>
+         * <li>advanced: enhanced edition</li>
+         * <li>x-pack: Commercial Edition</li>
+         * <li>community: community version</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CPFS_PREMIUM</p>
          */
         @NameInMap("DiskType")
         public String diskType;
@@ -96,52 +110,73 @@ public class CapacityPlanResponseBody extends TeaModel {
     public static class CapacityPlanResponseBodyResultNodeConfigurations extends TeaModel {
         /**
          * <p>The number of CPUs of the cloud desktop.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("Amount")
         public Long amount;
 
         /**
          * <p>The size of the disk. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Cpu")
         public Long cpu;
 
         /**
          * <p>The type of the hard disk. Valid values:</p>
-         * <br>
-         * <p>*   cloud_essd: enhanced SSD (ESSD)</p>
-         * <p>*   cloud_ssd: standard SSD</p>
-         * <p>*   cloud_efficiency: ultra disk</p>
-         * <p>*   local_ssd: local SSD</p>
-         * <p>*   local_efficiency: local ultra disk</p>
+         * <ul>
+         * <li>cloud_essd: enhanced SSD (ESSD)</li>
+         * <li>cloud_ssd: standard SSD</li>
+         * <li>cloud_efficiency: ultra disk</li>
+         * <li>local_ssd: local SSD</li>
+         * <li>local_efficiency: local ultra disk</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("Disk")
         public Long disk;
 
         /**
          * <p>The memory size of the current node role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_ssd</p>
          */
         @NameInMap("DiskType")
         public String diskType;
 
         /**
          * <p>The type of the node. Supported types are as follows:</p>
-         * <br>
-         * <p>*   WORKER: data node</p>
-         * <p>*   WORKER_WARM: cold data node</p>
-         * <p>*   MASTER: dedicated master node</p>
-         * <p>*   KIBANA: Kibana node</p>
-         * <p>*   COORDINATING: client node</p>
-         * <p>*   ELASTIC_WORKER: elastic node</p>
+         * <ul>
+         * <li>WORKER: data node</li>
+         * <li>WORKER_WARM: cold data node</li>
+         * <li>MASTER: dedicated master node</li>
+         * <li>KIBANA: Kibana node</li>
+         * <li>COORDINATING: client node</li>
+         * <li>ELASTIC_WORKER: elastic node</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Memory")
         public Long memory;
 
         /**
          * <p>The result calculated based on the capacity planning. No default value is available. The values are as follows:</p>
-         * <br>
-         * <p>*   true: indicates that the number of data nodes calculated by capacity planning exceeds the threshold of 50.</p>
-         * <p>*   false: The number of data nodes calculated by capacity planning is less than 50.</p>
+         * <ul>
+         * <li>true: indicates that the number of data nodes calculated by capacity planning exceeds the threshold of 50.</li>
+         * <li>false: The number of data nodes calculated by capacity planning is less than 50.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>WORKER</p>
          */
         @NameInMap("NodeType")
         public String nodeType;
@@ -204,14 +239,18 @@ public class CapacityPlanResponseBody extends TeaModel {
     public static class CapacityPlanResponseBodyResult extends TeaModel {
         /**
          * <p>The type of the configuration. Set the value to sharedDisk.</p>
-         * <br>
-         * <p>>  The extendConfigs attribute that may occur when the planned instance type is enhanced (advanced).</p>
+         * <blockquote>
+         * <p> The extendConfigs attribute that may occur when the planned instance type is enhanced (advanced).</p>
+         * </blockquote>
          */
         @NameInMap("ExtendConfigs")
         public java.util.List<CapacityPlanResponseBodyResultExtendConfigs> extendConfigs;
 
         /**
          * <p>The node information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>advanced</p>
          */
         @NameInMap("InstanceCategory")
         public String instanceCategory;
@@ -222,6 +261,10 @@ public class CapacityPlanResponseBody extends TeaModel {
         @NameInMap("NodeConfigurations")
         public java.util.List<CapacityPlanResponseBodyResultNodeConfigurations> nodeConfigurations;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("OversizedCluster")
         public Boolean oversizedCluster;
 

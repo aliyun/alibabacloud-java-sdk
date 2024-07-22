@@ -4,9 +4,17 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class CreateComponentIndexResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>C20022BA-5382-4339-89FB-30AF48A05431</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Result")
     public Boolean result;
 

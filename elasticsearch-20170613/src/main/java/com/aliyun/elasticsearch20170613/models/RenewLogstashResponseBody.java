@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class RenewLogstashResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F99407AB-2FA9-489E-A259-40CF6DC****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The returned result. Valid values:</p>
-     * <br>
-     * <p>*   true: The cluster is renewed.</p>
-     * <p>*   false: The cluster fails to be renewed.</p>
+     * <ul>
+     * <li>true: The cluster is renewed.</li>
+     * <li>false: The cluster fails to be renewed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Result")
     public Boolean result;

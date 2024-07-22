@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetOpenStoreUsageResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E1DE2491-804F-4C86-BAB4-548DD70B****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class GetOpenStoreUsageResponseBody extends TeaModel {
     public static class GetOpenStoreUsageResponseBodyResult extends TeaModel {
         /**
          * <p>The current OpenStore storage capacity (estimated value based on actual indexes). Unit: Byte.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>204800</p>
          */
         @NameInMap("currentUsage")
         public Long currentUsage;
 
         /**
          * <p>The storage capacity of OpenStore yesterday. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>184320</p>
          */
         @NameInMap("lastDayUsage")
         public Long lastDayUsage;

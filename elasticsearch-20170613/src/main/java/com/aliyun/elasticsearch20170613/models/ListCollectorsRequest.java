@@ -6,39 +6,58 @@ import com.aliyun.tea.*;
 public class ListCollectorsRequest extends TeaModel {
     /**
      * <p>The ID of the resource with which the shipper is associated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>es-cn-nif1q8auz0003****</p>
      */
     @NameInMap("instanceId")
     public String instanceId;
 
     /**
      * <p>The name of the shipper.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>collectorName1</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
      * <p>The number of the page to return. Valid values: 1 to 200. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("page")
     public Integer page;
 
     /**
      * <p>The ID of the shipper.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ct-cn-77uqof2s7rg5c****</p>
      */
     @NameInMap("resId")
     public String resId;
 
     /**
      * <p>The number of entries to return on each page. Valid values: 1 to 500. Default value: 20.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("size")
     public Integer size;
 
     /**
      * <p>The type of the machine on which the shipper is deployed. If you leave this parameter empty, shippers deployed on all types of machines are returned. Valid values:</p>
-     * <br>
-     * <p>*   ECS</p>
-     * <p>*   ACK</p>
+     * <ul>
+     * <li>ECS</li>
+     * <li>ACK</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ECS</p>
      */
     @NameInMap("sourceType")
     public String sourceType;

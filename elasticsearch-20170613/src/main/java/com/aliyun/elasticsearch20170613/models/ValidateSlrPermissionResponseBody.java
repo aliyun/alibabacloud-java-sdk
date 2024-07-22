@@ -4,9 +4,17 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ValidateSlrPermissionResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>BC4ED7DD-8C84-49B5-8A95-456F82E44D13</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Result")
     public Boolean result;
 

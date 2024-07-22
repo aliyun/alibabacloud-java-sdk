@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateWhiteIpsResponseBody extends TeaModel {
     /**
      * <p>The updated whitelist.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8D58B014-BBD7-4D80-B219-00B9D5C6860C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,6 +43,9 @@ public class UpdateWhiteIpsResponseBody extends TeaModel {
     public static class UpdateWhiteIpsResponseBodyResultNetworkConfigWhiteIpGroupList extends TeaModel {
         /**
          * <p>The type of the whitelist. The value of this parameter is fixed as PRIVATE_ES, which indicates a private IP address whitelist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_group</p>
          */
         @NameInMap("groupName")
         public String groupName;
@@ -47,6 +53,10 @@ public class UpdateWhiteIpsResponseBody extends TeaModel {
         @NameInMap("ips")
         public java.util.List<String> ips;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PRIVATE_ES</p>
+         */
         @NameInMap("whiteIpType")
         public String whiteIpType;
 

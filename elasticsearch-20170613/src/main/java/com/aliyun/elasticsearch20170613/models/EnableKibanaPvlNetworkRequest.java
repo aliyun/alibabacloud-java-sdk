@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class EnableKibanaPvlNetworkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>es-cn-27a3mul6l000xxx-kibana-endpoint</p>
      */
     @NameInMap("endpointName")
     public String endpointName;
@@ -24,6 +27,9 @@ public class EnableKibanaPvlNetworkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-xxx</p>
      */
     @NameInMap("vpcId")
     public String vpcId;
@@ -68,12 +74,18 @@ public class EnableKibanaPvlNetworkRequest extends TeaModel {
     public static class EnableKibanaPvlNetworkRequestVSwitchIdsZone extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-xxxx</p>
          */
         @NameInMap("vswitchId")
         public String vswitchId;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h</p>
          */
         @NameInMap("zoneId")
         public String zoneId;

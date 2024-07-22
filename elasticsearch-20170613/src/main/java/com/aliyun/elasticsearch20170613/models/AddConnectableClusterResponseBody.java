@@ -4,9 +4,17 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class AddConnectableClusterResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>5A5D8E74-565C-43DC-B031-29289FA****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Result")
     public Boolean result;
 

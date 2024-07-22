@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListDefaultCollectorConfigurationsResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8BAE3C32-8E4A-47D6-B4B0-95B5DE643BF5</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,20 @@ public class ListDefaultCollectorConfigurationsResponseBody extends TeaModel {
     public static class ListDefaultCollectorConfigurationsResponseBodyResult extends TeaModel {
         /**
          * <p>The content of the configuration file.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li>key: log\n  title: Log file content\n  description: &gt;\n    Contains log file lines.\n  fields:\n ......</li>
+         * </ul>
          */
         @NameInMap("content")
         public String content;
 
         /**
          * <p>The name of the configuration file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fields.yml</p>
          */
         @NameInMap("fileName")
         public String fileName;

@@ -15,6 +15,9 @@ public class CreateCollectorRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("dryRun")
     public Boolean dryRun;
@@ -27,30 +30,45 @@ public class CreateCollectorRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ct-test</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>fileBeat</p>
      */
     @NameInMap("resType")
     public String resType;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6.8.5_with_community</p>
      */
     @NameInMap("resVersion")
     public String resVersion;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-bp12nu14urf0upaf*****</p>
      */
     @NameInMap("vpcId")
     public String vpcId;
 
     /**
      * <p>The ID of the created crawer.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF****</p>
      */
     @NameInMap("clientToken")
     public String clientToken;
@@ -135,12 +153,18 @@ public class CreateCollectorRequest extends TeaModel {
     public static class CreateCollectorRequestConfigs extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;filebeat.inputs:xxx&quot;</p>
          */
         @NameInMap("content")
         public String content;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>filebeat.yml</p>
          */
         @NameInMap("fileName")
         public String fileName;

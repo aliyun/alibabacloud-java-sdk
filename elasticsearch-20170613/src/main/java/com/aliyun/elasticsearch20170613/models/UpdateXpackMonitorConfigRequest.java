@@ -4,18 +4,40 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class UpdateXpackMonitorConfigRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF****</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("enable")
     public Boolean enable;
 
     @NameInMap("endpoints")
     public java.util.List<String> endpoints;
 
+    /**
+     * <strong>example:</strong>
+     * <hr>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
     @NameInMap("password")
     public String password;
 
+    /**
+     * <strong>example:</strong>
+     * <p>elastic</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
     @NameInMap("userName")
     public String userName;
 

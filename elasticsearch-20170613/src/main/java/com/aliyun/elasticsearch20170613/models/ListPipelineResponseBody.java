@@ -12,6 +12,9 @@ public class ListPipelineResponseBody extends TeaModel {
 
     /**
      * <p>The response.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,6 +57,9 @@ public class ListPipelineResponseBody extends TeaModel {
     public static class ListPipelineResponseBodyHeaders extends TeaModel {
         /**
          * <p>The time when the pipeline was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("X-Total-Count")
         public Integer xTotalCount;
@@ -74,22 +80,38 @@ public class ListPipelineResponseBody extends TeaModel {
     }
 
     public static class ListPipelineResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2020-08-05T03:10:38.188Z</p>
+         */
         @NameInMap("gmtCreatedTime")
         public String gmtCreatedTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-08-05T08:43:31.757Z</p>
+         */
         @NameInMap("gmtUpdateTime")
         public String gmtUpdateTime;
 
         /**
          * <p>The status of the pipeline. Supported:</p>
-         * <br>
-         * <p>*   NOT_DEPLOYED: The node is not deployed.</p>
-         * <p>*   RUNNING</p>
-         * <p>*   DELETED: Deleted. The console does not display this status.</p>
+         * <ul>
+         * <li>NOT_DEPLOYED: The node is not deployed.</li>
+         * <li>RUNNING</li>
+         * <li>DELETED: Deleted. The console does not display this status.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>pipeline_test</p>
          */
         @NameInMap("pipelineId")
         public String pipelineId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>NOT_DEPLOYED</p>
+         */
         @NameInMap("pipelineStatus")
         public String pipelineStatus;
 

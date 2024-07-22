@@ -6,22 +6,33 @@ import com.aliyun.tea.*;
 public class ModifyWhiteIpsRequest extends TeaModel {
     /**
      * <p>The information about the IP address whitelist that you want to update. You can specify only one whitelist.</p>
-     * <br>
-     * <p>> You cannot configure both the whiteIpList and whiteIpGroup parameters.</p>
+     * <blockquote>
+     * <p>You cannot configure both the whiteIpList and whiteIpGroup parameters.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Cover</p>
      */
     @NameInMap("modifyMode")
     public String modifyMode;
 
     /**
      * <p>The IP addresses in the whitelist. This parameter is available if the whiteIpGroup parameter is left empty. The default IP address whitelist is updated based on the value of this parameter.</p>
-     * <br>
-     * <p>> You cannot configure both the whiteIpList and whiteIpGroup parameters.</p>
+     * <blockquote>
+     * <p>You cannot configure both the whiteIpList and whiteIpGroup parameters.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>PUBLIC</p>
      */
     @NameInMap("networkType")
     public String networkType;
 
     /**
      * <p>The IP addresses in the whitelist. This parameter is available if the whiteIpGroup parameter is left empty. The default IP address whitelist is updated based on the value of this parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>WORKER</p>
      */
     @NameInMap("nodeType")
     public String nodeType;
@@ -40,9 +51,13 @@ public class ModifyWhiteIpsRequest extends TeaModel {
 
     /**
      * <p>The network type. This parameter is required if you configure the whiteIpList parameter. Valid values:</p>
-     * <br>
-     * <p>*   PRIVATE</p>
-     * <p>*   PUBLIC</p>
+     * <ul>
+     * <li>PRIVATE</li>
+     * <li>PUBLIC</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF****</p>
      */
     @NameInMap("clientToken")
     public String clientToken;
@@ -103,11 +118,15 @@ public class ModifyWhiteIpsRequest extends TeaModel {
     public static class ModifyWhiteIpsRequestWhiteIpGroup extends TeaModel {
         /**
          * <p>The type of the IP address whitelist. Valid values:</p>
-         * <br>
-         * <p>*   PRIVATE_KIBANA</p>
-         * <p>*   PRIVATE_ES</p>
-         * <p>*   PUBLIC_ES</p>
-         * <p>*   PUBLIC_KIBANA</p>
+         * <ul>
+         * <li>PRIVATE_KIBANA</li>
+         * <li>PRIVATE_ES</li>
+         * <li>PUBLIC_ES</li>
+         * <li>PUBLIC_KIBANA</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>test_group</p>
          */
         @NameInMap("groupName")
         public String groupName;
@@ -120,6 +139,9 @@ public class ModifyWhiteIpsRequest extends TeaModel {
 
         /**
          * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PRIVATE_ES</p>
          */
         @NameInMap("whiteIpType")
         public String whiteIpType;

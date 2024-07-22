@@ -4,14 +4,22 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class UpdateAdminPasswordRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>es_password</p>
+     */
     @NameInMap("esAdminPassword")
     public String esAdminPassword;
 
     /**
      * <p>Indicates whether the password was updated. Valid values:</p>
-     * <br>
-     * <p>*   true: The call was successful.</p>
-     * <p>*   false: The call failed.</p>
+     * <ul>
+     * <li>true: The call was successful.</li>
+     * <li>false: The call failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF****</p>
      */
     @NameInMap("clientToken")
     public String clientToken;

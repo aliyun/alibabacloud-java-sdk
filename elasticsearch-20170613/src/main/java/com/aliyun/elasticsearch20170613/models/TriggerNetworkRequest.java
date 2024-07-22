@@ -6,22 +6,35 @@ import com.aliyun.tea.*;
 public class TriggerNetworkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OPEN</p>
      */
     @NameInMap("actionType")
     public String actionType;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PUBLIC</p>
      */
     @NameInMap("networkType")
     public String networkType;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>KIBANA</p>
      */
     @NameInMap("nodeType")
     public String nodeType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>407d02b74c49beb5bfdac7ec8bde2488</p>
+     */
     @NameInMap("clientToken")
     public String clientToken;
 

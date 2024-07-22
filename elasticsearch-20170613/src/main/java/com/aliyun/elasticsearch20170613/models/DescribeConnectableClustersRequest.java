@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeConnectableClustersRequest extends TeaModel {
     /**
      * <p>The ID of the instance that can communicate with each other.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("alreadySetItems")
     public Boolean alreadySetItems;

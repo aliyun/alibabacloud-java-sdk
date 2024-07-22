@@ -7,6 +7,10 @@ public class ListInstanceHistoryEventsResponseBody extends TeaModel {
     @NameInMap("Headers")
     public ListInstanceHistoryEventsResponseBodyHeaders headers;
 
+    /**
+     * <strong>example:</strong>
+     * <p>D1A6830A-F59B-4E05-BFAC-9496C21DBBA7</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,12 +47,24 @@ public class ListInstanceHistoryEventsResponseBody extends TeaModel {
     }
 
     public static class ListInstanceHistoryEventsResponseBodyHeaders extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>15</p>
+         */
         @NameInMap("X-Total-Count")
         public Long xTotalCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("X-Total-Failed")
         public Long xTotalFailed;
 
+        /**
+         * <strong>example:</strong>
+         * <p>13</p>
+         */
         @NameInMap("X-Total-Success")
         public Long xTotalSuccess;
 
@@ -84,33 +100,73 @@ public class ListInstanceHistoryEventsResponseBody extends TeaModel {
     }
 
     public static class ListInstanceHistoryEventsResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>i-2ze8s9cjdf2cv969****</p>
+         */
         @NameInMap("ecsId")
         public String ecsId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2017-12-07T00:00:00Z</p>
+         */
         @NameInMap("eventCreateTime")
         public String eventCreateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>EXECUTED</p>
+         */
         @NameInMap("eventCycleStatus")
         public String eventCycleStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2017-12-07T00:00:00Z</p>
+         */
         @NameInMap("eventExecuteTime")
         public String eventExecuteTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2017-12-07T00:00:00Z</p>
+         */
         @NameInMap("eventFinashTime")
         public String eventFinashTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>INFO</p>
+         */
         @NameInMap("eventLevel")
         public String eventLevel;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ECS:AUTO_RESTART</p>
+         */
         @NameInMap("eventType")
         public String eventType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>es-cn-2r42l7a740005****</p>
+         */
         @NameInMap("instanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10.1.xx.xx</p>
+         */
         @NameInMap("nodeIP")
         public String nodeIP;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("regionId")
         public String regionId;
 

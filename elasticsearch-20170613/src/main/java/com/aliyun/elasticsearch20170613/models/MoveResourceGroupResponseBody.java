@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class MoveResourceGroupResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D***</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,32 +43,46 @@ public class MoveResourceGroupResponseBody extends TeaModel {
     public static class MoveResourceGroupResponseBodyResultDictList extends TeaModel {
         /**
          * <p>The size of the dictionary file. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2782602</p>
          */
         @NameInMap("fileSize")
         public Long fileSize;
 
         /**
          * <p>The name of the dictionary file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM_MAIN.dic</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>The type of the source of the dictionary file. Valid values:</p>
-         * <br>
-         * <p>*   OSS: Object Storage Service (OSS). You must make sure that the access control list (ACL) of the related OSS bucket is public read.</p>
-         * <p>*   ORIGIN: previously uploaded dictionary.</p>
+         * <ul>
+         * <li>OSS: Object Storage Service (OSS). You must make sure that the access control list (ACL) of the related OSS bucket is public read.</li>
+         * <li>ORIGIN: previously uploaded dictionary.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ORIGIN</p>
          */
         @NameInMap("sourceType")
         public String sourceType;
 
         /**
          * <p>The type of the dictionary. Valid values:</p>
-         * <br>
-         * <p>*   STOP: stopword list</p>
-         * <p>*   MAIN: main dictionary</p>
-         * <p>*   SYNONYMS: synonym dictionary</p>
-         * <p>*   ALI_WS: Alibaba Cloud dictionary</p>
+         * <ul>
+         * <li>STOP: stopword list</li>
+         * <li>MAIN: main dictionary</li>
+         * <li>SYNONYMS: synonym dictionary</li>
+         * <li>ALI_WS: Alibaba Cloud dictionary</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>MAIN</p>
          */
         @NameInMap("type")
         public String type;
@@ -112,24 +129,36 @@ public class MoveResourceGroupResponseBody extends TeaModel {
     public static class MoveResourceGroupResponseBodyResultKibanaConfiguration extends TeaModel {
         /**
          * <p>The number of nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("amount")
         public Integer amount;
 
         /**
          * <p>The storage capacity. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("disk")
         public Integer disk;
 
         /**
          * <p>The storage type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_ssd</p>
          */
         @NameInMap("diskType")
         public String diskType;
 
         /**
          * <p>The specification category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>elasticsearch.n4.small</p>
          */
         @NameInMap("spec")
         public String spec;
@@ -176,24 +205,36 @@ public class MoveResourceGroupResponseBody extends TeaModel {
     public static class MoveResourceGroupResponseBodyResultMasterConfiguration extends TeaModel {
         /**
          * <p>The number of nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("amount")
         public Integer amount;
 
         /**
          * <p>The storage capacity. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("disk")
         public Integer disk;
 
         /**
          * <p>The storage type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_ssd</p>
          */
         @NameInMap("diskType")
         public String diskType;
 
         /**
          * <p>The specification category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>elasticsearch.sn2ne.large</p>
          */
         @NameInMap("spec")
         public String spec;
@@ -240,24 +281,36 @@ public class MoveResourceGroupResponseBody extends TeaModel {
     public static class MoveResourceGroupResponseBodyResultNetworkConfig extends TeaModel {
         /**
          * <p>The network type. Only the VPC is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc</p>
          */
         @NameInMap("type")
         public String type;
 
         /**
          * <p>The ID of the virtual private cloud (VPC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp16k1dvzxtmagcva****</p>
          */
         @NameInMap("vpcId")
         public String vpcId;
 
         /**
          * <p>The zone where the cluster resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-i</p>
          */
         @NameInMap("vsArea")
         public String vsArea;
 
         /**
          * <p>The ID of the vSwitch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp1k4ec6s7sjdbudw****</p>
          */
         @NameInMap("vswitchId")
         public String vswitchId;
@@ -304,18 +357,27 @@ public class MoveResourceGroupResponseBody extends TeaModel {
     public static class MoveResourceGroupResponseBodyResultNodeSpec extends TeaModel {
         /**
          * <p>The storage capacity. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         @NameInMap("disk")
         public Integer disk;
 
         /**
          * <p>The storage type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_ssd</p>
          */
         @NameInMap("diskType")
         public String diskType;
 
         /**
          * <p>The specification category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>elasticsearch.n4.small</p>
          */
         @NameInMap("spec")
         public String spec;
@@ -354,32 +416,46 @@ public class MoveResourceGroupResponseBody extends TeaModel {
     public static class MoveResourceGroupResponseBodyResultSynonymsDicts extends TeaModel {
         /**
          * <p>The size of the dictionary file. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2782602</p>
          */
         @NameInMap("fileSize")
         public Long fileSize;
 
         /**
          * <p>The name of the dictionary file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM_MAIN.dic</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>The type of the source of the dictionary file. Valid values:</p>
-         * <br>
-         * <p>*   OSS: Object Storage Service (OSS). You must make sure that the ACL of the related OSS bucket is public read.</p>
-         * <p>*   ORIGIN: previously uploaded dictionary.</p>
+         * <ul>
+         * <li>OSS: Object Storage Service (OSS). You must make sure that the ACL of the related OSS bucket is public read.</li>
+         * <li>ORIGIN: previously uploaded dictionary.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ORIGIN</p>
          */
         @NameInMap("sourceType")
         public String sourceType;
 
         /**
          * <p>The type of the dictionary. Valid values:</p>
-         * <br>
-         * <p>*   STOP: stopword list</p>
-         * <p>*   MAIN: main dictionary</p>
-         * <p>*   SYNONYMS: synonym dictionary</p>
-         * <p>*   ALI_WS: Alibaba Cloud dictionary</p>
+         * <ul>
+         * <li>STOP: stopword list</li>
+         * <li>MAIN: main dictionary</li>
+         * <li>SYNONYMS: synonym dictionary</li>
+         * <li>ALI_WS: Alibaba Cloud dictionary</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>STOP</p>
          */
         @NameInMap("type")
         public String type;
@@ -426,12 +502,18 @@ public class MoveResourceGroupResponseBody extends TeaModel {
     public static class MoveResourceGroupResponseBodyResult extends TeaModel {
         /**
          * <p>The time when the cluster was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-07-06T10:18:48.662Z</p>
          */
         @NameInMap("createdAt")
         public String createdAt;
 
         /**
          * <p>The name of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-abc</p>
          */
         @NameInMap("description")
         public String description;
@@ -444,18 +526,27 @@ public class MoveResourceGroupResponseBody extends TeaModel {
 
         /**
          * <p>The internal endpoint of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-nif1q8auz0003****.elasticsearch.aliyuncs.com</p>
          */
         @NameInMap("domain")
         public String domain;
 
         /**
          * <p>The version of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6.7.0_with_X-Pack</p>
          */
         @NameInMap("esVersion")
         public String esVersion;
 
         /**
          * <p>The ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-n6w1o1x0w001c****</p>
          */
         @NameInMap("instanceId")
         public String instanceId;
@@ -468,12 +559,18 @@ public class MoveResourceGroupResponseBody extends TeaModel {
 
         /**
          * <p>The public endpoint of the Kibana console of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-nif1q8auz0003****.kibana.elasticsearch.aliyuncs.com</p>
          */
         @NameInMap("kibanaDomain")
         public String kibanaDomain;
 
         /**
          * <p>The port number that is used to access the Kibana console of the cluster over the Internet.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5601</p>
          */
         @NameInMap("kibanaPort")
         public Integer kibanaPort;
@@ -492,6 +589,9 @@ public class MoveResourceGroupResponseBody extends TeaModel {
 
         /**
          * <p>The number of data nodes in the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("nodeAmount")
         public Integer nodeAmount;
@@ -504,32 +604,46 @@ public class MoveResourceGroupResponseBody extends TeaModel {
 
         /**
          * <p>The billing method of the cluster. Valid values:</p>
-         * <br>
-         * <p>*   prepaid: subscription</p>
-         * <p>*   postpaid: pay-as-you-go</p>
+         * <ul>
+         * <li>prepaid: subscription</li>
+         * <li>postpaid: pay-as-you-go</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>postpaid</p>
          */
         @NameInMap("paymentType")
         public String paymentType;
 
         /**
          * <p>The public endpoint of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-n6w1o1x0w001c****.public.elasticsearch.aliyuncs.com</p>
          */
         @NameInMap("publicDomain")
         public String publicDomain;
 
         /**
          * <p>The port number that is used to access the cluster over the Internet.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9200</p>
          */
         @NameInMap("publicPort")
         public Integer publicPort;
 
         /**
          * <p>The status of the cluster. Valid values:</p>
-         * <br>
-         * <p>*   active: The cluster is normal.</p>
-         * <p>*   activating: The cluster is being activated.</p>
-         * <p>*   Inactive: The cluster is frozen.</p>
-         * <p>*   invalid: The cluster is valid.</p>
+         * <ul>
+         * <li>active: The cluster is normal.</li>
+         * <li>activating: The cluster is being activated.</li>
+         * <li>Inactive: The cluster is frozen.</li>
+         * <li>invalid: The cluster is valid.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>active</p>
          */
         @NameInMap("status")
         public String status;
@@ -542,6 +656,9 @@ public class MoveResourceGroupResponseBody extends TeaModel {
 
         /**
          * <p>The time when the cluster was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-07-18T10:10:04.484Z</p>
          */
         @NameInMap("updatedAt")
         public String updatedAt;

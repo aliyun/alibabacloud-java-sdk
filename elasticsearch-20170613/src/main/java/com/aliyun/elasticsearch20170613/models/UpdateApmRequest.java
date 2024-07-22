@@ -4,18 +4,38 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class UpdateApmRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>APMtest</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>es-cn-i7m2fsfhc001x****</p>
+     */
     @NameInMap("outputES")
     public String outputES;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ESPassword****</p>
+     */
     @NameInMap("outputESPassword")
     public String outputESPassword;
 
+    /**
+     * <strong>example:</strong>
+     * <p>elastic</p>
+     */
     @NameInMap("outputESUserName")
     public String outputESUserName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AMPPassword****</p>
+     */
     @NameInMap("token")
     public String token;
 

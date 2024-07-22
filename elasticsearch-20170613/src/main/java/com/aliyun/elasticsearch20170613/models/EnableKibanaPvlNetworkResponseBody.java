@@ -4,9 +4,17 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class EnableKibanaPvlNetworkResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0DC92CFE-62AF-51AF-9D5B-F1078D7C451E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Result")
     public Boolean result;
 

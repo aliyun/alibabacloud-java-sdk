@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class EstimatedLogstashRestartTimeResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D***</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class EstimatedLogstashRestartTimeResponseBody extends TeaModel {
     public static class EstimatedLogstashRestartTimeResponseBodyResult extends TeaModel {
         /**
          * <p>The unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>second</p>
          */
         @NameInMap("unit")
         public String unit;
 
         /**
          * <p>The estimated restart time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>600</p>
          */
         @NameInMap("value")
         public Long value;

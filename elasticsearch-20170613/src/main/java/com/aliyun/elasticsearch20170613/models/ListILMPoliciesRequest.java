@@ -4,6 +4,10 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListILMPoliciesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>policy-1</p>
+     */
     @NameInMap("policyName")
     public String policyName;
 

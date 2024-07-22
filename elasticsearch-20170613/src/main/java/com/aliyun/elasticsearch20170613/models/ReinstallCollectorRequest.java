@@ -6,15 +6,25 @@ import com.aliyun.tea.*;
 public class ReinstallCollectorRequest extends TeaModel {
     /**
      * <p>The request body parameters. For more information, see the Request body section in this topic.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>Indicates whether the shipper is installed. Valid values:</p>
-     * <br>
-     * <p>*   true: The shipper is installed.</p>
-     * <p>*   false: The shipper fails to be installed.</p>
+     * <ul>
+     * <li>true: The shipper is installed.</li>
+     * <li>false: The shipper fails to be installed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     *   &quot;restartType&quot;: &quot;nodeEcsId&quot;,
+     *   &quot;nodes&quot;:[&quot;i-bp1gyhphjaj73jsr****&quot;,&quot;i-bp10piq1mkfnyw9t****&quot;]
+     * }</p>
      */
     @NameInMap("body")
     public String body;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateKibanaWhiteIpsResponseBody extends TeaModel {
     /**
      * <p>The details of the Elasticsearch cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E5EF11F1-DBAE-4020-AC24-DFA6C4345CAE</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,6 +43,9 @@ public class UpdateKibanaWhiteIpsResponseBody extends TeaModel {
     public static class UpdateKibanaWhiteIpsResponseBodyResultNetworkConfigWhiteIpGroupList extends TeaModel {
         /**
          * <p>The IP addresses in the whitelist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_group_name</p>
          */
         @NameInMap("groupName")
         public String groupName;
@@ -50,6 +56,10 @@ public class UpdateKibanaWhiteIpsResponseBody extends TeaModel {
         @NameInMap("ips")
         public java.util.List<String> ips;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PUBLIC_KIBANA</p>
+         */
         @NameInMap("whiteIpType")
         public String whiteIpType;
 
@@ -87,24 +97,36 @@ public class UpdateKibanaWhiteIpsResponseBody extends TeaModel {
     public static class UpdateKibanaWhiteIpsResponseBodyResultNetworkConfig extends TeaModel {
         /**
          * <p>The IP address whitelists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc</p>
          */
         @NameInMap("type")
         public String type;
 
         /**
          * <p>The ID of the vSwitch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1jy348ibzulk6hn****</p>
          */
         @NameInMap("vpcId")
         public String vpcId;
 
         /**
          * <p>The network type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h</p>
          */
         @NameInMap("vsArea")
         public String vsArea;
 
         /**
          * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp1a0mifpletdd1da****</p>
          */
         @NameInMap("vswitchId")
         public String vswitchId;

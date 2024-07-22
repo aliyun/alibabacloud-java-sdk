@@ -4,6 +4,10 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class DescribeIndexTemplateResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>25DB38F8-82E4-4D16-82BB-FF077C7F****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +36,24 @@ public class DescribeIndexTemplateResponseBody extends TeaModel {
     }
 
     public static class DescribeIndexTemplateResponseBodyResultTemplate extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>{\&quot;mydata\&quot;:{}}</p>
+         */
         @NameInMap("aliases")
         public String aliases;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{\&quot;properties\&quot;:{\&quot;created_at\&quot;:{\&quot;format\&quot;:\&quot;EEE MMM dd HH:mm:ss Z yyyy\&quot;,\&quot;type\&quot;:\&quot;date\&quot;},\&quot;host_name\&quot;:{\&quot;type\&quot;:\&quot;keyword\&quot;}}}</p>
+         */
         @NameInMap("mappings")
         public String mappings;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{\&quot;index.refresh_interval\&quot;:\&quot;1s\&quot;}</p>
+         */
         @NameInMap("settings")
         public String settings;
 
@@ -73,18 +89,34 @@ public class DescribeIndexTemplateResponseBody extends TeaModel {
     }
 
     public static class DescribeIndexTemplateResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("dataStream")
         public Boolean dataStream;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cube_default_ilm_policy</p>
+         */
         @NameInMap("ilmPolicy")
         public String ilmPolicy;
 
         @NameInMap("indexPatterns")
         public java.util.List<String> indexPatterns;
 
+        /**
+         * <strong>example:</strong>
+         * <p>data-stream-default</p>
+         */
         @NameInMap("indexTemplate")
         public String indexTemplate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("priority")
         public Integer priority;
 

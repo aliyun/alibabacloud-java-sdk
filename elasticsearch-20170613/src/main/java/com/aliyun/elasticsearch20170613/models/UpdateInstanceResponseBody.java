@@ -12,17 +12,21 @@ public class UpdateInstanceResponseBody extends TeaModel {
 
     /**
      * <p>The time when the instance was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The state of the instance. Valid values:</p>
-     * <br>
-     * <p>*   active: normal</p>
-     * <p>*   activating: taking effect</p>
-     * <p>*   inactive: frozen</p>
-     * <p>*   invalid: invalid</p>
+     * <ul>
+     * <li>active: normal</li>
+     * <li>activating: taking effect</li>
+     * <li>inactive: frozen</li>
+     * <li>invalid: invalid</li>
+     * </ul>
      */
     @NameInMap("Result")
     public UpdateInstanceResponseBodyResult result;
@@ -67,24 +71,36 @@ public class UpdateInstanceResponseBody extends TeaModel {
     public static class UpdateInstanceResponseBodyResultKibanaConfiguration extends TeaModel {
         /**
          * <p>The configuration of dedicated master nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("amount")
         public Integer amount;
 
         /**
          * <p>The node specifications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("disk")
         public Integer disk;
 
         /**
          * <p>The number of nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_ssd</p>
          */
         @NameInMap("diskType")
         public String diskType;
 
         /**
          * <p>The storage type of the node. This parameter can be ignored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>elasticsearch.n4.small</p>
          */
         @NameInMap("spec")
         public String spec;
@@ -129,17 +145,32 @@ public class UpdateInstanceResponseBody extends TeaModel {
     }
 
     public static class UpdateInstanceResponseBodyResultMasterConfiguration extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("amount")
         public Integer amount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("disk")
         public Integer disk;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cloud_ssd</p>
+         */
         @NameInMap("diskType")
         public String diskType;
 
         /**
          * <p>The storage type of the node. Only cloud_ssd(SSD cloud disk) is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>elasticsearch.sn2ne.large</p>
          */
         @NameInMap("spec")
         public String spec;
@@ -186,18 +217,27 @@ public class UpdateInstanceResponseBody extends TeaModel {
     public static class UpdateInstanceResponseBodyResultNodeSpec extends TeaModel {
         /**
          * <p>The node specifications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40</p>
          */
         @NameInMap("disk")
         public Integer disk;
 
         /**
          * <p>The number of nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_ssd</p>
          */
         @NameInMap("diskType")
         public String diskType;
 
         /**
          * <p>The configuration of Kibana nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>elasticsearch.sn2ne.xlarge</p>
          */
         @NameInMap("spec")
         public String spec;
@@ -236,30 +276,45 @@ public class UpdateInstanceResponseBody extends TeaModel {
     public static class UpdateInstanceResponseBodyResult extends TeaModel {
         /**
          * <p>The private domain name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-07-13T03:58:07.253Z</p>
          */
         @NameInMap("createdAt")
         public String createdAt;
 
         /**
          * <p>The configuration of data nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
          * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-abc.elasticsearch.aliyuncs.com</p>
          */
         @NameInMap("domain")
         public String domain;
 
         /**
          * <p>The node specifications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5.5.3_with_X-Pack</p>
          */
         @NameInMap("esVersion")
         public String esVersion;
 
         /**
          * <p>The storage space of the node. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-abc</p>
          */
         @NameInMap("instanceId")
         public String instanceId;
@@ -278,30 +333,41 @@ public class UpdateInstanceResponseBody extends TeaModel {
 
         /**
          * <p>The billing method of the instance. Valid values:</p>
-         * <br>
-         * <p>*   prepaid: subscription</p>
-         * <p>*   postpaid: pay-as-you-go</p>
+         * <ul>
+         * <li>prepaid: subscription</li>
+         * <li>postpaid: pay-as-you-go</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("nodeAmount")
         public Integer nodeAmount;
 
         /**
          * <p>The storage type of the node. Valid values:</p>
-         * <br>
-         * <p>*   cloud_ssd: standard SSD</p>
-         * <p>*   cloud_efficiency: ultra disk</p>
+         * <ul>
+         * <li>cloud_ssd: standard SSD</li>
+         * <li>cloud_efficiency: ultra disk</li>
+         * </ul>
          */
         @NameInMap("nodeSpec")
         public UpdateInstanceResponseBodyResultNodeSpec nodeSpec;
 
         /**
          * <p>The edition of the dedicated KMS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>postpaid</p>
          */
         @NameInMap("paymentType")
         public String paymentType;
 
         /**
          * <p>The name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>active</p>
          */
         @NameInMap("status")
         public String status;

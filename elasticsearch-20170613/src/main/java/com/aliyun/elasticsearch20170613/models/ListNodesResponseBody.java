@@ -12,6 +12,9 @@ public class ListNodesResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E1FD7642-7C40-4FF2-9C0F-21F1A1746F70</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,6 +57,9 @@ public class ListNodesResponseBody extends TeaModel {
     public static class ListNodesResponseBodyHeaders extends TeaModel {
         /**
          * <p>The number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("X-Total-Count")
         public Integer xTotalCount;
@@ -76,15 +82,22 @@ public class ListNodesResponseBody extends TeaModel {
     public static class ListNodesResponseBodyResultIpAddress extends TeaModel {
         /**
          * <p>The IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.xx.xx</p>
          */
         @NameInMap("host")
         public String host;
 
         /**
          * <p>The type of the IP address. Valid values:</p>
-         * <br>
-         * <p>*   public: public IP address</p>
-         * <p>*   private: private IP address</p>
+         * <ul>
+         * <li>public: public IP address</li>
+         * <li>private: private IP address</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>public</p>
          */
         @NameInMap("ipType")
         public String ipType;
@@ -115,12 +128,18 @@ public class ListNodesResponseBody extends TeaModel {
     public static class ListNodesResponseBodyResultTags extends TeaModel {
         /**
          * <p>The key of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         @NameInMap("tagKey")
         public String tagKey;
 
         /**
          * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xyz</p>
          */
         @NameInMap("tagValue")
         public String tagValue;
@@ -151,32 +170,46 @@ public class ListNodesResponseBody extends TeaModel {
     public static class ListNodesResponseBodyResult extends TeaModel {
         /**
          * <p>The status of the shipper on the ECS instance. Valid values:</p>
-         * <br>
-         * <p>*   heartOk: The heartbeat is normal.</p>
-         * <p>*   heartLost: The heartbeat is abnormal.</p>
-         * <p>*   uninstalled: The shipper is not installed.</p>
-         * <p>*   failed: The shipper fails to be installed.</p>
+         * <ul>
+         * <li>heartOk: The heartbeat is normal.</li>
+         * <li>heartLost: The heartbeat is abnormal.</li>
+         * <li>uninstalled: The shipper is not installed.</li>
+         * <li>failed: The shipper fails to be installed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>heartOk</p>
          */
         @NameInMap("agentStatus")
         public String agentStatus;
 
         /**
          * <p>Indicates whether the Cloud Assistant client is installed. Valid values:</p>
-         * <br>
-         * <p>*   true: installed</p>
-         * <p>*   false: not installed</p>
+         * <ul>
+         * <li>true: installed</li>
+         * <li>false: not installed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("cloudAssistantStatus")
         public String cloudAssistantStatus;
 
         /**
          * <p>The ID of the ECS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp13y63575oypr****</p>
          */
         @NameInMap("ecsInstanceId")
         public String ecsInstanceId;
 
         /**
          * <p>The name of the ECS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS_beat</p>
          */
         @NameInMap("ecsInstanceName")
         public String ecsInstanceName;
@@ -189,20 +222,28 @@ public class ListNodesResponseBody extends TeaModel {
 
         /**
          * <p>The operating system type of the ECS instance. Valid values:</p>
-         * <br>
-         * <p>*   windows: Windows Server</p>
-         * <p>*   linux: Linux</p>
+         * <ul>
+         * <li>windows: Windows Server</li>
+         * <li>linux: Linux</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>linux</p>
          */
         @NameInMap("osType")
         public String osType;
 
         /**
          * <p>The status of the ECS instance. Valid values:</p>
-         * <br>
-         * <p>*   running: The instance is running.</p>
-         * <p>*   starting: The instance is being started.</p>
-         * <p>*   stopping: The instance is being stopped.</p>
-         * <p>*   stopped: The instance is stopped.</p>
+         * <ul>
+         * <li>running: The instance is running.</li>
+         * <li>starting: The instance is being started.</li>
+         * <li>stopping: The instance is being stopped.</li>
+         * <li>stopped: The instance is stopped.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>running</p>
          */
         @NameInMap("status")
         public String status;

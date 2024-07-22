@@ -4,6 +4,10 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListDiagnosisItemsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +36,24 @@ public class ListDiagnosisItemsResponseBody extends TeaModel {
     }
 
     public static class ListDiagnosisItemsResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>诊断集群写数据是否有堆积当集群的数据写入存在堆积时，会造成BulkReject异常，可能会导致数据丢失，且会造成系统资源消耗严重</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ClusterBulkRejectDiagnostic</p>
+         */
         @NameInMap("key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>索引写入BulkReject诊断</p>
+         */
         @NameInMap("name")
         public String name;
 

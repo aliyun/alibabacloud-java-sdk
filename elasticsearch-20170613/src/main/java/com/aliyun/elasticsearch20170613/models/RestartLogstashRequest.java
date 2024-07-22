@@ -4,9 +4,17 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class RestartLogstashRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>20%</p>
+     */
     @NameInMap("batchCount")
     public Double batchCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("blueGreenDep")
     public Boolean blueGreenDep;
 
@@ -16,12 +24,24 @@ public class RestartLogstashRequest extends TeaModel {
     @NameInMap("nodes")
     public java.util.List<String> nodes;
 
+    /**
+     * <strong>example:</strong>
+     * <p>instance</p>
+     */
     @NameInMap("restartType")
     public String restartType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF****</p>
+     */
     @NameInMap("clientToken")
     public String clientToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("force")
     public Boolean force;
 

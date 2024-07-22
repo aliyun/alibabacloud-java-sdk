@@ -10,6 +10,10 @@ public class UpdateInstanceRequest extends TeaModel {
     @NameInMap("elasticDataNodeConfiguration")
     public ElasticDataNodeConfiguration elasticDataNodeConfiguration;
 
+    /**
+     * <strong>example:</strong>
+     * <p>advanced</p>
+     */
     @NameInMap("instanceCategory")
     public String instanceCategory;
 
@@ -19,6 +23,10 @@ public class UpdateInstanceRequest extends TeaModel {
     @NameInMap("masterConfiguration")
     public MasterNodeConfiguration masterConfiguration;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("nodeAmount")
     public Integer nodeAmount;
 
@@ -30,15 +38,25 @@ public class UpdateInstanceRequest extends TeaModel {
 
     /**
      * <p>The result of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF****</p>
      */
     @NameInMap("clientToken")
     public String clientToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("force")
     public Boolean force;
 
     /**
      * <p>The number of data nodes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>upgrade</p>
      */
     @NameInMap("orderActionType")
     public String orderActionType;

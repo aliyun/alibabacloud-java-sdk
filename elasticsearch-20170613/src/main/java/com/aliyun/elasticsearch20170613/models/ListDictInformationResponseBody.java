@@ -4,6 +4,10 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListDictInformationResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>7C4334EA-D22B-48BD-AE28-08EE68******</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +36,24 @@ public class ListDictInformationResponseBody extends TeaModel {
     }
 
     public static class ListDictInformationResponseBodyResultOssObject extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>es-osstest*</p>
+         */
         @NameInMap("bucketName")
         public String bucketName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2ABAB5E70BBF631145647F6BE533****</p>
+         */
         @NameInMap("etag")
         public String etag;
 
+        /**
+         * <strong>example:</strong>
+         * <p>oss/dict_0*.dic</p>
+         */
         @NameInMap("key")
         public String key;
 
@@ -73,12 +89,20 @@ public class ListDictInformationResponseBody extends TeaModel {
     }
 
     public static class ListDictInformationResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2202301</p>
+         */
         @NameInMap("fileSize")
         public Long fileSize;
 
         @NameInMap("ossObject")
         public ListDictInformationResponseBodyResultOssObject ossObject;
 
+        /**
+         * <strong>example:</strong>
+         * <p>STOP</p>
+         */
         @NameInMap("type")
         public String type;
 

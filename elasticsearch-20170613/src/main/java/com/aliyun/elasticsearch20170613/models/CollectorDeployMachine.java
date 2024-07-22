@@ -6,27 +6,49 @@ import com.aliyun.tea.*;
 public class CollectorDeployMachine extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>collectorDeployMachine</p>
      */
     @NameInMap("configType")
     public String configType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>default_ct-cn-f3t0dq5p97199ru3z</p>
+     */
     @NameInMap("groupId")
     public String groupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ce93d7566df2141f490f0f60f646252c3</p>
+     */
     @NameInMap("instanceId")
     public String instanceId;
 
     @NameInMap("machines")
     public java.util.List<CollectorDeployMachineMachines> machines;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("successPodsCount")
     public String successPodsCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("totalPodsCount")
     public String totalPodsCount;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ACKCluster</p>
      */
     @NameInMap("type")
     public String type;
@@ -93,9 +115,17 @@ public class CollectorDeployMachine extends TeaModel {
     }
 
     public static class CollectorDeployMachineMachines extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>UNINSTALLED</p>
+         */
         @NameInMap("agentStatus")
         public String agentStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>i-xs34****</p>
+         */
         @NameInMap("instanceId")
         public String instanceId;
 

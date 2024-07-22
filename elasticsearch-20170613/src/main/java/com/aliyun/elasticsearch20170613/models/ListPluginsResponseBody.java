@@ -12,6 +12,9 @@ public class ListPluginsResponseBody extends TeaModel {
 
     /**
      * <p>The return results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5A5D8E74-565C-43DC-B031-29289FA9****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,6 +57,9 @@ public class ListPluginsResponseBody extends TeaModel {
     public static class ListPluginsResponseBodyHeaders extends TeaModel {
         /**
          * <p>The address of the plug-in description document.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("X-Total-Count")
         public Integer xTotalCount;
@@ -76,22 +82,40 @@ public class ListPluginsResponseBody extends TeaModel {
     public static class ListPluginsResponseBodyResult extends TeaModel {
         /**
          * <p>The source type of the plug-in.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IK analysis plug-in for Elasticsearch.</p>
          */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>analysis-ik</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SYSTEM</p>
+         */
         @NameInMap("source")
         public String source;
 
         /**
          * <p>The name of the plug-in.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://xxxx.html">https://xxxx.html</a></p>
          */
         @NameInMap("specificationUrl")
         public String specificationUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>INSTALLED</p>
+         */
         @NameInMap("state")
         public String state;
 

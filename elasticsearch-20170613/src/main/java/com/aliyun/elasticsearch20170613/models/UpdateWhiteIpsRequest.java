@@ -18,14 +18,21 @@ public class UpdateWhiteIpsRequest extends TeaModel {
 
     /**
      * <p>The IP addresses in the whitelist.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF****</p>
      */
     @NameInMap("clientToken")
     public String clientToken;
 
     /**
      * <p>The IP addresses in the whitelist. This parameter is available if the whiteIpGroup parameter is left empty. The default IP address whitelist is updated based on the value of this parameter.</p>
-     * <br>
-     * <p>>  You cannot configure both the esIPWhitelist and whiteIpGroup parameters.</p>
+     * <blockquote>
+     * <p> You cannot configure both the esIPWhitelist and whiteIpGroup parameters.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Cover</p>
      */
     @NameInMap("modifyMode")
     public String modifyMode;
@@ -69,7 +76,10 @@ public class UpdateWhiteIpsRequest extends TeaModel {
 
     public static class UpdateWhiteIpsRequestWhiteIpGroup extends TeaModel {
         /**
-         * <p>The type of the whitelist. Set the value to **PRIVATE_ES**. This value indicates a private IP address whitelist.</p>
+         * <p>The type of the whitelist. Set the value to <strong>PRIVATE_ES</strong>. This value indicates a private IP address whitelist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_group</p>
          */
         @NameInMap("groupName")
         public String groupName;
@@ -82,6 +92,9 @@ public class UpdateWhiteIpsRequest extends TeaModel {
 
         /**
          * <p>The returned result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PRIVATE_ES</p>
          */
         @NameInMap("whiteIpType")
         public String whiteIpType;

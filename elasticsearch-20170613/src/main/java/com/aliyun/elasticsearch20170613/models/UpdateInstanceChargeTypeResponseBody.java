@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class UpdateInstanceChargeTypeResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Return results:</p>
-     * <br>
-     * <p>*   true: conversion successful</p>
-     * <p>*   false: conversion failed</p>
+     * <ul>
+     * <li>true: conversion successful</li>
+     * <li>false: conversion failed</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Result")
     public Boolean result;

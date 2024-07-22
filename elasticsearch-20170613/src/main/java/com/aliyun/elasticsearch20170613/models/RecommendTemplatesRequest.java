@@ -5,17 +5,19 @@ import com.aliyun.tea.*;
 
 public class RecommendTemplatesRequest extends TeaModel {
     /**
-     * <p>*</p>
-     * <p>*</p>
-     * <p>*</p>
-     * <p>*</p>
-     * <p>*</p>
-     * <br>
+     * <ul>
+     * <li></li>
+     * <li></li>
+     * <li></li>
+     * <li></li>
+     * <li></li>
+     * </ul>
      * <p>**</p>
-     * <br>
-     * <p>****</p>
-     * <br>
+     * <hr>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>general</p>
      */
     @NameInMap("usageScenario")
     public String usageScenario;

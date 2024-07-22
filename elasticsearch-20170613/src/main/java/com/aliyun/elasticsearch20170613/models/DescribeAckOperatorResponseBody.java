@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeAckOperatorResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6615EE8D-FD9D-4FD3-997E-6FEA5B8D82ED</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,17 +43,24 @@ public class DescribeAckOperatorResponseBody extends TeaModel {
     public static class DescribeAckOperatorResponseBodyResult extends TeaModel {
         /**
          * <p>The installation status of ES-operator. Valid values:</p>
-         * <br>
-         * <p>*   deployed: ES-operator is installed.</p>
-         * <p>*   not-deploy: ES-operator is not installed.</p>
-         * <p>*   failed: ES-operator fails to be installed.</p>
-         * <p>*   unknown: The installation status of ES-operator is unknown.</p>
+         * <ul>
+         * <li>deployed: ES-operator is installed.</li>
+         * <li>not-deploy: ES-operator is not installed.</li>
+         * <li>failed: ES-operator fails to be installed.</li>
+         * <li>unknown: The installation status of ES-operator is unknown.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>deployed</p>
          */
         @NameInMap("status")
         public String status;
 
         /**
          * <p>The version of ES-operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("version")
         public String version;

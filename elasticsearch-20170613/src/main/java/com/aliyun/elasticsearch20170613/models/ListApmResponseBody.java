@@ -7,6 +7,10 @@ public class ListApmResponseBody extends TeaModel {
     @NameInMap("Headers")
     public ListApmResponseBodyHeaders headers;
 
+    /**
+     * <strong>example:</strong>
+     * <p>080D3399-76CF-519D-A540-2C44BC056EB7</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,6 +47,10 @@ public class ListApmResponseBody extends TeaModel {
     }
 
     public static class ListApmResponseBodyHeaders extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("X-Total-Count")
         public Long xTotalCount;
 
@@ -62,54 +70,122 @@ public class ListApmResponseBody extends TeaModel {
     }
 
     public static class ListApmResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2021-11-16T07:15:51.967Z</p>
+         */
         @NameInMap("createdAt")
         public String createdAt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("deployedReplica")
         public Long deployedReplica;
 
+        /**
+         * <strong>example:</strong>
+         * <p>APMtest</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>apm-cn-i7m2fuae****</p>
+         */
         @NameInMap("instanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("nodeAmount")
         public Long nodeAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>es-cn-i7m2fsfhc001x****</p>
+         */
         @NameInMap("outputES")
         public String outputES;
 
+        /**
+         * <strong>example:</strong>
+         * <p>elastic</p>
+         */
         @NameInMap("outputESUserName")
         public String outputESUserName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>133071096032****</p>
+         */
         @NameInMap("ownerId")
         public String ownerId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>postpaid</p>
+         */
         @NameInMap("paymentType")
         public String paymentType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("region")
         public String region;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("replica")
         public Long replica;
 
+        /**
+         * <strong>example:</strong>
+         * <p>C1M2</p>
+         */
         @NameInMap("resourceSpec")
         public String resourceSpec;
 
+        /**
+         * <strong>example:</strong>
+         * <p>active</p>
+         */
         @NameInMap("status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>7.10.2</p>
+         */
         @NameInMap("version")
         public String version;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vpc-bp1530vdhqkamm9s0****</p>
+         */
         @NameInMap("vpcId")
         public String vpcId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-i</p>
+         */
         @NameInMap("vsArea")
         public String vsArea;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vsw-bp1j1mql6r9g5vfb4****</p>
+         */
         @NameInMap("vswitchId")
         public String vswitchId;
 

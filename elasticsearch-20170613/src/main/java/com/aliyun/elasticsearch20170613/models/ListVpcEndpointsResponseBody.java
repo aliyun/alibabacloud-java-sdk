@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListVpcEndpointsResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F99407AB-2FA9-489E-A259-40CF6DCC47D9</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,70 +43,100 @@ public class ListVpcEndpointsResponseBody extends TeaModel {
     public static class ListVpcEndpointsResponseBodyResult extends TeaModel {
         /**
          * <p>The status of the endpoint connection. Valid values:</p>
-         * <br>
-         * <p>*   Pending</p>
-         * <p>*   Connecting</p>
-         * <p>*   Connected</p>
-         * <p>*   Disconnecting</p>
-         * <p>*   Disconnected</p>
-         * <p>*   Deleting</p>
-         * <p>*   ServiceDeleted</p>
+         * <ul>
+         * <li>Pending</li>
+         * <li>Connecting</li>
+         * <li>Connected</li>
+         * <li>Disconnecting</li>
+         * <li>Disconnected</li>
+         * <li>Deleting</li>
+         * <li>ServiceDeleted</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Disconnected</p>
          */
         @NameInMap("connectionStatus")
         public String connectionStatus;
 
         /**
          * <p>The time when the endpoint was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-07-22T01:19:24Z</p>
          */
         @NameInMap("createTime")
         public String createTime;
 
         /**
          * <p>The business status of the endpoint. Valid values:</p>
-         * <br>
-         * <p>*   Normal</p>
-         * <p>*   FinancialLocked</p>
+         * <ul>
+         * <li>Normal</li>
+         * <li>FinancialLocked</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         @NameInMap("endpointBusinessStatus")
         public String endpointBusinessStatus;
 
         /**
          * <p>The domain name of the endpoint. The domain name is used for connection configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ep-bp18s6wy9420wdi4****.epsrv-bp1bz3efowa4kc0****.cn-hangzhou.privatelink.aliyuncs.com</p>
          */
         @NameInMap("endpointDomain")
         public String endpointDomain;
 
         /**
          * <p>The ID of the endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ep-bp1tah7zbrwmkjef****</p>
          */
         @NameInMap("endpointId")
         public String endpointId;
 
         /**
          * <p>The name of the endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("endpointName")
         public String endpointName;
 
         /**
          * <p>The status of the endpoint. Valid values:</p>
-         * <br>
-         * <p>*   Creating</p>
-         * <p>*   Active</p>
-         * <p>*   Pending</p>
-         * <p>*   Deleting</p>
+         * <ul>
+         * <li>Creating</li>
+         * <li>Active</li>
+         * <li>Pending</li>
+         * <li>Deleting</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
         @NameInMap("endpointStatus")
         public String endpointStatus;
 
         /**
          * <p>The ID of the endpoint service with which the endpoint is associated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>epsrv-bp1w0p3jdirbfmt6****</p>
          */
         @NameInMap("serviceId")
         public String serviceId;
 
         /**
          * <p>The name of the endpoint service with which the endpoint is associated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>com.aliyuncs.privatelink.cn-hangzhou.epsrv-bp1w0p3jdirbfmt6****</p>
          */
         @NameInMap("serviceName")
         public String serviceName;

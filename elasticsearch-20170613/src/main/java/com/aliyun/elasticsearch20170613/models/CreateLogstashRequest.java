@@ -4,6 +4,10 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class CreateLogstashRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ls-cn-abc</p>
+     */
     @NameInMap("description")
     public String description;
 
@@ -15,6 +19,9 @@ public class CreateLogstashRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("nodeAmount")
     public Integer nodeAmount;
@@ -28,6 +35,10 @@ public class CreateLogstashRequest extends TeaModel {
     @NameInMap("paymentInfo")
     public CreateLogstashRequestPaymentInfo paymentInfo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>prepaid</p>
+     */
     @NameInMap("paymentType")
     public String paymentType;
 
@@ -36,10 +47,17 @@ public class CreateLogstashRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6.7_with_X-Pack</p>
      */
     @NameInMap("version")
     public String version;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF****</p>
+     */
     @NameInMap("clientToken")
     public String clientToken;
 
@@ -121,23 +139,36 @@ public class CreateLogstashRequest extends TeaModel {
     }
 
     public static class CreateLogstashRequestNetworkConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>vpc</p>
+         */
         @NameInMap("type")
         public String type;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp16k1dvzxtmagcva****</p>
          */
         @NameInMap("vpcId")
         public String vpcId;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-i</p>
          */
         @NameInMap("vsArea")
         public String vsArea;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp1k4ec6s7sjdbudw****</p>
          */
         @NameInMap("vswitchId")
         public String vswitchId;
@@ -182,14 +213,25 @@ public class CreateLogstashRequest extends TeaModel {
     }
 
     public static class CreateLogstashRequestNodeSpec extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>50</p>
+         */
         @NameInMap("disk")
         public Long disk;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cloud_ssd</p>
+         */
         @NameInMap("diskType")
         public String diskType;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>logstash.n4.small</p>
          */
         @NameInMap("spec")
         public String spec;
@@ -226,15 +268,31 @@ public class CreateLogstashRequest extends TeaModel {
     }
 
     public static class CreateLogstashRequestPaymentInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("autoRenewDuration")
         public Long autoRenewDuration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("duration")
         public Long duration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("isAutoRenew")
         public Boolean isAutoRenew;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Month</p>
+         */
         @NameInMap("pricingCycle")
         public String pricingCycle;
 

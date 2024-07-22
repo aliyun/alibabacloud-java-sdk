@@ -7,6 +7,10 @@ public class ListDataStreamsResponseBody extends TeaModel {
     @NameInMap("Headers")
     public ListDataStreamsResponseBodyHeaders headers;
 
+    /**
+     * <strong>example:</strong>
+     * <p>F99407AB-2FA9-489E-A259-40CF6DCC****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,9 +47,17 @@ public class ListDataStreamsResponseBody extends TeaModel {
     }
 
     public static class ListDataStreamsResponseBodyHeaders extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("X-Managed-Count")
         public Integer xManagedCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>143993923932990</p>
+         */
         @NameInMap("X-Managed-StorageSize")
         public Long xManagedStorageSize;
 
@@ -73,21 +85,45 @@ public class ListDataStreamsResponseBody extends TeaModel {
     }
 
     public static class ListDataStreamsResponseBodyResultIndices extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2018-07-13T03:58:07.253Z</p>
+         */
         @NameInMap("createTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Green</p>
+         */
         @NameInMap("health")
         public String health;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("isManaged")
         public Boolean isManaged;
 
+        /**
+         * <strong>example:</strong>
+         * <p>following</p>
+         */
         @NameInMap("managedStatus")
         public String managedStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Log1</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>15393899</p>
+         */
         @NameInMap("size")
         public Long size;
 
@@ -147,24 +183,48 @@ public class ListDataStreamsResponseBody extends TeaModel {
     }
 
     public static class ListDataStreamsResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Green</p>
+         */
         @NameInMap("health")
         public String health;
 
+        /**
+         * <strong>example:</strong>
+         * <p>rollver1</p>
+         */
         @NameInMap("ilmPolicyName")
         public String ilmPolicyName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>template1</p>
+         */
         @NameInMap("indexTemplateName")
         public String indexTemplateName;
 
         @NameInMap("indices")
         public java.util.List<ListDataStreamsResponseBodyResultIndices> indices;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1788239393298</p>
+         */
         @NameInMap("managedStorageSize")
         public Long managedStorageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>my-index-0001</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1788239393298</p>
+         */
         @NameInMap("totalStorageSize")
         public Long totalStorageSize;
 

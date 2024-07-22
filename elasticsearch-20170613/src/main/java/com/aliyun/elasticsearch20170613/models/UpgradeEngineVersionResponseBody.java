@@ -6,18 +6,22 @@ import com.aliyun.tea.*;
 public class UpgradeEngineVersionResponseBody extends TeaModel {
     /**
      * <p>The verification information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F99407AB-2FA9-489E-A259-40CF6DC*****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The type of the error. Valid values:</p>
-     * <br>
-     * <p>*   clusterStatus: the health status of the cluster.</p>
-     * <p>*   clusterConfigYml: Cluster YML File</p>
-     * <p>*   clusterConfigPlugins: Cluster Configuration File</p>
-     * <p>*   clusterResource: cluster resources</p>
-     * <p>*   clusterSnapshot: cluster snapshot</p>
+     * <ul>
+     * <li>clusterStatus: the health status of the cluster.</li>
+     * <li>clusterConfigYml: Cluster YML File</li>
+     * <li>clusterConfigPlugins: Cluster Configuration File</li>
+     * <li>clusterResource: cluster resources</li>
+     * <li>clusterSnapshot: cluster snapshot</li>
+     * </ul>
      */
     @NameInMap("Result")
     public java.util.List<UpgradeEngineVersionResponseBodyResult> result;
@@ -44,17 +48,29 @@ public class UpgradeEngineVersionResponseBody extends TeaModel {
     }
 
     public static class UpgradeEngineVersionResponseBodyResultValidateResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>ClusterStatusNotHealth</p>
+         */
         @NameInMap("errorCode")
         public String errorCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>The cluster status is not health</p>
+         */
         @NameInMap("errorMsg")
         public String errorMsg;
 
         /**
          * <p>The verification is passed. Valid values:</p>
-         * <br>
-         * <p>*   success: through</p>
-         * <p>*   failed: failed</p>
+         * <ul>
+         * <li>success: through</li>
+         * <li>failed: failed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>clusterStatus</p>
          */
         @NameInMap("errorType")
         public String errorType;
@@ -91,6 +107,10 @@ public class UpgradeEngineVersionResponseBody extends TeaModel {
     }
 
     public static class UpgradeEngineVersionResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>success</p>
+         */
         @NameInMap("status")
         public String status;
 
@@ -102,6 +122,9 @@ public class UpgradeEngineVersionResponseBody extends TeaModel {
 
         /**
          * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>checkClusterHealth</p>
          */
         @NameInMap("validateType")
         public String validateType;

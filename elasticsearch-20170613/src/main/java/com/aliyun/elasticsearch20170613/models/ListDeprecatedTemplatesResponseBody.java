@@ -7,6 +7,10 @@ public class ListDeprecatedTemplatesResponseBody extends TeaModel {
     @NameInMap("Headers")
     public ListDeprecatedTemplatesResponseBodyHeaders headers;
 
+    /**
+     * <strong>example:</strong>
+     * <p>F99407AB-2FA9-489E-A259-40CF6DCC47D9</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,6 +47,10 @@ public class ListDeprecatedTemplatesResponseBody extends TeaModel {
     }
 
     public static class ListDeprecatedTemplatesResponseBodyHeaders extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("X-Total-Count")
         public Long xTotalCount;
 
@@ -62,12 +70,24 @@ public class ListDeprecatedTemplatesResponseBody extends TeaModel {
     }
 
     public static class ListDeprecatedTemplatesResponseBodyResultTemplate extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;{}&quot;</p>
+         */
         @NameInMap("aliases")
         public String aliases;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;{\&quot;properties\&quot;:{\&quot;created_at\&quot;:{\&quot;format\&quot;:\&quot;EEE MMM dd HH:mm:ss Z yyyy\&quot;,\&quot;type\&quot;:\&quot;date\&quot;},\&quot;host_name\&quot;:{\&quot;type\&quot;:\&quot;keyword\&quot;}}}&quot;</p>
+         */
         @NameInMap("mappings")
         public String mappings;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;{\&quot;index.number_of_shards\&quot;:\&quot;1\&quot;}&quot;</p>
+         */
         @NameInMap("settings")
         public String settings;
 
@@ -103,21 +123,37 @@ public class ListDeprecatedTemplatesResponseBody extends TeaModel {
     }
 
     public static class ListDeprecatedTemplatesResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("dataStream")
         public Boolean dataStream;
 
         @NameInMap("indexPatterns")
         public java.util.List<String> indexPatterns;
 
+        /**
+         * <strong>example:</strong>
+         * <p>openstore-index-template</p>
+         */
         @NameInMap("indexTemplate")
         public String indexTemplate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("order")
         public Long order;
 
         @NameInMap("template")
         public ListDeprecatedTemplatesResponseBodyResultTemplate template;
 
+        /**
+         * <strong>example:</strong>
+         * <p>70000</p>
+         */
         @NameInMap("version")
         public String version;
 

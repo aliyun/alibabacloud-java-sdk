@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListLogstashLogResponseBody extends TeaModel {
     /**
      * <p>The details of the log.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7F40EAA1-6F1D-4DD9-8DB8-C5F00C4E****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -44,18 +47,33 @@ public class ListLogstashLogResponseBody extends TeaModel {
         @NameInMap("content")
         public String content;
 
+        /**
+         * <strong>example:</strong>
+         * <p>192.168.xx.xx</p>
+         */
         @NameInMap("host")
         public String host;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ls-cn-v0h1kzca****</p>
+         */
         @NameInMap("instanceId")
         public String instanceId;
 
         /**
          * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>info</p>
          */
         @NameInMap("level")
         public String level;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1531985112420</p>
+         */
         @NameInMap("timestamp")
         public Long timestamp;
 

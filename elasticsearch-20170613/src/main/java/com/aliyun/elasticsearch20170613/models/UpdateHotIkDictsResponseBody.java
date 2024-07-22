@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateHotIkDictsResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,30 +43,44 @@ public class UpdateHotIkDictsResponseBody extends TeaModel {
     public static class UpdateHotIkDictsResponseBodyResult extends TeaModel {
         /**
          * <p>The size of the dictionary file. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         @NameInMap("fileSize")
         public Long fileSize;
 
         /**
          * <p>The name of the dictionary file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>deploy_0.dic</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>The source type of the dictionary file. Valid values:</p>
-         * <br>
-         * <p>*   OSS</p>
-         * <p>*   ORIGIN</p>
+         * <ul>
+         * <li>OSS</li>
+         * <li>ORIGIN</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OSS</p>
          */
         @NameInMap("sourceType")
         public String sourceType;
 
         /**
          * <p>The type of the dictionaries. Valid values:</p>
-         * <br>
-         * <p>*   MAIN: IK main dictionary</p>
-         * <p>*   STOP: IK stopword list</p>
+         * <ul>
+         * <li>MAIN: IK main dictionary</li>
+         * <li>STOP: IK stopword list</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>MAIN</p>
          */
         @NameInMap("type")
         public String type;

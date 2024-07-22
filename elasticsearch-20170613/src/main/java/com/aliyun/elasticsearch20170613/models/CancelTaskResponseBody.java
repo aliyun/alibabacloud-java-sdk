@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class CancelTaskResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F99407AB-2FA9-489E-A259-40CF6DCC****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Return results:</p>
-     * <br>
-     * <p>*   true: the task was cancelled successfully</p>
-     * <p>*   false: the task was cancelled successfully failed</p>
+     * <ul>
+     * <li>true: the task was cancelled successfully</li>
+     * <li>false: the task was cancelled successfully failed</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Result")
     public Boolean result;

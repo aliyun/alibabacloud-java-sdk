@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class DescribeElasticsearchHealthResponseBody extends TeaModel {
     /**
      * <p>The response code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The response message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0731F217-2C8A-4D42-8BCD-5C352866E3B7</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The color that indicates the health status of the cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>GREEN</p>
      */
     @NameInMap("Result")
     public String result;

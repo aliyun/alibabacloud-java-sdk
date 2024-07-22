@@ -9,6 +9,9 @@ public class ValidateTransferableNodesRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>WORKER</p>
      */
     @NameInMap("nodeType")
     public String nodeType;
@@ -35,12 +38,24 @@ public class ValidateTransferableNodesRequest extends TeaModel {
     }
 
     public static class ValidateTransferableNodesRequestBody extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>172.16.xx.xx</p>
+         */
         @NameInMap("host")
         public String host;
 
+        /**
+         * <strong>example:</strong>
+         * <p>9200</p>
+         */
         @NameInMap("port")
         public Integer port;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-shanghai-c</p>
+         */
         @NameInMap("zoneId")
         public String zoneId;
 

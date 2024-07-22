@@ -6,16 +6,20 @@ import com.aliyun.tea.*;
 public class GetTransferableNodesRequest extends TeaModel {
     /**
      * <p>The number of nodes to be migrated.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("count")
     public Integer count;
 
     /**
-     * <p>The type of nodes.**WORKER**represents a hot node,**WORKER_WARM** represents a warm node.</p>
-     * <br>
+     * <p>The type of nodes.<strong>WORKER</strong>represents a hot node,<strong>WORKER_WARM</strong> represents a warm node.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>WORKER</p>
      */
     @NameInMap("nodeType")
     public String nodeType;

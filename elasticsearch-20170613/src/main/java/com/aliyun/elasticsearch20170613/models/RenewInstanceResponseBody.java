@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class RenewInstanceResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F99407AB-2FA9-489E-A259-40CF6DCC****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Return results:</p>
-     * <br>
-     * <p>*   true: renewal successfully</p>
-     * <p>*   false: renewal failed</p>
+     * <ul>
+     * <li>true: renewal successfully</li>
+     * <li>false: renewal failed</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Result")
     public Boolean result;

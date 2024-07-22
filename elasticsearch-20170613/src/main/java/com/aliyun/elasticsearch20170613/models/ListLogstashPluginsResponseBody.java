@@ -6,20 +6,24 @@ import com.aliyun.tea.*;
 public class ListLogstashPluginsResponseBody extends TeaModel {
     /**
      * <p>The address of the documentation for the plug-in.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>99407AB-2FA9-489E-A259-40CF6DCC****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The status of the plug-in. Valid values:</p>
-     * <br>
-     * <p>*   INSTALLED: Installed</p>
-     * <p>*   UNINSTALLED: Not installed</p>
-     * <p>*   INSTALLING: The instance is being installed.</p>
-     * <p>*   UNINSTALLING: The instance is being uninstalled.</p>
-     * <p>*   UPGRADING: The backup gateway is being upgraded.</p>
-     * <p>*   FAILED: Installation failed</p>
-     * <p>*   UNKNOWN: The cluster is lost and cannot be created.</p>
+     * <ul>
+     * <li>INSTALLED: Installed</li>
+     * <li>UNINSTALLED: Not installed</li>
+     * <li>INSTALLING: The instance is being installed.</li>
+     * <li>UNINSTALLING: The instance is being uninstalled.</li>
+     * <li>UPGRADING: The backup gateway is being upgraded.</li>
+     * <li>FAILED: Installation failed</li>
+     * <li>UNKNOWN: The cluster is lost and cannot be created.</li>
+     * </ul>
      */
     @NameInMap("Result")
     public java.util.List<ListLogstashPluginsResponseBodyResult> result;
@@ -48,22 +52,40 @@ public class ListLogstashPluginsResponseBody extends TeaModel {
     public static class ListLogstashPluginsResponseBodyResult extends TeaModel {
         /**
          * <p>The source of the plug-in.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The clone filter is for duplicating events.</p>
          */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>logstash-filter-clone</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SYSTEM</p>
+         */
         @NameInMap("source")
         public String source;
 
         /**
          * <p>The name of the plug-in.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://xxx.html">https://xxx.html</a></p>
          */
         @NameInMap("specificationUrl")
         public String specificationUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>INSTALLED</p>
+         */
         @NameInMap("state")
         public String state;
 

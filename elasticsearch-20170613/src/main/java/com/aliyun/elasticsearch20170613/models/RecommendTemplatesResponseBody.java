@@ -4,6 +4,10 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class RecommendTemplatesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>66B060CF-7381-49C7-9B89-7757927FDA16</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +36,25 @@ public class RecommendTemplatesResponseBody extends TeaModel {
     }
 
     public static class RecommendTemplatesResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>{\n\t\&quot;persistent\&quot;: {\n\t\t\&quot;search\&quot;: {\n\t\t\t\&quot;max_buckets\&quot;: \&quot;10000\&quot;\n\t\t}\n\t}\n}</p>
+         */
         @NameInMap("content")
         public String content;
 
         /**
-         * <p>*</p>
-         * <p>*</p>
-         * <p>*</p>
-         * <p>*</p>
-         * <br>
+         * <ul>
+         * <li></li>
+         * <li></li>
+         * <li></li>
+         * <li></li>
+         * </ul>
          * <p>**</p>
-         * <br>
-         * <p>****</p>
+         * <hr>
+         * 
+         * <strong>example:</strong>
+         * <p>dynamicSettings</p>
          */
         @NameInMap("templateName")
         public String templateName;

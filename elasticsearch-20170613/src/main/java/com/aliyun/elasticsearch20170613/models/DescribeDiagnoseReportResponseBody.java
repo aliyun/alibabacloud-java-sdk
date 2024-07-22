@@ -4,6 +4,10 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class DescribeDiagnoseReportResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +36,38 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
     }
 
     public static class DescribeDiagnoseReportResponseBodyResultDiagnoseItemsDetail extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Check whether the number of replica shards is optimal and easy to maintain</p>
+         */
         @NameInMap("desc")
         public String desc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Number of Replica Shards</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>You may need to adjust the numbers of replica shards of some indices as follows: [geoname08 : 0 -&gt; 1][geoname09 : 0 -&gt; 1][geonametest01 : 0 -&gt; 1]</p>
+         */
         @NameInMap("result")
         public String result;
 
+        /**
+         * <strong>example:</strong>
+         * <p>You can call the following function in the Elasticsearch API....</p>
+         */
         @NameInMap("suggest")
         public String suggest;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ES_API</p>
+         */
         @NameInMap("type")
         public String type;
 
@@ -98,9 +122,17 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
         @NameInMap("detail")
         public DescribeDiagnoseReportResponseBodyResultDiagnoseItemsDetail detail;
 
+        /**
+         * <strong>example:</strong>
+         * <p>YELLOW</p>
+         */
         @NameInMap("health")
         public String health;
 
+        /**
+         * <strong>example:</strong>
+         * <p>IndexAliasUseDiagnostic</p>
+         */
         @NameInMap("item")
         public String item;
 
@@ -136,24 +168,48 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
     }
 
     public static class DescribeDiagnoseReportResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1535745731000</p>
+         */
         @NameInMap("createTime")
         public Long createTime;
 
         @NameInMap("diagnoseItems")
         public java.util.List<DescribeDiagnoseReportResponseBodyResultDiagnoseItems> diagnoseItems;
 
+        /**
+         * <strong>example:</strong>
+         * <p>YELLOW</p>
+         */
         @NameInMap("health")
         public String health;
 
+        /**
+         * <strong>example:</strong>
+         * <p>es-cn-abc</p>
+         */
         @NameInMap("instanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>trigger__2020-08-17T17:09:02</p>
+         */
         @NameInMap("reportId")
         public String reportId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
+         */
         @NameInMap("state")
         public String state;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SYSTEM</p>
+         */
         @NameInMap("trigger")
         public String trigger;
 

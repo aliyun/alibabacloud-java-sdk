@@ -4,25 +4,40 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class UpgradeEngineVersionRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>engineVersion</p>
+     */
     @NameInMap("type")
     public String type;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6.7</p>
+     */
     @NameInMap("version")
     public String version;
 
     /**
      * <p>The moderation results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF****</p>
      */
     @NameInMap("clientToken")
     public String clientToken;
 
     /**
      * <p>The monitoring type. Valid values:</p>
-     * <br>
-     * <p>*   checkClusterHealth: Cluster Health Status</p>
-     * <p>*   checkConfigCompatible: Configuration Compatibility Status</p>
-     * <p>*   checkClusterResource: resource space status</p>
-     * <p>*   checkClusterSnapshot: Whether a snapshot exists</p>
+     * <ul>
+     * <li>checkClusterHealth: Cluster Health Status</li>
+     * <li>checkConfigCompatible: Configuration Compatibility Status</li>
+     * <li>checkClusterResource: resource space status</li>
+     * <li>checkClusterSnapshot: Whether a snapshot exists</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("dryRun")
     public Boolean dryRun;

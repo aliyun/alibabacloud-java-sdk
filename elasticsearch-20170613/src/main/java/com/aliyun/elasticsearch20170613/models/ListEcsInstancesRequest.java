@@ -6,36 +6,54 @@ import com.aliyun.tea.*;
 public class ListEcsInstancesRequest extends TeaModel {
     /**
      * <p>test</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;i-bp13y63575oypr9d****&quot;,&quot;i-bp1gyhphjaj73jsr****&quot;]</p>
      */
     @NameInMap("ecsInstanceIds")
     public String ecsInstanceIds;
 
     /**
-     * <p>[{ "tagKey":"a","tagValue":"b"}]</p>
+     * <p>[{ &quot;tagKey&quot;:&quot;a&quot;,&quot;tagValue&quot;:&quot;b&quot;}]</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("ecsInstanceName")
     public String ecsInstanceName;
 
     /**
      * <p>10</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("page")
     public Integer page;
 
     /**
-     * <p>["i-bp13y63575oypr9d\\*\\*\\*\\*","i-bp1gyhphjaj73jsr\\*\\*\\*\\*"]</p>
+     * <p>[&quot;i-bp13y63575oypr9d\<em>\</em>\<em>\</em>&quot;,&quot;i-bp1gyhphjaj73jsr\<em>\</em>\<em>\</em>&quot;]</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("size")
     public Integer size;
 
     /**
-     * <p>vpc-bp16k1dvzxtmagcva\\*\\*\\*\\*</p>
+     * <p>vpc-bp16k1dvzxtmagcva\<em>\</em>\<em>\</em></p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{ &quot;tagKey&quot;:&quot;a&quot;,&quot;tagValue&quot;:&quot;b&quot;}]</p>
      */
     @NameInMap("tags")
     public String tags;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-bp16k1dvzxtmagcva****</p>
      */
     @NameInMap("vpcId")
     public String vpcId;

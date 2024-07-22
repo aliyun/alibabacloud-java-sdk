@@ -12,6 +12,9 @@ public class ListLogstashResponseBody extends TeaModel {
 
     /**
      * <p>Detailed information about the matching instances.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AC442F2F-5068-4434-AA21-E78947A9****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,6 +57,9 @@ public class ListLogstashResponseBody extends TeaModel {
     public static class ListLogstashResponseBodyHeaders extends TeaModel {
         /**
          * <p>The number of data nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("X-Total-Count")
         public Integer xTotalCount;
@@ -76,12 +82,18 @@ public class ListLogstashResponseBody extends TeaModel {
     public static class ListLogstashResponseBodyResultTags extends TeaModel {
         /**
          * <p>The disk size of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
          * <p>The instance type of the ECS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dev</p>
          */
         @NameInMap("TagValue")
         public String tagValue;
@@ -110,18 +122,33 @@ public class ListLogstashResponseBody extends TeaModel {
     }
 
     public static class ListLogstashResponseBodyResultNetworkConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>vpc</p>
+         */
         @NameInMap("type")
         public String type;
 
         /**
          * <p>The ID of the vSwitch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-abc</p>
          */
         @NameInMap("vpcId")
         public String vpcId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-*</p>
+         */
         @NameInMap("vsArea")
         public String vsArea;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vsw-def</p>
+         */
         @NameInMap("vswitchId")
         public String vswitchId;
 
@@ -167,24 +194,36 @@ public class ListLogstashResponseBody extends TeaModel {
     public static class ListLogstashResponseBodyResultNodeSpec extends TeaModel {
         /**
          * <p>The network configurations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         @NameInMap("disk")
         public Integer disk;
 
         /**
          * <p>The ID of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("diskEncryption")
         public Boolean diskEncryption;
 
         /**
          * <p>The zone where the cluster resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_ssd</p>
          */
         @NameInMap("diskType")
         public String diskType;
 
         /**
          * <p>The type of the disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>logstash.n4.small</p>
          */
         @NameInMap("spec")
         public String spec;
@@ -237,18 +276,27 @@ public class ListLogstashResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-07-13T03:58:07.253Z</p>
          */
         @NameInMap("createdAt")
         public String createdAt;
 
         /**
          * <p>The time when the instance was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ls-cn-abc</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
          * <p>The tag value of the cloud disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ls-cn-n6w1o5jq****</p>
          */
         @NameInMap("instanceId")
         public String instanceId;
@@ -261,21 +309,28 @@ public class ListLogstashResponseBody extends TeaModel {
 
         /**
          * <p>The state of the instance. Valid values: Normal, Active, Inactive, and Invalid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("nodeAmount")
         public Integer nodeAmount;
 
         /**
          * <p>Specifies whether to use disk encryption. Valid values:</p>
-         * <br>
-         * <p>*   true: Enables the concurrent query feature for queries other than aggregate queries.</p>
-         * <p>*   false: Disables the concurrent query feature for queries other than aggregate queries.</p>
+         * <ul>
+         * <li>true: Enables the concurrent query feature for queries other than aggregate queries.</li>
+         * <li>false: Disables the concurrent query feature for queries other than aggregate queries.</li>
+         * </ul>
          */
         @NameInMap("nodeSpec")
         public ListLogstashResponseBodyResultNodeSpec nodeSpec;
 
         /**
          * <p>The time when the instance was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>postpaid</p>
          */
         @NameInMap("paymentType")
         public String paymentType;
@@ -285,18 +340,27 @@ public class ListLogstashResponseBody extends TeaModel {
 
         /**
          * <p>The version of the instance. Currently, only 6.7.0_with_X-Pack and 7.4.0_with_X-Pack are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>active</p>
          */
         @NameInMap("status")
         public String status;
 
         /**
          * <p>The tag of the instance. Valid values:</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-07-18T10:10:04.484Z</p>
          */
         @NameInMap("updatedAt")
         public String updatedAt;
 
         /**
          * <p>The tag key of the cloud disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6.7.0_with_X-Pack</p>
          */
         @NameInMap("version")
         public String version;

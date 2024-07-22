@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetSuggestShrinkableNodesResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F99407AB-2FA9-489E-A259-40CF6DCC****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class GetSuggestShrinkableNodesResponseBody extends TeaModel {
     public static class GetSuggestShrinkableNodesResponseBodyResult extends TeaModel {
         /**
          * <p>The IP address of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.**.**</p>
          */
         @NameInMap("host")
         public String host;
 
         /**
          * <p>The access port number of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9200</p>
          */
         @NameInMap("port")
         public Integer port;
