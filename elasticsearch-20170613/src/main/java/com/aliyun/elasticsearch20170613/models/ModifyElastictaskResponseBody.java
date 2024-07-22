@@ -4,6 +4,10 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ModifyElastictaskResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +36,34 @@ public class ModifyElastictaskResponseBody extends TeaModel {
     }
 
     public static class ModifyElastictaskResponseBodyResultElasticExpansionTask extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0 0 0 ? * MON</p>
+         */
         @NameInMap("cronExpression")
         public String cronExpression;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("elasticNodeCount")
         public Integer elasticNodeCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("replicaCount")
         public Integer replicaCount;
 
         @NameInMap("targetIndices")
         public java.util.List<String> targetIndices;
 
+        /**
+         * <strong>example:</strong>
+         * <p>crontab</p>
+         */
         @NameInMap("triggerType")
         public String triggerType;
 
@@ -95,18 +115,34 @@ public class ModifyElastictaskResponseBody extends TeaModel {
     }
 
     public static class ModifyElastictaskResponseBodyResultElasticShrinkTask extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>4 4 4 ? * WED</p>
+         */
         @NameInMap("cronExpression")
         public String cronExpression;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("elasticNodeCount")
         public Integer elasticNodeCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("replicaCount")
         public Integer replicaCount;
 
         @NameInMap("targetIndices")
         public java.util.List<String> targetIndices;
 
+        /**
+         * <strong>example:</strong>
+         * <p>crontab</p>
+         */
         @NameInMap("triggerType")
         public String triggerType;
 

@@ -6,18 +6,32 @@ import com.aliyun.tea.*;
 public class CreateVpcEndpointRequest extends TeaModel {
     /**
      * <p>The returned result details.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D***</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>epsrv-hp3xdsq46ael67lo****</p>
+     */
     @NameInMap("serviceId")
     public String serviceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-i</p>
+     */
     @NameInMap("zoneId")
     public String zoneId;
 
     /**
      * <p>The ID of the user endpoint service associated with the endpoint.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("dryRun")
     public Boolean dryRun;

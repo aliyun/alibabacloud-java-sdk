@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListConnectedClustersResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D***</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class ListConnectedClustersResponseBody extends TeaModel {
     public static class ListConnectedClustersResponseBodyResultResult extends TeaModel {
         /**
          * <p>The ID of the remote instance that is connected to the network of the current instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-09k1rocex0006****</p>
          */
         @NameInMap("instances")
         public String instances;
 
         /**
          * <p>The network type of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc</p>
          */
         @NameInMap("networkType")
         public String networkType;

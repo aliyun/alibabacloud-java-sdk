@@ -12,6 +12,9 @@ public class ListInstanceIndicesResponseBody extends TeaModel {
 
     /**
      * <p>The total number of indexes in Cloud Hosting.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F99407AB-2FA9-489E-A259-40CF6DCC****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,24 +57,36 @@ public class ListInstanceIndicesResponseBody extends TeaModel {
     public static class ListInstanceIndicesResponseBodyHeaders extends TeaModel {
         /**
          * <p>The details of the index list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         @NameInMap("X-Managed-Count")
         public Integer xManagedCount;
 
         /**
          * <p>The total number of indexes in the OpenStore cold phase.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18093942932</p>
          */
         @NameInMap("X-Managed-StorageSize")
         public Long xManagedStorageSize;
 
         /**
          * <p>The time when the index list was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("X-OSS-Count")
         public Integer xOSSCount;
 
         /**
          * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9093942932</p>
          */
         @NameInMap("X-OSS-StorageSize")
         public Long xOSSStorageSize;
@@ -118,54 +133,85 @@ public class ListInstanceIndicesResponseBody extends TeaModel {
     public static class ListInstanceIndicesResponseBodyResult extends TeaModel {
         /**
          * <p>The name of the Elasticsearch index.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-11T05:49:41.114Z</p>
          */
         @NameInMap("createTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>green</p>
+         */
         @NameInMap("health")
         public String health;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{    &quot;indices&quot;: {         &quot;.ds-console-2021.08.18-000002&quot;: {             &quot;index&quot;: &quot;.ds-console-2021.08.18-000002&quot;,             &quot;managed&quot;: true,             &quot;policy&quot;: &quot;console&quot;,             &quot;lifecycle_date_millis&quot;: 1629277498775,             &quot;age&quot;: &quot;2.64h&quot;,             &quot;phase&quot;: &quot;hot&quot;,             &quot;phase_time_millis&quot;: 1629277450334,             &quot;action&quot;: &quot;complete&quot;,             &quot;action_time_millis&quot;: 1629278605586,             &quot;step&quot;: &quot;complete&quot;,             &quot;step_time_millis&quot;: 1629278605586,             &quot;phase_execution&quot;: {                 &quot;policy&quot;: &quot;console&quot;,                 &quot;phase_definition&quot;: {                     &quot;min_age&quot;: &quot;0s&quot;,                     &quot;actions&quot;: {                         &quot;rollover&quot;: {                             &quot;max_size&quot;: &quot;1gb&quot;,                             &quot;max_age&quot;: &quot;1d&quot;,                             &quot;max_docs&quot;: 10000                         },                         &quot;set_priority&quot;: {                             &quot;priority&quot;: 1000                         }                     }                 },                 &quot;version&quot;: 1,                 &quot;modified_date_in_millis&quot;: 1629277370953             }         }     } }</p>
+         */
         @NameInMap("ilmExplain")
         public String ilmExplain;
 
         /**
          * <p>The managed status of the index. The following three statuses are supported:</p>
-         * <br>
-         * <p>*   following: Hosting.</p>
-         * <p>*   closing: The instance is being unhosted.</p>
-         * <p>*   closed: unmanaged.</p>
+         * <ul>
+         * <li>following: Hosting.</li>
+         * <li>closing: The instance is being unhosted.</li>
+         * <li>closed: unmanaged.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("isManaged")
         public String isManaged;
 
         /**
          * <p>The current storage lifecycle. Value meaning:</p>
-         * <br>
-         * <p>*   warm: warm.</p>
-         * <p>*   cold: the cold phase.</p>
-         * <p>*   hot: hot phase.</p>
-         * <p>*   delete: deletes a stage.</p>
-         * <br>
-         * <p>>  If this parameter is empty, the current index is not managed by the lifecycle.</p>
+         * <ul>
+         * <li>warm: warm.</li>
+         * <li>cold: the cold phase.</li>
+         * <li>hot: hot phase.</li>
+         * <li>delete: deletes a stage.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If this parameter is empty, the current index is not managed by the lifecycle.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>closing</p>
          */
         @NameInMap("managedStatus")
         public String managedStatus;
 
         /**
          * <p>The full lifecycle status of the current index.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>.kibana_task_manager_1</p>
          */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>warm</p>
+         */
         @NameInMap("phase")
         public String phase;
 
         /**
          * <p>The running status of the index. The following three statuses are supported:</p>
-         * <br>
-         * <p>*   green: healthy.</p>
-         * <p>*   yellow: alerts.</p>
-         * <p>*   red: an exception.</p>
+         * <ul>
+         * <li>green: healthy.</li>
+         * <li>yellow: alerts.</li>
+         * <li>red: an exception.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>49298589</p>
          */
         @NameInMap("size")
         public Long size;

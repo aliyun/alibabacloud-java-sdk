@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DiagnoseInstanceRequest extends TeaModel {
     /**
      * <p>The timestamp when the diagnostic report was generated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -16,11 +19,18 @@ public class DiagnoseInstanceRequest extends TeaModel {
     @NameInMap("indices")
     public java.util.List<String> indices;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ALL</p>
+     */
     @NameInMap("type")
     public String type;
 
     /**
      * <p>The returned data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("lang")
     public String lang;

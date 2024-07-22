@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListDataTasksResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D***</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,42 +43,63 @@ public class ListDataTasksResponseBody extends TeaModel {
     public static class ListDataTasksResponseBodyResultSinkCluster extends TeaModel {
         /**
          * <p>The type of the target cluster. Default value: elasticsearch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("dataSourceType")
         public String dataSourceType;
 
         /**
          * <p>The public network access address of the target cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://192.168.xx.xx:4101">http://192.168.xx.xx:4101</a></p>
          */
         @NameInMap("endpoint")
         public String endpoint;
 
         /**
          * <p>The target index.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>product_info</p>
          */
         @NameInMap("index")
         public String index;
 
         /**
          * <p>The type of the destination index.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>_doc</p>
          */
         @NameInMap("type")
         public String type;
 
         /**
          * <p>The ID of the VPC to which the cluster belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-2ze55voww95g82gak****</p>
          */
         @NameInMap("vpcId")
         public String vpcId;
 
         /**
          * <p>The instance ID or Server Load Balancer (SLB) ID of the current cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-09k1rnu3g0002****-worker</p>
          */
         @NameInMap("vpcInstanceId")
         public String vpcInstanceId;
 
         /**
          * <p>The access port number of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9200</p>
          */
         @NameInMap("vpcInstancePort")
         public String vpcInstancePort;
@@ -146,36 +170,54 @@ public class ListDataTasksResponseBody extends TeaModel {
     public static class ListDataTasksResponseBodyResultSourceCluster extends TeaModel {
         /**
          * <p>The type of the source cluster. Default value: elasticsearch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("dataSourceType")
         public String dataSourceType;
 
         /**
          * <p>The index whose data you want to migrate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>product_info</p>
          */
         @NameInMap("index")
         public String index;
 
         /**
          * <p>The Mapping configuration of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;_doc\&quot;:{\&quot;properties\&quot;:{\&quot;user\&quot;:{\&quot;properties\&quot;:{\&quot;last\&quot;:{\&quot;type\&quot;:\&quot;text\&quot;,...}}}}}}</p>
          */
         @NameInMap("mapping")
         public String mapping;
 
         /**
          * <p>The routing field to index the table. It is set to the primary key by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>_id</p>
          */
         @NameInMap("routing")
         public String routing;
 
         /**
          * <p>The Settings of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\n  \&quot;index\&quot;: {\n    \&quot;replication\&quot;: {\n}.....}}</p>
          */
         @NameInMap("settings")
         public String settings;
 
         /**
          * <p>The type of the destination index.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>_doc</p>
          */
         @NameInMap("type")
         public String type;
@@ -238,6 +280,9 @@ public class ListDataTasksResponseBody extends TeaModel {
     public static class ListDataTasksResponseBodyResult extends TeaModel {
         /**
          * <p>The time when the site monitoring task was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-07-30 06:32:18</p>
          */
         @NameInMap("createTime")
         public String createTime;
@@ -256,12 +301,18 @@ public class ListDataTasksResponseBody extends TeaModel {
 
         /**
          * <p>The status of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         @NameInMap("status")
         public String status;
 
         /**
          * <p>The ID of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>et_cn_mfv1233r47272****</p>
          */
         @NameInMap("taskId")
         public String taskId;

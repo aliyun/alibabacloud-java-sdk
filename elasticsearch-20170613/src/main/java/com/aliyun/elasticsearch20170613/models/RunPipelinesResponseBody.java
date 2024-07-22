@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class RunPipelinesResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The returned result. Valid values:</p>
-     * <br>
-     * <p>*   true: successful</p>
-     * <p>*   false: failed</p>
+     * <ul>
+     * <li>true: successful</li>
+     * <li>false: failed</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Result")
     public Boolean result;

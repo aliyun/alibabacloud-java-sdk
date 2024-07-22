@@ -6,7 +6,6 @@ import com.aliyun.tea.*;
 public class UpdateKibanaWhiteIpsRequest extends TeaModel {
     /**
      * <p>The IP address whitelists. This parameter is available if the whiteIpGroup parameter is left empty. The default IP address whitelist is updated based on the value of this parameter.</p>
-     * <br>
      * <p>You cannot configure both the kibanaIPWhitelist and whiteIpGroup parameters.</p>
      */
     @NameInMap("kibanaIPWhitelist")
@@ -20,16 +19,23 @@ public class UpdateKibanaWhiteIpsRequest extends TeaModel {
 
     /**
      * <p>The update mode. Valid values:</p>
-     * <br>
-     * <p>*   Cover: overwrites the IP addresses in the specified IP address whitelist with the IP addresses specified by using the ips parameter. This is the default value.</p>
-     * <p>*   Append: adds the IP addresses specified by using the ips parameter to the specified IP address whitelist.</p>
-     * <p>*   Delete: deletes the IP addresses specified by using the ips parameter from the specified IP address whitelist. At least one IP address must be retained for the whitelist.</p>
+     * <ul>
+     * <li>Cover: overwrites the IP addresses in the specified IP address whitelist with the IP addresses specified by using the ips parameter. This is the default value.</li>
+     * <li>Append: adds the IP addresses specified by using the ips parameter to the specified IP address whitelist.</li>
+     * <li>Delete: deletes the IP addresses specified by using the ips parameter from the specified IP address whitelist. At least one IP address must be retained for the whitelist.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF****</p>
      */
     @NameInMap("clientToken")
     public String clientToken;
 
     /**
      * <p>The body of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Cover</p>
      */
     @NameInMap("modifyMode")
     public String modifyMode;
@@ -74,6 +80,9 @@ public class UpdateKibanaWhiteIpsRequest extends TeaModel {
     public static class UpdateKibanaWhiteIpsRequestWhiteIpGroup extends TeaModel {
         /**
          * <p>The type of the whitelist. Set the value to PUBLIC_KIBANA. This value indicates a public IP address whitelist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_group_name</p>
          */
         @NameInMap("groupName")
         public String groupName;
@@ -86,6 +95,9 @@ public class UpdateKibanaWhiteIpsRequest extends TeaModel {
 
         /**
          * <p>The IP addresses in the whitelist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PUBLIC_KIBANA</p>
          */
         @NameInMap("whiteIpType")
         public String whiteIpType;

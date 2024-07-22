@@ -6,69 +6,103 @@ import com.aliyun.tea.*;
 public class ListInstanceRequest extends TeaModel {
     /**
      * <p>cn-hangzhou-i</p>
+     * 
+     * <strong>example:</strong>
+     * <p>aliyunes_test1</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
      * <p>advanced</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6.7_with_X-Pack</p>
      */
     @NameInMap("esVersion")
     public String esVersion;
 
     /**
      * <p>The number of data nodes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>advanced</p>
      */
     @NameInMap("instanceCategory")
     public String instanceCategory;
 
     /**
      * <p>postpaid</p>
+     * 
+     * <strong>example:</strong>
+     * <p>es-cn-v641a0ta3000g****</p>
      */
     @NameInMap("instanceId")
     public String instanceId;
 
     /**
-     * <p>[{"tagKey":"key1","tagValue":"value1"}]</p>
+     * <p>[{&quot;tagKey&quot;:&quot;key1&quot;,&quot;tagValue&quot;:&quot;value1&quot;}]</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("page")
     public Integer page;
 
     /**
      * <p>Specifies whether to include dedicated master nodes. Valid values:</p>
-     * <br>
-     * <p>*   true: The files contain data that is dumped to the IA storage medium.</p>
-     * <p>*   false: The files do not contain data that is dumped to the IA storage medium.</p>
+     * <ul>
+     * <li>true: The files contain data that is dumped to the IA storage medium.</li>
+     * <li>false: The files do not contain data that is dumped to the IA storage medium.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>postpaid</p>
      */
     @NameInMap("paymentType")
     public String paymentType;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-aekzvowej3i****</p>
      */
     @NameInMap("resourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>vpc-bp16k1dvzxtmagcva\\*\\*\\*\\*</p>
+     * <p>vpc-bp16k1dvzxtmagcva\<em>\</em>\<em>\</em></p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("size")
     public Integer size;
 
     /**
      * <p>The header of the response.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;tagKey&quot;:&quot;key1&quot;,&quot;tagValue&quot;:&quot;value1&quot;}]</p>
      */
     @NameInMap("tags")
     public String tags;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-bp16k1dvzxtmagcva****</p>
      */
     @NameInMap("vpcId")
     public String vpcId;
 
     /**
      * <p>The returned data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-i</p>
      */
     @NameInMap("zoneId")
     public String zoneId;

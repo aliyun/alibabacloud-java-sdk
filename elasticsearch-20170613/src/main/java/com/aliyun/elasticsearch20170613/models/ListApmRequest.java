@@ -4,18 +4,38 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListApmRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>APMtest</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>apm-cn-i7m2fuae****</p>
+     */
     @NameInMap("instanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>es-cn-i7m2fsfhc001x****</p>
+     */
     @NameInMap("output")
     public String output;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("page")
     public Long page;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("size")
     public Long size;
 

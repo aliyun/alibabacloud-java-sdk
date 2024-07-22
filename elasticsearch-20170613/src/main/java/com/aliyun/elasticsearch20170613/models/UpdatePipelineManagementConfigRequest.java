@@ -7,18 +7,34 @@ public class UpdatePipelineManagementConfigRequest extends TeaModel {
     @NameInMap("endpoints")
     public java.util.List<String> endpoints;
 
+    /**
+     * <strong>example:</strong>
+     * <hr>
+     */
     @NameInMap("password")
     public String password;
 
     @NameInMap("pipelineIds")
     public java.util.List<String> pipelineIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ES</p>
+     */
     @NameInMap("pipelineManagementType")
     public String pipelineManagementType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>elastic</p>
+     */
     @NameInMap("userName")
     public String userName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF****</p>
+     */
     @NameInMap("clientToken")
     public String clientToken;
 

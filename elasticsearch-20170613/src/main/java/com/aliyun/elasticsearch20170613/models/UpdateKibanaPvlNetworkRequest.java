@@ -4,6 +4,10 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class UpdateKibanaPvlNetworkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>es-cn-27a3mul6l00***-kibana</p>
+     */
     @NameInMap("endpointName")
     public String endpointName;
 
@@ -12,6 +16,9 @@ public class UpdateKibanaPvlNetworkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>es-cn-27a3mul6l0***-kibana-internal</p>
      */
     @NameInMap("pvlId")
     public String pvlId;

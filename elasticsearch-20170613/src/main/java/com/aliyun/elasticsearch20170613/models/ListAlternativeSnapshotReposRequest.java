@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListAlternativeSnapshotReposRequest extends TeaModel {
     /**
      * <p>Indicates whether to return the OSS reference repository added. The return value. Valid values: true and false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("alreadySetItems")
     public Boolean alreadySetItems;

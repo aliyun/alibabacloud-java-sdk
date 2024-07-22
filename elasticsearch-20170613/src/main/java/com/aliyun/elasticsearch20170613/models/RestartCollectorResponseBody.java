@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class RestartCollectorResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>84B4038A-AF38-4BF4-9FAD-EA92A4FFF00A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the shipper is restarted. Valid values:</p>
-     * <br>
-     * <p>*   true: The shipper is restarted.</p>
-     * <p>*   false: The shipper fails to be restarted.</p>
+     * <ul>
+     * <li>true: The shipper is restarted.</li>
+     * <li>false: The shipper fails to be restarted.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Result")
     public Boolean result;

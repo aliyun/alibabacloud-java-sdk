@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class RestartInstanceResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F99407AB-2FA9-489E-A259-40CF6DC****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,33 +43,47 @@ public class RestartInstanceResponseBody extends TeaModel {
     public static class RestartInstanceResponseBodyResultDictList extends TeaModel {
         /**
          * <p>The size of the Dictionary File. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2782602</p>
          */
         @NameInMap("fileSize")
         public Long fileSize;
 
         /**
          * <p>The name of the dictionary file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM_MAIN.dic</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>The source type. Valid values:</p>
-         * <br>
-         * <p>*   OSS: OSS open storage (need to ensure that OSS storage space is public readable.)</p>
-         * <p>*   ORIGIN: Open source Elasticsearch</p>
-         * <p>*   UPLOAD: Uploaded files</p>
+         * <ul>
+         * <li>OSS: OSS open storage (need to ensure that OSS storage space is public readable.)</li>
+         * <li>ORIGIN: Open source Elasticsearch</li>
+         * <li>UPLOAD: Uploaded files</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ORIGIN</p>
          */
         @NameInMap("sourceType")
         public String sourceType;
 
         /**
          * <p>The type of the dictionary. Valid values:</p>
-         * <br>
-         * <p>*   STOP: The STOP word.</p>
-         * <p>*   MAIN: MAIN Dictionary</p>
-         * <p>*   SYNONYMS: SYNONYMS</p>
-         * <p>*   ALI_WS: an Alibaba Dictionary.</p>
+         * <ul>
+         * <li>STOP: The STOP word.</li>
+         * <li>MAIN: MAIN Dictionary</li>
+         * <li>SYNONYMS: SYNONYMS</li>
+         * <li>ALI_WS: an Alibaba Dictionary.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>MAIN</p>
          */
         @NameInMap("type")
         public String type;
@@ -113,24 +130,36 @@ public class RestartInstanceResponseBody extends TeaModel {
     public static class RestartInstanceResponseBodyResultKibanaConfiguration extends TeaModel {
         /**
          * <p>The number of performance metrics.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("amount")
         public Integer amount;
 
         /**
          * <p>The size of the node storage space. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("disk")
         public Integer disk;
 
         /**
          * <p>The storage type of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_ssd</p>
          */
         @NameInMap("diskType")
         public String diskType;
 
         /**
          * <p>The specification of data nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>elasticsearch.n4.small</p>
          */
         @NameInMap("spec")
         public String spec;
@@ -177,24 +206,36 @@ public class RestartInstanceResponseBody extends TeaModel {
     public static class RestartInstanceResponseBodyResultMasterConfiguration extends TeaModel {
         /**
          * <p>The number of nodes in the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("amount")
         public Integer amount;
 
         /**
          * <p>The size of the node storage space. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("disk")
         public Integer disk;
 
         /**
          * <p>The storage type of the node. This tool only supports cloud_ssd (cloud SSD) disks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_ssd</p>
          */
         @NameInMap("diskType")
         public String diskType;
 
         /**
          * <p>The node specifications of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>elasticsearch.sn2ne.large</p>
          */
         @NameInMap("spec")
         public String spec;
@@ -241,24 +282,36 @@ public class RestartInstanceResponseBody extends TeaModel {
     public static class RestartInstanceResponseBodyResultNetworkConfig extends TeaModel {
         /**
          * <p>The network type. Only Virtual Private Cloud (VPC) is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc</p>
          */
         @NameInMap("type")
         public String type;
 
         /**
          * <p>The ID of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp16k1dvzxtmagcva****</p>
          */
         @NameInMap("vpcId")
         public String vpcId;
 
         /**
          * <p>The zone where the instance is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-i</p>
          */
         @NameInMap("vsArea")
         public String vsArea;
 
         /**
          * <p>The ID of the vSwitch associated with the specified VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp1k4ec6s7sjdbudw****</p>
          */
         @NameInMap("vswitchId")
         public String vswitchId;
@@ -305,18 +358,27 @@ public class RestartInstanceResponseBody extends TeaModel {
     public static class RestartInstanceResponseBodyResultNodeSpec extends TeaModel {
         /**
          * <p>The storage space size per data node. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         @NameInMap("disk")
         public Integer disk;
 
         /**
          * <p>The storage type of the node. Valid values: cloud_ssd and cloud_efficiency.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_ssd</p>
          */
         @NameInMap("diskType")
         public String diskType;
 
         /**
          * <p>The specification of data nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>elasticsearch.n4.small</p>
          */
         @NameInMap("spec")
         public String spec;
@@ -355,33 +417,47 @@ public class RestartInstanceResponseBody extends TeaModel {
     public static class RestartInstanceResponseBodyResultSynonymsDicts extends TeaModel {
         /**
          * <p>The size of the Dictionary File. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2782602</p>
          */
         @NameInMap("fileSize")
         public Long fileSize;
 
         /**
          * <p>The name of the dictionary file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM_MAIN.dic</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>The source type. Valid values:</p>
-         * <br>
-         * <p>*   OSS:OSS open storage (the OSS storage space must be publicly readable.)</p>
-         * <p>*   ORIGIN: open-source Elasticsearch</p>
-         * <p>*   UPLOAD</p>
+         * <ul>
+         * <li>OSS:OSS open storage (the OSS storage space must be publicly readable.)</li>
+         * <li>ORIGIN: open-source Elasticsearch</li>
+         * <li>UPLOAD</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ORIGIN</p>
          */
         @NameInMap("sourceType")
         public String sourceType;
 
         /**
          * <p>The type of the dictionary. Valid values:</p>
-         * <br>
-         * <p>*   STOP: The STOP word.</p>
-         * <p>*   MAIN: MAIN Dictionary</p>
-         * <p>*   SYNONYMS: SYNONYMS</p>
-         * <p>*   ALI_WS: an Alibaba Dictionary.</p>
+         * <ul>
+         * <li>STOP: The STOP word.</li>
+         * <li>MAIN: MAIN Dictionary</li>
+         * <li>SYNONYMS: SYNONYMS</li>
+         * <li>ALI_WS: an Alibaba Dictionary.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>STOP</p>
          */
         @NameInMap("type")
         public String type;
@@ -428,12 +504,18 @@ public class RestartInstanceResponseBody extends TeaModel {
     public static class RestartInstanceResponseBodyResult extends TeaModel {
         /**
          * <p>The time when the instance was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-07-06T10:18:48.662Z</p>
          */
         @NameInMap("createdAt")
         public String createdAt;
 
         /**
          * <p>The name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-abc</p>
          */
         @NameInMap("description")
         public String description;
@@ -446,18 +528,27 @@ public class RestartInstanceResponseBody extends TeaModel {
 
         /**
          * <p>The intranet access address of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-nif1q8auz0003****.elasticsearch.aliyuncs.com</p>
          */
         @NameInMap("domain")
         public String domain;
 
         /**
          * <p>The version of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6.7.0_with_X-Pack</p>
          */
         @NameInMap("esVersion")
         public String esVersion;
 
         /**
          * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-n6w1o1x0w001c****</p>
          */
         @NameInMap("instanceId")
         public String instanceId;
@@ -470,12 +561,18 @@ public class RestartInstanceResponseBody extends TeaModel {
 
         /**
          * <p>The public network access address of Kibana.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-nif1q8auz0003****.kibana.elasticsearch.aliyuncs.com</p>
          */
         @NameInMap("kibanaDomain")
         public String kibanaDomain;
 
         /**
          * <p>The public port of the Kibana network.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5601</p>
          */
         @NameInMap("kibanaPort")
         public Integer kibanaPort;
@@ -494,6 +591,9 @@ public class RestartInstanceResponseBody extends TeaModel {
 
         /**
          * <p>The number of data nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("nodeAmount")
         public Integer nodeAmount;
@@ -506,28 +606,38 @@ public class RestartInstanceResponseBody extends TeaModel {
 
         /**
          * <p>The billing method of the created ECS instance.</p>
-         * <br>
          * <p>Valid values: prepaid and postpaid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>postpaid</p>
          */
         @NameInMap("paymentType")
         public String paymentType;
 
         /**
          * <p>The public network access address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-n6w1o1x0w001c****.public.elasticsearch.aliyuncs.com</p>
          */
         @NameInMap("publicDomain")
         public String publicDomain;
 
         /**
          * <p>The public network port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9200</p>
          */
         @NameInMap("publicPort")
         public Integer publicPort;
 
         /**
          * <p>The state of the cluster.</p>
-         * <br>
          * <p>Supported: active (normal), activating (initializing), inactive (blocked), and invalid (expired).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>active</p>
          */
         @NameInMap("status")
         public String status;
@@ -540,6 +650,9 @@ public class RestartInstanceResponseBody extends TeaModel {
 
         /**
          * <p>The time when the instance was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-07-18T10:10:04.484Z</p>
          */
         @NameInMap("updatedAt")
         public String updatedAt;

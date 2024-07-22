@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class DeletePipelinesResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the pipeline is deleted. Valid values:</p>
-     * <br>
-     * <p>*   true: The pipeline is deleted.</p>
-     * <p>*   false: The pipeline fails to be deleted.</p>
+     * <ul>
+     * <li>true: The pipeline is deleted.</li>
+     * <li>false: The pipeline fails to be deleted.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Result")
     public Boolean result;

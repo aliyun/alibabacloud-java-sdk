@@ -7,17 +7,32 @@ public class ShrinkNodeRequest extends TeaModel {
     @NameInMap("body")
     public java.util.List<ShrinkNodeRequestBody> body;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF****</p>
+     */
     @NameInMap("clientToken")
     public String clientToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("count")
     public Integer count;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("ignoreStatus")
     public Boolean ignoreStatus;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>WORKER</p>
      */
     @NameInMap("nodeType")
     public String nodeType;
@@ -68,18 +83,38 @@ public class ShrinkNodeRequest extends TeaModel {
     }
 
     public static class ShrinkNodeRequestBody extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>192.168.xx.xx</p>
+         */
         @NameInMap("host")
         public String host;
 
+        /**
+         * <strong>example:</strong>
+         * <p>es-cn-pl32xxxxxxx-data-f-1</p>
+         */
         @NameInMap("hostName")
         public String hostName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>WORKER</p>
+         */
         @NameInMap("nodeType")
         public String nodeType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>9200</p>
+         */
         @NameInMap("port")
         public Integer port;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-shanghai-c</p>
+         */
         @NameInMap("zoneId")
         public String zoneId;
 

@@ -4,6 +4,10 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListPipelineIdsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>{     &quot;userName&quot;:&quot;elastic&quot;,     &quot;password&quot;:&quot;xxxxxx&quot; }</p>
+     */
     @NameInMap("body")
     public String body;
 

@@ -6,40 +6,56 @@ import com.aliyun.tea.*;
 public class ListSearchLogRequest extends TeaModel {
     /**
      * <p>20</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1531910852074</p>
      */
     @NameInMap("beginTime")
     public Long beginTime;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1531910852074</p>
      */
     @NameInMap("endTime")
     public Long endTime;
 
     /**
      * <p>The header of the response.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("page")
     public Integer page;
 
     /**
      * <p>1</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>host:172.16.**.** AND content:netty</p>
      */
     @NameInMap("query")
     public String query;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("size")
     public Integer size;
 
     /**
      * <p>1531910852074</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>INSTANCELOG</p>
      */
     @NameInMap("type")
     public String type;

@@ -7,6 +7,10 @@ public class ListComponentIndicesResponseBody extends TeaModel {
     @NameInMap("Headers")
     public ListComponentIndicesResponseBodyHeaders headers;
 
+    /**
+     * <strong>example:</strong>
+     * <p>F99407AB-2FA9-489E-A259-40CF6DCC47D9</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,6 +47,10 @@ public class ListComponentIndicesResponseBody extends TeaModel {
     }
 
     public static class ListComponentIndicesResponseBodyHeaders extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("X-Total-Count")
         public Long xTotalCount;
 
@@ -62,6 +70,10 @@ public class ListComponentIndicesResponseBody extends TeaModel {
     }
 
     public static class ListComponentIndicesResponseBodyResultContentTemplateSettingsIndexLifecycle extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>synthetics</p>
+         */
         @NameInMap("name")
         public String name;
 
@@ -81,6 +93,10 @@ public class ListComponentIndicesResponseBody extends TeaModel {
     }
 
     public static class ListComponentIndicesResponseBodyResultContentTemplateSettingsIndex extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>best_compression</p>
+         */
         @NameInMap("codec")
         public String codec;
 
@@ -149,12 +165,20 @@ public class ListComponentIndicesResponseBody extends TeaModel {
     }
 
     public static class ListComponentIndicesResponseBodyResultContent extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>{ &quot;description&quot;: &quot;set number of shards to one&quot; }</p>
+         */
         @NameInMap("_meta")
         public java.util.Map<String, ?> meta;
 
         @NameInMap("template")
         public ListComponentIndicesResponseBodyResultContentTemplate template;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("version")
         public Long version;
 
@@ -196,6 +220,10 @@ public class ListComponentIndicesResponseBody extends TeaModel {
         @NameInMap("content")
         public ListComponentIndicesResponseBodyResultContent content;
 
+        /**
+         * <strong>example:</strong>
+         * <p>synthetics-settings</p>
+         */
         @NameInMap("name")
         public String name;
 

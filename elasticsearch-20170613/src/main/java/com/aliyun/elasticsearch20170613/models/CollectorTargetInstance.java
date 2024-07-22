@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CollectorTargetInstance extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>collectorTargetInstance</p>
      */
     @NameInMap("configType")
     public String configType;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("enableMonitoring")
     public Boolean enableMonitoring;
@@ -21,30 +27,45 @@ public class CollectorTargetInstance extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>es-cn-ks8x****</p>
      */
     @NameInMap("instanceId")
     public String instanceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>elasticsearch</p>
      */
     @NameInMap("instanceType")
     public String instanceType;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>password</p>
      */
     @NameInMap("password")
     public String password;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>HTTP</p>
      */
     @NameInMap("protocol")
     public String protocol;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>username</p>
      */
     @NameInMap("userName")
     public String userName;

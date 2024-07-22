@@ -12,6 +12,9 @@ public class ListDictsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2937F832-F39E-41EF-89BA-B528342A2A3A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,6 +57,9 @@ public class ListDictsResponseBody extends TeaModel {
     public static class ListDictsResponseBodyHeaders extends TeaModel {
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("X-Total-Count")
         public Integer xTotalCount;
@@ -76,33 +82,49 @@ public class ListDictsResponseBody extends TeaModel {
     public static class ListDictsResponseBodyResult extends TeaModel {
         /**
          * <p>The link that is used to download the dictionary over the Internet. The link is valid for 90s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://test_bucket.oss-cn-hangzhou.aliyuncs.com/AliyunEs/test.dic?Expires=162573****&OSSAccessKeyId=LTAI*****V9&Signature=PNPO********BBGsJDO4V3VfU4sE%3D">http://test_bucket.oss-cn-hangzhou.aliyuncs.com/AliyunEs/test.dic?Expires=162573****&amp;OSSAccessKeyId=LTAI*****V9&amp;Signature=PNPO********BBGsJDO4V3VfU4sE%3D</a></p>
          */
         @NameInMap("downloadUrl")
         public String downloadUrl;
 
         /**
          * <p>The size of the dictionary file. Unit: byte.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2782602</p>
          */
         @NameInMap("fileSize")
         public Long fileSize;
 
         /**
          * <p>The name of the dictionary file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM_MAIN.dic</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>The source type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ORIGIN</p>
          */
         @NameInMap("sourceType")
         public String sourceType;
 
         /**
          * <p>The type of the IK dictionary. Valid values:</p>
-         * <br>
-         * <p>*   MAIN: main dictionary</p>
-         * <p>*   STOP: stopword list</p>
+         * <ul>
+         * <li>MAIN: main dictionary</li>
+         * <li>STOP: stopword list</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>MAIN</p>
          */
         @NameInMap("type")
         public String type;

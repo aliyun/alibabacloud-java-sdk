@@ -4,18 +4,34 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class GetEmonMonitorDataResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2D184B55-FA51-43F7-A1EF-E68A0545****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Result")
     public java.util.List<GetEmonMonitorDataResponseBodyResult> result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,21 +81,45 @@ public class GetEmonMonitorDataResponseBody extends TeaModel {
     }
 
     public static class GetEmonMonitorDataResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>{ &quot;1586249280&quot;: 465.1980465119913, &quot;1586249300&quot;: 213.45243650423305 }</p>
+         */
         @NameInMap("dps")
         public java.util.Map<String, ?> dps;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.0</p>
+         */
         @NameInMap("integrity")
         public Float integrity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1522127381471</p>
+         */
         @NameInMap("messageWatermark")
         public Long messageWatermark;
 
+        /**
+         * <strong>example:</strong>
+         * <p>elasticbuild.elasticsearch.source.total_doc_count</p>
+         */
         @NameInMap("metric")
         public String metric;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("summary")
         public Float summary;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;taskName&quot;:&quot;et-xxx&quot;,&quot;userId&quot;:&quot;123456&quot;}</p>
+         */
         @NameInMap("tags")
         public java.util.Map<String, ?> tags;
 

@@ -4,12 +4,20 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class UpdateLogstashRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("nodeAmount")
     public Integer nodeAmount;
 
     @NameInMap("nodeSpec")
     public UpdateLogstashRequestNodeSpec nodeSpec;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF****</p>
+     */
     @NameInMap("clientToken")
     public String clientToken;
 
@@ -43,12 +51,24 @@ public class UpdateLogstashRequest extends TeaModel {
     }
 
     public static class UpdateLogstashRequestNodeSpec extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("disk")
         public Integer disk;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cloud_efficiency</p>
+         */
         @NameInMap("diskType")
         public String diskType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>elasticsearch.sn1ne.large</p>
+         */
         @NameInMap("spec")
         public String spec;
 

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateSynonymsDictsResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7C5622CC-B312-426F-85AA-B0271*******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,27 +43,40 @@ public class UpdateSynonymsDictsResponseBody extends TeaModel {
     public static class UpdateSynonymsDictsResponseBodyResult extends TeaModel {
         /**
          * <p>The size of the dictionary file. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>220</p>
          */
         @NameInMap("fileSize")
         public Long fileSize;
 
         /**
          * <p>The name of the dictionary file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>deploy_0.txt</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>The source type of the dictionary file. Valid values:</p>
-         * <br>
-         * <p>*   OSS</p>
-         * <p>*   ORIGIN</p>
+         * <ul>
+         * <li>OSS</li>
+         * <li>ORIGIN</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OSS</p>
          */
         @NameInMap("sourceType")
         public String sourceType;
 
         /**
          * <p>The dictionary type. The value is fixed as SYNONYMS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYNONYMS</p>
          */
         @NameInMap("type")
         public String type;

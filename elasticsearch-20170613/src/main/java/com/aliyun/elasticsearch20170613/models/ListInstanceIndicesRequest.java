@@ -6,36 +6,54 @@ import com.aliyun.tea.*;
 public class ListInstanceIndicesRequest extends TeaModel {
     /**
      * <p>false</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("all")
     public Boolean all;
 
     /**
      * <p>15</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("isManaged")
     public Boolean isManaged;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("isOpenstore")
     public Boolean isOpenstore;
 
     /**
      * <p>1</p>
+     * 
+     * <strong>example:</strong>
+     * <p>log-0001</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
      * <p>The header of the response.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("page")
     public Integer page;
 
     /**
      * <p>The total size of the index in Cloud Hosting. Unit: bytes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>15</p>
      */
     @NameInMap("size")
     public Integer size;

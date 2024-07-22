@@ -9,12 +9,18 @@ public class UpdatePrivateNetworkWhiteIpsRequest extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF****</p>
      */
     @NameInMap("clientToken")
     public String clientToken;
 
     /**
      * <p>The results that are returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Cover</p>
      */
     @NameInMap("modifyMode")
     public String modifyMode;

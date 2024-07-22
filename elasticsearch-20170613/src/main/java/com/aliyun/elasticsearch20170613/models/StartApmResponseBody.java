@@ -4,9 +4,17 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class StartApmResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>526F30AB-4A43-55BA-910F-ACD275FD5F14</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Result")
     public Boolean result;
 

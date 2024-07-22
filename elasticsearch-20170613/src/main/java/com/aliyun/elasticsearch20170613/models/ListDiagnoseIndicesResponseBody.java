@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListDiagnoseIndicesResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F05ED12E-140A-4ACB-B059-3A508A69F2E1</p>
      */
     @NameInMap("RequestId")
     public String requestId;

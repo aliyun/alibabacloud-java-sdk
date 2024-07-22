@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class CancelLogstashDeletionResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>23EBF56B-2DC0-4507-8BE5-B87395DB0FEB</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the cluster is restored. Valid values:</p>
-     * <br>
-     * <p>*   true: The cluster is restored.</p>
-     * <p>*   false: The cluster is not restored.</p>
+     * <ul>
+     * <li>true: The cluster is restored.</li>
+     * <li>false: The cluster is not restored.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Result")
     public Boolean result;

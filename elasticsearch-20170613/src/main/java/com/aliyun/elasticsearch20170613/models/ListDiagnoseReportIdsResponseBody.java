@@ -12,6 +12,9 @@ public class ListDiagnoseReportIdsResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -51,6 +54,9 @@ public class ListDiagnoseReportIdsResponseBody extends TeaModel {
     public static class ListDiagnoseReportIdsResponseBodyHeaders extends TeaModel {
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("X-Total-Count")
         public Integer xTotalCount;

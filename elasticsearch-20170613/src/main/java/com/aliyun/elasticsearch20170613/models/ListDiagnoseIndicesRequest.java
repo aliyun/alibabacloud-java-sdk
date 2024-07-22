@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListDiagnoseIndicesRequest extends TeaModel {
     /**
      * <p>The language. Multiple languages are supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("lang")
     public String lang;

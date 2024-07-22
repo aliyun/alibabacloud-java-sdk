@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class UpdateDiagnosisSettingsResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Return results:</p>
-     * <br>
-     * <p>*   true: update successfully</p>
-     * <p>*   false: update failed</p>
+     * <ul>
+     * <li>true: update successfully</li>
+     * <li>false: update failed</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Result")
     public Boolean result;

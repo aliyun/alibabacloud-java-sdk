@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateSnapshotSettingResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class UpdateSnapshotSettingResponseBody extends TeaModel {
     public static class UpdateSnapshotSettingResponseBodyResult extends TeaModel {
         /**
          * <p>Specifies whether to enable automatic backup.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("enable")
         public Boolean enable;
 
         /**
          * <p>The start time of automatic backup.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0 0 01 ? * * *</p>
          */
         @NameInMap("quartzRegex")
         public String quartzRegex;

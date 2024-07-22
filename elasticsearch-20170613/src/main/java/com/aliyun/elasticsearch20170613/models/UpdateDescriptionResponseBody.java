@@ -4,6 +4,10 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class UpdateDescriptionResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>FDF34727-1664-44C1-A8DA-3EB72D60****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +36,10 @@ public class UpdateDescriptionResponseBody extends TeaModel {
     }
 
     public static class UpdateDescriptionResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>aliyunes_test_name</p>
+         */
         @NameInMap("description")
         public String description;
 

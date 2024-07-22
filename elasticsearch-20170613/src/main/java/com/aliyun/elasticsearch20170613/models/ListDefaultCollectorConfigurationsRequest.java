@@ -6,33 +6,43 @@ import com.aliyun.tea.*;
 public class ListDefaultCollectorConfigurationsRequest extends TeaModel {
     /**
      * <p>The shipper type. Valid values:</p>
-     * <br>
-     * <p>*   fileBeat</p>
-     * <p>*   metricBeat</p>
-     * <p>*   heartBeat</p>
-     * <p>*   auditBeat</p>
-     * <br>
+     * <ul>
+     * <li>fileBeat</li>
+     * <li>metricBeat</li>
+     * <li>heartBeat</li>
+     * <li>auditBeat</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>fileBeat</p>
      */
     @NameInMap("resType")
     public String resType;
 
     /**
      * <p>The shipper version. The shipper version varies based on the type of the machine on which the shipper is deployed. Valid values:</p>
-     * <br>
-     * <p>*   ECS: 6.8.5_with_community</p>
-     * <p>*   ACK: 6.8.13_with_community</p>
-     * <br>
+     * <ul>
+     * <li>ECS: 6.8.5_with_community</li>
+     * <li>ACK: 6.8.13_with_community</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6.8.5_with_community</p>
      */
     @NameInMap("resVersion")
     public String resVersion;
 
     /**
      * <p>The type of the machine on which the shipper is deployed. If you do not configure this parameter, the default configuration files of shippers deployed on all types of machines are returned. Valid values:</p>
-     * <br>
-     * <p>*   ECS: ECS instance</p>
-     * <p>*   ACK: ACK cluster</p>
+     * <ul>
+     * <li>ECS: ECS instance</li>
+     * <li>ACK: ACK cluster</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ECS</p>
      */
     @NameInMap("sourceType")
     public String sourceType;

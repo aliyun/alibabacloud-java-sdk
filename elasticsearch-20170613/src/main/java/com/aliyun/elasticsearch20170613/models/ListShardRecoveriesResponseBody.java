@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListShardRecoveriesResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F99407AB-2FA9-489E-A259-40CF6DCC47D9</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,79 +43,116 @@ public class ListShardRecoveriesResponseBody extends TeaModel {
     public static class ListShardRecoveriesResponseBodyResult extends TeaModel {
         /**
          * <p>The data restoration progress.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80%</p>
          */
         @NameInMap("bytesPercent")
         public String bytesPercent;
 
         /**
          * <p>The total amount of data that is restored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12086</p>
          */
         @NameInMap("bytesTotal")
         public Long bytesTotal;
 
         /**
          * <p>The file execution progress.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80.0%</p>
          */
         @NameInMap("filesPercent")
         public String filesPercent;
 
         /**
          * <p>The total number of files.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>79</p>
          */
         @NameInMap("filesTotal")
         public Long filesTotal;
 
         /**
          * <p>The name of the index.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-index-000001</p>
          */
         @NameInMap("index")
         public String index;
 
         /**
          * <p>The IP address of the source node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         @NameInMap("sourceHost")
         public String sourceHost;
 
         /**
          * <p>The name of the source node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2Kni3dJ</p>
          */
         @NameInMap("sourceNode")
         public String sourceNode;
 
         /**
          * <p>The data restoration status. Valid values:</p>
-         * <br>
-         * <p>*   done: Data restoration is complete.</p>
-         * <p>*   finalize: Data is being cleared.</p>
-         * <p>*   index: Index metadata is being read, and bytes are being copied from source to destination.</p>
-         * <p>*   init: Data restoration is not started.</p>
-         * <p>*   start: Data restoration is started.</p>
-         * <p>*   translog: Translogs are being redone.</p>
+         * <ul>
+         * <li>done: Data restoration is complete.</li>
+         * <li>finalize: Data is being cleared.</li>
+         * <li>index: Index metadata is being read, and bytes are being copied from source to destination.</li>
+         * <li>init: Data restoration is not started.</li>
+         * <li>start: Data restoration is started.</li>
+         * <li>translog: Translogs are being redone.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>done</p>
          */
         @NameInMap("stage")
         public String stage;
 
         /**
          * <p>The IP address of the destination node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         @NameInMap("targetHost")
         public String targetHost;
 
         /**
          * <p>The name of the destination node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>YVVKLmW</p>
          */
         @NameInMap("targetNode")
         public String targetNode;
 
         /**
          * <p>The number of translog operations to be restored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12086</p>
          */
         @NameInMap("translogOps")
         public Long translogOps;
 
         /**
          * <p>The restoration progress of translog operations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80%</p>
          */
         @NameInMap("translogOpsPercent")
         public String translogOpsPercent;

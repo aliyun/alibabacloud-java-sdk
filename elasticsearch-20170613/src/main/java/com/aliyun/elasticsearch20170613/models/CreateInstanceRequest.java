@@ -7,6 +7,10 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("clientNodeConfiguration")
     public ClientNodeConfiguration clientNodeConfiguration;
 
+    /**
+     * <strong>example:</strong>
+     * <p>es</p>
+     */
     @NameInMap("description")
     public String description;
 
@@ -15,16 +19,26 @@ public class CreateInstanceRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>es_password</p>
      */
     @NameInMap("esAdminPassword")
     public String esAdminPassword;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5.5.3_with_X-Pack</p>
      */
     @NameInMap("esVersion")
     public String esVersion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>advanced</p>
+     */
     @NameInMap("instanceCategory")
     public String instanceCategory;
 
@@ -42,6 +56,9 @@ public class CreateInstanceRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("nodeAmount")
     public Integer nodeAmount;
@@ -52,9 +69,17 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("paymentInfo")
     public PaymentInfo paymentInfo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>postpaid</p>
+     */
     @NameInMap("paymentType")
     public String paymentType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rg-aekzu7tsu4nem4q</p>
+     */
     @NameInMap("resourceGroupId")
     public String resourceGroupId;
 
@@ -64,9 +89,17 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("warmNodeConfiguration")
     public WarmNodeConfiguration warmNodeConfiguration;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("zoneCount")
     public Integer zoneCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF****</p>
+     */
     @NameInMap("clientToken")
     public String clientToken;
 

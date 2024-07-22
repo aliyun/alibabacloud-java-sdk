@@ -12,6 +12,9 @@ public class ListKibanaPluginsResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>11234B4A-34CE-473B-8E61-AD95702E****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,6 +57,9 @@ public class ListKibanaPluginsResponseBody extends TeaModel {
     public static class ListKibanaPluginsResponseBodyHeaders extends TeaModel {
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("X-Total-Count")
         public Integer xTotalCount;
@@ -76,30 +82,45 @@ public class ListKibanaPluginsResponseBody extends TeaModel {
     public static class ListKibanaPluginsResponseBodyResult extends TeaModel {
         /**
          * <p>The description of the plug-in.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Customize DSL statements to query data.</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
          * <p>The name of the plug-in.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bsearch_querybuilder</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>The source of the plug-in.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM</p>
          */
         @NameInMap("source")
         public String source;
 
         /**
          * <p>The URL of the introduction to the plug-in. The value null is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://xxxx">https://xxxx</a></p>
          */
         @NameInMap("specificationUrl")
         public String specificationUrl;
 
         /**
          * <p>The installation status of the plug-in.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INSTALLED</p>
          */
         @NameInMap("state")
         public String state;

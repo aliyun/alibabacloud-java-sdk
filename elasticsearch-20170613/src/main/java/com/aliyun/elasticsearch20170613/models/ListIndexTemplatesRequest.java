@@ -4,12 +4,24 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListIndexTemplatesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>my-template</p>
+     */
     @NameInMap("indexTemplate")
     public String indexTemplate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("page")
     public Integer page;
 
+    /**
+     * <strong>example:</strong>
+     * <p>50</p>
+     */
     @NameInMap("size")
     public Integer size;
 

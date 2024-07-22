@@ -7,22 +7,32 @@ public class ValidateShrinkNodesRequest extends TeaModel {
     @NameInMap("body")
     public java.util.List<ValidateShrinkNodesRequestBody> body;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("count")
     public Integer count;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("ignoreStatus")
     public Boolean ignoreStatus;
 
     /**
      * <p>Returned results:</p>
-     * <br>
-     * <p>*   true: can be scaled in</p>
-     * <p>*   false: cannot be scaled in.</p>
-     * <br>
+     * <ul>
+     * <li>true: can be scaled in</li>
+     * <li>false: cannot be scaled in.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>WORKER</p>
      */
     @NameInMap("nodeType")
     public String nodeType;
@@ -65,18 +75,38 @@ public class ValidateShrinkNodesRequest extends TeaModel {
     }
 
     public static class ValidateShrinkNodesRequestBody extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>192.168.xx.xx</p>
+         */
         @NameInMap("host")
         public String host;
 
+        /**
+         * <strong>example:</strong>
+         * <p>es-cn-pl32xxxxxxx-data-f-1</p>
+         */
         @NameInMap("hostName")
         public String hostName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>WORKER</p>
+         */
         @NameInMap("nodeType")
         public String nodeType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>9200</p>
+         */
         @NameInMap("port")
         public Integer port;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-shanghai-c</p>
+         */
         @NameInMap("zoneId")
         public String zoneId;
 

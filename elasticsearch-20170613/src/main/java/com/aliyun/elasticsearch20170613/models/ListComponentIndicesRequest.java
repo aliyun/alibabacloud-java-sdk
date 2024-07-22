@@ -4,12 +4,30 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListComponentIndicesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>template</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
     @NameInMap("page")
     public Integer page;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
     @NameInMap("size")
     public Integer size;
 

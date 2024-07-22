@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class InitializeOperationRoleResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>29101430-4797-4D1D-96C3-9FCBCCA8F845</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the service-linked role is created. Valid values:</p>
-     * <br>
-     * <p>*   true: The service-linked role is created.</p>
-     * <p>*   false: The service-linked role fails to be created.</p>
+     * <ul>
+     * <li>true: The service-linked role is created.</li>
+     * <li>false: The service-linked role fails to be created.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Result")
     public Boolean result;

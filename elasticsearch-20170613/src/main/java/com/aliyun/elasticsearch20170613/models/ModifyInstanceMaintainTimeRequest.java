@@ -4,9 +4,17 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceMaintainTimeRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF****</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{     &quot;openMaintainTime&quot;: true,     &quot;maintainStartTime&quot;: &quot;03:00Z&quot;,     &quot;maintainEndTime&quot;: &quot;04:00Z&quot; }</p>
+     */
     @NameInMap("body")
     public String body;
 

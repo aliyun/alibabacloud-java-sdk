@@ -4,9 +4,17 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class DeleteIndexTemplateResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>A0761F7E-0B50-46B9-8CAA-EBB3A420****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Result")
     public Boolean result;
 

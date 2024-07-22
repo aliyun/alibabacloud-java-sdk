@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DiagnoseInstanceResponseBody extends TeaModel {
     /**
      * <p>The ID of the report.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D***</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,16 +43,31 @@ public class DiagnoseInstanceResponseBody extends TeaModel {
     public static class DiagnoseInstanceResponseBodyResult extends TeaModel {
         /**
          * <p>The ID of the diagnostic instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1535745731000</p>
          */
         @NameInMap("createTime")
         public Long createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>es-cn-n6w1o1x0w001c****</p>
+         */
         @NameInMap("instanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>trigger__2020-08-17T17:09:02</p>
+         */
         @NameInMap("reportId")
         public String reportId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
+         */
         @NameInMap("state")
         public String state;
 

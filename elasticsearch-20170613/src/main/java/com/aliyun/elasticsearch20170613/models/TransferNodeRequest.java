@@ -7,11 +7,18 @@ public class TransferNodeRequest extends TeaModel {
     @NameInMap("body")
     public java.util.List<TransferNodeRequestBody> body;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF****</p>
+     */
     @NameInMap("clientToken")
     public String clientToken;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>WORKER</p>
      */
     @NameInMap("nodeType")
     public String nodeType;
@@ -46,12 +53,24 @@ public class TransferNodeRequest extends TeaModel {
     }
 
     public static class TransferNodeRequestBody extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>192.168.xx.xx</p>
+         */
         @NameInMap("host")
         public String host;
 
+        /**
+         * <strong>example:</strong>
+         * <p>9200</p>
+         */
         @NameInMap("port")
         public Integer port;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-shanghai-c</p>
+         */
         @NameInMap("zoneId")
         public String zoneId;
 

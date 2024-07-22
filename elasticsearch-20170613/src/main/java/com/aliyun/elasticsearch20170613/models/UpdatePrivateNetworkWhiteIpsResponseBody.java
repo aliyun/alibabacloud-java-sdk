@@ -4,6 +4,10 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class UpdatePrivateNetworkWhiteIpsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>6DEBE5EE-0368-4757-8F82-EF9C3972****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

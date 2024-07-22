@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListKibanaPvlNetworkResponseBody extends TeaModel {
     /**
      * <p>request id</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D***</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -35,9 +38,17 @@ public class ListKibanaPvlNetworkResponseBody extends TeaModel {
     }
 
     public static class ListKibanaPvlNetworkResponseBodyResultVSwitchIdsZone extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>vsw-xdefafns***</p>
+         */
         @NameInMap("vswitchId")
         public String vswitchId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-e</p>
+         */
         @NameInMap("zoneId")
         public String zoneId;
 
@@ -65,18 +76,38 @@ public class ListKibanaPvlNetworkResponseBody extends TeaModel {
     }
 
     public static class ListKibanaPvlNetworkResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2024-03-07T06:26:28Z</p>
+         */
         @NameInMap("createTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ep-bp1tah7zbrwmkjef****</p>
+         */
         @NameInMap("endpointId")
         public String endpointId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>es-cn-xxdjfia****-kibana</p>
+         */
         @NameInMap("endpointName")
         public String endpointName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Connected</p>
+         */
         @NameInMap("endpointStatus")
         public String endpointStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>es-cn-27a3mul6l***-kibana-internal</p>
+         */
         @NameInMap("pvlId")
         public String pvlId;
 
@@ -86,6 +117,10 @@ public class ListKibanaPvlNetworkResponseBody extends TeaModel {
         @NameInMap("vSwitchIdsZone")
         public java.util.List<ListKibanaPvlNetworkResponseBodyResultVSwitchIdsZone> vSwitchIdsZone;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vpc-bp16k1dvzxtma*****</p>
+         */
         @NameInMap("vpcId")
         public String vpcId;
 

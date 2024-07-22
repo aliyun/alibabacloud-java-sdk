@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListAckNamespacesResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>95789100-A329-473B-9D14-9E0B7DB4BD5A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class ListAckNamespacesResponseBody extends TeaModel {
     public static class ListAckNamespacesResponseBodyResult extends TeaModel {
         /**
          * <p>The namespace of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>logging</p>
          */
         @NameInMap("namespace")
         public String namespace;
 
         /**
          * <p>The status of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
         @NameInMap("status")
         public String status;

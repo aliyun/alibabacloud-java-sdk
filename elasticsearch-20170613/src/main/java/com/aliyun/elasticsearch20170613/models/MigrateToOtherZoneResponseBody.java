@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class MigrateToOtherZoneResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Return results:</p>
-     * <br>
-     * <p>*   true: migration succeeded</p>
-     * <p>*   false: The migration fails</p>
+     * <ul>
+     * <li>true: migration succeeded</li>
+     * <li>false: The migration fails</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Result")
     public Boolean result;

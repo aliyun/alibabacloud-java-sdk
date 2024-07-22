@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribePipelineManagementConfigResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D***</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,13 +42,19 @@ public class DescribePipelineManagementConfigResponseBody extends TeaModel {
 
     public static class DescribePipelineManagementConfigResponseBodyResult extends TeaModel {
         /**
-         * <p>The access addresses of the Elasticsearch cluster. Specify each address in the `http://Endpoint of the Elasticsearch cluster:Port number` format.</p>
+         * <p>The access addresses of the Elasticsearch cluster. Specify each address in the <code>http://Endpoint of the Elasticsearch cluster:Port number</code> format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;<a href="http://es-cn-n6w1o1x0w001c****.elasticsearch.aliyuncs.com:9200%22%5D">http://es-cn-n6w1o1x0w001c****.elasticsearch.aliyuncs.com:9200&quot;]</a></p>
          */
         @NameInMap("endpoints")
         public String endpoints;
 
         /**
          * <p>The ID of the Elasticsearch cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-n6w1o1x0w001c****</p>
          */
         @NameInMap("esInstanceId")
         public String esInstanceId;
@@ -55,12 +64,18 @@ public class DescribePipelineManagementConfigResponseBody extends TeaModel {
 
         /**
          * <p>The pipeline management method. Valid values: Kibana and MULTIPLE_PIPELINE.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MULTIPLE_PIPELINE</p>
          */
         @NameInMap("pipelineManagementType")
         public String pipelineManagementType;
 
         /**
          * <p>The username that is used to access the Elasticsearch cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>elastic</p>
          */
         @NameInMap("userName")
         public String userName;

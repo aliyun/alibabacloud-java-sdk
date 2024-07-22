@@ -4,17 +4,27 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListDictInformationRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ALIWS</p>
+     */
     @NameInMap("analyzerType")
     public String analyzerType;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>search-cloud-test-cn-****</p>
      */
     @NameInMap("bucketName")
     public String bucketName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss/dic_0.dic</p>
      */
     @NameInMap("key")
     public String key;

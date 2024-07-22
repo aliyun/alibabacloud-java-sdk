@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ListTagResourcesRequest extends TeaModel {
     /**
      * <p>The number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1d2db86sca4384811e0b5e8707e******</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>1d2db86sca4384811e0b5e8707e\\*\\*\\*\\*\\*\\*</p>
+     * <p>1d2db86sca4384811e0b5e8707e\<em>\</em>\<em>\</em>\<em>\</em></p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Page")
     @Deprecated
@@ -19,20 +25,28 @@ public class ListTagResourcesRequest extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;es-cn-aaa&quot;,&quot;es-cn-bbb&quot;]</p>
      */
     @NameInMap("ResourceIds")
     public String resourceIds;
 
     /**
-     * <p>[{"key":"env","value","dev"},{"key":"dev", "value":"IT"}]</p>
-     * <br>
+     * <p>[{&quot;key&quot;:&quot;env&quot;,&quot;value&quot;,&quot;dev&quot;},{&quot;key&quot;:&quot;dev&quot;, &quot;value&quot;:&quot;IT&quot;}]</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>INSTANCE</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
-     * <p>["es-cn-aaa","es-cn-bbb"]</p>
+     * <p>[&quot;es-cn-aaa&quot;,&quot;es-cn-bbb&quot;]</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("Size")
     @Deprecated
@@ -40,8 +54,12 @@ public class ListTagResourcesRequest extends TeaModel {
 
     /**
      * <p>The header of the response. This parameter is empty and is for reference only. You cannot force this parameter to be relied on in the program.</p>
-     * <br>
-     * <p>>  The return examples does not contain this parameter.</p>
+     * <blockquote>
+     * <p> The return examples does not contain this parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;key&quot;:&quot;env&quot;,&quot;value&quot;,&quot;dev&quot;},{&quot;key&quot;:&quot;dev&quot;,  &quot;value&quot;:&quot;IT&quot;}]</p>
      */
     @NameInMap("Tags")
     public String tags;

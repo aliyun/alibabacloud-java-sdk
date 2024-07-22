@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListSnapshotReposByInstanceIdResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,24 +43,36 @@ public class ListSnapshotReposByInstanceIdResponseBody extends TeaModel {
     public static class ListSnapshotReposByInstanceIdResponseBodyResult extends TeaModel {
         /**
          * <p>Reference instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-6ja1ro4jt000c****</p>
          */
         @NameInMap("instanceId")
         public String instanceId;
 
         /**
          * <p>The address of the repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-6ja1ro4jt000c****</p>
          */
         @NameInMap("repoPath")
         public String repoPath;
 
         /**
          * <p>Reference warehouse name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliyun_snapshot_from_es-cn-6ja1ro4jt000c****</p>
          */
         @NameInMap("snapWarehouse")
         public String snapWarehouse;
 
         /**
          * <p>Reference warehouse status. available indicates that it is valid. unavailable indicates that it is invalid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>available</p>
          */
         @NameInMap("status")
         public String status;

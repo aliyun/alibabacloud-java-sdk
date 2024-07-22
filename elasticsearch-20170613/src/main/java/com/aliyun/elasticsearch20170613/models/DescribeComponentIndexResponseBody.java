@@ -4,6 +4,10 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class DescribeComponentIndexResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>F99407AB-2FA9-489E-A259-40CF6DCC47D9</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +36,24 @@ public class DescribeComponentIndexResponseBody extends TeaModel {
     }
 
     public static class DescribeComponentIndexResponseBodyResultTemplate extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("aliases")
         public java.util.Map<String, ?> aliases;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{ &quot;properties&quot;: { &quot;@timestamp&quot;: { &quot;type&quot;: &quot;date&quot; } } }</p>
+         */
         @NameInMap("mappings")
         public java.util.Map<String, ?> mappings;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{ &quot;index.number_of_replicas&quot;: 0 }</p>
+         */
         @NameInMap("settings")
         public java.util.Map<String, ?> settings;
 
@@ -73,6 +89,10 @@ public class DescribeComponentIndexResponseBody extends TeaModel {
     }
 
     public static class DescribeComponentIndexResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>{ &quot;description&quot;: &quot;set number of shards to one&quot; }</p>
+         */
         @NameInMap("_meta")
         public java.util.Map<String, ?> meta;
 

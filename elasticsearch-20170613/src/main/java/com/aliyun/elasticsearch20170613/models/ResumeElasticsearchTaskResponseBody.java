@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class ResumeElasticsearchTaskResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Return results:</p>
-     * <br>
-     * <p>*   true: resume the interrupted change successfully</p>
-     * <p>*   false: resume the interrupted change successfully failed</p>
+     * <ul>
+     * <li>true: resume the interrupted change successfully</li>
+     * <li>false: resume the interrupted change successfully failed</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Result")
     public Boolean result;

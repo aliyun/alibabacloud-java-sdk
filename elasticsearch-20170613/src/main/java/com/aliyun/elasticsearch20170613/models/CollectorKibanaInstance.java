@@ -6,42 +6,63 @@ import com.aliyun.tea.*;
 public class CollectorKibanaInstance extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>collectorElasticsearchForKibana</p>
      */
     @NameInMap("configType")
     public String configType;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>es-cn-*****-kibana.internal.elasticsearch.aliyuncs.com:5601</p>
      */
     @NameInMap("host")
     public String host;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>es-cn-45dfy****</p>
      */
     @NameInMap("instanceId")
     public String instanceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://es-cn-****.kibana.elasticsearch.aliyuncs.com:5601">https://es-cn-****.kibana.elasticsearch.aliyuncs.com:5601</a></p>
      */
     @NameInMap("kibanaHost")
     public String kibanaHost;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>password</p>
      */
     @NameInMap("password")
     public String password;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>HTTP</p>
      */
     @NameInMap("protocol")
     public String protocol;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>username</p>
      */
     @NameInMap("userName")
     public String userName;

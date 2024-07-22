@@ -4,6 +4,10 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class GetRegionConfigurationResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6F******</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +36,17 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
     }
 
     public static class GetRegionConfigurationResponseBodyResultClientNodeAmountRange extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>25</p>
+         */
         @NameInMap("maxAmount")
         public Integer maxAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("minAmount")
         public Integer minAmount;
 
@@ -62,15 +74,31 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
     }
 
     public static class GetRegionConfigurationResponseBodyResultClientNodeDiskList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>cloud_efficiency</p>
+         */
         @NameInMap("diskType")
         public String diskType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("maxSize")
         public Integer maxSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("minSize")
         public Integer minSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>18</p>
+         */
         @NameInMap("scaleLimit")
         public Integer scaleLimit;
 
@@ -114,15 +142,31 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
     }
 
     public static class GetRegionConfigurationResponseBodyResultDataDiskList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>cloud_ssd</p>
+         */
         @NameInMap("diskType")
         public String diskType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5120</p>
+         */
         @NameInMap("maxSize")
         public Integer maxSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("minSize")
         public Integer minSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2048</p>
+         */
         @NameInMap("scaleLimit")
         public Integer scaleLimit;
 
@@ -177,9 +221,17 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
     }
 
     public static class GetRegionConfigurationResponseBodyResultElasticNodePropertiesAmountRange extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>25</p>
+         */
         @NameInMap("maxAmount")
         public Integer maxAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("minAmount")
         public Integer minAmount;
 
@@ -207,18 +259,38 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
     }
 
     public static class GetRegionConfigurationResponseBodyResultElasticNodePropertiesDiskList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("diskEncryption")
         public Boolean diskEncryption;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cloud_ssd</p>
+         */
         @NameInMap("diskType")
         public String diskType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5120</p>
+         */
         @NameInMap("maxSize")
         public Integer maxSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>500</p>
+         */
         @NameInMap("minSize")
         public Integer minSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2048</p>
+         */
         @NameInMap("scaleLimit")
         public Integer scaleLimit;
 
@@ -322,9 +394,17 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
     }
 
     public static class GetRegionConfigurationResponseBodyResultEsVersionsLatestList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>5.5_with_X-Pack</p>
+         */
         @NameInMap("key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5.5.3_with_X-Pack</p>
+         */
         @NameInMap("value")
         public String value;
 
@@ -352,6 +432,10 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
     }
 
     public static class GetRegionConfigurationResponseBodyResultJvmConfine extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>32</p>
+         */
         @NameInMap("memory")
         public Integer memory;
 
@@ -393,9 +477,17 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
     }
 
     public static class GetRegionConfigurationResponseBodyResultKibanaNodePropertiesAmountRange extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("maxAmount")
         public Integer maxAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("minAmount")
         public Integer minAmount;
 
@@ -453,15 +545,31 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
     }
 
     public static class GetRegionConfigurationResponseBodyResultMasterDiskList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>cloud_ssd</p>
+         */
         @NameInMap("diskType")
         public String diskType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("maxSize")
         public Integer maxSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("minSize")
         public Integer minSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("scaleLimit")
         public Integer scaleLimit;
 
@@ -505,9 +613,17 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
     }
 
     public static class GetRegionConfigurationResponseBodyResultNode extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>50</p>
+         */
         @NameInMap("maxAmount")
         public Integer maxAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("minAmount")
         public Integer minAmount;
 
@@ -535,24 +651,52 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
     }
 
     public static class GetRegionConfigurationResponseBodyResultNodeSpecList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>16</p>
+         */
         @NameInMap("cpuCount")
         public Integer cpuCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>44000</p>
+         */
         @NameInMap("disk")
         public Integer disk;
 
+        /**
+         * <strong>example:</strong>
+         * <p>local_efficiency</p>
+         */
         @NameInMap("diskType")
         public String diskType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("enable")
         public Boolean enable;
 
+        /**
+         * <strong>example:</strong>
+         * <p>64</p>
+         */
         @NameInMap("memorySize")
         public Integer memorySize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>elasticsearch.sn2ne.large</p>
+         */
         @NameInMap("spec")
         public String spec;
 
+        /**
+         * <strong>example:</strong>
+         * <p>local_efficiency</p>
+         */
         @NameInMap("specGroupType")
         public String specGroupType;
 
@@ -620,9 +764,17 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
     }
 
     public static class GetRegionConfigurationResponseBodyResultSupportVersionsSupportVersionList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>5.5</p>
+         */
         @NameInMap("key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5.5.3</p>
+         */
         @NameInMap("value")
         public String value;
 
@@ -650,6 +802,10 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
     }
 
     public static class GetRegionConfigurationResponseBodyResultSupportVersions extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>x-pack</p>
+         */
         @NameInMap("instanceCategory")
         public String instanceCategory;
 
@@ -680,9 +836,17 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
     }
 
     public static class GetRegionConfigurationResponseBodyResultWarmNodePropertiesAmountRange extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>50</p>
+         */
         @NameInMap("maxAmount")
         public Integer maxAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("minAmount")
         public Integer minAmount;
 
@@ -710,18 +874,38 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
     }
 
     public static class GetRegionConfigurationResponseBodyResultWarmNodePropertiesDiskList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("diskEncryption")
         public Boolean diskEncryption;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cloud_efficiency</p>
+         */
         @NameInMap("diskType")
         public String diskType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5120</p>
+         */
         @NameInMap("maxSize")
         public Integer maxSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>500</p>
+         */
         @NameInMap("minSize")
         public Integer minSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2048</p>
+         */
         @NameInMap("scaleLimit")
         public Integer scaleLimit;
 
@@ -834,6 +1018,10 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         @NameInMap("clientNodeSpec")
         public java.util.List<String> clientNodeSpec;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://common-buy.aliyun.com/?commodityCode=elasticsearch&orderType=BUY#/buy">https://common-buy.aliyun.com/?commodityCode=elasticsearch&amp;orderType=BUY#/buy</a></p>
+         */
         @NameInMap("createUrl")
         public String createUrl;
 
@@ -843,6 +1031,10 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         @NameInMap("elasticNodeProperties")
         public GetRegionConfigurationResponseBodyResultElasticNodeProperties elasticNodeProperties;
 
+        /**
+         * <strong>example:</strong>
+         * <p>production</p>
+         */
         @NameInMap("env")
         public String env;
 
@@ -873,6 +1065,10 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         @NameInMap("nodeSpecList")
         public java.util.List<GetRegionConfigurationResponseBodyResultNodeSpecList> nodeSpecList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("regionId")
         public String regionId;
 

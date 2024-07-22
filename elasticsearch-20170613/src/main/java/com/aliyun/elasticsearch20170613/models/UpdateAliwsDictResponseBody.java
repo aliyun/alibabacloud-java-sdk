@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateAliwsDictResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,27 +43,40 @@ public class UpdateAliwsDictResponseBody extends TeaModel {
     public static class UpdateAliwsDictResponseBodyResult extends TeaModel {
         /**
          * <p>The size of the dictionary file. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6226</p>
          */
         @NameInMap("fileSize")
         public Long fileSize;
 
         /**
          * <p>The name of the uploaded dictionary file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliws_ext_dict.txt</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>The source type of the dictionary file. Valid values:</p>
-         * <br>
-         * <p>*   OSS</p>
-         * <p>*   ORIGIN</p>
+         * <ul>
+         * <li>OSS</li>
+         * <li>ORIGIN</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OSS</p>
          */
         @NameInMap("sourceType")
         public String sourceType;
 
         /**
          * <p>The dictionary type. The value is fixed as ALI_WS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALI_WS</p>
          */
         @NameInMap("type")
         public String type;

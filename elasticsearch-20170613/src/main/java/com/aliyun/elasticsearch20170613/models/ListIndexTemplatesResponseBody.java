@@ -4,6 +4,10 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListIndexTemplatesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>F99407AB-2FA9-489E-A259-40CF6DCC****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +36,24 @@ public class ListIndexTemplatesResponseBody extends TeaModel {
     }
 
     public static class ListIndexTemplatesResponseBodyResultTemplate extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>{\&quot;index.number_of_shards\&quot;:\&quot;1\&quot;}</p>
+         */
         @NameInMap("aliases")
         public String aliases;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{\&quot;properties\&quot;:{\&quot;created_at\&quot;:{\&quot;format\&quot;:\&quot;EEE MMM dd HH:mm:ss Z yyyy\&quot;,\&quot;type\&quot;:\&quot;date\&quot;},\&quot;host_name\&quot;:{\&quot;type\&quot;:\&quot;keyword\&quot;}}}</p>
+         */
         @NameInMap("mappings")
         public String mappings;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{\&quot;mydata\&quot;:{}}</p>
+         */
         @NameInMap("settings")
         public String settings;
 
@@ -73,18 +89,34 @@ public class ListIndexTemplatesResponseBody extends TeaModel {
     }
 
     public static class ListIndexTemplatesResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("dataStream")
         public Boolean dataStream;
 
+        /**
+         * <strong>example:</strong>
+         * <p>my_ilm_policy</p>
+         */
         @NameInMap("ilmPolicy")
         public String ilmPolicy;
 
         @NameInMap("indexPatterns")
         public java.util.List<String> indexPatterns;
 
+        /**
+         * <strong>example:</strong>
+         * <p>my-template</p>
+         */
         @NameInMap("indexTemplate")
         public String indexTemplate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("priority")
         public Integer priority;
 

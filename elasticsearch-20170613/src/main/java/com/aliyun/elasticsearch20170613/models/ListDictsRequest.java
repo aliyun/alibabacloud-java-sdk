@@ -6,19 +6,25 @@ import com.aliyun.tea.*;
 public class ListDictsRequest extends TeaModel {
     /**
      * <p>The type of the dictionary. Valid values:</p>
-     * <br>
-     * <p>*   IK: IK dictionary after a standard update</p>
-     * <p>*   IK_HOT: IK dictionary after a rolling update</p>
-     * <p>*   SYNONYMS: synonym dictionary</p>
-     * <p>*   ALIWS: Alibaba Cloud dictionary</p>
-     * <br>
+     * <ul>
+     * <li>IK: IK dictionary after a standard update</li>
+     * <li>IK_HOT: IK dictionary after a rolling update</li>
+     * <li>SYNONYMS: synonym dictionary</li>
+     * <li>ALIWS: Alibaba Cloud dictionary</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>IK</p>
      */
     @NameInMap("analyzerType")
     public String analyzerType;
 
     /**
      * <p>The name of the dictionary file.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SYSTEM_MAIN.dic</p>
      */
     @NameInMap("name")
     public String name;

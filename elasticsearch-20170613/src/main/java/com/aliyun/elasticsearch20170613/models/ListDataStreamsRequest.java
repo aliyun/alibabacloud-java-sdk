@@ -4,9 +4,17 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListDataStreamsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("isManaged")
     public Boolean isManaged;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Log1</p>
+     */
     @NameInMap("name")
     public String name;
 

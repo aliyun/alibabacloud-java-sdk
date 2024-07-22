@@ -4,6 +4,10 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +36,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceResponseBodyResultAdvancedSetting extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>CMS</p>
+         */
         @NameInMap("gcName")
         public String gcName;
 
@@ -51,15 +59,31 @@ public class DescribeInstanceResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceResponseBodyResultAliwsDicts extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2782602</p>
+         */
         @NameInMap("fileSize")
         public Long fileSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>aliws_ext_dict.txt</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OSS</p>
+         */
         @NameInMap("sourceType")
         public String sourceType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ALI_WS</p>
+         */
         @NameInMap("type")
         public String type;
 
@@ -103,15 +127,31 @@ public class DescribeInstanceResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceResponseBodyResultClientNodeConfiguration extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("amount")
         public Integer amount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>40</p>
+         */
         @NameInMap("disk")
         public Integer disk;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cloud_efficiency</p>
+         */
         @NameInMap("diskType")
         public String diskType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>elasticsearch.n4.small</p>
+         */
         @NameInMap("spec")
         public String spec;
 
@@ -166,15 +206,31 @@ public class DescribeInstanceResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceResponseBodyResultDictList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2782602</p>
+         */
         @NameInMap("fileSize")
         public Long fileSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SYSTEM_MAIN.dic</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ORIGIN</p>
+         */
         @NameInMap("sourceType")
         public String sourceType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MAIN</p>
+         */
         @NameInMap("type")
         public String type;
 
@@ -218,18 +274,38 @@ public class DescribeInstanceResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceResponseBodyResultElasticDataNodeConfiguration extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("amount")
         public Integer amount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("disk")
         public Integer disk;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("diskEncryption")
         public Boolean diskEncryption;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cloud_ssd</p>
+         */
         @NameInMap("diskType")
         public String diskType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>elasticsearch.sn2ne.large</p>
+         */
         @NameInMap("spec")
         public String spec;
 
@@ -292,15 +368,31 @@ public class DescribeInstanceResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceResponseBodyResultIkHotDicts extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>6</p>
+         */
         @NameInMap("fileSize")
         public Integer fileSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>deploy_0.dic</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OSS</p>
+         */
         @NameInMap("sourceType")
         public String sourceType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MAIN</p>
+         */
         @NameInMap("type")
         public String type;
 
@@ -344,12 +436,24 @@ public class DescribeInstanceResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceResponseBodyResultKibanaConfiguration extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("amount")
         public Integer amount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("disk")
         public Integer disk;
 
+        /**
+         * <strong>example:</strong>
+         * <p>elasticsearch.n4.small</p>
+         */
         @NameInMap("spec")
         public String spec;
 
@@ -396,15 +500,31 @@ public class DescribeInstanceResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceResponseBodyResultMasterConfiguration extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("amount")
         public Integer amount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>40</p>
+         */
         @NameInMap("disk")
         public Integer disk;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cloud_ssd</p>
+         */
         @NameInMap("diskType")
         public String diskType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>elasticsearch.n4.small</p>
+         */
         @NameInMap("spec")
         public String spec;
 
@@ -459,12 +579,20 @@ public class DescribeInstanceResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceResponseBodyResultNetworkConfigWhiteIpGroupList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>default</p>
+         */
         @NameInMap("groupName")
         public String groupName;
 
         @NameInMap("ips")
         public java.util.List<String> ips;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PRIVATE_ES</p>
+         */
         @NameInMap("whiteIpType")
         public String whiteIpType;
 
@@ -500,15 +628,31 @@ public class DescribeInstanceResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceResponseBodyResultNetworkConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>vpc</p>
+         */
         @NameInMap("type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vpc-abc</p>
+         */
         @NameInMap("vpcId")
         public String vpcId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-b</p>
+         */
         @NameInMap("vsArea")
         public String vsArea;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vsw-abc</p>
+         */
         @NameInMap("vswitchId")
         public String vswitchId;
 
@@ -563,18 +707,38 @@ public class DescribeInstanceResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceResponseBodyResultNodeSpec extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("disk")
         public Integer disk;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("diskEncryption")
         public Boolean diskEncryption;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cloud_ssd</p>
+         */
         @NameInMap("diskType")
         public String diskType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PL1</p>
+         */
         @NameInMap("performanceLevel")
         public String performanceLevel;
 
+        /**
+         * <strong>example:</strong>
+         * <p>elasticsearch.n4.small</p>
+         */
         @NameInMap("spec")
         public String spec;
 
@@ -637,15 +801,31 @@ public class DescribeInstanceResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceResponseBodyResultSynonymsDicts extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2782602</p>
+         */
         @NameInMap("fileSize")
         public Long fileSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SYSTEM_MAIN.dic</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ORIGIN</p>
+         */
         @NameInMap("sourceType")
         public String sourceType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>STOP</p>
+         */
         @NameInMap("type")
         public String type;
 
@@ -689,9 +869,17 @@ public class DescribeInstanceResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceResponseBodyResultTags extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>env</p>
+         */
         @NameInMap("tagKey")
         public String tagKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>dev</p>
+         */
         @NameInMap("tagValue")
         public String tagValue;
 
@@ -719,18 +907,38 @@ public class DescribeInstanceResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceResponseBodyResultWarmNodeConfiguration extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>6</p>
+         */
         @NameInMap("amount")
         public Integer amount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>500</p>
+         */
         @NameInMap("disk")
         public Integer disk;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("diskEncryption")
         public Boolean diskEncryption;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cloud_efficiency</p>
+         */
         @NameInMap("diskType")
         public String diskType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>elasticsearch.n4.small</p>
+         */
         @NameInMap("spec")
         public String spec;
 
@@ -793,9 +1001,17 @@ public class DescribeInstanceResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceResponseBodyResultZoneInfos extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
+         */
         @NameInMap("status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-b</p>
+         */
         @NameInMap("zoneId")
         public String zoneId;
 
@@ -823,6 +1039,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("advancedDedicateMaster")
         public Boolean advancedDedicateMaster;
 
@@ -838,36 +1058,68 @@ public class DescribeInstanceResponseBody extends TeaModel {
         @NameInMap("clientNodeConfiguration")
         public DescribeInstanceResponseBodyResultClientNodeConfiguration clientNodeConfiguration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2018-07-13T03:58:07.253Z</p>
+         */
         @NameInMap("createdAt")
         public String createdAt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("dedicateMaster")
         public Boolean dedicateMaster;
 
+        /**
+         * <strong>example:</strong>
+         * <p>es-cn-abc</p>
+         */
         @NameInMap("description")
         public String description;
 
         @NameInMap("dictList")
         public java.util.List<DescribeInstanceResponseBodyResultDictList> dictList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>es-cn-3h4k3axh33th9****.elasticsearch.aliyuncs.com</p>
+         */
         @NameInMap("domain")
         public String domain;
 
         @NameInMap("elasticDataNodeConfiguration")
         public DescribeInstanceResponseBodyResultElasticDataNodeConfiguration elasticDataNodeConfiguration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("enableKibanaPrivateNetwork")
         public Boolean enableKibanaPrivateNetwork;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("enableKibanaPublicNetwork")
         public Boolean enableKibanaPublicNetwork;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("enablePublic")
         public Boolean enablePublic;
 
         @NameInMap("endtime")
         public Long endtime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;http.cors.allow-credentials&quot;:&quot;false&quot;}</p>
+         */
         @NameInMap("esConfig")
         public java.util.Map<String, ?> esConfig;
 
@@ -877,39 +1129,71 @@ public class DescribeInstanceResponseBody extends TeaModel {
         @NameInMap("esIPWhitelist")
         public java.util.List<String> esIPWhitelist;
 
+        /**
+         * <strong>example:</strong>
+         * <p>6.3.2_with_X-Pack</p>
+         */
         @NameInMap("esVersion")
         public String esVersion;
 
         @NameInMap("extendConfigs")
         public java.util.List<java.util.Map<String, ?>> extendConfigs;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("haveClientNode")
         public Boolean haveClientNode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("haveKibana")
         public Boolean haveKibana;
 
         @NameInMap("ikHotDicts")
         public java.util.List<DescribeInstanceResponseBodyResultIkHotDicts> ikHotDicts;
 
+        /**
+         * <strong>example:</strong>
+         * <p>advanced</p>
+         */
         @NameInMap("instanceCategory")
         public String instanceCategory;
 
+        /**
+         * <strong>example:</strong>
+         * <p>es-cn-3h4k3axh33th9****</p>
+         */
         @NameInMap("instanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("isNewDeployment")
         public Boolean isNewDeployment;
 
         @NameInMap("kibanaConfiguration")
         public DescribeInstanceResponseBodyResultKibanaConfiguration kibanaConfiguration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>es-cn-3h4k3axh33th9****.kibana.elasticsearch.aliyuncs.com</p>
+         */
         @NameInMap("kibanaDomain")
         public String kibanaDomain;
 
         @NameInMap("kibanaIPWhitelist")
         public java.util.List<String> kibanaIPWhitelist;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5601</p>
+         */
         @NameInMap("kibanaPort")
         public Integer kibanaPort;
 
@@ -922,42 +1206,82 @@ public class DescribeInstanceResponseBody extends TeaModel {
         @NameInMap("networkConfig")
         public DescribeInstanceResponseBodyResultNetworkConfig networkConfig;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("nodeAmount")
         public Integer nodeAmount;
 
         @NameInMap("nodeSpec")
         public DescribeInstanceResponseBodyResultNodeSpec nodeSpec;
 
+        /**
+         * <strong>example:</strong>
+         * <p>postpaid</p>
+         */
         @NameInMap("paymentType")
         public String paymentType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>9200</p>
+         */
         @NameInMap("port")
         public Integer port;
 
+        /**
+         * <strong>example:</strong>
+         * <p>active</p>
+         */
         @NameInMap("postpaidServiceStatus")
         public String postpaidServiceStatus;
 
         @NameInMap("privateNetworkIpWhiteList")
         public java.util.List<String> privateNetworkIpWhiteList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>HTTP</p>
+         */
         @NameInMap("protocol")
         public String protocol;
 
+        /**
+         * <strong>example:</strong>
+         * <p>es-cn-3h4k3axh33th9****.elasticsearch.aliyuncs.com</p>
+         */
         @NameInMap("publicDomain")
         public String publicDomain;
 
         @NameInMap("publicIpWhitelist")
         public java.util.List<String> publicIpWhitelist;
 
+        /**
+         * <strong>example:</strong>
+         * <p>9200</p>
+         */
         @NameInMap("publicPort")
         public Integer publicPort;
 
+        /**
+         * <strong>example:</strong>
+         * <p>rg-aekzvowej3i****</p>
+         */
         @NameInMap("resourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("serviceVpc")
         public Boolean serviceVpc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>active</p>
+         */
         @NameInMap("status")
         public String status;
 
@@ -967,18 +1291,34 @@ public class DescribeInstanceResponseBody extends TeaModel {
         @NameInMap("tags")
         public java.util.List<DescribeInstanceResponseBodyResultTags> tags;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2018-07-13T03:58:07.253Z</p>
+         */
         @NameInMap("updatedAt")
         public String updatedAt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vpc-bp1uag5jj38c****</p>
+         */
         @NameInMap("vpcInstanceId")
         public String vpcInstanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("warmNode")
         public Boolean warmNode;
 
         @NameInMap("warmNodeConfiguration")
         public DescribeInstanceResponseBodyResultWarmNodeConfiguration warmNodeConfiguration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("zoneCount")
         public Integer zoneCount;
 

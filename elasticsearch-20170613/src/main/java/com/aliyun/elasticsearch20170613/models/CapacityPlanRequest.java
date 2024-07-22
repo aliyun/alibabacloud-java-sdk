@@ -4,6 +4,10 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class CapacityPlanRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("complexQueryAvailable")
     public Boolean complexQueryAvailable;
 
@@ -13,6 +17,10 @@ public class CapacityPlanRequest extends TeaModel {
     @NameInMap("metric")
     public java.util.List<CapacityPlanRequestMetric> metric;
 
+    /**
+     * <strong>example:</strong>
+     * <p>general</p>
+     */
     @NameInMap("usageScenario")
     public String usageScenario;
 
@@ -54,18 +62,38 @@ public class CapacityPlanRequest extends TeaModel {
     }
 
     public static class CapacityPlanRequestDataInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>totalRawData</p>
+         */
         @NameInMap("code")
         public String code;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("size")
         public Long size;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10000</p>
+         */
         @NameInMap("totalCount")
         public Integer totalCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>hot</p>
+         */
         @NameInMap("type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MiB</p>
+         */
         @NameInMap("unit")
         public String unit;
 
@@ -117,24 +145,52 @@ public class CapacityPlanRequest extends TeaModel {
     }
 
     public static class CapacityPlanRequestMetric extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("averageQps")
         public Integer averageQps;
 
+        /**
+         * <strong>example:</strong>
+         * <p>write</p>
+         */
         @NameInMap("code")
         public String code;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("concurrent")
         public Long concurrent;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("peakQps")
         public Integer peakQps;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("responseTime")
         public Integer responseTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("throughput")
         public Long throughput;
 
+        /**
+         * <strong>example:</strong>
+         * <p>common</p>
+         */
         @NameInMap("type")
         public String type;
 

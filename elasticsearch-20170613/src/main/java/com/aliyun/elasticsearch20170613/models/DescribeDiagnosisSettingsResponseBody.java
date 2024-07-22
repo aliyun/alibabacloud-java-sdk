@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeDiagnosisSettingsResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5E82B8A8-EED7-4557-A6E9-D1AD3E58****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class DescribeDiagnosisSettingsResponseBody extends TeaModel {
     public static class DescribeDiagnosisSettingsResponseBodyResult extends TeaModel {
         /**
          * <p>Scenarios of intelligent maintenance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Business Search</p>
          */
         @NameInMap("scene")
         public String scene;
 
         /**
          * <p>The timestamp of the last update for Intelligent Maintenance scenarios.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1588994035385</p>
          */
         @NameInMap("updateTime")
         public Long updateTime;

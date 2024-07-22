@@ -7,24 +7,48 @@ public class ListInstanceHistoryEventsShrinkRequest extends TeaModel {
     @NameInMap("body")
     public java.util.List<ListInstanceHistoryEventsShrinkRequestBody> body;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1645596516000</p>
+     */
     @NameInMap("eventCreateEndTime")
     public String eventCreateEndTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1645596516000</p>
+     */
     @NameInMap("eventCreateStartTime")
     public String eventCreateStartTime;
 
     @NameInMap("eventCycleStatus")
     public String eventCycleStatusShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1645596516000</p>
+     */
     @NameInMap("eventExecuteEndTime")
     public String eventExecuteEndTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1645596516000</p>
+     */
     @NameInMap("eventExecuteStartTime")
     public String eventExecuteStartTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1645596516000</p>
+     */
     @NameInMap("eventFinashEndTime")
     public String eventFinashEndTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1645596516000</p>
+     */
     @NameInMap("eventFinashStartTime")
     public String eventFinashStartTime;
 
@@ -34,15 +58,31 @@ public class ListInstanceHistoryEventsShrinkRequest extends TeaModel {
     @NameInMap("eventType")
     public String eventTypeShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>es-cn-2r42l7a740005****</p>
+     */
     @NameInMap("instanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10.1.xx.xx</p>
+     */
     @NameInMap("nodeIP")
     public String nodeIP;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("page")
     public Integer page;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("size")
     public Integer size;
 
@@ -164,9 +204,17 @@ public class ListInstanceHistoryEventsShrinkRequest extends TeaModel {
     }
 
     public static class ListInstanceHistoryEventsShrinkRequestBody extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("desc")
         public Boolean desc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>event_time</p>
+         */
         @NameInMap("sortField")
         public String sortField;
 

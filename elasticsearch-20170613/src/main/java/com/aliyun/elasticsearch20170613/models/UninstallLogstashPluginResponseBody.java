@@ -7,6 +7,10 @@ public class UninstallLogstashPluginResponseBody extends TeaModel {
     @NameInMap("Headers")
     public java.util.Map<String, ?> headers;
 
+    /**
+     * <strong>example:</strong>
+     * <p>F99407AB-2FA9-489E-A259-40CF6DCC****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

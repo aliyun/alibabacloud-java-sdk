@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ListTagsRequest extends TeaModel {
     /**
      * <p>The return results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("pageSize")
     public Integer pageSize;
 
     /**
      * <p>The tag value of the ENI.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>INSTANCE</p>
      */
     @NameInMap("resourceType")
     public String resourceType;

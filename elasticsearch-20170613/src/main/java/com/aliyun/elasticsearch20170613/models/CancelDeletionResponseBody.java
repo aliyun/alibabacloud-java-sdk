@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class CancelDeletionResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D682B6B3-B425-46DA-A5FC-5F5C60553622</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the cluster is restored. Valid values:</p>
-     * <br>
-     * <p>*   true: The cluster is restored.</p>
-     * <p>*   false: The cluster fails to be restored.</p>
+     * <ul>
+     * <li>true: The cluster is restored.</li>
+     * <li>false: The cluster fails to be restored.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Result")
     public Boolean result;
