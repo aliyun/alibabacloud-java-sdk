@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateVariableRequest extends TeaModel {
     /**
+     * <p>The parameter that is used to create the variable.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("body")

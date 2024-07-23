@@ -4,15 +4,31 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class DeploymentRestoreStrategy extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>TRUE</p>
+     */
     @NameInMap("allowNonRestoredState")
     public Boolean allowNonRestoredState;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1660293803155</p>
+     */
     @NameInMap("jobStartTimeInMs")
     public Long jobStartTimeInMs;
 
+    /**
+     * <strong>example:</strong>
+     * <p>LATEST_STATE</p>
+     */
     @NameInMap("kind")
     public String kind;
 
+    /**
+     * <strong>example:</strong>
+     * <p>354dde66-a3ae-463e-967a-0b4107fd****</p>
+     */
     @NameInMap("savepointId")
     public String savepointId;
 

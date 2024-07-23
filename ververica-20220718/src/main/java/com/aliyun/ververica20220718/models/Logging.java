@@ -4,6 +4,10 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class Logging extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>xml格式文本</p>
+     */
     @NameInMap("log4j2ConfigurationTemplate")
     public String log4j2ConfigurationTemplate;
 
@@ -13,6 +17,10 @@ public class Logging extends TeaModel {
     @NameInMap("logReservePolicy")
     public LogReservePolicy logReservePolicy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>oss</p>
+     */
     @NameInMap("loggingProfile")
     public String loggingProfile;
 

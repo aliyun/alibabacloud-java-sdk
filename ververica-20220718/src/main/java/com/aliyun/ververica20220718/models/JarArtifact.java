@@ -7,9 +7,17 @@ public class JarArtifact extends TeaModel {
     @NameInMap("additionalDependencies")
     public java.util.List<String> additionalDependencies;
 
+    /**
+     * <strong>example:</strong>
+     * <p>org.apapche.flink.test</p>
+     */
     @NameInMap("entryClass")
     public String entryClass;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://oss//bucket//test.jar">https://oss//bucket//test.jar</a></p>
+     */
     @NameInMap("jarUri")
     public String jarUri;
 

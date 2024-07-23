@@ -13,30 +13,62 @@ public class Job extends TeaModel {
     @NameInMap("createdAt")
     public String createdAt;
 
+    /**
+     * <strong>example:</strong>
+     * <p>27846363877456****</p>
+     */
     @NameInMap("creator")
     public String creator;
 
+    /**
+     * <strong>example:</strong>
+     * <p>****@streamcompute.onaliyun.com</p>
+     */
     @NameInMap("creatorName")
     public String creatorName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>354dde66-a3ae-463e-967a-0b4107fd****</p>
+     */
     @NameInMap("deploymentId")
     public String deploymentId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>flinktest</p>
+     */
     @NameInMap("deploymentName")
     public String deploymentName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1660277235</p>
+     */
     @NameInMap("endTime")
     public Long endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>vvr-4.0.14-flink-1.13</p>
+     */
     @NameInMap("engineVersion")
     public String engineVersion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>BATCH</p>
+     */
     @NameInMap("executionMode")
     public String executionMode;
 
     @NameInMap("flinkConf")
     public java.util.Map<String, ?> flinkConf;
 
+    /**
+     * <strong>example:</strong>
+     * <p>354dde66-a3ae-463e-967a-0b4107fd****</p>
+     */
     @NameInMap("jobId")
     public String jobId;
 
@@ -52,21 +84,41 @@ public class Job extends TeaModel {
     @NameInMap("modifiedAt")
     public String modifiedAt;
 
+    /**
+     * <strong>example:</strong>
+     * <p>27846363877456****</p>
+     */
     @NameInMap("modifier")
     public String modifier;
 
+    /**
+     * <strong>example:</strong>
+     * <p>****@streamcompute.onaliyun.com</p>
+     */
     @NameInMap("modifierName")
     public String modifierName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>namespacetest</p>
+     */
     @NameInMap("namespace")
     public String namespace;
 
     @NameInMap("restoreStrategy")
     public DeploymentRestoreStrategy restoreStrategy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>preview</p>
+     */
     @NameInMap("sessionClusterName")
     public String sessionClusterName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1660190835</p>
+     */
     @NameInMap("startTime")
     public Long startTime;
 
@@ -79,6 +131,10 @@ public class Job extends TeaModel {
     @NameInMap("userFlinkConf")
     public java.util.Map<String, ?> userFlinkConf;
 
+    /**
+     * <strong>example:</strong>
+     * <p>edcef******b4f</p>
+     */
     @NameInMap("workspace")
     public String workspace;
 

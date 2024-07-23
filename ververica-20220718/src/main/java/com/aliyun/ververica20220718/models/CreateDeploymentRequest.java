@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDeploymentRequest extends TeaModel {
     /**
+     * <p>The content of the deployment.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("body")

@@ -19,6 +19,10 @@ public class PythonArtifact extends TeaModel {
     @NameInMap("mainArgs")
     public String mainArgs;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://oss//bucket//test.py">https://oss//bucket//test.py</a></p>
+     */
     @NameInMap("pythonArtifactUri")
     public String pythonArtifactUri;
 

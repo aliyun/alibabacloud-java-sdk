@@ -27,8 +27,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary create a deployment
-     *
+     * <b>summary</b> : 
+     * <p>Creates a deployment.</p>
+     * 
      * @param request CreateDeploymentRequest
      * @param headers CreateDeploymentHeaders
      * @param runtime runtime options for this request RuntimeOptions
@@ -64,8 +65,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary create a deployment
-     *
+     * <b>summary</b> : 
+     * <p>Creates a deployment.</p>
+     * 
      * @param request CreateDeploymentRequest
      * @return CreateDeploymentResponse
      */
@@ -76,8 +78,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 调用CreateMember创建成员。
-     *
+     * <b>summary</b> : 
+     * <p>Adds a user to a namespace as a member and grants permissions to the user.</p>
+     * 
      * @param request CreateMemberRequest
      * @param headers CreateMemberHeaders
      * @param runtime runtime options for this request RuntimeOptions
@@ -113,8 +116,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 调用CreateMember创建成员。
-     *
+     * <b>summary</b> : 
+     * <p>Adds a user to a namespace as a member and grants permissions to the user.</p>
+     * 
      * @param request CreateMemberRequest
      * @return CreateMemberResponse
      */
@@ -125,8 +129,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 调用CreateSavepoint触发一次savepoint。
-     *
+     * <b>summary</b> : 
+     * <p>Creates a savepoint.</p>
+     * 
      * @param request CreateSavepointRequest
      * @param headers CreateSavepointHeaders
      * @param runtime runtime options for this request RuntimeOptions
@@ -175,8 +180,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 调用CreateSavepoint触发一次savepoint。
-     *
+     * <b>summary</b> : 
+     * <p>Creates a savepoint.</p>
+     * 
      * @param request CreateSavepointRequest
      * @return CreateSavepointResponse
      */
@@ -187,8 +193,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 调用CreateVariable创建变量。
-     *
+     * <b>summary</b> : 
+     * <p>Creates a variable.</p>
+     * 
      * @param request CreateVariableRequest
      * @param headers CreateVariableHeaders
      * @param runtime runtime options for this request RuntimeOptions
@@ -224,8 +231,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 调用CreateVariable创建变量。
-     *
+     * <b>summary</b> : 
+     * <p>Creates a variable.</p>
+     * 
      * @param request CreateVariableRequest
      * @return CreateVariableResponse
      */
@@ -236,8 +244,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary delete deployment
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a deployment based on the deployment ID.</p>
+     * 
      * @param headers DeleteDeploymentHeaders
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteDeploymentResponse
@@ -270,8 +279,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary delete deployment
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a deployment based on the deployment ID.</p>
      * @return DeleteDeploymentResponse
      */
     public DeleteDeploymentResponse deleteDeployment(String namespace, String deploymentId) throws Exception {
@@ -281,8 +290,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary delete job
-     *
+     * <b>summary</b> : 
+     * <p>Deletes the information about a job that is not in the running state in a deployment.</p>
+     * 
      * @param headers DeleteJobHeaders
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteJobResponse
@@ -315,8 +325,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary delete job
-     *
+     * <b>summary</b> : 
+     * <p>Deletes the information about a job that is not in the running state in a deployment.</p>
      * @return DeleteJobResponse
      */
     public DeleteJobResponse deleteJob(String namespace, String jobId) throws Exception {
@@ -326,8 +336,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 调用DeleteMember删除成员。
-     *
+     * <b>summary</b> : 
+     * <p>Revokes the permissions from a member.</p>
+     * 
      * @param headers DeleteMemberHeaders
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteMemberResponse
@@ -360,8 +371,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 调用DeleteMember删除成员。
-     *
+     * <b>summary</b> : 
+     * <p>Revokes the permissions from a member.</p>
      * @return DeleteMemberResponse
      */
     public DeleteMemberResponse deleteMember(String namespace, String member) throws Exception {
@@ -371,8 +382,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 调用DeleteSavepoint删除savepoint。
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a savepoint.</p>
+     * 
      * @param headers DeleteSavepointHeaders
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteSavepointResponse
@@ -405,8 +417,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 调用DeleteSavepoint删除savepoint。
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a savepoint.</p>
      * @return DeleteSavepointResponse
      */
     public DeleteSavepointResponse deleteSavepoint(String namespace, String savepointId) throws Exception {
@@ -416,8 +428,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary deleta variable
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a variable.</p>
+     * 
      * @param headers DeleteVariableHeaders
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteVariableResponse
@@ -450,8 +463,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary deleta variable
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a variable.</p>
      * @return DeleteVariableResponse
      */
     public DeleteVariableResponse deleteVariable(String namespace, String name) throws Exception {
@@ -461,8 +474,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 调用FlinkApiProxy代理Flink请求。
-     *
+     * <b>summary</b> : 
+     * <p>Provides a Flink request proxy.</p>
+     * 
      * @param request FlinkApiProxyRequest
      * @param headers FlinkApiProxyHeaders
      * @param runtime runtime options for this request RuntimeOptions
@@ -515,8 +529,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 调用FlinkApiProxy代理Flink请求。
-     *
+     * <b>summary</b> : 
+     * <p>Provides a Flink request proxy.</p>
+     * 
      * @param request FlinkApiProxyRequest
      * @return FlinkApiProxyResponse
      */
@@ -527,8 +542,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary generate resource plan with flink conf async.
-     *
+     * <b>summary</b> : 
+     * <p>Submits a ticket that applies for asynchronous generation of the fine-grained resources. This operation returns the ID of the ticket for you to query the asynchronous generation result.</p>
+     * 
      * @param request GenerateResourcePlanWithFlinkConfAsyncRequest
      * @param headers GenerateResourcePlanWithFlinkConfAsyncHeaders
      * @param runtime runtime options for this request RuntimeOptions
@@ -564,8 +580,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary generate resource plan with flink conf async.
-     *
+     * <b>summary</b> : 
+     * <p>Submits a ticket that applies for asynchronous generation of the fine-grained resources. This operation returns the ID of the ticket for you to query the asynchronous generation result.</p>
+     * 
      * @param request GenerateResourcePlanWithFlinkConfAsyncRequest
      * @return GenerateResourcePlanWithFlinkConfAsyncResponse
      */
@@ -576,8 +593,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary get a deployment
-     *
+     * <b>summary</b> : 
+     * <p>Obtains the details of a deployment.</p>
+     * 
      * @param headers GetDeploymentHeaders
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetDeploymentResponse
@@ -610,8 +628,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary get a deployment
-     *
+     * <b>summary</b> : 
+     * <p>Obtains the details of a deployment.</p>
      * @return GetDeploymentResponse
      */
     public GetDeploymentResponse getDeployment(String namespace, String deploymentId) throws Exception {
@@ -621,8 +639,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取生成ResourcePlan异步操作的结果。
-     *
+     * <b>summary</b> : 
+     * <p>Obtains the asynchronous generation result of fine-grained resources based on the ID of the ticket that applies for an asynchronous generation.</p>
+     * 
      * @param headers GetGenerateResourcePlanResultHeaders
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetGenerateResourcePlanResultResponse
@@ -655,8 +674,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取生成ResourcePlan异步操作的结果。
-     *
+     * <b>summary</b> : 
+     * <p>Obtains the asynchronous generation result of fine-grained resources based on the ID of the ticket that applies for an asynchronous generation.</p>
      * @return GetGenerateResourcePlanResultResponse
      */
     public GetGenerateResourcePlanResultResponse getGenerateResourcePlanResult(String namespace, String ticketId) throws Exception {
@@ -666,8 +685,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary get job
-     *
+     * <b>summary</b> : 
+     * <p>Obtains the details of a job.</p>
+     * 
      * @param headers GetJobHeaders
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetJobResponse
@@ -700,8 +720,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary get job
-     *
+     * <b>summary</b> : 
+     * <p>Obtains the details of a job.</p>
      * @return GetJobResponse
      */
     public GetJobResponse getJob(String namespace, String jobId) throws Exception {
@@ -711,8 +731,55 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 调用GetMember获取成员。
-     *
+     * <b>summary</b> : 
+     * <p>Obtains the latest startup logs of a job.</p>
+     * 
+     * @param headers GetLatestJobStartLogHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetLatestJobStartLogResponse
+     */
+    public GetLatestJobStartLogResponse getLatestJobStartLogWithOptions(String namespace, String deploymentId, GetLatestJobStartLogHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.workspace)) {
+            realHeaders.put("workspace", com.aliyun.teautil.Common.toJSONString(headers.workspace));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetLatestJobStartLog"),
+            new TeaPair("version", "2022-07-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/namespaces/" + com.aliyun.openapiutil.Client.getEncodeParam(namespace) + "/deployments/" + com.aliyun.openapiutil.Client.getEncodeParam(deploymentId) + "/latest_jobmanager_start_log"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetLatestJobStartLogResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Obtains the latest startup logs of a job.</p>
+     * @return GetLatestJobStartLogResponse
+     */
+    public GetLatestJobStartLogResponse getLatestJobStartLog(String namespace, String deploymentId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        GetLatestJobStartLogHeaders headers = new GetLatestJobStartLogHeaders();
+        return this.getLatestJobStartLogWithOptions(namespace, deploymentId, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the permissions of a member.</p>
+     * 
      * @param headers GetMemberHeaders
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetMemberResponse
@@ -745,8 +812,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 调用GetMember获取成员。
-     *
+     * <b>summary</b> : 
+     * <p>Queries the permissions of a member.</p>
      * @return GetMemberResponse
      */
     public GetMemberResponse getMember(String namespace, String member) throws Exception {
@@ -756,8 +823,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 调用GetSavepoint获取savepoint信息。
-     *
+     * <b>summary</b> : 
+     * <p>Queries details of a savepoint and checkpoint.</p>
+     * 
      * @param headers GetSavepointHeaders
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetSavepointResponse
@@ -790,8 +858,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 调用GetSavepoint获取savepoint信息。
-     *
+     * <b>summary</b> : 
+     * <p>Queries details of a savepoint and checkpoint.</p>
      * @return GetSavepointResponse
      */
     public GetSavepointResponse getSavepoint(String namespace, String savepointId) throws Exception {
@@ -801,8 +869,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary list deployment targets
-     *
+     * <b>summary</b> : 
+     * <p>Obtains a list of clusters in which deployments can be deployed. The cluster can be a session cluster or a per-job cluster.</p>
+     * 
      * @param request ListDeploymentTargetsRequest
      * @param headers ListDeploymentTargetsHeaders
      * @param runtime runtime options for this request RuntimeOptions
@@ -847,8 +916,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary list deployment targets
-     *
+     * <b>summary</b> : 
+     * <p>Obtains a list of clusters in which deployments can be deployed. The cluster can be a session cluster or a per-job cluster.</p>
+     * 
      * @param request ListDeploymentTargetsRequest
      * @return ListDeploymentTargetsResponse
      */
@@ -859,8 +929,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary list deployments
-     *
+     * <b>summary</b> : 
+     * <p>Obtains information about all deployments.</p>
+     * 
      * @param request ListDeploymentsRequest
      * @param headers ListDeploymentsHeaders
      * @param runtime runtime options for this request RuntimeOptions
@@ -933,8 +1004,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary list deployments
-     *
+     * <b>summary</b> : 
+     * <p>Obtains information about all deployments.</p>
+     * 
      * @param request ListDeploymentsRequest
      * @return ListDeploymentsResponse
      */
@@ -945,8 +1017,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 列出有编辑权限的项目空间。
-     *
+     * <b>summary</b> : 
+     * <p>列出有编辑权限的项目空间。</p>
+     * 
      * @param request ListEditableNamespaceRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -994,8 +1067,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 列出有编辑权限的项目空间。
-     *
+     * <b>summary</b> : 
+     * <p>列出有编辑权限的项目空间。</p>
+     * 
      * @param request ListEditableNamespaceRequest
      * @return ListEditableNamespaceResponse
      */
@@ -1006,8 +1080,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取系统支持的引擎版本信息。
-     *
+     * <b>summary</b> : 
+     * <p>Obtains a list of engine versions that are supported by Realtime Compute for Apache Flink.</p>
+     * 
      * @param headers ListEngineVersionMetadataHeaders
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListEngineVersionMetadataResponse
@@ -1040,8 +1115,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取系统支持的引擎版本信息。
-     *
+     * <b>summary</b> : 
+     * <p>Obtains a list of engine versions that are supported by Realtime Compute for Apache Flink.</p>
      * @return ListEngineVersionMetadataResponse
      */
     public ListEngineVersionMetadataResponse listEngineVersionMetadata() throws Exception {
@@ -1051,8 +1126,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary list jobs
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about all jobs in a deployment.</p>
+     * 
      * @param request ListJobsRequest
      * @param headers ListJobsHeaders
      * @param runtime runtime options for this request RuntimeOptions
@@ -1105,8 +1181,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary list jobs
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about all jobs in a deployment.</p>
+     * 
      * @param request ListJobsRequest
      * @return ListJobsResponse
      */
@@ -1117,8 +1194,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 调用ListMembers接口获取成员列表。
-     *
+     * <b>summary</b> : 
+     * <p>Queries the mappings between the ID and permissions of a member in a specific namespace.</p>
+     * 
      * @param request ListMembersRequest
      * @param headers ListMembersHeaders
      * @param runtime runtime options for this request RuntimeOptions
@@ -1163,8 +1241,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 调用ListMembers接口获取成员列表。
-     *
+     * <b>summary</b> : 
+     * <p>Queries the mappings between the ID and permissions of a member in a specific namespace.</p>
+     * 
      * @param request ListMembersRequest
      * @return ListMembersResponse
      */
@@ -1175,8 +1254,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 调用ListSavepoints获取满足查询条件的savepoint列表。
-     *
+     * <b>summary</b> : 
+     * <p>Obtains a list of savepoints or checkpoints.</p>
+     * 
      * @param request ListSavepointsRequest
      * @param headers ListSavepointsHeaders
      * @param runtime runtime options for this request RuntimeOptions
@@ -1229,8 +1309,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 调用ListSavepoints获取满足查询条件的savepoint列表。
-     *
+     * <b>summary</b> : 
+     * <p>Obtains a list of savepoints or checkpoints.</p>
+     * 
      * @param request ListSavepointsRequest
      * @return ListSavepointsResponse
      */
@@ -1241,8 +1322,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary list variables
-     *
+     * <b>summary</b> : 
+     * <p>Obtains a list of variables.</p>
+     * 
      * @param request ListVariablesRequest
      * @param headers ListVariablesHeaders
      * @param runtime runtime options for this request RuntimeOptions
@@ -1287,8 +1369,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary list variables
-     *
+     * <b>summary</b> : 
+     * <p>Obtains a list of variables.</p>
+     * 
      * @param request ListVariablesRequest
      * @return ListVariablesResponse
      */
@@ -1299,15 +1382,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>start job</p>
+     * 
      * @deprecated OpenAPI StartJob is deprecated
-     *
-     * @summary start job
-     *
+     * 
      * @param request StartJobRequest
      * @param headers StartJobHeaders
      * @param runtime runtime options for this request RuntimeOptions
      * @return StartJobResponse
      */
+    @Deprecated
     // Deprecated
     public StartJobResponse startJobWithOptions(String namespace, StartJobRequest request, StartJobHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1339,13 +1424,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>start job</p>
+     * 
      * @deprecated OpenAPI StartJob is deprecated
-     *
-     * @summary start job
-     *
+     * 
      * @param request StartJobRequest
      * @return StartJobResponse
      */
+    @Deprecated
     // Deprecated
     public StartJobResponse startJob(String namespace, StartJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -1354,8 +1441,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 启动作业实例。
-     *
+     * <b>summary</b> : 
+     * <p>Starts a job.</p>
+     * 
      * @param request StartJobWithParamsRequest
      * @param headers StartJobWithParamsHeaders
      * @param runtime runtime options for this request RuntimeOptions
@@ -1391,8 +1479,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 启动作业实例。
-     *
+     * <b>summary</b> : 
+     * <p>Starts a job.</p>
+     * 
      * @param request StartJobWithParamsRequest
      * @return StartJobWithParamsResponse
      */
@@ -1403,8 +1492,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 调用StopJob停止实例。
-     *
+     * <b>summary</b> : 
+     * <p>Stops a job.</p>
+     * 
      * @param request StopJobRequest
      * @param headers StopJobHeaders
      * @param runtime runtime options for this request RuntimeOptions
@@ -1440,8 +1530,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 调用StopJob停止实例。
-     *
+     * <b>summary</b> : 
+     * <p>Stops a job.</p>
+     * 
      * @param request StopJobRequest
      * @return StopJobResponse
      */
@@ -1452,8 +1543,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary update a deployment using patch
-     *
+     * <b>summary</b> : 
+     * <p>Updates information about a deployment.</p>
+     * 
      * @param request UpdateDeploymentRequest
      * @param headers UpdateDeploymentHeaders
      * @param runtime runtime options for this request RuntimeOptions
@@ -1489,8 +1581,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary update a deployment using patch
-     *
+     * <b>summary</b> : 
+     * <p>Updates information about a deployment.</p>
+     * 
      * @param request UpdateDeploymentRequest
      * @return UpdateDeploymentResponse
      */
@@ -1501,8 +1594,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 调用UpdateMember更新成员。
-     *
+     * <b>summary</b> : 
+     * <p>Updates the permissions of one or more members in a specific namespace.</p>
+     * 
      * @param request UpdateMemberRequest
      * @param headers UpdateMemberHeaders
      * @param runtime runtime options for this request RuntimeOptions
@@ -1538,8 +1632,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 调用UpdateMember更新成员。
-     *
+     * <b>summary</b> : 
+     * <p>Updates the permissions of one or more members in a specific namespace.</p>
+     * 
      * @param request UpdateMemberRequest
      * @return UpdateMemberResponse
      */
@@ -1547,5 +1642,56 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         UpdateMemberHeaders headers = new UpdateMemberHeaders();
         return this.updateMemberWithOptions(namespace, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Verifies the code of an SQL deployment.</p>
+     * 
+     * @param request ValidateSqlStatementRequest
+     * @param headers ValidateSqlStatementHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ValidateSqlStatementResponse
+     */
+    public ValidateSqlStatementResponse validateSqlStatementWithOptions(String namespace, ValidateSqlStatementRequest request, ValidateSqlStatementHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.workspace)) {
+            realHeaders.put("workspace", com.aliyun.teautil.Common.toJSONString(headers.workspace));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ValidateSqlStatement"),
+            new TeaPair("version", "2022-07-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/namespaces/" + com.aliyun.openapiutil.Client.getEncodeParam(namespace) + "/sql-statement/validate"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ValidateSqlStatementResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Verifies the code of an SQL deployment.</p>
+     * 
+     * @param request ValidateSqlStatementRequest
+     * @return ValidateSqlStatementResponse
+     */
+    public ValidateSqlStatementResponse validateSqlStatement(String namespace, ValidateSqlStatementRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        ValidateSqlStatementHeaders headers = new ValidateSqlStatementHeaders();
+        return this.validateSqlStatementWithOptions(namespace, request, headers, runtime);
     }
 }

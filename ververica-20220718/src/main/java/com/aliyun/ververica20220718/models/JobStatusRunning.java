@@ -4,9 +4,17 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class JobStatusRunning extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>4</p>
+     */
     @NameInMap("observedFlinkJobRestarts")
     public Long observedFlinkJobRestarts;
 
+    /**
+     * <strong>example:</strong>
+     * <p>RUNNING</p>
+     */
     @NameInMap("observedFlinkJobStatus")
     public String observedFlinkJobStatus;
 

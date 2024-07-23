@@ -7,18 +7,38 @@ public class StartJobResponseBody extends TeaModel {
     @NameInMap("data")
     public Job data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("httpCode")
     public Integer httpCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CBC799F0-AS7S-1D30-8A4F-882ED4DD****</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 

@@ -13,30 +13,62 @@ public class Deployment extends TeaModel {
     @NameInMap("createdAt")
     public String createdAt;
 
+    /**
+     * <strong>example:</strong>
+     * <p>27846363877456****</p>
+     */
     @NameInMap("creator")
     public String creator;
 
+    /**
+     * <strong>example:</strong>
+     * <p>****@streamcompute.onaliyun.com</p>
+     */
     @NameInMap("creatorName")
     public String creatorName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("deploymentHasChanged")
     public Boolean deploymentHasChanged;
 
+    /**
+     * <strong>example:</strong>
+     * <p>00000000-0000-0000-0000-000000000001</p>
+     */
     @NameInMap("deploymentId")
     public String deploymentId;
 
     @NameInMap("deploymentTarget")
     public BriefDeploymentTarget deploymentTarget;
 
+    /**
+     * <strong>example:</strong>
+     * <p>this is a deployment description</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>vvr-6.0.0-flink-1.15</p>
+     */
     @NameInMap("engineVersion")
     public String engineVersion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>STREAMING | BATCH</p>
+     */
     @NameInMap("executionMode")
     public String executionMode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;taskmanager.numberOfTaskSlots&quot;:&quot;1&quot;}</p>
+     */
     @NameInMap("flinkConf")
     public java.util.Map<String, ?> flinkConf;
 
@@ -52,21 +84,41 @@ public class Deployment extends TeaModel {
     @NameInMap("modifiedAt")
     public String modifiedAt;
 
+    /**
+     * <strong>example:</strong>
+     * <p>27846363877456****</p>
+     */
     @NameInMap("modifier")
     public String modifier;
 
+    /**
+     * <strong>example:</strong>
+     * <p>****@streamcompute.onaliyun.com</p>
+     */
     @NameInMap("modifierName")
     public String modifierName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>deploymentName</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>default-namespace</p>
+     */
     @NameInMap("namespace")
     public String namespace;
 
     @NameInMap("streamingResourceSetting")
     public StreamingResourceSetting streamingResourceSetting;
 
+    /**
+     * <strong>example:</strong>
+     * <p>edcef******b4f</p>
+     */
     @NameInMap("workspace")
     public String workspace;
 

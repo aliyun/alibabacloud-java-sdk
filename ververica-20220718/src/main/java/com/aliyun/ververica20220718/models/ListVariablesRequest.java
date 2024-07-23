@@ -4,9 +4,21 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class ListVariablesRequest extends TeaModel {
+    /**
+     * <p>The page number. Minimum value: 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("pageIndex")
     public Integer pageIndex;
 
+    /**
+     * <p>The number of entries per page. Valid values: 1 to 100. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("pageSize")
     public Integer pageSize;
 

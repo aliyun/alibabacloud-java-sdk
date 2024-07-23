@@ -4,6 +4,10 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class EngineVersionMetadataIndex extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>vvr-6.0.1-flink-1.15</p>
+     */
     @NameInMap("defaultEngineVersion")
     public String defaultEngineVersion;
 

@@ -5,17 +5,45 @@ import com.aliyun.tea.*;
 
 public class ListJobsRequest extends TeaModel {
     /**
+     * <p>The deployment ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>58718c99-3b29-4c5e-93bb-c9fc4ec6****</p>
      */
     @NameInMap("deploymentId")
     public String deploymentId;
 
+    /**
+     * <p>The page number. Minimum value: 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("pageIndex")
     public Integer pageIndex;
 
+    /**
+     * <p>The number of entries per page. Valid values: 1 to 100. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The collation.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>gmt_create</li>
+     * <li>job_id</li>
+     * <li>status</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>gmt_create</p>
+     */
     @NameInMap("sortName")
     public String sortName;
 

@@ -4,6 +4,10 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class SavepointFailure extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1655006835</p>
+     */
     @NameInMap("failedAt")
     public Long failedAt;
 

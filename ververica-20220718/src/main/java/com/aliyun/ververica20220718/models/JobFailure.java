@@ -4,6 +4,10 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class JobFailure extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1660120062</p>
+     */
     @NameInMap("failedAt")
     public Long failedAt;
 

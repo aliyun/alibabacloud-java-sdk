@@ -4,9 +4,21 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class ListMembersRequest extends TeaModel {
+    /**
+     * <p>The page number. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("pageIndex")
     public Integer pageIndex;
 
+    /**
+     * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("pageSize")
     public Integer pageSize;
 

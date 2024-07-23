@@ -4,39 +4,79 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class Savepoint extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1659066711</p>
+     */
     @NameInMap("createdAt")
     public Long createdAt;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1d716b22-6aad-4be2-85c2-50cfc757****</p>
+     */
     @NameInMap("deploymentId")
     public String deploymentId;
 
     @NameInMap("description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5af678c0-7db0-4650-94c2-d2604f0a****</p>
+     */
     @NameInMap("jobId")
     public String jobId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1659069473</p>
+     */
     @NameInMap("modifiedAt")
     public Long modifiedAt;
 
+    /**
+     * <strong>example:</strong>
+     * <p>namespacetest</p>
+     */
     @NameInMap("namespace")
     public String namespace;
 
+    /**
+     * <strong>example:</strong>
+     * <p>TRUE</p>
+     */
     @NameInMap("nativeFormat")
     public Boolean nativeFormat;
 
+    /**
+     * <strong>example:</strong>
+     * <p>354dde66-a3ae-463e-967a-0b4107fd****</p>
+     */
     @NameInMap("savepointId")
     public String savepointId;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://oss/bucket/flink/flink-jobs/namespaces/vvp-team/deployments/5a19a71b-1c42-4f34-94fd-86cf60782c81/checkpoints/sp-3285">https://oss/bucket/flink/flink-jobs/namespaces/vvp-team/deployments/5a19a71b-1c42-4f34-94fd-86cf60782c81/checkpoints/sp-3285</a></p>
+     */
     @NameInMap("savepointLocation")
     public String savepointLocation;
 
+    /**
+     * <strong>example:</strong>
+     * <p>USER_REQUEST</p>
+     */
     @NameInMap("savepointOrigin")
     public String savepointOrigin;
 
     @NameInMap("status")
     public SavepointStatus status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>TRUE</p>
+     */
     @NameInMap("stopWithDrainEnabled")
     public Boolean stopWithDrainEnabled;
 

@@ -7,6 +7,10 @@ public class Artifact extends TeaModel {
     @NameInMap("jarArtifact")
     public JarArtifact jarArtifact;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SQLSCRIPT</p>
+     */
     @NameInMap("kind")
     public String kind;
 

@@ -4,30 +4,97 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class ListDeploymentsRequest extends TeaModel {
+    /**
+     * <p>The ID of the user who creates the deployment.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>183899668*******</p>
+     */
     @NameInMap("creator")
     public String creator;
 
+    /**
+     * <p>The execution mode of the deployment.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>BATCH</li>
+     * <li>STREAMING</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>STREAMING</p>
+     */
     @NameInMap("executionMode")
     public String executionMode;
 
+    /**
+     * <p>The tag key.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>key</p>
+     */
     @NameInMap("labelKey")
     public String labelKey;
 
+    /**
+     * <p>The tag value. Separate multiple values with semicolon (;).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>value1,value2</p>
+     */
     @NameInMap("labelValueArray")
     public String labelValueArray;
 
+    /**
+     * <p>The ID of the user who modifies the deployment.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>183899668*******</p>
+     */
     @NameInMap("modifier")
     public String modifier;
 
+    /**
+     * <p>The name of the deployment.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vvp_ds_0522</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>The page number. Minimum value: 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("pageIndex")
     public Integer pageIndex;
 
+    /**
+     * <p>The number of entries per page. Valid values: 1 to 100. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The latest status of the deployment.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>CANCELLED</li>
+     * <li>FAILED</li>
+     * <li>RUNNING</li>
+     * <li>TRANSITIONING</li>
+     * <li>FINISHED</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>RUNNING</p>
+     */
     @NameInMap("status")
     public String status;
 

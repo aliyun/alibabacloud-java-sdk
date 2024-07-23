@@ -7,6 +7,10 @@ public class SavepointStatus extends TeaModel {
     @NameInMap("failure")
     public SavepointFailure failure;
 
+    /**
+     * <strong>example:</strong>
+     * <p>COMPLETED</p>
+     */
     @NameInMap("state")
     public String state;
 

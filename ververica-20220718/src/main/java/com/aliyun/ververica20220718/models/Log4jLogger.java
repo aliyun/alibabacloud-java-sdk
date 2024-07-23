@@ -4,9 +4,17 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class Log4jLogger extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ERROR</p>
+     */
     @NameInMap("loggerLevel")
     public String loggerLevel;
 
+    /**
+     * <strong>example:</strong>
+     * <p>StdOutErrConsoleAppender</p>
+     */
     @NameInMap("loggerName")
     public String loggerName;
 

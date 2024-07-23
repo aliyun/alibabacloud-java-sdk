@@ -4,6 +4,9 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class GenerateResourcePlanWithFlinkConfAsyncRequest extends TeaModel {
+    /**
+     * <p>The Flink configuration that is used to generate a resource plan.</p>
+     */
     @NameInMap("body")
     public java.util.Map<String, ?> body;
 
