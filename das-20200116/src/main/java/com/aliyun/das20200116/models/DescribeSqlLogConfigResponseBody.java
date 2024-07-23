@@ -241,6 +241,9 @@ public class DescribeSqlLogConfigResponseBody extends TeaModel {
         @NameInMap("SqlLogEnable")
         public Boolean sqlLogEnable;
 
+        @NameInMap("SqlLogSource")
+        public String sqlLogSource;
+
         /**
          * <p>The state of data migration. Valid values:</p>
          * <ul>
@@ -263,6 +266,9 @@ public class DescribeSqlLogConfigResponseBody extends TeaModel {
          */
         @NameInMap("SqlLogVisibleTime")
         public Long sqlLogVisibleTime;
+
+        @NameInMap("SupportMigration")
+        public Boolean supportMigration;
 
         /**
          * <p>The latest version of DAS Enterprise Edition that supports the database instance. Valid values:</p>
@@ -407,6 +413,14 @@ public class DescribeSqlLogConfigResponseBody extends TeaModel {
             return this.sqlLogEnable;
         }
 
+        public DescribeSqlLogConfigResponseBodyData setSqlLogSource(String sqlLogSource) {
+            this.sqlLogSource = sqlLogSource;
+            return this;
+        }
+        public String getSqlLogSource() {
+            return this.sqlLogSource;
+        }
+
         public DescribeSqlLogConfigResponseBodyData setSqlLogState(String sqlLogState) {
             this.sqlLogState = sqlLogState;
             return this;
@@ -421,6 +435,14 @@ public class DescribeSqlLogConfigResponseBody extends TeaModel {
         }
         public Long getSqlLogVisibleTime() {
             return this.sqlLogVisibleTime;
+        }
+
+        public DescribeSqlLogConfigResponseBodyData setSupportMigration(Boolean supportMigration) {
+            this.supportMigration = supportMigration;
+            return this;
+        }
+        public Boolean getSupportMigration() {
+            return this.supportMigration;
         }
 
         public DescribeSqlLogConfigResponseBodyData setSupportVersion(String supportVersion) {
