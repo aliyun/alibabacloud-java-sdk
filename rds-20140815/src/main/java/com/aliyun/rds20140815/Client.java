@@ -2307,6 +2307,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Amount", request.amount);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.autoCreateProxy)) {
+            query.put("AutoCreateProxy", request.autoCreateProxy);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.autoPay)) {
             query.put("AutoPay", request.autoPay);
         }
@@ -4489,6 +4493,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateReadOnlyDBInstanceResponse createReadOnlyDBInstanceWithOptions(CreateReadOnlyDBInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.autoCreateProxy)) {
+            query.put("AutoCreateProxy", request.autoCreateProxy);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.autoPay)) {
             query.put("AutoPay", request.autoPay);
         }

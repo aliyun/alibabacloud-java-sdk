@@ -21,6 +21,9 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
     @NameInMap("Amount")
     public Integer amount;
 
+    @NameInMap("AutoCreateProxy")
+    public Boolean autoCreateProxy;
+
     /**
      * <p>Specifies whether to enable the automatic payment feature. Valid values:</p>
      * <ul>
@@ -825,6 +828,14 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
     }
     public Integer getAmount() {
         return this.amount;
+    }
+
+    public CreateDBInstanceShrinkRequest setAutoCreateProxy(Boolean autoCreateProxy) {
+        this.autoCreateProxy = autoCreateProxy;
+        return this;
+    }
+    public Boolean getAutoCreateProxy() {
+        return this.autoCreateProxy;
     }
 
     public CreateDBInstanceShrinkRequest setAutoPay(Boolean autoPay) {
