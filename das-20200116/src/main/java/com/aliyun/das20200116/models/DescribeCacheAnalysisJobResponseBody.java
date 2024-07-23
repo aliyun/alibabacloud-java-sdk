@@ -14,7 +14,7 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The details of the task.</p>
+     * <p>The details of the cache analysis task.</p>
      */
     @NameInMap("Data")
     public DescribeCacheAnalysisJobResponseBodyData data;
@@ -118,7 +118,7 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
         public Long count;
 
         /**
-         * <p>The name of the database.</p>
+         * <p>The database name.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -136,7 +136,7 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
         public String encoding;
 
         /**
-         * <p>The expiration period of the key. Unit: milliseconds. A value of 0 indicates that the key does not expire.</p>
+         * <p>The time when the key expires. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. A value of 0 indicates that the key never expires.</p>
          * 
          * <strong>example:</strong>
          * <p>1596256542547</p>
@@ -145,7 +145,7 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
         public Long expirationTimeMillis;
 
         /**
-         * <p>The name of the key.</p>
+         * <p>The key name.</p>
          * 
          * <strong>example:</strong>
          * <p>task_x****</p>
@@ -281,7 +281,7 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
         public Long count;
 
         /**
-         * <p>The name of the database.</p>
+         * <p>The database name.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -299,7 +299,7 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
         public String encoding;
 
         /**
-         * <p>The expiration period of the key. Unit: milliseconds. A value of 0 indicates that the key does not expire.</p>
+         * <p>The time when the key expires. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. A value of 0 indicates that the key never expires.</p>
          * 
          * <strong>example:</strong>
          * <p>1596256542547</p>
@@ -308,7 +308,7 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
         public Long expirationTimeMillis;
 
         /**
-         * <p>The name of the key.</p>
+         * <p>The key name.</p>
          * 
          * <strong>example:</strong>
          * <p>task_x****</p>
@@ -425,15 +425,50 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
     }
 
     public static class DescribeCacheAnalysisJobResponseBodyDataExpiryKeysLevelCountExpiryLevel extends TeaModel {
+        /**
+         * <p>The time when the cache analysis task was complete. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1717469347000</p>
+         */
         @NameInMap("AnalysisTs")
         public Long analysisTs;
 
+        /**
+         * <p>The expiration level. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: The key never expires.</li>
+         * <li><strong>1</strong>: The key has expired.</li>
+         * <li><strong>2</strong>: The key has expired for 0 to 1 hour.</li>
+         * <li><strong>3</strong>: The key has expired for 1 to 3 hours.</li>
+         * <li><strong>4</strong>: The key has expired for 3 to 12 hours.</li>
+         * <li><strong>5</strong>: The key has expired for 12 to 24 hours.</li>
+         * <li><strong>6</strong>: The key has expired for one to two days.</li>
+         * <li><strong>7</strong>: The key has expired for three to seven days.</li>
+         * <li><strong>8</strong>: The key has expired for more than seven days.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Level")
         public Integer level;
 
+        /**
+         * <p>The number of bytes occupied by the keys that have expired.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8064</p>
+         */
         @NameInMap("TotalBytes")
         public Long totalBytes;
 
+        /**
+         * <p>The total number of the keys that have expired.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>62</p>
+         */
         @NameInMap("TotalKeys")
         public Long totalKeys;
 
@@ -627,7 +662,7 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
         public Long count;
 
         /**
-         * <p>The name of the database.</p>
+         * <p>The database name.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -645,7 +680,7 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
         public String encoding;
 
         /**
-         * <p>The expiration period of the key. Unit: milliseconds. A value of 0 indicates that the key does not expire.</p>
+         * <p>The time when the key expires. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. A value of 0 indicates that the key never expires.</p>
          * 
          * <strong>example:</strong>
          * <p>1596256542547</p>
@@ -654,7 +689,7 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
         public Long expirationTimeMillis;
 
         /**
-         * <p>The name of the key.</p>
+         * <p>The key name.</p>
          * 
          * <strong>example:</strong>
          * <p>task_x****</p>
@@ -790,7 +825,7 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
         public Long count;
 
         /**
-         * <p>The name of the database.</p>
+         * <p>The database name.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -808,7 +843,7 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
         public String encoding;
 
         /**
-         * <p>The expiration period of the key. Unit: milliseconds. A value of 0 indicates that the key does not expire.</p>
+         * <p>The time when the key expires. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. A value of 0 indicates that the key never expires.</p>
          * 
          * <strong>example:</strong>
          * <p>1596256542547</p>
@@ -817,7 +852,7 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
         public Long expirationTimeMillis;
 
         /**
-         * <p>The name of the key.</p>
+         * <p>The key name.</p>
          * 
          * <strong>example:</strong>
          * <p>task_x****</p>
@@ -946,6 +981,9 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
         @NameInMap("BigKeysOfNum")
         public DescribeCacheAnalysisJobResponseBodyDataBigKeysOfNum bigKeysOfNum;
 
+        /**
+         * <p>The statistics of the keys that have expired.</p>
+         */
         @NameInMap("ExpiryKeysLevelCount")
         public DescribeCacheAnalysisJobResponseBodyDataExpiryKeysLevelCount expiryKeysLevelCount;
 
