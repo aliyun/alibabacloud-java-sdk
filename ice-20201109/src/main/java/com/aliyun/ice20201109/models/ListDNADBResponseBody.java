@@ -51,7 +51,7 @@ public class ListDNADBResponseBody extends TeaModel {
          * <p>Video</p>
          */
         @NameInMap("Model")
-        public Integer model;
+        public String model;
 
         /**
          * <strong>example:</strong>
@@ -88,11 +88,11 @@ public class ListDNADBResponseBody extends TeaModel {
             return this.description;
         }
 
-        public ListDNADBResponseBodyDBList setModel(Integer model) {
+        public ListDNADBResponseBodyDBList setModel(String model) {
             this.model = model;
             return this;
         }
-        public Integer getModel() {
+        public String getModel() {
             return this.model;
         }
 

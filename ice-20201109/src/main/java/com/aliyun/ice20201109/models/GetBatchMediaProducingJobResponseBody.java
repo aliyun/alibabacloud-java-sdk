@@ -71,6 +71,9 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
         @NameInMap("MediaURL")
         public String mediaURL;
 
+        @NameInMap("ProjectId")
+        public String projectId;
+
         /**
          * <strong>example:</strong>
          * <p>Success</p>
@@ -121,6 +124,14 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
         }
         public String getMediaURL() {
             return this.mediaURL;
+        }
+
+        public GetBatchMediaProducingJobResponseBodyEditingBatchJobSubJobList setProjectId(String projectId) {
+            this.projectId = projectId;
+            return this;
+        }
+        public String getProjectId() {
+            return this.projectId;
         }
 
         public GetBatchMediaProducingJobResponseBodyEditingBatchJobSubJobList setStatus(String status) {

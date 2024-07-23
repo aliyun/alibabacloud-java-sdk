@@ -3042,26 +3042,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("JobId", request.jobId);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.signature)) {
-            query.put("Signature", request.signature);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.signatureMehtod)) {
-            query.put("SignatureMehtod", request.signatureMehtod);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.signatureNonce)) {
-            query.put("SignatureNonce", request.signatureNonce);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.signatureType)) {
-            query.put("SignatureType", request.signatureType);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.signatureVersion)) {
-            query.put("SignatureVersion", request.signatureVersion);
-        }
-
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -7434,8 +7414,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>If you have questions about how to use the media asset search feature in Intelligent Media Services (IMS), contact technical support in the DingTalk group (ID 30415005038).</p>
+     * 
      * <b>summary</b> : 
-     * <p>媒资搜索</p>
+     * <p>Queries information about media assets based on the request parameters.</p>
      * 
      * @param request SearchMediaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7490,8 +7473,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>If you have questions about how to use the media asset search feature in Intelligent Media Services (IMS), contact technical support in the DingTalk group (ID 30415005038).</p>
+     * 
      * <b>summary</b> : 
-     * <p>媒资搜索</p>
+     * <p>Queries information about media assets based on the request parameters.</p>
      * 
      * @param request SearchMediaRequest
      * @return SearchMediaResponse
