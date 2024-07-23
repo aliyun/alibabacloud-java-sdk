@@ -2944,8 +2944,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>SQL Server</p>
+     * <h3><a href="#"></a>References</h3>
+     * <p><a href="https://help.aliyun.com/document_detail/2392322.html">Configure security group settings for an ApsaraDB RDS for SQL Server instance</a></p>
+     * 
      * <b>summary</b> : 
-     * <p>创建实例主机安全组规则</p>
+     * <p>Adds a security group rule to an ApsaraDB RDS for SQL Server instance.</p>
      * 
      * @param request CreateDBInstanceSecurityGroupRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3008,8 +3014,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>SQL Server</p>
+     * <h3><a href="#"></a>References</h3>
+     * <p><a href="https://help.aliyun.com/document_detail/2392322.html">Configure security group settings for an ApsaraDB RDS for SQL Server instance</a></p>
+     * 
      * <b>summary</b> : 
-     * <p>创建实例主机安全组规则</p>
+     * <p>Adds a security group rule to an ApsaraDB RDS for SQL Server instance.</p>
      * 
      * @param request CreateDBInstanceSecurityGroupRuleRequest
      * @return CreateDBInstanceSecurityGroupRuleResponse
@@ -5616,8 +5628,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>SQL Server</p>
+     * <h3><a href="#"></a>References</h3>
+     * <p><a href="https://help.aliyun.com/document_detail/2392322.html">Configure security group settings for an ApsaraDB RDS for SQL Server instance</a></p>
+     * 
      * <b>summary</b> : 
-     * <p>删除实例主机安全组规则</p>
+     * <p>Deletes a security group rule that is configured for an ApsaraDB RDS for SQL Server instance.</p>
      * 
      * @param request DeleteDBInstanceSecurityGroupRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5676,8 +5694,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>SQL Server</p>
+     * <h3><a href="#"></a>References</h3>
+     * <p><a href="https://help.aliyun.com/document_detail/2392322.html">Configure security group settings for an ApsaraDB RDS for SQL Server instance</a></p>
+     * 
      * <b>summary</b> : 
-     * <p>删除实例主机安全组规则</p>
+     * <p>Deletes a security group rule that is configured for an ApsaraDB RDS for SQL Server instance.</p>
      * 
      * @param request DeleteDBInstanceSecurityGroupRuleRequest
      * @return DeleteDBInstanceSecurityGroupRuleResponse
@@ -6964,7 +6988,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details about scheduled O\\\&amp;M tasks for an instance.</p>
+     * <p>Queries the details about scheduled O\\\\\\&amp;M tasks for an instance.</p>
      * 
      * @param request DescribeActiveOperationTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7065,7 +7089,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details about scheduled O\\\&amp;M tasks for an instance.</p>
+     * <p>Queries the details about scheduled O\\\\\\&amp;M tasks for an instance.</p>
      * 
      * @param request DescribeActiveOperationTasksRequest
      * @return DescribeActiveOperationTasksResponse
@@ -10488,8 +10512,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>SQL Server</p>
+     * <h3><a href="#"></a>References</h3>
+     * <p><a href="https://help.aliyun.com/document_detail/2392322.html">Configure security group settings for an ApsaraDB RDS for SQL Server instance</a></p>
+     * 
      * <b>summary</b> : 
-     * <p>描述实例主机安全组规则</p>
+     * <p>Queries the security group rules that are configured for an ApsaraDB RDS for SQL Server instance.</p>
      * 
      * @param request DescribeDBInstanceSecurityGroupRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10536,8 +10566,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>SQL Server</p>
+     * <h3><a href="#"></a>References</h3>
+     * <p><a href="https://help.aliyun.com/document_detail/2392322.html">Configure security group settings for an ApsaraDB RDS for SQL Server instance</a></p>
+     * 
      * <b>summary</b> : 
-     * <p>描述实例主机安全组规则</p>
+     * <p>Queries the security group rules that are configured for an ApsaraDB RDS for SQL Server instance.</p>
      * 
      * @param request DescribeDBInstanceSecurityGroupRuleRequest
      * @return DescribeDBInstanceSecurityGroupRuleResponse
@@ -16651,13 +16687,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h3><a href="#"></a>Supported database engines</h3>
      * <ul>
-     * <li>RDS MySQL
-     * **
-     * <strong>Note</strong> This operation is not supported for RDS instances that run MySQL 5.7 on RDS Basic Edition.</li>
-     * <li>RDS SQL Server
-     * **
-     * <strong>Note</strong> This operation is supported only for RDS instances that run SQL Server 2008 R2.</li>
-     * <li>RDS MariaDB</li>
+     * <li>MySQL<blockquote>
+     * <p>This operation is not supported for RDS instances that run MySQL 5.7 on RDS Basic Edition.</p>
+     * </blockquote>
+     * </li>
+     * <li>SQL Server<blockquote>
+     * <p>This operation is supported only for RDS instances that run SQL Server 2008 R2.</p>
+     * </blockquote>
+     * </li>
+     * <li>MariaDB</li>
      * </ul>
      * <h3><a href="#"></a>Precautions</h3>
      * <ul>
@@ -16741,13 +16779,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h3><a href="#"></a>Supported database engines</h3>
      * <ul>
-     * <li>RDS MySQL
-     * **
-     * <strong>Note</strong> This operation is not supported for RDS instances that run MySQL 5.7 on RDS Basic Edition.</li>
-     * <li>RDS SQL Server
-     * **
-     * <strong>Note</strong> This operation is supported only for RDS instances that run SQL Server 2008 R2.</li>
-     * <li>RDS MariaDB</li>
+     * <li>MySQL<blockquote>
+     * <p>This operation is not supported for RDS instances that run MySQL 5.7 on RDS Basic Edition.</p>
+     * </blockquote>
+     * </li>
+     * <li>SQL Server<blockquote>
+     * <p>This operation is supported only for RDS instances that run SQL Server 2008 R2.</p>
+     * </blockquote>
+     * </li>
+     * <li>MariaDB</li>
      * </ul>
      * <h3><a href="#"></a>Precautions</h3>
      * <ul>
@@ -21570,8 +21610,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>SQL Server</p>
+     * <h3><a href="#"></a>References</h3>
+     * <p><a href="https://help.aliyun.com/document_detail/2392322.html">Configure security group settings for an ApsaraDB RDS for SQL Server instance</a></p>
+     * 
      * <b>summary</b> : 
-     * <p>修改实例主机安全组规则</p>
+     * <p>Modifies a security group rule that is configured for an ApsaraDB RDS for SQL Server instance.</p>
      * 
      * @param request ModifyDBInstanceSecurityGroupRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -21638,8 +21684,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>SQL Server</p>
+     * <h3><a href="#"></a>References</h3>
+     * <p><a href="https://help.aliyun.com/document_detail/2392322.html">Configure security group settings for an ApsaraDB RDS for SQL Server instance</a></p>
+     * 
      * <b>summary</b> : 
-     * <p>修改实例主机安全组规则</p>
+     * <p>Modifies a security group rule that is configured for an ApsaraDB RDS for SQL Server instance.</p>
      * 
      * @param request ModifyDBInstanceSecurityGroupRuleRequest
      * @return ModifyDBInstanceSecurityGroupRuleResponse

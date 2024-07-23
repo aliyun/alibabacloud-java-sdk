@@ -43,7 +43,7 @@ public class DescribeSlowLogsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Valid values: any non-zero positive integer.</p>
+     * <p>The page number. Pages start from 1.</p>
      * <p>Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
@@ -53,7 +53,7 @@ public class DescribeSlowLogsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: <strong>30</strong> to <strong>100</strong>. Default value: <strong>30</strong>.</p>
+     * <p>The number of entries per page. Valid values: <strong>30</strong> to <strong>100</strong>. Default value: <strong>30</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>

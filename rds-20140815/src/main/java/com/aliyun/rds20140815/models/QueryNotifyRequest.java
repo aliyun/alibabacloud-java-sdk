@@ -15,7 +15,7 @@ public class QueryNotifyRequest extends TeaModel {
     public String from;
 
     /**
-     * <p>The number of the page to return. Valid values: any <strong>non-zero</strong> positive integer.</p>
+     * <p>The page number. Pages start from page 1. Default value: 1.****</p>
      * <p>Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class QueryNotifyRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values:</p>
+     * <p>The number of entries per page. Valid values:</p>
      * <ul>
      * <li><strong>30</strong></li>
      * <li><strong>50</strong></li>

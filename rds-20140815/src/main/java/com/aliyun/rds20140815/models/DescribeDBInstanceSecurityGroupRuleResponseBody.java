@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstanceSecurityGroupRuleResponseBody extends TeaModel {
     /**
+     * <p>The status code returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The details of the security group rule.</p>
+     */
     @NameInMap("Data")
     public String data;
 
     /**
+     * <p>The information about the status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -22,6 +29,8 @@ public class DescribeDBInstanceSecurityGroupRuleResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6BFF4136-10B9-130B-BF8E-D3504BCE4F43</p>
      */

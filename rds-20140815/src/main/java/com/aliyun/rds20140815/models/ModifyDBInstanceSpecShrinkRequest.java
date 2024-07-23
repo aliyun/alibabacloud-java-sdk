@@ -154,6 +154,11 @@ public class ModifyDBInstanceSpecShrinkRequest extends TeaModel {
      * <li><strong>Immediate</strong> (default)</li>
      * <li><strong>MaintainTime</strong>: The effective time is within the maintenance window. For more information, see ModifyDBInstanceMaintainTime.</li>
      * </ul>
+     * <!---->
+     * 
+     * <ul>
+     * <li>ScheduleTime: The schedule time must be a specific point in time that is 12 hours later than the current time. In this case, EffectiveTime is calculated by using the following formula: EffectiveTime = ScheduleTime + SwitchTime.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>MaintainTime</p>

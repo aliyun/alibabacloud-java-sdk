@@ -69,15 +69,12 @@ public class ModifyParameterGroupRequest extends TeaModel {
     /**
      * <p>A JSON string that consists of parameters and their values in the parameter template. Format: {&quot;Parameter 1&quot;:&quot;Value of Parameter 1&quot;,&quot;Parameter 2&quot;:&quot;Value of Parameter 2&quot;...}. For more information about the parameters that can be modified, see <a href="https://help.aliyun.com/document_detail/96063.html">Modify the parameters of an ApsaraDB RDS for MySQL instance</a> or <a href="https://help.aliyun.com/document_detail/96751.html">Modify the parameters of an ApsaraDB RDS for PostgreSQL instance</a>.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>If <strong>ModifyMode</strong> is set to <strong>Individual</strong> and this parameter is specified, the new parameters overwrite the parameters in the original parameter template.</p>
-     * </li>
-     * <li><p>If you set <strong>ModifyMode</strong> to <strong>Collectivity</strong> and specify this parameter, the new parameters are added to the original parameter template, or the parameters in the original parameter template are modified.</p>
-     * </li>
-     * <li><p>If you do not specify this parameter, the parameters in the original parameter template remain unchanged.</p>
-     * </li>
+     * <li>If <strong>ModifyMode</strong> is set to <strong>Individual</strong> and this parameter is specified, the new parameters overwrite the parameters in the original parameter template.</li>
+     * <li>If you set <strong>ModifyMode</strong> to <strong>Collectivity</strong> and specify this parameter, the new parameters are added to the original parameter template, or the parameters in the original parameter template are modified.</li>
+     * <li>If you do not specify this parameter, the parameters in the original parameter template remain unchanged.</li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>{&quot;back_log&quot;:&quot;3000&quot;}</p>

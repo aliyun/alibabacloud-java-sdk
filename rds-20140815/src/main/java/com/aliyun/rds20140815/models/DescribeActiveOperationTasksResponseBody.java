@@ -130,6 +130,9 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
 
         /**
          * <p>The level of the task in Chinese.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>系统运维</p>
          */
         @NameInMap("ChangeLevelZh")
         public String changeLevelZh;
@@ -208,6 +211,9 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
 
         /**
          * <p>The impact of the task in Chinese.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>实例闪断</p>
          */
         @NameInMap("ImpactZh")
         public String impactZh;
@@ -343,6 +349,9 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
 
         /**
          * <p>The reason for the task in Chinese.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>小版本升级</p>
          */
         @NameInMap("TaskTypeZh")
         public String taskTypeZh;

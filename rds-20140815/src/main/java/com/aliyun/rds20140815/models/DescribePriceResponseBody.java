@@ -350,7 +350,7 @@ public class DescribePriceResponseBody extends TeaModel {
          * <p>Order Information</p>
          */
         @NameInMap("OrderLines")
-        public String orderLines;
+        public Object orderLines;
 
         /**
          * <p>The original price.</p>
@@ -431,11 +431,11 @@ public class DescribePriceResponseBody extends TeaModel {
             return this.discountPrice;
         }
 
-        public DescribePriceResponseBodyPriceInfo setOrderLines(String orderLines) {
+        public DescribePriceResponseBodyPriceInfo setOrderLines(Object orderLines) {
             this.orderLines = orderLines;
             return this;
         }
-        public String getOrderLines() {
+        public Object getOrderLines() {
             return this.orderLines;
         }
 

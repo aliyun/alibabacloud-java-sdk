@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateDBInstanceSecurityGroupRuleResponseBody extends TeaModel {
     /**
+     * <p>The status code returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class CreateDBInstanceSecurityGroupRuleResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The information about the status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -19,6 +23,8 @@ public class CreateDBInstanceSecurityGroupRuleResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>07F6177E-6DE4-408A-BB4F-0723301340F4</p>
      */

@@ -11,7 +11,7 @@ public class RenewInstanceRequest extends TeaModel {
      * <li><strong>False</strong> (default): disables automatic payment. You have to manually pay the order in the console.</li>
      * </ul>
      * <blockquote>
-     * <p> For more information about how to manually renew an instance in the console, see the following topic:</p>
+     * <p> For more information about how to manually pay the order in the console, see the following topics:</p>
      * </blockquote>
      * <ul>
      * <li><p><a href="https://help.aliyun.com/document_detail/96050.html">Manually renew an ApsaraDB RDS for MySQL instance</a></p>

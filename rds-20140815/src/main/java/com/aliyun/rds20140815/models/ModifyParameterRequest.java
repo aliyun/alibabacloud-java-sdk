@@ -46,13 +46,11 @@ public class ModifyParameterRequest extends TeaModel {
     /**
      * <p>The parameter template ID.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>If you specify this parameter, you do not need to specify <strong>Parameters</strong>.</p>
-     * </li>
-     * <li><p>If the parameter template can be applied only after the instance is restarted, you must specify <strong>Forcerestart</strong>.</p>
-     * </li>
+     * <li>If you specify this parameter, you do not need to specify <strong>Parameters</strong>.</li>
+     * <li>If the parameter template can be applied only after the instance is restarted, you must specify <strong>Forcerestart</strong>.</li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>rpg-xxxxxxxxx</p>

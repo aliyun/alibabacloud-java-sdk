@@ -190,7 +190,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String createStrategy;
 
     /**
-     * <p>The instance type of the instance. You can specify a standard instance type or an economy instance type. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary ApsaraDB RDS instance types</a>.</p>
+     * <p>The instance type of the instance. You can specify an instance type of the standard or YiTian product type. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary ApsaraDB RDS instance types</a>.</p>
      * <p>To create a serverless instance, set this parameter to one of the following values:</p>
      * <ul>
      * <li>If you want to create a serverless instance that runs MySQL on RDS Basic Edition, set this parameter to <strong>mysql.n2.serverless.1c</strong>.</li>
