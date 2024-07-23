@@ -7,18 +7,38 @@ public class GetDebugAppInstanceResponseBody extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>aig-9ciijz60n4xsv****</p>
+     */
     @NameInMap("AppInstanceGroupId")
     public String appInstanceGroupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ai-7ybdeiyoeh5e****</p>
+     */
     @NameInMap("AppInstanceId")
     public String appInstanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1.1</p>
+     */
     @NameInMap("AppVersion")
     public String appVersion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>e4e169bea1cc48e8afac53**********</p>
+     */
     @NameInMap("AuthCode")
     public String authCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

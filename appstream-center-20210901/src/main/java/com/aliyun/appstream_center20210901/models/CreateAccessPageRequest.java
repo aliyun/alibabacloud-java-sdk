@@ -4,21 +4,42 @@ package com.aliyun.appstream_center20210901.models;
 import com.aliyun.tea.*;
 
 public class CreateAccessPageRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AccessPageName")
     public String accessPageName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>c-e-06gdesdaxez****</p>
+     */
     @NameInMap("CloudEnvId")
     public String cloudEnvId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>7</p>
+     */
     @NameInMap("EffectTime")
     public Integer effectTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>p-065zdecaer07h****</p>
+     */
     @NameInMap("ProjectId")
     public String projectId;
 
     @NameInMap("ProjectName")
     public String projectName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Day</p>
+     */
     @NameInMap("Unit")
     public String unit;
 

@@ -4,18 +4,38 @@ package com.aliyun.appstream_center20210901.models;
 import com.aliyun.tea.*;
 
 public class RenewSessionPackageResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>There is a missing parameter.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>50158E8B-992E-1286-B174-**********</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>22983172******</p>
+     */
     @NameInMap("SessionPackageId")
     public Long sessionPackageId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Success")
     public String success;
 

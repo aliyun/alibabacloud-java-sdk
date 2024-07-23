@@ -4,24 +4,59 @@ package com.aliyun.appstream_center20210901.models;
 import com.aliyun.tea.*;
 
 public class CreateAppInstanceGroupRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>img-8z4nztpaqvay4****</p>
+     */
     @NameInMap("AppCenterImageId")
     public String appCenterImageId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppInstanceGroupName")
     public String appInstanceGroupName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("BizRegionId")
     public String bizRegionId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Node</p>
+     */
     @NameInMap("ChargeResourceMode")
     public String chargeResourceMode;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PrePaid</p>
+     */
     @NameInMap("ChargeType")
     public String chargeType;
 
@@ -31,18 +66,41 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
     @NameInMap("NodePool")
     public CreateAppInstanceGroupRequestNodePool nodePool;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Period")
     public Integer period;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PeriodUnit")
     public String periodUnit;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cag-b2ron*******</p>
+     */
     @NameInMap("PreOpenAppId")
     public String preOpenAppId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CloudApp</p>
+     */
     @NameInMap("ProductType")
     public String productType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>17440009****</p>
+     */
     @NameInMap("PromotionId")
     public String promotionId;
 
@@ -52,17 +110,29 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
     @NameInMap("SecurityPolicy")
     public CreateAppInstanceGroupRequestSecurityPolicy securityPolicy;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>15</p>
+     */
     @NameInMap("SessionTimeout")
     public Integer sessionTimeout;
 
     @NameInMap("StoragePolicy")
     public CreateAppInstanceGroupRequestStoragePolicy storagePolicy;
 
+    @NameInMap("UserDefinePolicy")
+    public CreateAppInstanceGroupRequestUserDefinePolicy userDefinePolicy;
+
     @NameInMap("UserInfo")
     public CreateAppInstanceGroupRequestUserInfo userInfo;
 
     @NameInMap("Users")
     public java.util.List<String> users;
+
+    @NameInMap("VideoPolicy")
+    public CreateAppInstanceGroupRequestVideoPolicy videoPolicy;
 
     public static CreateAppInstanceGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAppInstanceGroupRequest self = new CreateAppInstanceGroupRequest();
@@ -213,6 +283,14 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
         return this.storagePolicy;
     }
 
+    public CreateAppInstanceGroupRequest setUserDefinePolicy(CreateAppInstanceGroupRequestUserDefinePolicy userDefinePolicy) {
+        this.userDefinePolicy = userDefinePolicy;
+        return this;
+    }
+    public CreateAppInstanceGroupRequestUserDefinePolicy getUserDefinePolicy() {
+        return this.userDefinePolicy;
+    }
+
     public CreateAppInstanceGroupRequest setUserInfo(CreateAppInstanceGroupRequestUserInfo userInfo) {
         this.userInfo = userInfo;
         return this;
@@ -227,6 +305,14 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
     }
     public java.util.List<String> getUsers() {
         return this.users;
+    }
+
+    public CreateAppInstanceGroupRequest setVideoPolicy(CreateAppInstanceGroupRequestVideoPolicy videoPolicy) {
+        this.videoPolicy = videoPolicy;
+        return this;
+    }
+    public CreateAppInstanceGroupRequestVideoPolicy getVideoPolicy() {
+        return this.videoPolicy;
     }
 
     public static class CreateAppInstanceGroupRequestNetworkDomainRules extends TeaModel {
@@ -260,9 +346,17 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
     }
 
     public static class CreateAppInstanceGroupRequestNetworkRoutes extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>139.196.XX.XX/32</p>
+         */
         @NameInMap("Destination")
         public String destination;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Shared</p>
+         */
         @NameInMap("Mode")
         public String mode;
 
@@ -293,12 +387,20 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
         @NameInMap("DomainRules")
         public java.util.List<CreateAppInstanceGroupRequestNetworkDomainRules> domainRules;
 
+        /**
+         * <strong>example:</strong>
+         * <p>60</p>
+         */
         @NameInMap("IpExpireMinutes")
         public Integer ipExpireMinutes;
 
         @NameInMap("Routes")
         public java.util.List<CreateAppInstanceGroupRequestNetworkRoutes> routes;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Shared</p>
+         */
         @NameInMap("StrategyType")
         public String strategyType;
 
@@ -342,12 +444,24 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
     }
 
     public static class CreateAppInstanceGroupRequestNodePoolRecurrenceSchedulesTimerPeriods extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("Amount")
         public Integer amount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>15:00</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12:00</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
@@ -383,6 +497,10 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
     }
 
     public static class CreateAppInstanceGroupRequestNodePoolRecurrenceSchedules extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>weekly</p>
+         */
         @NameInMap("RecurrenceType")
         public String recurrenceType;
 
@@ -424,12 +542,24 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
     }
 
     public static class CreateAppInstanceGroupRequestNodePool extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("MaxScalingAmount")
         public Integer maxScalingAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("NodeAmount")
         public Integer nodeAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("NodeCapacity")
         public Integer nodeCapacity;
 
@@ -439,24 +569,52 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
         @NameInMap("RecurrenceSchedules")
         public java.util.List<CreateAppInstanceGroupRequestNodePoolRecurrenceSchedules> recurrenceSchedules;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("ScalingDownAfterIdleMinutes")
         public Integer scalingDownAfterIdleMinutes;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("ScalingStep")
         public Integer scalingStep;
 
+        /**
+         * <strong>example:</strong>
+         * <p>85</p>
+         */
         @NameInMap("ScalingUsageThreshold")
         public String scalingUsageThreshold;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-09-08</p>
+         */
         @NameInMap("StrategyDisableDate")
         public String strategyDisableDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-08-01</p>
+         */
         @NameInMap("StrategyEnableDate")
         public String strategyEnableDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>NODE_FIXED</p>
+         */
         @NameInMap("StrategyType")
         public String strategyType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("WarmUp")
         public Boolean warmUp;
 
@@ -569,6 +727,9 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
 
         /**
          * <p>会话类型。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         @NameInMap("SessionType")
         public String sessionType;
@@ -597,9 +758,17 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
     }
 
     public static class CreateAppInstanceGroupRequestSecurityPolicy extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("ResetAfterUnbind")
         public Boolean resetAfterUnbind;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("SkipUserAuthCheck")
         public Boolean skipUserAuthCheck;
 
@@ -645,7 +814,30 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
 
     }
 
+    public static class CreateAppInstanceGroupRequestUserDefinePolicy extends TeaModel {
+        @NameInMap("CustomConfig")
+        public String customConfig;
+
+        public static CreateAppInstanceGroupRequestUserDefinePolicy build(java.util.Map<String, ?> map) throws Exception {
+            CreateAppInstanceGroupRequestUserDefinePolicy self = new CreateAppInstanceGroupRequestUserDefinePolicy();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateAppInstanceGroupRequestUserDefinePolicy setCustomConfig(String customConfig) {
+            this.customConfig = customConfig;
+            return this;
+        }
+        public String getCustomConfig() {
+            return this.customConfig;
+        }
+
+    }
+
     public static class CreateAppInstanceGroupRequestUserInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Simple</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -660,6 +852,80 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
         }
         public String getType() {
             return this.type;
+        }
+
+    }
+
+    public static class CreateAppInstanceGroupRequestVideoPolicy extends TeaModel {
+        @NameInMap("FrameRate")
+        public Integer frameRate;
+
+        @NameInMap("SessionResolutionHeight")
+        public Integer sessionResolutionHeight;
+
+        @NameInMap("SessionResolutionWidth")
+        public Integer sessionResolutionWidth;
+
+        @NameInMap("StreamingMode")
+        public String streamingMode;
+
+        @NameInMap("TerminalResolutionAdaptive")
+        public Boolean terminalResolutionAdaptive;
+
+        @NameInMap("Webrtc")
+        public Boolean webrtc;
+
+        public static CreateAppInstanceGroupRequestVideoPolicy build(java.util.Map<String, ?> map) throws Exception {
+            CreateAppInstanceGroupRequestVideoPolicy self = new CreateAppInstanceGroupRequestVideoPolicy();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateAppInstanceGroupRequestVideoPolicy setFrameRate(Integer frameRate) {
+            this.frameRate = frameRate;
+            return this;
+        }
+        public Integer getFrameRate() {
+            return this.frameRate;
+        }
+
+        public CreateAppInstanceGroupRequestVideoPolicy setSessionResolutionHeight(Integer sessionResolutionHeight) {
+            this.sessionResolutionHeight = sessionResolutionHeight;
+            return this;
+        }
+        public Integer getSessionResolutionHeight() {
+            return this.sessionResolutionHeight;
+        }
+
+        public CreateAppInstanceGroupRequestVideoPolicy setSessionResolutionWidth(Integer sessionResolutionWidth) {
+            this.sessionResolutionWidth = sessionResolutionWidth;
+            return this;
+        }
+        public Integer getSessionResolutionWidth() {
+            return this.sessionResolutionWidth;
+        }
+
+        public CreateAppInstanceGroupRequestVideoPolicy setStreamingMode(String streamingMode) {
+            this.streamingMode = streamingMode;
+            return this;
+        }
+        public String getStreamingMode() {
+            return this.streamingMode;
+        }
+
+        public CreateAppInstanceGroupRequestVideoPolicy setTerminalResolutionAdaptive(Boolean terminalResolutionAdaptive) {
+            this.terminalResolutionAdaptive = terminalResolutionAdaptive;
+            return this;
+        }
+        public Boolean getTerminalResolutionAdaptive() {
+            return this.terminalResolutionAdaptive;
+        }
+
+        public CreateAppInstanceGroupRequestVideoPolicy setWebrtc(Boolean webrtc) {
+            this.webrtc = webrtc;
+            return this;
+        }
+        public Boolean getWebrtc() {
+            return this.webrtc;
         }
 
     }

@@ -4,12 +4,24 @@ package com.aliyun.appstream_center20210901.models;
 import com.aliyun.tea.*;
 
 public class AuthorizeInstanceGroupRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>aig-9ciijz60n4xsv****</p>
+     */
     @NameInMap("AppInstanceGroupId")
     public String appInstanceGroupId;
 
     @NameInMap("AuthorizeUserIds")
     public java.util.List<String> authorizeUserIds;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CloudApp</p>
+     */
     @NameInMap("ProductType")
     public String productType;
 

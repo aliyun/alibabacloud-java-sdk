@@ -7,6 +7,10 @@ public class DeleteAppInstancesResponseBody extends TeaModel {
     @NameInMap("DeleteAppInstanceModels")
     public java.util.List<DeleteAppInstancesResponseBodyDeleteAppInstanceModels> deleteAppInstanceModels;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +36,31 @@ public class DeleteAppInstancesResponseBody extends TeaModel {
     }
 
     public static class DeleteAppInstancesResponseBodyDeleteAppInstanceModels extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>ai-gbuea*****</p>
+         */
         @NameInMap("AppInstanceId")
         public String appInstanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>InvalidParameter.ProductType</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <strong>example:</strong>
+         * <p>The parameter ProductType is invalid.</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Success")
         public Boolean success;
 

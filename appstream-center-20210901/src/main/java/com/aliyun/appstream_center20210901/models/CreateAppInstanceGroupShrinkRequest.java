@@ -4,24 +4,59 @@ package com.aliyun.appstream_center20210901.models;
 import com.aliyun.tea.*;
 
 public class CreateAppInstanceGroupShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>img-8z4nztpaqvay4****</p>
+     */
     @NameInMap("AppCenterImageId")
     public String appCenterImageId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppInstanceGroupName")
     public String appInstanceGroupName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("BizRegionId")
     public String bizRegionId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Node</p>
+     */
     @NameInMap("ChargeResourceMode")
     public String chargeResourceMode;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PrePaid</p>
+     */
     @NameInMap("ChargeType")
     public String chargeType;
 
@@ -31,18 +66,41 @@ public class CreateAppInstanceGroupShrinkRequest extends TeaModel {
     @NameInMap("NodePool")
     public String nodePoolShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Period")
     public Integer period;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PeriodUnit")
     public String periodUnit;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cag-b2ron*******</p>
+     */
     @NameInMap("PreOpenAppId")
     public String preOpenAppId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CloudApp</p>
+     */
     @NameInMap("ProductType")
     public String productType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>17440009****</p>
+     */
     @NameInMap("PromotionId")
     public String promotionId;
 
@@ -52,17 +110,29 @@ public class CreateAppInstanceGroupShrinkRequest extends TeaModel {
     @NameInMap("SecurityPolicy")
     public String securityPolicyShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>15</p>
+     */
     @NameInMap("SessionTimeout")
     public Integer sessionTimeout;
 
     @NameInMap("StoragePolicy")
     public String storagePolicyShrink;
 
+    @NameInMap("UserDefinePolicy")
+    public String userDefinePolicyShrink;
+
     @NameInMap("UserInfo")
     public String userInfoShrink;
 
     @NameInMap("Users")
     public java.util.List<String> users;
+
+    @NameInMap("VideoPolicy")
+    public String videoPolicyShrink;
 
     public static CreateAppInstanceGroupShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAppInstanceGroupShrinkRequest self = new CreateAppInstanceGroupShrinkRequest();
@@ -213,6 +283,14 @@ public class CreateAppInstanceGroupShrinkRequest extends TeaModel {
         return this.storagePolicyShrink;
     }
 
+    public CreateAppInstanceGroupShrinkRequest setUserDefinePolicyShrink(String userDefinePolicyShrink) {
+        this.userDefinePolicyShrink = userDefinePolicyShrink;
+        return this;
+    }
+    public String getUserDefinePolicyShrink() {
+        return this.userDefinePolicyShrink;
+    }
+
     public CreateAppInstanceGroupShrinkRequest setUserInfoShrink(String userInfoShrink) {
         this.userInfoShrink = userInfoShrink;
         return this;
@@ -227,6 +305,14 @@ public class CreateAppInstanceGroupShrinkRequest extends TeaModel {
     }
     public java.util.List<String> getUsers() {
         return this.users;
+    }
+
+    public CreateAppInstanceGroupShrinkRequest setVideoPolicyShrink(String videoPolicyShrink) {
+        this.videoPolicyShrink = videoPolicyShrink;
+        return this;
+    }
+    public String getVideoPolicyShrink() {
+        return this.videoPolicyShrink;
     }
 
 }

@@ -1,3 +1,43 @@
+2024-07-23 Version: 1.2.0
+- Support API AccessPageGetAcl.
+- Support API AccessPageSetAcl.
+- Support API AskSessionPackagePrice.
+- Support API AskSessionPackageRenewPrice.
+- Support API BuySessionPackage.
+- Support API CreateAccessPage.
+- Support API CreateProject.
+- Support API DeleteAccessPage.
+- Support API DeleteProject.
+- Support API GetAccessPageSession.
+- Support API GetProjectPolicies.
+- Support API ListAccessPages.
+- Support API ListProjects.
+- Support API ListSessionPackages.
+- Support API MigrateSessionPackage.
+- Support API ModifyAppPolicy.
+- Support API ModifyProjectPolicy.
+- Support API RefreshAccessUrl.
+- Support API RenewSessionPackage.
+- Support API UpdateAccessPageState.
+- Update API CreateAppInstanceGroup: add param UserDefinePolicy.
+- Update API CreateAppInstanceGroup: add param VideoPolicy.
+- Update API CreateAppInstanceGroup: update param Network.
+- Update API GetAppInstanceGroup: update response param.
+- Update API GetConnectionTicket: add param AppInstancePersistentId.
+- Update API GetConnectionTicket: update response param.
+- Update API GetResourcePrice: add param AppInstanceType.
+- Update API GetResourcePrice: update param NodeInstanceType.
+- Update API GetResourcePrice: update response param.
+- Update API ListAppInstanceGroup: add param BizRegionId.
+- Update API ListAppInstanceGroup: update param RegionId.
+- Update API ListAppInstanceGroup: update response param.
+- Update API ListRegions: add param ProductType.
+- Update API ModifyAppInstanceGroupAttribute: add param Network.
+- Update API ModifyAppInstanceGroupAttribute: add param PreOpenAppId.
+- Update API ModifyAppInstanceGroupAttribute: add param PreOpenMode.
+- Update API Unbind: add param AppInstancePersistentId.
+
+
 2024-01-17 Version: 1.1.0
 - Generated java 2021-09-01 for appstream-center.
 

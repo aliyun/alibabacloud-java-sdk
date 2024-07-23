@@ -7,6 +7,10 @@ public class GetResourceRenewPriceResponseBody extends TeaModel {
     @NameInMap("Data")
     public GetResourceRenewPriceResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +36,30 @@ public class GetResourceRenewPriceResponseBody extends TeaModel {
     }
 
     public static class GetResourceRenewPriceResponseBodyDataPricePromotions extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>coupon****</p>
+         */
         @NameInMap("OptionCode")
         public String optionCode;
 
         @NameInMap("PromotionDesc")
         public String promotionDesc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>139965*****</p>
+         */
         @NameInMap("PromotionId")
         public String promotionId;
 
         @NameInMap("PromotionName")
         public String promotionName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Selected")
         public Boolean selected;
 
@@ -95,18 +111,34 @@ public class GetResourceRenewPriceResponseBody extends TeaModel {
     }
 
     public static class GetResourceRenewPriceResponseBodyDataPrice extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>CNY</p>
+         */
         @NameInMap("Currency")
         public String currency;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("DiscountPrice")
         public String discountPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>11</p>
+         */
         @NameInMap("OriginalPrice")
         public String originalPrice;
 
         @NameInMap("Promotions")
         public java.util.List<GetResourceRenewPriceResponseBodyDataPricePromotions> promotions;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("TradePrice")
         public String tradePrice;
 
@@ -161,6 +193,10 @@ public class GetResourceRenewPriceResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20002****</p>
+         */
         @NameInMap("RuleId")
         public Long ruleId;
 

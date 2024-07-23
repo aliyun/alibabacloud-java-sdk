@@ -4,20 +4,35 @@ package com.aliyun.appstream_center20210901.models;
 import com.aliyun.tea.*;
 
 public class ModifyNodePoolAttributeShrinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("BizRegionId")
     public String bizRegionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("NodeCapacity")
     public Integer nodeCapacity;
 
     @NameInMap("NodePoolStrategy")
     public String nodePoolStrategyShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rg-ew7va2g1wl3vm****</p>
+     */
     @NameInMap("PoolId")
     public String poolId;
 
     /**
      * <p>产品类型。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CloudApp</p>
      */
     @NameInMap("ProductType")
     public String productType;

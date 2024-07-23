@@ -4,9 +4,17 @@ package com.aliyun.appstream_center20210901.models;
 import com.aliyun.tea.*;
 
 public class GetResourcePriceResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>InvalidParameter.ProductType</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>The parameter ProductType is invalid.</p>
+     */
     @NameInMap("Message")
     public String message;
 
@@ -16,6 +24,10 @@ public class GetResourcePriceResponseBody extends TeaModel {
     @NameInMap("PriceModel")
     public GetResourcePriceResponseBodyPriceModel priceModel;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -65,18 +77,30 @@ public class GetResourcePriceResponseBody extends TeaModel {
     }
 
     public static class GetResourcePriceResponseBodyPriceListPricePromotions extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>coupon****</p>
+         */
         @NameInMap("OptionCode")
         public String optionCode;
 
         @NameInMap("PromotionDesc")
         public String promotionDesc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1847709****</p>
+         */
         @NameInMap("PromotionId")
         public String promotionId;
 
         @NameInMap("PromotionName")
         public String promotionName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Selected")
         public Boolean selected;
 
@@ -128,18 +152,34 @@ public class GetResourcePriceResponseBody extends TeaModel {
     }
 
     public static class GetResourcePriceResponseBodyPriceListPrice extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>CNY</p>
+         */
         @NameInMap("Currency")
         public String currency;
 
+        /**
+         * <strong>example:</strong>
+         * <p>999.0</p>
+         */
         @NameInMap("DiscountPrice")
         public String discountPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>6700</p>
+         */
         @NameInMap("OriginalPrice")
         public String originalPrice;
 
         @NameInMap("Promotions")
         public java.util.List<GetResourcePriceResponseBodyPriceListPricePromotions> promotions;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5278.0</p>
+         */
         @NameInMap("TradePrice")
         public String tradePrice;
 
@@ -194,6 +234,10 @@ public class GetResourcePriceResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>260904273633****</p>
+         */
         @NameInMap("RuleId")
         public Long ruleId;
 
@@ -224,6 +268,10 @@ public class GetResourcePriceResponseBody extends TeaModel {
         @NameInMap("Price")
         public GetResourcePriceResponseBodyPriceListPrice price;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Standby</p>
+         */
         @NameInMap("PriceType")
         public String priceType;
 
@@ -262,18 +310,30 @@ public class GetResourcePriceResponseBody extends TeaModel {
     }
 
     public static class GetResourcePriceResponseBodyPriceModelPricePromotions extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>coupon****</p>
+         */
         @NameInMap("OptionCode")
         public String optionCode;
 
         @NameInMap("PromotionDesc")
         public String promotionDesc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>17440009****</p>
+         */
         @NameInMap("PromotionId")
         public String promotionId;
 
         @NameInMap("PromotionName")
         public String promotionName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Selected")
         public Boolean selected;
 
@@ -325,18 +385,34 @@ public class GetResourcePriceResponseBody extends TeaModel {
     }
 
     public static class GetResourcePriceResponseBodyPriceModelPrice extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>CNY</p>
+         */
         @NameInMap("Currency")
         public String currency;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.00</p>
+         */
         @NameInMap("DiscountPrice")
         public String discountPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>11.00</p>
+         */
         @NameInMap("OriginalPrice")
         public String originalPrice;
 
         @NameInMap("Promotions")
         public java.util.List<GetResourcePriceResponseBodyPriceModelPricePromotions> promotions;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10.00</p>
+         */
         @NameInMap("TradePrice")
         public String tradePrice;
 
@@ -391,6 +467,10 @@ public class GetResourcePriceResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>102002100393****</p>
+         */
         @NameInMap("RuleId")
         public Long ruleId;
 

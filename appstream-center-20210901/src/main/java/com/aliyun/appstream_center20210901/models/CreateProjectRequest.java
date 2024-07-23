@@ -4,42 +4,90 @@ package com.aliyun.appstream_center20210901.models;
 import com.aliyun.tea.*;
 
 public class CreateProjectRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("Clipboard")
     public Integer clipboard;
 
+    /**
+     * <strong>example:</strong>
+     * <p>c-xxxxxxx</p>
+     */
     @NameInMap("CloudEnvId")
     public String cloudEnvId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>c-06vcpamarryyq****</p>
+     */
     @NameInMap("ContentId")
     public String contentId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>xxx</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("FileTransfer")
     public Integer fileTransfer;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("FrameRate")
     public Integer frameRate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>15</p>
+     */
     @NameInMap("KeepAliveDuration")
     public Integer keepAliveDuration;
 
+    /**
+     * <strong>example:</strong>
+     * <p>notepad++xxxxx</p>
+     */
     @NameInMap("ProjectName")
     public String projectName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4096</p>
+     */
     @NameInMap("SessionResolutionHeight")
     public Integer sessionResolutionHeight;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4096</p>
+     */
     @NameInMap("SessionResolutionWidth")
     public Integer sessionResolutionWidth;
 
     @NameInMap("SessionSpec")
     public String sessionSpec;
 
+    /**
+     * <strong>example:</strong>
+     * <p>mix</p>
+     */
     @NameInMap("StreamingMode")
     public String streamingMode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("TerminalResolutionAdaptation")
     public Boolean terminalResolutionAdaptation;
 

@@ -4,9 +4,17 @@ package com.aliyun.appstream_center20210901.models;
 import com.aliyun.tea.*;
 
 public class ListAppInstanceGroupRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>img-8z4nztpaqvay4****</p>
+     */
     @NameInMap("AppCenterImageId")
     public String appCenterImageId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>aig-9ciijz60n4xsv****</p>
+     */
     @NameInMap("AppInstanceGroupId")
     public String appInstanceGroupId;
 
@@ -16,17 +24,43 @@ public class ListAppInstanceGroupRequest extends TeaModel {
     @NameInMap("BizRegionId")
     public String bizRegionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>appstreaming.vgpu.4c8g.2g</p>
+     */
     @NameInMap("NodeInstanceType")
     public String nodeInstanceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CloudApp</p>
+     */
     @NameInMap("ProductType")
     public String productType;
+
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
+    @NameInMap("RegionId")
+    @Deprecated
+    public String regionId;
 
     @NameInMap("Status")
     public java.util.List<String> status;
@@ -98,6 +132,14 @@ public class ListAppInstanceGroupRequest extends TeaModel {
     }
     public String getProductType() {
         return this.productType;
+    }
+
+    public ListAppInstanceGroupRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ListAppInstanceGroupRequest setStatus(java.util.List<String> status) {

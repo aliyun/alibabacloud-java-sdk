@@ -4,33 +4,69 @@ package com.aliyun.appstream_center20210901.models;
 import com.aliyun.tea.*;
 
 public class GetConnectionTicketRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ca-e4s0puhmwi7v****</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
     @NameInMap("AppInstanceGroupIdList")
     public java.util.List<String> appInstanceGroupIdList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ai-1rznfnrvsa99d****</p>
+     */
     @NameInMap("AppInstanceId")
     public String appInstanceId;
 
     @NameInMap("AppInstancePersistentId")
     public String appInstancePersistentId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>/q /n</p>
+     */
     @NameInMap("AppStartParam")
     public String appStartParam;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1.0.0</p>
+     */
     @NameInMap("AppVersion")
     public String appVersion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("BizRegionId")
     public String bizRegionId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alice</p>
+     */
     @NameInMap("EndUserId")
     public String endUserId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CloudApp</p>
+     */
     @NameInMap("ProductType")
     public String productType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>28778acb-a469-4bc0-8e0f****</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 

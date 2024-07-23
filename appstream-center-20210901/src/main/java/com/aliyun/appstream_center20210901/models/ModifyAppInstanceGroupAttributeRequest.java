@@ -4,6 +4,12 @@ package com.aliyun.appstream_center20210901.models;
 import com.aliyun.tea.*;
 
 public class ModifyAppInstanceGroupAttributeRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>aig-9ciijz60n4xsv****</p>
+     */
     @NameInMap("AppInstanceGroupId")
     public String appInstanceGroupId;
 
@@ -22,12 +28,22 @@ public class ModifyAppInstanceGroupAttributeRequest extends TeaModel {
     @NameInMap("PreOpenMode")
     public String preOpenMode;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CloudApp</p>
+     */
     @NameInMap("ProductType")
     public String productType;
 
     @NameInMap("SecurityPolicy")
     public ModifyAppInstanceGroupAttributeRequestSecurityPolicy securityPolicy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>15</p>
+     */
     @NameInMap("SessionTimeout")
     public Integer sessionTimeout;
 
@@ -169,9 +185,17 @@ public class ModifyAppInstanceGroupAttributeRequest extends TeaModel {
     }
 
     public static class ModifyAppInstanceGroupAttributeRequestNodePool extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("NodeCapacity")
         public Integer nodeCapacity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>rg-ew7va2g1wl3vm****</p>
+         */
         @NameInMap("NodePoolId")
         public String nodePoolId;
 
@@ -199,9 +223,17 @@ public class ModifyAppInstanceGroupAttributeRequest extends TeaModel {
     }
 
     public static class ModifyAppInstanceGroupAttributeRequestSecurityPolicy extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("ResetAfterUnbind")
         public Boolean resetAfterUnbind;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("SkipUserAuthCheck")
         public Boolean skipUserAuthCheck;
 

@@ -4,21 +4,43 @@ package com.aliyun.appstream_center20210901.models;
 import com.aliyun.tea.*;
 
 public class GetOtaTaskByTaskIdResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OtaTask.Running</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>The task is running and cannot be sumitted.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0.0.1-R-20220708.110604</p>
+     */
     @NameInMap("OtaVersion")
     public String otaVersion;
 
     @NameInMap("ReleaseNote")
     public String releaseNote;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-08-04T14:36:00+08:00</p>
+     */
     @NameInMap("TaskStartTime")
     public String taskStartTime;
 
