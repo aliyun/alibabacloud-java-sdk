@@ -26,7 +26,7 @@ public class SubmitCopyrightJobRequest extends TeaModel {
      * <p>2</p>
      */
     @NameInMap("Level")
-    public String level;
+    public Long level;
 
     /**
      * <p>This parameter is required.</p>
@@ -107,11 +107,11 @@ public class SubmitCopyrightJobRequest extends TeaModel {
         return this.input;
     }
 
-    public SubmitCopyrightJobRequest setLevel(String level) {
+    public SubmitCopyrightJobRequest setLevel(Long level) {
         this.level = level;
         return this;
     }
-    public String getLevel() {
+    public Long getLevel() {
         return this.level;
     }
 
