@@ -13,7 +13,6 @@ public class CancelAutoSnapshotPolicyRequest extends TeaModel {
 
     /**
      * <p>The ID of the automatic snapshot policy.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>sp-78lhzpe7kjfnd****</p>
