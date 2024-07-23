@@ -4,6 +4,12 @@ package com.aliyun.appstream_center20210901.models;
 import com.aliyun.tea.*;
 
 public class ModifyAppInstanceGroupAttributeShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>aig-9ciijz60n4xsv****</p>
+     */
     @NameInMap("AppInstanceGroupId")
     public String appInstanceGroupId;
 
@@ -22,12 +28,22 @@ public class ModifyAppInstanceGroupAttributeShrinkRequest extends TeaModel {
     @NameInMap("PreOpenMode")
     public String preOpenMode;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CloudApp</p>
+     */
     @NameInMap("ProductType")
     public String productType;
 
     @NameInMap("SecurityPolicy")
     public String securityPolicyShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>15</p>
+     */
     @NameInMap("SessionTimeout")
     public Integer sessionTimeout;
 

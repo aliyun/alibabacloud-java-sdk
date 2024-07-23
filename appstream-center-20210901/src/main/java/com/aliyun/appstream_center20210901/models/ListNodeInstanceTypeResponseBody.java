@@ -7,15 +7,27 @@ public class ListNodeInstanceTypeResponseBody extends TeaModel {
     @NameInMap("NodeInstanceTypeModels")
     public java.util.List<ListNodeInstanceTypeResponseBodyNodeInstanceTypeModels> nodeInstanceTypeModels;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,41 +77,71 @@ public class ListNodeInstanceTypeResponseBody extends TeaModel {
     }
 
     public static class ListNodeInstanceTypeResponseBodyNodeInstanceTypeModels extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("Cpu")
         public String cpu;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("Gpu")
         public String gpu;
 
         /**
          * <p>显卡内存大小，单位为MB。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8192</p>
          */
         @NameInMap("GpuMemory")
         public Long gpuMemory;
 
         /**
          * <p>最大并发会话数，即单个资源可同时连接的会话数。如果同时连接的会话数过多，可能导致应用的使用体验下降。取值范围因资源规格不同而不同。各资源规格对应的取值范围分别是：</p>
-         * <br>
-         * <p>- appstreaming.general.4c8g：1\~2；</p>
-         * <p>- appstreaming.general.8c16g：1\~4；</p>
-         * <p>- appstreaming.vgpu.8c16g.4g：1\~4；</p>
-         * <p>- appstreaming.vgpu.8c31g.16g：1\~4；</p>
-         * <p>- appstreaming.vgpu.14c93g.12g：1\~6；</p>
+         * <ul>
+         * <li>appstreaming.general.4c8g：1\~2；</li>
+         * <li>appstreaming.general.8c16g：1\~4；</li>
+         * <li>appstreaming.vgpu.8c16g.4g：1\~4；</li>
+         * <li>appstreaming.vgpu.8c31g.16g：1\~4；</li>
+         * <li>appstreaming.vgpu.14c93g.12g：1\~6；</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         @NameInMap("MaxCapacity")
         public Integer maxCapacity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8192</p>
+         */
         @NameInMap("Memory")
         public Long memory;
 
+        /**
+         * <strong>example:</strong>
+         * <p>appstreaming.vgpu.4c8g.2g</p>
+         */
         @NameInMap("NodeInstanceType")
         public String nodeInstanceType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>appstreaming.vgpu</p>
+         */
         @NameInMap("NodeInstanceTypeFamily")
         public String nodeInstanceTypeFamily;
 
         /**
          * <p>资源规格名称。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无影-通用型_4核8G</p>
          */
         @NameInMap("NodeTypeName")
         public String nodeTypeName;

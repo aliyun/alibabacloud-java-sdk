@@ -10,6 +10,10 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
     @NameInMap("AppInstanceGroupModels")
     public GetAppInstanceGroupResponseBodyAppInstanceGroupModels appInstanceGroupModels;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -38,6 +42,10 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
         @NameInMap("AppIcon")
         public String appIcon;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ca-i87mycyn419nu****</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
@@ -98,12 +106,24 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
     }
 
     public static class GetAppInstanceGroupResponseBodyAppInstanceGroupModelsNodePoolRecurrenceSchedulesTimerPeriods extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("Amount")
         public Integer amount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>11:00</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>09:30</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
@@ -139,6 +159,10 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
     }
 
     public static class GetAppInstanceGroupResponseBodyAppInstanceGroupModelsNodePoolRecurrenceSchedules extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Weekly</p>
+         */
         @NameInMap("RecurrenceType")
         public String recurrenceType;
 
@@ -180,57 +204,121 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
     }
 
     public static class GetAppInstanceGroupResponseBodyAppInstanceGroupModelsNodePool extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("Amount")
         public Integer amount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8</p>
+         */
         @NameInMap("MaxScalingAmount")
         public Integer maxScalingAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("NodeAmount")
         public Integer nodeAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("NodeCapacity")
         public Integer nodeCapacity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>appstreaming.vgpu.4c8g.2g</p>
+         */
         @NameInMap("NodeInstanceType")
         public String nodeInstanceType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>rg-g6922kced36hx****</p>
+         */
         @NameInMap("NodePoolId")
         public String nodePoolId;
 
         @NameInMap("NodeTypeName")
         public String nodeTypeName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("NodeUsed")
         public Integer nodeUsed;
 
         @NameInMap("RecurrenceSchedules")
         public java.util.List<GetAppInstanceGroupResponseBodyAppInstanceGroupModelsNodePoolRecurrenceSchedules> recurrenceSchedules;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("ScalingDownAfterIdleMinutes")
         public Integer scalingDownAfterIdleMinutes;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8</p>
+         */
         @NameInMap("ScalingNodeAmount")
         public Integer scalingNodeAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("ScalingNodeUsed")
         public Integer scalingNodeUsed;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("ScalingStep")
         public Integer scalingStep;
 
+        /**
+         * <strong>example:</strong>
+         * <p>85</p>
+         */
         @NameInMap("ScalingUsageThreshold")
         public String scalingUsageThreshold;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-09-08</p>
+         */
         @NameInMap("StrategyDisableDate")
         public String strategyDisableDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-08-01</p>
+         */
         @NameInMap("StrategyEnableDate")
         public String strategyEnableDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>NODE_FIXED</p>
+         */
         @NameInMap("StrategyType")
         public String strategyType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("WarmUp")
         public Boolean warmUp;
 
@@ -386,12 +474,24 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
     }
 
     public static class GetAppInstanceGroupResponseBodyAppInstanceGroupModelsOtaInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0.0.1-D-20220630.11****</p>
+         */
         @NameInMap("NewOtaVersion")
         public String newOtaVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.0.1-D-20220615.11****</p>
+         */
         @NameInMap("OtaVersion")
         public String otaVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ota-e49929gv8acz5****</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
@@ -430,93 +530,197 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
         @NameInMap("Amount")
         public Integer amount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>img-8z4nztpaqvay4****</p>
+         */
         @NameInMap("AppCenterImageId")
         public String appCenterImageId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OfficeApps</p>
+         */
         @NameInMap("AppCenterImageName")
         public String appCenterImageName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>aig-9ciijz60n4xsv****</p>
+         */
         @NameInMap("AppInstanceGroupId")
         public String appInstanceGroupId;
 
         @NameInMap("AppInstanceGroupName")
         public String appInstanceGroupName;
 
+        /**
+         * <strong>example:</strong>
+         * <p><strong>dynamic</strong></p>
+         */
         @NameInMap("AppInstanceType")
         public String appInstanceType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test001</p>
+         */
         @NameInMap("AppInstanceTypeName")
         public String appInstanceTypeName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>pg-g3k5wa2ms2****</p>
+         */
         @NameInMap("AppPolicyId")
         public String appPolicyId;
 
         @NameInMap("Apps")
         public java.util.List<GetAppInstanceGroupResponseBodyAppInstanceGroupModelsApps> apps;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Node</p>
+         */
         @NameInMap("ChargeResourceMode")
         public String chargeResourceMode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PrePaid</p>
+         */
         @NameInMap("ChargeType")
         public String chargeType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-04-27T16:00:00.000+00:00</p>
+         */
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-04-26T15:06:16.000+00:00</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("MaxAmount")
         public Integer maxAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("MinAmount")
         public Integer minAmount;
 
         @NameInMap("NodePool")
         public java.util.List<GetAppInstanceGroupResponseBodyAppInstanceGroupModelsNodePool> nodePool;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Windows</p>
+         */
         @NameInMap("OsType")
         public String osType;
 
         @NameInMap("OtaInfo")
         public GetAppInstanceGroupResponseBodyAppInstanceGroupModelsOtaInfo otaInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CloudApp</p>
+         */
         @NameInMap("ProductType")
         public String productType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("ReserveAmountRatio")
         public String reserveAmountRatio;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("ReserveMaxAmount")
         public Integer reserveMaxAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ReserveMinAmount")
         public Integer reserveMinAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>AVAILABLE</p>
+         */
         @NameInMap("ResourceStatus")
         public String resourceStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("ScalingDownAfterIdleMinutes")
         public Integer scalingDownAfterIdleMinutes;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("ScalingStep")
         public Integer scalingStep;
 
+        /**
+         * <strong>example:</strong>
+         * <p>85</p>
+         */
         @NameInMap("ScalingUsageThreshold")
         public String scalingUsageThreshold;
 
+        /**
+         * <strong>example:</strong>
+         * <p>15</p>
+         */
         @NameInMap("SessionTimeout")
         public String sessionTimeout;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("SkipUserAuthCheck")
         public Boolean skipUserAuthCheck;
 
+        /**
+         * <strong>example:</strong>
+         * <p>spec-8o18t8uc31qib0****</p>
+         */
         @NameInMap("SpecId")
         public String specId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PUBLISHED</p>
+         */
         @NameInMap("Status")
         public String status;
 

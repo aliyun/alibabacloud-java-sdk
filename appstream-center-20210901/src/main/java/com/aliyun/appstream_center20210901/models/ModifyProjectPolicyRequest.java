@@ -4,30 +4,66 @@ package com.aliyun.appstream_center20210901.models;
 import com.aliyun.tea.*;
 
 public class ModifyProjectPolicyRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("Clipboard")
     public Integer clipboard;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("FileTransfer")
     public Integer fileTransfer;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("FrameRate")
     public Integer frameRate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>15</p>
+     */
     @NameInMap("KeepAliveDuration")
     public Integer keepAliveDuration;
 
+    /**
+     * <strong>example:</strong>
+     * <p>p-065z4tu9ak07h****</p>
+     */
     @NameInMap("ProjectId")
     public String projectId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4096</p>
+     */
     @NameInMap("SessionResolutionHeight")
     public Integer sessionResolutionHeight;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4096</p>
+     */
     @NameInMap("SessionResolutionWidth")
     public Integer sessionResolutionWidth;
 
+    /**
+     * <strong>example:</strong>
+     * <p>video</p>
+     */
     @NameInMap("StreamingMode")
     public String streamingMode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("TerminalResolutionAdaptation")
     public Boolean terminalResolutionAdaptation;
 

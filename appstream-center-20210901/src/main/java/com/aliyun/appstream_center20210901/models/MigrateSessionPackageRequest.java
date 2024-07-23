@@ -4,12 +4,26 @@ package com.aliyun.appstream_center20210901.models;
 import com.aliyun.tea.*;
 
 public class MigrateSessionPackageRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>p-xxxxxx123x4312367</p>
+     */
     @NameInMap("DestProjectId")
     public String destProjectId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tp-xxxxxxxxxxxxxxxxx</p>
+     */
     @NameInMap("SessionPackageId")
     public String sessionPackageId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>p-xxxxxx123x4312345</p>
+     */
     @NameInMap("SourceProjectId")
     public String sourceProjectId;
 

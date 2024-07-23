@@ -4,6 +4,10 @@ package com.aliyun.appstream_center20210901.models;
 import com.aliyun.tea.*;
 
 public class AccessPageGetAclRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>a-075nu7bcqim2wvxli</p>
+     */
     @NameInMap("AccessPageId")
     public String accessPageId;
 

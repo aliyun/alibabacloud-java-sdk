@@ -4,18 +4,44 @@ package com.aliyun.appstream_center20210901.models;
 import com.aliyun.tea.*;
 
 public class AccessPageSetAclRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FREE_ACCESS</p>
+     */
     @NameInMap("AccessMode")
     public String accessMode;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a-062wec3cwmayw****</p>
+     */
     @NameInMap("AccessPageId")
     public String accessPageId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>notepad_test</p>
+     */
     @NameInMap("AccessPageName")
     public String accessPageName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7</p>
+     */
     @NameInMap("EffectTime")
     public Integer effectTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Day</p>
+     */
     @NameInMap("Unit")
     public String unit;
 

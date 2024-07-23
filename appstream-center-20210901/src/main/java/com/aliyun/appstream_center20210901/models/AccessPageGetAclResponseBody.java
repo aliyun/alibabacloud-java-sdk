@@ -4,21 +4,36 @@ package com.aliyun.appstream_center20210901.models;
 import com.aliyun.tea.*;
 
 public class AccessPageGetAclResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public java.util.List<AccessPageGetAclResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>The parameter ProductType is invalid.</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public String success;
 
@@ -68,18 +83,38 @@ public class AccessPageGetAclResponseBody extends TeaModel {
     }
 
     public static class AccessPageGetAclResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>FREE_ACCESS</p>
+         */
         @NameInMap("AccessMode")
         public String accessMode;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://wuying.aliyun.com/native-solution/cloud-flow/view?id=a-075nu7bcqim2wvxli&token=8141B1A674D48ACB8E5D2D6CE53FDB2F3CF8710A5F8F78578D5254BC6F">https://wuying.aliyun.com/native-solution/cloud-flow/view?id=a-075nu7bcqim2wvxli&amp;token=8141B1A674D48ACB8E5D2D6CE53FDB2F3CF8710A5F8F78578D5254BC6F</a>******</p>
+         */
         @NameInMap("AccessUrl")
         public String accessUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-02-08T03:52Z</p>
+         */
         @NameInMap("EffectTime")
         public Integer effectTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>hour</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-12-05 14:28:20</p>
+         */
         @NameInMap("UrlExpireTime")
         public String urlExpireTime;
 

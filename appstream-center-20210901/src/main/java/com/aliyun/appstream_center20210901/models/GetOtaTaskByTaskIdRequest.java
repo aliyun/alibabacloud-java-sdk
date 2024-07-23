@@ -4,6 +4,12 @@ package com.aliyun.appstream_center20210901.models;
 import com.aliyun.tea.*;
 
 public class GetOtaTaskByTaskIdRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ota-be7jzm29wrrz5****</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 

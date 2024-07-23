@@ -4,20 +4,35 @@ package com.aliyun.appstream_center20210901.models;
 import com.aliyun.tea.*;
 
 public class ModifyNodePoolAttributeRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("BizRegionId")
     public String bizRegionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("NodeCapacity")
     public Integer nodeCapacity;
 
     @NameInMap("NodePoolStrategy")
     public ModifyNodePoolAttributeRequestNodePoolStrategy nodePoolStrategy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rg-ew7va2g1wl3vm****</p>
+     */
     @NameInMap("PoolId")
     public String poolId;
 
     /**
      * <p>产品类型。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CloudApp</p>
      */
     @NameInMap("ProductType")
     public String productType;
@@ -70,18 +85,27 @@ public class ModifyNodePoolAttributeRequest extends TeaModel {
     public static class ModifyNodePoolAttributeRequestNodePoolStrategyRecurrenceSchedulesTimerPeriods extends TeaModel {
         /**
          * <p>资源数量。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Amount")
         public Integer amount;
 
         /**
          * <p>结束时间。格式为HH:mm。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15:00</p>
          */
         @NameInMap("EndTime")
         public String endTime;
 
         /**
          * <p>开始时间。格式为HH:mm。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12:00</p>
          */
         @NameInMap("StartTime")
         public String startTime;
@@ -119,7 +143,10 @@ public class ModifyNodePoolAttributeRequest extends TeaModel {
 
     public static class ModifyNodePoolAttributeRequestNodePoolStrategyRecurrenceSchedules extends TeaModel {
         /**
-         * <p>策略执行周期的类型。必须同时指定`RecurrenceType`和`RecurrenceValues`。</p>
+         * <p>策略执行周期的类型。必须同时指定<code>RecurrenceType</code>和<code>RecurrenceValues</code>。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>weekly</p>
          */
         @NameInMap("RecurrenceType")
         public String recurrenceType;
@@ -132,12 +159,13 @@ public class ModifyNodePoolAttributeRequest extends TeaModel {
 
         /**
          * <p>策略执行周期的时间段列表。时间段设置要求：</p>
-         * <br>
-         * <p>- 最多可添加3个时间段。</p>
-         * <p>- 时间段之间不重叠。</p>
-         * <p>- 时间段之间的间隔大于或等于5分钟。</p>
-         * <p>- 单个时间段的时长大于或等于15分钟。</p>
-         * <p>- 所有时间段累计不跨天。</p>
+         * <ul>
+         * <li>最多可添加3个时间段。</li>
+         * <li>时间段之间不重叠。</li>
+         * <li>时间段之间的间隔大于或等于5分钟。</li>
+         * <li>单个时间段的时长大于或等于15分钟。</li>
+         * <li>所有时间段累计不跨天。</li>
+         * </ul>
          */
         @NameInMap("TimerPeriods")
         public java.util.List<ModifyNodePoolAttributeRequestNodePoolStrategyRecurrenceSchedulesTimerPeriods> timerPeriods;
@@ -174,42 +202,69 @@ public class ModifyNodePoolAttributeRequest extends TeaModel {
     }
 
     public static class ModifyNodePoolAttributeRequestNodePoolStrategy extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("MaxScalingAmount")
         public Integer maxScalingAmount;
 
         /**
          * <p>购买资源的数量。取值范围：1~100。</p>
-         * <br>
-         * <p>> </p>
-         * <p>- 若为包年包月资源，则该参数不可修改。</p>
-         * <p>- 若为按量付费资源，则当弹性模式（`StrategyType`）为固定数量（`NODE_FIXED`）或自动扩缩容（`NODE_SCALING_BY_USAGE`）时该参数可修改。</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li>若为包年包月资源，则该参数不可修改。</li>
+         * <li>若为按量付费资源，则当弹性模式（<code>StrategyType</code>）为固定数量（<code>NODE_FIXED</code>）或自动扩缩容（<code>NODE_SCALING_BY_USAGE</code>）时该参数可修改。</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("NodeAmount")
         public Integer nodeAmount;
 
         /**
-         * <p>策略执行周期列表。`StrategyType`（弹性模式）设为`NODE_SCALING_BY_SCHEDULE`（定时扩缩容）时，该字段必填。</p>
+         * <p>策略执行周期列表。<code>StrategyType</code>（弹性模式）设为<code>NODE_SCALING_BY_SCHEDULE</code>（定时扩缩容）时，该字段必填。</p>
          */
         @NameInMap("RecurrenceSchedules")
         public java.util.List<ModifyNodePoolAttributeRequestNodePoolStrategyRecurrenceSchedules> recurrenceSchedules;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("ScalingDownAfterIdleMinutes")
         public Integer scalingDownAfterIdleMinutes;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("ScalingStep")
         public Integer scalingStep;
 
+        /**
+         * <strong>example:</strong>
+         * <p>85</p>
+         */
         @NameInMap("ScalingUsageThreshold")
         public String scalingUsageThreshold;
 
         /**
-         * <p>策略失效日期。格式为：yyyy-MM-dd。失效日期与生效日期的间隔必须介于7天到1年之间（含7天和1年）。`StrategyType`（弹性模式）设为`NODE_SCALING_BY_SCHEDULE`（定时扩缩容）时，该字段必填。</p>
+         * <p>策略失效日期。格式为：yyyy-MM-dd。失效日期与生效日期的间隔必须介于7天到1年之间（含7天和1年）。<code>StrategyType</code>（弹性模式）设为<code>NODE_SCALING_BY_SCHEDULE</code>（定时扩缩容）时，该字段必填。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-01-19</p>
          */
         @NameInMap("StrategyDisableDate")
         public String strategyDisableDate;
 
         /**
-         * <p>策略生效日期。格式为：yyyy-MM-dd。该日期必须大于或等于当前日期。`StrategyType`（弹性模式）设为`NODE_SCALING_BY_SCHEDULE`（定时扩缩容）时，该字段必填。</p>
+         * <p>策略生效日期。格式为：yyyy-MM-dd。该日期必须大于或等于当前日期。<code>StrategyType</code>（弹性模式）设为<code>NODE_SCALING_BY_SCHEDULE</code>（定时扩缩容）时，该字段必填。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-01-05</p>
          */
         @NameInMap("StrategyEnableDate")
         public String strategyEnableDate;
@@ -218,7 +273,10 @@ public class ModifyNodePoolAttributeRequest extends TeaModel {
         public String strategyType;
 
         /**
-         * <p>是否开启资源预热策略。`StrategyType`（弹性模式）设为`NODE_SCALING_BY_SCHEDULE`（定时扩缩容）时，该字段必填。</p>
+         * <p>是否开启资源预热策略。<code>StrategyType</code>（弹性模式）设为<code>NODE_SCALING_BY_SCHEDULE</code>（定时扩缩容）时，该字段必填。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("WarmUp")
         public Boolean warmUp;

@@ -4,6 +4,9 @@ package com.aliyun.appstream_center20210901.models;
 import com.aliyun.tea.*;
 
 public class BuySessionPackageRequest extends TeaModel {
+    @NameInMap("AutoPay")
+    public Boolean autoPay;
+
     @NameInMap("ChargeType")
     public String chargeType;
 
@@ -16,27 +19,61 @@ public class BuySessionPackageRequest extends TeaModel {
     @NameInMap("PeriodUnit")
     public String periodUnit;
 
+    /**
+     * <strong>example:</strong>
+     * <p>p-xxxxxxxxxxxxx</p>
+     */
     @NameInMap("ProjectId")
     public String projectId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("Region")
     public String region;
 
     @NameInMap("SessionPackageName")
     public String sessionPackageName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("SessionPackageType")
     public String sessionPackageType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>appstreaming.general.entry</p>
+     */
     @NameInMap("SessionSpec")
     public String sessionSpec;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Windows</p>
+     */
     @NameInMap("SessionType")
     public String sessionType;
 
     public static BuySessionPackageRequest build(java.util.Map<String, ?> map) throws Exception {
         BuySessionPackageRequest self = new BuySessionPackageRequest();
         return TeaModel.build(map, self);
+    }
+
+    public BuySessionPackageRequest setAutoPay(Boolean autoPay) {
+        this.autoPay = autoPay;
+        return this;
+    }
+    public Boolean getAutoPay() {
+        return this.autoPay;
     }
 
     public BuySessionPackageRequest setChargeType(String chargeType) {

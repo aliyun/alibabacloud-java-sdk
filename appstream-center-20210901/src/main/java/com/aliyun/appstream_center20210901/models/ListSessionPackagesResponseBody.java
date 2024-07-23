@@ -7,15 +7,31 @@ public class ListSessionPackagesResponseBody extends TeaModel {
     @NameInMap("Data")
     public java.util.List<ListSessionPackagesResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5Fxxxxxxxx</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -65,27 +81,59 @@ public class ListSessionPackagesResponseBody extends TeaModel {
     }
 
     public static class ListSessionPackagesResponseBodyDataInstanceObject extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2024-05-28T16:00:00Z</p>
+         */
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>tp-xxxxxxxxxxx</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>appstreaming.general.entry</p>
+         */
         @NameInMap("InstanceType")
         public String instanceType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>p-xxxxxxxxxx</p>
+         */
         @NameInMap("ResourceId")
         public String resourceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>AppSessionPackage</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-11-28T04:14:07Z</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3600000</p>
+         */
         @NameInMap("TotalTime")
         public Long totalTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1021</p>
+         */
         @NameInMap("UsedTime")
         public Long usedTime;
 
@@ -161,57 +209,113 @@ public class ListSessionPackagesResponseBody extends TeaModel {
     }
 
     public static class ListSessionPackagesResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>500</p>
+         */
         @NameInMap("AvailableHours")
         public Long availableHours;
 
         @NameInMap("ChargeType")
         public String chargeType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("DeleteStatus")
         public Integer deleteStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1701170196000</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1701170203000</p>
+         */
         @NameInMap("GmtModifiedTime")
         public String gmtModifiedTime;
 
         @NameInMap("InstanceObject")
         public ListSessionPackagesResponseBodyDataInstanceObject instanceObject;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("MaxHours")
         public Long maxHours;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("MaxSessions")
         public Long maxSessions;
 
+        /**
+         * <strong>example:</strong>
+         * <p>p-xxxxxxxxxxxx</p>
+         */
         @NameInMap("ProjectId")
         public String projectId;
 
         @NameInMap("ProjectName")
         public String projectName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <strong>example:</strong>
+         * <p>tp-xxxxxxxxx</p>
+         */
         @NameInMap("SessionPackageId")
         public String sessionPackageId;
 
         @NameInMap("SessionPackageName")
         public String sessionPackageName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("SessionPackageTypeId")
         public String sessionPackageTypeId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>appstreaming.general.entry</p>
+         */
         @NameInMap("SessionSpec")
         public String sessionSpec;
 
+        /**
+         * <strong>example:</strong>
+         * <p>60</p>
+         */
         @NameInMap("SessionUsageRate")
         public Long sessionUsageRate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("State")
         public Integer state;
 
+        /**
+         * <strong>example:</strong>
+         * <p>156xxxxxxxxxx</p>
+         */
         @NameInMap("UserIdentification")
         public Long userIdentification;
 

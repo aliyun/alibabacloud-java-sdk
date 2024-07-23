@@ -4,6 +4,10 @@ package com.aliyun.appstream_center20210901.models;
 import com.aliyun.tea.*;
 
 public class GetProjectPoliciesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>p-xxxxxxxxxxxxxxx</p>
+     */
     @NameInMap("ProjectId")
     public String projectId;
 

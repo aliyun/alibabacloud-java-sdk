@@ -16,15 +16,37 @@ public class AskSessionPackagePriceRequest extends TeaModel {
     @NameInMap("PeriodUnit")
     public String periodUnit;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("Region")
     public String region;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("SessionPackageType")
     public String sessionPackageType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>appstreaming.general.entry</p>
+     */
     @NameInMap("SessionSpec")
     public String sessionSpec;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Windows</p>
+     */
     @NameInMap("SessionType")
     public String sessionType;
 

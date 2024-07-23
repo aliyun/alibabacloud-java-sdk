@@ -3,7 +3,7 @@ package com.aliyun.appstream_center20210901.models;
 
 import com.aliyun.tea.*;
 
-public class AskSessionPackagePriceResponse extends TeaModel {
+public class ModifyAppPolicyResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class AskSessionPackagePriceResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public AskSessionPackagePriceResponseBody body;
+    public ModifyAppPolicyResponseBody body;
 
-    public static AskSessionPackagePriceResponse build(java.util.Map<String, ?> map) throws Exception {
-        AskSessionPackagePriceResponse self = new AskSessionPackagePriceResponse();
+    public static ModifyAppPolicyResponse build(java.util.Map<String, ?> map) throws Exception {
+        ModifyAppPolicyResponse self = new ModifyAppPolicyResponse();
         return TeaModel.build(map, self);
     }
 
-    public AskSessionPackagePriceResponse setHeaders(java.util.Map<String, String> headers) {
+    public ModifyAppPolicyResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class AskSessionPackagePriceResponse extends TeaModel {
         return this.headers;
     }
 
-    public AskSessionPackagePriceResponse setStatusCode(Integer statusCode) {
+    public ModifyAppPolicyResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class AskSessionPackagePriceResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public AskSessionPackagePriceResponse setBody(AskSessionPackagePriceResponseBody body) {
+    public ModifyAppPolicyResponse setBody(ModifyAppPolicyResponseBody body) {
         this.body = body;
         return this;
     }
-    public AskSessionPackagePriceResponseBody getBody() {
+    public ModifyAppPolicyResponseBody getBody() {
         return this.body;
     }
 

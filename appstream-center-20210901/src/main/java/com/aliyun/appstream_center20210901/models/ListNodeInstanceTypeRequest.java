@@ -5,32 +5,63 @@ import com.aliyun.tea.*;
 
 public class ListNodeInstanceTypeRequest extends TeaModel {
     /**
-     * <p>资源所属的地域ID。关于支持的地域详情，请参见[使用限制](~~426036~~)。</p>
+     * <p>资源所属的地域ID。关于支持的地域详情，请参见<a href="https://help.aliyun.com/document_detail/426036.html">使用限制</a>。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("BizRegionId")
     public String bizRegionId;
 
     /**
      * <p>语言类型。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>zh-CN</p>
      */
     @NameInMap("Language")
     public String language;
 
+    /**
+     * <strong>example:</strong>
+     * <p>appstreaming.vgpu.4c8g.2g</p>
+     */
     @NameInMap("NodeInstanceType")
     public String nodeInstanceType;
 
     /**
      * <p>支持的操作系统类型。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Windows</p>
      */
     @NameInMap("OsType")
     public String osType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CloudApp</p>
+     */
     @NameInMap("ProductType")
     public String productType;
 

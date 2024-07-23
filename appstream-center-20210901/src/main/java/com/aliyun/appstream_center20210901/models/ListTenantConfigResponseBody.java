@@ -4,6 +4,10 @@ package com.aliyun.appstream_center20210901.models;
 import com.aliyun.tea.*;
 
 public class ListTenantConfigResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +36,10 @@ public class ListTenantConfigResponseBody extends TeaModel {
     }
 
     public static class ListTenantConfigResponseBodyTenantConfigModel extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("AppInstanceGroupExpireRemind")
         public Boolean appInstanceGroupExpireRemind;
 

@@ -32,12 +32,24 @@ public class CreateAppInstanceGroupResponseBody extends TeaModel {
     }
 
     public static class CreateAppInstanceGroupResponseBodyAppInstanceGroupModel extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>aig-9ciijz60n4xsv****</p>
+         */
         @NameInMap("AppInstanceGroupId")
         public String appInstanceGroupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>rg-ew7va2g1wl3vm****</p>
+         */
         @NameInMap("NodePoolId")
         public String nodePoolId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12345****</p>
+         */
         @NameInMap("OrderId")
         public String orderId;
 

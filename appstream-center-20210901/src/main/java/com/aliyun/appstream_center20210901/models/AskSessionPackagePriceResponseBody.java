@@ -7,6 +7,10 @@ public class AskSessionPackagePriceResponseBody extends TeaModel {
     @NameInMap("Data")
     public java.util.List<AskSessionPackagePriceResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2C64D9E5-DFCD-10A5-A911-xxxxxxx</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +36,31 @@ public class AskSessionPackagePriceResponseBody extends TeaModel {
     }
 
     public static class AskSessionPackagePriceResponseBodyDataPrice extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>CNY</p>
+         */
         @NameInMap("Currency")
         public String currency;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.0</p>
+         */
         @NameInMap("DiscountPrice")
         public Float discountPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2000.0</p>
+         */
         @NameInMap("OriginalPrice")
         public Float originalPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2000.0</p>
+         */
         @NameInMap("TradePrice")
         public Float tradePrice;
 

@@ -4,33 +4,65 @@ package com.aliyun.appstream_center20210901.models;
 import com.aliyun.tea.*;
 
 public class GetConnectionTicketResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>aig-53fvrq1oan****</p>
+     */
     @NameInMap("AppInstanceGroupId")
     public String appInstanceGroupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ai-7ybdeiyoeh5e****</p>
+     */
     @NameInMap("AppInstanceId")
     public String appInstanceId;
 
     @NameInMap("AppInstancePersistentId")
     public String appInstancePersistentId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("BizRegionId")
     public String bizRegionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Windows</p>
+     */
     @NameInMap("OsType")
     public String osType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>f3d1b31c-605e-4d04-a896****</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Running</p>
+     */
     @NameInMap("TaskStatus")
     public String taskStatus;
 
     @NameInMap("TenantId")
     public Long tenantId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DQpbRGVza3RvcF0NCkZvcmNlVGxzVHlwZT0xDQpHV1Rva2VuUGFydDE9MDAva09ROW1FUTU3dU****</p>
+     */
     @NameInMap("Ticket")
     public String ticket;
 

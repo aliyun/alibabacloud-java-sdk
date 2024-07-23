@@ -4,18 +4,34 @@ package com.aliyun.appstream_center20210901.models;
 import com.aliyun.tea.*;
 
 public class ListOtaTaskResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("TaskList")
     public java.util.List<ListOtaTaskResponseBodyTaskList> taskList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,15 +81,33 @@ public class ListOtaTaskResponseBody extends TeaModel {
     }
 
     public static class ListOtaTaskResponseBodyTaskList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0.0.1-R-20220708.110604</p>
+         */
         @NameInMap("OtaVersion")
         public String otaVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
+         */
         @NameInMap("TaskDisplayStatus")
         public String taskDisplayStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ota-be7jzm29wrrz5****</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-08-04T14:36:00+08:00</p>
+         */
         @NameInMap("TaskStartTime")
         public String taskStartTime;
 

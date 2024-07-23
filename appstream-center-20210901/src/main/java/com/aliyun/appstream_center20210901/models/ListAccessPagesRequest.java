@@ -4,21 +4,41 @@ package com.aliyun.appstream_center20210901.models;
 import com.aliyun.tea.*;
 
 public class ListAccessPagesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>a-062wec3cwmayw****</p>
+     */
     @NameInMap("AccessPageId")
     public String accessPageId;
 
     @NameInMap("AccessPageName")
     public String accessPageName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>p-065zdecaer07h****</p>
+     */
     @NameInMap("ProjectId")
     public String projectId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ASC</p>
+     */
     @NameInMap("SortType")
     public String sortType;
 

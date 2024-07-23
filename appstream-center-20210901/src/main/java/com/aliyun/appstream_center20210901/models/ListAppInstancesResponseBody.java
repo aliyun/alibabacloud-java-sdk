@@ -7,15 +7,31 @@ public class ListAppInstancesResponseBody extends TeaModel {
     @NameInMap("AppInstanceModels")
     public java.util.List<ListAppInstancesResponseBodyAppInstanceModels> appInstanceModels;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>18</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,9 +81,17 @@ public class ListAppInstancesResponseBody extends TeaModel {
     }
 
     public static class ListAppInstancesResponseBodyAppInstanceModelsBindInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>app.test</p>
+         */
         @NameInMap("EndUserId")
         public String endUserId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2000</p>
+         */
         @NameInMap("UsageDuration")
         public Long usageDuration;
 
@@ -95,27 +119,55 @@ public class ListAppInstancesResponseBody extends TeaModel {
     }
 
     public static class ListAppInstancesResponseBodyAppInstanceModels extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>aig-dk8p95irqfst9****</p>
+         */
         @NameInMap("AppInstanceGroupId")
         public String appInstanceGroupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ai-8dl7dzchklmka****</p>
+         */
         @NameInMap("AppInstanceId")
         public String appInstanceId;
 
         @NameInMap("BindInfo")
         public ListAppInstancesResponseBodyAppInstanceModelsBindInfo bindInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-03-07T20:29:19.000+08:00</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-03-07T20:29:19.000+08:00</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10.13.13.211</p>
+         */
         @NameInMap("MainEthPublicIp")
         public String mainEthPublicIp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>connect</p>
+         */
         @NameInMap("SessionStatus")
         public String sessionStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>BOUND</p>
+         */
         @NameInMap("Status")
         public String status;
 

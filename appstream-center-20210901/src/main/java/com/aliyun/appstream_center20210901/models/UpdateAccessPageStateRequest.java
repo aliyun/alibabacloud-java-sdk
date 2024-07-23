@@ -4,9 +4,17 @@ package com.aliyun.appstream_center20210901.models;
 import com.aliyun.tea.*;
 
 public class UpdateAccessPageStateRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>a-06xnr5lyp77e7****</p>
+     */
     @NameInMap("AccessPageId")
     public String accessPageId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("AccessPageState")
     public Integer accessPageState;
 

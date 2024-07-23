@@ -4,27 +4,68 @@ package com.aliyun.appstream_center20210901.models;
 import com.aliyun.tea.*;
 
 public class GetResourcePriceRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Amount")
     public Long amount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>appstreaming.general</p>
+     */
     @NameInMap("AppInstanceType")
     public String appInstanceType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("BizRegionId")
     public String bizRegionId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PrePaid</p>
+     */
     @NameInMap("ChargeType")
     public String chargeType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>appstreaming.vgpu.4c8g.2g</p>
+     */
     @NameInMap("NodeInstanceType")
     public String nodeInstanceType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Period")
     public Long period;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PeriodUnit")
     public String periodUnit;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CloudApp</p>
+     */
     @NameInMap("ProductType")
     public String productType;
 
