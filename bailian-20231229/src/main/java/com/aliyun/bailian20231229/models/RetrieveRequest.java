@@ -64,6 +64,9 @@ public class RetrieveRequest extends TeaModel {
     @NameInMap("SaveRetrieverHistory")
     public Boolean saveRetrieverHistory;
 
+    @NameInMap("SearchFilters")
+    public java.util.List<java.util.Map<String, String>> searchFilters;
+
     /**
      * <strong>example:</strong>
      * <p>100</p>
@@ -154,6 +157,14 @@ public class RetrieveRequest extends TeaModel {
     }
     public Boolean getSaveRetrieverHistory() {
         return this.saveRetrieverHistory;
+    }
+
+    public RetrieveRequest setSearchFilters(java.util.List<java.util.Map<String, String>> searchFilters) {
+        this.searchFilters = searchFilters;
+        return this;
+    }
+    public java.util.List<java.util.Map<String, String>> getSearchFilters() {
+        return this.searchFilters;
     }
 
     public RetrieveRequest setSparseSimilarityTopK(Integer sparseSimilarityTopK) {
