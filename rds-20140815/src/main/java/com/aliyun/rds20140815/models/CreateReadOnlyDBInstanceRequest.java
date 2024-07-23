@@ -4,6 +4,9 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class CreateReadOnlyDBInstanceRequest extends TeaModel {
+    @NameInMap("AutoCreateProxy")
+    public Boolean autoCreateProxy;
+
     /**
      * <p>Specifies whether to enable the automatic payment feature. Valid values:</p>
      * <ol>
@@ -388,6 +391,14 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
     public static CreateReadOnlyDBInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateReadOnlyDBInstanceRequest self = new CreateReadOnlyDBInstanceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateReadOnlyDBInstanceRequest setAutoCreateProxy(Boolean autoCreateProxy) {
+        this.autoCreateProxy = autoCreateProxy;
+        return this;
+    }
+    public Boolean getAutoCreateProxy() {
+        return this.autoCreateProxy;
     }
 
     public CreateReadOnlyDBInstanceRequest setAutoPay(Boolean autoPay) {
