@@ -12,18 +12,27 @@ public class DescribeInstanceRamRoleResponseBody extends TeaModel {
 
     /**
      * <p>The region ID of the instance RAM role.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of instance RAM roles returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -68,12 +77,18 @@ public class DescribeInstanceRamRoleResponseBody extends TeaModel {
     public static class DescribeInstanceRamRoleResponseBodyInstanceRamRoleSetsInstanceRamRoleSet extends TeaModel {
         /**
          * <p>The ID of the instance</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp67acfmxazb4p****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The name of the instance RAM role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EcsServiceRole-EcsDocGuideTest</p>
          */
         @NameInMap("RamRoleName")
         public String ramRoleName;

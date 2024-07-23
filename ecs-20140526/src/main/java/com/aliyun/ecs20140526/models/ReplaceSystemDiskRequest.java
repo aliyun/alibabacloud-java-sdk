@@ -8,7 +8,12 @@ public class ReplaceSystemDiskRequest extends TeaModel {
     public ReplaceSystemDiskRequestSystemDisk systemDisk;
 
     /**
-     * <p>>  This parameter is deprecated.</p>
+     * <blockquote>
+     * <p> This parameter is deprecated.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>i386</p>
      */
     @NameInMap("Architecture")
     public String architecture;
@@ -20,58 +25,87 @@ public class ReplaceSystemDiskRequest extends TeaModel {
     public java.util.List<ReplaceSystemDiskRequestArn> arn;
 
     /**
-     * <p>The client token that is used to ensure the idempotency of the request. You can use the client to generate the token, but make sure that the token is unique across requests. The **token** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
+     * <p>The client token that is used to ensure the idempotency of the request. You can use the client to generate the token, but make sure that the token is unique across requests. The <strong>token</strong> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>>  This parameter is deprecated. To improve compatibility, we recommend that you use `ImageId`.</p>
+     * <blockquote>
+     * <p> This parameter is deprecated. To improve compatibility, we recommend that you use <code>ImageId</code>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>d-bp67acfmxazb4ph****</p>
      */
     @NameInMap("DiskId")
     public String diskId;
 
     /**
-     * <p>> This parameter is not available for public use.</p>
+     * <blockquote>
+     * <p>This parameter is not available for public use.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>hide</p>
      */
     @NameInMap("EncryptAlgorithm")
     public String encryptAlgorithm;
 
     /**
      * <p>Specifies whether to encrypt the disk. Valid values:</p>
-     * <br>
-     * <p>*   true: encrypts the disk.</p>
-     * <p>*   false: does not encrypt the disk.</p>
-     * <br>
+     * <ul>
+     * <li>true: encrypts the disk.</li>
+     * <li>false: does not encrypt the disk.</li>
+     * </ul>
      * <p>Default value: false</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("Encrypted")
     public Boolean encrypted;
 
     /**
      * <p>The ID of the image to be used to replace the system disk.</p>
-     * <br>
-     * <p>If the `DiskId` parameter is not specified, this parameter is required.</p>
+     * <p>If the <code>DiskId</code> parameter is not specified, this parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>m-bp67acfmxazb4ph****</p>
      */
     @NameInMap("ImageId")
     public String imageId;
 
     /**
      * <p>The instance ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-bp67acfmxazb4ph****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The ID of the KMS key that you want to use for the system disk.</p>
+     * <p>The ID of the KMS key to use for the system disk.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>e522b26d-abf6-4e0d-b5da-04b7******3c</p>
      */
     @NameInMap("KMSKeyId")
     public String KMSKeyId;
 
     /**
      * <p>The name of the key pair.</p>
-     * <br>
-     * <p>> This parameter is applicable only to Linux instances. You can bind an SSH key pair to the instance as a logon credential. After you bind the SSH key pair, the username and password logon method is disabled for the instance.</p>
+     * <blockquote>
+     * <p>This parameter is applicable only to Linux instances. You can bind an SSH key pair to the instance as a logon credential. After you bind the SSH key pair, the username and password logon method is disabled for the instance.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>testKeyPairName</p>
      */
     @NameInMap("KeyPairName")
     public String keyPairName;
@@ -84,30 +118,40 @@ public class ReplaceSystemDiskRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to reset the password for the instance. The password must be 8 to 30 characters in length and contain at least three of the following items: uppercase letters, lowercase letters, digits, and special characters. Special characters include:</p>
-     * <br>
-     * <p>    ()`~!@#$%^&*-_+=|{}[]:;\"<>,.?/</p>
-     * <br>
+     * <pre><code>()`~!@#$%^&amp;*-_+=|{}[]:;\\&quot;&lt;&gt;,.?/
+     * </code></pre>
      * <p>The passwords of Windows instances cannot start with a forward slash (/).</p>
-     * <br>
      * <p>This parameter is empty by default, which indicates that the current password remains unchanged.</p>
-     * <br>
-     * <p>> If you specify `Password`, we recommend that you send requests over HTTPS to prevent password leaks.</p>
+     * <blockquote>
+     * <p>If you specify <code>Password</code>, we recommend that you send requests over HTTPS to prevent password leaks.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>EcsV587!</p>
      */
     @NameInMap("Password")
     public String password;
 
     /**
      * <p>Specifies whether to use the preset password of the image.</p>
-     * <br>
      * <p>Default value: false</p>
-     * <br>
-     * <p>> If the PasswordInherit parameter is specified, you must leave the Password parameter empty. Before you use this parameter, make sure that a password is preset for the image.</p>
+     * <blockquote>
+     * <p>If the PasswordInherit parameter is specified, you must leave the Password parameter empty. Before you use this parameter, make sure that a password is preset for the image.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("PasswordInherit")
     public Boolean passwordInherit;
 
     /**
-     * <p>>  This parameter is deprecated.</p>
+     * <blockquote>
+     * <p> This parameter is deprecated.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>CentOS</p>
      */
     @NameInMap("Platform")
     public String platform;
@@ -120,19 +164,26 @@ public class ReplaceSystemDiskRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to use Security Center Basic after the system disk is replaced. Valid values:</p>
-     * <br>
-     * <p>*   Active: uses Security Center Basic after the system disk is re-initialized. This value is applicable only to public images.</p>
-     * <p>*   Deactive: does not use Security Center Basic after the system disk is re-initialized. This value is applicable to all images.</p>
-     * <br>
+     * <ul>
+     * <li>Active: uses Security Center Basic after the system disk is re-initialized. This value is applicable only to public images.</li>
+     * <li>Deactive: does not use Security Center Basic after the system disk is re-initialized. This value is applicable to all images.</li>
+     * </ul>
      * <p>Default value: Deactive.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Active</p>
      */
     @NameInMap("SecurityEnhancementStrategy")
     public String securityEnhancementStrategy;
 
     /**
      * <p>Specifies whether to use the system configurations for virtual machines provided by Alibaba Cloud. System configurations for Windows: NTP and KMS. System configurations for Linux: NTP and YUM.</p>
-     * <br>
-     * <p>> This parameter takes effect only when you attach a system disk whose device name is /dev/xvda.</p>
+     * <blockquote>
+     * <p>This parameter takes effect only when you attach a system disk whose device name is /dev/xvda.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("UseAdditionalService")
     public Boolean useAdditionalService;
@@ -304,14 +355,30 @@ public class ReplaceSystemDiskRequest extends TeaModel {
 
     public static class ReplaceSystemDiskRequestSystemDisk extends TeaModel {
         /**
-         * <p>The capacity of the new system disk. Unit: GiB. Valid values:</p>
-         * <br>
-         * <p>*   Basic disk: Max{20, Size of the image corresponding to ImageId} to 500.</p>
-         * <p>*   Other disks: Max{20, Size of the image corresponding to ImageId} to 2,048.</p>
-         * <br>
-         * <p>Default value: 40 or the size of the image corresponding to ImageId, whichever is greater.</p>
-         * <br>
-         * <p>>  If the capacity of the new system disk exceeds `Max{20, Capacity of the original system disk}`, you are charged for excess capacity.</p>
+         * <p>The capacity of the new system disk. Unit: GiB. Valid values for different disk categories:</p>
+         * <ul>
+         * <li><p>Basic disk: Max{20, Size of the image specified by ImageId} to 500.</p>
+         * </li>
+         * <li><p>Enterprise SSD (ESSD):</p>
+         * <ul>
+         * <li>PL0: Max{1, Size of the image specified by ImageId} to 2048.</li>
+         * <li>PL1: Max{20, Size of the image specified by ImageId} to 2048.</li>
+         * <li>PL2: Max{461, Size of the image specified by ImageId} to 2048.</li>
+         * <li>PL3: Max{1261, Size of the image specified by ImageId} to 2048.</li>
+         * </ul>
+         * </li>
+         * <li><p>ESSD AutoPL disk: Max{1, Size of the image specified by ImageId} to 2048.</p>
+         * </li>
+         * <li><p>Other disk categories: Max{20, Size of the image specified by ImageId} to 2048.</p>
+         * </li>
+         * </ul>
+         * <p>Default value: 40 or the size of the image specified by ImageId, whichever is greater.</p>
+         * <blockquote>
+         * <p> If the capacity of the new system disk exceeds <code>Max{20, Capacity of the original system disk}</code>, you are charged for the excess capacity.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("Size")
         public Integer size;
@@ -333,19 +400,34 @@ public class ReplaceSystemDiskRequest extends TeaModel {
 
     public static class ReplaceSystemDiskRequestArn extends TeaModel {
         /**
-         * <p>> This parameter is unavailable.</p>
+         * <blockquote>
+         * <p>This parameter is unavailable.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("AssumeRoleFor")
         public Long assumeRoleFor;
 
         /**
-         * <p>> This parameter is not available for public use.</p>
+         * <blockquote>
+         * <p>This parameter is not available for public use.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("RoleType")
         public String roleType;
 
         /**
-         * <p>> This parameter is not available for public use.</p>
+         * <blockquote>
+         * <p>This parameter is not available for public use.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("Rolearn")
         public String rolearn;

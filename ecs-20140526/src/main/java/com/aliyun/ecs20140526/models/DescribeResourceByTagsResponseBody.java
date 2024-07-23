@@ -5,31 +5,43 @@ import com.aliyun.tea.*;
 
 public class DescribeResourceByTagsResponseBody extends TeaModel {
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1C1E5359-71D7-44D8-8FAA-0327B549157X</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>An array consisting of Resource data.</p>
+     * <p>Details about the resources to which the tags are bound.</p>
      */
     @NameInMap("Resources")
     public DescribeResourceByTagsResponseBodyResources resources;
 
     /**
      * <p>The total number of resources returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,18 +94,27 @@ public class DescribeResourceByTagsResponseBody extends TeaModel {
     public static class DescribeResourceByTagsResponseBodyResourcesResource extends TeaModel {
         /**
          * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>The ID of the resource.</p>
+         * <p>The resource ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp16t2cgmiiy7t1c****</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
          * <p>The type of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;

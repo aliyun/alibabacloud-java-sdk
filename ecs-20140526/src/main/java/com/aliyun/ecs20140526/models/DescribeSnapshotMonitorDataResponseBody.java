@@ -12,6 +12,9 @@ public class DescribeSnapshotMonitorDataResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9F8163A8-F5DE-47A2-A572-4E062D223E09</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class DescribeSnapshotMonitorDataResponseBody extends TeaModel {
     public static class DescribeSnapshotMonitorDataResponseBodyMonitorDataDataPoint extends TeaModel {
         /**
          * <p>The total size of snapshots. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>243036848128</p>
          */
         @NameInMap("Size")
         public Long size;
 
         /**
          * <p>The timestamp that corresponds to a snapshot size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-05-10T04:00:00Z</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;

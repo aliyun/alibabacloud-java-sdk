@@ -5,13 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeNetworkInterfacePermissionsRequest extends TeaModel {
     /**
-     * <p>The ID of ENI N. You must specify `NetworkInterfaceId` or `NetworkInterfacePermissionId.N` to determine the query range.</p>
+     * <p>The ID of ENI N. You must specify <code>NetworkInterfaceId</code> or <code>NetworkInterfacePermissionId.N</code> to determine the query range.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eni-bp17pdijfczax****</p>
      */
     @NameInMap("NetworkInterfaceId")
     public String networkInterfaceId;
 
     /**
      * <p>The IDs of ENI permissions. You can specify up to 100 ENI permission IDs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eni-perm-bp1cs4lwn56lfb****</p>
      */
     @NameInMap("NetworkInterfacePermissionId")
     public java.util.List<String> networkInterfacePermissionId;
@@ -24,26 +30,32 @@ public class DescribeNetworkInterfacePermissionsRequest extends TeaModel {
 
     /**
      * <p>The page number.</p>
-     * <br>
      * <p>Pages start from page 1.</p>
-     * <br>
      * <p>Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
-     * <br>
      * <p>Maximum value: 100.</p>
-     * <br>
      * <p>Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the ENI permission. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the ENI permission. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

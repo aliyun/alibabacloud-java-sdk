@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeDiagnosticMetricsRequest extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
@@ -18,23 +21,33 @@ public class DescribeDiagnosticMetricsRequest extends TeaModel {
 
     /**
      * <p>The maximum number of entries to return on each page. Maximum value: 100.</p>
-     * <br>
      * <p>Default value:</p>
-     * <br>
-     * <p>*   If this parameter is left empty, the default value is 10.</p>
-     * <p>*   If this parameter is set to a value greater than 100, the default value is 100.</p>
+     * <ul>
+     * <li>If this parameter is left empty, the default value is 10.</li>
+     * <li>If this parameter is set to a value greater than 100, the default value is 100.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The IDs of diagnostic metrics.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The query token. Set the value to the `NextToken` value returned in the last call to the DescribeDiagnosticMetrics operation. Leave this parameter empty the first time you call this operation.</p>
+     * <p>The query token. Set the value to the <code>NextToken</code> value returned in the last call to the DescribeDiagnosticMetrics operation. Leave this parameter empty the first time you call this operation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>instance</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

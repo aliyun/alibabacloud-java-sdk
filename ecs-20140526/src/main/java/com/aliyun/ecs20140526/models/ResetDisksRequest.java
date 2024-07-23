@@ -6,17 +6,21 @@ import com.aliyun.tea.*;
 public class ResetDisksRequest extends TeaModel {
     /**
      * <p>The disks that you want to roll back.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Disk")
     public java.util.List<ResetDisksRequestDisk> disk;
 
     /**
      * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
-     * <br>
-     * <p>*   true: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and resource state limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
-     * <p>*   false: performs a dry run and performs the actual request. If the request passes the dry run, the rollback operation is performed.</p>
-     * <br>
+     * <ul>
+     * <li>true: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and resource state limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li>false: performs a dry run and performs the actual request. If the request passes the dry run, the rollback operation is performed.</li>
+     * </ul>
      * <p>Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
@@ -28,7 +32,11 @@ public class ResetDisksRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -103,12 +111,18 @@ public class ResetDisksRequest extends TeaModel {
     public static class ResetDisksRequestDisk extends TeaModel {
         /**
          * <p>The ID of the disk that you want to roll back. You can specify up to 10 disk IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-j6cf7l0ewidb78lq****</p>
          */
         @NameInMap("DiskId")
         public String diskId;
 
         /**
          * <p>The ID of the disk snapshot that is contained in the instance snapshot. You can specify up to 10 disk snapshot IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-j6cdofbycydvg7ey****</p>
          */
         @NameInMap("SnapshotId")
         public String snapshotId;

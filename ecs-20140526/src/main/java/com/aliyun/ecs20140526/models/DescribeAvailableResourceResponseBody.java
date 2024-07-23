@@ -12,6 +12,9 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0041D94C-FB92-4C49-B115-259DA1C*****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,45 +42,68 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
 
     public static class DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceSupportedResourcesSupportedResource extends TeaModel {
         /**
-         * <p>The maximum number of available resources of a specific type. No value is returned when the parameter is empty.</p>
+         * <p>The maximum disk capacity.</p>
+         * <p>This parameter takes effect only if DestinationResource is set to SystemDisk or DataDisk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Max")
         public Integer max;
 
         /**
-         * <p>The minimum number of available resources of a specific type. No value is returned when the parameter is empty.</p>
+         * <p>The minimum disk capacity.</p>
+         * <p>This parameter takes effect only if DestinationResource is set to SystemDisk or DataDisk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Min")
         public Integer min;
 
         /**
-         * <p>The state of the resource. Valid values:</p>
-         * <br>
-         * <p>*   Available</p>
-         * <p>*   SoldOut</p>
+         * <p>The status of the resource. Valid values:</p>
+         * <ul>
+         * <li>Available</li>
+         * <li>SoldOut</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The resource category based on the stock. Valid values:</p>
-         * <br>
-         * <p>*   WithStock: Resources are in sufficient stock.</p>
-         * <p>*   ClosedWithStock: Resources are insufficient. We recommend that you use other resources that are in sufficient stock.</p>
-         * <p>*   WithoutStock: Resources are sold out and will be replenished. We recommend that you use other resources that are in sufficient stock.</p>
-         * <p>*   ClosedWithoutStock: Resources are sold out and will not be replenished. We recommend that you use other resources that are in sufficient stock.</p>
+         * <p>The resource category based on the stock level. Valid values:</p>
+         * <ul>
+         * <li>WithStock: Resources are in sufficient stock.</li>
+         * <li>ClosedWithStock: Resources are in insufficient stock. We recommend that you use other resources that are in sufficient stock.</li>
+         * <li>WithoutStock: Resources are out of stock and will be replenished. We recommend that you use other resources that are in sufficient stock.</li>
+         * <li>ClosedWithoutStock: Resources are out of stock and will not be replenished. We recommend that you use other resources that are in sufficient stock.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>WithStock</p>
          */
         @NameInMap("StatusCategory")
         public String statusCategory;
 
         /**
-         * <p>The unit of the resource type. No value is returned when the parameter is empty.</p>
+         * <p>The unit of the disk capacity.</p>
+         * <p>This parameter takes effect only if DestinationResource is set to SystemDisk or DataDisk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("Unit")
         public String unit;
 
         /**
-         * <p>The resource type.</p>
+         * <p>The resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.d1ne.xlarge</p>
          */
         @NameInMap("Value")
         public String value;
@@ -158,21 +184,25 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
 
     public static class DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResource extends TeaModel {
         /**
-         * <p>Details about the resources.</p>
+         * <p>The information about the resources.</p>
          */
         @NameInMap("SupportedResources")
         public DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceSupportedResources supportedResources;
 
         /**
-         * <p>The type of a resource. Valid values:</p>
-         * <br>
-         * <p>*   Zone: zone.</p>
-         * <p>*   IoOptimized: I/O optimized resource.</p>
-         * <p>*   InstanceType: instance type.</p>
-         * <p>*   SystemDisk: system disk.</p>
-         * <p>*   DataDisk: data disk.</p>
-         * <p>*   Network: network type.</p>
-         * <p>*   ddh: dedicated host.</p>
+         * <p>The resource type. Valid values:</p>
+         * <ul>
+         * <li>Zone: zone</li>
+         * <li>IoOptimized: I/O optimized resource</li>
+         * <li>InstanceType: instance type</li>
+         * <li>SystemDisk: system disk</li>
+         * <li>DataDisk: data disk</li>
+         * <li>Network: network type</li>
+         * <li>ddh: dedicated host</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>InstanceType</p>
          */
         @NameInMap("Type")
         public String type;
@@ -221,39 +251,53 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
 
     public static class DescribeAvailableResourceResponseBodyAvailableZonesAvailableZone extends TeaModel {
         /**
-         * <p>Details about the resources that can be created in the zone.</p>
+         * <p>The resources that are available in the zone.</p>
          */
         @NameInMap("AvailableResources")
         public DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResources availableResources;
 
         /**
-         * <p>The ID of the region where the instance resides.</p>
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>The state of resources in the zone. Valid values:</p>
-         * <br>
-         * <p>*   Available</p>
-         * <p>*   SoldOut</p>
+         * <p>The status of resources in the zone. Valid values:</p>
+         * <ul>
+         * <li>Available</li>
+         * <li>SoldOut</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The resource category based on the stock. Valid values:</p>
-         * <br>
-         * <p>*   WithStock: Resources are in sufficient stock.</p>
-         * <p>*   ClosedWithStock: Resources are insufficient. We recommend that you use other resources that are in sufficient stock.</p>
-         * <p>*   WithoutStock: Resources are sold out and will be replenished. We recommend that you use other resources that are in sufficient stock.</p>
-         * <p>*   ClosedWithoutStock: Resources are sold out and will not be replenished. We recommend that you use other resources that are in sufficient stock.</p>
+         * <p>The resource category based on the stock level in the zone. Valid values:</p>
+         * <ul>
+         * <li>WithStock: Resources are in sufficient stock.</li>
+         * <li>ClosedWithStock: Resources are in insufficient stock. We recommend that you use other resources that are in sufficient stock.</li>
+         * <li>WithoutStock: Resources are out of stock and will be replenished. We recommend that you use other resources that are in sufficient stock.</li>
+         * <li>ClosedWithoutStock: Resources are out of stock and will not be replenished. We recommend that you use other resources that are in sufficient stock.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>WithStock</p>
          */
         @NameInMap("StatusCategory")
         public String statusCategory;
 
         /**
-         * <p>The ID of the zone in which the instance resides.</p>
+         * <p>The zone ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-e</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;

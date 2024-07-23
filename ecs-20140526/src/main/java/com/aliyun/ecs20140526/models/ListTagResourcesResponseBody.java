@@ -6,18 +6,24 @@ import com.aliyun.tea.*;
 public class ListTagResourcesResponseBody extends TeaModel {
     /**
      * <p>A pagination token.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>484256DA-D816-44D2-9D86-B6EE4D5BA78C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The details about the resources and tags, such as the resource ID, the resource type, tag keys, and tag values.</p>
+     * <p>The information about the resource and its tags, including the resource ID, the resource type, and the keys and values of the tags.</p>
      */
     @NameInMap("TagResources")
     public ListTagResourcesResponseBodyTagResources tagResources;
@@ -54,42 +60,57 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public static class ListTagResourcesResponseBodyTagResourcesTagResource extends TeaModel {
         /**
          * <p>The resource ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1j6qtvdm8w0z1o****</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
-         * <p>The type of a resource. Valid values:</p>
-         * <br>
-         * <p>*   instance: ECS instance</p>
-         * <p>*   disk: disk</p>
-         * <p>*   snapshot: snapshot</p>
-         * <p>*   image: image</p>
-         * <p>*   securitygroup: security group</p>
-         * <p>*   volume: storage volume</p>
-         * <p>*   eni: ENI</p>
-         * <p>*   ddh: dedicated host</p>
-         * <p>*   ddhcluster: dedicated host cluster</p>
-         * <p>*   keypair: SSH key pair</p>
-         * <p>*   launchtemplate: launch template</p>
-         * <p>*   reservedinstance: reserved instance</p>
-         * <p>*   snapshotpolicy: automatic snapshot policy</p>
-         * <p>*   elasticityassurance: elasticity assurance</p>
-         * <p>*   capacityreservation: capacity reservation</p>
-         * <p>*   command: Cloud Assistant command</p>
-         * <p>*   invocation: Cloud Assistant command execution result</p>
+         * <p>The resource type. Valid values:</p>
+         * <ul>
+         * <li>instance: ECS instance</li>
+         * <li>disk: disk</li>
+         * <li>snapshot: snapshot</li>
+         * <li>image: image</li>
+         * <li>securitygroup: security group</li>
+         * <li>volume: storage volume</li>
+         * <li>eni: ENI</li>
+         * <li>ddh: dedicated host</li>
+         * <li>ddhcluster: dedicated host cluster</li>
+         * <li>keypair: SSH key pair</li>
+         * <li>launchtemplate: launch template</li>
+         * <li>reservedinstance: reserved instance</li>
+         * <li>snapshotpolicy: automatic snapshot policy</li>
+         * <li>elasticityassurance: elasticity assurance</li>
+         * <li>capacityreservation: capacity reservation</li>
+         * <li>command: Cloud Assistant command</li>
+         * <li>invocation: Cloud Assistant command execution result</li>
+         * <li>activation: activation code for a Cloud Assistant managed instance</li>
+         * <li>managedinstance: Cloud Assistant managed instance</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>instance</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
          */
         @NameInMap("TagValue")
         public String tagValue;

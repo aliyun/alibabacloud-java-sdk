@@ -6,23 +6,32 @@ import com.aliyun.tea.*;
 public class DescribeStorageCapacityUnitsRequest extends TeaModel {
     /**
      * <p>The allocation type. Valid values:</p>
-     * <br>
-     * <p>*   Normal: queries SCUs that belong to the current Alibaba Cloud account.</p>
-     * <p>*   Shared: queries SCUs shared between the Alibaba Cloud account and RAM users.</p>
-     * <br>
+     * <ul>
+     * <li>Normal: queries SCUs that belong to the current Alibaba Cloud account.</li>
+     * <li>Shared: queries SCUs shared between the Alibaba Cloud account and RAM users.</li>
+     * </ul>
      * <p>Default value: Normal.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Normal</p>
      */
     @NameInMap("AllocationType")
     public String allocationType;
 
     /**
      * <p>The capacity of the SCU. Unit: GiB. Valid values: 20, 40, 100, 200, 500, 1024, 2048, 5120, 10240, 20480, and 51200.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("Capacity")
     public Integer capacity;
 
     /**
-     * <p>The name of the SCU. The name must be 2 to 128 characters in length. It must start with a letter but cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
+     * <p>The name of the SCU. The name must be 2 to 128 characters in length. It must start with a letter but cannot start with <code>http://</code> or <code>https://</code>. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testScuName</p>
      */
     @NameInMap("Name")
     public String name;
@@ -35,26 +44,32 @@ public class DescribeStorageCapacityUnitsRequest extends TeaModel {
 
     /**
      * <p>The number of the page to return.</p>
-     * <br>
      * <p>Pages start from page 1.</p>
-     * <br>
      * <p>Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page.</p>
-     * <br>
      * <p>Maximum value: 100.</p>
-     * <br>
      * <p>Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the SCU. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the SCU. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -67,17 +82,24 @@ public class DescribeStorageCapacityUnitsRequest extends TeaModel {
 
     /**
      * <p>The state of SCUs. You can specify 1 to 4 types of state. Valid values:</p>
-     * <br>
-     * <p>*   Creating: The SCUs are being created.</p>
-     * <p>*   Active: The SCUs are in effect.</p>
-     * <p>*   Expired: The SCUs have expired.</p>
-     * <p>*   Pending: The SCUs have not taken effect.</p>
+     * <ul>
+     * <li>Creating: The SCUs are being created.</li>
+     * <li>Active: The SCUs are in effect.</li>
+     * <li>Expired: The SCUs have expired.</li>
+     * <li>Pending: The SCUs have not taken effect.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Active</p>
      */
     @NameInMap("Status")
     public java.util.List<String> status;
 
     /**
      * <p>One or multiple SCU IDs. You can specify 1 to 100 SCU IDs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>scu-bp67acfmxazb4p****</p>
      */
     @NameInMap("StorageCapacityUnitId")
     public java.util.List<String> storageCapacityUnitId;
@@ -200,12 +222,18 @@ public class DescribeStorageCapacityUnitsRequest extends TeaModel {
     public static class DescribeStorageCapacityUnitsRequestTag extends TeaModel {
         /**
          * <p>The key of tag N of the SCU. N is the identifier for the tag, which you can use to set and query the tag. Valid values of N: 1 to 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag N of the SCU. N is the identifier for the tag, which you can use to set and query the tag. The value of N must coincide with `Tag.N.Key`. Valid values of N: 1 to 20.</p>
+         * <p>The value of tag N of the SCU. N is the identifier for the tag, which you can use to set and query the tag. The value of N must coincide with <code>Tag.N.Key</code>. Valid values of N: 1 to 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
          */
         @NameInMap("Value")
         public String value;

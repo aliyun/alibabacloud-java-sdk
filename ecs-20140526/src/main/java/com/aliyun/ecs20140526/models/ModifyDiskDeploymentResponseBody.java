@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ModifyDiskDeploymentResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D69846D9-F17F-51C0-8AC6-B4B71777****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the disk migration task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>t-bp67acfmxazb4p****</p>
      */
     @NameInMap("TaskId")
     public String taskId;

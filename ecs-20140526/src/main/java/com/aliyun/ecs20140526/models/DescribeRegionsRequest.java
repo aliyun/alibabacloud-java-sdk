@@ -5,24 +5,30 @@ import com.aliyun.tea.*;
 
 public class DescribeRegionsRequest extends TeaModel {
     /**
-     * <p>The natural language that is used to filter responses. For more information, visit [RFC 7231](https://tools.ietf.org/html/rfc7231). Valid values:</p>
-     * <br>
-     * <p>*   zh-CN: Chinese</p>
-     * <p>*   en-US: English</p>
-     * <p>*   ja: Japanese</p>
-     * <br>
+     * <p>The natural language that is used to filter responses. For more information, see <a href="https://tools.ietf.org/html/rfc7231">RFC 7231</a>. Valid values:</p>
+     * <ul>
+     * <li>zh-CN: Chinese</li>
+     * <li>en-US: English</li>
+     * <li>ja: Japanese</li>
+     * </ul>
      * <p>Default value: zh-CN.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>zh-CN</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
-     * <p>The billing method of the instance. For more information, see [Billing overview](~~25398~~). Valid values:</p>
-     * <br>
-     * <p>*   PrePaid: subscription. If this parameter is set to PrePaid, make sure that you have sufficient balance or credits in your account. Otherwise, the InvalidPayMethod error code is returned.</p>
-     * <p>*   PostPaid: pay-as-you-go.</p>
-     * <br>
+     * <p>The billing method of instances. For more information, see <a href="https://help.aliyun.com/document_detail/25398.html">Billing overview</a>. Valid values:</p>
+     * <ul>
+     * <li>PrePaid: subscription. If you set this parameter to PrePaid, make sure that you have sufficient balance or credits in your account. Otherwise, the InvalidPayMethod error code is returned.</li>
+     * <li>PostPaid: pay-as-you-go.</li>
+     * </ul>
      * <p>Default value: PostPaid.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PrePaid</p>
      */
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
@@ -40,14 +46,17 @@ public class DescribeRegionsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The type of the resource. Valid values:</p>
-     * <br>
-     * <p>*   instance: Elastic Compute Service (ECS) instance</p>
-     * <p>*   disk: disk</p>
-     * <p>*   reservedinstance: reserved instance</p>
-     * <p>*   scu: storage capacity unit (SCU)</p>
-     * <br>
+     * <p>The resource type. Valid value:</p>
+     * <ul>
+     * <li>instance: Elastic Compute Service (ECS) instance</li>
+     * <li>disk: disk</li>
+     * <li>reservedinstance: reserved instance</li>
+     * <li>scu: storage capacity unit (SCU)</li>
+     * </ul>
      * <p>Default value: instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>instance</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

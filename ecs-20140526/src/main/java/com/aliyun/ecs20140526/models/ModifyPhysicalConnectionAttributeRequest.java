@@ -28,6 +28,9 @@ public class ModifyPhysicalConnectionAttributeRequest extends TeaModel {
     @NameInMap("PeerLocation")
     public String peerLocation;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PhysicalConnectionId")
     public String physicalConnectionId;
 
@@ -37,6 +40,9 @@ public class ModifyPhysicalConnectionAttributeRequest extends TeaModel {
     @NameInMap("RedundantPhysicalConnectionId")
     public String redundantPhysicalConnectionId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

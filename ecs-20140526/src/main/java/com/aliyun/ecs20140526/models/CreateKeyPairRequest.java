@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class CreateKeyPairRequest extends TeaModel {
     /**
-     * <p>The name of the key pair. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
+     * <p>The name of the key pair. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testKeyPairName</p>
      */
     @NameInMap("KeyPairName")
     public String keyPairName;
@@ -14,13 +18,20 @@ public class CreateKeyPairRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region in which to create the key pair. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The ID of the region in which to create the key pair. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the enterprise resource group to which the SSH key pair belongs.</p>
+     * <p>The ID of the resource group to which to add the key pair.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-bp67acfmxazb4p****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -32,7 +43,7 @@ public class CreateKeyPairRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The tags.</p>
+     * <p>The tags of the key pair.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateKeyPairRequestTag> tag;
@@ -100,13 +111,19 @@ public class CreateKeyPairRequest extends TeaModel {
 
     public static class CreateKeyPairRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N to be bound to the key pair. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.</p>
+         * <p>The key of tag N to add to the key pair. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag N of the key pair. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://. It cannot start with acs:.</p>
+         * <p>The value of tag N to add to the key pair. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://. The tag value cannot start with acs:.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
          */
         @NameInMap("Value")
         public String value;

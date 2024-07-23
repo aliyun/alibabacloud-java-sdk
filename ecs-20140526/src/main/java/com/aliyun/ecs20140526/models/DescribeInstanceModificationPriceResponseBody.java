@@ -12,6 +12,9 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A3DC3196-379B-4F32-A2C5-B937134FAD8A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,28 +43,38 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
     public static class DescribeInstanceModificationPriceResponseBodyPriceInfoPrice extends TeaModel {
         /**
          * <p>The currency unit.</p>
-         * <br>
          * <p>Alibaba Cloud China site (aliyun.com): CNY</p>
-         * <br>
          * <p>Alibaba Cloud International site (alibabacloud.com): USD</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CNY</p>
          */
         @NameInMap("Currency")
         public String currency;
 
         /**
          * <p>The discount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>61.320</p>
          */
         @NameInMap("DiscountPrice")
         public Float discountPrice;
 
         /**
          * <p>The original price.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>175.200</p>
          */
         @NameInMap("OriginalPrice")
         public Float originalPrice;
 
         /**
          * <p>The transaction price, which is equal to the original price minus the discount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>113.880</p>
          */
         @NameInMap("TradePrice")
         public Float tradePrice;
@@ -108,12 +121,18 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
     public static class DescribeInstanceModificationPriceResponseBodyPriceInfoRulesRule extends TeaModel {
         /**
          * <p>The description of the promotion rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Upgrade offers</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The ID of the promotion rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567890</p>
          */
         @NameInMap("RuleId")
         public Long ruleId;

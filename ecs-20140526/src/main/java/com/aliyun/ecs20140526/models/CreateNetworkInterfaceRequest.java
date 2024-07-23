@@ -5,118 +5,170 @@ import com.aliyun.tea.*;
 
 public class CreateNetworkInterfaceRequest extends TeaModel {
     /**
-     * <p>> This parameter is no longer used.</p>
+     * <blockquote>
+     * <p>This parameter is no longer used.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
      */
     @NameInMap("BusinessType")
     public String businessType;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The **token** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <strong>token</strong> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>This parameter is not publicly available.</p>
+     */
     @NameInMap("ConnectionTrackingConfiguration")
     public CreateNetworkInterfaceRequestConnectionTrackingConfiguration connectionTrackingConfiguration;
 
     /**
      * <p>Specifies whether to release the ENI when the associated instance is released. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("DeleteOnRelease")
     public Boolean deleteOnRelease;
 
     /**
-     * <p>The description of the ENI. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.</p>
-     * <br>
+     * <p>The description of the ENI. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * <p>This parameter is empty by default.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testDescription</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>This parameter is not publicly available.</p>
+     */
+    @NameInMap("EnhancedNetwork")
+    public CreateNetworkInterfaceRequestEnhancedNetwork enhancedNetwork;
+
+    /**
      * <p>The type of the ENI. Valid values:</p>
-     * <br>
-     * <p>*   Secondary: secondary ENI.</p>
-     * <p>*   Trunk: trunk ENI. This value is in invitational preview.</p>
-     * <br>
+     * <ul>
+     * <li>Secondary: secondary ENI.</li>
+     * <li>Trunk: trunk ENI. This value is in invitational preview.</li>
+     * </ul>
      * <p>Default value: Secondary.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
 
     /**
      * <p>IPv4 prefixes to assign to the ENI. Valid values of N: 1 to 10.</p>
-     * <br>
-     * <p>>  To assign IPv4 prefixes to the ENI, you must specify the Ipv4Prefix.N or Ipv4PrefixCount parameter, but not both.</p>
+     * <blockquote>
+     * <p> To assign IPv4 prefixes to the ENI, you must specify the Ipv4Prefix.N or Ipv4PrefixCount parameter, but not both.</p>
+     * </blockquote>
      */
     @NameInMap("Ipv4Prefix")
     public java.util.List<String> ipv4Prefix;
 
     /**
      * <p>The number of IPv4 prefixes to assign to the ENI. Valid values: 1 to 10.</p>
-     * <br>
-     * <p>>  To assign IPv4 prefixes to the ENI, you must specify the Ipv4Prefix.N or Ipv4PrefixCount parameter, but not both.</p>
+     * <blockquote>
+     * <p> To assign IPv4 prefixes to the ENI, you must specify the Ipv4Prefix.N or Ipv4PrefixCount parameter, but not both.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>hide</p>
      */
     @NameInMap("Ipv4PrefixCount")
     public Integer ipv4PrefixCount;
 
     /**
      * <p>IPv6 addresses to assign to the ENI. Valid values of N: 1 to 10.</p>
-     * <br>
-     * <p>Example: Ipv6Address.1=2001:db8:1234:1a00::\*\*\*\*</p>
-     * <br>
-     * <p>>  To assign IPv6 addresses to the ENI, you must specify the `Ipv6Addresses.N` or `Ipv6AddressCount` parameter, but not both.</p>
+     * <p>Example: Ipv6Address.1=2001:db8:1234:1a00::\<em>\</em>\<em>\</em></p>
+     * <blockquote>
+     * <p> To assign IPv6 addresses to the ENI, you must specify the <code>Ipv6Addresses.N</code> or <code>Ipv6AddressCount</code> parameter, but not both.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>2001:db8:1234:1a00::****</p>
      */
     @NameInMap("Ipv6Address")
     public java.util.List<String> ipv6Address;
 
     /**
      * <p>The number of IPv6 addresses to randomly generate for the ENI. Valid values: 1 to 10.</p>
-     * <br>
-     * <p>>  To assign IPv6 addresses to the ENI, you must specify the `Ipv6Addresses.N` or `Ipv6AddressCount` parameter, but not both.</p>
+     * <blockquote>
+     * <p> To assign IPv6 addresses to the ENI, you must specify the <code>Ipv6Addresses.N</code> or <code>Ipv6AddressCount</code> parameter, but not both.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Ipv6AddressCount")
     public Integer ipv6AddressCount;
 
     /**
      * <p>IPv6 prefixes to assign to the ENI. Valid values of N: 1 to 10.</p>
-     * <br>
-     * <p>>  To assign IPv6 prefixes to the ENI, you must specify the Ipv6Prefix.N or Ipv6PrefixCount parameter, but not both.</p>
+     * <blockquote>
+     * <p> To assign IPv6 prefixes to the ENI, you must specify the Ipv6Prefix.N or Ipv6PrefixCount parameter, but not both.</p>
+     * </blockquote>
      */
     @NameInMap("Ipv6Prefix")
     public java.util.List<String> ipv6Prefix;
 
     /**
      * <p>The number of IPv6 prefixes to assign to the ENI. Valid values: 1 to 10.</p>
-     * <br>
-     * <p>>  To assign IPv6 prefixes to the ENI, you must specify the Ipv6Prefix.N or Ipv6PrefixCount parameter, but not both.</p>
+     * <blockquote>
+     * <p> To assign IPv6 prefixes to the ENI, you must specify the Ipv6Prefix.N or Ipv6PrefixCount parameter, but not both.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>hide</p>
      */
     @NameInMap("Ipv6PrefixCount")
     public Integer ipv6PrefixCount;
 
     /**
-     * <p>The name of the ENI. The name must be 2 to 128 characters in length, and can contain letters, digits, colons (:), underscores (\_), and hyphens (-). It must start with a letter and cannot start with `http://` or `https://`.</p>
-     * <br>
-     * <p>This parameter is empty by default.</p>
+     * <p>The name of the ENI. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
+     * <p>This parameter is left empty by default.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testNetworkInterfaceName</p>
      */
     @NameInMap("NetworkInterfaceName")
     public String networkInterfaceName;
 
+    /**
+     * <p>The communication settings of the ENI.</p>
+     */
     @NameInMap("NetworkInterfaceTrafficConfig")
     public CreateNetworkInterfaceRequestNetworkInterfaceTrafficConfig networkInterfaceTrafficConfig;
 
     /**
      * <p>The communication mode of the ENI. Valid values:</p>
-     * <br>
-     * <p>*   Standard: uses the TCP communication mode.</p>
-     * <p>*   HighPerformance: uses the remote direct memory access (RDMA) communication mode with Elastic RDMA Interface (ERI) enabled.</p>
-     * <br>
-     * <p>>  ENIs in RDMA mode can be attached only to instances of the instance types that support ERIs. The number of ENIs in RDMA mode that are attached to an instance cannot exceed the maximum number of ENIs that the instance type supports. For more information, see [Overview of ECS instance families](~~25378~~) and [Configure eRDMA on an enterprise-level instance](~~336853~~).</p>
-     * <br>
+     * <ul>
+     * <li>Standard: uses the TCP communication mode.</li>
+     * <li>HighPerformance: uses the remote direct memory access (RDMA) communication mode with Elastic RDMA Interface (ERI) enabled.</li>
+     * </ul>
+     * <blockquote>
+     * <p> ENIs in RDMA mode can be attached only to instances of the instance types that support ERIs. The number of ENIs in RDMA mode that are attached to an instance cannot exceed the maximum number of ENIs that the instance type supports. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of ECS instance families</a> and <a href="https://help.aliyun.com/document_detail/336853.html">Configure eRDMA on an enterprise-level instance</a>.</p>
+     * </blockquote>
      * <p>Default value: Standard.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Standard</p>
      */
     @NameInMap("NetworkInterfaceTrafficMode")
     public String networkInterfaceTrafficMode;
@@ -129,44 +181,63 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
 
     /**
      * <p>The primary private IP address of the ENI.</p>
-     * <br>
      * <p>The specified IP address must be an idle IP address within the CIDR block of the vSwitch with which to associate the ENI. If this parameter is not specified, an idle IP address is assigned from within the vSwitch CIDR block at random.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>172.17.**.**</p>
      */
     @NameInMap("PrimaryIpAddress")
     public String primaryIpAddress;
 
     /**
      * <p>Secondary private IP addresses to assign to the ENI. The IP addresses must be idle IP addresses in the CIDR block of the vSwitch with which to associate the ENI. Valid values of N: 0 to 10.</p>
-     * <br>
-     * <p>>  To assign secondary private IP addresses to the ENI, you can specify the `PrivateIpAddress.N` or `SecondaryPrivateIpAddressCount` parameter, but not both.</p>
+     * <blockquote>
+     * <p> To assign secondary private IP addresses to the ENI, you can specify the <code>PrivateIpAddress.N</code> or <code>SecondaryPrivateIpAddressCount</code> parameter, but not both.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>172.17.**.**</p>
      */
     @NameInMap("PrivateIpAddress")
     public java.util.List<String> privateIpAddress;
 
     /**
      * <p>The number of queues supported by the ENI. Valid values: 1 to 2048.</p>
-     * <br>
-     * <p>When you attach the ENI to an instance, make sure that the value of this parameter is less than the maximum number of queues per ENI that is allowed for the instance type. To view the maximum number of queues per ENI allowed for an instance type, you can call the [DescribeInstanceTypes](~~25620~~) operation and then check the return value of `MaximumQueueNumberPerEni`.</p>
-     * <br>
-     * <p>This parameter is left empty by default. If you do not specify this parameter, the default number of queues per ENI for the instance type of an instance is used when you attach the ENI to the instance. To view the default number of queues per ENI for an instance type, you can call the [DescribeInstanceTypes](~~25620~~) operation and then check the return value of `SecondaryEniQueueNumber`.</p>
+     * <p>When you attach the ENI to an instance, make sure that the value of this parameter is less than the maximum number of queues per ENI that is allowed for the instance type. To view the maximum number of queues per ENI allowed for an instance type, you can call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation and then check the return value of <code>MaximumQueueNumberPerEni</code>.</p>
+     * <p>This parameter is left empty by default. If you do not specify this parameter, the default number of queues per ENI for the instance type of an instance is used when you attach the ENI to the instance. To view the default number of queues per ENI for an instance type, you can call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation and then check the return value of <code>SecondaryEniQueueNumber</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("QueueNumber")
     public Integer queueNumber;
 
     /**
-     * <p>> This parameter is in invitational preview and is not publicly available.</p>
+     * <blockquote>
+     * <p>This parameter is in invitational preview and is not publicly available.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>22</p>
      */
     @NameInMap("QueuePairNumber")
     public Integer queuePairNumber;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region in which to create the ENI. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which you want to assign the ENI. You can call the [ListResourceGroups](~~158855~~) operation to query the most recent resource group list.</p>
+     * <p>The ID of the resource group to which you want to assign the ENI. You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query the most recent resource group list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-bp67acfmxazb4ph****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -179,35 +250,47 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
 
     /**
      * <p>The receive (Rx) queue depth of the ENI.</p>
-     * <br>
      * <p>Take note of the following items:</p>
-     * <br>
-     * <p>*   The Rx queue depth of an ENI must be the same as the Tx queue depth of the ENI. Valid values: powers of 2 in the range of 8192 to 16384.</p>
-     * <p>*   A larger Rx queue depth yields higher inbound throughput but consumes more memory.</p>
+     * <ul>
+     * <li>The Rx queue depth of an ENI must be the same as the Tx queue depth of the ENI. Valid values: powers of 2 in the range of 8192 to 16384.</li>
+     * <li>A larger Rx queue depth yields higher inbound throughput but consumes more memory.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>8192</p>
      */
     @NameInMap("RxQueueSize")
     public Integer rxQueueSize;
 
     /**
      * <p>The number of private IP addresses to be assigned by ECS. Valid values: 1 to 49.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("SecondaryPrivateIpAddressCount")
     public Integer secondaryPrivateIpAddressCount;
 
     /**
      * <p>The ID of the security group to which to assign the ENI. The security group and the ENI must belong to the same VPC.</p>
-     * <br>
-     * <p>> You must specify `SecurityGroupId` or `SecurityGroupIds.N` but not both.</p>
+     * <blockquote>
+     * <p>You must specify <code>SecurityGroupId</code> or <code>SecurityGroupIds.N</code> but not both.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>sg-bp1fg655nh68xyz9i****</p>
      */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
     /**
-     * <p>The ID of security group N to which to assign the ENI. The security group and the ENI must belong to the same VPC. The valid values of N are determined based on the maximum number of security groups to which an ENI can be assigned. For more information, see [Limits](~~25412~~).</p>
-     * <br>
-     * <p>**</p>
-     * <br>
-     * <p>You must specify **SecurityGroupId** or SecurityGroupIds.N but not both.````</p>
+     * <p>The IDs of security groups to which to assign the ENI. The security groups and the ENI must belong to the same VPC. The valid values of N are determined based on the maximum number of security groups to which an ENI can be assigned. For more information, see <a href="https://help.aliyun.com/document_detail/25412.html">Limits</a>.</p>
+     * <blockquote>
+     * <p> You must specify <code>SecurityGroupId</code> or <code>SecurityGroupIds.N</code> but not both.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>sg-bp1fg655nh68xyz9i****</p>
      */
     @NameInMap("SecurityGroupIds")
     public java.util.List<String> securityGroupIds;
@@ -220,23 +303,35 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
 
     /**
      * <p>The transmit (Tx) queue depth of the ENI.</p>
-     * <br>
      * <p>Take note of the following items:</p>
-     * <br>
-     * <p>*   The Tx queue depth of an ENI must be the same as the Rx queue depth of the ENI. Valid values: powers of 2 in the range of 8192 to 16384.</p>
-     * <p>*   A larger Tx queue depth yields higher outbound throughput but consumes more memory.</p>
+     * <ul>
+     * <li>The Tx queue depth of an ENI must be the same as the Rx queue depth of the ENI. Valid values: powers of 2 in the range of 8192 to 16384.</li>
+     * <li>A larger Tx queue depth yields higher outbound throughput but consumes more memory.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>8192</p>
      */
     @NameInMap("TxQueueSize")
     public Integer txQueueSize;
 
     /**
      * <p>The ID of the vSwitch with which to associate the ENI. Private IP addresses are assigned to the ENI from within the CIDR block of the vSwitch.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-bp1s5fnvk4gn2tws03****</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
     /**
-     * <p>> This parameter is no longer used.</p>
+     * <blockquote>
+     * <p>This parameter is no longer used.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
      */
     @NameInMap("Visible")
     public Boolean visible;
@@ -284,6 +379,14 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public CreateNetworkInterfaceRequest setEnhancedNetwork(CreateNetworkInterfaceRequestEnhancedNetwork enhancedNetwork) {
+        this.enhancedNetwork = enhancedNetwork;
+        return this;
+    }
+    public CreateNetworkInterfaceRequestEnhancedNetwork getEnhancedNetwork() {
+        return this.enhancedNetwork;
     }
 
     public CreateNetworkInterfaceRequest setInstanceType(String instanceType) {
@@ -511,12 +614,21 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     }
 
     public static class CreateNetworkInterfaceRequestConnectionTrackingConfiguration extends TeaModel {
+        /**
+         * <p>This parameter is not publicly available.</p>
+         */
         @NameInMap("TcpClosedAndTimeWaitTimeout")
         public Integer tcpClosedAndTimeWaitTimeout;
 
+        /**
+         * <p>This parameter is not publicly available.</p>
+         */
         @NameInMap("TcpEstablishedTimeout")
         public Integer tcpEstablishedTimeout;
 
+        /**
+         * <p>This parameter is not publicly available.</p>
+         */
         @NameInMap("UdpTimeout")
         public Integer udpTimeout;
 
@@ -551,19 +663,71 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
 
     }
 
+    public static class CreateNetworkInterfaceRequestEnhancedNetwork extends TeaModel {
+        /**
+         * <p>This parameter is not publicly available.</p>
+         */
+        @NameInMap("EnableSriov")
+        public Boolean enableSriov;
+
+        public static CreateNetworkInterfaceRequestEnhancedNetwork build(java.util.Map<String, ?> map) throws Exception {
+            CreateNetworkInterfaceRequestEnhancedNetwork self = new CreateNetworkInterfaceRequestEnhancedNetwork();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateNetworkInterfaceRequestEnhancedNetwork setEnableSriov(Boolean enableSriov) {
+            this.enableSriov = enableSriov;
+            return this;
+        }
+        public Boolean getEnableSriov() {
+            return this.enableSriov;
+        }
+
+    }
+
     public static class CreateNetworkInterfaceRequestNetworkInterfaceTrafficConfig extends TeaModel {
+        /**
+         * <p>The communication mode of the ENI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HighPerformance</p>
+         */
         @NameInMap("NetworkInterfaceTrafficMode")
         public String networkInterfaceTrafficMode;
 
+        /**
+         * <p>The number of queues supported by the ENI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
+         */
         @NameInMap("QueueNumber")
         public Integer queueNumber;
 
+        /**
+         * <p>The number of queues supported by the ERI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
+         */
         @NameInMap("QueuePairNumber")
         public Integer queuePairNumber;
 
+        /**
+         * <p>The receive (Rx) queue depth of the ENI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8192</p>
+         */
         @NameInMap("RxQueueSize")
         public Integer rxQueueSize;
 
+        /**
+         * <p>The transmit (Tx) queue depth of the ENI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8192</p>
+         */
         @NameInMap("TxQueueSize")
         public Integer txQueueSize;
 
@@ -616,13 +780,19 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
 
     public static class CreateNetworkInterfaceRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N to add to the ENI. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain `http://` or `https://`.</p>
+         * <p>The key of tag N to add to the ENI. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag N to add to the ENI. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length. It cannot start with acs: or contain `http://` or `https://`.</p>
+         * <p>The value of tag N to add to the ENI. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
          */
         @NameInMap("Value")
         public String value;

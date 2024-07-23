@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class GetInstanceScreenshotRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-bp1gbz20g229bvu5****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -17,7 +21,11 @@ public class GetInstanceScreenshotRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shenzhen</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -30,8 +38,10 @@ public class GetInstanceScreenshotRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to wake up the hibernated instance.</p>
-     * <br>
      * <p>Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("WakeUp")
     public Boolean wakeUp;

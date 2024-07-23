@@ -12,30 +12,37 @@ public class ListPluginStatusRequest extends TeaModel {
 
     /**
      * <p>The maximum number of entries per page. </p>
-     * <br>
      * <p>Valid values: 1 to 50. </p>
-     * <br>
      * <p>Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The name of the Cloud Assistant plug-in. The name supports all character sets and must be 1 to 255 characters in length.</p>
-     * <br>
-     * <p>*   If this parameter is not specified, the status of all Cloud Assistant plug-ins that are installed on the specified instances are queried.</p>
-     * <br>
-     * <p>    **</p>
-     * <br>
-     * <p>    **Note** If this parameter is not specified, only a single instance ID can be specified.</p>
-     * <br>
-     * <p>*   If this parameter is specified, the status of the specified Cloud Assistant plug-in is queried.</p>
+     * <ul>
+     * <li><p>If this parameter is not specified, the status of all Cloud Assistant plug-ins that are installed on the specified instances are queried.</p>
+     * <p>**</p>
+     * <p><strong>Note</strong> If this parameter is not specified, only a single instance ID can be specified.</p>
+     * </li>
+     * <li><p>If this parameter is specified, the status of the specified Cloud Assistant plug-in is queried.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>testPluginName</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AAAAAdDWBF2</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -48,24 +55,36 @@ public class ListPluginStatusRequest extends TeaModel {
 
     /**
      * <p>The page number.</p>
-     * <br>
-     * <p>*   Pages start from page 1.</p>
-     * <p>*   Default value: 1.</p>
+     * <ul>
+     * <li>Pages start from page 1.</li>
+     * <li>Default value: 1.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
-     * <br>
-     * <p>*   Valid values: 1 to 50.</p>
-     * <p>*   Default value: 10.</p>
+     * <ul>
+     * <li>Valid values: 1 to 50.</li>
+     * <li>Default value: 10.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

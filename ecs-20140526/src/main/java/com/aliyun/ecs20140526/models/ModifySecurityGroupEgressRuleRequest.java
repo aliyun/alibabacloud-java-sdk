@@ -5,90 +5,123 @@ import com.aliyun.tea.*;
 
 public class ModifySecurityGroupEgressRuleRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.**** For more information, see [How to ensure idempotence](~~25693~~).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.**** For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The description of the security group rule. The description must be 1 to 512 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>This is a new securitygroup rule.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The destination IPv4 CIDR block. IPv4 CIDR blocks and IPv4 addresses are supported.</p>
-     * <br>
      * <p>By default, this parameter is left empty.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10.0.0.0/8</p>
      */
     @NameInMap("DestCidrIp")
     public String destCidrIp;
 
     /**
-     * <p>The ID of the destination security group. You must specify at least one of `DestGroupId` and `DestCidrIp`.</p>
-     * <br>
-     * <p>*   At least one of DestGroupId, DestCidrIp, Ipv6DestCidrIp, and DestPrefixListId must be specified.</p>
-     * <p>*   If DestGroupId is specified but DestCidrIp is not specified, the NicType parameter can be set only to intranet.</p>
-     * <p>*   If both DestGroupId and DestCidrIp are specified, DestCidrIp takes precedence.</p>
+     * <p>The ID of the destination security group. You must specify at least one of <code>DestGroupId</code> and <code>DestCidrIp</code>.</p>
+     * <ul>
+     * <li>At least one of DestGroupId, DestCidrIp, Ipv6DestCidrIp, and DestPrefixListId must be specified.</li>
+     * <li>If DestGroupId is specified but DestCidrIp is not specified, the NicType parameter can be set only to intranet.</li>
+     * <li>If both DestGroupId and DestCidrIp are specified, DestCidrIp takes precedence.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>sg-bp67acfmxa123b****</p>
      */
     @NameInMap("DestGroupId")
     public String destGroupId;
 
     /**
      * <p>The Alibaba Cloud account that manages the destination security group when you set security group rule N across accounts.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="mailto:EcsforCloud@Alibaba.com">EcsforCloud@Alibaba.com</a></p>
      */
     @NameInMap("DestGroupOwnerAccount")
     public String destGroupOwnerAccount;
 
     /**
      * <p>The ID of the Alibaba Cloud account that manages the destination security group when you set security group rule N across accounts.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234567890</p>
      */
     @NameInMap("DestGroupOwnerId")
     public Long destGroupOwnerId;
 
     /**
-     * <p>The ID of the destination prefix list. You can call the [DescribePrefixLists](~~205046~~) operation to query the IDs of available prefix lists.</p>
-     * <br>
-     * <p>If you specify `DestCidrIp`, `Ipv6DestCidrIp`, or `DestGroupId`, this parameter is ignored.</p>
+     * <p>The ID of the destination prefix list. You can call the <a href="https://help.aliyun.com/document_detail/205046.html">DescribePrefixLists</a> operation to query the IDs of available prefix lists.</p>
+     * <p>If you specify <code>DestCidrIp</code>, <code>Ipv6DestCidrIp</code>, or <code>DestGroupId</code>, this parameter is ignored.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pl-x1j1k5ykzqlixdcy****</p>
      */
     @NameInMap("DestPrefixListId")
     public String destPrefixListId;
 
     /**
      * <p>The transport layer protocol of the security group rule. The value of this parameter is case-insensitive. Valid values:</p>
-     * <br>
-     * <p>*   ICMP</p>
-     * <p>*   GRE</p>
-     * <p>*   TCP</p>
-     * <p>*   UDP</p>
-     * <p>*   ALL: All protocols are supported.</p>
+     * <ul>
+     * <li>ICMP</li>
+     * <li>GRE</li>
+     * <li>TCP</li>
+     * <li>UDP</li>
+     * <li>ALL: All protocols are supported.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>tcp</p>
      */
     @NameInMap("IpProtocol")
     public String ipProtocol;
 
     /**
      * <p>The destination IPv6 CIDR block. IPv6 CIDR blocks and IPv6 addresses are supported.</p>
-     * <br>
-     * <p>>  Only the IP addresses of instances in virtual private clouds (VPCs) are supported. You cannot specify both Ipv6DestCidrIp and `DestCidrIp`.</p>
-     * <br>
+     * <blockquote>
+     * <p> Only the IP addresses of instances in virtual private clouds (VPCs) are supported. You cannot specify both Ipv6DestCidrIp and <code>DestCidrIp</code>.</p>
+     * </blockquote>
      * <p>By default, this parameter is left empty.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2001:db8:1233:1a00::***</p>
      */
     @NameInMap("Ipv6DestCidrIp")
     public String ipv6DestCidrIp;
 
     /**
      * <p>The source IPv6 CIDR block. IPv6 CIDR blocks and IPv6 addresses are supported.</p>
-     * <br>
-     * <p>>  Only the IP addresses of instances in VPCs are supported. You cannot specify both Ipv6SourceCidrIp and `SourceCidrIp`.</p>
-     * <br>
+     * <blockquote>
+     * <p> Only the IP addresses of instances in VPCs are supported. You cannot specify both Ipv6SourceCidrIp and <code>SourceCidrIp</code>.</p>
+     * </blockquote>
      * <p>By default, this parameter is left empty.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2001:db8:1234:1a00::***</p>
      */
     @NameInMap("Ipv6SourceCidrIp")
     public String ipv6SourceCidrIp;
 
     /**
-     * <p>You cannot modify this parameter when you modify a security group rule by specifying its ID.\</p>
-     * <p>You can add a new rule that meets your business requirements and delete the original rule.</p>
+     * <p>You cannot modify this parameter when you modify a security group rule by specifying its ID.\
+     * You can add a new rule that meets your business requirements and delete the original rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>intranet</p>
      */
     @NameInMap("NicType")
     public String nicType;
@@ -101,36 +134,49 @@ public class ModifySecurityGroupEgressRuleRequest extends TeaModel {
 
     /**
      * <p>The action of the security group rule. Valid values:</p>
-     * <br>
-     * <p>*   accept: allows access.</p>
-     * <p>*   drop: denies access and returns no responses.</p>
-     * <br>
+     * <ul>
+     * <li>accept: allows access.</li>
+     * <li>drop: denies access and returns no responses.</li>
+     * </ul>
      * <p>Default value: accept.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>accept</p>
      */
     @NameInMap("Policy")
     public String policy;
 
     /**
      * <p>The range of destination ports that correspond to the transport layer protocol. Valid values:</p>
-     * <br>
-     * <p>*   If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. Separate the start port number and the end port number with a forward slash (/). Example: 1/200.</p>
-     * <p>*   If you set IpProtocol to ICMP, the port number range is -1/-1.</p>
-     * <p>*   If you set IpProtocol to GRE, the port number range is -1/-1.</p>
-     * <p>*   If you set IpProtocol to ALL, the port number range is -1/-1.</p>
+     * <ul>
+     * <li>If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. Separate the start port number and the end port number with a forward slash (/). Example: 1/200.</li>
+     * <li>If you set IpProtocol to ICMP, the port number range is -1/-1.</li>
+     * <li>If you set IpProtocol to GRE, the port number range is -1/-1.</li>
+     * <li>If you set IpProtocol to ALL, the port number range is -1/-1.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>80/80</p>
      */
     @NameInMap("PortRange")
     public String portRange;
 
     /**
      * <p>The priority of the security group rule. Valid values: 1 to 100.</p>
-     * <br>
      * <p>Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Priority")
     public String priority;
 
     /**
-     * <p>The region ID of the security group. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the security group. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -143,32 +189,45 @@ public class ModifySecurityGroupEgressRuleRequest extends TeaModel {
 
     /**
      * <p>The ID of the security group.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sg-bp67acfmxazb4p****</p>
      */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
     /**
-     * <p>The ID of the security group rule.\</p>
-     * <p>This parameter is required when you modify a security group rule based on the security group rule ID.</p>
+     * <p>The ID of the security group rule.\
+     * This parameter is required when you modify a security group rule based on the security group rule ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sgr-bp67acfmxazb4q****</p>
      */
     @NameInMap("SecurityGroupRuleId")
     public String securityGroupRuleId;
 
     /**
      * <p>The source IPv4 CIDR block. IPv4 CIDR blocks and IPv4 addresses are supported.</p>
-     * <br>
      * <p>By default, this parameter is left empty.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10.0.0.0/8</p>
      */
     @NameInMap("SourceCidrIp")
     public String sourceCidrIp;
 
     /**
      * <p>The range of source ports that correspond to the transport layer protocol. Valid values:</p>
-     * <br>
-     * <p>*   If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. Separate the start port number and the end port number with a forward slash (/). Example: 1/200.</p>
-     * <p>*   If you set IpProtocol to ICMP, the port number range is -1/-1.</p>
-     * <p>*   If you set IpProtocol to GRE, the port number range is -1/-1.</p>
-     * <p>*   If you set IpProtocol to ALL, the port number range is -1/-1.</p>
+     * <ul>
+     * <li>If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. Separate the start port number and the end port number with a forward slash (/). Example: 1/200.</li>
+     * <li>If you set IpProtocol to ICMP, the port number range is -1/-1.</li>
+     * <li>If you set IpProtocol to GRE, the port number range is -1/-1.</li>
+     * <li>If you set IpProtocol to ALL, the port number range is -1/-1.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>80/80</p>
      */
     @NameInMap("SourcePortRange")
     public String sourcePortRange;

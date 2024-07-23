@@ -12,30 +12,45 @@ public class DescribeActivationsResponseBody extends TeaModel {
 
     /**
      * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AAAAAdDWBF2****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4ECEEE12-56F1-4FBC-9AB1-890F74625134</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -96,12 +111,18 @@ public class DescribeActivationsResponseBody extends TeaModel {
     public static class DescribeActivationsResponseBodyActivationListTags extends TeaModel {
         /**
          * <p>The tag key of the activation code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>owner</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
          * <p>The tag value of the activation code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zhangsan</p>
          */
         @NameInMap("TagValue")
         public String tagValue;
@@ -132,60 +153,90 @@ public class DescribeActivationsResponseBody extends TeaModel {
     public static class DescribeActivationsResponseBodyActivationList extends TeaModel {
         /**
          * <p>The ID of the activation code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4ECEEE12-56F1-4FBC-9AB1-890F1234****</p>
          */
         @NameInMap("ActivationId")
         public String activationId;
 
         /**
          * <p>The time when the activation code was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-20T06:00:00Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The number of instances that were deregistered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("DeregisteredCount")
         public Integer deregisteredCount;
 
         /**
          * <p>The description of the activation code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is description.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>Indicates whether the activation code is disabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Disabled")
         public Boolean disabled;
 
         /**
          * <p>The maximum number of times that the activation code can be used to register managed instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("InstanceCount")
         public Integer instanceCount;
 
         /**
          * <p>The default instance name prefix.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-InstanceName</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
          * <p>The IP addresses of hosts that are allowed to use the activation code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0.0.0/0</p>
          */
         @NameInMap("IpAddressRange")
         public String ipAddressRange;
 
         /**
          * <p>The number of instances that were registered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("RegisteredCount")
         public Integer registeredCount;
 
         /**
          * <p>The ID of the resource group to which the activation code belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-123******</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
@@ -198,6 +249,9 @@ public class DescribeActivationsResponseBody extends TeaModel {
 
         /**
          * <p>The validity period of the activation code. Unit: hours.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         @NameInMap("TimeToLiveInHours")
         public Long timeToLiveInHours;

@@ -6,27 +6,51 @@ import com.aliyun.tea.*;
 public class DetachClassicLinkVpcRequest extends TeaModel {
     /**
      * <p>The ID of the classic network-type instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-bp67acfmxazb4p****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>155780923770</p>
+     */
     @NameInMap("OwnerId")
     public Long ownerId;
 
     /**
-     * <p>The region ID of the classic network-type instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the classic network-type instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ECSforCloud</p>
+     */
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>155780923770</p>
+     */
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
     /**
      * <p>The ID of the VPC to which the instance is linked.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-bp67acfmxazb4p****</p>
      */
     @NameInMap("VpcId")
     public String vpcId;

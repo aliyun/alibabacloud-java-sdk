@@ -9,33 +9,43 @@ public class DescribeCapacityReservationsRequest extends TeaModel {
 
     /**
      * <p>The billing method of the instance. Valid values:</p>
-     * <br>
-     * <p>*   PostPaid: pay-as-you-go.</p>
-     * <p>*   PrePaid: subscription.</p>
-     * <br>
+     * <ul>
+     * <li>PostPaid: pay-as-you-go.</li>
+     * <li>PrePaid: subscription.</li>
+     * </ul>
      * <p>Default value: PostPaid.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PostPaid</p>
      */
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
 
     /**
      * <p>The instance type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs.c6.large</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
 
     /**
      * <p>The number of entries per page.</p>
-     * <br>
      * <p>Valid values: 1 to 100.</p>
-     * <br>
      * <p>Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of the NextToken parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -48,26 +58,37 @@ public class DescribeCapacityReservationsRequest extends TeaModel {
 
     /**
      * <p>The operating system of the instance. Valid values:</p>
-     * <br>
-     * <p>*   windows: Windows operating systems.</p>
-     * <p>*   linux: Linux operating systems.</p>
-     * <p>*   all: all operating system types.</p>
-     * <br>
+     * <ul>
+     * <li>windows: Windows operating systems.</li>
+     * <li>linux: Linux operating systems.</li>
+     * <li>all: all operating system types.</li>
+     * </ul>
      * <p>Default value: all.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>linux</p>
      */
     @NameInMap("Platform")
     public String platform;
 
     /**
-     * <p>The region ID of the capacity reservation. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the capacity reservation. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group to which the capacity reservation belongs. If you specify this parameter to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.</p>
-     * <br>
-     * <p>> Resources in the default resource group are displayed in the response regardless of whether you specify this parameter.</p>
+     * <blockquote>
+     * <p>Resources in the default resource group are displayed in the response regardless of whether you specify this parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-bp67acfmxazb4p****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -80,15 +101,18 @@ public class DescribeCapacityReservationsRequest extends TeaModel {
 
     /**
      * <p>The state of the capacity reservation. Valid values:</p>
-     * <br>
-     * <p>*   All: All states.</p>
-     * <p>*   Pending: The capacity reservation is being initialized. Scheduled capacity reservations enter the Pending state after they are created.</p>
-     * <p>*   Preparing: The capacity reservation is being prepared. Scheduled capacity reservations are in the Preparing state while resources are being provisioned.</p>
-     * <p>*   Prepared: The capacity reservation is to take effect. After resources are provisioned, scheduled capacity reservations remain in the Prepared state until they take effect.</p>
-     * <p>*   Active: The capacity reservation is in effect.</p>
-     * <p>*   Released: The capacity reservation has been released manually or automatically when it expired.</p>
-     * <br>
+     * <ul>
+     * <li>All: All states.</li>
+     * <li>Pending: The capacity reservation is being initialized. Scheduled capacity reservations enter the Pending state after they are created.</li>
+     * <li>Preparing: The capacity reservation is being prepared. Scheduled capacity reservations are in the Preparing state while resources are being provisioned.</li>
+     * <li>Prepared: The capacity reservation is to take effect. After resources are provisioned, scheduled capacity reservations remain in the Prepared state until they take effect.</li>
+     * <li>Active: The capacity reservation is in effect.</li>
+     * <li>Released: The capacity reservation has been released manually or automatically when it expired.</li>
+     * </ul>
      * <p>Default value: Active.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Active</p>
      */
     @NameInMap("Status")
     public String status;
@@ -101,6 +125,9 @@ public class DescribeCapacityReservationsRequest extends TeaModel {
 
     /**
      * <p>The zone ID of the capacity reservation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-h</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;
@@ -233,6 +260,9 @@ public class DescribeCapacityReservationsRequest extends TeaModel {
     public static class DescribeCapacityReservationsRequestPrivatePoolOptions extends TeaModel {
         /**
          * <p>The IDs of capacity reservations. The value can be a JSON array that consists of up to 100 capacity reservation IDs. Separate the IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;crp-bp1gubrkqutenqdd****&quot;, &quot;crp-bp67acfmxazb5****&quot;]</p>
          */
         @NameInMap("Ids")
         public String ids;
@@ -255,14 +285,19 @@ public class DescribeCapacityReservationsRequest extends TeaModel {
     public static class DescribeCapacityReservationsRequestTag extends TeaModel {
         /**
          * <p>The key of tag N. Valid values of N: 1 to 20.</p>
-         * <br>
-         * <p>If you specify a single tag to query resources, up to 1,000 resources with this tag are returned in the response. If you specify multiple tags to query resources, up to 1,000 resources with all these tags are returned in the response. To query more than 1,000 resources with the specified tags, call the [ListTagResources](~~110425~~) operation.</p>
+         * <p>If you specify a single tag to query resources, up to 1,000 resources with this tag are returned in the response. If you specify multiple tags to query resources, up to 1,000 resources with all these tags are returned in the response. To query more than 1,000 resources with the specified tags, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of tag N. Valid values of N: 1 to 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
          */
         @NameInMap("Value")
         public String value;

@@ -11,65 +11,89 @@ public class DescribeResourcesModificationRequest extends TeaModel {
     public java.util.List<String> conditions;
 
     /**
-     * <p>The number of vCPUs of the instance type. For information about the values, see [Overview of instance families](~~25378~~). This parameter takes effect only when DestinationResource is set to InstanceType.</p>
+     * <p>The number of vCPUs of the instance type. For information about the values, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>. This parameter takes effect only when DestinationResource is set to InstanceType.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("Cores")
     public Integer cores;
 
     /**
      * <p>The type of the resource. Valid values:</p>
-     * <br>
-     * <p>*   InstanceType</p>
-     * <p>*   SystemDisk</p>
+     * <ul>
+     * <li>InstanceType</li>
+     * <li>SystemDisk</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>InstanceType</p>
      */
     @NameInMap("DestinationResource")
     public String destinationResource;
 
     /**
-     * <p>The instance type. For more information, see [Overview of instance families](~~25378~~). You can also call the [DescribeInstanceTypes](~~25620~~) operation to query the most recent instance type list. This parameter must be specified when DestinationResource is set to SystemDisk.</p>
+     * <p>The instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>. You can also call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation to query the most recent instance type list. This parameter must be specified when DestinationResource is set to SystemDisk.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs.g5.large</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
 
     /**
-     * <p>The memory size of the instance type. Unit: GiB. For information about the values, see [Overview of instance families](~~25378~~). This parameter takes effect only when DestinationResource is set to InstanceType.</p>
+     * <p>The memory size of the instance type. Unit: GiB. For information about the values, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>. This parameter takes effect only when DestinationResource is set to InstanceType.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8.0</p>
      */
     @NameInMap("Memory")
     public Float memory;
 
     /**
      * <p>Specifies whether cross-cluster instance type upgrades are supported. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
-     * <br>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
      * <p>Default value: false.</p>
-     * <br>
      * <p>When MigrateAcrossZone is set to true and you upgrade the instance type of an instance based on the returned information, take note of the following items:</p>
-     * <br>
-     * <p>*   Instance that resides in the classic network:</p>
-     * <br>
-     * <p>    *   For [retired instance types](~~55263~~), when a non-I/O optimized instance is upgraded to an I/O optimized instance, the private IP address, disk device names, and software authorization codes of the instance change. For a Linux instance, basic disks (cloud) are identified as xvd\* such as xvda and xvdb, and ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified as vd\* such as vda and vdb.</p>
-     * <p>    *   For [instance families available for purchase](~~25378~~), when the instance type of an instance is changed, the private IP address of the instance changes.</p>
-     * <br>
-     * <p>*   Instance that resides in a virtual private cloud (VPC): For [retired instance types](~~55263~~), when a non-I/O optimized instance is upgraded to an I/O optimized instance, the disk device names and software authorization codes of the instance change. For a Linux instance, basic disks (cloud) are identified as xvd\* such as xvda and xvdb, and ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified as vd\* such as vda and vdb.</p>
+     * <ul>
+     * <li><p>Instance that resides in the classic network:</p>
+     * <ul>
+     * <li>For <a href="https://help.aliyun.com/document_detail/55263.html">retired instance types</a>, when a non-I/O optimized instance is upgraded to an I/O optimized instance, the private IP address, disk device names, and software authorization codes of the instance change. For a Linux instance, basic disks (cloud) are identified as xvd\* such as xvda and xvdb, and ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified as vd\* such as vda and vdb.</li>
+     * <li>For <a href="https://help.aliyun.com/document_detail/25378.html">instance families available for purchase</a>, when the instance type of an instance is changed, the private IP address of the instance changes.</li>
+     * </ul>
+     * </li>
+     * <li><p>Instance that resides in a virtual private cloud (VPC): For <a href="https://help.aliyun.com/document_detail/55263.html">retired instance types</a>, when a non-I/O optimized instance is upgraded to an I/O optimized instance, the disk device names and software authorization codes of the instance change. For a Linux instance, basic disks (cloud) are identified as xvd\* such as xvda and xvdb, and ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified as vd\* such as vda and vdb.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("MigrateAcrossZone")
     public Boolean migrateAcrossZone;
 
     /**
      * <p>The operation of changing resource configurations.</p>
-     * <br>
-     * <p>*   Valid values for subscription resources:</p>
-     * <br>
-     * <p>    *   Upgrade: upgrades resources.</p>
-     * <p>    *   Downgrade: downgrades resources.</p>
-     * <p>    *   RenewDowngrade: renews and downgrades resources.</p>
-     * <p>    *   RenewModify: renews an expired instance and changes its configurations.</p>
-     * <br>
-     * <p>*   Set the value to Upgrade for pay-as-you-go resources.</p>
-     * <br>
+     * <ul>
+     * <li><p>Valid values for subscription resources:</p>
+     * <ul>
+     * <li>Upgrade: upgrades resources.</li>
+     * <li>Downgrade: downgrades resources.</li>
+     * <li>RenewDowngrade: renews and downgrades resources.</li>
+     * <li>RenewModify: renews an expired instance and changes its configurations.</li>
+     * </ul>
+     * </li>
+     * <li><p>Set the value to Upgrade for pay-as-you-go resources.</p>
+     * </li>
+     * </ul>
      * <p>Default value: Upgrade.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Upgrade</p>
      */
     @NameInMap("OperationType")
     public String operationType;
@@ -81,13 +105,21 @@ public class DescribeResourcesModificationRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource. For example, when DestinationResource is set to InstanceType, this parameter can be interpreted as InstanceId.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-bp67acfmxazb4p****</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;
@@ -100,6 +132,9 @@ public class DescribeResourcesModificationRequest extends TeaModel {
 
     /**
      * <p>The zone ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-e</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;

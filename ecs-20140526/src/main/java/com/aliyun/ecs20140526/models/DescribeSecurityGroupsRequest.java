@@ -6,50 +6,70 @@ import com.aliyun.tea.*;
 public class DescribeSecurityGroupsRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
-     * <br>
-     * <p>*   true: performs only a dry run. The system checks your AccessKey pair, the permissions of the RAM user, and the required parameters. If the request passes the dry run, the DryRunOperation error code is returned. Otherwise, an error message is returned.</p>
-     * <p>*   false: performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
-     * <br>
+     * <ul>
+     * <li>true: performs only a dry run. The system checks your AccessKey pair, the permissions of the RAM user, and the required parameters. If the request passes the dry run, the DryRunOperation error code is returned. Otherwise, an error message is returned.</li>
+     * <li>false: performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+     * </ul>
      * <p>Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
-     * <p>> This parameter is deprecated.</p>
+     * <blockquote>
+     * <p>This parameter is deprecated.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
      */
     @NameInMap("FuzzyQuery")
     public Boolean fuzzyQuery;
 
     /**
-     * <p>Specifies whether to query the capacity of the security group. If you set this parameter to True, the `EcsCount` and `AvailableInstanceAmount` values in the response are valid.</p>
-     * <br>
-     * <p>>  This parameter is deprecated.</p>
+     * <p>Specifies whether to query the capacity of the security group. If you set this parameter to True, the <code>EcsCount</code> and <code>AvailableInstanceAmount</code> values in the response are valid.</p>
+     * <blockquote>
+     * <p> This parameter is deprecated.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
      */
     @NameInMap("IsQueryEcsCount")
     public Boolean isQueryEcsCount;
 
     /**
-     * <p>The maximum number of entries per page. If you specify this parameter, both `MaxResults` and `NextToken` are used for a paged query.</p>
-     * <br>
+     * <p>The maximum number of entries per page. If you specify this parameter, both <code>MaxResults</code> and <code>NextToken</code> are used for a paged query.</p>
      * <p>Maximum value: 100.</p>
-     * <br>
      * <p>Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The network type of the security group. Valid values:</p>
-     * <br>
-     * <p>*   vpc</p>
-     * <p>*   classic</p>
+     * <ul>
+     * <li>vpc</li>
+     * <li>classic</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc</p>
      */
     @NameInMap("NetworkType")
     public String networkType;
 
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>e71d8a535bd9cc11</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -62,38 +82,50 @@ public class DescribeSecurityGroupsRequest extends TeaModel {
 
     /**
      * <p>The page number.</p>
-     * <br>
      * <p>Pages start from page 1.</p>
-     * <br>
      * <p>Default value: 1.</p>
-     * <br>
-     * <p>>  This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
+     * <blockquote>
+     * <p> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
-     * <br>
      * <p>Valid values: 1 to 50.</p>
-     * <br>
      * <p>Default value: 10.</p>
-     * <br>
-     * <p>>  This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
+     * <blockquote>
+     * <p> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which the security group belongs. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response. You can call the [ListResourceGroups](~~158855~~) operation to query the most recent resource group list.</p>
-     * <br>
-     * <p>> Resources in the default resource group are displayed in the response regardless of how this parameter is configured.</p>
+     * <p>The ID of the resource group to which the security group belongs. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response. You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query the most recent resource group list.</p>
+     * <blockquote>
+     * <p>Resources in the default resource group are displayed in the response regardless of how this parameter is configured.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-bp67acfmxazb4p****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -106,38 +138,59 @@ public class DescribeSecurityGroupsRequest extends TeaModel {
 
     /**
      * <p>The security group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sg-bp67acfmxazb4p****</p>
      */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
     /**
      * <p>The security group IDs. Set this parameter to a JSON array that consists of up to 100 security group IDs. Separate the security group IDs with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;sg-bp67acfmxazb4p****&quot;, &quot;sg-bp67acfmxazb4p****&quot;, &quot;sg-bp67acfmxazb4p****&quot;,....]</p>
      */
     @NameInMap("SecurityGroupIds")
     public String securityGroupIds;
 
     /**
      * <p>The name of the security group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SGTestName</p>
      */
     @NameInMap("SecurityGroupName")
     public String securityGroupName;
 
     /**
      * <p>The type of the security group. Valid values:</p>
-     * <br>
-     * <p>*   normal: basic security group</p>
-     * <p>*   enterprise: advanced security group</p>
-     * <br>
-     * <p>> If you do not specify this parameter, both basic and advanced security groups are queried.</p>
+     * <ul>
+     * <li>normal: basic security group</li>
+     * <li>enterprise: advanced security group</li>
+     * </ul>
+     * <blockquote>
+     * <p>If you do not specify this parameter, both basic and advanced security groups are queried.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>normal</p>
      */
     @NameInMap("SecurityGroupType")
     public String securityGroupType;
 
     /**
      * <p>Specifies whether to query managed security groups. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
      */
     @NameInMap("ServiceManaged")
     public Boolean serviceManaged;
@@ -150,6 +203,9 @@ public class DescribeSecurityGroupsRequest extends TeaModel {
 
     /**
      * <p>The ID of the virtual private cloud (VPC) to which the security group belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-bp67acfmxazb4p****</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
@@ -330,14 +386,19 @@ public class DescribeSecurityGroupsRequest extends TeaModel {
     public static class DescribeSecurityGroupsRequestTag extends TeaModel {
         /**
          * <p>The key of tag N to add to the security group. Valid values of N: 1 to 20.</p>
-         * <br>
-         * <p>Up to 1,000 resources that match the tags specified can be returned in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.</p>
+         * <p>Up to 1,000 resources that match the tags specified can be returned in the response. To query more than 1,000 resources that have specified tags added, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of tag N to add to the security group. Valid values of N: 1 to 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
          */
         @NameInMap("Value")
         public String value;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteDedicatedHostClusterResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>11B55F58-D3A4-4A9B-9596-342420D02FF8</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -6,34 +6,47 @@ import com.aliyun.tea.*;
 public class DescribeSnapshotGroupsRequest extends TeaModel {
     /**
      * <p>This parameter is not publicly available.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hide</p>
      */
     @NameInMap("AdditionalAttributes")
     public java.util.List<String> additionalAttributes;
 
     /**
      * <p>The ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-j6ca469urv8ei629****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The number of entries per page.</p>
-     * <br>
      * <p>Valid values: 1 to 100.</p>
-     * <br>
      * <p>Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The name of the snapshot-consistent group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testName</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The token that determines the start point of the next query. Set the value to the NextToken value that is returned from the last call.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -45,13 +58,20 @@ public class DescribeSnapshotGroupsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the snapshot-consistent group. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the snapshot-consistent group. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group to which the snapshot-consistent group belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-bp67acfmxazb4p****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -64,16 +84,23 @@ public class DescribeSnapshotGroupsRequest extends TeaModel {
 
     /**
      * <p>The ID of snapshot-consistent group N. Valid values of N: 1 to 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ssg-j6ciyh3k52qp7ovm****</p>
      */
     @NameInMap("SnapshotGroupId")
     public java.util.List<String> snapshotGroupId;
 
     /**
      * <p>The state of snapshot-consistent group N. Valid values of the second N: 1, 2, and 3. Valid values:</p>
-     * <br>
-     * <p>*   progressing: The snapshot-consistent group is being created.</p>
-     * <p>*   accomplished: The snapshot-consistent group is created.</p>
-     * <p>*   failed: The snapshot-consistent group fails to be created.</p>
+     * <ul>
+     * <li>progressing: The snapshot-consistent group is being created.</li>
+     * <li>accomplished: The snapshot-consistent group is created.</li>
+     * <li>failed: The snapshot-consistent group fails to be created.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>accomplished</p>
      */
     @NameInMap("Status")
     public java.util.List<String> status;
@@ -204,12 +231,18 @@ public class DescribeSnapshotGroupsRequest extends TeaModel {
     public static class DescribeSnapshotGroupsRequestTag extends TeaModel {
         /**
          * <p>The key of tag N of the snapshot-consistent group. Valid values of N: 1 to 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of tag N of the snapshot-consistent group. Valid values of N: 1 to 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
          */
         @NameInMap("Value")
         public String value;

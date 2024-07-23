@@ -6,20 +6,22 @@ import com.aliyun.tea.*;
 public class DescribeHpcClustersRequest extends TeaModel {
     /**
      * <p>The page number.</p>
-     * <br>
      * <p>Pages start from page 1.</p>
-     * <br>
      * <p>Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The number of entries per page.</p>
-     * <br>
      * <p>Maximum value: 100.</p>
-     * <br>
      * <p>Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;hpc-xxxxxxxxx&quot;, &quot;hpc-yyyyyyyyy&quot;, … &quot;hpc-zzzzzzzzz&quot;]</p>
      */
     @NameInMap("HpcClusterIds")
     public String hpcClusterIds;
@@ -32,18 +34,28 @@ public class DescribeHpcClustersRequest extends TeaModel {
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The IDs of HPC clusters. The value is a JSON array that consists of up to 100 HPC cluster IDs. Separate the HPC cluster IDs with commas (,).</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -12,24 +12,36 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of key pairs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,12 +94,18 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
     public static class DescribeKeyPairsResponseBodyKeyPairsKeyPairTagsTag extends TeaModel {
         /**
          * <p>The tag key of the key pair.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
          * <p>The tag value of the key pair.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
          */
         @NameInMap("TagValue")
         public String tagValue;
@@ -137,30 +155,45 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
     public static class DescribeKeyPairsResponseBodyKeyPairsKeyPair extends TeaModel {
         /**
          * <p>The time when the key pair was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-09-04T08:33Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The fingerprint of the key pair.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABC1234567</p>
          */
         @NameInMap("KeyPairFingerPrint")
         public String keyPairFingerPrint;
 
         /**
          * <p>The name of the key pair.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testKeyPairName</p>
          */
         @NameInMap("KeyPairName")
         public String keyPairName;
 
         /**
          * <p>The content of the public key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ssh-rsa****</p>
          */
         @NameInMap("PublicKey")
         public String publicKey;
 
         /**
          * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-amnhr7u7c7hj****</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;

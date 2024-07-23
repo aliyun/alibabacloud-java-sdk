@@ -5,31 +5,43 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
     /**
-     * <p>The information about instance system events.</p>
+     * <p>Details about the instance system events.</p>
      */
     @NameInMap("InstanceSystemEventSet")
     public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSet instanceSystemEventSet;
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of instances returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,12 +94,18 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
     public static class DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeEventCycleStatus extends TeaModel {
         /**
          * <p>The state code of the system event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Code")
         public Integer code;
 
         /**
          * <p>The state name of the system event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Executed</p>
          */
         @NameInMap("Name")
         public String name;
@@ -118,12 +136,18 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
     public static class DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeEventType extends TeaModel {
         /**
          * <p>The code of the system event type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34</p>
          */
         @NameInMap("Code")
         public Integer code;
 
         /**
          * <p>The name of the system event type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InstanceExpiration.Stop</p>
          */
         @NameInMap("Name")
         public String name;
@@ -153,43 +177,60 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
 
     public static class DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttributeInactiveDisksInactiveDisk extends TeaModel {
         /**
-         * <p>The time when the disk was created. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The time when the disk was created. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-11-30T06:32:31Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The category of the disk. Valid values:</p>
-         * <br>
-         * <p>*   cloud: basic disk</p>
-         * <p>*   cloud_efficiency: ultra disk</p>
-         * <p>*   cloud_ssd: standard SSD</p>
-         * <p>*   cloud_essd: enhanced SSD (ESSD)</p>
-         * <p>*   local_ssd_pro: I/O-intensive local disk</p>
-         * <p>*   local_hdd_pro: throughput-intensive local disk</p>
-         * <p>*   ephemeral: retired local disk</p>
-         * <p>*   ephemeral_ssd: retired local SSD</p>
+         * <ul>
+         * <li>cloud: basic disk</li>
+         * <li>cloud_efficiency: ultra disk</li>
+         * <li>cloud_ssd: standard SSD</li>
+         * <li>cloud_essd: Enterprise SSD (ESSD)</li>
+         * <li>local_ssd_pro: I/O-intensive local disk</li>
+         * <li>local_hdd_pro: throughput-intensive local disk</li>
+         * <li>ephemeral: retired local disk</li>
+         * <li>ephemeral_ssd: retired local SSD</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_efficiency</p>
          */
         @NameInMap("DeviceCategory")
         public String deviceCategory;
 
         /**
          * <p>The size of the disk. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("DeviceSize")
         public String deviceSize;
 
         /**
          * <p>The type of the disk. Valid values:</p>
-         * <br>
-         * <p>*   system: system disk</p>
-         * <p>*   data: data disk</p>
+         * <ul>
+         * <li>system: system disk</li>
+         * <li>data: data disk</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>data</p>
          */
         @NameInMap("DeviceType")
         public String deviceType;
 
         /**
-         * <p>The time when the disk was released. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The time when the disk was released. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-11-30T06:32:31Z</p>
          */
         @NameInMap("ReleaseTime")
         public String releaseTime;
@@ -282,90 +323,128 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
     public static class DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttribute extends TeaModel {
         /**
          * <p>Indicates whether the event can be handled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("CanAccept")
         public String canAccept;
 
         /**
          * <p>The code of the security violation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PR111</p>
          */
         @NameInMap("Code")
         public String code;
 
         /**
          * <p>The device name of the local disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/dev/vda</p>
          */
         @NameInMap("Device")
         public String device;
 
         /**
          * <p>The ID of the local disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-diskid1</p>
          */
         @NameInMap("DiskId")
         public String diskId;
 
         /**
          * <p>The ID of the host.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dh-bp1ewce1gk3iwv2****</p>
          */
         @NameInMap("HostId")
         public String hostId;
 
         /**
          * <p>The type of the host. Valid values:</p>
-         * <br>
-         * <p>- ddh: dedicated host</p>
-         * <p>- managehost: physical machine in a smart hosting pool</p>
+         * <ul>
+         * <li>ddh: dedicated host</li>
+         * <li>managehost: physical machine in a smart hosting pool</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ddh</p>
          */
         @NameInMap("HostType")
         public String hostType;
 
         /**
-         * <p>The information about the inactive disks that have been released and must be cleared.</p>
+         * <p>The inactive disks that have been released and whose data must be cleared.</p>
          */
         @NameInMap("InactiveDisks")
         public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttributeInactiveDisks inactiveDisks;
 
         /**
-         * <p>The migration solution of the instance. Valid value: MigrationPlan, which indicates that instances can be migrated only by using migration plans.</p>
+         * <p>The migration solution of the instance. Valid value: MigrationPlan. Instances can be migrated only by using migration plans.</p>
          */
         @NameInMap("MigrationOptions")
         public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttributeMigrationOptions migrationOptions;
 
         /**
          * <p>The online repair policy for the damaged disk. Valid value: IsolateOnly, which indicates that damaged disks are isolated but not repaired.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IsolateOnly</p>
          */
         @NameInMap("OnlineRepairPolicy")
         public String onlineRepairPolicy;
 
         /**
          * <p>The illegal domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1228.test.com</p>
          */
         @NameInMap("PunishDomain")
         public String punishDomain;
 
         /**
          * <p>The type of the penalty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs_message_alert</p>
          */
         @NameInMap("PunishType")
         public String punishType;
 
         /**
          * <p>The illegal URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://1228.test.com/1">http://1228.test.com/1</a></p>
          */
         @NameInMap("PunishUrl")
         public String punishUrl;
 
         /**
          * <p>The rack number of the cloud box.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A01</p>
          */
         @NameInMap("Rack")
         public String rack;
 
         /**
          * <p>The response result of the event. Valid values:</p>
-         * <br>
-         * <p>- true: The event was handled.</p>
-         * <p>- false: The event failed to be handled.</p>
+         * <ul>
+         * <li>true: The event was handled.</li>
+         * <li>false: The event failed to be handled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("ResponseResult")
         public String responseResult;
@@ -491,25 +570,34 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
 
     public static class DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventType extends TeaModel {
         /**
-         * <p>The lifecycle state of the system event.</p>
+         * <p>The lifecycle status of the system event.</p>
          */
         @NameInMap("EventCycleStatus")
         public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeEventCycleStatus eventCycleStatus;
 
         /**
-         * <p>The time when the system event ended. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The time when the system event ended. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-12-01T06:35:31Z</p>
          */
         @NameInMap("EventFinishTime")
         public String eventFinishTime;
 
         /**
          * <p>The ID of the system event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e-uf64yvznlao4jl2c****</p>
          */
         @NameInMap("EventId")
         public String eventId;
 
         /**
-         * <p>The time when the system event was published. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The time when the system event was published. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-11-30T06:32:31Z</p>
          */
         @NameInMap("EventPublishTime")
         public String eventPublishTime;
@@ -528,34 +616,50 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
 
         /**
          * <p>The impact level of the system event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("ImpactLevel")
         public String impactLevel;
 
         /**
          * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-uf678mass4zvr9n1****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>The scheduled start time of the system event. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The scheduled start time of the system event. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-12-06T00:00:00Z</p>
          */
         @NameInMap("NotBefore")
         public String notBefore;
 
         /**
          * <p>The reason why the system event was scheduled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>System maintenance is scheduled due to ***.</p>
          */
         @NameInMap("Reason")
         public String reason;
 
         /**
          * <p>The type of the resource. Valid values:</p>
-         * <br>
-         * <p>*   instance: ECS instance</p>
-         * <p>*   ddh: dedicated host</p>
-         * <p>*   managehost: physical machine in a smart hosting pool</p>
+         * <ul>
+         * <li>instance: ECS instance</li>
+         * <li>ddh: dedicated host</li>
+         * <li>managehost: physical machine in a smart hosting pool</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>instance</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;

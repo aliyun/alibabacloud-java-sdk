@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class DescribeStorageSetsResponseBody extends TeaModel {
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -30,6 +39,9 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
 
     /**
      * <p>The total number of storage sets.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,42 +94,63 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
     public static class DescribeStorageSetsResponseBodyStorageSetsStorageSet extends TeaModel {
         /**
          * <p>The time when the storage set was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-06-01T00:00:00Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The description of the storage set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testDescription</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The ID of the region to which the storage set belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The ID of the storage set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ss-bp1d6tsvznfghy7y****</p>
          */
         @NameInMap("StorageSetId")
         public String storageSetId;
 
         /**
          * <p>The name of the storage set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testStorageSetName</p>
          */
         @NameInMap("StorageSetName")
         public String storageSetName;
 
         /**
          * <p>The maximum number of partitions supported by the storage set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("StorageSetPartitionNumber")
         public Integer storageSetPartitionNumber;
 
         /**
          * <p>The ID of the zone to which the storage set belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-g</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;

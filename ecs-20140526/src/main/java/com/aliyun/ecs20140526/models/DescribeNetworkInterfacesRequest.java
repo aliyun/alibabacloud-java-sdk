@@ -6,43 +6,60 @@ import com.aliyun.tea.*;
 public class DescribeNetworkInterfacesRequest extends TeaModel {
     /**
      * <p>The ID of the instance to which the ENI is attached.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-bp1e2l6djkndyuli****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>An array that consists of the IPv6 address of the ENI. You can specify multiple IPv6 addresses. Valid values of N: 1 to 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2408:4321:180:1701:94c7:bc38:3bfa:****</p>
      */
     @NameInMap("Ipv6Address")
     public java.util.List<String> ipv6Address;
 
     /**
      * <p>The maximum number of entries to return on each page. Valid values: 10 to 500.</p>
-     * <br>
      * <p>Default values:</p>
-     * <br>
-     * <p>*   If this parameter is not specified or if this parameter is set to a value less than 10, the default value is 10.</p>
-     * <p>*   If this parameter is set to a value greater than 500, the default value is 500.</p>
+     * <ul>
+     * <li>If this parameter is not specified or if this parameter is set to a value less than 10, the default value is 10.</li>
+     * <li>If this parameter is set to a value greater than 500, the default value is 500.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>An array that consists of the IDs of the ENIs. You specify multiple ENI IDs. Valid values of N: 1 to 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eni-bp125p95hhdhn3ot****</p>
      */
     @NameInMap("NetworkInterfaceId")
     public java.util.List<String> networkInterfaceId;
 
     /**
      * <p>The name of the ENI.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-eni-name</p>
      */
     @NameInMap("NetworkInterfaceName")
     public String networkInterfaceName;
 
     /**
-     * <p>The query token. Set the value to the `NextToken` value returned in the last call to this operation.</p>
-     * <br>
-     * <p>For more information about how to check the responses returned by this operation, see the preceding "Description" section.</p>
+     * <p>The query token. Set the value to the <code>NextToken</code> value returned in the last call to this operation.</p>
+     * <p>For more information about how to check the responses returned by this operation, see the preceding &quot;Description&quot; section.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AAAAAdDWBF2****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -55,12 +72,14 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
 
     /**
      * <p>The page number.</p>
-     * <br>
      * <p>Pages start from page 1.</p>
-     * <br>
      * <p>Default value: 1.</p>
-     * <br>
-     * <p>>  This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
+     * <blockquote>
+     * <p> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     @Deprecated
@@ -68,12 +87,14 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
 
     /**
      * <p>The number of entries per page.</p>
-     * <br>
      * <p>Valid values: 1 to 1000.</p>
-     * <br>
      * <p>Default value: 10.</p>
-     * <br>
-     * <p>>  This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
+     * <blockquote>
+     * <p> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("PageSize")
     @Deprecated
@@ -81,26 +102,40 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
 
     /**
      * <p>The primary private IPv4 address of the ENI.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.**.**</p>
      */
     @NameInMap("PrimaryIpAddress")
     public String primaryIpAddress;
 
     /**
      * <p>An array that consists of the secondary private IPv4 addresses of the ENI. You can specify multiple secondary private IPv4 addresses. Valid values of N: 1 to 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.**.**</p>
      */
     @NameInMap("PrivateIpAddress")
     public java.util.List<String> privateIpAddress;
 
     /**
-     * <p>The region ID of the ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the ENI. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group to which the ENI belongs. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be returned.</p>
-     * <br>
-     * <p>> Resources in the default resource group are displayed in the response regardless of how this parameter is set.</p>
+     * <blockquote>
+     * <p>Resources in the default resource group are displayed in the response regardless of how this parameter is set.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-bp67acfmxazb4p****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -113,29 +148,39 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
 
     /**
      * <p>The ID of the security group to which the secondary ENI belongs.</p>
-     * <br>
-     * <p>*   To query the details of secondary ENIs based on the ID of a security group, specify this parameter.</p>
-     * <p>*   To query the details of primary ENIs based on the ID of a security group, call the [DescribeInstances](~~25506~~) operation and specify the `SecurityGroupId` parameter.</p>
+     * <ul>
+     * <li>To query the details of secondary ENIs based on the ID of a security group, specify this parameter.</li>
+     * <li>To query the details of primary ENIs based on the ID of a security group, call the <a href="https://help.aliyun.com/document_detail/25506.html">DescribeInstances</a> operation and specify the <code>SecurityGroupId</code> parameter.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>sg-bp144yr32sx6ndw****</p>
      */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
     /**
      * <p>Specifies whether the user of the ENI is an Alibaba Cloud service or a distributor.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("ServiceManaged")
     public Boolean serviceManaged;
 
     /**
      * <p>The state of the ENI. Valid values:</p>
-     * <br>
-     * <p>*   Available: The ENI is available.</p>
-     * <p>*   Attaching: The ENI is being attached to an instance.</p>
-     * <p>*   InUse: The ENI is attached to an instance.</p>
-     * <p>*   Detaching: The ENI is being detached from an instance.</p>
-     * <p>*   Deleting: The ENI is being deleted.</p>
-     * <br>
+     * <ul>
+     * <li>Available: The ENI is available.</li>
+     * <li>Attaching: The ENI is being attached to an instance.</li>
+     * <li>InUse: The ENI is attached to an instance.</li>
+     * <li>Detaching: The ENI is being detached from an instance.</li>
+     * <li>Deleting: The ENI is being deleted.</li>
+     * </ul>
      * <p>This parameter is empty by default, which indicates that ENIs in all states are queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Available</p>
      */
     @NameInMap("Status")
     public String status;
@@ -148,23 +193,32 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
 
     /**
      * <p>The type of the ENI. Valid values:</p>
-     * <br>
-     * <p>*   Primary</p>
-     * <p>*   Secondary</p>
-     * <br>
+     * <ul>
+     * <li>Primary</li>
+     * <li>Secondary</li>
+     * </ul>
      * <p>This parameter is empty by default, which indicates that both primary and secondary ENIs are queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Secondary</p>
      */
     @NameInMap("Type")
     public String type;
 
     /**
      * <p>The ID of the vSwitch with which the ENI is associated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-bp16usj2p27htro3****</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
     /**
      * <p>The ID of the virtual private cloud (VPC) to which the elastic network interface (ENI) belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-bp16usj2p27htro3****</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
@@ -361,14 +415,19 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
     public static class DescribeNetworkInterfacesRequestTag extends TeaModel {
         /**
          * <p>The key of tag N of the ENI. Valid values of N: 1 to 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of tag N of the ENI. Valid values of N: 1 to 20.</p>
-         * <br>
-         * <p>If a single tag is specified to query ENIs, up to 1,000 ENIs that have this tag can be returned. If multiple tags are specified to query ENIs, up to 1,000 ENIs that have all these tags can be returned. To query more than 1,000 resources that have specified tags, call the [ListTagResources](~~110425~~) operation.</p>
+         * <p>If a single tag is specified to query ENIs, up to 1,000 ENIs that have this tag can be returned. If multiple tags are specified to query ENIs, up to 1,000 ENIs that have all these tags can be returned. To query more than 1,000 resources that have specified tags, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
          */
         @NameInMap("Value")
         public String value;

@@ -12,24 +12,36 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. For information about how to use the return value, see the "Usage notes" section of this topic.</p>
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. For information about how to use the return value, see the &quot;Usage notes&quot; section of this topic.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AAAAAdDWBF2****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of image templates returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -101,12 +113,18 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
     public static class DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetTagsTag extends TeaModel {
         /**
          * <p>The key of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
          * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
          */
         @NameInMap("TagValue")
         public String tagValue;
@@ -181,84 +199,125 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
 
         /**
          * <p>The source image.</p>
-         * <br>
-         * <p>*   When `BaseImageType` is set to IMAGE, the value of this parameter is the ID of a custom image.</p>
-         * <p>*   When `BaseImageType` is set to IMAGE_FAMILY, the value of this parameter is the name of an image family.</p>
+         * <ul>
+         * <li>When <code>BaseImageType</code> is set to IMAGE, the value of this parameter is the ID of a custom image.</li>
+         * <li>When <code>BaseImageType</code> is set to IMAGE_FAMILY, the value of this parameter is the name of an image family.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>m-bp67acfmxazb4p****</p>
          */
         @NameInMap("BaseImage")
         public String baseImage;
 
         /**
          * <p>The type of the source image. Valid values:</p>
-         * <br>
-         * <p>*   IMAGE: custom image</p>
-         * <p>*   IMAGE_FAMILY: image family</p>
+         * <ul>
+         * <li>IMAGE: custom image</li>
+         * <li>IMAGE_FAMILY: image family</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>IMAGE</p>
          */
         @NameInMap("BaseImageType")
         public String baseImageType;
 
         /**
          * <p>The content of the image template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FROM IMAGE:m-bp67acfmxazb4p****</p>
          */
         @NameInMap("BuildContent")
         public String buildContent;
 
         /**
          * <p>The time when the image template was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-24T06:00:00Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>Indicates whether to release the intermediate instance when the image fails to be created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("DeleteInstanceOnFailure")
         public Boolean deleteInstanceOnFailure;
 
         /**
          * <p>The description of the image template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is description.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name prefix of the image to be created based on the image template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testImageName</p>
          */
         @NameInMap("ImageName")
         public String imageName;
 
         /**
          * <p>The ID of the image template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ip-2ze5tsl5bp6nf2b3****</p>
          */
         @NameInMap("ImagePipelineId")
         public String imagePipelineId;
 
         /**
          * <p>The instance type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.g6.large</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
 
         /**
          * <p>The size of the outbound public bandwidth for the intermediate instance. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("InternetMaxBandwidthOut")
         public Integer internetMaxBandwidthOut;
 
         /**
          * <p>The name of the image template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testImagePipeline</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-bp67acfmxazb4p****</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>The system disk size of the intermediate instance. Unit: GiB</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40</p>
          */
         @NameInMap("SystemDiskSize")
         public Integer systemDiskSize;
@@ -277,6 +336,9 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the vSwitch in the virtual private cloud (VPC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp67acfmxazb4p****</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;

@@ -5,47 +5,66 @@ import com.aliyun.tea.*;
 
 public class AssignIpv6AddressesRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.**** For more information, see [How to ensure idempotence](~~25693~~).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.**** For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The IPv6 addresses to assign to the ENI. Valid values of N: 1 to 10.</p>
-     * <br>
-     * <p>Example: Ipv6Address.1=2001:db8:1234:1a00::\*\*\*\*</p>
-     * <br>
-     * <p>>  You must specify `Ipv6Addresses.N` or `Ipv6AddressCount`, but not both.</p>
+     * <p>Example: Ipv6Address.1=2001:db8:1234:1a00::\<em>\</em>\<em>\</em></p>
+     * <blockquote>
+     * <p> You must specify <code>Ipv6Addresses.N</code> or <code>Ipv6AddressCount</code>, but not both.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>2001:db8:1234:1a00::****</p>
      */
     @NameInMap("Ipv6Address")
     public java.util.List<String> ipv6Address;
 
     /**
      * <p>The number of IPv6 addresses to randomly generate for the ENI. Valid values: 1 to 10.</p>
-     * <br>
-     * <p>>  You must specify `Ipv6Addresses.N` or `Ipv6AddressCount`, but not both.</p>
+     * <blockquote>
+     * <p> You must specify <code>Ipv6Addresses.N</code> or <code>Ipv6AddressCount</code>, but not both.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Ipv6AddressCount")
     public Integer ipv6AddressCount;
 
     /**
      * <p>The IPv6 prefixes to assign to the ENI. Valid values of N: 1 to 10.</p>
-     * <br>
-     * <p>>  To assign IPv6 prefixes to the ENI, you must specify Ipv6Prefix.N or Ipv6PrefixCount, but not both.</p>
+     * <blockquote>
+     * <p> To assign IPv6 prefixes to the ENI, you must specify Ipv6Prefix.N or Ipv6PrefixCount, but not both.</p>
+     * </blockquote>
      */
     @NameInMap("Ipv6Prefix")
     public java.util.List<String> ipv6Prefix;
 
     /**
      * <p>The number of IPv6 prefixes to assign to the ENI. Valid values: 1 to 10.</p>
-     * <br>
-     * <p>>  To assign IPv6 prefixes to the ENI, you must specify Ipv6Prefix.N or Ipv6PrefixCount, but not both.</p>
+     * <blockquote>
+     * <p> To assign IPv6 prefixes to the ENI, you must specify Ipv6Prefix.N or Ipv6PrefixCount, but not both.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>hide</p>
      */
     @NameInMap("Ipv6PrefixCount")
     public Integer ipv6PrefixCount;
 
     /**
      * <p>The ENI ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eni-bp1iqejowblx6h8j****</p>
      */
     @NameInMap("NetworkInterfaceId")
     public String networkInterfaceId;
@@ -57,7 +76,11 @@ public class AssignIpv6AddressesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the ENI. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

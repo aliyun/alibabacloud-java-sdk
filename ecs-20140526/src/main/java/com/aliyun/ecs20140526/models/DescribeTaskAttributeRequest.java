@@ -4,23 +4,43 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeTaskAttributeRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>155780923770</p>
+     */
     @NameInMap("OwnerId")
     public Long ownerId;
 
     /**
-     * <p>The region ID of the task. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the task. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ECSforCloud</p>
+     */
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>155780923770</p>
+     */
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the task. You can call the [DescribeTasks](~~25622~~) operation to query the list of task IDs.</p>
+     * <p>The ID of the task. You can call the <a href="https://help.aliyun.com/document_detail/25622.html">DescribeTasks</a> operation to query the list of task IDs.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>t-ce946ntx4wr****</p>
      */
     @NameInMap("TaskId")
     public String taskId;

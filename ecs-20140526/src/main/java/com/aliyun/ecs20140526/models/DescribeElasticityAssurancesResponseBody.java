@@ -12,24 +12,36 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
 
     /**
      * <p>The maximum number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,24 +94,36 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
     public static class DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemAllocatedResourcesAllocatedResource extends TeaModel {
         /**
          * <p>The instance type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.c6.large</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
 
         /**
          * <p>The total number of instances for which capacity of an instance type is reserved.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("TotalAmount")
         public Integer totalAmount;
 
         /**
          * <p>The number of instances that have used the elasticity assurance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("UsedAmount")
         public Integer usedAmount;
 
         /**
          * <p>The zone ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h</p>
          */
         @NameInMap("zoneId")
         public String zoneId;
@@ -165,12 +189,18 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
     public static class DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemTagsTag extends TeaModel {
         /**
          * <p>The key of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
          * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
          */
         @NameInMap("TagValue")
         public String tagValue;
@@ -226,83 +256,124 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
 
         /**
          * <p>The description of the elasticity assurance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is description.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The time when the elasticity assurance expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-03T16:00Z</p>
          */
         @NameInMap("EndTime")
         public String endTime;
 
         /**
          * <p>The billing method of the instance. The value can be only PostPaid. Only pay-as-you-go instances can be created by using elasticity assurances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PostPaid</p>
          */
         @NameInMap("InstanceChargeType")
         public String instanceChargeType;
 
         /**
-         * <p>> This parameter is not publicly available.</p>
+         * <blockquote>
+         * <p>This parameter is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("LatestStartTime")
         public String latestStartTime;
 
         /**
          * <p>The ID of the elasticity assurance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eap-bp1ir35kqtn8ywci****</p>
          */
         @NameInMap("PrivatePoolOptionsId")
         public String privatePoolOptionsId;
 
         /**
          * <p>The type of the private pool associated with the elasticity assurance. Valid values:</p>
-         * <br>
-         * <p>*   Open: open private pool</p>
-         * <p>*   Target: specific private pool</p>
+         * <ul>
+         * <li>Open: open private pool</li>
+         * <li>Target: specific private pool</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Target</p>
          */
         @NameInMap("PrivatePoolOptionsMatchCriteria")
         public String privatePoolOptionsMatchCriteria;
 
         /**
          * <p>The name of the elasticity assurance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eapTestName</p>
          */
         @NameInMap("PrivatePoolOptionsName")
         public String privatePoolOptionsName;
 
         /**
          * <p>The region ID of the elasticity assurance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-bp67acfmxazb4p****</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>The time when the elasticity assurance takes effect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-12-03T05:25Z</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
         /**
          * <p>Indicates when the elasticity assurance takes effect. Valid values:</p>
-         * <br>
-         * <p>*   Now: The elasticity assurance takes effect immediately after it is created.</p>
-         * <p>*   Later: The elasticity assurance takes effect at a specified time.</p>
+         * <ul>
+         * <li>Now: The elasticity assurance takes effect immediately after it is created.</li>
+         * <li>Later: The elasticity assurance takes effect at a specified time.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Now</p>
          */
         @NameInMap("StartTimeType")
         public String startTimeType;
 
         /**
          * <p>The status of the elasticity assurance. Valid values:</p>
-         * <br>
-         * <p>*   Preparing</p>
-         * <p>*   Prepared</p>
-         * <p>*   Active</p>
-         * <p>*   Released</p>
+         * <ul>
+         * <li>Preparing</li>
+         * <li>Prepared</li>
+         * <li>Active</li>
+         * <li>Released</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
         @NameInMap("Status")
         public String status;
@@ -315,12 +386,20 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
 
         /**
          * <p>The total number of times that the elasticity assurance is applied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Unlimited</p>
          */
         @NameInMap("TotalAssuranceTimes")
         public String totalAssuranceTimes;
 
         /**
-         * <p>> This parameter is not publicly available.</p>
+         * <blockquote>
+         * <p>This parameter is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("UsedAssuranceTimes")
         public Integer usedAssuranceTimes;

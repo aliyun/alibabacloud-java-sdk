@@ -6,26 +6,37 @@ import com.aliyun.tea.*;
 public class DescribeImagePipelineExecutionsRequest extends TeaModel {
     /**
      * <p>The ID of the image creation task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>exec-5fb8facb8ed7427c****</p>
      */
     @NameInMap("ExecutionId")
     public String executionId;
 
     /**
      * <p>The ID of the image template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ip-2ze5tsl5bp6nf2b3****</p>
      */
     @NameInMap("ImagePipelineId")
     public String imagePipelineId;
 
     /**
      * <p>The maximum number of entries per page. Valid values: 1 to 500.</p>
-     * <br>
      * <p>Default value: 50.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of `NextToken`.</p>
+     * <p>The pagination token that is used in the request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of <code>NextToken</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AAAAAdDWBF2****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -37,7 +48,11 @@ public class DescribeImagePipelineExecutionsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -49,23 +64,30 @@ public class DescribeImagePipelineExecutionsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The status of the image creation task. You can specify multiple values. Separate the values with commas (,). Example: `BUILDING,DISTRIBUTING`. Valid values:</p>
-     * <br>
-     * <p>*   BUILDING</p>
-     * <p>*   DISTRIBUTING</p>
-     * <p>*   RELEASING</p>
-     * <p>*   SUCCESS</p>
-     * <p>*   FAILED</p>
-     * <p>*   CANCELLING</p>
-     * <p>*   CANCELLED</p>
-     * <br>
-     * <p>> If you want to query the image creation tasks in all states, specify all values.</p>
+     * <p>The status of the image creation task. You can specify multiple values. Separate the values with commas (,). Example: <code>BUILDING,DISTRIBUTING</code>. Valid values:</p>
+     * <ul>
+     * <li>BUILDING</li>
+     * <li>DISTRIBUTING</li>
+     * <li>RELEASING</li>
+     * <li>SUCCESS</li>
+     * <li>FAILED</li>
+     * <li>CANCELLING</li>
+     * <li>CANCELLED</li>
+     * </ul>
+     * <blockquote>
+     * <p>If you want to query the image creation tasks in all states, specify all values.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>BUILDING</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
-     * <p>> This parameter is not publicly available.</p>
+     * <blockquote>
+     * <p>This parameter is not publicly available.</p>
+     * </blockquote>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeImagePipelineExecutionsRequestTag> tag;
@@ -165,13 +187,23 @@ public class DescribeImagePipelineExecutionsRequest extends TeaModel {
 
     public static class DescribeImagePipelineExecutionsRequestTag extends TeaModel {
         /**
-         * <p>> This parameter is not publicly available.</p>
+         * <blockquote>
+         * <p>This parameter is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>> This parameter is not publicly available.</p>
+         * <blockquote>
+         * <p>This parameter is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("Value")
         public String value;

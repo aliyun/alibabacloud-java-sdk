@@ -12,6 +12,9 @@ public class DisableActivationResponseBody extends TeaModel {
 
     /**
      * <p>Details about the activation code and its usage information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4ECEEE12-56F1-4FBC-9AB1-890F74942176</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -38,59 +41,90 @@ public class DisableActivationResponseBody extends TeaModel {
     }
 
     public static class DisableActivationResponseBodyActivation extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>4ECEEE12-56F1-4FBC-9AB1-890F1234****</p>
+         */
         @NameInMap("ActivationId")
         public String activationId;
 
         /**
          * <p>The number of instances that were deregistered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-20T06:00:00Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The maximum number of times that the activation code can be used to register managed instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("DeregisteredCount")
         public Integer deregisteredCount;
 
         /**
          * <p>The number of registered instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is description.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The IP addresses of the hosts that can use the activation code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Disabled")
         public Boolean disabled;
 
         /**
          * <p>The description of the activation code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("InstanceCount")
         public Integer instanceCount;
 
         /**
          * <p>Indicates whether the activation code is disabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-InstanceName</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
          * <p>The validity period of the activation code. Unit: hours.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0.0.0/0</p>
          */
         @NameInMap("IpAddressRange")
         public String ipAddressRange;
 
         /**
          * <p>The default prefix of the instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("RegisteredCount")
         public Integer registeredCount;
 
         /**
          * <p>The activation code ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         @NameInMap("TimeToLiveInHours")
         public Long timeToLiveInHours;

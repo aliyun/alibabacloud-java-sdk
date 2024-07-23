@@ -18,6 +18,9 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -93,12 +96,18 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether custom upgrade is enabled for Cloud Assistant Agent. If the value is false or empty, an upgrade attempt is performed for Cloud Assistant Agent every 30 minutes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Enabled")
         public Boolean enabled;
 
         /**
          * <p>The time zone of the time windows.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Asia/Shanghai</p>
          */
         @NameInMap("TimeZone")
         public String timeZone;
@@ -137,52 +146,76 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
     public static class DescribeCloudAssistantSettingsResponseBodyOssDeliveryConfigsOssDeliveryConfig extends TeaModel {
         /**
          * <p>The name of the OSS bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-bucket</p>
          */
         @NameInMap("BucketName")
         public String bucketName;
 
         /**
          * <p>The type of items to be delivered. Valid values:</p>
-         * <br>
-         * <p>*   SessionManager: session records.</p>
-         * <p>*   Invocation: task execution records.</p>
+         * <ul>
+         * <li>SessionManager: session records.</li>
+         * <li>Invocation: task execution records.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SessionManager</p>
          */
         @NameInMap("DeliveryType")
         public String deliveryType;
 
         /**
          * <p>Indicates whether to deliver the specified items to OSS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Enabled")
         public Boolean enabled;
 
         /**
          * <p>The OSS encryption algorithm. Valid values:</p>
-         * <br>
-         * <p>*   AES256</p>
-         * <p>*   SM4</p>
+         * <ul>
+         * <li>AES256</li>
+         * <li>SM4</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>AES256</p>
          */
         @NameInMap("EncryptionAlgorithm")
         public String encryptionAlgorithm;
 
         /**
          * <p>The ID of the customer master key (CMK) when EncryptionType is set to KMS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a807****7a70e</p>
          */
         @NameInMap("EncryptionKeyId")
         public String encryptionKeyId;
 
         /**
          * <p>The OSS encryption method. Valid values:</p>
-         * <br>
-         * <p>*   Inherit: the encryption method used by the specified bucket.</p>
-         * <p>*   OssManaged: server-side encryption by using OSS-managed keys (SSE-OSS).</p>
-         * <p>*   KMS: server-side encryption with Key Management Service (SSE-KMS).</p>
+         * <ul>
+         * <li>Inherit: the encryption method used by the specified bucket.</li>
+         * <li>OssManaged: server-side encryption by using OSS-managed keys (SSE-OSS).</li>
+         * <li>KMS: server-side encryption with Key Management Service (SSE-KMS).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Inherit</p>
          */
         @NameInMap("EncryptionType")
         public String encryptionType;
 
         /**
          * <p>The prefix of the OSS bucket directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sessionmanager/audit</p>
          */
         @NameInMap("Prefix")
         public String prefix;
@@ -272,27 +305,40 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
     public static class DescribeCloudAssistantSettingsResponseBodySlsDeliveryConfigsSlsDeliveryConfig extends TeaModel {
         /**
          * <p>The type of items to be delivered. Valid values:</p>
-         * <br>
-         * <p>*   SessionManager: session records.</p>
-         * <p>*   Invocation: task execution records.</p>
+         * <ul>
+         * <li>SessionManager: session records.</li>
+         * <li>Invocation: task execution records.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SessionManager</p>
          */
         @NameInMap("DeliveryType")
         public String deliveryType;
 
         /**
          * <p>Indicates whether to deliver the specified items to Simple Log Service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Enabled")
         public Boolean enabled;
 
         /**
          * <p>The name of the Logstore.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-logstore</p>
          */
         @NameInMap("LogstoreName")
         public String logstoreName;
 
         /**
          * <p>The name of the Simple Log Service project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-project</p>
          */
         @NameInMap("ProjectName")
         public String projectName;

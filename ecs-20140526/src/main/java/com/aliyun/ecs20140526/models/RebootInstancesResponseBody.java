@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class RebootInstancesResponseBody extends TeaModel {
     /**
-     * <p>Details about the responses returned for the instances, which contain the status of each instance before and after the operation is called and the operation results.</p>
+     * <p>Details about instance-specific responses, which contain the status of each instance before and after the operation is called and the results of the operation.</p>
      */
     @NameInMap("InstanceResponses")
     public RebootInstancesResponseBodyInstanceResponses instanceResponses;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,31 +42,46 @@ public class RebootInstancesResponseBody extends TeaModel {
 
     public static class RebootInstancesResponseBodyInstanceResponsesInstanceResponse extends TeaModel {
         /**
-         * <p>The error code that is returned for the operation on the instance. The value 200 indicates that the operation is successful. For more information, see the "Error codes" section in this topic.</p>
+         * <p>The error code returned for the instance. A return value of 200 indicates that the operation is successful. For more information, see the &quot;Error codes&quot; section of this topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         @NameInMap("Code")
         public String code;
 
         /**
-         * <p>The current status of the instance.</p>
+         * <p>The current state of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Stopping</p>
          */
         @NameInMap("CurrentStatus")
         public String currentStatus;
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1g6zv0ce8oghu7****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>The error message that is returned for the operation on the instance. The return value Success indicates that the operation is successful. For more information, see the "Error codes" section in this topic.</p>
+         * <p>The error message that is returned for the operation on the instance. The return value Success indicates that the operation is successful. For more information, see the &quot;Error codes&quot; section of this topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
-         * <p>The status of the instance before the operation is called.</p>
+         * <p>The state of the instance before the operation is called.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         @NameInMap("PreviousStatus")
         public String previousStatus;

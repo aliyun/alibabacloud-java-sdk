@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyAutoProvisioningGroupResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B48A12CD-1295-4A38-A8F0-0E92C937****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

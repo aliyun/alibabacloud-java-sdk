@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribePrefixListsResponseBody extends TeaModel {
     /**
      * <p>The query token returned in this call. If the return value is empty, no more data is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AAAAAdDWBF2****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -18,6 +21,9 @@ public class DescribePrefixListsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>38793DB8-A4B2-4AEC-BFD3-111234E9188D</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,45 +60,67 @@ public class DescribePrefixListsResponseBody extends TeaModel {
     public static class DescribePrefixListsResponseBodyPrefixListsPrefixList extends TeaModel {
         /**
          * <p>The IP address family of the prefix list. Valid values:</p>
-         * <br>
-         * <p>*   IPv4</p>
-         * <p>*   IPv6</p>
+         * <ul>
+         * <li>IPv4</li>
+         * <li>IPv6</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>IPv4</p>
          */
         @NameInMap("AddressFamily")
         public String addressFamily;
 
         /**
          * <p>The number of associated resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("AssociationCount")
         public Integer associationCount;
 
         /**
          * <p>The time when the prefix list was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-02-20T07:11Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The description of the prefix list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is description.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The maximum number of entries that the prefix list can contain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("MaxEntries")
         public Integer maxEntries;
 
         /**
          * <p>The ID of the prefix list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pl-x1j1k5ykzqlixdcy****</p>
          */
         @NameInMap("PrefixListId")
         public String prefixListId;
 
         /**
          * <p>The name of the prefix list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PrefixListNameSample</p>
          */
         @NameInMap("PrefixListName")
         public String prefixListName;

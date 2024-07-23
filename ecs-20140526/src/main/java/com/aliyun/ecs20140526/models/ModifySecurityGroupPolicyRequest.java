@@ -5,18 +5,25 @@ import com.aliyun.tea.*;
 
 public class ModifySecurityGroupPolicyRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The **token** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <strong>token</strong> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The internal access policy of the security group. Valid values:</p>
-     * <br>
-     * <p>*   Accept: All instances in the security group can communicate with each other.</p>
-     * <p>*   Drop: All instances in the security group are isolated from each other.</p>
-     * <br>
+     * <ul>
+     * <li>Accept: All instances in the security group can communicate with each other.</li>
+     * <li>Drop: All instances in the security group are isolated from each other.</li>
+     * </ul>
      * <p>The value of this parameter is not case-sensitive.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Drop</p>
      */
     @NameInMap("InnerAccessPolicy")
     public String innerAccessPolicy;
@@ -28,7 +35,11 @@ public class ModifySecurityGroupPolicyRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the security group. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the security group. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -41,6 +52,10 @@ public class ModifySecurityGroupPolicyRequest extends TeaModel {
 
     /**
      * <p>The ID of the security group.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sg-bp67acfmxazb4ph****</p>
      */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;

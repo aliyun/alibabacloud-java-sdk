@@ -4,40 +4,64 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
+    /**
+     * <p>This parameter is unavailable for public use.</p>
+     */
     @NameInMap("ConnectionTrackingConfiguration")
     public ModifyNetworkInterfaceAttributeRequestConnectionTrackingConfiguration connectionTrackingConfiguration;
 
     /**
      * <p>Specifies whether to release the ENI when the associated instance is released. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("DeleteOnRelease")
     public Boolean deleteOnRelease;
 
     /**
-     * <p>The description of the ENI. The description must be 2 to 255 characters in length and cannot start with [http:// or https://](http://https://。).</p>
-     * <br>
+     * <p>The description of the ENI. The description must be 2 to 255 characters in length and cannot start with <a href="http://https://%E3%80%82">http:// or https://</a>.</p>
      * <p>This parameter is left empty by default.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testDescription</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>This parameter is unavailable for public use.</p>
+     */
+    @NameInMap("EnhancedNetwork")
+    public ModifyNetworkInterfaceAttributeRequestEnhancedNetwork enhancedNetwork;
+
+    /**
      * <p>The ID of the ENI.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eni-bp67acfmxazb4p****</p>
      */
     @NameInMap("NetworkInterfaceId")
     public String networkInterfaceId;
 
     /**
-     * <p>The name of the ENI. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with http:// or https://. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
-     * <br>
-     * <p>This parameter is empty by default.</p>
+     * <p>The name of the ENI. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. The name can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
+     * <p>This parameter is left empty by default.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eniTestName</p>
      */
     @NameInMap("NetworkInterfaceName")
     public String networkInterfaceName;
 
+    /**
+     * <p>The communication parameters of the ENI.</p>
+     */
     @NameInMap("NetworkInterfaceTrafficConfig")
     public ModifyNetworkInterfaceAttributeRequestNetworkInterfaceTrafficConfig networkInterfaceTrafficConfig;
 
@@ -49,16 +73,24 @@ public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
 
     /**
      * <p>The number of queues supported by the ENI. Valid values: 1 to 2048.</p>
-     * <br>
-     * <p>*   You can change only the number of queues supported by the secondary ENI.</p>
-     * <p>*   You can change the number of queues supported by the secondary ENI only when the ENI is in the `Available` state or the ENI is attached (`InUse`) to an instance that is in the `Stopped` state.</p>
-     * <p>*   The number of queues supported by the secondary ENI cannot exceed the maximum number of queues that the instance allows for each ENI. The total number of queues for all ENIs on the instance cannot exceed the queue quota that the instance allows. To query the maximum number of queues per ENI and the queue quota for an instance type, you can call the [DescribeInstanceTypes](~~25620~~) operation and check the values of `MaximumQueueNumberPerEni` and `TotalEniQueueQuantity` in the response.</p>
+     * <ul>
+     * <li>You can change only the number of queues supported by the secondary ENI.</li>
+     * <li>You can change the number of queues supported by the secondary ENI only when the ENI is in the <code>Available</code> state or the ENI is attached (<code>InUse</code>) to an instance that is in the <code>Stopped</code> state.</li>
+     * <li>The number of queues supported by the secondary ENI cannot exceed the maximum number of queues that the instance allows for each ENI. The total number of queues for all ENIs on the instance cannot exceed the queue quota that the instance allows. To query the maximum number of queues per ENI and the queue quota for an instance type, you can call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation and check the values of <code>MaximumQueueNumberPerEni</code> and <code>TotalEniQueueQuantity</code> in the response.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>8</p>
      */
     @NameInMap("QueueNumber")
     public Integer queueNumber;
 
     /**
-     * <p>The region ID of the ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the ENI. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -71,31 +103,38 @@ public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
 
     /**
      * <p>The receive (Rx) queue depth of the ENI.</p>
-     * <br>
      * <p>Take note of the following items:</p>
-     * <br>
-     * <p>*   The Rx queue depth of an ENI must be the same as the transmit (Tx) queue depth of the ENI. Valid values: powers of 2 in the range of 8192 to 16384.</p>
-     * <p>*   A larger Rx queue depth yields higher inbound throughput but consumes more memory.</p>
+     * <ul>
+     * <li>The Rx queue depth of an ENI must be the same as the transmit (Tx) queue depth of the ENI. Valid values: powers of 2 in the range of 8192 to 16384.</li>
+     * <li>A larger Rx queue depth yields higher inbound throughput but consumes more memory.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>8192</p>
      */
     @NameInMap("RxQueueSize")
     public Integer rxQueueSize;
 
     /**
      * <p>The IDs of the security groups to which to add the secondary ENI. The secondary ENI is added to the specified security groups and are removed from its original security groups.</p>
-     * <br>
-     * <p>*   The valid value range of N varies based on the number of security groups to which an ENI can be added. For more information, see [Limits](~~25412#SecurityGroupQuota~~).</p>
-     * <p>*   The new security groups take effect after a short delay.</p>
+     * <ul>
+     * <li>The valid value range of N varies based on the number of security groups to which an ENI can be added. For more information, see <a href="~~25412#SecurityGroupQuota~~">Limits</a>.</li>
+     * <li>The new security groups take effect after a short delay.</li>
+     * </ul>
      */
     @NameInMap("SecurityGroupId")
     public java.util.List<String> securityGroupId;
 
     /**
      * <p>The Tx queue depth of the ENI.</p>
-     * <br>
      * <p>Take note of the following items:</p>
-     * <br>
-     * <p>*   The Tx queue depth of an ENI must be the same as the Rx queue depth of the ENI. Valid values: powers of 2 in the range of 8192 to 16384.</p>
-     * <p>*   A larger Tx queue depth yields higher outbound throughput but consumes more memory.</p>
+     * <ul>
+     * <li>The Tx queue depth of an ENI must be the same as the Rx queue depth of the ENI. Valid values: powers of 2 in the range of 8192 to 16384.</li>
+     * <li>A larger Tx queue depth yields higher outbound throughput but consumes more memory.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>8192</p>
      */
     @NameInMap("TxQueueSize")
     public Integer txQueueSize;
@@ -127,6 +166,14 @@ public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public ModifyNetworkInterfaceAttributeRequest setEnhancedNetwork(ModifyNetworkInterfaceAttributeRequestEnhancedNetwork enhancedNetwork) {
+        this.enhancedNetwork = enhancedNetwork;
+        return this;
+    }
+    public ModifyNetworkInterfaceAttributeRequestEnhancedNetwork getEnhancedNetwork() {
+        return this.enhancedNetwork;
     }
 
     public ModifyNetworkInterfaceAttributeRequest setNetworkInterfaceId(String networkInterfaceId) {
@@ -226,12 +273,21 @@ public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
     }
 
     public static class ModifyNetworkInterfaceAttributeRequestConnectionTrackingConfiguration extends TeaModel {
+        /**
+         * <p>This parameter is unavailable for public use.</p>
+         */
         @NameInMap("TcpClosedAndTimeWaitTimeout")
         public Integer tcpClosedAndTimeWaitTimeout;
 
+        /**
+         * <p>This parameter is unavailable for public use.</p>
+         */
         @NameInMap("TcpEstablishedTimeout")
         public Integer tcpEstablishedTimeout;
 
+        /**
+         * <p>This parameter is unavailable for public use.</p>
+         */
         @NameInMap("UdpTimeout")
         public Integer udpTimeout;
 
@@ -266,19 +322,111 @@ public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
 
     }
 
+    public static class ModifyNetworkInterfaceAttributeRequestEnhancedNetwork extends TeaModel {
+        /**
+         * <p>This parameter is unavailable for public use.</p>
+         */
+        @NameInMap("EnableSriov")
+        public Boolean enableSriov;
+
+        public static ModifyNetworkInterfaceAttributeRequestEnhancedNetwork build(java.util.Map<String, ?> map) throws Exception {
+            ModifyNetworkInterfaceAttributeRequestEnhancedNetwork self = new ModifyNetworkInterfaceAttributeRequestEnhancedNetwork();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyNetworkInterfaceAttributeRequestEnhancedNetwork setEnableSriov(Boolean enableSriov) {
+            this.enableSriov = enableSriov;
+            return this;
+        }
+        public Boolean getEnableSriov() {
+            return this.enableSriov;
+        }
+
+    }
+
     public static class ModifyNetworkInterfaceAttributeRequestNetworkInterfaceTrafficConfig extends TeaModel {
+        /**
+         * <p>The communication mode of the ENI. Valid values:</p>
+         * <ul>
+         * <li>Standard: uses the TCP communication mode.</li>
+         * <li>HighPerformance: uses the remote direct memory access (RDMA) communication mode with Elastic RDMA Interface (ERI) enabled.</li>
+         * </ul>
+         * <p>When the ENI is in the InUse state, take note of the following items:</p>
+         * <ul>
+         * <li>The total number of ERIs attached to the instance cannot exceed the ERI quota for the instance type. To query the ERI quota for an instance type, call the DescribeInstanceTypes operation and check the EriQuantity value in the response.</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>HighPerformance</p>
+         */
         @NameInMap("NetworkInterfaceTrafficMode")
         public String networkInterfaceTrafficMode;
 
+        /**
+         * <p>The number of queues supported by the ENI. When the ENI is in the InUse state, take note of the following items:</p>
+         * <ul>
+         * <li>The value of this parameter cannot exceed the maximum number of queues allowed per ENI for the instance type.</li>
+         * <li>The total number of queues for all ENIs on the instance cannot exceed the queue quota for the instance type. To query the maximum number of queues per ENI and the queue quota for an instance type, call the DescribeInstanceTypes operation and check the MaximumQueueNumberPerEnig and TotalEniQueueQuantity values in the response.</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
+         */
         @NameInMap("QueueNumber")
         public Integer queueNumber;
 
+        /**
+         * <p>The number of queues supported by the ERI. When the ERI is in the InUse state, take note of the following items:</p>
+         * <ul>
+         * <li>The value of this parameter cannot exceed the maximum number of queues allowed per ERI for the instance type. To query the maximum number of queues allowed per ERI for an instance type, call the DescribeInstanceTypes operation and check the QueuePairNumber value in the response.</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
+         */
         @NameInMap("QueuePairNumber")
         public Integer queuePairNumber;
 
+        /**
+         * <p>The receive (Rx) queue depth of the ENI.</p>
+         * <p>Take note of the following items:</p>
+         * <ul>
+         * <li>The Rx queue depth of an ENI must be the same as the transmit (Tx) queue depth of the ENI. Valid values: powers of 2 in the range of 8192 to 16384.</li>
+         * <li>A larger Rx queue depth yields higher inbound throughput but consumes more memory.</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>8192</p>
+         */
         @NameInMap("RxQueueSize")
         public Integer rxQueueSize;
 
+        /**
+         * <p>The Tx queue depth of the ENI.</p>
+         * <p>Take note of the following items:</p>
+         * <ul>
+         * <li>The Tx queue depth of an ENI must be the same as the Rx queue depth of the ENI. Valid values: powers of 2 in the range of 8192 to 16384.</li>
+         * <li>A larger Tx queue depth yields higher outbound throughput but consumes more memory.</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>8192</p>
+         */
         @NameInMap("TxQueueSize")
         public Integer txQueueSize;
 

@@ -6,63 +6,73 @@ import com.aliyun.tea.*;
 public class DescribeImageSupportInstanceTypesResponseBody extends TeaModel {
     /**
      * <p>The key of filter N. Only the image ID can be used to filter instance types. Valid values:</p>
-     * <br>
-     * <p>*   imagId: image ID</p>
-     * <p>*   filter: image ID</p>
+     * <ul>
+     * <li>imagId: image ID</li>
+     * <li>filter: image ID</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>m-o6w3gy99qf89rkga****</p>
      */
     @NameInMap("ImageId")
     public String imageId;
 
     /**
-     * <p>{</p>
-     * <p>    "RequestId": "CF661E2D-4AFE-4BCD-959A-A65E14416B44",</p>
-     * <p>    "RegionId": "cn-hangzhou",</p>
-     * <p>    "ImageId": "ubuntu_16_0402_64_20G_alibase_20180409.vhd",</p>
-     * <p>    "InstanceTypes": {</p>
-     * <p>        "InstanceType": [{</p>
-     * <p>            "InstanceTypeId": "ecs.t1.xsmall",</p>
-     * <p>            "CpuCoreCount": 1,</p>
-     * <p>            "MemorySize": 0.5,</p>
-     * <p>            "InstanceTypeFamily": "ecs.t1"</p>
-     * <p>        },</p>
-     * <p>        {</p>
-     * <p>            "InstanceTypeId": "ecs.t1.small",</p>
-     * <p>            "CpuCoreCount": 1,</p>
-     * <p>            "MemorySize": 1,</p>
-     * <p>            "InstanceTypeFamily": "ecs.t1"</p>
-     * <p>        }]</p>
-     * <p>    }</p>
-     * <p>}</p>
+     * <p>{
+     *     &quot;RequestId&quot;: &quot;CF661E2D-4AFE-4BCD-959A-A65E14416B44&quot;,
+     *     &quot;RegionId&quot;: &quot;cn-hangzhou&quot;,
+     *     &quot;ImageId&quot;: &quot;ubuntu_16_0402_64_20G_alibase_20180409.vhd&quot;,
+     *     &quot;InstanceTypes&quot;: {
+     *         &quot;InstanceType&quot;: [{
+     *             &quot;InstanceTypeId&quot;: &quot;ecs.t1.xsmall&quot;,
+     *             &quot;CpuCoreCount&quot;: 1,
+     *             &quot;MemorySize&quot;: 0.5,
+     *             &quot;InstanceTypeFamily&quot;: &quot;ecs.t1&quot;
+     *         },
+     *         {
+     *             &quot;InstanceTypeId&quot;: &quot;ecs.t1.small&quot;,
+     *             &quot;CpuCoreCount&quot;: 1,
+     *             &quot;MemorySize&quot;: 1,
+     *             &quot;InstanceTypeFamily&quot;: &quot;ecs.t1&quot;
+     *         }]
+     *     }
+     * }</p>
      */
     @NameInMap("InstanceTypes")
     public DescribeImageSupportInstanceTypesResponseBodyInstanceTypes instanceTypes;
 
     /**
-     * <p>{</p>
-     * <p>    "RequestId": "CF661E2D-4AFE-4BCD-959A-A65E14416B44",</p>
-     * <p>    "RegionId": "cn-hangzhou",</p>
-     * <p>    "ImageId": "ubuntu_16_0402_64_20G_alibase_20180409.vhd",</p>
-     * <p>    "InstanceTypes": {</p>
-     * <p>        "InstanceType": [{</p>
-     * <p>            "InstanceTypeId": "ecs.t1.xsmall",</p>
-     * <p>            "CpuCoreCount": 1,</p>
-     * <p>            "MemorySize": 0.5,</p>
-     * <p>            "InstanceTypeFamily": "ecs.t1"</p>
-     * <p>        },</p>
-     * <p>        {</p>
-     * <p>            "InstanceTypeId": "ecs.t1.small",</p>
-     * <p>            "CpuCoreCount": 1,</p>
-     * <p>            "MemorySize": 1,</p>
-     * <p>            "InstanceTypeFamily": "ecs.t1"</p>
-     * <p>        }]</p>
-     * <p>    }</p>
-     * <p>}</p>
+     * <p>{
+     *     &quot;RequestId&quot;: &quot;CF661E2D-4AFE-4BCD-959A-A65E14416B44&quot;,
+     *     &quot;RegionId&quot;: &quot;cn-hangzhou&quot;,
+     *     &quot;ImageId&quot;: &quot;ubuntu_16_0402_64_20G_alibase_20180409.vhd&quot;,
+     *     &quot;InstanceTypes&quot;: {
+     *         &quot;InstanceType&quot;: [{
+     *             &quot;InstanceTypeId&quot;: &quot;ecs.t1.xsmall&quot;,
+     *             &quot;CpuCoreCount&quot;: 1,
+     *             &quot;MemorySize&quot;: 0.5,
+     *             &quot;InstanceTypeFamily&quot;: &quot;ecs.t1&quot;
+     *         },
+     *         {
+     *             &quot;InstanceTypeId&quot;: &quot;ecs.t1.small&quot;,
+     *             &quot;CpuCoreCount&quot;: 1,
+     *             &quot;MemorySize&quot;: 1,
+     *             &quot;InstanceTypeFamily&quot;: &quot;ecs.t1&quot;
+     *         }]
+     *     }
+     * }</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -107,24 +117,36 @@ public class DescribeImageSupportInstanceTypesResponseBody extends TeaModel {
     public static class DescribeImageSupportInstanceTypesResponseBodyInstanceTypesInstanceType extends TeaModel {
         /**
          * <p>The number of vCPUs of the instance type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CpuCoreCount")
         public Integer cpuCoreCount;
 
         /**
          * <p>DescribeImageSupportInstanceTypes</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.t1</p>
          */
         @NameInMap("InstanceTypeFamily")
         public String instanceTypeFamily;
 
         /**
          * <p>Queries the instance types supported by an image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.t1.xsmall</p>
          */
         @NameInMap("InstanceTypeId")
         public String instanceTypeId;
 
         /**
          * <p>The memory size of the instance type. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
          */
         @NameInMap("MemorySize")
         public Float memorySize;

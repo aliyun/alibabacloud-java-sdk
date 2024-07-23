@@ -6,16 +6,20 @@ import com.aliyun.tea.*;
 public class DescribePrefixListAssociationsRequest extends TeaModel {
     /**
      * <p>The query token that is returned in this call. If the return value is empty, no more data is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The number of entries to return on each page.</p>
-     * <br>
      * <p>Maximum value: 100.</p>
-     * <br>
      * <p>Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AAAAAdDWBF2****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -27,13 +31,21 @@ public class DescribePrefixListAssociationsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The query token. Set the value to the `NextToken` value returned in the previous call to the DescribePrefixListAssociations operation. Leave this parameter empty the first time you call this operation.</p>
+     * <p>The query token. Set the value to the <code>NextToken</code> value returned in the previous call to the DescribePrefixListAssociations operation. Leave this parameter empty the first time you call this operation.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pl-x1j1k5ykzqlixdcy****</p>
      */
     @NameInMap("PrefixListId")
     public String prefixListId;
 
     /**
      * <p>The ID of the prefix list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-chengdu</p>
      */
     @NameInMap("RegionId")
     public String regionId;

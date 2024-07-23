@@ -5,32 +5,59 @@ import com.aliyun.tea.*;
 
 public class DeleteHpcClusterRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The **ClientToken** value must contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The <strong>ClientToken</strong> value must contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The ID of the HPC cluster.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hpc-cxvr5uzy54j0ya****</p>
      */
     @NameInMap("HpcClusterId")
     public String hpcClusterId;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="mailto:EcsforCloud@Alibaba.com">EcsforCloud@Alibaba.com</a></p>
+     */
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>155780923770</p>
+     */
     @NameInMap("OwnerId")
     public Long ownerId;
 
     /**
-     * <p>The region ID of the HPC cluster. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the HPC cluster. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>EcsforCloud</p>
+     */
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>155780923770</p>
+     */
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 

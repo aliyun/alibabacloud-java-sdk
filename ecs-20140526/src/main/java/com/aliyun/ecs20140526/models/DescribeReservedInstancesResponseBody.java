@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class DescribeReservedInstancesResponseBody extends TeaModel {
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E572643C-6A29-49D6-9D4E-6CFA4E063A3E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -30,6 +39,9 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
 
     /**
      * <p>The total number of reserved instances.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,6 +94,9 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
     public static class DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceOperationLocksOperationLock extends TeaModel {
         /**
          * <p>The reason why the instance is locked.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>security</p>
          */
         @NameInMap("LockReason")
         public String lockReason;
@@ -123,12 +138,18 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
     public static class DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceTagsTag extends TeaModel {
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
          */
         @NameInMap("TagValue")
         public String tagValue;
@@ -178,45 +199,67 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
     public static class DescribeReservedInstancesResponseBodyReservedInstancesReservedInstance extends TeaModel {
         /**
          * <p>Indicates the sharing status of the reserved instance when the AllocationType parameter is set to Shared. Valid values:</p>
-         * <br>
-         * <p>*   allocated: The reserved instance is allocated to another account.</p>
-         * <p>*   beAllocated: The reserved instance is allocated by another account.</p>
+         * <ul>
+         * <li>allocated: The reserved instance is allocated to another account.</li>
+         * <li>beAllocated: The reserved instance is allocated by another account.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>allocated</p>
          */
         @NameInMap("AllocationStatus")
         public String allocationStatus;
 
         /**
          * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-12-10T12:07Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testDescription</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The expiration time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-12-10T12:07Z</p>
          */
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
         /**
          * <p>The number of pay-as-you-go instances that are of the same instance type as the reserved instance and can be matched to the reserved instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("InstanceAmount")
         public Integer instanceAmount;
 
         /**
          * <p>The instance type of the pay-as-you-go instances that can be matched to the reserved instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.g5.large</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
 
         /**
          * <p>The payment option.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>All Upfront</p>
          */
         @NameInMap("OfferingType")
         public String offeringType;
@@ -229,51 +272,76 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
 
         /**
          * <p>The operating system of the image used by the instance. Valid values:</p>
-         * <br>
-         * <p>*   Windows</p>
-         * <p>*   Linux</p>
+         * <ul>
+         * <li>Windows</li>
+         * <li>Linux</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Linux</p>
          */
         @NameInMap("Platform")
         public String platform;
 
         /**
          * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The reserved instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ri-bpzhex2ulpzf53****</p>
          */
         @NameInMap("ReservedInstanceId")
         public String reservedInstanceId;
 
         /**
          * <p>The name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>riZbpzhex2ulpzf53****</p>
          */
         @NameInMap("ReservedInstanceName")
         public String reservedInstanceName;
 
         /**
          * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EcsDocTest</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>The scope.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>region</p>
          */
         @NameInMap("Scope")
         public String scope;
 
         /**
          * <p>The effective time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-12-10T12:00Z</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
         /**
          * <p>The status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
         @NameInMap("Status")
         public String status;
@@ -286,6 +354,9 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
 
         /**
          * <p>The zone ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-z</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;

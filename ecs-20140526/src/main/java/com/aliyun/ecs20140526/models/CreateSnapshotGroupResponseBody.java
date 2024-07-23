@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreateSnapshotGroupResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>01ABBD93-1ABB-4D92-B496-1A3D20EC0697</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the snapshot-consistent group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ssg-j6ciyh3k52qp7ovm****</p>
      */
     @NameInMap("SnapshotGroupId")
     public String snapshotGroupId;

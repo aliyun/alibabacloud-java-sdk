@@ -5,30 +5,40 @@ import com.aliyun.tea.*;
 
 public class DescribeBandwidthLimitationRequest extends TeaModel {
     /**
-     * <p>The billing method of the instance. For more information, see [Billing overview](~~25398~~). Valid values:</p>
-     * <br>
-     * <p>*   PrePaid: subscription</p>
-     * <p>*   PostPaid: pay-as-you-go</p>
-     * <br>
+     * <p>The billing method of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/25398.html">Billing overview</a>. Valid values:</p>
+     * <ul>
+     * <li>PrePaid: subscription</li>
+     * <li>PostPaid: pay-as-you-go</li>
+     * </ul>
      * <p>Default value: PostPaid.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PostPaid</p>
      */
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
 
     /**
-     * <p>The instance type. For information about the values, see [Overview of ECS instance families](~~25378~~).</p>
+     * <p>The instance type. For information about the values, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of ECS instance families</a>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs.g5.large</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
 
     /**
      * <p>Specifies the operation for which to query the maximum public bandwidth. Valid values:</p>
-     * <br>
-     * <p>*   Upgrade: upgrades the public bandwidth.</p>
-     * <p>*   Downgrade: downgrades the public bandwidth.</p>
-     * <p>*   Create: creates an ECS instance.</p>
-     * <br>
+     * <ul>
+     * <li>Upgrade: upgrades the public bandwidth.</li>
+     * <li>Downgrade: downgrades the public bandwidth.</li>
+     * <li>Create: creates an ECS instance.</li>
+     * </ul>
      * <p>Default value: Create.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Upgrade</p>
      */
     @NameInMap("OperationType")
     public String operationType;
@@ -40,15 +50,23 @@ public class DescribeBandwidthLimitationRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The resource ID.</p>
-     * <br>
-     * <p>>  This parameter is required when the OperationType parameter is set to Upgrade or Downgrade.</p>
+     * <blockquote>
+     * <p> This parameter is required when the OperationType parameter is set to Upgrade or Downgrade.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>i-bp67acfmxazb4ph***</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;
@@ -61,14 +79,18 @@ public class DescribeBandwidthLimitationRequest extends TeaModel {
 
     /**
      * <p>The bidding policy for the pay-as-you-go instance. Valid values:</p>
-     * <br>
-     * <p>*   NoSpot: The instance is a pay-as-you-go instance.</p>
-     * <p>*   SpotWithPriceLimit: The instance is a preemptible instance for which you can specify the maximum hourly price.</p>
-     * <p>*   SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is automatically used as the bid price. The market price can be up to the pay-as-you-go price.</p>
-     * <br>
+     * <ul>
+     * <li>NoSpot: The instance is a pay-as-you-go instance.</li>
+     * <li>SpotWithPriceLimit: The instance is a preemptible instance for which you can specify the maximum hourly price.</li>
+     * <li>SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is automatically used as the bid price. The market price can be up to the pay-as-you-go price.</li>
+     * </ul>
      * <p>Default value: NoSpot.</p>
-     * <br>
-     * <p>>  The SpotStrategy parameter takes effect only when the InstanceChargeType parameter is set to PostPaid.</p>
+     * <blockquote>
+     * <p> The SpotStrategy parameter takes effect only when the InstanceChargeType parameter is set to PostPaid.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>NoSpot</p>
      */
     @NameInMap("SpotStrategy")
     public String spotStrategy;

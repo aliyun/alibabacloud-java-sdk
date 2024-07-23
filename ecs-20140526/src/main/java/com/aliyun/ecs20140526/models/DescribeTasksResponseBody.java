@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class DescribeTasksResponseBody extends TeaModel {
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The region ID of the task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -36,6 +48,9 @@ public class DescribeTasksResponseBody extends TeaModel {
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -96,42 +111,63 @@ public class DescribeTasksResponseBody extends TeaModel {
     public static class DescribeTasksResponseBodyTaskSetTask extends TeaModel {
         /**
          * <p>The time when the task was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-24T12:50Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The time when the task was completed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-24T12:50Z</p>
          */
         @NameInMap("FinishedTime")
         public String finishedTime;
 
         /**
          * <p>The ID of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-bp1i8huqm5u7****</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
          * <p>Indicates whether the task can be canceled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("SupportCancel")
         public String supportCancel;
 
         /**
          * <p>The name of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ImportImage</p>
          */
         @NameInMap("TaskAction")
         public String taskAction;
 
         /**
          * <p>The ID of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-bp1hvgwromzv32iq****</p>
          */
         @NameInMap("TaskId")
         public String taskId;
 
         /**
          * <p>The state of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Finished</p>
          */
         @NameInMap("TaskStatus")
         public String taskStatus;

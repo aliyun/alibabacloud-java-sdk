@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyDedicatedHostAutoRenewAttributeResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2A4EA075-CB5B-41B7-B0EB-70D339F6****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -12,30 +12,45 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the custom image.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>m-bp1caf3yicx5jlfl****</p>
      */
     @NameInMap("ImageId")
     public String imageId;
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The region ID of the custom image.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -48,6 +63,9 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -124,12 +142,18 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
     public static class DescribeImageSharePermissionResponseBodyAccountsAccount extends TeaModel {
         /**
          * <p>The ID of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567890</p>
          */
         @NameInMap("AliyunId")
         public String aliyunId;
 
         /**
-         * <p>The time when the image was shared. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The time when the image was shared. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-01-01T12:05:00Z</p>
          */
         @NameInMap("SharedTime")
         public String sharedTime;
@@ -179,6 +203,9 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
     public static class DescribeImageSharePermissionResponseBodyShareGroupsShareGroup extends TeaModel {
         /**
          * <p>The shared group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>all</p>
          */
         @NameInMap("Group")
         public String group;

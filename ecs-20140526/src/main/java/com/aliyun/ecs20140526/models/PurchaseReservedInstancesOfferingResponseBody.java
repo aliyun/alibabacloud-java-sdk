@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class PurchaseReservedInstancesOfferingResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8C314443-AF0D-4766-9562-C83B7F1A3C8B</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -12,6 +12,9 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE*****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
     public static class DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResultTagsTag extends TeaModel {
         /**
          * <p>The tag key of the command task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>owner</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
          * <p>The tag value of the command task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zhangsan</p>
          */
         @NameInMap("TagValue")
         public String tagValue;
@@ -95,199 +104,264 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
     public static class DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResult extends TeaModel {
         /**
          * <p>The command ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-hz0jdfwcsr****</p>
          */
         @NameInMap("CommandId")
         public String commandId;
 
         /**
          * <p>The container ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ab141ddfbacfe02d9dbc25966ed971536124527097398d419a6746873fea****</p>
          */
         @NameInMap("ContainerId")
         public String containerId;
 
         /**
          * <p>The container name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-container</p>
          */
         @NameInMap("ContainerName")
         public String containerName;
 
         /**
-         * <p>The size of the Output text that was truncated and discarded because the `Output` value exceeded 24 KB in size.</p>
+         * <p>The size of the Output text that was truncated and discarded because the <code>Output</code> value exceeded 24 KB in size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Dropped")
         public Integer dropped;
 
         /**
-         * <p>The error code for the failure to send or run the command. Valid values:</p>
-         * <br>
-         * <p>*   If this parameter is empty, the command was run as expected.</p>
-         * <p>*   InstanceNotExists: The specified instance did not exist or was released.</p>
-         * <p>*   InstanceReleased: The instance was released while the command was being run.</p>
-         * <p>*   InstanceNotRunning: The instance was not running when the command started to be run.</p>
-         * <p>*   CommandNotApplicable: The command was not applicable to the specified instance.</p>
-         * <p>*   AccountNotExists: The specified account did not exist.</p>
-         * <p>*   DirectoryNotExists: The specified directory did not exist.</p>
-         * <p>*   BadCronExpression: The specified cron expression for the execution schedule was invalid.</p>
-         * <p>*   ClientNotRunning: Cloud Assistant Agent was not running.</p>
-         * <p>*   ClientNotResponse: Cloud Assistant Agent did not respond.</p>
-         * <p>*   ClientIsUpgrading: Cloud Assistant Agent was being upgraded.</p>
-         * <p>*   ClientNeedUpgrade: Cloud Assistant Agent needed to be upgraded.</p>
-         * <p>*   DeliveryTimeout: The request to send the command timed out.</p>
-         * <p>*   ExecutionTimeout: The execution timed out.</p>
-         * <p>*   ExecutionException: An exception occurred while the command was being run.</p>
-         * <p>*   ExecutionInterrupted: The execution was interrupted.</p>
-         * <p>*   ExitCodeNonzero: The execution was complete, but the exit code was not 0.</p>
+         * <p>The error code returned when the command failed to be sent or run. Valid values:</p>
+         * <ul>
+         * <li>If this parameter is empty, the command was run as expected.</li>
+         * <li>InstanceNotExists: The specified instance did not exist or was released.</li>
+         * <li>InstanceReleased: The instance was released while the command was being run.</li>
+         * <li>InstanceNotRunning: The instance was not running while the command was being run.</li>
+         * <li>CommandNotApplicable: The command was inapplicable to the specified instance.</li>
+         * <li>AccountNotExists: The username specified to run the command did not exist.</li>
+         * <li>DirectoryNotExists: The specified directory did not exist.</li>
+         * <li>BadCronExpression: The specified cron expression for the execution schedule was invalid.</li>
+         * <li>ClientNotRunning: Cloud Assistant Agent was not running.</li>
+         * <li>ClientNotResponse: Cloud Assistant Agent did not respond.</li>
+         * <li>ClientIsUpgrading: Cloud Assistant Agent was being upgraded.</li>
+         * <li>ClientNeedUpgrade: Cloud Assistant Agent needed to be upgraded.</li>
+         * <li>DeliveryTimeout: The request to send the command timed out.</li>
+         * <li>ExecutionTimeout: The execution timed out.</li>
+         * <li>ExecutionException: An exception occurred while the command was being run.</li>
+         * <li>ExecutionInterrupted: The execution was interrupted.</li>
+         * <li>ExitCodeNonzero: The execution was complete, but the exit code was not 0.</li>
+         * <li>SecurityGroupRuleDenied: Access to Cloud Assistant was denied by security group rules.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>InstanceNotExists</p>
          */
         @NameInMap("ErrorCode")
         public String errorCode;
 
         /**
          * <p>The error message returned when the command failed to be sent or run. Valid values:</p>
-         * <br>
-         * <p>*   If this parameter is empty, the command was run as expected.</p>
-         * <p>*   the specified instance does not exists</p>
-         * <p>*   the instance has released when create task</p>
-         * <p>*   the instance is not running when create task</p>
-         * <p>*   the command is not applicable</p>
-         * <p>*   the specified account does not exists</p>
-         * <p>*   the specified directory does not exists</p>
-         * <p>*   the cron job expression is invalid</p>
-         * <p>*   the aliyun service is not running on the instance</p>
-         * <p>*   the aliyun service in the instance does not response</p>
-         * <p>*   the aliyun service in the instance is upgrading now</p>
-         * <p>*   the aliyun service in the instance need upgrade</p>
-         * <p>*   the command delivery has been timeout</p>
-         * <p>*   the command execution has been timeout</p>
-         * <p>*   the command execution got an exception</p>
-         * <p>*   the command execution has been interrupted</p>
-         * <p>*   the command execution exit code is not zero</p>
-         * <p>*   the specified instance has been released</p>
+         * <ul>
+         * <li>If this parameter is empty, the command was run as expected.</li>
+         * <li>the specified instance does not exists</li>
+         * <li>the instance has released when create task</li>
+         * <li>the instance is not running when create task</li>
+         * <li>the command is not applicable</li>
+         * <li>the specified account does not exists</li>
+         * <li>the specified directory does not exists</li>
+         * <li>the cron job expression is invalid</li>
+         * <li>the aliyun service is not running on the instance</li>
+         * <li>the aliyun service in the instance does not response</li>
+         * <li>the aliyun service in the instance is upgrading now</li>
+         * <li>the aliyun service in the instance need upgrade</li>
+         * <li>the command delivery has been timeout</li>
+         * <li>the command execution has been timeout</li>
+         * <li>the command execution got an exception</li>
+         * <li>the command execution has been interrupted</li>
+         * <li>the command execution exit code is not zero</li>
+         * <li>the specified instance has been released</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>the specified instance does not exists</p>
          */
         @NameInMap("ErrorInfo")
         public String errorInfo;
 
         /**
          * <p>The exit code of the command task.</p>
-         * <br>
-         * <p>*   For Linux instances, the value is the exit code of the shell command.</p>
-         * <p>*   For Windows instances, the value is the exit code of the batch or PowerShell command.</p>
+         * <ul>
+         * <li>For Linux instances, the value is the exit code of the shell command.</li>
+         * <li>For Windows instances, the value is the exit code of the batch or PowerShell command.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ExitCode")
         public Long exitCode;
 
         /**
-         * <p>The time when the command task was complete. If the command task times out, the end time is equal to the start time of the command task specified by `StartTime` plus the timeout period specified by `Timeout`.</p>
+         * <p>The time when the command task was completed. If the command task times out, the end time is equal to the start time of the command task specified by <code>StartTime</code> plus the timeout period specified by <code>Timeout</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-12-20T06:15:56Z</p>
          */
         @NameInMap("FinishedTime")
         public String finishedTime;
 
         /**
          * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1i7gg30r52z2em****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>The execution state on a single instance. Valid values:</p>
-         * <br>
-         * <p>*   Pending: The command was being verified or sent.</p>
-         * <br>
-         * <p>*   Invalid: The specified command type or parameter was invalid.</p>
-         * <br>
-         * <p>*   Aborted: The command failed to be sent to the instance. To send a command to an instance, make sure that the instance is in the Running state and the command can be sent to the instance within 1 minute.</p>
-         * <br>
-         * <p>*   Running: The command was being run on the instance.</p>
-         * <br>
-         * <p>*   Success:</p>
-         * <br>
-         * <p>    *   One-time task: The execution was complete, and the exit code was 0.</p>
-         * <p>    *   Scheduled task: The last execution was complete, the exit code was 0, and the specified period ended.</p>
-         * <br>
-         * <p>*   Failed:</p>
-         * <br>
-         * <p>    *   One-time task: The execution was complete, but the exit code was not 0.</p>
-         * <p>    *   Scheduled task: The last execution was complete, but the exit code was not 0. The specified period was about to end.</p>
-         * <br>
-         * <p>*   Error: The execution cannot proceed due to an exception.</p>
-         * <br>
-         * <p>*   Timeout: The execution timed out.</p>
-         * <br>
-         * <p>*   Cancelled: The execution was canceled, and the command was not run.</p>
-         * <br>
-         * <p>*   Stopping: The command task was being stopped.</p>
-         * <br>
-         * <p>*   Terminated: The execution was terminated before completion.</p>
-         * <br>
-         * <p>*   Scheduled:</p>
-         * <br>
-         * <p>    *   One-time task: The execution state can never be Scheduled.</p>
-         * <p>    *   Scheduled task: The command was waiting to be run.</p>
+         * <p>The execution status on a single instance. Valid values:</p>
+         * <ul>
+         * <li><p>Pending: The command is being verified or sent.</p>
+         * </li>
+         * <li><p>Invalid: The specified command type or parameter is invalid.</p>
+         * </li>
+         * <li><p>Aborted: The command failed to be sent to the instance. To send a command to an instance, make sure that the instance is in the Running state and the command can be sent to the instance within 1 minute.</p>
+         * </li>
+         * <li><p>Running: The command is being run on the instance.</p>
+         * </li>
+         * <li><p>Success:</p>
+         * <ul>
+         * <li>One-time task: The execution was complete, and the exit code was 0.</li>
+         * <li>Scheduled task: The last execution was complete, the exit code was 0, and the specified period ended.</li>
+         * </ul>
+         * </li>
+         * <li><p>Failed:</p>
+         * <ul>
+         * <li>One-time task: The execution was complete, but the exit code was not 0.</li>
+         * <li>Scheduled task: The last execution was complete, but the exit code was not 0. The specified period was about to end.</li>
+         * </ul>
+         * </li>
+         * <li><p>Error: The execution cannot proceed due to an exception.</p>
+         * </li>
+         * <li><p>Timeout: The execution timed out.</p>
+         * </li>
+         * <li><p>Cancelled: The execution was canceled before it started.</p>
+         * </li>
+         * <li><p>Stopping: The command task is being stopped.</p>
+         * </li>
+         * <li><p>Terminated: The execution was terminated before completion.</p>
+         * </li>
+         * <li><p>Scheduled:</p>
+         * <ul>
+         * <li>One-time task: The execution state can never be Scheduled.</li>
+         * <li>Scheduled task: The command is waiting to be run.</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         @NameInMap("InvocationStatus")
         public String invocationStatus;
 
         /**
-         * <p>The ID of the command task.</p>
+         * <p>The command task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-hz0jdfwd9f****</p>
          */
         @NameInMap("InvokeId")
         public String invokeId;
 
         /**
-         * <p>The execution state of the command. Valid values:</p>
-         * <br>
-         * <p>*   Running:</p>
-         * <br>
-         * <p>    *   Scheduled task: Before you stop the scheduled execution of the command, the execution state is always Running.</p>
-         * <p>    *   One-time task: If the command is being run on instances, the execution state is Running.</p>
-         * <br>
-         * <p>*   Finished:</p>
-         * <br>
-         * <p>    *   Scheduled task: The execution state can never be Finished.</p>
-         * <p>    *   One-time task: The execution was complete on all instances, or the execution was stopped on some instances and was complete on the other instances.</p>
-         * <br>
-         * <p>*   Failed:</p>
-         * <br>
-         * <p>    *   Scheduled task: The execution state can never be Failed.</p>
-         * <p>    *   One-time task: The execution failed on all instances.</p>
-         * <br>
-         * <p>*   PartialFailed:</p>
-         * <br>
-         * <p>    *   Scheduled task: The execution state can never be PartialFailed.</p>
-         * <p>    *   One-time task: The execution failed on some instances.</p>
-         * <br>
-         * <p>*   Stopped: The task was stopped.</p>
-         * <br>
-         * <p>*   Stopping: The task was being stopped.</p>
+         * <p>The execution status of the command. Valid values:</p>
+         * <ul>
+         * <li><p>Running:</p>
+         * <ul>
+         * <li>Scheduled task: Before you stop the scheduled execution of the command, the execution state is always Running.</li>
+         * <li>One-time task: If the command is being run on instances, the execution state is Running.</li>
+         * </ul>
+         * </li>
+         * <li><p>Finished:</p>
+         * <ul>
+         * <li>Scheduled task: The execution state can never be Finished.</li>
+         * <li>One-time task: The execution was complete on all instances, or the execution was stopped on some instances and was complete on the other instances.</li>
+         * </ul>
+         * </li>
+         * <li><p>Failed:</p>
+         * <ul>
+         * <li>Scheduled task: The execution state can never be Failed.</li>
+         * <li>One-time task: The execution failed on all instances.</li>
+         * </ul>
+         * </li>
+         * <li><p>PartialFailed:</p>
+         * <ul>
+         * <li>Scheduled task: The execution state can never be PartialFailed.</li>
+         * <li>One-time task: The execution failed on some instances.</li>
+         * </ul>
+         * </li>
+         * <li><p>Stopped: The task was stopped.</p>
+         * </li>
+         * <li><p>Stopping: The task is being stopped.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         @NameInMap("InvokeRecordStatus")
         public String invokeRecordStatus;
 
         /**
          * <p>The command output.</p>
-         * <br>
-         * <p>*   If ContentEncoding is set to PlainText in the request, the original command output is returned.</p>
-         * <p>*   If ContentEncoding is set to Base64 in the request, the Base64-encoded command output is returned.</p>
+         * <ul>
+         * <li>If ContentEncoding is set to PlainText in the request, the original command output is returned.</li>
+         * <li>If ContentEncoding is set to Base64 in the request, the Base64-encoded command output is returned.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>MTU6MzA6MDEK</p>
          */
         @NameInMap("Output")
         public String output;
 
         /**
          * <p>The number of times that the command was run on the instance.</p>
-         * <br>
-         * <p>*   If the command is set to run only once, the value is 0 or 1.</p>
-         * <p>*   If the command is set to run on a schedule, the value is the number of times that the command has been run on the instance.</p>
+         * <ul>
+         * <li>If the command is set to run only once, the value is 0 or 1.</li>
+         * <li>If the command is set to run on a schedule, the value is the number of times that the command has been run on the instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Repeats")
         public Integer repeats;
 
         /**
          * <p>The time when the command started to be run on the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-12-20T06:15:55Z</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
         /**
-         * <p>The time when the command task was stopped. If you call the `StopInvocation` operation to stop the command task, the value of this parameter is the time when the operation is called.</p>
+         * <p>The time when the command task was stopped. If you call the <code>StopInvocation</code> operation to stop the command task, the value of this parameter is the time when the operation is called.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-01-19T09:15:47Z</p>
          */
         @NameInMap("StopTime")
         public String stopTime;
@@ -299,16 +373,23 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
         public DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResultTags tags;
 
         /**
-         * <p>Indicates how the task was stopped. Valid values:</p>
-         * <br>
-         * <p>*   Process: The process of the command was stopped.</p>
-         * <p>*   ProcessTree: The process tree was stopped. In this case, the process of the command and all subprocesses of the process were stopped.</p>
+         * <p>Indicates how the command task is stopped when a command execution is manually stopped or times out. Valid values:</p>
+         * <ul>
+         * <li>Process: The process of the command is stopped.</li>
+         * <li>ProcessTree: The process tree of the command is stopped. In this case, the process of the command and all subprocesses are stopped.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ProcessTree</p>
          */
         @NameInMap("TerminationMode")
         public String terminationMode;
 
         /**
          * <p>The username used to run the command on the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>root</p>
          */
         @NameInMap("Username")
         public String username;
@@ -500,24 +581,36 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
 
         /**
          * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAdDWBF2</p>
          */
         @NameInMap("NextToken")
         public String nextToken;
 
         /**
          * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageNumber")
         public Long pageNumber;
 
         /**
          * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageSize")
         public Long pageSize;
 
         /**
          * <p>The total number of the commands.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("TotalCount")
         public Long totalCount;

@@ -6,21 +6,31 @@ import com.aliyun.tea.*;
 public class DescribePrefixListAttributesResponseBody extends TeaModel {
     /**
      * <p>The name of the prefix list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>IPv4</p>
      */
     @NameInMap("AddressFamily")
     public String addressFamily;
 
     /**
      * <p>The maximum number of entries that the prefix list can contain.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-02-20T07:11Z</p>
      */
     @NameInMap("CreationTime")
     public String creationTime;
 
     /**
      * <p>The IP address family of the prefix list. Valid values:</p>
-     * <br>
-     * <p>*   IPv4</p>
-     * <p>*   IPv6</p>
+     * <ul>
+     * <li>IPv4</li>
+     * <li>IPv6</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>This is description.</p>
      */
     @NameInMap("Description")
     public String description;
@@ -33,24 +43,36 @@ public class DescribePrefixListAttributesResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxEntries")
     public Integer maxEntries;
 
     /**
      * <p>Details about the entries in the prefix list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pl-x1j1k5ykzqlixdcy****</p>
      */
     @NameInMap("PrefixListId")
     public String prefixListId;
 
     /**
      * <p>The ID of the prefix list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PrefixListNameSample</p>
      */
     @NameInMap("PrefixListName")
     public String prefixListName;
 
     /**
      * <p>The description of the prefix list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>38793DB8-A4B2-4AEC-BFD3-111234E9188D</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -125,11 +147,18 @@ public class DescribePrefixListAttributesResponseBody extends TeaModel {
     }
 
     public static class DescribePrefixListAttributesResponseBodyEntriesEntry extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>192.168.1.0/24</p>
+         */
         @NameInMap("Cidr")
         public String cidr;
 
         /**
          * <p>The CIDR block in the entry in the prefix list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Description Sample 01</p>
          */
         @NameInMap("Description")
         public String description;

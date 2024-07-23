@@ -6,26 +6,37 @@ import com.aliyun.tea.*;
 public class RebootInstanceRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform only a dry run. Valid values:</p>
-     * <br>
-     * <p>*   true: performs only a dry run. The system checks the required parameters, the request format, service limits, and available ECS resources. If the request fails the dry run, the corresponding error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
-     * <p>*   false: performs a dry run and sends the request. If the request passes the dry run, the instance is restarted.</p>
-     * <br>
+     * <ul>
+     * <li>true: performs only a dry run. The system checks the required parameters, the request format, service limits, and available ECS resources. If the request fails the dry run, the corresponding error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li>false: performs a dry run and sends the request. If the request passes the dry run, the instance is restarted.</li>
+     * </ul>
      * <p>Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
      * <p>Specifies whether to forcefully stop the instance before you restart the instance. Valid values:</p>
-     * <br>
-     * <p>*   true: stops the instance in a forceful manner. This operation is equivalent to the power-off operation. Cache data that is not written to storage devices on the instance is lost.</p>
-     * <p>*   false (default): normally stops the instance.</p>
+     * <ul>
+     * <li>true: stops the instance in a forceful manner. This operation is equivalent to the power-off operation. Cache data that is not written to storage devices on the instance is lost.</li>
+     * <li>false (default): normally stops the instance.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("ForceStop")
     public Boolean forceStop;
 
     /**
      * <p>The instance ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-bp67acfmxazb4ph****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

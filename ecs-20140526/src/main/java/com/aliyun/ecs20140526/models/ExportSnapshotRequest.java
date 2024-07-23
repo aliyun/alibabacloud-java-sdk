@@ -4,12 +4,18 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ExportSnapshotRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("OssBucket")
     public String ossBucket;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -22,6 +28,9 @@ public class ExportSnapshotRequest extends TeaModel {
     @NameInMap("RoleName")
     public String roleName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SnapshotId")
     public String snapshotId;
 

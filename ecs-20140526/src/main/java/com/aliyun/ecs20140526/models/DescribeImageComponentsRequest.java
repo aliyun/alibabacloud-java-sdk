@@ -6,35 +6,50 @@ import com.aliyun.tea.*;
 public class DescribeImageComponentsRequest extends TeaModel {
     /**
      * <p>The IDs of image components. Valid values of N: 1 to 20.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ic-bp67acfmxazb4p****</p>
      */
     @NameInMap("ImageComponentId")
     public java.util.List<String> imageComponentId;
 
     /**
      * <p>The number of entries per page. Valid values: 1 to 500.</p>
-     * <br>
      * <p>Default value: 50.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The name of the image component. You must specify an exact name to search for the image component.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testComponent</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of `NextToken`.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of <code>NextToken</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AAAAAdDWBF2****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The type of the image component. Valid values:</p>
-     * <br>
-     * <p>*   SELF: the custom component that you created.</p>
-     * <p>*   ALIYUN: the system component provided by Alibaba Cloud.</p>
+     * <ul>
+     * <li>SELF: the custom component that you created.</li>
+     * <li>ALIYUN: the system component provided by Alibaba Cloud.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>SELF</p>
      */
     @NameInMap("Owner")
     public String owner;
@@ -46,15 +61,23 @@ public class DescribeImageComponentsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the image component. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the image component. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.</p>
-     * <br>
-     * <p>>  Resources in the default resource group are displayed in the response regardless of how this parameter is set.</p>
+     * <blockquote>
+     * <p> Resources in the default resource group are displayed in the response regardless of how this parameter is set.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-bp67acfmxazb4p****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -175,12 +198,18 @@ public class DescribeImageComponentsRequest extends TeaModel {
     public static class DescribeImageComponentsRequestTag extends TeaModel {
         /**
          * <p>The key of tag N. Valid values of N: 1 to 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of tag N. Valid values of N: 1 to 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
          */
         @NameInMap("Value")
         public String value;

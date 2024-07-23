@@ -5,24 +5,30 @@ import com.aliyun.tea.*;
 
 public class DescribeZonesRequest extends TeaModel {
     /**
-     * <p>The natural language that is used to filter responses. For more information, see [RFC 7231](https://tools.ietf.org/html/rfc7231). Valid values:</p>
-     * <br>
-     * <p>*   zh-CN</p>
-     * <p>*   en-US</p>
-     * <p>*   ja</p>
-     * <br>
+     * <p>The natural language that is used to filter responses. For more information, see <a href="https://tools.ietf.org/html/rfc7231">RFC 7231</a>. Valid values:</p>
+     * <ul>
+     * <li>zh-CN</li>
+     * <li>en-US</li>
+     * <li>ja</li>
+     * </ul>
      * <p>Default value: zh-CN.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>zh-CN</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
-     * <p>The billing method of resources. For more information, see [Billing overview](~~25398~~). Valid values:</p>
-     * <br>
-     * <p>*   PrePaid: subscription</p>
-     * <p>*   PostPaid: pay-as-you-go</p>
-     * <br>
+     * <p>The billing method of resources. For more information, see <a href="https://help.aliyun.com/document_detail/25398.html">Billing overview</a>. Valid values:</p>
+     * <ul>
+     * <li>PrePaid: subscription</li>
+     * <li>PostPaid: pay-as-you-go</li>
+     * </ul>
      * <p>Default value: PostPaid.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PostPaid</p>
      */
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
@@ -34,7 +40,11 @@ public class DescribeZonesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -46,24 +56,30 @@ public class DescribeZonesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The bidding policy for pay-as-you-go instances. You can specify this parameter when the `InstanceChargeType` parameter is set to PostPaid. For more information, see [Preemptible instances](~~52088~~). Valid values:</p>
-     * <br>
-     * <p>*   NoSpot: The instances are regular pay-as-you-go instances.</p>
-     * <p>*   SpotWithPriceLimit: The instances are preemptible instances with user-defined maximum hourly prices.</p>
-     * <p>*   SpotAsPriceGo: The instances are preemptible instances for which the market price at the time of purchase is automatically used as the bid price. The market price can be up to the pay-as-you-go price.</p>
-     * <br>
+     * <p>The bidding policy for pay-as-you-go instances. You can specify this parameter when the <code>InstanceChargeType</code> parameter is set to PostPaid. For more information, see <a href="https://help.aliyun.com/document_detail/52088.html">Preemptible instances</a>. Valid values:</p>
+     * <ul>
+     * <li>NoSpot: The instances are regular pay-as-you-go instances.</li>
+     * <li>SpotWithPriceLimit: The instances are preemptible instances with user-defined maximum hourly prices.</li>
+     * <li>SpotAsPriceGo: The instances are preemptible instances for which the market price at the time of purchase is automatically used as the bid price. The market price can be up to the pay-as-you-go price.</li>
+     * </ul>
      * <p>Default value: NoSpot.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NoSpot</p>
      */
     @NameInMap("SpotStrategy")
     public String spotStrategy;
 
     /**
      * <p>Specifies whether to display detailed information.</p>
-     * <br>
-     * <p>*   true: displays detailed information.</p>
-     * <p>*   false: does not display detailed information.</p>
-     * <br>
+     * <ul>
+     * <li>true: displays detailed information.</li>
+     * <li>false: does not display detailed information.</li>
+     * </ul>
      * <p>Default value: true.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("Verbose")
     public Boolean verbose;

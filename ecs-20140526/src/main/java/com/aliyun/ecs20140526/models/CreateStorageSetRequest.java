@@ -5,21 +5,29 @@ import com.aliyun.tea.*;
 
 public class CreateStorageSetRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The **token** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <strong>token</strong> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The description of the storage set. The description must be 2 to 256 characters in length and cannot start with [http:// or https://](http://https://。).</p>
+     * <p>The description of the storage set. The description must be 2 to 256 characters in length and cannot start with <a href="http://https://%E3%80%82">http:// or https://</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testDescription</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The maximum number of partitions supported by the storage set. The value must be greater than or equal to 2 but cannot exceed the quota that you obtained by calling the [DescribeAccountAttributes](~~73772~~) operation.</p>
-     * <br>
+     * <p>The maximum number of partitions supported by the storage set. The value must be greater than or equal to 2 but cannot exceed the quota that you obtained by calling the <a href="https://help.aliyun.com/document_detail/73772.html">DescribeAccountAttributes</a> operation.</p>
      * <p>Default value: 2.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxPartitionNumber")
     public Integer maxPartitionNumber;
@@ -31,7 +39,11 @@ public class CreateStorageSetRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the storage set. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the storage set. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -43,13 +55,20 @@ public class CreateStorageSetRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The name of the storage set. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (\_), and hyphens (-). The name must start with a letter and cannot start with [http:// or https:// ](http://https://。、（:）、（\_）（-）。).</p>
+     * <p>The name of the storage set. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (_), and hyphens (-). The name must start with a letter and cannot start with <a href="http://https://%E3%80%82%E3%80%81%EF%BC%88:%EF%BC%89%E3%80%81%EF%BC%88_%EF%BC%89%EF%BC%88-%EF%BC%89%E3%80%82">http:// or https:// </a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testStorageSetName</p>
      */
     @NameInMap("StorageSetName")
     public String storageSetName;
 
     /**
-     * <p>The zone ID of the storage set. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.</p>
+     * <p>The zone ID of the storage set. You can call the <a href="https://help.aliyun.com/document_detail/25610.html">DescribeZones</a> operation to query the most recent zone list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-g</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;

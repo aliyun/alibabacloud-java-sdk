@@ -12,6 +12,10 @@ public class DescribeSecurityGroupReferencesRequest extends TeaModel {
 
     /**
      * <p>The region ID of the security group.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -24,6 +28,10 @@ public class DescribeSecurityGroupReferencesRequest extends TeaModel {
 
     /**
      * <p>The ID of security group N. Valid values of N: 1 to 10.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sg-bp14vtedjtobkvi****</p>
      */
     @NameInMap("SecurityGroupId")
     public java.util.List<String> securityGroupId;

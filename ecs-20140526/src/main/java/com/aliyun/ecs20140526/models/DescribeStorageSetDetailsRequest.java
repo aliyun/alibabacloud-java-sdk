@@ -5,63 +5,98 @@ import com.aliyun.tea.*;
 
 public class DescribeStorageSetDetailsRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The value of **ClientToken** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The value of <strong>ClientToken</strong> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The IDs of disks or Shared Block Storage devices. The value can be a JSON array that consists of up to 100 disk or Shared Block Storage device IDs. Separate the IDs with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;d-bp1d6tsvznfghy7y****&quot;, &quot;d-bp1ippxbaql9zet7****&quot;, … &quot;d-bp1ib7bcz07l****&quot;]</p>
      */
     @NameInMap("DiskIds")
     public String diskIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>hide</p>
+     */
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>111</p>
+     */
     @NameInMap("OwnerId")
     public Long ownerId;
 
     /**
      * <p>The number of the page to return.</p>
-     * <br>
      * <p>Pages start from page 1.</p>
-     * <br>
      * <p>Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page.</p>
-     * <br>
      * <p>Maximum value: 100.</p>
-     * <br>
      * <p>Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the storage set. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the storage set. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>hide</p>
+     */
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>111</p>
+     */
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
     /**
      * <p>The ID of the storage set.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ss-bp67acfmxazb4p****</p>
      */
     @NameInMap("StorageSetId")
     public String storageSetId;
 
     /**
      * <p>The maximum number of partitions in the storage set.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("StorageSetPartitionNumber")
     public Integer storageSetPartitionNumber;

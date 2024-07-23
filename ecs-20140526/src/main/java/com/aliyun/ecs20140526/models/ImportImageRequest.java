@@ -6,39 +6,53 @@ import com.aliyun.tea.*;
 public class ImportImageRequest extends TeaModel {
     /**
      * <p>The system architecture. Valid values:</p>
-     * <br>
-     * <p>*   i386</p>
-     * <p>*   x86\_64</p>
-     * <p>*   arm64</p>
-     * <br>
-     * <p>Default value: x86\_64.</p>
+     * <ul>
+     * <li>i386</li>
+     * <li>x86_64</li>
+     * <li>arm64</li>
+     * </ul>
+     * <p>Default value: x86_64.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>x86_64</p>
      */
     @NameInMap("Architecture")
     public String architecture;
 
     /**
      * <p>The boot mode of the image. Valid values:</p>
-     * <br>
-     * <p>*   BIOS</p>
-     * <p>*   UEFI</p>
-     * <br>
-     * <p>Default value: BIOS. If you set `Architecture` to arm64, set this parameter to UEFI.</p>
-     * <br>
-     * <p>> Make sure that you are aware of the boot modes supported by the specified image, as thehe modified boot mode needs to be supported by the image. This way, instances that use this image can start.</p>
+     * <ul>
+     * <li>BIOS</li>
+     * <li>UEFI</li>
+     * </ul>
+     * <p>Default value: BIOS. If you set <code>Architecture</code> to arm64, set this parameter to UEFI.</p>
+     * <blockquote>
+     * <p>Make sure that you are aware of the boot modes supported by the specified image, as thehe modified boot mode needs to be supported by the image. This way, instances that use this image can start.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>BIOS</p>
      */
     @NameInMap("BootMode")
     public String bootMode;
 
     /**
-     * <p>The image description. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.</p>
+     * <p>The image description. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TestDescription</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The mode in which to check the image. If you do not specify this parameter, the image is not checked. Only the standard check mode is supported.</p>
-     * <br>
-     * <p>>  This parameter is supported for most Linux and Windows operating system versions. For more information about image check items and operating system limits for image check, see [Overview](~~439819~~) and [Operating system limits for image check](~~475800~~).</p>
+     * <blockquote>
+     * <p> This parameter is supported for most Linux and Windows operating system versions. For more information about image check items and operating system limits for image check, see <a href="https://help.aliyun.com/document_detail/439819.html">Overview</a> and <a href="https://help.aliyun.com/document_detail/475800.html">Operating system limits for image check</a>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Standard</p>
      */
     @NameInMap("DetectionStrategy")
     public String detectionStrategy;
@@ -50,30 +64,39 @@ public class ImportImageRequest extends TeaModel {
     public java.util.List<ImportImageRequestDiskDeviceMapping> diskDeviceMapping;
 
     /**
-     * <p>The image name. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `acs:` or `aliyun`. The name cannot contain `http://` or `https://`. The name can contain letters, digits, periods (.), colons (:), underscores (\_), and hyphens (-).</p>
+     * <p>The image name. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <code>acs:</code> or <code>aliyun</code>. The name cannot contain <code>http://</code> or <code>https://</code>. The name can contain letters, digits, periods (.), colons (:), underscores (_), and hyphens (-).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ImageTestName</p>
      */
     @NameInMap("ImageName")
     public String imageName;
 
     /**
      * <p>The type of the license used to activate the operating system after the image is imported. Valid values:</p>
-     * <br>
-     * <p>*   Auto: ECS checks the operating system of the image and allocates a license to the operating system. ECS first checks whether the operating system distribution specified by `Platform` has a license allocated through an official Alibaba Cloud channel. If yes, the allocated license is used. If no, the license that comes with the source operating system is used.</p>
-     * <p>*   Aliyun: The license allocated through an official Alibaba Cloud channel is used for the operating system distribution specified by `Platform`.</p>
-     * <p>*   BYOL: The license that comes with the source operating system is used. In this case, make sure that your license key is eligible for use in Alibaba Cloud.</p>
-     * <br>
+     * <ul>
+     * <li>Auto: ECS checks the operating system of the image and allocates a license to the operating system. ECS first checks whether the operating system distribution specified by <code>Platform</code> has a license allocated through an official Alibaba Cloud channel. If yes, the allocated license is used. If no, the license that comes with the source operating system is used.</li>
+     * <li>Aliyun: The license allocated through an official Alibaba Cloud channel is used for the operating system distribution specified by <code>Platform</code>.</li>
+     * <li>BYOL: The license that comes with the source operating system is used. In this case, make sure that your license key is eligible for use in Alibaba Cloud.</li>
+     * </ul>
      * <p>Default value: Auto.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Auto</p>
      */
     @NameInMap("LicenseType")
     public String licenseType;
 
     /**
      * <p>The operating system platform. Valid values:</p>
-     * <br>
-     * <p>*   windows</p>
-     * <p>*   linux</p>
-     * <br>
+     * <ul>
+     * <li>windows</li>
+     * <li>linux</li>
+     * </ul>
      * <p>Default value: linux.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>linux</p>
      */
     @NameInMap("OSType")
     public String OSType;
@@ -83,47 +106,57 @@ public class ImportImageRequest extends TeaModel {
 
     /**
      * <p>The operating system distribution. Valid values:</p>
-     * <br>
-     * <p>*   Aliyun</p>
-     * <p>*   Anolis</p>
-     * <p>*   CentOS</p>
-     * <p>*   Ubuntu</p>
-     * <p>*   CoreOS</p>
-     * <p>*   SUSE</p>
-     * <p>*   Debian</p>
-     * <p>*   OpenSUSE</p>
-     * <p>*   FreeBSD</p>
-     * <p>*   RedHat</p>
-     * <p>*   Kylin</p>
-     * <p>*   UOS</p>
-     * <p>*   Fedora</p>
-     * <p>*   Fedora CoreOS</p>
-     * <p>*   CentOS Stream</p>
-     * <p>*   AlmaLinux</p>
-     * <p>*   Rocky Linux</p>
-     * <p>*   Gentoo</p>
-     * <p>*   Customized Linux</p>
-     * <p>*   Others Linux</p>
-     * <p>*   Windows Server 2022</p>
-     * <p>*   Windows Server 2019</p>
-     * <p>*   Windows Server 2016</p>
-     * <p>*   Windows Server 2012</p>
-     * <p>*   Windows Server 2008</p>
-     * <p>*   Windows Server 2003</p>
-     * <br>
+     * <ul>
+     * <li>Aliyun</li>
+     * <li>Anolis</li>
+     * <li>CentOS</li>
+     * <li>Ubuntu</li>
+     * <li>CoreOS</li>
+     * <li>SUSE</li>
+     * <li>Debian</li>
+     * <li>OpenSUSE</li>
+     * <li>FreeBSD</li>
+     * <li>RedHat</li>
+     * <li>Kylin</li>
+     * <li>UOS</li>
+     * <li>Fedora</li>
+     * <li>Fedora CoreOS</li>
+     * <li>CentOS Stream</li>
+     * <li>AlmaLinux</li>
+     * <li>Rocky Linux</li>
+     * <li>Gentoo</li>
+     * <li>Customized Linux</li>
+     * <li>Others Linux</li>
+     * <li>Windows Server 2022</li>
+     * <li>Windows Server 2019</li>
+     * <li>Windows Server 2016</li>
+     * <li>Windows Server 2012</li>
+     * <li>Windows Server 2008</li>
+     * <li>Windows Server 2003</li>
+     * </ul>
      * <p>Default value: Others Linux.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Aliyun</p>
      */
     @NameInMap("Platform")
     public String platform;
 
     /**
-     * <p>The region ID of the source image. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the source image. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group to which to assign the image.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-bp67acfmxazb4p****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -136,16 +169,22 @@ public class ImportImageRequest extends TeaModel {
 
     /**
      * <p>The name of the RAM role used to import the image.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AliyunECSImageImportDefaultRole</p>
      */
     @NameInMap("RoleName")
     public String roleName;
 
     /**
      * <p>The Alibaba Cloud Resource Name (ARN) of the cloud box, which is used to uniquely identify a storage location in the cloud.</p>
-     * <br>
-     * <p>>  Specify this parameter only if you import an image from OSS on CloudBox. Otherwise, you do not need to specify this parameter. For more information, see [What is OSS on CloudBox?](~~430190~~)</p>
-     * <br>
-     * <p>The ARN must be in the following format: `arn:acs:cloudbox:{RegionId}:{AliUid}:cloudbox/{CloudBoxId}`. Replace `{RegionId}` with the region ID of the cloud box, `{AliUid}` with the ID of the Alibaba Cloud account to which the cloud box belongs, and `{CloudBoxId}` with the ID of the cloud box.</p>
+     * <blockquote>
+     * <p> Specify this parameter only if you import an image from OSS on CloudBox. Otherwise, you do not need to specify this parameter. For more information, see <a href="https://help.aliyun.com/document_detail/430190.html">What is OSS on CloudBox?</a></p>
+     * </blockquote>
+     * <p>The ARN must be in the following format: <code>arn:acs:cloudbox:{RegionId}:{AliUid}:cloudbox/{CloudBoxId}</code>. Replace <code>{RegionId}</code> with the region ID of the cloud box, <code>{AliUid}</code> with the ID of the Alibaba Cloud account to which the cloud box belongs, and <code>{CloudBoxId}</code> with the ID of the cloud box.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>arn:acs:cloudbox:cn-hangzhou:123456:cloudbox/cb-xx***123</p>
      */
     @NameInMap("StorageLocationArn")
     public String storageLocationArn;
@@ -300,62 +339,81 @@ public class ImportImageRequest extends TeaModel {
     public static class ImportImageRequestDiskDeviceMapping extends TeaModel {
         /**
          * <p>The device name of disk N in the custom image.</p>
-         * <br>
-         * <p>>  This parameter will be removed in the future. We recommend that you do not use this parameter to ensure future compatibility.</p>
+         * <blockquote>
+         * <p> This parameter will be removed in the future. We recommend that you do not use this parameter to ensure future compatibility.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("Device")
         public String device;
 
         /**
          * <p>The size of disk N in the custom image. Unit: GiB</p>
-         * <br>
          * <p>You can use this parameter to specify the sizes of the system disk and data disks in the custom image. When you specify the size of the system disk, make sure that the specified size is greater than or equal to the size of the imported image file. Unit: GiB. Valid values:</p>
-         * <br>
-         * <p>*   When the N value is 1, this parameter specifies the size of the system disk in the custom image. Valid values: 5 to 500.</p>
-         * <p>*   When the N value is an integer in the range of 2 to 17, this parameter specifies the size of a data disk in the custom image. Valid values: 5 to 2000.</p>
-         * <br>
+         * <ul>
+         * <li>When the N value is 1, this parameter specifies the size of the system disk in the custom image. Valid values: 5 to 500.</li>
+         * <li>When the N value is an integer in the range of 2 to 17, this parameter specifies the size of a data disk in the custom image. Valid values: 5 to 2000.</li>
+         * </ul>
          * <p>After the image file is uploaded to an OSS bucket, you can view the size of the image file in the OSS bucket.</p>
-         * <br>
-         * <p>>  This parameter will be removed in the future. We recommend that you use `DiskDeviceMapping.N.DiskImageSize` to ensure future compatibility.</p>
+         * <blockquote>
+         * <p> This parameter will be removed in the future. We recommend that you use <code>DiskDeviceMapping.N.DiskImageSize</code> to ensure future compatibility.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("DiskImSize")
         public Integer diskImSize;
 
         /**
          * <p>The size of disk N in the custom image after the image is imported.</p>
-         * <br>
          * <p>You can use this parameter to specify the sizes of the system disk and data disks in the custom image. When you specify the size of the system disk, make sure that the specified size is greater than or equal to the size of the imported image file. Unit: GiB. Valid values:</p>
-         * <br>
-         * <p>*   When the N value is 1, this parameter specifies the size of the system disk in the custom image. Valid values: 5 to 500.</p>
-         * <p>*   When the N value is an integer in the range of 2 to 17, this parameter specifies the size of a data disk in the custom image. Valid values: 5 to 2000.</p>
-         * <br>
+         * <ul>
+         * <li>When the N value is 1, this parameter specifies the size of the system disk in the custom image. Valid values: 5 to 500.</li>
+         * <li>When the N value is an integer in the range of 2 to 17, this parameter specifies the size of a data disk in the custom image. Valid values: 5 to 2000.</li>
+         * </ul>
          * <p>After the image file is uploaded to an OSS bucket, you can view the size of the image file in the OSS bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("DiskImageSize")
         public Integer diskImageSize;
 
         /**
          * <p>The image format. Valid values:</p>
-         * <br>
-         * <p>*   RAW</p>
-         * <p>*   VHD</p>
-         * <p>*   QCOW2</p>
-         * <br>
+         * <ul>
+         * <li>RAW</li>
+         * <li>VHD</li>
+         * <li>QCOW2</li>
+         * </ul>
          * <p>This parameter is empty by default, which indicates that the system checks the format of the image and uses the check result as the value of this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>QCOW2</p>
          */
         @NameInMap("Format")
         public String format;
 
         /**
          * <p>The OSS bucket where the image file is stored.</p>
-         * <br>
-         * <p>>  Before you import images for the first time, you must use RAM to authorize ECS to access your OSS buckets. If ECS is not authorized to access your OSS buckets, the `NoSetRoletoECSServiceAcount` error code is returned when you call the ImportImage operation. For more information, see the "**Usage notes**" section in this topic.</p>
+         * <blockquote>
+         * <p> Before you import images for the first time, you must use RAM to authorize ECS to access your OSS buckets. If ECS is not authorized to access your OSS buckets, the <code>NoSetRoletoECSServiceAcount</code> error code is returned when you call the ImportImage operation. For more information, see the &quot;<strong>Usage notes</strong>&quot; section in this topic.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>ecsimageos</p>
          */
         @NameInMap("OSSBucket")
         public String OSSBucket;
 
         /**
          * <p>The name (key) of the object that the uploaded image is stored as in the OSS bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CentOS_5.4_32.raw</p>
          */
         @NameInMap("OSSObject")
         public String OSSObject;
@@ -417,13 +475,19 @@ public class ImportImageRequest extends TeaModel {
 
     public static class ImportImageRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N of the image. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.</p>
+         * <p>The key of tag N of the image. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag N of the image. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `acs:`.</p>
+         * <p>The value of tag N of the image. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>acs:</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
          */
         @NameInMap("Value")
         public String value;

@@ -5,31 +5,52 @@ import com.aliyun.tea.*;
 
 public class DescribeDeploymentSetsRequest extends TeaModel {
     /**
-     * <p>The IDs of deployment sets. The value can be a JSON array that consists of up to 100 deployment set IDs in the format of `["ds-xxxxxxxxx", "ds-yyyyyyyyy", … "ds-zzzzzzzzz"]`. Separate multiple deployment set IDs with commas (,).</p>
+     * <p>The IDs of deployment sets. The value can be a JSON array that consists of up to 100 deployment set IDs in the format of <code>[&quot;ds-xxxxxxxxx&quot;, &quot;ds-yyyyyyyyy&quot;, … &quot;ds-zzzzzzzzz&quot;]</code>. Separate multiple deployment set IDs with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;ds-bp67acfmxazb4ph****&quot;, &quot;ds-bp67acfmxazb4pi****&quot;, … &quot;ds-bp67acfmxazb4pj****&quot;]</p>
      */
     @NameInMap("DeploymentSetIds")
     public String deploymentSetIds;
 
     /**
-     * <p>The name of the deployment set. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
+     * <p>The name of the deployment set. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testDeploymentSetName</p>
      */
     @NameInMap("DeploymentSetName")
     public String deploymentSetName;
 
     /**
-     * <p>> The parameter is deprecated.</p>
+     * <blockquote>
+     * <p>The parameter is deprecated.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
      */
     @NameInMap("Domain")
     public String domain;
 
     /**
-     * <p>> The parameter is deprecated.</p>
+     * <blockquote>
+     * <p>The parameter is deprecated.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
      */
     @NameInMap("Granularity")
     public String granularity;
 
     /**
-     * <p>> The parameter is deprecated.</p>
+     * <blockquote>
+     * <p>The parameter is deprecated.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
      */
     @NameInMap("NetworkType")
     public String networkType;
@@ -42,26 +63,32 @@ public class DescribeDeploymentSetsRequest extends TeaModel {
 
     /**
      * <p>The number of the page to return.</p>
-     * <br>
      * <p>Pages start from page 1.</p>
-     * <br>
      * <p>Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page.</p>
-     * <br>
      * <p>Maximum value: 50.</p>
-     * <br>
      * <p>Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the deployment set. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the deployment set. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -74,9 +101,13 @@ public class DescribeDeploymentSetsRequest extends TeaModel {
 
     /**
      * <p>The deployment strategy. Valid values:</p>
-     * <br>
-     * <p>*   Availability: high availability strategy.</p>
-     * <p>*   AvailabilityGroup: high availability group strategy.</p>
+     * <ul>
+     * <li>Availability: high availability strategy.</li>
+     * <li>AvailabilityGroup: high availability group strategy.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Availability</p>
      */
     @NameInMap("Strategy")
     public String strategy;

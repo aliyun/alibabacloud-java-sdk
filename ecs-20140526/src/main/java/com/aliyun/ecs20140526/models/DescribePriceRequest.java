@@ -15,126 +15,170 @@ public class DescribePriceRequest extends TeaModel {
 
     /**
      * <p>The number of ECS instances. You can specify this parameter when you want to query the prices of multiple instances that have specific specifications. Valid values: 1 to 1000.</p>
-     * <br>
      * <p>Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Amount")
     public Integer amount;
 
     /**
      * <p>The total number of times that the elasticity assurance can be applied. Set the value to Unlimited. This value indicates that the elasticity assurance can be applied an unlimited number of times within its effective period.</p>
-     * <br>
      * <p>Default value: Unlimited.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Unlimited</p>
      */
     @NameInMap("AssuranceTimes")
     public String assuranceTimes;
 
     /**
      * <p>The storage capacity. Unit: GiB.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1024</p>
      */
     @NameInMap("Capacity")
     public Integer capacity;
 
     /**
-     * <p>The type of the dedicated host. You can call the [DescribeDedicatedHostTypes](~~134240~~) operation to query the most recent list of dedicated host types.</p>
+     * <p>The type of the dedicated host. You can call the <a href="https://help.aliyun.com/document_detail/134240.html">DescribeDedicatedHostTypes</a> operation to query the most recent list of dedicated host types.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ddh.c5</p>
      */
     @NameInMap("DedicatedHostType")
     public String dedicatedHostType;
 
     /**
-     * <p>The image ID. An image contains the runtime environment to load when an instance is started. You can call the [DescribeImages](~~25534~~) operation to query the available images. If you do not specify this parameter, the system queries the prices of Linux images.</p>
+     * <p>This parameter takes effect only when ResourceType is set to instance.</p>
+     * <p>The image ID. Images contain the runtime environments to load when instances start. You can call the <a href="https://help.aliyun.com/document_detail/25534.html">DescribeImages</a> operation to query available images. If you do not specify this parameter, the system queries the prices of Linux images.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>centos_7_05_64_20G_alibase_20181212.vhd</p>
      */
     @NameInMap("ImageId")
     public String imageId;
 
     /**
      * <p>The total number of reserved instances for an instance type.</p>
-     * <br>
      * <p>Valid values: 1 to 1000.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("InstanceAmount")
     public Integer instanceAmount;
 
     /**
      * <p>The total number of vCPUs supported by the elasticity assurance. When you call this API operation, the system calculates the number of instances that an elasticity assurance must support based on the specified value of InstanceType. The calculated value is rounded up to the nearest integer.</p>
-     * <br>
-     * <p>> When you call this API operation to query the price of an elasticity assurance, you can only specify either InstanceCoreCpuCount or InstanceAmount.</p>
+     * <blockquote>
+     * <p>When you call this API operation to query the price of an elasticity assurance, you can only specify either InstanceCoreCpuCount or InstanceAmount.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1024</p>
      */
     @NameInMap("InstanceCpuCoreCount")
     public Integer instanceCpuCoreCount;
 
     /**
      * <p>The network type of the instance. Valid values:</p>
-     * <br>
-     * <p>*   classic: classic network</p>
-     * <p>*   vpc: Virtual Private Cloud (VPC)</p>
-     * <br>
+     * <ul>
+     * <li>classic: classic network</li>
+     * <li>vpc: Virtual Private Cloud (VPC)</li>
+     * </ul>
      * <p>Default value: vpc.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc</p>
      */
     @NameInMap("InstanceNetworkType")
     public String instanceNetworkType;
 
     /**
-     * <p>The instance type. When `ResourceType` is set to `instance`, you must specify this parameter. For more information, see [Instance families](~~25378~~) or call the [DescribeInstanceTypes](~~25620~~) operation to query the most recent list of instance types.</p>
+     * <p>The instance type. When <code>ResourceType</code> is set to <code>instance</code>, you must specify this parameter. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a> or call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation to query the most recent list of instance types.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs.g6.large</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
 
     /**
      * <p>The instance types. You can select only a single instance type when you configure an elasticity assurance in unlimited mode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs.g6.xlarge</p>
      */
     @NameInMap("InstanceTypeList")
     public java.util.List<String> instanceTypeList;
 
     /**
      * <p>The billing method for network usage. Valid values:</p>
-     * <br>
-     * <p>*   PayByBandwidth: pay-by-bandwidth</p>
-     * <p>*   PayByTraffic: pay-by-traffic</p>
-     * <br>
+     * <ul>
+     * <li>PayByBandwidth: pay-by-bandwidth</li>
+     * <li>PayByTraffic: pay-by-traffic</li>
+     * </ul>
      * <p>Default value: PayByTraffic</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PayByTraffic</p>
      */
     @NameInMap("InternetChargeType")
     public String internetChargeType;
 
     /**
      * <p>The maximum outbound public bandwidth. Unit: Mbit/s. Valid values: 0 to 100.</p>
-     * <br>
      * <p>Default value: 0.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("InternetMaxBandwidthOut")
     public Integer internetMaxBandwidthOut;
 
     /**
      * <p>Specifies whether the instance is I/O optimized. Valid values:</p>
-     * <br>
-     * <p>*   none: The instance is not I/O optimized.</p>
-     * <p>*   optimized: The instance is I/O optimized.</p>
-     * <br>
-     * <p>When the instance type specified by the InstanceType parameter belongs to [Generation I instance families](~~55263~~), the default value of this parameter is none.</p>
-     * <br>
-     * <p>When the instance type specified by the InstanceType parameter does not belong to [Generation I instance families](~~55263~~), the default value of this parameter is optimized.</p>
+     * <ul>
+     * <li>none: The instance is not I/O optimized.</li>
+     * <li>optimized: The instance is I/O optimized.</li>
+     * </ul>
+     * <p>When the instance type specified by the InstanceType parameter belongs to <a href="https://help.aliyun.com/document_detail/55263.html">Generation I instance families</a>, the default value of this parameter is none.</p>
+     * <p>When the instance type specified by the InstanceType parameter does not belong to <a href="https://help.aliyun.com/document_detail/55263.html">Generation I instance families</a>, the default value of this parameter is optimized.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>optimized</p>
      */
     @NameInMap("IoOptimized")
     public String ioOptimized;
 
     /**
      * <p>The Internet service provider (ISP). Valid values:</p>
-     * <br>
-     * <p>*   cmcc: China Mobile</p>
-     * <p>*   telecom: China Telecom</p>
-     * <p>*   unicom: China Unicom</p>
-     * <p>*   multiCarrier: multi-line ISP</p>
+     * <ul>
+     * <li>cmcc: China Mobile</li>
+     * <li>telecom: China Telecom</li>
+     * <li>unicom: China Unicom</li>
+     * <li>multiCarrier: multi-line ISP</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>cmcc</p>
      */
     @NameInMap("Isp")
     public String isp;
 
     /**
      * <p>The payment option of the reserved instance. Valid values:</p>
-     * <br>
-     * <p>*   No Upfront</p>
-     * <p>*   Partial Upfront</p>
-     * <p>*   All Upfront</p>
+     * <ul>
+     * <li>No Upfront</li>
+     * <li>Partial Upfront</li>
+     * <li>All Upfront</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>All Upfront</p>
      */
     @NameInMap("OfferingType")
     public String offeringType;
@@ -147,37 +191,52 @@ public class DescribePriceRequest extends TeaModel {
 
     /**
      * <p>The billing cycle of the ECS instance. Valid values:</p>
-     * <br>
-     * <p>*   Valid values when PriceUnit is set to Month: 1, 2, 3, 4, 5, 6, 7, 8, and 9.</p>
-     * <p>*   Valid values when PriceUnit is set to Year: 1, 2, 3, 4, and 5.</p>
-     * <p>*   Set the value to 1 when PriceUnit is set to Hour.</p>
-     * <br>
+     * <ul>
+     * <li>Valid values when PriceUnit is set to Month: 1, 2, 3, 4, 5, 6, 7, 8, and 9.</li>
+     * <li>Valid values when PriceUnit is set to Year: 1, 2, 3, 4, and 5.</li>
+     * <li>Set the value to 1 when PriceUnit is set to Hour.</li>
+     * </ul>
      * <p>Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Period")
     public Integer period;
 
     /**
      * <p>The operating system of the image that is used by the instance. Valid values:</p>
-     * <br>
-     * <p>*   Windows: Windows Server operating system</p>
-     * <p>*   Linux: Linux and UNIX-like operating system</p>
+     * <ul>
+     * <li>Windows: Windows Server operating system</li>
+     * <li>Linux: Linux and UNIX-like operating system</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Linux</p>
      */
     @NameInMap("Platform")
     public String platform;
 
     /**
      * <p>The pricing unit of the ECS resource. Valid values:</p>
-     * <br>
-     * <p>*   Month</p>
-     * <p>*   Year</p>
-     * <p>*   Hour (default)</p>
+     * <ul>
+     * <li>Month</li>
+     * <li>Year</li>
+     * <li>Hour (default)</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Year</p>
      */
     @NameInMap("PriceUnit")
     public String priceUnit;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent list of regions.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -190,62 +249,79 @@ public class DescribePriceRequest extends TeaModel {
 
     /**
      * <p>The resource type. Valid values:</p>
-     * <br>
-     * <p>*   instance: queries the most recent prices of ECS instances. When this parameter is set to `instance`, you must specify `InstanceType`.</p>
-     * <p>*   disk: queries the most recent prices of cloud disks. When this parameter is set to `disk`, you must specify `DataDisk.1.Category` and `DataDisk.1.Size`.</p>
-     * <p>*   bandwidth: queries the most recent prices of network usage.</p>
-     * <p>*   ddh: queries the most recent prices of dedicated hosts.</p>
-     * <p>*   ElasticityAssurance: queries the most recent prices of elasticity assurances. When this parameter is set to `ElasticityAssurance`, you must specify `InstanceType`.</p>
-     * <p>*   CapacityReservation: queries the most recent prices of capacity reservations. When this parameter is set to `CapacityReservation`, you must specify `InstanceType`.</p>
-     * <br>
+     * <ul>
+     * <li>instance: queries the most recent prices of ECS instances. When this parameter is set to <code>instance</code>, you must specify <code>InstanceType</code>.</li>
+     * <li>disk: queries the most recent prices of cloud disks. When this parameter is set to <code>disk</code>, you must specify <code>DataDisk.1.Category</code> and <code>DataDisk.1.Size</code>.</li>
+     * <li>bandwidth: queries the most recent prices of network usage.</li>
+     * <li>ddh: queries the most recent prices of dedicated hosts.</li>
+     * <li>ElasticityAssurance: queries the most recent prices of elasticity assurances. When this parameter is set to <code>ElasticityAssurance</code>, you must specify <code>InstanceType</code>.</li>
+     * <li>CapacityReservation: queries the most recent prices of capacity reservations. When this parameter is set to <code>CapacityReservation</code>, you must specify <code>InstanceType</code>.</li>
+     * </ul>
      * <p>Default value: instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>instance</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
      * <p>The scope of the reserved instance. Valid values:</p>
-     * <br>
-     * <p>*   Region: regional</p>
-     * <p>*   Zone: zonal</p>
-     * <br>
+     * <ul>
+     * <li>Region: regional</li>
+     * <li>Zone: zonal</li>
+     * </ul>
      * <p>Default value: Region.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Zone</p>
      */
     @NameInMap("Scope")
     public String scope;
 
     /**
      * <p>The protection period of the preemptible instance. Unit: hours. Default value: 1. Valid values:</p>
-     * <br>
-     * <p>- 1: After a preemptible instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After the 1-hour protection period ends, the system compares the bidding price with the market price and checks the resource inventory to determine whether to retain or release the instance.</p>
-     * <br>
-     * <p>- 0: After a preemptible instance is created, Alibaba Cloud does not ensure that the instance runs for 1 hour. The system compares the biding price with the market price and checks the resource inventory to determine whether to retain or release the instance.</p>
-     * <br>
-     * <p>Alibaba Cloud sends ECS system events to notify you 5 minutes before the instance is released. Preemptible instances are billed by second. We recommend that you specify a protection period based on your business requirements.</p>
-     * <br>
-     * <p>>If you set SpotStrategy to SpotWithPriceLimit or SpotAsPriceGo, this parameter takes effect.</p>
+     * <ul>
+     * <li>1: After a preemptible instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After the 1-hour protection period ends, the system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</li>
+     * <li>0: After a preemptible instance is created, Alibaba Cloud does not ensure that the instance runs for 1 hour. The system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</li>
+     * </ul>
+     * <p>Alibaba Cloud sends an ECS system event to notify you 5 minutes before the instance is released. Preemptible instances are billed by second. We recommend that you specify a protection period based on your business requirements.</p>
+     * <blockquote>
+     * <p> This parameter takes effect only when SpotStrategy is set to SpotWithPriceLimit or SpotAsPriceGo.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("SpotDuration")
     public Integer spotDuration;
 
     /**
-     * <p>The preemption policy for the pay-as-you-go instance. Valid values:</p>
-     * <br>
-     * <p>*   NoSpot: The instance is created as a pay-as-you-go instance.</p>
-     * <p>*   SpotWithPriceLimit: The instance is a preemptible instance with a user-defined maximum hourly price.</p>
-     * <p>*   SpotAsPriceGo: The instance is a preemptible instance for which the market price is automatically used as the bid price. The market price can be up to the pay-as-you-go price.</p>
-     * <br>
-     * <p>Default value: NoSpot</p>
-     * <br>
-     * <p>> This parameter is valid only when `PriceUnit` is set to Hour and `Period` is set to 1. The default value of `PriceUnit` is `Hour` and the default value of `Period` is `1`. Therefore, you do not need to set `PriceUnit` and `Period` when you set SpotStrategy.</p>
+     * <p>The bidding policy for the pay-as-you-go instance. Valid values:</p>
+     * <ul>
+     * <li>NoSpot: The instance is a regular pay-as-you-go instance.</li>
+     * <li>SpotWithPriceLimit: The instance is created as a preemptible instance that has a user-defined maximum hourly price.</li>
+     * <li>SpotAsPriceGo: The instance is created as a preemptible instance whose bid price is based on the market price at the time of purchase. The market price can be up to the pay-as-you-go price.</li>
+     * </ul>
+     * <p>Default value: NoSpot.</p>
+     * <blockquote>
+     * <p> This parameter takes effect only when <code>PriceUnit</code> is set to Hour and <code>Period</code> is set to 1. The default value of <code>PriceUnit</code> is <code>Hour</code> and the default value of <code>Period</code> is <code>1</code>. Therefore, you do not need to set <code>PriceUnit</code> or <code>Period</code> when you set SpotStrategy.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>NoSpot</p>
      */
     @NameInMap("SpotStrategy")
     public String spotStrategy;
 
     /**
      * <p>The zone ID.</p>
-     * <br>
-     * <p>> Prices of preemptible instances vary based on zones. When you query the price of a preemptible instance, specify ZoneId.</p>
+     * <blockquote>
+     * <p>Prices of preemptible instances vary based on zones. When you query the price of a preemptible instance, specify ZoneId.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hagzhou-i</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;
@@ -505,51 +581,65 @@ public class DescribePriceRequest extends TeaModel {
 
     public static class DescribePriceRequestDataDisk extends TeaModel {
         /**
-         * <p>The type of data disk N. Valid values:</p>
-         * <br>
-         * <p>*   cloud: basic disk</p>
-         * <p>*   cloud_efficiency: ultra disk</p>
-         * <p>*   cloud_ssd: standard SSD</p>
-         * <p>*   ephemeral_ssd: local SSD</p>
-         * <p>*   cloud_essd: ESSD</p>
-         * <br>
+         * <p>The category of data disk N. Valid values:</p>
+         * <ul>
+         * <li>cloud: basic disk</li>
+         * <li>cloud_efficiency: ultra disk</li>
+         * <li>cloud_ssd: standard SSD</li>
+         * <li>ephemeral_ssd: local SSD</li>
+         * <li>cloud_essd: ESSD</li>
+         * <li>cloud_auto: ESSD AutoPL disk</li>
+         * </ul>
          * <p>Valid values of N: 1 to 16.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_ssd</p>
          */
         @NameInMap("Category")
         public String category;
 
         /**
-         * <p>The performance level of data disk N when the disk is an ESSD. This parameter is valid only when `DataDisk.N.Category` is set to cloud_essd. Valid values:</p>
-         * <br>
-         * <p>*   PL0</p>
-         * <p>*   PL1 (default)</p>
-         * <p>*   PL2</p>
-         * <p>*   PL3</p>
-         * <br>
+         * <p>The performance level of data disk N when the disk is an ESSD. This parameter takes effect only when <code>DataDisk.N.Category</code> is set to cloud_essd. Valid values:</p>
+         * <ul>
+         * <li>PL0</li>
+         * <li>PL1 (default)</li>
+         * <li>PL2</li>
+         * <li>PL3</li>
+         * </ul>
          * <p>Valid values of N: 1 to 16.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PL1</p>
          */
         @NameInMap("PerformanceLevel")
         public String performanceLevel;
 
         /**
          * <p>The size of data disk N. Unit: GiB. Valid values:</p>
-         * <br>
-         * <p>*   Valid values when Category is set to cloud: 5 to 2000.</p>
-         * <br>
-         * <p>*   Valid values when Category is set to cloud_efficiency: 20 to 32768.</p>
-         * <br>
-         * <p>*   Valid values when DataDisk.N.Category is set to cloud_ssd: 20 to 32768.</p>
-         * <br>
-         * <p>*   Valid values when DataDisk.N.Category is set to cloud_essd: depend on the value of `DataDisk.N.PerformanceLevel`.</p>
-         * <br>
-         * <p>    *   Valid values when DataDisk.N.PerformanceLevel is set to PL0: 40 to 32768.</p>
-         * <p>    *   Valid values when DataDisk.N.PerformanceLevel is set to PL1: 20 to 32768.</p>
-         * <p>    *   Valid values when DataDisk.N.PerformanceLevel is set to PL2: 461 to 32768.</p>
-         * <p>    *   Valid values when DataDisk.4.PerformanceLevel is set to PL3: 1261 to 32768.</p>
-         * <br>
-         * <p>*   Valid values when DataDisk.N.Category is set to ephemeral_ssd: 5 to 800.</p>
-         * <br>
+         * <ul>
+         * <li><p>Valid values when DataDisk.N.Category is set to cloud: 5 to 2000.</p>
+         * </li>
+         * <li><p>Valid values when DataDisk.N.Category is set to cloud_efficiency: 20 to 32768.</p>
+         * </li>
+         * <li><p>Valid values when DataDisk.N.Category is set to cloud_ssd: 20 to 32768.</p>
+         * </li>
+         * <li><p>Valid values when DataDisk.N.Category is set to cloud_auto: 1 to 32768.</p>
+         * </li>
+         * <li><p>Valid values when DataDisk.N.Category is set to cloud_essd: vary based on the value of <code>DataDisk.N.PerformanceLevel</code>.</p>
+         * <ul>
+         * <li>Valid values when DataDisk.N.PerformanceLevel is set to PL0: 1 to 32768.</li>
+         * <li>Valid values when DataDisk.N.PerformanceLevel is set to PL1: 20 to 32768.</li>
+         * <li>Valid values when DataDisk.N.PerformanceLevel is set to PL2: 461 to 32768.</li>
+         * <li>Valid values when DataDisk.N.PerformanceLevel is set to PL3: 1261 to 32768.</li>
+         * </ul>
+         * </li>
+         * <li><p>Valid values when DataDisk.N.Category is set to ephemeral_ssd: 5 to 800.</p>
+         * </li>
+         * </ul>
          * <p>Valid values of N: 1 to 16.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2000</p>
          */
         @NameInMap("Size")
         public Long size;
@@ -587,7 +677,11 @@ public class DescribePriceRequest extends TeaModel {
 
     public static class DescribePriceRequestSchedulerOptions extends TeaModel {
         /**
-         * <p>专有宿主机ID。您可以通过[DescribeDedicatedHosts ](~~134242~~)查询专有宿主机ID列表。</p>
+         * <p>This parameter takes effect only when ResourceType is set to instance.</p>
+         * <p>The ID of the dedicated host. You can call the <a href="https://help.aliyun.com/document_detail/134242.html">DescribeDedicatedHosts</a> operation to query the dedicated host list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dh-bp67acfmxazb4p****</p>
          */
         @NameInMap("DedicatedHostId")
         public String dedicatedHostId;
@@ -609,36 +703,62 @@ public class DescribePriceRequest extends TeaModel {
 
     public static class DescribePriceRequestSystemDisk extends TeaModel {
         /**
-         * <p>The type of the system disk. Valid values:</p>
-         * <br>
-         * <p>*   cloud: basic disk</p>
-         * <p>*   cloud_efficiency: ultra disk</p>
-         * <p>*   cloud_ssd: standard SSD</p>
-         * <p>*   ephemeral_ssd: local SSD</p>
-         * <p>*   cloud_essd: enhanced SSD (ESSD)</p>
-         * <br>
-         * <p>Description of the default values:</p>
-         * <br>
-         * <p>*   When the InstanceType parameter is set to a retired instance type and `IoOptimized` is set to `none`, the default value of this parameter is `cloud`.</p>
-         * <p>*   In other cases, the default value of this parameter is `cloud_efficiency`.</p>
-         * <br>
-         * <p>> If you want to query the prices of system disks, you must also specify `ImageId`.</p>
+         * <p>The category of the system disk. Valid values:</p>
+         * <ul>
+         * <li>cloud: basic disk</li>
+         * <li>cloud_efficiency: ultra disk</li>
+         * <li>cloud_ssd: standard SSD</li>
+         * <li>ephemeral_ssd: local SSD</li>
+         * <li>cloud_essd: Enterprise SSD (ESSD)</li>
+         * <li>cloud_auto: ESSD AutoPL disk</li>
+         * </ul>
+         * <p>Default value:</p>
+         * <ul>
+         * <li>When InstanceType is set to a retired instance type and <code>IoOptimized</code> is set to <code>none</code>, the default value is <code>cloud</code>.</li>
+         * <li>In other cases, the default value is <code>cloud_efficiency</code>.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If you want to query the price of a system disk, you must also specify <code>ImageId</code>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_ssd</p>
          */
         @NameInMap("Category")
         public String category;
 
         /**
-         * <p>The performance level of the system disk when the disk is an ESSD. This parameter is valid only when `SystemDiskCategory` is set to cloud_essd. Valid values:</p>
-         * <br>
+         * <p>The performance level of the system disk when the disk is an ESSD. This parameter is valid only when <code>SystemDiskCategory</code> is set to cloud_essd. Valid values:</p>
          * <p>PL0, PL1 (default), PL2, PL3.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PL1</p>
          */
         @NameInMap("PerformanceLevel")
         public String performanceLevel;
 
         /**
-         * <p>The size of the system disk. Unit: GiB. Valid values: 20 to 500.</p>
-         * <br>
-         * <p>Default value: 20 or the image size, whichever is greater.</p>
+         * <p>The size of the system disk. Unit: GiB. Valid values:</p>
+         * <ul>
+         * <li><p>Basic disk (cloud): 20 to 500.</p>
+         * </li>
+         * <li><p>ESSD (cloud_essd): Valid values vary based on the SystemDisk.PerformanceLevel value.</p>
+         * <ul>
+         * <li>Valid values when SystemDisk.PerformanceLevel is set to PL0: 1 to 2048.</li>
+         * <li>Valid values when SystemDisk.PerformanceLevel is set to PL1: 20 to 2048.</li>
+         * <li>Valid values when SystemDisk.PerformanceLevel is set to PL2: 461 to 2048.</li>
+         * <li>Valid values when SystemDisk.PerformanceLevel is set to PL3: 1261 to 2048.</li>
+         * </ul>
+         * </li>
+         * <li><p>ESSD AutoPL disk (cloud_auto): 1 to 2048.</p>
+         * </li>
+         * <li><p>Other disk categories: 20 to 2048.</p>
+         * </li>
+         * </ul>
+         * <p>Default value: 20 or the size of the image specified by ImageId, whichever is greater.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("Size")
         public Integer size;

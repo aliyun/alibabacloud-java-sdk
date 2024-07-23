@@ -6,14 +6,19 @@ import com.aliyun.tea.*;
 public class StartTerminalSessionRequest extends TeaModel {
     /**
      * <p>The command to run after the session is initiated. The command length cannot exceed 512 characters.</p>
-     * <br>
-     * <p>>  If you specify the `CommandLine` parameter, you cannot specify the `PortNumber` or `TargetServer` parameter.</p>
+     * <blockquote>
+     * <p> If you specify the <code>CommandLine</code> parameter, you cannot specify the <code>PortNumber</code> or <code>TargetServer</code> parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>ssh <a href="mailto:root@192.168.0.246">root@192.168.0.246</a></p>
      */
     @NameInMap("CommandLine")
     public String commandLine;
 
     /**
      * <p>The instance IDs.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
     public java.util.List<String> instanceId;
@@ -26,14 +31,20 @@ public class StartTerminalSessionRequest extends TeaModel {
 
     /**
      * <p>The port number of the ECS instance. The port is used to forward data. After this parameter is configured, Cloud Assistant Agent forwards data to the specified port. For example, you can set this parameter to 22 for data forwarding over SSH.</p>
-     * <br>
      * <p>This parameter is empty by default, which indicates that no port is configured to forward data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>22</p>
      */
     @NameInMap("PortNumber")
     public Integer portNumber;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -46,14 +57,21 @@ public class StartTerminalSessionRequest extends TeaModel {
 
     /**
      * <p>The IP address of the instance. You can use the IP address to access the destination service in a virtual private cloud (VPC).</p>
-     * <br>
-     * <p>>  If this parameter is not empty, `PortNumber` specifies the port number that is used by the managed instance to access the destination service in the VPC.</p>
+     * <blockquote>
+     * <p> If this parameter is not empty, <code>PortNumber</code> specifies the port number that is used by the managed instance to access the destination service in the VPC.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.0.246</p>
      */
     @NameInMap("TargetServer")
     public String targetServer;
 
     /**
      * <p>The username used for connection establishment.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testUser</p>
      */
     @NameInMap("Username")
     public String username;

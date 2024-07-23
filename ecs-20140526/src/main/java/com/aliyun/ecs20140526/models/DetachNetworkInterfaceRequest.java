@@ -6,14 +6,23 @@ import com.aliyun.tea.*;
 public class DetachNetworkInterfaceRequest extends TeaModel {
     /**
      * <p>The ID of the trunk ENI.</p>
-     * <br>
-     * <p>>  This parameter is unavailable for use.</p>
+     * <blockquote>
+     * <p> This parameter is unavailable for use.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-bp67acfmxazb4p****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The ID of the instance</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eni-bp67acfmxazb4p****</p>
      */
     @NameInMap("NetworkInterfaceId")
     public String networkInterfaceId;
@@ -26,6 +35,10 @@ public class DetachNetworkInterfaceRequest extends TeaModel {
 
     /**
      * <p>The ID of the ENI.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -38,6 +51,9 @@ public class DetachNetworkInterfaceRequest extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eni-f8zapqwj1v1j4ia3****</p>
      */
     @NameInMap("TrunkNetworkInstanceId")
     public String trunkNetworkInstanceId;

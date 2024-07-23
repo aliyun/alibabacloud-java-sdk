@@ -6,32 +6,46 @@ import com.aliyun.tea.*;
 public class ExportImageRequest extends TeaModel {
     /**
      * <p>The format in which you want to export the custom image. Valid values:</p>
-     * <br>
-     * <p>*   raw</p>
-     * <p>*   vhd</p>
-     * <p>*   qcow2</p>
-     * <p>*   vmdk</p>
-     * <p>*   vdi</p>
-     * <br>
+     * <ul>
+     * <li>raw</li>
+     * <li>vhd</li>
+     * <li>qcow2</li>
+     * <li>vmdk</li>
+     * <li>vdi</li>
+     * </ul>
      * <p>Default value: raw.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>raw</p>
      */
     @NameInMap("ImageFormat")
     public String imageFormat;
 
     /**
      * <p>The custom image ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>m-bp67acfmxazb4p****</p>
      */
     @NameInMap("ImageId")
     public String imageId;
 
     /**
      * <p>The OSS bucket in which you want to store the exported custom image.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testexportImage</p>
      */
     @NameInMap("OSSBucket")
     public String OSSBucket;
 
     /**
      * <p>The prefix for the name of the OSS object. The prefix must be 1 to 30 characters in length and can contain digits and letters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EcsExport</p>
      */
     @NameInMap("OSSPrefix")
     public String OSSPrefix;
@@ -40,7 +54,11 @@ public class ExportImageRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the custom image. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the custom image. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -53,6 +71,9 @@ public class ExportImageRequest extends TeaModel {
 
     /**
      * <p>The name of the RAM role that you want to use to export the custom image.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AliyunECSImageExportDefaultRole</p>
      */
     @NameInMap("RoleName")
     public String roleName;

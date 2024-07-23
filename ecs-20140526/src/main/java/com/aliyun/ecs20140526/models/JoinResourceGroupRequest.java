@@ -11,19 +11,28 @@ public class JoinResourceGroupRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the resource. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the resource. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group to which you want to add the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-bp67acfmxazb4p****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>The ID of the resource. For example, if you set ResourceType to instance, set this parameter to the ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sg-bp67acfmxazb4p****</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;
@@ -36,22 +45,25 @@ public class JoinResourceGroupRequest extends TeaModel {
 
     /**
      * <p>The type of the ECS resource. Valid values:</p>
-     * <br>
-     * <p>*   instance: instance</p>
-     * <p>*   disk: Elastic Block Storage (EBS) device</p>
-     * <p>*   snapshot: snapshot</p>
-     * <p>*   image: image</p>
-     * <p>*   securitygroup: security group</p>
-     * <p>*   ddh: dedicated host</p>
-     * <p>*   ddhcluster: dedicated host cluster</p>
-     * <p>*   eni: ENI</p>
-     * <p>*   keypair: SSH key pair</p>
-     * <p>*   launchtemplate: launch template</p>
-     * <p>*   command: Cloud Assistant command</p>
-     * <p>*   activation: activation code for a Cloud Assistant managed instance</p>
-     * <p>*   managedinstance: Cloud Assistant managed instance</p>
-     * <br>
+     * <ul>
+     * <li>instance: instance</li>
+     * <li>disk: Elastic Block Storage (EBS) device</li>
+     * <li>snapshot: snapshot</li>
+     * <li>image: image</li>
+     * <li>securitygroup: security group</li>
+     * <li>ddh: dedicated host</li>
+     * <li>ddhcluster: dedicated host cluster</li>
+     * <li>eni: ENI</li>
+     * <li>keypair: SSH key pair</li>
+     * <li>launchtemplate: launch template</li>
+     * <li>command: Cloud Assistant command</li>
+     * <li>activation: activation code for a Cloud Assistant managed instance</li>
+     * <li>managedinstance: Cloud Assistant managed instance</li>
+     * </ul>
      * <p>The values are case-sensitive.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>securitygroup</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

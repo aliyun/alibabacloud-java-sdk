@@ -6,21 +6,32 @@ import com.aliyun.tea.*;
 public class CreatePrefixListRequest extends TeaModel {
     /**
      * <p>The IP address family. Valid values:</p>
-     * <br>
-     * <p>*   IPv4</p>
-     * <p>*   IPv6</p>
+     * <ul>
+     * <li>IPv4</li>
+     * <li>IPv6</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>IPv4</p>
      */
     @NameInMap("AddressFamily")
     public String addressFamily;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The `token` can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <code>token</code> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0c593ea1-3bea-11e9-b96b-88e9fe637760</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The description of the prefix list. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.</p>
+     * <p>The description of the prefix list. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>This is description.</p>
      */
     @NameInMap("Description")
     public String description;
@@ -33,6 +44,10 @@ public class CreatePrefixListRequest extends TeaModel {
 
     /**
      * <p>The maximum number of entries that the prefix list can contain. Valid values: 1 to 200.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxEntries")
     public Integer maxEntries;
@@ -44,13 +59,21 @@ public class CreatePrefixListRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The name of the prefix list. The name must be 2 to 128 characters in length, and can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-). It must start with a letter and cannot start with `http://`, `https://`, `com.aliyun`, or `com.alibabacloud`.</p>
+     * <p>The name of the prefix list. The name must be 2 to 128 characters in length, and can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-). It must start with a letter and cannot start with <code>http://</code>, <code>https://</code>, <code>com.aliyun</code>, or <code>com.alibabacloud</code>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PrefixListNameSample</p>
      */
     @NameInMap("PrefixListName")
     public String prefixListName;
 
     /**
      * <p>The ID of the region in which to create the prefix list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-chengdu</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -157,22 +180,28 @@ public class CreatePrefixListRequest extends TeaModel {
     public static class CreatePrefixListRequestEntry extends TeaModel {
         /**
          * <p>The CIDR block in entry N. Valid values of N: 0 to 200. Take note of the following items:</p>
-         * <br>
-         * <p>*   The total number of entries cannot exceed the `MaxEntries` value.</p>
-         * <p>*   CIDR block types are determined by the IP address family. You cannot combine IPv4 and IPv6 CIDR blocks in a single prefix list.</p>
-         * <p>*   CIDR blocks must be unique across all entries in a prefix list. For example, you cannot specify 192.168.1.0/24 twice in the entries of the prefix list.</p>
-         * <p>*   IP addresses are supported. The system converts IP addresses into CIDR blocks. For example, if you specify 192.168.1.100, the system converts it into the 192.168.1.100/32 CIDR block.</p>
-         * <p>*   If an IPv6 CIDR block is used, the system converts it into the zero compression format and changes uppercase letters into lowercase ones. For example, if you specify 2001:0DB8:0000:0000:0000:0000:0000:0000/32, the system converts it into 2001:db8::/32.</p>
-         * <br>
-         * <p>For more information about CIDR blocks, see the [What is CIDR?](~~40637~~#title-gu4-uzk-12r) section in the "Network FAQ" topic.</p>
-         * <br>
+         * <ul>
+         * <li>The total number of entries cannot exceed the <code>MaxEntries</code> value.</li>
+         * <li>CIDR block types are determined by the IP address family. You cannot combine IPv4 and IPv6 CIDR blocks in a single prefix list.</li>
+         * <li>CIDR blocks must be unique across all entries in a prefix list. For example, you cannot specify 192.168.1.0/24 twice in the entries of the prefix list.</li>
+         * <li>IP addresses are supported. The system converts IP addresses into CIDR blocks. For example, if you specify 192.168.1.100, the system converts it into the 192.168.1.100/32 CIDR block.</li>
+         * <li>If an IPv6 CIDR block is used, the system converts it into the zero compression format and changes uppercase letters into lowercase ones. For example, if you specify 2001:0DB8:0000:0000:0000:0000:0000:0000/32, the system converts it into 2001:db8::/32.</li>
+         * </ul>
+         * <p>For more information about CIDR blocks, see the <a href="https://help.aliyun.com/document_detail/40637.html#title-gu4-uzk-12r">What is CIDR?</a> section in the &quot;Network FAQ&quot; topic.</p>
          * <p>This parameter is empty by default.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.1.0/24</p>
          */
         @NameInMap("Cidr")
         public String cidr;
 
         /**
-         * <p>The description in entry N. The description must be 2 to 32 characters in length and cannot start with `http://` or `https://`. Valid values of N: 0 to 200.</p>
+         * <p>The description in entry N. The description must be 2 to 32 characters in length and cannot start with <code>http://</code> or <code>https://</code>. Valid values of N: 0 to 200.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Description Sample 01</p>
          */
         @NameInMap("Description")
         public String description;

@@ -9,6 +9,9 @@ public class ReleaseCapacityReservationRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to perform only a dry run, without performing the actual request. Set the value to false. This indicates that the system directly releases the capacity reservation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
@@ -20,7 +23,11 @@ public class ReleaseCapacityReservationRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the capacity reservation. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the capacity reservation. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -95,6 +102,10 @@ public class ReleaseCapacityReservationRequest extends TeaModel {
     public static class ReleaseCapacityReservationRequestPrivatePoolOptions extends TeaModel {
         /**
          * <p>The ID of the capacity reservation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>crp-bp67acfmxazb4****</p>
          */
         @NameInMap("Id")
         public String id;

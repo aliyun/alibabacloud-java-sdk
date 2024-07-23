@@ -6,63 +6,84 @@ import com.aliyun.tea.*;
 public class ModifyInstanceChargeTypeRequest extends TeaModel {
     /**
      * <p>Specifies whether to automatically complete the payment. Valid values:</p>
-     * <br>
-     * <p>*   true: The payment is automatically completed. Make sure that your account balance is sufficient. Otherwise, your order becomes invalid and is canceled.</p>
-     * <p>*   false: An order is generated but no payment is made.</p>
-     * <br>
+     * <ul>
+     * <li>true: The payment is automatically completed. Make sure that your account balance is sufficient. Otherwise, your order becomes invalid and is canceled.</li>
+     * <li>false: An order is generated but no payment is made.</li>
+     * </ul>
      * <p>Default value: true.</p>
-     * <br>
-     * <p>> If your account balance is insufficient, you can set AutoPay to false to generate an unpaid order. Then, you can log on to the ECS console to pay for the order.</p>
+     * <blockquote>
+     * <p>If your account balance is insufficient, you can set AutoPay to false to generate an unpaid order. Then, you can log on to the ECS console to pay for the order.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The **token** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <strong>token</strong> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>Specifies whether to perform only a dry run. Valid Values:</p>
-     * <br>
-     * <p>*   true: performs only a dry run. The system checks whether your AccessKey pair is valid, whether Resource Access Management (RAM) users are granted permissions, and whether the required parameters are specified. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
-     * <p>*   false: performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
-     * <br>
+     * <ul>
+     * <li>true: performs only a dry run. The system checks whether your AccessKey pair is valid, whether Resource Access Management (RAM) users are granted permissions, and whether the required parameters are specified. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li>false: performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+     * </ul>
      * <p>Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
      * <p>Specifies whether to change the billing method of all data disks attached to the instance from pay-as-you-go to subscription.</p>
-     * <br>
      * <p>Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("IncludeDataDisks")
     public Boolean includeDataDisks;
 
     /**
      * <p>The new billing method. Valid values:</p>
-     * <br>
-     * <p>*   PrePaid</p>
-     * <p>*   PostPaid</p>
-     * <br>
+     * <ul>
+     * <li>PrePaid</li>
+     * <li>PostPaid</li>
+     * </ul>
      * <p>Default value: PrePaid.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PrePaid</p>
      */
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
 
     /**
      * <p>The instance IDs. The value can be a JSON array that consists of up to 20 instance IDs. Separate the instance IDs with commas (,).</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;i-bp67acfmxazb4p****&quot;,&quot;i-bp67acfmxazb4d****&quot;]</p>
      */
     @NameInMap("InstanceIds")
     public String instanceIds;
 
     /**
      * <p>Specifies whether to return cost details of the order after the billing method is changed from subscription to pay-as-you-go.</p>
-     * <br>
      * <p>Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("IsDetailFee")
     public Boolean isDetailFee;
@@ -75,24 +96,31 @@ public class ModifyInstanceChargeTypeRequest extends TeaModel {
 
     /**
      * <p>The renewal duration of the subscription instance. If the instance is hosted on a dedicated host, the renewal duration of the instance cannot exceed the subscription duration of the dedicated host. Valid values:</p>
-     * <br>
-     * <p>Valid values when `PeriodUnit` is set to Month: `1, 2, 3, 4, 5, 6, 7, 8, 9, and 12`.</p>
+     * <p>Valid values when <code>PeriodUnit</code> is set to Month: <code>1, 2, 3, 4, 5, 6, 7, 8, 9, and 12</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Period")
     public Integer period;
 
     /**
-     * <p>The unit of the renewal duration specified by `Period`. Valid values:</p>
-     * <br>
+     * <p>The unit of the renewal duration specified by <code>Period</code>. Valid values:</p>
      * <p>Month</p>
-     * <br>
      * <p>Default value: Month.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Month</p>
      */
     @NameInMap("PeriodUnit")
     public String periodUnit;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

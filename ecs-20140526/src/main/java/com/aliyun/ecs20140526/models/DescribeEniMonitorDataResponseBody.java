@@ -12,12 +12,18 @@ public class DescribeEniMonitorDataResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -54,48 +60,72 @@ public class DescribeEniMonitorDataResponseBody extends TeaModel {
     public static class DescribeEniMonitorDataResponseBodyMonitorDataEniMonitorData extends TeaModel {
         /**
          * <p>The number of received packets that were dropped by the secondary ENI over the internal network.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("DropPacketRx")
         public String dropPacketRx;
 
         /**
          * <p>The number of sent packets that were dropped by the secondary ENI over the internal network.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("DropPacketTx")
         public String dropPacketTx;
 
         /**
          * <p>The ID of the secondary ENI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eni-bp19da36d6xdwey****</p>
          */
         @NameInMap("EniId")
         public String eniId;
 
         /**
          * <p>The average rate at which the secondary ENI received data over the internal network. Unit: Kbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("IntranetRx")
         public String intranetRx;
 
         /**
          * <p>The average rate at which the secondary ENI sent data over the internal network. Unit: Kbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("IntranetTx")
         public String intranetTx;
 
         /**
          * <p>The number of packets received by the secondary ENI over the internal network.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("PacketRx")
         public String packetRx;
 
         /**
          * <p>The number of packets sent by the secondary ENI over the internal network.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("PacketTx")
         public String packetTx;
 
         /**
          * <p>The timestamp of the monitoring data. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-05-21T03:22:00Z</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;

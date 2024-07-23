@@ -16,9 +16,15 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionRequest extends Te
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PhysicalConnectionId")
     public String physicalConnectionId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

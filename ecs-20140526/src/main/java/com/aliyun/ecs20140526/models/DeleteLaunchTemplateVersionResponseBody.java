@@ -12,6 +12,9 @@ public class DeleteLaunchTemplateVersionResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class DeleteLaunchTemplateVersionResponseBody extends TeaModel {
     public static class DeleteLaunchTemplateVersionResponseBodyLaunchTemplateVersionsLaunchTemplateVersion extends TeaModel {
         /**
          * <p>The ID of the launch template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lt-m5eiaupmvm2op9d****</p>
          */
         @NameInMap("LaunchTemplateId")
         public String launchTemplateId;
 
         /**
          * <p>The version number of the launch template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("LaunchTemplateVersionNumber")
         public Long launchTemplateVersionNumber;

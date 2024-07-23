@@ -6,16 +6,23 @@ import com.aliyun.tea.*;
 public class ModifyInstanceMaintenanceAttributesRequest extends TeaModel {
     /**
      * <p>The maintenance action. Valid values:</p>
-     * <br>
-     * <p>*   Stop: stops the instance.</p>
-     * <p>*   AutoRecover: automatically recovers the instance.</p>
-     * <p>*   AutoRedeploy: redeploys the instance, which may damage the data disks attached to the instance.</p>
+     * <ul>
+     * <li>Stop: stops the instance.</li>
+     * <li>AutoRecover: automatically recovers the instance.</li>
+     * <li>AutoRedeploy: redeploys the instance, which may damage the data disks attached to the instance.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>AutoRecover</p>
      */
     @NameInMap("ActionOnMaintenance")
     public String actionOnMaintenance;
 
     /**
      * <p>The ID of instance N. Valid values of N: 1 to 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-bp67acfmxazb4ph****</p>
      */
     @NameInMap("InstanceId")
     public java.util.List<String> instanceId;
@@ -28,11 +35,14 @@ public class ModifyInstanceMaintenanceAttributesRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to send an event notification before maintenance. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
-     * <br>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
      * <p>Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("NotifyOnMaintenance")
     public Boolean notifyOnMaintenance;
@@ -44,7 +54,11 @@ public class ModifyInstanceMaintenanceAttributesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -134,13 +148,19 @@ public class ModifyInstanceMaintenanceAttributesRequest extends TeaModel {
 
     public static class ModifyInstanceMaintenanceAttributesRequestMaintenanceWindow extends TeaModel {
         /**
-         * <p>The end time of the maintenance window. The time must be on the hour. You must configure both StartTime and EndTime. The value of EndTime must be 1 to 23 hours later than the value of StartTime. Specify the time in the `HH:mm:ss` format. The time must be in UTC+8. Set the value of N to 1.</p>
+         * <p>The end time of the maintenance window. The time must be on the hour. You must configure both StartTime and EndTime. The value of EndTime must be 1 to 23 hours later than the value of StartTime. Specify the time in the <code>HH:mm:ss</code> format. The time must be in UTC+8. Set the value of N to 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18:00:00</p>
          */
         @NameInMap("EndTime")
         public String endTime;
 
         /**
-         * <p>The start time of the maintenance window. The time must be on the hour. You must configure both StartTime and EndTime. The value of EndTime must be 1 to 23 hours later than the value of StartTime. Specify the time in the `HH:mm:ss` format. The time must be in UTC+8. Set the value of N to 1.</p>
+         * <p>The start time of the maintenance window. The time must be on the hour. You must configure both StartTime and EndTime. The value of EndTime must be 1 to 23 hours later than the value of StartTime. Specify the time in the <code>HH:mm:ss</code> format. The time must be in UTC+8. Set the value of N to 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>02:00:00</p>
          */
         @NameInMap("StartTime")
         public String startTime;

@@ -12,6 +12,9 @@ public class DeleteActivationResponseBody extends TeaModel {
 
     /**
      * <p>Details of the activation code and its usage information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4ECEEE12-56F1-4FBC-9AB1-890F74942176</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -38,53 +41,81 @@ public class DeleteActivationResponseBody extends TeaModel {
     }
 
     public static class DeleteActivationResponseBodyActivation extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>4ECEEE12-56F1-4FBC-9AB1-890F1234****</p>
+         */
         @NameInMap("ActivationId")
         public String activationId;
 
         /**
          * <p>The number of instances that were deregistered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-20T06:00:00Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The maximum number of times that the activation code can be used to register managed instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("DeregisteredCount")
         public Integer deregisteredCount;
 
         /**
          * <p>The number of registered instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is description.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The description of the activation code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("InstanceCount")
         public Integer instanceCount;
 
         /**
          * <p>The IP addresses of hosts that are allowed to use the activation code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-InstanceName</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
          * <p>The validity period of the activation code. Unit: hours.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0.0.0/0</p>
          */
         @NameInMap("IpAddressRange")
         public String ipAddressRange;
 
         /**
          * <p>The default instance name prefix.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("RegisteredCount")
         public Integer registeredCount;
 
         /**
          * <p>The ID of the activation code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         @NameInMap("TimeToLiveInHours")
         public Long timeToLiveInHours;

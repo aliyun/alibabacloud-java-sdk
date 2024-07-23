@@ -12,6 +12,9 @@ public class ResetDisksResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3D66C85C-AA97-4A00-B0ED-2D9A80FE782C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class ResetDisksResponseBody extends TeaModel {
     public static class ResetDisksResponseBodyOperationProgressSetOperationProgressRelatedItemSetRelatedItem extends TeaModel {
         /**
          * <p>The resource name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SnapshotId</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The resource ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-j6cdofbycydvg7ey****</p>
          */
         @NameInMap("Value")
         public String value;
@@ -95,22 +104,29 @@ public class ResetDisksResponseBody extends TeaModel {
     public static class ResetDisksResponseBodyOperationProgressSetOperationProgress extends TeaModel {
         /**
          * <p>The error code that is returned if the request failed. This parameter is empty if the request is successful.</p>
-         * <br>
-         * <p>For information about error codes and error messages, see [Service error codes](https://error-center.alibabacloud.com/status/product/Ecs).</p>
+         * <p>For information about error codes and error messages, see <a href="https://error-center.alibabacloud.com/status/product/Ecs">Service error codes</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>400</p>
          */
         @NameInMap("ErrorCode")
         public String errorCode;
 
         /**
          * <p>The error message that is returned if the request failed. This parameter is empty if the request is successful.</p>
-         * <br>
-         * <p>For information about error codes and error messages, see [Service error codes](https://error-center.alibabacloud.com/status/product/Ecs).</p>
+         * <p>For information about error codes and error messages, see <a href="https://error-center.alibabacloud.com/status/product/Ecs">Service error codes</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testErrorMsg</p>
          */
         @NameInMap("ErrorMsg")
         public String errorMsg;
 
         /**
          * <p>Indicates whether the request is successful. If the request is successful, Success is returned. If the request failed, an error code and an error message are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         @NameInMap("OperationStatus")
         public String operationStatus;

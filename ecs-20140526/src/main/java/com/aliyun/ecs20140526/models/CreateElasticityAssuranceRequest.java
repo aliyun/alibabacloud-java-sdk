@@ -9,42 +9,60 @@ public class CreateElasticityAssuranceRequest extends TeaModel {
 
     /**
      * <p>The total number of times that the elasticity assurance can be applied. Set the value to Unlimited. This value indicates that the elasticity assurance can be applied an unlimited number of times within its effective duration.</p>
-     * <br>
      * <p>Default value: Unlimited.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Unlimited</p>
      */
     @NameInMap("AssuranceTimes")
     public String assuranceTimes;
 
     /**
-     * <p>The client token that you want to use to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The `token` can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
+     * <p>The client token that you want to use to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <code>token</code> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0c593ea1-3bea-11e9-b96b-88e9fe637760</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The description of the elasticity assurance. The description must be 2 to 256 characters in length. It cannot start with `http://` or `https://`.</p>
-     * <br>
+     * <p>The description of the elasticity assurance. The description must be 2 to 256 characters in length. It cannot start with <code>http://</code> or <code>https://</code>.</p>
      * <p>This parameter is empty by default.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>This is description.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The total number of instances for which to reserve capacity of an instance type.</p>
-     * <br>
      * <p>Valid values: 1 to 1000.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("InstanceAmount")
     public Integer instanceAmount;
 
     /**
-     * <p>> This parameter is no longer used.</p>
+     * <blockquote>
+     * <p>This parameter is no longer used.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
      */
     @NameInMap("InstanceCpuCoreCount")
     public Integer instanceCpuCoreCount;
 
     /**
      * <p>The instance type. An elasticity assurance can be created to reserve the capacity of a single instance type.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs.c6.xlarge</p>
      */
     @NameInMap("InstanceType")
     public java.util.List<String> instanceType;
@@ -56,35 +74,48 @@ public class CreateElasticityAssuranceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The term of the elasticity assurance. The unit of the term is determined by the `PeriodUnit` value. Valid values:</p>
-     * <br>
-     * <p>*   When `PeriodUnit` is set to `Month`, the valid values are 1, 2, 3, 4, 5, 6, 7, 8, and 9.</p>
-     * <p>*   When `PeriodUnit` is set to `Year`, the valid values are 1, 2, 3, 4, and 5.</p>
-     * <br>
+     * <p>The term of the elasticity assurance. The unit of the term is determined by the <code>PeriodUnit</code> value. Valid values:</p>
+     * <ul>
+     * <li>When <code>PeriodUnit</code> is set to <code>Month</code>, the valid values are 1, 2, 3, 4, 5, 6, 7, 8, and 9.</li>
+     * <li>When <code>PeriodUnit</code> is set to <code>Year</code>, the valid values are 1, 2, 3, 4, and 5.</li>
+     * </ul>
      * <p>Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Period")
     public Integer period;
 
     /**
      * <p>The unit of the term of the elasticity assurance. Valid values:</p>
-     * <br>
-     * <p>*   Month</p>
-     * <p>*   Year</p>
-     * <br>
+     * <ul>
+     * <li>Month</li>
+     * <li>Year</li>
+     * </ul>
      * <p>Default value: Year.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Year</p>
      */
     @NameInMap("PeriodUnit")
     public String periodUnit;
 
     /**
-     * <p>The ID of the region in which to create the elasticity assurance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The ID of the region in which to create the elasticity assurance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group to which to assign the elasticity assurance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-bp67acfmxazb4p****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -96,7 +127,10 @@ public class CreateElasticityAssuranceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The time when the elasticity assurance takes effect. The default value is the time when the CreateElasticityAssurance operation is called to create the elasticity assurance. Specify the time in the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC. For more information, see [ISO 8601](~~25696~~).</p>
+     * <p>The time when the elasticity assurance takes effect. The default value is the time when the CreateElasticityAssurance operation is called to create the elasticity assurance. Specify the time in the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in UTC. For more information, see <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-10-30T06:32:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -109,6 +143,10 @@ public class CreateElasticityAssuranceRequest extends TeaModel {
 
     /**
      * <p>The ID of the zone in which to create the elasticity assurance. An elasticity assurance can be used to reserve resources within a single zone.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-h</p>
      */
     @NameInMap("ZoneId")
     public java.util.List<String> zoneId;
@@ -265,17 +303,23 @@ public class CreateElasticityAssuranceRequest extends TeaModel {
     public static class CreateElasticityAssuranceRequestPrivatePoolOptions extends TeaModel {
         /**
          * <p>The type of the private pool with which you want to associate the elasticity assurance. Valid values:</p>
-         * <br>
-         * <p>*   Open: open private pool.</p>
-         * <p>*   Target: specified private pool.</p>
-         * <br>
+         * <ul>
+         * <li>Open: open private pool.</li>
+         * <li>Target: specified private pool.</li>
+         * </ul>
          * <p>Default value: Open.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Open</p>
          */
         @NameInMap("MatchCriteria")
         public String matchCriteria;
 
         /**
-         * <p>The name of the elasticity assurance. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
+         * <p>The name of the elasticity assurance. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eapTestName</p>
          */
         @NameInMap("Name")
         public String name;
@@ -305,13 +349,19 @@ public class CreateElasticityAssuranceRequest extends TeaModel {
 
     public static class CreateElasticityAssuranceRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N to add to the elasticity assurance. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.</p>
+         * <p>The key of tag N to add to the elasticity assurance. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag N to add to the elasticity assurance. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with `acs:`. The tag value cannot contain `http://` or `https://`.</p>
+         * <p>The value of tag N to add to the elasticity assurance. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with <code>acs:</code>. The tag value cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
          */
         @NameInMap("Value")
         public String value;

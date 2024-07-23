@@ -5,13 +5,19 @@ import com.aliyun.tea.*;
 
 public class ModifySnapshotGroupRequest extends TeaModel {
     /**
-     * <p>The new name of the snapshot-consistent group. The name must be 2 to 128 characters in length. It can contain letters, digits, periods (.), underscores (\_), hyphens (-), and colons (:). It must start with a letter or a digit and cannot start with `http://` or `https://`.</p>
+     * <p>The new name of the snapshot-consistent group. The name must be 2 to 128 characters in length. It can contain letters, digits, periods (.), underscores (_), hyphens (-), and colons (:). It must start with a letter or a digit and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>This is new description</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The ID of the snapshot-consistent group. You can call the [DescribeSnapshotGroups](~~210940~~) operation to query the IDs of one or more snapshot-consistent groups.</p>
+     * <p>The ID of the snapshot-consistent group. You can call the <a href="https://help.aliyun.com/document_detail/210940.html">DescribeSnapshotGroups</a> operation to query the IDs of one or more snapshot-consistent groups.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testName02</p>
      */
     @NameInMap("Name")
     public String name;
@@ -23,7 +29,11 @@ public class ModifySnapshotGroupRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **ModifySnapshotGroup**.</p>
+     * <p>The operation that you want to perform. Set the value to <strong>ModifySnapshotGroup</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -35,7 +45,11 @@ public class ModifySnapshotGroupRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The region ID of the snapshot-consistent group. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the snapshot-consistent group. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ssg-j6ciyh3k52qp7ovm****</p>
      */
     @NameInMap("SnapshotGroupId")
     public String snapshotGroupId;

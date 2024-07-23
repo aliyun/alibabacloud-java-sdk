@@ -6,23 +6,33 @@ import com.aliyun.tea.*;
 public class DescribeKeyPairsRequest extends TeaModel {
     /**
      * <p>Specifies whether to include PublicKey in the response. Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("IncludePublicKey")
     public Boolean includePublicKey;
 
     /**
-     * <p>The fingerprint of the key pair. The message-digest algorithm 5 (MD5) is used based on the public key fingerprint format defined in RFC 4716. For more information, see [RFC 4716](https://tools.ietf.org/html/rfc4716).</p>
+     * <p>The fingerprint of the key pair. The message-digest algorithm 5 (MD5) is used based on the public key fingerprint format defined in RFC 4716. For more information, see <a href="https://tools.ietf.org/html/rfc4716">RFC 4716</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ABC1234567</p>
      */
     @NameInMap("KeyPairFingerPrint")
     public String keyPairFingerPrint;
 
     /**
      * <p>The name of the key pair. You can use the asterisk (\*) symbol as a wildcard in regular expressions to perform a fuzzy search for key pairs. Sample patterns:</p>
-     * <br>
-     * <p>*   `*SshKey`: queries key pairs whose names end with SshKey, including the key pair named SshKey.</p>
-     * <p>*   `SshKey*`: queries key pairs whose names start with SshKey, including the key pair named SshKey.</p>
-     * <p>*   `*SshKey*`: queries key pairs whose names include SshKey, including the key pair named SshKey.</p>
-     * <p>*   `SshKey`: queries the key pair named SshKey.</p>
+     * <ul>
+     * <li><code>*SshKey</code>: queries key pairs whose names end with SshKey, including the key pair named SshKey.</li>
+     * <li><code>SshKey*</code>: queries key pairs whose names start with SshKey, including the key pair named SshKey.</li>
+     * <li><code>*SshKey*</code>: queries key pairs whose names include SshKey, including the key pair named SshKey.</li>
+     * <li><code>SshKey</code>: queries the key pair named SshKey.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p><em>SshKey</em></p>
      */
     @NameInMap("KeyPairName")
     public String keyPairName;
@@ -32,30 +42,42 @@ public class DescribeKeyPairsRequest extends TeaModel {
 
     /**
      * <p>The number of the page to return. Pages start from page 1.</p>
-     * <br>
      * <p>Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page. Maximum value: 50.</p>
-     * <br>
      * <p>Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the key pair. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the key pair. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.</p>
-     * <br>
-     * <p>>  Resources in the default resource group are displayed in the response regardless of how this parameter is set.</p>
+     * <blockquote>
+     * <p> Resources in the default resource group are displayed in the response regardless of how this parameter is set.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-amnhr7u7c7hj****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -168,14 +190,19 @@ public class DescribeKeyPairsRequest extends TeaModel {
     public static class DescribeKeyPairsRequestTag extends TeaModel {
         /**
          * <p>The key of tag N of the key pair. Valid values of N: 1 to 20.</p>
-         * <br>
-         * <p>If a single tag is specified to query resources, up to 1,000 resources that are bound with this tag can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that are bound with all these tags can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.</p>
+         * <p>If a single tag is specified to query resources, up to 1,000 resources that are bound with this tag can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that are bound with all these tags can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of tag N of the key pair. Valid values of N: 1 to 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
          */
         @NameInMap("Value")
         public String value;

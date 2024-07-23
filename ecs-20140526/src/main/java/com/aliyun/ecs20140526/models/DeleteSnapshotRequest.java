@@ -6,11 +6,14 @@ import com.aliyun.tea.*;
 public class DeleteSnapshotRequest extends TeaModel {
     /**
      * <p>Specifies whether to force delete the snapshot that has been used to create disks. Valid values:</p>
-     * <br>
-     * <p>*   true: force deletes the snapshot. After the snapshot is force deleted, the disks created from the snapshot cannot be re-initialized.</p>
-     * <p>*   false: does not force delete the snapshot.</p>
-     * <br>
+     * <ul>
+     * <li>true: force deletes the snapshot. After the snapshot is force deleted, the disks created from the snapshot cannot be re-initialized.</li>
+     * <li>false: does not force delete the snapshot.</li>
+     * </ul>
      * <p>Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("Force")
     public Boolean force;
@@ -29,6 +32,10 @@ public class DeleteSnapshotRequest extends TeaModel {
 
     /**
      * <p>The snapshot ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>s-bp1c0doj0taqyzzl****</p>
      */
     @NameInMap("SnapshotId")
     public String snapshotId;

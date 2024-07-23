@@ -12,24 +12,36 @@ public class DescribeNetworkInterfacePermissionsResponseBody extends TeaModel {
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0FCD3DEF-63D3-4605-A818-805C8BD7DB87</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,41 +94,60 @@ public class DescribeNetworkInterfacePermissionsResponseBody extends TeaModel {
     public static class DescribeNetworkInterfacePermissionsResponseBodyNetworkInterfacePermissionsNetworkInterfacePermission extends TeaModel {
         /**
          * <p>The ID of the Alibaba Cloud partner (a certified ISV) or individual user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567890</p>
          */
         @NameInMap("AccountId")
         public Long accountId;
 
         /**
          * <p>The ID of ENI N.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eni-bp14v2sdd3v8htln****</p>
          */
         @NameInMap("NetworkInterfaceId")
         public String networkInterfaceId;
 
         /**
          * <p>The ID of the ENI permission.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eni-perm-bp1cs4lwn56lfb****</p>
          */
         @NameInMap("NetworkInterfacePermissionId")
         public String networkInterfacePermissionId;
 
         /**
          * <p>The ENI permission.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InstanceAttach</p>
          */
         @NameInMap("Permission")
         public String permission;
 
         /**
          * <p>The status of the ENI permission. Valid values:</p>
-         * <br>
-         * <p>*   Pending: The permission is being granted.</p>
-         * <p>*   Granted: The permission is granted.</p>
-         * <p>*   Revoking: The permission is being revoked.</p>
-         * <p>*   Revoked: The permission is revoked.</p>
+         * <ul>
+         * <li>Pending: The permission is being granted.</li>
+         * <li>Granted: The permission is granted.</li>
+         * <li>Revoking: The permission is being revoked.</li>
+         * <li>Revoked: The permission is revoked.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Granted</p>
          */
         @NameInMap("PermissionState")
         public String permissionState;
 
         /**
          * <p>The name of the Alibaba Cloud service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Elastic Compute Service</p>
          */
         @NameInMap("ServiceName")
         public String serviceName;

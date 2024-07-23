@@ -6,49 +6,69 @@ import com.aliyun.tea.*;
 public class DescribeLaunchTemplateVersionsRequest extends TeaModel {
     /**
      * <p>Specifies whether to query the default version.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("DefaultVersion")
     public Boolean defaultVersion;
 
     /**
      * <p>Specifies whether to query the configurations of the launch template. Valid values:</p>
-     * <br>
-     * <p>*   true: queries the basic information and other details of the launch template. The details include the image ID and system disk size.</p>
-     * <p>*   false: queries only the basic information of the launch template. The basic information includes the template ID, template name, and default version.</p>
-     * <br>
+     * <ul>
+     * <li>true: queries the basic information and other details of the launch template. The details include the image ID and system disk size.</li>
+     * <li>false: queries only the basic information of the launch template. The basic information includes the template ID, template name, and default version.</li>
+     * </ul>
      * <p>Default value: true.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("DetailFlag")
     public Boolean detailFlag;
 
     /**
      * <p>The ID of the launch template.</p>
-     * <br>
      * <p>You must set LaunchTemplateId or LaunchTemplateName to specify a launch template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lt-bp168lnahrdwl39p****</p>
      */
     @NameInMap("LaunchTemplateId")
     public String launchTemplateId;
 
     /**
      * <p>The name of the launch template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testLaunchTemplateName</p>
      */
     @NameInMap("LaunchTemplateName")
     public String launchTemplateName;
 
     /**
      * <p>Version N of the launch template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("LaunchTemplateVersion")
     public java.util.List<Long> launchTemplateVersion;
 
     /**
      * <p>The maximum version number in the version range to query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxVersion")
     public Long maxVersion;
 
     /**
      * <p>The minimum version number in the version range to query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("MinVersion")
     public Long minVersion;
@@ -61,26 +81,32 @@ public class DescribeLaunchTemplateVersionsRequest extends TeaModel {
 
     /**
      * <p>The number of the page to return.</p>
-     * <br>
      * <p>Pages start from page 1.</p>
-     * <br>
      * <p>Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page.</p>
-     * <br>
      * <p>Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The region ID of the launch template.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

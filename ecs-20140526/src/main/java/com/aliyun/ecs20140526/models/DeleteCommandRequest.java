@@ -4,6 +4,12 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DeleteCommandRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c-4d34302d02424c5c8e10281e3a31****</p>
+     */
     @NameInMap("CommandId")
     public String commandId;
 
@@ -15,6 +21,10 @@ public class DeleteCommandRequest extends TeaModel {
 
     /**
      * <p>$.parameters[1].schema.enumValueTitles</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

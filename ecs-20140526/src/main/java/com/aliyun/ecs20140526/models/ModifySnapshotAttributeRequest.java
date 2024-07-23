@@ -5,20 +5,27 @@ import com.aliyun.tea.*;
 
 public class ModifySnapshotAttributeRequest extends TeaModel {
     /**
-     * <p>The description of the snapshot. The description must be 2 to 256 characters in length and cannot start with [http:// or https://](http://https://。).</p>
+     * <p>The description of the snapshot. The description must be 2 to 256 characters in length and cannot start with <a href="http://https://%E3%80%82">http:// or https://</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testDescription</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>Specifies whether to disable the instant access feature. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
-     * <br>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
      * <p>Default value: false.</p>
-     * <br>
-     * <p>>  This parameter is no longer used. By default, new normal snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see [Use the instant access feature](~~193667~~).</p>
+     * <blockquote>
+     * <p> This parameter is no longer used. By default, new normal snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see <a href="https://help.aliyun.com/document_detail/193667.html">Use the instant access feature</a>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("DisableInstantAccess")
     public Boolean disableInstantAccess;
@@ -36,23 +43,33 @@ public class ModifySnapshotAttributeRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The retention period of the snapshot. After you specify this parameter, the end time of the new retention period is the specified number of days apart from the **creation time** of the snapshot, which follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format and is displayed in UTC. Valid values: 1 to 65536.</p>
-     * <br>
-     * <p>>  You can extend the retention period of the snapshot and cannot shorten the retention period.</p>
+     * <p>The retention period of the snapshot. After you specify this parameter, the end time of the new retention period is the specified number of days apart from the <strong>creation time</strong> of the snapshot, which follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format and is displayed in UTC. Valid values: 1 to 65536.</p>
+     * <blockquote>
+     * <p> You can extend the retention period of the snapshot and cannot shorten the retention period.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("RetentionDays")
     public Integer retentionDays;
 
     /**
      * <p>The ID of the snapshot.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>s-bp199lyny9bb47pa****</p>
      */
     @NameInMap("SnapshotId")
     public String snapshotId;
 
     /**
-     * <p>The name of the snapshot. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
-     * <br>
+     * <p>The name of the snapshot. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
      * <p>The name cannot start with auto because snapshots whose names start with auto are recognized as automatic snapshots.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testSnapshotName</p>
      */
     @NameInMap("SnapshotName")
     public String snapshotName;

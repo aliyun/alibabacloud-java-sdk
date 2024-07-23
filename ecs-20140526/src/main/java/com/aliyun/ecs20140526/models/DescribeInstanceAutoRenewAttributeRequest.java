@@ -6,8 +6,12 @@ import com.aliyun.tea.*;
 public class DescribeInstanceAutoRenewAttributeRequest extends TeaModel {
     /**
      * <p>The IDs of the instances. You can specify up to 100 subscription instance IDs in a single request. Separate multiple instance IDs with commas (,).</p>
-     * <br>
-     * <p>> `InstanceId` and `RenewalStatus` cannot be empty at the same time.</p>
+     * <blockquote>
+     * <p><code>InstanceId</code> and <code>RenewalStatus</code> cannot be empty at the same time.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>i-bp18x3z4hc7bixhx****,i-bp1g6zv0ce8oghu7****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -20,36 +24,46 @@ public class DescribeInstanceAutoRenewAttributeRequest extends TeaModel {
 
     /**
      * <p>The page number.</p>
-     * <br>
      * <p>Pages start from page 1.</p>
-     * <br>
      * <p>Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public String pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
-     * <br>
      * <p>Valid values: 1 to 100.</p>
-     * <br>
      * <p>Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The auto-renewal state of the instance. Valid values:</p>
-     * <br>
-     * <p>*   AutoRenewal: Auto-renewal is enabled for the instance.</p>
-     * <p>*   Normal: Auto-renewal is disabled for the instance.</p>
-     * <p>*   NotRenewal: The instance is not to be renewed. The system sends no more expiration reminders, but sends only a non-renewal reminder three days before the expiration date. For an instance that is not to be renewed, you can call the [ModifyInstanceAutoRenewAttribute](~~52843~~) operation to change its auto-renewal status to `Normal`. Then, you can manually renew the instance or enable auto-renewal for the instance.</p>
+     * <ul>
+     * <li>AutoRenewal: Auto-renewal is enabled for the instance.</li>
+     * <li>Normal: Auto-renewal is disabled for the instance.</li>
+     * <li>NotRenewal: The instance is not to be renewed. The system sends no more expiration reminders, but sends only a non-renewal reminder three days before the expiration date. For an instance that is not to be renewed, you can call the <a href="https://help.aliyun.com/document_detail/52843.html">ModifyInstanceAutoRenewAttribute</a> operation to change its auto-renewal status to <code>Normal</code>. Then, you can manually renew the instance or enable auto-renewal for the instance.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>AutoRenewal</p>
      */
     @NameInMap("RenewalStatus")
     public String renewalStatus;

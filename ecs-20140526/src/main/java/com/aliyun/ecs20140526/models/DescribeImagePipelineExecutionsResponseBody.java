@@ -12,24 +12,36 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
 
     /**
      * <p>The maximum number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists. For information about how to use the returned value, see the "Usage notes" section in this topic.</p>
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists. For information about how to use the returned value, see the &quot;Usage notes&quot; section in this topic.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AAAAAdDWBF2****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of returned image components.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -81,13 +93,23 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
 
     public static class DescribeImagePipelineExecutionsResponseBodyImagePipelineExecutionImagePipelineExecutionSetTagsTag extends TeaModel {
         /**
-         * <p>> This parameter is not publicly available.</p>
+         * <blockquote>
+         * <p>This parameter is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
-         * <p>> This parameter is not publicly available.</p>
+         * <blockquote>
+         * <p>This parameter is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("TagValue")
         public String tagValue;
@@ -137,62 +159,89 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
     public static class DescribeImagePipelineExecutionsResponseBodyImagePipelineExecutionImagePipelineExecutionSet extends TeaModel {
         /**
          * <p>The time when the image creation task was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-24T06:00:00Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The ID of the image creation task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>exec-5fb8facb8ed7427c****</p>
          */
         @NameInMap("ExecutionId")
         public String executionId;
 
         /**
          * <p>The ID of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-bp67acfmxazb4p****</p>
          */
         @NameInMap("ImageId")
         public String imageId;
 
         /**
          * <p>The ID of the image template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ip-2ze5tsl5bp6nf2b3****</p>
          */
         @NameInMap("ImagePipelineId")
         public String imagePipelineId;
 
         /**
          * <p>The data returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Create transition vpc &quot;vpc-2ze70rc7093j9idu6****&quot; success!</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
          * <p>The last modification time of the image creation task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-25T06:00:00Z</p>
          */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
         /**
          * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-bp67acfmxazb4p****</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>The status of the image creation task. Valid values:</p>
-         * <br>
-         * <p>*   BUILDING</p>
-         * <p>*   DISTRIBUTING</p>
-         * <p>*   RELEASING</p>
-         * <p>*   SUCCESS</p>
-         * <p>*   FAILED</p>
-         * <p>*   CANCELLING</p>
-         * <p>*   CANCELLED</p>
+         * <ul>
+         * <li>BUILDING</li>
+         * <li>DISTRIBUTING</li>
+         * <li>RELEASING</li>
+         * <li>SUCCESS</li>
+         * <li>FAILED</li>
+         * <li>CANCELLING</li>
+         * <li>CANCELLED</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>BUILDING</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>> This parameter is not publicly available.</p>
+         * <blockquote>
+         * <p>This parameter is not publicly available.</p>
+         * </blockquote>
          */
         @NameInMap("Tags")
         public DescribeImagePipelineExecutionsResponseBodyImagePipelineExecutionImagePipelineExecutionSetTags tags;

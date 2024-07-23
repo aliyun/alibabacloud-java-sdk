@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class StartImagePipelineExecutionResponseBody extends TeaModel {
     /**
      * <p>The ID of the image creation task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>exec-5fb8facb8ed7427c****</p>
      */
     @NameInMap("ExecutionId")
     public String executionId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
     @NameInMap("RequestId")
     public String requestId;

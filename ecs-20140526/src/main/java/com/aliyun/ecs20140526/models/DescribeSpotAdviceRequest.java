@@ -5,68 +5,95 @@ import com.aliyun.tea.*;
 
 public class DescribeSpotAdviceRequest extends TeaModel {
     /**
-     * <p>The number of vCPUs of the instance type. For more information, see [Instance families](~~25378~~).</p>
+     * <p>The number of vCPUs of the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("Cores")
     public Integer cores;
 
     /**
-     * <p>The number of GPUs that a GPU-accelerated instance has. For information about the valid values, see [GPU-accelerated compute optimized instance types](~~108496~~).</p>
+     * <p>The number of GPUs that a GPU-accelerated instance has. For information about the valid values, see <a href="https://help.aliyun.com/document_detail/108496.html">GPU-accelerated compute optimized instance types</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("GpuAmount")
     public Integer gpuAmount;
 
     /**
      * <p>The GPU type. Valid values:</p>
-     * <br>
-     * <p>*   NVIDIA P4</p>
-     * <p>*   NVIDIA T4</p>
-     * <p>*   NVIDIA P100</p>
-     * <p>*   NVIDIA V100</p>
-     * <br>
-     * <p>This parameter is left empty by default, which indicates that all GPU types are queried. For more information, see [GPU-accelerated compute-optimized and vGPU-accelerated instance families](~~108496~~).</p>
+     * <ul>
+     * <li>NVIDIA P4</li>
+     * <li>NVIDIA T4</li>
+     * <li>NVIDIA P100</li>
+     * <li>NVIDIA V100</li>
+     * </ul>
+     * <p>This parameter is left empty by default, which indicates that all GPU types are queried. For more information, see <a href="https://help.aliyun.com/document_detail/108496.html">GPU-accelerated compute-optimized and vGPU-accelerated instance families</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NVIDIA T4</p>
      */
     @NameInMap("GpuSpec")
     public String gpuSpec;
 
     /**
      * <p>The level of the instance family. Valid values:</p>
-     * <br>
-     * <p>*   EntryLevel.</p>
-     * <p>*   EnterpriseLevel.</p>
-     * <p>*   CreditEntryLevel. For more information, see [Overview of burstable instances](~~59977~~).</p>
-     * <br>
+     * <ul>
+     * <li>EntryLevel.</li>
+     * <li>EnterpriseLevel.</li>
+     * <li>CreditEntryLevel. For more information, see <a href="https://help.aliyun.com/document_detail/59977.html">Overview of burstable instances</a>.</li>
+     * </ul>
      * <p>This parameter is left empty by default, which indicates that instance families at all levels are queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EntryLevel</p>
      */
     @NameInMap("InstanceFamilyLevel")
     public String instanceFamilyLevel;
 
     /**
-     * <p>The instance family. For more information, see [Instance families](~~25378~~).</p>
+     * <p>The instance family. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs.c5</p>
      */
     @NameInMap("InstanceTypeFamily")
     public String instanceTypeFamily;
 
     /**
      * <p>The instance types. You can specify up to 10 instance types.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs.c5.large</p>
      */
     @NameInMap("InstanceTypes")
     public java.util.List<String> instanceTypes;
 
     /**
-     * <p>The memory size of the instance type. Unit: GiB. For more information, see [Instance families](~~25378~~).</p>
+     * <p>The memory size of the instance type. Unit: GiB. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8.0</p>
      */
     @NameInMap("Memory")
     public Float memory;
 
     /**
-     * <p>The minimum number of vCPUs of the instance type. For more information, see [Instance families](~~25378~~).</p>
+     * <p>The minimum number of vCPUs of the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("MinCores")
     public Integer minCores;
 
     /**
-     * <p>The minimum memory size of the instance type. For more information, see [Instance families](~~25378~~).</p>
+     * <p>The minimum memory size of the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8.0</p>
      */
     @NameInMap("MinMemory")
     public Float minMemory;
@@ -78,7 +105,11 @@ public class DescribeSpotAdviceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -91,8 +122,10 @@ public class DescribeSpotAdviceRequest extends TeaModel {
 
     /**
      * <p>The zone ID.</p>
-     * <br>
      * <p>This parameter is left empty by default, which indicates that all zones in the specified region are queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-i</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;

@@ -24,6 +24,10 @@ public class ModifyCloudAssistantSettingsShrinkRequest extends TeaModel {
 
     /**
      * <p>The region ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -36,9 +40,14 @@ public class ModifyCloudAssistantSettingsShrinkRequest extends TeaModel {
 
     /**
      * <p>The Cloud Assistant feature. Valid values:</p>
-     * <br>
-     * <p>*   SessionManagerDelivery: the Session Record Delivery feature</p>
-     * <p>*   InvocationDelivery: the Operation Content and Result Delivery feature</p>
+     * <ul>
+     * <li>SessionManagerDelivery: the Session Record Delivery feature</li>
+     * <li>InvocationDelivery: the Operation Content and Result Delivery feature</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SessionManagerDelivery</p>
      */
     @NameInMap("SettingType")
     public String settingType;

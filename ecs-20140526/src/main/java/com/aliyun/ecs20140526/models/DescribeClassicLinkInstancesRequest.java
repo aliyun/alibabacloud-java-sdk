@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeClassicLinkInstancesRequest extends TeaModel {
     /**
      * <p>The instance ID. You can specify a maximum of 100 instance IDs in a single request. Separate the instance IDs with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-bp1a5zr3u7nq9cxh****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -15,22 +18,30 @@ public class DescribeClassicLinkInstancesRequest extends TeaModel {
 
     /**
      * <p>The page number. Pages start from page 1.</p>
-     * <br>
      * <p>Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public String pageNumber;
 
     /**
      * <p>The number of entries per page. Valid values: 1 to 100.</p>
-     * <br>
      * <p>Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
 
     /**
-     * <p>The region ID of the instances. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the instances. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -42,7 +53,10 @@ public class DescribeClassicLinkInstancesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The VPC ID. The ClassicLink feature must be enabled for the specified VPC. For more information, see [Establish a ClassicLink connection](~~65413~~).</p>
+     * <p>The VPC ID. The ClassicLink feature must be enabled for the specified VPC. For more information, see <a href="https://help.aliyun.com/document_detail/65413.html">Establish a ClassicLink connection</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-bp1vwnn14rqpyiczj****</p>
      */
     @NameInMap("VpcId")
     public String vpcId;

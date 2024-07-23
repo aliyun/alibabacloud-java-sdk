@@ -9,6 +9,10 @@ public class ModifyInstanceAttachmentAttributesRequest extends TeaModel {
 
     /**
      * <p>The ID of the instance for which you want to modify the attributes of the private pool.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-bp67acfmxazb4****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -20,7 +24,11 @@ public class ModifyInstanceAttachmentAttributesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the private pool. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the private pool. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -95,19 +103,28 @@ public class ModifyInstanceAttachmentAttributesRequest extends TeaModel {
     public static class ModifyInstanceAttachmentAttributesRequestPrivatePoolOptions extends TeaModel {
         /**
          * <p>The ID of the private pool. Set the value to the ID of the elasticity assurance or capacity reservation that generates the private pool.</p>
-         * <br>
-         * <p>*   This parameter is required when `PrivatePoolOptions.MatchCriteria` is set to `Target`.</p>
-         * <p>*   This parameter must be empty when `PrivatePoolOptions.MatchCriteria` is set to `Open` or `None`.</p>
+         * <ul>
+         * <li>This parameter is required when <code>PrivatePoolOptions.MatchCriteria</code> is set to <code>Target</code>.</li>
+         * <li>This parameter must be empty when <code>PrivatePoolOptions.MatchCriteria</code> is set to <code>Open</code> or <code>None</code>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>eap-bp67acfmxazb4****</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The match mode of the private pool. Valid values:</p>
-         * <br>
-         * <p>*   Open: open private pool. The system matches the instance with open private pools.</p>
-         * <p>*   Target: specified private pool. You must set the `PrivatePoolOptions.Id` parameter to specify the ID of a private pool.</p>
-         * <p>*   None: no private pool. The instance starts normally without using private pools.</p>
+         * <ul>
+         * <li>Open: open private pool. The system matches the instance with open private pools.</li>
+         * <li>Target: specified private pool. You must set the <code>PrivatePoolOptions.Id</code> parameter to specify the ID of a private pool.</li>
+         * <li>None: no private pool. The instance starts normally without using private pools.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Open</p>
          */
         @NameInMap("MatchCriteria")
         public String matchCriteria;

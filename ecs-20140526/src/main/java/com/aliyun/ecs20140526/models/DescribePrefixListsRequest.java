@@ -6,27 +6,34 @@ import com.aliyun.tea.*;
 public class DescribePrefixListsRequest extends TeaModel {
     /**
      * <p>The IP address family of the prefix list. Valid values:</p>
-     * <br>
-     * <p>*   IPv4</p>
-     * <p>*   IPv6</p>
-     * <br>
+     * <ul>
+     * <li>IPv4</li>
+     * <li>IPv6</li>
+     * </ul>
      * <p>This parameter is empty by default, which indicates that all prefix lists are queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>IPv4</p>
      */
     @NameInMap("AddressFamily")
     public String addressFamily;
 
     /**
      * <p>The number of entries to return on each page.</p>
-     * <br>
      * <p>Maximum value: 100.</p>
-     * <br>
      * <p>Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The query token. Set the value to the `NextToken` value returned in the previous call to the DescribePrefixLists operation. Leave this parameter empty the first time you call this operation.</p>
+     * <p>The query token. Set the value to the <code>NextToken</code> value returned in the previous call to the DescribePrefixLists operation. Leave this parameter empty the first time you call this operation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AAAAAdDWBF2****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -39,18 +46,28 @@ public class DescribePrefixListsRequest extends TeaModel {
 
     /**
      * <p>The IDs of prefix list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pl-x1j1k5ykzqlixdcy****</p>
      */
     @NameInMap("PrefixListId")
     public java.util.List<String> prefixListId;
 
     /**
      * <p>The name of the prefix list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PrefixListNameSample</p>
      */
     @NameInMap("PrefixListName")
     public String prefixListName;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-chengdu</p>
      */
     @NameInMap("RegionId")
     public String regionId;

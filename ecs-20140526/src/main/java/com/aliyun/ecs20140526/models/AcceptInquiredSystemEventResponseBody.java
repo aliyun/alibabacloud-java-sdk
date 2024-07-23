@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class AcceptInquiredSystemEventResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4DD56CA6-6D75-4D33-BE34-E4A44EBE1C3D</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -12,24 +12,36 @@ public class DescribeHpcClustersResponseBody extends TeaModel {
 
     /**
      * <p>Details about the HPC clusters. The value is an array that consists of the information of each HPC cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The total number of HPC clusters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the HPC cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -80,15 +92,26 @@ public class DescribeHpcClustersResponseBody extends TeaModel {
     }
 
     public static class DescribeHpcClustersResponseBodyHpcClustersHpcCluster extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>testDescription</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The description of the HPC cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hpc-bp1a5zr3u7nq9cx****</p>
          */
         @NameInMap("HpcClusterId")
         public String hpcClusterId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>testName</p>
+         */
         @NameInMap("Name")
         public String name;
 

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateNetworkInterfaceResponseBody extends TeaModel {
     /**
      * <p>The description of the ENI.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testDescription</p>
      */
     @NameInMap("Description")
     public String description;
@@ -30,30 +33,45 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
 
     /**
      * <p>The media access control (MAC) address of the ENI.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>00:16:3e:12:<strong>:</strong></p>
      */
     @NameInMap("MacAddress")
     public String macAddress;
 
     /**
      * <p>The ID of the ENI.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eni-bp14v2sdd3v8htln****</p>
      */
     @NameInMap("NetworkInterfaceId")
     public String networkInterfaceId;
 
     /**
      * <p>The name of the ENI.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my-eni-name</p>
      */
     @NameInMap("NetworkInterfaceName")
     public String networkInterfaceName;
 
     /**
      * <p>The ID of the account to which the ENI belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456****</p>
      */
     @NameInMap("OwnerId")
     public String ownerId;
 
     /**
      * <p>The private IP address of the ENI.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>172.17.**.**</p>
      */
     @NameInMap("PrivateIpAddress")
     public String privateIpAddress;
@@ -66,12 +84,18 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the resource group to which the ENI belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-2ze88m67qx5z****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -84,18 +108,27 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the distributor to which the ENI belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12345678910</p>
      */
     @NameInMap("ServiceID")
     public Long serviceID;
 
     /**
      * <p>Indicates whether the user of the ENI is an Alibaba Cloud service or a distributor.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("ServiceManaged")
     public Boolean serviceManaged;
 
     /**
      * <p>The state of the ENI.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Available</p>
      */
     @NameInMap("Status")
     public String status;
@@ -108,24 +141,36 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
 
     /**
      * <p>The type of the ENI.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Secondary</p>
      */
     @NameInMap("Type")
     public String type;
 
     /**
      * <p>The ID of the vSwitch to which the ENI is connected.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-bp16usj2p27htro3****</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
     /**
      * <p>The ID of the VPC to which the ENI belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-bp1j7w3gc1cexjqd****</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
 
     /**
      * <p>The zone ID of the ENI.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-e</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;
@@ -306,6 +351,9 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
     public static class CreateNetworkInterfaceResponseBodyIpv4PrefixSetsIpv4PrefixSet extends TeaModel {
         /**
          * <p>The IPv4 prefix assigned to the ENI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hide</p>
          */
         @NameInMap("Ipv4Prefix")
         public String ipv4Prefix;
@@ -347,6 +395,9 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
     public static class CreateNetworkInterfaceResponseBodyIpv6PrefixSetsIpv6PrefixSet extends TeaModel {
         /**
          * <p>The IPv6 prefix assigned to the ENI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hide</p>
          */
         @NameInMap("Ipv6Prefix")
         public String ipv6Prefix;
@@ -388,6 +439,9 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
     public static class CreateNetworkInterfaceResponseBodyIpv6SetsIpv6Set extends TeaModel {
         /**
          * <p>The IPv6 address assigned to the ENI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2001:db8:1234:1a00::****</p>
          */
         @NameInMap("Ipv6Address")
         public String ipv6Address;
@@ -429,12 +483,18 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
     public static class CreateNetworkInterfaceResponseBodyPrivateIpSetsPrivateIpSet extends TeaModel {
         /**
          * <p>Indicates whether the private IP address is the primary private IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Primary")
         public Boolean primary;
 
         /**
          * <p>The private IP address of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.17.**.**</p>
          */
         @NameInMap("PrivateIpAddress")
         public String privateIpAddress;
@@ -503,12 +563,18 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
     public static class CreateNetworkInterfaceResponseBodyTagsTag extends TeaModel {
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
          */
         @NameInMap("TagValue")
         public String tagValue;

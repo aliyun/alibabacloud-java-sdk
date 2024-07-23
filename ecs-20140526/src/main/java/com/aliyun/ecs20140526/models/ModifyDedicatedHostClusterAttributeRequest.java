@@ -6,18 +6,28 @@ import com.aliyun.tea.*;
 public class ModifyDedicatedHostClusterAttributeRequest extends TeaModel {
     /**
      * <p>The ID of the dedicated host cluster.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dc-bp12wlf6am0vz9v2****</p>
      */
     @NameInMap("DedicatedHostClusterId")
     public String dedicatedHostClusterId;
 
     /**
-     * <p>The new name of the dedicated host cluster. The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter. The name cannot contain `http://` or `https://`.</p>
+     * <p>The new name of the dedicated host cluster. The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter. The name cannot contain <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>newClusterName</p>
      */
     @NameInMap("DedicatedHostClusterName")
     public String dedicatedHostClusterName;
 
     /**
-     * <p>The description of the dedicated host cluster. It must be 2 to 256 characters in length. It cannot start with `http://` or `https://`.</p>
+     * <p>The description of the dedicated host cluster. It must be 2 to 256 characters in length. It cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>newClusterDescription</p>
      */
     @NameInMap("Description")
     public String description;
@@ -29,7 +39,11 @@ public class ModifyDedicatedHostClusterAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the dedicated host cluster. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the dedicated host cluster. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

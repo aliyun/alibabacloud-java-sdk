@@ -12,12 +12,18 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
 
     /**
      * <p>The query token returned in this call.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>e71d8a535bd9cc11</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>00827261-20B7-4562-83F2-4DF39876A45A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -51,9 +57,48 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeEnhancedNetwork extends TeaModel {
+        /**
+         * <p>This parameter is unavailable for public use.</p>
+         */
+        @NameInMap("SriovSupport")
+        public Boolean sriovSupport;
+
+        /**
+         * <p>This parameter is unavailable for public use.</p>
+         */
+        @NameInMap("VfQueueNumberPerEni")
+        public Integer vfQueueNumberPerEni;
+
+        public static DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeEnhancedNetwork build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeEnhancedNetwork self = new DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeEnhancedNetwork();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeEnhancedNetwork setSriovSupport(Boolean sriovSupport) {
+            this.sriovSupport = sriovSupport;
+            return this;
+        }
+        public Boolean getSriovSupport() {
+            return this.sriovSupport;
+        }
+
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeEnhancedNetwork setVfQueueNumberPerEni(Integer vfQueueNumberPerEni) {
+            this.vfQueueNumberPerEni = vfQueueNumberPerEni;
+            return this;
+        }
+        public Integer getVfQueueNumberPerEni() {
+            return this.vfQueueNumberPerEni;
+        }
+
+    }
+
     public static class DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeNetworkCardsNetworkCardInfo extends TeaModel {
         /**
          * <p>The index of the network card.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("NetworkCardIndex")
         public Integer networkCardIndex;
@@ -114,213 +159,316 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
     public static class DescribeInstanceTypesResponseBodyInstanceTypesInstanceType extends TeaModel {
         /**
          * <p>The baseline vCPU computing performance (overall baseline performance of all vCPUs) per t5 or t6 burstable instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         @NameInMap("BaselineCredit")
         public Integer baselineCredit;
 
         /**
          * <p>The CPU architecture. Valid values:</p>
-         * <br>
-         * <p>*   X86</p>
-         * <p>*   ARM</p>
+         * <ul>
+         * <li>X86</li>
+         * <li>ARM</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>X86</p>
          */
         @NameInMap("CpuArchitecture")
         public String cpuArchitecture;
 
         /**
          * <p>The number of vCPUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         @NameInMap("CpuCoreCount")
         public Integer cpuCoreCount;
 
         /**
          * <p>The CPU base frequency. Unit: GHz.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.7</p>
          */
         @NameInMap("CpuSpeedFrequency")
         public Float cpuSpeedFrequency;
 
         /**
          * <p>The CPU turbo frequency. Unit: GHz.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3.5</p>
          */
         @NameInMap("CpuTurboFrequency")
         public Float cpuTurboFrequency;
 
         /**
          * <p>The maximum number of cloud disks per instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>17</p>
          */
         @NameInMap("DiskQuantity")
         public Integer diskQuantity;
 
         /**
+         * <p>This parameter is unavailable for public use.</p>
+         */
+        @NameInMap("EnhancedNetwork")
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeEnhancedNetwork enhancedNetwork;
+
+        /**
          * <p>The maximum number of IPv6 addresses per ENI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("EniIpv6AddressQuantity")
         public Integer eniIpv6AddressQuantity;
 
         /**
          * <p>The maximum number of IPv4 addresses per ENI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("EniPrivateIpAddressQuantity")
         public Integer eniPrivateIpAddressQuantity;
 
         /**
          * <p>The maximum number of ENIs per instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("EniQuantity")
         public Integer eniQuantity;
 
         /**
          * <p>The maximum number of ENIs, including primary, secondary, and trunk ENIs.</p>
-         * <br>
-         * <p>>  This parameter is in invitational preview and is not publicly available.</p>
+         * <blockquote>
+         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("EniTotalQuantity")
         public Integer eniTotalQuantity;
 
         /**
          * <p>Indicates whether trunk ENIs are supported.</p>
-         * <br>
-         * <p>>  This parameter is in invitational preview and is not publicly available.</p>
+         * <blockquote>
+         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("EniTrunkSupported")
         public Boolean eniTrunkSupported;
 
         /**
          * <p>The number of ERIs.</p>
-         * <br>
-         * <p>>  This parameter is in invitational preview and is not publicly available.</p>
+         * <blockquote>
+         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("EriQuantity")
         public Integer eriQuantity;
 
         /**
          * <p>The number of GPUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("GPUAmount")
         public Integer GPUAmount;
 
         /**
          * <p>The amount of GPU memory per GPU. Unit: GiB</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32</p>
          */
         @NameInMap("GPUMemorySize")
         public Float GPUMemorySize;
 
         /**
          * <p>The GPU model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NVIDIA V100</p>
          */
         @NameInMap("GPUSpec")
         public String GPUSpec;
 
         /**
          * <p>The initial vCPU credits per t5 or t6 burstable instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120</p>
          */
         @NameInMap("InitialCredit")
         public Integer initialCredit;
 
         /**
          * <p>The maximum inbound internal bandwidth. Unit: Kbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024000</p>
          */
         @NameInMap("InstanceBandwidthRx")
         public Integer instanceBandwidthRx;
 
         /**
          * <p>The maximum outbound internal bandwidth. Unit: Kbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024000</p>
          */
         @NameInMap("InstanceBandwidthTx")
         public Integer instanceBandwidthTx;
 
         /**
          * <p>The category of the instance type. Valid values:</p>
-         * <br>
-         * <p>*   General-purpose</p>
-         * <p>*   Compute-optimized</p>
-         * <p>*   Memory-optimized</p>
-         * <p>*   Big data</p>
-         * <p>*   Local SSDs</p>
-         * <p>*   High Clock Speed</p>
-         * <p>*   Enhanced</p>
-         * <p>*   Shared</p>
-         * <p>*   Compute-optimized with GPU</p>
-         * <p>*   Visual Compute-optimized</p>
-         * <p>*   Heterogeneous Service</p>
-         * <p>*   Compute-optimized with FPGA</p>
-         * <p>*   Compute-optimized with NPU</p>
-         * <p>*   ECS Bare Metal</p>
-         * <p>*   Super Computing Cluster</p>
-         * <p>*   High Performance Compute</p>
+         * <ul>
+         * <li>General-purpose</li>
+         * <li>Compute-optimized</li>
+         * <li>Memory-optimized</li>
+         * <li>Big data</li>
+         * <li>Local SSDs</li>
+         * <li>High Clock Speed</li>
+         * <li>Enhanced</li>
+         * <li>Shared</li>
+         * <li>Compute-optimized with GPU</li>
+         * <li>Visual Compute-optimized</li>
+         * <li>Heterogeneous Service</li>
+         * <li>Compute-optimized with FPGA</li>
+         * <li>Compute-optimized with NPU</li>
+         * <li>ECS Bare Metal</li>
+         * <li>Super Computing Cluster</li>
+         * <li>High Performance Compute</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Big data</p>
          */
         @NameInMap("InstanceCategory")
         public String instanceCategory;
 
         /**
          * <p>The level of the instance family. Valid values:</p>
-         * <br>
-         * <p>*   EntryLevel: entry level (shared).</p>
-         * <p>*   EnterpriseLevel: enterprise level.</p>
-         * <p>*   CreditEntryLevel: credit-based entry level. For more information, see [Overview](~~59977~~).</p>
+         * <ul>
+         * <li>EntryLevel: entry level (shared).</li>
+         * <li>EnterpriseLevel: enterprise level.</li>
+         * <li>CreditEntryLevel: credit-based entry level. For more information, see <a href="https://help.aliyun.com/document_detail/59977.html">Overview</a>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>EnterpriseLevel</p>
          */
         @NameInMap("InstanceFamilyLevel")
         public String instanceFamilyLevel;
 
         /**
          * <p>The inbound packet forwarding rate over the internal network. Unit: pps.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500000</p>
          */
         @NameInMap("InstancePpsRx")
         public Long instancePpsRx;
 
         /**
          * <p>The outbound packet forwarding rate over the internal network. Unit: pps.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500000</p>
          */
         @NameInMap("InstancePpsTx")
         public Long instancePpsTx;
 
         /**
          * <p>The instance family.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.g6</p>
          */
         @NameInMap("InstanceTypeFamily")
         public String instanceTypeFamily;
 
         /**
          * <p>The ID of the instance type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.g6.large</p>
          */
         @NameInMap("InstanceTypeId")
         public String instanceTypeId;
 
         /**
          * <p>The number of local disks per instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("LocalStorageAmount")
         public Integer localStorageAmount;
 
         /**
          * <p>The capacity of each local disk. Unit: GiB</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5000</p>
          */
         @NameInMap("LocalStorageCapacity")
         public Long localStorageCapacity;
 
         /**
-         * <p>The category of local disks. For more information, see [Local disks](~~63138~~). Valid values:</p>
-         * <br>
-         * <p>*   local_hdd_pro: local SATA HDDs, which are attached to d1ne or d1 instances</p>
-         * <p>*   local_ssd_pro: local NVMe SSDs, which are attached to i2, i2g, i1, ga1, or gn5 instances</p>
+         * <p>The category of local disks. For more information, see <a href="https://help.aliyun.com/document_detail/63138.html">Local disks</a>. Valid values:</p>
+         * <ul>
+         * <li>local_hdd_pro: local SATA HDDs, which are attached to d1ne or d1 instances</li>
+         * <li>local_ssd_pro: local NVMe SSDs, which are attached to i2, i2g, i1, ga1, or gn5 instances</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>local_ssd_pro</p>
          */
         @NameInMap("LocalStorageCategory")
         public String localStorageCategory;
 
         /**
          * <p>The maximum number of queues per ENI, including primary and secondary ENIs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         @NameInMap("MaximumQueueNumberPerEni")
         public Integer maximumQueueNumberPerEni;
 
         /**
          * <p>The memory size. Unit: GiB</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16</p>
          */
         @NameInMap("MemorySize")
         public Float memorySize;
 
         /**
          * <p>The maximum number of network cards that the instance type supports.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("NetworkCardQuantity")
         public Integer networkCardQuantity;
@@ -333,42 +481,62 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether to allow network traffic transmitted over virtual private clouds (VPCs) to be encrypted. Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("NetworkEncryptionSupport")
         public Boolean networkEncryptionSupport;
 
         /**
          * <p>Indicates whether cloud disks can be attached by using the NVMe protocol. Valid values:</p>
-         * <br>
-         * <p>*   required: Cloud disks can be attached by using the NVMe protocol.</p>
-         * <p>*   unsupported: Cloud disks cannot be attached by using the NVMe protocol.</p>
+         * <ul>
+         * <li>required: Cloud disks can be attached by using the NVMe protocol.</li>
+         * <li>unsupported: Cloud disks cannot be attached by using the NVMe protocol.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>unsupported</p>
          */
         @NameInMap("NvmeSupport")
         public String nvmeSupport;
 
         /**
          * <p>The CPU model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Intel Xeon(Ice Lake) Platinum 8369B</p>
          */
         @NameInMap("PhysicalProcessorModel")
         public String physicalProcessorModel;
 
         /**
          * <p>The default number of queues per primary ENI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         @NameInMap("PrimaryEniQueueNumber")
         public Integer primaryEniQueueNumber;
 
         /**
          * <p>The maximum number of QPs per ERI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22</p>
          */
         @NameInMap("QueuePairNumber")
         public Integer queuePairNumber;
 
         /**
          * <p>The default number of queues per secondary ENI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         @NameInMap("SecondaryEniQueueNumber")
         public Integer secondaryEniQueueNumber;
@@ -381,6 +549,9 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
 
         /**
          * <p>The maximum number of queues on ENIs that the instance type supports.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         @NameInMap("TotalEniQueueQuantity")
         public Integer totalEniQueueQuantity;
@@ -436,6 +607,14 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         }
         public Integer getDiskQuantity() {
             return this.diskQuantity;
+        }
+
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceType setEnhancedNetwork(DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeEnhancedNetwork enhancedNetwork) {
+            this.enhancedNetwork = enhancedNetwork;
+            return this;
+        }
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeEnhancedNetwork getEnhancedNetwork() {
+            return this.enhancedNetwork;
         }
 
         public DescribeInstanceTypesResponseBodyInstanceTypesInstanceType setEniIpv6AddressQuantity(Integer eniIpv6AddressQuantity) {

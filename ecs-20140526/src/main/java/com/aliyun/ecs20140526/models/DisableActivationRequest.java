@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class DisableActivationRequest extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4ECEEE12-56F1-4FBC-9AB1-890F1234****</p>
      */
     @NameInMap("ActivationId")
     public String activationId;
@@ -18,6 +22,10 @@ public class DisableActivationRequest extends TeaModel {
 
     /**
      * <p>The activation code ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

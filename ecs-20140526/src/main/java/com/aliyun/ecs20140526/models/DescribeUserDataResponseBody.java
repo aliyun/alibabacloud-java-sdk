@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class DescribeUserDataResponseBody extends TeaModel {
     /**
      * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-bp14bnftyqhxg9ij****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The region ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The user data of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ZWNobyBoZWxsbyBlY321ABC</p>
      */
     @NameInMap("UserData")
     public String userData;

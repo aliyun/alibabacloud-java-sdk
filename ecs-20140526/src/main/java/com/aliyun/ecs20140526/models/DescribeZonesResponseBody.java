@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeZonesResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -254,6 +257,9 @@ public class DescribeZonesResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether the instance is I/O optimized.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("IoOptimized")
         public Boolean ioOptimized;
@@ -399,11 +405,12 @@ public class DescribeZonesResponseBody extends TeaModel {
 
         /**
          * <p>The supported disk categories. Valid values:</p>
-         * <br>
-         * <p>*   cloud: basic disk</p>
-         * <p>*   cloud_ssd: standard SSD</p>
-         * <p>*   cloud_efficiency: ultra disk</p>
-         * <p>*   cloud_essd: ESSD</p>
+         * <ul>
+         * <li>cloud: basic disk</li>
+         * <li>cloud_ssd: standard SSD</li>
+         * <li>cloud_efficiency: ultra disk</li>
+         * <li>cloud_essd: ESSD</li>
+         * </ul>
          */
         @NameInMap("AvailableDiskCategories")
         public DescribeZonesResponseBodyZonesZoneAvailableDiskCategories availableDiskCategories;
@@ -416,12 +423,13 @@ public class DescribeZonesResponseBody extends TeaModel {
 
         /**
          * <p>The types of resources that can be created. Valid values:</p>
-         * <br>
-         * <p>*   VSwitch: vSwitch</p>
-         * <p>*   IoOptimized: I/O optimized instance</p>
-         * <p>*   Instance: instance</p>
-         * <p>*   DedicatedHost: dedicated host</p>
-         * <p>*   disk: disk</p>
+         * <ul>
+         * <li>VSwitch: vSwitch</li>
+         * <li>IoOptimized: I/O optimized instance</li>
+         * <li>Instance: instance</li>
+         * <li>DedicatedHost: dedicated host</li>
+         * <li>disk: disk</li>
+         * </ul>
          */
         @NameInMap("AvailableResourceCreation")
         public DescribeZonesResponseBodyZonesZoneAvailableResourceCreation availableResourceCreation;
@@ -446,21 +454,31 @@ public class DescribeZonesResponseBody extends TeaModel {
 
         /**
          * <p>The name of the zone in the local language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hangzhou Zone G</p>
          */
         @NameInMap("LocalName")
         public String localName;
 
         /**
          * <p>The ID of the zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-g</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;
 
         /**
          * <p>The type of the zone. Valid values:</p>
-         * <br>
-         * <p>*   AvailabilityZone: zone for the Alibaba Cloud public cloud</p>
-         * <p>*   CloudBoxZone: zone for CloudBox</p>
+         * <ul>
+         * <li>AvailabilityZone: zone for the Alibaba Cloud public cloud</li>
+         * <li>CloudBoxZone: zone for CloudBox</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>AvailabilityZone</p>
          */
         @NameInMap("ZoneType")
         public String zoneType;

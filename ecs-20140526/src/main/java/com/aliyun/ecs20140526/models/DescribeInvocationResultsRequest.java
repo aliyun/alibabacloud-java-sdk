@@ -6,91 +6,120 @@ import com.aliyun.tea.*;
 public class DescribeInvocationResultsRequest extends TeaModel {
     /**
      * <p>The ID of the command.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c-hz0jdfwcsr****</p>
      */
     @NameInMap("CommandId")
     public String commandId;
 
     /**
-     * <p>The encoding mode of the `CommandContent` and `Output` values in the response. Valid values:</p>
-     * <br>
-     * <p>*   PlainText: returns the original command content and command output.</p>
-     * <p>*   Base64: returns the Base64-encoded command content and command output.</p>
-     * <br>
+     * <p>The encoding mode of the <code>CommandContent</code> and <code>Output</code> values in the response. Valid values:</p>
+     * <ul>
+     * <li>PlainText: returns the original command content and command output.</li>
+     * <li>Base64: returns the Base64-encoded command content and command output.</li>
+     * </ul>
      * <p>Default value: Base64.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PlainText</p>
      */
     @NameInMap("ContentEncoding")
     public String contentEncoding;
 
     /**
      * <p>Specifies whether to return the results of historical scheduled executions. Valid values:</p>
-     * <br>
-     * <p>*   true: returns the results of historical scheduled executions. If you set this parameter to true, you must set InvokeId to the ID of a task that is run on a schedule (RepeatMode set to Period) or on each system startup (RepeatMode set to EveryReboot).</p>
-     * <p>*   false: does not return the results of historical scheduled executions.</p>
-     * <br>
+     * <ul>
+     * <li>true: returns the results of historical scheduled executions. If you set this parameter to true, you must set InvokeId to the ID of a task that is run on a schedule (RepeatMode set to Period) or on each system startup (RepeatMode set to EveryReboot).</li>
+     * <li>false: does not return the results of historical scheduled executions.</li>
+     * </ul>
      * <p>Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("IncludeHistory")
     public Boolean includeHistory;
 
     /**
      * <p>The ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-bp1i7gg30r52z2em****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The ID of the command task. You can call the [DescribeInvocations](~~64840~~) operation to query the IDs of all command tasks.</p>
+     * <p>The ID of the command task. You can call the <a href="https://help.aliyun.com/document_detail/64840.html">DescribeInvocations</a> operation to query the IDs of all command tasks.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>t-hz0jdfwd9f****</p>
      */
     @NameInMap("InvokeId")
     public String invokeId;
 
     /**
      * <p>The execution status of the command task. Valid values:</p>
-     * <br>
-     * <p>*   Running:</p>
-     * <br>
-     * <p>    *   Scheduled task: Before you stop the scheduled execution of the command, the execution state is always Running.</p>
-     * <p>    *   One-time task: If the command is being run on instances, the execution state is Running.</p>
-     * <br>
-     * <p>*   Finished:</p>
-     * <br>
-     * <p>    *   Scheduled task: The execution state can never be Finished.</p>
-     * <p>    *   One-time task: The execution is complete on all instances, or the execution is stopped on some instances and is complete on the other instances.</p>
-     * <br>
-     * <p>*   Success:</p>
-     * <br>
-     * <p>    *   One-time task: The execution is complete, and the exit code is 0.</p>
-     * <p>    *   Scheduled task: The last execution is complete, the exit code is 0, and the specified period ends.</p>
-     * <br>
-     * <p>*   Failed:</p>
-     * <br>
-     * <p>    *   Scheduled task: The execution state can never be Failed.</p>
-     * <p>    *   One-time task: The execution fails on all instances.</p>
-     * <br>
-     * <p>*   PartialFailed:</p>
-     * <br>
-     * <p>    *   Scheduled task: The execution state can never be PartialFailed.</p>
-     * <p>    *   One-time task: The execution fails on some instances.</p>
-     * <br>
-     * <p>*   Stopped: The task is stopped.</p>
-     * <br>
-     * <p>*   Stopping: The task is being stopped.</p>
+     * <ul>
+     * <li><p>Running:</p>
+     * <ul>
+     * <li>Scheduled task: Before you stop the scheduled execution of the command, the execution state is always Running.</li>
+     * <li>One-time task: If the command is being run on instances, the execution state is Running.</li>
+     * </ul>
+     * </li>
+     * <li><p>Finished:</p>
+     * <ul>
+     * <li>Scheduled task: The execution state can never be Finished.</li>
+     * <li>One-time task: The execution is complete on all instances, or the execution is stopped on some instances and is complete on the other instances.</li>
+     * </ul>
+     * </li>
+     * <li><p>Success:</p>
+     * <ul>
+     * <li>One-time task: The execution is complete, and the exit code is 0.</li>
+     * <li>Scheduled task: The last execution is complete, the exit code is 0, and the specified period ends.</li>
+     * </ul>
+     * </li>
+     * <li><p>Failed:</p>
+     * <ul>
+     * <li>Scheduled task: The execution state can never be Failed.</li>
+     * <li>One-time task: The execution fails on all instances.</li>
+     * </ul>
+     * </li>
+     * <li><p>PartialFailed:</p>
+     * <ul>
+     * <li>Scheduled task: The execution state can never be PartialFailed.</li>
+     * <li>One-time task: The execution fails on some instances.</li>
+     * </ul>
+     * </li>
+     * <li><p>Stopped: The task is stopped.</p>
+     * </li>
+     * <li><p>Stopping: The task is being stopped.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Running</p>
      */
     @NameInMap("InvokeRecordStatus")
     public String invokeRecordStatus;
 
     /**
      * <p>The maximum number of entries per page.</p>
-     * <br>
      * <p>Valid values: 1 to 50.</p>
-     * <br>
      * <p>Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AAAAAdDWBF2</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -103,32 +132,41 @@ public class DescribeInvocationResultsRequest extends TeaModel {
 
     /**
      * <p>The page number.</p>
-     * <br>
      * <p>Pages start from page 1.</p>
-     * <br>
      * <p>Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
-     * <br>
      * <p>Valid values: 1 to 50.</p>
-     * <br>
      * <p>Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
-     * <p>The region ID of the command. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the command. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group. After you set this parameter, command execution results in the specified resource group are queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-bp67acfmxazb4p****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -289,18 +327,21 @@ public class DescribeInvocationResultsRequest extends TeaModel {
     public static class DescribeInvocationResultsRequestTag extends TeaModel {
         /**
          * <p>The key of tag N of the command task. Valid values of N: 1 to 20. The tag key cannot be an empty string.</p>
-         * <br>
-         * <p>If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.</p>
-         * <br>
-         * <p>The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         * <p>If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</p>
+         * <p>The tag key can be up to 64 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of tag N of the command task. Valid values of N: 1 to 20. The tag value can be an empty string.</p>
-         * <br>
-         * <p>The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`.</p>
+         * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
          */
         @NameInMap("Value")
         public String value;

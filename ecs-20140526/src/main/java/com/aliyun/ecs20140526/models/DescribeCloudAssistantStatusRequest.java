@@ -6,32 +6,43 @@ import com.aliyun.tea.*;
 public class DescribeCloudAssistantStatusRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-bp1iudwa5b1tqa****</p>
      */
     @NameInMap("InstanceId")
     public java.util.List<String> instanceId;
 
     /**
-     * <p>The maximum number of entries per page. If you specify InstanceId, this parameter does not take effect. </p>
-     * <br>
-     * <p>Valid values: 1 to 50. </p>
-     * <br>
+     * <p>The maximum number of entries per page. If you specify <strong>InstanceId</strong>, this parameter does not take effect.</p>
+     * <p>Valid values: 1 to 50.</p>
      * <p>Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AAAAAdDWBF2</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The operating system type of the instance. Valid values:</p>
-     * <br>
-     * <p>*   Windows</p>
-     * <p>*   Linux</p>
-     * <p>*   FreeBSD</p>
+     * <ul>
+     * <li>Windows</li>
+     * <li>Linux</li>
+     * <li>FreeBSD</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Windows</p>
      */
     @NameInMap("OSType")
     public String OSType;
@@ -44,24 +55,31 @@ public class DescribeCloudAssistantStatusRequest extends TeaModel {
 
     /**
      * <p>The page number.</p>
-     * <br>
      * <p>Pages start from page 1.</p>
-     * <br>
      * <p>Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page. If you specify **InstanceId**, this parameter does not take effect. Valid values: 1 to 50.</p>
-     * <br>
+     * <p>The number of entries per page. If you specify <strong>InstanceId</strong>, this parameter does not take effect. Valid values: 1 to 50.</p>
      * <p>Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
-     * <p>The region ID of the instance. You can call [DescribeRegions](~~25609~~) to query the most recent region list.</p>
+     * <p>The region ID of the instance. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

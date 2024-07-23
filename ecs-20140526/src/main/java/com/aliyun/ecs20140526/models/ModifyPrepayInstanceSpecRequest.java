@@ -9,87 +9,116 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to enable automatic payment when you upgrade the instance type. Valid values:</p>
-     * <br>
-     * <p>*   true: enables automatic payment.</p>
-     * <br>
-     * <p>    **</p>
-     * <br>
-     * <p>    **Note** Make sure that your account balance is sufficient. Otherwise, your order becomes invalid and must be canceled. If your account balance is insufficient, you can set `AutoPay` to `false` to generate an unpaid order. Then, you can log on to the ECS console to pay for the order.</p>
-     * <br>
-     * <p>*   false: disables automatic payment. An order is generated but no payment is made.</p>
-     * <br>
+     * <ul>
+     * <li><p>true: enables automatic payment.</p>
+     * <p>**</p>
+     * <p><strong>Note</strong> Make sure that your account balance is sufficient. Otherwise, your order becomes invalid and must be canceled. If your account balance is insufficient, you can set <code>AutoPay</code> to <code>false</code> to generate an unpaid order. Then, you can log on to the ECS console to pay for the order.</p>
+     * </li>
+     * <li><p>false: disables automatic payment. An order is generated but no payment is made.</p>
+     * </li>
+     * </ul>
      * <p>Default value: true.</p>
-     * <br>
-     * <p>When `OperatorType` is set to `downgrade`, `AutoPay` is ignored.</p>
+     * <p>When <code>OperatorType</code> is set to <code>downgrade</code>, <code>AutoPay</code> is ignored.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
     /**
-     * <p>The client token that you want to use to ensure the idempotency of the request. You can use the client to generate the value, but make sure that the value is unique among different requests. This value allows only ASCII characters and is up to 64 characters in length. For more information, see [How do I ensure the idempotence of a request?](~~25693~~)</p>
+     * <p>The client token that you want to use to ensure the idempotency of the request. You can use the client to generate the value, but make sure that the value is unique among different requests. This value allows only ASCII characters and is up to 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How do I ensure the idempotence of a request?</a></p>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>>  This parameter is not publicly available.</p>
+     * <blockquote>
+     * <p> This parameter is not publicly available.</p>
+     * </blockquote>
      */
     @NameInMap("Disk")
     public java.util.List<ModifyPrepayInstanceSpecRequestDisk> disk;
 
     /**
-     * <p>The end time of the temporary change. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The end time of the temporary change. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2018-01-01T12:05Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The instance ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-bp67acfmxazb4ph****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The new instance type. For information about available instance types, see [Instance families](~~25378~~) or call the [DescribeInstanceTypes](~~25620~~) operation.</p>
+     * <p>The new instance type. For information about available instance types, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a> or call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs.g5.xlarge</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
 
     /**
      * <p>Specifies whether cross-cluster instance type upgrades are supported. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
-     * <br>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
      * <p>Default value: false.</p>
-     * <br>
-     * <p>When you set `MigrateAcrossZone` to `true` and you upgrade the instance type of an instance based on the returned information, take note of the following items:</p>
-     * <br>
+     * <p>When you set <code>MigrateAcrossZone</code> to <code>true</code> and you upgrade the instance type of an instance based on the returned information, take note of the following items:</p>
      * <p>Instance that resides in the classic network:</p>
-     * <br>
-     * <p>*   For [retired instance types](~~55263~~), when a non-I/O optimized instance is upgraded to an I/O optimized instance, the private IP address, disk device names, and software authorization codes of the instance change. For a Linux instance, basic disks (cloud) are identified as xvd\* such as xvda and xvdb, and ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified as vd\* such as vda and vdb.</p>
-     * <p>*   For [instance families available for purchase](~~25378~~), the private IP address of the instance changes.</p>
-     * <br>
+     * <ul>
+     * <li>For <a href="https://help.aliyun.com/document_detail/55263.html">retired instance types</a>, when a non-I/O optimized instance is upgraded to an I/O optimized instance, the private IP address, disk device names, and software authorization codes of the instance change. For a Linux instance, basic disks (cloud) are identified as xvd\* such as xvda and xvdb, and ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified as vd\* such as vda and vdb.</li>
+     * <li>For <a href="https://help.aliyun.com/document_detail/25378.html">instance families available for purchase</a>, the private IP address of the instance changes.</li>
+     * </ul>
      * <p>Instance that resides in a virtual private cloud (VPC): For retired instance types, when a non-I/O optimized instance is upgraded to an I/O optimized instance, the disk device names and software authorization codes of the instance change. For a Linux instance, basic disks (cloud) are identified as xvd\* such as xvda and xvdb, and ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified as vd\* such as vda and vdb.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("MigrateAcrossZone")
     public Boolean migrateAcrossZone;
 
     /**
-     * <p>>  This parameter is not publicly available.</p>
+     * <blockquote>
+     * <p> This parameter is not publicly available.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
      */
     @NameInMap("ModifyMode")
     public String modifyMode;
 
     /**
      * <p>The type of the change to the instance. Valid values:</p>
-     * <br>
-     * <p>>  This parameter is optional. The system can automatically determine whether the instance change is an upgrade or a downgrade. If you want to specify this parameter, refer to the following valid values of the parameter.</p>
-     * <br>
-     * <p>*   upgrade: upgrades the instance type. Make sure that the balance in your account is sufficient.</p>
-     * <p>*   downgrade: downgrades the instance type. When the new instance type specified by the `InstanceType` parameter has lower specifications than the current instance type, set `OperatorType` to downgrade.</p>
-     * <br>
-     * <p>>  You can refer to the preceding usage notes on how to upgrade or downgrade the instance type.</p>
+     * <blockquote>
+     * <p> This parameter is optional. The system can automatically determine whether the instance change is an upgrade or a downgrade. If you want to specify this parameter, refer to the following valid values of the parameter.</p>
+     * </blockquote>
+     * <ul>
+     * <li>upgrade: upgrades the instance type. Make sure that the balance in your account is sufficient.</li>
+     * <li>downgrade: downgrades the instance type. When the new instance type specified by the <code>InstanceType</code> parameter has lower specifications than the current instance type, set <code>OperatorType</code> to downgrade.</li>
+     * </ul>
+     * <blockquote>
+     * <p> You can refer to the preceding usage notes on how to upgrade or downgrade the instance type.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>upgrade</p>
      */
     @NameInMap("OperatorType")
     public String operatorType;
@@ -101,26 +130,37 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The restart time of the instance. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The restart time of the instance. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2018-01-01T12:05Z</p>
      */
     @NameInMap("RebootTime")
     public String rebootTime;
 
     /**
      * <p>Specifies whether to restart the instance immediately after the instance type is changed. Valid values:</p>
-     * <br>
-     * <p>*   true: restart the instance immediately after the instance type is changed.</p>
-     * <p>*   false: does not restart the instance immediately after the instance type is changed.</p>
-     * <br>
+     * <ul>
+     * <li>true: restart the instance immediately after the instance type is changed.</li>
+     * <li>false: does not restart the instance immediately after the instance type is changed.</li>
+     * </ul>
      * <p>Default value: false.</p>
-     * <br>
-     * <p>>  If the instance is in the **Stopping** state, the instance status remains unchanged and no operations are performed after the instance type is change regardless of whether you set the `RebootWhenFinished` parameter to true.</p>
+     * <blockquote>
+     * <p> If the instance is in the <strong>Stopping</strong> state, the instance status remains unchanged and no operations are performed after the instance type is change regardless of whether you set the <code>RebootWhenFinished</code> parameter to true.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("RebootWhenFinished")
     public Boolean rebootWhenFinished;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -275,11 +315,16 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
     public static class ModifyPrepayInstanceSpecRequestSystemDisk extends TeaModel {
         /**
          * <p>The new category of the system disk. Valid values:</p>
-         * <br>
-         * <p>*   cloud_efficiency: utra disk</p>
-         * <p>*   cloud_ssd: standard SSD</p>
-         * <br>
-         * <p>>  This parameter takes effect on an instance only when you change from a [retired instance type](~~55263~~) to an instance type in an [instance family available for purchase](~~25378~~) and upgrade the instance from a non-I/O optimized instance type to an I/O optimized instance type.</p>
+         * <ul>
+         * <li>cloud_efficiency: utra disk</li>
+         * <li>cloud_ssd: standard SSD</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter takes effect on an instance only when you change from a <a href="https://help.aliyun.com/document_detail/55263.html">retired instance type</a> to an instance type in an <a href="https://help.aliyun.com/document_detail/25378.html">instance family available for purchase</a> and upgrade the instance from a non-I/O optimized instance type to an I/O optimized instance type.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_efficiency</p>
          */
         @NameInMap("Category")
         public String category;
@@ -301,19 +346,34 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
 
     public static class ModifyPrepayInstanceSpecRequestDisk extends TeaModel {
         /**
-         * <p>>  This parameter is not publicly available.</p>
+         * <blockquote>
+         * <p> This parameter is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("Category")
         public String category;
 
         /**
-         * <p>>  This parameter is not publicly available.</p>
+         * <blockquote>
+         * <p> This parameter is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("DiskId")
         public String diskId;
 
         /**
-         * <p>>  This parameter is not publicly available.</p>
+         * <blockquote>
+         * <p> This parameter is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("PerformanceLevel")
         public String performanceLevel;

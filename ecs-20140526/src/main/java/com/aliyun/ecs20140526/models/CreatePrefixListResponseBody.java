@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreatePrefixListResponseBody extends TeaModel {
     /**
      * <p>The ID of the prefix list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pl-x1j1k5ykzqlixdcy****</p>
      */
     @NameInMap("PrefixListId")
     public String prefixListId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>38793DB8-A4B2-4AEC-BFD3-111234E9188D</p>
      */
     @NameInMap("RequestId")
     public String requestId;

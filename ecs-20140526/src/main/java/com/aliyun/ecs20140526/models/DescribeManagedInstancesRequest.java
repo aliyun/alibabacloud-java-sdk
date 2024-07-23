@@ -6,49 +6,70 @@ import com.aliyun.tea.*;
 public class DescribeManagedInstancesRequest extends TeaModel {
     /**
      * <p>The ID of the activation code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4ECEEE12-56F1-4FBC-9AB1-890F7494****</p>
      */
     @NameInMap("ActivationId")
     public String activationId;
 
     /**
      * <p>The ID of managed instance N. Valid values of N: 1 to 50.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mi-hz018jrc1o0****</p>
      */
     @NameInMap("InstanceId")
     public java.util.List<String> instanceId;
 
     /**
      * <p>The internal or public IP address of the managed instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.**.**</p>
      */
     @NameInMap("InstanceIp")
     public String instanceIp;
 
     /**
      * <p>The name of the managed instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my-webapp-server</p>
      */
     @NameInMap("InstanceName")
     public String instanceName;
 
     /**
      * <p>The maximum number of entries per page.</p>
-     * <br>
      * <p>Valid values: 1 to 50.</p>
-     * <br>
      * <p>Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AAAAAdDWBF2****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The operating system type of the managed instance. Valid values:</p>
-     * <br>
-     * <p>*   windows</p>
-     * <p>*   linux</p>
+     * <ul>
+     * <li>windows</li>
+     * <li>linux</li>
+     * <li>FreeBSD</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>windows</p>
      */
     @NameInMap("OsType")
     public String osType;
@@ -61,34 +82,42 @@ public class DescribeManagedInstancesRequest extends TeaModel {
 
     /**
      * <p>The page number.</p>
-     * <br>
      * <p>Pages start from page 1.</p>
-     * <br>
      * <p>Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
-     * <br>
      * <p>Valid values: 1 to 50.</p>
-     * <br>
      * <p>Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
-     * <p>The region ID of the managed instance. Supported regions: China (Qingdao), China (Beijing), China (Zhangjiakou), China (Hohhot), China (Hangzhou), China (Shanghai), China (Shenzhen), China (Heyuan), and China (Hong Kong).</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID. Supported regions: China (Qingdao), China (Beijing), China (Zhangjiakou), China (Hohhot), China (Ulanqab), China (Hangzhou), China (Shanghai), China (Shenzhen), China (Heyuan), China (Guangzhou), China (Chengdu), China (Hong Kong), Singapore, Japan (Tokyo), US (Silicon Valley), and US (Virginia).</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group to which the managed instance belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-123******</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -241,18 +270,21 @@ public class DescribeManagedInstancesRequest extends TeaModel {
     public static class DescribeManagedInstancesRequestTag extends TeaModel {
         /**
          * <p>The key of tag N of the managed instance. Valid values of N: 1 to 20. The tag key cannot be an empty string.</p>
-         * <br>
-         * <p>If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.</p>
-         * <br>
-         * <p>The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         * <p>If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</p>
+         * <p>The tag key can be up to 64 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of tag N of the managed instance. Valid values of N: 1 to 20. The tag value can be an empty string.</p>
-         * <br>
-         * <p>The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`.</p>
+         * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
          */
         @NameInMap("Value")
         public String value;

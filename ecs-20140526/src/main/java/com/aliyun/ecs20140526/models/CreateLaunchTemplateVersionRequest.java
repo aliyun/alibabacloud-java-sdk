@@ -8,20 +8,53 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
     public CreateLaunchTemplateVersionRequestSystemDisk systemDisk;
 
     /**
-     * <p>The automatic release time of the instance. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
-     * <br>
-     * <p>*   If the value of `ss` is not `00`, the time is automatically rounded down to the nearest minute based on the value of `mm`.</p>
-     * <p>*   The specified time must be at least 30 minutes later than the current time.</p>
-     * <p>*   The specified time can be at most three years later than the current time.</p>
+     * <p>The automatic release time of the instance. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <ul>
+     * <li>If the value of <code>ss</code> is not <code>00</code>, the time is automatically rounded down to the nearest minute based on the value of <code>mm</code>.</li>
+     * <li>The specified time must be at least 30 minutes later than the current time.</li>
+     * <li>The specified time can be at most three years later than the current time.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>2018-01-01T12:05:00Z</p>
      */
     @NameInMap("AutoReleaseTime")
     public String autoReleaseTime;
 
     /**
+     * <p>Specifies whether to enable auto-renewal for the instance. This parameter is valid only if <code>InstanceChargeType</code> is set to <code>PrePaid</code>. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * <p>Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("AutoRenew")
+    public Boolean autoRenew;
+
+    /**
+     * <p>The auto-renewal period of the instance. Valid values:</p>
+     * <p>Valid values when PeriodUnit is set to Month: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</p>
+     * <p>Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("AutoRenewPeriod")
+    public Integer autoRenewPeriod;
+
+    /**
      * <p>The performance mode of the burstable instance. Valid values:</p>
-     * <br>
-     * <p>*   Standard: the standard mode. For more information, see the "Standard mode" section in [Overview of burstable instances](~~59977~~).</p>
-     * <p>*   Unlimited: the unlimited mode. For more information, see the "Unlimited mode" section in [Overview of burstable instances](~~59977~~).</p>
+     * <ul>
+     * <li>Standard: the standard mode. For more information, see the &quot;Standard mode&quot; section in <a href="https://help.aliyun.com/document_detail/59977.html">Overview of burstable instances</a>.</li>
+     * <li>Unlimited: the unlimited mode. For more information, see the &quot;Unlimited mode&quot; section in <a href="https://help.aliyun.com/document_detail/59977.html">Overview of burstable instances</a>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Standard</p>
      */
     @NameInMap("CreditSpecification")
     public String creditSpecification;
@@ -33,139 +66,203 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
     public java.util.List<CreateLaunchTemplateVersionRequestDataDisk> dataDisk;
 
     /**
-     * <p>Specifies whether to enable release protection for the instance. This parameter specifies whether you can use the ECS console or call the [DeleteInstance](~~25507~~) operation to release the instance. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
-     * <br>
+     * <p>Specifies whether to enable release protection for the instance. This parameter specifies whether you can use the ECS console or call the <a href="https://help.aliyun.com/document_detail/25507.html">DeleteInstance</a> operation to release the instance. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
      * <p>Default value: false.</p>
-     * <br>
-     * <p>>  This parameter is applicable only to pay-as-you-go instances. The release protection feature can protect instances against manual releases, but not against automatic releases.</p>
+     * <blockquote>
+     * <p> This parameter is applicable only to pay-as-you-go instances. The release protection feature can protect instances against manual releases, but not against automatic releases.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("DeletionProtection")
     public Boolean deletionProtection;
 
     /**
      * <p>The ID of the deployment set to which to deploy the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ds-bp1brhwhoqinyjd6****</p>
      */
     @NameInMap("DeploymentSetId")
     public String deploymentSetId;
 
     /**
-     * <p>The description of the instance. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.</p>
+     * <p>The description of the instance. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testDescription</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>Specifies whether to enable the operating system configuration of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("EnableVmOsConfig")
     public Boolean enableVmOsConfig;
 
     /**
      * <p>The hostname of the instance.</p>
-     * <br>
-     * <p>*   The hostname cannot start or end with a period (.) or hyphen (-). It cannot contain consecutive periods (.) or hyphens (-).</p>
-     * <p>*   For Windows instances, the hostname must be 2 to 15 characters in length and cannot contain periods (.) or contain only digits. It can contain letters, digits, and hyphens (-).</p>
-     * <p>*   For instances that run other operating systems such as Linux, the hostname must be 2 to 64 characters in length. You can use periods (.) to separate the hostname into multiple segments. Each segment can contain letters, digits, and hyphens (-).</p>
+     * <ul>
+     * <li>The hostname cannot start or end with a period (.) or hyphen (-). It cannot contain consecutive periods (.) or hyphens (-).</li>
+     * <li>For Windows instances, the hostname must be 2 to 15 characters in length and cannot contain periods (.) or contain only digits. It can contain letters, digits, and hyphens (-).</li>
+     * <li>For instances that run other operating systems such as Linux, the hostname must be 2 to 64 characters in length. You can use periods (.) to separate the hostname into multiple segments. Each segment can contain letters, digits, and hyphens (-).</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>testHostName</p>
      */
     @NameInMap("HostName")
     public String hostName;
 
     /**
-     * <p>The ID of the image to use to create the Elastic Compute Service (ECS) instance. You can call the [DescribeImages](~~25534~~) operation to query available images.</p>
+     * <p>The ID of the image to use to create the Elastic Compute Service (ECS) instance. You can call the <a href="https://help.aliyun.com/document_detail/25534.html">DescribeImages</a> operation to query available images.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>win2008r2_64_ent_sp1_en-us_40G_alibase_20170915.vhd</p>
      */
     @NameInMap("ImageId")
     public String imageId;
 
     /**
      * <p>The source of the image.</p>
-     * <br>
-     * <p>> This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.</p>
+     * <blockquote>
+     * <p>This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>system</p>
      */
     @NameInMap("ImageOwnerAlias")
     public String imageOwnerAlias;
 
     /**
      * <p>The billing method of the instance. Valid values:</p>
-     * <br>
-     * <p>*   PrePaid: subscription. If you set this parameter to PrePaid, make sure that your account has sufficient credits. Otherwise, an `InvalidPayMethod` error is returned.</p>
-     * <p>*   PostPaid: pay-as-you-go</p>
+     * <ul>
+     * <li>PrePaid: subscription. If you set this parameter to PrePaid, make sure that your account has sufficient credits. Otherwise, an <code>InvalidPayMethod</code> error is returned.</li>
+     * <li>PostPaid: pay-as-you-go</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>PrePaid</p>
      */
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
 
     /**
-     * <p>The name of the instance. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
+     * <p>The instance name. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-). The default value of this parameter is the <code>InstanceId</code> value.</p>
+     * <p>When you create multiple ECS instances at a time, you can batch configure sequential names for the instances. The instance names can contain square brackets ([]) and commas (,). For more information, see <a href="https://help.aliyun.com/document_detail/196048.html">Batch configure sequential names or hostnames for multiple instances</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>k8s-node-[1,4]-alibabacloud</p>
      */
     @NameInMap("InstanceName")
     public String instanceName;
 
     /**
-     * <p>The instance type. For more information, see [Instance families](~~25378~~) or call the [DescribeInstanceTypes](~~25620~~) operation to query the most recent instance type list.</p>
+     * <p>The instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a> or call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation to query the most recent instance type list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs.g5.large</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
 
     /**
      * <p>The billing method for network usage. Default value: PayByTraffic. Valid values:</p>
-     * <br>
-     * <p>*   PayByBandwidth: pay-by-bandwidth</p>
-     * <p>*   PayByTraffic: pay-by-traffic</p>
-     * <br>
-     * <p>> When the **pay-by-traffic** billing method for network usage is used, the maximum inbound and outbound bandwidths are used as the upper limits of bandwidths instead of guaranteed performance specifications. In scenarios where demand outstrips resource supplies, these maximum bandwidth values may not be reached. If you want guaranteed bandwidths for your instance, use the **pay-by-bandwidth** billing method for network usage.</p>
+     * <ul>
+     * <li>PayByBandwidth: pay-by-bandwidth</li>
+     * <li>PayByTraffic: pay-by-traffic</li>
+     * </ul>
+     * <blockquote>
+     * <p>When the <strong>pay-by-traffic</strong> billing method for network usage is used, the maximum inbound and outbound bandwidths are used as the upper limits of bandwidths instead of guaranteed performance specifications. In scenarios where demand outstrips resource supplies, these maximum bandwidth values may not be reached. If you want guaranteed bandwidths for your instance, use the <strong>pay-by-bandwidth</strong> billing method for network usage.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>PayByTraffic</p>
      */
     @NameInMap("InternetChargeType")
     public String internetChargeType;
 
     /**
      * <p>The maximum inbound public bandwidth. Unit: Mbit/s. Valid values:</p>
-     * <br>
-     * <p>*   When the purchased outbound public bandwidth is less than or equal to 10 Mbit/s, the valid values of this parameter are 1 to 10 and the default value is 10.</p>
-     * <p>*   If the purchased outbound public bandwidth is greater than 10 Mbit/s, the valid values of this parameter range from 1 to the `InternetMaxBandwidthOut` value and the default value is the `InternetMaxBandwidthOut` value.</p>
+     * <ul>
+     * <li>When the purchased outbound public bandwidth is less than or equal to 10 Mbit/s, the valid values of this parameter are 1 to 10 and the default value is 10.</li>
+     * <li>If the purchased outbound public bandwidth is greater than 10 Mbit/s, the valid values of this parameter range from 1 to the <code>InternetMaxBandwidthOut</code> value and the default value is the <code>InternetMaxBandwidthOut</code> value.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("InternetMaxBandwidthIn")
     public Integer internetMaxBandwidthIn;
 
     /**
      * <p>The maximum outbound public bandwidth. Unit: Mbit/s. Valid values: 0 to 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("InternetMaxBandwidthOut")
     public Integer internetMaxBandwidthOut;
 
     /**
      * <p>Specifies whether to create an I/O optimized instance. Valid values:</p>
-     * <br>
-     * <p>*   none: The instance is not I/O optimized.</p>
-     * <p>*   optimized: creates an I/O optimized instance.</p>
+     * <ul>
+     * <li>none: The instance is not I/O optimized.</li>
+     * <li>optimized: creates an I/O optimized instance.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>optimized</p>
      */
     @NameInMap("IoOptimized")
     public String ioOptimized;
 
     /**
      * <p>The number of IPv6 addresses to randomly generate for the primary elastic network interface (ENI). Valid values: 1 to 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Ipv6AddressCount")
     public Integer ipv6AddressCount;
 
     /**
      * <p>The name of the key pair to bind to the instance.</p>
-     * <br>
-     * <p>*   For Windows instances, this parameter is ignored The `Password` parameter is valid even if the KeyPairName parameter is specified.</p>
-     * <p>*   For Linux instances, the password-based logon method is disabled by default.</p>
+     * <ul>
+     * <li>For Windows instances, this parameter is ignored The <code>Password</code> parameter is valid even if the KeyPairName parameter is specified.</li>
+     * <li>For Linux instances, the password-based logon method is disabled by default.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>testKeyPairName</p>
      */
     @NameInMap("KeyPairName")
     public String keyPairName;
 
     /**
-     * <p>The ID of the launch template. For more information, call the [DescribeLaunchTemplates](~~73759~~) operation. You must specify `LaunchTemplateId` or `LaunchTemplateName` to specify a launch template.</p>
+     * <p>The ID of the launch template. For more information, call the <a href="https://help.aliyun.com/document_detail/73759.html">DescribeLaunchTemplates</a> operation. You must specify <code>LaunchTemplateId</code> or <code>LaunchTemplateName</code> to specify a launch template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lt-m5eiaupmvm2op9d****</p>
      */
     @NameInMap("LaunchTemplateId")
     public String launchTemplateId;
 
     /**
-     * <p>The name of the launch template. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
+     * <p>The name of the launch template. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testLaunchTemplateName</p>
      */
     @NameInMap("LaunchTemplateName")
     public String launchTemplateName;
@@ -178,9 +275,13 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
 
     /**
      * <p>The network type of the instance. Valid values:</p>
-     * <br>
-     * <p>*   classic: classic network</p>
-     * <p>*   vpc: VPC</p>
+     * <ul>
+     * <li>classic: classic network</li>
+     * <li>vpc: VPC</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc</p>
      */
     @NameInMap("NetworkType")
     public String networkType;
@@ -193,45 +294,74 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to use the password that is preconfigured in the image. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
-     * <br>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
      * <p>Default value: false.</p>
-     * <br>
-     * <p>>  If you specify PasswordInherit, you must leave Password empty and make sure that a password is preconfigured for the image.</p>
+     * <blockquote>
+     * <p> If you specify PasswordInherit, you must leave Password empty and make sure that a password is preconfigured for the image.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("PasswordInherit")
     public Boolean passwordInherit;
 
     /**
-     * <p>The subscription period of the instance. Unit: months. This parameter is valid and required only when `InstanceChargeType` is set to `PrePaid`. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</p>
+     * <p>The subscription period of the instance. Unit: months. This parameter is valid and required only when <code>InstanceChargeType</code> is set to <code>PrePaid</code>. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Period")
     public Integer period;
 
     /**
+     * <p>The unit of the subscription period. Valid values:</p>
+     * <p>Month (default)</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Month</p>
+     */
+    @NameInMap("PeriodUnit")
+    public String periodUnit;
+
+    /**
      * <p>The private IP address to assign to the instance.</p>
-     * <br>
-     * <p>To assign a private IP address to an instance of the VPC type, make sure that the IP address is an idle IP address within the CIDR block of the vSwitch specified by the `VSwitchId` parameter.</p>
+     * <p>To assign a private IP address to an instance of the VPC type, make sure that the IP address is an idle IP address within the CIDR block of the vSwitch specified by the <code>VSwitchId</code> parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10.1.**.**</p>
      */
     @NameInMap("PrivateIpAddress")
     public String privateIpAddress;
 
     /**
-     * <p>The name of the instance Resource Access Management (RAM) role. You can call the [ListRoles](~~28713~~) operation provided by RAM to query the instance RAM roles that you created.</p>
+     * <p>The name of the instance Resource Access Management (RAM) role. You can call the <a href="https://help.aliyun.com/document_detail/28713.html">ListRoles</a> operation provided by RAM to query the instance RAM roles that you created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testRamRoleName</p>
      */
     @NameInMap("RamRoleName")
     public String ramRoleName;
 
     /**
-     * <p>The region ID of the command. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.</p>
+     * <p>The region ID of the command. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent list of regions.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group to which to assign the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-bp67acfmxazb4p****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -244,54 +374,77 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to enable security hardening for the operating system. Valid values:</p>
-     * <br>
-     * <p>*   Active: Security hardening is enabled. This value is applicable only to public images.</p>
-     * <p>*   Deactive: Security hardening is disabled. This value is available to all types of images.</p>
+     * <ul>
+     * <li>Active: Security hardening is enabled. This value is applicable only to public images.</li>
+     * <li>Deactive: Security hardening is disabled. This value is available to all types of images.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Active</p>
      */
     @NameInMap("SecurityEnhancementStrategy")
     public String securityEnhancementStrategy;
 
     /**
      * <p>The ID of the security group to which to assign the instance. Instances within the same security group can access each other.</p>
-     * <br>
-     * <p>> The `SecurityGroupId` parameter and the `SecurityGroupIds.N` parameter are mutually exclusive.</p>
+     * <blockquote>
+     * <p>The <code>SecurityGroupId</code> parameter and the <code>SecurityGroupIds.N</code> parameter are mutually exclusive.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>sg-bp15ed6xe1yxeycg****</p>
      */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
     /**
-     * <p>The ID of security group N to which to assign the instance. The valid values of N depend on the maximum number of security groups to which the instance can belong. For more information, see [Quantity limits](~~25412~~).</p>
-     * <br>
-     * <p>> The `SecurityGroupId` parameter and the `SecurityGroupIds.N` parameter are mutually exclusive.</p>
+     * <p>The ID of security group N to which to assign the instance. The valid values of N depend on the maximum number of security groups to which the instance can belong. For more information, see <a href="https://help.aliyun.com/document_detail/25412.html">Quantity limits</a>.</p>
+     * <blockquote>
+     * <p>The <code>SecurityGroupId</code> parameter and the <code>SecurityGroupIds.N</code> parameter are mutually exclusive.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>sg-bp15ed6xe1yxeycg7****</p>
      */
     @NameInMap("SecurityGroupIds")
     public java.util.List<String> securityGroupIds;
 
     /**
      * <p>The protection period of the preemptible instance. Unit: hours. Default value: 1. Valid values:</p>
-     * <br>
-     * <p>*   1: After a preemptible instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After the 1-hour protection period ends, the system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</p>
-     * <p>*   0: After a preemptible instance is created, Alibaba Cloud does not ensure that the instance runs for 1 hour. The system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</p>
-     * <br>
+     * <ul>
+     * <li>1: After a preemptible instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After the 1-hour protection period ends, the system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</li>
+     * <li>0: After a preemptible instance is created, Alibaba Cloud does not ensure that the instance runs for 1 hour. The system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</li>
+     * </ul>
      * <p>Alibaba Cloud sends an ECS system event to notify you 5 minutes before the instance is released. Preemptible instances are billed by second. We recommend that you specify a protection period based on your business requirements.</p>
-     * <br>
-     * <p>>  This parameter takes effect only if SpotStrategy is set to SpotWithPriceLimit or SpotAsPriceGo.</p>
+     * <blockquote>
+     * <p> This parameter takes effect only if SpotStrategy is set to SpotWithPriceLimit or SpotAsPriceGo.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("SpotDuration")
     public Integer spotDuration;
 
     /**
      * <p>The maximum hourly price of the preemptible instance. A maximum of three decimal places are allowed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.97</p>
      */
     @NameInMap("SpotPriceLimit")
     public Float spotPriceLimit;
 
     /**
-     * <p>The preemption policy for the pay-as-you-go instance. This parameter is valid only when the `InstanceChargeType` parameter is set to `PostPaid`. Default value: NoSpot. Valid values:</p>
-     * <br>
-     * <p>*   NoSpot: The instance is created as a pay-as-you-go instance.</p>
-     * <p>*   SpotWithPriceLimit: The instances of the compute node are preemptible instances. These types of instances have a specified maximum hourly price.</p>
-     * <p>*   SpotAsPriceGo: The instance is created as a preemptible instance for which the market price at the time of purchase is automatically used as the bid price.</p>
+     * <p>The preemption policy for the pay-as-you-go instance. This parameter is valid only when the <code>InstanceChargeType</code> parameter is set to <code>PostPaid</code>. Default value: NoSpot. Valid values:</p>
+     * <ul>
+     * <li>NoSpot: The instance is created as a pay-as-you-go instance.</li>
+     * <li>SpotWithPriceLimit: The instances of the compute node are preemptible instances. These types of instances have a specified maximum hourly price.</li>
+     * <li>SpotAsPriceGo: The instance is created as a preemptible instance for which the market price at the time of purchase is automatically used as the bid price.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>NoSpot</p>
      */
     @NameInMap("SpotStrategy")
     public String spotStrategy;
@@ -304,30 +457,45 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
 
     /**
      * <p>The user data of the instance. The user data must be encoded in Base64. The maximum size of raw data is 32 KB.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ZWNobyBoZWxsbyBl****</p>
      */
     @NameInMap("UserData")
     public String userData;
 
     /**
      * <p>The ID of the vSwitch to which to connect the instance. This parameter is required if you specify the VpcId parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-bp1s5fnvk4gn2tws0****</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
     /**
-     * <p>The description of the launch template version. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.</p>
+     * <p>The description of the launch template version. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testVersionDescription</p>
      */
     @NameInMap("VersionDescription")
     public String versionDescription;
 
     /**
      * <p>The ID of the virtual private cloud (VPC).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-bp12433upq1y5scen****</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
 
     /**
      * <p>The ID of the zone to which the instance belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-g</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;
@@ -351,6 +519,22 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
     }
     public String getAutoReleaseTime() {
         return this.autoReleaseTime;
+    }
+
+    public CreateLaunchTemplateVersionRequest setAutoRenew(Boolean autoRenew) {
+        this.autoRenew = autoRenew;
+        return this;
+    }
+    public Boolean getAutoRenew() {
+        return this.autoRenew;
+    }
+
+    public CreateLaunchTemplateVersionRequest setAutoRenewPeriod(Integer autoRenewPeriod) {
+        this.autoRenewPeriod = autoRenewPeriod;
+        return this;
+    }
+    public Integer getAutoRenewPeriod() {
+        return this.autoRenewPeriod;
     }
 
     public CreateLaunchTemplateVersionRequest setCreditSpecification(String creditSpecification) {
@@ -561,6 +745,14 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
         return this.period;
     }
 
+    public CreateLaunchTemplateVersionRequest setPeriodUnit(String periodUnit) {
+        this.periodUnit = periodUnit;
+        return this;
+    }
+    public String getPeriodUnit() {
+        return this.periodUnit;
+    }
+
     public CreateLaunchTemplateVersionRequest setPrivateIpAddress(String privateIpAddress) {
         this.privateIpAddress = privateIpAddress;
         return this;
@@ -708,106 +900,143 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
     public static class CreateLaunchTemplateVersionRequestSystemDisk extends TeaModel {
         /**
          * <p>The ID of the automatic snapshot policy to apply to the system disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sp-bp1dgzpaxwc4load****</p>
          */
         @NameInMap("AutoSnapshotPolicyId")
         public String autoSnapshotPolicyId;
 
         /**
          * <p>Specifies whether to enable the performance burst feature. Valid values:</p>
-         * <br>
-         * <p>*   true: encrypts the disk.</p>
-         * <p>*   false: does not enable the performance burst feature.</p>
+         * <ul>
+         * <li>true: encrypts the disk.</li>
+         * <li>false: does not enable the performance burst feature.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("BurstingEnabled")
         public Boolean burstingEnabled;
 
         /**
          * <p>The category of the system disk. Valid values:</p>
-         * <br>
-         * <p>*   cloud: basic disk.</p>
-         * <p>*   cloud_efficiency: ultra disk.</p>
-         * <p>*   cloud_ssd: standard SSD.</p>
-         * <p>*   cloud_auto: Enterprise SSD (ESSD) AutoPL disk.</p>
-         * <p>*   cloud_essd: ESSD. You can use `SystemDisk.PerformanceLevel` to set the performance level of the ESSD to use as the system disk.</p>
-         * <p>*   cloud_essd_entry: ESSD Entry disk.</p>
-         * <br>
+         * <ul>
+         * <li>cloud: basic disk.</li>
+         * <li>cloud_efficiency: ultra disk.</li>
+         * <li>cloud_ssd: standard SSD.</li>
+         * <li>cloud_auto: Enterprise SSD (ESSD) AutoPL disk.</li>
+         * <li>cloud_essd: ESSD. You can use <code>SystemDisk.PerformanceLevel</code> to set the performance level of the ESSD to use as the system disk.</li>
+         * <li>cloud_essd_entry: ESSD Entry disk.</li>
+         * </ul>
          * <p>For non-I/O optimized instances of retired instance types, the default value is cloud. For other types of instances, the default value is cloud_efficiency.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_ssd</p>
          */
         @NameInMap("Category")
         public String category;
 
         /**
          * <p>Specifies whether to release the system disk when the instance is released. Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
-         * <br>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * <p>Default value: true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("DeleteWithInstance")
         public Boolean deleteWithInstance;
 
         /**
-         * <p>The description of the system disk. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.</p>
+         * <p>The description of the system disk. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testSystemDiskDescription</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The name of the system disk. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
+         * <p>The name of the system disk. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_ssdSystem</p>
          */
         @NameInMap("DiskName")
         public String diskName;
 
         /**
          * <p>Specifies whether to encrypt the system disk. Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
-         * <br>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * <p>Default value: false</p>
-         * <br>
-         * <p>> You cannot encrypt system disks when you create instances in Hong Kong Zone D or Singapore Zone A.</p>
+         * <blockquote>
+         * <p>You cannot encrypt system disks when you create instances in Hong Kong Zone D or Singapore Zone A.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Encrypted")
         public String encrypted;
 
         /**
-         * <p>>  This parameter is not publicly available.</p>
+         * <blockquote>
+         * <p> This parameter is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>30000</p>
          */
         @NameInMap("Iops")
         public Integer iops;
 
         /**
          * <p>The performance level of the ESSD to be used as the system disk. Default value: PL0. Valid values:</p>
-         * <br>
-         * <p>*   PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</p>
-         * <p>*   PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.</p>
-         * <p>*   PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.</p>
-         * <p>*   PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.</p>
-         * <br>
-         * <p>For more information about ESSD performance levels, see [ESSDs](~~122389~~).</p>
+         * <ul>
+         * <li>PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</li>
+         * <li>PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.</li>
+         * <li>PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.</li>
+         * <li>PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.</li>
+         * </ul>
+         * <p>For more information about ESSD performance levels, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PL0</p>
          */
         @NameInMap("PerformanceLevel")
         public String performanceLevel;
 
         /**
          * <p>The provisioned read/write IOPS of the ESSD AutoPL disk to use as data disk N. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}</p>
-         * <br>
          * <p>Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}</p>
-         * <br>
-         * <p>> This parameter is available only if you set the Category parameter to cloud_auto. For more information, see [ESSD AutoPL disks](~~368372~~) and [Modify the performance configurations of an ESSD AutoPL disk](~~413275~~).</p>
+         * <blockquote>
+         * <p>This parameter is available only if you set the Category parameter to cloud_auto. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a> and <a href="https://help.aliyun.com/document_detail/413275.html">Modify the performance configurations of an ESSD AutoPL disk</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>50000</p>
          */
         @NameInMap("ProvisionedIops")
         public Long provisionedIops;
 
         /**
          * <p>The size of the system disk. Unit: GiB. Valid values:</p>
-         * <br>
-         * <p>*   Valid values if you set SystemDisk.Category to cloud: 20 to 500.</p>
-         * <p>*   Valid values if you set SystemDisk.Category to other disk categories: 20 to 2048.</p>
-         * <br>
+         * <ul>
+         * <li>Valid values if you set SystemDisk.Category to cloud: 20 to 500.</li>
+         * <li>Valid values if you set SystemDisk.Category to other disk categories: 20 to 2048.</li>
+         * </ul>
          * <p>The value of this parameter must be at least 20 and greater than or equal to the size of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40</p>
          */
         @NameInMap("Size")
         public Integer size;
@@ -910,121 +1139,161 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
     public static class CreateLaunchTemplateVersionRequestDataDisk extends TeaModel {
         /**
          * <p>The ID of the automatic snapshot policy to apply to data disk N.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sp-bp67acfmxazb4p****</p>
          */
         @NameInMap("AutoSnapshotPolicyId")
         public String autoSnapshotPolicyId;
 
         /**
          * <p>Specifies whether to enable the performance burst feature for data disk N. Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("BurstingEnabled")
         public Boolean burstingEnabled;
 
         /**
          * <p>The category of data disk N. Valid values:</p>
-         * <br>
-         * <p>*   cloud: basic disk</p>
-         * <p>*   cloud_efficiency: ultra disk</p>
-         * <p>*   cloud_ssd: standard SSD</p>
-         * <p>*   cloud_auto: ESSD AutoPL disk</p>
-         * <p>*   cloud_essd: ESSD</p>
-         * <p>*   cloud_essd_entry: ESSD Entry disk</p>
-         * <br>
+         * <ul>
+         * <li>cloud: basic disk</li>
+         * <li>cloud_efficiency: ultra disk</li>
+         * <li>cloud_ssd: standard SSD</li>
+         * <li>cloud_auto: ESSD AutoPL disk</li>
+         * <li>cloud_essd: ESSD</li>
+         * <li>cloud_essd_entry: ESSD Entry disk</li>
+         * </ul>
          * <p>For I/O optimized instances, the default value is cloud_efficiency. For non-I/O optimized instances, the default value is cloud.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_ssd</p>
          */
         @NameInMap("Category")
         public String category;
 
         /**
          * <p>Specifies whether to release data disk N when the instance is released. Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
-         * <br>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * <p>Default value: true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("DeleteWithInstance")
         public Boolean deleteWithInstance;
 
         /**
-         * <p>The description of data disk N. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.</p>
+         * <p>The description of data disk N. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testDataDiskDescription</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>>  This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.</p>
+         * <blockquote>
+         * <p> This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("Device")
         public String device;
 
         /**
-         * <p>The name of data disk N. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
+         * <p>The name of data disk N. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testDataDiskName</p>
          */
         @NameInMap("DiskName")
         public String diskName;
 
         /**
          * <p>Specifies whether to encrypt data disk N.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Encrypted")
         public String encrypted;
 
         /**
-         * <p>The performance level of the ESSD to use as data disk N. The value of N must be the same as that in `DataDisk.N.Category` when DataDisk.N.Category is set to cloud_essd. Valid values:</p>
-         * <br>
-         * <p>*   PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</p>
-         * <p>*   PL1 (default): A single ESSD can deliver up to 50,000 random read/write IOPS.</p>
-         * <p>*   PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.</p>
-         * <p>*   PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.</p>
-         * <br>
-         * <p>For information about ESSD performance levels, see [ESSDs](~~122389~~).</p>
+         * <p>The performance level of the ESSD to use as data disk N. The value of N must be the same as that in <code>DataDisk.N.Category</code> when DataDisk.N.Category is set to cloud_essd. Valid values:</p>
+         * <ul>
+         * <li>PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</li>
+         * <li>PL1 (default): A single ESSD can deliver up to 50,000 random read/write IOPS.</li>
+         * <li>PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.</li>
+         * <li>PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.</li>
+         * </ul>
+         * <p>For information about ESSD performance levels, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PL1</p>
          */
         @NameInMap("PerformanceLevel")
         public String performanceLevel;
 
         /**
          * <p>The provisioned read/write IOPS of the ESSD AutoPL disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}</p>
-         * <br>
          * <p>Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}</p>
-         * <br>
-         * <p>>  This parameter is available only if you set DataDisk.N.Category to cloud_auto. For more information, see [ESSD AutoPL disks](~~368372~~) and [Modify the performance configurations of an ESSD AutoPL disk](~~413275~~).</p>
+         * <blockquote>
+         * <p> This parameter is available only if you set DataDisk.N.Category to cloud_auto. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a> and <a href="https://help.aliyun.com/document_detail/413275.html">Modify the performance configurations of an ESSD AutoPL disk</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>50000</p>
          */
         @NameInMap("ProvisionedIops")
         public Long provisionedIops;
 
         /**
          * <p>The size of data disk N. Valid values of N: 1 to 16. Unit: GiB. Valid values:</p>
-         * <br>
-         * <p>*   Valid values if you set DataDisk.N.Category to cloud: 5 to 2000.</p>
-         * <br>
-         * <p>*   Valid values if you set DataDisk.N.Category to cloud_efficiency: 20 to 32768.</p>
-         * <br>
-         * <p>*   Valid values if you set DataDisk.N.Category to cloud_ssd: 20 to 32768.</p>
-         * <br>
-         * <p>*   Valid values if you set DataDisk.N.Category to cloud_essd: vary based on the `DataDisk.N.PerformanceLevel` value.</p>
-         * <br>
-         * <p>    *   Valid values if you set DataDisk.N.PerformanceLevel to PL0: 1 to 32768.</p>
-         * <p>    *   Valid values if you set DataDisk.N.PerformanceLevel to PL1: 20 to 32768.</p>
-         * <p>    *   Valid values if you set DataDisk.N.PerformanceLevel to PL2: 461 to 32768.</p>
-         * <p>    *   Valid values if you set DataDisk.N.PerformanceLevel to PL3: 1261 to 32768.</p>
-         * <br>
-         * <p>*   Valid values if you set DataDisk.N.Category to cloud_auto: 1 to 32768.</p>
-         * <br>
-         * <p>*   Valid values if you set DataDisk.N.Category to cloud_essd_entry: 10 to 32768.</p>
-         * <br>
-         * <p>The value of this parameter must be greater than or equal to the size of the snapshot specified by `DataDisk.N.SnapshotId`.</p>
+         * <ul>
+         * <li><p>Valid values if you set DataDisk.N.Category to cloud: 5 to 2000.</p>
+         * </li>
+         * <li><p>Valid values if you set DataDisk.N.Category to cloud_efficiency: 20 to 32768.</p>
+         * </li>
+         * <li><p>Valid values if you set DataDisk.N.Category to cloud_ssd: 20 to 32768.</p>
+         * </li>
+         * <li><p>Valid values if you set DataDisk.N.Category to cloud_essd: vary based on the <code>DataDisk.N.PerformanceLevel</code> value.</p>
+         * <ul>
+         * <li>Valid values if you set DataDisk.N.PerformanceLevel to PL0: 1 to 32768.</li>
+         * <li>Valid values if you set DataDisk.N.PerformanceLevel to PL1: 20 to 32768.</li>
+         * <li>Valid values if you set DataDisk.N.PerformanceLevel to PL2: 461 to 32768.</li>
+         * <li>Valid values if you set DataDisk.N.PerformanceLevel to PL3: 1261 to 32768.</li>
+         * </ul>
+         * </li>
+         * <li><p>Valid values if you set DataDisk.N.Category to cloud_auto: 1 to 32768.</p>
+         * </li>
+         * <li><p>Valid values if you set DataDisk.N.Category to cloud_essd_entry: 10 to 32768.</p>
+         * </li>
+         * </ul>
+         * <p>The value of this parameter must be greater than or equal to the size of the snapshot specified by <code>DataDisk.N.SnapshotId</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2000</p>
          */
         @NameInMap("Size")
         public Integer size;
 
         /**
-         * <p>The ID of the snapshot to use to create data disk N. Valid values of N: 1 to 16. When `DataDisk.N.SnapshotId` is specified, `DataDisk.N.Size` is ignored. The data disk is created with the size of the specified snapshot.</p>
-         * <br>
+         * <p>The ID of the snapshot to use to create data disk N. Valid values of N: 1 to 16. When <code>DataDisk.N.SnapshotId</code> is specified, <code>DataDisk.N.Size</code> is ignored. The data disk is created with the size of the specified snapshot.</p>
          * <p>Use snapshots created on or after July 15, 2013. Otherwise, an error is returned and your request is rejected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-bp17441ohwka0yuh****</p>
          */
         @NameInMap("SnapshotId")
         public String snapshotId;
@@ -1134,63 +1403,89 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
 
     public static class CreateLaunchTemplateVersionRequestNetworkInterface extends TeaModel {
         /**
-         * <p>The description of the secondary ENI. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`. The value of N in `NetworkInterface.N` cannot be greater than 1.</p>
+         * <p>The description of the secondary ENI. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>. The value of N in <code>NetworkInterface.N</code> cannot be greater than 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testNetworkInterfaceDescription</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The type of ENI N. Valid values of N: 1 and 2. If the value of N is 1, you can configure a primary or secondary ENI. If the value of N is 2, you must configure a primary ENI and a secondary ENI.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   Primary</p>
-         * <p>*   Secondary</p>
-         * <br>
+         * <ul>
+         * <li>Primary</li>
+         * <li>Secondary</li>
+         * </ul>
          * <p>Default value: Secondary.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.g5.large</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
 
         /**
-         * <p>The name of the secondary ENI. The value of N in `NetworkInterface.N` cannot be greater than 1.</p>
+         * <p>The name of the secondary ENI. The value of N in <code>NetworkInterface.N</code> cannot be greater than 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testNetworkInterfaceName</p>
          */
         @NameInMap("NetworkInterfaceName")
         public String networkInterfaceName;
 
         /**
          * <p>The communication mode of the primary ENI. Valid values:</p>
-         * <br>
-         * <p>*   Standard: uses the TCP communication mode.</p>
-         * <p>*   HighPerformance: uses the remote direct memory access (RDMA) communication mode with Elastic RDMA Interface (ERI) enabled.</p>
+         * <ul>
+         * <li>Standard: uses the TCP communication mode.</li>
+         * <li>HighPerformance: uses the remote direct memory access (RDMA) communication mode with Elastic RDMA Interface (ERI) enabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Standard</p>
          */
         @NameInMap("NetworkInterfaceTrafficMode")
         public String networkInterfaceTrafficMode;
 
         /**
-         * <p>The primary private IP address of the secondary ENI. The value of N in `NetworkInterface.N` cannot be greater than 1.</p>
+         * <p>The primary private IP address of the secondary ENI. The value of N in <code>NetworkInterface.N</code> cannot be greater than 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.**.**</p>
          */
         @NameInMap("PrimaryIpAddress")
         public String primaryIpAddress;
 
         /**
-         * <p>The ID of the security group to which to assign the secondary ENI. The security groups of the secondary ENI and of the instance must belong to the same VPC. The value of N in `NetworkInterface.N` cannot be greater than 1.</p>
-         * <br>
-         * <p>>  You cannot specify both `NetworkInterface.N.SecurityGroupId` and `NetworkInterface.N.SecurityGroupIds.N`.</p>
+         * <p>The ID of the security group to which to assign the secondary ENI. The security groups of the secondary ENI and of the instance must belong to the same VPC. The value of N in <code>NetworkInterface.N</code> cannot be greater than 1.</p>
+         * <blockquote>
+         * <p> You cannot specify both <code>NetworkInterface.N.SecurityGroupId</code> and <code>NetworkInterface.N.SecurityGroupIds.N</code>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-bp15ed6xe1yxeycg****</p>
          */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
         /**
-         * <p>The IDs of the security groups to which to assign the secondary ENI. The security group and the secondary ENI must belong to the same VPC. The valid values of N in `SecurityGroupIds.N` vary based on the maximum number of security groups to which a secondary ENI can belong. For more information, see the "Security group limits" section in [Limits](~~25412~~). The value of N in `NetworkInterface.N` cannot be greater than 1.</p>
-         * <br>
-         * <p>>  You cannot specify both `NetworkInterface.N.SecurityGroupId` and `NetworkInterface.N.SecurityGroupIds.N`.</p>
+         * <p>The IDs of the security groups to which to assign the secondary ENI. The security group and the secondary ENI must belong to the same VPC. The valid values of N in <code>SecurityGroupIds.N</code> vary based on the maximum number of security groups to which a secondary ENI can belong. For more information, see the &quot;Security group limits&quot; section in <a href="https://help.aliyun.com/document_detail/25412.html">Limits</a>. The value of N in <code>NetworkInterface.N</code> cannot be greater than 1.</p>
+         * <blockquote>
+         * <p> You cannot specify both <code>NetworkInterface.N.SecurityGroupId</code> and <code>NetworkInterface.N.SecurityGroupIds.N</code>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-bp67acfmxazb4p****</p>
          */
         @NameInMap("SecurityGroupIds")
         public java.util.List<String> securityGroupIds;
 
         /**
-         * <p>The ID of the vSwitch to which to connect the secondary ENI. The instance and the secondary ENI must reside in the same zone of the same VPC, but they can be connected to different vSwitches. The value of N in `NetworkInterface.N` cannot be greater than 1.</p>
+         * <p>The ID of the vSwitch to which to connect the secondary ENI. The instance and the secondary ENI must reside in the same zone of the same VPC, but they can be connected to different vSwitches. The value of N in <code>NetworkInterface.N</code> cannot be greater than 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp1s5fnvk4gn2tws0****</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
@@ -1268,13 +1563,19 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
 
     public static class CreateLaunchTemplateVersionRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N to add to the instance, block storage devices, or primary ENI. Valid values of N: 1 to 5. The tag key cannot be an empty string. It can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         * <p>The key of tag N to add to the instance, block storage devices, or primary ENI. Valid values of N: 1 to 5. The tag key cannot be an empty string. It can be up to 64 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag N to add to the instance, block storage devices, or primary ENI. Valid values of N: 1 to 5. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         * <p>The value of tag N to add to the instance, block storage devices, or primary ENI. Valid values of N: 1 to 5. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
          */
         @NameInMap("Value")
         public String value;

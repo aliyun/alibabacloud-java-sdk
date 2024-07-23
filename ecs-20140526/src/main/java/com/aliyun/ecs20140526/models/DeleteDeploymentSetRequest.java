@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class DeleteDeploymentSetRequest extends TeaModel {
     /**
-     * <p>The ID of the deployment set. You cannot delete a deployment set that contains instances.</p>
+     * <p>The ID of the deployment set. You cannot delete a deployment set if the deployment set contains instances.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ds-bp1g5ahlkal88d7x****</p>
      */
     @NameInMap("DeploymentSetId")
     public String deploymentSetId;
@@ -17,7 +21,11 @@ public class DeleteDeploymentSetRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the deployment set. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the deployment set. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
