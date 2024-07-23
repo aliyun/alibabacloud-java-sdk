@@ -64,6 +64,9 @@ public class RetrieveShrinkRequest extends TeaModel {
     @NameInMap("SaveRetrieverHistory")
     public Boolean saveRetrieverHistory;
 
+    @NameInMap("SearchFilters")
+    public String searchFiltersShrink;
+
     /**
      * <strong>example:</strong>
      * <p>100</p>
@@ -154,6 +157,14 @@ public class RetrieveShrinkRequest extends TeaModel {
     }
     public Boolean getSaveRetrieverHistory() {
         return this.saveRetrieverHistory;
+    }
+
+    public RetrieveShrinkRequest setSearchFiltersShrink(String searchFiltersShrink) {
+        this.searchFiltersShrink = searchFiltersShrink;
+        return this;
+    }
+    public String getSearchFiltersShrink() {
+        return this.searchFiltersShrink;
     }
 
     public RetrieveShrinkRequest setSparseSimilarityTopK(Integer sparseSimilarityTopK) {

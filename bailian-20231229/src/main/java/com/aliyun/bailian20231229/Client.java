@@ -688,6 +688,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.rewriteShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.rewrite, "Rewrite", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.searchFilters)) {
+            request.searchFiltersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.searchFilters, "SearchFilters", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.denseSimilarityTopK)) {
             query.put("DenseSimilarityTopK", request.denseSimilarityTopK);
@@ -727,6 +731,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.saveRetrieverHistory)) {
             query.put("SaveRetrieverHistory", request.saveRetrieverHistory);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchFiltersShrink)) {
+            query.put("SearchFilters", request.searchFiltersShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.sparseSimilarityTopK)) {
