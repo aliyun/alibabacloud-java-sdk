@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class StopJobRequest extends TeaModel {
     /**
+     * <p>The parameter that is used to stop the job.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("body")

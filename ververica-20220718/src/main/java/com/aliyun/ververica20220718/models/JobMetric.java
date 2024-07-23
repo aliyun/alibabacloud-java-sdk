@@ -4,9 +4,17 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class JobMetric extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("totalCpu")
     public Double totalCpu;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4096</p>
+     */
     @NameInMap("totalMemoryByte")
     public Long totalMemoryByte;
 

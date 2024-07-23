@@ -6,10 +6,17 @@ import com.aliyun.tea.*;
 public class Member extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>user: 181319557522****</p>
      */
     @NameInMap("member")
     public String member;
 
+    /**
+     * <strong>example:</strong>
+     * <p>VIEWER</p>
+     */
     @NameInMap("role")
     public String role;
 

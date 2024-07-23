@@ -4,6 +4,9 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class UpdateMemberRequest extends TeaModel {
+    /**
+     * <p>The permission information about the member.</p>
+     */
     @NameInMap("body")
     public Member body;
 

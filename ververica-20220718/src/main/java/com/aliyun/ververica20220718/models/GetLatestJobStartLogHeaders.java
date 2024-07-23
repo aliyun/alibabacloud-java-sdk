@@ -3,7 +3,7 @@ package com.aliyun.ververica20220718.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteDeploymentHeaders extends TeaModel {
+public class GetLatestJobStartLogHeaders extends TeaModel {
     @NameInMap("commonHeaders")
     public java.util.Map<String, String> commonHeaders;
 
@@ -17,12 +17,12 @@ public class DeleteDeploymentHeaders extends TeaModel {
     @NameInMap("workspace")
     public String workspace;
 
-    public static DeleteDeploymentHeaders build(java.util.Map<String, ?> map) throws Exception {
-        DeleteDeploymentHeaders self = new DeleteDeploymentHeaders();
+    public static GetLatestJobStartLogHeaders build(java.util.Map<String, ?> map) throws Exception {
+        GetLatestJobStartLogHeaders self = new GetLatestJobStartLogHeaders();
         return TeaModel.build(map, self);
     }
 
-    public DeleteDeploymentHeaders setCommonHeaders(java.util.Map<String, String> commonHeaders) {
+    public GetLatestJobStartLogHeaders setCommonHeaders(java.util.Map<String, String> commonHeaders) {
         this.commonHeaders = commonHeaders;
         return this;
     }
@@ -30,7 +30,7 @@ public class DeleteDeploymentHeaders extends TeaModel {
         return this.commonHeaders;
     }
 
-    public DeleteDeploymentHeaders setWorkspace(String workspace) {
+    public GetLatestJobStartLogHeaders setWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }

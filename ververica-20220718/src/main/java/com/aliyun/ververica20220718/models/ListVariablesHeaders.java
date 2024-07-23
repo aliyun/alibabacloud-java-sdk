@@ -8,7 +8,11 @@ public class ListVariablesHeaders extends TeaModel {
     public java.util.Map<String, String> commonHeaders;
 
     /**
+     * <p>The workspace ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a14bda1c4a****</p>
      */
     @NameInMap("workspace")
     public String workspace;

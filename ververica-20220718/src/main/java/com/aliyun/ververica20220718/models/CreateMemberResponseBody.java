@@ -4,21 +4,63 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class CreateMemberResponseBody extends TeaModel {
+    /**
+     * <ul>
+     * <li>If the value of success was false, a null value was returned.</li>
+     * <li>If the value of success was true, the authorization information was returned.</li>
+     * </ul>
+     */
     @NameInMap("data")
     public Member data;
 
+    /**
+     * <ul>
+     * <li>If the value of success was false, an error code was returned.</li>
+     * <li>If the value of success was true, a null value was returned.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("errorCode")
     public String errorCode;
 
+    /**
+     * <ul>
+     * <li>If the value of success was false, an error message was returned.</li>
+     * <li>If the value of success was true, a null value was returned.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("errorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The status code returned. The value was fixed to 200. The status code 200 indicates that the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("httpCode")
     public Integer httpCode;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F989CA70-2925-5A94-92B7-20F5762B71C8</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("success")
     public Boolean success;
 

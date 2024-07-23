@@ -10,6 +10,10 @@ public class StreamingResourceSetting extends TeaModel {
     @NameInMap("expertResourceSetting")
     public ExpertResourceSetting expertResourceSetting;
 
+    /**
+     * <strong>example:</strong>
+     * <p>EXPERT</p>
+     */
     @NameInMap("resourceSettingMode")
     public String resourceSettingMode;
 

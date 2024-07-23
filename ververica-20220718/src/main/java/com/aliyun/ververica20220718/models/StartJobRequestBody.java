@@ -4,6 +4,10 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class StartJobRequestBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>5a19a71b-1c42-4f34-94fd-86cf60782c81</p>
+     */
     @NameInMap("deploymentId")
     public String deploymentId;
 

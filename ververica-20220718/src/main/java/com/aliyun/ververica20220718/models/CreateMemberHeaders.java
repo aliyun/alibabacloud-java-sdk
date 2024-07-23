@@ -8,7 +8,11 @@ public class CreateMemberHeaders extends TeaModel {
     public java.util.Map<String, String> commonHeaders;
 
     /**
+     * <p>The workspace ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ca84d539167d4d</p>
      */
     @NameInMap("workspace")
     public String workspace;

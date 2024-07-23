@@ -7,6 +7,10 @@ public class BatchResourceSetting extends TeaModel {
     @NameInMap("basicResourceSetting")
     public BasicResourceSetting basicResourceSetting;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("maxSlot")
     public Long maxSlot;
 

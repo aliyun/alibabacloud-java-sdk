@@ -3,21 +3,15 @@ package com.aliyun.ververica20220718.models;
 
 import com.aliyun.tea.*;
 
-public class CreateDeploymentResponseBody extends TeaModel {
+public class ValidateSqlStatementResponseBody extends TeaModel {
     /**
-     * <ul>
-     * <li>If the value of success was true, the deployment that you created was returned.</li>
-     * <li>If the value of success was false, a null value was returned.</li>
-     * </ul>
+     * <p>The returned data, which represents the details of SQL validation results.</p>
      */
     @NameInMap("data")
-    public Deployment data;
+    public SqlStatementValidationResult data;
 
     /**
-     * <ul>
-     * <li>If the value of success was false, an error code was returned.</li>
-     * <li>If the value of success was true, a null value was returned.</li>
-     * </ul>
+     * <p>If the value of success was false, an error code was returned. If the value of success was true, a null value was returned.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
@@ -26,10 +20,7 @@ public class CreateDeploymentResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <ul>
-     * <li>If the value of success was false, an error message was returned.</li>
-     * <li>If the value of success was true, a null value was returned.</li>
-     * </ul>
+     * <p>If the value of success was false, an error message was returned. If the value of success was true, a null value was returned.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
@@ -38,7 +29,7 @@ public class CreateDeploymentResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>The value was fixed to 200.</p>
+     * <p>The status code returned. The value was fixed to 200.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -50,7 +41,7 @@ public class CreateDeploymentResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>CBC799F0-AS7S-1D30-8A4F-882ED4DD****</p>
+     * <p>CBC799F0-****-1D30-8A4F-882ED4DD5E02</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -64,20 +55,20 @@ public class CreateDeploymentResponseBody extends TeaModel {
     @NameInMap("success")
     public Boolean success;
 
-    public static CreateDeploymentResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        CreateDeploymentResponseBody self = new CreateDeploymentResponseBody();
+    public static ValidateSqlStatementResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        ValidateSqlStatementResponseBody self = new ValidateSqlStatementResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public CreateDeploymentResponseBody setData(Deployment data) {
+    public ValidateSqlStatementResponseBody setData(SqlStatementValidationResult data) {
         this.data = data;
         return this;
     }
-    public Deployment getData() {
+    public SqlStatementValidationResult getData() {
         return this.data;
     }
 
-    public CreateDeploymentResponseBody setErrorCode(String errorCode) {
+    public ValidateSqlStatementResponseBody setErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
     }
@@ -85,7 +76,7 @@ public class CreateDeploymentResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public CreateDeploymentResponseBody setErrorMessage(String errorMessage) {
+    public ValidateSqlStatementResponseBody setErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
     }
@@ -93,7 +84,7 @@ public class CreateDeploymentResponseBody extends TeaModel {
         return this.errorMessage;
     }
 
-    public CreateDeploymentResponseBody setHttpCode(Integer httpCode) {
+    public ValidateSqlStatementResponseBody setHttpCode(Integer httpCode) {
         this.httpCode = httpCode;
         return this;
     }
@@ -101,7 +92,7 @@ public class CreateDeploymentResponseBody extends TeaModel {
         return this.httpCode;
     }
 
-    public CreateDeploymentResponseBody setRequestId(String requestId) {
+    public ValidateSqlStatementResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -109,7 +100,7 @@ public class CreateDeploymentResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CreateDeploymentResponseBody setSuccess(Boolean success) {
+    public ValidateSqlStatementResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }

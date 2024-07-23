@@ -4,6 +4,10 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class JobStatus extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>RUNNING</p>
+     */
     @NameInMap("currentJobStatus")
     public String currentJobStatus;
 

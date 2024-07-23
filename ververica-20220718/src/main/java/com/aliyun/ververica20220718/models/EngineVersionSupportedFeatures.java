@@ -4,9 +4,17 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class EngineVersionSupportedFeatures extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("supportNativeSavepoint")
     public Boolean supportNativeSavepoint;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("useForSqlDeployments")
     public Boolean useForSqlDeployments;
 

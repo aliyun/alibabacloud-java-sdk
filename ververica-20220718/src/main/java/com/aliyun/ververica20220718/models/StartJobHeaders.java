@@ -9,6 +9,9 @@ public class StartJobHeaders extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a14bd5d90a****</p>
      */
     @NameInMap("workspace")
     public String workspace;

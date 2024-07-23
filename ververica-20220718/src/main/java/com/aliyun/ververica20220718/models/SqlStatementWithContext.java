@@ -13,12 +13,6 @@ public class SqlStatementWithContext extends TeaModel {
     @NameInMap("batchMode")
     public Boolean batchMode;
 
-    @NameInMap("catalog")
-    public String catalog;
-
-    @NameInMap("database")
-    public String database;
-
     @NameInMap("flinkConfiguration")
     public java.util.Map<String, ?> flinkConfiguration;
 
@@ -50,22 +44,6 @@ public class SqlStatementWithContext extends TeaModel {
     }
     public Boolean getBatchMode() {
         return this.batchMode;
-    }
-
-    public SqlStatementWithContext setCatalog(String catalog) {
-        this.catalog = catalog;
-        return this;
-    }
-    public String getCatalog() {
-        return this.catalog;
-    }
-
-    public SqlStatementWithContext setDatabase(String database) {
-        this.database = database;
-        return this;
-    }
-    public String getDatabase() {
-        return this.database;
     }
 
     public SqlStatementWithContext setFlinkConfiguration(java.util.Map<String, ?> flinkConfiguration) {

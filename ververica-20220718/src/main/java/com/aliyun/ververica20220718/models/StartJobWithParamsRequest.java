@@ -4,6 +4,9 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class StartJobWithParamsRequest extends TeaModel {
+    /**
+     * <p>The parameter that is used to start the job.</p>
+     */
     @NameInMap("body")
     public JobStartParameters body;
 

@@ -4,9 +4,17 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class LogReservePolicy extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>7</p>
+     */
     @NameInMap("expirationDays")
     public Long expirationDays;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("openHistory")
     public Boolean openHistory;
 

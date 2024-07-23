@@ -3,21 +3,18 @@ package com.aliyun.ververica20220718.models;
 
 import com.aliyun.tea.*;
 
-public class CreateDeploymentResponseBody extends TeaModel {
+public class GetLatestJobStartLogResponseBody extends TeaModel {
     /**
-     * <ul>
-     * <li>If the value of success was true, the deployment that you created was returned.</li>
-     * <li>If the value of success was false, a null value was returned.</li>
-     * </ul>
+     * <p>If the value of success was false, the latest logs of the deployment were returned. If the value of success was true, a null value was returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;[main] INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - --------------------------------------------------------------------------------\n2024-05-22 11:46:39,871 [main] INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint&quot;</p>
      */
     @NameInMap("data")
-    public Deployment data;
+    public String data;
 
     /**
-     * <ul>
-     * <li>If the value of success was false, an error code was returned.</li>
-     * <li>If the value of success was true, a null value was returned.</li>
-     * </ul>
+     * <p>If the value of success was false, an error code was returned. If the value of success was true, a null value was returned.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
@@ -26,10 +23,7 @@ public class CreateDeploymentResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <ul>
-     * <li>If the value of success was false, an error message was returned.</li>
-     * <li>If the value of success was true, a null value was returned.</li>
-     * </ul>
+     * <p>If the value of success was false, an error message was returned. If the value of success was true, a null value was returned.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
@@ -38,7 +32,7 @@ public class CreateDeploymentResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>The value was fixed to 200.</p>
+     * <p>The status code returned. The value was fixed to 200.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -64,20 +58,20 @@ public class CreateDeploymentResponseBody extends TeaModel {
     @NameInMap("success")
     public Boolean success;
 
-    public static CreateDeploymentResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        CreateDeploymentResponseBody self = new CreateDeploymentResponseBody();
+    public static GetLatestJobStartLogResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        GetLatestJobStartLogResponseBody self = new GetLatestJobStartLogResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public CreateDeploymentResponseBody setData(Deployment data) {
+    public GetLatestJobStartLogResponseBody setData(String data) {
         this.data = data;
         return this;
     }
-    public Deployment getData() {
+    public String getData() {
         return this.data;
     }
 
-    public CreateDeploymentResponseBody setErrorCode(String errorCode) {
+    public GetLatestJobStartLogResponseBody setErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
     }
@@ -85,7 +79,7 @@ public class CreateDeploymentResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public CreateDeploymentResponseBody setErrorMessage(String errorMessage) {
+    public GetLatestJobStartLogResponseBody setErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
     }
@@ -93,7 +87,7 @@ public class CreateDeploymentResponseBody extends TeaModel {
         return this.errorMessage;
     }
 
-    public CreateDeploymentResponseBody setHttpCode(Integer httpCode) {
+    public GetLatestJobStartLogResponseBody setHttpCode(Integer httpCode) {
         this.httpCode = httpCode;
         return this;
     }
@@ -101,7 +95,7 @@ public class CreateDeploymentResponseBody extends TeaModel {
         return this.httpCode;
     }
 
-    public CreateDeploymentResponseBody setRequestId(String requestId) {
+    public GetLatestJobStartLogResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -109,7 +103,7 @@ public class CreateDeploymentResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CreateDeploymentResponseBody setSuccess(Boolean success) {
+    public GetLatestJobStartLogResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }

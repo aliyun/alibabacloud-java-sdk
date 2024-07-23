@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class StopJobRequestBody extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NONE</p>
      */
     @NameInMap("stopStrategy")
     public String stopStrategy;

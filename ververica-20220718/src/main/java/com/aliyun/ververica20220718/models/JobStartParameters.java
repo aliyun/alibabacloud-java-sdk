@@ -10,6 +10,10 @@ public class JobStartParameters extends TeaModel {
     @NameInMap("localVariables")
     public java.util.List<LocalVariable> localVariables;
 
+    /**
+     * <strong>example:</strong>
+     * <p>default-queue</p>
+     */
     @NameInMap("resourceQueueName")
     public String resourceQueueName;
 

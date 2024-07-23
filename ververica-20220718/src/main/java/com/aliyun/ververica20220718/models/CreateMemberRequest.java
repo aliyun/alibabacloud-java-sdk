@@ -4,6 +4,9 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class CreateMemberRequest extends TeaModel {
+    /**
+     * <p>The mappings between the ID and permissions of the member.</p>
+     */
     @NameInMap("body")
     public Member body;
 

@@ -4,9 +4,17 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class LocalVariable extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>datagen</p>
+     */
     @NameInMap("value")
     public String value;
 

@@ -8,7 +8,11 @@ public class DeleteMemberHeaders extends TeaModel {
     public java.util.Map<String, String> commonHeaders;
 
     /**
+     * <p>The workspace ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>710d6a64d8c34d</p>
      */
     @NameInMap("workspace")
     public String workspace;

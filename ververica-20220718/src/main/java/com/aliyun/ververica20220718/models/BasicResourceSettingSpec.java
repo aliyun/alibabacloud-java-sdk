@@ -4,9 +4,17 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class BasicResourceSettingSpec extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2.0</p>
+     */
     @NameInMap("cpu")
     public Double cpu;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4Gi</p>
+     */
     @NameInMap("memory")
     public String memory;
 

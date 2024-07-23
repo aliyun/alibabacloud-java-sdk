@@ -4,23 +4,36 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class Variable extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>This is a variable description</p>
+     */
     @NameInMap("description")
     public String description;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Plain</p>
      */
     @NameInMap("kind")
     public String kind;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>variableName</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>variableValue</p>
      */
     @NameInMap("value")
     public String value;

@@ -7,6 +7,10 @@ public class BasicResourceSetting extends TeaModel {
     @NameInMap("jobmanagerResourceSettingSpec")
     public BasicResourceSettingSpec jobmanagerResourceSettingSpec;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4</p>
+     */
     @NameInMap("parallelism")
     public Long parallelism;
 

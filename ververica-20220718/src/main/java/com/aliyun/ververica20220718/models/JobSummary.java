@@ -4,21 +4,45 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class JobSummary extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("cancelled")
     public Integer cancelled;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("cancelling")
     public Integer cancelling;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("failed")
     public Integer failed;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("finished")
     public Integer finished;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("running")
     public Integer running;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("starting")
     public Integer starting;
 

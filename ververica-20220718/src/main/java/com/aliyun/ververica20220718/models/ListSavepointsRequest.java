@@ -4,15 +4,39 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class ListSavepointsRequest extends TeaModel {
+    /**
+     * <p>The deployment ID. This parameter is optional.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>88a8fc49-e090-430a-85d8-3ee8c79c****</p>
+     */
     @NameInMap("deploymentId")
     public String deploymentId;
 
+    /**
+     * <p>The job ID. This parameter is optional.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>99a8fc49-e090-430a-85d8-3ee8c79c****</p>
+     */
     @NameInMap("jobId")
     public String jobId;
 
+    /**
+     * <p>The page number. Minimum value: 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("pageIndex")
     public Integer pageIndex;
 
+    /**
+     * <p>The number of entries per page. Valid values: 1 to 100. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("pageSize")
     public Integer pageSize;
 
