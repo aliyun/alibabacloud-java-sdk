@@ -4,11 +4,18 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class RenewReservedInstancesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2023912123****</p>
+     */
     @NameInMap("OrderId")
     public String orderId;
 
     /**
      * <p>The IDs of the reserved instances.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8C314443-AF0D-4766-9562-C83B7F1****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

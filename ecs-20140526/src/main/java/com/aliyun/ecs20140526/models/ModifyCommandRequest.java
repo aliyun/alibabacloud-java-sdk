@@ -5,25 +5,40 @@ import com.aliyun.tea.*;
 
 public class ModifyCommandRequest extends TeaModel {
     /**
-     * <p>>  This parameter is no longer used and does not take effect.</p>
+     * <blockquote>
+     * <p> This parameter is no longer used and does not take effect.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>echo</p>
      */
     @NameInMap("CommandContent")
     public String commandContent;
 
     /**
-     * <p>The command ID. You can call the [DescribeCommands](~~64843~~) operation to query all available command IDs.</p>
+     * <p>The command ID. You can call the <a href="https://help.aliyun.com/document_detail/64843.html">DescribeCommands</a> operation to query all available command IDs.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c-hz01272yr52****</p>
      */
     @NameInMap("CommandId")
     public String commandId;
 
     /**
      * <p>The command description. The description supports all character sets and can be up to 512 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>This is description.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The command name. The name supports all character sets and can be up to 128 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-CommandName</p>
      */
     @NameInMap("Name")
     public String name;
@@ -35,7 +50,11 @@ public class ModifyCommandRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the command. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the command. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -48,12 +67,18 @@ public class ModifyCommandRequest extends TeaModel {
 
     /**
      * <p>The maximum timeout period for the command to be run on the instance. Unit: seconds. When a command cannot run within the specified time range, the command times out. Then, the command process is forcibly terminated by canceling the process ID (PID) of the command.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>120</p>
      */
     @NameInMap("Timeout")
     public Long timeout;
 
     /**
      * <p>The working directory of the command. The value can be up to 200 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/home/</p>
      */
     @NameInMap("WorkingDir")
     public String workingDir;

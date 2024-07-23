@@ -6,12 +6,20 @@ import com.aliyun.tea.*;
 public class DescribeDiskMonitorDataRequest extends TeaModel {
     /**
      * <p>The disk ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d-bp1bq5g3dxxo1x4o****</p>
      */
     @NameInMap("DiskId")
     public String diskId;
 
     /**
-     * <p>The end of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of seconds (ss) is not 00, the time is rounded up to the next minute.</p>
+     * <p>The end of the time range to query. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of seconds (ss) is not 00, the time is rounded up to the next minute.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2014-07-23T12:09:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -24,12 +32,15 @@ public class DescribeDiskMonitorDataRequest extends TeaModel {
 
     /**
      * <p>The interval at which to retrieve the monitoring data. Unit: seconds. Valid values:</p>
-     * <br>
-     * <p>*   60</p>
-     * <p>*   600</p>
-     * <p>*   3600</p>
-     * <br>
+     * <ul>
+     * <li>60</li>
+     * <li>600</li>
+     * <li>3600</li>
+     * </ul>
      * <p>Default value: 60.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60</p>
      */
     @NameInMap("Period")
     public Integer period;
@@ -41,7 +52,11 @@ public class DescribeDiskMonitorDataRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of seconds (ss) is not 00, the time is rounded up to the next minute.</p>
+     * <p>The beginning of the time range to query. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of seconds (ss) is not 00, the time is rounded up to the next minute.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2014-07-23T12:07:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;

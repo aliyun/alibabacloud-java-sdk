@@ -8,7 +8,11 @@ public class CancelTaskRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the task. You can call the [DescribeTasks](~~25622~~) operation to query the list of task IDs.</p>
+     * <p>The ID of the task. You can call the <a href="https://help.aliyun.com/document_detail/25622.html">DescribeTasks</a> operation to query the list of task IDs.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -21,6 +25,10 @@ public class CancelTaskRequest extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>t-bp198jigq7l0h5ac****</p>
      */
     @NameInMap("TaskId")
     public String taskId;

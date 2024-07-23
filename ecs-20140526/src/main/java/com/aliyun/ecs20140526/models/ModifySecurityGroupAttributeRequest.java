@@ -5,50 +5,75 @@ import com.aliyun.tea.*;
 
 public class ModifySecurityGroupAttributeRequest extends TeaModel {
     /**
-     * <p>The new description of the security group. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.</p>
-     * <br>
+     * <p>The new description of the security group. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * <p>By default, this parameter is left empty.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TestDescription</p>
      */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="mailto:ECSforCloud@Alibaba.com">ECSforCloud@Alibaba.com</a></p>
+     */
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
     /**
      * <p>RAM用户的虚拟账号ID。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>155780923770</p>
      */
     @NameInMap("OwnerId")
     public Long ownerId;
 
     /**
-     * <p>The region ID of the security group. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the security group. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>资源主账号的账号名称。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ECSforCloud</p>
      */
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     /**
      * <p>资源主账号的ID，亦即UID。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>155780923770</p>
      */
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
     /**
      * <p>The security group ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sg-bp67acfmxazb4p****</p>
      */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
     /**
-     * <p>The new name of the security group. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
-     * <br>
+     * <p>The new name of the security group. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
      * <p>By default, this parameter is left empty.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SecurityGroupTestName</p>
      */
     @NameInMap("SecurityGroupName")
     public String securityGroupName;

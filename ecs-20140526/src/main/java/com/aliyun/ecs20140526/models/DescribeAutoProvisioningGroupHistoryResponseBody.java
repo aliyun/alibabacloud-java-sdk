@@ -12,24 +12,36 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B48A12CD-1295-4A38-A8F0-0E92C937****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The number of queried scheduling tasks in the auto provisioning group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,17 +94,24 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
     public static class DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetail extends TeaModel {
         /**
          * <p>The execution details of instance creation performed by the single scheduling task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>New ECS instances &quot;i-bp67acfmxazb4p****, i-bp67acfmxazb5p****&quot; created.</p>
          */
         @NameInMap("Detail")
         public String detail;
 
         /**
          * <p>The execution status of instance creation performed by the single scheduling task. Valid values:</p>
-         * <br>
-         * <p>*   Successful: Instances are created.</p>
-         * <p>*   Failed: Instances failed to be created.</p>
-         * <p>*   InProgress: Instances are being created.</p>
-         * <p>*   Warning: Some instances are created.</p>
+         * <ul>
+         * <li>Successful: Instances are created.</li>
+         * <li>Failed: Instances failed to be created.</li>
+         * <li>InProgress: Instances are being created.</li>
+         * <li>Warning: Some instances are created.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         @NameInMap("Status")
         public String status;
@@ -148,28 +167,41 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
 
         /**
          * <p>The execution time of the last instance creation performed by the single scheduling task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-04-01T15:10:20Z</p>
          */
         @NameInMap("LastEventTime")
         public String lastEventTime;
 
         /**
          * <p>The start time of executing the single scheduling task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-04-01T15:10:20Z</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
         /**
          * <p>The execution status of the single scheduling task. Valid values:</p>
-         * <br>
-         * <p>*   prepare: The scheduling task is being executed.</p>
-         * <p>*   success: The scheduling task is executed.</p>
-         * <p>*   failed: The scheduling task failed to be executed.</p>
+         * <ul>
+         * <li>prepare: The scheduling task is being executed.</li>
+         * <li>success: The scheduling task is executed.</li>
+         * <li>failed: The scheduling task failed to be executed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The ID of the scheduling task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apg-task-bp67acfmxazb4p****</p>
          */
         @NameInMap("TaskId")
         public String taskId;

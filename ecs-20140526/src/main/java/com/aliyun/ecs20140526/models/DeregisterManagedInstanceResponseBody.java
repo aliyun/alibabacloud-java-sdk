@@ -12,6 +12,9 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4ECEEE12-56F1-4FBC-9AB1-890F74942176</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,84 +43,126 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
     public static class DeregisterManagedInstanceResponseBodyInstance extends TeaModel {
         /**
          * <p>The activation code ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4ECEEE12-56F1-4FBC-9AB1-890F7494****</p>
          */
         @NameInMap("ActivationId")
         public String activationId;
 
         /**
          * <p>The version number of Cloud Assistant Agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.2.0.102</p>
          */
         @NameInMap("AgentVersion")
         public String agentVersion;
 
         /**
          * <p>The hostname of the managed instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-Hostname</p>
          */
         @NameInMap("Hostname")
         public String hostname;
 
         /**
          * <p>The managed instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mi-hz01axdfas****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The name of the managed instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-InstanceName-001</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
          * <p>The public IP address of the managed instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47.8.**.**</p>
          */
         @NameInMap("InternetIp")
         public String internetIp;
 
         /**
          * <p>The internal IP address of the managed instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0.**.**</p>
          */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
         /**
          * <p>The number of times that Cloud Assistant tasks were executed on the managed instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("InvocationCount")
         public Long invocationCount;
 
         /**
          * <p>The time when the Cloud Assistant task was last executed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-20T09:00:40Z</p>
          */
         @NameInMap("LastInvokedTime")
         public String lastInvokedTime;
 
         /**
          * <p>The machine code of the managed instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e03231b37ab14e53b5795ad625fc****</p>
          */
         @NameInMap("MachineId")
         public String machineId;
 
         /**
          * <p>The operating system type of the managed instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>linux</p>
          */
         @NameInMap("OsType")
         public String osType;
 
         /**
          * <p>The version information about the operating system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Linux_#38~18.04.1-Ubuntu SMP Wed Jan 6 18:26:30 UTC 2021_x86_64</p>
          */
         @NameInMap("OsVersion")
         public String osVersion;
 
         /**
          * <p>The time when the managed instance was registered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-20T08:57:56Z</p>
          */
         @NameInMap("RegistrationTime")
         public String registrationTime;
 
         /**
          * <p>The ID of the resource group to which the managed instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-123******</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;

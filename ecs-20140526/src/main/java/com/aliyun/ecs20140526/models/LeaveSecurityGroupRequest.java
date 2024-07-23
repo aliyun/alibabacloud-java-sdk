@@ -6,16 +6,24 @@ import com.aliyun.tea.*;
 public class LeaveSecurityGroupRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
-     * <br>
-     * <p>> If you configure this parameter, you cannot configure `NetworkInterfaceId`.</p>
+     * <blockquote>
+     * <p>If you configure this parameter, you cannot configure <code>NetworkInterfaceId</code>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>i-bp67acfmxazb4p****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The ENI ID.</p>
-     * <br>
-     * <p>> If you configure this parameter, you cannot configure `InstanceId`.</p>
+     * <blockquote>
+     * <p>If you configure this parameter, you cannot configure <code>InstanceId</code>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>eni-bp13kd656hxambfe****</p>
      */
     @NameInMap("NetworkInterfaceId")
     public String networkInterfaceId;
@@ -27,10 +35,14 @@ public class LeaveSecurityGroupRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
-     * <br>
-     * <p>*   If you want to remove an instance from a security group, you do not need to specify a region ID.</p>
-     * <p>*   If you want to remove an ENI from a security group, you must specify the ID of the region in which the ENI resides.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <ul>
+     * <li>If you want to remove an instance from a security group, you do not need to specify a region ID.</li>
+     * <li>If you want to remove an ENI from a security group, you must specify the ID of the region in which the ENI resides.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -43,6 +55,10 @@ public class LeaveSecurityGroupRequest extends TeaModel {
 
     /**
      * <p>The security group ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sg-bp67acfmxazb4p****</p>
      */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;

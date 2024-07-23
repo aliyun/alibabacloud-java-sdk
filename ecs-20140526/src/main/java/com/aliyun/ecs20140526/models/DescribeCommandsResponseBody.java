@@ -12,30 +12,45 @@ public class DescribeCommandsResponseBody extends TeaModel {
 
     /**
      * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AAAAAdDWBF2</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of commands.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -115,18 +130,27 @@ public class DescribeCommandsResponseBody extends TeaModel {
     public static class DescribeCommandsResponseBodyCommandsCommandParameterDefinitionsParameterDefinition extends TeaModel {
         /**
          * <p>The default value of the custom parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://aliyun-client-assist.oss-accelerate.aliyuncs.com/linux/aliyun_assist_latest.rpm">https://aliyun-client-assist.oss-accelerate.aliyuncs.com/linux/aliyun_assist_latest.rpm</a></p>
          */
         @NameInMap("DefaultValue")
         public String defaultValue;
 
         /**
          * <p>The description of the custom parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Download path of the Cloud Assistant Agent installation package.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the custom parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DownloadUrl</p>
          */
         @NameInMap("ParameterName")
         public String parameterName;
@@ -138,12 +162,15 @@ public class DescribeCommandsResponseBody extends TeaModel {
         public DescribeCommandsResponseBodyCommandsCommandParameterDefinitionsParameterDefinitionPossibleValues possibleValues;
 
         /**
-         * <p>Indicates whether the custom parameter is required.</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
-         * <br>
+         * <p>Indicates whether the custom parameter is required. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * <p>Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Required")
         public Boolean required;
@@ -236,12 +263,18 @@ public class DescribeCommandsResponseBody extends TeaModel {
     public static class DescribeCommandsResponseBodyCommandsCommandTagsTag extends TeaModel {
         /**
          * <p>The tag key of the command.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>owner</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
          * <p>The tag value of the command.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zhangsan</p>
          */
         @NameInMap("TagValue")
         public String tagValue;
@@ -291,57 +324,85 @@ public class DescribeCommandsResponseBody extends TeaModel {
     public static class DescribeCommandsResponseBodyCommandsCommand extends TeaModel {
         /**
          * <p>The category of the common command.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>“”</p>
          */
         @NameInMap("Category")
         public String category;
 
         /**
-         * <p>The Base64-encoded command content.</p>
-         * <br>
-         * <p>*   If you set ContentEncoding to PlainText, the original command content is returned.</p>
-         * <p>*   If you set ContentEncoding to Base64, the Base64-encoded command content is returned.</p>
+         * <p>The content of the command, which is Base64-encoded.</p>
+         * <ul>
+         * <li>If ContentEncoding is set to PlainText in the request, the original command content is returned.</li>
+         * <li>If ContentEncoding is set to Base64 in the request, the Base64-encoded command content is returned.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Y2QgL3Jvb3Q=</p>
          */
         @NameInMap("CommandContent")
         public String commandContent;
 
         /**
-         * <p>The ID of the command.</p>
+         * <p>The command ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-hz01272yr52****</p>
          */
         @NameInMap("CommandId")
         public String commandId;
 
         /**
          * <p>The time when the command was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-17T06:52Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The description of the command.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testDescription</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>Indicates whether the custom parameter feature is enabled for the command.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("EnableParameter")
         public Boolean enableParameter;
 
         /**
          * <p>The number of tasks created by using the command.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("InvokeTimes")
         public Integer invokeTimes;
 
         /**
-         * <p>Indicates whether the common command is of the latest version. If multiple common commands from the same provider (`Provider`) belong to the same category and have the same name, these commands are different versions of the same command. This parameter is not returned for the Cloud Assistant commands that you created.</p>
+         * <p>Indicates whether the common command is of the latest version. If multiple common commands from the same provider (<code>Provider</code>) belong to the same category and have the same name, these commands are different versions of the same command. This parameter is not returned for the Cloud Assistant commands that you created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Latest")
         public Boolean latest;
 
         /**
          * <p>The name of the command.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testName</p>
          */
         @NameInMap("Name")
         public String name;
@@ -353,19 +414,25 @@ public class DescribeCommandsResponseBody extends TeaModel {
         public DescribeCommandsResponseBodyCommandsCommandParameterDefinitions parameterDefinitions;
 
         /**
-         * <p>The list of custom parameter names that are parsed from the command content specified when the command was being created. If the custom parameter feature is disabled, an empty list is returned.</p>
+         * <p>The custom parameter names that are parsed from the command content specified when the command was created. If the custom parameter feature is disabled, an empty list is returned.</p>
          */
         @NameInMap("ParameterNames")
         public DescribeCommandsResponseBodyCommandsCommandParameterNames parameterNames;
 
         /**
          * <p>The provider of the common command.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AlibabaCloud.ECS.GuestOS</p>
          */
         @NameInMap("Provider")
         public String provider;
 
         /**
          * <p>The ID of the resource group to which the command belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-123******</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
@@ -378,24 +445,36 @@ public class DescribeCommandsResponseBody extends TeaModel {
 
         /**
          * <p>The timeout period. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3600</p>
          */
         @NameInMap("Timeout")
         public Long timeout;
 
         /**
          * <p>The type of the command.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RunShellScript</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
-         * <p>The version of the common command. If multiple common commands from the same provider (`Provider`) belong to the same category and have the same name, these commands are different versions of the same command. This parameter is not returned for the Cloud Assistant commands that you created.</p>
+         * <p>The version of the common command. If multiple common commands from the same provider (<code>Provider</code>) belong to the same category and have the same name, these commands are different versions of the same command. This parameter is not returned for the Cloud Assistant commands that you created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Version")
         public Integer version;
 
         /**
          * <p>The execution path of the command.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/home/</p>
          */
         @NameInMap("WorkingDir")
         public String workingDir;

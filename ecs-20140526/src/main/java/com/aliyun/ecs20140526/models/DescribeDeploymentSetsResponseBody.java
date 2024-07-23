@@ -12,30 +12,45 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The region ID of the deployment set.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of deployment sets returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -96,18 +111,27 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
     public static class DescribeDeploymentSetsResponseBodyDeploymentSetsDeploymentSetCapacitiesCapacity extends TeaModel {
         /**
          * <p>The number of ECS instances that can be added to the deployment set within the zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18</p>
          */
         @NameInMap("AvailableAmount")
         public Integer availableAmount;
 
         /**
          * <p>The number of ECS instances that belong to the zone in the deployment set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("UsedAmount")
         public Integer usedAmount;
 
         /**
          * <p>The ID of the zone. Only the zone IDs of existing ECS instances in the deployment set are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-i</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;
@@ -190,56 +214,84 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
 
         /**
          * <p>The time when the deployment set was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-07T06:01:46Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The description of the deployment set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testDeploymentSetDescription</p>
          */
         @NameInMap("DeploymentSetDescription")
         public String deploymentSetDescription;
 
         /**
          * <p>The ID of the deployment set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ds-bp67acfmxazb4ph****</p>
          */
         @NameInMap("DeploymentSetId")
         public String deploymentSetId;
 
         /**
          * <p>The name of the deployment set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testDeploymentSetName</p>
          */
         @NameInMap("DeploymentSetName")
         public String deploymentSetName;
 
         /**
-         * <p>The deployment strategy. The value of this response parameter is that of the `Strategy` request parameter.</p>
+         * <p>The deployment strategy. The value of this response parameter is that of the <code>Strategy</code> request parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Availability</p>
          */
         @NameInMap("DeploymentStrategy")
         public String deploymentStrategy;
 
         /**
          * <p>The deployment domain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("Domain")
         public String domain;
 
         /**
          * <p>The deployment granularity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>host</p>
          */
         @NameInMap("Granularity")
         public String granularity;
 
         /**
          * <p>The number of deployment set groups in the deployment set.</p>
-         * <br>
-         * <p>>  This parameter is valid only when the Strategy request parameter is set to AvailabilityGroup.</p>
+         * <blockquote>
+         * <p> This parameter is valid only when the Strategy request parameter is set to AvailabilityGroup.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("GroupCount")
         public Integer groupCount;
 
         /**
          * <p>The number of instances in the deployment set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("InstanceAmount")
         public Integer instanceAmount;
@@ -252,6 +304,9 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
 
         /**
          * <p>The deployment strategy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LooseDispersion</p>
          */
         @NameInMap("Strategy")
         public String strategy;

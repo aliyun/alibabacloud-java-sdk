@@ -6,28 +6,38 @@ import com.aliyun.tea.*;
 public class DescribeActivationsRequest extends TeaModel {
     /**
      * <p>The ID of the activation code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4ECEEE12-56F1-4FBC-9AB1-890F1234****</p>
      */
     @NameInMap("ActivationId")
     public String activationId;
 
     /**
      * <p>The default instance name prefix.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-InstanceName</p>
      */
     @NameInMap("InstanceName")
     public String instanceName;
 
     /**
      * <p>The maximum number of entries per page.</p>
-     * <br>
      * <p>Valid values: 1 to 50.</p>
-     * <br>
      * <p>Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AAAAAdDWBF2****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -40,34 +50,42 @@ public class DescribeActivationsRequest extends TeaModel {
 
     /**
      * <p>The page number.</p>
-     * <br>
      * <p>Pages start from page 1.</p>
-     * <br>
      * <p>Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
-     * <br>
      * <p>Valid values: 1 to 50.</p>
-     * <br>
      * <p>Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
      * <p>The region ID of the command. Supported regions: China (Qingdao), China (Beijing), China (Zhangjiakou), China (Hohhot), China (Hangzhou), China (Shanghai), China (Shenzhen), China (Heyuan), and China (Hong Kong).</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group to which the activation code belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-123******</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -196,18 +214,21 @@ public class DescribeActivationsRequest extends TeaModel {
     public static class DescribeActivationsRequestTag extends TeaModel {
         /**
          * <p>The key of tag N of the activation code. Valid values of N: 1 to 20. The tag key cannot be an empty string.</p>
-         * <br>
-         * <p>If a single tag is specified to query resources, up to 1,000 resources that have this tag can be returned. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags can be returned. To query more than 1,000 resources that have specified tags, call the [ListTagResources](~~110425~~) operation.</p>
-         * <br>
-         * <p>The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         * <p>If a single tag is specified to query resources, up to 1,000 resources that have this tag can be returned. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags can be returned. To query more than 1,000 resources that have specified tags, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</p>
+         * <p>The tag key can be up to 64 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of tag N of the activation code. Valid values of N: 1 to 20. The tag value can be an empty string.</p>
-         * <br>
-         * <p>The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`.</p>
+         * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
          */
         @NameInMap("Value")
         public String value;

@@ -12,24 +12,36 @@ public class DescribeInstanceStatusResponseBody extends TeaModel {
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of instances.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>58</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,18 +94,25 @@ public class DescribeInstanceStatusResponseBody extends TeaModel {
     public static class DescribeInstanceStatusResponseBodyInstanceStatusesInstanceStatus extends TeaModel {
         /**
          * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1j4i2jdf3owlhe****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The status of the instance. Valid values:</p>
-         * <br>
-         * <p>*   Pending: The instance is being created.</p>
-         * <p>*   Running: The instance is running.</p>
-         * <p>*   Starting: The instance is being started.</p>
-         * <p>*   Stopping: The instance is being stopped.</p>
-         * <p>*   Stopped: The instance is stopped.</p>
+         * <ul>
+         * <li>Pending: The instance is being created.</li>
+         * <li>Running: The instance is running.</li>
+         * <li>Starting: The instance is being started.</li>
+         * <li>Stopping: The instance is being stopped.</li>
+         * <li>Stopped: The instance is stopped.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         @NameInMap("Status")
         public String status;

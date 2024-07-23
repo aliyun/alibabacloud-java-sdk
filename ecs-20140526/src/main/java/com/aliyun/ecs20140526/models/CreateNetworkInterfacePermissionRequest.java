@@ -6,14 +6,21 @@ import com.aliyun.tea.*;
 public class CreateNetworkInterfacePermissionRequest extends TeaModel {
     /**
      * <p>The ID of the ENI.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234567890</p>
      */
     @NameInMap("AccountId")
     public Long accountId;
 
     /**
      * <p>The permission on the ENI. Set the value to InstanceAttach.</p>
-     * <br>
      * <p>InstanceAttach: allows authorized users to attach the ENI to an ECS instance. The ENI and the ECS instance must reside in the same zone.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eni-bp14v2sdd3v8htln****</p>
      */
     @NameInMap("NetworkInterfaceId")
     public String networkInterfaceId;
@@ -26,12 +33,20 @@ public class CreateNetworkInterfacePermissionRequest extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>InstanceAttach</p>
      */
     @NameInMap("Permission")
     public String permission;
 
     /**
      * <p>The ID of the Alibaba Cloud partner (a certified ISV) or individual user.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

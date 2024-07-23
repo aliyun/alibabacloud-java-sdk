@@ -18,12 +18,20 @@ public class ModifyReservedInstancesRequest extends TeaModel {
 
     /**
      * <p>The IDs of reserved instances. Valid values of N: 1 to 20.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The IDs of reserved instances. Valid values of N: 1 to 20.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ReservedInstanceId.1=&quot;ecsri-bp1cx3****&quot;,ReservedInstanceId.2=&quot;ecsri-bp15xx2****&quot;......</p>
      */
     @NameInMap("ReservedInstanceId")
     public java.util.List<String> reservedInstanceId;
@@ -98,43 +106,56 @@ public class ModifyReservedInstancesRequest extends TeaModel {
     public static class ModifyReservedInstancesRequestConfiguration extends TeaModel {
         /**
          * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("InstanceAmount")
         public Integer instanceAmount;
 
         /**
          * <p>The number of pay-as-you-go instances of the same instance type that the reserved instance can match. The value of this parameter must be greater than or equal to 1. Valid values of N: 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.c5.4xlarge</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
 
         /**
          * <p>The zone ID of reserved instance N. Valid values of N: 1 to 100.</p>
-         * <br>
-         * <p>This parameter is required when `Scope` is set to `Zone`.</p>
-         * <br>
-         * <p>You can call the [DescribeZones](~~25609~~) operation to query the most recent zone list.</p>
+         * <p>This parameter is required when <code>Scope</code> is set to <code>Zone</code>.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeZones</a> operation to query the most recent zone list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testReservedInstanceName</p>
          */
         @NameInMap("ReservedInstanceName")
         public String reservedInstanceName;
 
         /**
          * <p>The instance type that reserved instance N can match. Valid values of N: 1 to 100.</p>
-         * <br>
-         * <p>> The supported instance types are regularly updated. For more information, see the "Attributes" section of [Overview](~~100370~~).</p>
+         * <blockquote>
+         * <p>The supported instance types are regularly updated. For more information, see the &quot;Attributes&quot; section of <a href="https://help.aliyun.com/document_detail/100370.html">Overview</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Zone</p>
          */
         @NameInMap("Scope")
         public String scope;
 
         /**
          * <p>The scope of reserved instance N. Valid values:</p>
-         * <br>
-         * <p>*   Region</p>
-         * <p>*   Zone</p>
-         * <br>
+         * <ul>
+         * <li>Region</li>
+         * <li>Zone</li>
+         * </ul>
          * <p>Valid values of N: 1 to 100.</p>
-         * <br>
          * <p>Default value: Region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-i</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;

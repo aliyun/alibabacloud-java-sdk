@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
     /**
      * <p>The instance type of the preemptible instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CNY</p>
      */
     @NameInMap("Currency")
     public String currency;
 
     /**
      * <p>The network type of the preemptible instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1000</p>
      */
     @NameInMap("NextOffset")
     public Integer nextOffset;
 
     /**
      * <p>The instance type of the preemptible instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,46 +77,65 @@ public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
     public static class DescribeSpotPriceHistoryResponseBodySpotPricesSpotPriceType extends TeaModel {
         /**
          * <p>The instance type of the preemptible instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.g5.large</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
 
         /**
          * <p>Details about the price history of the preemptible instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>optimized</p>
          */
         @NameInMap("IoOptimized")
         public String ioOptimized;
 
         /**
          * <p>Queries the price history of a preemptible instance within the last 30 days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc</p>
          */
         @NameInMap("NetworkType")
         public String networkType;
 
         /**
          * <p>The price for a pay-as-you-go instance that has the same configuration as the specified preemptible instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.354</p>
          */
         @NameInMap("OriginPrice")
         public Float originPrice;
 
         /**
          * <p>The price for a pay-as-you-go instance that has the same configurations as the preemptible instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.036</p>
          */
         @NameInMap("SpotPrice")
         public Float spotPrice;
 
         /**
          * <p>The currency unit of the price.</p>
-         * <br>
          * <p>Alibaba Cloud China site (aliyun.com): CNY.</p>
-         * <br>
          * <p>Alibaba Cloud International site (alibabacloud.com): USD.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-11-19T06:00:00Z</p>
          */
         @NameInMap("Timestamp")
         public String timestamp;
 
         /**
          * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-c</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;

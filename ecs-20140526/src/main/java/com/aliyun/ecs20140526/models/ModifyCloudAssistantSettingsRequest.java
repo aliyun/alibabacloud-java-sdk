@@ -24,6 +24,10 @@ public class ModifyCloudAssistantSettingsRequest extends TeaModel {
 
     /**
      * <p>The region ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -36,9 +40,14 @@ public class ModifyCloudAssistantSettingsRequest extends TeaModel {
 
     /**
      * <p>The Cloud Assistant feature. Valid values:</p>
-     * <br>
-     * <p>*   SessionManagerDelivery: the Session Record Delivery feature</p>
-     * <p>*   InvocationDelivery: the Operation Content and Result Delivery feature</p>
+     * <ul>
+     * <li>SessionManagerDelivery: the Session Record Delivery feature</li>
+     * <li>InvocationDelivery: the Operation Content and Result Delivery feature</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SessionManagerDelivery</p>
      */
     @NameInMap("SettingType")
     public String settingType;
@@ -129,29 +138,32 @@ public class ModifyCloudAssistantSettingsRequest extends TeaModel {
     public static class ModifyCloudAssistantSettingsRequestAgentUpgradeConfig extends TeaModel {
         /**
          * <p>The time windows during which Cloud Assistant Agent can be upgraded. The time windows can be accurate to minutes. The Coordinated Universal Time (UTC) time zone is used by default.</p>
-         * <br>
          * <p>Make sure that the upgrade windows specified by this parameter are not shorter than 1 hour.</p>
-         * <br>
          * <p>Specify each upgrade window in the following format: \<Start time in the HH:mm format>-\<End time in the HH:mm format>.</p>
-         * <br>
-         * <p>For example, \[ "02:00-03:00", "05:00-06:00" ] specifies that Cloud Assistant Agent can be upgraded from 2:00:00 to 3:00:00 and from 5:00:00 to 6:00:00 every day in the UTC time zone.</p>
+         * <p>For example, [ &quot;02:00-03:00&quot;, &quot;05:00-06:00&quot; ] specifies that Cloud Assistant Agent can be upgraded from 2:00:00 to 3:00:00 and from 5:00:00 to 6:00:00 every day in the UTC time zone.</p>
          */
         @NameInMap("AllowedUpgradeWindow")
         public java.util.List<String> allowedUpgradeWindow;
 
         /**
          * <p>Specifies whether to enable custom upgrade for Cloud Assistant Agent. If you set this parameter to false, an upgrade attempt is performed for Cloud Assistant Agent every 30 minutes.</p>
-         * <br>
          * <p>Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Enabled")
         public Boolean enabled;
 
         /**
          * <p>The time zone of the time windows. Default value: UTC. You can specify a time zone in the following forms:</p>
-         * <br>
-         * <p>*   The time zone name. Examples: Asia/Shanghai and America/Los_Angeles.</p>
-         * <p>*   The time offset from GMT. Examples: GMT+8:00 (UTC+8) and GMT-7:00 (UTC-7). You cannot add leading zeros to the hour value.</p>
+         * <ul>
+         * <li>The time zone name. Examples: Asia/Shanghai and America/Los_Angeles.</li>
+         * <li>The time offset from GMT. Examples: GMT+8:00 (UTC+8) and GMT-7:00 (UTC-7). You cannot add leading zeros to the hour value.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Asia/Shanghai</p>
          */
         @NameInMap("TimeZone")
         public String timeZone;
@@ -190,48 +202,68 @@ public class ModifyCloudAssistantSettingsRequest extends TeaModel {
     public static class ModifyCloudAssistantSettingsRequestOssDeliveryConfig extends TeaModel {
         /**
          * <p>The name of the OSS bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-bucket</p>
          */
         @NameInMap("BucketName")
         public String bucketName;
 
         /**
          * <p>Specifies whether to deliver records to OSS. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Enabled")
         public Boolean enabled;
 
         /**
          * <p>The OSS encryption algorithm. Valid values:</p>
-         * <br>
-         * <p>*   AES256</p>
-         * <p>*   SM4</p>
+         * <ul>
+         * <li>AES256</li>
+         * <li>SM4</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>AES256</p>
          */
         @NameInMap("EncryptionAlgorithm")
         public String encryptionAlgorithm;
 
         /**
          * <p>The ID of the customer master key (CMK) when EncryptionType is set to KMS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a807****7a70e</p>
          */
         @NameInMap("EncryptionKeyId")
         public String encryptionKeyId;
 
         /**
          * <p>The OSS encryption method. Valid values:</p>
-         * <br>
-         * <p>*   Inherit: the encryption method used by the specified bucket.</p>
-         * <p>*   OssManaged: server-side encryption by using OSS-managed keys (SSE-OSS).</p>
-         * <p>*   KMS: server-side encryption by using Key Management Service managed keys (SSE-KMS).</p>
+         * <ul>
+         * <li>Inherit: the encryption method used by the specified bucket.</li>
+         * <li>OssManaged: server-side encryption by using OSS-managed keys (SSE-OSS).</li>
+         * <li>KMS: server-side encryption by using Key Management Service managed keys (SSE-KMS).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Inherit</p>
          */
         @NameInMap("EncryptionType")
         public String encryptionType;
 
         /**
          * <p>The prefix of the OSS bucket directory. The prefix must meet the following requirements:</p>
-         * <br>
-         * <p>*   The prefix can be up to 254 characters in length.</p>
-         * <p>*   The prefix cannot start with a forward slash (/) or a backslash (\\).</p>
-         * <br>
-         * <p>Note: If you do not need a directory prefix, specify a pair of double quotation marks ("") for this parameter to clear the directory prefix that you specified.</p>
+         * <ul>
+         * <li>The prefix can be up to 254 characters in length.</li>
+         * <li>The prefix cannot start with a forward slash (/) or a backslash (\\).</li>
+         * </ul>
+         * <p>Note: If you do not need a directory prefix, specify a pair of double quotation marks (&quot;&quot;) for this parameter to clear the directory prefix that you specified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sessionmanager/audit</p>
          */
         @NameInMap("Prefix")
         public String prefix;
@@ -294,18 +326,27 @@ public class ModifyCloudAssistantSettingsRequest extends TeaModel {
     public static class ModifyCloudAssistantSettingsRequestSlsDeliveryConfig extends TeaModel {
         /**
          * <p>Specifies whether to deliver records to Simple Log Service. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Enabled")
         public Boolean enabled;
 
         /**
          * <p>The name of the Logstore.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-logstore</p>
          */
         @NameInMap("LogstoreName")
         public String logstoreName;
 
         /**
          * <p>The name of the Simple Log Service project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-project</p>
          */
         @NameInMap("ProjectName")
         public String projectName;

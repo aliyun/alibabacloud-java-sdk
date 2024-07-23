@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class CreateLaunchTemplateResponseBody extends TeaModel {
     /**
      * <p>The ID of the launch template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lt-m5eiaupmvm2op9d****</p>
      */
     @NameInMap("LaunchTemplateId")
     public String launchTemplateId;
 
     /**
      * <p>The version number of the launch template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("LaunchTemplateVersionNumber")
     public Long launchTemplateVersionNumber;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

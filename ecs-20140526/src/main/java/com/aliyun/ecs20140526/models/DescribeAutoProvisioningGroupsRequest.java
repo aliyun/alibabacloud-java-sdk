@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class DescribeAutoProvisioningGroupsRequest extends TeaModel {
     /**
      * <p>The ID of the auto provisioning group. You can specify up to 20 IDs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>apg-sn54avj8htgvtyh8****</p>
      */
     @NameInMap("AutoProvisioningGroupId")
     public java.util.List<String> autoProvisioningGroupId;
 
     /**
      * <p>The name of the auto provisioning group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testAutoProvisioningGroupName</p>
      */
     @NameInMap("AutoProvisioningGroupName")
     public String autoProvisioningGroupName;
 
     /**
      * <p>The status of the auto provisioning group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>active</p>
      */
     @NameInMap("AutoProvisioningGroupStatus")
     public java.util.List<String> autoProvisioningGroupStatus;
@@ -30,32 +39,41 @@ public class DescribeAutoProvisioningGroupsRequest extends TeaModel {
 
     /**
      * <p>The page number.</p>
-     * <br>
      * <p>Pages start from page 1.</p>
-     * <br>
      * <p>Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
-     * <br>
      * <p>Valid values: 1 to 100.</p>
-     * <br>
      * <p>Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The region ID of the auto provisioning group.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group to which the auto provisioning group belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-bp67acfmxazb4p****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -176,16 +194,20 @@ public class DescribeAutoProvisioningGroupsRequest extends TeaModel {
     public static class DescribeAutoProvisioningGroupsRequestTag extends TeaModel {
         /**
          * <p>The key of tag N that is added to the auto provisioning group.</p>
-         * <br>
          * <p>Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of tag N that is added to the auto provisioning group.</p>
-         * <br>
          * <p>Valid values of N: 1 to 20. The tag value can be an empty string. The tag key can be up to 128 characters in length and cannot contain http:// or https://.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
          */
         @NameInMap("Value")
         public String value;

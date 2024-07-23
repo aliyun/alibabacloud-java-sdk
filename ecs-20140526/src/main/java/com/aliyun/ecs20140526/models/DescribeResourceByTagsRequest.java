@@ -8,23 +8,31 @@ public class DescribeResourceByTagsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Pages start from page 1.</p>
-     * <br>
+     * <p>The page number. Pages start from page 1.</p>
      * <p>Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: 1 to 100.</p>
-     * <br>
+     * <p>The number of entries per page. Valid values: 1 to 100.</p>
      * <p>Default value: 50.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the resource. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the resource. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -37,19 +45,22 @@ public class DescribeResourceByTagsRequest extends TeaModel {
 
     /**
      * <p>The type of the resource. Valid values:</p>
-     * <br>
-     * <p>*   instance: ECS instance</p>
-     * <p>*   disk: disk</p>
-     * <p>*   snapshot: snapshot</p>
-     * <p>*   image: image</p>
-     * <p>*   securitygroup: security group</p>
-     * <p>*   volume: storage volume</p>
-     * <p>*   eni: elastic network interface (ENI)</p>
-     * <p>*   ddh: dedicated host</p>
-     * <p>*   keypair: SSH key pair</p>
-     * <p>*   launchtemplate: launch template</p>
-     * <br>
+     * <ul>
+     * <li>instance: Elastic Compute Service (ECS) instance</li>
+     * <li>disk: disk</li>
+     * <li>snapshot: snapshot</li>
+     * <li>image: image</li>
+     * <li>securitygroup: security group</li>
+     * <li>volume: storage volume</li>
+     * <li>eni: elastic network interface (ENI)</li>
+     * <li>ddh: dedicated host</li>
+     * <li>keypair: SSH key pair</li>
+     * <li>launchtemplate: launch template</li>
+     * </ul>
      * <p>All the preceding values must be lowercase.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>instance</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
@@ -131,13 +142,19 @@ public class DescribeResourceByTagsRequest extends TeaModel {
 
     public static class DescribeResourceByTagsRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N of the resource. Valid values of N: 1 to 20 The tag key cannot be an empty string. It can be up to 128 characters in length.</p>
+         * <p>The key of tag N of the resource. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag N of the resource. Valid values of N: 1 to 20 The tag value can be an empty string. It can be up to 128 characters in length.</p>
+         * <p>The value of tag N of the resource. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
          */
         @NameInMap("Value")
         public String value;

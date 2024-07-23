@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class ExportImageResponseBody extends TeaModel {
     /**
      * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C8B26B44-0189-443E-9816-D951F596****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the task that is used to export the custom image.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tsk-bp67acfmxazb4p****</p>
      */
     @NameInMap("TaskId")
     public String taskId;

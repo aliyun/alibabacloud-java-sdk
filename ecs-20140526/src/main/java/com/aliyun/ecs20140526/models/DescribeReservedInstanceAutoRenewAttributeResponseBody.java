@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeReservedInstanceAutoRenewAttributeResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>04F0F334-1335-436C-A1D7-6C044FE7****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,29 +43,41 @@ public class DescribeReservedInstanceAutoRenewAttributeResponseBody extends TeaM
     public static class DescribeReservedInstanceAutoRenewAttributeResponseBodyReservedInstanceRenewAttributesReservedInstanceRenewAttribute extends TeaModel {
         /**
          * <p>The auto-renewal duration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Duration")
         public Integer duration;
 
         /**
          * <p>The unit of the auto-renewal duration.</p>
-         * <br>
          * <p>Valid values: Year and Month.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         @NameInMap("PeriodUnit")
         public String periodUnit;
 
         /**
          * <p>The auto-renewal status of the reserved instance. Valid values:</p>
-         * <br>
-         * <p>*   AutoRenewal: The reserved instance is automatically renewed.</p>
-         * <p>*   Normal: You must manually renew the reserved instance.</p>
+         * <ul>
+         * <li>AutoRenewal: The reserved instance is automatically renewed.</li>
+         * <li>Normal: You must manually renew the reserved instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>AutoRenewal</p>
          */
         @NameInMap("RenewalStatus")
         public String renewalStatus;
 
         /**
          * <p>The ID of the reserved instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecsri-ajdfaj****</p>
          */
         @NameInMap("ReservedInstanceId")
         public String reservedInstanceId;

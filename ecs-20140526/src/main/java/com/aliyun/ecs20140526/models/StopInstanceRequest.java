@@ -6,40 +6,58 @@ import com.aliyun.tea.*;
 public class StopInstanceRequest extends TeaModel {
     /**
      * <p>This parameter will be removed in the future and is retained only to ensure compatibility. We recommend that you ignore this parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("ConfirmStop")
     public Boolean confirmStop;
 
     /**
      * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
-     * <br>
-     * <p>*   true: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, service limits, and available ECS resources. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
-     * <p>*   false: performs a dry run and performs the actual request.</p>
-     * <br>
+     * <ul>
+     * <li>true: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, service limits, and available ECS resources. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li>false: performs a dry run and performs the actual request.</li>
+     * </ul>
      * <p>Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
      * <p>Specifies whether to forcibly stop the instance. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
-     * <br>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
      * <p>Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("ForceStop")
     public Boolean forceStop;
 
     /**
-     * <p>> This parameter is in invitational preview and is not publicly available.</p>
+     * <blockquote>
+     * <p>This parameter is in invitational preview and is not publicly available.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>hide</p>
      */
     @NameInMap("Hibernate")
     public Boolean hibernate;
 
     /**
      * <p>The ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-bp67acfmxazb4ph****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -58,11 +76,14 @@ public class StopInstanceRequest extends TeaModel {
 
     /**
      * <p>The stop mode of the pay-as-you-go instance. Valid values:</p>
-     * <br>
-     * <p>*   StopCharging: economical mode. For information about how `StopCharging` takes effect, see the "Conditions for enabling economical mode" section in [Economical mode](~~63353~~).</p>
-     * <p>*   KeepCharging: standard mode. You continue to be charged for instances that are stopped in standard mode.</p>
-     * <br>
-     * <p>Default value: If the conditions for enabling the economical mode are met and you have enabled this mode in the ECS console, the default value is [StopCharging](~~63353#default~~). For more information, see the "Enable economical mode" section in `Economical mode`. Otherwise, the default value is `KeepCharging`.</p>
+     * <ul>
+     * <li>StopCharging: economical mode. For information about how <code>StopCharging</code> takes effect, see the &quot;Conditions for enabling economical mode&quot; section in <a href="https://help.aliyun.com/document_detail/63353.html">Economical mode</a>.</li>
+     * <li>KeepCharging: standard mode. You continue to be charged for instances that are stopped in standard mode.</li>
+     * </ul>
+     * <p>Default value: If the conditions for enabling the economical mode are met and you have enabled this mode in the ECS console, the default value is <a href="~~63353#default~~">StopCharging</a>. For more information, see the &quot;Enable economical mode&quot; section in <code>Economical mode</code>. Otherwise, the default value is <code>KeepCharging</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>KeepCharging</p>
      */
     @NameInMap("StoppedMode")
     public String stoppedMode;

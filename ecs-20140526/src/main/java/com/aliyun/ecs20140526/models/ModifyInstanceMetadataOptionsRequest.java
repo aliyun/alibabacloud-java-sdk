@@ -6,44 +6,66 @@ import com.aliyun.tea.*;
 public class ModifyInstanceMetadataOptionsRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the access channel for instance metadata. Valid values:</p>
-     * <br>
-     * <p>*   enabled</p>
-     * <p>*   disabled</p>
-     * <br>
+     * <ul>
+     * <li>enabled</li>
+     * <li>disabled</li>
+     * </ul>
      * <p>Default value: enabled.</p>
-     * <br>
-     * <p>> For more information about instance metadata, see [Overview of ECS instance metadata](~~49122~~).</p>
+     * <blockquote>
+     * <p>For more information about instance metadata, see <a href="https://help.aliyun.com/document_detail/49122.html">Overview of ECS instance metadata</a>.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>enabled</p>
      */
     @NameInMap("HttpEndpoint")
     public String httpEndpoint;
 
     /**
-     * <p>> This parameter is in invitational preview and is not publicly available.</p>
+     * <blockquote>
+     * <p>This parameter is in invitational preview and is not publicly available.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("HttpPutResponseHopLimit")
     public Integer httpPutResponseHopLimit;
 
     /**
      * <p>Specifies whether to forcefully use the security-enhanced mode (IMDSv2) to access instance metadata. Valid values:</p>
-     * <br>
-     * <p>*   optional: does not forcefully use the security-enhanced mode (IMDSv2).</p>
-     * <p>*   required: forcefully uses the security-enhanced mode (IMDSv2). After you set this parameter to required, you cannot access instance metadata in normal mode.</p>
-     * <br>
+     * <ul>
+     * <li>optional: does not forcefully use the security-enhanced mode (IMDSv2).</li>
+     * <li>required: forcefully uses the security-enhanced mode (IMDSv2). After you set this parameter to required, you cannot access instance metadata in normal mode.</li>
+     * </ul>
      * <p>Default value: optional.</p>
-     * <br>
-     * <p>> For more information about the modes of accessing instance metadata, see [Access mode of instance metadata](~~150575~~).</p>
+     * <blockquote>
+     * <p>For more information about the modes of accessing instance metadata, see <a href="https://help.aliyun.com/document_detail/150575.html">Access mode of instance metadata</a>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>optional</p>
      */
     @NameInMap("HttpTokens")
     public String httpTokens;
 
     /**
      * <p>The ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-bp67acfmxaz****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>> This parameter is in invitational preview and is not publicly available.</p>
+     * <blockquote>
+     * <p>This parameter is in invitational preview and is not publicly available.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
      */
     @NameInMap("InstanceMetadataTags")
     public String instanceMetadataTags;
@@ -52,7 +74,11 @@ public class ModifyInstanceMetadataOptionsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeLaunchTemplatesRequest extends TeaModel {
     /**
      * <p>The IDs of launch templates. You can specify up to 100 launch template IDs. You must specify LaunchTemplateId or LaunchTemplateName to determine a launch template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lt-m5e3ofjr1zn1aw7q****</p>
      */
     @NameInMap("LaunchTemplateId")
     public java.util.List<String> launchTemplateId;
 
     /**
      * <p>The names of launch templates. You can specify up to 100 launch template names.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>wd-152630748****</p>
      */
     @NameInMap("LaunchTemplateName")
     public java.util.List<String> launchTemplateName;
@@ -24,22 +30,32 @@ public class DescribeLaunchTemplatesRequest extends TeaModel {
 
     /**
      * <p>The number of entries to return on each page.</p>
-     * <br>
      * <p>Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The ID of the resource group to which the launch template belongs. If you specify this parameter to query resources, up to 1,000 resources that belong to the specified resource group can be returned.</p>
-     * <br>
-     * <p>> Resources in the default resource group are displayed in the response regardless of whether you specify this parameter.</p>
+     * <blockquote>
+     * <p>Resources in the default resource group are displayed in the response regardless of whether you specify this parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The tags of the launch template.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -52,6 +68,9 @@ public class DescribeLaunchTemplatesRequest extends TeaModel {
 
     /**
      * <p>The IDs of launch templates. You can specify up to 100 launch template IDs. You must specify LaunchTemplateId or LaunchTemplateName to determine a launch template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmxazb4p****</p>
      */
     @NameInMap("TemplateResourceGroupId")
     public String templateResourceGroupId;
@@ -158,14 +177,19 @@ public class DescribeLaunchTemplatesRequest extends TeaModel {
     public static class DescribeLaunchTemplatesRequestTemplateTag extends TeaModel {
         /**
          * <p>The value of tag N of the launch template. Valid values of N: 1 to 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The number of the page to return. Pages start from page 1.</p>
-         * <br>
          * <p>Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
          */
         @NameInMap("Value")
         public String value;

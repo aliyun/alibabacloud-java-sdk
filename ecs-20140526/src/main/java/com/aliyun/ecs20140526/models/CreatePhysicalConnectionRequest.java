@@ -4,6 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreatePhysicalConnectionRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AccessPointId")
     public String accessPointId;
 
@@ -16,6 +19,9 @@ public class CreatePhysicalConnectionRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("LineOperator")
     public String lineOperator;
 
@@ -28,6 +34,9 @@ public class CreatePhysicalConnectionRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PeerLocation")
     public String peerLocation;
 
@@ -37,6 +46,9 @@ public class CreatePhysicalConnectionRequest extends TeaModel {
     @NameInMap("RedundantPhysicalConnectionId")
     public String redundantPhysicalConnectionId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

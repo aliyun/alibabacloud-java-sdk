@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeInstanceTopologyResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
     public static class DescribeInstanceTopologyResponseBodyTopologysTopology extends TeaModel {
         /**
          * <p>The ID of the host where the ECS instance resides. This parameter is encrypted and cannot match the ID of the ECS instance. However, if the values of this parameter for different ECS instances are the same, the ECS instances reside on the same host.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ZWNobyBo****</p>
          */
         @NameInMap("HostId")
         public String hostId;
 
         /**
          * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp67acfmxazb4p****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;

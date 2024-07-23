@@ -22,6 +22,9 @@ public class EipFillProductRequest extends TeaModel {
     @NameInMap("UserCidr")
     public String userCidr;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("data")
     public String data;
 

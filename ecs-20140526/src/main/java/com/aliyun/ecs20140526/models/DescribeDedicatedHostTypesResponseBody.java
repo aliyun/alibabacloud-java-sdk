@@ -12,6 +12,9 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5FE5FF06-3A33-4658-8495-6445FC54E327</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -78,66 +81,99 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
     public static class DescribeDedicatedHostTypesResponseBodyDedicatedHostTypesDedicatedHostType extends TeaModel {
         /**
          * <p>The number of cores per physical CPU.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Cores")
         public Integer cores;
 
         /**
          * <p>The supported CPU overcommit ratio range.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1-5</p>
          */
         @NameInMap("CpuOverCommitRatioRange")
         public String cpuOverCommitRatioRange;
 
         /**
          * <p>The dedicated host type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ddh.sn1ne</p>
          */
         @NameInMap("DedicatedHostType")
         public String dedicatedHostType;
 
         /**
          * <p>The GPU model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gpu</p>
          */
         @NameInMap("GPUSpec")
         public String GPUSpec;
 
         /**
          * <p>The number of local disks on a dedicated host.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("LocalStorageAmount")
         public Integer localStorageAmount;
 
         /**
          * <p>The capacity of a local disk. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("LocalStorageCapacity")
         public Long localStorageCapacity;
 
         /**
          * <p>The category of local disks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>local</p>
          */
         @NameInMap("LocalStorageCategory")
         public String localStorageCategory;
 
         /**
          * <p>The memory size. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>112.0</p>
          */
         @NameInMap("MemorySize")
         public Float memorySize;
 
         /**
          * <p>The number of physical GPUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("PhysicalGpus")
         public Integer physicalGpus;
 
         /**
          * <p>The number of physical CPUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Sockets")
         public Integer sockets;
 
         /**
          * <p>Indicates whether the CPU overcommit ratio settings are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("SupportCpuOverCommitRatio")
         public Boolean supportCpuOverCommitRatio;
@@ -156,12 +192,18 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
 
         /**
          * <p>The total number of vCPUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>56</p>
          */
         @NameInMap("TotalVcpus")
         public Integer totalVcpus;
 
         /**
          * <p>The total number of vGPUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("TotalVgpus")
         public Integer totalVgpus;

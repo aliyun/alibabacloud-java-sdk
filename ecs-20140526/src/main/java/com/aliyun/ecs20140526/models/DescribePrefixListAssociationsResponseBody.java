@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribePrefixListAssociationsResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AAAAAdDWBF2****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -18,6 +21,9 @@ public class DescribePrefixListAssociationsResponseBody extends TeaModel {
 
     /**
      * <p>Details about the resources that are associated with the prefix list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>38793DB8-A4B2-4AEC-BFD3-111234E9188D</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,10 +60,17 @@ public class DescribePrefixListAssociationsResponseBody extends TeaModel {
     public static class DescribePrefixListAssociationsResponseBodyPrefixListAssociationsPrefixListAssociation extends TeaModel {
         /**
          * <p>The type of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-bp11ujym6xsff6l0****</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>securitygroup</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 

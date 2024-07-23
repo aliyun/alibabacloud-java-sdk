@@ -12,24 +12,36 @@ public class DescribeClassicLinkInstancesResponseBody extends TeaModel {
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of ClassicLink connections.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,12 +94,18 @@ public class DescribeClassicLinkInstancesResponseBody extends TeaModel {
     public static class DescribeClassicLinkInstancesResponseBodyLinksLink extends TeaModel {
         /**
          * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-test</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The VPC ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-test</p>
          */
         @NameInMap("VpcId")
         public String vpcId;

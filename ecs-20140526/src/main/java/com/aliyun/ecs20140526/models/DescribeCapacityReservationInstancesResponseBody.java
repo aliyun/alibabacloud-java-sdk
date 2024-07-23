@@ -12,24 +12,36 @@ public class DescribeCapacityReservationInstancesResponseBody extends TeaModel {
 
     /**
      * <p>Details about the instances that match the capacity reservation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The maximum number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -80,6 +92,10 @@ public class DescribeCapacityReservationInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeCapacityReservationInstancesResponseBodyCapacityReservationItemInstanceIdSet extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>i-bp67acfmxazb4****</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 

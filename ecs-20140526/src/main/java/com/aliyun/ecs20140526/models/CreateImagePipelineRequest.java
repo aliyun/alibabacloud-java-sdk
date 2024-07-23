@@ -6,87 +6,123 @@ import com.aliyun.tea.*;
 public class CreateImagePipelineRequest extends TeaModel {
     /**
      * <p>The IDs of Alibaba Cloud accounts to which to share the image that will be created based on the image template. You can specify up to 20 account IDs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234567890</p>
      */
     @NameInMap("AddAccount")
     public java.util.List<Long> addAccount;
 
     /**
      * <p>The source image.</p>
-     * <br>
-     * <p>*   If you set `BaseImageType` to IMAGE, set the BaseImage parameter to the ID of a custom image.</p>
-     * <p>*   If you set `BaseImageType` to IMAGE_FAMILY, set the BaseImage parameter to the name of an image family.</p>
+     * <ul>
+     * <li>If you set <code>BaseImageType</code> to IMAGE, set the BaseImage parameter to the ID of a custom image.</li>
+     * <li>If you set <code>BaseImageType</code> to IMAGE_FAMILY, set the BaseImage parameter to the name of an image family.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>m-bp67acfmxazb4p****</p>
      */
     @NameInMap("BaseImage")
     public String baseImage;
 
     /**
      * <p>The type of the source image. Valid values:</p>
-     * <br>
-     * <p>*   IMAGE: image</p>
-     * <p>*   IMAGE_FAMILY: image family</p>
+     * <ul>
+     * <li>IMAGE: image</li>
+     * <li>IMAGE_FAMILY: image family</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>IMAGE</p>
      */
     @NameInMap("BaseImageType")
     public String baseImageType;
 
     /**
-     * <p>The content of the image template. The content cannot exceed 16 KB in size and can contain up to 127 commands. For more information about the commands that are supported, see the "Usage notes" section of this topic.</p>
+     * <p>The content of the image template. The content cannot exceed 16 KB in size and can contain up to 127 commands. For more information about the commands that are supported, see the &quot;Usage notes&quot; section of this topic.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FROM IMAGE:m-bp67acfmxazb4p****</p>
      */
     @NameInMap("BuildContent")
     public String buildContent;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.**** For more information, see [How to ensure idempotence](~~25693~~).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.**** For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>Specifies whether to release the intermediate instance when the image cannot be created. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
-     * <br>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
      * <p>Default value: true.</p>
-     * <br>
-     * <p>> If the intermediate instance cannot be started, the instance is released by default.</p>
+     * <blockquote>
+     * <p>If the intermediate instance cannot be started, the instance is released by default.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("DeleteInstanceOnFailure")
     public Boolean deleteInstanceOnFailure;
 
     /**
-     * <p>The description of the image template. The description must be 2 to 256 characters in length. It cannot start with `http://` or `https://`.</p>
+     * <p>The description of the image template. The description must be 2 to 256 characters in length. It cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>This is description.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The prefix of the image name. The prefix must be 2 to 64 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-).</p>
-     * <br>
-     * <p>The system generates the final complete image name that consists of the specified prefix and the ID of the build task (`ExecutionId`) in the format of `{ImageName}_{ExecutionId}`.</p>
+     * <p>The prefix of the image name. The prefix must be 2 to 64 characters in length. It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. It can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
+     * <p>The system generates the final complete image name that consists of the specified prefix and the ID of the build task (<code>ExecutionId</code>) in the format of <code>{ImageName}_{ExecutionId}</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testImageName</p>
      */
     @NameInMap("ImageName")
     public String imageName;
 
     /**
-     * <p>The instance type. You can call the [DescribeInstanceTypes](~~25620~~) to query instance types.</p>
-     * <br>
+     * <p>The instance type. You can call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> to query instance types.</p>
      * <p>If you do not configure this parameter, an instance type that provides the fewest vCPUs and memory resources is automatically selected. This configuration is subject to resource availability of instance types. For example, the ecs.g6.large instance type is automatically selected. If available ecs.g6.large resources are insufficient, the ecs.g6.xlarge instance type is selected.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs.g6.large</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
 
     /**
      * <p>The size of the outbound public bandwidth for the intermediate instance. Unit: Mbit/s. Valid values: 0 to 100.</p>
-     * <br>
      * <p>Default value: 0.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("InternetMaxBandwidthOut")
     public Integer internetMaxBandwidthOut;
 
     /**
-     * <p>The name of the image template. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-).</p>
-     * <br>
-     * <p>> If you do not specify the `Name` parameter, the return value of `ImagePipelineId` is used.</p>
+     * <p>The name of the image template. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. It can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
+     * <blockquote>
+     * <p>If you do not specify the <code>Name</code> parameter, the return value of <code>ImagePipelineId</code> is used.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>testImagePipeline</p>
      */
     @NameInMap("Name")
     public String name;
@@ -98,13 +134,20 @@ public class CreateImagePipelineRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-bp67acfmxazb4p****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -117,8 +160,10 @@ public class CreateImagePipelineRequest extends TeaModel {
 
     /**
      * <p>The system disk size of the intermediate instance. Unit: GiB. Valid values: 20 to 500.</p>
-     * <br>
      * <p>Default value: 40.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>40</p>
      */
     @NameInMap("SystemDiskSize")
     public Integer systemDiskSize;
@@ -131,16 +176,20 @@ public class CreateImagePipelineRequest extends TeaModel {
 
     /**
      * <p>The IDs of regions to which you want to distribute the image that is created based on the image template. You can specify up to 20 region IDs.</p>
-     * <br>
      * <p>If you do not specify this parameter, the image is created only in the current region.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("ToRegionId")
     public java.util.List<String> toRegionId;
 
     /**
      * <p>The ID of the vSwitch.</p>
-     * <br>
-     * <p>If you do not specify this parameter, a new VPC and vSwitch are created. Make sure that the VPC quota in your account is sufficient. For more information, see [Limits and quotas](~~27750~~).</p>
+     * <p>If you do not specify this parameter, a new VPC and vSwitch are created. Make sure that the VPC quota in your account is sufficient. For more information, see <a href="https://help.aliyun.com/document_detail/27750.html">Limits and quotas</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-bp67acfmxazb4p****</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
@@ -320,13 +369,19 @@ public class CreateImagePipelineRequest extends TeaModel {
 
     public static class CreateImagePipelineRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N. Valid values of N: 1 to 20. You cannot specify empty strings as tag keys. The tag key must be 1 to 128 characters in length and cannot contain `http://` or `https://`. It cannot start with `acs:` or `aliyun`.</p>
+         * <p>The key of tag N. Valid values of N: 1 to 20. You cannot specify empty strings as tag keys. The tag key must be 1 to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag N. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value must be 0 to 128 characters in length. It cannot start with `acs:` or contain `http://` or `https://`.</p>
+         * <p>The value of tag N. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value must be 0 to 128 characters in length. It cannot start with <code>acs:</code> or contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
          */
         @NameInMap("Value")
         public String value;

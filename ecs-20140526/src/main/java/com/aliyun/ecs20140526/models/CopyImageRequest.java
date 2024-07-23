@@ -5,48 +5,72 @@ import com.aliyun.tea.*;
 
 public class CopyImageRequest extends TeaModel {
     /**
-     * <p>The description of the image copy. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.</p>
+     * <p>The description of the image copy. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>This is a description example.</p>
      */
     @NameInMap("DestinationDescription")
     public String destinationDescription;
 
     /**
-     * <p>The name of the new image. The name must be 2 to 128 characters in length. The name must start with a letter and cannot contain `http://` or `https://`. The name cannot start with `acs:` or `aliyun`. The name can contain letters, digits, periods (.), colons (:), underscores (\_), and hyphens (-).</p>
+     * <p>The name of the new image. The name must be 2 to 128 characters in length. The name must start with a letter and cannot contain <code>http://</code> or <code>https://</code>. The name cannot start with <code>acs:</code> or <code>aliyun</code>. The name can contain letters, digits, periods (.), colons (:), underscores (_), and hyphens (-).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>YourImageName</p>
      */
     @NameInMap("DestinationImageName")
     public String destinationImageName;
 
     /**
      * <p>The ID of the destination region to which the source custom image is copied.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("DestinationRegionId")
     public String destinationRegionId;
 
     /**
-     * <p>> This parameter is unavailable.</p>
+     * <blockquote>
+     * <p>This parameter is unavailable.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>hide</p>
      */
     @NameInMap("EncryptAlgorithm")
     public String encryptAlgorithm;
 
     /**
      * <p>Specifies whether to encrypt the new image.</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
-     * <br>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
      * <p>Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("Encrypted")
     public Boolean encrypted;
 
     /**
      * <p>The ID of the source custom image.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>m-bp1h46wfpjsjastc****</p>
      */
     @NameInMap("ImageId")
     public String imageId;
 
     /**
      * <p>The ID of the key used to encrypt the image copy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>e522b26d-abf6-4e0d-b5da-04b7******3c</p>
      */
     @NameInMap("KMSKeyId")
     public String KMSKeyId;
@@ -58,15 +82,23 @@ public class CopyImageRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the source custom image. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the source custom image. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group to which to assign the new image. If you do not specify this parameter, the new image is assigned to the default resource group.</p>
-     * <br>
-     * <p>>  If you call the CopyImage operation as a Resource Access Management (RAM) user who does not have the permissions to manage the default resource group and do not specify `ResourceGroupId`, the `Forbidden: User not authorized to operate on the specified resource` error message is returned. You must specify the ID of a resource group that the RAM user has the permissions to manage or grant the RAM user the permissions to manage the default resource group before you call the CopyImage operation again.</p>
+     * <blockquote>
+     * <p> If you call the CopyImage operation as a Resource Access Management (RAM) user who does not have the permissions to manage the default resource group and do not specify <code>ResourceGroupId</code>, the <code>Forbidden: User not authorized to operate on the specified resource</code> error message is returned. You must specify the ID of a resource group that the RAM user has the permissions to manage or grant the RAM user the permissions to manage the default resource group before you call the CopyImage operation again.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-bp67acfmxazb4p****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -202,13 +234,19 @@ public class CopyImageRequest extends TeaModel {
 
     public static class CopyImageRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N of the image copy. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `aliyun` or `acs:`.</p>
+         * <p>The key of tag N of the image copy. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag N of the image copy. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with `acs:`. It cannot contain `http://` or `https://`.</p>
+         * <p>The value of tag N of the image copy. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
          */
         @NameInMap("Value")
         public String value;

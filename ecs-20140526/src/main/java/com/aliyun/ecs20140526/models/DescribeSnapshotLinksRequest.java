@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeSnapshotLinksRequest extends TeaModel {
     /**
      * <p>The disk IDs. You can specify a JSON array that contains a maximum of 100 disk IDs. Separate the disk IDs with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;d-bp1d6tsvznfghy7y****&quot;, &quot;d-bp1ippxbaql9zet7****&quot;, … &quot;d-bp1ib7bcz07lcxa9****&quot;]</p>
      */
     @NameInMap("DiskIds")
     public String diskIds;
 
     /**
      * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-bp1h6jmbefj2cyqs****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -24,22 +30,30 @@ public class DescribeSnapshotLinksRequest extends TeaModel {
 
     /**
      * <p>The page number. Page starts from page 1.</p>
-     * <br>
      * <p>Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page. Valid values: 1 to 100.</p>
-     * <br>
      * <p>Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the disk. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the disk. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -52,6 +66,9 @@ public class DescribeSnapshotLinksRequest extends TeaModel {
 
     /**
      * <p>The snapshot chain IDs. You can specify a JSON array that contains a maximum of 100 snapshot chain IDs. Separate the snapshot chain IDs with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;sl-bp1grgphbcc9brb5****&quot;, &quot;sl-bp1c4izumvq0i5bs****&quot;, … &quot;sl-bp1akk7isz866dds****&quot;]</p>
      */
     @NameInMap("SnapshotLinkIds")
     public String snapshotLinkIds;

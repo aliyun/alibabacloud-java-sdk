@@ -15,18 +15,30 @@ public class ApplyAutoSnapshotPolicyRequest extends TeaModel {
 
     /**
      * <p>The ID of the automatic snapshot policy.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sp-bp14yziiuvu3s6jn****</p>
      */
     @NameInMap("autoSnapshotPolicyId")
     public String autoSnapshotPolicyId;
 
     /**
      * <p>The IDs of disks. The value is a JSON array that consists of disk IDs. Separate the disk IDs with commas (,).</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;d-bp14k9cxvr5uzy54****&quot;, &quot;d-bp1dtj8v7x6u08iw****&quot;, &quot;d-bp1c0tyj9tfli2r8****&quot;]</p>
      */
     @NameInMap("diskIds")
     public String diskIds;
 
     /**
-     * <p>The region ID of the automatic snapshot policy and the disks. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the automatic snapshot policy and the disks. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("regionId")
     public String regionId;

@@ -6,67 +6,95 @@ import com.aliyun.tea.*;
 public class ModifyDiskAttributeRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the performance burst feature for data disk N. Valid values:</p>
-     * <br>
-     * <p>*   true: encrypts the disk.</p>
-     * <p>*   false: does not encrypt the disk.</p>
+     * <ul>
+     * <li>true: encrypts the disk.</li>
+     * <li>false: does not encrypt the disk.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("BurstingEnabled")
     public Boolean burstingEnabled;
 
     /**
      * <p>Specifies whether to delete the automatic snapshots of the disk when the disk is released. This parameter is empty by default, which indicates that the current value remains unchanged.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("DeleteAutoSnapshot")
     public Boolean deleteAutoSnapshot;
 
     /**
      * <p>Specifies whether to release the disk along with its associated instance. This parameter is empty by default, which indicates that the current value remains unchanged.</p>
-     * <br>
-     * <p>An error is returned if you set `DeleteWithInstance` to `false` in one of the following cases:</p>
-     * <br>
-     * <p>*   The disk is a local disk.</p>
-     * <p>*   The disk is a basic disk and is not removable. If the Portable attribute of a disk is set to false, the disk is not removable.</p>
+     * <p>An error is returned if you set <code>DeleteWithInstance</code> to <code>false</code> in one of the following cases:</p>
+     * <ul>
+     * <li>The disk is a local disk.</li>
+     * <li>The disk is a basic disk and is not removable. If the Portable attribute of a disk is set to false, the disk is not removable.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("DeleteWithInstance")
     public Boolean deleteWithInstance;
 
     /**
-     * <p>The description of the disk. The description must be 2 to 256 characters in length. It cannot start with `http://` or `https://`.</p>
+     * <p>The description of the disk. The description must be 2 to 256 characters in length. It cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TestDescription</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The ID of the disk.</p>
-     * <br>
-     * <p>> You can specify the `DiskId` parameter or the `DiskIds.N` parameter, but you cannot specify both parameters at the same time.</p>
+     * <blockquote>
+     * <p>You can specify the <code>DiskId</code> parameter or the <code>DiskIds.N</code> parameter, but you cannot specify both parameters at the same time.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>d-bp1famypsnar20bv****</p>
      */
     @NameInMap("DiskId")
     public String diskId;
 
     /**
      * <p>The ID of disk N. Valid values of N: 0 to 100.</p>
-     * <br>
-     * <p>> You can specify the `DiskId` parameter or the `DiskIds.N` parameter, but you cannot specify both parameters at the same time.</p>
+     * <blockquote>
+     * <p>You can specify the <code>DiskId</code> parameter or the <code>DiskIds.N</code> parameter, but you cannot specify both parameters at the same time.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>d-bp1famypsnar20bv****</p>
      */
     @NameInMap("DiskIds")
     public java.util.List<String> diskIds;
 
     /**
-     * <p>The name of the disk. The name must be 2 to 128 characters in length and can contain Unicode characters under the Decimal Number category and the categories whose names contain Letter. The name can also contain colons (:), underscores (\_), periods (.), and hyphens (-).</p>
+     * <p>The name of the disk. The name must be 2 to 128 characters in length and can contain Unicode characters under the Decimal Number category and the categories whose names contain Letter. The name can also contain colons (:), underscores (_), periods (.), and hyphens (-).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MyDiskName</p>
      */
     @NameInMap("DiskName")
     public String diskName;
 
     /**
      * <p>Specifies whether to enable the automatic snapshot policy feature for the cloud disk. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
-     * <br>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
      * <p>This parameter is empty by default, which indicates that the current value remains unchanged.</p>
-     * <br>
-     * <p>>  By default, the automatic snapshot policy feature is enabled for cloud disks. You only need to associate an automatic snapshot policy with a cloud disk before you can use the policy.</p>
+     * <blockquote>
+     * <p> By default, the automatic snapshot policy feature is enabled for cloud disks. You only need to associate an automatic snapshot policy with a cloud disk before you can use the policy.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("EnableAutoSnapshot")
     public Boolean enableAutoSnapshot;
@@ -78,7 +106,10 @@ public class ModifyDiskAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the command. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.</p>
+     * <p>The region ID of the command. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent list of regions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

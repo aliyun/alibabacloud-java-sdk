@@ -12,6 +12,9 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,36 +43,54 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
     public static class DescribeRecommendInstanceTypeResponseBodyDataRecommendInstanceTypeInstanceType extends TeaModel {
         /**
          * <p>The number of vCPUs of the instance type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Cores")
         public Integer cores;
 
         /**
          * <p>The generation of the instance family.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs-4</p>
          */
         @NameInMap("Generation")
         public String generation;
 
         /**
          * <p>The name of the instance type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.hfg6.large</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
 
         /**
          * <p>The instance family.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.hfg6</p>
          */
         @NameInMap("InstanceTypeFamily")
         public String instanceTypeFamily;
 
         /**
          * <p>The memory size of the instance type. Unit: MB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8192</p>
          */
         @NameInMap("Memory")
         public Integer memory;
 
         /**
          * <p>Indicates whether the instance type supports I/O optimization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>optimized</p>
          */
         @NameInMap("SupportIoOptimized")
         public String supportIoOptimized;
@@ -157,6 +178,9 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the zone where the instance type is available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h</p>
          */
         @NameInMap("ZoneNo")
         public String zoneNo;
@@ -206,12 +230,18 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
     public static class DescribeRecommendInstanceTypeResponseBodyDataRecommendInstanceType extends TeaModel {
         /**
          * <p>The commodity code of the instance type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         @NameInMap("CommodityCode")
         public String commodityCode;
 
         /**
          * <p>The billing method of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PostPaid</p>
          */
         @NameInMap("InstanceChargeType")
         public String instanceChargeType;
@@ -224,36 +254,54 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
 
         /**
          * <p>The network type of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc</p>
          */
         @NameInMap("NetworkType")
         public String networkType;
 
         /**
          * <p>The priority based on which the system sorts the instance types.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Priority")
         public Integer priority;
 
         /**
          * <p>The region ID of the instance type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The scenarios in which the instance type is recommended.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CREATE</p>
          */
         @NameInMap("Scene")
         public String scene;
 
         /**
          * <p>The bidding policy for the preemptible instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NoSpot</p>
          */
         @NameInMap("SpotStrategy")
         public String spotStrategy;
 
         /**
          * <p>The ID of the zone in which the instance type is available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;

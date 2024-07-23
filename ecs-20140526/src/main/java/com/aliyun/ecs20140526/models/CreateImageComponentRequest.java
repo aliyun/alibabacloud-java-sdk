@@ -5,35 +5,50 @@ import com.aliyun.tea.*;
 
 public class CreateImageComponentRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotency of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The **token** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
+     * <p>The client token that is used to ensure the idempotency of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <strong>token</strong> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The type of the image component. Only image build components are supported. Set the value to Build.</p>
-     * <br>
      * <p>Default value: Build.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Build</p>
      */
     @NameInMap("ComponentType")
     public String componentType;
 
     /**
      * <p>The content of the image component. The content consists of up to 127 commands.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RUN yum update -y</p>
      */
     @NameInMap("Content")
     public String content;
 
     /**
-     * <p>The description. The description must be 2 to 256 characters in length and cannot start with [http:// or https://](http://https://。).</p>
+     * <p>The description. The description must be 2 to 256 characters in length and cannot start with <a href="http://https://%E3%80%82">http:// or https://</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>This is description.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The component name. The name must be 2 to 128 characters in length. The name must start with a letter but cannot start with http:// or https://.[ ](http://https://。、、、（:）、（\_）、（.）（-）。)The name can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-).</p>
-     * <br>
-     * <p>> If you do not configure `Name`, the return value of `ImageComponentId` is used.</p>
+     * <p>The component name. The name must be 2 to 128 characters in length. The name must start with a letter but cannot start with http:// or https://.<a href="http://https://%E3%80%82%E3%80%81%E3%80%81%E3%80%81%EF%BC%88:%EF%BC%89%E3%80%81%EF%BC%88_%EF%BC%89%E3%80%81%EF%BC%88.%EF%BC%89%EF%BC%88-%EF%BC%89%E3%80%82"> </a>The name can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
+     * <blockquote>
+     * <p>If you do not configure <code>Name</code>, the return value of <code>ImageComponentId</code> is used.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>testComponent</p>
      */
     @NameInMap("Name")
     public String name;
@@ -45,13 +60,20 @@ public class CreateImageComponentRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-bp67acfmxazb4p****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -64,8 +86,10 @@ public class CreateImageComponentRequest extends TeaModel {
 
     /**
      * <p>The operating system type supported by the image component. Only Linux is supported. Set the value to Linux.</p>
-     * <br>
      * <p>Default value: Linux.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Linux</p>
      */
     @NameInMap("SystemType")
     public String systemType;
@@ -187,13 +211,19 @@ public class CreateImageComponentRequest extends TeaModel {
 
     public static class CreateImageComponentRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain [http:// or https://](http://https://。). The tag key cannot start with acs: or aliyun.</p>
+         * <p>The key of tag N. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain <a href="http://https://%E3%80%82">http:// or https://</a>. The tag key cannot start with acs: or aliyun.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag N. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain [http:// or https://](http://https://。). The tag value cannot start with acs:.</p>
+         * <p>The value of tag N. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain <a href="http://https://%E3%80%82">http:// or https://</a>. The tag value cannot start with acs:.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
          */
         @NameInMap("Value")
         public String value;

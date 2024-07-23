@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class CancelImagePipelineExecutionRequest extends TeaModel {
     /**
      * <p>The ID of the image build task.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>exec-5fb8facb8ed7427c****</p>
      */
     @NameInMap("ExecutionId")
     public String executionId;
@@ -17,7 +21,11 @@ public class CancelImagePipelineExecutionRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the image build task. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the image build task. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -29,7 +37,9 @@ public class CancelImagePipelineExecutionRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>> This parameter is deprecated.</p>
+     * <blockquote>
+     * <p>This parameter is deprecated.</p>
+     * </blockquote>
      */
     @NameInMap("TemplateTag")
     public java.util.List<CancelImagePipelineExecutionRequestTemplateTag> templateTag;
@@ -97,13 +107,23 @@ public class CancelImagePipelineExecutionRequest extends TeaModel {
 
     public static class CancelImagePipelineExecutionRequestTemplateTag extends TeaModel {
         /**
-         * <p>>  This parameter is deprecated.</p>
+         * <blockquote>
+         * <p> This parameter is deprecated.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>>  This parameter is deprecated.</p>
+         * <blockquote>
+         * <p> This parameter is deprecated.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("Value")
         public String value;

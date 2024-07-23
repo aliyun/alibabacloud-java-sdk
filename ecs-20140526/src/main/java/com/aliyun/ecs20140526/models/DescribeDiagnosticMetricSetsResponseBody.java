@@ -12,12 +12,18 @@ public class DescribeDiagnosticMetricSetsResponseBody extends TeaModel {
 
     /**
      * <p>The query token returned in this call.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE*****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,6 +60,9 @@ public class DescribeDiagnosticMetricSetsResponseBody extends TeaModel {
     public static class DescribeDiagnosticMetricSetsResponseBodyMetricSets extends TeaModel {
         /**
          * <p>The description of the diagnostic metric set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>connection issue diagnostics</p>
          */
         @NameInMap("Description")
         public String description;
@@ -66,27 +75,40 @@ public class DescribeDiagnosticMetricSetsResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the diagnostic metric set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dms-bp17p0qwtr72zmu*****</p>
          */
         @NameInMap("MetricSetId")
         public String metricSetId;
 
         /**
          * <p>The name of the diagnostic metric set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>connection issue diagnostics</p>
          */
         @NameInMap("MetricSetName")
         public String metricSetName;
 
         /**
          * <p>The resource type supported by the diagnostic metric set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
          * <p>The type of the diagnostic metric set. Valid values:</p>
-         * <br>
-         * <p>*   User: user-defined diagnostic metric set</p>
-         * <p>*   Common: common diagnostic metric set</p>
+         * <ul>
+         * <li>User: user-defined diagnostic metric set</li>
+         * <li>Common: common diagnostic metric set</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>User</p>
          */
         @NameInMap("Type")
         public String type;

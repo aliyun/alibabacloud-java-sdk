@@ -6,36 +6,55 @@ import com.aliyun.tea.*;
 public class ModifyDiskChargeTypeRequest extends TeaModel {
     /**
      * <p>Specifies whether to automatically complete the payment. Valid values:</p>
-     * <br>
-     * <p>*   true (default): The payment is automatically completed. Maintain sufficient balance in your account. Otherwise, your order becomes invalid and must be canceled.</p>
-     * <p>*   false: An order is generated but no payment is made. If your account balance is insufficient, you can set AutoPay to false to generate an unpaid order. Then, you can go to the [Orders page](https://usercenter2-intl.aliyun.com/order/list) in the Expenses and Costs console and pay for the order.</p>
+     * <ul>
+     * <li>true (default): The payment is automatically completed. Maintain sufficient balance in your account. Otherwise, your order becomes invalid and must be canceled.</li>
+     * <li>false: An order is generated but no payment is made. If your account balance is insufficient, you can set AutoPay to false to generate an unpaid order. Then, you can go to the <a href="https://usercenter2-intl.aliyun.com/order/list">Orders page</a> in the Expenses and Costs console and pay for the order.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The **token** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [Ensure idempotence](~~25693~~).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <strong>token</strong> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">Ensure idempotence</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The new billing method of the disk. Valid values:</p>
-     * <br>
-     * <p>*   PrePaid (default): changes the billing method from pay-as-you-go to subscription.</p>
-     * <p>*   PostPaid: changes the billing method from subscription to pay-as-you-go.</p>
+     * <ul>
+     * <li>PrePaid (default): changes the billing method from pay-as-you-go to subscription.</li>
+     * <li>PostPaid: changes the billing method from subscription to pay-as-you-go.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>PostPaid</p>
      */
     @NameInMap("DiskChargeType")
     public String diskChargeType;
 
     /**
      * <p>The IDs of disks. The value is a JSON array that consists of up to 16 disk IDs. Separate the disk IDs with commas (,).</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[“d-bp67acfmxazb4ph****”, “d-bp67acfmxazb4pi****”, … “d-bp67acfmxazb4pj****”]</p>
      */
     @NameInMap("DiskIds")
     public String diskIds;
 
     /**
      * <p>The ID of the instance to which disks are attached.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-bp1i778bq705cvx1****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -47,7 +66,11 @@ public class ModifyDiskChargeTypeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

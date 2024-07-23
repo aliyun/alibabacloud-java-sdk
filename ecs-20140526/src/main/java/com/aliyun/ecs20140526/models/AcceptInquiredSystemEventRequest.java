@@ -5,13 +5,22 @@ import com.aliyun.tea.*;
 
 public class AcceptInquiredSystemEventRequest extends TeaModel {
     /**
-     * <p>> This parameter is in invitational preview and is unavailable to general users.</p>
+     * <blockquote>
+     * <p>This parameter is in invitational preview and is unavailable to general users.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>hide</p>
      */
     @NameInMap("Choice")
     public String choice;
 
     /**
      * <p>The ID of the system event.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>e-2zeielxl1qzq8slb****</p>
      */
     @NameInMap("EventId")
     public String eventId;
@@ -23,7 +32,11 @@ public class AcceptInquiredSystemEventRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the system event. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the system event. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

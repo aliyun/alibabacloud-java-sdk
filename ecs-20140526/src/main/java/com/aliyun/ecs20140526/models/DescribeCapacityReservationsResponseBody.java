@@ -12,24 +12,36 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
 
     /**
      * <p>The maximum number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>A pagination token. It can be used in the next request to retrieve a new page of results.If NextToken is empty, no next page exists.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,18 +94,27 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
     public static class DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemAllocatedResourcesAllocatedResourceCapacityReservationUsagesCapacityReservationUsage extends TeaModel {
         /**
          * <p>The ID of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>105909559088****</p>
          */
         @NameInMap("AccountId")
         public String accountId;
 
         /**
          * <p>The name of the Alibaba Cloud service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>maxcompute.aliyuncs.com</p>
          */
         @NameInMap("ServiceName")
         public String serviceName;
 
         /**
          * <p>The number of instances that are used by the Alibaba Cloud account or service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("UsedAmount")
         public Integer usedAmount;
@@ -151,6 +172,9 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
     public static class DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemAllocatedResourcesAllocatedResource extends TeaModel {
         /**
          * <p>The number of available instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("AvailableAmount")
         public Integer availableAmount;
@@ -163,24 +187,36 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
 
         /**
          * <p>The instance type of the instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.c6.large</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
 
         /**
          * <p>The total number of instances for which the capacity of an instance type is reserved.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("TotalAmount")
         public Integer totalAmount;
 
         /**
          * <p>The number of instances that have used the capacity reservation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("UsedAmount")
         public Integer usedAmount;
 
         /**
          * <p>The zone ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h</p>
          */
         @NameInMap("zoneId")
         public String zoneId;
@@ -262,12 +298,18 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
     public static class DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemTagsTag extends TeaModel {
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
          */
         @NameInMap("TagValue")
         public String tagValue;
@@ -323,117 +365,171 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the capacity reservation owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100************7</p>
          */
         @NameInMap("CapacityReservationOwnerId")
         public String capacityReservationOwnerId;
 
         /**
          * <p>The description of the capacity reservation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is description.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The time when the capacity reservation expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-02-19T03:02Z</p>
          */
         @NameInMap("EndTime")
         public String endTime;
 
         /**
          * <p>The release mode of the capacity reservation. Valid values:</p>
-         * <br>
-         * <p>*   Limited: The capacity reservation is automatically released at a specified time.</p>
-         * <p>*   Unlimited: The capacity reservation is manually released. You can release the capacity reservation anytime.</p>
+         * <ul>
+         * <li>Limited: The capacity reservation is automatically released at a specified time.</li>
+         * <li>Unlimited: The capacity reservation is manually released. You can release the capacity reservation anytime.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Unlimited</p>
          */
         @NameInMap("EndTimeType")
         public String endTimeType;
 
         /**
          * <p>The billing method of the instances created by using the capacity reservation. Valid values:</p>
-         * <br>
-         * <p>*   PostPaid: pay-as-you-go.</p>
-         * <p>*   PrePaid: subscription.</p>
+         * <ul>
+         * <li>PostPaid: pay-as-you-go.</li>
+         * <li>PrePaid: subscription.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PostPaid</p>
          */
         @NameInMap("InstanceChargeType")
         public String instanceChargeType;
 
         /**
          * <p>The operating system type of the instances created by using the capacity reservation. Valid values:</p>
-         * <br>
-         * <p>*   windows</p>
-         * <p>*   linux</p>
+         * <ul>
+         * <li>windows</li>
+         * <li>linux</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>linux</p>
          */
         @NameInMap("Platform")
         public String platform;
 
         /**
          * <p>The ID of the capacity reservation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>crp-bp1gubrkqutenqdd****</p>
          */
         @NameInMap("PrivatePoolOptionsId")
         public String privatePoolOptionsId;
 
         /**
          * <p>The type of the private pool generated after the capacity reservation takes effect. Valid values:</p>
-         * <br>
-         * <p>*   Open: open private pool.</p>
-         * <p>*   Target: targeted private pool.</p>
+         * <ul>
+         * <li>Open: open private pool.</li>
+         * <li>Target: targeted private pool.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Open</p>
          */
         @NameInMap("PrivatePoolOptionsMatchCriteria")
         public String privatePoolOptionsMatchCriteria;
 
         /**
          * <p>The name of the capacity reservation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>crpTestName</p>
          */
         @NameInMap("PrivatePoolOptionsName")
         public String privatePoolOptionsName;
 
         /**
          * <p>The region ID of the capacity reservation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The ID of the reserved instance used with the capacity reservation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ri-bpzhex2ulpzf53****</p>
          */
         @NameInMap("ReservedInstanceId")
         public String reservedInstanceId;
 
         /**
          * <p>The ID of the resource group to which the capacity reservation belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-bp67acfmxazb4p****</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>The ID of the savings plan used with the capacity reservation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>spn-c29b5e18pJMT****</p>
          */
         @NameInMap("SavingPlanId")
         public String savingPlanId;
 
         /**
          * <p>The time when the capacity reservation takes effect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-02-19T02:01Z</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
         /**
          * <p>The mode in which the capacity reservation takes effect. Valid values:</p>
-         * <br>
-         * <p>*   Now: The capacity reservation takes effect immediately after it is created.</p>
-         * <p>*   Later: The capacity reservation takes effect at a specified time.</p>
+         * <ul>
+         * <li>Now: The capacity reservation takes effect immediately after it is created.</li>
+         * <li>Later: The capacity reservation takes effect at a specified time.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Now</p>
          */
         @NameInMap("StartTimeType")
         public String startTimeType;
 
         /**
          * <p>The status of the capacity reservation. Valid values:</p>
-         * <br>
-         * <p>*   Pending: The capacity reservation is being initialized.</p>
-         * <p>*   Preparing: The capacity reservation is being prepared.</p>
-         * <p>*   Prepared: The capacity reservation is to take effect.</p>
-         * <p>*   Active: The capacity reservation is in effect.</p>
-         * <p>*   Released: The capacity reservation has been released manually or automatically when it expired.</p>
+         * <ul>
+         * <li>Pending: The capacity reservation is being initialized.</li>
+         * <li>Preparing: The capacity reservation is being prepared.</li>
+         * <li>Prepared: The capacity reservation is to take effect.</li>
+         * <li>Active: The capacity reservation is in effect.</li>
+         * <li>Released: The capacity reservation has been released manually or automatically when it expired.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
         @NameInMap("Status")
         public String status;
@@ -445,7 +541,12 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
         public DescribeCapacityReservationsResponseBodyCapacityReservationSetCapacityReservationItemTags tags;
 
         /**
-         * <p>>  This parameter is in invitational preview and is not publicly available.</p>
+         * <blockquote>
+         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("TimeSlot")
         public String timeSlot;

@@ -10,9 +10,15 @@ public class UnassociateHaVipRequest extends TeaModel {
     @NameInMap("Force")
     public String force;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("HaVipId")
     public String haVipId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -22,6 +28,9 @@ public class UnassociateHaVipRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

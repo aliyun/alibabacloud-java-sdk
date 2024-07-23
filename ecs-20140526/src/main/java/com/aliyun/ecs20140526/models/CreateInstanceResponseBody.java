@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class CreateInstanceResponseBody extends TeaModel {
     /**
      * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-bp67acfmxazb4p****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The order ID. This parameter is returned only if `InstanceChargeType` is set to PrePaid.</p>
+     * <p>The order ID. This parameter is returned only if <code>InstanceChargeType</code> is set to PrePaid.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234567890</p>
      */
     @NameInMap("OrderId")
     public String orderId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The transaction price.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.165</p>
      */
     @NameInMap("TradePrice")
     public Float tradePrice;

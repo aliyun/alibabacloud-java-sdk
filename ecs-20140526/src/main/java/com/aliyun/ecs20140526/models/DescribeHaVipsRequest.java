@@ -4,6 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeHaVipsRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Filter")
     public java.util.List<DescribeHaVipsRequestFilter> filter;
 
@@ -19,6 +22,9 @@ public class DescribeHaVipsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

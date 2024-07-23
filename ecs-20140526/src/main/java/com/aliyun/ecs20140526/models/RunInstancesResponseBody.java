@@ -5,25 +5,34 @@ import com.aliyun.tea.*;
 
 public class RunInstancesResponseBody extends TeaModel {
     /**
-     * <p>The IDs of the instances (`InstanceIdSet`).</p>
+     * <p>The IDs of the instances (<code>InstanceIdSet</code>).</p>
      */
     @NameInMap("InstanceIdSets")
     public RunInstancesResponseBodyInstanceIdSets instanceIdSets;
 
     /**
-     * <p>The ID of the order. This parameter is returned only when `InstanceChargeType` is set to PrePaid.</p>
+     * <p>The ID of the order. This parameter is returned only when <code>InstanceChargeType</code> is set to PrePaid.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456****</p>
      */
     @NameInMap("OrderId")
     public String orderId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The transaction price.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.165</p>
      */
     @NameInMap("TradePrice")
     public Float tradePrice;

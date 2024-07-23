@@ -6,22 +6,29 @@ import com.aliyun.tea.*;
 public class DescribeTerminalSessionsRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-bp1i7gg30r52z2em****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The maximum number of entries per page.</p>
-     * <br>
      * <p>Valid values: 1 to 100.</p>
-     * <br>
      * <p>Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AAAAAdDWBF2****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -34,6 +41,10 @@ public class DescribeTerminalSessionsRequest extends TeaModel {
 
     /**
      * <p>The region ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -46,6 +57,9 @@ public class DescribeTerminalSessionsRequest extends TeaModel {
 
     /**
      * <p>The session ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>s-hz023od0x9****</p>
      */
     @NameInMap("SessionId")
     public String sessionId;

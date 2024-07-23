@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyReservedInstancesResponseBody extends TeaModel {
     /**
      * <p>Details about the reserved instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ED9E4A5F-FF4D-4C96-BE80-6B4227060DD7</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -6,16 +6,23 @@ import com.aliyun.tea.*;
 public class DescribeNetworkInterfaceAttributeRequest extends TeaModel {
     /**
      * <p>The attribute of the ENI. Valid value:</p>
-     * <br>
      * <p>attachment: attachment information about the ENI</p>
-     * <br>
-     * <p>>  This parameter is in invitational preview and is not publicly available.</p>
+     * <blockquote>
+     * <p> This parameter is in invitational preview and is not publicly available.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>attachment</p>
      */
     @NameInMap("Attribute")
     public String attribute;
 
     /**
      * <p>The ID of the ENI.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eni-bp67acfmxazb4p****</p>
      */
     @NameInMap("NetworkInterfaceId")
     public String networkInterfaceId;
@@ -27,7 +34,11 @@ public class DescribeNetworkInterfaceAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the ENI. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -39,7 +50,9 @@ public class DescribeNetworkInterfaceAttributeRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>>  This parameter is unavailable.</p>
+     * <blockquote>
+     * <p> This parameter is unavailable.</p>
+     * </blockquote>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeNetworkInterfaceAttributeRequestTag> tag;
@@ -115,13 +128,23 @@ public class DescribeNetworkInterfaceAttributeRequest extends TeaModel {
 
     public static class DescribeNetworkInterfaceAttributeRequestTag extends TeaModel {
         /**
-         * <p>>  This parameter is unavailable.</p>
+         * <blockquote>
+         * <p> This parameter is unavailable.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>>  This parameter is unavailable.</p>
+         * <blockquote>
+         * <p> This parameter is unavailable.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
          */
         @NameInMap("Value")
         public String value;

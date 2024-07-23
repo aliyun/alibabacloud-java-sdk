@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyDiagnosticMetricSetRequest extends TeaModel {
     /**
      * <p>The new description of the diagnostic metric set.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>connection diagnostics</p>
      */
     @NameInMap("Description")
     public String description;
@@ -18,24 +21,38 @@ public class ModifyDiagnosticMetricSetRequest extends TeaModel {
 
     /**
      * <p>The ID of the diagnostic metric set.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dms-uf6i0tv2refv8wz*****</p>
      */
     @NameInMap("MetricSetId")
     public String metricSetId;
 
     /**
      * <p>The new name of the diagnostic metric set.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>remoteConnectError</p>
      */
     @NameInMap("MetricSetName")
     public String metricSetName;
 
     /**
-     * <p>The region ID of the diagnostic metric set. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the diagnostic metric set. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The type of the resource.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>instance</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class ImportImageResponseBody extends TeaModel {
     /**
      * <p>The image ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>m-bp67acfmxazb4p****</p>
      */
     @NameInMap("ImageId")
     public String imageId;
 
     /**
      * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The image import task ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>t-bp67acfmxazb4p****</p>
      */
     @NameInMap("TaskId")
     public String taskId;

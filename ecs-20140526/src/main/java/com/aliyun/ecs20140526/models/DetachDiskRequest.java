@@ -5,29 +5,41 @@ import com.aliyun.tea.*;
 
 public class DetachDiskRequest extends TeaModel {
     /**
-     * <p>Specifies whether to release the system disk when the instance from which you want to detach the system disk is released. Valid values:</p>
-     * <br>
-     * <p>*   true: releases the system disk when the instance is released.</p>
-     * <p>*   false: does not release the system disk when the instance is released. The system disk is retained as a pay-as-you-go data disk.</p>
-     * <br>
+     * <p>Specifies whether to release the system disk or data disk when the instance from which you want to detach the disk is released. Valid values:</p>
+     * <ul>
+     * <li>true: releases the disk when the instance is released.</li>
+     * <li>false: does not release the disk when the instance is released. The disk is retained as a pay-as-you-go data disk.</li>
+     * </ul>
      * <p>Default value: true.</p>
-     * <br>
-     * <p>If you specify this parameter, take note of the following items:</p>
-     * <br>
-     * <p>*   You cannot specify this parameter for disks for which the multi-attach feature is enabled.</p>
-     * <p>*   If you detach a data disk, the default value of this parameter is `false`.</p>
+     * <p>Take note of the following items:</p>
+     * <ul>
+     * <li>You cannot specify this parameter for disks for which the multi-attach feature is enabled.</li>
+     * <li>If a data disk is to be detached, the default value is <code>false</code>.</li>
+     * <li>If you want to detach an <code>elastic ephemeral disk</code>, you must set <code>DeleteWithInstance</code> to <code>true</code>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("DeleteWithInstance")
     public Boolean deleteWithInstance;
 
     /**
      * <p>The ID of the disk that you want to detach.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d-bp67acfmxazb4p****</p>
      */
     @NameInMap("DiskId")
     public String diskId;
 
     /**
      * <p>The ID of the ECS instance from which you want to detach the disk.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-bp67acfmxazb4p****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

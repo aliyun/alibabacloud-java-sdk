@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class ModifyInstanceVpcAttributeRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-bp1iudwa5b1tqag1****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -18,10 +22,13 @@ public class ModifyInstanceVpcAttributeRequest extends TeaModel {
 
     /**
      * <p>The new private IP address of the instance.</p>
-     * <br>
-     * <p>> The value of `PrivateIpAddress` depends on the value of `VSwitchId`. The specified IP address must be within the CIDR block of the specified vSwitch.</p>
-     * <br>
+     * <blockquote>
+     * <p>The value of <code>PrivateIpAddress</code> depends on the value of <code>VSwitchId</code>. The specified IP address must be within the CIDR block of the specified vSwitch.</p>
+     * </blockquote>
      * <p>By default, if this parameter is not specified, a private IP address is randomly assigned from the CIDR block of the specified vSwitch.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>172.17.**.**</p>
      */
     @NameInMap("PrivateIpAddress")
     public String privateIpAddress;
@@ -33,27 +40,39 @@ public class ModifyInstanceVpcAttributeRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of security group N to which the instance belongs after the VPC is changed. This parameter is required only when the `VpcId` parameter is specified.</p>
-     * <br>
-     * <p>*   The specified security groups must be of the same type.</p>
-     * <p>*   You can specify one or more security groups. The valid values of N depend on the maximum number of security groups to which an instance can belong. For more information, see [Limits](~~25412~~).</p>
-     * <p>*   The specified security groups must belong to the VPC specified by the `VpcId` parameter.</p>
+     * <p>The ID of security group N to which the instance belongs after the VPC is changed. This parameter is required only when the <code>VpcId</code> parameter is specified.</p>
+     * <ul>
+     * <li>The specified security groups must be of the same type.</li>
+     * <li>You can specify one or more security groups. The valid values of N depend on the maximum number of security groups to which an instance can belong. For more information, see <a href="https://help.aliyun.com/document_detail/25412.html">Limits</a>.</li>
+     * <li>The specified security groups must belong to the VPC specified by the <code>VpcId</code> parameter.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>sg-o6w9l8bc8dgmkw87****</p>
      */
     @NameInMap("SecurityGroupId")
     public java.util.List<String> securityGroupId;
 
     /**
      * <p>The ID of the vSwitch.</p>
-     * <br>
-     * <p>*   If this parameter is set to the ID of the current vSwitch, the vSwitch of the instance remains unchanged.</p>
-     * <p>*   If this parameter is set to the ID of a different vSwitch and the `VpcId` parameter is not specified, the new vSwitch must belong to the same zone and VPC as the current vSwitch.</p>
-     * <p>*   If the `VpcId` parameter is specified, the vSwitch specified by this parameter must belong to the specified VPC and the same zone as the current vSwitch.</p>
+     * <ul>
+     * <li>If this parameter is set to the ID of the current vSwitch, the vSwitch of the instance remains unchanged.</li>
+     * <li>If this parameter is set to the ID of a different vSwitch and the <code>VpcId</code> parameter is not specified, the new vSwitch must belong to the same zone and VPC as the current vSwitch.</li>
+     * <li>If the <code>VpcId</code> parameter is specified, the vSwitch specified by this parameter must belong to the specified VPC and the same zone as the current vSwitch.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-bp1s5fnvk4gn3tw12****</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
     /**
      * <p>The ID of the new VPC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-bp1vwnn14rqpyiczj****</p>
      */
     @NameInMap("VpcId")
     public String vpcId;

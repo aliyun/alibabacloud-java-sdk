@@ -6,11 +6,14 @@ import com.aliyun.tea.*;
 public class CreateAutoSnapshotPolicyRequest extends TeaModel {
     /**
      * <p>The retention period of the snapshot copy in the destination region. Unit: days. Valid values:</p>
-     * <br>
-     * <p>*   \-1: The snapshot copy is retained until it is deleted.</p>
-     * <p>*   1 to 65535: The snapshot copy is retained for the specified number of days. After the retention period of the snapshot copy expires, the snapshot copy is automatically deleted.</p>
-     * <br>
+     * <ul>
+     * <li>\-1: The snapshot copy is retained until it is deleted.</li>
+     * <li>1 to 65535: The snapshot copy is retained for the specified number of days. After the retention period of the snapshot copy expires, the snapshot copy is automatically deleted.</li>
+     * </ul>
      * <p>Default value: -1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("CopiedSnapshotsRetentionDays")
     public Integer copiedSnapshotsRetentionDays;
@@ -23,9 +26,13 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to enable cross-region replication for snapshots.</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("EnableCrossRegionCopy")
     public Boolean enableCrossRegionCopy;
@@ -35,6 +42,9 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
 
     /**
      * <p>The resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-aek2kkmhmhs****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -46,7 +56,12 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>> This parameter is not publicly available.</p>
+     * <blockquote>
+     * <p>This parameter is not publicly available.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
      */
     @NameInMap("StorageLocationArn")
     public String storageLocationArn;
@@ -59,49 +74,72 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
 
     /**
      * <p>The destination region to which to copy the snapshot. You can specify only a single destination region.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;cn-hangzhou&quot;]</p>
      */
     @NameInMap("TargetCopyRegions")
     public String targetCopyRegions;
 
     /**
-     * <p>The name of the automatic snapshot policy. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with http:// or https://. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
-     * <br>
+     * <p>The name of the automatic snapshot policy. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with http:// or https://. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
      * <p>By default, this parameter is left empty.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TestName</p>
      */
     @NameInMap("autoSnapshotPolicyName")
     public String autoSnapshotPolicyName;
 
     /**
-     * <p>The ID of the region in which to create the automatic snapshot policy. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The ID of the region in which to create the automatic snapshot policy. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("regionId")
     public String regionId;
 
     /**
      * <p>The days of the week on which to create automatic snapshots. Valid values: 1 to 7, which correspond to Monday to Sunday. 1 indicates Monday. Format description:</p>
-     * <br>
-     * <p>*   Set this parameter to a JSON-formatted array. For example, a value of \["1"] specifies automatic snapshots to be created every Monday.</p>
-     * <p>*   To schedule multiple automatic snapshots to be created in a week, you can specify multiple values. Separate the values with commas (,). You can specify a maximum of seven days. For example, a value of \["1","3","5"] specifies automatic snapshots to be created every Monday, Wednesday, and Friday.</p>
+     * <ul>
+     * <li>Set this parameter to a JSON-formatted array. For example, a value of [&quot;1&quot;] specifies automatic snapshots to be created every Monday.</li>
+     * <li>To schedule multiple automatic snapshots to be created in a week, you can specify multiple values. Separate the values with commas (,). You can specify a maximum of seven days. For example, a value of [&quot;1&quot;,&quot;3&quot;,&quot;5&quot;] specifies automatic snapshots to be created every Monday, Wednesday, and Friday.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;1&quot;,&quot;2&quot;]</p>
      */
     @NameInMap("repeatWeekdays")
     public String repeatWeekdays;
 
     /**
      * <p>The retention period of the automatic snapshot. Unit: days. Valid values:</p>
-     * <br>
-     * <p>*   \-1: The automatic snapshot is retained until it is deleted.</p>
-     * <p>*   1 to 65535: The automatic snapshot is retained for the specified number of days. After the retention period of the automatic snapshot expires, the automatic snapshot is automatically deleted.</p>
-     * <br>
+     * <ul>
+     * <li>\-1: The automatic snapshot is retained until it is deleted.</li>
+     * <li>1 to 65535: The automatic snapshot is retained for the specified number of days. After the retention period of the automatic snapshot expires, the automatic snapshot is automatically deleted.</li>
+     * </ul>
      * <p>Default value: -1.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("retentionDays")
     public Integer retentionDays;
 
     /**
      * <p>The points in time of the day at which to create automatic snapshots. The time must be in UTC+8. Unit: hours. Valid values: 0 to 23, which correspond to the 24 on-the-hour points in time from 00:00:00 to 23:00:00. 1 indicates 01:00:00. Format description:</p>
-     * <br>
-     * <p>*   Set this parameter to a JSON-formatted array. For example, a value of \["1"] specifies automatic snapshots to be created at 01:00:00.</p>
-     * <p>*   To schedule multiple automatic snapshots to be created in a day, you can specify multiple values. Separate the values with commas (,). You can specify a maximum of 24 points in time. For example, a value of \["1","3","5"] specifies automatic snapshots to be created at 01:00:00, 03:00:00, and 05:00:00.</p>
+     * <ul>
+     * <li>Set this parameter to a JSON-formatted array. For example, a value of [&quot;1&quot;] specifies automatic snapshots to be created at 01:00:00.</li>
+     * <li>To schedule multiple automatic snapshots to be created in a day, you can specify multiple values. Separate the values with commas (,). You can specify a maximum of 24 points in time. For example, a value of [&quot;1&quot;,&quot;3&quot;,&quot;5&quot;] specifies automatic snapshots to be created at 01:00:00, 03:00:00, and 05:00:00.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;0&quot;, &quot;1&quot;, … &quot;23&quot;]</p>
      */
     @NameInMap("timePoints")
     public String timePoints;
@@ -234,18 +272,27 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
     public static class CreateAutoSnapshotPolicyRequestCopyEncryptionConfigurationArn extends TeaModel {
         /**
          * <p>This parameter is not publicly available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000000000</p>
          */
         @NameInMap("AssumeRoleFor")
         public Long assumeRoleFor;
 
         /**
          * <p>This parameter is not publicly available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hide</p>
          */
         @NameInMap("RoleType")
         public String roleType;
 
         /**
          * <p>This parameter is not publicly available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hide</p>
          */
         @NameInMap("Rolearn")
         public String rolearn;
@@ -290,17 +337,23 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
 
         /**
          * <p>Specifies whether to enable cross-region snapshot replication and encryption. Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
-         * <br>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * <p>Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Encrypted")
         public Boolean encrypted;
 
         /**
          * <p>The ID of the KMS key used in cross-region snapshot replication and encryption.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0e478b7a-4262-4802-b8cb-00d3fb40826X</p>
          */
         @NameInMap("KMSKeyId")
         public String KMSKeyId;
@@ -339,12 +392,18 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
     public static class CreateAutoSnapshotPolicyRequestTag extends TeaModel {
         /**
          * <p>The key of tag N to add to the snapshot. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of tag N to add to the snapshot. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://. The tag value cannot start with acs:.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
          */
         @NameInMap("Value")
         public String value;

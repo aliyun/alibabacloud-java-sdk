@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class DescribeSnapshotLinksResponseBody extends TeaModel {
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -30,6 +39,9 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,80 +94,119 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
     public static class DescribeSnapshotLinksResponseBodySnapshotLinksSnapshotLink extends TeaModel {
         /**
          * <p>The category of the snapshot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>standard</p>
          */
         @NameInMap("Category")
         public String category;
 
         /**
          * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1h6jmbefj2cyqs****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testInstanceName</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
          * <p>Indicates whether the instant access feature is enabled. Valid values:</p>
-         * <br>
-         * <p>*   true: The instant access feature is enabled. This feature can be enabled only for enhanced SSDs (ESSDs).</p>
-         * <p>*   false: The instant access feature is disabled. The snapshot is a normal snapshot for which the instant access feature is disabled.</p>
-         * <br>
-         * <p>>  This parameter is no longer used. By default, new normal snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see [Use the instant access feature](~~193667~~).</p>
+         * <ul>
+         * <li>true: The instant access feature is enabled. This feature can be enabled only for enhanced SSDs (ESSDs).</li>
+         * <li>false: The instant access feature is disabled. The snapshot is a normal snapshot for which the instant access feature is disabled.</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is no longer used. By default, new normal snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see <a href="https://help.aliyun.com/document_detail/193667.html">Use the instant access feature</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("InstantAccess")
         public Boolean instantAccess;
 
         /**
          * <p>The region ID of the source disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The ID of the snapshot chain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sl-2ze0y1jwzpb1geqx****</p>
          */
         @NameInMap("SnapshotLinkId")
         public String snapshotLinkId;
 
         /**
          * <p>The ID of the source disk. This parameter is retained even if the source disk is deleted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-bp1d6tsvznfghy7y****</p>
          */
         @NameInMap("SourceDiskId")
         public String sourceDiskId;
 
         /**
          * <p>The name of the source disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testSourceDiskName</p>
          */
         @NameInMap("SourceDiskName")
         public String sourceDiskName;
 
         /**
          * <p>The capacity of the source disk. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40</p>
          */
         @NameInMap("SourceDiskSize")
         public Integer sourceDiskSize;
 
         /**
          * <p>The type of the source disk. Valid values:</p>
-         * <br>
-         * <p>*   system: system disk</p>
-         * <p>*   data: data disk</p>
+         * <ul>
+         * <li>system: system disk</li>
+         * <li>data: data disk</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>data</p>
          */
         @NameInMap("SourceDiskType")
         public String sourceDiskType;
 
         /**
          * <p>The total number of snapshots.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;
 
         /**
          * <p>The total size of all snapshots in the snapshot chain. Unit: byte.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2097152</p>
          */
         @NameInMap("TotalSize")
         public Long totalSize;

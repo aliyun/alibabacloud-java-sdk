@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -30,6 +39,9 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
 
     /**
      * <p>The total number of SCUs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,12 +94,18 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
     public static class DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnitTagsTag extends TeaModel {
         /**
          * <p>The key of tag N.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
          * <p>The value of tag N.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
          */
         @NameInMap("TagValue")
         public String tagValue;
@@ -137,63 +155,94 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
     public static class DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnit extends TeaModel {
         /**
          * <p>Indicates the allocation state of the SCU when the AllocationType parameter is set to Shared. Valid values:</p>
-         * <br>
-         * <p>*   allocated: The SCU is allocated to other accounts.</p>
-         * <p>*   BeAllocated: The SCU is allocated from another account.</p>
+         * <ul>
+         * <li>allocated: The SCU is allocated to other accounts.</li>
+         * <li>BeAllocated: The SCU is allocated from another account.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>allocated</p>
          */
         @NameInMap("AllocationStatus")
         public String allocationStatus;
 
         /**
          * <p>The capacity of the SCU.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("Capacity")
         public Integer capacity;
 
         /**
          * <p>The time when the SCU was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-08-17T02:55Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The description of the SCU.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testScuDescription</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The time when the SCU expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-09-17T16:00Z</p>
          */
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
         /**
          * <p>The name of the SCU.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testScuName</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The region ID of the SCU.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The time when the SCU took effect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-08-17T02:55Z</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
         /**
          * <p>The state of the SCU.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The ID of the SCU.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>scu-bp67acfmxazb4p****</p>
          */
         @NameInMap("StorageCapacityUnitId")
         public String storageCapacityUnitId;

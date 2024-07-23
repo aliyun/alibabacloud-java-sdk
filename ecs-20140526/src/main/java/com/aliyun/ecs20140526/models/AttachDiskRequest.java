@@ -6,60 +6,95 @@ import com.aliyun.tea.*;
 public class AttachDiskRequest extends TeaModel {
     /**
      * <p>Specifies whether to attach the disk as a system disk.</p>
-     * <br>
      * <p>Default value: false.</p>
-     * <br>
-     * <p>> If you set `Bootable` to true, the instance must be in the No System Disk state.</p>
+     * <blockquote>
+     * <p> You can set <code>Bootable</code> to true only if the instance does not have a system disk.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("Bootable")
     public Boolean bootable;
 
     /**
-     * <p>Specifies whether to release the disk when the instance is released. Valid values:</p>
-     * <br>
-     * <p>*   true: releases the disk when the instance is released.</p>
-     * <p>*   false: does not release the data disk when the instance is released. The disk is retained as a pay-as-you-go data disk.</p>
-     * <br>
+     * <p>Specifies whether to release the disk when the instance is released.</p>
+     * <ul>
+     * <li>true: releases the disk when the instance is released.</li>
+     * <li>false: does not release the disk when the instance is released. The disk is retained as a pay-as-you-go data disk.</li>
+     * </ul>
      * <p>Default value: false.</p>
-     * <br>
      * <p>When you specify this parameter, take note of the following items:</p>
-     * <br>
-     * <p>*   If `OperationLocks` in the DescribeInstances response contains `"LockReason" : "security"` for the instance to which the disk is attached, the instance is locked for security reasons. Regardless of whether you set `DeleteWithInstance` to `false`, the DeleteWithInstance parameter is ignored, and the disk is released when the instance is released.</p>
-     * <p>*   You cannot specify this parameter for disks for which the multi-attach feature is enabled.</p>
+     * <ul>
+     * <li>If <code>OperationLocks</code> in the DescribeInstances response contains <code>&quot;LockReason&quot; : &quot;security&quot;</code> for the instance to which the disk is attached, the instance is locked for security reasons. Regardless of whether you set <code>DeleteWithInstance</code> to <code>false</code>, the DeleteWithInstance setting is ignored, and the disk is released when the instance is released.</li>
+     * <li>If you want to attach an <code>elastic ephemeral disk</code>, you must set <code>DeleteWithInstance</code> to <code>true</code>.</li>
+     * <li>This parameter is unavailable for disks for which the multi-attach feature is enabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("DeleteWithInstance")
     public Boolean deleteWithInstance;
 
     /**
      * <p>The device name of the disk.</p>
-     * <br>
-     * <p>> This parameter will be removed in the future. We recommend that you use other parameters to ensure compatibility.</p>
+     * <blockquote>
+     * <p> This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>testDeviceName</p>
      */
     @NameInMap("Device")
     public String device;
 
     /**
-     * <p>The ID of the disk. The disk specified by the `DiskId` parameter and the instance specified by the `InstanceId` parameter must reside in the same zone.</p>
-     * <br>
-     * <p>> For more information about the limits on attaching a data disk and a system disk, see the "Usage notes" section of this topic.</p>
+     * <p>The ID of the disk. The disk specified by <code>DiskId</code> and the instance specified by <code>InstanceId</code> must reside in the same zone.</p>
+     * <blockquote>
+     * <p> For more information about the limits on attaching a data disk and a system disk, see the &quot;Usage notes&quot; section of this topic.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d-bp1j4l5axzdy6ftk****</p>
      */
     @NameInMap("DiskId")
     public String diskId;
 
+    /**
+     * <p>Specifies whether to forcefully attach the disk to the instance.</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * <p>Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("Force")
     public Boolean force;
 
     /**
      * <p>The ID of the instance to which you want to attach the disk.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-bp1dq5lozx5f4pmd****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The name of the SSH key pair that you bind to the Linux instance when you attach the system disk.</p>
-     * <br>
-     * <p>*   Windows instances do not support logons based on SSH key pairs. The `Password` parameter takes effect even if the KeyPairName parameter is specified.</p>
-     * <p>*   For Linux instances, the username and password-based logon method is disabled by default.</p>
+     * <ul>
+     * <li>Windows instances do not support logons based on SSH key pairs. The <code>Password</code> parameter takes effect even if the KeyPairName parameter is specified.</li>
+     * <li>For Linux instances, the username and password-based logon method is disabled by default.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>KeyPairTestName</p>
      */
     @NameInMap("KeyPairName")
     public String keyPairName;
@@ -72,12 +107,15 @@ public class AttachDiskRequest extends TeaModel {
 
     /**
      * <p>The password that is set when you attach the system disk. The password is applicable only to the administrator and root users. The password must be 8 to 30 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. The following special characters are supported:</p>
-     * <br>
-     * <p>    ()`~!@#$%^&*-_+=|{}[]:;\"<>,.?/</p>
-     * <br>
+     * <pre><code>()`~!@#$%^&amp;*-_+=|{}[]:;\\&quot;&lt;&gt;,.?/
+     * </code></pre>
      * <p>For Windows instances, passwords cannot start with a forward slash (/).</p>
-     * <br>
-     * <p>> If `Password` is configured, we recommend that you send requests over HTTPS to prevent password leaks.</p>
+     * <blockquote>
+     * <p>If <code>Password</code> is configured, we recommend that you send requests over HTTPS to prevent password leaks.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>EcsV587!</p>
      */
     @NameInMap("Password")
     public String password;

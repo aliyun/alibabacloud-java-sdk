@@ -6,17 +6,24 @@ import com.aliyun.tea.*;
 public class DescribeSnapshotMonitorDataRequest extends TeaModel {
     /**
      * <p>The category of the snapshot. Valid values:</p>
-     * <br>
-     * <p>*   Standard: normal snapshot</p>
-     * <p>*   Flash: local snapshot</p>
-     * <br>
+     * <ul>
+     * <li>Standard: normal snapshot</li>
+     * <li>Flash: local snapshot</li>
+     * </ul>
      * <p>Default value: Standard.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Standard</p>
      */
     @NameInMap("Category")
     public String category;
 
     /**
-     * <p>The end of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of seconds (ss) is not 00, the time is rounded up to the next minute.</p>
+     * <p>The end of the time range to query. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of seconds (ss) is not 00, the time is rounded up to the next minute.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-05-10T03:00:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -29,18 +36,25 @@ public class DescribeSnapshotMonitorDataRequest extends TeaModel {
 
     /**
      * <p>The interval at which to query the monitoring data of snapshot sizes. Unit: seconds. Valid values:</p>
-     * <br>
-     * <p>*   60</p>
-     * <p>*   600</p>
-     * <p>*   3600</p>
-     * <br>
+     * <ul>
+     * <li>60</li>
+     * <li>600</li>
+     * <li>3600</li>
+     * </ul>
      * <p>Default value: 60.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60</p>
      */
     @NameInMap("Period")
     public Integer period;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -52,7 +66,11 @@ public class DescribeSnapshotMonitorDataRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of seconds (ss) is not 00, the time is rounded up to the next minute.</p>
+     * <p>The beginning of the time range to query. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of seconds (ss) is not 00, the time is rounded up to the next minute.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-05-10T00:00:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;

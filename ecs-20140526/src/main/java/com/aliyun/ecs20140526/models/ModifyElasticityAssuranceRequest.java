@@ -8,7 +8,10 @@ public class ModifyElasticityAssuranceRequest extends TeaModel {
     public ModifyElasticityAssuranceRequestPrivatePoolOptions privatePoolOptions;
 
     /**
-     * <p>The description of the elasticity assurance. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.</p>
+     * <p>The description of the elasticity assurance. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>This is description.</p>
      */
     @NameInMap("Description")
     public String description;
@@ -20,7 +23,11 @@ public class ModifyElasticityAssuranceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the elasticity assurance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the elasticity assurance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -95,12 +102,19 @@ public class ModifyElasticityAssuranceRequest extends TeaModel {
     public static class ModifyElasticityAssuranceRequestPrivatePoolOptions extends TeaModel {
         /**
          * <p>The ID of the elasticity assurance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eap-bp67acfmxazb4****</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
-         * <p>The name of the elasticity assurance. The name must be 2 to 128 characters in length. It must start with a letter but cannot start with http:// or https://. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
+         * <p>The name of the elasticity assurance. The name must be 2 to 128 characters in length. It must start with a letter but cannot start with http:// or https://. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eapTestName</p>
          */
         @NameInMap("Name")
         public String name;

@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeDeploymentSetSupportedInstanceTypeFamilyResponseBody extends TeaModel {
     /**
      * <p>The instance families that support deployment sets.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs.i2g,ecs.i1,ecs.i2ne,ecs.i2gne</p>
      */
     @NameInMap("InstanceTypeFamilies")
     public String instanceTypeFamilies;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B7DB-A3DC7DE1****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class DeleteImagePipelineRequest extends TeaModel {
     /**
      * <p>The ID of the image template.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ip-2ze5tsl5bp6nf2b3****</p>
      */
     @NameInMap("ImagePipelineId")
     public String imagePipelineId;
@@ -17,7 +21,11 @@ public class DeleteImagePipelineRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the image template. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the image template. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

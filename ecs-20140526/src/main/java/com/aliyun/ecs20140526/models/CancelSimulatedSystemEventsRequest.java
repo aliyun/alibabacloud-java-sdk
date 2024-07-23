@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class CancelSimulatedSystemEventsRequest extends TeaModel {
     /**
      * <p>The IDs of simulated system events. You can specify up to 100 event IDs in a single request.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>e-xhskHun1256****</p>
      */
     @NameInMap("EventId")
     public java.util.List<String> eventId;
@@ -17,7 +21,11 @@ public class CancelSimulatedSystemEventsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class AttachKeyPairResponseBody extends TeaModel {
     /**
      * <p>The number of instances to which the SSH key pair fails to be bound.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("FailCount")
     public String failCount;
 
     /**
      * <p>The name of the SSH key pair.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testKeyPairName</p>
      */
     @NameInMap("KeyPairName")
     public String keyPairName;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -30,6 +39,9 @@ public class AttachKeyPairResponseBody extends TeaModel {
 
     /**
      * <p>The total number of instances to which the SSH key pair is bound.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("TotalCount")
     public String totalCount;
@@ -82,24 +94,36 @@ public class AttachKeyPairResponseBody extends TeaModel {
     public static class AttachKeyPairResponseBodyResultsResult extends TeaModel {
         /**
          * <p>The operation status code returned. 200 indicates that the operation was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         @NameInMap("Code")
         public String code;
 
         /**
          * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-m5eg7be9ndloji64****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The operation information returned. When the value of Code is 200, the value of Message is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
          * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Success")
         public String success;

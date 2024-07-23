@@ -6,30 +6,39 @@ import com.aliyun.tea.*;
 public class CreateActivationRequest extends TeaModel {
     /**
      * <p>The description of the activation code. It must be 1 to 100 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>This is description.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The maximum number of times that you can use the activation code to register managed instances. Valid values: 1 to 1000.</p>
-     * <br>
      * <p>Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("InstanceCount")
     public Integer instanceCount;
 
     /**
-     * <p>The default instance name prefix. The instance name prefix must be 2 to 50 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, periods (.), underscores (\_), hyphens (-), and colons (:).</p>
-     * <br>
+     * <p>The default instance name prefix. The instance name prefix must be 2 to 50 characters in length. It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. It can contain letters, digits, periods (.), underscores (_), hyphens (-), and colons (:).</p>
      * <p>If you use the activation code that is created by calling this operation (CreateActivation) to register managed instances, the instances are assigned sequential names that are prefixed by the value of this parameter. You can also specify a new instance name to replace the assigned sequential name when you register a managed instance.</p>
-     * <br>
-     * <p>If you specify InstanceName when you register a managed instance, an instance name in the format of `<InstanceName>-<Number>` is generated. The number of digits in the \<Number> value is determined by that in the `InstanceCount` value. Example: `001`. If you do not specify InstanceName, the hostname (Hostname) is used as the instance name.</p>
+     * <p>If you specify InstanceName when you register a managed instance, an instance name in the format of <code>&lt;InstanceName&gt;-&lt;Number&gt;</code> is generated. The number of digits in the \<Number> value is determined by that in the <code>InstanceCount</code> value. Example: <code>001</code>. If you do not specify InstanceName, the hostname (Hostname) is used as the instance name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-InstanceName</p>
      */
     @NameInMap("InstanceName")
     public String instanceName;
 
     /**
      * <p>The IP addresses of hosts that can use the activation code. The value can be IPv4 addresses, IPv6 addresses, or CIDR blocks.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.0.0.0/0</p>
      */
     @NameInMap("IpAddressRange")
     public String ipAddressRange;
@@ -42,14 +51,20 @@ public class CreateActivationRequest extends TeaModel {
 
     /**
      * <p>The ID of the region in which to create the activation code. Supported regions: China (Qingdao), China (Beijing), China (Zhangjiakou), China (Hohhot), China (Ulanqab), China (Hangzhou), China (Shanghai), China (Shenzhen), China (Heyuan), China (Guangzhou), China (Chengdu), China (Hong Kong), Singapore, Japan (Tokyo), US (Silicon Valley), and US (Virginia).</p>
-     * <br>
-     * <p>You can all the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>You can all the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group to which to assign the activation code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-123******</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -68,8 +83,10 @@ public class CreateActivationRequest extends TeaModel {
 
     /**
      * <p>The validity period of the activation code. The activation code can no longer be used to register instances after the period expires. Unit: hours. Valid values: 1 to 876576, which represents a range of time from 1 hour to 100 years.</p>
-     * <br>
      * <p>Default value: 4.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
      */
     @NameInMap("TimeToLiveInHours")
     public Long timeToLiveInHours;
@@ -178,18 +195,21 @@ public class CreateActivationRequest extends TeaModel {
     public static class CreateActivationRequestTag extends TeaModel {
         /**
          * <p>The key of tag N to add to the activation code. Valid values of N: 1 to 20. The tag key cannot be an empty string.</p>
-         * <br>
-         * <p>If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags, call [ListTagResources](~~110425~~).</p>
-         * <br>
-         * <p>The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         * <p>If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags, call <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a>.</p>
+         * <p>The tag key can be up to 64 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of tag N to add to the activation code. Valid values of N: 1 to 20. The tag value can be an empty string.</p>
-         * <br>
-         * <p>It can be up to 128 characters in length and cannot contain `http://` or `https://`.</p>
+         * <p>It can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
          */
         @NameInMap("Value")
         public String value;

@@ -5,53 +5,78 @@ import com.aliyun.tea.*;
 
 public class CreateDeploymentSetRequest extends TeaModel {
     /**
-     * <p>The description of the deployment set. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.</p>
+     * <p>The description of the deployment set. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The name of the deployment set. The name must be 2 to 128 characters in length and can contain Unicode characters under the Decimal Number category and the categories whose names contain Letter. The name can also contain colons (:), underscores (\_), periods (.), and hyphens (-).</p>
+     * <p>The name of the deployment set. The name must be 2 to 128 characters in length and can contain Unicode characters under the Decimal Number category and the categories whose names contain Letter. The name can also contain colons (:), underscores (_), periods (.), and hyphens (-).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testDeploymentSetName</p>
      */
     @NameInMap("DeploymentSetName")
     public String deploymentSetName;
 
     /**
      * <p>The emergency solution to use in the situation where instances in the deployment set cannot be evenly distributed to different zones due to resource insufficiency after the instances failover. Valid values:</p>
-     * <br>
-     * <p>*   CancelMembershipAndStart: removes the instances from the deployment set and starts the instances immediately after they are failed over.</p>
-     * <p>*   KeepStopped: leaves the instances in the Stopped state and starts them after resources are replenished.</p>
-     * <br>
+     * <ul>
+     * <li>CancelMembershipAndStart: removes the instances from the deployment set and starts the instances immediately after they are failed over.</li>
+     * <li>KeepStopped: leaves the instances in the Stopped state and starts them after resources are replenished.</li>
+     * </ul>
      * <p>Default value: CancelMembershipAndStart.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testDescription</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>>  This parameter is deprecated.</p>
+     * <blockquote>
+     * <p> This parameter is deprecated.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Default</p>
      */
     @NameInMap("Domain")
     public String domain;
 
     /**
-     * <p>>  This parameter is deprecated.</p>
+     * <blockquote>
+     * <p> This parameter is deprecated.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>host</p>
      */
     @NameInMap("Granularity")
     public String granularity;
 
     /**
      * <p>The deployment strategy. Valid values:</p>
-     * <br>
-     * <p>*   Availability: high availability strategy.</p>
-     * <p>*   AvailabilityGroup: high availability group strategy.</p>
-     * <br>
+     * <ul>
+     * <li>Availability: high availability strategy.</li>
+     * <li>AvailabilityGroup: high availability group strategy.</li>
+     * </ul>
      * <p>Default value: Availability.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("GroupCount")
     public Long groupCount;
 
     /**
-     * <p>The region ID of the deployment set. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.</p>
+     * <p>The region ID of the deployment set. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent list of regions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CancelMembershipAndStart</p>
      */
     @NameInMap("OnUnableToRedeployFailedInstance")
     public String onUnableToRedeployFailedInstance;
@@ -64,6 +89,10 @@ public class CreateDeploymentSetRequest extends TeaModel {
 
     /**
      * <p>Creates a deployment set in a specific region.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -76,12 +105,15 @@ public class CreateDeploymentSetRequest extends TeaModel {
 
     /**
      * <p>The deployment strategy. Valid values:</p>
-     * <br>
-     * <p>*   Availability: high availability strategy</p>
-     * <p>*   AvailabilityGroup: high availability group strategy</p>
-     * <p>*   LowLatency: low latency strategy</p>
-     * <br>
+     * <ul>
+     * <li>Availability: high availability strategy</li>
+     * <li>AvailabilityGroup: high availability group strategy</li>
+     * <li>LowLatency: low latency strategy</li>
+     * </ul>
      * <p>Default value: Availability.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Availability</p>
      */
     @NameInMap("Strategy")
     public String strategy;

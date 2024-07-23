@@ -6,26 +6,37 @@ import com.aliyun.tea.*;
 public class DeleteInstanceRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
-     * <br>
-     * <p>*   true: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, service limits, and unavailable ECS resources. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
-     * <p>*   false (default): performs a dry run and performs the actual request. If the request passes the dry run, the instance is released.</p>
+     * <ul>
+     * <li>true: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, service limits, and unavailable ECS resources. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li>false (default): performs a dry run and performs the actual request. If the request passes the dry run, the instance is released.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
-     * <p>Specifies whether to forcefully release the instance in the **Running** (`Running`) state. Valid values:</p>
-     * <br>
-     * <p>*   true: forcefully releases the instance in the **Running** (`Running`) state. This operation is equivalent to the power-off operation. Cache data that is not written to persistent storage will be lost.</p>
-     * <p>*   false: normally releases the instance. This value is valid only if the instance is in the **Stopped** (`Stopped`) state.</p>
-     * <br>
+     * <p>Specifies whether to forcefully release the instance in the <strong>Running</strong> (<code>Running</code>) state. Valid values:</p>
+     * <ul>
+     * <li>true: forcefully releases the instance in the <strong>Running</strong> (<code>Running</code>) state. This operation is equivalent to the power-off operation. Cache data that is not written to persistent storage will be lost.</li>
+     * <li>false: normally releases the instance. This value take effects only if the instance is in the <strong>Stopped</strong> (<code>Stopped</code>) state.</li>
+     * </ul>
      * <p>Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("Force")
     public Boolean force;
 
     /**
      * <p>The ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-bp1g6zv0ce8oghu7****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -44,11 +55,14 @@ public class DeleteInstanceRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to release the expired subscription instance. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
-     * <br>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
      * <p>Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("TerminateSubscription")
     public Boolean terminateSubscription;

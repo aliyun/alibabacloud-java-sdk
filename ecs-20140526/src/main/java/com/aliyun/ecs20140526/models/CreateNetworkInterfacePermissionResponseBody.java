@@ -12,6 +12,9 @@ public class CreateNetworkInterfacePermissionResponseBody extends TeaModel {
 
     /**
      * <p>Details about permissions on ENIs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0FCD3DEF-63D3-4605-A818-805C8BD7DB87</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,38 +43,58 @@ public class CreateNetworkInterfacePermissionResponseBody extends TeaModel {
     public static class CreateNetworkInterfacePermissionResponseBodyNetworkInterfacePermission extends TeaModel {
         /**
          * <p>The ID of the permission on the ENI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567890</p>
          */
         @NameInMap("AccountId")
         public Long accountId;
 
         /**
          * <p>The ID of the Alibaba Cloud partner (a certified ISV).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eni-bp14v2sdd3v8htln****</p>
          */
         @NameInMap("NetworkInterfaceId")
         public String networkInterfaceId;
 
         /**
          * <p>The name of the Alibaba Cloud service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eni-perm-bp1cs4lwn56lfb****</p>
          */
         @NameInMap("NetworkInterfacePermissionId")
         public String networkInterfacePermissionId;
 
         /**
          * <p>The ID of the ENI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InstanceAttach</p>
          */
         @NameInMap("Permission")
         public String permission;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Granted</p>
+         */
         @NameInMap("PermissionState")
         public String permissionState;
 
         /**
          * <p>The state of the permission on the ENI. Valid values:</p>
-         * <br>
-         * <p>*   Pending: The permission is being granted.</p>
-         * <p>*   Granted: The permission is granted.</p>
-         * <p>*   Revoking: The permission is being revoked.</p>
-         * <p>*   Revoked: The permission is revoked.</p>
+         * <ul>
+         * <li>Pending: The permission is being granted.</li>
+         * <li>Granted: The permission is granted.</li>
+         * <li>Revoking: The permission is being revoked.</li>
+         * <li>Revoked: The permission is revoked.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Elastic Compute Service</p>
          */
         @NameInMap("ServiceName")
         public String serviceName;

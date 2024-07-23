@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class DescribeInstanceVncUrlRequest extends TeaModel {
     /**
      * <p>The ID of the instance</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-bp1hzoinajzkh91h****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -17,7 +21,11 @@ public class DescribeInstanceVncUrlRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.</p>
+     * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent list of regions.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

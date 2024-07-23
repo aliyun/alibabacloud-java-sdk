@@ -8,13 +8,21 @@ public class RemoveTagsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the resource. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the resource. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shenzhen</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource. For example, if you set ResourceType to instance, you must set this parameter to the ID of the related instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>s-946ntx4****</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;
@@ -27,21 +35,25 @@ public class RemoveTagsRequest extends TeaModel {
 
     /**
      * <p>The type of the resource. Valid values:</p>
-     * <br>
-     * <p>*   instance</p>
-     * <p>*   disk</p>
-     * <p>*   snapshot</p>
-     * <p>*   image</p>
-     * <p>*   securitygroup</p>
-     * <p>*   volume</p>
-     * <p>*   eni</p>
-     * <p>*   ddh</p>
-     * <p>*   keypair</p>
-     * <p>*   launchtemplate</p>
-     * <p>*   reservedinstance</p>
-     * <p>*   snapshotpolicy</p>
-     * <br>
+     * <ul>
+     * <li>instance</li>
+     * <li>disk</li>
+     * <li>snapshot</li>
+     * <li>image</li>
+     * <li>securitygroup</li>
+     * <li>volume</li>
+     * <li>eni</li>
+     * <li>ddh</li>
+     * <li>keypair</li>
+     * <li>launchtemplate</li>
+     * <li>reservedinstance</li>
+     * <li>snapshotpolicy</li>
+     * </ul>
      * <p>All values must be in lowercase.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>snapshot</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
@@ -115,13 +127,19 @@ public class RemoveTagsRequest extends TeaModel {
 
     public static class RemoveTagsRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot contain [http:// or https://](http://https://。). The tag key cannot start with acs: or aliyun.</p>
+         * <p>The key of tag N. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot contain <a href="http://https://%E3%80%82">http:// or https://</a>. The tag key cannot start with acs: or aliyun.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag N. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain [http:// or https://](http://https://。). The tag value cannot start with acs: or aliyun.</p>
+         * <p>The value of tag N. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain <a href="http://https://%E3%80%82">http:// or https://</a>. The tag value cannot start with acs: or aliyun.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
          */
         @NameInMap("Value")
         public String value;

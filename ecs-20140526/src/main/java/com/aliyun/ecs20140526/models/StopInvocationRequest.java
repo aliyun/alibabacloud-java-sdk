@@ -6,12 +6,19 @@ import com.aliyun.tea.*;
 public class StopInvocationRequest extends TeaModel {
     /**
      * <p>The ID of instance N on which you want to stop the process of the Cloud Assistant command. You can specify up to 50 instance IDs in each request. Valid values of N: 1 to 50.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-bp67acfmxazb4p****</p>
      */
     @NameInMap("InstanceId")
     public java.util.List<String> instanceId;
 
     /**
-     * <p>The ID of the command task. You can call the [DescribeInvocations](~~64840~~) operation to query all task IDs.</p>
+     * <p>The ID of the command task. You can call the <a href="https://help.aliyun.com/document_detail/64840.html">DescribeInvocations</a> operation to query all task IDs.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>t-7d2a745b412b4601b2d47f6a768d****</p>
      */
     @NameInMap("InvokeId")
     public String invokeId;
@@ -23,7 +30,11 @@ public class StopInvocationRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the command task. You can call the [DescribeInvocations](~~64840~~) operation to query the IDs of all command tasks.</p>
+     * <p>The ID of the command task. You can call the <a href="https://help.aliyun.com/document_detail/64840.html">DescribeInvocations</a> operation to query the IDs of all command tasks.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -6,18 +6,28 @@ import com.aliyun.tea.*;
 public class StartInstancesRequest extends TeaModel {
     /**
      * <p>The IDs of the ECS instances. You can specify up to 100 ECS instance IDs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AllTogether</p>
      */
     @NameInMap("BatchOptimization")
     public String batchOptimization;
 
     /**
-     * <p>The region ID of the ECS instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the ECS instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
      * <p>The ID of instance N. Valid values of N: 1 to 100.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-bp67acfmxazb4p****</p>
      */
     @NameInMap("InstanceId")
     public java.util.List<String> instanceId;
@@ -30,11 +40,15 @@ public class StartInstancesRequest extends TeaModel {
 
     /**
      * <p>The batch operation mode. Valid values:</p>
-     * <br>
-     * <p>*   AllTogether: starts all ECS instances at the same time. If all ECS instances are started, a success message is returned. If an ECS instance fails to be started, all the specified instances fail to be started and an error message is returned.</p>
-     * <p>*   SuccessFirst: separately starts each ECS instance. The response contains the operation results of each ECS instance.</p>
-     * <br>
+     * <ul>
+     * <li>AllTogether: starts all ECS instances at the same time. If all ECS instances are started, a success message is returned. If an ECS instance fails to be started, all the specified instances fail to be started and an error message is returned.</li>
+     * <li>SuccessFirst: separately starts each ECS instance. The response contains the operation results of each ECS instance.</li>
+     * </ul>
      * <p>Default value: AllTogether.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

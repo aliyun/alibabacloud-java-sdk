@@ -9,69 +9,93 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
 
     /**
      * <p>The performance mode of the burstable instance. Valid values:</p>
-     * <br>
-     * <p>*   Standard</p>
-     * <p>*   Unlimited</p>
-     * <br>
-     * <p>For more information about the performance modes of burstable instances, see [Overview](~~59977~~).</p>
+     * <ul>
+     * <li>Standard</li>
+     * <li>Unlimited</li>
+     * </ul>
+     * <p>For more information about the performance modes of burstable instances, see <a href="https://help.aliyun.com/document_detail/59977.html">Overview</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Standard</p>
      */
     @NameInMap("CreditSpecification")
     public String creditSpecification;
 
     /**
-     * <p>The release protection attribute of the instance. This parameter specifies whether you can use the ECS console or call the [DeleteInstance](~~25507~~) operation to release the instance.</p>
-     * <br>
-     * <p>>  This parameter is applicable only to pay-as-you-go instances. The release protection attribute can protect instances against manual releases, but not against automatic releases.</p>
+     * <p>The release protection attribute of the instance. This parameter specifies whether you can use the ECS console or call the <a href="https://help.aliyun.com/document_detail/25507.html">DeleteInstance</a> operation to release the instance.</p>
+     * <blockquote>
+     * <p> This parameter is applicable only to pay-as-you-go instances. The release protection attribute can protect instances against manual releases, but not against automatic releases.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("DeletionProtection")
     public Boolean deletionProtection;
 
     /**
-     * <p>The description of the instance. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.</p>
+     * <p>The description of the instance. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testInstanceDescription</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>Specifies whether to enable the Jumbo Frames feature for the instance. Valid values:</p>
-     * <br>
      * <p>true</p>
-     * <br>
      * <p>false</p>
-     * <br>
-     * <p>You can enable the Jumbo Frames feature only for specific instance types. For more information, see [MTUs](~~200512~~).</p>
+     * <p>You can enable the Jumbo Frames feature only for specific instance types. For more information, see <a href="https://help.aliyun.com/document_detail/200512.html">MTUs</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("EnableJumboFrame")
     public Boolean enableJumboFrame;
 
     /**
      * <p>The hostname of the instance. Take note of the following items:</p>
-     * <br>
-     * <p>*   When you change the hostname of the instance, the instance cannot be in the Creating (`Pending`) or Starting (`Starting`) state. Otherwise, the new hostname and the configurations in `/etc/hosts` may not take effect. You can call the [DescribeInstances](~~25506~~) operation to query the status of the instance.</p>
-     * <p>*   After you change the hostname, you must call the [RebootInstance](~~25502~~) operation for the new hostname to take effect.</p>
-     * <br>
+     * <ul>
+     * <li>When you change the hostname of the instance, the instance cannot be in the Creating (<code>Pending</code>) or Starting (<code>Starting</code>) state. Otherwise, the new hostname and the configurations in <code>/etc/hosts</code> may not take effect. You can call the <a href="https://help.aliyun.com/document_detail/25506.html">DescribeInstances</a> operation to query the status of the instance.</li>
+     * <li>After you change the hostname, you must call the <a href="https://help.aliyun.com/document_detail/25502.html">RebootInstance</a> operation for the new hostname to take effect.</li>
+     * </ul>
      * <p>The following limits apply to the hostnames of instances that run different operating systems:</p>
-     * <br>
-     * <p>*   For Windows Server, the hostname must be 2 to 15 characters in length and can contain letters, digits, and hyphens (-). The hostname cannot start or end with a hyphen (-), contain consecutive hyphens (-), or contain only digits.</p>
-     * <p>*   For other operating systems such as Linux, the hostname must be 2 to 64 characters in length. You can use periods (.) to separate a hostname into multiple segments. Each segment can contain letters, digits, and hyphens (-). The hostname cannot contain consecutive periods (.) or hyphens (-). The hostname cannot start or end with a period (.) or a hyphen (-).</p>
+     * <ul>
+     * <li>For Windows Server, the hostname must be 2 to 15 characters in length and can contain letters, digits, and hyphens (-). The hostname cannot start or end with a hyphen (-), contain consecutive hyphens (-), or contain only digits.</li>
+     * <li>For other operating systems such as Linux, the hostname must be 2 to 64 characters in length. You can use periods (.) to separate a hostname into multiple segments. Each segment can contain letters, digits, and hyphens (-). The hostname cannot contain consecutive periods (.) or hyphens (-). The hostname cannot start or end with a period (.) or a hyphen (-).</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>testHostName</p>
      */
     @NameInMap("HostName")
     public String hostName;
 
     /**
      * <p>The instance ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-bp67acfmxazb4ph****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The name of the instance. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
+     * <p>The name of the instance. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testInstanceName</p>
      */
     @NameInMap("InstanceName")
     public String instanceName;
 
     /**
      * <p>The number of queues supported by the primary ENI.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8</p>
      */
     @NameInMap("NetworkInterfaceQueueNumber")
     public Integer networkInterfaceQueueNumber;
@@ -84,24 +108,34 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
 
     /**
      * <p>The password of the instance. The password must be 8 to 30 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. The following special characters are supported:</p>
-     * <br>
-     * <p>    ( ) ` ~ ! @ # $ % ^ & * - _ + = | { } [ ] : ; \" < > , . ? /</p>
-     * <br>
+     * <pre><code>( ) ` ~ ! @ # $ % ^ &amp; * - _ + = | { } [ ] : ; \\&quot; &lt; &gt; , . ? /
+     * </code></pre>
      * <p>The password of a Windows instance cannot start with a forward slash (/).</p>
-     * <br>
-     * <p>>  For security reasons, we recommend that you use HTTPS to send requests if `Password` is specified.</p>
+     * <blockquote>
+     * <p> For security reasons, we recommend that you use HTTPS to send requests if <code>Password</code> is specified.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Test123456</p>
      */
     @NameInMap("Password")
     public String password;
 
     /**
-     * <p>>  This parameter is in invitational preview and is not publicly available.</p>
+     * <blockquote>
+     * <p> This parameter is in invitational preview and is not publicly available.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>hide</p>
      */
     @NameInMap("Recyclable")
     public Boolean recyclable;
 
     /**
-     * <p>>  This parameter is in invitational preview and is not publicly available.</p>
+     * <blockquote>
+     * <p> This parameter is in invitational preview and is not publicly available.</p>
+     * </blockquote>
      */
     @NameInMap("RemoteConnectionOptions")
     public ModifyInstanceAttributeRequestRemoteConnectionOptions remoteConnectionOptions;
@@ -114,21 +148,27 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
 
     /**
      * <p>The IDs of replacement security groups.</p>
-     * <br>
-     * <p>*   All security group IDs must be unique.</p>
-     * <p>*   The instance is moved from the current security groups to the replacement security groups. If you want the instance to remain in the current security groups, add the IDs of the current security groups to the list.</p>
-     * <p>*   You can move the instance to security groups of a different type. However, the list cannot contain the IDs of both basic and advanced security groups.</p>
-     * <p>*   The security groups and the instance must belong to the same VPC.</p>
-     * <p>*   The valid values of N vary based on the maximum number of security groups to which the instance can belong. For more information, see the [Security group limits](~~25412#SecurityGroupQuota1~~) section in the "Limits" topic.</p>
-     * <p>*   New security groups become valid for the instance after a short latency.</p>
+     * <ul>
+     * <li>All security group IDs must be unique.</li>
+     * <li>The instance is moved from the current security groups to the replacement security groups. If you want the instance to remain in the current security groups, add the IDs of the current security groups to the list.</li>
+     * <li>You can move the instance to security groups of a different type. However, the list cannot contain the IDs of both basic and advanced security groups.</li>
+     * <li>The security groups and the instance must belong to the same VPC.</li>
+     * <li>The valid values of N vary based on the maximum number of security groups to which the instance can belong. For more information, see the <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a> section in the &quot;Limits&quot; topic.</li>
+     * <li>New security groups become valid for the instance after a short latency.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>sg-bp15ed6xe1yxeycg7o****</p>
      */
     @NameInMap("SecurityGroupIds")
     public java.util.List<String> securityGroupIds;
 
     /**
      * <p>The user data of the instance. The user data must be encoded in Base64.</p>
-     * <br>
      * <p>The maximum size of the raw data before encoding is 32 KB. We recommend that you do not pass in confidential information such as passwords and private keys in plaintext. If you must pass in confidential information, we recommend that you encrypt and Base64-encode the information before you pass it in. Then, you can decode and decrypt the information in the same way within the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ZWNobyBoZWxsbyBlY3Mh</p>
      */
     @NameInMap("UserData")
     public String userData;
@@ -285,17 +325,22 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
     public static class ModifyInstanceAttributeRequestCpuOptions extends TeaModel {
         /**
          * <p>The CPU topology type of the instance. Valid values:</p>
-         * <br>
-         * <p>*   `ContinuousCoreToHTMapping`: The Hyper-Threading (HT) technology allows continuous threads to run on the same core in the CPU topology of the instance.</p>
-         * <p>*   `DiscreteCoreToHTMapping`: The HT technology allows discrete threads to run on the same core in the CPU topology of the instance.</p>
-         * <br>
+         * <ul>
+         * <li><code>ContinuousCoreToHTMapping</code>: The Hyper-Threading (HT) technology allows continuous threads to run on the same core in the CPU topology of the instance.</li>
+         * <li><code>DiscreteCoreToHTMapping</code>: The HT technology allows discrete threads to run on the same core in the CPU topology of the instance.</li>
+         * </ul>
          * <p>By default, this parameter is left empty.</p>
-         * <br>
-         * <p>> </p>
-         * <br>
-         * <p>*   This parameter is supported only by specific instance families. For information about the supported instance families, see [View and modify CPU topologies](~~2636059~~).</p>
-         * <br>
-         * <p>*   Before you specify this parameter, make sure that the instance is in the Stopped (`Stopped`) state.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>This parameter is supported only by specific instance families. For information about the supported instance families, see <a href="https://help.aliyun.com/document_detail/2636059.html">View and modify CPU topologies</a>.</p>
+         * </li>
+         * <li><p>Before you specify this parameter, make sure that the instance is in the Stopped (<code>Stopped</code>) state.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DiscreteCoreToHTMapping</p>
          */
         @NameInMap("TopologyType")
         public String topologyType;
@@ -317,13 +362,23 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
 
     public static class ModifyInstanceAttributeRequestRemoteConnectionOptions extends TeaModel {
         /**
-         * <p>>  This parameter is in invitational preview and is not publicly available.</p>
+         * <blockquote>
+         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>hide</p>
          */
         @NameInMap("Password")
         public String password;
 
         /**
-         * <p>>  This parameter is in invitational preview and is not publicly available.</p>
+         * <blockquote>
+         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>hide</p>
          */
         @NameInMap("Type")
         public String type;

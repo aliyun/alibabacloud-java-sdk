@@ -5,13 +5,20 @@ import com.aliyun.tea.*;
 
 public class StartImagePipelineExecutionRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among requests. **The token can contain only ASCII characters and cannot exceed 64 characters in length.** For more information, see [How to ensure idempotence](~~25693~~).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among requests. <strong>The token can contain only ASCII characters and cannot exceed 64 characters in length.</strong> For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The ID of the image template.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ip-2ze5tsl5bp6nf2b3****</p>
      */
     @NameInMap("ImagePipelineId")
     public String imagePipelineId;
@@ -23,7 +30,11 @@ public class StartImagePipelineExecutionRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent list of regions.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -35,7 +46,9 @@ public class StartImagePipelineExecutionRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>> This parameter is deprecated.</p>
+     * <blockquote>
+     * <p>This parameter is deprecated.</p>
+     * </blockquote>
      */
     @NameInMap("TemplateTag")
     public java.util.List<StartImagePipelineExecutionRequestTemplateTag> templateTag;
@@ -111,13 +124,23 @@ public class StartImagePipelineExecutionRequest extends TeaModel {
 
     public static class StartImagePipelineExecutionRequestTemplateTag extends TeaModel {
         /**
-         * <p>> This parameter is deprecated.</p>
+         * <blockquote>
+         * <p>This parameter is deprecated.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>> This parameter is deprecated.</p>
+         * <blockquote>
+         * <p>This parameter is deprecated.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("Value")
         public String value;

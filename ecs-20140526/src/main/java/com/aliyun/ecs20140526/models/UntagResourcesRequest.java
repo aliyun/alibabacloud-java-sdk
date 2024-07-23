@@ -6,11 +6,14 @@ import com.aliyun.tea.*;
 public class UntagResourcesRequest extends TeaModel {
     /**
      * <p>Specifies whether to remove all tags from the resource. This parameter takes effect only if you do not specify TagKey.N. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
-     * <br>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
      * <p>Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("All")
     public Boolean all;
@@ -22,13 +25,21 @@ public class UntagResourcesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the resource. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the resource. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The resource IDs. Valid values of N: 1 to 50.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-bp67acfmxazb4ph****</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
@@ -41,30 +52,38 @@ public class UntagResourcesRequest extends TeaModel {
 
     /**
      * <p>The type of the resource. Valid values:</p>
-     * <br>
-     * <p>*   instance: ECS instance</p>
-     * <p>*   disk: disk</p>
-     * <p>*   snapshot: snapshot</p>
-     * <p>*   image: image</p>
-     * <p>*   securitygroup: security group</p>
-     * <p>*   volume: storage volume</p>
-     * <p>*   eni: elastic network interface (ENI)</p>
-     * <p>*   ddh: dedicated host</p>
-     * <p>*   ddhcluster: dedicated host cluster</p>
-     * <p>*   keypair: SSH key pair</p>
-     * <p>*   launchtemplate: launch template</p>
-     * <p>*   reservedinstance: reserved instance</p>
-     * <p>*   snapshotpolicy: automatic snapshot policy</p>
-     * <p>*   elasticityassurance: elasticity assurance</p>
-     * <p>*   capacityreservation: capacity reservation</p>
-     * <p>*   command: Cloud Assistant command</p>
-     * <p>*   invocation: Cloud Assistant command execution result</p>
+     * <ul>
+     * <li>instance: ECS instance</li>
+     * <li>disk: disk</li>
+     * <li>snapshot: snapshot</li>
+     * <li>image: image</li>
+     * <li>securitygroup: security group</li>
+     * <li>volume: storage volume</li>
+     * <li>eni: elastic network interface (ENI)</li>
+     * <li>ddh: dedicated host</li>
+     * <li>ddhcluster: dedicated host cluster</li>
+     * <li>keypair: SSH key pair</li>
+     * <li>launchtemplate: launch template</li>
+     * <li>reservedinstance: reserved instance</li>
+     * <li>snapshotpolicy: automatic snapshot policy</li>
+     * <li>elasticityassurance: elasticity assurance</li>
+     * <li>capacityreservation: capacity reservation</li>
+     * <li>command: Cloud Assistant command</li>
+     * <li>invocation: Cloud Assistant command execution result</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>instance</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
      * <p>The tag keys. Valid values of N: 1 to 20.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TestKey</p>
      */
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;

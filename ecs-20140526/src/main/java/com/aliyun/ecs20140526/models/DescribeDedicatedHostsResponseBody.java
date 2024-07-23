@@ -12,30 +12,45 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
 
     /**
      * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists. If the return value of this parameter is empty when you specify MaxResults and NextToken for a paged query, no more results are to be returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>e71d8a535bd9cc11</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7654525A-9964-4ABB-8BCD-98F8835E809A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of dedicated hosts.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -114,31 +129,46 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
 
     public static class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacitySocketCapacitiesSocketCapacity extends TeaModel {
         /**
-         * <p>The amount of available memory space. Unit: GiB.</p>
+         * <p>The amount of available memory. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>65</p>
          */
         @NameInMap("AvailableMemory")
         public Float availableMemory;
 
         /**
-         * <p>The total number of vCPUs.</p>
+         * <p>The number of available vCPUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>64</p>
          */
         @NameInMap("AvailableVcpu")
         public Integer availableVcpu;
 
         /**
          * <p>The socket ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("SocketId")
         public Integer socketId;
 
         /**
-         * <p>The total capacity of the memory. Unit: GiB.</p>
+         * <p>The total amount of memory. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>128</p>
          */
         @NameInMap("TotalMemory")
         public Float totalMemory;
 
         /**
-         * <p>The number of available vCPUs.</p>
+         * <p>The total number of vCPUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>128</p>
          */
         @NameInMap("TotalVcpu")
         public Integer totalVcpu;
@@ -212,30 +242,45 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
     public static class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacity extends TeaModel {
         /**
          * <p>The amount of available space on the local disks. Unit: GiB</p>
+         * 
+         * <strong>example:</strong>
+         * <p>65</p>
          */
         @NameInMap("AvailableLocalStorage")
         public Integer availableLocalStorage;
 
         /**
-         * <p>The amount of available memory space. Unit: GiB.</p>
+         * <p>The amount of available memory. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25</p>
          */
         @NameInMap("AvailableMemory")
         public Float availableMemory;
 
         /**
          * <p>The number of available vCPUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("AvailableVcpus")
         public Integer availableVcpus;
 
         /**
          * <p>The number of available vGPUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("AvailableVgpus")
         public Integer availableVgpus;
 
         /**
-         * <p>The category of the local disks.</p>
+         * <p>The category of local disks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i2</p>
          */
         @NameInMap("LocalStorageCategory")
         public String localStorageCategory;
@@ -247,25 +292,37 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacitySocketCapacities socketCapacities;
 
         /**
-         * <p>The total capacity of the local disks. Unit: GiB.</p>
+         * <p>The total capacity of local disks. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>512</p>
          */
         @NameInMap("TotalLocalStorage")
         public Integer totalLocalStorage;
 
         /**
-         * <p>The total capacity of the memory. Unit: GiB.</p>
+         * <p>The total amount of memory. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
          */
         @NameInMap("TotalMemory")
         public Float totalMemory;
 
         /**
          * <p>The total number of vCPUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>56</p>
          */
         @NameInMap("TotalVcpus")
         public Integer totalVcpus;
 
         /**
          * <p>The total number of vGPUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("TotalVgpus")
         public Integer totalVgpus;
@@ -360,6 +417,9 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
     public static class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostHostDetailInfo extends TeaModel {
         /**
          * <p>This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("SerialNumber")
         public String serialNumber;
@@ -382,24 +442,36 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
     public static class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostInstancesInstance extends TeaModel {
         /**
          * <p>The ID of the ECS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp14ot0ykf8w13a1****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The ID of the ECS instance owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>128************0</p>
          */
         @NameInMap("InstanceOwnerId")
         public Long instanceOwnerId;
 
         /**
          * <p>The instance type of the ECS instance that was created on the dedicated host.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.g5.large</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
 
         /**
          * <p>The ID of the socket to which the ECS instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0,1</p>
          */
         @NameInMap("SocketId")
         public String socketId;
@@ -464,13 +536,19 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
 
     public static class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostNetworkAttributes extends TeaModel {
         /**
-         * <p>The timeout period of the UDP session that was established between Server Load Balancer (SLB) and the dedicated host. Unit: seconds. Only 60 is returned.</p>
+         * <p>The timeout period of the UDP session that is established between Server Load Balancer (SLB) and the dedicated host. Unit: seconds. Only 60 is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         @NameInMap("SlbUdpTimeout")
         public Integer slbUdpTimeout;
 
         /**
-         * <p>The timeout period of the UDP session that was established between a user and an Alibaba Cloud service on the dedicated host. Unit: seconds. Only 60 is returned.</p>
+         * <p>The timeout period of the UDP session that is established between a user and an Alibaba Cloud service on the dedicated host. Unit: seconds. Only 60 is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         @NameInMap("UdpTimeout")
         public Integer udpTimeout;
@@ -501,9 +579,13 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
     public static class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostOperationLocksOperationLock extends TeaModel {
         /**
          * <p>The reason why the dedicated host was locked. Valid values:</p>
-         * <br>
-         * <p>*   financial: The dedicated host was locked due to overdue payments.</p>
-         * <p>*   security: The dedicated host was locked due to security reasons.</p>
+         * <ul>
+         * <li>financial: The dedicated host was locked due to overdue payments.</li>
+         * <li>security: The dedicated host was locked due to security reasons.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>financial</p>
          */
         @NameInMap("LockReason")
         public String lockReason;
@@ -602,12 +684,18 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
     public static class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostTagsTag extends TeaModel {
         /**
          * <p>The tag key of the dedicated host.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
          * <p>The tag value of the dedicated host.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
          */
         @NameInMap("TagValue")
         public String tagValue;
@@ -660,28 +748,37 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
 
         /**
          * <p>The policy used to migrate the ECS instances deployed on the dedicated host when the dedicated host fails. Valid values:</p>
-         * <br>
-         * <p>*   Migrate: The instances are migrated to another physical machine. Instances that are not in the Stopped state when the dedicated host fails are restarted.</p>
-         * <p>*   Stop: The instances are stopped. If the dedicated host cannot be restored, the instances are migrated to another physical machine and then restarted.</p>
-         * <br>
+         * <ul>
+         * <li>Migrate: The instances are migrated to another physical machine. Instances that are not in the Stopped state when the dedicated host fails are restarted.</li>
+         * <li>Stop: The instances are stopped. If the dedicated host cannot be repaired, the instances are migrated to another physical machine and then restarted.</li>
+         * </ul>
          * <p>If the dedicated host has cloud disks attached, the default value is Migrate. If the dedicated host has local disks attached, the default value is Stop.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Migrate</p>
          */
         @NameInMap("ActionOnMaintenance")
         public String actionOnMaintenance;
 
         /**
-         * <p>Indicates whether the dedicated host was added to the resource pool for automatic deployment. Valid values:</p>
-         * <br>
-         * <p>*   on: The dedicated host was added to the resource pool for automatic deployment.</p>
-         * <p>*   off: The dedicated host was not added to the resource pool for automatic deployment.</p>
-         * <br>
-         * <p>For information about automatic deployment, see the "Automatic deployment" section in [Functions and features](~~118938~~).</p>
+         * <p>Indicates whether the dedicated host is added to the resource pool for automatic deployment. Valid values:</p>
+         * <ul>
+         * <li>on: The dedicated host is added to the resource pool for automatic deployment.</li>
+         * <li>off: The dedicated host is not added to the resource pool for automatic deployment.</li>
+         * </ul>
+         * <p>For information about automatic deployment, see the &quot;Automatic deployment&quot; section in <a href="https://help.aliyun.com/document_detail/118938.html">Functions and features</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         @NameInMap("AutoPlacement")
         public String autoPlacement;
 
         /**
-         * <p>The automatic release time of the dedicated host. The time follows the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mmZ` format. The time is displayed in UTC.</p>
+         * <p>The automatic release time of the dedicated host. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <code>yyyy-MM-ddTHH:mmZ</code> format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-01-01T12:00Z</p>
          */
         @NameInMap("AutoReleaseTime")
         public String autoReleaseTime;
@@ -694,72 +791,108 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
 
         /**
          * <p>The billing method of the dedicated host.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Prepaid</p>
          */
         @NameInMap("ChargeType")
         public String chargeType;
 
         /**
          * <p>The number of physical cores per CPU.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("Cores")
         public Integer cores;
 
         /**
-         * <p>The CPU overcommit ratio.</p>
+         * <p>The CPU overcommit ratio.Valid values: 1 to 5.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CpuOverCommitRatio")
         public Float cpuOverCommitRatio;
 
         /**
-         * <p>The time when the dedicated host was created. The time follows the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mmZ` format. The time is displayed in UTC.</p>
+         * <p>The time when the dedicated host was created. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <code>yyyy-MM-ddTHH:mmZ</code> format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-01-01T12:00Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The ID of the dedicated host cluster to which the dedicated host belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dc-bp12wlf6am0vz9v2****</p>
          */
         @NameInMap("DedicatedHostClusterId")
         public String dedicatedHostClusterId;
 
         /**
          * <p>The ID of the dedicated host.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dh-bp165p6xk2tlw61e****</p>
          */
         @NameInMap("DedicatedHostId")
         public String dedicatedHostId;
 
         /**
          * <p>The name of the dedicated host.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyDDHTestName</p>
          */
         @NameInMap("DedicatedHostName")
         public String dedicatedHostName;
 
         /**
          * <p>The ID of the dedicated host owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100************7</p>
          */
         @NameInMap("DedicatedHostOwnerId")
         public Long dedicatedHostOwnerId;
 
         /**
          * <p>The type of the dedicated host.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ddh.g5</p>
          */
         @NameInMap("DedicatedHostType")
         public String dedicatedHostType;
 
         /**
          * <p>The description of the dedicated host.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>this-is-my-DDH</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The expiration time of the subscription dedicated host. The time follows the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mmZ` format. The time is displayed in UTC.</p>
+         * <p>The expiration time of the subscription dedicated host. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <code>yyyy-MM-ddTHH:mmZ</code> format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-01-01T12:00Z</p>
          */
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
         /**
          * <p>The GPU model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gpu</p>
          */
         @NameInMap("GPUSpec")
         public String GPUSpec;
@@ -778,6 +911,9 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
 
         /**
          * <p>The machine code of the dedicated host.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12aaa123456ff19dec12345d3026e****</p>
          */
         @NameInMap("MachineId")
         public String machineId;
@@ -796,43 +932,63 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
 
         /**
          * <p>The number of physical GPUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PhysicalGpus")
         public Integer physicalGpus;
 
         /**
          * <p>The region ID of the dedicated host.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The ID of the resource group to which the dedicated host belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek3b6jzp66****</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>The unit of the subscription duration. Valid values:</p>
-         * <br>
-         * <p>*   Month</p>
-         * <p>*   Year</p>
+         * <ul>
+         * <li>Month</li>
+         * <li>Year</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         @NameInMap("SaleCycle")
         public String saleCycle;
 
         /**
          * <p>The number of physical CPUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("Sockets")
         public Integer sockets;
 
         /**
-         * <p>The state of the dedicated host. Valid values:</p>
-         * <br>
-         * <p>*   Available: The dedicated host was running as expected.</p>
-         * <p>*   UnderAssessment: The dedicated host was available but had potential risks that may cause the ECS instances on the dedicated host to fail.</p>
-         * <p>*   PermanentFailure: The dedicated host had permanent failures and was unavailable.</p>
+         * <p>The status of the dedicated host. Valid values:</p>
+         * <ul>
+         * <li>Available: The dedicated host is running as expected.</li>
+         * <li>UnderAssessment: The dedicated host is available but has potential risks that may cause the ECS instances on the dedicated host to fail.</li>
+         * <li>PermanentFailure: The dedicated host has permanent failures and is unavailable.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
          */
         @NameInMap("Status")
         public String status;
@@ -863,6 +1019,9 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
 
         /**
          * <p>The zone ID of the dedicated host.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-g</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;

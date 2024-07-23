@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeInstanceMaintenanceAttributesRequest extends TeaModel {
     /**
      * <p>The instance IDs. You can specify up to 100 instance IDs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-bp67acfmxazb4p****</p>
      */
     @NameInMap("InstanceId")
     public java.util.List<String> instanceId;
@@ -18,24 +21,31 @@ public class DescribeInstanceMaintenanceAttributesRequest extends TeaModel {
 
     /**
      * <p>The page number.</p>
-     * <br>
      * <p>Pages start from page 1.</p>
-     * <br>
      * <p>Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
      * <p>The number of entries per page. Valid values: 1 to 100.</p>
-     * <br>
      * <p>Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

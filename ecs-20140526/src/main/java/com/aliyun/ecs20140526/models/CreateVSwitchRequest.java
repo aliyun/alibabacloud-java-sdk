@@ -4,6 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateVSwitchRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CidrBlock")
     public String cidrBlock;
 
@@ -31,9 +34,15 @@ public class CreateVSwitchRequest extends TeaModel {
     @NameInMap("VSwitchName")
     public String vSwitchName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ZoneId")
     public String zoneId;
 

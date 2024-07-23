@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreateDedicatedHostClusterResponseBody extends TeaModel {
     /**
      * <p>The ID of the dedicated host cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dc-bp12wlf6bw0vz9v2****</p>
      */
     @NameInMap("DedicatedHostClusterId")
     public String dedicatedHostClusterId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E2A664A6-2933-4C64-88AE-5033D003****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -5,23 +5,33 @@ import com.aliyun.tea.*;
 
 public class RenewInstanceRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The **token** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <strong>token</strong> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0c593ea1-3bea-11e9-b96b-88e9fe637760</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The synchronized expiration date. Set the value to a synchronized expiration date that you specified. Otherwise, the call fails. If you configure this parameter, your instance will be renewed to the specified synchronized expiration date. Valid values: 1 to 28.</p>
-     * <br>
-     * <p>For information about how to synchronize the expiration dates of instances, see [Synchronize the expiration dates of subscription instances](~~108486~~).</p>
-     * <br>
-     * <p>> The renewal period-related parameter pair (`Period` and `PeriodUnit`) and `ExpectedRenewDay` are mutually exclusive.</p>
+     * <p>For information about how to synchronize the expiration dates of instances, see <a href="https://help.aliyun.com/document_detail/108486.html">Synchronize the expiration dates of subscription instances</a>.</p>
+     * <blockquote>
+     * <p>The renewal period-related parameter pair (<code>Period</code> and <code>PeriodUnit</code>) and <code>ExpectedRenewDay</code> are mutually exclusive.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("ExpectedRenewDay")
     public Integer expectedRenewDay;
 
     /**
      * <p>The ID of the instance that you want to renew.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-bp67acfmxazb4p****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -33,21 +43,25 @@ public class RenewInstanceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The renewal period of the subscription instance. If `DedicatedHostId` is specified, the value of Period cannot exceed the subscription period of the specified dedicated host.</p>
-     * <br>
+     * <p>The renewal period of the subscription instance. If <code>DedicatedHostId</code> is specified, the value of Period cannot exceed the subscription period of the specified dedicated host.</p>
      * <p>Valid values when PeriodUnit is set to Month: 1, 2, 3, 4, 5, 6, 7, 8, 9, and 12.</p>
-     * <br>
-     * <p>> The renewal period-related parameter pair (`Period` and `PeriodUnit`) and `ExpectedRenewDay` are mutually exclusive.</p>
+     * <blockquote>
+     * <p>The renewal period-related parameter pair (<code>Period</code> and <code>PeriodUnit</code>) and <code>ExpectedRenewDay</code> are mutually exclusive.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Period")
     public Integer period;
 
     /**
      * <p>The unit of the renewal period. Valid values:</p>
-     * <br>
      * <p>Month</p>
-     * <br>
      * <p>Default value: Month.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Month</p>
      */
     @NameInMap("PeriodUnit")
     public String periodUnit;

@@ -12,24 +12,36 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
 
     /**
      * <p>The total number of launch templates.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>04F0F334-1335-436C-A1D7-6C044FE12CBA</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The information about the launch templates.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -80,11 +92,18 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
     }
 
     public static class DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSetTagsTag extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>TestKey</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
          * <p>The key of tag N of the launch template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
          */
         @NameInMap("TagValue")
         public String tagValue;
@@ -134,48 +153,72 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
     public static class DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSet extends TeaModel {
         /**
          * <p>The ID of the resource group to which the launch template belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-05-14T14:18:00Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The latest version number of the launch template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567890</p>
          */
         @NameInMap("CreatedBy")
         public String createdBy;
 
         /**
          * <p>The time when the launch template was modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("DefaultVersionNumber")
         public Long defaultVersionNumber;
 
         /**
          * <p>The tags of the launch template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("LatestVersionNumber")
         public Long latestVersionNumber;
 
         /**
          * <p>The time when the launch template was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lt-m5e3ofjr1zn1aw7q****</p>
          */
         @NameInMap("LaunchTemplateId")
         public String launchTemplateId;
 
         /**
          * <p>The default version number of the launch template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wd-152630748****</p>
          */
         @NameInMap("LaunchTemplateName")
         public String launchTemplateName;
 
         /**
          * <p>The ID of the launch template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-05-14T14:18:00Z</p>
          */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
         /**
          * <p>The creator of the launch template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxazb4p****</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;

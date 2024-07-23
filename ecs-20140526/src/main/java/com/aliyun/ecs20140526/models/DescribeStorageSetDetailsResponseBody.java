@@ -12,24 +12,36 @@ public class DescribeStorageSetDetailsResponseBody extends TeaModel {
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>49765E79-0D5D-4451-B3AE-580A20831846</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of storage sets.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,48 +94,72 @@ public class DescribeStorageSetDetailsResponseBody extends TeaModel {
     public static class DescribeStorageSetDetailsResponseBodyDisksDisk extends TeaModel {
         /**
          * <p>The category of the disk or Shared Block Storage device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_ssd</p>
          */
         @NameInMap("Category")
         public String category;
 
         /**
          * <p>The time when the disk or Shared Block Storage device was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-06-01T00:00:00Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The ID of the disk or Shared Block Storage device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-bp67acfmxazb4p****</p>
          */
         @NameInMap("DiskId")
         public String diskId;
 
         /**
          * <p>The name of the disk or Shared Block Storage device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testDiskName</p>
          */
         @NameInMap("DiskName")
         public String diskName;
 
         /**
          * <p>The region to which the disk or Shared Block Storage device belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The ID of the storage set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ss-bp67acfmxazb4p****</p>
          */
         @NameInMap("StorageSetId")
         public String storageSetId;
 
         /**
          * <p>The number of partitions in the storage set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("StorageSetPartitionNumber")
         public Integer storageSetPartitionNumber;
 
         /**
          * <p>The zone to which the disk or Shared Block Storage device belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-g</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;

@@ -12,6 +12,10 @@ public class UnassignPrivateIpAddressesRequest extends TeaModel {
 
     /**
      * <p>The ID of the ENI.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eni-bp67acfmxazb4ph****</p>
      */
     @NameInMap("NetworkInterfaceId")
     public String networkInterfaceId;
@@ -24,12 +28,19 @@ public class UnassignPrivateIpAddressesRequest extends TeaModel {
 
     /**
      * <p>The secondary private IP addresses to unassign.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.**.**</p>
      */
     @NameInMap("PrivateIpAddress")
     public java.util.List<String> privateIpAddress;
 
     /**
-     * <p>The region ID of the ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the ENI. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

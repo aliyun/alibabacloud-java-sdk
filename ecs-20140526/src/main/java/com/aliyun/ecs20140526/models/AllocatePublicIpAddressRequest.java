@@ -6,12 +6,19 @@ import com.aliyun.tea.*;
 public class AllocatePublicIpAddressRequest extends TeaModel {
     /**
      * <p>The ID of the instance to which you want to assign a public IP address.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-bp1gtjxuuvwj17zr****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The public IP address. If you leave this parameter empty, the system randomly assigns a public IP address to the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>112.124.**.**</p>
      */
     @NameInMap("IpAddress")
     public String ipAddress;
@@ -30,8 +37,12 @@ public class AllocatePublicIpAddressRequest extends TeaModel {
 
     /**
      * <p>The virtual LAN (VLAN) ID of the instance.</p>
-     * <br>
-     * <p>> This parameter will be removed in the future. To ensure future compatibility, we recommend that you use other parameters.</p>
+     * <blockquote>
+     * <p>This parameter will be removed in the future. To ensure future compatibility, we recommend that you use other parameters.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>720</p>
      */
     @NameInMap("VlanId")
     public String vlanId;

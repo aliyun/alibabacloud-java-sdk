@@ -12,6 +12,9 @@ public class AllocateDedicatedHostsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E2A664A6-2933-4C64-88AE-5033D003****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

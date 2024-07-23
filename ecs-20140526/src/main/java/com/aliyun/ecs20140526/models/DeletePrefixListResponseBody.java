@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeletePrefixListResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>38793DB8-A4B2-4AEC-BFD3-111234E9188D</p>
      */
     @NameInMap("RequestId")
     public String requestId;

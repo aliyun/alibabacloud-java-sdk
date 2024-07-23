@@ -6,18 +6,24 @@ import com.aliyun.tea.*;
 public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
     /**
      * <p>The ID of the auto provisioning group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>apg-sn54avj8htgvtyh8****</p>
      */
     @NameInMap("AutoProvisioningGroupId")
     public String autoProvisioningGroupId;
 
     /**
-     * <p>The instances created by the auto provisioning group. The values of the parameters in this array are returned only when AutoProvisioningGroupType is set to `instant`.</p>
+     * <p>The instances created by the auto provisioning group. The values of the parameters in this array are returned only when AutoProvisioningGroupType is set to <code>instant</code>.</p>
      */
     @NameInMap("LaunchResults")
     public CreateAutoProvisioningGroupResponseBodyLaunchResults launchResults;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>745CEC9F-0DD7-4451-9FE7-8B752F39****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -73,18 +79,27 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
     public static class CreateAutoProvisioningGroupResponseBodyLaunchResultsLaunchResult extends TeaModel {
         /**
          * <p>The number of created instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Amount")
         public Integer amount;
 
         /**
          * <p>The error code returned when the instance cannot be created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidParameter</p>
          */
         @NameInMap("ErrorCode")
         public String errorCode;
 
         /**
          * <p>The error message returned when the instance cannot be created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Specific parameter is not valid.</p>
          */
         @NameInMap("ErrorMsg")
         public String errorMsg;
@@ -97,22 +112,32 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
 
         /**
          * <p>The instance type of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.g5.large</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
 
         /**
          * <p>The bidding policy for the pay-as-you-go instance. Valid values:</p>
-         * <br>
-         * <p>*   NoSpot: The instance is a regular pay-as-you-go instance.</p>
-         * <p>*   SpotWithPriceLimit: The instance is a preemptible instance for which you specify the maximum hourly price.</p>
-         * <p>*   SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is used as the bid price.</p>
+         * <ul>
+         * <li>NoSpot: The instance is a regular pay-as-you-go instance.</li>
+         * <li>SpotWithPriceLimit: The instance is a preemptible instance for which you specify the maximum hourly price.</li>
+         * <li>SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is used as the bid price.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NoSpot</p>
          */
         @NameInMap("SpotStrategy")
         public String spotStrategy;
 
         /**
          * <p>The zone ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-g</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;

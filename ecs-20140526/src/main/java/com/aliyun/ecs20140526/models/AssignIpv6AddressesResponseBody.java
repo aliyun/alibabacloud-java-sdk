@@ -18,12 +18,18 @@ public class AssignIpv6AddressesResponseBody extends TeaModel {
 
     /**
      * <p>The ENI ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eni-bp1iqejowblx6h8j****</p>
      */
     @NameInMap("NetworkInterfaceId")
     public String networkInterfaceId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class DeleteLaunchTemplateResponseBody extends TeaModel {
     /**
-     * <p>The ID of the launch template. For more information, see [DescribeLaunchTemplates](~~73759~~).</p>
-     * <br>
-     * <p>You must specify `LaunchTemplateId` or `LaunchTemplateName` to specify a launch template.</p>
+     * <p>The ID of the launch template. For more information, see <a href="https://help.aliyun.com/document_detail/73759.html">DescribeLaunchTemplates</a>.</p>
+     * <p>You must specify <code>LaunchTemplateId</code> or <code>LaunchTemplateName</code> to specify a launch template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lt-bp1apo0bbbkuy0rj****</p>
      */
     @NameInMap("LaunchTemplateId")
     public String launchTemplateId;
@@ -20,6 +22,9 @@ public class DeleteLaunchTemplateResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
     @NameInMap("RequestId")
     public String requestId;

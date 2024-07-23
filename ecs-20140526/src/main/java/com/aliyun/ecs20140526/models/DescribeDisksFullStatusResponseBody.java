@@ -12,24 +12,36 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of EBS devices for which full status information is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,17 +94,24 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
     public static class DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusTypeDiskEventSetDiskEventTypeEventType extends TeaModel {
         /**
          * <p>The code of the event type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         @NameInMap("Code")
         public Integer code;
 
         /**
          * <p>The name of the event type. Valid values:</p>
-         * <br>
-         * <p>*   Degraded: The performance of the EBS device is degraded.</p>
-         * <p>*   SeverelyDegraded: The performance of the EBS device is severely degraded.</p>
-         * <p>*   Stalled: The performance of the EBS device is severely affected.</p>
-         * <p>*   ErrorDetected: The local disk is damaged.</p>
+         * <ul>
+         * <li>Degraded: The performance of the EBS device is degraded.</li>
+         * <li>SeverelyDegraded: The performance of the EBS device is severely degraded.</li>
+         * <li>Stalled: The performance of the EBS device is severely affected.</li>
+         * <li>ErrorDetected: The local disk is damaged.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Stalled</p>
          */
         @NameInMap("Name")
         public String name;
@@ -123,18 +142,27 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
     public static class DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusTypeDiskEventSetDiskEventType extends TeaModel {
         /**
          * <p>The time when the event ended.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-05-06T02:48:52Z</p>
          */
         @NameInMap("EventEndTime")
         public String eventEndTime;
 
         /**
          * <p>The ID of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e-bp67acfmxazb4p****</p>
          */
         @NameInMap("EventId")
         public String eventId;
 
         /**
          * <p>The time when the event occurred.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-05-08T02:43:10Z</p>
          */
         @NameInMap("EventTime")
         public String eventTime;
@@ -147,6 +175,9 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
 
         /**
          * <p>The impact level of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("ImpactLevel")
         public String impactLevel;
@@ -220,12 +251,18 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
     public static class DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusTypeHealthStatus extends TeaModel {
         /**
          * <p>The code of the health status of the EBS device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>128</p>
          */
         @NameInMap("Code")
         public Integer code;
 
         /**
          * <p>The name of the health status of the EBS device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Impaired</p>
          */
         @NameInMap("Name")
         public String name;
@@ -256,12 +293,18 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
     public static class DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusTypeStatus extends TeaModel {
         /**
          * <p>The code of the lifecycle status of the EBS device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>129</p>
          */
         @NameInMap("Code")
         public Integer code;
 
         /**
          * <p>The name of the lifecycle status of the EBS device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
          */
         @NameInMap("Name")
         public String name;
@@ -292,10 +335,13 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
     public static class DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusType extends TeaModel {
         /**
          * <p>The name of the EBS device that is attached to an instance. Example: /dev/xvdb.</p>
-         * <br>
-         * <p>This parameter has a value only when the value of `Status` is `In_use`.</p>
-         * <br>
-         * <p>> This parameter will be deprecated in the future. To ensure future compatibility, we recommend that you do not use this parameter.</p>
+         * <p>This parameter has a value only when the value of <code>Status</code> is <code>In_use</code>.</p>
+         * <blockquote>
+         * <p>This parameter will be deprecated in the future. To ensure future compatibility, we recommend that you do not use this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("Device")
         public String device;
@@ -308,6 +354,9 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
 
         /**
          * <p>The EBS device ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-bp67acfmxazb4p****</p>
          */
         @NameInMap("DiskId")
         public String diskId;
@@ -320,6 +369,9 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
 
         /**
          * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp67acfmxazb4p****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;

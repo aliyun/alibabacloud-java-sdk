@@ -6,56 +6,79 @@ import com.aliyun.tea.*;
 public class DescribeCommandsRequest extends TeaModel {
     /**
      * <p>The ID of the command.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c-hz01272yr52****</p>
      */
     @NameInMap("CommandId")
     public String commandId;
 
     /**
-     * <p>The encoding mode of the `CommandContent` and `Output` values in the response. Valid values:</p>
-     * <br>
-     * <p>*   PlainText: returns the original command content and command output.</p>
-     * <p>*   Base64: returns the Base64-encoded command content and command output.</p>
-     * <br>
+     * <p>The encoding mode of the <code>CommandContent</code> and <code>Output</code> values in the response. Valid values:</p>
+     * <ul>
+     * <li>PlainText: returns the original command content and command output.</li>
+     * <li>Base64: returns the Base64-encoded command content and command output.</li>
+     * </ul>
      * <p>Default value: Base64.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PlainText</p>
      */
     @NameInMap("ContentEncoding")
     public String contentEncoding;
 
     /**
-     * <p>The description of the common command. This parameter takes effect and fuzzy search is supported by default only when `Provider` is specified.</p>
+     * <p>The description of the command.</p>
+     * <p>If you specify <code>Provider</code>, fuzzy search is supported by default.</p>
+     * <p>If you do not specify <code>Provider</code>, prefix-based fuzzy search is supported. For example, if you specify <code>test*</code>, all commands whose descriptions start with <code>test</code> are queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testDescription</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>Specifies whether to query only the latest version of common commands when common commands are queried. This parameter does not affect the query for private commands.</p>
-     * <br>
-     * <p>*   true: queries only the latest version of common commands.</p>
-     * <p>*   false: queries all versions of common commands.</p>
-     * <br>
+     * <ul>
+     * <li>true: queries only the latest version of common commands.</li>
+     * <li>false: queries all versions of common commands.</li>
+     * </ul>
      * <p>Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Latest")
     public Boolean latest;
 
     /**
-     * <p>The maximum number of entries per page. </p>
-     * <br>
-     * <p>Valid values: 1 to 50. </p>
-     * <br>
+     * <p>The maximum number of entries per page.</p>
+     * <p>Valid values: 1 to 50.</p>
      * <p>Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The name of the command. If you specify `Provider`, fuzzy search is supported by default.</p>
+     * <p>The name of the command.</p>
+     * <p>If you specify <code>Provider</code>, fuzzy search is supported by default.</p>
+     * <p>If you do not specify <code>Provider</code>, prefix-based fuzzy search is supported. For example, if you specify <code>command*</code>, all commands whose names start with <code>command</code> are queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testName</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AAAAAdDWBF2</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -68,47 +91,62 @@ public class DescribeCommandsRequest extends TeaModel {
 
     /**
      * <p>The page number.</p>
-     * <br>
      * <p>Pages start from page 1.</p>
-     * <br>
      * <p>Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
-     * <br>
      * <p>Valid values: 1 to 50.</p>
-     * <br>
      * <p>Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
      * <p>The provider of the common command. Take note of the following items:</p>
-     * <br>
-     * <p>*   If you do not specify this parameter, all the commands that you created are queried.</p>
-     * <br>
-     * <p>*   If you set this parameter to `AlibabaCloud`, all the common commands provided by Alibaba Cloud are queried.</p>
-     * <br>
-     * <p>*   If you set this parameter to a specific provider, all the common commands provided by the provider are queried. Examples:</p>
-     * <br>
-     * <p>    *   If you set `Provider` to AlibabaCloud.ECS.GuestOS, all the common commands provided by `AlibabaCloud.ECS.GuestOS` are queried.</p>
-     * <p>    *   If you set `Provider` to AlibabaCloud.ECS.GuestOSDiagnose, all the common commands provided by `AlibabaCloud.ECS.GuestOSDiagnose` are queried.</p>
+     * <ul>
+     * <li><p>If you do not specify this parameter, all the commands that you created are queried.</p>
+     * </li>
+     * <li><p>If you set this parameter to <code>AlibabaCloud</code>, all the common commands provided by Alibaba Cloud are queried.</p>
+     * </li>
+     * <li><p>If you set this parameter to a specific provider, all the common commands provided by the provider are queried. Examples:</p>
+     * <ul>
+     * <li>If you set <code>Provider</code> to AlibabaCloud.ECS.GuestOS, all the common commands provided by <code>AlibabaCloud.ECS.GuestOS</code> are queried.</li>
+     * <li>If you set <code>Provider</code> to AlibabaCloud.ECS.GuestOSDiagnose, all the common commands provided by <code>AlibabaCloud.ECS.GuestOSDiagnose</code> are queried.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>AlibabaCloud</p>
      */
     @NameInMap("Provider")
     public String provider;
 
     /**
-     * <p>The region ID of the command. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the command. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group to which the command belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-123******</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -127,10 +165,14 @@ public class DescribeCommandsRequest extends TeaModel {
 
     /**
      * <p>The type of the command. Valid values:</p>
-     * <br>
-     * <p>*   RunBatScript: batch command, applicable to Windows instances</p>
-     * <p>*   RunPowerShellScript: PowerShell command, applicable to Windows instances</p>
-     * <p>*   RunShellScript: shell command, applicable to Linux instances</p>
+     * <ul>
+     * <li>RunBatScript: batch command, applicable to Windows instances</li>
+     * <li>RunPowerShellScript: PowerShell command, applicable to Windows instances</li>
+     * <li>RunShellScript: shell command, applicable to Linux instances</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>RunShellScript</p>
      */
     @NameInMap("Type")
     public String type;
@@ -287,18 +329,21 @@ public class DescribeCommandsRequest extends TeaModel {
     public static class DescribeCommandsRequestTag extends TeaModel {
         /**
          * <p>The key of tag N of the command. Valid values of N: 1 to 20. The tag key cannot be an empty string.</p>
-         * <br>
-         * <p>If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags, call the [ListTagResources](~~110425~~) operation.</p>
-         * <br>
-         * <p>The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         * <p>If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</p>
+         * <p>The tag key can be up to 64 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of tag N of the command. Valid values of N: 1 to 20. The tag value can be an empty string.</p>
-         * <br>
-         * <p>It can be up to 128 characters in length and cannot contain `http://` or `https://`.</p>
+         * <p>It can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
          */
         @NameInMap("Value")
         public String value;

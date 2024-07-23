@@ -9,16 +9,20 @@ public class DescribeElasticityAssuranceInstancesRequest extends TeaModel {
 
     /**
      * <p>The number of entries to return on each page.</p>
-     * <br>
      * <p>Maximum value: 100.</p>
-     * <br>
      * <p>Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The token used to start the query. Set the value to the NextToken value obtained from the response to the preceding request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -30,7 +34,11 @@ public class DescribeElasticityAssuranceInstancesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the elasticity assurance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the elasticity assurance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -113,6 +121,10 @@ public class DescribeElasticityAssuranceInstancesRequest extends TeaModel {
     public static class DescribeElasticityAssuranceInstancesRequestPrivatePoolOptions extends TeaModel {
         /**
          * <p>The ID of the elasticity assurance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eap-bp67acfmxazb4****</p>
          */
         @NameInMap("Id")
         public String id;

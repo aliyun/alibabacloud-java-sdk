@@ -12,24 +12,36 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of queried maintenance attributes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -101,6 +113,9 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
     public static class DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeActionOnMaintenance extends TeaModel {
         /**
          * <p>The default maintenance action.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AutoRecover</p>
          */
         @NameInMap("DefaultValue")
         public String defaultValue;
@@ -113,10 +128,14 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
 
         /**
          * <p>The current maintenance action. Valid values:</p>
-         * <br>
-         * <p>*   Stop: stops the instance.</p>
-         * <p>*   AutoRecover: automatically recovers the instance.</p>
-         * <p>*   AutoRedeploy: redeploys the instance, which may damage the data disks attached to the instance.</p>
+         * <ul>
+         * <li>Stop: stops the instance.</li>
+         * <li>AutoRecover: automatically recovers the instance.</li>
+         * <li>AutoRedeploy: redeploys the instance, which may damage the data disks attached to the instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Stop</p>
          */
         @NameInMap("Value")
         public String value;
@@ -155,12 +174,18 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
     public static class DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeMaintenanceWindowsMaintenanceWindow extends TeaModel {
         /**
          * <p>The end time of the maintenance window.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18:00:00</p>
          */
         @NameInMap("EndTime")
         public String endTime;
 
         /**
          * <p>The start time of the maintenance window.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>02:00:00</p>
          */
         @NameInMap("StartTime")
         public String startTime;
@@ -216,6 +241,9 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
 
         /**
          * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp67acfmxazb4p****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
@@ -228,6 +256,9 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
 
         /**
          * <p>Indicates whether an event notification was sent before maintenance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("NotifyOnMaintenance")
         public Boolean notifyOnMaintenance;

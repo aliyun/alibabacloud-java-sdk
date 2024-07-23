@@ -5,25 +5,40 @@ import com.aliyun.tea.*;
 
 public class ReleasePublicIpAddressRequest extends TeaModel {
     /**
-     * <p>> This parameter is unavailable.</p>
+     * <blockquote>
+     * <p>This parameter is unavailable.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>hide</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
      * <p>The ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-bp67acfmxazb4p****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The public IP address of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>121.40.**.**</p>
      */
     @NameInMap("PublicIpAddress")
     public String publicIpAddress;
 
     /**
      * <p>The region ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

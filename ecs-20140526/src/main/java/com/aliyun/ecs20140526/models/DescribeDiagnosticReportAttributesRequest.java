@@ -5,13 +5,21 @@ import com.aliyun.tea.*;
 
 public class DescribeDiagnosticReportAttributesRequest extends TeaModel {
     /**
-     * <p>The region ID of the diagnostic report. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the diagnostic report. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the diagnostic report.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dr-i-uf6i0tv2refv8wz*****</p>
      */
     @NameInMap("ReportId")
     public String reportId;

@@ -12,24 +12,36 @@ public class DetachInstanceRamRoleResponseBody extends TeaModel {
 
     /**
      * <p>The number of instances from which instance RAM roles failed to be detached.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("FailCount")
     public Integer failCount;
 
     /**
      * <p>The name of the instance RAM role.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RamRoleTest</p>
      */
     @NameInMap("RamRoleName")
     public String ramRoleName;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of instances from which you attempted to detach instance RAM roles.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,12 +94,18 @@ public class DetachInstanceRamRoleResponseBody extends TeaModel {
     public static class DetachInstanceRamRoleResponseBodyDetachInstanceRamRoleResultsDetachInstanceRamRoleResultInstanceRamRoleSetsInstanceRamRoleSet extends TeaModel {
         /**
          * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp67acfmxazb4p****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The name of the instance RAM role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RamRoleTest</p>
          */
         @NameInMap("RamRoleName")
         public String ramRoleName;
@@ -136,13 +154,19 @@ public class DetachInstanceRamRoleResponseBody extends TeaModel {
 
     public static class DetachInstanceRamRoleResponseBodyDetachInstanceRamRoleResultsDetachInstanceRamRoleResult extends TeaModel {
         /**
-         * <p>Indicates whether the instance RAM role was detached. If 200 is returned, the instance RAM role was detached. If any other value is returned, the instance RAM role failed to be detached. For more information, see the "Error codes" section.</p>
+         * <p>Indicates whether the instance RAM role was detached. If 200 is returned, the instance RAM role was detached. If any other value is returned, the instance RAM role failed to be detached. For more information, see the &quot;Error codes&quot; section.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         @NameInMap("Code")
         public String code;
 
         /**
          * <p>The ID of the instance from which you attempted to detach the instance RAM role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp67acfmxazb4p****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
@@ -154,13 +178,19 @@ public class DetachInstanceRamRoleResponseBody extends TeaModel {
         public DetachInstanceRamRoleResponseBodyDetachInstanceRamRoleResultsDetachInstanceRamRoleResultInstanceRamRoleSets instanceRamRoleSets;
 
         /**
-         * <p>Indicates whether the instance RAM role was detached. If success is returned, the instance RAM role was detached. If any other value is returned, the instance RAM role failed to be detached. For more information, see the "Error codes" section.</p>
+         * <p>Indicates whether the instance RAM role was detached. If success is returned, the instance RAM role was detached. If any other value is returned, the instance RAM role failed to be detached. For more information, see the &quot;Error codes&quot; section.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
          * <p>Indicates whether the instance RAM role was detached.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Success")
         public Boolean success;

@@ -9,12 +9,18 @@ public class DescribeCapacityReservationInstancesRequest extends TeaModel {
 
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The ID of the capacity reservation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -27,10 +33,12 @@ public class DescribeCapacityReservationInstancesRequest extends TeaModel {
 
     /**
      * <p>The number of entries per page.</p>
-     * <br>
      * <p>Maximum value: 100.</p>
-     * <br>
      * <p>Default value: 10.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -113,6 +121,10 @@ public class DescribeCapacityReservationInstancesRequest extends TeaModel {
     public static class DescribeCapacityReservationInstancesRequestPrivatePoolOptions extends TeaModel {
         /**
          * <p>The token used to start the next query.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>crp-bp67acfmxazb4****</p>
          */
         @NameInMap("Id")
         public String id;

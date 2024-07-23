@@ -13,6 +13,9 @@ public class ModifyRouterInterfaceSpecRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -22,9 +25,15 @@ public class ModifyRouterInterfaceSpecRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RouterInterfaceId")
     public String routerInterfaceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Spec")
     public String spec;
 

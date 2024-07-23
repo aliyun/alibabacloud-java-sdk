@@ -6,42 +6,59 @@ import com.aliyun.tea.*;
 public class DescribeReservedInstancesRequest extends TeaModel {
     /**
      * <p>The allocation type. Valid values:</p>
-     * <br>
-     * <p>*   Normal: queries all reserved instances that belong to the current account.</p>
-     * <p>*   Shared: queries reserved instances that are shared between the main account and linked accounts.</p>
-     * <br>
+     * <ul>
+     * <li>Normal: queries all reserved instances that belong to the current account.</li>
+     * <li>Shared: queries reserved instances that are shared between the main account and linked accounts.</li>
+     * </ul>
      * <p>Default value: Normal.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Normal</p>
      */
     @NameInMap("AllocationType")
     public String allocationType;
 
     /**
-     * <p>The instance type. For more information, see [Instance families](~~25378~~).</p>
+     * <p>The instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs.g5.large</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
 
     /**
-     * <p>The instance family. For more information, see [Instance families](~~25378~~).</p>
+     * <p>The instance family. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs.g5</p>
      */
     @NameInMap("InstanceTypeFamily")
     public String instanceTypeFamily;
 
     /**
      * <p>The reason why the instance is locked. Valid values:</p>
-     * <br>
-     * <p>*   financial: You have an overdue payment in your account, or the reserved instance has expired.</p>
-     * <p>*   security: The reserved instance is locked for security reasons.</p>
+     * <ul>
+     * <li>financial: You have an overdue payment in your account, or the reserved instance has expired.</li>
+     * <li>security: The reserved instance is locked for security reasons.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>security</p>
      */
     @NameInMap("LockReason")
     public String lockReason;
 
     /**
      * <p>The payment option of the reserved instances. Valid values:</p>
-     * <br>
-     * <p>*   No Upfront</p>
-     * <p>*   Partial Upfront</p>
-     * <p>*   All Upfront</p>
+     * <ul>
+     * <li>No Upfront</li>
+     * <li>Partial Upfront</li>
+     * <li>All Upfront</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>All Upfront</p>
      */
     @NameInMap("OfferingType")
     public String offeringType;
@@ -54,34 +71,48 @@ public class DescribeReservedInstancesRequest extends TeaModel {
 
     /**
      * <p>The page number. Pages start from page 1.</p>
-     * <br>
      * <p>Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page. Maximum value: 100.</p>
-     * <br>
      * <p>Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the instances. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the instances. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of reserved instance N. Valid values of N: 1 to 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ri-bpzhex2ulpzf53****</p>
      */
     @NameInMap("ReservedInstanceId")
     public java.util.List<String> reservedInstanceId;
 
     /**
      * <p>The name of the reserved instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testReservedInstanceName</p>
      */
     @NameInMap("ReservedInstanceName")
     public String reservedInstanceName;
@@ -94,22 +125,29 @@ public class DescribeReservedInstancesRequest extends TeaModel {
 
     /**
      * <p>The scope of the reserved instances. Valid values:</p>
-     * <br>
-     * <p>*   Region</p>
-     * <p>*   Zone</p>
-     * <br>
+     * <ul>
+     * <li>Region</li>
+     * <li>Zone</li>
+     * </ul>
      * <p>Default value: Region.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Region</p>
      */
     @NameInMap("Scope")
     public String scope;
 
     /**
      * <p>The status of reserved instance N. Valid values of N: 1 to 100. Valid values:</p>
-     * <br>
-     * <p>*   Creating</p>
-     * <p>*   Active</p>
-     * <p>*   Expired</p>
-     * <p>*   Updating</p>
+     * <ul>
+     * <li>Creating</li>
+     * <li>Active</li>
+     * <li>Expired</li>
+     * <li>Updating</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Active</p>
      */
     @NameInMap("Status")
     public java.util.List<String> status;
@@ -121,7 +159,10 @@ public class DescribeReservedInstancesRequest extends TeaModel {
     public java.util.List<DescribeReservedInstancesRequestTag> tag;
 
     /**
-     * <p>The zone ID of the reserved instances. This parameter is required when Scope is set to Zone. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.</p>
+     * <p>The zone ID of the reserved instances. This parameter is required when Scope is set to Zone. You can call the <a href="https://help.aliyun.com/document_detail/25610.html">DescribeZones</a> operation to query the most recent zone list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-z</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;
@@ -277,15 +318,20 @@ public class DescribeReservedInstancesRequest extends TeaModel {
 
     public static class DescribeReservedInstancesRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N to add to the reserved instance. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain [http:// or https://](http://https://。). The tag key cannot start with acs: or aliyun.</p>
-         * <br>
-         * <p>Up to 1,000 resources with the specified tags can be returned in the response. To query more than 1,000 resources with the specified tags, call the [ListTagResources](~~110425~~) operation.</p>
+         * <p>The key of tag N to add to the reserved instance. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain <a href="http://https://%E3%80%82">http:// or https://</a>. The tag key cannot start with acs: or aliyun.</p>
+         * <p>Up to 1,000 resources with the specified tags can be returned in the response. To query more than 1,000 resources with the specified tags, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag N to add to the reserved instance. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain [http:// or https://](http://https://。). The tag value cannot start with acs:.</p>
+         * <p>The value of tag N to add to the reserved instance. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain <a href="http://https://%E3%80%82">http:// or https://</a>. The tag value cannot start with acs:.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
          */
         @NameInMap("Value")
         public String value;

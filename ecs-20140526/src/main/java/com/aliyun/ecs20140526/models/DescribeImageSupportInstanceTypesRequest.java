@@ -6,9 +6,13 @@ import com.aliyun.tea.*;
 public class DescribeImageSupportInstanceTypesRequest extends TeaModel {
     /**
      * <p>The scenario in which you want to use the image. Valid values:</p>
-     * <br>
-     * <p>- CreateEcs (default): instance creation</p>
-     * <p>- ChangeOS: replacement of the system disk or operating system</p>
+     * <ul>
+     * <li>CreateEcs (default): instance creation</li>
+     * <li>ChangeOS: replacement of the system disk or operating system</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>CreateEcs</p>
      */
     @NameInMap("ActionType")
     public String actionType;
@@ -20,7 +24,10 @@ public class DescribeImageSupportInstanceTypesRequest extends TeaModel {
     public java.util.List<DescribeImageSupportInstanceTypesRequestFilter> filter;
 
     /**
-     * <p>The region ID of the image. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the image. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>m-o6w3gy99qf89rkga****</p>
      */
     @NameInMap("ImageId")
     public String imageId;
@@ -30,6 +37,10 @@ public class DescribeImageSupportInstanceTypesRequest extends TeaModel {
 
     /**
      * <p>Details about the instance types that are supported by the image.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -104,12 +115,18 @@ public class DescribeImageSupportInstanceTypesRequest extends TeaModel {
     public static class DescribeImageSupportInstanceTypesRequestFilter extends TeaModel {
         /**
          * <p>Filter N used to filter instance types.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>imageId</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The ID of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-o6w3gy99qf89rkga****</p>
          */
         @NameInMap("Value")
         public String value;

@@ -5,33 +5,57 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceTypeFamiliesRequest extends TeaModel {
     /**
-     * <p>The generation of the instance family. For more information, see [Overview of instance families](~~25378~~). Valid values:</p>
-     * <br>
-     * <p>*   ecs-1: Generation I, which consists of the earliest and cost-effective instance types</p>
-     * <p>*   ecs-2: Generation II, which provides upgraded software and hardware and higher performance than Generation I</p>
-     * <p>*   ecs-3: Generation III, which consists of high-performance instance families and is suitable for different business scenarios</p>
-     * <p>*   ecs-4: Generation IV, which consists of enterprise-level instance families (such as g5, c5, and r5), ECS Bare Metal Instance families (such as ebmc5s, ebmg5s, and ebmr5s), and burstable instance families (such as t5) and can meet a wide variety of business requirements with lower latency</p>
-     * <p>*   ecs-5: Generation V, which consists of enterprise-level instance families (such as g6, c6, and r6), ECS Bare Metal Instance families (such as ebmg6, ebmg6e, and ebmc6), and storage-enhanced instance families (such as g6e) and delivers quick response times and higher performance</p>
-     * <p>*   ecs-6: Generation VI, which consists of enterprise-level instance families (such as hfc7, hfg7, and hfr7) and ECS Bare Metal Instance families (such as ebmhfg7) and is in invitational preview</p>
+     * <p>The generation of the instance family. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>. Valid values:</p>
+     * <ul>
+     * <li>ecs-1: Generation I, which consists of the earliest and cost-effective instance types</li>
+     * <li>ecs-2: Generation II, which provides upgraded software and hardware and higher performance than Generation I</li>
+     * <li>ecs-3: Generation III, which consists of high-performance instance families and is suitable for different business scenarios</li>
+     * <li>ecs-4: Generation IV, which consists of enterprise-level instance families (such as g5, c5, and r5), ECS Bare Metal Instance families (such as ebmc5s, ebmg5s, and ebmr5s), and burstable instance families (such as t5) and can meet a wide variety of business requirements with lower latency</li>
+     * <li>ecs-5: Generation V, which consists of enterprise-level instance families (such as g6, c6, and r6), ECS Bare Metal Instance families (such as ebmg6, ebmg6e, and ebmc6), and storage-enhanced instance families (such as g6e) and delivers quick response times and higher performance</li>
+     * <li>ecs-6: Generation VI, which consists of enterprise-level instance families (such as hfc7, hfg7, and hfr7) and ECS Bare Metal Instance families (such as ebmhfg7) and is in invitational preview</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs-5</p>
      */
     @NameInMap("Generation")
     public String generation;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="mailto:ECSforCloud@Alibaba.com">ECSforCloud@Alibaba.com</a></p>
+     */
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>155780923770</p>
+     */
     @NameInMap("OwnerId")
     public Long ownerId;
 
     /**
-     * <p>The region ID of the instance family. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the instance family. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ECSforCloud</p>
+     */
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>155780923770</p>
+     */
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 

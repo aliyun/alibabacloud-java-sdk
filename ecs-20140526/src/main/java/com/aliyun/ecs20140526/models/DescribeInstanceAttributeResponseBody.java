@@ -6,29 +6,43 @@ import com.aliyun.tea.*;
 public class DescribeInstanceAttributeResponseBody extends TeaModel {
     /**
      * <p>The ID of the cluster to which the instance belongs.</p>
-     * <br>
-     * <p>> This parameter will be removed in the future. To ensure future compatibility, we recommend that you use other parameters.</p>
+     * <blockquote>
+     * <p>This parameter will be removed in the future. To ensure future compatibility, we recommend that you use other parameters.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cls-bp67acfmxazb4p****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The number of vCPUs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8</p>
      */
     @NameInMap("Cpu")
     public Integer cpu;
 
     /**
-     * <p>The time when the instance was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. For more information, see [ISO 8601](~~25696~~).</p>
+     * <p>The time when the instance was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. For more information, see <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2017-12-10T04:04Z</p>
      */
     @NameInMap("CreationTime")
     public String creationTime;
 
     /**
      * <p>The performance mode of the burstable instance. Valid values:</p>
-     * <br>
-     * <p>*   Standard: the standard mode. For more information, see the [Performance modes](~~59977#section-svb-w9d-dju~~) section of the "Overview of burstable instances" topic.</p>
-     * <p>*   Unlimited: the unlimited mode. For more information, see the [Performance modes](~~59977#section-svb-w9d-dju~~) section of the "Overview of burstable instances" topic.</p>
+     * <ul>
+     * <li>Standard: the standard mode. For more information, see the <a href="~~59977#section-svb-w9d-dju~~">Performance modes</a> section of the &quot;Overview of burstable instances&quot; topic.</li>
+     * <li>Unlimited: the unlimited mode. For more information, see the <a href="~~59977#section-svb-w9d-dju~~">Performance modes</a> section of the &quot;Overview of burstable instances&quot; topic.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Standard</p>
      */
     @NameInMap("CreditSpecification")
     public String creditSpecification;
@@ -41,6 +55,9 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
 
     /**
      * <p>The description of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testDescription</p>
      */
     @NameInMap("Description")
     public String description;
@@ -53,29 +70,41 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the Jumbo Frame feature is enabled for the instance. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
-     * <br>
-     * <p>For more information, see [MTUs](~~200512~~).</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/200512.html">MTUs</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("EnableJumboFrame")
     public Boolean enableJumboFrame;
 
     /**
-     * <p>The time when the instance expires. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. For more information, see [ISO 8601](~~25696~~).</p>
+     * <p>The time when the instance expires. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. For more information, see <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2017-12-10T04:04Z</p>
      */
     @NameInMap("ExpiredTime")
     public String expiredTime;
 
     /**
      * <p>The hostname of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testHostName</p>
      */
     @NameInMap("HostName")
     public String hostName;
 
     /**
      * <p>The ID of the image that the instance is running.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>m-bp1h46wfpjsjastc****</p>
      */
     @NameInMap("ImageId")
     public String imageId;
@@ -88,83 +117,118 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
 
     /**
      * <p>The billing method of the instance. Valid values:</p>
-     * <br>
-     * <p>*   PrePaid: subscription.</p>
-     * <p>*   PostPaid: pay-as-you-go</p>
+     * <ul>
+     * <li>PrePaid: subscription.</li>
+     * <li>PostPaid: pay-as-you-go</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>PrePaid</p>
      */
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
 
     /**
      * <p>The instance ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-uf6f5trc95ug8t33****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The instance name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testInstanceName</p>
      */
     @NameInMap("InstanceName")
     public String instanceName;
 
     /**
      * <p>The network type of the instance. Valid values:</p>
-     * <br>
-     * <p>*   classic: classic network</p>
-     * <p>*   vpc: VPC</p>
+     * <ul>
+     * <li>classic: classic network</li>
+     * <li>vpc: VPC</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc</p>
      */
     @NameInMap("InstanceNetworkType")
     public String instanceNetworkType;
 
     /**
      * <p>The instance type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs.g5.large</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
 
     /**
      * <p>The billing method for network usage. Valid values:</p>
-     * <br>
-     * <p>*   PayByBandwidth</p>
-     * <p>*   PayByTraffic</p>
-     * <br>
-     * <p>>  When the **pay-by-traffic** billing method is used for network usage, the maximum inbound and outbound bandwidths are used as the upper limits of bandwidths instead of guaranteed performance specifications. In scenarios in which demands exceed resource supplies, the maximum bandwidths may not be reached. If you want guaranteed bandwidths for your instance, use the **pay-by-bandwidth** billing method for network usage.</p>
+     * <ul>
+     * <li>PayByBandwidth</li>
+     * <li>PayByTraffic</li>
+     * </ul>
+     * <blockquote>
+     * <p> When the <strong>pay-by-traffic</strong> billing method is used for network usage, the maximum inbound and outbound bandwidths are used as the upper limits of bandwidths instead of guaranteed performance specifications. In scenarios in which demands exceed resource supplies, the maximum bandwidths may not be reached. If you want guaranteed bandwidths for your instance, use the <strong>pay-by-bandwidth</strong> billing method for network usage.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>PayByTraffic</p>
      */
     @NameInMap("InternetChargeType")
     public String internetChargeType;
 
     /**
      * <p>The maximum inbound public bandwidth. Unit: Mbit/s.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("InternetMaxBandwidthIn")
     public Integer internetMaxBandwidthIn;
 
     /**
      * <p>The maximum outbound public bandwidth. Unit: Mbit/s.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("InternetMaxBandwidthOut")
     public Integer internetMaxBandwidthOut;
 
     /**
      * <p>Indicates whether the instance is I/O optimized.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IoOptimized")
     public String ioOptimized;
 
     /**
      * <p>The memory size of the instance. Unit: MiB.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16384</p>
      */
     @NameInMap("Memory")
     public Integer memory;
 
     /**
      * <p>The reason why the instance was locked. Valid values:</p>
-     * <br>
-     * <p>*   financial: The dedicated host was locked due to overdue payments.</p>
-     * <p>*   security: The instance was locked due to security reasons.</p>
-     * <p>*   recycling: The preemptible instance was locked and pending release.</p>
-     * <p>*   dedicatedhostfinancial: The instance was locked due to overdue payments for the dedicated host.</p>
-     * <p>*   refunded: The instance was locked because a refund was made for the instance.</p>
+     * <ul>
+     * <li>financial: The dedicated host was locked due to overdue payments.</li>
+     * <li>security: The instance was locked due to security reasons.</li>
+     * <li>recycling: The preemptible instance was locked and pending release.</li>
+     * <li>dedicatedhostfinancial: The instance was locked due to overdue payments for the dedicated host.</li>
+     * <li>refunded: The instance was locked because a refund was made for the instance.</li>
+     * </ul>
      */
     @NameInMap("OperationLocks")
     public DescribeInstanceAttributeResponseBodyOperationLocks operationLocks;
@@ -177,12 +241,18 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the region in which the instance resides.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -195,36 +265,51 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
 
     /**
      * <p>The serial number of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>51d1353b-22bf-4567-a176-8b3e12e4****</p>
      */
     @NameInMap("SerialNumber")
     public String serialNumber;
 
     /**
      * <p>The status of the instance. Valid values:</p>
-     * <br>
-     * <p>*   Pending: The instance is being created.</p>
-     * <p>*   Running: The instance is running.</p>
-     * <p>*   Starting: The instance is being started.</p>
-     * <p>*   Stopping: The instance is being stopped.</p>
-     * <p>*   Stopped: The instance is stopped.</p>
+     * <ul>
+     * <li>Pending: The instance is being created.</li>
+     * <li>Running: The instance is running.</li>
+     * <li>Starting: The instance is being started.</li>
+     * <li>Stopping: The instance is being stopped.</li>
+     * <li>Stopped: The instance is stopped.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Running</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
      * <p>Indicates whether the system implements billing after the instance is stopped. Valid values:</p>
-     * <br>
-     * <p>*   KeepCharging: The instance is stopped in standard mode. The billing of the instance continues after the instance is stopped, and resources are retained for the instance.</p>
-     * <p>*   StopCharging: The instance is stopped in economical mode. The billing of some resources of the instance stops after the instance is stopped. When the instance is stopped, its resources such as vCPUs, memory, and public IP address are released. The instance may be unable to start again if some required resources are out of stock in the current region.</p>
-     * <p>*   Not-applicable: The instance does not support economical mode.</p>
+     * <ul>
+     * <li>KeepCharging: The instance is stopped in standard mode. The billing of the instance continues after the instance is stopped, and resources are retained for the instance.</li>
+     * <li>StopCharging: The instance is stopped in economical mode. The billing of some resources of the instance stops after the instance is stopped. When the instance is stopped, its resources such as vCPUs, memory, and public IP address are released. The instance may be unable to start again if some required resources are out of stock in the current region.</li>
+     * <li>Not-applicable: The instance does not support economical mode.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>KeepCharging</p>
      */
     @NameInMap("StoppedMode")
     public String stoppedMode;
 
     /**
      * <p>The virtual LAN (VLAN) ID of the instance.</p>
-     * <br>
-     * <p>> This parameter will be removed in the future. To ensure future compatibility, we recommend that you use other parameters.</p>
+     * <blockquote>
+     * <p>This parameter will be removed in the future. To ensure future compatibility, we recommend that you use other parameters.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("VlanId")
     public String vlanId;
@@ -237,6 +322,9 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the zone in which the instance resides.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-g</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;
@@ -513,12 +601,18 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     public static class DescribeInstanceAttributeResponseBodyDedicatedHostAttribute extends TeaModel {
         /**
          * <p>The ID of the dedicated host.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dh-2ze7qrzz6lvbfhr0****</p>
          */
         @NameInMap("DedicatedHostId")
         public String dedicatedHostId;
 
         /**
          * <p>The name of the dedicated host.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs-autoui-create-ddh-temp</p>
          */
         @NameInMap("DedicatedHostName")
         public String dedicatedHostName;
@@ -549,29 +643,43 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     public static class DescribeInstanceAttributeResponseBodyEipAddress extends TeaModel {
         /**
          * <p>The ID of the EIP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eip-wz9uilio26dfscamm****</p>
          */
         @NameInMap("AllocationId")
         public String allocationId;
 
         /**
          * <p>The maximum public bandwidth of the EIP. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         @NameInMap("Bandwidth")
         public Integer bandwidth;
 
         /**
          * <p>The billing method for network usage. Valid values:</p>
-         * <br>
-         * <p>*   PayByBandwidth</p>
-         * <p>*   PayByTraffic</p>
-         * <br>
-         * <p>>  When the **pay-by-traffic** billing method is used for network usage, the maximum inbound and outbound bandwidths are used as the upper limits of bandwidths instead of guaranteed performance specifications. In scenarios in which demands exceed resource supplies, the maximum bandwidths may not be reached. If you want guaranteed bandwidths for your instance, use the **pay-by-bandwidth** billing method for network usage.</p>
+         * <ul>
+         * <li>PayByBandwidth</li>
+         * <li>PayByTraffic</li>
+         * </ul>
+         * <blockquote>
+         * <p> When the <strong>pay-by-traffic</strong> billing method is used for network usage, the maximum inbound and outbound bandwidths are used as the upper limits of bandwidths instead of guaranteed performance specifications. In scenarios in which demands exceed resource supplies, the maximum bandwidths may not be reached. If you want guaranteed bandwidths for your instance, use the <strong>pay-by-bandwidth</strong> billing method for network usage.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>PayByTraffic</p>
          */
         @NameInMap("InternetChargeType")
         public String internetChargeType;
 
         /**
          * <p>The ID of the elastic IP address (EIP).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30.21.**.**</p>
          */
         @NameInMap("IpAddress")
         public String ipAddress;
@@ -637,12 +745,16 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     public static class DescribeInstanceAttributeResponseBodyOperationLocksLockReason extends TeaModel {
         /**
          * <p>The reason why the instance was locked. Valid values:</p>
-         * <br>
-         * <p>*   financial: The instance was locked due to overdue payments.</p>
-         * <p>*   security: The instance was locked due to security reasons.</p>
-         * <p>*   recycling: The preemptible instance was locked and pending release.</p>
-         * <p>*   dedicatedhostfinancial: The instance was locked due to overdue payments for the dedicated host.</p>
-         * <p>*   refunded: The instance was locked because a refund is made for the instance.</p>
+         * <ul>
+         * <li>financial: The instance was locked due to overdue payments.</li>
+         * <li>security: The instance was locked due to security reasons.</li>
+         * <li>recycling: The preemptible instance was locked and pending release.</li>
+         * <li>dedicatedhostfinancial: The instance was locked due to overdue payments for the dedicated host.</li>
+         * <li>refunded: The instance was locked because a refund is made for the instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>financial</p>
          */
         @NameInMap("LockReason")
         public String lockReason;
@@ -741,6 +853,9 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     public static class DescribeInstanceAttributeResponseBodyVpcAttributes extends TeaModel {
         /**
          * <p>The NAT IP address of the instance. It is used by ECS instances in different VPCs for communication.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.17.**.**</p>
          */
         @NameInMap("NatIpAddress")
         public String natIpAddress;
@@ -753,12 +868,18 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the vSwitch to which the instance is connected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-uf6ixacqz8osrwnqb****</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
         /**
          * <p>The ID of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-wz9e4e9pmbcnj6ki6****</p>
          */
         @NameInMap("VpcId")
         public String vpcId;

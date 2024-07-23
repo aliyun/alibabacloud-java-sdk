@@ -8,30 +8,44 @@ public class ModifyCapacityReservationRequest extends TeaModel {
     public ModifyCapacityReservationRequestPrivatePoolOptions privatePoolOptions;
 
     /**
-     * <p>The description of the capacity reservation. The description must be 2 to 256 characters in length. It cannot start with `http://` or `https://`.</p>
+     * <p>The description of the capacity reservation. The description must be 2 to 256 characters in length. It cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>This is description.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The expiration time of the capacity reservation. This parameter takes effect only when `EndTimeType` is set to Limited. Specify the time in the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC. For more information, see [ISO 8601](~~25696~~).</p>
+     * <p>The expiration time of the capacity reservation. This parameter takes effect only when <code>EndTimeType</code> is set to Limited. Specify the time in the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in UTC. For more information, see <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-10-30T06:32:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The release mode of the capacity reservation. Valid values:</p>
-     * <br>
-     * <p>*   Limited: The capacity reservation is automatically released at the specified point in time. If you configure this parameter, you must also configure `EndTime`.</p>
-     * <p>*   Unlimited: The capacity reservation must be manually released. You can release it anytime.</p>
+     * <ul>
+     * <li>Limited: The capacity reservation is automatically released at the specified point in time. If you configure this parameter, you must also configure <code>EndTime</code>.</li>
+     * <li>Unlimited: The capacity reservation must be manually released. You can release it anytime.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Unlimited</p>
      */
     @NameInMap("EndTimeType")
     public String endTimeType;
 
     /**
      * <p>The total number of instances for which capacity is reserved. Valid values: the number of used instances to 1000.</p>
-     * <br>
-     * <p>> When you increase the number of instances, the increase may fail due to insufficient resources.</p>
+     * <blockquote>
+     * <p>When you increase the number of instances, the increase may fail due to insufficient resources.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("InstanceAmount")
     public Integer instanceAmount;
@@ -44,17 +58,26 @@ public class ModifyCapacityReservationRequest extends TeaModel {
 
     /**
      * <p>The operating system of the image used by the instance. Valid values:</p>
-     * <br>
-     * <p>*   Windows</p>
-     * <p>*   Linux</p>
-     * <br>
-     * <p>> This parameter is unavailable.</p>
+     * <ul>
+     * <li>Windows</li>
+     * <li>Linux</li>
+     * </ul>
+     * <blockquote>
+     * <p>This parameter is unavailable.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Linux</p>
      */
     @NameInMap("Platform")
     public String platform;
 
     /**
-     * <p>The region ID of the capacity reservation. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the capacity reservation. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -67,8 +90,12 @@ public class ModifyCapacityReservationRequest extends TeaModel {
 
     /**
      * <p>The mode in which the capacity reservation takes effect. Only immediate capacity reservations are supported. You do not need to specify a value for this parameter.</p>
-     * <br>
-     * <p>> If you do not specify a value for this parameter, the capacity reservation immediately takes effect.</p>
+     * <blockquote>
+     * <p>If you do not specify a value for this parameter, the capacity reservation immediately takes effect.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Now</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -177,12 +204,19 @@ public class ModifyCapacityReservationRequest extends TeaModel {
     public static class ModifyCapacityReservationRequestPrivatePoolOptions extends TeaModel {
         /**
          * <p>The capacity reservation ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>crp-bp67acfmxazb4****</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
-         * <p>The name of the capacity reservation. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
+         * <p>The name of the capacity reservation. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eapTestName</p>
          */
         @NameInMap("Name")
         public String name;

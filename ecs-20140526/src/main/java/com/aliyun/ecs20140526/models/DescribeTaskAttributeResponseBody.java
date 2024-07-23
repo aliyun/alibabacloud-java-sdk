@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class DescribeTaskAttributeResponseBody extends TeaModel {
     /**
      * <p>The time when the task was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2015-11-23T02:13Z</p>
      */
     @NameInMap("CreationTime")
     public String creationTime;
 
     /**
      * <p>The number of failed tasks.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("FailedCount")
     public Integer failedCount;
 
     /**
      * <p>The time when the task was complete.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2015-11-23T02:19Z</p>
      */
     @NameInMap("FinishedTime")
     public String finishedTime;
@@ -30,57 +39,85 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
 
     /**
      * <p>The region ID of the task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The number of completed tasks.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("SuccessCount")
     public Integer successCount;
 
     /**
-     * <p>Indicates whether the task can be canceled ([CancelTask](https://www.alibabacloud.com/help/en/elastic-compute-service/latest/canceltask)). Valid values: </p>
-     * <br>
-     * <p>- true: The task can be canceled.</p>
-     * <p>- false: The task cannot be canceled.</p>
+     * <p>Indicates whether the task can be canceled (<a href="https://www.alibabacloud.com/help/en/elastic-compute-service/latest/canceltask">CancelTask</a>). Valid values: </p>
+     * <ul>
+     * <li>true: The task can be canceled.</li>
+     * <li>false: The task cannot be canceled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("SupportCancel")
     public String supportCancel;
 
     /**
      * <p>The operation name of the task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ExportImage</p>
      */
     @NameInMap("TaskAction")
     public String taskAction;
 
     /**
      * <p>The ID of the task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>t-ce946ntx4wr****</p>
      */
     @NameInMap("TaskId")
     public String taskId;
 
     /**
      * <p>The progress of the task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100%</p>
      */
     @NameInMap("TaskProcess")
     public String taskProcess;
 
     /**
      * <p>The status of the task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Finished</p>
      */
     @NameInMap("TaskStatus")
     public String taskStatus;
 
     /**
      * <p>The total number of tasks.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -197,12 +234,18 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
     public static class DescribeTaskAttributeResponseBodyOperationProgressSetOperationProgressRelatedItemSetRelatedItem extends TeaModel {
         /**
          * <p>The name of the related item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OSSObject</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The value of the related item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MYOSSPRE_m-23f8tcp***_t-23ym6mv***.vhd</p>
          */
         @NameInMap("Value")
         public String value;
@@ -252,18 +295,27 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
     public static class DescribeTaskAttributeResponseBodyOperationProgressSetOperationProgress extends TeaModel {
         /**
          * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ParameterInvalid</p>
          */
         @NameInMap("ErrorCode")
         public String errorCode;
 
         /**
          * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified RegionId parameter is invalid.</p>
          */
         @NameInMap("ErrorMsg")
         public String errorMsg;
 
         /**
          * <p>The status of the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         @NameInMap("OperationStatus")
         public String operationStatus;

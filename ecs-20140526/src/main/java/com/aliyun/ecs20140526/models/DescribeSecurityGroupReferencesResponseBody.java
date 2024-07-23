@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeSecurityGroupReferencesResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class DescribeSecurityGroupReferencesResponseBody extends TeaModel {
     public static class DescribeSecurityGroupReferencesResponseBodySecurityGroupReferencesSecurityGroupReferenceReferencingSecurityGroupsReferencingSecurityGroup extends TeaModel {
         /**
          * <p>The ID of the Alibaba Cloud account to which the security group belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456****</p>
          */
         @NameInMap("AliUid")
         public String aliUid;
 
         /**
          * <p>The ID of the security group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-bp67acfmxazb4j****</p>
          */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
@@ -101,6 +110,9 @@ public class DescribeSecurityGroupReferencesResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the specified security group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-bp67acfmxazb4p****</p>
          */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;

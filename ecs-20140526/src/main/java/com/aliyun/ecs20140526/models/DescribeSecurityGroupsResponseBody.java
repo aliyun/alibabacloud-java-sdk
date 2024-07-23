@@ -6,34 +6,51 @@ import com.aliyun.tea.*;
 public class DescribeSecurityGroupsResponseBody extends TeaModel {
     /**
      * <p>A pagination token. If the return value of this parameter is empty when MaxResults and NextToken are used for a paged query, no next page exists.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>e71d8a535bd9cc11</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The page number.</p>
-     * <br>
-     * <p>> This parameter will be deprecated in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
+     * <blockquote>
+     * <p>This parameter will be deprecated in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
-     * <br>
-     * <p>> This parameter will be deprecated in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
+     * <blockquote>
+     * <p>This parameter will be deprecated in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The region ID of the security group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -45,7 +62,10 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
     public DescribeSecurityGroupsResponseBodySecurityGroups securityGroups;
 
     /**
-     * <p>The total number of security groups returned. If `MaxResults` and `NextToken` are specified in the request, the value of this parameter is not returned.</p>
+     * <p>The total number of security groups returned. If <code>MaxResults</code> and <code>NextToken</code> are specified in the request, the value of this parameter is not returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -114,12 +134,18 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
     public static class DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroupTagsTag extends TeaModel {
         /**
          * <p>The key of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
          * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
          */
         @NameInMap("TagValue")
         public String tagValue;
@@ -168,72 +194,103 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
 
     public static class DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroup extends TeaModel {
         /**
-         * <p>The number of private IP addresses that can be added to the security group. For more information, see the "Security group capacity" section in [Basic security groups and advanced security groups](~~605897#section-kj9-e46-6v5~~).</p>
-         * <br>
+         * <p>The number of private IP addresses that can be added to the security group. For more information, see the &quot;Security group capacity&quot; section in <a href="~~605897#section-kj9-e46-6v5~~">Basic security groups and advanced security groups</a>.</p>
          * <p>If you set IsQueryEcsCount to True, the return value of AvailableInstanceAmount is valid.</p>
-         * <br>
-         * <p>>  This parameter is deprecated. The returned quantity is provided only for reference. The actual quantity may differ from the returned quantity.</p>
+         * <blockquote>
+         * <p> This parameter is deprecated. The returned quantity is provided only for reference. The actual quantity may differ from the returned quantity.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("AvailableInstanceAmount")
         public Integer availableInstanceAmount;
 
         /**
-         * <p>The time when the security group was created. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddThh:mmZ format. The time is displayed in UTC.</p>
+         * <p>The time when the security group was created. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddThh:mmZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-08-31T03:12:29Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The description of the security group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestDescription</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The number of private IP addresses that are contained in the security group. For more information, see the "Security group capacity" section in [Basic security groups and advanced security groups](~~605897#section-kj9-e46-6v5~~).</p>
-         * <br>
+         * <p>The number of private IP addresses that are contained in the security group. For more information, see the &quot;Security group capacity&quot; section in <a href="~~605897#section-kj9-e46-6v5~~">Basic security groups and advanced security groups</a>.</p>
          * <p>If you set IsQueryEcsCount to True, the return value of EcsCount is valid.</p>
-         * <br>
-         * <p>>  This parameter is deprecated. The returned quantity is provided only for reference. The actual quantity may differ from the returned quantity.</p>
+         * <blockquote>
+         * <p> This parameter is deprecated. The returned quantity is provided only for reference. The actual quantity may differ from the returned quantity.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("EcsCount")
         public Integer ecsCount;
 
         /**
          * <p>The ID of the resource group to which the security group belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-bp67acfmxazb4p****</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>The ID of the security group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-bp67acfmxazb4p****</p>
          */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
         /**
          * <p>The name of the security group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SGTestName</p>
          */
         @NameInMap("SecurityGroupName")
         public String securityGroupName;
 
         /**
          * <p>The type of the security group. Valid values:</p>
-         * <br>
-         * <p>*   normal: basic security group</p>
-         * <p>*   enterprise: advanced security group</p>
+         * <ul>
+         * <li>normal: basic security group</li>
+         * <li>enterprise: advanced security group</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         @NameInMap("SecurityGroupType")
         public String securityGroupType;
 
         /**
          * <p>The ID of the distributor to which the security group belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345678910</p>
          */
         @NameInMap("ServiceID")
         public Long serviceID;
 
         /**
          * <p>Indicates whether the user of the security group is an Alibaba Cloud service or a distributor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("ServiceManaged")
         public Boolean serviceManaged;
@@ -246,6 +303,9 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the VPC to which the security group belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp67acfmxazb4p****</p>
          */
         @NameInMap("VpcId")
         public String vpcId;

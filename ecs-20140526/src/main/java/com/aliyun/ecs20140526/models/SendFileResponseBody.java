@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class SendFileResponseBody extends TeaModel {
     /**
      * <p>The ID of the command task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>f-7d2a745b412b46****</p>
      */
     @NameInMap("InvokeId")
     public String invokeId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
     @NameInMap("RequestId")
     public String requestId;

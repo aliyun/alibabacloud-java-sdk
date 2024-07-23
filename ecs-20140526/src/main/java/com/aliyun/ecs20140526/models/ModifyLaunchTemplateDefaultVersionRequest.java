@@ -6,18 +6,28 @@ import com.aliyun.tea.*;
 public class ModifyLaunchTemplateDefaultVersionRequest extends TeaModel {
     /**
      * <p>The default version number of the instance launch template.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("DefaultVersionNumber")
     public Long defaultVersionNumber;
 
     /**
      * <p>The ID of the launch template. You must specify the LaunchTemplateId or LaunchTemplateName parameter to determine an instance launch template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lt-s-bp177juajht6****</p>
      */
     @NameInMap("LaunchTemplateId")
     public String launchTemplateId;
 
     /**
      * <p>The name of the instance launch template. You must specify the LaunchTemplateId or LaunchTemplateName parameter to determine an instance launch template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testLaunchTemplateName</p>
      */
     @NameInMap("LaunchTemplateName")
     public String launchTemplateName;
@@ -29,7 +39,11 @@ public class ModifyLaunchTemplateDefaultVersionRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the launch template. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the launch template. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

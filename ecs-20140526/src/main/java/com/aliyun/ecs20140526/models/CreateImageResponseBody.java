@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreateImageResponseBody extends TeaModel {
     /**
      * <p>The image ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>m-bp146shijn7hujku****</p>
      */
     @NameInMap("ImageId")
     public String imageId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C8B26B44-0189-443E-9816-*******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
