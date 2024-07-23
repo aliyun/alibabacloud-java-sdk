@@ -2639,6 +2639,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.snapshotPolicyId)) {
+            query.put("SnapshotPolicyId", request.snapshotPolicyId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
             query.put("Tag", request.tag);
         }

@@ -263,6 +263,9 @@ public class CreateDesktopsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("SnapshotPolicyId")
+    public String snapshotPolicyId;
+
     /**
      * <p>The tags that you want to add to the cloud desktop.</p>
      */
@@ -515,6 +518,14 @@ public class CreateDesktopsRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public CreateDesktopsRequest setSnapshotPolicyId(String snapshotPolicyId) {
+        this.snapshotPolicyId = snapshotPolicyId;
+        return this;
+    }
+    public String getSnapshotPolicyId() {
+        return this.snapshotPolicyId;
     }
 
     public CreateDesktopsRequest setTag(java.util.List<CreateDesktopsRequestTag> tag) {

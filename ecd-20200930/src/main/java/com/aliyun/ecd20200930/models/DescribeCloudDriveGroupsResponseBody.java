@@ -92,15 +92,38 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeCloudDriveGroupsResponseBodyCloudDriveGroupsAdminUserInfos extends TeaModel {
+        @NameInMap("Email")
+        public String email;
+
         @NameInMap("EndUserId")
         public String endUserId;
+
+        @NameInMap("JobNumber")
+        public String jobNumber;
 
         @NameInMap("NickName")
         public String nickName;
 
+        @NameInMap("Phone")
+        public String phone;
+
+        @NameInMap("RealNickName")
+        public String realNickName;
+
+        @NameInMap("Remark")
+        public String remark;
+
         public static DescribeCloudDriveGroupsResponseBodyCloudDriveGroupsAdminUserInfos build(java.util.Map<String, ?> map) throws Exception {
             DescribeCloudDriveGroupsResponseBodyCloudDriveGroupsAdminUserInfos self = new DescribeCloudDriveGroupsResponseBodyCloudDriveGroupsAdminUserInfos();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeCloudDriveGroupsResponseBodyCloudDriveGroupsAdminUserInfos setEmail(String email) {
+            this.email = email;
+            return this;
+        }
+        public String getEmail() {
+            return this.email;
         }
 
         public DescribeCloudDriveGroupsResponseBodyCloudDriveGroupsAdminUserInfos setEndUserId(String endUserId) {
@@ -111,12 +134,44 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
             return this.endUserId;
         }
 
+        public DescribeCloudDriveGroupsResponseBodyCloudDriveGroupsAdminUserInfos setJobNumber(String jobNumber) {
+            this.jobNumber = jobNumber;
+            return this;
+        }
+        public String getJobNumber() {
+            return this.jobNumber;
+        }
+
         public DescribeCloudDriveGroupsResponseBodyCloudDriveGroupsAdminUserInfos setNickName(String nickName) {
             this.nickName = nickName;
             return this;
         }
         public String getNickName() {
             return this.nickName;
+        }
+
+        public DescribeCloudDriveGroupsResponseBodyCloudDriveGroupsAdminUserInfos setPhone(String phone) {
+            this.phone = phone;
+            return this;
+        }
+        public String getPhone() {
+            return this.phone;
+        }
+
+        public DescribeCloudDriveGroupsResponseBodyCloudDriveGroupsAdminUserInfos setRealNickName(String realNickName) {
+            this.realNickName = realNickName;
+            return this;
+        }
+        public String getRealNickName() {
+            return this.realNickName;
+        }
+
+        public DescribeCloudDriveGroupsResponseBodyCloudDriveGroupsAdminUserInfos setRemark(String remark) {
+            this.remark = remark;
+            return this;
+        }
+        public String getRemark() {
+            return this.remark;
         }
 
     }
