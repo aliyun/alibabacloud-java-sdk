@@ -15,7 +15,7 @@ public class AttachWhitelistTemplateToInstanceRequest extends TeaModel {
     public String insName;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

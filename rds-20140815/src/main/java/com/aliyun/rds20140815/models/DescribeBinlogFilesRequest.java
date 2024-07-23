@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeBinlogFilesRequest extends TeaModel {
     /**
-     * <p>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/610396.html">DescribeDBInstances</a> operation to query the ID of the instance.</p>
+     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,7 +32,7 @@ public class DescribeBinlogFilesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Valid values: any non-zero positive integer.</p>
+     * <p>The page number. Pages start from 1.</p>
      * <p>Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
@@ -42,7 +42,7 @@ public class DescribeBinlogFilesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page.</p>
      * <p>Valid values: <strong>30</strong> to <strong>100</strong>.</p>
      * <p>Default value: <strong>30</strong>.</p>
      * 

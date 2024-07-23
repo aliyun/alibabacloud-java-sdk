@@ -47,7 +47,7 @@ public class DescribeParametersResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The list of parameters that are in use.</p>
+     * <p>The parameters that are in use.</p>
      */
     @NameInMap("RunningParameters")
     public DescribeParametersResponseBodyRunningParameters runningParameters;
@@ -260,6 +260,12 @@ public class DescribeParametersResponseBody extends TeaModel {
     }
 
     public static class DescribeParametersResponseBodyRunningParametersDBInstanceParameter extends TeaModel {
+        /**
+         * <p>The default value of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("ParameterDefaultValue")
         public String parameterDefaultValue;
 
@@ -290,6 +296,12 @@ public class DescribeParametersResponseBody extends TeaModel {
         @NameInMap("ParameterValue")
         public String parameterValue;
 
+        /**
+         * <p>The valid values of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1~100</p>
+         */
         @NameInMap("ParameterValueRange")
         public String parameterValueRange;
 

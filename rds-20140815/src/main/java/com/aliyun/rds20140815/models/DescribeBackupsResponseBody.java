@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeBackupsResponseBody extends TeaModel {
     /**
-     * <p>The queried backup sets.</p>
+     * <p>The returned backup sets.</p>
      */
     @NameInMap("Items")
     public DescribeBackupsResponseBodyItems items;
@@ -370,9 +370,27 @@ public class DescribeBackupsResponseBody extends TeaModel {
         @NameInMap("Encryption")
         public String encryption;
 
+        /**
+         * <p>The type of the database engine. Valid values:</p>
+         * <ul>
+         * <li>MySQL</li>
+         * <li>SQLServer</li>
+         * <li>PostgreSQL</li>
+         * <li>MariaDB</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
+         */
         @NameInMap("Engine")
         public String engine;
 
+        /**
+         * <p>The version of the database engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8.0</p>
+         */
         @NameInMap("EngineVersion")
         public String engineVersion;
 

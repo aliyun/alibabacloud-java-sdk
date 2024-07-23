@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     /**
-     * <p>The details of the instance.</p>
+     * <p>The details of instances.</p>
      */
     @NameInMap("Items")
     public DescribeDBInstanceAttributeResponseBodyItems items;
@@ -313,6 +313,12 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("DBInstanceIds")
         public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeExtraDBInstanceIds DBInstanceIds;
 
+        /**
+         * <p>The recovery model. Valid values: Simple and Full.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Simple</p>
+         */
         @NameInMap("RecoveryModel")
         public String recoveryModel;
 
