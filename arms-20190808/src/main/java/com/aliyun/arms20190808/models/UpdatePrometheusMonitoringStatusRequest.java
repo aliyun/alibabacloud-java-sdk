@@ -35,7 +35,7 @@ public class UpdatePrometheusMonitoringStatusRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The status of the monitoring configuration. Valid values: run and stop.</p>
+     * <p>The status of the monitoring configuration. Valid values: run and stop. The status of Probe cannot be modified.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

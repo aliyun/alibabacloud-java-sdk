@@ -7,7 +7,7 @@ public class ListPrometheusInstancesRequest extends TeaModel {
     /**
      * <p>Optional instance types (if left blank, all types of instances will be queried):</p>
      * <ul>
-     * <li>cloud-product-prometheus </li>
+     * <li>cloud-product-prometheus</li>
      * <li>ManagedKubernetes</li>
      * <li>satellite</li>
      * <li>Ask</li>
@@ -26,7 +26,7 @@ public class ListPrometheusInstancesRequest extends TeaModel {
     public String clusterType;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,7 +36,7 @@ public class ListPrometheusInstancesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Specifies whether to query global aggregation instances. Valid values:</p>
+     * <p>Specifies whether to obtain global aggregation instances. Valid values:</p>
      * <ul>
      * <li>true</li>
      * <li>false</li>

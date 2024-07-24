@@ -58,6 +58,8 @@ public class CreateOrUpdateSilencePolicyRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>Specifies whether to enable the silence policy. Valid values: enable and disable.</p>
+     * 
      * <strong>example:</strong>
      * <p>enable</p>
      */

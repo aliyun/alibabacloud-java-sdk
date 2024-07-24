@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateRumFileStatusRequest extends TeaModel {
     /**
+     * <p>The file name.</p>
+     * 
      * <strong>example:</strong>
      * <p>test.js.map</p>
      */
@@ -12,6 +14,8 @@ public class UpdateRumFileStatusRequest extends TeaModel {
     public String fileName;
 
     /**
+     * <p>The application ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>atc8xxxx
      * cf@d8deedfa9bf****</p>
@@ -20,6 +24,7 @@ public class UpdateRumFileStatusRequest extends TeaModel {
     public String pid;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,6 +34,8 @@ public class UpdateRumFileStatusRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The size of the file. Unit: bytes.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -36,6 +43,8 @@ public class UpdateRumFileStatusRequest extends TeaModel {
     public String size;
 
     /**
+     * <p>The status of the file. Valid values: SUCCESS and INIT.</p>
+     * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
      */
@@ -43,6 +52,8 @@ public class UpdateRumFileStatusRequest extends TeaModel {
     public String status;
 
     /**
+     * <p>The unique ID of the file. If you do not set this parameter, the system automatically sets a UUID for you.</p>
+     * 
      * <strong>example:</strong>
      * <p>MS4wLjAtbWFpbi4wZjM0NzRlOSxxxxxx</p>
      */
@@ -50,6 +61,8 @@ public class UpdateRumFileStatusRequest extends TeaModel {
     public String uuid;
 
     /**
+     * <p>The version number of the file.</p>
+     * 
      * <strong>example:</strong>
      * <p>1.0.0</p>
      */

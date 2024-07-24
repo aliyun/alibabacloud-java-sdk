@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpgradeAddonReleaseResponseBody extends TeaModel {
     /**
-     * <p>The status code. 200 indicates success.</p>
+     * <p>The status code. The status code 200 indicates that the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class UpgradeAddonReleaseResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>Return a message.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -23,7 +23,7 @@ public class UpgradeAddonReleaseResponseBody extends TeaModel {
     public String data;
 
     /**
-     * <p>The information returned when the request parameter is incorrect.</p>
+     * <p>The error message returned if the request parameters are invalid.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -32,7 +32,7 @@ public class UpgradeAddonReleaseResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>27E653FA-5958-45BE-8AA9-14D884DC****</p>
@@ -41,7 +41,7 @@ public class UpgradeAddonReleaseResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Whether the call was successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

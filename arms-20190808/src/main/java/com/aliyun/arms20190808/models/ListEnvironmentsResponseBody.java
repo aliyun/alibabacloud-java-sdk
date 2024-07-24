@@ -368,7 +368,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
          * <p>The type of the environment instance. Valid values:</p>
          * <ul>
          * <li>CS: Container Service</li>
-         * <li>ECS: Elastic Compute Service (ECS)</li>
+         * <li>ECS: Elastic Compute Service</li>
          * <li>Cloud: cloud service</li>
          * </ul>
          * 
@@ -385,9 +385,9 @@ public class ListEnvironmentsResponseBody extends TeaModel {
         public java.util.List<ListEnvironmentsResponseBodyDataEnvironmentsFeatures> features;
 
         /**
-         * <p>The payable resource plan. Valid values:</p>
+         * <p>The payable resource plan.</p>
          * <ul>
-         * <li>If the EnvironmentType parameter is set to CS, set the value to CS_Basic or CS_Pro. Default value: CS_Basic.</li>
+         * <li>If the EnvironmentType parameter is set to CS, set the value to CS_Basic or CS_Pro.</li>
          * <li>Otherwise, leave the parameter empty.</li>
          * </ul>
          * 
@@ -466,7 +466,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
         public String prometheusInstanceId;
 
         /**
-         * <p>The ID of the region where the Message Queue for RabbitMQ instance resides.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-zhangjiakou</p>
@@ -484,7 +484,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
         public Integer releaseCount;
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmvt3xpr5aema</p>
@@ -499,7 +499,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
         public java.util.List<ListEnvironmentsResponseBodyDataEnvironmentsTags> tags;
 
         /**
-         * <p>The ID of the user.</p>
+         * <p>The user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>13990957477389</p>
@@ -708,7 +708,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
 
     public static class ListEnvironmentsResponseBodyData extends TeaModel {
         /**
-         * <p>The parameters of the environment instance.</p>
+         * <p>The queried environments.</p>
          */
         @NameInMap("Environments")
         public java.util.List<ListEnvironmentsResponseBodyDataEnvironments> environments;

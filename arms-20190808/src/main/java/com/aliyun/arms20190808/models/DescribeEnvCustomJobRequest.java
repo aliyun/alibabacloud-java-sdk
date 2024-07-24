@@ -15,7 +15,7 @@ public class DescribeEnvCustomJobRequest extends TeaModel {
     public String customJobName;
 
     /**
-     * <p>Specifies whether to return the encrypted YAML string.</p>
+     * <p>Specifies whether to return an encrypted YAML string.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

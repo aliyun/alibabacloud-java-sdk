@@ -14,7 +14,7 @@ public class InstallManagedPrometheusResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The response content. The status of the Prometheus instance is returned.</p>
+     * <p>The response content. In most cases, the installation status of the Prometheus agent is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -23,7 +23,7 @@ public class InstallManagedPrometheusResponseBody extends TeaModel {
     public String data;
 
     /**
-     * <p>The error message returned if the Prometheus instance fails to be created.</p>
+     * <p>The error message returned if the Prometheus agent failed to be installed.</p>
      * 
      * <strong>example:</strong>
      * <p>vpcId is blank</p>
@@ -41,7 +41,7 @@ public class InstallManagedPrometheusResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the Prometheus instance was created.</p>
+     * <p>Indicates whether the Prometheus agent was installed.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

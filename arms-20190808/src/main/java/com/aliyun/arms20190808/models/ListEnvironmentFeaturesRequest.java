@@ -4,6 +4,9 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListEnvironmentFeaturesRequest extends TeaModel {
+    /**
+     * <p>The language. Valid values: zh and en. Default value: zh.</p>
+     */
     @NameInMap("AliyunLang")
     public String aliyunLang;
 

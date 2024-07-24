@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListRetcodeAppsResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>99A663CB-8D7B-4B0D-A006-03C8EE38E7BB</p>
@@ -111,7 +111,7 @@ public class ListRetcodeAppsResponseBody extends TeaModel {
         public String nickName;
 
         /**
-         * <p>The PID of the application.</p>
+         * <p>The process identifier (PID) of the application.</p>
          * 
          * <strong>example:</strong>
          * <p>atc889zkcf@d8deedfa9bf****</p>
@@ -146,7 +146,7 @@ public class ListRetcodeAppsResponseBody extends TeaModel {
         public String retcodeAppType;
 
         /**
-         * <p>The tags.</p>
+         * <p>The tags of the task.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListRetcodeAppsResponseBodyRetcodeAppsTags> tags;

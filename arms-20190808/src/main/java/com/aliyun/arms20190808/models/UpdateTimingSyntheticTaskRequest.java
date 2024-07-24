@@ -323,7 +323,11 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
         public java.util.List<UpdateTimingSyntheticTaskRequestCommonSettingCustomHostHosts> hosts;
 
         /**
-         * <p>The selection mode. 0: Random. 1: Polling.</p>
+         * <p>The selection mode. Valid values:</p>
+         * <ul>
+         * <li>0: random</li>
+         * <li>1: polling</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -396,15 +400,39 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
     }
 
     public static class UpdateTimingSyntheticTaskRequestCommonSettingCustomVPCSetting extends TeaModel {
+        /**
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The ID of the security group to which the client belongs. The security group specifies the inbound and outbound rules of the client for the VPC. You need to allow the security group to which the client belongs to access the security group to which the VPC belongs. Otherwise, the client cannot access resources in the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-xxxxxxxx</p>
+         */
         @NameInMap("SecureGroupId")
         public String secureGroupId;
 
+        /**
+         * <p>The vSwitch ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-2zevek6r3mpny7wxxxxxv</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        /**
+         * <p>VPC ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp15bjtubjytclwxxxxxx</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
@@ -449,7 +477,7 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
 
     public static class UpdateTimingSyntheticTaskRequestCommonSetting extends TeaModel {
         /**
-         * <p>The custom host.</p>
+         * <p>The custom host settings.</p>
          */
         @NameInMap("CustomHost")
         public UpdateTimingSyntheticTaskRequestCommonSettingCustomHost customHost;
@@ -457,6 +485,9 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
         @NameInMap("CustomPrometheusSetting")
         public UpdateTimingSyntheticTaskRequestCommonSettingCustomPrometheusSetting customPrometheusSetting;
 
+        /**
+         * <p>The information about the virtual private cloud (VPC). If the destination URL is an Alibaba Cloud internal endpoint, you need to configure a VPC.</p>
+         */
         @NameInMap("CustomVPCSetting")
         public UpdateTimingSyntheticTaskRequestCommonSettingCustomVPCSetting customVPCSetting;
 
@@ -475,7 +506,7 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
         public Integer ipType;
 
         /**
-         * <p>是否开启链路追踪。</p>
+         * <p>Specifies whether to enable tracing.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -486,8 +517,8 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
         /**
          * <p>Specifies whether to evenly distribute monitoring samples. Valid values:</p>
          * <ul>
-         * <li>0: No</li>
-         * <li>1: Yes</li>
+         * <li>0: no.</li>
+         * <li>1: yes.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -497,11 +528,11 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
         public Integer monitorSamples;
 
         /**
-         * <p>链路追踪客户端类型：</p>
+         * <p>The type of the client for tracing. Valid values:</p>
          * <ul>
-         * <li>0：ARMS Agent</li>
-         * <li>1：OpenTelemetry</li>
-         * <li>2：Jaeger</li>
+         * <li>0: ARMS agent</li>
+         * <li>1: OpenTelemetry</li>
+         * <li>2: Jaeger</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -511,7 +542,7 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
         public Integer traceClientType;
 
         /**
-         * <p>链路数据上报region。</p>
+         * <p>The region to which trace data is reported.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -634,7 +665,7 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
 
     public static class UpdateTimingSyntheticTaskRequestMonitorConfApiHTTPRequestBody extends TeaModel {
         /**
-         * <p>The content of the request body. Format: JSON string. The parameter is required if the type parameter is set to text/plain, application/json, application/xml, or text/html. Format: JSON string.</p>
+         * <p>The content of the request body. Format: JSON string. The parameter is required if the type parameter is set to text/plain, application/json, application/xml, or text/html.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -678,6 +709,12 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
     }
 
     public static class UpdateTimingSyntheticTaskRequestMonitorConfApiHTTP extends TeaModel {
+        /**
+         * <p>Specifies whether to verify the certificate. Default value: No.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("CheckCert")
         public Boolean checkCert;
 
@@ -703,6 +740,10 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
         @NameInMap("Method")
         public String method;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ProtocolAlpnProtocol")
         public Integer protocolAlpnProtocol;
 
@@ -809,7 +850,7 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
 
     public static class UpdateTimingSyntheticTaskRequestMonitorConfFileDownload extends TeaModel {
         /**
-         * <p>The connection timeout period. Unit: milliseconds. Minimum value: 1000. Maximum value: 120000. Default value: 5000.</p>
+         * <p>Unit: milliseconds. Minimum value: 1000. Maximum value: 120000. Default value: 5000.</p>
          * 
          * <strong>example:</strong>
          * <p>5000</p>
@@ -818,13 +859,13 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
         public Long connectionTimeout;
 
         /**
-         * <p>The content of the custom request header.</p>
+         * <p>The content of the custom request header. Format: JSON map.</p>
          */
         @NameInMap("CustomHeaderContent")
         public java.util.Map<String, String> customHeaderContent;
 
         /**
-         * <p>The kernel type.</p>
+         * <p>The kernel type. Valid values:</p>
          * <ul>
          * <li>1: curl</li>
          * <li>0: WinInet</li>
@@ -837,7 +878,7 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
         public Integer downloadKernel;
 
         /**
-         * <p>Specifies whether to ignore CA certificate authentication errors. 0: No. 1: Yes. Default value: 1.</p>
+         * <p>Specifies whether to ignore CA certificate authentication errors. Valid values: 0: No. 1: Yes. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -846,7 +887,7 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
         public Integer ignoreCertificateAuthError;
 
         /**
-         * <p>Specifies whether to ignore certificate revocation errors. 0: No. 1: Yes. Default value: 1.</p>
+         * <p>Specifies whether to ignore certificate revocation errors. Valid values: 0: No. 1: Yes. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -855,7 +896,7 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
         public Integer ignoreCertificateCanceledError;
 
         /**
-         * <p>Specifies whether to ignore certificate invalidity. 0: No. 1: Yes. Default value: 1.</p>
+         * <p>Specifies whether to ignore certificate invalidity. Valid values: 0: No. 1: Yes. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -873,7 +914,7 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
         public Integer ignoreCertificateStatusError;
 
         /**
-         * <p>Specifies whether to ignore certificate incredibility. 0: No. 1: Yes. Default value: 1.</p>
+         * <p>Specifies whether to ignore certificate incredibility. Valid values: 0: No. 1: Yes. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -882,7 +923,7 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
         public Integer ignoreCertificateUntrustworthyError;
 
         /**
-         * <p>Specifies whether to ignore certificate usage errors. 0: No. 1: Yes. Default value: 1.</p>
+         * <p>Specifies whether to ignore certificate usage errors. Valid values: 0: No. 1: Yes. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -891,7 +932,7 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
         public Integer ignoreCertificateUsingError;
 
         /**
-         * <p>Specifies whether to ignore host invalidity. 0: No. 1: Yes. Default value: 1.</p>
+         * <p>Specifies whether to ignore host invalidity. Valid values: 0: No. 1: Yes. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -909,11 +950,11 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
         public Long monitorTimeout;
 
         /**
-         * <p>The QUIC protocol type.</p>
+         * <p>The QUIC protocol type. Valid values:</p>
          * <ul>
-         * <li>1: http1</li>
-         * <li>2: http2</li>
-         * <li>3: http3</li>
+         * <li>1: HTTP/1</li>
+         * <li>2: HTTP/2</li>
+         * <li>3: HTTP/3</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -923,7 +964,7 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
         public Integer quickProtocol;
 
         /**
-         * <p>Specifies whether to support redirection. 0: No. 1: Yes. Default value: 1.</p>
+         * <p>Specifies whether to support redirection. Valid values: 0: No. 1: Yes. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -932,7 +973,7 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
         public Integer redirection;
 
         /**
-         * <p>The file download URL.</p>
+         * <p>The URL that is used to download the file.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://img.alicdn.com/tfs/TB13DzOjXP7gK0jSZFjXXc5aXXa-212-48.png">https://img.alicdn.com/tfs/TB13DzOjXP7gK0jSZFjXXc5aXXa-212-48.png</a></p>
@@ -950,7 +991,7 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
         public Long transmissionSize;
 
         /**
-         * <p>验证关键词。</p>
+         * <p>The keyword that is used in verification.</p>
          * 
          * <strong>example:</strong>
          * <p>aliyun</p>
@@ -959,11 +1000,11 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
         public String validateKeywords;
 
         /**
-         * <p>验证方式。</p>
+         * <p>The verification method. Valid values:</p>
          * <ul>
-         * <li>0：不验证 </li>
-         * <li>1：验证字符串 </li>
-         * <li>2：MD5验证</li>
+         * <li>0: no verification</li>
+         * <li>1: string verification</li>
+         * <li>2: MD5 verification</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -973,7 +1014,7 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
         public Integer verifyWay;
 
         /**
-         * <p>DNS劫持白名单。匹配规则支持IP、IP通配符、子网掩码和CNAME，可以填写多个匹配规则，多个匹配规则以竖线（|）隔开。例如：<a href="http://www.aliyun.com:203.0.3.55%7C203.3.44.67%EF%BC%8C%E8%A1%A8%E7%A4%BAwww.aliyun.com%E5%9F%9F%E5%90%8D%E4%B8%8B%E9%99%A4203.0.3.55%E5%92%8C203.3.44.67%E4%B9%8B%E5%A4%96%E7%9A%84%E5%85%B6%E4%BB%96IP%E9%83%BD%E6%98%AF%E8%A2%AB%E5%8A%AB%E6%8C%81%E7%9A%84%E3%80%82">www.aliyun.com:203.0.3.55|203.3.44.67，表示www.aliyun.com域名下除203.0.3.55和203.3.44.67之外的其他IP都是被劫持的。</a></p>
+         * <p>The whitelisted objects that are used to avoid DNS hijacking. The objects can be IP addresses, wildcard mask, subnet mask, or CNAME records. Separate multiple objects with vertical bars (|). Example: <a href="http://www.aliyun.com:203.0.3.55%7C203.3.44.67">www.aliyun.com:203.0.3.55|203.3.44.67</a>. It indicates that all IP addresses that belong to the <a href="http://www.aliyun.com">www.aliyun.com</a> domain name except 203.0.3.55 and 203.3.44.67 are hijacked.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.aliyun.com:203.0.3.55%7C203.3.44.67">www.aliyun.com:203.0.3.55|203.3.44.67</a></p>
@@ -1134,7 +1175,7 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
 
     public static class UpdateTimingSyntheticTaskRequestMonitorConfNetDNS extends TeaModel {
         /**
-         * <p>Specifies whether to use dig to display the data. 0: No. 1: Yes.</p>
+         * <p>Specifies whether to use the dig command to display the data. Valid values: 0: No. 1: Yes.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1143,7 +1184,7 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
         public Integer dig;
 
         /**
-         * <p>The IP version of the DNS server. 0: IPv4. 1: IPv6. 2: A version is automatically selected. Default value: 0.</p>
+         * <p>The IP version of the DNS server. Valid values: 0: IPv4. 1: IPv6. 2: A version is automatically selected. Default value: 0.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1161,7 +1202,7 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
         public String nsServer;
 
         /**
-         * <p>The DNS query. 0: recursive, 1: iterative. Default value: 0.</p>
+         * <p>The DNS query method. Valid values: 0: recursive. 1: iterative. Default value: 0.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1170,7 +1211,7 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
         public Integer queryMethod;
 
         /**
-         * <p>The destination domain name.</p>
+         * <p>The domain name.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
@@ -1262,7 +1303,7 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
         public Integer packageNum;
 
         /**
-         * <p>The size of each ICMP packet. Unit: bytes. Valid values: 32, 64, 128, 256, 512, 1024.</p>
+         * <p>The size of each ICMP packet. Unit: bytes. Valid values: 32, 64, 128, 256, 512, 1024, 1080, and 1450.</p>
          * 
          * <strong>example:</strong>
          * <p>32</p>
@@ -1280,7 +1321,7 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
         public Boolean splitPackage;
 
         /**
-         * <p>The destination host IP address or domain name. Port numbers, protocol headers, or request paths are not supported.</p>
+         * <p>The IP address or domain name of the destination host. The value cannot contain port numbers, protocol headers, or request paths.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
@@ -1289,7 +1330,7 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
         public String targetUrl;
 
         /**
-         * <p>The timeout period for the TCP synthetic test. Unit: milliseconds. Minimum value: 1000. Maximum value: 300000. Default value: 20000.</p>
+         * <p>The timeout period for the ICMP synthetic test. Unit: milliseconds. Minimum value: 1000. Maximum value: 300000. Default value: 20000.</p>
          * 
          * <strong>example:</strong>
          * <p>5000</p>
@@ -1307,7 +1348,7 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
         public Boolean tracertEnable;
 
         /**
-         * <p>The maximum number of hops for tracert. Minimum value: 1. Maximum value: 128. Default value: 64.</p>
+         * <p>The maximum number of hops for the tracert command. Minimum value: 1. Maximum value: 128. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -1316,7 +1357,7 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
         public Integer tracertNumMax;
 
         /**
-         * <p>The timeout period of tracert. Unit: milliseconds. Minimum value: 1000. Maximum value: 300000. Default value: 60000.</p>
+         * <p>The timeout period of the tracert command. Unit: milliseconds. Minimum value: 1000. Maximum value: 300000. Default value: 60000.</p>
          * 
          * <strong>example:</strong>
          * <p>60000</p>
@@ -1405,7 +1446,7 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
 
     public static class UpdateTimingSyntheticTaskRequestMonitorConfNetTCP extends TeaModel {
         /**
-         * <p>The number of TCP connections that are established in a test. Minimum value: 1. Maximum value: 16. Default value: 4.</p>
+         * <p>The number of TCP connections that are established. Minimum value: 1. Maximum value: 16. Default value: 4.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -1423,7 +1464,7 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
         public Long interval;
 
         /**
-         * <p>The destination host IP address.</p>
+         * <p>The IP address of the destination host.</p>
          * 
          * <strong>example:</strong>
          * <p>127.0.0.1:8888</p>
@@ -1450,7 +1491,7 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
         public Boolean tracertEnable;
 
         /**
-         * <p>The maximum number of hops for tracert. Minimum value: 1. Maximum value: 128. Default value: 20.</p>
+         * <p>The maximum number of hops for the tracert command. Minimum value: 1. Maximum value: 128. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -1459,7 +1500,7 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
         public Integer tracertNumMax;
 
         /**
-         * <p>The timeout period of tracert. Unit: milliseconds. Minimum value: 1000. Maximum value: 300000. Default value: 60000.</p>
+         * <p>The timeout period of the tracert command. Unit: milliseconds. Minimum value: 1000. Maximum value: 300000. Default value: 60000.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -1532,16 +1573,16 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
 
     public static class UpdateTimingSyntheticTaskRequestMonitorConfStream extends TeaModel {
         /**
-         * <p>自定义header，JSON Map格式。</p>
+         * <p>The custom header. Format: JSON map.</p>
          */
         @NameInMap("CustomHeaderContent")
         public java.util.Map<String, String> customHeaderContent;
 
         /**
-         * <p>播放器，不传默认12。</p>
+         * <p>The player. Default value: 12. Valid values:</p>
          * <ul>
-         * <li>12：VLC</li>
-         * <li>2：FlashPlayer</li>
+         * <li>12: VLC</li>
+         * <li>2: Flash Player</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1551,10 +1592,10 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
         public Integer playerType;
 
         /**
-         * <p>资源地址类型：</p>
+         * <p>The address type of the resource. Valid values:</p>
          * <ul>
-         * <li>1：资源地址。</li>
-         * <li>0：页面地址。不传默认0。</li>
+         * <li>1: resource URL</li>
+         * <li>0: page URL Default value: 0.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1564,7 +1605,7 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
         public Integer streamAddressType;
 
         /**
-         * <p>监测时长，单位秒，最长支持60s，不传默认60。</p>
+         * <p>The monitoring duration. Unit: seconds. Maximum and default value: 60.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -1573,7 +1614,7 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
         public Integer streamMonitorTimeout;
 
         /**
-         * <p>音视频标志：0-视频，1-音频。</p>
+         * <p>Specifies whether the resource is a video or audio. Valid values: 0: video. 1: audio.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1582,7 +1623,7 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
         public Integer streamType;
 
         /**
-         * <p>流媒体地址。</p>
+         * <p>The resource URL of the streaming media.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.aliyun.com/stream/test.mp4">http://www.aliyun.com/stream/test.mp4</a></p>
@@ -1591,7 +1632,7 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
         public String targetUrl;
 
         /**
-         * <p>DNS劫持白名单。匹配规则支持IP、IP通配符、子网掩码和CNAME，可以填写多个匹配规则，多个匹配规则以竖线（|）隔开。例如：<a href="http://www.aliyun.com:203.0.3.55%7C203.3.44.67%EF%BC%8C%E8%A1%A8%E7%A4%BAwww.aliyun.com%E5%9F%9F%E5%90%8D%E4%B8%8B%E9%99%A4203.0.3.55%E5%92%8C203.3.44.67%E4%B9%8B%E5%A4%96%E7%9A%84%E5%85%B6%E4%BB%96IP%E9%83%BD%E6%98%AF%E8%A2%AB%E5%8A%AB%E6%8C%81%E7%9A%84%E3%80%82">www.aliyun.com:203.0.3.55|203.3.44.67，表示www.aliyun.com域名下除203.0.3.55和203.3.44.67之外的其他IP都是被劫持的。</a></p>
+         * <p>The whitelisted objects that are used to avoid DNS hijacking. The objects can be IP addresses, wildcard mask, subnet mask, or CNAME records. Separate multiple objects with vertical bars (|). Example: <a href="http://www.aliyun.com:203.0.3.55%7C203.3.44.67">www.aliyun.com:203.0.3.55|203.3.44.67</a>. It indicates that all IP addresses that belong to the <a href="http://www.aliyun.com">www.aliyun.com</a> domain name except 203.0.3.55 and 203.3.44.67 are hijacked.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.aliyun.com:203.0.3.55%7C203.3.44.67">www.aliyun.com:203.0.3.55|203.3.44.67</a></p>
@@ -1664,7 +1705,7 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
 
     public static class UpdateTimingSyntheticTaskRequestMonitorConfWebsite extends TeaModel {
         /**
-         * <p>Specifies whether to automatically scroll up and down the screen to load a page. 0: No. 1: Yes. Default value: 0.</p>
+         * <p>Specifies whether to automatically scroll up and down the screen to load a page. Valid values: 0: No. 1: Yes. Default value: 0.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1673,7 +1714,7 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
         public Integer automaticScrolling;
 
         /**
-         * <p>Specifies whether to create a custom header. 0: No. 1: The first packet is modified. 2: All packets are modified. Default value: 0.</p>
+         * <p>Specifies whether to create a custom header. Valid values: 0: No. 1: The first packet is modified. 2: All packets are modified. Default value: 0.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1688,8 +1729,8 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
         public java.util.Map<String, String> customHeaderContent;
 
         /**
-         * <p>域名（例如<a href="http://www.aliyun.com%EF%BC%89%E8%A7%A3%E6%9E%90%E6%97%B6%EF%BC%8C%E8%A7%A3%E6%9E%90%E5%87%BA%E7%9A%84IP%E5%9C%B0%E5%9D%80%E6%88%96%E8%80%85CNAME%E4%B8%8D%E5%9C%A8DNS%E5%8A%AB%E6%8C%81%E7%99%BD%E5%90%8D%E5%8D%95%E5%86%85%EF%BC%8C%E7%94%A8%E6%88%B7%E5%B0%B1%E4%BC%9A%E8%AE%BF%E9%97%AE%E5%A4%B1%E8%B4%A5%E6%88%96%E8%80%85%E8%BF%94%E5%9B%9E%E4%B8%80%E4%B8%AA%E9%9D%9EAliyun%E7%9A%84%E7%9B%AE%E6%A0%87IP%EF%BC%9B%E8%8B%A5%E8%A7%A3%E6%9E%90%E7%BB%93%E6%9E%9C%E4%B8%AD%E7%9A%84IP%E6%88%96%E8%80%85CNAME%E5%9C%A8DNS%E7%99%BD%E5%90%8D%E5%8D%95%E5%86%85%EF%BC%8C%E5%88%99%E4%BC%9A%E8%A2%AB%E8%AE%A4%E5%AE%9A%E4%B8%BA%E6%B2%A1%E6%9C%89%E5%8F%91%E7%94%9FDNS%E5%8A%AB%E6%8C%81%E3%80%82">www.aliyun.com）解析时，解析出的IP地址或者CNAME不在DNS劫持白名单内，用户就会访问失败或者返回一个非Aliyun的目标IP；若解析结果中的IP或者CNAME在DNS白名单内，则会被认定为没有发生DNS劫持。</a></p>
-         * <p>填写格式：域名:匹配规则。匹配规则支持IP、IP通配符、子网掩码和CNAME，可以填写多个匹配规则，多个匹配规则以竖线（|）隔开。例如：<a href="http://www.aliyun.com:203.0.3.55%7C203.3.44.67%EF%BC%8C%E8%A1%A8%E7%A4%BAwww.aliyun.com%E5%9F%9F%E5%90%8D%E4%B8%8B%E9%99%A4203.0.3.55%E5%92%8C203.3.44.67%E4%B9%8B%E5%A4%96%E7%9A%84%E5%85%B6%E4%BB%96IP%E9%83%BD%E6%98%AF%E8%A2%AB%E5%8A%AB%E6%8C%81%E7%9A%84%E3%80%82">www.aliyun.com:203.0.3.55|203.3.44.67，表示www.aliyun.com域名下除203.0.3.55和203.3.44.67之外的其他IP都是被劫持的。</a></p>
+         * <p>If the IP address or CNAME record resolved from a domain name is not included in the DNS whitelist, you cannot access the domain name, or an IP address that belongs to a different domain name is returned. If the IP address or CNAME record is included in the DNS whitelist, DNS hijacking does not occur.</p>
+         * <p>Format: \<domain name>:\<objects>. The objects can be IP addresses, wildcard mask, subnet mask, or CNAME records. Separate multiple objects with vertical bars (|). Example: <a href="http://www.aliyun.com:203.0.3.55%7C203.3.44.67">www.aliyun.com:203.0.3.55|203.3.44.67</a>. It indicates that all IP addresses that belong to the <a href="http://www.aliyun.com">www.aliyun.com</a> domain name except 203.0.3.55 and 203.3.44.67 are hijacked.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.aliyun.com:203.0.3.55%7C203.3.44.67">www.aliyun.com:203.0.3.55|203.3.44.67</a></p>
@@ -1698,7 +1739,7 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
         public String DNSHijackWhitelist;
 
         /**
-         * <p>Specifies whether to disable the cache. 0: No. 1: Yes. Default value: 1.</p>
+         * <p>Specifies whether to disable the cache. Valid values: 0: No. 1: Yes. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1707,7 +1748,7 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
         public Integer disableCache;
 
         /**
-         * <p>Specifies whether to accept compressed files based on the HTTP Accept-Encoding request header. 0: No. 1: Yes. Default value: 0.</p>
+         * <p>Specifies whether to accept compressed files based on the HTTP Accept-Encoding request header. Valid values: 0: No. 1: Yes. Default value: 0.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1716,7 +1757,7 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
         public Integer disableCompression;
 
         /**
-         * <p>在页面加载过程中如果出现元素黑名单中配置的元素，不会请求加载该元素 。</p>
+         * <p>The elements not to be loaded in the page loading process.</p>
          * 
          * <strong>example:</strong>
          * <p>a.jpg</p>
@@ -1725,7 +1766,7 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
         public String elementBlacklist;
 
         /**
-         * <p>Specifies whether to filter invalid IP addresses.</p>
+         * <p>Specifies whether to exclude invalid IP addresses. Valid values:</p>
          * <ul>
          * <li>1: No</li>
          * <li>0: Yes</li>
@@ -1738,7 +1779,7 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
         public Integer filterInvalidIP;
 
         /**
-         * <p>识别元素：设置浏览页面元素总个数。</p>
+         * <p>The total number of elements on the page.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1747,7 +1788,7 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
         public Integer flowHijackJumpTimes;
 
         /**
-         * <p>劫持标识：设置匹配的关键信息。填写劫持判断关键字或关键元素，允许带星号（*）。</p>
+         * <p>The keyword that is used to identify hijacking. Asterisks (\*) are allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>aliyun</p>
@@ -1756,7 +1797,7 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
         public String flowHijackLogo;
 
         /**
-         * <p>Specifies whether to ignore SSL certificate errors during browsing. 0: No. 1: Yes. Default value: 1.</p>
+         * <p>Specifies whether to ignore SSL certificate errors during browsing. Valid values: 0: No. 1: Yes. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1774,7 +1815,7 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
         public Long monitorTimeout;
 
         /**
-         * <p>监测页面出现了域名设置之外的元素都属于页面被篡改。常见的表现形式为弹出广告、浮动广告、跳转等。</p>
+         * <p>Elements that are not included in the whitelist and appear on the page are manipulated. These elements can be pop-up ads, floating ads, and page redirection.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.aliyun.com:%7C/cc/bb/a.gif%7C/vv/bb/cc.jpg">www.aliyun.com:|/cc/bb/a.gif|/vv/bb/cc.jpg</a></p>
@@ -1783,7 +1824,7 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
         public String pageTamper;
 
         /**
-         * <p>Specifies whether to continue browsing after redirection. 0: No, 1:Yes. Default value: 1.</p>
+         * <p>Specifies whether to continue browsing after redirection. Valid values: 0: No. 1:Yes. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1801,7 +1842,7 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
         public Long slowElementThreshold;
 
         /**
-         * <p>The destination URL.</p>
+         * <p>The URL of the website.</p>
          * 
          * <strong>example:</strong>
          * <p>https://********</p>
@@ -1810,7 +1851,7 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
         public String targetUrl;
 
         /**
-         * <p>验证字符串即监测页面源代码中的某个任意字符串。若客户端返回的源码中包含任一黑名单中的字符串则报650验证字符串失败的错误。多个字符串以竖线（|）隔开。</p>
+         * <p>An arbitrary string in the source code of the page for verification. If the source code returned by the client contains a string that is in the blacklist, the 650 error code is reported, which indicates that the string fails to be verified. Separate multiple strings with vertical bars (|).</p>
          * 
          * <strong>example:</strong>
          * <p>error</p>
@@ -1819,7 +1860,7 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
         public String verifyStringBlacklist;
 
         /**
-         * <p>验证字符串即监测页面源代码中的某个任意字符串。客户端返回的源码必须包含所有白名单中的字符串，否则报650验证字符串失败的错误。多个字符串以竖线（|）隔开。</p>
+         * <p>An arbitrary string in the source code of the page for verification. If the source code returned by the client contains a string that is not in the whitelist, the 650 error code is reported, which indicates that the string fails to be verified. Separate multiple strings with vertical bars (|).</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -1997,43 +2038,43 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
 
     public static class UpdateTimingSyntheticTaskRequestMonitorConf extends TeaModel {
         /**
-         * <p>The HTTP(S) synthetic test parameters.</p>
+         * <p>The parameters of the HTTP(S) synthetic test.</p>
          */
         @NameInMap("ApiHTTP")
         public UpdateTimingSyntheticTaskRequestMonitorConfApiHTTP apiHTTP;
 
         /**
-         * <p>The file download parameters.</p>
+         * <p>The parameters of file downloading.</p>
          */
         @NameInMap("FileDownload")
         public UpdateTimingSyntheticTaskRequestMonitorConfFileDownload fileDownload;
 
         /**
-         * <p>The DNS synthetic test parameters.</p>
+         * <p>The parameters of the DNS synthetic test.</p>
          */
         @NameInMap("NetDNS")
         public UpdateTimingSyntheticTaskRequestMonitorConfNetDNS netDNS;
 
         /**
-         * <p>The ICMP synthetic test parameters.</p>
+         * <p>The parameters of the ICMP synthetic test.</p>
          */
         @NameInMap("NetICMP")
         public UpdateTimingSyntheticTaskRequestMonitorConfNetICMP netICMP;
 
         /**
-         * <p>The TCP synthetic tests parameters. This parameter is required if the TaskType parameter is set to 2.</p>
+         * <p>The parameters of the TCP synthetic test. This parameter is required if the TaskType parameter is set to 2.</p>
          */
         @NameInMap("NetTCP")
         public UpdateTimingSyntheticTaskRequestMonitorConfNetTCP netTCP;
 
         /**
-         * <p>流媒体拨测配置。</p>
+         * <p>The parameters of the streaming-media synthetic test.</p>
          */
         @NameInMap("Stream")
         public UpdateTimingSyntheticTaskRequestMonitorConfStream stream;
 
         /**
-         * <p>The website-speed measurement parameters.</p>
+         * <p>The parameters of the website speed measurement.</p>
          */
         @NameInMap("Website")
         public UpdateTimingSyntheticTaskRequestMonitorConfWebsite website;

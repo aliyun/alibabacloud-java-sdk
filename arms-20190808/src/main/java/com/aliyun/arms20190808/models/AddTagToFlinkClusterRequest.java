@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddTagToFlinkClusterRequest extends TeaModel {
     /**
+     * <p>The ID of the Prometheus instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class AddTagToFlinkClusterRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The ID of the Flink workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class AddTagToFlinkClusterRequest extends TeaModel {
     public String flinkWorkSpaceId;
 
     /**
+     * <p>The name of the Flink workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,7 @@ public class AddTagToFlinkClusterRequest extends TeaModel {
     public String flinkWorkSpaceName;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,6 +45,8 @@ public class AddTagToFlinkClusterRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The ID of the resource group.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-acfmxyexli2****</p>
      */
@@ -48,6 +54,7 @@ public class AddTagToFlinkClusterRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
+     * <p>The ID of the Alibaba Cloud account to which the Flink workspace belongs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

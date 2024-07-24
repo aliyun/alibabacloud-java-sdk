@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAppJVMConfigResponseBody extends TeaModel {
     /**
-     * <p>The status code. The status code 200 indicates that the request was successful. If another status code is returned, the request failed.</p>
+     * <p>The response code. Valid values: 2XX: The request is successful. 3XX: A redirection message is returned. 4XX: The request is invalid. 5XX: A server error occurs.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,13 @@ public class GetAppJVMConfigResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>Java VM info list.</p>
+     * <p>The list of JVM information.</p>
      */
     @NameInMap("JvmInfoList")
     public java.util.List<GetAppJVMConfigResponseBodyJvmInfoList> jvmInfoList;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The error message returned if the request failed.</p>
      * 
      * <strong>example:</strong>
      * <p>message</p>
@@ -38,11 +38,7 @@ public class GetAppJVMConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
-     * <ul>
-     * <li><code>true</code></li>
-     * <li><code>false</code></li>
-     * </ul>
+     * <p>Indicates whether the request was successful. Valid values: true and false.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -97,7 +93,7 @@ public class GetAppJVMConfigResponseBody extends TeaModel {
 
     public static class GetAppJVMConfigResponseBodyJvmInfoList extends TeaModel {
         /**
-         * <p>Agent version.</p>
+         * <p>The version of the agent.</p>
          * 
          * <strong>example:</strong>
          * <p>1.7.0-SNAPSHOT_3.0.3_3756244</p>
@@ -106,7 +102,7 @@ public class GetAppJVMConfigResponseBody extends TeaModel {
         public String agentVersion;
 
         /**
-         * <p>The name of the elastic container instance.</p>
+         * <p>The hostname.</p>
          * 
          * <strong>example:</strong>
          * <p>host_name</p>
@@ -115,7 +111,7 @@ public class GetAppJVMConfigResponseBody extends TeaModel {
         public String hostName;
 
         /**
-         * <p>Ip address.</p>
+         * <p>The IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>47.91.59.244</p>
@@ -124,7 +120,7 @@ public class GetAppJVMConfigResponseBody extends TeaModel {
         public String ip;
 
         /**
-         * <p>The PID.</p>
+         * <p>The application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>dsv9zcel92@1455182510c5369</p>
@@ -133,7 +129,7 @@ public class GetAppJVMConfigResponseBody extends TeaModel {
         public String pid;
 
         /**
-         * <p>Process Id.</p>
+         * <p>The process ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -142,7 +138,7 @@ public class GetAppJVMConfigResponseBody extends TeaModel {
         public String procId;
 
         /**
-         * <p>Java VM config.</p>
+         * <p>The VM parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>[-javaagent:/home/admin/.opt/ArmsAgent/arms-bootstrap-1.7.0-SNAPSHOT.jar, -Doneagent.plugin.arms-agent.enabled=true, -Darms.licenseKey=[******], -Darms.agent.env=K8s, -Darms.agent.podinfo.path=/etc/podinfo, -Darms.appName=productservice, -Doneagent.region=cn-hangzhou, -Dproject.name=Product]</p>

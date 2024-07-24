@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class UpdateRumAppResponseBody extends TeaModel {
     /**
+     * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The details of the returned results.</p>
+     */
     @NameInMap("Data")
     public UpdateRumAppResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class UpdateRumAppResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
+     * <p>The error message returned if the request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>message</p>
      */
@@ -29,7 +38,7 @@ public class UpdateRumAppResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>E9C9DA3D-10FE-472E-9EEF-2D0A3E41****</p>
@@ -38,6 +47,12 @@ public class UpdateRumAppResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><code>true</code></li>
+     * <li><code>false</code></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -98,10 +113,15 @@ public class UpdateRumAppResponseBody extends TeaModel {
     }
 
     public static class UpdateRumAppResponseBodyData extends TeaModel {
+        /**
+         * <p>The user configurations. This is a reserved parameter.</p>
+         */
         @NameInMap("Config")
         public String config;
 
         /**
+         * <p>The QPS limit. Unit: bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>100000</p>
          */
@@ -109,6 +129,8 @@ public class UpdateRumAppResponseBody extends TeaModel {
         public Integer limit;
 
         /**
+         * <p>Indicates whether the request is throttled due to the QPS limit. Valid values: true and false.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -116,6 +138,8 @@ public class UpdateRumAppResponseBody extends TeaModel {
         public Boolean limited;
 
         /**
+         * <p>The usage. Unit: bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>10000</p>
          */

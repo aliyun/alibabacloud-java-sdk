@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateRumFileStatusResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>626037F5-FDEB-45B0-804C-B3C92797****</p>

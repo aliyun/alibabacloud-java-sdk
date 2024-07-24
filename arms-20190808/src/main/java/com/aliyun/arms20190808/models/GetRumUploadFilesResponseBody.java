@@ -5,27 +5,37 @@ import com.aliyun.tea.*;
 
 public class GetRumUploadFilesResponseBody extends TeaModel {
     /**
+     * <p>The HTTP status code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The queried files.</p>
+     */
     @NameInMap("Data")
     public java.util.List<GetRumUploadFilesResponseBodyData> data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The error message returned if the request failed.</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2983BEF7-4A0D-47A2-94A2-8E9C5E63****</p>
@@ -34,6 +44,12 @@ public class GetRumUploadFilesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -95,6 +111,8 @@ public class GetRumUploadFilesResponseBody extends TeaModel {
 
     public static class GetRumUploadFilesResponseBodyData extends TeaModel {
         /**
+         * <p>The file name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test.js.map</p>
          */
@@ -102,6 +120,8 @@ public class GetRumUploadFilesResponseBody extends TeaModel {
         public String fileName;
 
         /**
+         * <p>The time when the file was last modified. The value is a timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1682863151000</p>
          */
@@ -109,6 +129,8 @@ public class GetRumUploadFilesResponseBody extends TeaModel {
         public Object lastModifiedTime;
 
         /**
+         * <p>The size of the file. Unit: bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -116,6 +138,8 @@ public class GetRumUploadFilesResponseBody extends TeaModel {
         public String size;
 
         /**
+         * <p>The file ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cxxxerfewrfwerfwerffvrt</p>
          */
@@ -123,6 +147,8 @@ public class GetRumUploadFilesResponseBody extends TeaModel {
         public String uuid;
 
         /**
+         * <p>The version number of the file.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.0.0</p>
          */

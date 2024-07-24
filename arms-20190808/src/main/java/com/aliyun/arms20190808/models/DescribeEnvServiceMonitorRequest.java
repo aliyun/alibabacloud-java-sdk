@@ -15,7 +15,7 @@ public class DescribeEnvServiceMonitorRequest extends TeaModel {
     public String environmentId;
 
     /**
-     * <p>The namespace where the ServiceMonitor is located.</p>
+     * <p>The namespace where the ServiceMonitor resides.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

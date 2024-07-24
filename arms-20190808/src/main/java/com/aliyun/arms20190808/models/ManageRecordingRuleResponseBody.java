@@ -32,7 +32,7 @@ public class ManageRecordingRuleResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID. You can use the ID to troubleshoot issues.</p>
+     * <p>The ID of the request. You can use the ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>CD782AEC-A676-529F-8F26-0ED0FF0EF1EA</p>

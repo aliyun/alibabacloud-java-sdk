@@ -14,7 +14,7 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
     public String code;
 
     /**
-     * <p>The struct returned.</p>
+     * <p>The returned struct.</p>
      */
     @NameInMap("Data")
     public ListPrometheusInstanceByTagAndResourceGroupIdResponseBodyData data;
@@ -76,7 +76,7 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
 
     public static class ListPrometheusInstanceByTagAndResourceGroupIdResponseBodyDataPrometheusInstancesTags extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>ac-cus-tag-3</p>
@@ -85,7 +85,7 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
         public String tagKey;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>asg-2vc8qq7x89o11rus9uvu</p>
@@ -118,7 +118,7 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
 
     public static class ListPrometheusInstanceByTagAndResourceGroupIdResponseBodyDataPrometheusInstances extends TeaModel {
         /**
-         * <p>Auth Token string.</p>
+         * <p>The authorization token.</p>
          * 
          * <strong>example:</strong>
          * <p>ad32dxxxx</p>
@@ -145,13 +145,14 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
         public String clusterName;
 
         /**
-         * <p>The type of the cluster. Valid values: remote-write: Prometheus instance for remote write.</p>
+         * <p>The instance type. Valid values:</p>
          * <ul>
-         * <li>ecs: Prometheus instances for ECS.</li>
-         * <li>cloud-monitor: Prometheus instance for Alibaba Cloud services in the Chinese mainland.</li>
-         * <li>cloud-product: Prometheus instance for Alibaba Cloud services outside China.</li>
-         * <li>global-view: Prometheus instance for GlobalView.</li>
-         * <li>aliyun-cs: Prometheus instance for Container Service.</li>
+         * <li>remote-write: Prometheus instance for Remote Write</li>
+         * <li>ecs: Prometheus instances for ECS</li>
+         * <li>cloud-monitor: Prometheus instance for Alibaba Cloud services in the Chinese mainland</li>
+         * <li>cloud-product: Prometheus instance for Alibaba Cloud services outside the Chinese mainland</li>
+         * <li>global-view: global aggregation instance</li>
+         * <li>aliyun-cs: Prometheus instance for Container Service</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -170,7 +171,7 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
         public String grafanaInstanceId;
 
         /**
-         * <p>HTTP Api internet url.</p>
+         * <p>The public URL for the HTTP API.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://cn-beijing.arms.aliyuncs.com:9090/api/v1/prometheus/xxx/cn-beijing">http://cn-beijing.arms.aliyuncs.com:9090/api/v1/prometheus/xxx/cn-beijing</a></p>
@@ -179,7 +180,7 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
         public String httpApiInterUrl;
 
         /**
-         * <p>HTTP Api intranet url.</p>
+         * <p>The internal URL for the HTTP API.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://cn-beijing-intranet.arms.aliyuncs.com:9090/api/v1/prometheus/xxx/cn-beijing">http://cn-beijing-intranet.arms.aliyuncs.com:9090/api/v1/prometheus/xxx/cn-beijing</a></p>
@@ -190,8 +191,8 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
         /**
          * <p>The billing method. Valid values:</p>
          * <ul>
-         * <li>PREPAY: subscription.</li>
-         * <li>POSTPAY: pay-as-you-go.</li>
+         * <li>PREPAY: subscription</li>
+         * <li>POSTPAY: pay-as-you-go</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -201,7 +202,7 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
         public String paymentType;
 
         /**
-         * <p>Push Gateway internet url.</p>
+         * <p>The public URL for Pushgateway.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://cn-beijing.arms.aliyuncs.com/prometheus/xxx/api/v2">http://cn-beijing.arms.aliyuncs.com/prometheus/xxx/api/v2</a></p>
@@ -210,7 +211,7 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
         public String pushGatewayInterUrl;
 
         /**
-         * <p>Push Gateway intranet url.</p>
+         * <p>The internal URL for Pushgateway.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://cn-beijing-intranet.arms.aliyuncs.com/prometheus/xxx/api/v2">http://cn-beijing-intranet.arms.aliyuncs.com/prometheus/xxx/api/v2</a></p>
@@ -219,7 +220,7 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
         public String pushGatewayIntraUrl;
 
         /**
-         * <p>The region ID of the Prometheus instance.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -228,7 +229,7 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
         public String regionId;
 
         /**
-         * <p>Remote Read internet url.</p>
+         * <p>The public URL for remote read.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://cn-beijing.arms.aliyuncs.com:9090/api/v1/prometheus/xxx/api/v1/read">http://cn-beijing.arms.aliyuncs.com:9090/api/v1/prometheus/xxx/api/v1/read</a></p>
@@ -237,7 +238,7 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
         public String remoteReadInterUrl;
 
         /**
-         * <p>Remote Read intranet url.</p>
+         * <p>The internal URL for remote read.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://cn-beijing-intranet.arms.aliyuncs.com:9090/api/v1/prometheus/xxx/api/v1/read">http://cn-beijing-intranet.arms.aliyuncs.com:9090/api/v1/prometheus/xxx/api/v1/read</a></p>
@@ -246,7 +247,7 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
         public String remoteReadIntraUrl;
 
         /**
-         * <p>Remote Write internet url.</p>
+         * <p>The public URL for remote write.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://cn-beijing.arms.aliyuncs.com/prometheus/xxx/api/v3/write">http://cn-beijing.arms.aliyuncs.com/prometheus/xxx/api/v3/write</a></p>
@@ -255,7 +256,7 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
         public String remoteWriteInterUrl;
 
         /**
-         * <p>Remote Write intranet url.</p>
+         * <p>The internal URL for remote write.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://cn-beijing-intranet.arms.aliyuncs.com/prometheus/xxx/api/v3/write">http://cn-beijing-intranet.arms.aliyuncs.com/prometheus/xxx/api/v3/write</a></p>
@@ -273,7 +274,7 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
         public String resourceGroupId;
 
         /**
-         * <p>Resource type.</p>
+         * <p>The resource type.</p>
          * 
          * <strong>example:</strong>
          * <p>PROMETHEUS</p>
@@ -291,7 +292,7 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
         public String securityGroupId;
 
         /**
-         * <p>The child instances of the Prometheus instance for GlobalView instance. The value is a JSON string.</p>
+         * <p>The child instances of the global aggregation instance. The value is a JSON string.</p>
          * 
          * <strong>example:</strong>
          * <p>[ { &quot;headers&quot;: {}, &quot;regionId&quot;: &quot;cn-hangzhou&quot;, &quot;sourceType&quot;: &quot;AlibabaPrometheus&quot;, &quot;extras&quot;: {}, &quot;clusterId&quot;: &quot;c39a1048921e04fceb039db2fb\<em>\</em>\<em>\</em>&quot;, &quot;sourceName&quot;: &quot;arms-luyao-test&quot;, &quot;dataSource&quot;: &quot;&quot;, &quot;userId&quot;: &quot;167275301789\<em>\</em>\<em>\</em>&quot; }, { &quot;headers&quot;: {}, &quot;regionId&quot;: &quot;cn-beijing&quot;, &quot;sourceType&quot;: &quot;AlibabaPrometheus&quot;, &quot;extras&quot;: {}, &quot;clusterId&quot;: &quot;c6b6485496d5b400abde22cb47b5\<em>\</em>\<em>\</em>&quot;, &quot;sourceName&quot;: &quot;agent-321-test&quot;, &quot;dataSource&quot;: &quot;&quot;, &quot;userId&quot;: &quot;167275301789\<em>\</em>\<em>\</em>&quot; }, { &quot;headers&quot;: {}, &quot;regionId&quot;: &quot;cn-zhangjiakou&quot;, &quot;sourceType&quot;: &quot;AlibabaPrometheus&quot;, &quot;extras&quot;: {}, &quot;clusterId&quot;: &quot;c261a4f3200c446659133f1ade78\<em>\</em>\<em>\</em>&quot;, &quot;sourceName&quot;: &quot;zaifeng-cardinality-01&quot;, &quot;dataSource&quot;: &quot;&quot;, &quot;userId&quot;: &quot;167275301789\<em>\</em>\<em>\</em>&quot; } ]</p>
@@ -300,7 +301,7 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
         public String subClustersJson;
 
         /**
-         * <p>The tags.</p>
+         * <p>The list of tags.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListPrometheusInstanceByTagAndResourceGroupIdResponseBodyDataPrometheusInstancesTags> tags;

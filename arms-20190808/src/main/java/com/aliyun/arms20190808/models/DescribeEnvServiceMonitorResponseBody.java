@@ -76,7 +76,7 @@ public class DescribeEnvServiceMonitorResponseBody extends TeaModel {
 
     public static class DescribeEnvServiceMonitorResponseBodyData extends TeaModel {
         /**
-         * <p>The YAML configuration string of the ServiceMonitor.</p>
+         * <p>The YAML configuration file of the ServiceMonitor.</p>
          * 
          * <strong>example:</strong>
          * <p>Refer to supplementary instructions.</p>
@@ -121,7 +121,11 @@ public class DescribeEnvServiceMonitorResponseBody extends TeaModel {
         public String serviceMonitorName;
 
         /**
-         * <p>The status of the ServiceMonitor. Valid values: run and stop.</p>
+         * <p>The status. Valid values:</p>
+         * <ul>
+         * <li>run</li>
+         * <li>stop</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>run</p>

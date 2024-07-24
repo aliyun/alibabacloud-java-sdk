@@ -47,6 +47,10 @@ public class GetRumExceptionStackRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>source-map</p>
+     */
     @NameInMap("SourcemapType")
     public String sourcemapType;
 

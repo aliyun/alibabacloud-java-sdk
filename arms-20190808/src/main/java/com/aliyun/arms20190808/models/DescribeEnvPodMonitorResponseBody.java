@@ -76,7 +76,7 @@ public class DescribeEnvPodMonitorResponseBody extends TeaModel {
 
     public static class DescribeEnvPodMonitorResponseBodyData extends TeaModel {
         /**
-         * <p>The YAML configuration string of the PodMonitor.</p>
+         * <p>The YAML string of the PodMonitor.</p>
          * 
          * <strong>example:</strong>
          * <p>Refer to supplementary instructions.</p>
@@ -121,7 +121,11 @@ public class DescribeEnvPodMonitorResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The status of the PodMonitor. Valid values: run and stop.</p>
+         * <p>The status. Valid values:</p>
+         * <ul>
+         * <li>run</li>
+         * <li>stop</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>run</p>

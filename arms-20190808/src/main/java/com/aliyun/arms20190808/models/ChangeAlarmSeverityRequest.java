@@ -30,6 +30,7 @@ public class ChangeAlarmSeverityRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The severity level of the alert. Valid values: P1, P2, P3, and P4. P4 indicates the lowest severity, whereas P1 indicates the highest severity.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

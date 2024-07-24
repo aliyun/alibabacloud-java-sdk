@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class OpenArmsDefaultSLRResponseBody extends TeaModel {
     /**
-     * <p>The returned result.</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <ul>
+     * <li><code>true</code>: The call was successful.</li>
+     * <li><code>false</code>: The call failed.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>

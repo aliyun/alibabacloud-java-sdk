@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeTraceLicenseKeyResponseBody extends TeaModel {
     /**
+     * <p>The license key for the application.</p>
+     * 
      * <strong>example:</strong>
      * <p>b590lhguqs@3a75d95f218****</p>
      */
@@ -12,6 +14,8 @@ public class DescribeTraceLicenseKeyResponseBody extends TeaModel {
     public String licenseKey;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>29053944-6FE5-4240-8927-10095ECE****</p>
      */

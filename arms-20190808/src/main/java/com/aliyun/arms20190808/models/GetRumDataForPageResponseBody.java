@@ -22,6 +22,8 @@ public class GetRumDataForPageResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>StartTime is mandatory for this action.</p>
      */

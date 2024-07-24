@@ -61,10 +61,15 @@ public class ListEnvironmentsShrinkRequest extends TeaModel {
     public String environmentType;
 
     /**
-     * <p>The payable resource plan. Valid values:</p>
+     * <p>The payable resource plan.</p>
      * <ul>
      * <li>If the EnvironmentType parameter is set to CS, set the value to CS_Basic or CS_Pro. Default value: CS_Basic.</li>
      * <li>Otherwise, leave the parameter empty.</li>
+     * </ul>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>CS_Pro: Container Monitoring Pro</li>
+     * <li>CS_Basic: Container Monitoring Basic</li>
      * </ul>
      * 
      * <strong>example:</strong>

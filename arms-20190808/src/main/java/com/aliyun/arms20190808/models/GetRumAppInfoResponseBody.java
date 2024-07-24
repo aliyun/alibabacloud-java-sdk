@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetRumAppInfoResponseBody extends TeaModel {
     /**
+     * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The details of the application.</p>
+     */
     @NameInMap("Data")
     public GetRumAppInfoResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetRumAppInfoResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
+     * <p>The error message returned if the request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>StartTime is mandatory for this action.</p>
      */
@@ -29,7 +38,7 @@ public class GetRumAppInfoResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A5EC8221-08F2-4C95-9AF1-49FD998C****</p>
@@ -38,6 +47,12 @@ public class GetRumAppInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><code>true</code></li>
+     * <li><code>false</code></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,16 +112,71 @@ public class GetRumAppInfoResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class GetRumAppInfoResponseBodyDataBonreeSDKConfig extends TeaModel {
+        @NameInMap("enable")
+        public Boolean enable;
+
+        @NameInMap("moduleConfig")
+        public java.util.Map<String, DataBonreeSDKConfigModuleConfigValue> moduleConfig;
+
+        public static GetRumAppInfoResponseBodyDataBonreeSDKConfig build(java.util.Map<String, ?> map) throws Exception {
+            GetRumAppInfoResponseBodyDataBonreeSDKConfig self = new GetRumAppInfoResponseBodyDataBonreeSDKConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public GetRumAppInfoResponseBodyDataBonreeSDKConfig setEnable(Boolean enable) {
+            this.enable = enable;
+            return this;
+        }
+        public Boolean getEnable() {
+            return this.enable;
+        }
+
+        public GetRumAppInfoResponseBodyDataBonreeSDKConfig setModuleConfig(java.util.Map<String, DataBonreeSDKConfigModuleConfigValue> moduleConfig) {
+            this.moduleConfig = moduleConfig;
+            return this;
+        }
+        public java.util.Map<String, DataBonreeSDKConfigModuleConfigValue> getModuleConfig() {
+            return this.moduleConfig;
+        }
+
+    }
+
     public static class GetRumAppInfoResponseBodyDataServiceDomainConfigs extends TeaModel {
+        /**
+         * <p>Describe.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>Domain name or IP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
+         */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <p>Trace transparent transmission protocol list, must be transmitted when link tracking is enabled.</p>
+         */
         @NameInMap("PropagatorTypes")
         public java.util.List<String> propagatorTypes;
 
+        /**
+         * <p>Whether to enable link tracking (need to enable the observable link Open Telemetry version), value:</p>
+         * <ul>
+         * <li><code>true</code>: Enable link tracking (after enabling, the relevant header will be inserted into the domain name request).</li>
+         * <li><code>false</code>: Do not enable link tracking.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Tracing")
         public Boolean tracing;
 
@@ -151,6 +221,8 @@ public class GetRumAppInfoResponseBody extends TeaModel {
 
     public static class GetRumAppInfoResponseBodyDataTags extends TeaModel {
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>Label</p>
          */
@@ -158,6 +230,8 @@ public class GetRumAppInfoResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>Value</p>
          */
@@ -188,24 +262,46 @@ public class GetRumAppInfoResponseBody extends TeaModel {
     }
 
     public static class GetRumAppInfoResponseBodyData extends TeaModel {
+        @NameInMap("AppGroup")
+        public String appGroup;
+
         /**
+         * <p>The application type. Valid values: web, miniapp, ios, and android.</p>
+         * 
          * <strong>example:</strong>
          * <p>web</p>
          */
         @NameInMap("AppType")
         public String appType;
 
+        @NameInMap("BonreeSDKConfig")
+        public GetRumAppInfoResponseBodyDataBonreeSDKConfig bonreeSDKConfig;
+
         /**
+         * <strong>example:</strong>
+         * <p>b59xxxxxxxx-sdk.rum.aliyuncs.com/v2/browser-sdk.js</p>
+         */
+        @NameInMap("CdnDomain")
+        public String cdnDomain;
+
+        /**
+         * <p>The time when the application was created. The value is a timestamp. Unit: milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1683353594000</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The description of the application.</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The endpoint that is used to report application data.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxxxxxxx-default-cn.rum.aliyuncs.com</p>
          */
@@ -213,6 +309,8 @@ public class GetRumAppInfoResponseBody extends TeaModel {
         public String endpoint;
 
         /**
+         * <p>Indicates whether the application is subscribed. Valid values: true and false.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -220,6 +318,8 @@ public class GetRumAppInfoResponseBody extends TeaModel {
         public String isSubscription;
 
         /**
+         * <p>The application name.</p>
+         * 
          * <strong>example:</strong>
          * <p>tomcat-demo-test</p>
          */
@@ -227,6 +327,8 @@ public class GetRumAppInfoResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The alias of the application.</p>
+         * 
          * <strong>example:</strong>
          * <p>nickname</p>
          */
@@ -234,6 +336,8 @@ public class GetRumAppInfoResponseBody extends TeaModel {
         public String nickName;
 
         /**
+         * <p>The name of the application package.</p>
+         * 
          * <strong>example:</strong>
          * <p>com.alibaba.rum</p>
          */
@@ -241,6 +345,8 @@ public class GetRumAppInfoResponseBody extends TeaModel {
         public String packageName;
 
         /**
+         * <p>The application ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>avccccefy0@24cccccbf384dc6</p>
          */
@@ -248,6 +354,8 @@ public class GetRumAppInfoResponseBody extends TeaModel {
         public String pid;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -255,16 +363,23 @@ public class GetRumAppInfoResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The ID of the resource group.</p>
+         * 
          * <strong>example:</strong>
          * <p>rg-aek2vezare****</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>Service domain name configuration list (currently only supports mobile applications).</p>
+         */
         @NameInMap("ServiceDomainConfigs")
         public java.util.List<GetRumAppInfoResponseBodyDataServiceDomainConfigs> serviceDomainConfigs;
 
         /**
+         * <p>The name of the Simple Log Service Logstore that stores application data.</p>
+         * 
          * <strong>example:</strong>
          * <p>logstore-rum</p>
          */
@@ -272,6 +387,8 @@ public class GetRumAppInfoResponseBody extends TeaModel {
         public String slsLogstore;
 
         /**
+         * <p>The name of the Simple Log Service project that stores application data.</p>
+         * 
          * <strong>example:</strong>
          * <p>proj-xtrace-xxxxxxxxxxxxxxxxxxxxxxx-cn-hangzhou</p>
          */
@@ -279,16 +396,23 @@ public class GetRumAppInfoResponseBody extends TeaModel {
         public String slsProject;
 
         /**
+         * <p>The status of the application. Valid values: created, running, and stopped.</p>
+         * 
          * <strong>example:</strong>
          * <p>running</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<GetRumAppInfoResponseBodyDataTags> tags;
 
         /**
+         * <p>The type of the application. Valid value: RUM.</p>
+         * 
          * <strong>example:</strong>
          * <p>RUM</p>
          */
@@ -300,12 +424,36 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public GetRumAppInfoResponseBodyData setAppGroup(String appGroup) {
+            this.appGroup = appGroup;
+            return this;
+        }
+        public String getAppGroup() {
+            return this.appGroup;
+        }
+
         public GetRumAppInfoResponseBodyData setAppType(String appType) {
             this.appType = appType;
             return this;
         }
         public String getAppType() {
             return this.appType;
+        }
+
+        public GetRumAppInfoResponseBodyData setBonreeSDKConfig(GetRumAppInfoResponseBodyDataBonreeSDKConfig bonreeSDKConfig) {
+            this.bonreeSDKConfig = bonreeSDKConfig;
+            return this;
+        }
+        public GetRumAppInfoResponseBodyDataBonreeSDKConfig getBonreeSDKConfig() {
+            return this.bonreeSDKConfig;
+        }
+
+        public GetRumAppInfoResponseBodyData setCdnDomain(String cdnDomain) {
+            this.cdnDomain = cdnDomain;
+            return this;
+        }
+        public String getCdnDomain() {
+            return this.cdnDomain;
         }
 
         public GetRumAppInfoResponseBodyData setCreateTime(String createTime) {

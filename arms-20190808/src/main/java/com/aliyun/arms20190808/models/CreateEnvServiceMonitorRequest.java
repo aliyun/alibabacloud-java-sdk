@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class CreateEnvServiceMonitorRequest extends TeaModel {
     /**
-     * <p>The language. Valid values: zh and en. Default value: zh.</p>
+     * <p>The language. Valid values:</p>
+     * <ul>
+     * <li>zh (default): Chinese</li>
+     * <li>en: English</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -14,7 +18,7 @@ public class CreateEnvServiceMonitorRequest extends TeaModel {
     public String aliyunLang;
 
     /**
-     * <p>The YAML configuration string of the ServiceMonitor.</p>
+     * <p>The YAML configuration file of the ServiceMonitor.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +28,7 @@ public class CreateEnvServiceMonitorRequest extends TeaModel {
     public String configYaml;
 
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request.</p>
+     * <p>Specifies whether to perform only a dry run, without performing the actual request. The system checks whether the format is valid and whether targets are matched.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

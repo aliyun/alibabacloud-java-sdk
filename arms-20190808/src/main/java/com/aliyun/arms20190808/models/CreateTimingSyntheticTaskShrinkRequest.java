@@ -7,6 +7,9 @@ public class CreateTimingSyntheticTaskShrinkRequest extends TeaModel {
     @NameInMap("AvailableAssertions")
     public String availableAssertionsShrink;
 
+    /**
+     * <p>The general settings.</p>
+     */
     @NameInMap("CommonSetting")
     public String commonSettingShrink;
 
@@ -32,6 +35,7 @@ public class CreateTimingSyntheticTaskShrinkRequest extends TeaModel {
     public Integer monitorCategory;
 
     /**
+     * <p>The monitoring configurations.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("MonitorConf")
@@ -44,6 +48,7 @@ public class CreateTimingSyntheticTaskShrinkRequest extends TeaModel {
     public String monitorsShrink;
 
     /**
+     * <p>The name of the task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,6 +58,7 @@ public class CreateTimingSyntheticTaskShrinkRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -72,6 +78,8 @@ public class CreateTimingSyntheticTaskShrinkRequest extends TeaModel {
     public String tagsShrink;
 
     /**
+     * <p>The type of the task. Valid values:</p>
+     * <p>1: ICMP. 2: TCP. 3: DNS. 4: HTTP. 5: website speed measurement. 6: file download.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

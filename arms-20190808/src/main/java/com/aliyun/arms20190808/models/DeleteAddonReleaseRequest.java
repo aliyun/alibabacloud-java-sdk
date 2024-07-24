@@ -4,6 +4,9 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class DeleteAddonReleaseRequest extends TeaModel {
+    /**
+     * <p>The name of the add-on.</p>
+     */
     @NameInMap("AddonName")
     public String addonName;
 

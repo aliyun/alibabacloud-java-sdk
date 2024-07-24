@@ -24,7 +24,7 @@ public class UpdateEnvironmentRequest extends TeaModel {
     public String environmentId;
 
     /**
-     * <p>The environment name.</p>
+     * <p>The name of the environment instance.</p>
      * 
      * <strong>example:</strong>
      * <p>env1</p>
@@ -33,10 +33,10 @@ public class UpdateEnvironmentRequest extends TeaModel {
     public String environmentName;
 
     /**
-     * <p>Fee package.</p>
+     * <p>The payable resource plan. Valid values:</p>
      * <ul>
-     * <li>When the EnvironmentType is CS: it can be specified as CS_Basic (default) or CS-Pro.</li>
-     * <li>When the EnvironmentType is a different value, please enter a null value.</li>
+     * <li>If the EnvironmentType parameter is set to CS, set the value to CS_Basic or CS_Pro. Default value: CS_Basic.</li>
+     * <li>Otherwise, leave the parameter empty.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateMetricDropRequest extends TeaModel {
     /**
+     * <p>The ID of the Prometheus instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>c3ca36c8e2693403d85c0d9f8bb1d7b6c</p>
      */
@@ -12,6 +14,8 @@ public class UpdateMetricDropRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The list of discarded metrics. Specify one metric name in each line.</p>
+     * 
      * <strong>example:</strong>
      * <p>apiserver_request_duration_seconds_bucket
      * etcd_request_duration_seconds_bucket
@@ -22,6 +26,8 @@ public class UpdateMetricDropRequest extends TeaModel {
     public String metricDrop;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */

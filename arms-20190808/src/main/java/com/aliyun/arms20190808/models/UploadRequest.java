@@ -14,8 +14,7 @@ public class UploadRequest extends TeaModel {
     public String edition;
 
     /**
-     * <p>The content of the SourceMap file.</p>
-     * <p>This parameter is required.</p>
+     * <p>The string of the SourceMap file.</p>
      * 
      * <strong>example:</strong>
      * <p>test file content</p>

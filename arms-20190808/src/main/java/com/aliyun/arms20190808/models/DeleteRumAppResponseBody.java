@@ -19,6 +19,8 @@ public class DeleteRumAppResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -42,6 +44,8 @@ public class DeleteRumAppResponseBody extends TeaModel {
     public String resourceGroupId;
 
     /**
+     * <p>Indicates whether the application is deleted.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success to delete app.</p>
      */

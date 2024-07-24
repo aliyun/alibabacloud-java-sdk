@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteRumUploadFileResponseBody extends TeaModel {
     /**
+     * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class DeleteRumUploadFileResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>Indicates whether the file is deleted. If the file is deleted, &quot;success&quot; is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,17 +23,22 @@ public class DeleteRumUploadFileResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>40B10E04-81E8-4643-970D-F1B38F2E****</p>
@@ -38,6 +47,12 @@ public class DeleteRumUploadFileResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <ul>
+     * <li><code>true</code></li>
+     * <li><code>false</code></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAddonReleasesRequest extends TeaModel {
     /**
-     * <p>Name of Addon.</p>
+     * <p>The name of the add-on.</p>
      * 
      * <strong>example:</strong>
      * <p>mysql</p>
@@ -14,7 +14,7 @@ public class ListAddonReleasesRequest extends TeaModel {
     public String addonName;
 
     /**
-     * <p>Environment instance ID.</p>
+     * <p>The environment ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

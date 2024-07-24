@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateMetricDropResponseBody extends TeaModel {
     /**
+     * <p>The response status. Valid values: 2XX: The request is successful. 3XX: A redirection message is returned. 4XX: The request is invalid. 5XX: A server error occurs.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class UpdateMetricDropResponseBody extends TeaModel {
     public Long code;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,6 +23,8 @@ public class UpdateMetricDropResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>The returned message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -26,7 +32,7 @@ public class UpdateMetricDropResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>CCCA4B88-BD7B-5A38-89AF-C09293BD4187</p>
@@ -35,6 +41,12 @@ public class UpdateMetricDropResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

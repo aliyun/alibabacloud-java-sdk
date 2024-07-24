@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAlertEventsResponseBody extends TeaModel {
     /**
-     * <p>The struct returned.</p>
+     * <p>The returned struct.</p>
      */
     @NameInMap("PageBean")
     public ListAlertEventsResponseBodyPageBean pageBean;
@@ -122,9 +122,21 @@ public class ListAlertEventsResponseBody extends TeaModel {
     }
 
     public static class ListAlertEventsResponseBodyPageBeanEventsNotificationPolicies extends TeaModel {
+        /**
+         * <p>The ID of the notification policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>646093</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The name of the notification policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>P1 alert notification policy</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -153,7 +165,7 @@ public class ListAlertEventsResponseBody extends TeaModel {
 
     public static class ListAlertEventsResponseBodyPageBeanEvents extends TeaModel {
         /**
-         * <p>The list of associated alerts.</p>
+         * <p>The associated alerts.</p>
          */
         @NameInMap("Alarms")
         public java.util.List<ListAlertEventsResponseBodyPageBeanEventsAlarms> alarms;
@@ -168,7 +180,7 @@ public class ListAlertEventsResponseBody extends TeaModel {
         public String alertName;
 
         /**
-         * <p>The list of annotations.</p>
+         * <p>The annotations.</p>
          * 
          * <strong>example:</strong>
          * <p>[{\&quot;Name\&quot;:\&quot;annotation-a\&quot;,\&quot;Value\&quot;:\&quot;annotation a value\&quot;}]</p>
@@ -186,7 +198,7 @@ public class ListAlertEventsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The end time of the alert event.</p>
+         * <p>The end time.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-12-20 17:42:16</p>
@@ -231,7 +243,7 @@ public class ListAlertEventsResponseBody extends TeaModel {
         public String integrationType;
 
         /**
-         * <p>The list of tags.</p>
+         * <p>The tags.</p>
          * 
          * <strong>example:</strong>
          * <p>[{\&quot;name\&quot;:\&quot;severity\&quot;,\&quot;value\&quot;:\&quot;error\&quot;}]</p>
@@ -239,6 +251,9 @@ public class ListAlertEventsResponseBody extends TeaModel {
         @NameInMap("Labels")
         public String labels;
 
+        /**
+         * <p>The information about the notification policy.</p>
+         */
         @NameInMap("NotificationPolicies")
         public java.util.List<ListAlertEventsResponseBodyPageBeanEventsNotificationPolicies> notificationPolicies;
 
@@ -252,7 +267,7 @@ public class ListAlertEventsResponseBody extends TeaModel {
         public String receiveTime;
 
         /**
-         * <p>The severity level of the alert. Valid value:</p>
+         * <p>The severity level of the alert. Valid values:</p>
          * <ul>
          * <li>critical: P1</li>
          * <li>error: P2</li>
@@ -268,7 +283,7 @@ public class ListAlertEventsResponseBody extends TeaModel {
         public String severity;
 
         /**
-         * <p>The start time of the alert event.</p>
+         * <p>The start time.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-12-20 17:42:16</p>
@@ -290,6 +305,12 @@ public class ListAlertEventsResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The number of times the alert is triggered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("TriggerCount")
         public Long triggerCount;
 
@@ -430,7 +451,7 @@ public class ListAlertEventsResponseBody extends TeaModel {
 
     public static class ListAlertEventsResponseBodyPageBean extends TeaModel {
         /**
-         * <p>The list of information about historical alert events.</p>
+         * <p>The queried historical alert events.</p>
          */
         @NameInMap("Events")
         public java.util.List<ListAlertEventsResponseBodyPageBeanEvents> events;

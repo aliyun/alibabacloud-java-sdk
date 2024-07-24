@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetRumUploadFilesRequest extends TeaModel {
     /**
+     * <p>The file type. Valid values: source-map: SourceMap files. mapping: symbol table files for Android. dsym: dSYM files for iOS.</p>
+     * 
      * <strong>example:</strong>
      * <p>source-map</p>
      */
@@ -12,6 +14,8 @@ public class GetRumUploadFilesRequest extends TeaModel {
     public String appType;
 
     /**
+     * <p>The application ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>aoxxxxxly@741623b4e91****</p>
      */
@@ -19,6 +23,7 @@ public class GetRumUploadFilesRequest extends TeaModel {
     public String pid;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

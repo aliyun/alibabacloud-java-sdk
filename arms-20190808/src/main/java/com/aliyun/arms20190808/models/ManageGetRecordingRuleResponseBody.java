@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ManageGetRecordingRuleResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.</p>
+     * <p>状态码。200为成功，其他状态码为异常。</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class ManageGetRecordingRuleResponseBody extends TeaModel {
     public String data;
 
     /**
-     * <p>The returned message.</p>
+     * <p>返回信息。</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>

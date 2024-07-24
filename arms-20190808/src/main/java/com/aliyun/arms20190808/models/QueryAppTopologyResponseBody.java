@@ -49,7 +49,7 @@ public class QueryAppTopologyResponseBody extends TeaModel {
     public Object data;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>Internal error. Please try again. Contact the DingTalk service account if the issue                              persists after multiple retries.</p>

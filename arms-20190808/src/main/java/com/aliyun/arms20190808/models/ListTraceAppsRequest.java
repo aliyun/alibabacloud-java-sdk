@@ -7,8 +7,8 @@ public class ListTraceAppsRequest extends TeaModel {
     /**
      * <p>The type of the application that is associated with the alert rule. Valid values:</p>
      * <ul>
-     * <li><code>TRACE</code>: Application Monitoring</li>
-     * <li><code>EBPF</code>: Application Monitoring eBPF Edition</li>
+     * <li>TRACE: Application Monitoring</li>
+     * <li>EBPF: Application Monitoring eBPF Edition</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class ListTraceAppsRequest extends TeaModel {
      * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>cn-hangzhou</p>
+     * <p>cn-shenzhen</p>
      */
     @NameInMap("Region")
     public String region;

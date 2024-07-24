@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetManagedPrometheusStatusResponseBody extends TeaModel {
     /**
-     * <p>The status code or error code.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,12 +14,12 @@ public class GetManagedPrometheusStatusResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The status of the Prometheus instance.</p>
+     * <p>The installation status of the Prometheus agent.</p>
      * <ul>
-     * <li>Installing: The Prometheus instance is created and the Prometheus agent has no registration information.</li>
-     * <li>Succeed: The Prometheus instance is created and the Prometheus agent is registered.</li>
-     * <li>Failure: The Prometheus instance failed to be created or the Prometheus agent failed to be registered.</li>
-     * <li>Unknown: No status of the Prometheus instance is available.</li>
+     * <li>Installing: The Prometheus agent is installed and no registration information is available.</li>
+     * <li>Succeed: The Prometheus agent is installed and registered.</li>
+     * <li>Failure: The Prometheus agent failed to be installed or registered.</li>
+     * <li>Unknown: The installation status of the Prometheus agent is unknown.</li>
      * </ul>
      * 
      * <strong>example:</strong>

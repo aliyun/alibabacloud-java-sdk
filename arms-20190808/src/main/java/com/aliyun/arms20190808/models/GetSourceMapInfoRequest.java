@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class GetSourceMapInfoRequest extends TeaModel {
     /**
+     * <p>The order in which the files are sorted. Valid values:</p>
+     * <ul>
+     * <li>true: ascending order</li>
+     * <li>false: descending order</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +18,8 @@ public class GetSourceMapInfoRequest extends TeaModel {
     public Boolean ascendingSequence;
 
     /**
+     * <p>The version of the SourceMap file.</p>
+     * 
      * <strong>example:</strong>
      * <p>0.0.0</p>
      */
@@ -19,12 +27,15 @@ public class GetSourceMapInfoRequest extends TeaModel {
     public String edition;
 
     /**
+     * <p>The ID of the SourceMap file.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ID")
     public String ID;
 
     /**
+     * <p>The keyword in the file name. The files are searched by keyword.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -32,6 +43,12 @@ public class GetSourceMapInfoRequest extends TeaModel {
     public String keyword;
 
     /**
+     * <p>The criterion by which the files are sorted. Valid values:</p>
+     * <ul>
+     * <li>version: The files are sorted by version.</li>
+     * <li>uploadTime: The files are sorted by upload time.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>version</p>
      */
@@ -39,6 +56,8 @@ public class GetSourceMapInfoRequest extends TeaModel {
     public String orderField;
 
     /**
+     * <p>The ID of the region.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */

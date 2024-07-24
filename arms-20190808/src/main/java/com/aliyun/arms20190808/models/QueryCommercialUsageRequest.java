@@ -4,13 +4,27 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class QueryCommercialUsageRequest extends TeaModel {
+    /**
+     * <p>The filter conditions.</p>
+     */
     @NameInMap("AdvancedFilters")
     public java.util.List<QueryCommercialUsageRequestAdvancedFilters> advancedFilters;
 
+    /**
+     * <p>The dimensions of the metric that you want to query. Valid values:</p>
+     * <ul>
+     * <li>dataType: data type</li>
+     * <li>productType: product type</li>
+     * <li>instanceId: instance ID</li>
+     * <li>instanceName: instance name</li>
+     * <li>instanceType: instance type</li>
+     * </ul>
+     */
     @NameInMap("Dimensions")
     public java.util.List<String> dimensions;
 
     /**
+     * <p>The end of the time range to query. Unit: milliseconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,16 +34,22 @@ public class QueryCommercialUsageRequest extends TeaModel {
     public Long endTime;
 
     /**
+     * <p>The time interval between data slices. Unit: seconds. Minimum value: 3600.</p>
+     * 
      * <strong>example:</strong>
      * <p>3600</p>
      */
     @NameInMap("IntervalInSec")
     public Integer intervalInSec;
 
+    /**
+     * <p>The measures of the metric that you want to query.</p>
+     */
     @NameInMap("Measures")
     public java.util.List<String> measures;
 
     /**
+     * <p>The name of the metric. Valid value: USAGEFEE.STAT.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +59,12 @@ public class QueryCommercialUsageRequest extends TeaModel {
     public String metric;
 
     /**
+     * <p>The order in which data is sorted. Valid value:</p>
+     * <ul>
+     * <li><code>ASC</code>: ascending order</li>
+     * <li><code>DESC</code>: descending order</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>ASC</p>
      */
@@ -46,6 +72,17 @@ public class QueryCommercialUsageRequest extends TeaModel {
     public String order;
 
     /**
+     * <p>The dimension by which data is sorted.</p>
+     * <p>Valid value:</p>
+     * <ul>
+     * <li><p>dataType</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- --></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>dataType</p>
      */
@@ -53,6 +90,11 @@ public class QueryCommercialUsageRequest extends TeaModel {
     public String orderBy;
 
     /**
+     * <p>The data type. Valid values:</p>
+     * <ul>
+     * <li>instantQuery: non-time series</li>
+     * <li>timeSeriesQuery: time series</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -62,6 +104,7 @@ public class QueryCommercialUsageRequest extends TeaModel {
     public String queryType;
 
     /**
+     * <p>The start of the time range to query. Unit: milliseconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -157,6 +200,8 @@ public class QueryCommercialUsageRequest extends TeaModel {
 
     public static class QueryCommercialUsageRequestAdvancedFilters extends TeaModel {
         /**
+         * <p>The key of the filter condition.</p>
+         * 
          * <strong>example:</strong>
          * <p>regionId</p>
          */
@@ -164,6 +209,8 @@ public class QueryCommercialUsageRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The operator. Valid values: eq and in.</p>
+         * 
          * <strong>example:</strong>
          * <p>eq</p>
          */
@@ -171,6 +218,8 @@ public class QueryCommercialUsageRequest extends TeaModel {
         public String opType;
 
         /**
+         * <p>The value of the filter condition.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */

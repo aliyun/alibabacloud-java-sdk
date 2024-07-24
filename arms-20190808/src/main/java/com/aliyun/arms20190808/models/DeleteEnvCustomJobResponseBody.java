@@ -14,7 +14,7 @@ public class DeleteEnvCustomJobResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The returned result.</p>
+     * <p>The result of the operation.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -32,7 +32,7 @@ public class DeleteEnvCustomJobResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2FC13182-B9AF-4E6B-BE51-72669B7C****</p>

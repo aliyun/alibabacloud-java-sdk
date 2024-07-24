@@ -21,6 +21,8 @@ public class ListGrafanaWorkspaceShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The ID of the resource group.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-acfmxyexli2****</p>
      */

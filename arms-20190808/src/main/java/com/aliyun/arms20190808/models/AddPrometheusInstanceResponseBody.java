@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AddPrometheusInstanceResponseBody extends TeaModel {
     /**
+     * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,7 +14,7 @@ public class AddPrometheusInstanceResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The returned struct. { &quot;RequestId&quot;: the request ID, &quot;Data&quot;: &quot;{ &quot;clusterType&quot;: the cluster type, &quot;remoteWriteUrl&quot;: the public URL for remote write, &quot;internetGrafanaUrl&quot;: the internal URL for Grafana, &quot;authToken&quot;: indicates whether authentication is enabled, &quot;internetPushGatewayUrl&quot;: the internal URL for Pushgateway, &quot;clusterId&quot;: the cluster ID, &quot;internetRemoteReadUrl&quot;: the internal URL for remote read, &quot;remoteReadUrl&quot;: the public URL for remote read, &quot;grafanaUrl&quot;: the public URL for Grafana, &quot;pushGatewayUrl&quot;: the public URL for Pushgateway, &quot;internetRemoteWriteUrl&quot;: the internal URL for remote write}&quot; }</p>
+     * <p>The struct returned. { &quot;RequestId&quot;: the request ID, &quot;Data&quot;: &quot;{ &quot;clusterType&quot;: the cluster type, &quot;remoteWriteUrl&quot;: the public URL for remote write, &quot;internetGrafanaUrl&quot;: the internal URL for Grafana, &quot;authToken&quot;: indicates whether authentication is enabled, &quot;internetPushGatewayUrl&quot;: the internal URL for Pushgateway, &quot;clusterId&quot;: the cluster ID, &quot;internetRemoteReadUrl&quot;: the internal URL for remote read, &quot;remoteReadUrl&quot;: the public URL for remote read, &quot;grafanaUrl&quot;: the public URL for Grafana, &quot;pushGatewayUrl&quot;: the public URL for Pushgateway, &quot;internetRemoteWriteUrl&quot;: the internal URL for remote write}&quot; }</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -35,6 +37,8 @@ public class AddPrometheusInstanceResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>The message returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -51,6 +55,8 @@ public class AddPrometheusInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

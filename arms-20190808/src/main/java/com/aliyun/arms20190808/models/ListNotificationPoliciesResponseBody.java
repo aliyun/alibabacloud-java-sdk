@@ -42,7 +42,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
 
     public static class ListNotificationPoliciesResponseBodyPageBeanNotificationPoliciesGroupRule extends TeaModel {
         /**
-         * <p>The time interval of grouping. Unit: seconds. Default value: 30.</p>
+         * <p>The time interval for grouping. Unit: seconds. Default value: 30.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -594,13 +594,13 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The notification rules.</p>
+         * <p>The notification rule.</p>
          */
         @NameInMap("NotifyRule")
         public ListNotificationPoliciesResponseBodyPageBeanNotificationPoliciesNotifyRule notifyRule;
 
         /**
-         * <p>The notification templates.</p>
+         * <p>The notification template.</p>
          */
         @NameInMap("NotifyTemplate")
         public ListNotificationPoliciesResponseBodyPageBeanNotificationPoliciesNotifyTemplate notifyTemplate;
@@ -641,6 +641,8 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
         public Boolean sendRecoverMessage;
 
         /**
+         * <p>Indicates whether the notification policy is enabled. Valid values: enable and disable.</p>
+         * 
          * <strong>example:</strong>
          * <p>enable</p>
          */

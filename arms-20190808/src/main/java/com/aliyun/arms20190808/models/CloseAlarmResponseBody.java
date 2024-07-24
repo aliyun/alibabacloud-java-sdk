@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CloseAlarmResponseBody extends TeaModel {
     /**
+     * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class CloseAlarmResponseBody extends TeaModel {
     public Long code;
 
     /**
+     * <p>The returned message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,6 +23,8 @@ public class CloseAlarmResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>46355DD8-FC56-40C5-BFC6-269DE4F9****</p>
      */
@@ -26,6 +32,12 @@ public class CloseAlarmResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><code>true</code></li>
+     * <li><code>false</code></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -33,6 +45,12 @@ public class CloseAlarmResponseBody extends TeaModel {
     public Boolean result;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><code>true</code></li>
+     * <li><code>false</code></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */

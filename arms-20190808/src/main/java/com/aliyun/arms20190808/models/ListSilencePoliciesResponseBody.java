@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListSilencePoliciesResponseBody extends TeaModel {
     /**
-     * <p>The objects that were returned.</p>
+     * <p>The returned pages.</p>
      */
     @NameInMap("PageBean")
     public ListSilencePoliciesResponseBodyPageBean pageBean;
@@ -109,7 +109,7 @@ public class ListSilencePoliciesResponseBody extends TeaModel {
 
     public static class ListSilencePoliciesResponseBodyPageBeanSilencePoliciesMatchingRules extends TeaModel {
         /**
-         * <p>An array of matching condition objects.</p>
+         * <p>The matching conditions.</p>
          */
         @NameInMap("MatchingConditions")
         public java.util.List<ListSilencePoliciesResponseBodyPageBeanSilencePoliciesMatchingRulesMatchingConditions> matchingConditions;
@@ -140,7 +140,7 @@ public class ListSilencePoliciesResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>An array of matching rule objects.</p>
+         * <p>The matching rules.</p>
          */
         @NameInMap("MatchingRules")
         public java.util.List<ListSilencePoliciesResponseBodyPageBeanSilencePoliciesMatchingRules> matchingRules;
@@ -154,6 +154,12 @@ public class ListSilencePoliciesResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>Indicates whether the silence policy is enabled. Valid values: enable and disable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>enable</p>
+         */
         @NameInMap("State")
         public String state;
 
@@ -207,7 +213,7 @@ public class ListSilencePoliciesResponseBody extends TeaModel {
         public Long page;
 
         /**
-         * <p>An array of silence policy objects.</p>
+         * <p>The queried silence policies.</p>
          */
         @NameInMap("SilencePolicies")
         public java.util.List<ListSilencePoliciesResponseBodyPageBeanSilencePolicies> silencePolicies;

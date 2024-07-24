@@ -111,7 +111,7 @@ public class InstallAddonResponseBody extends TeaModel {
         public String lastTransitionTime;
 
         /**
-         * <p>The detailed information.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxx</p>
@@ -290,7 +290,7 @@ public class InstallAddonResponseBody extends TeaModel {
         public String language;
 
         /**
-         * <p>Whether or not it is a managed component.</p>
+         * <p>Indicates whether the component is fully managed.</p>
          */
         @NameInMap("Managed")
         public Boolean managed;

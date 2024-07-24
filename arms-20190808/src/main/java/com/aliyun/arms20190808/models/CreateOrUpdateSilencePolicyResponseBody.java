@@ -14,7 +14,7 @@ public class CreateOrUpdateSilencePolicyResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>A list of silence policies.</p>
+     * <p>The silence policy.</p>
      */
     @NameInMap("SilencePolicy")
     public CreateOrUpdateSilencePolicyResponseBodySilencePolicy silencePolicy;
@@ -109,7 +109,7 @@ public class CreateOrUpdateSilencePolicyResponseBody extends TeaModel {
 
     public static class CreateOrUpdateSilencePolicyResponseBodySilencePolicyMatchingRules extends TeaModel {
         /**
-         * <p>A list of matching conditions.</p>
+         * <p>The matching conditions.</p>
          */
         @NameInMap("MatchingConditions")
         public java.util.List<CreateOrUpdateSilencePolicyResponseBodySilencePolicyMatchingRulesMatchingConditions> matchingConditions;
@@ -155,6 +155,8 @@ public class CreateOrUpdateSilencePolicyResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>Indicates whether the silence policy is enabled. Valid values: enable and disable.</p>
+         * 
          * <strong>example:</strong>
          * <p>enable</p>
          */

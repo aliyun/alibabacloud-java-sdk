@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateRumUploadFileUrlRequest extends TeaModel {
     /**
+     * <p>The application name.</p>
+     * 
      * <strong>example:</strong>
      * <p>test-app</p>
      */
@@ -12,6 +14,8 @@ public class CreateRumUploadFileUrlRequest extends TeaModel {
     public String appName;
 
     /**
+     * <p>The type of the file. You can set this parameter to &quot;application/zip&quot;, &quot;text/plain&quot;, or an empty string.</p>
+     * 
      * <strong>example:</strong>
      * <p>text/plain</p>
      */
@@ -19,6 +23,8 @@ public class CreateRumUploadFileUrlRequest extends TeaModel {
     public String contentType;
 
     /**
+     * <p>The file name.</p>
+     * 
      * <strong>example:</strong>
      * <p>test.js.map</p>
      */
@@ -26,6 +32,8 @@ public class CreateRumUploadFileUrlRequest extends TeaModel {
     public String fileName;
 
     /**
+     * <p>The application ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>iioe7jcnuk@582846f37******</p>
      */
@@ -33,6 +41,7 @@ public class CreateRumUploadFileUrlRequest extends TeaModel {
     public String pid;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +51,8 @@ public class CreateRumUploadFileUrlRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The file type. Valid values: source-map: SourceMap files. mapping: symbol table files for Android. dsym: dSYM files for iOS.</p>
+     * 
      * <strong>example:</strong>
      * <p>source-map</p>
      */
@@ -49,6 +60,8 @@ public class CreateRumUploadFileUrlRequest extends TeaModel {
     public String sourcemapType;
 
     /**
+     * <p>The file ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>125bdb39-a415-4503-bd96-e293925fc64c</p>
      */
@@ -56,6 +69,8 @@ public class CreateRumUploadFileUrlRequest extends TeaModel {
     public String uuid;
 
     /**
+     * <p>The version number of the file.</p>
+     * 
      * <strong>example:</strong>
      * <p>1.0.0</p>
      */

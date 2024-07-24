@@ -104,14 +104,13 @@ public class CreateOrUpdateAlertRuleRequest extends TeaModel {
     public String alertStatus;
 
     /**
-     * <p>The following alert rule types are available:</p>
      * <ul>
-     * <li>APPLICATION_MONITORING_ALERT_RULE: alert rule for Application Monitoring</li>
-     * <li>BROWSER_MONITORING_ALERT_RULE: alert rule for Browser Monitoring</li>
-     * <li>RUM_MONITORING_ALERT_RULE: alert rule for RUM Monitoring</li>
-     * <li>PROMETHEUS_MONITORING_ALERT_RULE: alert rule for Managed Service for Prometheus</li>
-     * <li>XTRACE_MONITORING_ALERT_RULE: alert rule for Managed Service for OpenTelemetry</li>
-     * <li>EBPF_MONITORING_ALERT_RULE: alert rule for Application Monitoring eBPF Edition</li>
+     * <li>APPLICATION_MONITORING_ALERT_RULE</li>
+     * <li>BROWSER_MONITORING_ALERT_RULE</li>
+     * <li>XTRACE_MONITORING_ALERT_RULE</li>
+     * <li>RUM_MONITORING_ALERT_RULE</li>
+     * <li>EBPF_MONITORING_ALERT_RULE</li>
+     * <li>PROMETHEUS_MONITORING_ALERT_RULE</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -143,6 +142,12 @@ public class CreateOrUpdateAlertRuleRequest extends TeaModel {
     @NameInMap("AutoAddNewApplication")
     public Boolean autoAddNewApplication;
 
+    /**
+     * <p>Application monitoring alarm rules - Alarm application automatically adds configuration. auto Add Match Type: Matching method: regular match (REGULAR)/regular non-match (NOT_REGULAR) auto Add Match Exp: regular expression</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;autoAddMatchType\&quot;:\&quot;REGULAR\&quot;,\&quot;autoAddMatchExp\&quot;:\&quot;.<em>cbw.</em>\&quot;}</p>
+     */
     @NameInMap("AutoAddTargetConfig")
     public String autoAddTargetConfig;
 
@@ -172,7 +177,7 @@ public class CreateOrUpdateAlertRuleRequest extends TeaModel {
     public String dataConfig;
 
     /**
-     * <p>The duration of the Prometheus alert rule. Unit: minutes.</p>
+     * <p>The duration of the Prometheus alert rule, in minutes, in the range of [0,1440].</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -307,10 +312,10 @@ public class CreateOrUpdateAlertRuleRequest extends TeaModel {
     public String pids;
 
     /**
-     * <p>It is determined when creating the underlying rules of Prometheus. The background will verify whether the product exists, which is used to distinguish cloud product filtering queries.</p>
+     * <p>When creating a Prometheus alert rule, the backend will verify whether this product exists, which is used to distinguish cloud product filtering queries.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxxx</p>
+     * <p>clickhouse</p>
      */
     @NameInMap("Product")
     public String product;

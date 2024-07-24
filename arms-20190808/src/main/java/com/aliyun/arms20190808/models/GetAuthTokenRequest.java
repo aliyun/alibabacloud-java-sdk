@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAuthTokenRequest extends TeaModel {
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The ID of the ACK cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetAuthTokenRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The ID of the region.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

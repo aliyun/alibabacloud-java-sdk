@@ -14,7 +14,7 @@ public class AddPrometheusRemoteWriteResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The name of the remote write configuration item. If the request fails, an error message is returned.</p>
+     * <p>The name of the remote write configuration item that was added, or the exception information.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class AddPrometheusRemoteWriteResponseBody extends TeaModel {
     public String data;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>message</p>

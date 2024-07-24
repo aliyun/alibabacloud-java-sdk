@@ -4,6 +4,12 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class AddRecordingRuleResponseBody extends TeaModel {
+    /**
+     * <p>The status code. The status code 200 indicates that the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
@@ -16,6 +22,12 @@ public class AddRecordingRuleResponseBody extends TeaModel {
     @NameInMap("Data")
     public String data;
 
+    /**
+     * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 

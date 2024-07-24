@@ -23,7 +23,7 @@ public class SearchRetcodeAppByPageRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,7 +42,7 @@ public class SearchRetcodeAppByPageRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The ID of the application.</p>
+     * <p>The application ID.</p>
      * <p>Log on to the <strong>ARMS console</strong>. In the left-side navigation pane, choose <strong>Browser Monitoring</strong> &gt; <strong>Browser Monitoring</strong>. On the Browser Monitoring page, click the name of an application. The URL in the browser address bar contains the pid of this application in the format of <code>pid=xxx</code>. The PID is usually percent encoded as xxx%40xxx. You must modify this value to remove the percent encoding. For example, if the PID in the URL is <code>xxx%4074xxx</code>, you must replace <strong>%40</strong> with the at sign (@). The actual PID is <code>xxx@74xxx</code>.</p>
      * 
      * <strong>example:</strong>
@@ -52,7 +52,7 @@ public class SearchRetcodeAppByPageRequest extends TeaModel {
     public String retcodeAppId;
 
     /**
-     * <p>The name of the application that is monitored by Browser Monitoring.</p>
+     * <p>The name of the application.</p>
      * 
      * <strong>example:</strong>
      * <p>App1</p>
@@ -61,7 +61,7 @@ public class SearchRetcodeAppByPageRequest extends TeaModel {
     public String retcodeAppName;
 
     /**
-     * <p>The tags.</p>
+     * <p>The tag.</p>
      */
     @NameInMap("Tags")
     public java.util.List<SearchRetcodeAppByPageRequestTags> tags;

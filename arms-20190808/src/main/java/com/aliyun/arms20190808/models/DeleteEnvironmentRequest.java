@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteEnvironmentRequest extends TeaModel {
     /**
-     * <p>cascade delete Prometheus instance.</p>
+     * <p>Specifies whether to delete the related Prometheus instance.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

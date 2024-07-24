@@ -42,7 +42,7 @@ public class ListInsightsEventsResponseBody extends TeaModel {
 
     public static class ListInsightsEventsResponseBodyInsightsEvents extends TeaModel {
         /**
-         * <p>The time at which the event occurred. The value is a timestamp.</p>
+         * <p>The time when the event occurred. The value is a timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1658890560</p>
@@ -78,7 +78,7 @@ public class ListInsightsEventsResponseBody extends TeaModel {
         public String pid;
 
         /**
-         * <p>问题标识。</p>
+         * <p>The problem identifier.</p>
          * 
          * <strong>example:</strong>
          * <p>erep3o9zue@01ebe697ab70566|@1499161100890550|@cn-hangzhou|@1701841800000|@1701842040000|@daa6c51a-3c44-4d57-9548-4e212c******</p>

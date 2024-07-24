@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAuthTokenResponseBody extends TeaModel {
     /**
-     * <p>The status code. The status code 200 indicates that the request was successful.</p>
+     * <p>Status code. 200 means success, other status codes are exceptions.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class GetAuthTokenResponseBody extends TeaModel {
     public String data;
 
     /**
-     * <p>The returned message.</p>
+     * <p>Additional Information.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -32,7 +32,7 @@ public class GetAuthTokenResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>1A9C645C-C83F-4C9D-8CCB-29BEC9E1****</p>
@@ -41,10 +41,10 @@ public class GetAuthTokenResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Whether the query was successful:</p>
      * <ul>
-     * <li><code>true</code></li>
-     * <li><code>false</code></li>
+     * <li>true: Success</li>
+     * <li>false: Failure</li>
      * </ul>
      * 
      * <strong>example:</strong>

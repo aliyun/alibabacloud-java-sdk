@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddIntegrationResponseBody extends TeaModel {
     /**
-     * <p>状态码。200为成功，其他状态码为异常。</p>
+     * <p>Status code. 200 means success, other status codes are exceptions.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class AddIntegrationResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>Indicates whether the integration was successful.</p>
+     * <p>Indicates whether the call was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -23,7 +23,7 @@ public class AddIntegrationResponseBody extends TeaModel {
     public String data;
 
     /**
-     * <p>返回结果的提示信息。</p>
+     * <p>The prompt information of the returned result.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>

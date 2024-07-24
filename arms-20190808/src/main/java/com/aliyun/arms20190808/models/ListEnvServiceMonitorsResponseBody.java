@@ -169,7 +169,7 @@ public class ListEnvServiceMonitorsResponseBody extends TeaModel {
 
     public static class ListEnvServiceMonitorsResponseBodyData extends TeaModel {
         /**
-         * <p>The name of the component to which the ServiceMonitor belongs.</p>
+         * <p>The name of the add-on to which the ServiceMonitor belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>mysql</p>
@@ -178,7 +178,7 @@ public class ListEnvServiceMonitorsResponseBody extends TeaModel {
         public String addonName;
 
         /**
-         * <p>The instance name of the component.</p>
+         * <p>The instance name of the add-on.</p>
          * 
          * <strong>example:</strong>
          * <p>mysql1</p>
@@ -187,7 +187,7 @@ public class ListEnvServiceMonitorsResponseBody extends TeaModel {
         public String addonReleaseName;
 
         /**
-         * <p>The version of the component.</p>
+         * <p>The version of the add-on.</p>
          * 
          * <strong>example:</strong>
          * <p>1.1.0</p>

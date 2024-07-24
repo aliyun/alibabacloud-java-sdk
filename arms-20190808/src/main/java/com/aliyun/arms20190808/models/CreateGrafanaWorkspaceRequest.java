@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateGrafanaWorkspaceRequest extends TeaModel {
     /**
+     * <p>The language. Valid values: zh and en. Default value: zh.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,6 +14,8 @@ public class CreateGrafanaWorkspaceRequest extends TeaModel {
     public String aliyunLang;
 
     /**
+     * <p>The description of the workspace</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -37,6 +41,7 @@ public class CreateGrafanaWorkspaceRequest extends TeaModel {
     public String grafanaWorkspaceEdition;
 
     /**
+     * <p>The name of the Grafana workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,6 +51,8 @@ public class CreateGrafanaWorkspaceRequest extends TeaModel {
     public String grafanaWorkspaceName;
 
     /**
+     * <p>The password of the workspace. The password must be 8 to 30 characters in length. It must include at least three of the following characters types: uppercase letter, lowercase letter, digit, and special character. Special characters include () \&quot; ~ ! @ # $ % ^ &amp; \* - _ + =.</p>
+     * 
      * <strong>example:</strong>
      * <p>Test123456!</p>
      */
@@ -53,6 +60,7 @@ public class CreateGrafanaWorkspaceRequest extends TeaModel {
     public String password;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -62,12 +70,17 @@ public class CreateGrafanaWorkspaceRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The resource group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-acfmxyexli2****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The list of tags.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<CreateGrafanaWorkspaceRequestTags> tags;
 
@@ -150,6 +163,8 @@ public class CreateGrafanaWorkspaceRequest extends TeaModel {
 
     public static class CreateGrafanaWorkspaceRequestTags extends TeaModel {
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>TestKey</p>
          */
@@ -157,6 +172,8 @@ public class CreateGrafanaWorkspaceRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>TestValue</p>
          */

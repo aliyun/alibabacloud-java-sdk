@@ -101,6 +101,12 @@ public class GetTraceAppResponseBody extends TeaModel {
         @NameInMap("AppName")
         public String appName;
 
+        /**
+         * <p>Cluster ID, used only in K8s scenarios.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c905d1364c2dd4b6284a3f41790c4****</p>
+         */
         @NameInMap("ClusterId")
         public String clusterId;
 
@@ -119,6 +125,12 @@ public class GetTraceAppResponseBody extends TeaModel {
         @NameInMap("Labels")
         public java.util.List<String> labels;
 
+        /**
+         * <p>Coding Language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>java</p>
+         */
         @NameInMap("Language")
         public String language;
 

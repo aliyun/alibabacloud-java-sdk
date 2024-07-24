@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class QueryCommercialUsageResponseBody extends TeaModel {
     /**
+     * <p>The response status. Valid values: 2XX: The request is successful. 3XX: A redirection message is returned. 4XX: The request is invalid. 5XX: A server error occurs.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned struct.</p>
+     */
     @NameInMap("Data")
     public QueryCommercialUsageResponseBodyData data;
 
     /**
+     * <p>The error message returned if the request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -22,6 +29,8 @@ public class QueryCommercialUsageResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>99A663CB-8D7B-4B0D-A006-03C8EE38E7BB</p>
      */
@@ -29,6 +38,12 @@ public class QueryCommercialUsageResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,12 +97,21 @@ public class QueryCommercialUsageResponseBody extends TeaModel {
 
     public static class QueryCommercialUsageResponseBodyData extends TeaModel {
         /**
+         * <p>Indicates whether a multi-region query is complete. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("Complete")
         public Boolean complete;
 
+        /**
+         * <p>The returned struct.</p>
+         */
         @NameInMap("Items")
         public java.util.List<java.util.Map<String, ?>> items;
 

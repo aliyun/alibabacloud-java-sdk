@@ -4,6 +4,12 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class GetClusterAllUrlResponseBody extends TeaModel {
+    /**
+     * <p>Status code. 200 means success, other status codes are exceptions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
@@ -18,6 +24,12 @@ public class GetClusterAllUrlResponseBody extends TeaModel {
     @NameInMap("Data")
     public String data;
 
+    /**
+     * <p>The prompt information of the returned result.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
@@ -30,6 +42,16 @@ public class GetClusterAllUrlResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Whether the query is successful:</p>
+     * <ul>
+     * <li>true: success</li>
+     * <li>false: failure</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

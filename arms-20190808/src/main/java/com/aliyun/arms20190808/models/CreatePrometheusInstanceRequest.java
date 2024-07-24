@@ -14,7 +14,7 @@ public class CreatePrometheusInstanceRequest extends TeaModel {
     public Boolean allSubClustersSuccess;
 
     /**
-     * <p>The number of days for automatic archiving after storage expiration (optional values: 60, 90, 180, 365). 0 means not archive.</p>
+     * <p>The number of days for which data is automatically archived after the storage expires. Valid values: 60, 90, 180, and 365. 0 indicates that the data is not archived.</p>
      * 
      * <strong>example:</strong>
      * <p>90</p>
@@ -41,14 +41,15 @@ public class CreatePrometheusInstanceRequest extends TeaModel {
     public String clusterName;
 
     /**
-     * <p>The type of the cluster to which the Prometheus instance belongs. Valid values: </p>
+     * <p>The type of the Prometheus instance. Valid values:</p>
      * <ul>
-     * <li>remote-write: Prometheus instance for remote write.</li>
-     * <li>ecs(Not supported): Prometheus instance for ECS.</li>
-     * <li>cloud-monitor(Not supported): Prometheus instance for Alibaba Cloud services in China.</li>
-     * <li>cloud-product(Not supported): Prometheus instance for Alibaba Cloud services outside China.</li>
-     * <li>global-view: Prometheus instance for GlobalView.</li>
-     * <li>aliyun-cs(Not supported): Prometheus instance for Container Service for Kubernetes (ACK).</li>
+     * <li>remote-write: Prometheus instance for Remote Write</li>
+     * <li>ecs (unavailable): Prometheus instance for ECS</li>
+     * <li>global-view: Prometheus instance for GlobalView</li>
+     * <li>aliyun-cs: Prometheus instance for Container Service</li>
+     * <li>cloud-product (unavailable): Prometheus instance for Alibaba Cloud services</li>
+     * <li>cloud-monitor (unavailable): Prometheus instance for Hybrid Cloud Monitoring</li>
+     * <li>flink (unavailable): Prometheus instance for Flink</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -59,7 +60,7 @@ public class CreatePrometheusInstanceRequest extends TeaModel {
     public String clusterType;
 
     /**
-     * <p>Data storage duration (in days).</p>
+     * <p>The data storage duration. Unit: days.</p>
      * 
      * <strong>example:</strong>
      * <p>90</p>

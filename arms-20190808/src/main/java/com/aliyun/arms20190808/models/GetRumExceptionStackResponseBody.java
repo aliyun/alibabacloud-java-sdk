@@ -22,6 +22,8 @@ public class GetRumExceptionStackResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Internal error. Please try again. Contact the DingTalk service account if the issue                              persists after multiple retries.</p>
      */

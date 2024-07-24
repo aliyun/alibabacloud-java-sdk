@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeletePrometheusRemoteWriteRequest extends TeaModel {
     /**
-     * <p>The ID of the Prometheus instance. Only a Prometheus instance for Container Service or a Prometheus instance for ECS is supported.</p>
+     * <p>The ID of the Prometheus instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
