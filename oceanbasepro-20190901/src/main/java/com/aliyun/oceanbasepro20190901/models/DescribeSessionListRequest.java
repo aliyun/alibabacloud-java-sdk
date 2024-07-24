@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSessionListRequest extends TeaModel {
     /**
+     * <p>The ID of the OceanBase cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DescribeSessionListRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The ID of the tenant.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

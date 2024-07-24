@@ -4,10 +4,15 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeSessionListResponseBody extends TeaModel {
+    /**
+     * <p>The object information.</p>
+     */
     @NameInMap("Data")
     public java.util.List<DescribeSessionListResponseBodyData> data;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C</p>
      */
@@ -37,13 +42,17 @@ public class DescribeSessionListResponseBody extends TeaModel {
 
     public static class DescribeSessionListResponseBodyData extends TeaModel {
         /**
+         * <p>The address of the client, with the format ip:port.</p>
+         * 
          * <strong>example:</strong>
-         * <p>192.168.1.100:80</p>
+         * <p>192.***.**.100:80</p>
          */
         @NameInMap("Host")
         public String host;
 
         /**
+         * <p>The session ID of the proxy service.</p>
+         * 
          * <strong>example:</strong>
          * <p>d2c90ad0-bc54-410f-bb89-2dcf14aa3c6d</p>
          */
