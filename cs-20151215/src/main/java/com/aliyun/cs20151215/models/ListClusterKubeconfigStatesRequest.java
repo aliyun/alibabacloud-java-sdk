@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class ListClusterKubeconfigStatesRequest extends TeaModel {
     /**
+     * <p>The page number.</p>
+     * <ul>
+     * <li>Valid values: ≥ 1.</li>
+     * <li>Default value: 1.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +18,12 @@ public class ListClusterKubeconfigStatesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * <ul>
+     * <li>Valid values: 10 to 50.</li>
+     * <li>Default value: 10.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

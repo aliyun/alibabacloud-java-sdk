@@ -46,9 +46,6 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
     @NameInMap("max_nodes")
     public Long maxNodes;
 
-    /**
-     * <p>节点配置</p>
-     */
     @NameInMap("node_config")
     public DescribeClusterNodePoolDetailResponseBodyNodeConfig nodeConfig;
 
@@ -59,7 +56,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
     public DescribeClusterNodePoolDetailResponseBodyNodepoolInfo nodepoolInfo;
 
     /**
-     * <p>The configuration of the scaling group.</p>
+     * <p>The configurations of the scaling group.</p>
      */
     @NameInMap("scaling_group")
     public DescribeClusterNodePoolDetailResponseBodyScalingGroup scalingGroup;
@@ -483,8 +480,6 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public java.util.List<Taint> taints;
 
         /**
-         * <p>扩容后的节点是否可调度。</p>
-         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -581,8 +576,6 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
 
     public static class DescribeClusterNodePoolDetailResponseBodyManagementAutoRepairPolicy extends TeaModel {
         /**
-         * <p>是否允许重启节点。</p>
-         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -606,8 +599,6 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
 
     public static class DescribeClusterNodePoolDetailResponseBodyManagementAutoUpgradePolicy extends TeaModel {
         /**
-         * <p>是否允许自动升级kubelet。</p>
-         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -631,8 +622,6 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
 
     public static class DescribeClusterNodePoolDetailResponseBodyManagementAutoVulFixPolicy extends TeaModel {
         /**
-         * <p>是否允许重启节点。</p>
-         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -640,8 +629,6 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public Boolean restartNode;
 
         /**
-         * <p>允许自动修复的漏洞级别，以逗号分隔。</p>
-         * 
          * <strong>example:</strong>
          * <p>asap,nntf</p>
          */
@@ -766,39 +753,26 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         @NameInMap("auto_repair")
         public Boolean autoRepair;
 
-        /**
-         * <p>自动修复节点策略。</p>
-         */
         @NameInMap("auto_repair_policy")
         public DescribeClusterNodePoolDetailResponseBodyManagementAutoRepairPolicy autoRepairPolicy;
 
         /**
-         * <p>是否自动升级。</p>
-         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("auto_upgrade")
         public Boolean autoUpgrade;
 
-        /**
-         * <p>自动升级策略。</p>
-         */
         @NameInMap("auto_upgrade_policy")
         public DescribeClusterNodePoolDetailResponseBodyManagementAutoUpgradePolicy autoUpgradePolicy;
 
         /**
-         * <p>是否自动修复CVE。</p>
-         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("auto_vul_fix")
         public Boolean autoVulFix;
 
-        /**
-         * <p>自动修复CVE策略。</p>
-         */
         @NameInMap("auto_vul_fix_policy")
         public DescribeClusterNodePoolDetailResponseBodyManagementAutoVulFixPolicy autoVulFixPolicy;
 
@@ -893,9 +867,6 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeClusterNodePoolDetailResponseBodyNodeConfig extends TeaModel {
-        /**
-         * <p>Kubelet参数配置。</p>
-         */
         @NameInMap("kubelet_configuration")
         public KubeletConfig kubeletConfiguration;
 
@@ -1108,7 +1079,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
 
     public static class DescribeClusterNodePoolDetailResponseBodyScalingGroupSpotPriceLimit extends TeaModel {
         /**
-         * <p>The instance type of preemptible instances.</p>
+         * <p>The instance type of the preemptible instances.</p>
          * 
          * <strong>example:</strong>
          * <p>ecs.c6.large</p>
@@ -1117,7 +1088,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public String instanceType;
 
         /**
-         * <p>The price limit of a preemptible instance.</p>
+         * <p>The price cap of a preemptible instance of the type.</p>
          * <p>Unit: USD/hour.</p>
          * 
          * <strong>example:</strong>
@@ -1174,8 +1145,6 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public Long autoRenewPeriod;
 
         /**
-         * <p>【已废弃】请使用参数security_hardening_os替代。</p>
-         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -1230,8 +1199,6 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public String imageId;
 
         /**
-         * <p>操作系统镜像类型。</p>
-         * 
          * <strong>example:</strong>
          * <p>AliyunLinux</p>
          */
@@ -1251,6 +1218,9 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         @NameInMap("instance_charge_type")
         public String instanceChargeType;
 
+        /**
+         * <p>实例属性</p>
+         */
         @NameInMap("instance_patterns")
         public java.util.List<InstancePatterns> instancePatterns;
 
@@ -1288,8 +1258,6 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public String keyPair;
 
         /**
-         * <p>弹出的ECS实例是否使用以非root用户登录。</p>
-         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -1395,6 +1363,8 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public String ramPolicy;
 
         /**
+         * <p>Worker RAM角色名称。</p>
+         * 
          * <strong>example:</strong>
          * <p>KubernetesWorkerRole-4a4fa089-80c1-48a5-b3c6-9349311f****</p>
          */
@@ -1445,13 +1415,6 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public java.util.List<String> securityGroupIds;
 
         /**
-         * <p>阿里云OS安全加固。取值：</p>
-         * <ul>
-         * <li><code>true</code>：开启阿里云OS安全加固。</li>
-         * <li><code>false</code>：不开启阿里云OS安全加固。</li>
-         * </ul>
-         * <p>默认值：<code>false</code>。</p>
-         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -1459,8 +1422,6 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public Boolean securityHardeningOs;
 
         /**
-         * <p>是否开启等保加固，仅当系统镜像选择Alibaba Cloud Linux 2或Alibaba Cloud Linux 3时，可为节点开启等保加固。阿里云为Alibaba Cloud Linux 2和Alibaba Cloud Linux 3等保2.0三级版镜像提供等保合规的基线检查标准和扫描程序。</p>
-         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -1511,8 +1472,6 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public String spotStrategy;
 
         /**
-         * <p>节点系统盘是否开启Burst（性能突发），磁盘类型为cloud_auto时配置。</p>
-         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -1520,26 +1479,31 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public Boolean systemDiskBurstingEnabled;
 
         /**
-         * <p>系统盘的多磁盘类型。当无法使用高优先级的磁盘类型时，自动尝试下一优先级的磁盘类型创建系统盘。取值：</p>
+         * <p>The system disk types. The system attempts to create system disks from a disk type with a lower priority when the disk type with a higher priority is unavailable. Valid values: Valid values:</p>
          * <ul>
-         * <li><code>cloud</code>：普通云盘。</li>
-         * <li><code>cloud_efficiency</code>：高效云盘。</li>
-         * <li><code>cloud_ssd</code>：SSD云盘。</li>
-         * <li><code>cloud_essd</code>：ESSD云盘。</li>
-         * <li><code>cloud_auto</code>：ESSD AutoPL 云盘。</li>
-         * <li><code>cloud_essd_entry</code>：ESSD Entry 云盘。</li>
+         * <li><code>cloud</code>: basic disk</li>
+         * <li><code>cloud_efficiency</code>: ultra disk</li>
+         * <li><code>cloud_ssd</code>: standard SSD</li>
+         * <li><code>cloud_essd</code>: ESSD</li>
+         * <li><code>cloud_auto</code>: ESSD AutoPL disk</li>
+         * <li><code>cloud_essd_entry</code>: ESSD Entry disk</li>
          * </ul>
-         * <p>默认值：<code>cloud_efficiency</code></p>
+         * <p>Default value: <code>cloud_efficiency</code>.</p>
          */
         @NameInMap("system_disk_categories")
         public java.util.List<String> systemDiskCategories;
 
         /**
-         * <p>The type of system disk. Valid values:</p>
+         * <p>The system disk type. Valid values:</p>
          * <ul>
-         * <li><code>cloud_efficiency</code>: ultra disk.</li>
-         * <li><code>cloud_ssd</code>: standard SSD.</li>
+         * <li><code>cloud</code>: basic disk</li>
+         * <li><code>cloud_efficiency</code>: ultra disk</li>
+         * <li><code>cloud_ssd</code>: standard SSD</li>
+         * <li><code>cloud_essd</code>: Enterprise SSD (ESSD)</li>
+         * <li><code>cloud_auto</code>: ESSD AutoPL disk</li>
+         * <li><code>cloud_essd_entry</code>: ESSD Entry disk</li>
          * </ul>
+         * <p>Default value: <code>cloud_efficiency</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_efficiency</p>
@@ -1548,8 +1512,6 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public String systemDiskCategory;
 
         /**
-         * <p>系统盘采用的加密算法。取值范围：aes-256。</p>
-         * 
          * <strong>example:</strong>
          * <p>aes-256</p>
          */
@@ -1557,10 +1519,10 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public String systemDiskEncryptAlgorithm;
 
         /**
-         * <p>是否加密系统盘。取值：</p>
+         * <p>Specifies whether to encrypt the system disk. Valid values: Valid values:</p>
          * <ul>
-         * <li><code>true</code>：加密。</li>
-         * <li><code>false</code>：不加密。</li>
+         * <li><code>true</code>: encrypts the system disk.</li>
+         * <li><code>false</code>: does not encrypt the system disk.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1570,8 +1532,6 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public Boolean systemDiskEncrypted;
 
         /**
-         * <p>系统盘使用的KMS密钥ID。</p>
-         * 
          * <strong>example:</strong>
          * <p>0e478b7a-4262-4802-b8cb-00d3fb40****</p>
          */
@@ -1588,8 +1548,6 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public String systemDiskPerformanceLevel;
 
         /**
-         * <p>节点系统盘预配置的读写IOPS，磁盘类型为cloud_auto时配置。</p>
-         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */

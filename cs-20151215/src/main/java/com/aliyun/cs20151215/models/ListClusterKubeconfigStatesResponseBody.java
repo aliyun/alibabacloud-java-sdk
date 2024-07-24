@@ -4,9 +4,15 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("page")
     public ListClusterKubeconfigStatesResponseBodyPage page;
 
+    /**
+     * <p>The status of the kubeconfig files associated with the cluster.</p>
+     */
     @NameInMap("states")
     public java.util.List<ListClusterKubeconfigStatesResponseBodyStates> states;
 
@@ -33,6 +39,8 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
 
     public static class ListClusterKubeconfigStatesResponseBodyPage extends TeaModel {
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -40,6 +48,8 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -47,6 +57,8 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of entries returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -86,6 +98,8 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
 
     public static class ListClusterKubeconfigStatesResponseBodyStates extends TeaModel {
         /**
+         * <p>The display name of the account.</p>
+         * 
          * <strong>example:</strong>
          * <p>tom</p>
          */
@@ -93,6 +107,8 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
         public String accountDisplayName;
 
         /**
+         * <p>The ID of an Alibaba Cloud account, RAM user, or RAM role.</p>
+         * 
          * <strong>example:</strong>
          * <p>22855*****************</p>
          */
@@ -100,6 +116,8 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
         public String accountId;
 
         /**
+         * <p>The name of the account.</p>
+         * 
          * <strong>example:</strong>
          * <p>tom</p>
          */
@@ -107,6 +125,13 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
         public String accountName;
 
         /**
+         * <p>The status of the account. Valid values:</p>
+         * <ul>
+         * <li>Active: The account is active.</li>
+         * <li>InActive: The account is locked.</li>
+         * <li>Deleted: The account is deleted.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Active</p>
          */
@@ -114,6 +139,13 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
         public String accountState;
 
         /**
+         * <p>The type of the account. Valid values:</p>
+         * <ul>
+         * <li>RootAccount: Alibaba Cloud account.</li>
+         * <li>RamUser: RAM user.</li>
+         * <li>RamRole: RAM role.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>RamUser</p>
          */
@@ -121,6 +153,8 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
         public String accountType;
 
         /**
+         * <p>Expiration time of the certificate.</p>
+         * 
          * <strong>example:</strong>
          * <p>2027-07-15T01:32:20Z</p>
          */
@@ -128,6 +162,13 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
         public String certExpireTime;
 
         /**
+         * <p>The status of the certificate.</p>
+         * <ul>
+         * <li>Unexpired: The certificate is not expired.</li>
+         * <li>Expired: The certificate is expired.</li>
+         * <li>Unknown: The status of the certificate is unknown.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Expired</p>
          */
@@ -135,6 +176,8 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
         public String certState;
 
         /**
+         * <p>Indicates whether the certificate can be revoked.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
