@@ -268,6 +268,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ChargeType", request.chargeType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.gpuAcceleration)) {
+            query.put("GpuAcceleration", request.gpuAcceleration);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.imageId)) {
             query.put("ImageId", request.imageId);
         }

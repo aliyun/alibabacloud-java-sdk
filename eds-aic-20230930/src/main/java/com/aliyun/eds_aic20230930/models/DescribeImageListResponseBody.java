@@ -128,6 +128,12 @@ public class DescribeImageListResponseBody extends TeaModel {
         @NameInMap("Language")
         public String language;
 
+        @NameInMap("ReleaseTime")
+        public String releaseTime;
+
+        @NameInMap("RenderingType")
+        public String renderingType;
+
         /**
          * <strong>example:</strong>
          * <p>AVAILABLE</p>
@@ -225,6 +231,22 @@ public class DescribeImageListResponseBody extends TeaModel {
         }
         public String getLanguage() {
             return this.language;
+        }
+
+        public DescribeImageListResponseBodyData setReleaseTime(String releaseTime) {
+            this.releaseTime = releaseTime;
+            return this;
+        }
+        public String getReleaseTime() {
+            return this.releaseTime;
+        }
+
+        public DescribeImageListResponseBodyData setRenderingType(String renderingType) {
+            this.renderingType = renderingType;
+            return this;
+        }
+        public String getRenderingType() {
+            return this.renderingType;
         }
 
         public DescribeImageListResponseBodyData setStatus(String status) {

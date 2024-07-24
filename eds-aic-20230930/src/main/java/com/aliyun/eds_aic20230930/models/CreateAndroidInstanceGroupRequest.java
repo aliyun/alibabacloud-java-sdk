@@ -37,6 +37,9 @@ public class CreateAndroidInstanceGroupRequest extends TeaModel {
     @NameInMap("ChargeType")
     public String chargeType;
 
+    @NameInMap("GpuAcceleration")
+    public Boolean gpuAcceleration;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -145,6 +148,14 @@ public class CreateAndroidInstanceGroupRequest extends TeaModel {
     }
     public String getChargeType() {
         return this.chargeType;
+    }
+
+    public CreateAndroidInstanceGroupRequest setGpuAcceleration(Boolean gpuAcceleration) {
+        this.gpuAcceleration = gpuAcceleration;
+        return this;
+    }
+    public Boolean getGpuAcceleration() {
+        return this.gpuAcceleration;
     }
 
     public CreateAndroidInstanceGroupRequest setImageId(String imageId) {

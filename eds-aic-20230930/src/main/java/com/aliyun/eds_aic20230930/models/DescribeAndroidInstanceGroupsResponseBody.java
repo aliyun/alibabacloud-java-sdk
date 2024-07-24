@@ -235,6 +235,9 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("RenderingType")
+        public String renderingType;
+
         /**
          * <strong>example:</strong>
          * <p>1280</p>
@@ -441,6 +444,14 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModel setRenderingType(String renderingType) {
+            this.renderingType = renderingType;
+            return this;
+        }
+        public String getRenderingType() {
+            return this.renderingType;
         }
 
         public DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModel setResolutionHeight(Integer resolutionHeight) {
