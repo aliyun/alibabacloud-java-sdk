@@ -15,7 +15,7 @@ public class CreateTemplateScratchShrinkRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The description of the scenario.</p>
+     * <p>The description of the resource scenario.</p>
      * 
      * <strong>example:</strong>
      * <p>Replicate a VPC.</p>
@@ -54,13 +54,13 @@ public class CreateTemplateScratchShrinkRequest extends TeaModel {
     public String logicalIdStrategy;
 
     /**
-     * <p>The preference parameters of the scenario.</p>
+     * <p>The preference parameters of the resource scenario.</p>
      */
     @NameInMap("PreferenceParameters")
     public String preferenceParametersShrink;
 
     /**
-     * <p>The region ID of the scenario.</p>
+     * <p>The region ID of the resource scenario.</p>
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
@@ -87,6 +87,8 @@ public class CreateTemplateScratchShrinkRequest extends TeaModel {
 
     /**
      * <p>The source resources.</p>
+     * <p>When you set TemplateScratchType to ArchitectureDetection, you can specify SourceResources to detect the architecture data of all resources associated with the specified source resources. For example, if you set SourceResources to the ID of a Classic Load Balancer (CLB) instance, the architecture data of all resources, such as the Elastic Compute Service (ECS) instance, vSwitch, and VPC, associated with the CLB instance is detected.</p>
+     * <p>If you set TemplateScratchType to ArchitectureDetection, you can specify up to 20 source resources. In other cases, you can specify up to 200 source resources.</p>
      */
     @NameInMap("SourceResources")
     public String sourceResourcesShrink;
@@ -98,18 +100,22 @@ public class CreateTemplateScratchShrinkRequest extends TeaModel {
     public String sourceTagShrink;
 
     /**
-     * <p>The tags of the scenario.</p>
+     * <p>The tags of the resource scenario.</p>
      */
     @NameInMap("Tags")
     public java.util.List<CreateTemplateScratchShrinkRequestTags> tags;
 
     /**
-     * <p>The type of the scenario. Valid values:</p>
+     * <p>The type of the resource scenario. Valid values:</p>
      * <ul>
-     * <li>ResourceImport: resource management</li>
      * <li>ArchitectureReplication: resource replication</li>
+     * <li>ArchitectureDetection: resource detection</li>
+     * <li>ResourceImport: resource management</li>
      * <li>ResourceMigration: resource migration</li>
      * </ul>
+     * <blockquote>
+     * <p> The valid values of the ParameterKey and ParameterValue request parameters vary based on the value of TemplateScratchType. For more information, see the &quot;<strong>Additional information about request parameters</strong>&quot; section of this topic.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -221,7 +227,7 @@ public class CreateTemplateScratchShrinkRequest extends TeaModel {
 
     public static class CreateTemplateScratchShrinkRequestTags extends TeaModel {
         /**
-         * <p>The tag key of the scenario.</p>
+         * <p>The tag key of the resource scenario.</p>
          * <blockquote>
          * <p>Tags is optional. If you want to specify Tags, you must specify Key.</p>
          * </blockquote>
@@ -234,7 +240,7 @@ public class CreateTemplateScratchShrinkRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value of the scenario.</p>
+         * <p>The tag value of the resource scenario.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>

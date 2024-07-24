@@ -214,6 +214,47 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
 
     }
 
+    public static class GetTemplateParameterConstraintsResponseBodyParameterConstraintsQueryTimeoutDetails extends TeaModel {
+        @NameInMap("ErrorMessage")
+        public String errorMessage;
+
+        @NameInMap("ResourceName")
+        public String resourceName;
+
+        @NameInMap("ResourceType")
+        public String resourceType;
+
+        public static GetTemplateParameterConstraintsResponseBodyParameterConstraintsQueryTimeoutDetails build(java.util.Map<String, ?> map) throws Exception {
+            GetTemplateParameterConstraintsResponseBodyParameterConstraintsQueryTimeoutDetails self = new GetTemplateParameterConstraintsResponseBodyParameterConstraintsQueryTimeoutDetails();
+            return TeaModel.build(map, self);
+        }
+
+        public GetTemplateParameterConstraintsResponseBodyParameterConstraintsQueryTimeoutDetails setErrorMessage(String errorMessage) {
+            this.errorMessage = errorMessage;
+            return this;
+        }
+        public String getErrorMessage() {
+            return this.errorMessage;
+        }
+
+        public GetTemplateParameterConstraintsResponseBodyParameterConstraintsQueryTimeoutDetails setResourceName(String resourceName) {
+            this.resourceName = resourceName;
+            return this;
+        }
+        public String getResourceName() {
+            return this.resourceName;
+        }
+
+        public GetTemplateParameterConstraintsResponseBodyParameterConstraintsQueryTimeoutDetails setResourceType(String resourceType) {
+            this.resourceType = resourceType;
+            return this;
+        }
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
+    }
+
     public static class GetTemplateParameterConstraintsResponseBodyParameterConstraints extends TeaModel {
         /**
          * <p>The values of the parameter.</p>
@@ -297,6 +338,9 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
          */
         @NameInMap("QueryErrors")
         public java.util.List<GetTemplateParameterConstraintsResponseBodyParameterConstraintsQueryErrors> queryErrors;
+
+        @NameInMap("QueryTimeoutDetails")
+        public java.util.List<GetTemplateParameterConstraintsResponseBodyParameterConstraintsQueryTimeoutDetails> queryTimeoutDetails;
 
         /**
          * <p>The data type of the parameter.</p>
@@ -390,6 +434,14 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
         }
         public java.util.List<GetTemplateParameterConstraintsResponseBodyParameterConstraintsQueryErrors> getQueryErrors() {
             return this.queryErrors;
+        }
+
+        public GetTemplateParameterConstraintsResponseBodyParameterConstraints setQueryTimeoutDetails(java.util.List<GetTemplateParameterConstraintsResponseBodyParameterConstraintsQueryTimeoutDetails> queryTimeoutDetails) {
+            this.queryTimeoutDetails = queryTimeoutDetails;
+            return this;
+        }
+        public java.util.List<GetTemplateParameterConstraintsResponseBodyParameterConstraintsQueryTimeoutDetails> getQueryTimeoutDetails() {
+            return this.queryTimeoutDetails;
         }
 
         public GetTemplateParameterConstraintsResponseBodyParameterConstraints setType(String type) {

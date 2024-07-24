@@ -1,3 +1,7 @@
+2024-07-24 Version: 2.3.15
+- Update API GetTemplateParameterConstraints: update response param.
+
+
 2024-06-21 Version: 2.3.14
 - Update API CreateStackInstances: update param DeploymentTargets.
 - Update API DeleteStack: add param Parallelism.

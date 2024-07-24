@@ -15,7 +15,7 @@ public class CreateTemplateScratchRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The description of the scenario.</p>
+     * <p>The description of the resource scenario.</p>
      * 
      * <strong>example:</strong>
      * <p>Replicate a VPC.</p>
@@ -54,13 +54,13 @@ public class CreateTemplateScratchRequest extends TeaModel {
     public String logicalIdStrategy;
 
     /**
-     * <p>The preference parameters of the scenario.</p>
+     * <p>The preference parameters of the resource scenario.</p>
      */
     @NameInMap("PreferenceParameters")
     public java.util.List<CreateTemplateScratchRequestPreferenceParameters> preferenceParameters;
 
     /**
-     * <p>The region ID of the scenario.</p>
+     * <p>The region ID of the resource scenario.</p>
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
@@ -87,6 +87,8 @@ public class CreateTemplateScratchRequest extends TeaModel {
 
     /**
      * <p>The source resources.</p>
+     * <p>When you set TemplateScratchType to ArchitectureDetection, you can specify SourceResources to detect the architecture data of all resources associated with the specified source resources. For example, if you set SourceResources to the ID of a Classic Load Balancer (CLB) instance, the architecture data of all resources, such as the Elastic Compute Service (ECS) instance, vSwitch, and VPC, associated with the CLB instance is detected.</p>
+     * <p>If you set TemplateScratchType to ArchitectureDetection, you can specify up to 20 source resources. In other cases, you can specify up to 200 source resources.</p>
      */
     @NameInMap("SourceResources")
     public java.util.List<CreateTemplateScratchRequestSourceResources> sourceResources;
@@ -98,18 +100,22 @@ public class CreateTemplateScratchRequest extends TeaModel {
     public CreateTemplateScratchRequestSourceTag sourceTag;
 
     /**
-     * <p>The tags of the scenario.</p>
+     * <p>The tags of the resource scenario.</p>
      */
     @NameInMap("Tags")
     public java.util.List<CreateTemplateScratchRequestTags> tags;
 
     /**
-     * <p>The type of the scenario. Valid values:</p>
+     * <p>The type of the resource scenario. Valid values:</p>
      * <ul>
-     * <li>ResourceImport: resource management</li>
      * <li>ArchitectureReplication: resource replication</li>
+     * <li>ArchitectureDetection: resource detection</li>
+     * <li>ResourceImport: resource management</li>
      * <li>ResourceMigration: resource migration</li>
      * </ul>
+     * <blockquote>
+     * <p> The valid values of the ParameterKey and ParameterValue request parameters vary based on the value of TemplateScratchType. For more information, see the &quot;<strong>Additional information about request parameters</strong>&quot; section of this topic.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -221,14 +227,16 @@ public class CreateTemplateScratchRequest extends TeaModel {
 
     public static class CreateTemplateScratchRequestPreferenceParameters extends TeaModel {
         /**
-         * <p>The key of the parameter.</p>
-         * <p>For information about the valid values of ParameterKey, see the <strong>Additional information about request parameters</strong> section of this topic.</p>
+         * <p>The parameter name.</p>
+         * <p>For more information about the valid values of ParameterKey, see the &quot;<strong>Additional information about request parameters</strong>&quot; section of this topic.</p>
          * <blockquote>
-         * <ul>
-         * <li>PreferenceParameters is optional. If you want to specify PreferenceParameters, you must specify ParameterKey and ParameterValue.</li>
-         * <li>If you set TemplateScratchType to ResourceImport, you must set ParameterKey to DeletionPolicy.</li>
-         * </ul>
          * </blockquote>
+         * <ul>
+         * <li><p>PreferenceParameters is optional. If you specify PreferenceParameters, you must specify ParameterKey and ParameterValue.</p>
+         * </li>
+         * <li><p>You must set ParameterKey to DeletionPolicy when TemplateScratchType is set to ResourceImport.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -238,10 +246,10 @@ public class CreateTemplateScratchRequest extends TeaModel {
         public String parameterKey;
 
         /**
-         * <p>The value of the parameter. The value of ParameterValue varies based on the value of ParameterKey.</p>
-         * <p>For information about the valid values of ParameterValue, see the <strong>Additional information about request parameters</strong> section of this topic.</p>
+         * <p>The parameter value. The value is an assignment to the parameter key.</p>
+         * <p>For more information about the valid values of ParameterValue, see the &quot;<strong>Additional information about request parameters</strong>&quot; section of this topic.</p>
          * <blockquote>
-         * <p>PreferenceParameters is optional. If you want to specify PreferenceParameters, you must specify ParameterKey and ParameterValue.</p>
+         * <p> PreferenceParameters is optional. If you specify PreferenceParameters, you must specify ParameterKey and ParameterValue.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -286,7 +294,7 @@ public class CreateTemplateScratchRequest extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The resource types.</p>
+         * <p>The resource types for filtering resources.</p>
          */
         @NameInMap("ResourceTypeFilter")
         public java.util.List<String> resourceTypeFilter;
@@ -316,7 +324,16 @@ public class CreateTemplateScratchRequest extends TeaModel {
 
     public static class CreateTemplateScratchRequestSourceResources extends TeaModel {
         /**
-         * <p>The region ID.</p>
+         * <p>The region ID of the resource.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>This parameter takes effect only when TemplateScratchType is set to ArchitectureDetection.</p>
+         * </li>
+         * <li><p>The region ID of a global resource is <code>global</code>. For example, the region ID of the ALIYUN::CDN::Domain global resource is <code>global</code>.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
@@ -324,11 +341,14 @@ public class CreateTemplateScratchRequest extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The related resource type filters.</p>
+         */
         @NameInMap("RelatedResourceTypeFilter")
         public java.util.List<String> relatedResourceTypeFilter;
 
         /**
-         * <p>The ID of the resource.</p>
+         * <p>The resource ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -338,7 +358,7 @@ public class CreateTemplateScratchRequest extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>The type of the resource.</p>
+         * <p>The resource type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -399,7 +419,7 @@ public class CreateTemplateScratchRequest extends TeaModel {
         public java.util.Map<String, ?> resourceTags;
 
         /**
-         * <p>The resource types.</p>
+         * <p>The resource types for filtering resources.</p>
          */
         @NameInMap("ResourceTypeFilter")
         public java.util.List<String> resourceTypeFilter;
@@ -429,7 +449,7 @@ public class CreateTemplateScratchRequest extends TeaModel {
 
     public static class CreateTemplateScratchRequestTags extends TeaModel {
         /**
-         * <p>The tag key of the scenario.</p>
+         * <p>The tag key of the resource scenario.</p>
          * <blockquote>
          * <p>Tags is optional. If you want to specify Tags, you must specify Key.</p>
          * </blockquote>
@@ -442,7 +462,7 @@ public class CreateTemplateScratchRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value of the scenario.</p>
+         * <p>The tag value of the resource scenario.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>

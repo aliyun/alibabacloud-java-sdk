@@ -14,7 +14,7 @@ public class CreateTemplateScratchResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the scenario.</p>
+     * <p>The ID of the resource scenario.</p>
      * 
      * <strong>example:</strong>
      * <p>ts-7f7a704cf71c49a6****</p>
