@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateAScriptsRequest extends TeaModel {
     /**
-     * <p>The AScript rules.</p>
+     * <p>The information about the AScript rule.</p>
      */
     @NameInMap("AScripts")
     public java.util.List<UpdateAScriptsRequestAScripts> AScripts;
@@ -14,7 +14,7 @@ public class UpdateAScriptsRequest extends TeaModel {
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -67,13 +67,22 @@ public class UpdateAScriptsRequest extends TeaModel {
 
     public static class UpdateAScriptsRequestAScriptsExtAttributes extends TeaModel {
         /**
+         * <p>The attribute name.</p>
+         * <p>Set the value to <strong>EsDebug</strong>, which specifies that when requests carry the _es_dbg parameter whose value is the specified key, the debugging header is enabled to output the execution result.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EsDebug</p>
          */
         @NameInMap("AttributeKey")
         public String attributeKey;
 
         /**
+         * <p>The attribute value, which must be 1 to 128 characters in length, and can contain letters and digits.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test123</p>
          */
         @NameInMap("AttributeValue")
         public String attributeValue;
@@ -103,7 +112,7 @@ public class UpdateAScriptsRequest extends TeaModel {
 
     public static class UpdateAScriptsRequestAScripts extends TeaModel {
         /**
-         * <p>The AScript rule ID.</p>
+         * <p>The rule ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,7 +123,7 @@ public class UpdateAScriptsRequest extends TeaModel {
 
         /**
          * <p>The name of the AScript rule.</p>
-         * <p>The name must be 2 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.</p>
+         * <p>The name must be 2 to 128 character in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter.</p>
          * 
          * <strong>example:</strong>
          * <p>Group1</p>
@@ -135,9 +144,22 @@ public class UpdateAScriptsRequest extends TeaModel {
         @NameInMap("Enabled")
         public Boolean enabled;
 
+        /**
+         * <p>Specifies whether to enable the extended attributes of the Ascript rule. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false (false)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("ExtAttributeEnabled")
         public Boolean extAttributeEnabled;
 
+        /**
+         * <p>The extended attribute.</p>
+         */
         @NameInMap("ExtAttributes")
         public java.util.List<UpdateAScriptsRequestAScriptsExtAttributes> extAttributes;
 

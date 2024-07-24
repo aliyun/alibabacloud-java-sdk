@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAclRelationsResponseBody extends TeaModel {
     /**
-     * <p>The ACLs and the associated listeners.</p>
+     * <p>The relations between the specified ACL and the listeners.</p>
      */
     @NameInMap("AclRelations")
     public java.util.List<ListAclRelationsResponseBodyAclRelations> aclRelations;
@@ -69,7 +69,7 @@ public class ListAclRelationsResponseBody extends TeaModel {
         public String listenerProtocol;
 
         /**
-         * <p>The ID of the Server Load Balancer (SLB) instance.</p>
+         * <p>The ID of the SLB instance.</p>
          * 
          * <strong>example:</strong>
          * <p>lb-bp1b6c719dfa08ex****</p>
@@ -78,7 +78,7 @@ public class ListAclRelationsResponseBody extends TeaModel {
         public String loadBalancerId;
 
         /**
-         * <p>The association status between the ACL and the listener. Valid values:</p>
+         * <p>The association status between the ACL and the listener.</p>
          * <ul>
          * <li><strong>Associating</strong></li>
          * <li><strong>Associated</strong></li>

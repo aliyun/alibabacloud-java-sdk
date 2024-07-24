@@ -4,6 +4,16 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class ListLoadBalancersRequest extends TeaModel {
+    /**
+     * <p>The IP version. Valid values:</p>
+     * <ul>
+     * <li><strong>IPv4</strong></li>
+     * <li><strong>DualStack</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>IPv4</p>
+     */
     @NameInMap("AddressIpVersion")
     public String addressIpVersion;
 
@@ -20,9 +30,25 @@ public class ListLoadBalancersRequest extends TeaModel {
     @NameInMap("AddressType")
     public String addressType;
 
+    /**
+     * <p>The domain name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alb-95qnr2itwu9orb****.cn-hangzhou.alb.aliyuncs.com</p>
+     */
     @NameInMap("DNSName")
     public String DNSName;
 
+    /**
+     * <p>The type of IPv6 address that is used by the ALB instance. Valid values:</p>
+     * <ul>
+     * <li><strong>Internet</strong>: The ALB instance uses a public IP address. The domain name of the ALB instance is resolved to the public IP address. Therefore, the ALB instance can be accessed over the Internet.</li>
+     * <li><strong>Intranet</strong>: The ALB instance uses a private IP address. The domain name of the ALB instance is resolved to the private IP address. Therefore, the ALB instance can be accessed over the VPC in which the ALB instance is deployed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Intranet</p>
+     */
     @NameInMap("Ipv6AddressType")
     public String ipv6AddressType;
 

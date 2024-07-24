@@ -208,6 +208,9 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The IDs of the security groups to which the ALB instance is added.</p>
+     */
     @NameInMap("SecurityGroupIds")
     public java.util.List<String> securityGroupIds;
 
@@ -228,8 +231,7 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>The zone ID of the ALB instance.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/189196.html">DescribeZones</a> operation to query the zones of the ALB instance.</p>
+     * <p>The mapping between zones and the vSwitches. You must specify at least two zones.</p>
      */
     @NameInMap("ZoneMappings")
     public java.util.List<GetLoadBalancerAttributeResponseBodyZoneMappings> zoneMappings;
@@ -522,7 +524,7 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
     public static class GetLoadBalancerAttributeResponseBodyLoadBalancerBillingConfig extends TeaModel {
         /**
          * <p>The billing method.</p>
-         * <p>Set the value to <strong>PostPay</strong>, which indicates the pay-as-you-go billing method.</p>
+         * <p>Only <strong>PostPay</strong> is returned, which indicates the pay-as-you-go billing method.</p>
          * 
          * <strong>example:</strong>
          * <p>PostPay</p>
@@ -548,12 +550,15 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
     public static class GetLoadBalancerAttributeResponseBodyLoadBalancerOperationLocks extends TeaModel {
         /**
          * <p>The reason why the ALB instance is locked. This parameter is valid only if <strong>LoadBalancerBussinessStatus</strong> is set to <strong>Abnormal</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nolock</p>
          */
         @NameInMap("LockReason")
         public String lockReason;
 
         /**
-         * <p>The type of the lock. Valid values:</p>
+         * <p>The lock type. Valid values:</p>
          * <ul>
          * <li><strong>SecurityLocked</strong>: The ALB instance is locked due to security reasons.</li>
          * <li><strong>RelatedResourceLocked</strong>: The ALB instance is locked due to other resources that are associated with the ALB instance.</li>
@@ -594,6 +599,9 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
         /**
          * <p>The reason for enabling the configuration read-only mode. The reason must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The reason must start with a letter.</p>
          * <p>This parameter is valid only if <strong>ModificationProtectionStatus</strong> is set to <strong>ConsoleProtection</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Reason")
         public String reason;
@@ -726,6 +734,9 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
         @NameInMap("IntranetAddress")
         public String intranetAddress;
 
+        @NameInMap("IntranetAddressHcStatus")
+        public String intranetAddressHcStatus;
+
         /**
          * <p>An IPv6 address.</p>
          * <p>This parameter takes effect only when <strong>AddressIPVersion</strong> is set to <strong>DualStack</strong>. The network type is determined by the value of <strong>Ipv6AddressType</strong>.</p>
@@ -735,6 +746,9 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
          */
         @NameInMap("Ipv6Address")
         public String ipv6Address;
+
+        @NameInMap("Ipv6AddressHcStatus")
+        public String ipv6AddressHcStatus;
 
         public static GetLoadBalancerAttributeResponseBodyZoneMappingsLoadBalancerAddresses build(java.util.Map<String, ?> map) throws Exception {
             GetLoadBalancerAttributeResponseBodyZoneMappingsLoadBalancerAddresses self = new GetLoadBalancerAttributeResponseBodyZoneMappingsLoadBalancerAddresses();
@@ -773,6 +787,14 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
             return this.intranetAddress;
         }
 
+        public GetLoadBalancerAttributeResponseBodyZoneMappingsLoadBalancerAddresses setIntranetAddressHcStatus(String intranetAddressHcStatus) {
+            this.intranetAddressHcStatus = intranetAddressHcStatus;
+            return this;
+        }
+        public String getIntranetAddressHcStatus() {
+            return this.intranetAddressHcStatus;
+        }
+
         public GetLoadBalancerAttributeResponseBodyZoneMappingsLoadBalancerAddresses setIpv6Address(String ipv6Address) {
             this.ipv6Address = ipv6Address;
             return this;
@@ -781,14 +803,25 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
             return this.ipv6Address;
         }
 
+        public GetLoadBalancerAttributeResponseBodyZoneMappingsLoadBalancerAddresses setIpv6AddressHcStatus(String ipv6AddressHcStatus) {
+            this.ipv6AddressHcStatus = ipv6AddressHcStatus;
+            return this;
+        }
+        public String getIpv6AddressHcStatus() {
+            return this.ipv6AddressHcStatus;
+        }
+
     }
 
     public static class GetLoadBalancerAttributeResponseBodyZoneMappings extends TeaModel {
         /**
-         * <p>The IP address of the ALB instance.</p>
+         * <p>The address of the ALB instance.</p>
          */
         @NameInMap("LoadBalancerAddresses")
         public java.util.List<GetLoadBalancerAttributeResponseBodyZoneMappingsLoadBalancerAddresses> loadBalancerAddresses;
+
+        @NameInMap("Status")
+        public String status;
 
         /**
          * <p>The vSwitch in the zone. You can specify only one vSwitch (subnet) in each zone of an ALB instance.</p>
@@ -820,6 +853,14 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
         }
         public java.util.List<GetLoadBalancerAttributeResponseBodyZoneMappingsLoadBalancerAddresses> getLoadBalancerAddresses() {
             return this.loadBalancerAddresses;
+        }
+
+        public GetLoadBalancerAttributeResponseBodyZoneMappings setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
         public GetLoadBalancerAttributeResponseBodyZoneMappings setVSwitchId(String vSwitchId) {

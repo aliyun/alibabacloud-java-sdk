@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class MoveResourceGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the resource group to which you want to move the resource.</p>
+     * <p>The ID of the resource group to which you want to transfer the cloud resource.</p>
      * <blockquote>
-     * <p>You can use resource groups to manage resources owned by your Alibaba Cloud account. Resource groups simplify resource and permission management in your Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/94475.html">What is resource management?</a></p>
+     * <p> You can use resource groups to manage resources within your Alibaba Cloud account by group. This helps you resolve issues such as resource grouping and permission management for your Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/94475.html">What is resource management?</a></p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

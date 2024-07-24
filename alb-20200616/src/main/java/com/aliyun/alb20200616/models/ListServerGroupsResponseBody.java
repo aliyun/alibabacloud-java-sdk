@@ -191,7 +191,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
         public String healthCheckHost;
 
         /**
-         * <p>The HTTP version for health checks.</p>
+         * <p>The HTTP version that is used for health checks.</p>
          * <p>Valid values: <strong>HTTP1.0</strong> and <strong>HTTP1.1</strong>.</p>
          * <blockquote>
          * <p> This parameter takes effect only when <strong>HealthCheckProtocol</strong> is set to <strong>HTTP</strong> or <strong>HTTPS</strong>. HTTPS is unavailable by default. If you want to use HTTPS, log on to the SLB console, go to the Quota Center page, click the <strong>ALB</strong> tab, and then apply for the privilege to use HTTPS.</p>
@@ -213,7 +213,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
         public Integer healthCheckInterval;
 
         /**
-         * <p>The HTTP method that is used for health checks. Valid value:</p>
+         * <p>The HTTP method that is used for health checks. Valid values:</p>
          * <ul>
          * <li><strong>GET</strong>: If the length of a response exceeds 8 KB, the response is truncated. However, the health check result is not affected.</li>
          * <li><strong>POST</strong>: gRPC health checks use the POST method by default.</li>
@@ -242,7 +242,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
         public String healthCheckPath;
 
         /**
-         * <p>The protocol that you want to use for health checks. Valid value:</p>
+         * <p>The protocol that is used for health checks. Valid values:</p>
          * <ul>
          * <li><strong>HTTP</strong>: HTTP health checks simulate browser behaviors by sending HEAD or GET requests to probe the availability of backend servers.</li>
          * <li><strong>HTTPS</strong>: HTTPS health checks simulate browser behaviors by sending HEAD or GET requests to probe the availability of backend servers. HTTPS supports encryption and provides higher security than HTTP.</li>
@@ -458,7 +458,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
         public Integer cookieTimeout;
 
         /**
-         * <p>Indicates whether session persistence is enabled. Valid value:</p>
+         * <p>Indicates whether session persistence is enabled. Valid values:</p>
          * <ul>
          * <li><strong>true</strong></li>
          * <li><strong>false</strong></li>
@@ -471,7 +471,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
         public Boolean stickySessionEnabled;
 
         /**
-         * <p>The method that is used to handle the cookie. Valid value:</p>
+         * <p>The method that is used to handle the cookie. Valid values:</p>
          * <ul>
          * <li><strong>insert</strong>: inserts the cookie. The first time a client accesses ALB, ALB inserts the SERVERID cookie into the HTTP or HTTPS response packet. Subsequent requests from the client that carry this cookie are forwarded to the same backend server as the first request.</li>
          * <li><strong>Server</strong>: rewrites the cookie. ALB rewrites the custom cookies in requests from a client. Subsequent requests from the client that carry the new cookie are forwarded to the same backend server as the first request.</li>
@@ -608,7 +608,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
 
     public static class ListServerGroupsResponseBodyServerGroups extends TeaModel {
         /**
-         * <p>Indicates whether configuration management is enabled. Valid value:</p>
+         * <p>Indicates whether configuration management is enabled. Valid values:</p>
          * <ul>
          * <li><strong>true</strong></li>
          * <li><strong>false</strong></li>
@@ -624,12 +624,15 @@ public class ListServerGroupsResponseBody extends TeaModel {
          * <p>The configurations of connection draining.</p>
          * <p>After connection draining is enabled, ALB maintains data transmission for a period of time after the backend server is removed or declared unhealthy.</p>
          * <blockquote>
-         * <ul>
-         * <li>By default, connection draining is disabled. To enable connection draining, contact your account manager.</li>
-         * <li>Basic ALB instances do not support connection draining. Standard and WAF-enabled ALB instances support connection draining.</li>
-         * <li>Server groups of the instance and IP types support connection draining. Server groups of the Function Compute type do not support connection draining.</li>
-         * </ul>
          * </blockquote>
+         * <ul>
+         * <li><p>By default, connection draining is disabled. To enable connection draining, contact your account manager.</p>
+         * </li>
+         * <li><p>Basic ALB instances do not support connection draining. Standard and WAF-enabled ALB instances support connection draining.</p>
+         * </li>
+         * <li><p>Server groups of the instance and IP types support connection draining. Server groups of the Function Compute type do not support connection draining.</p>
+         * </li>
+         * </ul>
          */
         @NameInMap("ConnectionDrainConfig")
         public ListServerGroupsResponseBodyServerGroupsConnectionDrainConfig connectionDrainConfig;
@@ -650,7 +653,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
         public ListServerGroupsResponseBodyServerGroupsHealthCheckConfig healthCheckConfig;
 
         /**
-         * <p>Indicates whether IPv6 is supported. Valid value:</p>
+         * <p>Indicates whether IPv6 is supported. Valid values:</p>
          * <ul>
          * <li><strong>true</strong></li>
          * <li><strong>false</strong></li>
@@ -663,7 +666,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
         public Boolean ipv6Enabled;
 
         /**
-         * <p>The backend protocol. Valid value:</p>
+         * <p>The backend protocol. Valid values:</p>
          * <ul>
          * <li><strong>HTTP</strong>: allows you to associate HTTPS, HTTP, or QUIC listeners with backend servers.</li>
          * <li><strong>HTTPS</strong>: allows you to associate HTTPS listeners with backend servers.</li>
@@ -683,7 +686,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
         public java.util.List<String> relatedLoadBalancerIds;
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The ID of the resource group to which the instance belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-atstuj3rtop****</p>
@@ -692,10 +695,10 @@ public class ListServerGroupsResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The scheduling algorithm. Valid value:</p>
+         * <p>The scheduling algorithm. Valid values:</p>
          * <ul>
-         * <li><strong>Wrr</strong>: Backend servers with higher weights receive more requests than backend servers with lower weights.</li>
-         * <li><strong>Wlc</strong>: Requests are distributed based on the weight and load of each backend server. The load refers to the number of connections on a backend server. If multiple backend servers have the same weight, requests are forwarded to the backend server with the least number of connections.</li>
+         * <li><strong>Wrr</strong>: weighted round-robin. Backend servers with higher weights receive more requests than backend servers with lower weights.</li>
+         * <li><strong>Wlc</strong>: weighted least connections. Requests are distributed based on the weight and load of each backend server. The load refers to the number of connections on a backend server. If multiple backend servers have the same weight, requests are forwarded to the backend server with the least number of connections.</li>
          * <li><strong>Sch</strong>: consistent hashing. Requests that have the same hash factors are distributed to the same backend server. If you do not specify the UchConfig parameter, the source IP address is used as the hash factor by default. Requests that are from the same IP address are distributed to the same backend server. If you specify the UchConfig parameter, the URL string is used as the hash factor. Requests that have the same URL string are distributed to the same backend server.</li>
          * </ul>
          * 
@@ -733,7 +736,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
         public String serverGroupName;
 
         /**
-         * <p>The status of the server group. Valid value:</p>
+         * <p>The status of the server group. Valid values:</p>
          * <ul>
          * <li><strong>Creating</strong>.</li>
          * <li><strong>Available</strong></li>
@@ -747,9 +750,9 @@ public class ListServerGroupsResponseBody extends TeaModel {
         public String serverGroupStatus;
 
         /**
-         * <p>The server group type. Valid value:</p>
+         * <p>The server group type. Valid values:</p>
          * <ul>
-         * <li><strong>Instance</strong>: instances, including Elastic Compute Service (ECS) instances, elastic network interfaces (ENIs), and elastic container instances.</li>
+         * <li><strong>Instance</strong>: instances, including ECS instances, ENIs, and elastic container instances.</li>
          * <li><strong>Ip</strong>: IP addresses.</li>
          * <li><strong>Fc</strong>: Function Compute</li>
          * </ul>
@@ -773,12 +776,15 @@ public class ListServerGroupsResponseBody extends TeaModel {
          * <p>The configurations of slow starts.</p>
          * <p>After slow starts are enabled, ALB prefetches data to newly added backend servers. Requests distributed to the backend servers gradually increase.</p>
          * <blockquote>
-         * <ul>
-         * <li>Basic ALB instances do not support slow starts. Standard and WAF-enabled ALB instances support slow starts.</li>
-         * <li>Server groups of the instance and IP types support slow starts. Server groups of the Function Compute type do not support slow starts.</li>
-         * <li>Slow start is supported only by the weighted round-robin scheduling algorithm.</li>
-         * </ul>
          * </blockquote>
+         * <ul>
+         * <li><p>Basic ALB instances do not support slow starts. Standard and WAF-enabled ALB instances support slow starts.</p>
+         * </li>
+         * <li><p>Server groups of the instance and IP types support slow starts. Server groups of the Function Compute type do not support slow starts.</p>
+         * </li>
+         * <li><p>Slow start is supported only by the weighted round-robin scheduling algorithm.</p>
+         * </li>
+         * </ul>
          */
         @NameInMap("SlowStartConfig")
         public ListServerGroupsResponseBodyServerGroupsSlowStartConfig slowStartConfig;
@@ -802,7 +808,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
         public ListServerGroupsResponseBodyServerGroupsUchConfig uchConfig;
 
         /**
-         * <p>Indicates whether persistent TCP connections are enabled. Valid value:</p>
+         * <p>Indicates whether persistent TCP connections are enabled. Valid values:</p>
          * <ul>
          * <li><strong>true</strong></li>
          * <li><strong>false</strong></li>

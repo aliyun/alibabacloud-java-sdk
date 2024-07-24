@@ -27,7 +27,7 @@ public class ListListenerCertificatesRequest extends TeaModel {
     public String listenerId;
 
     /**
-     * <p>The maximum number of entries to return. Valid values: <strong>1 to 100</strong>. If you do not specify this parameter, the default value <strong>20</strong> is used.</p>
+     * <p>The maximum number of entries to return. Valid values: <strong>1 to 100</strong>. Default value: <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>

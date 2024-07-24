@@ -8,7 +8,7 @@ public class CreateServerGroupRequest extends TeaModel {
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -122,7 +122,7 @@ public class CreateServerGroupRequest extends TeaModel {
     /**
      * <p>The configuration of session persistence.</p>
      * <blockquote>
-     * <p>This parameter takes effect when the <strong>ServerGroupType</strong> parameter is set to <strong>Instance</strong> or <strong>Ip</strong>.</p>
+     * <p> This parameter takes effect when the <strong>ServerGroupType</strong> parameter is set to <strong>Instance</strong> or <strong>Ip</strong>.</p>
      * </blockquote>
      */
     @NameInMap("StickySessionConfig")
@@ -142,14 +142,17 @@ public class CreateServerGroupRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to enable persistent TCP connections.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("UpstreamKeepaliveEnabled")
     public Boolean upstreamKeepaliveEnabled;
 
     /**
-     * <p>The ID of the virtual private cloud (VPC). You can add only backend servers that are deployed in the specified VPC to the server group.</p>
+     * <p>The ID of the virtual private cloud (VPC). You can add only servers that are deployed in the specified VPC to the server group.</p>
      * <blockquote>
-     * <p>This parameter takes effect when the <strong>ServerGroupType</strong> parameter is set to <strong>Instance</strong> or <strong>Ip</strong>.</p>
+     * <p> This parameter takes effect when the <strong>ServerGroupType</strong> parameter is set to <strong>Instance</strong> or <strong>Ip</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -292,9 +295,17 @@ public class CreateServerGroupRequest extends TeaModel {
     }
 
     public static class CreateServerGroupRequestConnectionDrainConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("ConnectionDrainEnabled")
         public Boolean connectionDrainEnabled;
 
+        /**
+         * <strong>example:</strong>
+         * <p>300</p>
+         */
         @NameInMap("ConnectionDrainTimeout")
         public Integer connectionDrainTimeout;
 
@@ -323,7 +334,7 @@ public class CreateServerGroupRequest extends TeaModel {
 
     public static class CreateServerGroupRequestHealthCheckConfig extends TeaModel {
         /**
-         * <p>The HTTP status codes that are used to indicate whether the backend server passes the health check.</p>
+         * <p>The HTTP status codes that indicate healthy backend servers.</p>
          */
         @NameInMap("HealthCheckCodes")
         public java.util.List<String> healthCheckCodes;
@@ -331,7 +342,7 @@ public class CreateServerGroupRequest extends TeaModel {
         /**
          * <p>The backend port that is used for health checks.</p>
          * <p>Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
-         * <p>Default value: <strong>0</strong>. If you set the value to 0, the port of a backend server is used for health checks.</p>
+         * <p>The default value is <strong>0</strong>, which specifies that the port of a backend server is used for health checks.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -342,8 +353,8 @@ public class CreateServerGroupRequest extends TeaModel {
         /**
          * <p>Specifies whether to enable the health check feature. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: enables the health check feature.</li>
-         * <li><strong>false</strong>: disables the health check feature.</li>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
          * </ul>
          * <blockquote>
          * <p> If the <strong>ServerGroupType</strong> parameter is set to <strong>Instance</strong> or <strong>Ip</strong>, the health check feature is enabled by default. If the <strong>ServerGroupType</strong> parameter is set to <strong>Fc</strong>, the health check feature is disabled by default.</p>
@@ -357,16 +368,16 @@ public class CreateServerGroupRequest extends TeaModel {
         public Boolean healthCheckEnabled;
 
         /**
-         * <p>The domain name that is used for health checks. The domain name meets the following requirements:</p>
+         * <p>The domain name that is used for health checks. The domain name must meet the following requirements:</p>
          * <ul>
-         * <li>The domain name is 1 to 80 characters in length.</li>
-         * <li>The domain name contains lowercase letters, digits, hyphens (-), and periods (.).</li>
-         * <li>The domain name contains at least one period (.) but does not start or end with a period (.).</li>
-         * <li>The rightmost domain label of the domain name contains only letters, and does not contain digits or hyphens (-).</li>
-         * <li>The domain name does not start or end with a hyphen (-).</li>
+         * <li>The domain name must be 1 to 80 characters in length.</li>
+         * <li>The domain name can contain lowercase letters, digits, hyphens (-), and periods (.).</li>
+         * <li>The domain name can contain at least one period (.) but cannot start or end with a period (.).</li>
+         * <li>The rightmost domain label of the domain name can contain only letters, and cannot contain digits or hyphens (-).</li>
+         * <li>The domain name cannot start or end with a hyphen (-).</li>
          * </ul>
          * <blockquote>
-         * <p> This parameter takes effect only when <strong>HealthCheckProtocol</strong> is set to <strong>HTTP</strong> or <strong>HTTPS</strong>. HTTPS is unavailable by default. If you want to use HTTPS, log on to the SLB console, go to the Quota Center page, and then apply for the privilege to use HTTPS on the <strong>ALB</strong> tab.</p>
+         * <p> This parameter takes effect only if <strong>HealthCheckProtocol</strong> is set to <strong>HTTP</strong> or <strong>HTTPS</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -378,7 +389,7 @@ public class CreateServerGroupRequest extends TeaModel {
         /**
          * <p>The version of the HTTP protocol. Valid values: <strong>HTTP1.0</strong> and <strong>HTTP1.1</strong>. Default value: HTTP1.1.</p>
          * <blockquote>
-         * <p> This parameter takes effect only when <strong>HealthCheckProtocol</strong> is set to <strong>HTTP</strong> or <strong>HTTPS</strong>. HTTPS is unavailable by default. If you want to use HTTPS, log on to the SLB console, go to the Quota Center page, and then apply for the privilege to use HTTPS on the <strong>ALB</strong> tab.</p>
+         * <p> This parameter takes effect only if <strong>HealthCheckProtocol</strong> is set to <strong>HTTP</strong> or <strong>HTTPS</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -403,10 +414,10 @@ public class CreateServerGroupRequest extends TeaModel {
          * <ul>
          * <li><strong>GET</strong>: If the length of a response exceeds 8 KB, the response is truncated. However, the health check result is not affected.</li>
          * <li><strong>POST</strong>: By default, gRPC health checks use the POST method.</li>
-         * <li><strong>HEAD</strong>: HTTP and HTTPS health checks in listeners use the HEAD method by default.</li>
+         * <li><strong>HEAD</strong> (default): By default, HTTP and HTTPS use the HEAD method.</li>
          * </ul>
          * <blockquote>
-         * <p> This parameter takes effect only when <strong>HealthCheckProtocol</strong> is set to <strong>HTTP</strong>, <strong>HTTPS</strong>, or <strong>gRPC</strong>. HTTPS is unavailable by default. If you want to use HTTPS, log on to the SLB console, go to the Quota Center page, and then apply for the privilege to use HTTPS on the <strong>ALB</strong> tab.</p>
+         * <p> This parameter takes effect only if <strong>HealthCheckProtocol</strong> is set to <strong>HTTP</strong>, <strong>HTTPS</strong>, or <strong>gRPC</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -416,10 +427,10 @@ public class CreateServerGroupRequest extends TeaModel {
         public String healthCheckMethod;
 
         /**
-         * <p>The path that is used for health checks.</p>
-         * <p>The path must be 1 to 80 characters in length and can contain only letters, digits, and the following special characters: <code>- / . % ? # &amp; =</code>. It can also contain the following extended characters: <code>_ ; ~ ! ( ) * [ ] @ $ ^ : \\&quot; , +</code>. The URL must start with a forward slash (/).</p>
+         * <p>The URL that is used for health checks.</p>
+         * <p>The URL must be 1 to 80 characters in length, and can contain letters, digits, and the following special characters: <code>- / . % ? # &amp; =</code>. It can also contain the following extended characters: <code>_ ; ~ ! ( ) * [ ] @ $ ^ : \\&quot; , +</code>. The URL must start with a forward slash (/).</p>
          * <blockquote>
-         * <p> This parameter takes effect only when <strong>HealthCheckProtocol</strong> is set to <strong>HTTP</strong> or <strong>HTTPS</strong>. HTTPS is unavailable by default. If you want to use HTTPS, log on to the SLB console, go to the Quota Center page, and then apply for the privilege to use HTPS on the <strong>ALB</strong> tab.</p>
+         * <p> This parameter takes effect only if <strong>HealthCheckProtocol</strong> is set to <strong>HTTP</strong> or <strong>HTTPS</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -431,14 +442,11 @@ public class CreateServerGroupRequest extends TeaModel {
         /**
          * <p>The protocol that is used for health checks. Valid values:</p>
          * <ul>
-         * <li><strong>HTTP</strong>: ALB performs HTTP health checks by sending HEAD or GET requests to a backend server to check whether the backend server is healthy.</li>
-         * <li><strong>HTTPS</strong>: ALB performs HTTPS health checks by sending HEAD or GET requests to a backend server to check whether the backend server is healthy. HTTPS supports data encryption and provides higher data security than HTTP.</li>
-         * <li><strong>TCP</strong>: To perform TCP health checks, SLB sends SYN packets to the backend server to check whether the port of the backend server is available to receive requests.</li>
-         * <li><strong>gRPC</strong>: To perform gRPC health checks, SLB sends POST or GET requests to a backend server to check whether the backend server is healthy.</li>
+         * <li><strong>HTTP</strong>: HTTP health checks simulate browser behaviors by sending HEAD or GET requests to probe the availability of backend servers.</li>
+         * <li><strong>HTTPS</strong>: HTTPS health checks simulate browser behaviors by sending HEAD or GET requests to probe the availability of backend servers. HTTPS provides higher security than HTTP because HTTPS supports data encryption.</li>
+         * <li><strong>TCP</strong>: TCP health checks send TCP SYN packets to a backend server to check whether the port of the backend server is reachable.</li>
+         * <li><strong>gRPC</strong>: gRPC health checks send POST or GET requests to a backend server to check whether the backend server is healthy.</li>
          * </ul>
-         * <blockquote>
-         * <p> HTTPS is unavailable by default. If you want to use HTTPS, log on to the SLB console, go to the Quota Center page, and then apply for the privilege to use HTTPS on the <strong>ALB</strong> tab.</p>
-         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>HTTP</p>
@@ -447,11 +455,11 @@ public class CreateServerGroupRequest extends TeaModel {
         public String healthCheckProtocol;
 
         /**
-         * <p>The timeout period for a health check response. If a backend server, such as an Elastic Compute Service (ECS) instance, does not return a health check response within the specified timeout period, the server fails the health check. Unit: seconds.</p>
+         * <p>The timeout period of a health check response. If a backend server does not respond within the specified timeout period, the backend server is declared unhealthy. Unit: seconds.</p>
          * <p>Valid values: <strong>1</strong> to <strong>300</strong>.</p>
          * <p>Default value: <strong>5</strong>.</p>
          * <blockquote>
-         * <p> If the value of <strong>HealthCHeckTimeout</strong> is smaller than the value of <strong>HealthCheckInterval</strong>, the value of <strong>HealthCHeckTimeout</strong> is ignored and the value of <strong>HealthCheckInterval</strong> is used.</p>
+         * <p> If the value of <strong>HealthCHeckTimeout</strong> is smaller than the value of <strong>HealthCheckInterval</strong>, <strong>HealthCHeckTimeout</strong> does not take effect. The value of <strong>HealthCheckInterval</strong> specifies the timeout period.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -586,9 +594,17 @@ public class CreateServerGroupRequest extends TeaModel {
     }
 
     public static class CreateServerGroupRequestSlowStartConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("SlowStartDuration")
         public Integer slowStartDuration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("SlowStartEnabled")
         public Boolean slowStartEnabled;
 
@@ -617,10 +633,10 @@ public class CreateServerGroupRequest extends TeaModel {
 
     public static class CreateServerGroupRequestStickySessionConfig extends TeaModel {
         /**
-         * <p>The cookie to be configured on the server.</p>
-         * <p>The cookie must be 1 to 200 characters in length and can contain only ASCII characters and digits. It cannot contain commas (,), semicolons (;), or space characters. It cannot start with a dollar sign ($).</p>
+         * <p>The cookie that you want to configure for the server.</p>
+         * <p>The cookie must be 1 to 200 characters in length, and can contain only ASCII letters and digits. It cannot contain commas (,), semicolons (;), or space characters. It cannot start with a dollar sign ($).</p>
          * <blockquote>
-         * <p>This parameter takes effect when the <strong>StickySessionEnabled</strong> parameter is set to <strong>true</strong> and the <strong>StickySessionType</strong> parameter is set to <strong>Server</strong>.</p>
+         * <p> This parameter takes effect only when <strong>StickySessionEnabled</strong> is set to <strong>true</strong> and <strong>StickySessionType</strong> is set to <strong>server</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -630,11 +646,11 @@ public class CreateServerGroupRequest extends TeaModel {
         public String cookie;
 
         /**
-         * <p>The timeout period of a cookie. Unit: seconds.</p>
+         * <p>The maximum amount of time to wait before the session cookie expires. Unit: seconds.</p>
          * <p>Valid values: <strong>1</strong> to <strong>86400</strong>.</p>
          * <p>Default value: <strong>1000</strong>.</p>
          * <blockquote>
-         * <p>This parameter takes effect only when the <strong>StickySessionEnabled</strong> parameter is set to <strong>true</strong> and the <strong>StickySessionType</strong> parameter is set to <strong>Insert</strong>.</p>
+         * <p> This parameter takes effect only when <strong>StickySessionEnabled</strong> is set to <strong>true</strong> and <strong>StickySessionType</strong> is set to <strong>Insert</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -647,10 +663,10 @@ public class CreateServerGroupRequest extends TeaModel {
          * <p>Specifies whether to enable session persistence. Valid values:</p>
          * <ul>
          * <li><strong>true</strong></li>
-         * <li><strong>false</strong> (default)</li>
+         * <li><strong>false</strong></li>
          * </ul>
          * <blockquote>
-         * <p>This parameter takes effect when the <strong>ServerGroupType</strong> parameter is set to <strong>Instance</strong> or <strong>Ip</strong>.</p>
+         * <p> This parameter takes effect when the <strong>ServerGroupType</strong> parameter is set to <strong>Instance</strong> or <strong>Ip</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -660,17 +676,13 @@ public class CreateServerGroupRequest extends TeaModel {
         public Boolean stickySessionEnabled;
 
         /**
-         * <p>The method that is used to handle a cookie. Valid values:</p>
+         * <p>The method that is used to handle cookies. Valid values:</p>
          * <ul>
-         * <li><strong>Insert</strong> (default): inserts a cookie.</li>
+         * <li><strong>Insert</strong> (default value): inserts a cookie. The first time a client accesses SLB, SLB inserts the SERVERID cookie into the HTTP or HTTPS response packet. Subsequent requests from the client that carry this cookie are forwarded to the same backend server as the first request.</li>
+         * <li><strong>Server</strong>: rewrites a cookie. SLB rewrites the custom cookies in requests from a client. Subsequent requests from the client that carry the new cookie are forwarded to the same backend server as the first request.</li>
          * </ul>
-         * <p>ALB inserts a session cookie (SERVERID) into the first HTTP or HTTPS response that is sent to a client. Subsequent requests to ALB carry this cookie, and ALB determines the destination servers of the requests based on the cookies.</p>
-         * <ul>
-         * <li><strong>Server</strong>: rewrites a cookie.</li>
-         * </ul>
-         * <p>When ALB detects a user-defined cookie, it overwrites the original cookie with the user-defined cookie. Subsequent requests to ALB carry this user-defined cookie, and ALB determines the destination servers of the requests based on the cookies.</p>
          * <blockquote>
-         * <p>This parameter takes effect when the <strong>StickySessionEnabled</strong> parameter is set to <strong>true</strong>.</p>
+         * <p> This parameter takes effect when the <strong>StickySessionEnabled</strong> parameter is set to <strong>true</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

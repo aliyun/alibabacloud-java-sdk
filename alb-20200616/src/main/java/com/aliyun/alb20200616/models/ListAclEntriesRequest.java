@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAclEntriesRequest extends TeaModel {
     /**
-     * <p>The ACL ID.</p>
+     * <p>The ID of the ACL.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

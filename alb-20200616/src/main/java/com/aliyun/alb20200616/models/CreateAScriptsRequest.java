@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAScriptsRequest extends TeaModel {
     /**
-     * <p>The AScript rules.</p>
+     * <p>The information about the AScript rules.</p>
      */
     @NameInMap("AScripts")
     public java.util.List<CreateAScriptsRequestAScripts> AScripts;
@@ -81,9 +81,22 @@ public class CreateAScriptsRequest extends TeaModel {
     }
 
     public static class CreateAScriptsRequestAScriptsExtAttributes extends TeaModel {
+        /**
+         * <p>The attribute name.</p>
+         * <p>Set the value to <strong>EsDebug</strong>, which specifies that if requests carry the _es_dbg parameter and the value is the specified key, the debugging header is enabled to output the execution result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EsDebug</p>
+         */
         @NameInMap("AttributeKey")
         public String attributeKey;
 
+        /**
+         * <p>The attribute value, which must be 1 to 128 characters in length, and can contain letters or digits.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test123</p>
+         */
         @NameInMap("AttributeValue")
         public String attributeValue;
 
@@ -113,7 +126,7 @@ public class CreateAScriptsRequest extends TeaModel {
     public static class CreateAScriptsRequestAScripts extends TeaModel {
         /**
          * <p>The name of the AScript rule.</p>
-         * <p>The name must be 2 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.</p>
+         * <p>The name must be 2 to 128 character in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -136,12 +149,21 @@ public class CreateAScriptsRequest extends TeaModel {
         public Boolean enabled;
 
         /**
+         * <p>Specifies whether to enable the extended attributes of the AScript rule. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false (default)</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("ExtAttributeEnabled")
         public Boolean extAttributeEnabled;
 
+        /**
+         * <p>The extended attributes.</p>
+         */
         @NameInMap("ExtAttributes")
         public java.util.List<CreateAScriptsRequestAScriptsExtAttributes> extAttributes;
 

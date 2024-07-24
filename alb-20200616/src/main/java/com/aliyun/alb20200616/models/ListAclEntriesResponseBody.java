@@ -106,7 +106,7 @@ public class ListAclEntriesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The CIDR block of the ACL entry.</p>
+         * <p>The CIDR block for the ACL entry.</p>
          * 
          * <strong>example:</strong>
          * <p>10.0.1.1/24</p>
@@ -117,9 +117,9 @@ public class ListAclEntriesResponseBody extends TeaModel {
         /**
          * <p>The status of the ACL entry. Valid values:</p>
          * <ul>
-         * <li><strong>Adding</strong></li>
-         * <li><strong>Available</strong></li>
-         * <li><strong>Removing</strong></li>
+         * <li><strong>Adding</strong>: The ACL entry is being added.</li>
+         * <li><strong>Available</strong>: The ACL entry is added and available.</li>
+         * <li><strong>Removing</strong>: The ACL entry is being removed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

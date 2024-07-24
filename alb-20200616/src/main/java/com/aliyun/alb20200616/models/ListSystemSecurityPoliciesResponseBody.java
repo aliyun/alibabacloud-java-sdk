@@ -42,7 +42,7 @@ public class ListSystemSecurityPoliciesResponseBody extends TeaModel {
 
     public static class ListSystemSecurityPoliciesResponseBodySecurityPolicies extends TeaModel {
         /**
-         * <p>The supported encryption algorithms.</p>
+         * <p>The supported cipher suite.</p>
          */
         @NameInMap("Ciphers")
         public java.util.List<String> ciphers;
@@ -57,7 +57,7 @@ public class ListSystemSecurityPoliciesResponseBody extends TeaModel {
         public String securityPolicyId;
 
         /**
-         * <p>The TLS versions that are supported.</p>
+         * <p>The supported TLS protocol versions.</p>
          */
         @NameInMap("TLSVersions")
         public java.util.List<String> TLSVersions;
