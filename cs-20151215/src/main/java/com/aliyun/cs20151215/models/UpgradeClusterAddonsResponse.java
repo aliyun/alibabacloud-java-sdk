@@ -10,6 +10,9 @@ public class UpgradeClusterAddonsResponse extends TeaModel {
     @NameInMap("statusCode")
     public Integer statusCode;
 
+    @NameInMap("body")
+    public UpgradeClusterAddonsResponseBody body;
+
     public static UpgradeClusterAddonsResponse build(java.util.Map<String, ?> map) throws Exception {
         UpgradeClusterAddonsResponse self = new UpgradeClusterAddonsResponse();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class UpgradeClusterAddonsResponse extends TeaModel {
     }
     public Integer getStatusCode() {
         return this.statusCode;
+    }
+
+    public UpgradeClusterAddonsResponse setBody(UpgradeClusterAddonsResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public UpgradeClusterAddonsResponseBody getBody() {
+        return this.body;
     }
 
 }

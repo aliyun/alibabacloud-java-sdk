@@ -517,8 +517,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li>To call this operation, make sure that you have the AliyunCSFullAccess permissions.</li>
+     * <li>You cannot revoke the permissions of an Alibaba Cloud account.</li>
+     * <li>You cannot revoke the permissions of the account that you use to call this operation.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>清理某个用户在某个集群的证书以及权限</p>
+     * <p>You can call the CleanClusterUserPermissions operation to delete kubeconfig files that may pose potential risks from a user and revoke Role-Based Access Control (RBAC) permissions on a cluster.</p>
      * 
      * @param request CleanClusterUserPermissionsRequest
      * @param headers map
@@ -551,8 +560,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li>To call this operation, make sure that you have the AliyunCSFullAccess permissions.</li>
+     * <li>You cannot revoke the permissions of an Alibaba Cloud account.</li>
+     * <li>You cannot revoke the permissions of the account that you use to call this operation.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>清理某个用户在某个集群的证书以及权限</p>
+     * <p>You can call the CleanClusterUserPermissions operation to delete kubeconfig files that may pose potential risks from a user and revoke Role-Based Access Control (RBAC) permissions on a cluster.</p>
      * 
      * @param request CleanClusterUserPermissionsRequest
      * @return CleanClusterUserPermissionsResponse
@@ -564,8 +582,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <ul>
+     * <li>To call this operation, make sure that you have the AliyunCSFullAccess permissions.</li>
+     * <li>You cannot revoke the permissions of an Alibaba Cloud account.</li>
+     * <li>You cannot revoke the permissions of the account that you use to call this operation.</li>
+     * </ul>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>清除某个用户的证书以及相关RBAC权限</p>
+     * <p>You can call the CleanUserPermissions operation to delete the kubeconfig files of the specified users and revoke the relevant Role-Based Access Control (RBAC) permissions. This API operation is suitable for scenarios where employees have resigned or the accounts of employees are locked.</p>
      * 
      * @param tmpReq CleanUserPermissionsRequest
      * @param headers map
@@ -608,8 +635,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <ul>
+     * <li>To call this operation, make sure that you have the AliyunCSFullAccess permissions.</li>
+     * <li>You cannot revoke the permissions of an Alibaba Cloud account.</li>
+     * <li>You cannot revoke the permissions of the account that you use to call this operation.</li>
+     * </ul>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>清除某个用户的证书以及相关RBAC权限</p>
+     * <p>You can call the CleanUserPermissions operation to delete the kubeconfig files of the specified users and revoke the relevant Role-Based Access Control (RBAC) permissions. This API operation is suitable for scenarios where employees have resigned or the accounts of employees are locked.</p>
      * 
      * @param request CleanUserPermissionsRequest
      * @return CleanUserPermissionsResponse
@@ -4946,8 +4982,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li>To call this operation, make sure that you have ram:ListUsers and ram:ListRoles permissions.</li>
+     * <li>To call this operation, make sure that you have the AliyunCSFullAccess permissions.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取当前集群已下发的用户Kubeconfig的状态列表</p>
+     * <p>You can call the ListClusterKubeconfigStates operation to query the kubeconfig files that are issued to users for the current cluster and the status of the kubeconfig files.</p>
      * 
      * @param request ListClusterKubeconfigStatesRequest
      * @param headers map
@@ -4984,8 +5028,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li>To call this operation, make sure that you have ram:ListUsers and ram:ListRoles permissions.</li>
+     * <li>To call this operation, make sure that you have the AliyunCSFullAccess permissions.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取当前集群已下发的用户Kubeconfig的状态列表</p>
+     * <p>You can call the ListClusterKubeconfigStates operation to query the kubeconfig files that are issued to users for the current cluster and the status of the kubeconfig files.</p>
      * 
      * @param request ListClusterKubeconfigStatesRequest
      * @return ListClusterKubeconfigStatesResponse
@@ -5121,8 +5173,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p> To call this operation, make sure that you have the AliyunCSFullAccess permissions.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>查询单用户所有集群的证书状态</p>
+     * <p>You can call the ListUserKubeConfigStates operation to query the status of the kubeconfig files of all clusters managed by the current user.</p>
      * 
      * @param request ListUserKubeConfigStatesRequest
      * @param headers map
@@ -5159,8 +5216,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p> To call this operation, make sure that you have the AliyunCSFullAccess permissions.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>查询单用户所有集群的证书状态</p>
+     * <p>You can call the ListUserKubeConfigStates operation to query the status of the kubeconfig files of all clusters managed by the current user.</p>
      * 
      * @param request ListUserKubeConfigStatesRequest
      * @return ListUserKubeConfigStatesResponse
@@ -7095,8 +7157,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, ensure that you understand the billing methods and pricing of <a href="https://www.aliyun.com/price/product#/sls/detail/sls">Simple Log Service</a> (SLS).</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新集群审计日志配置</p>
+     * <p>You can call the UpdateClusterAuditLogConfig operation to enable or disable the audit log feature in a Container Service for Kubernetes (ACK) cluster and update the audit log configuration. This operation also allows you to record requests to the Kubernetes API and the responses, which can be used to trace cluster operation history and troubleshoot cluster issues.</p>
      * 
      * @param request UpdateClusterAuditLogConfigRequest
      * @param headers map
@@ -7133,8 +7198,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, ensure that you understand the billing methods and pricing of <a href="https://www.aliyun.com/price/product#/sls/detail/sls">Simple Log Service</a> (SLS).</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新集群审计日志配置</p>
+     * <p>You can call the UpdateClusterAuditLogConfig operation to enable or disable the audit log feature in a Container Service for Kubernetes (ACK) cluster and update the audit log configuration. This operation also allows you to record requests to the Kubernetes API and the responses, which can be used to trace cluster operation history and troubleshoot cluster issues.</p>
      * 
      * @param request UpdateClusterAuditLogConfigRequest
      * @return UpdateClusterAuditLogConfigResponse
@@ -7564,7 +7632,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "none")
+            new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpgradeClusterAddonsResponse());
     }

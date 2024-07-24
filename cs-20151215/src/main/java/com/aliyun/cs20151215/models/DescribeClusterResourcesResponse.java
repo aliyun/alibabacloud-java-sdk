@@ -84,12 +84,30 @@ public class DescribeClusterResourcesResponse extends TeaModel {
     }
 
     public static class DescribeClusterResourcesResponseBodyAssociatedObject extends TeaModel {
+        /**
+         * <p>The Kubernetes object type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Service</p>
+         */
         @NameInMap("kind")
         public String kind;
 
+        /**
+         * <p>The namespace in which the Kubernetes object resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kube-system</p>
+         */
         @NameInMap("namespace")
         public String namespace;
 
+        /**
+         * <p>The Kubernetes object name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nginx-ingress-lb</p>
+         */
         @NameInMap("name")
         public String name;
 
@@ -125,9 +143,21 @@ public class DescribeClusterResourcesResponse extends TeaModel {
     }
 
     public static class DescribeClusterResourcesResponseBodyDeleteBehavior extends TeaModel {
+        /**
+         * <p>Specifies whether to delete the resource by default when the cluster is deleted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("delete_by_default")
         public Boolean deleteByDefault;
 
+        /**
+         * <p>Specifies whether the default behavior returned in delete_by_default can be changed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("changeable")
         public Boolean changeable;
 
@@ -183,7 +213,7 @@ public class DescribeClusterResourcesResponse extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The information about the resource. For more information about how to query the source information about a resource, see <a href="https://help.aliyun.com/document_detail/133836.html">ListStackResources</a>.</p>
+         * <p>The resource information. For more information about how to query the source information about the resource, see <a href="https://help.aliyun.com/document_detail/133836.html">ListStackResources</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;Id\&quot;:\&quot;k8s_master_slb\&quot;,\&quot;Name\&quot;:\&quot;k8s_master_slb\&quot;,\&quot;Type\&quot;:\&quot;ALIYUN::SLB::LoadBalancer\&quot;,\&quot;Status\&quot;:\&quot;CREATE_COMPLETE\&quot;,\&quot;StatusReason\&quot;:\&quot;state changed\&quot;,\&quot;Updated\&quot;:\&quot;2020-05-21T13:25:02\&quot;,\&quot;PhysicalId\&quot;:\&quot;lb-wz9poz4r0ymh8u0uf****\&quot;}</p>
@@ -203,14 +233,14 @@ public class DescribeClusterResourcesResponse extends TeaModel {
         /**
          * <p>The resource status. Valid values:</p>
          * <ul>
-         * <li><code>CREATE_COMPLETE</code>: The resource is created.</li>
-         * <li><code>CREATE_FAILED</code>: The resource failed to be created.</li>
-         * <li><code>CREATE_IN_PROGRESS</code>: The resource is being created.</li>
-         * <li><code>DELETE_FAILED</code>: The resource failed to be deleted.</li>
-         * <li><code>DELETE_IN_PROGRESS</code>: The resource is being deleted.</li>
-         * <li><code>ROLLBACK_COMPLETE</code>: The resource is rolled back.</li>
-         * <li><code>ROLLBACK_FAILED</code>: The resource failed to be rolled back.</li>
-         * <li><code>ROLLBACK_IN_PROGRESS</code>: The resource is being rolled back.</li>
+         * <li><code>CREATE_COMPLETE</code>: the resource is created.</li>
+         * <li><code>CREATE_FAILED</code>: the resource failed to be created.</li>
+         * <li><code>CREATE_IN_PROGRESS</code>: the resource is being created.</li>
+         * <li><code>DELETE_FAILED</code>: the resource failed to be deleted.</li>
+         * <li><code>DELETE_IN_PROGRESS</code>: the resource is being deleted.</li>
+         * <li><code>ROLLBACK_COMPLETE</code>: the resource is rolled back.</li>
+         * <li><code>ROLLBACK_FAILED</code>: the resource failed to be rolled back.</li>
+         * <li><code>ROLLBACK_IN_PROGRESS</code>: the resource is being rolled back.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -220,10 +250,10 @@ public class DescribeClusterResourcesResponse extends TeaModel {
         public String state;
 
         /**
-         * <p>Indicates whether the resource is created by Container Service for Kubernetes (ACK). Valid values:</p>
+         * <p>Specifies whether the resource is created by Container Service for Kubernetes (ACK). Valid values:</p>
          * <ul>
-         * <li>1: The resource is created by ACK.</li>
-         * <li>0: The resource is an existing resource.</li>
+         * <li>1: the resource is created by ACK.</li>
+         * <li>0: the resource is an existing resource.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -232,18 +262,44 @@ public class DescribeClusterResourcesResponse extends TeaModel {
         @NameInMap("auto_create")
         public Long autoCreate;
 
+        /**
+         * <p>The dependent resources.</p>
+         */
         @NameInMap("dependencies")
         public java.util.List<DescribeClusterResourcesResponseBodyDependencies> dependencies;
 
+        /**
+         * <p>The Kubernetes object with which the resource is associated.</p>
+         */
         @NameInMap("associated_object")
         public DescribeClusterResourcesResponseBodyAssociatedObject associatedObject;
 
+        /**
+         * <p>The deletion behavior of the resource when the cluster is deleted.</p>
+         */
         @NameInMap("delete_behavior")
         public DescribeClusterResourcesResponseBodyDeleteBehavior deleteBehavior;
 
+        /**
+         * <p>The type of the resource creator. Valid values:</p>
+         * <ul>
+         * <li>user: the resource is created by the user.</li>
+         * <li>system: the resource is created by the ACK management system.</li>
+         * <li>addon: the resource is created by a cluster component.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>addon</p>
+         */
         @NameInMap("creator_type")
         public String creatorType;
 
+        /**
+         * <p>The additional information about the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;IP&quot;: &quot;xx.xx.xx.xx&quot;}</p>
+         */
         @NameInMap("extra_info")
         public java.util.Map<String, ?> extraInfo;
 

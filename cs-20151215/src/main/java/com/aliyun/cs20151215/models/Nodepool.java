@@ -1068,6 +1068,13 @@ public class Nodepool extends TeaModel {
         @NameInMap("private_pool_options")
         public NodepoolScalingGroupPrivatePoolOptions privatePoolOptions;
 
+        /**
+         * <strong>example:</strong>
+         * <p>example-role</p>
+         */
+        @NameInMap("ram_role_name")
+        public String ramRoleName;
+
         @NameInMap("rds_instances")
         public java.util.List<String> rdsInstances;
 
@@ -1355,6 +1362,14 @@ public class Nodepool extends TeaModel {
         }
         public NodepoolScalingGroupPrivatePoolOptions getPrivatePoolOptions() {
             return this.privatePoolOptions;
+        }
+
+        public NodepoolScalingGroup setRamRoleName(String ramRoleName) {
+            this.ramRoleName = ramRoleName;
+            return this;
+        }
+        public String getRamRoleName() {
+            return this.ramRoleName;
         }
 
         public NodepoolScalingGroup setRdsInstances(java.util.List<String> rdsInstances) {
