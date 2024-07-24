@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class GetUploadUrlResponseBody extends TeaModel {
     /**
      * <p>The time when the upload task was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-09-11T16:34:36.977Z</p>
      */
     @NameInMap("create_at")
     public String createAt;
 
     /**
      * <p>The domain ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bj1</p>
      */
     @NameInMap("domain_id")
     public String domainId;
 
     /**
      * <p>The drive ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("drive_id")
     public String driveId;
 
     /**
      * <p>The file ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5d5b846942cf94fa72324c14a4bda34e81da635d</p>
      */
     @NameInMap("file_id")
     public String fileId;
@@ -36,6 +48,9 @@ public class GetUploadUrlResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the upload task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10166D06127B413BA1EC8ABB1144D111</p>
      */
     @NameInMap("upload_id")
     public String uploadId;

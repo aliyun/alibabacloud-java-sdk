@@ -4,15 +4,31 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class VideoMediaVideoStream extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>108420</p>
+     */
     @NameInMap("bitrate")
     public String bitrate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>h264</p>
+     */
     @NameInMap("code_name")
     public String codeName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>22.88</p>
+     */
     @NameInMap("duration")
     public String duration;
 
+    /**
+     * <strong>example:</strong>
+     * <p>90</p>
+     */
     @NameInMap("frame_count")
     public String frameCount;
 

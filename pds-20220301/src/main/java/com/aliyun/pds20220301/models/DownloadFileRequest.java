@@ -6,38 +6,55 @@ import com.aliyun.tea.*;
 public class DownloadFileRequest extends TeaModel {
     /**
      * <p>The drive ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("drive_id")
     public String driveId;
 
     /**
      * <p>The file ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9520943DC264</p>
      */
     @NameInMap("file_id")
     public String fileId;
 
     /**
      * <p>The method used to generate the thumbnail of an image. If this parameter is specified, you are redirected to the URL of the generated thumbnail.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>image/resize,m_fill,h_128,w_128,limit_0</p>
      */
     @NameInMap("image_thumbnail_process")
     public String imageThumbnailProcess;
 
     /**
      * <p>The method used to generate the thumbnail of a document. If this parameter is specified, you are redirected to the URL of the generated thumbnail.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>image/resize,w_200</p>
      */
     @NameInMap("office_thumbnail_process")
     public String officeThumbnailProcess;
 
     /**
-     * <p>The share ID. If you want to manage a file by using a share link, carry the `x-share-token` header for authentication in the request and specify share_id. In this case, `drive_id` is invalid. Otherwise, use an `AccessKey pair` or `access token` for authentication and specify `drive_id`. You must specify one of `share_id` and `drive_id`.</p>
+     * <p>The share ID. If you want to manage a file by using a share link, carry the <code>x-share-token</code> header for authentication in the request and specify share_id. In this case, <code>drive_id</code> is invalid. Otherwise, use an <code>AccessKey pair</code> or <code>access token</code> for authentication and specify <code>drive_id</code>. You must specify one of <code>share_id</code> and <code>drive_id</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7JQX1FswpQ8</p>
      */
     @NameInMap("share_id")
     public String shareId;
 
     /**
      * <p>The method used to generate the thumbnail of a video. If this parameter is specified, you are redirected to the URL of the generated thumbnail.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>video/snapshot,t_7000,f_jpg,w_800,h_600,m_fast</p>
      */
     @NameInMap("video_thumbnail_process")
     public String videoThumbnailProcess;

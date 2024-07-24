@@ -6,143 +6,155 @@ import com.aliyun.tea.*;
 public class ListFileRequest extends TeaModel {
     /**
      * <p>The category of the file. Valid values:</p>
-     * <br>
      * <p>app: installation package. zip: compressed package. image: image. doc: document. video: video. audio: audio. others: other files.</p>
-     * <br>
      * <p>By default, files of all categories are returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>image</p>
      */
     @NameInMap("category")
     public String category;
 
     /**
      * <p>The drive ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("drive_id")
     public String driveId;
 
     /**
      * <p>The fields to return.</p>
-     * <br>
-     * <p>1.  If this parameter is set to \\*, all fields of the file except the fields that must be specified are returned.</p>
-     * <p>2.  If only specific fields are required, you can specify the following fields: url, exif, cropping_suggestion, characteristic_hash, video_metadata, and video_preview_metadata. If multiple fields are required, separate them with commas (,). Example: url,exif.</p>
-     * <p>3.  The investigation_info field is returned only if you specify this field.</p>
-     * <br>
+     * <ol>
+     * <li>If this parameter is set to \*, all fields of the file except the fields that must be specified are returned.</li>
+     * <li>If only specific fields are required, you can specify the following fields: url, exif, cropping_suggestion, characteristic_hash, video_metadata, and video_preview_metadata. If multiple fields are required, separate them with commas (,). Example: url,exif.</li>
+     * <li>The investigation_info field is returned only if you specify this field.</li>
+     * </ol>
      * <p>By default, all fields except the fields that must be specified are returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <ul>
+     * <li></li>
+     * </ul>
      */
     @NameInMap("fields")
     public String fields;
 
     /**
      * <p>The maximum number of results to return. Valid values: 1 to 100.</p>
-     * <br>
      * <p>The number of returned results must be less than or equal to the specified number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("limit")
     public Integer limit;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of marker.\\</p>
-     * <p>By default, this parameter is empty.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of marker.\
+     * By default, this parameter is empty.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NWQ1Yjk4YmI1ZDRlYmU1Y2E0YWE0NmJhYWJmODBhNDQ2NzhlMTRhMg</p>
      */
     @NameInMap("marker")
     public String marker;
 
     /**
      * <p>The sorting field.</p>
-     * <br>
      * <p>Default value: created_at.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   updated_at</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    :</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    sorts the results based on the time when the file was last modified</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    .</p>
-     * <br>
-     * <p>*   size</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    :</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    sorts the results based on the size of the file</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    .</p>
-     * <br>
-     * <p>*   name</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    :</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    sorts the results based on the name of the file</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    .</p>
-     * <br>
-     * <p>*   created_at</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    :</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    sorts the results based on the time when the file was created</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    .</p>
+     * <ul>
+     * <li><p>updated_at</p>
+     * <!-- -->
+     * 
+     * <p>:</p>
+     * <!-- -->
+     * 
+     * <p>sorts the results based on the time when the file was last modified</p>
+     * <!-- -->
+     * 
+     * <p>.</p>
+     * </li>
+     * <li><p>size</p>
+     * <!-- -->
+     * 
+     * <p>:</p>
+     * <!-- -->
+     * 
+     * <p>sorts the results based on the size of the file</p>
+     * <!-- -->
+     * 
+     * <p>.</p>
+     * </li>
+     * <li><p>name</p>
+     * <!-- -->
+     * 
+     * <p>:</p>
+     * <!-- -->
+     * 
+     * <p>sorts the results based on the name of the file</p>
+     * <!-- -->
+     * 
+     * <p>.</p>
+     * </li>
+     * <li><p>created_at</p>
+     * <!-- -->
+     * 
+     * <p>:</p>
+     * <!-- -->
+     * 
+     * <p>sorts the results based on the time when the file was created</p>
+     * <!-- -->
+     * 
+     * <p>.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>updated_at</p>
      */
     @NameInMap("order_by")
     public String orderBy;
 
     /**
      * <p>The sorting direction. Valid values:</p>
-     * <br>
      * <p>ASC: ascending order. DESC: descending order.</p>
-     * <br>
      * <p>Default value: ASC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ASC</p>
      */
     @NameInMap("order_direction")
     public String orderDirection;
 
     /**
      * <p>The ID of the parent folder. If the parent folder is a root directory, set this parameter to root.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>root</p>
      */
     @NameInMap("parent_file_id")
     public String parentFileId;
 
     /**
-     * <p>The share ID. If you want to manage a file by using a share link, carry the `x-share-token` header for authentication in the request and specify share_id. In this case, `drive_id` is invalid. Otherwise, use an `AccessKey pair` or `access token` for authentication and specify `drive_id`. You must specify one of `share_id` and `drive_id`.</p>
+     * <p>The share ID. If you want to manage a file by using a share link, carry the <code>x-share-token</code> header for authentication in the request and specify share_id. In this case, <code>drive_id</code> is invalid. Otherwise, use an <code>AccessKey pair</code> or <code>access token</code> for authentication and specify <code>drive_id</code>. You must specify one of <code>share_id</code> and <code>drive_id</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7JQX1FswpQ8</p>
      */
     @NameInMap("share_id")
     public String shareId;
 
     /**
      * <p>The state of the file. Valid values:</p>
-     * <br>
      * <p>available: Only normal files are returned. uploading: Only files that are being uploaded are returned.</p>
-     * <br>
      * <p>By default, only files in the available state are returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>available</p>
      */
     @NameInMap("status")
     public String status;
@@ -155,10 +167,11 @@ public class ListFileRequest extends TeaModel {
 
     /**
      * <p>The type of the file. Valid values:</p>
-     * <br>
      * <p>file: Only files are returned. folder: Only folders are returned.</p>
-     * <br>
      * <p>By default, files of all types are returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>file</p>
      */
     @NameInMap("type")
     public String type;

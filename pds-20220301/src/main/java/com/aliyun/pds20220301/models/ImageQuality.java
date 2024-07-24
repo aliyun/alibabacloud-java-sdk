@@ -4,6 +4,10 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class ImageQuality extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0.736</p>
+     */
     @NameInMap("overall_score")
     public Double overallScore;
 

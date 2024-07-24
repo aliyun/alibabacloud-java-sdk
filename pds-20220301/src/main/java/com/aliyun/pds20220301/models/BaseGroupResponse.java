@@ -4,21 +4,45 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class BaseGroupResponse extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>111111</p>
+     */
     @NameInMap("created_at")
     public Long createdAt;
 
+    /**
+     * <strong>example:</strong>
+     * <p>system</p>
+     */
     @NameInMap("creator")
     public String creator;
 
+    /**
+     * <strong>example:</strong>
+     * <p>desc-111</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>bj123</p>
+     */
     @NameInMap("domain_id")
     public String domainId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>b38b5681bd964950ad8bc0f8ea504793</p>
+     */
     @NameInMap("group_id")
     public String groupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>name-111</p>
+     */
     @NameInMap("group_name")
     public String groupName;
 
@@ -28,6 +52,10 @@ public class BaseGroupResponse extends TeaModel {
     @NameInMap("permission")
     public java.util.Map<String, IDPermission> permission;
 
+    /**
+     * <strong>example:</strong>
+     * <p>111111</p>
+     */
     @NameInMap("updated_at")
     public String updatedAt;
 

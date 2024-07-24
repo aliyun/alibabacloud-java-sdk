@@ -4,15 +4,31 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class BaseUserResponse extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p><a href="http://a.b.c/ccp.jpg">http://a.b.c/ccp.jpg</a></p>
+     */
     @NameInMap("avatar")
     public String avatar;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1567407718386</p>
+     */
     @NameInMap("created_at")
     public String createdAt;
 
+    /**
+     * <strong>example:</strong>
+     * <p>system</p>
+     */
     @NameInMap("creator")
     public String creator;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123</p>
+     */
     @NameInMap("default_drive_id")
     public String defaultDriveId;
 
@@ -22,15 +38,31 @@ public class BaseUserResponse extends TeaModel {
     @NameInMap("deny_change_password_by_self")
     public Boolean denyChangePasswordBySelf;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ccp team user</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>hz999</p>
+     */
     @NameInMap("domain_id")
     public String domainId;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="mailto:123@ccp.com">123@ccp.com</a></p>
+     */
     @NameInMap("email")
     public String email;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("expired_at")
     public Long expiredAt;
 
@@ -43,6 +75,10 @@ public class BaseUserResponse extends TeaModel {
     @NameInMap("need_change_password_next_login")
     public Boolean needChangePasswordNextLogin;
 
+    /**
+     * <strong>example:</strong>
+     * <p>abc</p>
+     */
     @NameInMap("nick_name")
     public String nickName;
 
@@ -52,27 +88,51 @@ public class BaseUserResponse extends TeaModel {
     @NameInMap("permission")
     public java.util.Map<String, IDPermission> permission;
 
+    /**
+     * <strong>example:</strong>
+     * <p>13700000000</p>
+     */
     @NameInMap("phone")
     public String phone;
 
     @NameInMap("phone_region")
     public String phoneRegion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>user</p>
+     */
     @NameInMap("role")
     public String role;
 
+    /**
+     * <strong>example:</strong>
+     * <p>enabled</p>
+     */
     @NameInMap("status")
     public String status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1567407718386</p>
+     */
     @NameInMap("updated_at")
     public String updatedAt;
 
     @NameInMap("user_data")
     public java.util.Map<String, ?> userData;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ccpuserid</p>
+     */
     @NameInMap("user_id")
     public String userId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>name</p>
+     */
     @NameInMap("user_name")
     public String userName;
 

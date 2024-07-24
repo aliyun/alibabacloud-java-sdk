@@ -6,102 +6,153 @@ import com.aliyun.tea.*;
 public class GetShareLinkByAnonymousResponseBody extends TeaModel {
     /**
      * <p>The number of times that the shared files are visited.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("access_count")
     public Long accessCount;
 
     /**
      * <p>The profile picture of the user who created the share link.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://aliyunpds.com/a.jpg">https://aliyunpds.com/a.jpg</a></p>
      */
     @NameInMap("avatar")
     public String avatar;
 
     /**
      * <p>The ID of the user who created the share link.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c9b7a5aa04d14ae3867fdc886fa01da4</p>
      */
     @NameInMap("creator_id")
     public String creatorId;
 
     /**
      * <p>The name of the user who created the share link. The value is masked.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AB***CD</p>
      */
     @NameInMap("creator_name")
     public String creatorName;
 
     /**
      * <p>The mobile number of the user who created the share link. The value is masked.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>136****00</p>
      */
     @NameInMap("creator_phone")
     public String creatorPhone;
 
     /**
      * <p>Indicates whether the downloads of the shared files are prohibited.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("disable_download")
     public Boolean disableDownload;
 
     /**
      * <p>Indicates whether the previews of the shared files are prohibited.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("disable_preview")
     public Boolean disablePreview;
 
     /**
      * <p>Indicates whether the saves of the shared files are prohibited.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("disable_save")
     public Boolean disableSave;
 
     /**
      * <p>The number of times that the shared files are downloaded.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("download_count")
     public Long downloadCount;
 
     /**
      * <p>The maximum number of times that the shared files can be downloaded.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("download_limit")
     public Long downloadLimit;
 
     /**
      * <p>The time when the share link expires.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-08-20T06:51:27.292Z</p>
      */
     @NameInMap("expiration")
     public String expiration;
 
     /**
      * <p>The number of times that the shared files are previewed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>80</p>
      */
     @NameInMap("preview_count")
     public Long previewCount;
 
     /**
      * <p>The maximum number of times that the shared files can be previewed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("preview_limit")
     public Long previewLimit;
 
     /**
      * <p>The number of times that the shared files are reported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("report_count")
     public Long reportCount;
 
     /**
      * <p>The number of times that the shared files are saved.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("save_count")
     public Long saveCount;
 
     /**
      * <p>The maximum number of times that the shared files can be saved and downloaded.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("save_download_limit")
     public Long saveDownloadLimit;
 
     /**
      * <p>The maximum number of times that the shared files can be saved.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("save_limit")
     public Long saveLimit;
@@ -114,12 +165,18 @@ public class GetShareLinkByAnonymousResponseBody extends TeaModel {
 
     /**
      * <p>The time when the share link was last modified.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-08-20T06:51:27.292Z</p>
      */
     @NameInMap("updated_at")
     public String updatedAt;
 
     /**
      * <p>The number of times that the videos are previewed in the shared files.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("video_preview_count")
     public Long videoPreviewCount;

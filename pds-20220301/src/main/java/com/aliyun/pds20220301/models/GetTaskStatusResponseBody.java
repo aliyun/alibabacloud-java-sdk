@@ -6,50 +6,45 @@ import com.aliyun.tea.*;
 public class GetTaskStatusResponseBody extends TeaModel {
     /**
      * <p>The state of the task.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   running</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    : The task is</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    running</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    .</p>
-     * <br>
-     * <p>*   failed</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    : The task</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    fails</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    .</p>
-     * <br>
-     * <p>*   succeeded</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    : The task is</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    successful</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    .</p>
+     * <ul>
+     * <li><p>running</p>
+     * <!-- -->
+     * 
+     * <p>: The task is</p>
+     * <!-- -->
+     * 
+     * <p>running</p>
+     * <!-- -->
+     * 
+     * <p>.</p>
+     * </li>
+     * <li><p>failed</p>
+     * <!-- -->
+     * 
+     * <p>: The task</p>
+     * <!-- -->
+     * 
+     * <p>fails</p>
+     * <!-- -->
+     * 
+     * <p>.</p>
+     * </li>
+     * <li><p>succeeded</p>
+     * <!-- -->
+     * 
+     * <p>: The task is</p>
+     * <!-- -->
+     * 
+     * <p>successful</p>
+     * <!-- -->
+     * 
+     * <p>.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>running</p>
      */
     @NameInMap("status")
     public String status;

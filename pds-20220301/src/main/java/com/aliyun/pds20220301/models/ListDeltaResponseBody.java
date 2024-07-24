@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ListDeltaResponseBody extends TeaModel {
     /**
      * <p>The cursor of the incremental information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1WQ1Yjk4YmI1ZDRlYmU1Y2E0YWE0NmJhYWJmODBhNDQ2NzhlMTRhMg</p>
      */
     @NameInMap("cursor")
     public String cursor;
 
     /**
      * <p>Indicates whether more information is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("has_more")
     public Boolean hasMore;
@@ -60,21 +66,28 @@ public class ListDeltaResponseBody extends TeaModel {
 
         /**
          * <p>The file ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>122fb09598ae66777c7040109a16f49381f6abe2</p>
          */
         @NameInMap("file_id")
         public String fileId;
 
         /**
          * <p>The operation that is performed. Valid values: Valid values:</p>
-         * <br>
-         * <p>*   create</p>
-         * <p>*   overwrite</p>
-         * <p>*   delete</p>
-         * <p>*   update</p>
-         * <p>*   move</p>
-         * <p>*   trash</p>
-         * <p>*   restore</p>
-         * <p>*   rename</p>
+         * <ul>
+         * <li>create</li>
+         * <li>overwrite</li>
+         * <li>delete</li>
+         * <li>update</li>
+         * <li>move</li>
+         * <li>trash</li>
+         * <li>restore</li>
+         * <li>rename</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>create</p>
          */
         @NameInMap("op")
         public String op;

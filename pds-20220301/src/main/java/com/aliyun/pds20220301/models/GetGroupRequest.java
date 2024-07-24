@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class GetGroupRequest extends TeaModel {
     /**
      * <p>The group ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2e43ec8427dd45f19431b7504649a1b1</p>
      */
     @NameInMap("group_id")
     public String groupId;

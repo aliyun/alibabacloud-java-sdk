@@ -6,24 +6,30 @@ import com.aliyun.tea.*;
 public class CompleteFileRequest extends TeaModel {
     /**
      * <p>The drive ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("drive_id")
     public String driveId;
 
     /**
      * <p>The file ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9520943DC264</p>
      */
     @NameInMap("file_id")
     public String fileId;
 
     /**
      * <p>The upload ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C9DCFE5A82644AC7A02DB74C30C934A6</p>
      */
     @NameInMap("upload_id")
     public String uploadId;

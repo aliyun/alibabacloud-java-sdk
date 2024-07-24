@@ -6,23 +6,26 @@ import com.aliyun.tea.*;
 public class FileRemovePermissionRequest extends TeaModel {
     /**
      * <p>The drive ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("drive_id")
     public String driveId;
 
     /**
      * <p>The file ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4221bf6e6ab43c255edc4463bf3a6f5f5d317406</p>
      */
     @NameInMap("file_id")
     public String fileId;
 
     /**
      * <p>The identities with whom the file is shared.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("member_list")
@@ -60,7 +63,6 @@ public class FileRemovePermissionRequest extends TeaModel {
     public static class FileRemovePermissionRequestMemberList extends TeaModel {
         /**
          * <p>The identity to whom the permissions are granted, which is a user or a group.</p>
-         * <br>
          * <p>This parameter is required.</p>
          */
         @NameInMap("identity")
@@ -68,34 +70,23 @@ public class FileRemovePermissionRequest extends TeaModel {
 
         /**
          * <p>The role ID. You can grant permissions by assigning roles to identities, or you can customize the permissions. To grant permissions by assigning roles to identities, specify role_id. role_id and action_list are mutually exclusive. If both parameters are specified, role_id has a higher priority.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
          * <p>SystemFileOwner: collaborator.</p>
-         * <br>
          * <p>SystemFileDownloader: downloader.</p>
-         * <br>
          * <p>SystemFileEditor: editor.</p>
-         * <br>
          * <p>SystemFileEditorWithoutDelete: editor without permissions to delete the file.</p>
-         * <br>
          * <p>SystemFileEditorWithoutShareLink: editor without permissions to share the file.</p>
-         * <br>
          * <p>SystemFileMetaViewer: viewer of lists.</p>
-         * <br>
          * <p>SystemFileUploader: uploader. SystemFileUploaderAndDownloader: uploader and downloader.</p>
-         * <br>
          * <p>SystemFileDownloaderWithShareLink: downloader and sharer.</p>
-         * <br>
          * <p>SystemFileUploaderAndDownloaderWithShareLink: uploader, downloader, and sharer.</p>
-         * <br>
          * <p>SystemFileUploaderAndViewer: viewer and uploader.</p>
-         * <br>
          * <p>SystemFileUploaderWithShareLink: uploader and sharer.</p>
-         * <br>
          * <p>SystemFileViewer: viewer.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SystemFileDownloader</p>
          */
         @NameInMap("role_id")
         public String roleId;

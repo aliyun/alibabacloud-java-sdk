@@ -6,36 +6,54 @@ import com.aliyun.tea.*;
 public class CreateFileResponseBody extends TeaModel {
     /**
      * <p>The domain ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bj1</p>
      */
     @NameInMap("domain_id")
     public String domainId;
 
     /**
      * <p>The drive ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("drive_id")
     public String driveId;
 
     /**
      * <p>Indicates whether the file exists.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("exist")
     public Boolean exist;
 
     /**
      * <p>The file ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>fileid1</p>
      */
     @NameInMap("file_id")
     public String fileId;
 
     /**
      * <p>The file name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a.txt</p>
      */
     @NameInMap("file_name")
     public String fileName;
 
     /**
      * <p>The ID of the parent directory.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>fileid5</p>
      */
     @NameInMap("parent_file_id")
     public String parentFileId;
@@ -48,24 +66,36 @@ public class CreateFileResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the file is instantly uploaded.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("rapid_upload")
     public Boolean rapidUpload;
 
     /**
      * <p>The state of the file.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>uploading</p>
      */
     @NameInMap("status")
     public String status;
 
     /**
      * <p>The type of the file.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>file</p>
      */
     @NameInMap("type")
     public String type;
 
     /**
      * <p>The ID of the upload task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>uploadid1</p>
      */
     @NameInMap("upload_id")
     public String uploadId;

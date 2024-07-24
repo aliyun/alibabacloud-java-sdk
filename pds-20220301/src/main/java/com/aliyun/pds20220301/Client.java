@@ -17,8 +17,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
 
     /**
-     * @summary Adds a member to a group.
-     *
+     * <b>summary</b> : 
+     * <p>Adds a member to a group.</p>
+     * 
      * @param request AddGroupMemberRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -58,8 +59,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Adds a member to a group.
-     *
+     * <b>summary</b> : 
+     * <p>Adds a member to a group.</p>
+     * 
      * @param request AddGroupMemberRequest
      * @return AddGroupMemberResponse
      */
@@ -70,8 +72,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 故事添加文件
-     *
+     * <b>summary</b> : 
+     * <p>故事添加文件</p>
+     * 
      * @param request AddStoryFilesRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -111,8 +114,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 故事添加文件
-     *
+     * <b>summary</b> : 
+     * <p>故事添加文件</p>
+     * 
      * @param request AddStoryFilesRequest
      * @return AddStoryFilesResponse
      */
@@ -123,10 +127,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Assigns a group administrator role to a user.
-     *
-     * @description You can call this operation to assign a group administrator role to a user.
-     *
+     * <b>description</b> :
+     * <p>You can call this operation to assign a group administrator role to a user.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Assigns a group administrator role to a user.</p>
+     * 
      * @param request AssignRoleRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -170,10 +176,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Assigns a group administrator role to a user.
-     *
-     * @description You can call this operation to assign a group administrator role to a user.
-     *
+     * <b>description</b> :
+     * <p>You can call this operation to assign a group administrator role to a user.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Assigns a group administrator role to a user.</p>
+     * 
      * @param request AssignRoleRequest
      * @return AssignRoleResponse
      */
@@ -184,10 +192,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Requests permissions by using OAuth 2.0.
-     *
-     * @description For more information, see "OAuth 2.0 For Web Server Applications" at [OAuth 2.0 For Web Server Applications](https://www.alibabacloud.com/help/en/pds/drive-and-photo-service-dev/user-guide/oauth-2-0-access-process-for-web-server-applications) in User Guide.
-     *
+     * <b>description</b> :
+     * <p>For more information, see &quot;OAuth 2.0 For Web Server Applications&quot; at <a href="https://www.alibabacloud.com/help/en/pds/drive-and-photo-service-dev/user-guide/oauth-2-0-access-process-for-web-server-applications">OAuth 2.0 For Web Server Applications</a> in User Guide.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Requests permissions by using OAuth 2.0.</p>
+     * 
      * @param tmpReq AuthorizeRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -249,10 +259,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Requests permissions by using OAuth 2.0.
-     *
-     * @description For more information, see "OAuth 2.0 For Web Server Applications" at [OAuth 2.0 For Web Server Applications](https://www.alibabacloud.com/help/en/pds/drive-and-photo-service-dev/user-guide/oauth-2-0-access-process-for-web-server-applications) in User Guide.
-     *
+     * <b>description</b> :
+     * <p>For more information, see &quot;OAuth 2.0 For Web Server Applications&quot; at <a href="https://www.alibabacloud.com/help/en/pds/drive-and-photo-service-dev/user-guide/oauth-2-0-access-process-for-web-server-applications">OAuth 2.0 For Web Server Applications</a> in User Guide.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Requests permissions by using OAuth 2.0.</p>
+     * 
      * @param request AuthorizeRequest
      * @return AuthorizeResponse
      */
@@ -263,8 +275,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Calls multiple operations at a time to improve call efficiency.
-     *
+     * <b>summary</b> : 
+     * <p>Calls multiple operations at a time to improve call efficiency.</p>
+     * 
      * @param request BatchRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -300,8 +313,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Calls multiple operations at a time to improve call efficiency.
-     *
+     * <b>summary</b> : 
+     * <p>Calls multiple operations at a time to improve call efficiency.</p>
+     * 
      * @param request BatchRequest
      * @return BatchResponse
      */
@@ -312,10 +326,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Cancels a role.
-     *
-     * @description You can cancel only the group administrator role.
-     *
+     * <b>description</b> :
+     * <p>You can cancel only the group administrator role.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Cancels a role.</p>
+     * 
      * @param request CancelAssignRoleRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -359,10 +375,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Cancels a role.
-     *
-     * @description You can cancel only the group administrator role.
-     *
+     * <b>description</b> :
+     * <p>You can cancel only the group administrator role.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Cancels a role.</p>
+     * 
      * @param request CancelAssignRoleRequest
      * @return CancelAssignRoleResponse
      */
@@ -373,8 +391,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a share link.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a share link.</p>
+     * 
      * @param request CancelShareLinkRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -406,8 +425,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a share link.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a share link.</p>
+     * 
      * @param request CancelShareLinkRequest
      * @return CancelShareLinkResponse
      */
@@ -418,8 +438,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Empties the recycle bin.
-     *
+     * <b>summary</b> : 
+     * <p>Empties the recycle bin.</p>
+     * 
      * @param request ClearRecyclebinRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -451,8 +472,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Empties the recycle bin.
-     *
+     * <b>summary</b> : 
+     * <p>Empties the recycle bin.</p>
+     * 
      * @param request ClearRecyclebinRequest
      * @return ClearRecyclebinResponse
      */
@@ -463,8 +485,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Completes the upload of a file.
-     *
+     * <b>summary</b> : 
+     * <p>Completes the upload of a file.</p>
+     * 
      * @param request CompleteFileRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -504,8 +527,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Completes the upload of a file.
-     *
+     * <b>summary</b> : 
+     * <p>Completes the upload of a file.</p>
+     * 
      * @param request CompleteFileRequest
      * @return CompleteFileResponse
      */
@@ -516,8 +540,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Copies a file or folder.
-     *
+     * <b>summary</b> : 
+     * <p>Copies a file or folder.</p>
+     * 
      * @param request CopyFileRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -569,8 +594,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Copies a file or folder.
-     *
+     * <b>summary</b> : 
+     * <p>Copies a file or folder.</p>
+     * 
      * @param request CopyFileRequest
      * @return CopyFileResponse
      */
@@ -581,8 +607,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建自定义故事
-     *
+     * <b>summary</b> : 
+     * <p>创建自定义故事</p>
+     * 
      * @param request CreateCustomizedStoryRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -638,8 +665,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建自定义故事
-     *
+     * <b>summary</b> : 
+     * <p>创建自定义故事</p>
+     * 
      * @param request CreateCustomizedStoryRequest
      * @return CreateCustomizedStoryResponse
      */
@@ -650,10 +678,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Create domain.
-     *
-     * @description If you want to perform secondary operations based on Drive and Photo Service and perform fine-grained control on your tenants, you can use the parent-child domain feature of Drive and Photo Service. For more information, join the DingTalk group whose ID is 23146118.
-     *
+     * <b>description</b> :
+     * <p>If you want to perform secondary operations based on Drive and Photo Service and perform fine-grained control on your tenants, you can use the parent-child domain feature of Drive and Photo Service. For more information, join the DingTalk group whose ID is 23146118.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Create domain.</p>
+     * 
      * @param request CreateDomainRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -709,10 +739,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Create domain.
-     *
-     * @description If you want to perform secondary operations based on Drive and Photo Service and perform fine-grained control on your tenants, you can use the parent-child domain feature of Drive and Photo Service. For more information, join the DingTalk group whose ID is 23146118.
-     *
+     * <b>description</b> :
+     * <p>If you want to perform secondary operations based on Drive and Photo Service and perform fine-grained control on your tenants, you can use the parent-child domain feature of Drive and Photo Service. For more information, join the DingTalk group whose ID is 23146118.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Create domain.</p>
+     * 
      * @param request CreateDomainRequest
      * @return CreateDomainResponse
      */
@@ -723,8 +755,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a drive.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a drive.</p>
+     * 
      * @param request CreateDriveRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -784,8 +817,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a drive.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a drive.</p>
+     * 
      * @param request CreateDriveRequest
      * @return CreateDriveResponse
      */
@@ -796,8 +830,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a file or folder.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a file or folder.</p>
+     * 
      * @param request CreateFileRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -909,8 +944,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a file or folder.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a file or folder.</p>
+     * 
      * @param request CreateFileRequest
      * @return CreateFileResponse
      */
@@ -921,8 +957,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a group.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a group.</p>
+     * 
      * @param request CreateGroupRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -966,8 +1003,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a group.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a group.</p>
+     * 
      * @param request CreateGroupRequest
      * @return CreateGroupResponse
      */
@@ -978,10 +1016,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a mapping between an entity and a benefit package. You can call this operation to associate a benefit package with a user.
-     *
-     * @description If you need to manage a large number of users based on Drive and Photo Service, you can control the features and quotas that users can use based on the benefits to which they are entitled. For more information, join the DingTalk group (ID 23146118).
-     *
+     * <b>description</b> :
+     * <p>If you need to manage a large number of users based on Drive and Photo Service, you can control the features and quotas that users can use based on the benefits to which they are entitled. For more information, join the DingTalk group (ID 23146118).</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a mapping between an entity and a benefit package. You can call this operation to associate a benefit package with a user.</p>
+     * 
      * @param request CreateIdentityToBenefitPkgMappingRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1029,10 +1069,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a mapping between an entity and a benefit package. You can call this operation to associate a benefit package with a user.
-     *
-     * @description If you need to manage a large number of users based on Drive and Photo Service, you can control the features and quotas that users can use based on the benefits to which they are entitled. For more information, join the DingTalk group (ID 23146118).
-     *
+     * <b>description</b> :
+     * <p>If you need to manage a large number of users based on Drive and Photo Service, you can control the features and quotas that users can use based on the benefits to which they are entitled. For more information, join the DingTalk group (ID 23146118).</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a mapping between an entity and a benefit package. You can call this operation to associate a benefit package with a user.</p>
+     * 
      * @param request CreateIdentityToBenefitPkgMappingRequest
      * @return CreateIdentityToBenefitPkgMappingResponse
      */
@@ -1043,8 +1085,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建凌霄订单
-     *
+     * <b>summary</b> : 
+     * <p>创建凌霄订单</p>
+     * 
      * @param request CreateOrderRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1112,8 +1155,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建凌霄订单
-     *
+     * <b>summary</b> : 
+     * <p>创建凌霄订单</p>
+     * 
      * @param request CreateOrderRequest
      * @return CreateOrderResponse
      */
@@ -1124,10 +1168,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a share URL.
-     *
-     * @description A share is a file view container. You can grant anonymous users the permissions to access files in the user drive by using the share URL. Anonymous users can access the files based on the granted permissions.
-     *
+     * <b>description</b> :
+     * <p>A share is a file view container. You can grant anonymous users the permissions to access files in the user drive by using the share URL. Anonymous users can access the files based on the granted permissions.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a share URL.</p>
+     * 
      * @param request CreateShareLinkRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1219,10 +1265,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a share URL.
-     *
-     * @description A share is a file view container. You can grant anonymous users the permissions to access files in the user drive by using the share URL. Anonymous users can access the files based on the granted permissions.
-     *
+     * <b>description</b> :
+     * <p>A share is a file view container. You can grant anonymous users the permissions to access files in the user drive by using the share URL. Anonymous users can access the files based on the granted permissions.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a share URL.</p>
+     * 
      * @param request CreateShareLinkRequest
      * @return CreateShareLinkResponse
      */
@@ -1233,8 +1281,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建相似图片聚类任务
-     *
+     * <b>summary</b> : 
+     * <p>创建相似图片聚类任务</p>
+     * 
      * @param request CreateSimilarImageClusterTaskRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1266,8 +1315,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建相似图片聚类任务
-     *
+     * <b>summary</b> : 
+     * <p>创建相似图片聚类任务</p>
+     * 
      * @param request CreateSimilarImageClusterTaskRequest
      * @return CreateSimilarImageClusterTaskResponse
      */
@@ -1278,8 +1328,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建推荐故事
-     *
+     * <b>summary</b> : 
+     * <p>创建推荐故事</p>
+     * 
      * @param request CreateStoryRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1351,8 +1402,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建推荐故事
-     *
+     * <b>summary</b> : 
+     * <p>创建推荐故事</p>
+     * 
      * @param request CreateStoryRequest
      * @return CreateStoryResponse
      */
@@ -1363,8 +1415,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a user.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a user.</p>
+     * 
      * @param request CreateUserRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1436,8 +1489,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a user.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a user.</p>
+     * 
      * @param request CreateUserRequest
      * @return CreateUserResponse
      */
@@ -1448,8 +1502,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取文件内容安全信息
-     *
+     * <b>summary</b> : 
+     * <p>获取文件内容安全信息</p>
+     * 
      * @param request CsiGetFileInfoRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1489,8 +1544,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取文件内容安全信息
-     *
+     * <b>summary</b> : 
+     * <p>获取文件内容安全信息</p>
+     * 
      * @param request CsiGetFileInfoRequest
      * @return CsiGetFileInfoResponse
      */
@@ -1501,8 +1557,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Delete the domain
-     *
+     * <b>summary</b> : 
+     * <p>Delete the domain</p>
+     * 
      * @param request DeleteDomainRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1534,8 +1591,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Delete the domain
-     *
+     * <b>summary</b> : 
+     * <p>Delete the domain</p>
+     * 
      * @param request DeleteDomainRequest
      * @return DeleteDomainResponse
      */
@@ -1546,8 +1604,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a drive.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a drive.</p>
+     * 
      * @param request DeleteDriveRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1579,8 +1638,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a drive.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a drive.</p>
+     * 
      * @param request DeleteDriveRequest
      * @return DeleteDriveResponse
      */
@@ -1591,8 +1651,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a file or folder.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a file or folder.</p>
+     * 
      * @param request DeleteFileRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1628,8 +1689,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a file or folder.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a file or folder.</p>
+     * 
      * @param request DeleteFileRequest
      * @return DeleteFileResponse
      */
@@ -1640,8 +1702,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes groups. Before you delete a group, make sure that no other groups or users exist in the group. Otherwise, the group fails to be deleted.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes groups. Before you delete a group, make sure that no other groups or users exist in the group. Otherwise, the group fails to be deleted.</p>
+     * 
      * @param request DeleteGroupRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1673,8 +1736,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes groups. Before you delete a group, make sure that no other groups or users exist in the group. Otherwise, the group fails to be deleted.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes groups. Before you delete a group, make sure that no other groups or users exist in the group. Otherwise, the group fails to be deleted.</p>
+     * 
      * @param request DeleteGroupRequest
      * @return DeleteGroupResponse
      */
@@ -1685,8 +1749,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a historical version of a file. You cannot delete the latest version of a file.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a historical version of a file. You cannot delete the latest version of a file.</p>
+     * 
      * @param request DeleteRevisionRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1726,8 +1791,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a historical version of a file. You cannot delete the latest version of a file.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a historical version of a file. You cannot delete the latest version of a file.</p>
+     * 
      * @param request DeleteRevisionRequest
      * @return DeleteRevisionResponse
      */
@@ -1738,8 +1804,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除故事
-     *
+     * <b>summary</b> : 
+     * <p>删除故事</p>
+     * 
      * @param request DeleteStoryRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1775,8 +1842,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除故事
-     *
+     * <b>summary</b> : 
+     * <p>删除故事</p>
+     * 
      * @param request DeleteStoryRequest
      * @return DeleteStoryResponse
      */
@@ -1787,8 +1855,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a user.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a user.</p>
+     * 
      * @param request DeleteUserRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1820,8 +1889,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a user.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a user.</p>
+     * 
      * @param request DeleteUserRequest
      * @return DeleteUserResponse
      */
@@ -1832,8 +1902,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the cursor of incremental information.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the cursor of incremental information.</p>
+     * 
      * @param request DeltaGetLastCursorRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1869,8 +1940,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the cursor of incremental information.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the cursor of incremental information.</p>
+     * 
      * @param request DeltaGetLastCursorRequest
      * @return DeltaGetLastCursorResponse
      */
@@ -1881,10 +1953,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Downloads a file.
-     *
-     * @description For information about best practices for downloading a file.
-     *
+     * <b>description</b> :
+     * <p>For information about best practices for downloading a file.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Downloads a file.</p>
+     * 
      * @param request DownloadFileRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1936,10 +2010,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Downloads a file.
-     *
-     * @description For information about best practices for downloading a file.
-     *
+     * <b>description</b> :
+     * <p>For information about best practices for downloading a file.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Downloads a file.</p>
+     * 
      * @param request DownloadFileRequest
      * @return DownloadFileResponse
      */
@@ -1950,8 +2026,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Grants permissions to access files to a user or group.
-     *
+     * <b>summary</b> : 
+     * <p>Grants permissions to access files to a user or group.</p>
+     * 
      * @param request FileAddPermissionRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1991,8 +2068,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Grants permissions to access files to a user or group.
-     *
+     * <b>summary</b> : 
+     * <p>Grants permissions to access files to a user or group.</p>
+     * 
      * @param request FileAddPermissionRequest
      * @return FileAddPermissionResponse
      */
@@ -2003,8 +2081,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Removes custom tags from a file.
-     *
+     * <b>summary</b> : 
+     * <p>Removes custom tags from a file.</p>
+     * 
      * @param request FileDeleteUserTagsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2044,8 +2123,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Removes custom tags from a file.
-     *
+     * <b>summary</b> : 
+     * <p>Removes custom tags from a file.</p>
+     * 
      * @param request FileDeleteUserTagsRequest
      * @return FileDeleteUserTagsResponse
      */
@@ -2056,8 +2136,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the sharing authorization records of a file.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the sharing authorization records of a file.</p>
+     * 
      * @param request FileListPermissionRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2093,8 +2174,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the sharing authorization records of a file.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the sharing authorization records of a file.</p>
+     * 
      * @param request FileListPermissionRequest
      * @return FileListPermissionResponse
      */
@@ -2105,13 +2187,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Adds custom tags to a file.
-     *
-     * @description This operation is an incremental update operation. Take note of the following items:
-     * *   If a tag name specified in the request is the same as an existing tag name, the existing tag is overwritten.
-     * *   If a tag name specified in the request is different from the existing tag names, the specified tag is added.
-     * *   The existing tags with unique names are not affected.
-     *
+     * <b>description</b> :
+     * <p>This operation is an incremental update operation. Take note of the following items:</p>
+     * <ul>
+     * <li>If a tag name specified in the request is the same as an existing tag name, the existing tag is overwritten.</li>
+     * <li>If a tag name specified in the request is different from the existing tag names, the specified tag is added.</li>
+     * <li>The existing tags with unique names are not affected.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Adds custom tags to a file.</p>
+     * 
      * @param request FilePutUserTagsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2151,13 +2237,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Adds custom tags to a file.
-     *
-     * @description This operation is an incremental update operation. Take note of the following items:
-     * *   If a tag name specified in the request is the same as an existing tag name, the existing tag is overwritten.
-     * *   If a tag name specified in the request is different from the existing tag names, the specified tag is added.
-     * *   The existing tags with unique names are not affected.
-     *
+     * <b>description</b> :
+     * <p>This operation is an incremental update operation. Take note of the following items:</p>
+     * <ul>
+     * <li>If a tag name specified in the request is the same as an existing tag name, the existing tag is overwritten.</li>
+     * <li>If a tag name specified in the request is different from the existing tag names, the specified tag is added.</li>
+     * <li>The existing tags with unique names are not affected.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Adds custom tags to a file.</p>
+     * 
      * @param request FilePutUserTagsRequest
      * @return FilePutUserTagsResponse
      */
@@ -2168,8 +2258,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Cancels the permissions on a shared file.
-     *
+     * <b>summary</b> : 
+     * <p>Cancels the permissions on a shared file.</p>
+     * 
      * @param request FileRemovePermissionRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2209,8 +2300,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Cancels the permissions on a shared file.
-     *
+     * <b>summary</b> : 
+     * <p>Cancels the permissions on a shared file.</p>
+     * 
      * @param request FileRemovePermissionRequest
      * @return FileRemovePermissionResponse
      */
@@ -2221,8 +2313,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about an asynchronous task.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about an asynchronous task.</p>
+     * 
      * @param request GetAsyncTaskRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2254,8 +2347,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about an asynchronous task.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about an asynchronous task.</p>
+     * 
      * @param request GetAsyncTaskRequest
      * @return GetAsyncTaskResponse
      */
@@ -2266,8 +2360,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the default drive of a user.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the default drive of a user.</p>
+     * 
      * @param request GetDefaultDriveRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2299,8 +2394,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the default drive of a user.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the default drive of a user.</p>
+     * 
      * @param request GetDefaultDriveRequest
      * @return GetDefaultDriveResponse
      */
@@ -2311,8 +2407,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Get domain information.
-     *
+     * <b>summary</b> : 
+     * <p>Get domain information.</p>
+     * 
      * @param request GetDomainRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2352,8 +2449,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Get domain information.
-     *
+     * <b>summary</b> : 
+     * <p>Get domain information.</p>
+     * 
      * @param request GetDomainRequest
      * @return GetDomainResponse
      */
@@ -2364,8 +2462,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取domain限额
-     *
+     * <b>summary</b> : 
+     * <p>获取domain限额</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetDomainQuotaResponse
@@ -2389,8 +2488,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取domain限额
-     *
+     * <b>summary</b> : 
+     * <p>获取domain限额</p>
      * @return GetDomainQuotaResponse
      */
     public GetDomainQuotaResponse getDomainQuota() throws Exception {
@@ -2400,8 +2499,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the download URL of a file. For more information about best practices, visit https://help.aliyun.com/document_detail/175889.html.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the download URL of a file. For more information about best practices, visit <a href="https://help.aliyun.com/document_detail/175889.html">https://help.aliyun.com/document_detail/175889.html</a>.</p>
+     * 
      * @param request GetDownloadUrlRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2424,6 +2524,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.fileName)) {
             body.put("file_name", request.fileName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.responseContentType)) {
+            body.put("response_content_type", request.responseContentType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.shareId)) {
@@ -2449,8 +2553,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the download URL of a file. For more information about best practices, visit https://help.aliyun.com/document_detail/175889.html.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the download URL of a file. For more information about best practices, visit <a href="https://help.aliyun.com/document_detail/175889.html">https://help.aliyun.com/document_detail/175889.html</a>.</p>
+     * 
      * @param request GetDownloadUrlRequest
      * @return GetDownloadUrlResponse
      */
@@ -2461,8 +2566,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about a drive.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about a drive.</p>
+     * 
      * @param request GetDriveRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2494,8 +2600,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about a drive.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about a drive.</p>
+     * 
      * @param request GetDriveRequest
      * @return GetDriveResponse
      */
@@ -2506,8 +2613,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about a file.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about a file.</p>
+     * 
      * @param request GetFileRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2559,8 +2667,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about a file.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about a file.</p>
+     * 
      * @param request GetFileRequest
      * @return GetFileResponse
      */
@@ -2571,8 +2680,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about a group.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about a group.</p>
+     * 
      * @param request GetGroupRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2604,8 +2714,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about a group.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about a group.</p>
+     * 
      * @param request GetGroupRequest
      * @return GetGroupResponse
      */
@@ -2616,8 +2727,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the mapping between an entity and a benefit package. You can call this operation to query the benefit package that is associated with a user.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the mapping between an entity and a benefit package. You can call this operation to query the benefit package that is associated with a user.</p>
+     * 
      * @param request GetIdentityToBenefitPkgMappingRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2657,8 +2769,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the mapping between an entity and a benefit package. You can call this operation to query the benefit package that is associated with a user.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the mapping between an entity and a benefit package. You can call this operation to query the benefit package that is associated with a user.</p>
+     * 
      * @param request GetIdentityToBenefitPkgMappingRequest
      * @return GetIdentityToBenefitPkgMappingResponse
      */
@@ -2669,8 +2782,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取用户认证方式详情
-     *
+     * <b>summary</b> : 
+     * <p>获取用户认证方式详情</p>
+     * 
      * @param request GetLinkInfoRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2710,8 +2824,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取用户认证方式详情
-     *
+     * <b>summary</b> : 
+     * <p>获取用户认证方式详情</p>
+     * 
      * @param request GetLinkInfoRequest
      * @return GetLinkInfoResponse
      */
@@ -2722,8 +2837,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about a user based on the user ID.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about a user based on the user ID.</p>
+     * 
      * @param request GetLinkInfoByUserIdRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2755,8 +2871,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about a user based on the user ID.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about a user based on the user ID.</p>
+     * 
      * @param request GetLinkInfoByUserIdRequest
      * @return GetLinkInfoByUserIdResponse
      */
@@ -2767,8 +2884,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about a version.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about a version.</p>
+     * 
      * @param request GetRevisionRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2816,8 +2934,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about a version.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about a version.</p>
+     * 
      * @param request GetRevisionRequest
      * @return GetRevisionResponse
      */
@@ -2828,8 +2947,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the share URL of a file.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the share URL of a file.</p>
+     * 
      * @param request GetShareLinkRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2861,8 +2981,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the share URL of a file.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the share URL of a file.</p>
+     * 
      * @param request GetShareLinkRequest
      * @return GetShareLinkResponse
      */
@@ -2873,8 +2994,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about a share link anonymously.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about a share link anonymously.</p>
+     * 
      * @param request GetShareLinkByAnonymousRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2906,8 +3028,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about a share link anonymously.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about a share link anonymously.</p>
+     * 
      * @param request GetShareLinkByAnonymousRequest
      * @return GetShareLinkByAnonymousResponse
      */
@@ -2918,10 +3041,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a share token anonymously.
-     *
-     * @description To access a file by using a share link, you must first obtain a share token, even if the value of share_pwd of this share is an empty string, which specifies that the share is not private.
-     *
+     * <b>description</b> :
+     * <p>To access a file by using a share link, you must first obtain a share token, even if the value of share_pwd of this share is an empty string, which specifies that the share is not private.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a share token anonymously.</p>
+     * 
      * @param request GetShareLinkTokenRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2961,10 +3086,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a share token anonymously.
-     *
-     * @description To access a file by using a share link, you must first obtain a share token, even if the value of share_pwd of this share is an empty string, which specifies that the share is not private.
-     *
+     * <b>description</b> :
+     * <p>To access a file by using a share link, you must first obtain a share token, even if the value of share_pwd of this share is an empty string, which specifies that the share is not private.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a share token anonymously.</p>
+     * 
      * @param request GetShareLinkTokenRequest
      * @return GetShareLinkTokenResponse
      */
@@ -2975,8 +3102,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取故事详情
-     *
+     * <b>summary</b> : 
+     * <p>获取故事详情</p>
+     * 
      * @param request GetStoryRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3036,8 +3164,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取故事详情
-     *
+     * <b>summary</b> : 
+     * <p>获取故事详情</p>
+     * 
      * @param request GetStoryRequest
      * @return GetStoryResponse
      */
@@ -3048,12 +3177,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the execution status of a value-added asynchronous task. You can call this operation to query the execution status of an asynchronous task that is created by calling the CreateSimilarImageClusterTask operation.
-     *
-     * @description **Before you call this operation, make sure that you are familiar with the [billing](https://help.aliyun.com/document_detail/425220.html) of Drive and Photo Service**.
+     * <b>description</b> :
+     * <p><em>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/425220.html">billing</a> of Drive and Photo Service</em>*.
      * To call this operation, make sure that the value-added image processing feature is enabled.
-     * Before you call this operation, a value-added asynchronous task must be created. For example, you can call the CreateSimilarImageClusterTask operation to create an asynchronous task. Then, you can call this operation to query the execution status of the asynchronous task based on the task ID.
-     *
+     * Before you call this operation, a value-added asynchronous task must be created. For example, you can call the CreateSimilarImageClusterTask operation to create an asynchronous task. Then, you can call this operation to query the execution status of the asynchronous task based on the task ID.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the execution status of a value-added asynchronous task. You can call this operation to query the execution status of an asynchronous task that is created by calling the CreateSimilarImageClusterTask operation.</p>
+     * 
      * @param request GetTaskStatusRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3089,12 +3220,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the execution status of a value-added asynchronous task. You can call this operation to query the execution status of an asynchronous task that is created by calling the CreateSimilarImageClusterTask operation.
-     *
-     * @description **Before you call this operation, make sure that you are familiar with the [billing](https://help.aliyun.com/document_detail/425220.html) of Drive and Photo Service**.
+     * <b>description</b> :
+     * <p><em>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/425220.html">billing</a> of Drive and Photo Service</em>*.
      * To call this operation, make sure that the value-added image processing feature is enabled.
-     * Before you call this operation, a value-added asynchronous task must be created. For example, you can call the CreateSimilarImageClusterTask operation to create an asynchronous task. Then, you can call this operation to query the execution status of the asynchronous task based on the task ID.
-     *
+     * Before you call this operation, a value-added asynchronous task must be created. For example, you can call the CreateSimilarImageClusterTask operation to create an asynchronous task. Then, you can call this operation to query the execution status of the asynchronous task based on the task ID.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the execution status of a value-added asynchronous task. You can call this operation to query the execution status of an asynchronous task that is created by calling the CreateSimilarImageClusterTask operation.</p>
+     * 
      * @param request GetTaskStatusRequest
      * @return GetTaskStatusResponse
      */
@@ -3105,8 +3238,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the upload URL of a file.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the upload URL of a file.</p>
+     * 
      * @param request GetUploadUrlRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3154,8 +3288,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the upload URL of a file.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the upload URL of a file.</p>
+     * 
      * @param request GetUploadUrlRequest
      * @return GetUploadUrlResponse
      */
@@ -3166,8 +3301,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about a user.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about a user.</p>
+     * 
      * @param request GetUserRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3199,8 +3335,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about a user.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about a user.</p>
+     * 
      * @param request GetUserRequest
      * @return GetUserResponse
      */
@@ -3211,10 +3348,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about video playback.
-     *
-     * @description For more information about best practices, see [Preview videos online](https://help.aliyun.com/document_detail/427477.html).
-     *
+     * <b>description</b> :
+     * <p>For more information about best practices, see <a href="https://help.aliyun.com/document_detail/427477.html">Preview videos online</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information about video playback.</p>
+     * 
      * @param request GetVideoPreviewPlayInfoRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3274,10 +3413,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about video playback.
-     *
-     * @description For more information about best practices, see [Preview videos online](https://help.aliyun.com/document_detail/427477.html).
-     *
+     * <b>description</b> :
+     * <p>For more information about best practices, see <a href="https://help.aliyun.com/document_detail/427477.html">Preview videos online</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information about video playback.</p>
+     * 
      * @param request GetVideoPreviewPlayInfoRequest
      * @return GetVideoPreviewPlayInfoResponse
      */
@@ -3288,10 +3429,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the preview metadata of a video.
-     *
-     * @description For more information about best practices, see [Preview videos online](https://help.aliyun.com/document_detail/427477.html).
-     *
+     * <b>description</b> :
+     * <p>For more information about best practices, see <a href="https://help.aliyun.com/document_detail/427477.html">Preview videos online</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the preview metadata of a video.</p>
+     * 
      * @param request GetVideoPreviewPlayMetaRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3335,10 +3478,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the preview metadata of a video.
-     *
-     * @description For more information about best practices, see [Preview videos online](https://help.aliyun.com/document_detail/427477.html).
-     *
+     * <b>description</b> :
+     * <p>For more information about best practices, see <a href="https://help.aliyun.com/document_detail/427477.html">Preview videos online</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the preview metadata of a video.</p>
+     * 
      * @param request GetVideoPreviewPlayMetaRequest
      * @return GetVideoPreviewPlayMetaResponse
      */
@@ -3349,8 +3494,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新用户组名字
-     *
+     * <b>summary</b> : 
+     * <p>更新用户组名字</p>
+     * 
      * @param request GroupUpdateNameRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3386,8 +3532,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新用户组名字
-     *
+     * <b>summary</b> : 
+     * <p>更新用户组名字</p>
+     * 
      * @param request GroupUpdateNameRequest
      * @return GroupUpdateNameResponse
      */
@@ -3398,8 +3545,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Imports a user.
-     *
+     * <b>summary</b> : 
+     * <p>Imports a user.</p>
+     * 
      * @param request ImportUserRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3459,8 +3607,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Imports a user.
-     *
+     * <b>summary</b> : 
+     * <p>Imports a user.</p>
+     * 
      * @param request ImportUserRequest
      * @return ImportUserResponse
      */
@@ -3471,8 +3620,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 送审文件
-     *
+     * <b>summary</b> : 
+     * <p>送审文件</p>
+     * 
      * @param request InvestigateFileRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3516,8 +3666,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 送审文件
-     *
+     * <b>summary</b> : 
+     * <p>送审文件</p>
+     * 
      * @param request InvestigateFileRequest
      * @return InvestigateFileResponse
      */
@@ -3528,8 +3679,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Associates an account with a user.
-     *
+     * <b>summary</b> : 
+     * <p>Associates an account with a user.</p>
+     * 
      * @param request LinkAccountRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3573,8 +3725,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Associates an account with a user.
-     *
+     * <b>summary</b> : 
+     * <p>Associates an account with a user.</p>
+     * 
      * @param request LinkAccountRequest
      * @return LinkAccountResponse
      */
@@ -3585,8 +3738,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries location-based groups.
-     *
+     * <b>summary</b> : 
+     * <p>Queries location-based groups.</p>
+     * 
      * @param request ListAddressGroupsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3634,8 +3788,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries location-based groups.
-     *
+     * <b>summary</b> : 
+     * <p>Queries location-based groups.</p>
+     * 
      * @param request ListAddressGroupsRequest
      * @return ListAddressGroupsResponse
      */
@@ -3646,8 +3801,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a list of assigned roles. For example, you can query the administrators of a group by group ID.
-     *
+     * <b>summary</b> : 
+     * <p>Queries a list of assigned roles. For example, you can query the administrators of a group by group ID.</p>
+     * 
      * @param request ListAssignmentRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3691,8 +3847,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a list of assigned roles. For example, you can query the administrators of a group by group ID.
-     *
+     * <b>summary</b> : 
+     * <p>Queries a list of assigned roles. For example, you can query the administrators of a group by group ID.</p>
+     * 
      * @param request ListAssignmentRequest
      * @return ListAssignmentResponse
      */
@@ -3703,8 +3860,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries incremental information.
-     *
+     * <b>summary</b> : 
+     * <p>Queries incremental information.</p>
+     * 
      * @param request ListDeltaRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3748,8 +3906,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries incremental information.
-     *
+     * <b>summary</b> : 
+     * <p>Queries incremental information.</p>
+     * 
      * @param request ListDeltaRequest
      * @return ListDeltaResponse
      */
@@ -3760,8 +3919,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 列举 domain
-     *
+     * <b>summary</b> : 
+     * <p>列举 domain</p>
+     * 
      * @param request ListDomainsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3805,8 +3965,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 列举 domain
-     *
+     * <b>summary</b> : 
+     * <p>列举 domain</p>
+     * 
      * @param request ListDomainsRequest
      * @return ListDomainsResponse
      */
@@ -3817,8 +3978,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a list of drives.
-     *
+     * <b>summary</b> : 
+     * <p>Queries a list of drives.</p>
+     * 
      * @param request ListDriveRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3862,8 +4024,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a list of drives.
-     *
+     * <b>summary</b> : 
+     * <p>Queries a list of drives.</p>
+     * 
      * @param request ListDriveRequest
      * @return ListDriveResponse
      */
@@ -3874,8 +4037,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries face-based groups.
-     *
+     * <b>summary</b> : 
+     * <p>Queries face-based groups.</p>
+     * 
      * @param request ListFacegroupsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3923,8 +4087,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries face-based groups.
-     *
+     * <b>summary</b> : 
+     * <p>Queries face-based groups.</p>
+     * 
      * @param request ListFacegroupsRequest
      * @return ListFacegroupsResponse
      */
@@ -3935,8 +4100,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a list of files and folders.
-     *
+     * <b>summary</b> : 
+     * <p>Queries a list of files and folders.</p>
+     * 
      * @param request ListFileRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4012,8 +4178,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a list of files and folders.
-     *
+     * <b>summary</b> : 
+     * <p>Queries a list of files and folders.</p>
+     * 
      * @param request ListFileRequest
      * @return ListFileResponse
      */
@@ -4024,8 +4191,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries groups.
-     *
+     * <b>summary</b> : 
+     * <p>Queries groups.</p>
+     * 
      * @param request ListGroupRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4061,8 +4229,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries groups.
-     *
+     * <b>summary</b> : 
+     * <p>Queries groups.</p>
+     * 
      * @param request ListGroupRequest
      * @return ListGroupResponse
      */
@@ -4073,8 +4242,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the members of a group.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the members of a group.</p>
+     * 
      * @param request ListGroupMemberRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4118,8 +4288,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the members of a group.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the members of a group.</p>
+     * 
      * @param request ListGroupMemberRequest
      * @return ListGroupMemberResponse
      */
@@ -4130,8 +4301,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 列举用户或团队已分配的角色列表
-     *
+     * <b>summary</b> : 
+     * <p>列举用户或团队已分配的角色列表</p>
+     * 
      * @param request ListIdentityRoleRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4163,8 +4335,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 列举用户或团队已分配的角色列表
-     *
+     * <b>summary</b> : 
+     * <p>列举用户或团队已分配的角色列表</p>
+     * 
      * @param request ListIdentityRoleRequest
      * @return ListIdentityRoleResponse
      */
@@ -4175,8 +4348,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the mappings between entities and benefit packages. You can call this operation to query the benefit packages that are associated with a user.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the mappings between entities and benefit packages. You can call this operation to query the benefit packages that are associated with a user.</p>
+     * 
      * @param request ListIdentityToBenefitPkgMappingRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4216,8 +4390,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the mappings between entities and benefit packages. You can call this operation to query the benefit packages that are associated with a user.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the mappings between entities and benefit packages. You can call this operation to query the benefit packages that are associated with a user.</p>
+     * 
      * @param request ListIdentityToBenefitPkgMappingRequest
      * @return ListIdentityToBenefitPkgMappingResponse
      */
@@ -4228,8 +4403,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the drives of the current user.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the drives of the current user.</p>
+     * 
      * @param request ListMyDrivesRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4265,8 +4441,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the drives of the current user.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the drives of the current user.</p>
+     * 
      * @param request ListMyDrivesRequest
      * @return ListMyDrivesResponse
      */
@@ -4277,8 +4454,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the team drives that can be accessed by the authorized users.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the team drives that can be accessed by the authorized users.</p>
+     * 
      * @param request ListMyGroupDriveRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4314,8 +4492,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the team drives that can be accessed by the authorized users.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the team drives that can be accessed by the authorized users.</p>
+     * 
      * @param request ListMyGroupDriveRequest
      * @return ListMyGroupDriveResponse
      */
@@ -4326,8 +4505,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a list of files that are shared with a user. You can call this operation to query a list of files in a personal drive on which a user is granted permissions.
-     *
+     * <b>summary</b> : 
+     * <p>Queries a list of files that are shared with a user. You can call this operation to query a list of files in a personal drive on which a user is granted permissions.</p>
+     * 
      * @param request ListReceivedFileRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4363,8 +4543,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a list of files that are shared with a user. You can call this operation to query a list of files in a personal drive on which a user is granted permissions.
-     *
+     * <b>summary</b> : 
+     * <p>Queries a list of files that are shared with a user. You can call this operation to query a list of files in a personal drive on which a user is granted permissions.</p>
+     * 
      * @param request ListReceivedFileRequest
      * @return ListReceivedFileResponse
      */
@@ -4375,8 +4556,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about files and folders in the recycle bin.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about files and folders in the recycle bin.</p>
+     * 
      * @param request ListRecyclebinRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4420,8 +4602,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about files and folders in the recycle bin.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about files and folders in the recycle bin.</p>
+     * 
      * @param request ListRecyclebinRequest
      * @return ListRecyclebinResponse
      */
@@ -4432,8 +4615,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the versions of a file.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the versions of a file.</p>
+     * 
      * @param request ListRevisionRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4481,8 +4665,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the versions of a file.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the versions of a file.</p>
+     * 
      * @param request ListRevisionRequest
      * @return ListRevisionResponse
      */
@@ -4493,10 +4678,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries shares.
-     *
-     * @description This operation is discontinued. To query shares, you can call the SearchShareLink operation.
-     *
+     * <b>description</b> :
+     * <p>This operation is discontinued. To query shares, you can call the SearchShareLink operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries shares.</p>
+     * 
      * @param request ListShareLinkRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4548,10 +4735,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries shares.
-     *
-     * @description This operation is discontinued. To query shares, you can call the SearchShareLink operation.
-     *
+     * <b>description</b> :
+     * <p>This operation is discontinued. To query shares, you can call the SearchShareLink operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries shares.</p>
+     * 
      * @param request ListShareLinkRequest
      * @return ListShareLinkResponse
      */
@@ -4562,10 +4751,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries tags.
-     *
-     * @description You can call this operation to query the tags within the specified drive at a time. The top 2,000 tags of the images are returned.
-     *
+     * <b>description</b> :
+     * <p>You can call this operation to query the tags within the specified drive at a time. The top 2,000 tags of the images are returned.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries tags.</p>
+     * 
      * @param request ListTagsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4605,10 +4796,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries tags.
-     *
-     * @description You can call this operation to query the tags within the specified drive at a time. The top 2,000 tags of the images are returned.
-     *
+     * <b>description</b> :
+     * <p>You can call this operation to query the tags within the specified drive at a time. The top 2,000 tags of the images are returned.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries tags.</p>
+     * 
      * @param request ListTagsRequest
      * @return ListTagsResponse
      */
@@ -4619,8 +4812,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the file parts that are uploaded.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the file parts that are uploaded.</p>
+     * 
      * @param request ListUploadedPartsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4672,8 +4866,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the file parts that are uploaded.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the file parts that are uploaded.</p>
+     * 
      * @param request ListUploadedPartsRequest
      * @return ListUploadedPartsResponse
      */
@@ -4684,8 +4879,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries users.
-     *
+     * <b>summary</b> : 
+     * <p>Queries users.</p>
+     * 
      * @param request ListUserRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4721,8 +4917,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries users.
-     *
+     * <b>summary</b> : 
+     * <p>Queries users.</p>
+     * 
      * @param request ListUserRequest
      * @return ListUserResponse
      */
@@ -4733,8 +4930,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Moves files or folders.
-     *
+     * <b>summary</b> : 
+     * <p>Moves files or folders.</p>
+     * 
      * @param request MoveFileRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4778,8 +4976,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Moves files or folders.
-     *
+     * <b>summary</b> : 
+     * <p>Moves files or folders.</p>
+     * 
      * @param request MoveFileRequest
      * @return MoveFileResponse
      */
@@ -4790,8 +4989,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询凌霄订单价格
-     *
+     * <b>summary</b> : 
+     * <p>查询凌霄订单价格</p>
+     * 
      * @param request QueryOrderPriceRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4851,8 +5051,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询凌霄订单价格
-     *
+     * <b>summary</b> : 
+     * <p>查询凌霄订单价格</p>
+     * 
      * @param request QueryOrderPriceRequest
      * @return QueryOrderPriceResponse
      */
@@ -4863,8 +5064,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 从人脸分组中的移除指定的文件
-     *
+     * <b>summary</b> : 
+     * <p>从人脸分组中的移除指定的文件</p>
+     * 
      * @param request RemoveFaceGroupFileRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4904,8 +5106,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 从人脸分组中的移除指定的文件
-     *
+     * <b>summary</b> : 
+     * <p>从人脸分组中的移除指定的文件</p>
+     * 
      * @param request RemoveFaceGroupFileRequest
      * @return RemoveFaceGroupFileResponse
      */
@@ -4916,8 +5119,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Removes a member from a group.
-     *
+     * <b>summary</b> : 
+     * <p>Removes a member from a group.</p>
+     * 
      * @param request RemoveGroupMemberRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4957,8 +5161,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Removes a member from a group.
-     *
+     * <b>summary</b> : 
+     * <p>Removes a member from a group.</p>
+     * 
      * @param request RemoveGroupMemberRequest
      * @return RemoveGroupMemberResponse
      */
@@ -4969,8 +5174,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 故事移除文件
-     *
+     * <b>summary</b> : 
+     * <p>故事移除文件</p>
+     * 
      * @param request RemoveStoryFilesRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5010,8 +5216,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 故事移除文件
-     *
+     * <b>summary</b> : 
+     * <p>故事移除文件</p>
+     * 
      * @param request RemoveStoryFilesRequest
      * @return RemoveStoryFilesResponse
      */
@@ -5022,8 +5229,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Restores a file or folder from the recycle bin.
-     *
+     * <b>summary</b> : 
+     * <p>Restores a file or folder from the recycle bin.</p>
+     * 
      * @param request RestoreFileRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5059,8 +5267,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Restores a file or folder from the recycle bin.
-     *
+     * <b>summary</b> : 
+     * <p>Restores a file or folder from the recycle bin.</p>
+     * 
      * @param request RestoreFileRequest
      * @return RestoreFileResponse
      */
@@ -5071,8 +5280,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Restores a historical version of a file. You cannot restore the latest version of a file.
-     *
+     * <b>summary</b> : 
+     * <p>Restores a historical version of a file. You cannot restore the latest version of a file.</p>
+     * 
      * @param request RestoreRevisionRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5112,8 +5322,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Restores a historical version of a file. You cannot restore the latest version of a file.
-     *
+     * <b>summary</b> : 
+     * <p>Restores a historical version of a file. You cannot restore the latest version of a file.</p>
+     * 
      * @param request RestoreRevisionRequest
      * @return RestoreRevisionResponse
      */
@@ -5124,8 +5335,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Scans files.
-     *
+     * <b>summary</b> : 
+     * <p>Scans files.</p>
+     * 
      * @param request ScanFileRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5169,8 +5381,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Scans files.
-     *
+     * <b>summary</b> : 
+     * <p>Scans files.</p>
+     * 
      * @param request ScanFileRequest
      * @return ScanFileResponse
      */
@@ -5181,8 +5394,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries location-based groups based on specific locations.
-     *
+     * <b>summary</b> : 
+     * <p>Queries location-based groups based on specific locations.</p>
+     * 
      * @param request SearchAddressGroupsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5238,8 +5452,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries location-based groups based on specific locations.
-     *
+     * <b>summary</b> : 
+     * <p>Queries location-based groups based on specific locations.</p>
+     * 
      * @param request SearchAddressGroupsRequest
      * @return SearchAddressGroupsResponse
      */
@@ -5250,8 +5465,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Search domain with specified attributes
-     *
+     * <b>summary</b> : 
+     * <p>Search domain with specified attributes</p>
+     * 
      * @param request SearchDomainsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5295,8 +5511,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Search domain with specified attributes
-     *
+     * <b>summary</b> : 
+     * <p>Search domain with specified attributes</p>
+     * 
      * @param request SearchDomainsRequest
      * @return SearchDomainsResponse
      */
@@ -5307,8 +5524,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries drives.
-     *
+     * <b>summary</b> : 
+     * <p>Queries drives.</p>
+     * 
      * @param request SearchDriveRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5356,8 +5574,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries drives.
-     *
+     * <b>summary</b> : 
+     * <p>Queries drives.</p>
+     * 
      * @param request SearchDriveRequest
      * @return SearchDriveResponse
      */
@@ -5368,8 +5587,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries files. For more information about best practices, visit https://help.aliyun.com/document_detail/175890.html.
-     *
+     * <b>summary</b> : 
+     * <p>Queries files. For more information about best practices, visit <a href="https://help.aliyun.com/document_detail/175890.html">https://help.aliyun.com/document_detail/175890.html</a>.</p>
+     * 
      * @param request SearchFileRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5402,6 +5622,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("query", request.query);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.recursive)) {
+            body.put("recursive", request.recursive);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.returnTotalCount)) {
             body.put("return_total_count", request.returnTotalCount);
         }
@@ -5425,8 +5649,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries files. For more information about best practices, visit https://help.aliyun.com/document_detail/175890.html.
-     *
+     * <b>summary</b> : 
+     * <p>Queries files. For more information about best practices, visit <a href="https://help.aliyun.com/document_detail/175890.html">https://help.aliyun.com/document_detail/175890.html</a>.</p>
+     * 
      * @param request SearchFileRequest
      * @return SearchFileResponse
      */
@@ -5437,8 +5662,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries share URLs.
-     *
+     * <b>summary</b> : 
+     * <p>Queries share URLs.</p>
+     * 
      * @param request SearchShareLinkRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5494,8 +5720,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries share URLs.
-     *
+     * <b>summary</b> : 
+     * <p>Queries share URLs.</p>
+     * 
      * @param request SearchShareLinkRequest
      * @return SearchShareLinkResponse
      */
@@ -5506,8 +5733,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取相似图片聚类结果
-     *
+     * <b>summary</b> : 
+     * <p>获取相似图片聚类结果</p>
+     * 
      * @param request SearchSimilarImageClustersRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5555,8 +5783,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取相似图片聚类结果
-     *
+     * <b>summary</b> : 
+     * <p>获取相似图片聚类结果</p>
+     * 
      * @param request SearchSimilarImageClustersRequest
      * @return SearchSimilarImageClustersResponse
      */
@@ -5567,8 +5796,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询故事列表
-     *
+     * <b>summary</b> : 
+     * <p>查询故事列表</p>
+     * 
      * @param request SearchStoriesRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5664,8 +5894,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询故事列表
-     *
+     * <b>summary</b> : 
+     * <p>查询故事列表</p>
+     * 
      * @param request SearchStoriesRequest
      * @return SearchStoriesResponse
      */
@@ -5676,8 +5907,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Searches for users.
-     *
+     * <b>summary</b> : 
+     * <p>Searches for users.</p>
+     * 
      * @param request SearchUserRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5741,8 +5973,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Searches for users.
-     *
+     * <b>summary</b> : 
+     * <p>Searches for users.</p>
+     * 
      * @param request SearchUserRequest
      * @return SearchUserResponse
      */
@@ -5753,11 +5986,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Generates an access token based on Open Authorization (OAuth) 2.0.
-     *
-     * @description For more information about how to access Drive and Photo Service from a web server application by using OAuth 2.0, visit [OAuth 2.0 For Web Server Applications](https://www.alibabacloud.com/help/zh/pds/drive-and-photo-service-dev/user-guide/oauth-2-0-access-process-for-web-server-applications).
-     * For more information about how to access Drive and Photo Service by using a JSON Web Token (JWT) application, visit [Access process for JWT applications](https://www.alibabacloud.com/help/zh/pds/drive-and-photo-service-dev/user-guide/access-process-for-jwt-applications).
-     *
+     * <b>description</b> :
+     * <p>For more information about how to access Drive and Photo Service from a web server application by using OAuth 2.0, visit <a href="https://www.alibabacloud.com/help/zh/pds/drive-and-photo-service-dev/user-guide/oauth-2-0-access-process-for-web-server-applications">OAuth 2.0 For Web Server Applications</a>.
+     * For more information about how to access Drive and Photo Service by using a JSON Web Token (JWT) application, visit <a href="https://www.alibabacloud.com/help/zh/pds/drive-and-photo-service-dev/user-guide/access-process-for-jwt-applications">Access process for JWT applications</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Generates an access token based on Open Authorization (OAuth) 2.0.</p>
+     * 
      * @param request TokenRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5813,11 +6048,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Generates an access token based on Open Authorization (OAuth) 2.0.
-     *
-     * @description For more information about how to access Drive and Photo Service from a web server application by using OAuth 2.0, visit [OAuth 2.0 For Web Server Applications](https://www.alibabacloud.com/help/zh/pds/drive-and-photo-service-dev/user-guide/oauth-2-0-access-process-for-web-server-applications).
-     * For more information about how to access Drive and Photo Service by using a JSON Web Token (JWT) application, visit [Access process for JWT applications](https://www.alibabacloud.com/help/zh/pds/drive-and-photo-service-dev/user-guide/access-process-for-jwt-applications).
-     *
+     * <b>description</b> :
+     * <p>For more information about how to access Drive and Photo Service from a web server application by using OAuth 2.0, visit <a href="https://www.alibabacloud.com/help/zh/pds/drive-and-photo-service-dev/user-guide/oauth-2-0-access-process-for-web-server-applications">OAuth 2.0 For Web Server Applications</a>.
+     * For more information about how to access Drive and Photo Service by using a JSON Web Token (JWT) application, visit <a href="https://www.alibabacloud.com/help/zh/pds/drive-and-photo-service-dev/user-guide/access-process-for-jwt-applications">Access process for JWT applications</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Generates an access token based on Open Authorization (OAuth) 2.0.</p>
+     * 
      * @param request TokenRequest
      * @return TokenResponse
      */
@@ -5828,8 +6065,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Moves a file or folder to the recycle bin.
-     *
+     * <b>summary</b> : 
+     * <p>Moves a file or folder to the recycle bin.</p>
+     * 
      * @param request TrashFileRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5865,8 +6103,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Moves a file or folder to the recycle bin.
-     *
+     * <b>summary</b> : 
+     * <p>Moves a file or folder to the recycle bin.</p>
+     * 
      * @param request TrashFileRequest
      * @return TrashFileResponse
      */
@@ -5877,8 +6116,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 取消账号绑定
-     *
+     * <b>summary</b> : 
+     * <p>取消账号绑定</p>
+     * 
      * @param request UnLinkAccountRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5922,8 +6162,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 取消账号绑定
-     *
+     * <b>summary</b> : 
+     * <p>取消账号绑定</p>
+     * 
      * @param request UnLinkAccountRequest
      * @return UnLinkAccountResponse
      */
@@ -5934,8 +6175,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Update domain information.
-     *
+     * <b>summary</b> : 
+     * <p>Update domain information.</p>
+     * 
      * @param request UpdateDomainRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5995,8 +6237,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Update domain information.
-     *
+     * <b>summary</b> : 
+     * <p>Update domain information.</p>
+     * 
      * @param request UpdateDomainRequest
      * @return UpdateDomainResponse
      */
@@ -6007,8 +6250,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies a drive.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies a drive.</p>
+     * 
      * @param request UpdateDriveRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -6060,8 +6304,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies a drive.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies a drive.</p>
+     * 
      * @param request UpdateDriveRequest
      * @return UpdateDriveResponse
      */
@@ -6072,8 +6317,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates a face-based group.
-     *
+     * <b>summary</b> : 
+     * <p>Updates a face-based group.</p>
+     * 
      * @param request UpdateFacegroupRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -6121,8 +6367,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates a face-based group.
-     *
+     * <b>summary</b> : 
+     * <p>Updates a face-based group.</p>
+     * 
      * @param request UpdateFacegroupRequest
      * @return UpdateFacegroupResponse
      */
@@ -6133,8 +6380,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the information about a file instead of the file data.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the information about a file instead of the file data.</p>
+     * 
      * @param request UpdateFileRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -6198,8 +6446,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the information about a file instead of the file data.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the information about a file instead of the file data.</p>
+     * 
      * @param request UpdateFileRequest
      * @return UpdateFileResponse
      */
@@ -6210,8 +6459,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the information about a group.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the information about a group.</p>
+     * 
      * @param request UpdateGroupRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -6251,8 +6501,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the information about a group.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the information about a group.</p>
+     * 
      * @param request UpdateGroupRequest
      * @return UpdateGroupResponse
      */
@@ -6263,8 +6514,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the mapping between an entity and a benefit package. You can call this operation to associate a benefit package with a user.
-     *
+     * <b>summary</b> : 
+     * <p>Updates the mapping between an entity and a benefit package. You can call this operation to associate a benefit package with a user.</p>
+     * 
      * @param request UpdateIdentityToBenefitPkgMappingRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -6312,8 +6564,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the mapping between an entity and a benefit package. You can call this operation to associate a benefit package with a user.
-     *
+     * <b>summary</b> : 
+     * <p>Updates the mapping between an entity and a benefit package. You can call this operation to associate a benefit package with a user.</p>
+     * 
      * @param request UpdateIdentityToBenefitPkgMappingRequest
      * @return UpdateIdentityToBenefitPkgMappingResponse
      */
@@ -6324,8 +6577,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the version information. You can call this operation to permanently retain a version or modify the description of a version. You can permanently retain up to 50 versions of a file.
-     *
+     * <b>summary</b> : 
+     * <p>Updates the version information. You can call this operation to permanently retain a version or modify the description of a version. You can permanently retain up to 50 versions of a file.</p>
+     * 
      * @param request UpdateRevisionRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -6373,8 +6627,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the version information. You can call this operation to permanently retain a version or modify the description of a version. You can permanently retain up to 50 versions of a file.
-     *
+     * <b>summary</b> : 
+     * <p>Updates the version information. You can call this operation to permanently retain a version or modify the description of a version. You can permanently retain up to 50 versions of a file.</p>
+     * 
      * @param request UpdateRevisionRequest
      * @return UpdateRevisionResponse
      */
@@ -6385,8 +6640,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies a share link.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies a share link.</p>
+     * 
      * @param request UpdateShareLinkRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -6482,8 +6738,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies a share link.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies a share link.</p>
+     * 
      * @param request UpdateShareLinkRequest
      * @return UpdateShareLinkResponse
      */
@@ -6494,8 +6751,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新故事
-     *
+     * <b>summary</b> : 
+     * <p>更新故事</p>
+     * 
      * @param request UpdateStoryRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -6543,8 +6801,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新故事
-     *
+     * <b>summary</b> : 
+     * <p>更新故事</p>
+     * 
      * @param request UpdateStoryRequest
      * @return UpdateStoryResponse
      */
@@ -6555,8 +6814,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the information about a user.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the information about a user.</p>
+     * 
      * @param request UpdateUserRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -6624,8 +6884,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the information about a user.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the information about a user.</p>
+     * 
      * @param request UpdateUserRequest
      * @return UpdateUserResponse
      */

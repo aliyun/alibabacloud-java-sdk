@@ -10,6 +10,10 @@ public class IDPermission extends TeaModel {
     @NameInMap("expire_time")
     public Long expireTime;
 
+    /**
+     * <strong>if can be null:</strong>
+     * <p>false</p>
+     */
     @NameInMap("permission")
     public Permission permission;
 

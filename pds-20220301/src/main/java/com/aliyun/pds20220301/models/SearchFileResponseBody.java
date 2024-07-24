@@ -12,12 +12,18 @@ public class SearchFileResponseBody extends TeaModel {
 
     /**
      * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If next_marker is empty, no next page exists.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NWQ1Yjk4YmI1ZDRlYmU1Y2E0YWE0NmJhYWJmODBhNDQ2NzhlMTRhMg</p>
      */
     @NameInMap("next_marker")
     public String nextMarker;
 
     /**
      * <p>The total number of retrieved files.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1022</p>
      */
     @NameInMap("total_count")
     public Long totalCount;

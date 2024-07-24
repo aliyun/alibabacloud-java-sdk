@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class RemoveFaceGroupFileRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("drive_id")
     public String driveId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Cluster-abc</p>
      */
     @NameInMap("face_group_id")
     public String faceGroupId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>abcd</p>
      */
     @NameInMap("file_id")
     public String fileId;

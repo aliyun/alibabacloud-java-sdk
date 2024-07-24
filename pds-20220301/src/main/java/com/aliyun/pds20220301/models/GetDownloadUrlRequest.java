@@ -6,32 +6,53 @@ import com.aliyun.tea.*;
 public class GetDownloadUrlRequest extends TeaModel {
     /**
      * <p>The drive ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("drive_id")
     public String driveId;
 
     /**
      * <p>The validity period of the download URL. Maximum value: 115200. Default value: 900. Unit: seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("expire_sec")
     public Integer expireSec;
 
     /**
      * <p>The file ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9520943DC264</p>
      */
     @NameInMap("file_id")
     public String fileId;
 
     /**
      * <p>The name of the file. The name can be up to 1,024 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.txt</p>
      */
     @NameInMap("file_name")
     public String fileName;
 
     /**
-     * <p>The share ID. If you want to manage a file by using a sharing link, carry the `x-share-token` header in the request and specify share_id. In this case, `drive_id` is invalid. Otherwise, use an `AccessKey pair` or `access token` for authentication and specify `drive_id`. You must specify at least either `share_id` or `drive_id`.</p>
+     * <strong>example:</strong>
+     * <p>video/mp4</p>
+     */
+    @NameInMap("response_content_type")
+    public String responseContentType;
+
+    /**
+     * <p>The share ID. If you want to manage a file by using a sharing link, carry the <code>x-share-token</code> header in the request and specify share_id. In this case, <code>drive_id</code> is invalid. Otherwise, use an <code>AccessKey pair</code> or <code>access token</code> for authentication and specify <code>drive_id</code>. You must specify at least either <code>share_id</code> or <code>drive_id</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7JQX1FswpQ8</p>
      */
     @NameInMap("share_id")
     public String shareId;
@@ -71,6 +92,14 @@ public class GetDownloadUrlRequest extends TeaModel {
     }
     public String getFileName() {
         return this.fileName;
+    }
+
+    public GetDownloadUrlRequest setResponseContentType(String responseContentType) {
+        this.responseContentType = responseContentType;
+        return this;
+    }
+    public String getResponseContentType() {
+        return this.responseContentType;
     }
 
     public GetDownloadUrlRequest setShareId(String shareId) {

@@ -6,20 +6,39 @@ import com.aliyun.tea.*;
 public class SearchSimilarImageClustersRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("drive_id")
     public String driveId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>image/resize,m_fill,h_128,w_128,limit_0/format,jpg</p>
+     */
     @NameInMap("image_thumbnail_process")
     @Deprecated
     public String imageThumbnailProcess;
 
+    /**
+     * <strong>example:</strong>
+     * <p>50</p>
+     */
     @NameInMap("limit")
     public Long limit;
 
+    /**
+     * <strong>example:</strong>
+     * <p>YWRzX3VzZXJfcHJvZmlsZV9je1bnQh***</p>
+     */
     @NameInMap("marker")
     public String marker;
 
+    /**
+     * <strong>example:</strong>
+     * <p>desc</p>
+     */
     @NameInMap("order")
     public String order;
 

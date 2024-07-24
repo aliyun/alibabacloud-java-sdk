@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetLinkInfoByUserIdRequest extends TeaModel {
     /**
      * <p>The user ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxx</p>
      */
     @NameInMap("user_id")
     public String userId;

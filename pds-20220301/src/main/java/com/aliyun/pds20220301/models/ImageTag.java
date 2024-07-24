@@ -4,24 +4,52 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class ImageTag extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("count")
     public Long count;
 
+    /**
+     * <strong>example:</strong>
+     * <p>image</p>
+     */
     @NameInMap("cover_file_category")
     public String coverFileCategory;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5d79206586bb5dd69fb34c349282718146c55da7</p>
+     */
     @NameInMap("cover_file_id")
     public String coverFileId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0.736</p>
+     */
     @NameInMap("cover_overall_score")
     public Float coverOverallScore;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("cover_tag_confidence")
     public Float coverTagConfidence;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://data.aliyunpds.com/hz22%2F5d5b986facbec311ef844c25954f96821497b383%2F5d5b986f955410dd991646bb87c6b4e899eff525?Expires=xxx&OSSAccessKeyId=xxx&Signature=xxx">https://data.aliyunpds.com/hz22%2F5d5b986facbec311ef844c25954f96821497b383%2F5d5b986f955410dd991646bb87c6b4e899eff525?Expires=xxx&amp;OSSAccessKeyId=xxx&amp;Signature=xxx</a></p>
+     */
     @NameInMap("cover_url")
     public String coverUrl;
 
+    /**
+     * <strong>example:</strong>
+     * <p>动物</p>
+     */
     @NameInMap("name")
     public String name;
 

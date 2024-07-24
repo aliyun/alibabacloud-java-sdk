@@ -6,22 +6,29 @@ import com.aliyun.tea.*;
 public class UpdateFacegroupRequest extends TeaModel {
     /**
      * <p>The drive ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("drive_id")
     public String driveId;
 
     /**
-     * <p>The face ID of the thumbnail of the face-based group. You can obtain the face ID from the **image_media_metadata** parameter in the returned results of the GetFile, ListFile, or SearchFile operation.</p>
+     * <p>The face ID of the thumbnail of the face-based group. You can obtain the face ID from the <strong>image_media_metadata</strong> parameter in the returned results of the GetFile, ListFile, or SearchFile operation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>face1</p>
      */
     @NameInMap("group_cover_face_id")
     public String groupCoverFaceId;
 
     /**
      * <p>The ID of the face-based group. You can call the ListFacegroups operation to query the group ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>group-abc</p>
      */
     @NameInMap("group_id")
     public String groupId;

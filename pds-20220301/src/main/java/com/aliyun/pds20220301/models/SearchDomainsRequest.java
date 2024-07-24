@@ -6,15 +6,20 @@ import com.aliyun.tea.*;
 public class SearchDomainsRequest extends TeaModel {
     /**
      * <p>The maximum number of results to return. Valid values: 1 to 100. Default value: 100.</p>
-     * <br>
      * <p>The number of returned results must be less than or equal to the specified number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("limit")
     public Long limit;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of marker.\\</p>
-     * <p>By default, this parameter is empty.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of marker.\
+     * By default, this parameter is empty.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NWQ1Yjk4YmI1ZDRlYmU1Y2E0YWE0NmJhYWJmODBhNDQ2NzhlMTRhMg</p>
      */
     @NameInMap("marker")
     public String marker;
@@ -27,6 +32,9 @@ public class SearchDomainsRequest extends TeaModel {
 
     /**
      * <p>The sorting rule. Set the value to created_at, which specifies that the results are sorted based on the time when the domain was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>created_at</p>
      */
     @NameInMap("order_by")
     public String orderBy;

@@ -4,12 +4,24 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class VideoMediaAudioStream extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>129280</p>
+     */
     @NameInMap("bit_rate")
     public String bitRate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>aac</p>
+     */
     @NameInMap("code_name")
     public String codeName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>7704.573000</p>
+     */
     @NameInMap("duration")
     public String duration;
 

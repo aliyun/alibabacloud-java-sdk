@@ -6,79 +6,117 @@ import com.aliyun.tea.*;
 public class CreateUserResponseBody extends TeaModel {
     /**
      * <p>The URL of the profile picture.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://aa.com/1.jpg">http://aa.com/1.jpg</a></p>
      */
     @NameInMap("avatar")
     public String avatar;
 
     /**
      * <p>The time when the user was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1639762579768</p>
      */
     @NameInMap("created_at")
     public Long createdAt;
 
     /**
      * <p>The user who created the user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>user1</p>
      */
     @NameInMap("creator")
     public String creator;
 
     /**
      * <p>The ID of the default drive.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("default_drive_id")
     public String defaultDriveId;
 
     /**
      * <p>The description of the user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vipuser</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
      * <p>The domain ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bj1</p>
      */
     @NameInMap("domain_id")
     public String domainId;
 
     /**
      * <p>The email address.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="mailto:a@a.com">a@a.com</a></p>
      */
     @NameInMap("email")
     public String email;
 
     /**
      * <p>The nickname of the user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>001</p>
      */
     @NameInMap("nick_name")
     public String nickName;
 
     /**
      * <p>The phone number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>13900001111</p>
      */
     @NameInMap("phone")
     public String phone;
 
     /**
      * <p>The role of the user. Valid values:</p>
-     * <br>
-     * <p>*   superadmin</p>
-     * <p>*   admin</p>
-     * <p>*   user</p>
+     * <ul>
+     * <li>superadmin</li>
+     * <li>admin</li>
+     * <li>user</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>admin</p>
      */
     @NameInMap("role")
     public String role;
 
     /**
      * <p>The state of the user. Valid values:</p>
-     * <br>
-     * <p>*   disabled: The user is prohibited from logon.</p>
-     * <p>*   enabled: The user is in a normal state.</p>
+     * <ul>
+     * <li>disabled: The user is prohibited from logon.</li>
+     * <li>enabled: The user is in a normal state.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>enabled</p>
      */
     @NameInMap("status")
     public String status;
 
     /**
      * <p>The time when the user was modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1639762579768</p>
      */
     @NameInMap("updated_at")
     public Long updatedAt;
@@ -91,12 +129,18 @@ public class CreateUserResponseBody extends TeaModel {
 
     /**
      * <p>The user ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dingding_abc001</p>
      */
     @NameInMap("user_id")
     public String userId;
 
     /**
      * <p>The username.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pds</p>
      */
     @NameInMap("user_name")
     public String userName;

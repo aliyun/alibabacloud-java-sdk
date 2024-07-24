@@ -4,23 +4,36 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class UnLinkAccountRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("extra")
     public String extra;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>139****</p>
      */
     @NameInMap("identity")
     public String identity;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mobile</p>
      */
     @NameInMap("type")
     public String type;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>uid1</p>
      */
     @NameInMap("user_id")
     public String userId;

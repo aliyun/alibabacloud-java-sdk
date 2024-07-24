@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class FileDownloadCallbackInfo extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccp-bj1-bj-1234</p>
      */
     @NameInMap("bucket")
     public String bucket;

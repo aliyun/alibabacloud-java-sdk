@@ -12,6 +12,9 @@ public class ListAssignmentResponseBody extends TeaModel {
 
     /**
      * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If next_marker is empty, no next page exists.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NWQ1Yjk4YmI1ZDRlYmU1Y2E0YWE0NmJhYWJmODBhNDQ2NzhlMTRhMg</p>
      */
     @NameInMap("next_marker")
     public String nextMarker;
@@ -40,18 +43,27 @@ public class ListAssignmentResponseBody extends TeaModel {
     public static class ListAssignmentResponseBodyAssignmentList extends TeaModel {
         /**
          * <p>The time when the role was assigned. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1622682267564</p>
          */
         @NameInMap("created_at")
         public Long createdAt;
 
         /**
          * <p>The ID of the user who assigned the role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>216***c83</p>
          */
         @NameInMap("creator")
         public String creator;
 
         /**
          * <p>The domain ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hz1</p>
          */
         @NameInMap("domain_id")
         public String domainId;
@@ -64,18 +76,27 @@ public class ListAssignmentResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the managed resource, such as a group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>105***b82</p>
          */
         @NameInMap("manage_resource_id")
         public String manageResourceId;
 
         /**
          * <p>The type of the managed resource. For example, a value of RT_Group indicates group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RT_Group</p>
          */
         @NameInMap("manage_resource_type")
         public String manageResourceType;
 
         /**
          * <p>The ID of the role assigned to the identity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SystemGroupAdmin</p>
          */
         @NameInMap("role_id")
         public String roleId;

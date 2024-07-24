@@ -13,24 +13,48 @@ public class BaseDriveResponse extends TeaModel {
     @NameInMap("created_at")
     public String createdAt;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ccp</p>
+     */
     @NameInMap("creator")
     public String creator;
 
     @NameInMap("delta_enabled")
     public Boolean deltaEnabled;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ccp team drive</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>hz999</p>
+     */
     @NameInMap("domain_id")
     public String domainId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123</p>
+     */
     @NameInMap("drive_id")
     public String driveId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ccpdrive</p>
+     */
     @NameInMap("drive_name")
     public String driveName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>normal</p>
+     */
     @NameInMap("drive_type")
     public String driveType;
 
@@ -43,9 +67,17 @@ public class BaseDriveResponse extends TeaModel {
     @NameInMap("is_handover")
     public Boolean isHandover;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ccp</p>
+     */
     @NameInMap("owner")
     public String owner;
 
+    /**
+     * <strong>example:</strong>
+     * <p>user</p>
+     */
     @NameInMap("owner_type")
     public String ownerType;
 
@@ -58,18 +90,34 @@ public class BaseDriveResponse extends TeaModel {
     @NameInMap("relative_path")
     public String relativePath;
 
+    /**
+     * <strong>example:</strong>
+     * <p>enabled</p>
+     */
     @NameInMap("status")
     public String status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123</p>
+     */
     @NameInMap("store_id")
     public String storeId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>102400</p>
+     */
     @NameInMap("total_size")
     public Long totalSize;
 
     @NameInMap("updated_at")
     public String updatedAt;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1024</p>
+     */
     @NameInMap("used_size")
     public Long usedSize;
 

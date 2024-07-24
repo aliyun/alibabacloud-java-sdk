@@ -4,6 +4,10 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class VideoMediaMetadata extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1080</p>
+     */
     @NameInMap("height")
     public Long height;
 
@@ -13,6 +17,10 @@ public class VideoMediaMetadata extends TeaModel {
     @NameInMap("video_media_video_stream")
     public java.util.List<VideoMediaVideoStream> videoMediaVideoStream;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1920</p>
+     */
     @NameInMap("width")
     public Long width;
 

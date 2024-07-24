@@ -12,27 +12,38 @@ public class SearchDriveRequest extends TeaModel {
 
     /**
      * <p>The maximum number of asynchronous tasks to return. Valid values: 1 to 100. Default value: 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("limit")
     public Integer limit;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of marker.\\</p>
-     * <p>By default, this parameter is left empty.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of marker.\
+     * By default, this parameter is left empty.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NWQ1Yjk4YmI1ZDRlYmU1Y2E0YWE0NmJhYWJmODBhNDQ2NzhlMTRhMg</p>
      */
     @NameInMap("marker")
     public String marker;
 
     /**
      * <p>The owner of the drive.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c9b7a5aa04d14ae3867fdc886fa01da4</p>
      */
     @NameInMap("owner")
     public String owner;
 
     /**
      * <p>The type of the owner. Valid values:</p>
-     * <br>
      * <p>user group</p>
+     * 
+     * <strong>example:</strong>
+     * <p>user</p>
      */
     @NameInMap("owner_type")
     public String ownerType;
