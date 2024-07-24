@@ -14,7 +14,7 @@ public class DescribeClusterNetInfoResponseBody extends TeaModel {
     public String clusterNetworkType;
 
     /**
-     * <p>The network information about the cluster.</p>
+     * <p>The queried network information about the cluster.</p>
      */
     @NameInMap("Items")
     public DescribeClusterNetInfoResponseBodyItems items;
@@ -58,9 +58,27 @@ public class DescribeClusterNetInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeClusterNetInfoResponseBodyItemsAddressPortsPorts extends TeaModel {
+        /**
+         * <p>The port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3306</p>
+         */
         @NameInMap("Port")
         public String port;
 
+        /**
+         * <p>The type of the protocol. Valid values:</p>
+         * <ul>
+         * <li><strong>tcp</strong></li>
+         * <li><strong>http</strong></li>
+         * <li><strong>https</strong></li>
+         * <li><strong>mysql</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql</p>
+         */
         @NameInMap("Protocol")
         public String protocol;
 
@@ -110,8 +128,8 @@ public class DescribeClusterNetInfoResponseBody extends TeaModel {
         /**
          * <p>The endpoint of the cluster.</p>
          * <ul>
-         * <li>If the network type of the cluster is VPC, the VPC endpoint of the cluster is returned.</li>
-         * <li>If the network type of the cluster is Public, the public endpoint of the cluster is returned.</li>
+         * <li>If NetType is set to VPC, the VPC endpoint of the cluster is returned.</li>
+         * <li>If NetType is set to Public, the public endpoint of the cluster is returned.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -123,8 +141,8 @@ public class DescribeClusterNetInfoResponseBody extends TeaModel {
         /**
          * <p>The prefix of the endpoint.</p>
          * <ul>
-         * <li>If the network type of the cluster is VPC, the prefix of the private endpoint is returned.</li>
-         * <li>If the network type of the cluster is Public, the prefix of the public endpoint is returned.</li>
+         * <li>If NetType is set to VPC, the prefix of the VPC endpoint is returned.</li>
+         * <li>If NetType is set to Public, the prefix of the public endpoint is returned.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -136,8 +154,8 @@ public class DescribeClusterNetInfoResponseBody extends TeaModel {
         /**
          * <p>The IP address of the endpoint.</p>
          * <ul>
-         * <li>If the network type of the cluster is VPC, the IP address of the private endpoint is returned.</li>
-         * <li>If the network type of the cluster is Public, the IP address of the public endpoint is returned.</li>
+         * <li>If NetType is set to VPC, the private IP address of the cluster is returned.</li>
+         * <li>If NetType is set to Public, the public IP address of the cluster is returned.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -168,13 +186,16 @@ public class DescribeClusterNetInfoResponseBody extends TeaModel {
         @NameInMap("Port")
         public String port;
 
+        /**
+         * <p>The ports.</p>
+         */
         @NameInMap("Ports")
         public DescribeClusterNetInfoResponseBodyItemsAddressPorts ports;
 
         /**
          * <p>The VPC ID.</p>
          * <blockquote>
-         * <p>If NetType is set to Public, an empty string is returned for this parameter.</p>
+         * <p> If NetType is set to Public, an empty string is returned.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -186,7 +207,7 @@ public class DescribeClusterNetInfoResponseBody extends TeaModel {
         /**
          * <p>The vSwitch ID of the cluster.</p>
          * <blockquote>
-         * <p>If NetType is set to Public, an empty string is returned for this parameter.</p>
+         * <p> If NetType is set to Public, an empty string is returned.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

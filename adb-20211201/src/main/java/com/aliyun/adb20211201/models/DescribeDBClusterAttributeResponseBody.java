@@ -105,9 +105,25 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeDBClusterAttributeResponseBodyItemsDBCluster extends TeaModel {
+        /**
+         * <p>The cache size of the ClickHouse wide table engine. Unit: GB. If a value of -1 is returned, the ClickHouse wide table engine is disabled. If a value other than -1 is returned, this parameter indicates the disk cache size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("ClickhouseEngineCacheSize")
         public Integer clickhouseEngineCacheSize;
 
+        /**
+         * <p>Indicates whether the ClickHouse wide table engine is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("ClickhouseEngineEnabled")
         public Boolean clickhouseEngineEnabled;
 
@@ -277,6 +293,15 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @NameInMap("Expired")
         public String expired;
 
+        /**
+         * <p>The ID of the key that is used to encrypt disk data.</p>
+         * <blockquote>
+         * <p> This parameter is returned only when disk encryption is enabled.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>e1935511-cf88-1123-a0f8-1be8d251****</p>
+         */
         @NameInMap("KmsId")
         public String kmsId;
 
@@ -349,9 +374,25 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @NameInMap("Port")
         public Integer port;
 
+        /**
+         * <p>A reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>N/A</p>
+         */
         @NameInMap("ProductForm")
         public String productForm;
 
+        /**
+         * <p>The edition of the cluster. Valid values:</p>
+         * <ul>
+         * <li><strong>BasicVersion</strong>: Basic Edition.</li>
+         * <li><strong>EnterpriseVersion</strong>: Enterprise Edition.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>BasicVersion</p>
+         */
         @NameInMap("ProductVersion")
         public String productVersion;
 
@@ -373,9 +414,21 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @NameInMap("ReservedACU")
         public String reservedACU;
 
+        /**
+         * <p>A reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>N/A</p>
+         */
         @NameInMap("ReservedNodeCount")
         public Integer reservedNodeCount;
 
+        /**
+         * <p>A reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>N/A</p>
+         */
         @NameInMap("ReservedNodeSize")
         public String reservedNodeSize;
 
@@ -407,7 +460,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         public String storageResourceTotal;
 
         /**
-         * <p>A reserved parameter.</p>
+         * <p>Reserved parameters.</p>
          */
         @NameInMap("SupportedFeatures")
         public java.util.Map<String, String> supportedFeatures;

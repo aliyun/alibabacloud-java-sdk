@@ -86,6 +86,16 @@ public class DescribeAccountsResponseBody extends TeaModel {
         @NameInMap("AccountType")
         public String accountType;
 
+        /**
+         * <p>The database engine of the cluster. Valid values:</p>
+         * <ul>
+         * <li><strong>AnalyticDB</strong>: the AnalyticDB for MySQL engine.</li>
+         * <li><strong>Clickhouse</strong>: the wide table engine.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Clickhouse</p>
+         */
         @NameInMap("Engine")
         public String engine;
 
