@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchKillSessionListRequest extends TeaModel {
     /**
+     * <p>The ID of the OceanBase cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,10 @@ public class BatchKillSessionListRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The list of sessions, which is concatenated with commas.</p>
+     * <blockquote>
+     * <p>The session information is obtained from the result returned by the DescribeSessionList API.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +28,7 @@ public class BatchKillSessionListRequest extends TeaModel {
     public String sessionList;
 
     /**
+     * <p>The ID of the tenant.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
