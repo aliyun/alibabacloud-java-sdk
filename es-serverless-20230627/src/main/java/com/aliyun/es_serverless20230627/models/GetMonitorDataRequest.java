@@ -4,6 +4,10 @@ package com.aliyun.es_serverless20230627.models;
 import com.aliyun.tea.*;
 
 public class GetMonitorDataRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;start&quot;:1689245180581,&quot;end&quot;:1689246950582,&quot;queries&quot;:[{&quot;metric&quot;:&quot;aliyunes.elasticsearch.index.docs.count&quot;,&quot;aggregator&quot;:&quot;sum&quot;,&quot;downsample&quot;:&quot;avg&quot;,&quot;tags&quot;:{&quot;resource&quot;:&quot;{appName}&quot;},&quot;filters&quot;:[],&quot;granularity&quot;:&quot;auto&quot;}]}</p>
+     */
     @NameInMap("body")
     public String body;
 

@@ -4,6 +4,10 @@ package com.aliyun.es_serverless20230627.models;
 import com.aliyun.tea.*;
 
 public class GetAppRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("detailed")
     public Boolean detailed;
 

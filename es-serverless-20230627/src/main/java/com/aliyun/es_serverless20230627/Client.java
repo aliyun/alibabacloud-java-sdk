@@ -27,8 +27,46 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建Serverless应用
-     *
+     * <b>summary</b> : 
+     * <p>撤销规格审批</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CancelSpecReviewTaskResponse
+     */
+    public CancelSpecReviewTaskResponse cancelSpecReviewTaskWithOptions(String appName, String taskId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CancelSpecReviewTask"),
+            new TeaPair("version", "2023-06-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/es-serverless/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(appName) + "/spec-review-tasks/" + com.aliyun.openapiutil.Client.getEncodeParam(taskId) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CancelSpecReviewTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>撤销规格审批</p>
+     * @return CancelSpecReviewTaskResponse
+     */
+    public CancelSpecReviewTaskResponse cancelSpecReviewTask(String appName, String taskId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.cancelSpecReviewTaskWithOptions(appName, taskId, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建Serverless应用</p>
+     * 
      * @param request CreateAppRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -102,8 +140,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建Serverless应用
-     *
+     * <b>summary</b> : 
+     * <p>创建Serverless应用</p>
+     * 
      * @param request CreateAppRequest
      * @return CreateAppResponse
      */
@@ -114,8 +153,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建端点
-     *
+     * <b>summary</b> : 
+     * <p>创建端点</p>
+     * 
      * @param request CreateEndpointRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -161,8 +201,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建端点
-     *
+     * <b>summary</b> : 
+     * <p>创建端点</p>
+     * 
      * @param request CreateEndpointRequest
      * @return CreateEndpointResponse
      */
@@ -173,8 +214,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除Serverless应用。
-     *
+     * <b>summary</b> : 
+     * <p>创建快照</p>
+     * 
+     * @param request CreateSnapshotRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateSnapshotResponse
+     */
+    public CreateSnapshotResponse createSnapshotWithOptions(String appName, String repository, CreateSnapshotRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("dryRun", request.dryRun);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.indices)) {
+            body.put("indices", request.indices);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.snapshot)) {
+            body.put("snapshot", request.snapshot);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateSnapshot"),
+            new TeaPair("version", "2023-06-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/es-serverless/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(appName) + "/snapshot-repositories/" + com.aliyun.openapiutil.Client.getEncodeParam(repository) + "/snapshots"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateSnapshotResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建快照</p>
+     * 
+     * @param request CreateSnapshotRequest
+     * @return CreateSnapshotResponse
+     */
+    public CreateSnapshotResponse createSnapshot(String appName, String repository, CreateSnapshotRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createSnapshotWithOptions(appName, repository, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除Serverless应用。</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteAppResponse
@@ -198,8 +297,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除Serverless应用。
-     *
+     * <b>summary</b> : 
+     * <p>删除Serverless应用。</p>
      * @return DeleteAppResponse
      */
     public DeleteAppResponse deleteApp(String appName) throws Exception {
@@ -209,8 +308,134 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取Serverless应用详情
-     *
+     * <b>summary</b> : 
+     * <p>删除词典</p>
+     * 
+     * @param request DeleteDictRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteDictResponse
+     */
+    public DeleteDictResponse deleteDictWithOptions(String appName, DeleteDictRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            body.put("type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteDict"),
+            new TeaPair("version", "2023-06-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/es-serverless/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(appName) + "/dicts/actions/remove"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDictResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除词典</p>
+     * 
+     * @param request DeleteDictRequest
+     * @return DeleteDictResponse
+     */
+    public DeleteDictResponse deleteDict(String appName, DeleteDictRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteDictWithOptions(appName, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除端点</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteEndpointResponse
+     */
+    public DeleteEndpointResponse deleteEndpointWithOptions(String endpointId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteEndpoint"),
+            new TeaPair("version", "2023-06-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/es-serverless/endpoints/" + com.aliyun.openapiutil.Client.getEncodeParam(endpointId) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteEndpointResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除端点</p>
+     * @return DeleteEndpointResponse
+     */
+    public DeleteEndpointResponse deleteEndpoint(String endpointId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteEndpointWithOptions(endpointId, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除快照</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteSnapshotResponse
+     */
+    public DeleteSnapshotResponse deleteSnapshotWithOptions(String appName, String repository, String snapshot, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteSnapshot"),
+            new TeaPair("version", "2023-06-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/es-serverless/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(appName) + "/snapshot-repositories/" + com.aliyun.openapiutil.Client.getEncodeParam(repository) + "/snapshots/" + com.aliyun.openapiutil.Client.getEncodeParam(snapshot) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteSnapshotResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除快照</p>
+     * @return DeleteSnapshotResponse
+     */
+    public DeleteSnapshotResponse deleteSnapshot(String appName, String repository, String snapshot) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteSnapshotWithOptions(appName, repository, snapshot, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取Serverless应用详情</p>
+     * 
      * @param request GetAppRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -242,8 +467,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取Serverless应用详情
-     *
+     * <b>summary</b> : 
+     * <p>获取Serverless应用详情</p>
+     * 
      * @param request GetAppRequest
      * @return GetAppResponse
      */
@@ -254,8 +480,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取Serverless应用配额详情
-     *
+     * <b>summary</b> : 
+     * <p>获取Serverless应用配额详情</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetAppQuotaResponse
@@ -279,8 +506,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取Serverless应用配额详情
-     *
+     * <b>summary</b> : 
+     * <p>获取Serverless应用配额详情</p>
      * @return GetAppQuotaResponse
      */
     public GetAppQuotaResponse getAppQuota(String appName) throws Exception {
@@ -290,8 +517,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取监控数据
-     *
+     * <b>summary</b> : 
+     * <p>获取监控数据</p>
+     * 
      * @param request GetMonitorDataRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -318,8 +546,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取监控数据
-     *
+     * <b>summary</b> : 
+     * <p>获取监控数据</p>
+     * 
      * @param request GetMonitorDataRequest
      * @return GetMonitorDataResponse
      */
@@ -330,8 +559,83 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查看Serverless应用列表
-     *
+     * <b>summary</b> : 
+     * <p>获取自动备份配置</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetSnapshotSettingResponse
+     */
+    public GetSnapshotSettingResponse getSnapshotSettingWithOptions(String appName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetSnapshotSetting"),
+            new TeaPair("version", "2023-06-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/es-serverless/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(appName) + "/auto-snapshot-setting"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetSnapshotSettingResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取自动备份配置</p>
+     * @return GetSnapshotSettingResponse
+     */
+    public GetSnapshotSettingResponse getSnapshotSetting(String appName) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getSnapshotSettingWithOptions(appName, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取配额审批详情</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetSpecReviewTaskResponse
+     */
+    public GetSpecReviewTaskResponse getSpecReviewTaskWithOptions(String appName, String taskId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetSpecReviewTask"),
+            new TeaPair("version", "2023-06-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/es-serverless/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(appName) + "/spec-review-tasks/" + com.aliyun.openapiutil.Client.getEncodeParam(taskId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetSpecReviewTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取配额审批详情</p>
+     * @return GetSpecReviewTaskResponse
+     */
+    public GetSpecReviewTaskResponse getSpecReviewTask(String appName, String taskId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getSpecReviewTaskWithOptions(appName, taskId, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查看Serverless应用列表</p>
+     * 
      * @param request ListAppsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -387,8 +691,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查看Serverless应用列表
-     *
+     * <b>summary</b> : 
+     * <p>查看Serverless应用列表</p>
+     * 
      * @param request ListAppsRequest
      * @return ListAppsResponse
      */
@@ -399,8 +704,311 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 编辑Serverless应用
-     *
+     * <b>summary</b> : 
+     * <p>获取词典列表</p>
+     * 
+     * @param request ListDictsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListDictsResponse
+     */
+    public ListDictsResponse listDictsWithOptions(String appName, ListDictsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("pageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListDicts"),
+            new TeaPair("version", "2023-06-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/es-serverless/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(appName) + "/dicts"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListDictsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取词典列表</p>
+     * 
+     * @param request ListDictsRequest
+     * @return ListDictsResponse
+     */
+    public ListDictsResponse listDicts(String appName, ListDictsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listDictsWithOptions(appName, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取端点信息列表</p>
+     * 
+     * @param request ListEndpointsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListEndpointsResponse
+     */
+    public ListEndpointsResponse listEndpointsWithOptions(ListEndpointsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("pageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceId)) {
+            query.put("resourceId", request.resourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("type", request.type);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vpcId)) {
+            query.put("vpcId", request.vpcId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListEndpoints"),
+            new TeaPair("version", "2023-06-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/es-serverless/endpoints"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListEndpointsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取端点信息列表</p>
+     * 
+     * @param request ListEndpointsRequest
+     * @return ListEndpointsResponse
+     */
+    public ListEndpointsResponse listEndpoints(ListEndpointsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listEndpointsWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查看索引列表</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListIndicesResponse
+     */
+    public ListIndicesResponse listIndicesWithOptions(String appName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListIndices"),
+            new TeaPair("version", "2023-06-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/es-serverless/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(appName) + "/indices"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListIndicesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查看索引列表</p>
+     * @return ListIndicesResponse
+     */
+    public ListIndicesResponse listIndices(String appName) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listIndicesWithOptions(appName, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取快照仓库列表</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListSnapshotRepositoriesResponse
+     */
+    public ListSnapshotRepositoriesResponse listSnapshotRepositoriesWithOptions(String appName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListSnapshotRepositories"),
+            new TeaPair("version", "2023-06-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/es-serverless/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(appName) + "/snapshot-repositories"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListSnapshotRepositoriesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取快照仓库列表</p>
+     * @return ListSnapshotRepositoriesResponse
+     */
+    public ListSnapshotRepositoriesResponse listSnapshotRepositories(String appName) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listSnapshotRepositoriesWithOptions(appName, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取仓库的快照列表</p>
+     * 
+     * @param request ListSnapshotsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListSnapshotsResponse
+     */
+    public ListSnapshotsResponse listSnapshotsWithOptions(String appName, ListSnapshotsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("pageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.repository)) {
+            query.put("repository", request.repository);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.snapshot)) {
+            query.put("snapshot", request.snapshot);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListSnapshots"),
+            new TeaPair("version", "2023-06-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/es-serverless/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(appName) + "/snapshots"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListSnapshotsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取仓库的快照列表</p>
+     * 
+     * @param request ListSnapshotsRequest
+     * @return ListSnapshotsResponse
+     */
+    public ListSnapshotsResponse listSnapshots(String appName, ListSnapshotsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listSnapshotsWithOptions(appName, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取规格审批列表</p>
+     * 
+     * @param request ListSpecReviewTasksRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListSpecReviewTasksResponse
+     */
+    public ListSpecReviewTasksResponse listSpecReviewTasksWithOptions(String appName, ListSpecReviewTasksRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.page)) {
+            query.put("page", request.page);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.size)) {
+            query.put("size", request.size);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListSpecReviewTasks"),
+            new TeaPair("version", "2023-06-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/es-serverless/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(appName) + "/spec-review-tasks"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListSpecReviewTasksResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取规格审批列表</p>
+     * 
+     * @param request ListSpecReviewTasksRequest
+     * @return ListSpecReviewTasksResponse
+     */
+    public ListSpecReviewTasksResponse listSpecReviewTasks(String appName, ListSpecReviewTasksRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listSpecReviewTasksWithOptions(appName, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>编辑Serverless应用</p>
+     * 
      * @param request UpdateAppRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -456,8 +1064,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 编辑Serverless应用
-     *
+     * <b>summary</b> : 
+     * <p>编辑Serverless应用</p>
+     * 
      * @param request UpdateAppRequest
      * @return UpdateAppResponse
      */
@@ -465,5 +1074,172 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateAppWithOptions(appName, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建或更新词典</p>
+     * 
+     * @param request UpdateDictRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateDictResponse
+     */
+    public UpdateDictResponse updateDictWithOptions(String appName, UpdateDictRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.allowCover)) {
+            query.put("allowCover", request.allowCover);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("dryRun", request.dryRun);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.files)) {
+            body.put("files", request.files);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceType)) {
+            body.put("sourceType", request.sourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            body.put("type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateDict"),
+            new TeaPair("version", "2023-06-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/es-serverless/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(appName) + "/dicts"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateDictResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建或更新词典</p>
+     * 
+     * @param request UpdateDictRequest
+     * @return UpdateDictResponse
+     */
+    public UpdateDictResponse updateDict(String appName, UpdateDictRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateDictWithOptions(appName, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改端点信息</p>
+     * 
+     * @param request UpdateEndpointRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateEndpointResponse
+     */
+    public UpdateEndpointResponse updateEndpointWithOptions(String endpointId, UpdateEndpointRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endpointZones)) {
+            body.put("endpointZones", request.endpointZones);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("name", request.name);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateEndpoint"),
+            new TeaPair("version", "2023-06-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/es-serverless/endpoints/" + com.aliyun.openapiutil.Client.getEncodeParam(endpointId) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateEndpointResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改端点信息</p>
+     * 
+     * @param request UpdateEndpointRequest
+     * @return UpdateEndpointResponse
+     */
+    public UpdateEndpointResponse updateEndpoint(String endpointId, UpdateEndpointRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateEndpointWithOptions(endpointId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改自动备份配置</p>
+     * 
+     * @param request UpdateSnapshotSettingRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateSnapshotSettingResponse
+     */
+    public UpdateSnapshotSettingResponse updateSnapshotSettingWithOptions(String appName, UpdateSnapshotSettingRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.enable)) {
+            body.put("enable", request.enable);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.quartzRegex)) {
+            body.put("quartzRegex", request.quartzRegex);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateSnapshotSetting"),
+            new TeaPair("version", "2023-06-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/es-serverless/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(appName) + "/auto-snapshot-setting"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateSnapshotSettingResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改自动备份配置</p>
+     * 
+     * @param request UpdateSnapshotSettingRequest
+     * @return UpdateSnapshotSettingResponse
+     */
+    public UpdateSnapshotSettingResponse updateSnapshotSetting(String appName, UpdateSnapshotSettingRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateSnapshotSettingWithOptions(appName, request, headers, runtime);
     }
 }

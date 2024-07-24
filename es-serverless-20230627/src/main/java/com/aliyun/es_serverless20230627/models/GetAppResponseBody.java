@@ -4,6 +4,10 @@ package com.aliyun.es_serverless20230627.models;
 import com.aliyun.tea.*;
 
 public class GetAppResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2C5DAA30-****-5181-9B87-9D6181016197</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
@@ -240,12 +244,27 @@ public class GetAppResponseBody extends TeaModel {
     }
 
     public static class GetAppResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>test-app-abc</p>
+         */
         @NameInMap("appId")
         public String appId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>es-severless-test-app</p>
+         */
         @NameInMap("appName")
         public String appName;
 
+        @NameInMap("appType")
+        public String appType;
+
+        /**
+         * <strong>example:</strong>
+         * <p>2022-08-15T11:20:52.370Z</p>
+         */
         @NameInMap("createTime")
         public String createTime;
 
@@ -255,24 +274,44 @@ public class GetAppResponseBody extends TeaModel {
         @NameInMap("instanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-08-15T11:21:50.000Z</p>
+         */
         @NameInMap("modifiedTime")
         public String modifiedTime;
 
         @NameInMap("network")
         public java.util.List<GetAppResponseBodyResultNetwork> network;
 
+        /**
+         * <strong>example:</strong>
+         * <p>*******7595</p>
+         */
         @NameInMap("ownerId")
         public String ownerId;
 
         @NameInMap("privateNetwork")
         public java.util.List<GetAppResponseBodyResultPrivateNetwork> privateNetwork;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("regionId")
         public String regionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ACTIVE</p>
+         */
         @NameInMap("status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>7.10</p>
+         */
         @NameInMap("version")
         public String version;
 
@@ -295,6 +334,14 @@ public class GetAppResponseBody extends TeaModel {
         }
         public String getAppName() {
             return this.appName;
+        }
+
+        public GetAppResponseBodyResult setAppType(String appType) {
+            this.appType = appType;
+            return this;
+        }
+        public String getAppType() {
+            return this.appType;
         }
 
         public GetAppResponseBodyResult setCreateTime(String createTime) {

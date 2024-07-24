@@ -10,15 +10,26 @@ public class CreateEndpointRequest extends TeaModel {
     @NameInMap("endpointZones")
     public java.util.List<CreateEndpointRequestEndpointZones> endpointZones;
 
+    /**
+     * <strong>example:</strong>
+     * <p>testendpoint</p>
+     */
     @NameInMap("name")
     public String name;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-uf664nyle5khp5***</p>
      */
     @NameInMap("vpcId")
     public String vpcId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>VPC</p>
+     */
     @NameInMap("type")
     public String type;
 
@@ -60,9 +71,17 @@ public class CreateEndpointRequest extends TeaModel {
     }
 
     public static class CreateEndpointRequestEndpointZones extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>vsw-uf6qmfkqdcw*****</p>
+         */
         @NameInMap("vswitchId")
         public String vswitchId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h</p>
+         */
         @NameInMap("zoneId")
         public String zoneId;
 

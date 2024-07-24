@@ -6,7 +6,6 @@ import com.aliyun.tea.*;
 public class CreateAppRequest extends TeaModel {
     /**
      * <p>应用名</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("appName")

@@ -4,6 +4,10 @@ package com.aliyun.es_serverless20230627.models;
 import com.aliyun.tea.*;
 
 public class GetAppQuotaResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2C5DAA30-****-5181-9B87-9D6181016197</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
@@ -32,15 +36,31 @@ public class GetAppQuotaResponseBody extends TeaModel {
     }
 
     public static class GetAppQuotaResponseBodyResultLimiterInfoLimiters extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("immutable")
         public Boolean immutable;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("maxValue")
         public Long maxValue;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("minValue")
         public Long minValue;
 
+        /**
+         * <strong>example:</strong>
+         * <p>INDEX_NUMBER_OF_SHARDS</p>
+         */
         @NameInMap("type")
         public String type;
 

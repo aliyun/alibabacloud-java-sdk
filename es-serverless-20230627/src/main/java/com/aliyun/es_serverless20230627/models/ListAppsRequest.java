@@ -4,24 +4,52 @@ package com.aliyun.es_serverless20230627.models;
 import com.aliyun.tea.*;
 
 public class ListAppsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>es-severless-test-app</p>
+     */
     @NameInMap("appName")
     public String appName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-08-29T02:37:22Z</p>
+     */
     @NameInMap("createTime")
     public String createTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>metrics-logs-online</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>desc</p>
+     */
     @NameInMap("orderType")
     public String orderType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("pageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ACTIVE</p>
+     */
     @NameInMap("status")
     public String status;
 
