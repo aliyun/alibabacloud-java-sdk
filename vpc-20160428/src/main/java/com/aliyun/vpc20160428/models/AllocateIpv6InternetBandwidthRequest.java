@@ -27,6 +27,9 @@ public class AllocateIpv6InternetBandwidthRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
     /**
      * <p>The metering method of the Internet bandwidth for the IPv6 address. Valid values:</p>
      * <ul>
@@ -101,6 +104,14 @@ public class AllocateIpv6InternetBandwidthRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public AllocateIpv6InternetBandwidthRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public AllocateIpv6InternetBandwidthRequest setInternetChargeType(String internetChargeType) {

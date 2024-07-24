@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateVpnGatewayRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable automatic payment for the VPN gateway. Valid values:</p>
+     * <p>Specifies whether to enable automatic payment. Valid values:</p>
      * <ul>
      * <li><strong>true</strong></li>
      * <li><strong>false</strong> (default)</li>
      * </ul>
      * <blockquote>
-     * <p> We recommend that you enable automatic payment. If you disable automatic payment, you must manually pay the bill for creating the VPN gateway.</p>
+     * <p>To create a VPN gateway, we recommend that you enable automatic payment. If you disable automatic payment, you must manually pay the bill to create the VPN gateway.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class CreateVpnGatewayRequest extends TeaModel {
      * <li>If you want to create a private VPN gateway, valid values are <strong>200</strong> and <strong>1000</strong>.</li>
      * </ul>
      * <blockquote>
-     * <p> The maximum bandwidth supported by VPN gateways in some regions is 200 Mbit/s. For more information, see <a href="https://help.aliyun.com/document_detail/65290.html">VPN gateway limits</a>.</p>
+     * <p> The maximum bandwidth supported by VPN gateways in some regions is 500 Mbit/s. For more information, see <a href="https://help.aliyun.com/document_detail/65290.html">VPN gateway limits</a>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -66,7 +66,7 @@ public class CreateVpnGatewayRequest extends TeaModel {
     public String disasterRecoveryVSwitchId;
 
     /**
-     * <p>Specifies whether to enable the IPsec-VPN feature. Valid values:</p>
+     * <p>Specifies whether to enable IPsec-VPN for the VPN gateway. Valid values:</p>
      * <ul>
      * <li><strong>true</strong> (default)</li>
      * <li><strong>false</strong></li>
@@ -79,7 +79,7 @@ public class CreateVpnGatewayRequest extends TeaModel {
     public Boolean enableIpsec;
 
     /**
-     * <p>Specifies whether to enable the SSL-VPN feature for the VPN gateway. Valid values:</p>
+     * <p>Specifies whether to enable SSL-VPN. Valid values:</p>
      * <ul>
      * <li><strong>true</strong></li>
      * <li><strong>false</strong> (default)</li>

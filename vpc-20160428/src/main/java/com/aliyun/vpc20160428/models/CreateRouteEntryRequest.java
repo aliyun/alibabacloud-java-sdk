@@ -68,6 +68,9 @@ public class CreateRouteEntryRequest extends TeaModel {
      * <li><strong>NatGateway</strong>: a NAT gateway.</li>
      * <li><strong>Attachment</strong>: a transit router.</li>
      * <li><strong>VpcPeer</strong>: a VPC peering connection.</li>
+     * <li><strong>Ipv4Gateway</strong>: an IPv4 gateway.</li>
+     * <li><strong>GatewayEndpoint</strong>: a gateway endpoint.</li>
+     * <li><strong>Ecr</strong>: a Express Connect Router (ECR).</li>
      * </ul>
      * 
      * <strong>example:</strong>

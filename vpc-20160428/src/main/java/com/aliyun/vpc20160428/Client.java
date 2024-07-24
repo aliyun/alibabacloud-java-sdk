@@ -1332,6 +1332,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ClientToken", request.clientToken);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.internetChargeType)) {
             query.put("InternetChargeType", request.internetChargeType);
         }
@@ -4671,6 +4679,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.jobDuration)) {
@@ -11839,6 +11851,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteIpv6GatewayResponse deleteIpv6GatewayWithOptions(DeleteIpv6GatewayRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ipv6GatewayId)) {
             query.put("Ipv6GatewayId", request.ipv6GatewayId);
         }
@@ -11921,6 +11941,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteIpv6InternetBandwidthResponse deleteIpv6InternetBandwidthWithOptions(DeleteIpv6InternetBandwidthRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ipv6AddressId)) {
             query.put("Ipv6AddressId", request.ipv6AddressId);
         }
@@ -13629,6 +13657,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteVSwitchCidrReservationResponse deleteVSwitchCidrReservationWithOptions(DeleteVSwitchCidrReservationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
             query.put("OwnerAccount", request.ownerAccount);
         }
@@ -13965,6 +14001,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteVpcResponse deleteVpcWithOptions(DeleteVpcRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
             query.put("DryRun", request.dryRun);
         }
@@ -17947,6 +17987,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribePublicIpAddressResponse describePublicIpAddressWithOptions(DescribePublicIpAddressRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ipVersion)) {
+            query.put("IpVersion", request.ipVersion);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
             query.put("OwnerAccount", request.ownerAccount);
         }
@@ -22237,7 +22281,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询IP地址池功能的开通状态。</p>
+     * <p>Queries whether the IP address pool feature is enabled.</p>
      * 
      * @param request GetPublicIpAddressPoolServiceStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -22293,7 +22337,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询IP地址池功能的开通状态。</p>
+     * <p>Queries whether the IP address pool feature is enabled.</p>
      * 
      * @param request GetPublicIpAddressPoolServiceStatusRequest
      * @return GetPublicIpAddressPoolServiceStatusResponse
@@ -23975,7 +24019,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about the available IP address pools.</p>
+     * <p>Queries available IP address pools.</p>
      * 
      * @param request ListPublicIpAddressPoolsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -24063,7 +24107,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about the available IP address pools.</p>
+     * <p>Queries available IP address pools.</p>
      * 
      * @param request ListPublicIpAddressPoolsRequest
      * @return ListPublicIpAddressPoolsResponse
@@ -26924,8 +26968,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyIpv6AddressAttributeResponse modifyIpv6AddressAttributeWithOptions(ModifyIpv6AddressAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ipv6AddressId)) {
@@ -27000,8 +27052,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyIpv6GatewayAttributeResponse modifyIpv6GatewayAttributeWithOptions(ModifyIpv6GatewayAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ipv6GatewayId)) {
@@ -27085,6 +27145,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ipv6AddressId)) {
@@ -28724,6 +28792,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyVSwitchCidrReservationAttributeResponse modifyVSwitchCidrReservationAttributeWithOptions(ModifyVSwitchCidrReservationAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
             query.put("OwnerAccount", request.ownerAccount);
         }
@@ -33263,6 +33339,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.jobDuration)) {

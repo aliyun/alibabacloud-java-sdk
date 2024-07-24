@@ -4,6 +4,9 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DeleteVpcRequest extends TeaModel {
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     /**
      * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
@@ -70,6 +73,14 @@ public class DeleteVpcRequest extends TeaModel {
     public static DeleteVpcRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteVpcRequest self = new DeleteVpcRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteVpcRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public DeleteVpcRequest setDryRun(Boolean dryRun) {
