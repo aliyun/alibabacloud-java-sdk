@@ -706,6 +706,10 @@ public class CreateRuleRequest extends TeaModel {
     }
 
     public static class CreateRuleRequestRuleActionsRemoveHeaderConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Key")
         public String key;
 
@@ -1396,6 +1400,10 @@ public class CreateRuleRequest extends TeaModel {
     }
 
     public static class CreateRuleRequestRuleConditionsResponseHeaderConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Key")
         public String key;
 
@@ -1622,9 +1630,17 @@ public class CreateRuleRequest extends TeaModel {
     }
 
     public static class CreateRuleRequestTag extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>env</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>product</p>
+         */
         @NameInMap("Value")
         public String value;
 

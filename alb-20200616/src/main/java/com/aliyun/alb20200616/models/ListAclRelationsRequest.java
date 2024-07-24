@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAclRelationsRequest extends TeaModel {
     /**
-     * <p>The ACL IDs.</p>
+     * <p>Array of ACL ID.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AclIds")

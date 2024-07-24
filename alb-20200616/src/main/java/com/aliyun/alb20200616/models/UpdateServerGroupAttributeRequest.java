@@ -17,6 +17,17 @@ public class UpdateServerGroupAttributeRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The configurations of connection draining.</p>
+     * <p>After connection draining is enabled, ALB maintains data transmission for a period of time after the backend server is removed or declared unhealthy.</p>
+     * <blockquote>
+     * <ul>
+     * <li>By default, connection draining is disabled. To enable connection draining, contact your account manager.</li>
+     * <li>Basic ALB instances do not support connection draining. Standard and WAF-enabled ALB instances support connection draining.</li>
+     * <li>Server groups of the instance and IP types support connection draining. Server groups of the Function Compute type do not support connection draining.</li>
+     * </ul>
+     * </blockquote>
+     */
     @NameInMap("ConnectionDrainConfig")
     public UpdateServerGroupAttributeRequestConnectionDrainConfig connectionDrainConfig;
 
@@ -82,6 +93,17 @@ public class UpdateServerGroupAttributeRequest extends TeaModel {
     @NameInMap("ServiceName")
     public String serviceName;
 
+    /**
+     * <p>The configurations of slow starts.</p>
+     * <p>After slow starts are enabled, ALB prefetches data to newly added backend servers. Requests distributed to the backend servers gradually increase.</p>
+     * <blockquote>
+     * <ul>
+     * <li>Basic ALB instances do not support slow starts. Standard and WAF-enabled ALB instances support slow starts.</li>
+     * <li>Server groups of the instance and IP types support slow starts. Server groups of the Function Compute type do not support slow starts.</li>
+     * <li>Slow start is supported only by the weighted round-robin scheduling algorithm.</li>
+     * </ul>
+     * </blockquote>
+     */
     @NameInMap("SlowStartConfig")
     public UpdateServerGroupAttributeRequestSlowStartConfig slowStartConfig;
 
@@ -92,7 +114,7 @@ public class UpdateServerGroupAttributeRequest extends TeaModel {
     public UpdateServerGroupAttributeRequestStickySessionConfig stickySessionConfig;
 
     /**
-     * <p>The setting of consistent hashing based on URLs.</p>
+     * <p>The configurations of consistent hashing based on URLs.</p>
      */
     @NameInMap("UchConfig")
     public UpdateServerGroupAttributeRequestUchConfig uchConfig;
@@ -205,9 +227,25 @@ public class UpdateServerGroupAttributeRequest extends TeaModel {
     }
 
     public static class UpdateServerGroupAttributeRequestConnectionDrainConfig extends TeaModel {
+        /**
+         * <p>Indicates whether connection draining is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("ConnectionDrainEnabled")
         public Boolean connectionDrainEnabled;
 
+        /**
+         * <p>The timeout period of connection draining.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
+         */
         @NameInMap("ConnectionDrainTimeout")
         public Integer connectionDrainTimeout;
 
@@ -236,17 +274,17 @@ public class UpdateServerGroupAttributeRequest extends TeaModel {
 
     public static class UpdateServerGroupAttributeRequestHealthCheckConfig extends TeaModel {
         /**
-         * <p>The HTTP status codes that are used to determine whether the backend server passes the health check.</p>
+         * <p>The HTTP status codes that indicate healthy backend servers.</p>
          */
         @NameInMap("HealthCheckCodes")
         public java.util.List<String> healthCheckCodes;
 
         /**
-         * <p>The port that you want to use for health checks on backend servers.</p>
+         * <p>The backend port that is used for health checks.</p>
          * <p>Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
-         * <p>If you set the value to <strong>0</strong>, the ports of backend servers are used for health checks.</p>
+         * <p>If you set the value to <strong>0</strong>, the backend port is used for health checks.</p>
          * <blockquote>
-         * <p>This parameter takes effect when the <strong>HealthCheckEnabled</strong> parameter is set to <strong>true</strong>.</p>
+         * <p> This parameter takes effect only if you set <strong>HealthCheckEnabled</strong> to <strong>true</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -258,7 +296,7 @@ public class UpdateServerGroupAttributeRequest extends TeaModel {
         /**
          * <p>Specifies whether to enable the health check feature. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong> (default)</li>
+         * <li><strong>true</strong></li>
          * <li><strong>false</strong></li>
          * </ul>
          * 
@@ -273,12 +311,12 @@ public class UpdateServerGroupAttributeRequest extends TeaModel {
          * <ul>
          * <li>The domain name must be 1 to 80 characters in length.</li>
          * <li>The domain name can contain lowercase letters, digits, hyphens (-), and periods (.).</li>
-         * <li>It must contain at least one period (.) but cannot start or end with a period (.).</li>
+         * <li>The domain name must contain at least one period (.) but cannot start or end with a period (.).</li>
          * <li>The rightmost field of the domain name can contain only letters and cannot contain digits or hyphens (-).</li>
          * <li>Other fields cannot start or end with a hyphen (-).</li>
          * </ul>
          * <blockquote>
-         * <p>This parameter takes effect when the <strong>HealthCheckEnabled</strong> parameter is set to true and the <strong>HealthCheckProtocol</strong> parameter is set to <strong>HTTP</strong>.</p>
+         * <p> This parameter takes effect only if you set <strong>HealthCheckEnabled</strong> to true and <strong>HealthCheckProtocol</strong> to <strong>HTTP</strong> or <strong>HTTPS</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -288,13 +326,13 @@ public class UpdateServerGroupAttributeRequest extends TeaModel {
         public String healthCheckHost;
 
         /**
-         * <p>The version of HTTP that is used for health checks. Valid values:</p>
+         * <p>The HTTP version for health checks. Valid values:</p>
          * <ul>
          * <li><strong>HTTP1.0</strong></li>
          * <li><strong>HTTP1.1</strong></li>
          * </ul>
          * <blockquote>
-         * <p>This parameter takes effect when the <strong>HealthCheckEnabled</strong> parameter is set to true and the <strong>HealthCheckProtocol</strong> parameter is set to <strong>HTTP</strong>.</p>
+         * <p> This parameter takes effect only if you set <strong>HealthCheckEnabled</strong> to true and <strong>HealthCheckProtocol</strong> to <strong>HTTP</strong> or <strong>HTTPS</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -307,7 +345,7 @@ public class UpdateServerGroupAttributeRequest extends TeaModel {
          * <p>The interval at which health checks are performed. Unit: seconds.</p>
          * <p>Valid values: <strong>1</strong> to <strong>50</strong>.</p>
          * <blockquote>
-         * <p>This parameter takes effect when the <strong>HealthCheckEnabled</strong> parameter is set to <strong>true</strong>.</p>
+         * <p> This parameter takes effect only if you set <strong>HealthCheckEnabled</strong> to <strong>true</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -317,14 +355,14 @@ public class UpdateServerGroupAttributeRequest extends TeaModel {
         public Integer healthCheckInterval;
 
         /**
-         * <p>The method that you want to use for the health check. Valid values:</p>
+         * <p>The HTTP method that is used for health checks. Valid values:</p>
          * <ul>
          * <li><strong>GET</strong>: If the length of a response exceeds 8 KB, the response is truncated. However, the health check result is not affected.</li>
-         * <li><strong>POST</strong>: gRPC health checks automatically use the POST method.</li>
-         * <li><strong>HEAD</strong>: HTTP health checks automatically use the HEAD method.</li>
+         * <li><strong>POST</strong>: gRPC health checks use the POST method by default.</li>
+         * <li><strong>HEAD</strong>: HTTP and HTTPS health checks use the HEAD method by default.</li>
          * </ul>
          * <blockquote>
-         * <p>This parameter takes effect when the <strong>HealthCheckEnabled</strong> parameter is set to true and the <strong>HealthCheckProtocol</strong> parameter is set to <strong>HTTP</strong> or <strong>gRPC</strong>.</p>
+         * <p> This parameter takes effect only if you set <strong>HealthCheckEnabled</strong> to true and <strong>HealthCheckProtocol</strong> to <strong>HTTP</strong>, <strong>HTTPS</strong>, or <strong>gRPC</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -334,10 +372,10 @@ public class UpdateServerGroupAttributeRequest extends TeaModel {
         public String healthCheckMethod;
 
         /**
-         * <p>The path that is used for health checks.</p>
-         * <p>The path must be 1 to 80 characters in length and can contain only letters, digits, and the following special characters: <code>- / . % ? # &amp; =</code>. It can also contain the following extended characters: <code>_ ; ~ ! ( ) * [ ] @ $ ^ : \\&quot; , +</code>. The path must start with a forward slash (<code>/</code>).</p>
+         * <p>The URL that is used for health checks.</p>
+         * <p>The URL must be 1 to 80 characters in length, and can contain letters, digits, and the following special characters: <code>- / . % ? # &amp; =</code>. It can also contain the following extended characters: <code>_ ; ~ ! ( ) * [ ] @ $ ^ : \\&quot; , +</code>. The URL must start with a forward slash (<code>/</code>).</p>
          * <blockquote>
-         * <p>This parameter takes effect when the <strong>HealthCheckEnabled</strong> parameter is set to <strong>true</strong> and the <strong>HealthCheckProtocol</strong> parameter is set to <strong>HTTP</strong>.</p>
+         * <p> This parameter takes effect only if you set <strong>HealthCheckEnabled</strong> to <strong>true</strong> and <strong>HealthCheckProtocol</strong> to <strong>HTTP</strong> or <strong>HTTPS</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -347,11 +385,12 @@ public class UpdateServerGroupAttributeRequest extends TeaModel {
         public String healthCheckPath;
 
         /**
-         * <p>The protocol that you want to use for health checks. Valid values:</p>
+         * <p>The protocol that is used for health checks. Valid values:</p>
          * <ul>
-         * <li><strong>HTTP</strong>: To perform HTTP health checks, ALB sends HEAD or GET requests to a backend server to check whether the backend server is healthy.</li>
-         * <li><strong>TCP</strong>: To perform TCP health checks, ALB sends SYN packets to a backend server to check whether the port of the backend server is available to receive requests.</li>
-         * <li><strong>gRPC</strong>: To perform gRPC health checks, ALB sends POST or GET requests to a backend server to check whether the backend server is healthy.</li>
+         * <li><strong>HTTP</strong>: HTTP health checks simulate browser behaviors by sending HEAD or GET requests to probe the availability of backend servers.</li>
+         * <li><strong>HTTPS</strong>: HTTPS health checks simulate browser behaviors by sending HEAD or GET requests to probe the availability of backend servers. HTTPS supports encryption and provides higher security than HTTP.</li>
+         * <li><strong>TCP</strong>: TCP health checks send TCP SYN packets to a backend server to check whether the port of the backend server is reachable.</li>
+         * <li><strong>gRPC</strong>: gRPC health checks send POST or GET requests to a backend server to check whether the backend server is healthy.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -361,14 +400,14 @@ public class UpdateServerGroupAttributeRequest extends TeaModel {
         public String healthCheckProtocol;
 
         /**
-         * <p>Specify the timeout period of a health check response. If a backend server, such as an Elastic Compute Service (ECS) instance, does not return a health check response within the specified timeout period, the server fails the health check. Unit: seconds.</p>
+         * <p>The timeout period of a health check response. If a backend ECS instance does not respond within the specified timeout period, the ECS instance fails the health check. Unit: seconds.</p>
          * <p>Valid values: <strong>1</strong> to <strong>300</strong>.</p>
          * <blockquote>
          * </blockquote>
          * <ul>
-         * <li><p>If the value of the <strong>HealthCheckTimeout</strong> parameter is smaller than that of the <strong>HealthCheckInterval</strong> parameter, the timeout period specified by the <strong>HealthCheckTimeout</strong> parameter is ignored and the value of the <strong>HealthCheckInterval</strong> parameter is used as the timeout period.</p>
+         * <li><p>If the value of <strong>HealthCHeckTimeout</strong> is smaller than the value of <strong>HealthCheckInterval</strong>, <strong>HealthCHeckTimeout</strong> becomes invalid. The timeout period is specified by the value of <strong>HealthCheckInterval</strong>.</p>
          * </li>
-         * <li><p>This parameter takes effect when the <strong>HealthCheckEnabled</strong> parameter is set to <strong>true</strong>.</p>
+         * <li><p>This parameter takes effect only if you set <strong>HealthCheckEnabled</strong> to <strong>true</strong>.</p>
          * </li>
          * </ul>
          * 
@@ -379,7 +418,7 @@ public class UpdateServerGroupAttributeRequest extends TeaModel {
         public Integer healthCheckTimeout;
 
         /**
-         * <p>The number of times that an unhealthy backend server must consecutively pass health checks before it can be declared healthy (from <strong>fail</strong> to <strong>success</strong>).</p>
+         * <p>The number of times that an unhealthy backend server must consecutively pass health checks before it can be declared healthy. In this case, the health check status of the backend server changes from <strong>fail</strong> to <strong>success</strong>.</p>
          * <p>Valid values: <strong>2</strong> to <strong>10</strong>.</p>
          * 
          * <strong>example:</strong>
@@ -389,7 +428,7 @@ public class UpdateServerGroupAttributeRequest extends TeaModel {
         public Integer healthyThreshold;
 
         /**
-         * <p>The number of times that a healthy backend server must consecutively fail health checks before it is declared unhealthy. In this case, the health status is changed from <strong>success</strong> to <strong>fail</strong>.</p>
+         * <p>The number of times that a healthy backend server must consecutively fail health checks before it can be declared unhealthy. In this case, the health check status of the backend server changes from <strong>success</strong> to <strong>fail</strong>.</p>
          * <p>Valid values: <strong>2</strong> to <strong>10</strong>.</p>
          * 
          * <strong>example:</strong>
@@ -502,9 +541,25 @@ public class UpdateServerGroupAttributeRequest extends TeaModel {
     }
 
     public static class UpdateServerGroupAttributeRequestSlowStartConfig extends TeaModel {
+        /**
+         * <p>The duration of a slow start.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("SlowStartDuration")
         public Integer slowStartDuration;
 
+        /**
+         * <p>Indicates whether slow starts are enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("SlowStartEnabled")
         public Boolean slowStartEnabled;
 
@@ -632,7 +687,7 @@ public class UpdateServerGroupAttributeRequest extends TeaModel {
 
     public static class UpdateServerGroupAttributeRequestUchConfig extends TeaModel {
         /**
-         * <p>The type of the parameter.</p>
+         * <p>The type of the parameter. Only query strings are supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -642,7 +697,7 @@ public class UpdateServerGroupAttributeRequest extends TeaModel {
         public String type;
 
         /**
-         * <p>The setting of consistent hashing.</p>
+         * <p>The value of the parameter used for consistent hashing.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

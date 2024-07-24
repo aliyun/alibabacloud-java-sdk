@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetHealthCheckTemplateAttributeResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status codes that indicate healthy backend servers.</p>
+     * <p>The HTTP status codes that indicate a healthy backend server.</p>
      */
     @NameInMap("HealthCheckCodes")
     public java.util.List<String> healthCheckCodes;
@@ -21,13 +21,13 @@ public class GetHealthCheckTemplateAttributeResponseBody extends TeaModel {
     public Integer healthCheckConnectPort;
 
     /**
-     * <p>The domain name that you want to use for health checks. Valid values:</p>
+     * <p>The domain name that is used for health checks. Valid values:</p>
      * <ul>
-     * <li><strong>$SERVER_IP</strong>: the private IP addresses of backend servers. If you do not set the HealthCheckHost parameter or set the parameter to $SERVER_IP, the Application Load Balancer (ALB) instance uses the private IP addresses of backend servers for health checks.</li>
+     * <li><strong>$SERVER_IP</strong>: the private IP addresses of backend servers. If an IP address is specified, or this parameter is not specified, the ALB instance uses the private IP addresses of backend servers as domain names for health checks.</li>
      * <li><strong>domain</strong>: The domain name must be 1 to 80 characters in length, and can contain letters, digits, periods (.), and hyphens (-).</li>
      * </ul>
      * <blockquote>
-     * <p>This parameter takes effect only when the <code>HealthCheckProtocol</code> parameter is set to <strong>HTTP</strong>.</p>
+     * <p> This parameter takes effect only if <code>HealthCheckProtocol</code> is set to <strong>HTTP</strong> or <strong>HTTPS</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -37,10 +37,10 @@ public class GetHealthCheckTemplateAttributeResponseBody extends TeaModel {
     public String healthCheckHost;
 
     /**
-     * <p>The HTTP version that is used for health checks.</p>
+     * <p>The HTTP version for health checks.</p>
      * <p>Valid values: <strong>HTTP1.0</strong> and <strong>HTTP1.1</strong>.</p>
      * <blockquote>
-     * <p>This parameter takes effect only when the <code>HealthCheckProtocol</code> parameter is set to <strong>HTTP</strong>.</p>
+     * <p> This parameter takes effect only if you set <code>HealthCheckProtocol</code> to <strong>HTTP</strong> or <strong>HTTPS</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -59,14 +59,14 @@ public class GetHealthCheckTemplateAttributeResponseBody extends TeaModel {
     public Integer healthCheckInterval;
 
     /**
-     * <p>The method that you want to use for the health check. Valid values:</p>
+     * <p>The HTTP method that is used for health checks. Valid values:</p>
      * <ul>
-     * <li><strong>HEAD</strong>: By default, the ALB instance sends HEAD requests to a backend server to perform HTTP health checks.</li>
+     * <li><strong>HEAD</strong> (default): By default, HTTP and HTTPS health checks use the HEAD method.</li>
      * <li><strong>GET</strong>: If the length of a response exceeds 8 KB, the response is truncated. However, the health check result is not affected.</li>
-     * <li><strong>POST</strong>: gRPC health checks automatically use the POST method.</li>
+     * <li><strong>POST</strong>: gRPC health checks use the POST method by default.</li>
      * </ul>
      * <blockquote>
-     * <p>This parameter takes effect only when the <strong>HealthCheckProtocol</strong> parameter is set to <strong>HTTP</strong> or <strong>gRPC</strong>.</p>
+     * <p> This parameter takes effect only if you set <strong>HealthCheckProtocol</strong> to <strong>HTTP</strong>, <strong>HTTPS</strong>, or <strong>gRPC</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -77,9 +77,9 @@ public class GetHealthCheckTemplateAttributeResponseBody extends TeaModel {
 
     /**
      * <p>The URL that is used for health checks.</p>
-     * <p>The URL must be 1 to 80 characters in length, and can contain only letters, digits, hyphens (-), forward slashes (/), periods (.), percent signs (%), question marks (?), number signs (#), and ampersands (&amp;). The URL can also contain the following extended characters: <code>_ ; ~ ! ( ) * [ ] @ $ ^ : \\&quot; , +</code>. The URL must start with a forward slash (/).</p>
+     * <p>The URL must be 1 to 80 characters in length, and can contain letters, digits, the following special characters: - / . % ? # &amp;, and the following extended characters: <code>_ ; ~ ! ( ) * [ ] @ $ ^ : \\&quot; , +</code>. The URL must start with a forward slash (/).</p>
      * <blockquote>
-     * <p>This parameter takes effect only when the <strong>HealthCheckProtocol</strong> parameter is set to <strong>HTTP</strong> or <strong>gRPC</strong>.</p>
+     * <p> This parameter takes effect only if you set <strong>HealthCheckProtocol</strong> to <strong>HTTP</strong>, <strong>HTTPS</strong>, or <strong>gRPC</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -89,11 +89,12 @@ public class GetHealthCheckTemplateAttributeResponseBody extends TeaModel {
     public String healthCheckPath;
 
     /**
-     * <p>The protocol that you want to use for health checks. Valid values:</p>
+     * <p>The protocol that is used for health checks. Valid values:</p>
      * <ul>
-     * <li><strong>HTTP</strong> (default): To perform HTTP health checks, ALB sends HEAD or GET requests to a backend server to check whether the backend server is healthy.</li>
-     * <li><strong>TCP</strong>: To perform TCP health checks, ALB sends SYN packets to a backend server to check whether the port of the backend server is available to receive requests.</li>
-     * <li><strong>gRPC</strong>: To perform gRPC health checks, ALB sends POST or GET requests to a backend server to check whether the backend server is healthy.</li>
+     * <li><strong>HTTP</strong> (default): HTTP health checks simulate browser behaviors by sending HEAD or GET requests to probe the availability of backend servers.</li>
+     * <li><strong>HTTPS</strong>: The ALB instance sends HEAD or GET requests, which simulate browser requests, to check whether the backend server is healthy. HTTPS supports encryption and provides higher security than HTTP.</li>
+     * <li><strong>TCP</strong>: TCP health checks send TCP SYN packets to a backend server to probe the availability of backend servers.</li>
+     * <li><strong>gRPC</strong>: gRPC health checks send POST or GET requests to a backend server to probe the availability of backend servers.</li>
      * </ul>
      * 
      * <strong>example:</strong>

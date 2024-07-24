@@ -8,7 +8,7 @@ public class UpdateHealthCheckTemplateAttributeRequest extends TeaModel {
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</p>
+     * <p> If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -31,14 +31,7 @@ public class UpdateHealthCheckTemplateAttributeRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The HTTP status codes that are used to determine whether the backend server passes the health check.</p>
-     * <ul>
-     * <li>If <strong>HealthCheckProtocol</strong> is set to <strong>HTTP</strong>, <strong>HealthCheckCodes</strong> can be set to <strong>http_2xx</strong> (default), <strong>http_3xx</strong>, <strong>http_4xx</strong>, and <strong>http_5xx</strong>. Separate multiple HTTP status codes with a comma (,).</li>
-     * <li>If <strong>HealthCheckProtocol</strong> is set to <strong>gRPC</strong>, <strong>HealthCheckCodes</strong> can be set to <strong>0 to 99</strong>. Default value: <strong>0</strong>. Value ranges are supported. You can enter up to 20 value ranges and separate them with a comma (,).</li>
-     * </ul>
-     * <blockquote>
-     * <p>This parameter takes effect only when the <strong>HealthCheckProtocol</strong> parameter is set to <strong>HTTP</strong> or <strong>gRPC</strong>.</p>
-     * </blockquote>
+     * <p>The HTTP status codes that indicate healthy backend servers.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -56,13 +49,13 @@ public class UpdateHealthCheckTemplateAttributeRequest extends TeaModel {
     public Integer healthCheckConnectPort;
 
     /**
-     * <p>The domain name that you want to use for the health check. Valid values:</p>
+     * <p>The domain name that is used for health checks. Valid values:</p>
      * <ul>
-     * <li><strong>$SERVER_IP</strong> (default): the private IP addresses of backend servers. If you do not set the HealthCheckHost parameter or set the parameter to $SERVER_IP, the Application Load Balancer (ALB) uses the private IP addresses of backend servers for health checks.</li>
-     * <li><strong>domain</strong>: The domain name must be 1 to 80 characters in length and can contain letters, digits, periods (.), and hyphens (-).</li>
+     * <li><strong>$SERVER_IP</strong> (default): the private IP address of a backend server. If an IP address is specified, or this parameter is not specified, the ALB instance uses the private IP addresses of backend servers as domain names for health checks.</li>
+     * <li><strong>domain</strong>: The domain name must be 1 to 80 characters in length, and can contain letters, digits, periods (.), and hyphens (-).</li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is valid only if the <code>HealthCheckProtocol</code> parameter is set to <strong>HTTP</strong>.</p>
+     * <p> This parameter is supported only when you set <code>HealthCheckProtocol</code> to <strong>HTTP</strong> or <strong>HTTPS</strong>. HTTPS is unavailable by default. If you want to use HTTPS, log on to the SLB console, go to the Quota Center page, click the <strong>ALB</strong> tab, and then apply for the privilege to use HTTPS.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -72,11 +65,11 @@ public class UpdateHealthCheckTemplateAttributeRequest extends TeaModel {
     public String healthCheckHost;
 
     /**
-     * <p>The HTTP version that is used for health checks.</p>
+     * <p>The HTTP version for health checks.</p>
      * <p>Valid values: <strong>HTTP1.0</strong> and <strong>HTTP1.1</strong>.</p>
      * <p>Default value: <strong>HTTP1.1</strong>.</p>
      * <blockquote>
-     * <p>This parameter is valid only if the <code>HealthCheckProtocol</code> parameter is set to <strong>HTTP</strong>.</p>
+     * <p> This parameter takes effect only when <code>HealthCheckProtocol</code> is set to <strong>HTTP</strong> or <strong>HTTPS</strong>. HTTPS is unavailable by default. If you want to use HTTPS, log on to the SLB console, go to the Quota Center page, click the <strong>ALB</strong> tab, and then apply for the privilege to use HTTPS.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -95,14 +88,14 @@ public class UpdateHealthCheckTemplateAttributeRequest extends TeaModel {
     public Integer healthCheckInterval;
 
     /**
-     * <p>The method that you want to use for the health check. Valid values:</p>
+     * <p>The HTTP method that is used for health checks. Valid values:</p>
      * <ul>
-     * <li><strong>HEAD</strong>: By default, the ALB instance sends HEAD requests to a backend server to perform HTTP health checks.</li>
+     * <li><strong>HEAD</strong> (default): By default, HTTP and HTTPS health checks use the HEAD method.</li>
      * <li><strong>GET</strong>: If the length of a response exceeds 8 KB, the response is truncated. However, the health check result is not affected.</li>
-     * <li><strong>POST</strong>: gRPC health checks automatically use the POST method.</li>
+     * <li><strong>POST</strong>: gRPC health checks use the POST method by default.</li>
      * </ul>
      * <blockquote>
-     * <p>This parameter takes effect only when the <strong>HealthCheckProtocol</strong> parameter is set to <strong>HTTP</strong> or <strong>gRPC</strong>.</p>
+     * <p> This parameter is supported only when you set <strong>HealthCheckProtocol</strong> to <strong>HTTP</strong>, <strong>HTTPS</strong>, or <strong>gRPC</strong>. HTTPS is unavailable by default. If you want to use HTTPS, log on to the SLB console, go to the Quota Center page, click the <strong>ALB</strong> tab, and then apply for the privilege to use HTTPS.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -112,11 +105,11 @@ public class UpdateHealthCheckTemplateAttributeRequest extends TeaModel {
     public String healthCheckMethod;
 
     /**
-     * <p>The URL path that is used for health checks.</p>
-     * <p>The URL must be 1 to 80 characters in length and can contain only letters, digits, hyphens (-), forward slashes (/), periods (.), percent signs (%), question marks (?), number signs (#), and ampersands (&amp;). The URL can also contain the following extended characters: <code>_ ; ~ ! ( ) * [ ] @ $ ^ : \\&quot; , +</code>.</p>
+     * <p>The URL that is used for health checks.</p>
+     * <p>The URL must be 1 to 80 characters in length and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), percent signs (%), question marks (?), number signs (#), ampersands (&amp;), and the following extended character sets: <code>_ ; ~ ! ( ) * [ ] @ $ ^ : \\&quot; , +</code>.</p>
      * <p>The URL must start with a forward slash (/).</p>
      * <blockquote>
-     * <p>This parameter takes effect only when the <strong>HealthCheckProtocol</strong> parameter is set to <strong>HTTP</strong> or <strong>gRPC</strong>.</p>
+     * <p> This parameter is supported only when you set <strong>HealthCheckProtocol</strong> to <strong>HTTP</strong>, <strong>HTTPS</strong>, or <strong>gRPC</strong>. HTTPS is unavailable by default. If you want to use HTTPS, log on to the SLB console, go to the Quota Center page, click the <strong>ALB</strong> tab, and then apply for the privilege to use HTTPS.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -126,12 +119,16 @@ public class UpdateHealthCheckTemplateAttributeRequest extends TeaModel {
     public String healthCheckPath;
 
     /**
-     * <p>The protocol that you want to use for health checks. Valid values:</p>
+     * <p>The protocol that is used for health checks. Valid values:</p>
      * <ul>
-     * <li><strong>HTTP</strong> (default): To perform HTTP health checks, ALB sends HEAD or GET requests to a backend server to check whether the backend server is healthy.</li>
-     * <li><strong>TCP</strong>: To perform TCP health checks, ALB sends SYN packets to a backend server to check whether the port of the backend server is available to receive requests.</li>
-     * <li><strong>gRPC</strong>: To perform gRPC health checks, ALB sends POST or GET requests to a backend server to check whether the backend server is healthy.</li>
+     * <li><strong>HTTP</strong> (default): HTTP health checks simulate browser behaviors by sending HEAD or GET requests to probe the availability of backend servers.</li>
+     * <li><strong>HTTPS</strong>: The ALB instance sends HEAD or GET requests, which simulate browser requests, to check whether the backend server is healthy. HTTPS provides higher security than HTTP because HTTPS supports data encryption.</li>
+     * <li><strong>TCP</strong>: TCP health checks send TCP SYN packets to a backend server to check whether the port of the backend server is reachable.</li>
+     * <li><strong>gRPC</strong>: gRPC health checks send POST or GET requests to a backend server to check whether the backend server is healthy.</li>
      * </ul>
+     * <blockquote>
+     * <p> HTTPS is unavailable by default. If you want to use HTTPS, log on to the SLB console, go to the Quota Center page, click the <strong>ALB</strong> tab, and then apply for the privilege to use HTTPS.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>HTTP</p>

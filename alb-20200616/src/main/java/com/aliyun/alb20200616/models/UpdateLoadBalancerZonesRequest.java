@@ -41,7 +41,7 @@ public class UpdateLoadBalancerZonesRequest extends TeaModel {
     public String loadBalancerId;
 
     /**
-     * <p>The zones and the vSwitches. You must specify at least two zones. The specified zones overwrite the existing configurations.</p>
+     * <p>The zones and the vSwitches. You must specify at least two zones. The specified zones and vSwitches overwrite the existing configurations.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ZoneMappings")
@@ -85,11 +85,17 @@ public class UpdateLoadBalancerZonesRequest extends TeaModel {
     }
 
     public static class UpdateLoadBalancerZonesRequestZoneMappings extends TeaModel {
+        /**
+         * <p>The private IPv4 address. You must specify at least two zones. You can specify at most 10 zones.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.10.1</p>
+         */
         @NameInMap("IntranetAddress")
         public String intranetAddress;
 
         /**
-         * <p>The ID of the vSwitch in the zone. By default, you can specify only one vSwitch (subnet) for each zone of an ALB instance. You can specify up to 10 zone IDs.</p>
+         * <p>The ID of the vSwitch in the zone. By default, each zone contains one vSwitch and one subnet. You can specify at least 10 zones.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -99,7 +105,7 @@ public class UpdateLoadBalancerZonesRequest extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>The name of the zone. You can call the <a href="https://help.aliyun.com/document_detail/189196.html">DescribeZones</a> operation to query the zones. You can specify up to 10 zone IDs.</p>
+         * <p>The zone name. You can call the <a href="https://help.aliyun.com/document_detail/189196.html">DescribeZones</a> operation to query the most recent zone list. You can specify at least 10 zones.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

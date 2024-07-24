@@ -534,19 +534,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Prerequisites</h3>
+     * <h3><a href="#"></a>Prerequisites</h3>
      * <ul>
      * <li>A standard or WAF-enabled Application Load Balancer (ALB) instance is created. For more information, see <a href="https://help.aliyun.com/document_detail/214358.html">CreateLoadBalancer</a>.</li>
-     * <li>By default, the feature to create and manage AScript rules is unavailable. Log on to the <a href="https://quotas.console.aliyun.com/white-list-products/alb/quotas?spm=a2c4g.11186623.0.0.6e8834f6IFiF2I">Quota Center console</a>. On the <strong>Privileges</strong> page, enter the quota ID <code>slb_user_visible_gray_label/ascript</code> and apply for the quota.</li>
      * </ul>
-     * <h3>Usage notes</h3>
+     * <h3><a href="#"></a>Usage notes</h3>
+     * <p><strong>CreateAScripts</strong> an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/472574.html">ListAScripts</a> operation to query the status of a script.</p>
      * <ul>
-     * <li><strong>CreateAScripts</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/472574.html">ListAScripts</a> operation to query the status of the task:<ul>
-     * <li>If an AScript rule is in the <strong>Creating</strong> state, the AScript rule is being created.</li>
-     * <li>If an AScript rule is in the <strong>Available</strong> state, the AScript rule is created.</li>
-     * </ul>
-     * </li>
-     * <li>In the following table, the value of <strong>N</strong> is <strong>1</strong>.</li>
+     * <li>If the script is in the <strong>Creating</strong> state, the script is being created.</li>
+     * <li>If the script is in the <strong>Available</strong>, the script is created.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -594,19 +590,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Prerequisites</h3>
+     * <h3><a href="#"></a>Prerequisites</h3>
      * <ul>
      * <li>A standard or WAF-enabled Application Load Balancer (ALB) instance is created. For more information, see <a href="https://help.aliyun.com/document_detail/214358.html">CreateLoadBalancer</a>.</li>
-     * <li>By default, the feature to create and manage AScript rules is unavailable. Log on to the <a href="https://quotas.console.aliyun.com/white-list-products/alb/quotas?spm=a2c4g.11186623.0.0.6e8834f6IFiF2I">Quota Center console</a>. On the <strong>Privileges</strong> page, enter the quota ID <code>slb_user_visible_gray_label/ascript</code> and apply for the quota.</li>
      * </ul>
-     * <h3>Usage notes</h3>
+     * <h3><a href="#"></a>Usage notes</h3>
+     * <p><strong>CreateAScripts</strong> an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/472574.html">ListAScripts</a> operation to query the status of a script.</p>
      * <ul>
-     * <li><strong>CreateAScripts</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/472574.html">ListAScripts</a> operation to query the status of the task:<ul>
-     * <li>If an AScript rule is in the <strong>Creating</strong> state, the AScript rule is being created.</li>
-     * <li>If an AScript rule is in the <strong>Available</strong> state, the AScript rule is created.</li>
-     * </ul>
-     * </li>
-     * <li>In the following table, the value of <strong>N</strong> is <strong>1</strong>.</li>
+     * <li>If the script is in the <strong>Creating</strong> state, the script is being created.</li>
+     * <li>If the script is in the <strong>Available</strong>, the script is created.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -3967,8 +3959,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  By default, security groups are unavailable. To use security groups, contact your account manager.</p>
+     * <ul>
+     * <li>Make sure that a security group is created. For more information about how to create security groups, see <a href="https://help.aliyun.com/document_detail/2679843.html">CreateSecurityGroup</a>.</li>
+     * <li>Each ALB instance can be added to at most four security groups.</li>
+     * <li>To query the security groups of an ALB instance, call the <a href="https://help.aliyun.com/document_detail/2254835.html">GetLoadBalancerAttribute</a> operation.</li>
+     * <li>GetLoadBalancerAttribute is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/2254893.html">ListAsynJobs</a> operation to query the status of the task.<ul>
+     * <li>If the task is in the Succeeded state, the ALB instance is added to the security group.</li>
+     * <li>If the task is in the Processing state, the ALB instance is being added to the security group. In this case, you can query the task but cannot perform other operations.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建访问控制信息</p>
+     * <p>Adds an Application Load Balancer (ALB) instance to a security group.</p>
      * 
      * @param request LoadBalancerJoinSecurityGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4011,8 +4016,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  By default, security groups are unavailable. To use security groups, contact your account manager.</p>
+     * <ul>
+     * <li>Make sure that a security group is created. For more information about how to create security groups, see <a href="https://help.aliyun.com/document_detail/2679843.html">CreateSecurityGroup</a>.</li>
+     * <li>Each ALB instance can be added to at most four security groups.</li>
+     * <li>To query the security groups of an ALB instance, call the <a href="https://help.aliyun.com/document_detail/2254835.html">GetLoadBalancerAttribute</a> operation.</li>
+     * <li>GetLoadBalancerAttribute is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/2254893.html">ListAsynJobs</a> operation to query the status of the task.<ul>
+     * <li>If the task is in the Succeeded state, the ALB instance is added to the security group.</li>
+     * <li>If the task is in the Processing state, the ALB instance is being added to the security group. In this case, you can query the task but cannot perform other operations.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建访问控制信息</p>
+     * <p>Adds an Application Load Balancer (ALB) instance to a security group.</p>
      * 
      * @param request LoadBalancerJoinSecurityGroupRequest
      * @return LoadBalancerJoinSecurityGroupResponse
@@ -4023,8 +4041,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  LoadBalancerLeaveSecurityGroup is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/2254893.html">ListAsynJobs</a> operation to query the status of the task.
+     *     *   If the task is in the Succeeded state, the ALB instance is removed from the security group.
+     *     *   If the task is in the Processing state, the ALB instance is being removed from the security group. In this case, you can query the task but cannot perform other operations.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建访问控制信息</p>
+     * <p>Removes an Application Load Balancer (ALB) instance from a security group.</p>
      * 
      * @param request LoadBalancerLeaveSecurityGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4067,8 +4090,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  LoadBalancerLeaveSecurityGroup is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/2254893.html">ListAsynJobs</a> operation to query the status of the task.
+     *     *   If the task is in the Succeeded state, the ALB instance is removed from the security group.
+     *     *   If the task is in the Processing state, the ALB instance is being removed from the security group. In this case, you can query the task but cannot perform other operations.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建访问控制信息</p>
+     * <p>Removes an Application Load Balancer (ALB) instance from a security group.</p>
      * 
      * @param request LoadBalancerLeaveSecurityGroupRequest
      * @return LoadBalancerLeaveSecurityGroupResponse
@@ -4684,11 +4712,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>UpdateAScripts</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/472574.html">ListAScripts</a> operation to query the status of the task.
-     *     *   If an AScript rule is in the <strong>Configuring</strong> state, the AScript rule is being updated.
-     *     *   If an AScript rule is in the <strong>Available</strong> state, the AScript rule is updated.</p>
+     * <p><em>UpdateAScripts</em>* is an an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/472574.html">ListAScripts</a> operation to query the status of an AScript rule.</p>
      * <ul>
-     * <li>In the following table, the maximum value of <strong>N</strong> is <strong>4</strong>.</li>
+     * <li>If the rule is in the <strong>Configuring</strong> state, the rule is being updated.</li>
+     * <li>If the rule is in the <strong>Available</strong> state, the rule is updated.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -4732,11 +4759,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>UpdateAScripts</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/472574.html">ListAScripts</a> operation to query the status of the task.
-     *     *   If an AScript rule is in the <strong>Configuring</strong> state, the AScript rule is being updated.
-     *     *   If an AScript rule is in the <strong>Available</strong> state, the AScript rule is updated.</p>
+     * <p><em>UpdateAScripts</em>* is an an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/472574.html">ListAScripts</a> operation to query the status of an AScript rule.</p>
      * <ul>
-     * <li>In the following table, the maximum value of <strong>N</strong> is <strong>4</strong>.</li>
+     * <li>If the rule is in the <strong>Configuring</strong> state, the rule is being updated.</li>
+     * <li>If the rule is in the <strong>Available</strong> state, the rule is updated.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -5262,12 +5288,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2></h2>
+     * <p>  You can only upgrade a basic ALB instance to a standard ALB instance or a WAF-enabled ALB instance. You cannot downgrade a standard ALB instance or a WAF-enabled ALB instance to a basic ALB instance. For more information, see <a href="https://help.aliyun.com/document_detail/214654.html">Upgrade an ALB instance</a>.</p>
      * <ul>
-     * <li>You can upgrade a basic ALB instance to a standard ALB instance or a WAF-enabled ALB instance but you cannot downgrade a standard ALB instance or a WAF-enabled ALB instance to a basic ALB instance. For more information, see <a href="https://help.aliyun.com/document_detail/214654.html">Upgrade an ALB instance</a>.</li>
-     * <li><strong>UpdateLoadBalancerEdition</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/214362.html">GetLoadBalancerAttribute</a> to query the status of the task.<ul>
+     * <li><strong>UpdateLoadBalancerEdition</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/214362.html">GetLoadBalancerAttribute</a> operation to query the status of an ALB instance.<ul>
      * <li>If the ALB instance is in the <strong>Configuring</strong> state, the edition of the ALB instance is being modified.</li>
-     * <li>If the ALB instance is in the <strong>Active</strong> state, the edition of the ALB instance has been modified.</li>
+     * <li>If the ALB instance is in the <strong>Active</strong> state, the edition of the ALB instance is modified.</li>
      * </ul>
      * </li>
      * </ul>
@@ -5317,12 +5342,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2></h2>
+     * <p>  You can only upgrade a basic ALB instance to a standard ALB instance or a WAF-enabled ALB instance. You cannot downgrade a standard ALB instance or a WAF-enabled ALB instance to a basic ALB instance. For more information, see <a href="https://help.aliyun.com/document_detail/214654.html">Upgrade an ALB instance</a>.</p>
      * <ul>
-     * <li>You can upgrade a basic ALB instance to a standard ALB instance or a WAF-enabled ALB instance but you cannot downgrade a standard ALB instance or a WAF-enabled ALB instance to a basic ALB instance. For more information, see <a href="https://help.aliyun.com/document_detail/214654.html">Upgrade an ALB instance</a>.</li>
-     * <li><strong>UpdateLoadBalancerEdition</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/214362.html">GetLoadBalancerAttribute</a> to query the status of the task.<ul>
+     * <li><strong>UpdateLoadBalancerEdition</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/214362.html">GetLoadBalancerAttribute</a> operation to query the status of an ALB instance.<ul>
      * <li>If the ALB instance is in the <strong>Configuring</strong> state, the edition of the ALB instance is being modified.</li>
-     * <li>If the ALB instance is in the <strong>Active</strong> state, the edition of the ALB instance has been modified.</li>
+     * <li>If the ALB instance is in the <strong>Active</strong> state, the edition of the ALB instance is modified.</li>
      * </ul>
      * </li>
      * </ul>

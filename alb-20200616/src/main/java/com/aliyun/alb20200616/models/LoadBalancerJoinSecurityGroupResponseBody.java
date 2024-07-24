@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class LoadBalancerJoinSecurityGroupResponseBody extends TeaModel {
     /**
+     * <p>The ID of the asynchronous task.</p>
+     * 
      * <strong>example:</strong>
      * <p>8fe81f25-79a0-4fa0-9036-f2601fda****</p>
      */
@@ -12,6 +14,8 @@ public class LoadBalancerJoinSecurityGroupResponseBody extends TeaModel {
     public String jobId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D3B9AE45-F5DB-58E3-A4B5-EE58F1EC****</p>
      */

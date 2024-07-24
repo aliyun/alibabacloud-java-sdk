@@ -848,7 +848,7 @@ public class ListListenersResponseBody extends TeaModel {
         public String loadBalancerId;
 
         /**
-         * <p>The configuration of logs.</p>
+         * <p>The logging configurations.</p>
          */
         @NameInMap("LogConfig")
         public ListListenersResponseBodyListenersLogConfig logConfig;
@@ -882,7 +882,7 @@ public class ListListenersResponseBody extends TeaModel {
         public String securityPolicyId;
 
         /**
-         * <p>The tags of the dataset.</p>
+         * <p>The tags.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListListenersResponseBodyListenersTags> tags;

@@ -14,7 +14,8 @@ public class ListAsynJobsRequest extends TeaModel {
     public String apiName;
 
     /**
-     * <p>The start time of the task. Specify the time in the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in UTC.</p>
+     * <p>The timestamp that indicates the start time of the task. Unit: milliseconds.</p>
+     * <p>Specify the timestamp in the Unix format to indicate the total amount of time that is from 00:00:00 (UTC+0) on January 1, 1970 to when the status of the asynchronous task is queried.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-06-03T17:22Z</p>
@@ -23,7 +24,8 @@ public class ListAsynJobsRequest extends TeaModel {
     public Long beginTime;
 
     /**
-     * <p>The end time of the task. Specify the time in the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in UTC.</p>
+     * <p>The timestamp that indicates the end time of the task. Unit: milliseconds.</p>
+     * <p>Specify the timestamp in the Unix format to indicate the total amount of time that is from 00:00:00 (UTC+0) on January 1, 1970 to when the status of the asynchronous task is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-06-04T17:22Z</p>

@@ -112,7 +112,6 @@ public class AddServersToServerGroupRequest extends TeaModel {
          * <li><strong>true</strong></li>
          * <li><strong>false</strong></li>
          * </ul>
-         * <p>Regions that support the remote IP address feature: China (Hangzhou), China (Shenzhen), China (Qingdao), China (Beijing), China (Zhangjiakou), China (Ulanqab), China (Shanghai), China (Chengdu), China (Guangzhou), China (Hong Kong), US (Virginia), Japan (Tokyo), UK (London), US (Silicon Valley), Germany (Frankfurt), Indonesia (Jakarta), Singapore, Malaysia (Kuala Lumpur), Australia (Sydney), and India (Mumbai).</p>
          * <blockquote>
          * <p>If <strong>ServerType</strong> is set to <strong>Ip</strong>, this parameter is available.</p>
          * </blockquote>
