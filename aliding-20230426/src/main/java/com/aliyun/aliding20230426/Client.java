@@ -1102,6 +1102,78 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>校验阿里员工</p>
+     * 
+     * @param tmpReq CheckAlibabaStaffRequest
+     * @param tmpHeader CheckAlibabaStaffHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CheckAlibabaStaffResponse
+     */
+    public CheckAlibabaStaffResponse checkAlibabaStaffWithOptions(CheckAlibabaStaffRequest tmpReq, CheckAlibabaStaffHeaders tmpHeader, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CheckAlibabaStaffShrinkRequest request = new CheckAlibabaStaffShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        CheckAlibabaStaffShrinkHeaders headers = new CheckAlibabaStaffShrinkHeaders();
+        com.aliyun.openapiutil.Client.convert(tmpHeader, headers);
+        if (!com.aliyun.teautil.Common.isUnset(tmpHeader.accountContext)) {
+            headers.accountContextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpHeader.accountContext, "AccountContext", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tenantContext)) {
+            request.tenantContextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tenantContext, "TenantContext", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.mobile)) {
+            body.put("Mobile", request.mobile);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantContextShrink)) {
+            body.put("TenantContext", request.tenantContextShrink);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.accountContextShrink)) {
+            realHeaders.put("AccountContext", com.aliyun.teautil.Common.toJSONString(headers.accountContextShrink));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CheckAlibabaStaff"),
+            new TeaPair("version", "2023-04-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dingtalk/v1/im/checkAlibabaStaff"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CheckAlibabaStaffResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>校验阿里员工</p>
+     * 
+     * @param request CheckAlibabaStaffRequest
+     * @return CheckAlibabaStaffResponse
+     */
+    public CheckAlibabaStaffResponse checkAlibabaStaff(CheckAlibabaStaffRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        CheckAlibabaStaffHeaders headers = new CheckAlibabaStaffHeaders();
+        return this.checkAlibabaStaffWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>查询用户是否为企业内部群成员</p>
      * 
      * @param request CheckUserIsGroupMemberRequest
@@ -15468,6 +15540,102 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         UpdateUserAvatarHeaders headers = new UpdateUserAvatarHeaders();
         return this.updateUserAvatarWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>设置正在进行中的视频会议属性</p>
+     * 
+     * @param tmpReq UpdateVideoConferenceSettingRequest
+     * @param tmpHeader UpdateVideoConferenceSettingHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateVideoConferenceSettingResponse
+     */
+    public UpdateVideoConferenceSettingResponse updateVideoConferenceSettingWithOptions(UpdateVideoConferenceSettingRequest tmpReq, UpdateVideoConferenceSettingHeaders tmpHeader, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateVideoConferenceSettingShrinkRequest request = new UpdateVideoConferenceSettingShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        UpdateVideoConferenceSettingShrinkHeaders headers = new UpdateVideoConferenceSettingShrinkHeaders();
+        com.aliyun.openapiutil.Client.convert(tmpHeader, headers);
+        if (!com.aliyun.teautil.Common.isUnset(tmpHeader.accountContext)) {
+            headers.accountContextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpHeader.accountContext, "AccountContext", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tenantContext)) {
+            request.tenantContextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tenantContext, "TenantContext", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.allowUnmuteSelf)) {
+            body.put("AllowUnmuteSelf", request.allowUnmuteSelf);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoTransferHost)) {
+            body.put("AutoTransferHost", request.autoTransferHost);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.forbiddenShareScreen)) {
+            body.put("ForbiddenShareScreen", request.forbiddenShareScreen);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lockConference)) {
+            body.put("LockConference", request.lockConference);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.muteAll)) {
+            body.put("MuteAll", request.muteAll);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.onlyInternalEmployeesJoin)) {
+            body.put("OnlyInternalEmployeesJoin", request.onlyInternalEmployeesJoin);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantContextShrink)) {
+            body.put("TenantContext", request.tenantContextShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.conferenceId)) {
+            body.put("conferenceId", request.conferenceId);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.accountContextShrink)) {
+            realHeaders.put("AccountContext", com.aliyun.teautil.Common.toJSONString(headers.accountContextShrink));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateVideoConferenceSetting"),
+            new TeaPair("version", "2023-04-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dingtalk/v1/ysp/updateVideoConferenceSetting"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateVideoConferenceSettingResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>设置正在进行中的视频会议属性</p>
+     * 
+     * @param request UpdateVideoConferenceSettingRequest
+     * @return UpdateVideoConferenceSettingResponse
+     */
+    public UpdateVideoConferenceSettingResponse updateVideoConferenceSetting(UpdateVideoConferenceSettingRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        UpdateVideoConferenceSettingHeaders headers = new UpdateVideoConferenceSettingHeaders();
+        return this.updateVideoConferenceSettingWithOptions(request, headers, runtime);
     }
 
     /**
