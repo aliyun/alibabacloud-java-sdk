@@ -4,18 +4,34 @@ package com.aliyun.qualitycheck20190115.models;
 import com.aliyun.tea.*;
 
 public class GetNextResultToVerifyResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public GetNextResultToVerifyResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>successful</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>106C6CA0-282D-4AF7-85F0-D2D24F4CE647</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -87,6 +103,10 @@ public class GetNextResultToVerifyResponseBody extends TeaModel {
         @NameInMap("Line")
         public GetNextResultToVerifyResponseBodyDataDialoguesDialogueDeltasDeltaSourceLine line;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("Position")
         public Integer position;
 
@@ -136,6 +156,10 @@ public class GetNextResultToVerifyResponseBody extends TeaModel {
         @NameInMap("Line")
         public GetNextResultToVerifyResponseBodyDataDialoguesDialogueDeltasDeltaTargetLine line;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("Position")
         public Integer position;
 
@@ -169,6 +193,10 @@ public class GetNextResultToVerifyResponseBody extends TeaModel {
         @NameInMap("Target")
         public GetNextResultToVerifyResponseBodyDataDialoguesDialogueDeltasDeltaTarget target;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CHANGE</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -223,33 +251,61 @@ public class GetNextResultToVerifyResponseBody extends TeaModel {
     }
 
     public static class GetNextResultToVerifyResponseBodyDataDialoguesDialogue extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>980</p>
+         */
         @NameInMap("Begin")
         public Long begin;
 
+        /**
+         * <strong>example:</strong>
+         * <p>XXX</p>
+         */
         @NameInMap("BeginTime")
         public String beginTime;
 
         @NameInMap("Deltas")
         public GetNextResultToVerifyResponseBodyDataDialoguesDialogueDeltas deltas;
 
+        /**
+         * <strong>example:</strong>
+         * <p>6</p>
+         */
         @NameInMap("EmotionValue")
         public Integer emotionValue;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3422</p>
+         */
         @NameInMap("End")
         public Long end;
 
+        /**
+         * <strong>example:</strong>
+         * <p>00:00:07</p>
+         */
         @NameInMap("HourMinSec")
         public String hourMinSec;
 
         @NameInMap("Identity")
         public String identity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("IncorrectWords")
         public Integer incorrectWords;
 
         @NameInMap("Role")
         public String role;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("SilenceDuration")
         public Integer silenceDuration;
 
@@ -259,6 +315,10 @@ public class GetNextResultToVerifyResponseBody extends TeaModel {
         @NameInMap("SourceWords")
         public String sourceWords;
 
+        /**
+         * <strong>example:</strong>
+         * <p>332</p>
+         */
         @NameInMap("SpeechRate")
         public Integer speechRate;
 
@@ -404,45 +464,97 @@ public class GetNextResultToVerifyResponseBody extends TeaModel {
     }
 
     public static class GetNextResultToVerifyResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>http</p>
+         */
         @NameInMap("AudioScheme")
         public String audioScheme;
 
+        /**
+         * <strong>example:</strong>
+         * <p>sca-bucket.oss-cn-hangzhou.aliyuncs.com/upload_1173636551461420/dateset_1584674455133_SzC/%E4%BA%BA%E5%B7%A5%E6%A0%A1%E9%AA%8C%E6%B5%8B%E8%AF%95-%E6%9F%A5%E5%8C%97%E4%BA%AC%E5%A4%A9%E6%B0%94.wav?Expires=1584847372&amp;OSSAccessKeyId=<em><strong><strong>&amp;Signature=HccAKnLOJwoYvzE</strong></strong></em>****</p>
+         */
         @NameInMap("AudioURL")
         public String audioURL;
 
         @NameInMap("Dialogues")
         public GetNextResultToVerifyResponseBodyDataDialogues dialogues;
 
+        /**
+         * <strong>example:</strong>
+         * <p>23421</p>
+         */
         @NameInMap("Duration")
         public Integer duration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>e790e6c919d84b82b64ee*****</p>
+         */
         @NameInMap("FileId")
         public String fileId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxx.wav</p>
+         */
         @NameInMap("FileName")
         public String fileName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>23</p>
+         */
         @NameInMap("IncorrectWords")
         public Integer incorrectWords;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("Index")
         public Integer index;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.97079998</p>
+         */
         @NameInMap("Precision")
         public Float precision;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-03-20T11:26Z</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Verified")
         public Boolean verified;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("VerifiedCount")
         public Integer verifiedCount;
 

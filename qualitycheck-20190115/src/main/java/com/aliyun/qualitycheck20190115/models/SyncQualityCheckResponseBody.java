@@ -4,18 +4,34 @@ package com.aliyun.qualitycheck20190115.models;
 import com.aliyun.tea.*;
 
 public class SyncQualityCheckResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public SyncQualityCheckResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>successful</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>66E1ACB8-17B2-4BE8-8581-954A8*****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,15 +81,31 @@ public class SyncQualityCheckResponseBody extends TeaModel {
     }
 
     public static class SyncQualityCheckResponseBodyDataRulesHitHitKeyWords extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2312</p>
+         */
         @NameInMap("Cid")
         public Integer cid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("From")
         public Integer from;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("Pid")
         public Integer pid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("To")
         public Integer to;
 
@@ -128,24 +160,48 @@ public class SyncQualityCheckResponseBody extends TeaModel {
     }
 
     public static class SyncQualityCheckResponseBodyDataRulesHitPhrase extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1230</p>
+         */
         @NameInMap("Begin")
         public Long begin;
 
+        /**
+         * <strong>example:</strong>
+         * <p>6</p>
+         */
         @NameInMap("EmotionValue")
         public Integer emotionValue;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3440</p>
+         */
         @NameInMap("End")
         public Long end;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("Identity")
         public String identity;
 
         @NameInMap("Role")
         public String role;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("SilenceDuration")
         public Integer silenceDuration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>233</p>
+         */
         @NameInMap("SpeechRate")
         public Integer speechRate;
 
@@ -257,6 +313,10 @@ public class SyncQualityCheckResponseBody extends TeaModel {
         @NameInMap("Hit")
         public java.util.List<SyncQualityCheckResponseBodyDataRulesHit> hit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>232232</p>
+         */
         @NameInMap("Rid")
         public String rid;
 
@@ -295,18 +355,34 @@ public class SyncQualityCheckResponseBody extends TeaModel {
     }
 
     public static class SyncQualityCheckResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1584535485856</p>
+         */
         @NameInMap("BeginTime")
         public Long beginTime;
 
         @NameInMap("Rules")
         public java.util.List<SyncQualityCheckResponseBodyDataRules> rules;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Score")
         public Integer score;
 
+        /**
+         * <strong>example:</strong>
+         * <p>66E1ACB866E1ACB8</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20200876-66E1ACB8</p>
+         */
         @NameInMap("Tid")
         public String tid;
 

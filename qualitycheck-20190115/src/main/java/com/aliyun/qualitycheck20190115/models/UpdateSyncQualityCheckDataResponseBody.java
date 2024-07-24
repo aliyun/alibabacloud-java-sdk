@@ -4,18 +4,34 @@ package com.aliyun.qualitycheck20190115.models;
 import com.aliyun.tea.*;
 
 public class UpdateSyncQualityCheckDataResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public UpdateSyncQualityCheckDataResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>successful</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>76DB5D8C-5BD9-42A7-B527-5AF3A5F8***</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,9 +81,17 @@ public class UpdateSyncQualityCheckDataResponseBody extends TeaModel {
     }
 
     public static class UpdateSyncQualityCheckDataResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>123123D8C-5BD9-42A7-B527-1235F8**</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20210101-1212121***</p>
+         */
         @NameInMap("Tid")
         public String tid;
 

@@ -10,6 +10,10 @@ public class DeleteSchemeTaskConfigRequest extends TeaModel {
     @NameInMap("BaseMeAgentId")
     public Long baseMeAgentId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;schemeId&quot;:&quot;329&quot;}</p>
+     */
     @NameInMap("jsonStr")
     public String jsonStr;
 

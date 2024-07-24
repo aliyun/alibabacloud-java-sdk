@@ -10,15 +10,33 @@ public class UpdateRuleByIdRequest extends TeaModel {
     @NameInMap("BaseMeAgentId")
     public Long baseMeAgentId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("IsCopy")
     public Boolean isCopy;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("JsonStrForRule")
     public String jsonStrForRule;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("ReturnRelatedSchemes")
     public Boolean returnRelatedSchemes;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("RuleId")
     public Long ruleId;
 

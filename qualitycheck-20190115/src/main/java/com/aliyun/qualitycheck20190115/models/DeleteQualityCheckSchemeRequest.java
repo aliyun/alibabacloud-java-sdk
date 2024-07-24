@@ -10,6 +10,10 @@ public class DeleteQualityCheckSchemeRequest extends TeaModel {
     @NameInMap("BaseMeAgentId")
     public Long baseMeAgentId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;schemeId&quot;:191}</p>
+     */
     @NameInMap("jsonStr")
     public String jsonStr;
 

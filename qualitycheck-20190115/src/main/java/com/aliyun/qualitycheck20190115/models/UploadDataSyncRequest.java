@@ -10,6 +10,12 @@ public class UploadDataSyncRequest extends TeaModel {
     @NameInMap("BaseMeAgentId")
     public Long baseMeAgentId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;tickets&quot;:xxx}</p>
+     */
     @NameInMap("JsonStr")
     public String jsonStr;
 

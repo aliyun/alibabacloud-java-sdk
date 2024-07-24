@@ -10,6 +10,12 @@ public class GetRuleByIdRequest extends TeaModel {
     @NameInMap("BaseMeAgentId")
     public Long baseMeAgentId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>53</p>
+     */
     @NameInMap("RuleId")
     public Long ruleId;
 

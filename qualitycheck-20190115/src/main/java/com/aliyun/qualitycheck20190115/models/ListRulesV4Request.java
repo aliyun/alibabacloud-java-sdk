@@ -19,69 +19,149 @@ public class ListRulesV4Request extends TeaModel {
     @NameInMap("CategoryName")
     public String categoryName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("CountTotal")
     public Boolean countTotal;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CreateEmpid")
     public String createEmpid;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CreateUserId")
     public Long createUserId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-11-29 19:11:09</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("LastUpdateEmpid")
     public String lastUpdateEmpid;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("RequireInfos")
     public java.util.List<String> requireInfos;
 
+    /**
+     * <strong>example:</strong>
+     * <p>895EAD5312634F5AA708E3B3FA79662E</p>
+     */
     @NameInMap("Rid")
     public Long rid;
 
+    /**
+     * <strong>example:</strong>
+     * <p>xx</p>
+     */
     @NameInMap("RuleIdOrRuleName")
     public String ruleIdOrRuleName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("RuleScoreSingleType")
     public Integer ruleScoreSingleType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("RuleType")
     public Integer ruleType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1000000090</p>
+     */
     @NameInMap("SchemeId")
     public Long schemeId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("SourceType")
     public Integer sourceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-11-29 18:11:09</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("Status")
     public Integer status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Type")
     public Integer type;
 
     @NameInMap("TypeName")
     public String typeName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-11-29 18:11:09</p>
+     */
     @NameInMap("UpdateEndTime")
     public String updateEndTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-11-29 16:11:09</p>
+     */
     @NameInMap("UpdateStartTime")
     public String updateStartTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("UpdateUserId")
     public Long updateUserId;
 

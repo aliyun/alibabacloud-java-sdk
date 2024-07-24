@@ -4,30 +4,62 @@ package com.aliyun.qualitycheck20190115.models;
 import com.aliyun.tea.*;
 
 public class GetResultResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Count")
     public Integer count;
 
     @NameInMap("Data")
     public GetResultResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>successful</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3CEA0495-341B-4482-9AD9-8191EF4***</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>XXX</p>
+     */
     @NameInMap("ResultCountId")
     public String resultCountId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -109,6 +141,10 @@ public class GetResultResponseBody extends TeaModel {
     }
 
     public static class GetResultResponseBodyDataResultInfoAgent extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>28240****15643</p>
+         */
         @NameInMap("Id")
         public String id;
 
@@ -150,21 +186,41 @@ public class GetResultResponseBody extends TeaModel {
     }
 
     public static class GetResultResponseBodyDataResultInfoAsrResultAsrResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>10000</p>
+         */
         @NameInMap("Begin")
         public Long begin;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("EmotionValue")
         public Integer emotionValue;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("End")
         public Long end;
 
         @NameInMap("Role")
         public String role;
 
+        /**
+         * <strong>example:</strong>
+         * <p>50</p>
+         */
         @NameInMap("SpeechRate")
         public Integer speechRate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("Words")
         public String words;
 
@@ -1177,7 +1233,7 @@ public class GetResultResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>Lambda表达式：例如:a&&b</p>
+         * <p>Lambda表达式：例如:a&amp;&amp;b</p>
          */
         @NameInMap("Lambda")
         public String lambda;
@@ -1296,15 +1352,31 @@ public class GetResultResponseBody extends TeaModel {
     }
 
     public static class GetResultResponseBodyDataResultInfoHitResultHitResultHitsHitKeyWordsKeyWord extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>xxxx</p>
+         */
         @NameInMap("Cid")
         public String cid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("From")
         public Integer from;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("To")
         public Integer to;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Val")
         public String val;
 
@@ -1367,18 +1439,34 @@ public class GetResultResponseBody extends TeaModel {
     }
 
     public static class GetResultResponseBodyDataResultInfoHitResultHitResultHitsHitPhrase extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>300</p>
+         */
         @NameInMap("Begin")
         public Long begin;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("EmotionValue")
         public Integer emotionValue;
 
+        /**
+         * <strong>example:</strong>
+         * <p>300</p>
+         */
         @NameInMap("End")
         public Integer end;
 
         @NameInMap("Role")
         public String role;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("Words")
         public String words;
 
@@ -1499,15 +1587,31 @@ public class GetResultResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ReviewResult")
         public Integer reviewResult;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1276</p>
+         */
         @NameInMap("Rid")
         public String rid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123xx</p>
+         */
         @NameInMap("SchemeId")
         public Long schemeId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>11xx</p>
+         */
         @NameInMap("SchemeVersion")
         public Long schemeVersion;
 
@@ -1605,15 +1709,27 @@ public class GetResultResponseBody extends TeaModel {
     }
 
     public static class GetResultResponseBodyDataResultInfoHitScoreHitScore extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("RuleId")
         public String ruleId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123456</p>
+         */
         @NameInMap("ScoreId")
         public String scoreId;
 
         @NameInMap("ScoreName")
         public String scoreName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>-20</p>
+         */
         @NameInMap("ScoreNumber")
         public String scoreNumber;
 
@@ -1679,75 +1795,171 @@ public class GetResultResponseBody extends TeaModel {
         @NameInMap("Business")
         public String business;
 
+        /**
+         * <strong>example:</strong>
+         * <p>XXXX</p>
+         */
         @NameInMap("CallId")
         public String callId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1563967699000</p>
+         */
         @NameInMap("CallTime")
         public String callTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("CallType")
         public Integer callType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1888888****</p>
+         */
         @NameInMap("Callee")
         public String callee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0108888****</p>
+         */
         @NameInMap("Caller")
         public String caller;
 
+        /**
+         * <strong>example:</strong>
+         * <p>XXXX</p>
+         */
         @NameInMap("DataSetName")
         public String dataSetName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>32</p>
+         */
         @NameInMap("DialogueSize")
         public Integer dialogueSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>60</p>
+         */
         @NameInMap("Duration")
         public Long duration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>XXXXX</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123456.mkv</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3437500</p>
+         */
         @NameInMap("PrimaryId")
         public String primaryId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>XXX</p>
+         */
         @NameInMap("Remark1")
         public String remark1;
 
+        /**
+         * <strong>example:</strong>
+         * <p>XXX</p>
+         */
         @NameInMap("Remark10")
         public String remark10;
 
+        /**
+         * <strong>example:</strong>
+         * <p>XXX</p>
+         */
         @NameInMap("Remark11")
         public String remark11;
 
+        /**
+         * <strong>example:</strong>
+         * <p>XXX</p>
+         */
         @NameInMap("Remark12")
         public String remark12;
 
+        /**
+         * <strong>example:</strong>
+         * <p>XXX</p>
+         */
         @NameInMap("Remark13")
         public String remark13;
 
+        /**
+         * <strong>example:</strong>
+         * <p>XXX</p>
+         */
         @NameInMap("Remark2")
         public String remark2;
 
+        /**
+         * <strong>example:</strong>
+         * <p>XXX</p>
+         */
         @NameInMap("Remark3")
         public String remark3;
 
+        /**
+         * <strong>example:</strong>
+         * <p>XXX</p>
+         */
         @NameInMap("Remark4")
         public String remark4;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1232</p>
+         */
         @NameInMap("Remark5")
         public Long remark5;
 
+        /**
+         * <strong>example:</strong>
+         * <p>XXX</p>
+         */
         @NameInMap("Remark6")
         public String remark6;
 
+        /**
+         * <strong>example:</strong>
+         * <p>XXX</p>
+         */
         @NameInMap("Remark7")
         public String remark7;
 
+        /**
+         * <strong>example:</strong>
+         * <p>XXX</p>
+         */
         @NameInMap("Remark8")
         public String remark8;
 
+        /**
+         * <strong>example:</strong>
+         * <p>XXX</p>
+         */
         @NameInMap("Remark9")
         public String remark9;
 
@@ -1757,6 +1969,10 @@ public class GetResultResponseBody extends TeaModel {
         @NameInMap("TaskConfigName")
         public String taskConfigName;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://aliyun.com/audio.wav">http://aliyun.com/audio.wav</a></p>
+         */
         @NameInMap("Url")
         public String url;
 
@@ -1991,6 +2207,282 @@ public class GetResultResponseBody extends TeaModel {
 
     }
 
+    public static class GetResultResponseBodyDataResultInfoReviewHistoryListReviewHistoryReviewRightRuleReviewRightRule extends TeaModel {
+        @NameInMap("rid")
+        public Long rid;
+
+        @NameInMap("ruleName")
+        public String ruleName;
+
+        public static GetResultResponseBodyDataResultInfoReviewHistoryListReviewHistoryReviewRightRuleReviewRightRule build(java.util.Map<String, ?> map) throws Exception {
+            GetResultResponseBodyDataResultInfoReviewHistoryListReviewHistoryReviewRightRuleReviewRightRule self = new GetResultResponseBodyDataResultInfoReviewHistoryListReviewHistoryReviewRightRuleReviewRightRule();
+            return TeaModel.build(map, self);
+        }
+
+        public GetResultResponseBodyDataResultInfoReviewHistoryListReviewHistoryReviewRightRuleReviewRightRule setRid(Long rid) {
+            this.rid = rid;
+            return this;
+        }
+        public Long getRid() {
+            return this.rid;
+        }
+
+        public GetResultResponseBodyDataResultInfoReviewHistoryListReviewHistoryReviewRightRuleReviewRightRule setRuleName(String ruleName) {
+            this.ruleName = ruleName;
+            return this;
+        }
+        public String getRuleName() {
+            return this.ruleName;
+        }
+
+    }
+
+    public static class GetResultResponseBodyDataResultInfoReviewHistoryListReviewHistoryReviewRightRule extends TeaModel {
+        @NameInMap("ReviewRightRule")
+        public java.util.List<GetResultResponseBodyDataResultInfoReviewHistoryListReviewHistoryReviewRightRuleReviewRightRule> reviewRightRule;
+
+        public static GetResultResponseBodyDataResultInfoReviewHistoryListReviewHistoryReviewRightRule build(java.util.Map<String, ?> map) throws Exception {
+            GetResultResponseBodyDataResultInfoReviewHistoryListReviewHistoryReviewRightRule self = new GetResultResponseBodyDataResultInfoReviewHistoryListReviewHistoryReviewRightRule();
+            return TeaModel.build(map, self);
+        }
+
+        public GetResultResponseBodyDataResultInfoReviewHistoryListReviewHistoryReviewRightRule setReviewRightRule(java.util.List<GetResultResponseBodyDataResultInfoReviewHistoryListReviewHistoryReviewRightRuleReviewRightRule> reviewRightRule) {
+            this.reviewRightRule = reviewRightRule;
+            return this;
+        }
+        public java.util.List<GetResultResponseBodyDataResultInfoReviewHistoryListReviewHistoryReviewRightRuleReviewRightRule> getReviewRightRule() {
+            return this.reviewRightRule;
+        }
+
+    }
+
+    public static class GetResultResponseBodyDataResultInfoReviewHistoryListReviewHistory extends TeaModel {
+        @NameInMap("Comments")
+        public String comments;
+
+        @NameInMap("ComplainResult")
+        public Integer complainResult;
+
+        @NameInMap("OldScore")
+        public Integer oldScore;
+
+        @NameInMap("Operator")
+        public Long operator;
+
+        @NameInMap("OperatorName")
+        public String operatorName;
+
+        @NameInMap("ReviewManagerType")
+        public String reviewManagerType;
+
+        @NameInMap("ReviewResult")
+        public Integer reviewResult;
+
+        @NameInMap("ReviewRightRule")
+        public GetResultResponseBodyDataResultInfoReviewHistoryListReviewHistoryReviewRightRule reviewRightRule;
+
+        @NameInMap("Score")
+        public Integer score;
+
+        @NameInMap("Time")
+        public Long time;
+
+        @NameInMap("TimeStr")
+        public String timeStr;
+
+        @NameInMap("Type")
+        public Integer type;
+
+        public static GetResultResponseBodyDataResultInfoReviewHistoryListReviewHistory build(java.util.Map<String, ?> map) throws Exception {
+            GetResultResponseBodyDataResultInfoReviewHistoryListReviewHistory self = new GetResultResponseBodyDataResultInfoReviewHistoryListReviewHistory();
+            return TeaModel.build(map, self);
+        }
+
+        public GetResultResponseBodyDataResultInfoReviewHistoryListReviewHistory setComments(String comments) {
+            this.comments = comments;
+            return this;
+        }
+        public String getComments() {
+            return this.comments;
+        }
+
+        public GetResultResponseBodyDataResultInfoReviewHistoryListReviewHistory setComplainResult(Integer complainResult) {
+            this.complainResult = complainResult;
+            return this;
+        }
+        public Integer getComplainResult() {
+            return this.complainResult;
+        }
+
+        public GetResultResponseBodyDataResultInfoReviewHistoryListReviewHistory setOldScore(Integer oldScore) {
+            this.oldScore = oldScore;
+            return this;
+        }
+        public Integer getOldScore() {
+            return this.oldScore;
+        }
+
+        public GetResultResponseBodyDataResultInfoReviewHistoryListReviewHistory setOperator(Long operator) {
+            this.operator = operator;
+            return this;
+        }
+        public Long getOperator() {
+            return this.operator;
+        }
+
+        public GetResultResponseBodyDataResultInfoReviewHistoryListReviewHistory setOperatorName(String operatorName) {
+            this.operatorName = operatorName;
+            return this;
+        }
+        public String getOperatorName() {
+            return this.operatorName;
+        }
+
+        public GetResultResponseBodyDataResultInfoReviewHistoryListReviewHistory setReviewManagerType(String reviewManagerType) {
+            this.reviewManagerType = reviewManagerType;
+            return this;
+        }
+        public String getReviewManagerType() {
+            return this.reviewManagerType;
+        }
+
+        public GetResultResponseBodyDataResultInfoReviewHistoryListReviewHistory setReviewResult(Integer reviewResult) {
+            this.reviewResult = reviewResult;
+            return this;
+        }
+        public Integer getReviewResult() {
+            return this.reviewResult;
+        }
+
+        public GetResultResponseBodyDataResultInfoReviewHistoryListReviewHistory setReviewRightRule(GetResultResponseBodyDataResultInfoReviewHistoryListReviewHistoryReviewRightRule reviewRightRule) {
+            this.reviewRightRule = reviewRightRule;
+            return this;
+        }
+        public GetResultResponseBodyDataResultInfoReviewHistoryListReviewHistoryReviewRightRule getReviewRightRule() {
+            return this.reviewRightRule;
+        }
+
+        public GetResultResponseBodyDataResultInfoReviewHistoryListReviewHistory setScore(Integer score) {
+            this.score = score;
+            return this;
+        }
+        public Integer getScore() {
+            return this.score;
+        }
+
+        public GetResultResponseBodyDataResultInfoReviewHistoryListReviewHistory setTime(Long time) {
+            this.time = time;
+            return this;
+        }
+        public Long getTime() {
+            return this.time;
+        }
+
+        public GetResultResponseBodyDataResultInfoReviewHistoryListReviewHistory setTimeStr(String timeStr) {
+            this.timeStr = timeStr;
+            return this;
+        }
+        public String getTimeStr() {
+            return this.timeStr;
+        }
+
+        public GetResultResponseBodyDataResultInfoReviewHistoryListReviewHistory setType(Integer type) {
+            this.type = type;
+            return this;
+        }
+        public Integer getType() {
+            return this.type;
+        }
+
+    }
+
+    public static class GetResultResponseBodyDataResultInfoReviewHistoryList extends TeaModel {
+        @NameInMap("ReviewHistory")
+        public java.util.List<GetResultResponseBodyDataResultInfoReviewHistoryListReviewHistory> reviewHistory;
+
+        public static GetResultResponseBodyDataResultInfoReviewHistoryList build(java.util.Map<String, ?> map) throws Exception {
+            GetResultResponseBodyDataResultInfoReviewHistoryList self = new GetResultResponseBodyDataResultInfoReviewHistoryList();
+            return TeaModel.build(map, self);
+        }
+
+        public GetResultResponseBodyDataResultInfoReviewHistoryList setReviewHistory(java.util.List<GetResultResponseBodyDataResultInfoReviewHistoryListReviewHistory> reviewHistory) {
+            this.reviewHistory = reviewHistory;
+            return this;
+        }
+        public java.util.List<GetResultResponseBodyDataResultInfoReviewHistoryListReviewHistory> getReviewHistory() {
+            return this.reviewHistory;
+        }
+
+    }
+
+    public static class GetResultResponseBodyDataResultInfoReviewTypeIdListReviewTypeIdListReviewKeyIdList extends TeaModel {
+        @NameInMap("ReviewKeyIdList")
+        public java.util.List<Long> reviewKeyIdList;
+
+        public static GetResultResponseBodyDataResultInfoReviewTypeIdListReviewTypeIdListReviewKeyIdList build(java.util.Map<String, ?> map) throws Exception {
+            GetResultResponseBodyDataResultInfoReviewTypeIdListReviewTypeIdListReviewKeyIdList self = new GetResultResponseBodyDataResultInfoReviewTypeIdListReviewTypeIdListReviewKeyIdList();
+            return TeaModel.build(map, self);
+        }
+
+        public GetResultResponseBodyDataResultInfoReviewTypeIdListReviewTypeIdListReviewKeyIdList setReviewKeyIdList(java.util.List<Long> reviewKeyIdList) {
+            this.reviewKeyIdList = reviewKeyIdList;
+            return this;
+        }
+        public java.util.List<Long> getReviewKeyIdList() {
+            return this.reviewKeyIdList;
+        }
+
+    }
+
+    public static class GetResultResponseBodyDataResultInfoReviewTypeIdListReviewTypeIdList extends TeaModel {
+        @NameInMap("ReviewKeyIdList")
+        public GetResultResponseBodyDataResultInfoReviewTypeIdListReviewTypeIdListReviewKeyIdList reviewKeyIdList;
+
+        @NameInMap("ReviewTypeId")
+        public Long reviewTypeId;
+
+        public static GetResultResponseBodyDataResultInfoReviewTypeIdListReviewTypeIdList build(java.util.Map<String, ?> map) throws Exception {
+            GetResultResponseBodyDataResultInfoReviewTypeIdListReviewTypeIdList self = new GetResultResponseBodyDataResultInfoReviewTypeIdListReviewTypeIdList();
+            return TeaModel.build(map, self);
+        }
+
+        public GetResultResponseBodyDataResultInfoReviewTypeIdListReviewTypeIdList setReviewKeyIdList(GetResultResponseBodyDataResultInfoReviewTypeIdListReviewTypeIdListReviewKeyIdList reviewKeyIdList) {
+            this.reviewKeyIdList = reviewKeyIdList;
+            return this;
+        }
+        public GetResultResponseBodyDataResultInfoReviewTypeIdListReviewTypeIdListReviewKeyIdList getReviewKeyIdList() {
+            return this.reviewKeyIdList;
+        }
+
+        public GetResultResponseBodyDataResultInfoReviewTypeIdListReviewTypeIdList setReviewTypeId(Long reviewTypeId) {
+            this.reviewTypeId = reviewTypeId;
+            return this;
+        }
+        public Long getReviewTypeId() {
+            return this.reviewTypeId;
+        }
+
+    }
+
+    public static class GetResultResponseBodyDataResultInfoReviewTypeIdList extends TeaModel {
+        @NameInMap("ReviewTypeIdList")
+        public java.util.List<GetResultResponseBodyDataResultInfoReviewTypeIdListReviewTypeIdList> reviewTypeIdList;
+
+        public static GetResultResponseBodyDataResultInfoReviewTypeIdList build(java.util.Map<String, ?> map) throws Exception {
+            GetResultResponseBodyDataResultInfoReviewTypeIdList self = new GetResultResponseBodyDataResultInfoReviewTypeIdList();
+            return TeaModel.build(map, self);
+        }
+
+        public GetResultResponseBodyDataResultInfoReviewTypeIdList setReviewTypeIdList(java.util.List<GetResultResponseBodyDataResultInfoReviewTypeIdListReviewTypeIdList> reviewTypeIdList) {
+            this.reviewTypeIdList = reviewTypeIdList;
+            return this;
+        }
+        public java.util.List<GetResultResponseBodyDataResultInfoReviewTypeIdListReviewTypeIdList> getReviewTypeIdList() {
+            return this.reviewTypeIdList;
+        }
+
+    }
+
     public static class GetResultResponseBodyDataResultInfoSchemeIdList extends TeaModel {
         @NameInMap("SchemeIdList")
         public java.util.List<Long> schemeIdList;
@@ -2036,18 +2528,38 @@ public class GetResultResponseBody extends TeaModel {
         @NameInMap("AsrResult")
         public GetResultResponseBodyDataResultInfoAsrResult asrResult;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-03-02T14:37Z</p>
+         */
         @NameInMap("AssignmentTime")
         public String assignmentTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("Comments")
         public String comments;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2019-07-24T19:31Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1602743090</p>
+         */
         @NameInMap("CreateTimeLong")
         public String createTimeLong;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
@@ -2057,30 +2569,68 @@ public class GetResultResponseBody extends TeaModel {
         @NameInMap("HitScore")
         public GetResultResponseBodyDataResultInfoHitScore hitScore;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4498420@a_z@93EAADF1-01D3-44BD-8AC9-F57F447EFCE8_1614*****</p>
+         */
         @NameInMap("LastDataId")
         public String lastDataId;
 
         @NameInMap("Recording")
         public GetResultResponseBodyDataResultInfoRecording recording;
 
+        /**
+         * <strong>example:</strong>
+         * <p>XXX</p>
+         */
         @NameInMap("Resolver")
         public String resolver;
 
+        @NameInMap("ReviewHistoryList")
+        public GetResultResponseBodyDataResultInfoReviewHistoryList reviewHistoryList;
+
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ReviewResult")
         public Integer reviewResult;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ReviewStatus")
         public Integer reviewStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2019-07-24T19:31Z</p>
+         */
         @NameInMap("ReviewTime")
         public String reviewTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1602743090</p>
+         */
         @NameInMap("ReviewTimeLong")
         public String reviewTimeLong;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ReviewType")
         public Integer reviewType;
 
+        @NameInMap("ReviewTypeIdList")
+        public GetResultResponseBodyDataResultInfoReviewTypeIdList reviewTypeIdList;
+
+        /**
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("Reviewer")
         public String reviewer;
 
@@ -2090,15 +2640,31 @@ public class GetResultResponseBody extends TeaModel {
         @NameInMap("SchemeNameList")
         public GetResultResponseBodyDataResultInfoSchemeNameList schemeNameList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Score")
         public Integer score;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>A6BEC8D-9A5B-4BE5-8432-4F635E***</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("TaskName")
         public String taskName;
 
@@ -2203,6 +2769,14 @@ public class GetResultResponseBody extends TeaModel {
             return this.resolver;
         }
 
+        public GetResultResponseBodyDataResultInfo setReviewHistoryList(GetResultResponseBodyDataResultInfoReviewHistoryList reviewHistoryList) {
+            this.reviewHistoryList = reviewHistoryList;
+            return this;
+        }
+        public GetResultResponseBodyDataResultInfoReviewHistoryList getReviewHistoryList() {
+            return this.reviewHistoryList;
+        }
+
         public GetResultResponseBodyDataResultInfo setReviewResult(Integer reviewResult) {
             this.reviewResult = reviewResult;
             return this;
@@ -2241,6 +2815,14 @@ public class GetResultResponseBody extends TeaModel {
         }
         public Integer getReviewType() {
             return this.reviewType;
+        }
+
+        public GetResultResponseBodyDataResultInfo setReviewTypeIdList(GetResultResponseBodyDataResultInfoReviewTypeIdList reviewTypeIdList) {
+            this.reviewTypeIdList = reviewTypeIdList;
+            return this;
+        }
+        public GetResultResponseBodyDataResultInfoReviewTypeIdList getReviewTypeIdList() {
+            return this.reviewTypeIdList;
         }
 
         public GetResultResponseBodyDataResultInfo setReviewer(String reviewer) {

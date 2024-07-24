@@ -13,75 +13,159 @@ public class GetRulesCountListRequest extends TeaModel {
     @NameInMap("BusinessName")
     public String businessName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("BusinessRange")
     public Integer businessRange;
 
     @NameInMap("CategoryName")
     public String categoryName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("CountTotal")
     public Boolean countTotal;
 
+    /**
+     * <strong>example:</strong>
+     * <p>63</p>
+     */
     @NameInMap("CreateEmpid")
     public String createEmpid;
 
+    /**
+     * <strong>example:</strong>
+     * <p>63</p>
+     */
     @NameInMap("CreateUserId")
     public Long createUserId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-10-08 23:59:59</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>63</p>
+     */
     @NameInMap("LastUpdateEmpid")
     public String lastUpdateEmpid;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("RequireInfos")
     public java.util.List<String> requireInfos;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123</p>
+     */
     @NameInMap("Rid")
     public Long rid;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123</p>
+     */
     @NameInMap("RuleIdOrRuleName")
     public String ruleIdOrRuleName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("RuleScoreSingleType")
     public Integer ruleScoreSingleType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("RuleType")
     public Integer ruleType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123</p>
+     */
     @NameInMap("SchemeId")
     public Long schemeId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("SourceType")
     public Integer sourceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-10-07 00:00:00</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Status")
     public Integer status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Type")
     public Integer type;
 
     @NameInMap("TypeName")
     public String typeName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-10-08 23:59:59</p>
+     */
     @NameInMap("UpdateEndTime")
     public String updateEndTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-10-07 00:00:00</p>
+     */
     @NameInMap("UpdateStartTime")
     public String updateStartTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>63</p>
+     */
     @NameInMap("UpdateUserId")
     public Long updateUserId;
 

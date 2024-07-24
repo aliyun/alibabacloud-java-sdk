@@ -10,6 +10,10 @@ public class ListDataSetRequest extends TeaModel {
     @NameInMap("BaseMeAgentId")
     public Long baseMeAgentId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;pageNumber&quot;:1,&quot;pageSize&quot;:10}</p>
+     */
     @NameInMap("JsonStr")
     public String jsonStr;
 

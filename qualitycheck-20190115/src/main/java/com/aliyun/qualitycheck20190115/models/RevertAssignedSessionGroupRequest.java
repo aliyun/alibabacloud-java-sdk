@@ -10,6 +10,10 @@ public class RevertAssignedSessionGroupRequest extends TeaModel {
     @NameInMap("BaseMeAgentId")
     public Long baseMeAgentId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;isSchemeData&quot;:1,&quot;forceRevertSessionGroup&quot;:true,&quot;sessionGroupIdList&quot;:[&quot;1&quot;]}</p>
+     */
     @NameInMap("jsonStr")
     public String jsonStr;
 

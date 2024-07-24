@@ -4,42 +4,82 @@ package com.aliyun.qualitycheck20190115.models;
 import com.aliyun.tea.*;
 
 public class ListSchemeTaskConfigResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>22</p>
+     */
     @NameInMap("Count")
     public Integer count;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     @NameInMap("Data")
     public ListSchemeTaskConfigResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>xxx</p>
+     */
     @NameInMap("LastDataId")
     public String lastDataId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>successful</p>
+     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("Messages")
     public ListSchemeTaskConfigResponseBodyMessages messages;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4B0A8DCD-0DDF-5E80-8B9C-0A2F68B3403B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("ResultCountId")
     public String resultCountId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -172,18 +212,34 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
     }
 
     public static class ListSchemeTaskConfigResponseBodyDataDataDataConfigAssignConfigsAssignConfigAssignConfigContestsAssignConfigContest extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("DataType")
         public Integer dataType;
 
         @NameInMap("ListObject")
         public ListSchemeTaskConfigResponseBodyDataDataDataConfigAssignConfigsAssignConfigAssignConfigContestsAssignConfigContestListObject listObject;
 
+        /**
+         * <strong>example:</strong>
+         * <p>callStartTime</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("Symbol")
         public Integer symbol;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{\&quot;start\&quot;:\&quot;2022-09-01 00:00:00\&quot;,\&quot;end\&quot;:\&quot;2022-09-30 00:00:00\&quot;}</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -295,12 +351,24 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
         @NameInMap("AssignConfigs")
         public ListSchemeTaskConfigResponseBodyDataDataDataConfigAssignConfigs assignConfigs;
 
+        /**
+         * <strong>example:</strong>
+         * <p>[]</p>
+         */
         @NameInMap("DataSets")
         public String dataSets;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Index")
         public Integer index;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("ResultParam")
         public String resultParam;
 
@@ -366,6 +434,10 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>158</p>
+         */
         @NameInMap("SchemeId")
         public Long schemeId;
 
@@ -412,30 +484,62 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
     }
 
     public static class ListSchemeTaskConfigResponseBodyDataData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("AsrTaskPriority")
         public Integer asrTaskPriority;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("AssignType")
         public Integer assignType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1650418039000</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("CreateUser")
         public Long createUser;
 
         @NameInMap("DataConfig")
         public ListSchemeTaskConfigResponseBodyDataDataDataConfig dataConfig;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("FinishRate")
         public Double finishRate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ManualReview")
         public Integer manualReview;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cdae396590b*****ec40f3476e274fc</p>
+         */
         @NameInMap("ModeCustomizationId")
         public String modeCustomizationId;
 
@@ -445,15 +549,31 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("NumberExecuting")
         public Integer numberExecuting;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("NumberFail")
         public Integer numberFail;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("NumberSuccess")
         public Integer numberSuccess;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("NumberSum")
         public Integer numberSum;
 
@@ -463,27 +583,59 @@ public class ListSchemeTaskConfigResponseBody extends TeaModel {
         @NameInMap("SchemeList")
         public ListSchemeTaskConfigResponseBodyDataDataSchemeList schemeList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("SchemeTaskConfigId")
         public Long schemeTaskConfigId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("SourceDataType")
         public Integer sourceDataType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Type")
         public Integer type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1650418039000</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("UpdateUser")
         public Long updateUser;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("UserGroup")
         public String userGroup;
 
+        /**
+         * <strong>example:</strong>
+         * <p>9f90b3efa2****0a49acec226eafc17</p>
+         */
         @NameInMap("VocabId")
         public String vocabId;
 

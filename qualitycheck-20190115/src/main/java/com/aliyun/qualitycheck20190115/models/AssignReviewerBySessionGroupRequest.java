@@ -10,6 +10,10 @@ public class AssignReviewerBySessionGroupRequest extends TeaModel {
     @NameInMap("BaseMeAgentId")
     public Long baseMeAgentId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;sessionGroupParam&quot;:{&quot;isSchemeData&quot;:1,&quot;callStartTime&quot;:&quot;2022-09-17 00:00:00&quot;,&quot;callEndTime&quot;:&quot;2022-09-23 23:59:59&quot;,&quot;schemeTaskConfigId&quot;:24},&quot;assignments&quot;:[{&quot;reviewer&quot;:63,&quot;count&quot;:4}],&quot;isSchemeData&quot;:1}</p>
+     */
     @NameInMap("jsonStr")
     public String jsonStr;
 

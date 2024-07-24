@@ -4,27 +4,55 @@ package com.aliyun.qualitycheck20190115.models;
 import com.aliyun.tea.*;
 
 public class VerifySentenceResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public VerifySentenceResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("IncorrectWords")
     public Integer incorrectWords;
 
+    /**
+     * <strong>example:</strong>
+     * <p>successful</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>106C6CA0-282D-4AF7-85F0-D2D24F4CE647</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("SourceRole")
     public Integer sourceRole;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TargetRole")
     public Integer targetRole;
 
@@ -120,6 +148,10 @@ public class VerifySentenceResponseBody extends TeaModel {
         @NameInMap("Line")
         public VerifySentenceResponseBodyDataDeltaSourceLine line;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Position")
         public Integer position;
 
@@ -169,6 +201,10 @@ public class VerifySentenceResponseBody extends TeaModel {
         @NameInMap("Line")
         public VerifySentenceResponseBodyDataDeltaTargetLine line;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Position")
         public Integer position;
 
@@ -202,6 +238,10 @@ public class VerifySentenceResponseBody extends TeaModel {
         @NameInMap("Target")
         public VerifySentenceResponseBodyDataDeltaTarget target;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CHANGE</p>
+         */
         @NameInMap("Type")
         public String type;
 

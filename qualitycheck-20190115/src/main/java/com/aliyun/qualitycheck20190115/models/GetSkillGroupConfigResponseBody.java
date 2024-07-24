@@ -4,18 +4,34 @@ package com.aliyun.qualitycheck20190115.models;
 import com.aliyun.tea.*;
 
 public class GetSkillGroupConfigResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public GetSkillGroupConfigResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>successful</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3CEA0495-341B-4482-9AD9-8191EF4***</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,9 +81,17 @@ public class GetSkillGroupConfigResponseBody extends TeaModel {
     }
 
     public static class GetSkillGroupConfigResponseBodyDataAllRuleListRuleNameInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("Rid")
         public Long rid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("RuleName")
         public String ruleName;
 
@@ -114,9 +138,17 @@ public class GetSkillGroupConfigResponseBody extends TeaModel {
     }
 
     public static class GetSkillGroupConfigResponseBodyDataRuleListRuleNameInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>222</p>
+         */
         @NameInMap("Rid")
         public Long rid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("RuleName")
         public String ruleName;
 
@@ -163,63 +195,135 @@ public class GetSkillGroupConfigResponseBody extends TeaModel {
     }
 
     public static class GetSkillGroupConfigResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("AllContentQualityCheck")
         public Integer allContentQualityCheck;
 
+        /**
+         * <strong>example:</strong>
+         * <p>223</p>
+         */
         @NameInMap("AllRids")
         public String allRids;
 
         @NameInMap("AllRuleList")
         public GetSkillGroupConfigResponseBodyDataAllRuleList allRuleList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-12-01T15:12Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1212</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1321</p>
+         */
         @NameInMap("ModelId")
         public Long modelId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("ModelName")
         public String modelName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("QualityCheckType")
         public Integer qualityCheckType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2332</p>
+         */
         @NameInMap("Rid")
         public String rid;
 
         @NameInMap("RuleList")
         public GetSkillGroupConfigResponseBodyDataRuleList ruleList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("SkillGroupFrom")
         public Integer skillGroupFrom;
 
+        /**
+         * <strong>example:</strong>
+         * <p>111</p>
+         */
         @NameInMap("SkillGroupId")
         public String skillGroupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("SkillGroupName")
         public String skillGroupName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Type")
         public Integer type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-12-01T19:28Z</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("VocabId")
         public Long vocabId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("VocabName")
         public String vocabName;
 

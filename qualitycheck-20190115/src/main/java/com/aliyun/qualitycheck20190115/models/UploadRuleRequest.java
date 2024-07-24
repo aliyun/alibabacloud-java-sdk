@@ -10,6 +10,12 @@ public class UploadRuleRequest extends TeaModel {
     @NameInMap("BaseMeAgentId")
     public Long baseMeAgentId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{“conditions”:“xxxxx”,&quot;rules&quot;:&quot;xxxx&quot;}</p>
+     */
     @NameInMap("JsonStr")
     public String jsonStr;
 

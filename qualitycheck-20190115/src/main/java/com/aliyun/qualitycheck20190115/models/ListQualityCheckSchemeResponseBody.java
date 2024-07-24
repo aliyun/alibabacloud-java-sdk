@@ -4,30 +4,62 @@ package com.aliyun.qualitycheck20190115.models;
 import com.aliyun.tea.*;
 
 public class ListQualityCheckSchemeResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>22</p>
+     */
     @NameInMap("Count")
     public Integer count;
 
     @NameInMap("Data")
     public java.util.List<ListQualityCheckSchemeResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>successful</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>82C91484-B2D5-4D2A-A21F-A6D73F4***</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>XXX</p>
+     */
     @NameInMap("ResultCountId")
     public String resultCountId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -109,27 +141,55 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
     }
 
     public static class ListQualityCheckSchemeResponseBodyDataRuleListRules extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("CheckType")
         public Integer checkType;
 
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("Rid")
         public Long rid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("RuleScoreType")
         public Integer ruleScoreType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("ScoreNum")
         public Integer scoreNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ScoreNumType")
         public Integer scoreNumType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ScoreType")
         public Integer scoreType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("TargetType")
         public Integer targetType;
 
@@ -227,15 +287,31 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
         @NameInMap("CheckName")
         public String checkName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("CheckType")
         public Integer checkType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Enable")
         public Integer enable;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("Score")
         public Integer score;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("TargetType")
         public Integer targetType;
 
@@ -287,18 +363,30 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
     }
 
     public static class ListQualityCheckSchemeResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2022-05-10T09:34Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
         @NameInMap("CreateUserName")
         public String createUserName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("DataType")
         public Integer dataType;
 
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -308,24 +396,48 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
         @NameInMap("SchemeCheckTypeList")
         public java.util.List<ListQualityCheckSchemeResponseBodyDataSchemeCheckTypeList> schemeCheckTypeList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>112**</p>
+         */
         @NameInMap("SchemeId")
         public Long schemeId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TemplateType")
         public Integer templateType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Type")
         public Integer type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-05-10T10:34Z</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
         @NameInMap("UpdateUserName")
         public String updateUserName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Version")
         public Long version;
 

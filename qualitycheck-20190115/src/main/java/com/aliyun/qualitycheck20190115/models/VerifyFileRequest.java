@@ -10,6 +10,9 @@ public class VerifyFileRequest extends TeaModel {
     @NameInMap("BaseMeAgentId")
     public Long baseMeAgentId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("JsonStr")
     public String jsonStr;
 

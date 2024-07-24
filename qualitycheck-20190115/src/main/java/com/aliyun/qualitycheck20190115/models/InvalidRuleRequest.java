@@ -10,6 +10,12 @@ public class InvalidRuleRequest extends TeaModel {
     @NameInMap("BaseMeAgentId")
     public Long baseMeAgentId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;ruleIds&quot;:[3,4]}</p>
+     */
     @NameInMap("JsonStr")
     public String jsonStr;
 

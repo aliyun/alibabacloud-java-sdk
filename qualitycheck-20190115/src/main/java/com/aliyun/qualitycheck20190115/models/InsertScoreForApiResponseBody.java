@@ -4,18 +4,34 @@ package com.aliyun.qualitycheck20190115.models;
 import com.aliyun.tea.*;
 
 public class InsertScoreForApiResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public InsertScoreForApiResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>successful</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>96138D8D-8D26-4E41-BFF4-77AED1088BBD</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,6 +81,10 @@ public class InsertScoreForApiResponseBody extends TeaModel {
     }
 
     public static class InsertScoreForApiResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>5728</p>
+         */
         @NameInMap("ScoreId")
         public Long scoreId;
 

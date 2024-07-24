@@ -4,18 +4,34 @@ package com.aliyun.qualitycheck20190115.models;
 import com.aliyun.tea.*;
 
 public class GetBusinessCategoryListResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public GetBusinessCategoryListResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>successful</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>A186A419-FDBE-464C-AED4-7121CAC73BF1</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,12 +81,20 @@ public class GetBusinessCategoryListResponseBody extends TeaModel {
     }
 
     public static class GetBusinessCategoryListResponseBodyDataBusinessCategoryBasicInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Bid")
         public Integer bid;
 
         @NameInMap("BusinessName")
         public String businessName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ServiceType")
         public Integer serviceType;
 

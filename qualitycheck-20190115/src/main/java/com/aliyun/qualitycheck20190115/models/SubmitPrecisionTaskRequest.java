@@ -10,6 +10,12 @@ public class SubmitPrecisionTaskRequest extends TeaModel {
     @NameInMap("BaseMeAgentId")
     public Long baseMeAgentId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;{&quot;name&quot;:&quot;test&quot;,&quot;dataSetId&quot;:1865}&quot;</p>
+     */
     @NameInMap("JsonStr")
     public String jsonStr;
 

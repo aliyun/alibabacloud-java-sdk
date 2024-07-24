@@ -10,6 +10,12 @@ public class ListWarningConfigRequest extends TeaModel {
     @NameInMap("BaseMeAgentId")
     public Long baseMeAgentId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;pageNumber&quot;:1,&quot;pageSize&quot;:10}</p>
+     */
     @NameInMap("JsonStr")
     public String jsonStr;
 

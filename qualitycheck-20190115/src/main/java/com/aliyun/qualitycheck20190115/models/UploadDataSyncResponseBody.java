@@ -4,18 +4,34 @@ package com.aliyun.qualitycheck20190115.models;
 import com.aliyun.tea.*;
 
 public class UploadDataSyncResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public UploadDataSyncResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>successful</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4987D326-83D9-4A42-B9A5-0B27F9B***</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -84,6 +100,10 @@ public class UploadDataSyncResponseBody extends TeaModel {
     }
 
     public static class UploadDataSyncResponseBodyDataResultInfoRulesRuleHitInfoConditionInfoConditionBasicInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("ConditionInfoCid")
         public String conditionInfoCid;
 
@@ -141,15 +161,31 @@ public class UploadDataSyncResponseBody extends TeaModel {
     }
 
     public static class UploadDataSyncResponseBodyDataResultInfoRulesRuleHitInfoHitConditionHitInfoHitKeyWordsHitKeyWord extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("From")
         public Integer from;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Pid")
         public Integer pid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Tid")
         public String tid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("To")
         public Integer to;
 
@@ -223,15 +259,31 @@ public class UploadDataSyncResponseBody extends TeaModel {
     }
 
     public static class UploadDataSyncResponseBodyDataResultInfoRulesRuleHitInfoHitConditionHitInfoPhrase extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Begin")
         public Long begin;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1564574</p>
+         */
         @NameInMap("BeginTime")
         public String beginTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2090</p>
+         */
         @NameInMap("End")
         public Long end;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Identity")
         public String identity;
 
@@ -363,9 +415,17 @@ public class UploadDataSyncResponseBody extends TeaModel {
         @NameInMap("Hit")
         public UploadDataSyncResponseBodyDataResultInfoRulesRuleHitInfoHit hit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>801</p>
+         */
         @NameInMap("Rid")
         public String rid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>88888888</p>
+         */
         @NameInMap("Tid")
         public String tid;
 
@@ -434,6 +494,10 @@ public class UploadDataSyncResponseBody extends TeaModel {
         @NameInMap("Rules")
         public UploadDataSyncResponseBodyDataResultInfoRules rules;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Score")
         public Integer score;
 

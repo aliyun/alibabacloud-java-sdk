@@ -10,6 +10,12 @@ public class DeletePrecisionTaskRequest extends TeaModel {
     @NameInMap("BaseMeAgentId")
     public Long baseMeAgentId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;{&quot;taskId&quot;: &quot;7C1DEF5F-2C18-4D36-99C6*******&quot;}&quot;</p>
+     */
     @NameInMap("JsonStr")
     public String jsonStr;
 
