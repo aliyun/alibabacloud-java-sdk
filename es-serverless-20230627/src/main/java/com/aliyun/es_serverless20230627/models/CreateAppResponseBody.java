@@ -4,6 +4,10 @@ package com.aliyun.es_serverless20230627.models;
 import com.aliyun.tea.*;
 
 public class CreateAppResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2C5DAA30-****-5181-9B87-9D6181016197</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
@@ -32,6 +36,10 @@ public class CreateAppResponseBody extends TeaModel {
     }
 
     public static class CreateAppResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>es-serverless-cn-xxx</p>
+         */
         @NameInMap("instaneId")
         public String instaneId;
 
