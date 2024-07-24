@@ -33,6 +33,21 @@ public class DescribeDBNodePerformanceRequest extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The interval at which performance data is collected. Valid values:</p>
+     * <ul>
+     * <li>5</li>
+     * <li>30</li>
+     * <li>60</li>
+     * <li>600</li>
+     * <li>1800</li>
+     * <li>3600</li>
+     * <li>86400</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>60</p>
+     */
     @NameInMap("Interval")
     public String interval;
 
@@ -59,6 +74,12 @@ public class DescribeDBNodePerformanceRequest extends TeaModel {
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <p>The special metric. Set the value to tair, which indicates the PolarTair architecture.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tair</p>
+     */
     @NameInMap("Type")
     public String type;
 

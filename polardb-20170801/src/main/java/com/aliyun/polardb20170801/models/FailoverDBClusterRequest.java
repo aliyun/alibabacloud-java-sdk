@@ -35,6 +35,16 @@ public class FailoverDBClusterRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>Specifies whether to fail back to the original primary zone after a failover. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("RollBackForDisaster")
     public Boolean rollBackForDisaster;
 

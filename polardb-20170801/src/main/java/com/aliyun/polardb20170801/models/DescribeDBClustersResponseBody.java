@@ -152,7 +152,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         public String imciSwitch;
 
         /**
-         * <p>The region ID of the node.</p>
+         * <p>The region ID of the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -174,7 +174,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         public String serverless;
 
         /**
-         * <p>The zone ID of node.</p>
+         * <p>The zone ID of the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-i</p>
@@ -423,7 +423,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         public String DBClusterStatus;
 
         /**
-         * <p>The node specifications.</p>
+         * <p>The specifications of the node.</p>
          * 
          * <strong>example:</strong>
          * <p>polar.mysql.x4.large</p>
@@ -517,6 +517,9 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         @NameInMap("Expired")
         public String expired;
 
+        @NameInMap("HotStandbyCluster")
+        public String hotStandbyCluster;
+
         /**
          * <p>The lock state of the cluster. Valid values:</p>
          * <ul>
@@ -572,7 +575,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         public String remoteMemorySize;
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-************</p>
@@ -581,7 +584,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>Indicates whether the cluster is a serverless cluster. <strong>AgileServerless</strong> indicates a serverless cluster. No value is returned for a common cluster.</p>
+         * <p>Indicates whether the cluster is a serverless cluster. <strong>AgileServerless</strong> indicates the cluster is a serverless cluster. No value is returned for a common cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>AgileServerless</p>
@@ -611,6 +614,12 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         @NameInMap("StorageSpace")
         public Long storageSpace;
 
+        /**
+         * <p>The storage type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>essdautopl</p>
+         */
         @NameInMap("StorageType")
         public String storageType;
 
@@ -821,6 +830,14 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         }
         public String getExpired() {
             return this.expired;
+        }
+
+        public DescribeDBClustersResponseBodyItemsDBCluster setHotStandbyCluster(String hotStandbyCluster) {
+            this.hotStandbyCluster = hotStandbyCluster;
+            return this;
+        }
+        public String getHotStandbyCluster() {
+            return this.hotStandbyCluster;
         }
 
         public DescribeDBClustersResponseBodyItemsDBCluster setLockMode(String lockMode) {

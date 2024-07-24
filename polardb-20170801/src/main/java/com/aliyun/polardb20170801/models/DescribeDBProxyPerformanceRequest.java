@@ -33,6 +33,12 @@ public class DescribeDBProxyPerformanceRequest extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The interval at which performance data is collected. Valid values: 5, 30, 60, 600, 1800, 3600, 86400, in seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60</p>
+     */
     @NameInMap("Interval")
     public String interval;
 
@@ -56,6 +62,12 @@ public class DescribeDBProxyPerformanceRequest extends TeaModel {
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <p>Special metric. Set the value to tair, which indicates the PolarTair architecture.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tair</p>
+     */
     @NameInMap("Type")
     public String type;
 

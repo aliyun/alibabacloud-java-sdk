@@ -15,10 +15,10 @@ public class DescribeDBClusterParametersRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The kernel parameter. Valid values:</p>
+     * <p>The type of the parameter information to query. Valid values:</p>
      * <ul>
-     * <li><strong>Normal</strong>: the kernel parameters.</li>
-     * <li><strong>MigrationFromRDS</strong>: compares the current parameters with the parameters of the source RDS instance.</li>
+     * <li><strong>Normal</strong>: the information about the cluster parameters</li>
+     * <li><strong>MigrationFromRDS</strong>: a comparison of parameters between the source RDS instance and the destination PolarDB cluster</li>
      * </ul>
      * 
      * <strong>example:</strong>

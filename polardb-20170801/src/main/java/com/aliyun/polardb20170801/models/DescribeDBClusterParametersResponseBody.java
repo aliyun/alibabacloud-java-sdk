@@ -14,7 +14,7 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The database engine that the cluster runs. Valid values:</p>
+     * <p>The database engine that the clusters runs. Valid values:</p>
      * <ul>
      * <li><strong>MySQL</strong></li>
      * <li><strong>PostgreSQL</strong></li>
@@ -30,16 +30,18 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
     /**
      * <p>The version of the database engine. </p>
      * <ul>
-     * <li>Valid values for the MySQL database engine:    - <strong>5.6</strong><ul>
+     * <li>Valid values for the MySQL database engine:   <ul>
+     * <li><strong>5.6</strong></li>
      * <li><strong>5.7</strong></li>
      * <li><strong>8.0</strong></li>
      * </ul>
      * </li>
-     * <li>Valid value for the PostgreSQL database engine:    - <strong>11</strong><ul>
+     * <li>Valid value for the PostgreSQL database engine:    <ul>
+     * <li><strong>11</strong></li>
      * <li><strong>14</strong></li>
      * </ul>
      * </li>
-     * <li>Valid value for the Oracle database engine: <strong>11</strong></li>
+     * <li>Valid value for the Oracle database engine:  <strong>11</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -67,7 +69,7 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
     public String parameterNumbers;
 
     /**
-     * <p>A comparison between the current parameters of the PolarDB cluster and the parameters of the source RDS instance before migration.</p>
+     * <p>A comparison of parameters between the source RDS instance and the destination PolarDB cluster.</p>
      */
     @NameInMap("Parameters")
     public DescribeDBClusterParametersResponseBodyParameters parameters;
@@ -82,7 +84,7 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The parameters that are in use.</p>
+     * <p>The parameters of the PolarDB cluster.</p>
      */
     @NameInMap("RunningParameters")
     public DescribeDBClusterParametersResponseBodyRunningParameters runningParameters;
@@ -158,7 +160,7 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
 
     public static class DescribeDBClusterParametersResponseBodyParametersParameters extends TeaModel {
         /**
-         * <p>Indicates whether the source parameters and current parameters have the same value.</p>
+         * <p>Indicates whether the source and current parameters have the same value.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -166,20 +168,60 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
         @NameInMap("IsEqual")
         public String isEqual;
 
+        /**
+         * <p>Indicate whether the parameter is a primary parameter of the destination cluster. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: The parameter is a primary parameter of the destination cluster.</li>
+         * <li><strong>0</strong>: The parameter is not a primary parameter of the destination cluster.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("IsInstancePolarDBKey")
         public String isInstancePolarDBKey;
 
+        /**
+         * <p>Indicate whether the parameter is a primary parameter of the source instance. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: The parameter is a primary parameter of the source instance.</li>
+         * <li><strong>0</strong>: The parameter is not a primary parameter of the source instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("IsInstanceRdsKey")
         public String isInstanceRdsKey;
 
+        /**
+         * <p>Indicate whether the parameter is a primary parameter of the destination cluster. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: The parameter is a primary parameter of the destination cluster.</li>
+         * <li><strong>0</strong>: The parameter is not a primary parameter of the destination cluster.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("IsPolarDBKey")
         public String isPolarDBKey;
 
+        /**
+         * <p>Indicate whether the parameter is a primary parameter of the source instance. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: The parameter is a primary parameter of the source instance.</li>
+         * <li><strong>0</strong>: The parameter is not a primary parameter of the source instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("IsRdsKey")
         public String isRdsKey;
 
         /**
-         * <p>The description of the parameter of the current cluster.</p>
+         * <p>The description of the parameter of the destination cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>The server\&quot;s default character set.</p>
@@ -188,7 +230,7 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
         public String distParameterDescription;
 
         /**
-         * <p>The name of the parameter of the current cluster.</p>
+         * <p>The name of the parameter of the destination cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>character_set_server</p>
@@ -197,7 +239,7 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
         public String distParameterName;
 
         /**
-         * <p>The valid values of the parameter of the current cluster.</p>
+         * <p>The valid values of the parameter of the destination cluster.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -209,7 +251,7 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
         public String distParameterOptional;
 
         /**
-         * <p>The value of the parameter of the current cluster.</p>
+         * <p>The value of the parameter of the destination cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>utf8</p>
@@ -429,7 +471,7 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
         public String factor;
 
         /**
-         * <p>Indicates whether a cluster restart is required to allow the parameter modification to take effect. Valid values:</p>
+         * <p>Indicates whether a cluster restart is required for the parameter modification to take effect. Valid values:</p>
          * <ul>
          * <li><strong>false</strong></li>
          * <li><strong>true</strong></li>
@@ -457,8 +499,8 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the parameter is a global parameter. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: yes. The modified parameter value is synchronized to other nodes.</li>
-         * <li><strong>1</strong>: no. You can customize the nodes to which the modified parameter value can be synchronized.</li>
+         * <li><strong>0</strong>: The parameter is a global parameter. The modified parameter value is synchronized to other nodes.</li>
+         * <li><strong>1</strong>: The parameter is not a global parameter. You can specify the nodes to which the modified parameter value can be synchronized.</li>
          * </ul>
          * 
          * <strong>example:</strong>

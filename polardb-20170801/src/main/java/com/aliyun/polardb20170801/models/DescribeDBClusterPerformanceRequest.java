@@ -24,6 +24,12 @@ public class DescribeDBClusterPerformanceRequest extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The interval at which performance data is collected. Valid values: 5, 30, 60, 600, 1800, 3600, 86400, in seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60</p>
+     */
     @NameInMap("Interval")
     public String interval;
 
