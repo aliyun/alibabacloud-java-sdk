@@ -15,12 +15,18 @@ public class CreateDriveResponseBody extends TeaModel {
 
     /**
      * <p>The domain ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bj1</p>
      */
     @NameInMap("domain_id")
     public String domainId;
 
     /**
      * <p>The drive ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("drive_id")
     public String driveId;

@@ -7,6 +7,10 @@ public class SearchStoriesResponseBody extends TeaModel {
     @NameInMap("items")
     public java.util.List<Story> items;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Yjk4YmI1ZDRlYmU1Y2E0YWE0NmJ***</p>
+     */
     @NameInMap("next_marker")
     public String nextMarker;
 

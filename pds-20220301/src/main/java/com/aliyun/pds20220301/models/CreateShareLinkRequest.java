@@ -18,62 +18,91 @@ public class CreateShareLinkRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to disable the download feature.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("disable_download")
     public Boolean disableDownload;
 
     /**
      * <p>Specifies whether to disable the preview feature.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("disable_preview")
     public Boolean disablePreview;
 
     /**
      * <p>Specifies whether to disable the dump feature.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("disable_save")
     public Boolean disableSave;
 
     /**
      * <p>The limit on the number of times that the shared files can be downloaded. The value of this parameter must be equal to or greater than 0. A value of 0 indicates no limit.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("download_limit")
     public Long downloadLimit;
 
     /**
      * <p>The drive ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("drive_id")
     public String driveId;
 
     /**
-     * <p>The time when the share URL expires. The value of this parameter follows the RFC 3339 standard. Example: "2020-06-28T11:33:00.000+08:00". If expiration is set to "", the share URL never expires.</p>
+     * <p>The time when the share URL expires. The value of this parameter follows the RFC 3339 standard. Example: &quot;2020-06-28T11:33:00.000+08:00&quot;. If expiration is set to &quot;&quot;, the share URL never expires.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-06-28T11:33:00.000+08:00</p>
      */
     @NameInMap("expiration")
     public String expiration;
 
     /**
      * <p>The IDs of the files to share in the parent path. The number of files in the parent path ranges from 1 to 100. If share_all_files is set to true, this parameter does not take effect. Otherwise, you must specify this parameter.``</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;520b217f13adf4fc24f2191991b1664ce045b393&quot;]</p>
      */
     @NameInMap("file_id_list")
     public java.util.List<String> fileIdList;
 
     /**
      * <p>The limit on the number of times that the shared files can be previewed. The value of this parameter must be equal to or greater than 0. A value of 0 indicates no limit.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("preview_limit")
     public Long previewLimit;
 
     /**
      * <p>The limit on the number of times that the shared files can be dumped. The value of this parameter must be equal to or greater than 0. A value of 0 indicates no limit.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("save_limit")
     public Long saveLimit;
 
     /**
      * <p>Specifies whether to share all files in the drive.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("share_all_files")
     public Boolean shareAllFiles;
@@ -86,12 +115,18 @@ public class CreateShareLinkRequest extends TeaModel {
 
     /**
      * <p>The access code. An access code must be 0 to 64 bytes in length. If you do not specify this parameter or leave this parameter empty, the files can be accessed without an access code. In this case, you do not need to specify the share_pwd parameter when you call an operation to query the share URL. The access code can contain only visible ASCII characters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>abcF123x</p>
      */
     @NameInMap("share_pwd")
     public String sharePwd;
 
     /**
      * <p>The user ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>u123</p>
      */
     @NameInMap("user_id")
     public String userId;

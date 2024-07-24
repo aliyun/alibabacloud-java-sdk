@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class GetDomainRequest extends TeaModel {
     /**
      * <p>The ID of the domain.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bj1</p>
      */
     @NameInMap("domain_id")
     public String domainId;
@@ -17,6 +19,9 @@ public class GetDomainRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to return the used quota of the domain. Default value: false. If the quota of the domain is greater than 0 and you set this parameter to true, the used quota of the domain is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("get_quota_used")
     public Boolean getQuotaUsed;

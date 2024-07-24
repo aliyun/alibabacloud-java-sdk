@@ -4,18 +4,38 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class SystemTag extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0.877</p>
+     */
     @NameInMap("centric_score")
     public Float centricScore;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0.98</p>
+     */
     @NameInMap("confidence")
     public Float confidence;
 
+    /**
+     * <strong>example:</strong>
+     * <p>篮球</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>运动</p>
+     */
     @NameInMap("parent_name")
     public String parentName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("tag_level")
     public Integer tagLevel;
 

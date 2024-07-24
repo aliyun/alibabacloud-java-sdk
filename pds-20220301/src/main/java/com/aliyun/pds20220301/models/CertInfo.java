@@ -4,12 +4,24 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class CertInfo extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>xxx</p>
+     */
     @NameInMap("cert_body")
     public String certBody;
 
+    /**
+     * <strong>example:</strong>
+     * <p>xxx</p>
+     */
     @NameInMap("cert_name")
     public String certName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>xxx</p>
+     */
     @NameInMap("cert_privatekey")
     public String certPrivatekey;
 

@@ -4,6 +4,10 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class SearchSimilarImageClustersResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>NWQ1Yjk4YmI1ZDRlYmU1Y2E0YWE0***</p>
+     */
     @NameInMap("next_marker")
     public String nextMarker;
 

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeltaGetLastCursorResponseBody extends TeaModel {
     /**
      * <p>The latest cursor of incremental information in the specified drive or synced folder.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NWQ1Yjk4YmI1ZDRlYmU1Y2E0YWE0NmJhYWJmODBhNDQ2NzhlMTRhMg</p>
      */
     @NameInMap("cursor")
     public String cursor;

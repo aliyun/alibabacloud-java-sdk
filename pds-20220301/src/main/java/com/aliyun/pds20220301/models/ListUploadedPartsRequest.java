@@ -6,40 +6,56 @@ import com.aliyun.tea.*;
 public class ListUploadedPartsRequest extends TeaModel {
     /**
      * <p>The drive ID. This parameter is required if the file is not uploaded by using the share URL of the file.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("drive_id")
     public String driveId;
 
     /**
      * <p>The file ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>322fb07b975f4b0ae1b543fe8475eee4c19eb2b2</p>
      */
     @NameInMap("file_id")
     public String fileId;
 
     /**
      * <p>The maximum number of results to return. Valid values: 1 to 100. Default value: 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("limit")
     public Integer limit;
 
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of marker. By default, this parameter is left empty.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NWQ1Yjk4YmI1ZDRlYmU1Y2E0YWE0NmJhYWJmODBhNDQ2NzhlMTRhMg</p>
      */
     @NameInMap("part_number_marker")
     public Integer partNumberMarker;
 
     /**
      * <p>The share ID. This parameter is required if the file is uploaded by using the share URL of the file.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7JQX1FswpQ8</p>
      */
     @NameInMap("share_id")
     public String shareId;
 
     /**
      * <p>The ID of the upload task.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>00166D06127B413BA1EC8ABB1144D101</p>
      */
     @NameInMap("upload_id")
     public String uploadId;

@@ -6,26 +6,31 @@ import com.aliyun.tea.*;
 public class GetIdentityToBenefitPkgMappingRequest extends TeaModel {
     /**
      * <p>The unique identifier of the benefit package.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>40cb7794c9294</p>
      */
     @NameInMap("benefit_pkg_id")
     public String benefitPkgId;
 
     /**
      * <p>The unique identifier of the entity.</p>
-     * <br>
      * <p>If you want to manage the benefits of a user, set this parameter to a user ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>user123</p>
      */
     @NameInMap("identity_id")
     public String identityId;
 
     /**
      * <p>The type of the entity. If you want to manage the benefits of a user, set this parameter to user.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>user</p>
      */
     @NameInMap("identity_type")
     public String identityType;

@@ -6,62 +6,91 @@ import com.aliyun.tea.*;
 public class SearchUserRequest extends TeaModel {
     /**
      * <p>The email address of the user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="mailto:123@pds.com">123@pds.com</a></p>
      */
     @NameInMap("email")
     public String email;
 
     /**
      * <p>The maximum number of results to return. Valid values: 1 to 100. Default value: 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("limit")
     public Integer limit;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of marker.\\</p>
-     * <p>By default, this parameter is left empty.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of marker.\
+     * By default, this parameter is left empty.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NWQ1Yjk4YmI1ZDRlYmU1Y2E0YWE0NmJhYWJmODBhNDQ2NzhlMTRhMg</p>
      */
     @NameInMap("marker")
     public String marker;
 
     /**
      * <p>The nickname of the user. The nickname can be up to 128 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pdsuer</p>
      */
     @NameInMap("nick_name")
     public String nickName;
 
     /**
      * <p>The nickname used for fuzzy searches. The nickname can be up to 128 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>la</p>
      */
     @NameInMap("nick_name_for_fuzzy")
     public String nickNameForFuzzy;
 
     /**
      * <p>The mobile number of the user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>13900001111</p>
      */
     @NameInMap("phone")
     public String phone;
 
     /**
      * <p>The role of the user. Valid values:</p>
-     * <br>
-     * <p>*   superadmin</p>
-     * <p>*   admin</p>
-     * <p>*   user</p>
+     * <ul>
+     * <li>superadmin</li>
+     * <li>admin</li>
+     * <li>user</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>user</p>
      */
     @NameInMap("role")
     public String role;
 
     /**
      * <p>The state of the user. Valid values:</p>
-     * <br>
-     * <p>*   disabled: The user is prohibited from logon.</p>
-     * <p>*   enabled: The user is in a normal state.</p>
+     * <ul>
+     * <li>disabled: The user is prohibited from logon.</li>
+     * <li>enabled: The user is in a normal state.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>enabled</p>
      */
     @NameInMap("status")
     public String status;
 
     /**
      * <p>The name of the user. The name can be up to 128 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pds</p>
      */
     @NameInMap("user_name")
     public String userName;

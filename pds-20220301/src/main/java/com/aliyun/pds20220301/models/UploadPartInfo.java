@@ -4,6 +4,10 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class UploadPartInfo extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0CC175B9C0F1B6A831C399E269772661</p>
+     */
     @NameInMap("etag")
     public String etag;
 
@@ -18,10 +22,17 @@ public class UploadPartInfo extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("part_number")
     public Integer partNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1024</p>
+     */
     @NameInMap("part_size")
     public Long partSize;
 

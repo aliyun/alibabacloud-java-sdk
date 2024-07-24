@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class UpdateFacegroupResponseBody extends TeaModel {
     /**
      * <p>The drive ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("drive_id")
     public String driveId;
 
     /**
      * <p>The group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>group-abc</p>
      */
     @NameInMap("group_id")
     public String groupId;

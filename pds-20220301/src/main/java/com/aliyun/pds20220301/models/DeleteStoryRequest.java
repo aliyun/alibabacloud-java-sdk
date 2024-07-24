@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DeleteStoryRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("drive_id")
     public String driveId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9132e0d8-fe92-4e56-86c3-f5f112308003</p>
      */
     @NameInMap("story_id")
     public String storyId;

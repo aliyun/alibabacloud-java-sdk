@@ -59,12 +59,18 @@ public class InvestigateFileRequest extends TeaModel {
     public static class InvestigateFileRequestDriveFileIds extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("drive_id")
         public String driveId;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9520943DC264</p>
          */
         @NameInMap("file_id")
         public String fileId;

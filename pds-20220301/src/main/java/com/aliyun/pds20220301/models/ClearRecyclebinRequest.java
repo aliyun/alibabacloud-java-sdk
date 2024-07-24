@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ClearRecyclebinRequest extends TeaModel {
     /**
      * <p>The drive ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("drive_id")
     public String driveId;

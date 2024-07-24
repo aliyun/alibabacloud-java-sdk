@@ -13,33 +13,69 @@ public class CreateStoryRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("drive_id")
     public String driveId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
     @NameInMap("max_image_count")
     public Long maxImageCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
     @NameInMap("min_image_count")
     public Long minImageCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-12-30T16:00:00Z</p>
+     */
     @NameInMap("story_end_time")
     public String storyEndTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>9132e0d8-fe92-4e56-86c3-f5f112308003</p>
+     */
     @NameInMap("story_id")
     public String storyId;
 
     @NameInMap("story_name")
     public String storyName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2016-12-30T16:00:00Z</p>
+     */
     @NameInMap("story_start_time")
     public String storyStartTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Food</p>
+     */
     @NameInMap("story_sub_type")
     public String storySubType;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TagMemory</p>
      */
     @NameInMap("story_type")
     public String storyType;

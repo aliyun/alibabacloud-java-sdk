@@ -6,23 +6,26 @@ import com.aliyun.tea.*;
 public class FilePutUserTagsRequest extends TeaModel {
     /**
      * <p>The drive ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("drive_id")
     public String driveId;
 
     /**
      * <p>The file ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9520943DC264</p>
      */
     @NameInMap("file_id")
     public String fileId;
 
     /**
      * <p>The tags to be added to the file. You cannot leave this parameter empty. You can specify up to 1,000 tags. You cannot specify tags that have the same name.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("user_tags")
@@ -60,14 +63,19 @@ public class FilePutUserTagsRequest extends TeaModel {
     public static class FilePutUserTagsRequestUserTags extends TeaModel {
         /**
          * <p>The name of the tag. The tag name cannot be empty and cannot contain number signs (#).</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag</p>
          */
         @NameInMap("key")
         public String key;
 
         /**
          * <p>The value of the tag. The tag value cannot contain number signs (#).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value</p>
          */
         @NameInMap("value")
         public String value;

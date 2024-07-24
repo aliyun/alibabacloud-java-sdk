@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class FileListPermissionRequest extends TeaModel {
     /**
      * <p>The drive ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("drive_id")
     public String driveId;
 
     /**
      * <p>The file ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4221bf6e6ab43a255edc4463bffa6f5f5d317401</p>
      */
     @NameInMap("file_id")
     public String fileId;

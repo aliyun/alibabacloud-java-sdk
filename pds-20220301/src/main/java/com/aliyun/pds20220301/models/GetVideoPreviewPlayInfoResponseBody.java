@@ -4,23 +4,36 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class GetVideoPreviewPlayInfoResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>VideoPreviewWaitAndRetry</p>
+     */
     @NameInMap("code")
     public String code;
 
     /**
      * <p>The domain ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bj1</p>
      */
     @NameInMap("domain_id")
     public String domainId;
 
     /**
      * <p>The drive ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("drive_id")
     public String driveId;
 
     /**
      * <p>The file ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>fileid1</p>
      */
     @NameInMap("file_id")
     public String fileId;
@@ -28,11 +41,18 @@ public class GetVideoPreviewPlayInfoResponseBody extends TeaModel {
     @NameInMap("master_url")
     public String masterUrl;
 
+    /**
+     * <strong>example:</strong>
+     * <p>media is transcoding, please wait and retry.</p>
+     */
     @NameInMap("message")
     public String message;
 
     /**
      * <p>The share ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7JQX1FswpQ8</p>
      */
     @NameInMap("share_id")
     public String shareId;

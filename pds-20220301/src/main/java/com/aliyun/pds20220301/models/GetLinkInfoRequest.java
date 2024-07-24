@@ -9,12 +9,18 @@ public class GetLinkInfoRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>130***</p>
      */
     @NameInMap("identity")
     public String identity;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mobile</p>
      */
     @NameInMap("type")
     public String type;

@@ -32,12 +32,18 @@ public class BatchResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the child request. The ID is used to associate a child request with a response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>93433894994ad2e1</p>
          */
         @NameInMap("id")
         public String id;
 
         /**
          * <p>The returned HTTP status code of a child request. For more information, see the topic of the corresponding child request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         @NameInMap("status")
         public Integer status;

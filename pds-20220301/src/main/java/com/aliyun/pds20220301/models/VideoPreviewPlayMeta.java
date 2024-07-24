@@ -4,6 +4,10 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class VideoPreviewPlayMeta extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>live_transcoding</p>
+     */
     @NameInMap("category")
     public String category;
 
@@ -49,6 +53,10 @@ public class VideoPreviewPlayMeta extends TeaModel {
         @NameInMap("status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>264_720p</p>
+         */
         @NameInMap("template_id")
         public String templateId;
 
@@ -84,12 +92,24 @@ public class VideoPreviewPlayMeta extends TeaModel {
     }
 
     public static class VideoPreviewPlayMetaMeta extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("duration")
         public Double duration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>720</p>
+         */
         @NameInMap("height")
         public Long height;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1280</p>
+         */
         @NameInMap("width")
         public Long width;
 

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CdnFileDownloadCallbackInfo extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccp-bj1-bj-1234</p>
      */
     @NameInMap("bucket")
     public String bucket;
@@ -42,6 +45,9 @@ public class CdnFileDownloadCallbackInfo extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>md5.Sum([]byte(fmt.Sprintf(&quot;%v%v%v%v%v%v...%v&quot;, 		req.Object, req.Range, req.DomainID, req.DriveID, req.UserID, req.FileID, req.Expire)))</p>
      */
     @NameInMap("token")
     public String token;

@@ -6,16 +6,26 @@ import com.aliyun.tea.*;
 public class CsiGetFileInfoRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("drive_id")
     public String driveId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9520943DC264</p>
      */
     @NameInMap("file_id")
     public String fileId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("url_expire_sec")
     public Integer urlExpireSec;
 

@@ -6,56 +6,97 @@ import com.aliyun.tea.*;
 public class CreateFileRequest extends TeaModel {
     /**
      * <p>The processing method that is used if the file that you want to create has the same name as an existing file in the cloud. Valid values:</p>
-     * <br>
      * <p>ignore: allows you to create the file by using the same name as an existing file in the cloud.</p>
-     * <br>
      * <p>auto_rename: automatically renames the file that you want to create. By default, the current point in time is added to the end of the file name. Example: xxx_20060102_150405.</p>
-     * <br>
      * <p>refuse: does not create the file that you want to create but returns the information about the file that has the same name in the cloud.</p>
-     * <br>
      * <p>Default value: ignore.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ignore</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
      */
     @NameInMap("check_name_mode")
     public String checkNameMode;
 
     /**
      * <p>The hash value of the file content. The value is calculated based on the algorithm specified by content_hash_name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7C4A8D09CA3762AF61E59520943DC26494F8941B</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
      */
     @NameInMap("content_hash")
     public String contentHash;
 
     /**
      * <p>The name of the algorithm that is used to calculate the hash value of the file content. Only SHA1 is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sha1</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
      */
     @NameInMap("content_hash_name")
     public String contentHashName;
 
     /**
      * <p>The type of the file content. Default value: application/oct-stream.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>application/json</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
      */
     @NameInMap("content_type")
     public String contentType;
 
     /**
      * <p>The description of the file. The description can be up to 1,024 characters in length. By default, this parameter is left empty.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>重要文件</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
      * <p>The drive ID. This parameter is required if the file is not uploaded by using the share URL of the file.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("drive_id")
     public String driveId;
 
     /**
      * <p>The file ID. This parameter is required if check_name_mode is set to ignore.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9520943DC264</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
      */
     @NameInMap("file_id")
     public String fileId;
 
     /**
      * <p>Specifies whether to hide the file or folder. By default, the file or folder is not hidden.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
      */
     @NameInMap("hidden")
     public Boolean hidden;
@@ -68,34 +109,56 @@ public class CreateFileRequest extends TeaModel {
 
     /**
      * <p>The time when the local file was created. By default, this parameter is left empty. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format based on the UTC+0 time zone.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-08-20T06:51:27.292Z</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
      */
     @NameInMap("local_created_at")
     public String localCreatedAt;
 
     /**
      * <p>The time when the local file was modified. By default, this parameter is left empty. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format based on the UTC+0 time zone.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-08-20T06:51:27.292Z</p>
      */
     @NameInMap("local_modified_at")
     public String localModifiedAt;
 
     /**
      * <p>The name of the file. The name can be up to 1,024 bytes in length based on the UTF-8 encoding rule and cannot end with a forward slash (/).</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a.txt</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>false</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
      * <p>Specifies whether to enable the parallel upload feature.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
      */
     @NameInMap("parallel_upload")
     public Boolean parallelUpload;
 
     /**
      * <p>The ID of the parent directory. If you want to create a file or folder in the root directory, set this parameter to root.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>fileid1</p>
      */
     @NameInMap("parent_file_id")
     public String parentFileId;
@@ -108,28 +171,50 @@ public class CreateFileRequest extends TeaModel {
 
     /**
      * <p>The SHA-1 hash value of the first 1 KB data of the file. This parameter is required if you perform instant file upload by using the pre-hashing feature. If the SHA-1 hash value is not matched on the cloud, the client does not need to calculate the SHA-1 hash value of the entire file.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7C4A8D09CA3762AF61E59520943DC26494F89411</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
      */
     @NameInMap("pre_hash")
     public String preHash;
 
     /**
      * <p>The share ID. This parameter is required if the file is uploaded by using the share URL of the file.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7JQX1FswpQ8</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
      */
     @NameInMap("share_id")
     public String shareId;
 
     /**
      * <p>The size of the file. Unit: bytes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1024</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
      */
     @NameInMap("size")
     public Long size;
 
     /**
      * <p>The type of the file. Valid values:</p>
-     * <br>
      * <p>file folder</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>file</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
      */
     @NameInMap("type")
     public String type;
@@ -328,6 +413,9 @@ public class CreateFileRequest extends TeaModel {
 
         /**
          * <p>The size of the file content before the file part. Unit: bytes. The value must be a multiple of 64. This parameter takes effect only if the parallel upload feature is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10240</p>
          */
         @NameInMap("part_offset")
         public Long partOffset;
@@ -358,6 +446,9 @@ public class CreateFileRequest extends TeaModel {
     public static class CreateFileRequestPartInfoList extends TeaModel {
         /**
          * <p>The MD5 hash value of the file part. This parameter is required when the MD5 hash value of the file part needs to be verified during part upload.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ASKJDJSKDJJSJDJS</p>
          */
         @NameInMap("content_md5")
         public String contentMd5;
@@ -370,6 +461,9 @@ public class CreateFileRequest extends TeaModel {
 
         /**
          * <p>The serial number of a file part. The number starts from 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("part_number")
         public Integer partNumber;

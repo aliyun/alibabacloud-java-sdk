@@ -7,6 +7,10 @@ public class Identity extends TeaModel {
     @NameInMap("identity_id")
     public String identityId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>IT_User</p>
+     */
     @NameInMap("identity_type")
     public String identityType;
 

@@ -4,12 +4,24 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class CNameStatus extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>BINDING/BOUND</p>
+     */
     @NameInMap("bingding_state")
     public String bingdingState;
 
+    /**
+     * <strong>example:</strong>
+     * <p>NORMAL/ABNORMAL</p>
+     */
     @NameInMap("legal_state")
     public String legalState;
 
+    /**
+     * <strong>example:</strong>
+     * <p>beian</p>
+     */
     @NameInMap("remark")
     public String remark;
 

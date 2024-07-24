@@ -6,10 +6,11 @@ import com.aliyun.tea.*;
 public class UpdateUserRequest extends TeaModel {
     /**
      * <p>The URL of the profile picture.</p>
-     * <br>
      * <p>If you specify the parameter in the HTTP URL format, the URL must start with http:// or https:// and can be up to 4 KB in size.</p>
-     * <br>
      * <p>If you specify the parameter in the DATA URL format, the URL must start with data:// and be encoded in Base64. The URL can be up to 300 KB in size.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://a.b.c/pds.jpg">http://a.b.c/pds.jpg</a></p>
      */
     @NameInMap("avatar")
     public String avatar;
@@ -22,6 +23,9 @@ public class UpdateUserRequest extends TeaModel {
 
     /**
      * <p>The email address of the user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="mailto:a@aliyunpds.com">a@aliyunpds.com</a></p>
      */
     @NameInMap("email")
     public String email;
@@ -34,31 +38,45 @@ public class UpdateUserRequest extends TeaModel {
 
     /**
      * <p>The nickname of the user. The nickname can be up to 128 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pdsuer</p>
      */
     @NameInMap("nick_name")
     public String nickName;
 
     /**
      * <p>The mobile number of the user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>13900001111</p>
      */
     @NameInMap("phone")
     public String phone;
 
     /**
      * <p>The role of the user. Valid values:</p>
-     * <br>
-     * <p>*   superadmin</p>
-     * <p>*   admin</p>
-     * <p>*   user</p>
+     * <ul>
+     * <li>superadmin</li>
+     * <li>admin</li>
+     * <li>user</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>user</p>
      */
     @NameInMap("role")
     public String role;
 
     /**
      * <p>The state of the user. Valid values:</p>
-     * <br>
-     * <p>*   disabled: The user is prohibited from logon.</p>
-     * <p>*   enabled: The user is in a normal state.</p>
+     * <ul>
+     * <li>disabled: The user is prohibited from logon.</li>
+     * <li>enabled: The user is in a normal state.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>enabled</p>
      */
     @NameInMap("status")
     public String status;
@@ -71,8 +89,10 @@ public class UpdateUserRequest extends TeaModel {
 
     /**
      * <p>The user ID. The ID can be up to 64 characters in length and cannot contain a number sign (#).</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c9b7a5aa04d14ae3867fdc886fa01da4</p>
      */
     @NameInMap("user_id")
     public String userId;
@@ -165,6 +185,9 @@ public class UpdateUserRequest extends TeaModel {
     public static class UpdateUserRequestGroupInfoList extends TeaModel {
         /**
          * <p>The group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>g123</p>
          */
         @NameInMap("group_id")
         public String groupId;

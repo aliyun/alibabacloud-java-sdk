@@ -4,23 +4,42 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class SearchStoriesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>image/resize,m_fill,h_128,w_128,limit_0/format,jpg</p>
+     */
     @NameInMap("cover_image_thumbnail_process")
     @Deprecated
     public String coverImageThumbnailProcess;
 
+    /**
+     * <strong>example:</strong>
+     * <p>video/snapshot,t_1000,f_jpg,w_0,h_0,m_fast,ar_auto</p>
+     */
     @NameInMap("cover_video_thumbnail_process")
     @Deprecated
     public String coverVideoThumbnailProcess;
 
+    /**
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
     @NameInMap("create_time_range")
     public SearchStoriesRequestCreateTimeRange createTimeRange;
 
+    /**
+     * <strong>example:</strong>
+     * <p>key1=value1,key2!=value2</p>
+     */
     @NameInMap("custom_labels")
     @Deprecated
     public String customLabels;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("drive_id")
     public String driveId;
@@ -28,37 +47,80 @@ public class SearchStoriesRequest extends TeaModel {
     @NameInMap("face_group_ids")
     public java.util.List<String> faceGroupIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("limit")
     public Long limit;
 
+    /**
+     * <strong>example:</strong>
+     * <p>NWQ1Yjk4YmI1ZDODBhNDQ2Nzhl***</p>
+     */
     @NameInMap("marker")
     public String marker;
 
+    /**
+     * <strong>example:</strong>
+     * <p>desc</p>
+     */
     @NameInMap("order")
     public String order;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CreateTime</p>
+     */
     @NameInMap("sort")
     public String sort;
 
+    /**
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
     @NameInMap("story_end_time_range")
     public SearchStoriesRequestStoryEndTimeRange storyEndTimeRange;
 
+    /**
+     * <strong>example:</strong>
+     * <p>9132e0d8-fe92-4e56-86c3-f5f112308003</p>
+     */
     @NameInMap("story_id")
     public String storyId;
 
     @NameInMap("story_name")
     public String storyName;
 
+    /**
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
     @NameInMap("story_start_time_range")
     public SearchStoriesRequestStoryStartTimeRange storyStartTimeRange;
 
+    /**
+     * <strong>example:</strong>
+     * <p>PeopleMemory</p>
+     */
     @NameInMap("story_type")
     public String storyType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>900</p>
+     */
     @NameInMap("url_expire_sec")
     @Deprecated
     public Long urlExpireSec;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
     @NameInMap("with_empty_stories")
     public Boolean withEmptyStories;
 
@@ -204,9 +266,17 @@ public class SearchStoriesRequest extends TeaModel {
     }
 
     public static class SearchStoriesRequestCreateTimeRange extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2022-12-31T00:00:00+08:00</p>
+         */
         @NameInMap("end")
         public String end;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2016-12-31T00:00:00+08:00</p>
+         */
         @NameInMap("start")
         public String start;
 
@@ -234,9 +304,17 @@ public class SearchStoriesRequest extends TeaModel {
     }
 
     public static class SearchStoriesRequestStoryEndTimeRange extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2022-12-31T00:00:00+08:00</p>
+         */
         @NameInMap("end")
         public String end;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2016-12-31T00:00:00+08:00</p>
+         */
         @NameInMap("start")
         public String start;
 
@@ -264,9 +342,17 @@ public class SearchStoriesRequest extends TeaModel {
     }
 
     public static class SearchStoriesRequestStoryStartTimeRange extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2022-12-31T00:00:00+08:00</p>
+         */
         @NameInMap("end")
         public String end;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2016-12-31T00:00:00+08:00</p>
+         */
         @NameInMap("start")
         public String start;
 

@@ -6,23 +6,26 @@ import com.aliyun.tea.*;
 public class GetUploadUrlRequest extends TeaModel {
     /**
      * <p>The drive ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("drive_id")
     public String driveId;
 
     /**
      * <p>The file ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5d5b846942cf94fa72324c14a4bda34e81da635d</p>
      */
     @NameInMap("file_id")
     public String fileId;
 
     /**
      * <p>The information about the file parts.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("part_info_list")
@@ -30,14 +33,19 @@ public class GetUploadUrlRequest extends TeaModel {
 
     /**
      * <p>The share ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7JQX1FswpQ8</p>
      */
     @NameInMap("share_id")
     public String shareId;
 
     /**
      * <p>The ID of the upload task.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10166D06127B413BA1EC8ABB1144D111</p>
      */
     @NameInMap("upload_id")
     public String uploadId;
@@ -96,6 +104,9 @@ public class GetUploadUrlRequest extends TeaModel {
 
         /**
          * <p>The size of the file part. Unit: bytes. The value must be a multiple of 64. This parameter takes effect only if the parallel upload feature is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10240</p>
          */
         @NameInMap("part_offset")
         public Long partOffset;
@@ -171,6 +182,9 @@ public class GetUploadUrlRequest extends TeaModel {
 
         /**
          * <p>The serial number of a part.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("part_number")
         public Integer partNumber;

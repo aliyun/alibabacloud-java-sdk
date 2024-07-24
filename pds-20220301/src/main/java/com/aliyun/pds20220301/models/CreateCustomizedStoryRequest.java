@@ -10,6 +10,9 @@ public class CreateCustomizedStoryRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("drive_id")
     public String driveId;
@@ -28,18 +31,27 @@ public class CreateCustomizedStoryRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test_name</p>
      */
     @NameInMap("story_name")
     public String storyName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>user_created</p>
      */
     @NameInMap("story_sub_type")
     public String storySubType;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>user_created</p>
      */
     @NameInMap("story_type")
     public String storyType;
@@ -108,10 +120,17 @@ public class CreateCustomizedStoryRequest extends TeaModel {
     public static class CreateCustomizedStoryRequestStoryCover extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>63e5e4340f76cb3ead5f40f68163f0f967c1a7bf</p>
          */
         @NameInMap("file_id")
         public String fileId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>642a88d4aff041ee68fd4fc89beb80e1119da343</p>
+         */
         @NameInMap("revision_id")
         public String revisionId;
 
@@ -141,10 +160,17 @@ public class CreateCustomizedStoryRequest extends TeaModel {
     public static class CreateCustomizedStoryRequestStoryFiles extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>63e5e4340f76cb3ead5f40f68163f0f967c1a7bf</p>
          */
         @NameInMap("file_id")
         public String fileId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>642a88d4aff041ee68fd4fc89beb80e1119da343</p>
+         */
         @NameInMap("revision_id")
         public String revisionId;
 

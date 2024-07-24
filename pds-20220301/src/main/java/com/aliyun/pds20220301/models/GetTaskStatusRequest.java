@@ -6,16 +6,20 @@ import com.aliyun.tea.*;
 public class GetTaskStatusRequest extends TeaModel {
     /**
      * <p>The drive ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("drive_id")
     public String driveId;
 
     /**
      * <p>The ID of the task.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i:SimilarImageClustering-b67d53e7-2fe8-460f-9b95-1e93636923eb</p>
      */
     @NameInMap("task_id")
     public String taskId;

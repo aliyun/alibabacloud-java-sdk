@@ -4,36 +4,72 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class FaceGroup extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2022-01-14T10:10:52.83948013+08:00</p>
+     */
     @NameInMap("created_at")
     public String createdAt;
 
     @NameInMap("group_cover_face_boundary")
     public FaceGroupGroupCoverFaceBoundary groupCoverFaceBoundary;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6549c959640fbd517c9b4d93b3b36aecc45xxxxx</p>
+     */
     @NameInMap("group_cover_file_id")
     public String groupCoverFileId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1080</p>
+     */
     @NameInMap("group_cover_height")
     public Long groupCoverHeight;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://xxx">https://xxx</a></p>
+     */
     @NameInMap("group_cover_url")
     public String groupCoverUrl;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1920</p>
+     */
     @NameInMap("group_cover_width")
     public Long groupCoverWidth;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Cluster-ae6e3472-999e-410b-b54e-cd5dba****</p>
+     */
     @NameInMap("group_id")
     public String groupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>name</p>
+     */
     @NameInMap("group_name")
     public String groupName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("image_count")
     public Long imageCount;
 
     @NameInMap("remarks")
     public String remarks;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-01-14T10:10:52.83948013+08:00</p>
+     */
     @NameInMap("updated_at")
     public String updatedAt;
 
@@ -131,15 +167,31 @@ public class FaceGroup extends TeaModel {
     }
 
     public static class FaceGroupGroupCoverFaceBoundary extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>300</p>
+         */
         @NameInMap("Height")
         public Integer height;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Left")
         public Integer left;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("Top")
         public Integer top;
 
+        /**
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("Width")
         public Integer width;
 

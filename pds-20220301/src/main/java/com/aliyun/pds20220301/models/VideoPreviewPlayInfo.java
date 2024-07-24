@@ -4,6 +4,10 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class VideoPreviewPlayInfo extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>live_transcoding</p>
+     */
     @NameInMap("category")
     public String category;
 

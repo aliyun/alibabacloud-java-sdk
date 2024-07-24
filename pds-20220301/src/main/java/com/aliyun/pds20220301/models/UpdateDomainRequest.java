@@ -12,8 +12,10 @@ public class UpdateDomainRequest extends TeaModel {
 
     /**
      * <p>The domain ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bj1</p>
      */
     @NameInMap("domain_id")
     public String domainId;
@@ -26,12 +28,18 @@ public class UpdateDomainRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to enable the default drive feature. A value of true specifies that all users are assigned a drive by default on the first logon. Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("init_drive_enable")
     public Boolean initDriveEnable;
 
     /**
      * <p>The size of the default drive. Unit: bytes. You must specify init_drive_size if you set init_drive_enable to true. Default value: 0. A value of 0 specifies that the size of the default drive is 0 bytes and you cannot upload files to the drive. To initialize the default drive, set init_drive_size to 0. A value of -1 specifies that the size is unlimited.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1073741824</p>
      */
     @NameInMap("init_drive_size")
     public Long initDriveSize;
@@ -44,12 +52,18 @@ public class UpdateDomainRequest extends TeaModel {
 
     /**
      * <p>The total storage quota for all drives in the domain. A value of 0 specifies that the quota is unlimited.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1099511627776</p>
      */
     @NameInMap("size_quota")
     public Long sizeQuota;
 
     /**
      * <p>The maximum number of users that can be created in the domain.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("user_count_quota")
     public Long userCountQuota;

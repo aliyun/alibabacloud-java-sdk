@@ -6,32 +6,46 @@ import com.aliyun.tea.*;
 public class ListAddressGroupsRequest extends TeaModel {
     /**
      * <p>The drive ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("drive_id")
     public String driveId;
 
     /**
      * <p>The method that is used to generate a thumbnail of an image.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>image/resize,w_200</p>
      */
     @NameInMap("image_thumbnail_process")
     public String imageThumbnailProcess;
 
     /**
      * <p>The maximum number of results to return. Valid values: 1 to 100. Default value: 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("limit")
     public Integer limit;
 
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of marker. By default, this parameter is left empty.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NWQ1Yjk4YmI1ZDRlYmU1Y2E0YWE0NmJhYWJmODBhNDQ2NzhlMTRhMg</p>
      */
     @NameInMap("marker")
     public String marker;
 
     /**
      * <p>The method that is used to generate a thumbnail of a video.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>video_thumbnail_process</p>
      */
     @NameInMap("video_thumbnail_process")
     public String videoThumbnailProcess;

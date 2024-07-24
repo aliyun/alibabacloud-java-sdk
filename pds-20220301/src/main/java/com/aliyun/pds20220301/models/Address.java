@@ -4,18 +4,38 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class Address extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>杭州市</p>
+     */
     @NameInMap("city")
     public String city;
 
+    /**
+     * <strong>example:</strong>
+     * <p>中国</p>
+     */
     @NameInMap("country")
     public String country;
 
+    /**
+     * <strong>example:</strong>
+     * <p>余杭区</p>
+     */
     @NameInMap("district")
     public String district;
 
+    /**
+     * <strong>example:</strong>
+     * <p>浙江省</p>
+     */
     @NameInMap("province")
     public String province;
 
+    /**
+     * <strong>example:</strong>
+     * <p>文一西路</p>
+     */
     @NameInMap("township")
     public String township;
 

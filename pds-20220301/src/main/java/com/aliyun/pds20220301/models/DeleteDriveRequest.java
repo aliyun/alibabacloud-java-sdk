@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class DeleteDriveRequest extends TeaModel {
     /**
      * <p>The drive ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("drive_id")
     public String driveId;
