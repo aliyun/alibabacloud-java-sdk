@@ -38,6 +38,13 @@ public class GetChatappVerifyCodeResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("Success")
+    public Boolean success;
+
     public static GetChatappVerifyCodeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetChatappVerifyCodeResponseBody self = new GetChatappVerifyCodeResponseBody();
         return TeaModel.build(map, self);
@@ -73,6 +80,14 @@ public class GetChatappVerifyCodeResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public GetChatappVerifyCodeResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
 }

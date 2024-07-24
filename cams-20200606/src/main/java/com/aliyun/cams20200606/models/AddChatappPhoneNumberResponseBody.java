@@ -41,6 +41,13 @@ public class AddChatappPhoneNumberResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("Success")
+    public Boolean success;
+
     public static AddChatappPhoneNumberResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AddChatappPhoneNumberResponseBody self = new AddChatappPhoneNumberResponseBody();
         return TeaModel.build(map, self);
@@ -76,6 +83,14 @@ public class AddChatappPhoneNumberResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public AddChatappPhoneNumberResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
 }

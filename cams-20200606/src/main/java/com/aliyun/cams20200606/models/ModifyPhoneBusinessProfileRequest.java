@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class ModifyPhoneBusinessProfileRequest extends TeaModel {
     /**
      * <strong>example:</strong>
-     * <p>business profile</p>
+     * <p>关于</p>
      */
     @NameInMap("About")
     public String about;
@@ -48,6 +48,9 @@ public class ModifyPhoneBusinessProfileRequest extends TeaModel {
     @NameInMap("Email")
     public String email;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     /**
      * <p>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * <p>This parameter is required.</p>
@@ -69,6 +72,12 @@ public class ModifyPhoneBusinessProfileRequest extends TeaModel {
      */
     @NameInMap("ProfilePictureUrl")
     public String profilePictureUrl;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     /**
      * <p>Sichuan</p>
@@ -130,6 +139,14 @@ public class ModifyPhoneBusinessProfileRequest extends TeaModel {
         return this.email;
     }
 
+    public ModifyPhoneBusinessProfileRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
     public ModifyPhoneBusinessProfileRequest setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
@@ -144,6 +161,22 @@ public class ModifyPhoneBusinessProfileRequest extends TeaModel {
     }
     public String getProfilePictureUrl() {
         return this.profilePictureUrl;
+    }
+
+    public ModifyPhoneBusinessProfileRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public ModifyPhoneBusinessProfileRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public ModifyPhoneBusinessProfileRequest setVertical(String vertical) {

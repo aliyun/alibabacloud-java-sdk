@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class AddChatappPhoneNumberRequest extends TeaModel {
     /**
-     * <p>The country code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +14,6 @@ public class AddChatappPhoneNumberRequest extends TeaModel {
     public String cc;
 
     /**
-     * <p>The space ID of the user within the independent software vendor (ISV) account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,8 +22,10 @@ public class AddChatappPhoneNumberRequest extends TeaModel {
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     /**
-     * <p>The phone number without a country code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,16 +35,19 @@ public class AddChatappPhoneNumberRequest extends TeaModel {
     public String phoneNumber;
 
     /**
-     * <p>The ID of the pre-registered phone number.</p>
-     * 
      * <strong>example:</strong>
      * <p>10202020</p>
      */
     @NameInMap("PreValidateId")
     public String preValidateId;
 
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     /**
-     * <p>The display name of the phone number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -74,6 +77,14 @@ public class AddChatappPhoneNumberRequest extends TeaModel {
         return this.custSpaceId;
     }
 
+    public AddChatappPhoneNumberRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
     public AddChatappPhoneNumberRequest setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
@@ -88,6 +99,22 @@ public class AddChatappPhoneNumberRequest extends TeaModel {
     }
     public String getPreValidateId() {
         return this.preValidateId;
+    }
+
+    public AddChatappPhoneNumberRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public AddChatappPhoneNumberRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public AddChatappPhoneNumberRequest setVerifiedName(String verifiedName) {
