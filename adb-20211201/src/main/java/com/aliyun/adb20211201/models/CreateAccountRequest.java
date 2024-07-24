@@ -10,6 +10,9 @@ public class CreateAccountRequest extends TeaModel {
      * <li>The description cannot start with <code>http://</code> or <code>https://</code>.</li>
      * <li>The description can be up to 256 characters in length.</li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("AccountDescription")
     public String accountDescription;
@@ -69,6 +72,16 @@ public class CreateAccountRequest extends TeaModel {
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The database engine of the cluster. Valid values:</p>
+     * <ul>
+     * <li><strong>AnalyticDB</strong> (default): the AnalyticDB for MySQL engine.</li>
+     * <li><strong>Clickhouse</strong>: the wide table engine.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Clickhouse</p>
+     */
     @NameInMap("Engine")
     public String engine;
 

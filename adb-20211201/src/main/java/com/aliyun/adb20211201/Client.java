@@ -4202,6 +4202,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("OwnerId", request.ownerId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
             query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
         }
@@ -8003,6 +8007,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Releases the public endpoint of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+     * 
      * @param request ReleaseClusterPublicConnectionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ReleaseClusterPublicConnectionResponse
@@ -8036,6 +8046,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Releases the public endpoint of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+     * 
      * @param request ReleaseClusterPublicConnectionRequest
      * @return ReleaseClusterPublicConnectionResponse
      */

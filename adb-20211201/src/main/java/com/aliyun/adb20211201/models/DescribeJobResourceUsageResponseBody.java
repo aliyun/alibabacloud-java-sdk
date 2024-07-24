@@ -76,9 +76,17 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
         @NameInMap("ReservedAcuNumber")
         public Float reservedAcuNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>16ACU</p>
+         */
         @NameInMap("SpotAcuNumber")
         public Float spotAcuNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.9</p>
+         */
         @NameInMap("SpotAcuPercentage")
         public Float spotAcuPercentage;
 
