@@ -4,6 +4,12 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DeleteIpv6GatewayRequest extends TeaModel {
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
     /**
      * <p>The ID of the IPv6 gateway that you want to delete.</p>
      * <p>This parameter is required.</p>
@@ -39,6 +45,22 @@ public class DeleteIpv6GatewayRequest extends TeaModel {
     public static DeleteIpv6GatewayRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteIpv6GatewayRequest self = new DeleteIpv6GatewayRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteIpv6GatewayRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public DeleteIpv6GatewayRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public DeleteIpv6GatewayRequest setIpv6GatewayId(String ipv6GatewayId) {

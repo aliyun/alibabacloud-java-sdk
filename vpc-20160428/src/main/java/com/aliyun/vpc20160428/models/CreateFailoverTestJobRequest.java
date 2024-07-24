@@ -18,6 +18,9 @@ public class CreateFailoverTestJobRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -93,6 +96,14 @@ public class CreateFailoverTestJobRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public CreateFailoverTestJobRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public CreateFailoverTestJobRequest setJobDuration(Integer jobDuration) {

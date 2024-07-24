@@ -134,6 +134,16 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
         @NameInMap("BizType")
         public String bizType;
 
+        /**
+         * <p>The status of the IP address pool.</p>
+         * <ul>
+         * <li><strong>Normal</strong></li>
+         * <li><strong>FinancialLocked</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
+         */
         @NameInMap("BusinessStatus")
         public String businessStatus;
 

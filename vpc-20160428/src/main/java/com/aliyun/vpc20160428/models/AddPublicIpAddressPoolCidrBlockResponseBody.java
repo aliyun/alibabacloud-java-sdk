@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddPublicIpAddressPoolCidrBlockResponseBody extends TeaModel {
     /**
-     * <p>The CIDR blocks.</p>
+     * <p>The CIDR block.</p>
      * 
      * <strong>example:</strong>
      * <p>47.0.XX.XX/28</p>

@@ -4,6 +4,9 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ModifyIpv6GatewayAttributeRequest extends TeaModel {
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     /**
      * <p>The description of the IPv6 gateway.</p>
      * 
@@ -12,6 +15,9 @@ public class ModifyIpv6GatewayAttributeRequest extends TeaModel {
      */
     @NameInMap("Description")
     public String description;
+
+    @NameInMap("DryRun")
+    public Boolean dryRun;
 
     /**
      * <p>The ID of the IPv6 gateway that you want to modify.</p>
@@ -60,12 +66,28 @@ public class ModifyIpv6GatewayAttributeRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ModifyIpv6GatewayAttributeRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
     public ModifyIpv6GatewayAttributeRequest setDescription(String description) {
         this.description = description;
         return this;
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public ModifyIpv6GatewayAttributeRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public ModifyIpv6GatewayAttributeRequest setIpv6GatewayId(String ipv6GatewayId) {

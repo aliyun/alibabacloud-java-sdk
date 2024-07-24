@@ -4,6 +4,12 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DeleteIpv6InternetBandwidthRequest extends TeaModel {
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
     /**
      * <p>The ID of the IPv6 address.</p>
      * <blockquote>
@@ -51,6 +57,22 @@ public class DeleteIpv6InternetBandwidthRequest extends TeaModel {
     public static DeleteIpv6InternetBandwidthRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteIpv6InternetBandwidthRequest self = new DeleteIpv6InternetBandwidthRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteIpv6InternetBandwidthRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public DeleteIpv6InternetBandwidthRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public DeleteIpv6InternetBandwidthRequest setIpv6AddressId(String ipv6AddressId) {

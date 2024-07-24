@@ -31,6 +31,9 @@ public class ModifyIpv6InternetBandwidthRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
     /**
      * <p>The ID of the IPv6 address.</p>
      * <blockquote>
@@ -93,6 +96,14 @@ public class ModifyIpv6InternetBandwidthRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public ModifyIpv6InternetBandwidthRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public ModifyIpv6InternetBandwidthRequest setIpv6AddressId(String ipv6AddressId) {

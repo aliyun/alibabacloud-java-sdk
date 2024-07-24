@@ -4,6 +4,9 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribePublicIpAddressRequest extends TeaModel {
+    @NameInMap("IpVersion")
+    public String ipVersion;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -48,6 +51,14 @@ public class DescribePublicIpAddressRequest extends TeaModel {
     public static DescribePublicIpAddressRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribePublicIpAddressRequest self = new DescribePublicIpAddressRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribePublicIpAddressRequest setIpVersion(String ipVersion) {
+        this.ipVersion = ipVersion;
+        return this;
+    }
+    public String getIpVersion() {
+        return this.ipVersion;
     }
 
     public DescribePublicIpAddressRequest setOwnerAccount(String ownerAccount) {

@@ -4,6 +4,12 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DeleteVSwitchCidrReservationRequest extends TeaModel {
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -40,6 +46,22 @@ public class DeleteVSwitchCidrReservationRequest extends TeaModel {
     public static DeleteVSwitchCidrReservationRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteVSwitchCidrReservationRequest self = new DeleteVSwitchCidrReservationRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteVSwitchCidrReservationRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public DeleteVSwitchCidrReservationRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public DeleteVSwitchCidrReservationRequest setOwnerAccount(String ownerAccount) {

@@ -4,6 +4,9 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ModifyIpv6AddressAttributeRequest extends TeaModel {
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     /**
      * <p>The description of the IPv6 address.</p>
      * <p>It must be 2 to 256 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter. The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>.</p>
@@ -13,6 +16,9 @@ public class ModifyIpv6AddressAttributeRequest extends TeaModel {
      */
     @NameInMap("Description")
     public String description;
+
+    @NameInMap("DryRun")
+    public Boolean dryRun;
 
     /**
      * <p>The ID of the IPv6 address.</p>
@@ -61,12 +67,28 @@ public class ModifyIpv6AddressAttributeRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ModifyIpv6AddressAttributeRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
     public ModifyIpv6AddressAttributeRequest setDescription(String description) {
         this.description = description;
         return this;
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public ModifyIpv6AddressAttributeRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public ModifyIpv6AddressAttributeRequest setIpv6AddressId(String ipv6AddressId) {
