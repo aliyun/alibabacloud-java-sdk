@@ -178,6 +178,9 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("RenderingType")
+        public String renderingType;
+
         public static DescribeAndroidInstancesResponseBodyInstanceModel build(java.util.Map<String, ?> map) throws Exception {
             DescribeAndroidInstancesResponseBodyInstanceModel self = new DescribeAndroidInstancesResponseBodyInstanceModel();
             return TeaModel.build(map, self);
@@ -309,6 +312,14 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public DescribeAndroidInstancesResponseBodyInstanceModel setRenderingType(String renderingType) {
+            this.renderingType = renderingType;
+            return this;
+        }
+        public String getRenderingType() {
+            return this.renderingType;
         }
 
     }

@@ -4,6 +4,9 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class UpgradeAndroidInstanceGroupResponseBody extends TeaModel {
+    @NameInMap("InstanceIds")
+    public String instanceIds;
+
     /**
      * <strong>example:</strong>
      * <p>223684716098****</p>
@@ -21,6 +24,14 @@ public class UpgradeAndroidInstanceGroupResponseBody extends TeaModel {
     public static UpgradeAndroidInstanceGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpgradeAndroidInstanceGroupResponseBody self = new UpgradeAndroidInstanceGroupResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public UpgradeAndroidInstanceGroupResponseBody setInstanceIds(String instanceIds) {
+        this.instanceIds = instanceIds;
+        return this;
+    }
+    public String getInstanceIds() {
+        return this.instanceIds;
     }
 
     public UpgradeAndroidInstanceGroupResponseBody setOrderId(String orderId) {
