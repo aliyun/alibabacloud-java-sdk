@@ -10,9 +10,16 @@ public class AddRuleV4Request extends TeaModel {
     @NameInMap("BaseMeAgentId")
     public Long baseMeAgentId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("IsCopy")
     public Boolean isCopy;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("JsonStrForRule")
     public String jsonStrForRule;
 

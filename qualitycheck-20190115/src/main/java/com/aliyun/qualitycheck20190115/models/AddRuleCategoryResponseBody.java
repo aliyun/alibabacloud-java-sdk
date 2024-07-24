@@ -4,18 +4,30 @@ package com.aliyun.qualitycheck20190115.models;
 import com.aliyun.tea.*;
 
 public class AddRuleCategoryResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public AddRuleCategoryResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>successful</p>
+     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -68,6 +80,9 @@ public class AddRuleCategoryResponseBody extends TeaModel {
         @NameInMap("Select")
         public Boolean select;
 
+        @NameInMap("Type")
+        public Integer type;
+
         public static AddRuleCategoryResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             AddRuleCategoryResponseBodyData self = new AddRuleCategoryResponseBodyData();
             return TeaModel.build(map, self);
@@ -79,6 +94,14 @@ public class AddRuleCategoryResponseBody extends TeaModel {
         }
         public Boolean getSelect() {
             return this.select;
+        }
+
+        public AddRuleCategoryResponseBodyData setType(Integer type) {
+            this.type = type;
+            return this;
+        }
+        public Integer getType() {
+            return this.type;
         }
 
     }

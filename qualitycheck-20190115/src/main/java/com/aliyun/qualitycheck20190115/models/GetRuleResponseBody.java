@@ -4,18 +4,34 @@ package com.aliyun.qualitycheck20190115.models;
 import com.aliyun.tea.*;
 
 public class GetRuleResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public GetRuleResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>successful</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>F190ADE9-619A-447D-84E3-7E241A5C428E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -84,6 +100,10 @@ public class GetRuleResponseBody extends TeaModel {
     }
 
     public static class GetRuleResponseBodyDataRulesRuleInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("AutoReview")
         public Integer autoReview;
 
@@ -93,60 +113,128 @@ public class GetRuleResponseBody extends TeaModel {
         @NameInMap("Comments")
         public String comments;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("CreateEmpid")
         public String createEmpid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2016-08-05 10:37:10</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2016-08-05 10:37:10</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("IsDelete")
         public Integer isDelete;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("IsOnline")
         public Integer isOnline;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("LastUpdateEmpid")
         public String lastUpdateEmpid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2019-10-28 14:23:28</p>
+         */
         @NameInMap("LastUpdateTime")
         public String lastUpdateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>demo</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("Rid")
         public String rid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>a &amp;&amp; b</p>
+         */
         @NameInMap("RuleLambda")
         public String ruleLambda;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("RuleScoreType")
         public Integer ruleScoreType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("ScoreId")
         public Integer scoreId;
 
         @NameInMap("ScoreName")
         public String scoreName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>22</p>
+         */
         @NameInMap("ScoreSubId")
         public Integer scoreSubId;
 
         @NameInMap("ScoreSubName")
         public String scoreSubName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2016-08-05 10:37:10</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Type")
         public Integer type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Weight")
         public String weight;
 

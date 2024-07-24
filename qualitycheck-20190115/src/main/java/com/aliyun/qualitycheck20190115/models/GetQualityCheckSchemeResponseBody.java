@@ -4,24 +4,44 @@ package com.aliyun.qualitycheck20190115.models;
 import com.aliyun.tea.*;
 
 public class GetQualityCheckSchemeResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public GetQualityCheckSchemeResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>successful</p>
+     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("Messages")
     public java.util.List<String> messages;
 
+    /**
+     * <strong>example:</strong>
+     * <p>96138D8D-8D26-4E41-BFF4-77AED1088BBD</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -90,18 +110,38 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
         @NameInMap("CheckName")
         public String checkName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("CheckType")
         public Long checkType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Enable")
         public Integer enable;
 
+        /**
+         * <strong>example:</strong>
+         * <p>32</p>
+         */
         @NameInMap("SchemeId")
         public Long schemeId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("Score")
         public Integer score;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("SourceScore")
         public Integer sourceScore;
 
@@ -161,18 +201,34 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
     }
 
     public static class GetQualityCheckSchemeResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1616113198000</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("CreateUserName")
         public String createUserName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("DataType")
         public Integer dataType;
 
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -185,27 +241,59 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
         @NameInMap("SchemeCheckTypeList")
         public java.util.List<GetQualityCheckSchemeResponseBodyDataSchemeCheckTypeList> schemeCheckTypeList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>112**</p>
+         */
         @NameInMap("SchemeId")
         public Long schemeId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("SchemeTemplateId")
         public Long schemeTemplateId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TemplateType")
         public Integer templateType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Type")
         public Integer type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1616113198000</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("UpdateUserName")
         public String updateUserName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1616113198000</p>
+         */
         @NameInMap("Version")
         public Long version;
 

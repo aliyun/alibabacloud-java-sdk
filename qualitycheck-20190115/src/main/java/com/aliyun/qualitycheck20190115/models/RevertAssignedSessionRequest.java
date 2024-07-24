@@ -10,6 +10,10 @@ public class RevertAssignedSessionRequest extends TeaModel {
     @NameInMap("BaseMeAgentId")
     public Long baseMeAgentId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;isSchemeData&quot;:1,&quot;searchParam&quot;:{&quot;schemeTaskConfigId&quot;:1,&quot;sourceDataType&quot;:1,&quot;startTime&quot;:&quot;2022-09-20 00:00:00&quot;,&quot;endTime&quot;:&quot;2022-09-26 23:59:59&quot;}}</p>
+     */
     @NameInMap("jsonStr")
     public String jsonStr;
 

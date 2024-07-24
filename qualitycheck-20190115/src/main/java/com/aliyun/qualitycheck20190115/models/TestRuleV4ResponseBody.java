@@ -4,21 +4,41 @@ package com.aliyun.qualitycheck20190115.models;
 import com.aliyun.tea.*;
 
 public class TestRuleV4ResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public TestRuleV4ResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>successful</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>96138D8D-XXXX-4E41-XXXX-77AED1088BBD</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,18 +96,34 @@ public class TestRuleV4ResponseBody extends TeaModel {
     }
 
     public static class TestRuleV4ResponseBodyDataHitRuleReviewInfoListBranchInfoList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("CheckType")
         public Integer checkType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Index")
         public Integer index;
 
+        /**
+         * <strong>example:</strong>
+         * <p>a&amp;&amp;b</p>
+         */
         @NameInMap("Lambda")
         public String lambda;
 
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("NextNodeId")
         public Long nextNodeId;
 
@@ -161,21 +197,37 @@ public class TestRuleV4ResponseBody extends TeaModel {
     }
 
     public static class TestRuleV4ResponseBodyDataHitRuleReviewInfoListConditionHitInfoListKeyWords extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("Cid")
         public String cid;
 
         @NameInMap("CustomizeCode")
         public String customizeCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("From")
         public Integer from;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("Oid")
         public String oid;
 
         @NameInMap("OperatorKey")
         public String operatorKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>13</p>
+         */
         @NameInMap("Pid")
         public Integer pid;
 
@@ -185,6 +237,10 @@ public class TestRuleV4ResponseBody extends TeaModel {
         @NameInMap("Tid")
         public String tid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("To")
         public Integer to;
 
@@ -290,33 +346,65 @@ public class TestRuleV4ResponseBody extends TeaModel {
     }
 
     public static class TestRuleV4ResponseBodyDataHitRuleReviewInfoListConditionHitInfoListPhrase extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>72000</p>
+         */
         @NameInMap("Begin")
         public Long begin;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2019-11-25 15:37:16</p>
+         */
         @NameInMap("BeginTime")
         public String beginTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ChannelId")
         public Integer channelId;
 
         @NameInMap("EmotionFineGrainedValue")
         public Integer emotionFineGrainedValue;
 
+        /**
+         * <strong>example:</strong>
+         * <p>7</p>
+         */
         @NameInMap("EmotionValue")
         public Integer emotionValue;
 
+        /**
+         * <strong>example:</strong>
+         * <p>80000</p>
+         */
         @NameInMap("End")
         public Long end;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("HitStatus")
         public Integer hitStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10:00:00</p>
+         */
         @NameInMap("HourMinSec")
         public String hourMinSec;
 
         @NameInMap("Identity")
         public String identity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("Pid")
         public Integer pid;
 
@@ -329,9 +417,17 @@ public class TestRuleV4ResponseBody extends TeaModel {
         @NameInMap("Sid")
         public Long sid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("SilenceDuration")
         public Integer silenceDuration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("SpeechRate")
         public Integer speechRate;
 
@@ -526,6 +622,10 @@ public class TestRuleV4ResponseBody extends TeaModel {
     }
 
     public static class TestRuleV4ResponseBodyDataHitRuleReviewInfoList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("BranchHitId")
         public Long branchHitId;
 
@@ -541,27 +641,55 @@ public class TestRuleV4ResponseBody extends TeaModel {
         @NameInMap("JudgeNodeName")
         public String judgeNodeName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>a&amp;&amp;b</p>
+         */
         @NameInMap("Lambda")
         public String lambda;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Matched")
         public Boolean matched;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("NodeType")
         public String nodeType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>451</p>
+         */
         @NameInMap("Rid")
         public Long rid;
 
         @NameInMap("RuleName")
         public String ruleName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("RuleScoreType")
         public Integer ruleScoreType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ScoreNumType")
         public Integer scoreNumType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TaskFlowId")
         public Long taskFlowId;
 
@@ -680,6 +808,10 @@ public class TestRuleV4ResponseBody extends TeaModel {
         @NameInMap("GraphFlow")
         public TaskGraphFlow graphFlow;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Rid")
         public Long rid;
 
@@ -721,9 +853,17 @@ public class TestRuleV4ResponseBody extends TeaModel {
         @NameInMap("ConditionInfoList")
         public java.util.List<ConditionBasicInfo> conditionInfoList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Matched")
         public Boolean matched;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("Rid")
         public Long rid;
 

@@ -10,6 +10,12 @@ public class DeleteCustomizationConfigRequest extends TeaModel {
     @NameInMap("BaseMeAgentId")
     public Long baseMeAgentId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;modelId&quot;:&quot;2412&quot;}</p>
+     */
     @NameInMap("JsonStr")
     public String jsonStr;
 

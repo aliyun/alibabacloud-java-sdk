@@ -10,6 +10,12 @@ public class GetSyncResultRequest extends TeaModel {
     @NameInMap("BaseMeAgentId")
     public Long baseMeAgentId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;pageNumber&quot;:1,&quot;pageSize&quot;:10,&quot;requiredFields&quot;:&quot;asrResult,agent,status,errorMessage,reviewStatus,reviewResult,score,taskId,reviewer,resolver,recording.name,recording.duration,recording.url,hitResult,business&quot;,&quot;startTime&quot;:&quot;2020-12-25 00:00:00&quot;,&quot;endTime&quot;:&quot;2020-12-31 23:59:59&quot;}</p>
+     */
     @NameInMap("JsonStr")
     public String jsonStr;
 

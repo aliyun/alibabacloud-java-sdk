@@ -4,9 +4,16 @@ package com.aliyun.qualitycheck20190115.models;
 import com.aliyun.tea.*;
 
 public class TestRuleV4Request extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("IsSchemeData")
     public Integer isSchemeData;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TestJson")
     public String testJson;
 

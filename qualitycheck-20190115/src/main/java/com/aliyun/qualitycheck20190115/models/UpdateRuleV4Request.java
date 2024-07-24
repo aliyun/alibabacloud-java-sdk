@@ -10,9 +10,16 @@ public class UpdateRuleV4Request extends TeaModel {
     @NameInMap("BaseMeAgentId")
     public Long baseMeAgentId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("JsonStrForRule")
     public String jsonStrForRule;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("RuleId")
     public Long ruleId;
 

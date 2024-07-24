@@ -10,6 +10,12 @@ public class UpdateSkillGroupConfigRequest extends TeaModel {
     @NameInMap("BaseMeAgentId")
     public Long baseMeAgentId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;skillGroupFrom&quot;:0,&quot;name&quot;:&quot;test&quot;,&quot;qualityCheckType&quot;:0,&quot;rid&quot;:&quot;2493,4098&quot;,&quot;vocabId&quot;:267,&quot;skillGroupList&quot;:[{&quot;skillGroupId&quot;:&quot;090311&quot;,&quot;skillGroupName&quot;:&quot;09031&quot;}],&quot;id&quot;:553}</p>
+     */
     @NameInMap("JsonStr")
     public String jsonStr;
 

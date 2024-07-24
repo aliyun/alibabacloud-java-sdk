@@ -4,30 +4,62 @@ package com.aliyun.qualitycheck20190115.models;
 import com.aliyun.tea.*;
 
 public class GetSyncResultResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Count")
     public Integer count;
 
     @NameInMap("Data")
     public java.util.List<GetSyncResultResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>successful</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>76DB5D8C-5BD9-42A7-B527-5AF3A5F****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>xxx</p>
+     */
     @NameInMap("ResultCountId")
     public String resultCountId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -109,6 +141,10 @@ public class GetSyncResultResponseBody extends TeaModel {
     }
 
     public static class GetSyncResultResponseBodyDataAgent extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>12221</p>
+         */
         @NameInMap("Id")
         public String id;
 
@@ -150,21 +186,41 @@ public class GetSyncResultResponseBody extends TeaModel {
     }
 
     public static class GetSyncResultResponseBodyDataAsrResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>340</p>
+         */
         @NameInMap("Begin")
         public Long begin;
 
+        /**
+         * <strong>example:</strong>
+         * <p>6</p>
+         */
         @NameInMap("EmotionValue")
         public Integer emotionValue;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3000</p>
+         */
         @NameInMap("End")
         public Long end;
 
         @NameInMap("Role")
         public String role;
 
+        /**
+         * <strong>example:</strong>
+         * <p>11</p>
+         */
         @NameInMap("SilenceDuration")
         public Integer silenceDuration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>221</p>
+         */
         @NameInMap("SpeechRate")
         public Integer speechRate;
 
@@ -235,12 +291,24 @@ public class GetSyncResultResponseBody extends TeaModel {
     }
 
     public static class GetSyncResultResponseBodyDataHitResultHitsKeyWords extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>66666</p>
+         */
         @NameInMap("Cid")
         public String cid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("From")
         public Integer from;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("To")
         public Integer to;
 
@@ -287,21 +355,41 @@ public class GetSyncResultResponseBody extends TeaModel {
     }
 
     public static class GetSyncResultResponseBodyDataHitResultHitsPhrase extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>440</p>
+         */
         @NameInMap("Begin")
         public Long begin;
 
+        /**
+         * <strong>example:</strong>
+         * <p>6</p>
+         */
         @NameInMap("EmotionValue")
         public Integer emotionValue;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4000</p>
+         */
         @NameInMap("End")
         public Integer end;
 
         @NameInMap("Role")
         public String role;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("SilenceDuration")
         public Integer silenceDuration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>234</p>
+         */
         @NameInMap("SpeechRate")
         public Integer speechRate;
 
@@ -419,12 +507,24 @@ public class GetSyncResultResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ReviewResult")
         public Integer reviewResult;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1211</p>
+         */
         @NameInMap("Rid")
         public String rid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -479,48 +579,108 @@ public class GetSyncResultResponseBody extends TeaModel {
         @NameInMap("Business")
         public String business;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("CallId")
         public String callId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1563967699000</p>
+         */
         @NameInMap("CallTime")
         public String callTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("CallType")
         public Integer callType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1888888***</p>
+         */
         @NameInMap("Callee")
         public String callee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0108888****</p>
+         */
         @NameInMap("Caller")
         public String caller;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("DataSetName")
         public String dataSetName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>232</p>
+         */
         @NameInMap("Duration")
         public Long duration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>120</p>
+         */
         @NameInMap("DurationAudio")
         public Long durationAudio;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxxx</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123123.wav</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxxx</p>
+         */
         @NameInMap("PrimaryId")
         public String primaryId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("Remark1")
         public String remark1;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("Remark2")
         public String remark2;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("Remark3")
         public String remark3;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://aliyun.com/xxx.wav">http://aliyun.com/xxx.wav</a></p>
+         */
         @NameInMap("Url")
         public String url;
 
@@ -666,12 +826,24 @@ public class GetSyncResultResponseBody extends TeaModel {
         @NameInMap("AsrResult")
         public java.util.List<GetSyncResultResponseBodyDataAsrResult> asrResult;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("Comments")
         public String comments;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2019-07-24T19:31Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxxx</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
@@ -684,24 +856,48 @@ public class GetSyncResultResponseBody extends TeaModel {
         @NameInMap("Resolver")
         public String resolver;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("ReviewResult")
         public Integer reviewResult;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ReviewStatus")
         public Integer reviewStatus;
 
         @NameInMap("Reviewer")
         public String reviewer;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Score")
         public Integer score;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20201231de3d34ec-40fa-4a55-8d27-76ea*****</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("TaskName")
         public String taskName;
 

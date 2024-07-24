@@ -4,12 +4,20 @@ package com.aliyun.qualitycheck20190115.models;
 import com.aliyun.tea.*;
 
 public class RulesInfo extends TeaModel {
+    /**
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Conditions")
     public java.util.List<ConditionBasicInfo> conditions;
 
     @NameInMap("Count")
     public Integer count;
 
+    /**
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Dialogues")
     public java.util.List<RuleTestDialogue> dialogues;
 

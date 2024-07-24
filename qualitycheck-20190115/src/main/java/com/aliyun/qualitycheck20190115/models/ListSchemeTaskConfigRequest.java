@@ -10,6 +10,10 @@ public class ListSchemeTaskConfigRequest extends TeaModel {
     @NameInMap("BaseMeAgentId")
     public Long baseMeAgentId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;pageNumber&quot;:1,&quot;pageSize&quot;:10,&quot;sourceDataType&quot;:&quot;1&quot;}</p>
+     */
     @NameInMap("jsonStr")
     public String jsonStr;
 

@@ -4,27 +4,55 @@ package com.aliyun.qualitycheck20190115.models;
 import com.aliyun.tea.*;
 
 public class ListPrecisionTaskResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>22</p>
+     */
     @NameInMap("Count")
     public Integer count;
 
     @NameInMap("Data")
     public ListPrecisionTaskResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>successful</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>106C6CA0-282D-4AF7-85F0-D2D24F4CE647</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -98,21 +126,41 @@ public class ListPrecisionTaskResponseBody extends TeaModel {
     }
 
     public static class ListPrecisionTaskResponseBodyDataPrecisionTaskPrecisionsPrecision extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2020-03-10 20:26:29</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2321</p>
+         */
         @NameInMap("ModelId")
         public Long modelId;
 
         @NameInMap("ModelName")
         public String modelName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.98</p>
+         */
         @NameInMap("Precision")
         public Float precision;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>7C1DEF5F-2C18-4D36-99C6-8C276F781796</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
@@ -191,18 +239,34 @@ public class ListPrecisionTaskResponseBody extends TeaModel {
     }
 
     public static class ListPrecisionTaskResponseBodyDataPrecisionTask extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2020-03-10 20:26:29</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1212</p>
+         */
         @NameInMap("DataSetId")
         public Long dataSetId;
 
         @NameInMap("DataSetName")
         public String dataSetName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>331311</p>
+         */
         @NameInMap("Duration")
         public Integer duration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>32</p>
+         */
         @NameInMap("IncorrectWords")
         public Integer incorrectWords;
 
@@ -212,21 +276,45 @@ public class ListPrecisionTaskResponseBody extends TeaModel {
         @NameInMap("Precisions")
         public ListPrecisionTaskResponseBodyDataPrecisionTaskPrecisions precisions;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("Source")
         public Integer source;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>7C1DEF5F-2C18-4D36-99C6-8C276F781796</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>21</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-03-10 20:26:29</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("VerifiedCount")
         public Integer verifiedCount;
 

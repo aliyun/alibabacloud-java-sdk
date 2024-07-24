@@ -10,6 +10,12 @@ public class GetPrecisionTaskRequest extends TeaModel {
     @NameInMap("BaseMeAgentId")
     public Long baseMeAgentId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;{&quot;taskId&quot;:&quot;593A04C0-E6E9-4CDC-8C9****&quot;}&quot;</p>
+     */
     @NameInMap("JsonStr")
     public String jsonStr;
 

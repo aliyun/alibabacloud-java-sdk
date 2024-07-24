@@ -4,18 +4,34 @@ package com.aliyun.qualitycheck20190115.models;
 import com.aliyun.tea.*;
 
 public class GetScoreInfoResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public GetScoreInfoResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>successful</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>106C6CA0-282D-4AF7-85F0-D2D24***</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,15 +81,27 @@ public class GetScoreInfoResponseBody extends TeaModel {
     }
 
     public static class GetScoreInfoResponseBodyDataScorePoScoreInfosScoreParam extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>32</p>
+         */
         @NameInMap("ScoreNum")
         public Integer scoreNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3422</p>
+         */
         @NameInMap("ScoreSubId")
         public Integer scoreSubId;
 
         @NameInMap("ScoreSubName")
         public String scoreSubName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ScoreType")
         public Integer scoreType;
 
@@ -136,6 +164,10 @@ public class GetScoreInfoResponseBody extends TeaModel {
     }
 
     public static class GetScoreInfoResponseBodyDataScorePo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>34</p>
+         */
         @NameInMap("ScoreId")
         public Integer scoreId;
 

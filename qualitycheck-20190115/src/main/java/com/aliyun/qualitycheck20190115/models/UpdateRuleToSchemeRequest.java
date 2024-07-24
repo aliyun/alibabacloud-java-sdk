@@ -10,6 +10,10 @@ public class UpdateRuleToSchemeRequest extends TeaModel {
     @NameInMap("BaseMeAgentId")
     public Long baseMeAgentId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;schemeId&quot;:&quot;10&quot;,&quot;schemeRules&quot;:[{&quot;ruleId&quot;:229,&quot;checkType&quot;:0}]}</p>
+     */
     @NameInMap("jsonStr")
     public String jsonStr;
 

@@ -4,18 +4,34 @@ package com.aliyun.qualitycheck20190115.models;
 import com.aliyun.tea.*;
 
 public class ListWarningConfigResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public ListWarningConfigResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>successful</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>82C91484-B2D5-4D2A-A21F-A6D73F4D55C6</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,9 +81,17 @@ public class ListWarningConfigResponseBody extends TeaModel {
     }
 
     public static class ListWarningConfigResponseBodyDataWarningConfigInfoChannelsChannel extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Type")
         public Integer type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>oapi.dingtalk.com/robot/send?access_token=c55628f700eb9ad2a3ca</p>
+         */
         @NameInMap("Url")
         public String url;
 
@@ -133,6 +157,10 @@ public class ListWarningConfigResponseBody extends TeaModel {
     }
 
     public static class ListWarningConfigResponseBodyDataWarningConfigInfoRuleListWarningRule extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>33452</p>
+         */
         @NameInMap("Rid")
         public Long rid;
 
@@ -185,12 +213,20 @@ public class ListWarningConfigResponseBody extends TeaModel {
         @NameInMap("Channels")
         public ListWarningConfigResponseBodyDataWarningConfigInfoChannels channels;
 
+        /**
+         * <strong>example:</strong>
+         * <p>32</p>
+         */
         @NameInMap("ConfigId")
         public Long configId;
 
         @NameInMap("ConfigName")
         public String configName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2019-10-29T15:30Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
@@ -200,9 +236,17 @@ public class ListWarningConfigResponseBody extends TeaModel {
         @NameInMap("RuleList")
         public ListWarningConfigResponseBodyDataWarningConfigInfoRuleList ruleList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2019-10-29T17:24Z</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 

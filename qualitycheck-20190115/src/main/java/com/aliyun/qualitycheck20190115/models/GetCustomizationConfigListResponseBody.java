@@ -4,18 +4,34 @@ package com.aliyun.qualitycheck20190115.models;
 import com.aliyun.tea.*;
 
 public class GetCustomizationConfigListResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public GetCustomizationConfigListResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>successful</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>106C6CA0-282D-4AF7-85F0-D2D24F4CE647</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,21 +81,41 @@ public class GetCustomizationConfigListResponseBody extends TeaModel {
     }
 
     public static class GetCustomizationConfigListResponseBodyDataModelCustomizationDataSetPo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2019-01-08</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cdae396590bb479a9ec40f3476e274fc</p>
+         */
         @NameInMap("ModeCustomizationId")
         public String modeCustomizationId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ModelId")
         public Long modelId;
 
         @NameInMap("ModelName")
         public String modelName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("ModelStatus")
         public Integer modelStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TaskType")
         public Integer taskType;
 
