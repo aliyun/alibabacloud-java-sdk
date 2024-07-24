@@ -932,12 +932,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3></h3>
-     * <p>You can call this operation to create a scenario that allows you to specify a resource scope on a visualized interface and easily replicate and manage the resources that you specify. For more information about scenarios, see <a href="https://help.aliyun.com/document_detail/352074.html">Overview</a>.
-     * In this example, a scenario of the Resource Replication type is created in the China (Hangzhou) region. In the scenario, the virtual private cloud (VPC) whose ID is <code>vpc-bp1m6fww66xbntjyc****</code> is replicated.</p>
+     * <h3><a href="#"></a>Limits</h3>
+     * <p>Only specific resource types support the resource scenario feature. For more information, see <a href="https://help.aliyun.com/document_detail/353175.htmll">Resource types that support the scenario feature</a>.</p>
+     * <h3><a href="#"></a>Description</h3>
+     * <p>Resource Orchestration Service (ROS) provides the resource scenario feature that allows you to specify the scope of a collection of resources on a user interface (UI) and perform operations, such as replication and management, on the resources. This helps you manage resources in a simplified manner. For more information about resource scenarios, see <a href="https://help.aliyun.com/document_detail/352074.html">Overview</a>.</p>
+     * <h4><a href="#"></a>Resource replication scenario</h4>
+     * <p>If you want to replicate a collection of resources and dependencies between the resources, you can create a resource replication scenario. This type of resource scenario allows you to replicate all existing resources within the specified scope and generate a collection of resources that have the same architecture as the existing resources. For more information, see <a href="https://help.aliyun.com/document_detail/353133.html">Resource replication scenario</a>.</p>
+     * <h4><a href="#"></a>Resource detection scenario</h4>
+     * <p>If the relationships between resources that you want to create are complicated, you can create a resource detection scenario to preview the overall resource architecture or the architecture of a specific resource. This facilitates resource management. For more information, see <a href="https://help.aliyun.com/document_detail/2591901.html">Resource detection scenario</a>.</p>
+     * <h4><a href="#"></a>Resource management scenario</h4>
+     * <p>If you want to import a collection of existing resources to a stack and manage the resources in a centralized manner, you can create a resource management scenario. For more information, see <a href="https://help.aliyun.com/document_detail/353163.html">Resource management scenario</a>.</p>
+     * <h4><a href="#"></a>Resource migration scenario</h4>
+     * <p>If you want to migrate a collection of resources and dependencies between the resources, you can create a resource migration scenario. When you migrate the resources, ROS generates a stack. You can view the migration progress on the Stacks tab of the scenario details page. After you migrate the resources, you can delete source resources. For more information, see <a href="https://help.aliyun.com/document_detail/379902.html">Resource migration scenario</a>.
+     * This topic provides an example on how to create a resource replication scenario in the China (Hangzhou) region to replicate a resource. In this example, a virtual private cloud (VPC) whose ID is <code>vpc-bp1m6fww66xbntjyc****</code> is replicated.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a scenario.</p>
+     * <p>Creates a resource scenario.</p>
      * 
      * @param tmpReq CreateTemplateScratchRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1031,12 +1041,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3></h3>
-     * <p>You can call this operation to create a scenario that allows you to specify a resource scope on a visualized interface and easily replicate and manage the resources that you specify. For more information about scenarios, see <a href="https://help.aliyun.com/document_detail/352074.html">Overview</a>.
-     * In this example, a scenario of the Resource Replication type is created in the China (Hangzhou) region. In the scenario, the virtual private cloud (VPC) whose ID is <code>vpc-bp1m6fww66xbntjyc****</code> is replicated.</p>
+     * <h3><a href="#"></a>Limits</h3>
+     * <p>Only specific resource types support the resource scenario feature. For more information, see <a href="https://help.aliyun.com/document_detail/353175.htmll">Resource types that support the scenario feature</a>.</p>
+     * <h3><a href="#"></a>Description</h3>
+     * <p>Resource Orchestration Service (ROS) provides the resource scenario feature that allows you to specify the scope of a collection of resources on a user interface (UI) and perform operations, such as replication and management, on the resources. This helps you manage resources in a simplified manner. For more information about resource scenarios, see <a href="https://help.aliyun.com/document_detail/352074.html">Overview</a>.</p>
+     * <h4><a href="#"></a>Resource replication scenario</h4>
+     * <p>If you want to replicate a collection of resources and dependencies between the resources, you can create a resource replication scenario. This type of resource scenario allows you to replicate all existing resources within the specified scope and generate a collection of resources that have the same architecture as the existing resources. For more information, see <a href="https://help.aliyun.com/document_detail/353133.html">Resource replication scenario</a>.</p>
+     * <h4><a href="#"></a>Resource detection scenario</h4>
+     * <p>If the relationships between resources that you want to create are complicated, you can create a resource detection scenario to preview the overall resource architecture or the architecture of a specific resource. This facilitates resource management. For more information, see <a href="https://help.aliyun.com/document_detail/2591901.html">Resource detection scenario</a>.</p>
+     * <h4><a href="#"></a>Resource management scenario</h4>
+     * <p>If you want to import a collection of existing resources to a stack and manage the resources in a centralized manner, you can create a resource management scenario. For more information, see <a href="https://help.aliyun.com/document_detail/353163.html">Resource management scenario</a>.</p>
+     * <h4><a href="#"></a>Resource migration scenario</h4>
+     * <p>If you want to migrate a collection of resources and dependencies between the resources, you can create a resource migration scenario. When you migrate the resources, ROS generates a stack. You can view the migration progress on the Stacks tab of the scenario details page. After you migrate the resources, you can delete source resources. For more information, see <a href="https://help.aliyun.com/document_detail/379902.html">Resource migration scenario</a>.
+     * This topic provides an example on how to create a resource replication scenario in the China (Hangzhou) region to replicate a resource. In this example, a virtual private cloud (VPC) whose ID is <code>vpc-bp1m6fww66xbntjyc****</code> is replicated.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a scenario.</p>
+     * <p>Creates a resource scenario.</p>
      * 
      * @param request CreateTemplateScratchRequest
      * @return CreateTemplateScratchResponse
@@ -3220,10 +3240,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>In this example, the details of the scenario whose ID is <code>ts-7f7a704cf71c49a6****</code> is queried. In the response, the source node data is displayed.</p>
+     * <p>In this example, the details of the resource scenario whose ID is <code>ts-7f7a704cf71c49a6****</code> is queried. In the response, the source node data is displayed.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of a scenario.</p>
+     * <p>Queries the details of a resource scenario.</p>
      * 
      * @param request GetTemplateScratchRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3263,10 +3283,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>In this example, the details of the scenario whose ID is <code>ts-7f7a704cf71c49a6****</code> is queried. In the response, the source node data is displayed.</p>
+     * <p>In this example, the details of the resource scenario whose ID is <code>ts-7f7a704cf71c49a6****</code> is queried. In the response, the source node data is displayed.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of a scenario.</p>
+     * <p>Queries the details of a resource scenario.</p>
      * 
      * @param request GetTemplateScratchRequest
      * @return GetTemplateScratchResponse

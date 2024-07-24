@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetTemplateScratchRequest extends TeaModel {
     /**
-     * <p>The region ID of the scenario.</p>
+     * <p>The region ID of the resource scenario.</p>
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
@@ -35,7 +35,7 @@ public class GetTemplateScratchRequest extends TeaModel {
     public String showDataOption;
 
     /**
-     * <p>The ID of the scenario.</p>
+     * <p>The ID of the resource scenario.</p>
      * 
      * <strong>example:</strong>
      * <p>ts-7f7a704cf71c49a6****</p>

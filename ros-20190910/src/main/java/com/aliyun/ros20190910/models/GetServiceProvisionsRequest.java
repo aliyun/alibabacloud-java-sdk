@@ -172,7 +172,7 @@ public class GetServiceProvisionsRequest extends TeaModel {
 
     public static class GetServiceProvisionsRequestServices extends TeaModel {
         /**
-         * <p>The service or feature name. Valid values:</p>
+         * <p>The name of the service or feature. Valid values:</p>
          * <ul>
          * <li>AHAS: Application High Availability Service</li>
          * <li>ARMS: Application Real-Time Monitoring Service (ARMS)</li>
@@ -187,26 +187,26 @@ public class GetServiceProvisionsRequest extends TeaModel {
          * <li>DataHub: DataHub</li>
          * <li>DataWorks: DataWorks</li>
          * <li>EDAS: Enterprise Distributed Application Service (EDAS)</li>
-         * <li>EHPC: Elastic High Performance Computing (E-HPC)</li>
+         * <li>EHPC: E-HPC</li>
          * <li>EMAS: Enterprise Mobile Application Studio (EMAS)</li>
          * <li>FC: Function Compute</li>
-         * <li>FNF: Serverless Workflow (SWF)</li>
+         * <li>FNF: CloudFlow (SWF)</li>
          * <li>MaxCompute: MaxCompute</li>
          * <li>MNS: Message Service (MNS)</li>
-         * <li>HBR: Hybrid Backup Recovery (HBR)</li>
-         * <li>IMM: Intelligent Media Management</li>
+         * <li>HBR: Cloud Backup</li>
+         * <li>IMM: Intelligent Media Management (IMM)</li>
          * <li>IOT: IoT Platform</li>
          * <li>KMS: Key Management Service (KMS)</li>
          * <li>NAS: Apsara File Storage NAS (NAS)</li>
          * <li>NLP: Natural Language Processing (NLP)</li>
-         * <li>OSS: OSS</li>
+         * <li>OSS: Object Storage Service (OSS)</li>
          * <li>OTS: Tablestore</li>
          * <li>PrivateLink: PrivateLink</li>
          * <li>PrivateZone: Alibaba Cloud DNS PrivateZone</li>
          * <li>RocketMQ: ApsaraMQ for RocketMQ</li>
          * <li>SAE: Serverless App Engine (SAE)</li>
-         * <li>SLS: Log Service</li>
-         * <li>TrafficMirror: the traffic mirroring feature</li>
+         * <li>SLS: Simple Log Service (SLS)</li>
+         * <li>TrafficMirror: traffic mirroring</li>
          * <li>VS: Video Surveillance System</li>
          * <li>Xtrace: Managed Service for OpenTelemetry</li>
          * </ul>
