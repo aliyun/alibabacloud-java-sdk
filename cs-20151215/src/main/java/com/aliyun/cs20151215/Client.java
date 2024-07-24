@@ -4512,6 +4512,38 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetClusterAuditProjectResponse
+     */
+    public GetClusterAuditProjectResponse getClusterAuditProjectWithOptions(String clusterid, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetClusterAuditProject"),
+            new TeaPair("version", "2015-12-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/clusters/" + com.aliyun.openapiutil.Client.getEncodeParam(clusterid) + "/audit"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetClusterAuditProjectResponse());
+    }
+
+    /**
+     * @return GetClusterAuditProjectResponse
+     */
+    public GetClusterAuditProjectResponse getClusterAuditProject(String clusterid) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getClusterAuditProjectWithOptions(clusterid, headers, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Queries a cluster check task by cluster ID and task ID. You can view the status, check items, creation time, and end time of the task. Container Intelligence Service (CIS) provides a variety of Kubernetes cluster check features, including cluster update check, cluster migration check, component installation check, component update check, and node pool check.</p>
      * 
