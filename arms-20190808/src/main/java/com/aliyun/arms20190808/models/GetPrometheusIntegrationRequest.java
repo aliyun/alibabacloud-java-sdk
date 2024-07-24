@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetPrometheusIntegrationRequest extends TeaModel {
     /**
-     * <p>The ID of the Prometheus instance. Only a Prometheus instance for Container Service or a Prometheus instance for ECS is supported.</p>
+     * <p>The ID of the Prometheus instance. Valid values: aliyun-cs and ecs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetPrometheusIntegrationRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The exporter ID.</p>
+     * <p>The ID of the exporter.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class GetPrometheusIntegrationRequest extends TeaModel {
     public Long instanceId;
 
     /**
-     * <p>The type of the integration.</p>
+     * <p>The integration type. Valid values: kafka, mysql, redis, snmp, emr, nubela, and tidb.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

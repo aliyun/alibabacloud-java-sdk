@@ -5,16 +5,29 @@ import com.aliyun.tea.*;
 
 public class GetGrafanaWorkspaceResponseBody extends TeaModel {
     /**
+     * <p>The HTTP status code returned for the request. Valid values:</p>
+     * <ul>
+     * <li><code>2XX</code>: The request is successful.</li>
+     * <li><code>3XX</code>: A redirection message is returned.</li>
+     * <li><code>4XX</code>: The request is invalid.</li>
+     * <li><code>5XX</code>: A server error occurs.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The information about the Grafana workspace.</p>
+     */
     @NameInMap("Data")
     public GrafanaWorkspace data;
 
     /**
+     * <p>The error message returned when the request parameters are invalid.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -31,6 +44,12 @@ public class GetGrafanaWorkspaceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><code>true</code></li>
+     * <li><code>false</code></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -38,6 +57,8 @@ public class GetGrafanaWorkspaceResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The ID of the trace. The ID is used to query the details of a request.</p>
+     * 
      * <strong>example:</strong>
      * <p>eac0a8048716731735000007137d000b</p>
      */

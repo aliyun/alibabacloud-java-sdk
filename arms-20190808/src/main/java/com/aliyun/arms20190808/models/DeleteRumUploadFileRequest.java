@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteRumUploadFileRequest extends TeaModel {
     /**
+     * <p>The file name, with the extension.</p>
+     * 
      * <strong>example:</strong>
      * <p>test.js.map</p>
      */
@@ -12,6 +14,8 @@ public class DeleteRumUploadFileRequest extends TeaModel {
     public String fileName;
 
     /**
+     * <p>The application ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>atc889zkcf@d8deedfa9bf****</p>
      */
@@ -19,6 +23,7 @@ public class DeleteRumUploadFileRequest extends TeaModel {
     public String pid;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +33,8 @@ public class DeleteRumUploadFileRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The file ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>MS4wLjAtbWFpbi4wZjM0NzRlOSxxxxxx</p>
      */
@@ -35,6 +42,8 @@ public class DeleteRumUploadFileRequest extends TeaModel {
     public String uuid;
 
     /**
+     * <p>The version number of the file.</p>
+     * 
      * <strong>example:</strong>
      * <p>1.0.0</p>
      */

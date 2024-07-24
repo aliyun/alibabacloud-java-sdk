@@ -14,7 +14,7 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
     public Long code;
 
     /**
-     * <p>The struct returned.</p>
+     * <p>The returned struct.</p>
      */
     @NameInMap("Data")
     public GetTimingSyntheticTaskResponseBodyData data;
@@ -251,12 +251,27 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
     }
 
     public static class GetTimingSyntheticTaskResponseBodyDataCommonSettingCustomPrometheusSetting extends TeaModel {
+        /**
+         * <p>A reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Reserved parameter</p>
+         */
         @NameInMap("PrometheusClusterId")
         public String prometheusClusterId;
 
+        /**
+         * <p>A reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Reserved parameter</p>
+         */
         @NameInMap("PrometheusClusterRegion")
         public String prometheusClusterRegion;
 
+        /**
+         * <p>A reserved parameter.</p>
+         */
         @NameInMap("PrometheusLabels")
         public java.util.Map<String, String> prometheusLabels;
 
@@ -292,15 +307,39 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
     }
 
     public static class GetTimingSyntheticTaskResponseBodyDataCommonSettingCustomVPCSetting extends TeaModel {
+        /**
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>Security group ID. This security group is where the dial-up client is located. The security group limits the inbound and outbound rules of the dial-up client in the VPC. You need to set the inbound rules of the security group where your VPC is located to allow the security group where the dial-up client is located to access. Otherwise, the dial-up client cannot smoothly access the resources in your VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-xxxxxxx</p>
+         */
         @NameInMap("SecureGroupId")
         public String secureGroupId;
 
+        /**
+         * <p>The vSwitch ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp1i0xezblf1yrz4xxxxx</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        /**
+         * <p>VPC ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-2zexy5nae9q2otaxxxx</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
@@ -350,9 +389,15 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
         @NameInMap("CustomHost")
         public GetTimingSyntheticTaskResponseBodyDataCommonSettingCustomHost customHost;
 
+        /**
+         * <p>The reserved parameters.</p>
+         */
         @NameInMap("CustomPrometheusSetting")
         public GetTimingSyntheticTaskResponseBodyDataCommonSettingCustomPrometheusSetting customPrometheusSetting;
 
+        /**
+         * <p>User VPC information. If the dial-up is to the Alibaba Cloud intranet address, you need to configure the VPC information.</p>
+         */
         @NameInMap("CustomVPCSetting")
         public GetTimingSyntheticTaskResponseBodyDataCommonSettingCustomVPCSetting customVPCSetting;
 
@@ -371,7 +416,7 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
         public Integer ipType;
 
         /**
-         * <p>是否开启链路追踪。</p>
+         * <p>Whether to enable tracing.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -393,11 +438,11 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
         public Integer monitorSamples;
 
         /**
-         * <p>链路追踪客户端类型：</p>
+         * <p>Tracing client type:</p>
          * <ul>
-         * <li>0：ARMS Agent</li>
-         * <li>1：OpenTelemetry</li>
-         * <li>2：Jaeger</li>
+         * <li>0: ARMS Agent</li>
+         * <li>1: Open Telemetry</li>
+         * <li>2: Jaeger</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -407,7 +452,7 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
         public Integer traceClientType;
 
         /**
-         * <p>链路数据上报region。</p>
+         * <p>Tracing data reporting region.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -571,6 +616,12 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
     }
 
     public static class GetTimingSyntheticTaskResponseBodyDataMonitorConfApiHTTP extends TeaModel {
+        /**
+         * <p>Whether to verify the certificate. The default is no.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("CheckCert")
         public Boolean checkCert;
 
@@ -596,6 +647,16 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
         @NameInMap("Method")
         public String method;
 
+        /**
+         * <p>The ALPN protocol version. You can configure this parameter when you perform an HTTPS synthetic test on a WAP mobile client. Valid values:</p>
+         * <p>0: default</p>
+         * <p>1: HTTP/1.1</p>
+         * <p>2: HTTP/2</p>
+         * <p>3: disables the ALPN protocol</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ProtocolAlpnProtocol")
         public Integer protocolAlpnProtocol;
 
@@ -843,7 +904,7 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
         public Long transmissionSize;
 
         /**
-         * <p>验证关键词。</p>
+         * <p>Verify keywords.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -852,11 +913,11 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
         public String validateKeywords;
 
         /**
-         * <p>验证方式。</p>
+         * <p>Verification method.</p>
          * <ul>
-         * <li>0：不验证 </li>
-         * <li>1：验证字符串 </li>
-         * <li>2：MD5验证</li>
+         * <li>0: No verification</li>
+         * <li>1: Verification string</li>
+         * <li>2: MD5 verification</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -866,7 +927,7 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
         public Integer verifyWay;
 
         /**
-         * <p>DNS劫持白名单。匹配规则支持IP、IP通配符、子网掩码和CNAME，可以填写多个匹配规则，多个匹配规则以竖线（|）隔开。例如：<a href="http://www.aliyun.com:203.0.3.55%7C203.3.44.67%EF%BC%8C%E8%A1%A8%E7%A4%BAwww.aliyun.com%E5%9F%9F%E5%90%8D%E4%B8%8B%E9%99%A4203.0.3.55%E5%92%8C203.3.44.67%E4%B9%8B%E5%A4%96%E7%9A%84%E5%85%B6%E4%BB%96IP%E9%83%BD%E6%98%AF%E8%A2%AB%E5%8A%AB%E6%8C%81%E7%9A%84%E3%80%82">www.aliyun.com:203.0.3.55|203.3.44.67，表示www.aliyun.com域名下除203.0.3.55和203.3.44.67之外的其他IP都是被劫持的。</a></p>
+         * <p>DNS hijacking whitelist. Matching rules support IP, IP wildcard, subnet mask and CNAME. You can fill in multiple matching rules, and multiple matching rules are separated by vertical bars (|). For example: <code>www.aliyun.com:203.0.3.55|203.3.44.67</code>, which means that all IPs except 203.0.3.55 and 203.3.44.67 under the <a href="http://www.aliyun.com">www.aliyun.com</a> domain name are hijacked.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.aliyun.com:203.0.3.55%7C203.3.44.67">www.aliyun.com:203.0.3.55|203.3.44.67</a></p>
@@ -1408,16 +1469,16 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
 
     public static class GetTimingSyntheticTaskResponseBodyDataMonitorConfStream extends TeaModel {
         /**
-         * <p>自定义header，JSON Map格式。</p>
+         * <p>Custom header, JSON Map format.</p>
          */
         @NameInMap("CustomHeaderContent")
         public java.util.Map<String, String> customHeaderContent;
 
         /**
-         * <p>播放器，不传默认12。</p>
+         * <p>Player, default is 12 if not specified.</p>
          * <ul>
-         * <li>12：VLC</li>
-         * <li>2：FlashPlayer</li>
+         * <li>12: VLC</li>
+         * <li>2: Flash Player</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1427,10 +1488,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
         public Integer playerType;
 
         /**
-         * <p>资源地址类型：</p>
+         * <p>Resource address type:</p>
          * <ul>
-         * <li>1：资源地址。</li>
-         * <li>0：页面地址。不传默认0。</li>
+         * <li>1: Resource address.</li>
+         * <li>0: Page address. If not passed, the default value is 0.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1440,7 +1501,7 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
         public Integer streamAddressType;
 
         /**
-         * <p>监测时长，单位秒，最长支持60s，不传默认60。</p>
+         * <p>Monitoring duration, in seconds, supports up to 60 seconds. If not specified, the default value is 60 seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -1449,7 +1510,11 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
         public Integer streamMonitorTimeout;
 
         /**
-         * <p>音视频标志：0-视频，1-音频。</p>
+         * <p>Audio and video flag:</p>
+         * <ul>
+         * <li>0: video</li>
+         * <li>1: audio</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1458,7 +1523,7 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
         public Integer streamType;
 
         /**
-         * <p>流媒体资源地址。</p>
+         * <p>Streaming media resource address.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.aliyun.com/stream/test.mp4">http://www.aliyun.com/stream/test.mp4</a></p>
@@ -1467,7 +1532,7 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
         public String targetUrl;
 
         /**
-         * <p>DNS劫持白名单。匹配规则支持IP、IP通配符、子网掩码和CNAME，可以填写多个匹配规则，多个匹配规则以竖线（|）隔开。例如：<a href="http://www.aliyun.com:203.0.3.55%7C203.3.44.67%EF%BC%8C%E8%A1%A8%E7%A4%BAwww.aliyun.com%E5%9F%9F%E5%90%8D%E4%B8%8B%E9%99%A4203.0.3.55%E5%92%8C203.3.44.67%E4%B9%8B%E5%A4%96%E7%9A%84%E5%85%B6%E4%BB%96IP%E9%83%BD%E6%98%AF%E8%A2%AB%E5%8A%AB%E6%8C%81%E7%9A%84%E3%80%82">www.aliyun.com:203.0.3.55|203.3.44.67，表示www.aliyun.com域名下除203.0.3.55和203.3.44.67之外的其他IP都是被劫持的。</a></p>
+         * <p>DNS hijacking whitelist. Matching rules support IP, IP wildcard, subnet mask and CNAME. You can fill in multiple matching rules, and multiple matching rules are separated by vertical bars (|). For example: <code>www.aliyun.com:203.0.3.55|203.3.44.67</code>, which means that all IPs except 203.0.3.55 and 203.3.44.67 under the <a href="http://www.aliyun.com">www.aliyun.com</a> domain name are hijacked.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.aliyun.com:203.0.3.55%7C203.3.44.67">www.aliyun.com:203.0.3.55|203.3.44.67</a></p>
@@ -1564,8 +1629,9 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
         public java.util.Map<String, String> customHeaderContent;
 
         /**
-         * <p>域名（例如<a href="http://www.aliyun.com%EF%BC%89%E8%A7%A3%E6%9E%90%E6%97%B6%EF%BC%8C%E8%A7%A3%E6%9E%90%E5%87%BA%E7%9A%84IP%E5%9C%B0%E5%9D%80%E6%88%96%E8%80%85CNAME%E4%B8%8D%E5%9C%A8DNS%E5%8A%AB%E6%8C%81%E7%99%BD%E5%90%8D%E5%8D%95%E5%86%85%EF%BC%8C%E7%94%A8%E6%88%B7%E5%B0%B1%E4%BC%9A%E8%AE%BF%E9%97%AE%E5%A4%B1%E8%B4%A5%E6%88%96%E8%80%85%E8%BF%94%E5%9B%9E%E4%B8%80%E4%B8%AA%E9%9D%9EAliyun%E7%9A%84%E7%9B%AE%E6%A0%87IP%EF%BC%9B%E8%8B%A5%E8%A7%A3%E6%9E%90%E7%BB%93%E6%9E%9C%E4%B8%AD%E7%9A%84IP%E6%88%96%E8%80%85CNAME%E5%9C%A8DNS%E7%99%BD%E5%90%8D%E5%8D%95%E5%86%85%EF%BC%8C%E5%88%99%E4%BC%9A%E8%A2%AB%E8%AE%A4%E5%AE%9A%E4%B8%BA%E6%B2%A1%E6%9C%89%E5%8F%91%E7%94%9FDNS%E5%8A%AB%E6%8C%81%E3%80%82">www.aliyun.com）解析时，解析出的IP地址或者CNAME不在DNS劫持白名单内，用户就会访问失败或者返回一个非Aliyun的目标IP；若解析结果中的IP或者CNAME在DNS白名单内，则会被认定为没有发生DNS劫持。</a></p>
-         * <p>填写格式：域名:匹配规则。匹配规则支持IP、IP通配符、子网掩码和CNAME，可以填写多个匹配规则，多个匹配规则以竖线（|）隔开。例如：<a href="http://www.aliyun.com:203.0.3.55%7C203.3.44.67%EF%BC%8C%E8%A1%A8%E7%A4%BAwww.aliyun.com%E5%9F%9F%E5%90%8D%E4%B8%8B%E9%99%A4203.0.3.55%E5%92%8C203.3.44.67%E4%B9%8B%E5%A4%96%E7%9A%84%E5%85%B6%E4%BB%96IP%E9%83%BD%E6%98%AF%E8%A2%AB%E5%8A%AB%E6%8C%81%E7%9A%84%E3%80%82">www.aliyun.com:203.0.3.55|203.3.44.67，表示www.aliyun.com域名下除203.0.3.55和203.3.44.67之外的其他IP都是被劫持的。</a></p>
+         * <p>When resolving a domain name (such as <a href="http://www.aliyun.com">www.aliyun.com</a>), if the resolved IP address or CNAME is not in the DNS hijacking whitelist, the user will fail to access or return a non-Aliyun target IP; if the IP or CNAME in the resolution result is in the DNS whitelist, it will be deemed that no DNS hijacking has occurred.</p>
+         * <p>Fill in the format: <code>domain name: matching rule</code>. Matching rules support IP, IP wildcard, subnet mask and CNAME. You can fill in multiple matching rules, and multiple matching rules are separated by vertical bars (|). </p>
+         * <p>For example: <code>www.aliyun.com:203.0.3.55|203.3.44.67</code>, which means that all IPs except 203.0.3.55 and 203.3.44.67 under the <a href="http://www.aliyun.com">www.aliyun.com</a> domain name are hijacked.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.aliyun.com:203.0.3.55%7C203.3.44.67">www.aliyun.com:203.0.3.55|203.3.44.67</a></p>
@@ -1592,7 +1658,7 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
         public Integer disableCompression;
 
         /**
-         * <p>在页面加载过程中如果出现元素黑名单中配置的元素，不会请求加载该元素 。</p>
+         * <p>If an element configured in the element blacklist appears during page loading, no request will be made to load the element.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.example.com/a.jpg">www.example.com/a.jpg</a></p>
@@ -1614,7 +1680,7 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
         public Integer filterInvalidIP;
 
         /**
-         * <p>识别元素：设置浏览页面元素总个数。</p>
+         * <p>Identify elements: Set the total number of elements to browse the page.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1623,7 +1689,7 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
         public Integer flowHijackJumpTimes;
 
         /**
-         * <p>劫持标识：设置匹配的关键信息。填写劫持判断关键字或关键元素，允许带星号（*）。</p>
+         * <p>Hijacking flag: Set the key information for matching. Fill in the hijacking judgment keyword or key element, and asterisks (*) are allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>aliyun</p>
@@ -1650,8 +1716,8 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
         public Integer monitorTimeout;
 
         /**
-         * <p>监测页面出现了域名设置之外的元素都属于页面被篡改。常见的表现形式为弹出广告、浮动广告、跳转等。</p>
-         * <p>填写格式：域名:元素。元素支持填写通配符，可以填写多个元素，多个元素以竖线（|）隔开。例如：<a href="http://www.aliyun.com:%7C/cc/bb/a.gif%7C/vv/bb/cc.jpg%EF%BC%8C%E8%A1%A8%E7%A4%BAwww.aliyun.com%E5%9F%9F%E5%90%8D%E4%B8%8B%E9%99%A4%E5%9F%BA%E7%A1%80%E6%96%87%E6%A1%A3%E3%80%81/cc/bb/a.gif%E5%92%8C/vv/bb/cc.jpg%E4%B9%8B%E5%A4%96%E7%9A%84%E5%85%B6%E4%BB%96%E5%85%83%E7%B4%A0%E9%83%BD%E5%B1%9E%E4%BA%8E%E9%A1%B5%E9%9D%A2%E8%A2%AB%E7%AF%A1%E6%94%B9%E3%80%82">www.aliyun.com:|/cc/bb/a.gif|/vv/bb/cc.jpg，表示www.aliyun.com域名下除基础文档、/cc/bb/a.gif和/vv/bb/cc.jpg之外的其他元素都属于页面被篡改。</a></p>
+         * <p>If any element other than the domain name setting appears on the monitoring page, it means that the page has been tampered. Common manifestations include pop-up ads, floating ads, jumps, etc.</p>
+         * <p>Fill in the format: <code>domain name: element</code>. Elements support wildcards, and multiple elements can be filled in. Multiple elements are separated by vertical bars (|). For example: <code>www.aliyun.com:|/cc/bb/a.gif|/vv/bb/cc.jpg</code>, which means that all elements except the basic document, /cc/bb/a.gif and /vv/bb/cc.jpg under the <a href="http://www.aliyun.com">www.aliyun.com</a> domain name are considered to be tampered with.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.aliyun.com:%7C/cc/bb/a.gif%7C/vv/bb/cc.jpg">www.aliyun.com:|/cc/bb/a.gif|/vv/bb/cc.jpg</a></p>
@@ -1687,7 +1753,7 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
         public String targetUrl;
 
         /**
-         * <p>验证字符串即监测页面源代码中的某个任意字符串。若客户端返回的源码中包含任一黑名单中的字符串则报650验证字符串失败的错误。多个字符串以竖线（|）隔开。</p>
+         * <p>The verification string is an arbitrary string in the source code of the monitoring page. If the source code returned by the client contains any string in the blacklist, an error 650 &quot;Verification string failed&quot; will be reported. Multiple strings are separated by vertical bars (|).</p>
          * 
          * <strong>example:</strong>
          * <p>error</p>
@@ -1696,7 +1762,7 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
         public String verifyStringBlacklist;
 
         /**
-         * <p>验证字符串即监测页面源代码中的某个任意字符串。客户端返回的源码必须包含所有白名单中的字符串，否则报650验证字符串失败的错误。多个字符串以竖线（|）隔开。</p>
+         * <p>The verification string is an arbitrary string in the source code of the monitoring page. The source code returned by the client must contain all the strings in the whitelist, otherwise an error 650 &quot;Verification string failed&quot; will be reported. Multiple strings are separated by a vertical bar (|).</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -1874,7 +1940,7 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
 
     public static class GetTimingSyntheticTaskResponseBodyDataMonitorConf extends TeaModel {
         /**
-         * <p>The HTTP(S) synthetic test parameters.</p>
+         * <p>The parameters of the HTTP(S) synthetic test.</p>
          */
         @NameInMap("ApiHTTP")
         public GetTimingSyntheticTaskResponseBodyDataMonitorConfApiHTTP apiHTTP;
@@ -1904,7 +1970,7 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
         public GetTimingSyntheticTaskResponseBodyDataMonitorConfNetTCP netTCP;
 
         /**
-         * <p>流媒体拨测配置。</p>
+         * <p>Streaming media dial test configuration.</p>
          */
         @NameInMap("Stream")
         public GetTimingSyntheticTaskResponseBodyDataMonitorConfStream stream;

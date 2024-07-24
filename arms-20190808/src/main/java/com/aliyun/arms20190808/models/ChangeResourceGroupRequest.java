@@ -15,7 +15,7 @@ public class ChangeResourceGroupRequest extends TeaModel {
     public String newResourceGroupId;
 
     /**
-     * <p>The region ID of the resource.</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

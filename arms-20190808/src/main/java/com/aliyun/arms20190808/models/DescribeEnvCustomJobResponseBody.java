@@ -76,7 +76,7 @@ public class DescribeEnvCustomJobResponseBody extends TeaModel {
 
     public static class DescribeEnvCustomJobResponseBodyData extends TeaModel {
         /**
-         * <p>If the request parameter EncryptYaml is set to true, a Base64-encoded YAML string is returned. Otherwise, a plaintext YAML string is returned.</p>
+         * <p>If the <strong>encryptYaml</strong> parameter is set to <code>true</code>, a Base64-encoded YAML string is returned. Otherwise, a plaintext YAML string is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>Refer to supplementary instructions.</p>
@@ -112,7 +112,11 @@ public class DescribeEnvCustomJobResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The status of the custom job. Valid values: run and stop.</p>
+         * <p>The status. Valid values:</p>
+         * <ul>
+         * <li>run</li>
+         * <li>stop</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>run</p>

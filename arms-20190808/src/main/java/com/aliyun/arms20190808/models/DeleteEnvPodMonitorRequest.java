@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteEnvPodMonitorRequest extends TeaModel {
     /**
-     * <p>Environment instance ID.</p>
+     * <p>The ID of the environment instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DeleteEnvPodMonitorRequest extends TeaModel {
     public String environmentId;
 
     /**
-     * <p>The namespace where podMonitor is located</p>
+     * <p>The namespace where the PodMonitor is located.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class DeleteEnvPodMonitorRequest extends TeaModel {
     public String namespace;
 
     /**
-     * <p>PodMonitor name.</p>
+     * <p>The name of the PodMonitor.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

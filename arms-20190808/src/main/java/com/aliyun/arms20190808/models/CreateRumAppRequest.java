@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateRumAppRequest extends TeaModel {
     /**
+     * <p>The name of the application group.</p>
+     * 
      * <strong>example:</strong>
      * <p>default</p>
      */
@@ -12,6 +14,7 @@ public class CreateRumAppRequest extends TeaModel {
     public String appGroup;
 
     /**
+     * <p>The application name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,10 +23,27 @@ public class CreateRumAppRequest extends TeaModel {
     @NameInMap("AppName")
     public String appName;
 
+    /**
+     * <p>The description of the application.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Monitoring description</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>The nick name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-user</p>
+     */
+    @NameInMap("NickName")
+    public String nickName;
+
+    /**
+     * <p>The name of the Android application package. This parameter is required if you create an Android application.</p>
+     * 
      * <strong>example:</strong>
      * <p>com.xxxx.xxxxxx</p>
      */
@@ -31,6 +51,7 @@ public class CreateRumAppRequest extends TeaModel {
     public String packageName;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,6 +61,8 @@ public class CreateRumAppRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The ID of the resource group.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-acfmxyexli2****</p>
      */
@@ -47,6 +70,7 @@ public class CreateRumAppRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
+     * <p>The application type. Valid values: web, miniapp, ios, and android.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -56,12 +80,17 @@ public class CreateRumAppRequest extends TeaModel {
     public String siteType;
 
     /**
+     * <p>The source. This is a reserved parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>arms</p>
      */
     @NameInMap("Source")
     public String source;
 
+    /**
+     * <p>The list of tags. You can specify a maximum of 20 tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreateRumAppRequestTag> tag;
 
@@ -92,6 +121,14 @@ public class CreateRumAppRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public CreateRumAppRequest setNickName(String nickName) {
+        this.nickName = nickName;
+        return this;
+    }
+    public String getNickName() {
+        return this.nickName;
     }
 
     public CreateRumAppRequest setPackageName(String packageName) {
@@ -144,6 +181,8 @@ public class CreateRumAppRequest extends TeaModel {
 
     public static class CreateRumAppRequestTag extends TeaModel {
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>app</p>
          */
@@ -151,6 +190,8 @@ public class CreateRumAppRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>ecs</p>
          */

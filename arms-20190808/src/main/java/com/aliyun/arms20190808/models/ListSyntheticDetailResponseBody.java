@@ -11,6 +11,9 @@ public class ListSyntheticDetailResponseBody extends TeaModel {
     @NameInMap("Code")
     public Long code;
 
+    /**
+     * <p>The returned struct.</p>
+     */
     @NameInMap("Data")
     public ListSyntheticDetailResponseBodyData data;
 
@@ -68,6 +71,9 @@ public class ListSyntheticDetailResponseBody extends TeaModel {
     }
 
     public static class ListSyntheticDetailResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of results.</p>
+         */
         @NameInMap("Items")
         public java.util.List<java.util.Map<String, ?>> items;
 

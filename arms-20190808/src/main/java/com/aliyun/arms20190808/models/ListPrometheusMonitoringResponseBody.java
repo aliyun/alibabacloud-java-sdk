@@ -76,7 +76,7 @@ public class ListPrometheusMonitoringResponseBody extends TeaModel {
 
     public static class ListPrometheusMonitoringResponseBodyData extends TeaModel {
         /**
-         * <p>Prometheus Instance ID.</p>
+         * <p>The ID of the Prometheus instance.</p>
          * 
          * <strong>example:</strong>
          * <p>c589a1b8db05c4561aefbb898ca8fb1cf</p>

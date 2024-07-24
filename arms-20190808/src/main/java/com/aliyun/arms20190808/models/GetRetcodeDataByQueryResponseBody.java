@@ -5,6 +5,14 @@ import com.aliyun.tea.*;
 
 public class GetRetcodeDataByQueryResponseBody extends TeaModel {
     /**
+     * <p>The HTTP status code returned for the request. Valid values:</p>
+     * <ul>
+     * <li>2XX: The request was successful.</li>
+     * <li>3XX: A redirection message was returned.</li>
+     * <li>4XX: The request was invalid.</li>
+     * <li>5XX: A server error occurred.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +20,8 @@ public class GetRetcodeDataByQueryResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The Browser Monitoring data returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;total&quot;:0,&quot;auth&quot;:false,&quot;pageSize&quot;:20,&quot;completed&quot;:true,&quot;page&quot;:1,&quot;items&quot;:[]}</p>
      */
@@ -19,6 +29,8 @@ public class GetRetcodeDataByQueryResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>The error message returned if the call fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>Internal error. Please try again. Contact the DingTalk service account if the issue                              persists after multiple retries.</p>
      */
@@ -26,6 +38,8 @@ public class GetRetcodeDataByQueryResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2A0CEDF1-06FE-44AC-8E21-21A5BE65****</p>
      */
@@ -33,6 +47,12 @@ public class GetRetcodeDataByQueryResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

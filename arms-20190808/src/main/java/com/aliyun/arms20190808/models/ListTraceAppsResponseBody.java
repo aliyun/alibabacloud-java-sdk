@@ -51,7 +51,7 @@ public class ListTraceAppsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The queried application monitoring tasks.</p>
+     * <p>The list of Application Monitoring tasks.</p>
      */
     @NameInMap("TraceApps")
     public java.util.List<ListTraceAppsResponseBodyTraceApps> traceApps;
@@ -181,7 +181,7 @@ public class ListTraceAppsResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The tags of the application.</p>
+         * <p>The labels of the application.</p>
          */
         @NameInMap("Labels")
         public java.util.List<String> labels;
@@ -245,7 +245,7 @@ public class ListTraceAppsResponseBody extends TeaModel {
         public Boolean show;
 
         /**
-         * <p>The source of the application.</p>
+         * <p>The application source.</p>
          * 
          * <strong>example:</strong>
          * <p>ACK</p>

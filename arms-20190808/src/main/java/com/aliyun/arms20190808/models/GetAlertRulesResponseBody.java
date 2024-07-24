@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAlertRulesResponseBody extends TeaModel {
     /**
-     * <p>The pages returned.</p>
+     * <p>The returned pages.</p>
      */
     @NameInMap("PageBean")
     public GetAlertRulesResponseBodyPageBean pageBean;
@@ -66,7 +66,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
         public String metricKey;
 
         /**
-         * <p>Indicates the last N minutes.</p>
+         * <p>The last N minutes.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -75,16 +75,16 @@ public class GetAlertRulesResponseBody extends TeaModel {
         public Long n;
 
         /**
-         * <p>The comparison operator that was used to compare the metric value with the threshold. Valid values:</p>
+         * <p>The operator that is used to compare the metric value with the threshold. Valid values:</p>
          * <ul>
          * <li>CURRENT_GTE: greater than or equal to</li>
          * <li>CURRENT_LTE: less than or equal to</li>
-         * <li>PREVIOUS_UP: the increase percentage compared with the last period</li>
-         * <li>PREVIOUS_DOWN: the decrease percentage compared with the last period</li>
-         * <li>HOH_UP: the increase percentage compared with the last hour</li>
-         * <li>HOH_DOWN: the decrease percentage compared with the last hour</li>
-         * <li>DOD_UP: the increase percentage compared with the last day</li>
-         * <li>DOD_DOWN: the decrease percentage compared with the last day</li>
+         * <li>PREVIOUS_UP: increase in percentage compared with the previous period</li>
+         * <li>PREVIOUS_DOWN: decrease in percentage compared with the previous period</li>
+         * <li>HOH_UP: increase in percentage compared with the same period in the previous hour</li>
+         * <li>HOH_DOWN: decrease in percentage compared with the same period in the previous hour</li>
+         * <li>DOD_UP: increase in percentage compared with the same period in the previous day</li>
+         * <li>DOD_DOWN: decrease in percentage compared with the same period in the previous day</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -159,8 +159,8 @@ public class GetAlertRulesResponseBody extends TeaModel {
         /**
          * <p>The relationship between multiple alert conditions specified for the Application Monitoring or Browser Monitoring alert rule. Valid values:</p>
          * <ul>
-         * <li>OR: meets any of the specified conditions.</li>
-         * <li>AND: meets all the specified conditions.</li>
+         * <li>OR: The alert rule is triggered if one of the conditions is met.</li>
+         * <li>AND: The alert rule is triggered if all the conditions are met.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -258,7 +258,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
         public String opt;
 
         /**
-         * <p>Indicates whether this filter condition was displayed on the frontend.</p>
+         * <p>Indicates whether this filter condition is displayed on the frontend.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -267,7 +267,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
         public Boolean show;
 
         /**
-         * <p>Indicates the log type of Browser Monitoring. This field was not included in other filter conditions.</p>
+         * <p>The log type of Browser Monitoring. This field is not included in other filter conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -395,7 +395,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
         public java.util.List<GetAlertRulesResponseBodyPageBeanAlertRulesFiltersCustomSLSFilters> customSLSFilters;
 
         /**
-         * <p>The information of the aggregation dimension.</p>
+         * <p>The information about the aggregation dimension.</p>
          */
         @NameInMap("CustomSLSGroupByDimensions")
         public java.util.List<String> customSLSGroupByDimensions;
@@ -537,10 +537,10 @@ public class GetAlertRulesResponseBody extends TeaModel {
 
     public static class GetAlertRulesResponseBodyPageBeanAlertRules extends TeaModel {
         /**
-         * <p>The alert check type of the Prometheus alert rule. Valid values:</p>
+         * <p>The alert check type of the Prometheus alert rule.</p>
          * <ul>
-         * <li>STATIC: static threshold value</li>
-         * <li>CUSTOM: custom PromQL statement</li>
+         * <li>STATIC: static threshold</li>
+         * <li>CUSTOM: custom PromQL</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -550,7 +550,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
         public String alertCheckType;
 
         /**
-         * <p>The ID of the alert contact group to which the alert rule belongs. Valid values:</p>
+         * <p>The alert contact group ID of the Prometheus alert rule.</p>
          * <ul>
          * <li>\-1: custom PromQL</li>
          * <li>1: Kubernetes load</li>
@@ -564,7 +564,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
         public Long alertGroup;
 
         /**
-         * <p>The ID of the alert rule.</p>
+         * <p>The alert rule ID.</p>
          * 
          * <strong>example:</strong>
          * <p>5730***</p>
@@ -595,7 +595,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
          * <li>PAUSED</li>
          * </ul>
          * <blockquote>
-         * <p>The <strong>PAUSED</strong> status indicates that the alert rule is abnormal and is actively paused by the system. The alert rule may be paused because that it is not unique or the associated cluster has been deleted.</p>
+         * <p> The PAUSED state indicates that the alert rule is abnormal and has been suspended. This may be because the specified threshold value is excessively large, or the associated cluster has been deleted.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -605,11 +605,11 @@ public class GetAlertRulesResponseBody extends TeaModel {
         public String alertStatus;
 
         /**
-         * <p>The type of the alert rule.</p>
+         * <p>The type of the alert rule. Valid values:</p>
          * <ul>
          * <li>APPLICATION_MONITORING_ALERT_RULE: alert rule for Application Monitoring</li>
          * <li>BROWSER_MONITORING_ALERT_RULE: alert rule for Browser Monitoring</li>
-         * <li>PROMETHEUS_MONITORING_ALERT_RULE: alert rule for Managed Service for Prometheus</li>
+         * <li>PROMETHEUS_MONITORING_ALERT_RULE: Prometheus alert rule</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -625,10 +625,10 @@ public class GetAlertRulesResponseBody extends TeaModel {
         public java.util.List<GetAlertRulesResponseBodyPageBeanAlertRulesAnnotations> annotations;
 
         /**
-         * <p>Indicates whether the alert rule was applied to new applications that were created in Application Monitoring or Browser Monitoring. Valid values:</p>
+         * <p>Indicates whether the alert rule is applied to new applications that are created in Application Monitoring or Browser Monitoring. Valid values:</p>
          * <ul>
-         * <li><code>true</code></li>
-         * <li><code>false</code></li>
+         * <li><code>true</code>: yes</li>
+         * <li><code>false</code>: no</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -667,7 +667,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
         /**
          * <p>The extended fields.</p>
          * <blockquote>
-         * <p>For existing Application Monitoring alert rules, the fields contained information such as contacts, alert template, and notification content.</p>
+         * <p> For existing Application Monitoring alert rules, the fields contain information such as contacts, alert template, and notification content.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -732,7 +732,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
         public String notifyStrategy;
 
         /**
-         * <p>The process ID (PID) that was associated with the Application Monitoring or Browser Monitoring alert rule.</p>
+         * <p>The process ID (PID) of the application to which the Application Monitoring or Browser Monitoring alert rule is applied.</p>
          */
         @NameInMap("Pids")
         public java.util.List<String> pids;
@@ -756,7 +756,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The list of tags.</p>
+         * <p>The tags of the alert rule.</p>
          */
         @NameInMap("Tags")
         public java.util.List<GetAlertRulesResponseBodyPageBeanAlertRulesTags> tags;
@@ -771,7 +771,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
         public Long updatedTime;
 
         /**
-         * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
+         * <p>The ID of the Alibaba Cloud account.</p>
          * 
          * <strong>example:</strong>
          * <p>1131971649******</p>
@@ -988,7 +988,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
 
     public static class GetAlertRulesResponseBodyPageBean extends TeaModel {
         /**
-         * <p>The list of alert rules.</p>
+         * <p>The alert rules.</p>
          */
         @NameInMap("AlertRules")
         public java.util.List<GetAlertRulesResponseBodyPageBeanAlertRules> alertRules;

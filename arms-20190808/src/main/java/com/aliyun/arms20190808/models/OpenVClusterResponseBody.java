@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class OpenVClusterResponseBody extends TeaModel {
     /**
-     * <p>The cluster ID. The value is a string.</p>
+     * <p>The cluster ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rre59xelcx</p>
@@ -14,7 +14,7 @@ public class OpenVClusterResponseBody extends TeaModel {
     public String data;
 
     /**
-     * <p>The request ID. You can use the ID to find logs and troubleshoot issues.</p>
+     * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>42E58E4D-ACAD-4400-8FAF-F762340AE5B3</p>

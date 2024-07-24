@@ -17,7 +17,7 @@ public class CreateRetcodeAppResponseBody extends TeaModel {
      * <p>The response parameters.</p>
      * 
      * <strong>example:</strong>
-     * <p>cs80w0n7u3@6455f403dba2f0a</p>
+     * <p>bdidt76ehx@d5cf1cd3f7df411</p>
      */
     @NameInMap("Data")
     public String data;
@@ -26,13 +26,13 @@ public class CreateRetcodeAppResponseBody extends TeaModel {
      * <p>The message returned.</p>
      * 
      * <strong>example:</strong>
-     * <p>message</p>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A5EC8221-08F2-4C95-9AF1-49FD998C647A</p>
@@ -41,7 +41,7 @@ public class CreateRetcodeAppResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The return detail.</p>
+     * <p>The information of the Browser Monitoring task.</p>
      */
     @NameInMap("RetcodeAppDataBean")
     public CreateRetcodeAppResponseBodyRetcodeAppDataBean retcodeAppDataBean;
@@ -184,7 +184,7 @@ public class CreateRetcodeAppResponseBody extends TeaModel {
         public Long appId;
 
         /**
-         * <p>PID.</p>
+         * <p>The process identifier (PID) of the application.</p>
          * 
          * <strong>example:</strong>
          * <p>aokcdqn3ly@a195c6d6421****</p>
@@ -194,7 +194,6 @@ public class CreateRetcodeAppResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the resource group.</p>
-         * <p>If this parameter is left empty, the default resource group is used. You can view the resource group ID on the Resource Group page in the Resource Management console.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmxyexli2****</p>
@@ -203,7 +202,7 @@ public class CreateRetcodeAppResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The tags.</p>
+         * <p>The tags of the task.</p>
          */
         @NameInMap("Tags")
         public CreateRetcodeAppResponseBodyRetcodeAppDataBeanTags tags;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpgradeAddonReleaseRequest extends TeaModel {
     /**
-     * <p>Version of Addon.</p>
+     * <p>The version of the add-on.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class UpgradeAddonReleaseRequest extends TeaModel {
     public String addonVersion;
 
     /**
-     * <p>Whether to pre-check this request.</p>
+     * <p>Specifies whether to perform only a dry run, without performing the actual request.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -24,7 +24,7 @@ public class UpgradeAddonReleaseRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>Environment ID.</p>
+     * <p>The environment ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class UpgradeAddonReleaseRequest extends TeaModel {
     public String environmentId;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -43,7 +43,7 @@ public class UpgradeAddonReleaseRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The name of Release.</p>
+     * <p>The name of the release.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,7 +53,7 @@ public class UpgradeAddonReleaseRequest extends TeaModel {
     public String releaseName;
 
     /**
-     * <p>Metadata information.</p>
+     * <p>The metadata information.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

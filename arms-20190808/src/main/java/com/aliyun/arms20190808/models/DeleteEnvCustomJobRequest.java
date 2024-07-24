@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteEnvCustomJobRequest extends TeaModel {
     /**
-     * <p>Custom job name.</p>
+     * <p>The name of the custom job.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DeleteEnvCustomJobRequest extends TeaModel {
     public String customJobName;
 
     /**
-     * <p>Environment ID.</p>
+     * <p>The ID of the environment instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

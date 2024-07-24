@@ -237,67 +237,28 @@ public class GetTraceResponseBody extends TeaModel {
         /**
          * <p>The type of the remote procedure call (RPC) mode.</p>
          * <ul>
-         * <li>0 http</li>
-         * <li>25 http_client</li>
-         * <li>1 hsf_client</li>
-         * <li>2 hsf</li>
-         * <li>40 local</li>
-         * <li>41 async</li>
-         * <li>52 DB2</li>
-         * <li>53 Informix</li>
-         * <li>54 SequoiaDB</li>
-         * <li>55 Gbase</li>
-         * <li>56 GaussDB</li>
-         * <li>57 KingBase</li>
-         * <li>58 infuxdb</li>
-         * <li>59 clickhouse</li>
-         * <li>60 mysql</li>
-         * <li>61 mysql</li>
-         * <li>62 oracle</li>
-         * <li>63 postgresql</li>
-         * <li>64 mongodb</li>
-         * <li>65 ppas</li>
-         * <li>66 sqlserver</li>
-         * <li>67 mariadb</li>
-         * <li>68 dmdb</li>
-         * <li>69 oceanbase</li>
-         * <li>70 redis</li>
-         * <li>71 memcached</li>
-         * <li>72 elasticsearch</li>
-         * <li>73 kudu</li>
-         * <li>4 tddl</li>
-         * <li>5 tair</li>
-         * <li>13 mq_client</li>
-         * <li>252 mq</li>
-         * <li>23 kafka_client</li>
-         * <li>256 kafka</li>
-         * <li>3 notify_client</li>
-         * <li>254 notify</li>
-         * <li>7 dubbo_client</li>
-         * <li>8 dubbo</li>
-         * <li>11 dsf_client</li>
-         * <li>12 dsf</li>
-         * <li>9 grpc</li>
-         * <li>10 grpc_client</li>
-         * <li>16 thrift</li>
-         * <li>17 thrift_client</li>
-         * <li>18 sofa</li>
-         * <li>19 sofa_client</li>
-         * <li>-1 unknown</li>
-         * <li>98 user_method</li>
-         * <li>100 root</li>
-         * <li>101 client</li>
-         * <li>102 server</li>
-         * <li>103 producer</li>
-         * <li>104 consumer</li>
-         * <li>105 db</li>
-         * <li>106 xtrace_other</li>
-         * <li>1301 schedulerx</li>
-         * <li>1302 XXL_Job</li>
-         * <li>1303 Spring_Scheduled</li>
-         * <li>1304 Quartz</li>
-         * <li>1305 ElasticJob</li>
-         * <li>1308 Jdk_Timer</li>
+         * <li>0: HTTP entry</li>
+         * <li>25: HTTP call</li>
+         * <li>1: High-speed Service Framework (HSF) call</li>
+         * <li>2: HSF provision</li>
+         * <li>40: on-premises API call</li>
+         * <li>60: MySQL call</li>
+         * <li>62: Oracle call</li>
+         * <li>63: PostgreSQL call</li>
+         * <li>70: Redis call</li>
+         * <li>4: Taobao Distributed Data Layer (TDDL) call</li>
+         * <li>5: Tair call</li>
+         * <li>13: MetaQ message sending</li>
+         * <li>252: MetaQ message receiving</li>
+         * <li>3: notification sending</li>
+         * <li>254: notification receiving</li>
+         * <li>7: Apache Dubbo call</li>
+         * <li>8: Apache Dubbo provision</li>
+         * <li>19: SOFARPC call</li>
+         * <li>18: SOFARPC provision</li>
+         * <li>11: Distributed Service Framework (DSF) call</li>
+         * <li>12: DSF provision</li>
+         * <li>\-1: unknown call</li>
          * </ul>
          * 
          * <strong>example:</strong>

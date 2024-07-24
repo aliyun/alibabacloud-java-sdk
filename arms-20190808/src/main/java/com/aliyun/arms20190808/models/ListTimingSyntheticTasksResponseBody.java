@@ -75,12 +75,32 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
     }
 
     public static class ListTimingSyntheticTasksResponseBodyDataItemsCommonSettingCustomHostHosts extends TeaModel {
+        /**
+         * <p>The destination domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
+         */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <p>The IP version. Valid values:</p>
+         * <ul>
+         * <li>0: A version is automatically selected.</li>
+         * <li>1: IPv4.</li>
+         * <li>2: IPv6.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("IpType")
         public Integer ipType;
 
+        /**
+         * <p>The IP address.</p>
+         */
         @NameInMap("Ips")
         public java.util.List<String> ips;
 
@@ -116,9 +136,22 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
     }
 
     public static class ListTimingSyntheticTasksResponseBodyDataItemsCommonSettingCustomHost extends TeaModel {
+        /**
+         * <p>The custom host settings.</p>
+         */
         @NameInMap("Hosts")
         public java.util.List<ListTimingSyntheticTasksResponseBodyDataItemsCommonSettingCustomHostHosts> hosts;
 
+        /**
+         * <p>The selection mode. Valid values:</p>
+         * <ul>
+         * <li>0: random</li>
+         * <li>1: polling</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("SelectType")
         public Integer selectType;
 
@@ -146,12 +179,27 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
     }
 
     public static class ListTimingSyntheticTasksResponseBodyDataItemsCommonSettingCustomPrometheusSetting extends TeaModel {
+        /**
+         * <p>A reserved field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Reserved field</p>
+         */
         @NameInMap("PrometheusClusterId")
         public String prometheusClusterId;
 
+        /**
+         * <p>A reserved field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Reserved field</p>
+         */
         @NameInMap("PrometheusClusterRegion")
         public String prometheusClusterRegion;
 
+        /**
+         * <p>A reserved field.</p>
+         */
         @NameInMap("PrometheusLabels")
         public java.util.Map<String, String> prometheusLabels;
 
@@ -187,15 +235,39 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
     }
 
     public static class ListTimingSyntheticTasksResponseBodyDataItemsCommonSettingCustomVPCSetting extends TeaModel {
+        /**
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-zhangjiakou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The ID of the security group to which the client belongs. The security group specifies the inbound and outbound rules of the client for the VPC. You need to allow the security group to which the client belongs to access the security group to which the VPC belongs. Otherwise, the client cannot access resources in the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-xxxxxxxxxxxxxx</p>
+         */
         @NameInMap("SecureGroupId")
         public String secureGroupId;
 
+        /**
+         * <p>The vSwitch ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp1bcmj81kxxxxxxx</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        /**
+         * <p>The VPC ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-2zehbd4dfzahxxxxxxx</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
@@ -239,27 +311,80 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
     }
 
     public static class ListTimingSyntheticTasksResponseBodyDataItemsCommonSetting extends TeaModel {
+        /**
+         * <p>The custom host settings.</p>
+         */
         @NameInMap("CustomHost")
         public ListTimingSyntheticTasksResponseBodyDataItemsCommonSettingCustomHost customHost;
 
+        /**
+         * <p>A reserved field.</p>
+         */
         @NameInMap("CustomPrometheusSetting")
         public ListTimingSyntheticTasksResponseBodyDataItemsCommonSettingCustomPrometheusSetting customPrometheusSetting;
 
+        /**
+         * <p>The information about the virtual private cloud (VPC). If the destination URL is an Alibaba Cloud internal endpoint, you need to configure a VPC.</p>
+         */
         @NameInMap("CustomVPCSetting")
         public ListTimingSyntheticTasksResponseBodyDataItemsCommonSettingCustomVPCSetting customVPCSetting;
 
+        /**
+         * <p>The IP version. Valid values:</p>
+         * <ul>
+         * <li>0: A version is automatically selected.</li>
+         * <li>1: IPv4.</li>
+         * <li>2: IPv6.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("IpType")
         public Integer ipType;
 
+        /**
+         * <p>Indicates whether tracing is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("IsOpenTrace")
         public Boolean isOpenTrace;
 
+        /**
+         * <p>Indicates whether monitoring samples are evenly distributed. Valid values:</p>
+         * <ul>
+         * <li>0: No</li>
+         * <li>1: Yes</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("MonitorSamples")
         public Integer monitorSamples;
 
+        /**
+         * <p>The type of the client for tracing. Valid values:</p>
+         * <ul>
+         * <li>0: ARMS agent</li>
+         * <li>1: OpenTelemetry</li>
+         * <li>2: Jaeger</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TraceClientType")
         public Integer traceClientType;
 
+        /**
+         * <p>The region to which trace data is reported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("XtraceRegion")
         public String xtraceRegion;
 
@@ -377,6 +502,9 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
     }
 
     public static class ListTimingSyntheticTasksResponseBodyDataItems extends TeaModel {
+        /**
+         * <p>The general settings.</p>
+         */
         @NameInMap("CommonSetting")
         public ListTimingSyntheticTasksResponseBodyDataItemsCommonSetting commonSetting;
 

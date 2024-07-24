@@ -24,7 +24,7 @@ public class CreateRetcodeAppRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The name of the application that is monitored by Browser Monitoring.</p>
+     * <p>The name of the application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,15 @@ public class CreateRetcodeAppRequest extends TeaModel {
     public String retcodeAppName;
 
     /**
-     * <p>The site type.</p>
+     * <p>The type of the application. Valid values:</p>
+     * <ul>
+     * <li><code>web</code>: web application</li>
+     * <li><code>weex</code>: Weex mobile app</li>
+     * <li><code>mini_dd</code>: DingTalk mini program</li>
+     * <li><code>mini_alipay</code>: Alipay mini program</li>
+     * <li><code>mini_wx</code>: WeChat mini program</li>
+     * <li><code>mini_common</code>: mini program on other platforms</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,7 +52,7 @@ public class CreateRetcodeAppRequest extends TeaModel {
     public String retcodeAppType;
 
     /**
-     * <p>The list of tags.</p>
+     * <p>The tags that you want to add to the task.</p>
      */
     @NameInMap("Tags")
     public java.util.List<CreateRetcodeAppRequestTags> tags;

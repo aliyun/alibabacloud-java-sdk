@@ -15,7 +15,7 @@ public class EnableMetricRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>Enable metric name.</p>
+     * <p>The metric name.</p>
      * 
      * <strong>example:</strong>
      * <p>kube_pod_container_status_ready</p>

@@ -11,6 +11,9 @@ public class ListEnvironmentFeaturesResponseBody extends TeaModel {
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The returned struct.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListEnvironmentFeaturesResponseBodyData> data;
 
@@ -83,16 +86,27 @@ public class ListEnvironmentFeaturesResponseBody extends TeaModel {
     }
 
     public static class ListEnvironmentFeaturesResponseBodyData extends TeaModel {
+        /**
+         * <p>The alias of the feature.</p>
+         */
         @NameInMap("Alias")
         public String alias;
 
+        /**
+         * <p>The feature configuration.</p>
+         */
         @NameInMap("Config")
         public java.util.Map<String, String> config;
 
+        /**
+         * <p>The description of the feature.</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The ID of the environment instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>env-xxxxx</p>
          */
@@ -100,6 +114,8 @@ public class ListEnvironmentFeaturesResponseBody extends TeaModel {
         public String environmentId;
 
         /**
+         * <p>The URL of the icon.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://xxx">http://xxx</a></p>
          */
@@ -107,6 +123,12 @@ public class ListEnvironmentFeaturesResponseBody extends TeaModel {
         public String icon;
 
         /**
+         * <p>The language. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>zh</p>
          */
@@ -114,6 +136,8 @@ public class ListEnvironmentFeaturesResponseBody extends TeaModel {
         public String language;
 
         /**
+         * <p>The latest version number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.1.17</p>
          */
@@ -124,6 +148,8 @@ public class ListEnvironmentFeaturesResponseBody extends TeaModel {
         public Boolean managed;
 
         /**
+         * <p>The name of the feature.</p>
+         * 
          * <strong>example:</strong>
          * <p>metric-agent</p>
          */
@@ -131,6 +157,16 @@ public class ListEnvironmentFeaturesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The status of the feature. Valid values:</p>
+         * <ul>
+         * <li>Installing: The agent is being installed.</li>
+         * <li>Success: The agent is installed.</li>
+         * <li>Failed: The agent failed to be installed.</li>
+         * <li>UnInstall: The agent is uninstalled.</li>
+         * <li>Uninstalling: The agent is being uninstalled.</li>
+         * <li>UnInstallFailed: The agent failed to be uninstalled.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Success</p>
          */
@@ -138,6 +174,8 @@ public class ListEnvironmentFeaturesResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The version of the feature.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.1.17</p>
          */

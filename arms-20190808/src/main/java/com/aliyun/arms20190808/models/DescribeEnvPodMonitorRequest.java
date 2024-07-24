@@ -15,7 +15,7 @@ public class DescribeEnvPodMonitorRequest extends TeaModel {
     public String environmentId;
 
     /**
-     * <p>The namespace where the PodMonitor is located.</p>
+     * <p>The namespace where the PodMonitor resides.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

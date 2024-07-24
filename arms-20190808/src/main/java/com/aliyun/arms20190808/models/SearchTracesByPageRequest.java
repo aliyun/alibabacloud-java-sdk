@@ -130,7 +130,7 @@ public class SearchTracesByPageRequest extends TeaModel {
     public Long startTime;
 
     /**
-     * <p>The tags.</p>
+     * <p>The list of tags.</p>
      */
     @NameInMap("Tags")
     public java.util.List<SearchTracesByPageRequestTags> tags;
@@ -301,13 +301,12 @@ public class SearchTracesByPageRequest extends TeaModel {
          * <li>traceId: the ID of the trace.</li>
          * <li>serverApp: the name of the server application.</li>
          * <li>clientApp: the name of the client application.</li>
-         * <li>service: the name of the API operation.</li>
+         * <li>service: the name of the interface.</li>
          * <li>rpc: the type of the call.</li>
          * <li>msOfSpan: the duration exceeds a specific value.</li>
          * <li>clientIp: the IP address of the client.</li>
          * <li>serverIp: the IP address of the server.</li>
          * <li>isError: specifies whether the call is abnormal.</li>
-         * <li>hasTprof: contains only thread profiling.</li>
          * </ul>
          * 
          * <strong>example:</strong>

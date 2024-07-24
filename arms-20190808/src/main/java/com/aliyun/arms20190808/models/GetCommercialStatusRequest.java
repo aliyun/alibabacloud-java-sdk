@@ -5,6 +5,18 @@ import com.aliyun.tea.*;
 
 public class GetCommercialStatusRequest extends TeaModel {
     /**
+     * <p>The product code.</p>
+     * <ul>
+     * <li>arms_app_post</li>
+     * <li>arms_web_post</li>
+     * <li>arms_promethues_public_cn</li>
+     * <li>prometheus_pay_public_cn</li>
+     * <li>xtrace</li>
+     * <li>arms_serverless_public_cn</li>
+     * <li>arms_rumserverless_public_cn</li>
+     * <li>prometheus_serverless_public_cn</li>
+     * <li>xtrace_serverless_public_cn</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +26,8 @@ public class GetCommercialStatusRequest extends TeaModel {
     public String commodityCode;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */

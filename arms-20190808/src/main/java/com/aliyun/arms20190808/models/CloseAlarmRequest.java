@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CloseAlarmRequest extends TeaModel {
     /**
+     * <p>The alert ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class CloseAlarmRequest extends TeaModel {
     public Long alarmId;
 
     /**
+     * <p>The ID of the handler.</p>
+     * 
      * <strong>example:</strong>
      * <p>2048065</p>
      */
@@ -21,6 +24,7 @@ public class CloseAlarmRequest extends TeaModel {
     public Long handlerId;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,6 +33,9 @@ public class CloseAlarmRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The solution to the alert.</p>
+     */
     @NameInMap("Solution")
     public String solution;
 

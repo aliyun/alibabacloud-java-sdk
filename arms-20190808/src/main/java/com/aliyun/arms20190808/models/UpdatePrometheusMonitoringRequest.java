@@ -15,7 +15,7 @@ public class UpdatePrometheusMonitoringRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The monitoring configuration. Specify a YAML string.</p>
+     * <p>The monitoring configuration. The value is a YAML string.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ConfigYaml")

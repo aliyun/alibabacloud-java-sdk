@@ -165,7 +165,7 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
 
     public static class CreateOrUpdateNotificationPolicyResponseBodyNotificationPolicyMatchingRules extends TeaModel {
         /**
-         * <p>An array of alert event matching condition objects.</p>
+         * <p>The matching conditions.</p>
          */
         @NameInMap("MatchingConditions")
         public java.util.List<CreateOrUpdateNotificationPolicyResponseBodyNotificationPolicyMatchingRulesMatchingConditions> matchingConditions;
@@ -187,7 +187,7 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
 
     public static class CreateOrUpdateNotificationPolicyResponseBodyNotificationPolicyNotifyRuleNotifyObjects extends TeaModel {
         /**
-         * <p>通知对象为联系人时的单独的联系方式</p>
+         * <p>The notification methods specified for a contact.</p>
          */
         @NameInMap("NotifyChannels")
         public java.util.List<String> notifyChannels;
@@ -202,7 +202,7 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
         public Long notifyObjectId;
 
         /**
-         * <p>The name of the notification contact.</p>
+         * <p>The name of the notification object.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -211,12 +211,14 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
         public String notifyObjectName;
 
         /**
-         * <p>The type of the notification contact. Valid values: </p>
+         * <p>The type of the notification object. Valid values:</p>
          * <ul>
-         * <li>CONTACT: an individual contact</li>
-         * <li>CONTACT_GROUP: a contact group</li>
-         * <li>DING_ROBOT: an instant messaging (IM) robot</li>
-         * <li>CONTACT_SCHEDULE: a person on duty based on an established schedule</li>
+         * <li>CONTACT: individual contact</li>
+         * <li>CONTACT_GROUP: contact group</li>
+         * <li>ARMS_CONTACT: individual ARMS contact</li>
+         * <li>ARMS_CONTACT_GROUP: ARMS contact group</li>
+         * <li>DING_ROBOT_GROUP: DingTalk, Lark, or WeCom IM chatbot</li>
+         * <li>CONTACT_SCHEDULE: user on duty defined by a schedule</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -542,9 +544,6 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
     }
 
     public static class CreateOrUpdateNotificationPolicyResponseBodyNotificationPolicy extends TeaModel {
-        /**
-         * <p>极简模式</p>
-         */
         @NameInMap("DirectedMode")
         public Boolean directedMode;
 
@@ -644,6 +643,8 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
         public Boolean sendRecoverMessage;
 
         /**
+         * <p>Indicates whether the notification policy is enabled. Valid values: enable and disable.</p>
+         * 
          * <strong>example:</strong>
          * <p>enable</p>
          */

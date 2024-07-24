@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class InstallCmsExporterRequest extends TeaModel {
     /**
+     * <p>The ID of the cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class InstallCmsExporterRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The cloud services that you want to monitor. The CmsArgs parameter is the startup parameter of the cms-exporter collector. Separate multiple cloud services with number signs (<code>#</code>).</p>
+     * 
      * <strong>example:</strong>
      * <p>hologres#cen</p>
      */
@@ -21,6 +24,8 @@ public class InstallCmsExporterRequest extends TeaModel {
     public String cmsArgs;
 
     /**
+     * <p>The recently monitored cloud services. Separate multiple cloud services with number signs (<code>#</code>).</p>
+     * 
      * <strong>example:</strong>
      * <p>hologres#cen</p>
      */
@@ -28,6 +33,8 @@ public class InstallCmsExporterRequest extends TeaModel {
     public String directArgs;
 
     /**
+     * <p>Specifies whether to collect the aliyun tags attached to each cloud service. Default value: false.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -35,6 +42,7 @@ public class InstallCmsExporterRequest extends TeaModel {
     public Boolean enableTag;
 
     /**
+     * <p>The ID of the region.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

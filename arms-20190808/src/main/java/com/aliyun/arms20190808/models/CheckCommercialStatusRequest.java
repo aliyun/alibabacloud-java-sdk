@@ -14,10 +14,10 @@ public class CheckCommercialStatusRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Sub-services:</p>
+     * <p>The ARMS sub-service. Valid values:</p>
      * <ul>
      * <li>apm: Application Monitoring</li>
-     * <li>rum: Real User Monitoring</li>
+     * <li>rum: RUM</li>
      * <li>prometheus: Managed Service for Prometheus</li>
      * <li>xtrace: Managed Service for OpenTelemetry</li>
      * </ul>

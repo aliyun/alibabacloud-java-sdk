@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetCloudClusterAllUrlResponseBody extends TeaModel {
     /**
-     * <p>状态码。200为成功，其他状态码为异常。</p>
+     * <p>The HTTP status code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -20,7 +20,7 @@ public class GetCloudClusterAllUrlResponseBody extends TeaModel {
     public java.util.List<GetCloudClusterAllUrlResponseBodyData> data;
 
     /**
-     * <p>详细信息。</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -38,7 +38,7 @@ public class GetCloudClusterAllUrlResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>操作是否成功：true：操作成功                                 false：操作失败</p>
+     * <p>Indicates whether the request was successful. Valid values: true and false.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

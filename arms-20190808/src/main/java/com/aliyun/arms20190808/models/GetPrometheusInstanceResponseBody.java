@@ -14,7 +14,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The response parameters.</p>
      */
     @NameInMap("Data")
     public GetPrometheusInstanceResponseBodyData data;
@@ -118,8 +118,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
 
     public static class GetPrometheusInstanceResponseBodyData extends TeaModel {
         /**
-         * <p>权限类型：
-         * readWrite、readOnly、httpReadOnly</p>
+         * <p>Permission type: read Write, read Only, http Read Only</p>
          * 
          * <strong>example:</strong>
          * <p>readWrite</p>
@@ -128,7 +127,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String accessType;
 
         /**
-         * <p>The number of days for which data is automatically archived after the storage expires. Valid values: 60, 90, 180, and 365. 0 indicates that the data is not archived.</p>
+         * <p>The number of days for which data is automatically archived after the storage duration expires. Valid values: 60, 90, 180, and 365. 0 indicates that the data is not archived.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -137,7 +136,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public Integer archiveDuration;
 
         /**
-         * <p>Authorization token.</p>
+         * <p>The authorization token.</p>
          * 
          * <strong>example:</strong>
          * <p>GciOiJIUzI1NiJ9***</p>
@@ -189,7 +188,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String grafanaInstanceId;
 
         /**
-         * <p>Http API internet address.</p>
+         * <p>The public URL for the HTTP API.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://cn-beijing.arms.aliyuncs.com:9443/api/v1/prometheus/xxx">https://cn-beijing.arms.aliyuncs.com:9443/api/v1/prometheus/xxx</a></p>
@@ -198,7 +197,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String httpApiInterUrl;
 
         /**
-         * <p>Http API intranet address.</p>
+         * <p>The internal URL for the HTTP API.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://cn-beijing-intranet.arms.aliyuncs.com:9090/api/v1/prometheus/xxx">http://cn-beijing-intranet.arms.aliyuncs.com:9090/api/v1/prometheus/xxx</a></p>
@@ -220,7 +219,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String paymentType;
 
         /**
-         * <p>Push gateway internet address.</p>
+         * <p>The public URL for Pushgateway.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://cn-beijing.arms.aliyuncs.com/prometheus/xxx/api/v2">https://cn-beijing.arms.aliyuncs.com/prometheus/xxx/api/v2</a></p>
@@ -229,7 +228,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String pushGatewayInterUrl;
 
         /**
-         * <p>Push gateway intranet address.</p>
+         * <p>The internal URL for Pushgateway.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://cn-beijing-intranet.arms.aliyuncs.com/prometheus/xxx/api/v2">http://cn-beijing-intranet.arms.aliyuncs.com/prometheus/xxx/api/v2</a></p>
@@ -247,7 +246,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>Remote read internet address.</p>
+         * <p>The public URL for remote read.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://cn-beijing.arms.aliyuncs.com:9090/api/v1/prometheus/xxx/api/v1/read">http://cn-beijing.arms.aliyuncs.com:9090/api/v1/prometheus/xxx/api/v1/read</a></p>
@@ -256,7 +255,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String remoteReadInterUrl;
 
         /**
-         * <p>Remote read intranet address.</p>
+         * <p>The internal URL for remote read.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://cn-beijing-intranet.arms.aliyuncs.com:9090/api/v1/prometheus/xxx/api/v1/read">http://cn-beijing-intranet.arms.aliyuncs.com:9090/api/v1/prometheus/xxx/api/v1/read</a></p>
@@ -265,7 +264,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String remoteReadIntraUrl;
 
         /**
-         * <p>Remote write internet address.</p>
+         * <p>The public URL for remote write.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://cn-beijing.arms.aliyuncs.com/prometheus/xxx/api/v3/write">https://cn-beijing.arms.aliyuncs.com/prometheus/xxx/api/v3/write</a></p>
@@ -274,7 +273,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String remoteWriteInterUrl;
 
         /**
-         * <p>Remote write intranet address.</p>
+         * <p>The internal URL for remote write.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://cn-beijing-intranet.arms.aliyuncs.com/prometheus/xxx/api/v3/write">http://cn-beijing-intranet.arms.aliyuncs.com/prometheus/xxx/api/v3/write</a></p>

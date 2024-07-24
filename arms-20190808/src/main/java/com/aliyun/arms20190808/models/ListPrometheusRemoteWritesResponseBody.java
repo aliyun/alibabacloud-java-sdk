@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPrometheusRemoteWritesResponseBody extends TeaModel {
     /**
-     * <p>The status code. The status code 200 indicates that the request was successful. If another status code is returned, the request failed.</p>
+     * <p>The HTTP status code that is returned. The HTTP status code 200 indicates that the call was successful. Otherwise, the call fails.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -41,7 +41,7 @@ public class ListPrometheusRemoteWritesResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>9319A57D-2D9E-472A-B69B-CF3CD16D****</p>
@@ -50,7 +50,7 @@ public class ListPrometheusRemoteWritesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values: true and false.</p>
+     * <p>Indicates whether the call was successful. Valid values: true and false.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

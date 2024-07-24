@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddPrometheusInstanceRequest extends TeaModel {
     /**
+     * <p>The name of the Prometheus instance for Remote Write.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class AddPrometheusInstanceRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class AddPrometheusInstanceRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The type of the Prometheus instance. Only Prometheus instances for Remote Write is supported. Set the value to RW.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdatePrometheusInstanceRequest extends TeaModel {
     /**
-     * <p>The number of days for automatic archiving after storage expiration (optional values: 60, 90, 180, 365). 0 means not archive.</p>
+     * <p>The number of days for which data is automatically archived after the storage expires. Valid values: 60, 90, 180, and 365. 0 indicates that the data is not archived.</p>
      * 
      * <strong>example:</strong>
      * <p>90</p>
@@ -24,7 +24,7 @@ public class UpdatePrometheusInstanceRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,7 +43,7 @@ public class UpdatePrometheusInstanceRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>Storage duration (days).</p>
+     * <p>The data storage duration. Unit: days.</p>
      * 
      * <strong>example:</strong>
      * <p>90</p>

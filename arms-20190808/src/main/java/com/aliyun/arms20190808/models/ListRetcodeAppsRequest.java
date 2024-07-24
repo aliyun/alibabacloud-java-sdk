@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListRetcodeAppsRequest extends TeaModel {
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class ListRetcodeAppsRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The tags.</p>
+     * <p>The tags that you want to add to the task.</p>
      */
     @NameInMap("Tags")
     public java.util.List<ListRetcodeAppsRequestTags> tags;

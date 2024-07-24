@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteRetcodeAppResponseBody extends TeaModel {
     /**
-     * <p>状态码。200为成功，其他状态码为异常。</p>
+     * <p>Status code. 200 means success, other status codes are exceptions.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -27,7 +27,11 @@ public class DeleteRetcodeAppResponseBody extends TeaModel {
     public String data;
 
     /**
-     * <p>附加信息。取值说明如下：请求正常，返回success。请求异常，返回具体异常信息。</p>
+     * <p>Additional information. The value description is as follows:</p>
+     * <ul>
+     * <li>If the request is normal, return success.</li>
+     * <li>If the request is abnormal, return specific abnormal information.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -45,10 +49,10 @@ public class DeleteRetcodeAppResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>操作是否成功：</p>
+     * <p>Whether the operation was successful:</p>
      * <ul>
-     * <li><code>true</code>：操作成功</li>
-     * <li><code>false</code>：操作失败</li>
+     * <li><code>true</code>: The operation was successful</li>
+     * <li><code>false</code>: The operation failed</li>
      * </ul>
      * 
      * <strong>example:</strong>

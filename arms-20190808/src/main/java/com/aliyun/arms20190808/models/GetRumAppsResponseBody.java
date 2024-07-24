@@ -4,10 +4,15 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class GetRumAppsResponseBody extends TeaModel {
+    /**
+     * <p>The queried applications.</p>
+     */
     @NameInMap("AppList")
     public java.util.List<GetRumAppsResponseBodyAppList> appList;
 
     /**
+     * <p>The response code. The status code 200 indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -15,17 +20,22 @@ public class GetRumAppsResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The error message returned if the request failed.</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>70675725-8F11-4817-8106-CFE0AD71****</p>
@@ -34,6 +44,12 @@ public class GetRumAppsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -94,15 +110,40 @@ public class GetRumAppsResponseBody extends TeaModel {
     }
 
     public static class GetRumAppsResponseBodyAppListServiceDomainConfigs extends TeaModel {
+        /**
+         * <p>Description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>Domain name or IP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
+         */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <p>Trace transparent transmission protocol list, which must be transmitted when link tracing is enabled.</p>
+         */
         @NameInMap("PropagatorTypes")
         public java.util.List<String> propagatorTypes;
 
+        /**
+         * <p>Whether to enable link tracking (need to enable the observable link Open Telemetry version), value:</p>
+         * <ul>
+         * <li><code>true</code>: Enable link tracking (after enabling, the relevant header will be inserted into the domain name request).</li>
+         * <li><code>false</code>: Do not enable link tracking.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Tracing")
         public String tracing;
 
@@ -147,6 +188,8 @@ public class GetRumAppsResponseBody extends TeaModel {
 
     public static class GetRumAppsResponseBodyAppListTags extends TeaModel {
         /**
+         * <p>The tag key. The tag key can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.</p>
+         * 
          * <strong>example:</strong>
          * <p>tag1</p>
          */
@@ -154,6 +197,8 @@ public class GetRumAppsResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>ok</p>
          */
@@ -185,6 +230,8 @@ public class GetRumAppsResponseBody extends TeaModel {
 
     public static class GetRumAppsResponseBodyAppList extends TeaModel {
         /**
+         * <p>The application type. Valid values: web, miniapp, ios, and android.</p>
+         * 
          * <strong>example:</strong>
          * <p>web</p>
          */
@@ -192,16 +239,23 @@ public class GetRumAppsResponseBody extends TeaModel {
         public String appType;
 
         /**
+         * <p>The time when the application was created. The value is a timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1685686960872</p>
          */
         @NameInMap("CreateTime")
         public Object createTime;
 
+        /**
+         * <p>The description of the application.</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The endpoint that is used to report application data.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxxxxxxx-default-cn.rum.aliyuncs.com</p>
          */
@@ -209,16 +263,23 @@ public class GetRumAppsResponseBody extends TeaModel {
         public String endpoint;
 
         /**
+         * <p>Indicates whether the application is subscribed. Valid values: true and false.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("IsSubscription")
         public Boolean isSubscription;
 
+        /**
+         * <p>The application name.</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>The alias of the application.</p>
+         * 
          * <strong>example:</strong>
          * <p>Williamtag</p>
          */
@@ -226,6 +287,8 @@ public class GetRumAppsResponseBody extends TeaModel {
         public String nickName;
 
         /**
+         * <p>The package name of the Android application.</p>
+         * 
          * <strong>example:</strong>
          * <p>com.zy.yxws</p>
          */
@@ -233,6 +296,8 @@ public class GetRumAppsResponseBody extends TeaModel {
         public String packageName;
 
         /**
+         * <p>The application ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxxxx@cc08bdxxxx20b15</p>
          */
@@ -240,6 +305,8 @@ public class GetRumAppsResponseBody extends TeaModel {
         public String pid;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -247,16 +314,23 @@ public class GetRumAppsResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The ID of the resource group.</p>
+         * 
          * <strong>example:</strong>
          * <p>rg-acfmzaq3ypaqkdy</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>Service domain name configuration list. Currently only supports mobile applications.</p>
+         */
         @NameInMap("ServiceDomainConfigs")
         public java.util.List<GetRumAppsResponseBodyAppListServiceDomainConfigs> serviceDomainConfigs;
 
         /**
+         * <p>The name of the Simple Log Service Logstore that stores application data.</p>
+         * 
          * <strong>example:</strong>
          * <p>logstore-rum</p>
          */
@@ -264,6 +338,8 @@ public class GetRumAppsResponseBody extends TeaModel {
         public String slsLogstore;
 
         /**
+         * <p>The name of the Simple Log Service project that stores application data.</p>
+         * 
          * <strong>example:</strong>
          * <p>proj-xtrace-xxxxxxxba6ef5466b5debf9e2f951-cn-hangzhou</p>
          */
@@ -271,16 +347,23 @@ public class GetRumAppsResponseBody extends TeaModel {
         public String slsProject;
 
         /**
+         * <p>The status of the application. Valid values: created, running, and stopped.</p>
+         * 
          * <strong>example:</strong>
          * <p>running</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<GetRumAppsResponseBodyAppListTags> tags;
 
         /**
+         * <p>The type of the application. Valid value: RUM.</p>
+         * 
          * <strong>example:</strong>
          * <p>RUM</p>
          */

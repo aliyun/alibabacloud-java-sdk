@@ -11,7 +11,7 @@ public class ListDashboardsResponseBody extends TeaModel {
     public java.util.List<ListDashboardsResponseBodyDashboardVos> dashboardVos;
 
     /**
-     * <p>The environment ID.</p>
+     * <p>The ID of the environment instance.</p>
      * 
      * <strong>example:</strong>
      * <p>env-ebd54733482581fc8c4237******</p>
@@ -20,7 +20,7 @@ public class ListDashboardsResponseBody extends TeaModel {
     public String environmentId;
 
     /**
-     * <p>Whether to enable Grafana service.</p>
+     * <p>Indicates whether Managed Service for Grafana is activated.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -156,10 +156,10 @@ public class ListDashboardsResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>Indicates whether the exporter was provided by ARMS. Valid values:</p>
+         * <p>Indicates whether the exporter is provided by ARMS.</p>
          * <ul>
-         * <li><code>true</code>: The exporter is provided by ARMS.</li>
-         * <li><code>false</code>: The exporter is not provided by ARMS.</li>
+         * <li><code>true:</code> The exporter is provided by ARMS.</li>
+         * <li><code>false:</code>: The exporter is not provided by ARMS.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -196,7 +196,7 @@ public class ListDashboardsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Indicates whether the Grafana dashboard has a new version that was available for upgrade.</p>
+         * <p>Indicates whether the Grafana dashboard has a new version that is available for upgrade.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -211,7 +211,7 @@ public class ListDashboardsResponseBody extends TeaModel {
         public java.util.List<String> tags;
 
         /**
-         * <p>The timestamp when the Grafana dashboard was created.</p>
+         * <p>The time when the Grafana dashboard was created. The value is a timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1590136924</p>
@@ -242,7 +242,7 @@ public class ListDashboardsResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The unique identifier of a dashboard when multiple Grafana dashboards were installed. It is a unique business ID displayed on the page.</p>
+         * <p>The unique identifier of the Grafana dashboard.</p>
          * 
          * <strong>example:</strong>
          * <p>1131971649496228-*****-59</p>
@@ -467,7 +467,7 @@ public class ListDashboardsResponseBody extends TeaModel {
         public String httpsUrl;
 
         /**
-         * <p>The information about the Grafana dashboards.</p>
+         * <p>The information about the Grafana dashboard.</p>
          */
         @NameInMap("I18nChild")
         public ListDashboardsResponseBodyDashboardVosI18nChild i18nChild;
@@ -482,10 +482,10 @@ public class ListDashboardsResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>Indicates whether the exporter was provided by ARMS. Valid values:</p>
+         * <p>Indicates whether the exporter is provided by Application Real-Time Monitoring Service (ARMS).</p>
          * <ul>
-         * <li><code>true</code>: The exporter is provided by ARMS.</li>
-         * <li><code>false</code>: The exporter is not provided by ARMS.</li>
+         * <li><code>true:</code> The exporter is provided by ARMS.</li>
+         * <li><code>false:</code>: The exporter is not provided by ARMS.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -495,7 +495,7 @@ public class ListDashboardsResponseBody extends TeaModel {
         public Boolean isArmsExporter;
 
         /**
-         * <p>The type of the dashboard. Valid values: BASIC, THIRD, LIMIT, and CUSTOM. BASIC indicates a basic dashboard. THIRD indicates a third-party dashboard. LIMIT indicates a time-limited free dashboard. CUSTOM indicates a custom dashboard.</p>
+         * <p>The category of the Grafana dashboard. Valid values: BASIC, THIRD, LIMIT, and CUSTOM.</p>
          * 
          * <strong>example:</strong>
          * <p>BASIC</p>
@@ -522,7 +522,7 @@ public class ListDashboardsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Indicates whether the Grafana dashboard has a new version that was available for upgrade.</p>
+         * <p>Indicates whether the Grafana dashboard has a new version that is available for upgrade.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -537,7 +537,7 @@ public class ListDashboardsResponseBody extends TeaModel {
         public java.util.List<String> tags;
 
         /**
-         * <p>The timestamp generated when the Grafana dashboard was created. Unit: seconds</p>
+         * <p>The time when the Grafana dashboard was created. The value is a timestamp. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1590136924</p>
@@ -568,7 +568,7 @@ public class ListDashboardsResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The unique identifier of a dashboard when multiple Grafana dashboards were installed. It is a unique business ID displayed on the page.</p>
+         * <p>The unique identifier of the Grafana dashboard.</p>
          * 
          * <strong>example:</strong>
          * <p>1131971649496228-*****-59</p>

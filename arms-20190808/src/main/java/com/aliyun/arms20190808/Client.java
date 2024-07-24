@@ -172,7 +172,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>接入integration</p>
+     * <p>Integrates the dashboard and collection rules of Prometheus Service.</p>
      * 
      * @deprecated OpenAPI AddIntegration is deprecated, please use ARMS::2019-08-08::InstallAddon instead.
      * 
@@ -216,7 +216,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>接入integration</p>
+     * <p>Integrates the dashboard and collection rules of Prometheus Service.</p>
      * 
      * @deprecated OpenAPI AddIntegration is deprecated, please use ARMS::2019-08-08::InstallAddon instead.
      * 
@@ -456,7 +456,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds a remote write configuration item to a Prometheus instance for Container Service or a Prometheus instance for ECS.</p>
+     * <p>Adds a remote write configuration item to a Prometheus instance.</p>
      * 
      * @param request AddPrometheusRemoteWriteRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -498,7 +498,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds a remote write configuration item to a Prometheus instance for Container Service or a Prometheus instance for ECS.</p>
+     * <p>Adds a remote write configuration item to a Prometheus instance.</p>
      * 
      * @param request AddPrometheusRemoteWriteRequest
      * @return AddPrometheusRemoteWriteResponse
@@ -510,7 +510,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates or updates a recording rule.</p>
+     * <p>Creates or updates a recording rule of Managed Service for Prometheus.</p>
      * 
      * @param request AddRecordingRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -550,7 +550,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates or updates a recording rule.</p>
+     * <p>Creates or updates a recording rule of Managed Service for Prometheus.</p>
      * 
      * @param request AddRecordingRuleRequest
      * @return AddRecordingRuleResponse
@@ -562,7 +562,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Flink集群打标</p>
+     * <p>Associates a Prometheus instance with the ID and name of a Flink workspace.</p>
      * 
      * @param request AddTagToFlinkClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -614,7 +614,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Flink集群打标</p>
+     * <p>Associates a Prometheus instance with the ID and name of a Flink workspace.</p>
      * 
      * @param request AddTagToFlinkClusterRequest
      * @return AddTagToFlinkClusterResponse
@@ -822,7 +822,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>屏蔽告警通知</p>
+     * <p>Blocks alert notifications in a time period.</p>
      * 
      * @param request BlockAlarmNotificationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -866,7 +866,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>屏蔽告警通知</p>
+     * <p>Blocks alert notifications in a time period.</p>
      * 
      * @param request BlockAlarmNotificationRequest
      * @return BlockAlarmNotificationResponse
@@ -878,7 +878,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改告警等级</p>
+     * <p>Modifies the severity level of an alert.</p>
      * 
      * @param request ChangeAlarmSeverityRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -922,7 +922,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改告警等级</p>
+     * <p>Modifies the severity level of an alert.</p>
      * 
      * @param request ChangeAlarmSeverityRequest
      * @return ChangeAlarmSeverityResponse
@@ -934,7 +934,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Changes the resource group to which a resource belongs.</p>
+     * <p>Moves a resource to a specific resource group.</p>
      * 
      * @param request ChangeResourceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -978,7 +978,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Changes the resource group to which a resource belongs.</p>
+     * <p>Moves a resource to a specific resource group.</p>
      * 
      * @param request ChangeResourceGroupRequest
      * @return ChangeResourceGroupResponse
@@ -1084,7 +1084,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>认领告警</p>
+     * <p>Claims an alert. This operation can be used together with escalation policies. When multiple handlers are involved in alert management, each handler can call this operation to claim alerts. After an alert is claimed, the alert enters the Being Processed state.</p>
      * 
      * @param request ClaimAlarmRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1124,7 +1124,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>认领告警</p>
+     * <p>Claims an alert. This operation can be used together with escalation policies. When multiple handlers are involved in alert management, each handler can call this operation to claim alerts. After an alert is claimed, the alert enters the Being Processed state.</p>
      * 
      * @param request ClaimAlarmRequest
      * @return ClaimAlarmResponse
@@ -1136,7 +1136,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>关闭告警</p>
+     * <p>Disables an alert. Make sure that the alert is resolved before you disable the alert. If an alert is not resolved, new alerts can be triggered even after the alert is disabled.</p>
      * 
      * @param request CloseAlarmRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1180,7 +1180,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>关闭告警</p>
+     * <p>Disables an alert. Make sure that the alert is resolved before you disable the alert. If an alert is not resolved, new alerts can be triggered even after the alert is disabled.</p>
      * 
      * @param request CloseAlarmRequest
      * @return CloseAlarmResponse
@@ -1699,8 +1699,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call the operation, make sure that you have learned about the billing methods and <a href="https://www.alibabacloud.com/help/zh/grafana/product-overview/billing-4?spm=a2c4g.11186623.0.0.14c2d253B3SDbt">pricing</a> of Managed Service for Grafana.</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li>To create workspaces, you must complete real-name verification.</li>
+     * <li>Regular users can create workspaces only in Managed Service for Grafana Developer Edition, Pro Edition, and Advanced Edition. <code>These editions charge fees.</code></li>
+     * <li>Internal users can create workspaces only in Managed Service for Grafana Beta Edition and Standard Edition. <code>These editions do not charge fees.</code></li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建工作区</p>
+     * <p>Creates a workspace in Managed Service for Grafana.</p>
      * 
      * @param tmpReq CreateGrafanaWorkspaceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1769,8 +1779,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call the operation, make sure that you have learned about the billing methods and <a href="https://www.alibabacloud.com/help/zh/grafana/product-overview/billing-4?spm=a2c4g.11186623.0.0.14c2d253B3SDbt">pricing</a> of Managed Service for Grafana.</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li>To create workspaces, you must complete real-name verification.</li>
+     * <li>Regular users can create workspaces only in Managed Service for Grafana Developer Edition, Pro Edition, and Advanced Edition. <code>These editions charge fees.</code></li>
+     * <li>Internal users can create workspaces only in Managed Service for Grafana Beta Edition and Standard Edition. <code>These editions do not charge fees.</code></li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建工作区</p>
+     * <p>Creates a workspace in Managed Service for Grafana.</p>
      * 
      * @param request CreateGrafanaWorkspaceRequest
      * @return CreateGrafanaWorkspaceResponse
@@ -2134,7 +2154,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates or modifies an EventBridge integration that is used to push notifications.</p>
+     * <p>Creates or modifies an EventBridge integration.</p>
      * 
      * @param request CreateOrUpdateEventBridgeIntegrationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2198,7 +2218,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates or modifies an EventBridge integration that is used to push notifications.</p>
+     * <p>Creates or modifies an EventBridge integration.</p>
      * 
      * @param request CreateOrUpdateEventBridgeIntegrationRequest
      * @return CreateOrUpdateEventBridgeIntegrationResponse
@@ -2824,14 +2844,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建前端监控应用</p>
+     * <p>Create a Real User Monitoring (RUM) application.</p>
      * 
-     * @param request CreateRumAppRequest
+     * @param tmpReq CreateRumAppRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateRumAppResponse
      */
-    public CreateRumAppResponse createRumAppWithOptions(CreateRumAppRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public CreateRumAppResponse createRumAppWithOptions(CreateRumAppRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateRumAppShrinkRequest request = new CreateRumAppShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tag)) {
+            request.tagShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tag, "Tag", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.appGroup)) {
             query.put("AppGroup", request.appGroup);
@@ -2843,6 +2869,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nickName)) {
+            query.put("NickName", request.nickName);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.packageName)) {
@@ -2865,8 +2895,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Source", request.source);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
-            query.put("Tag", request.tag);
+        if (!com.aliyun.teautil.Common.isUnset(request.tagShrink)) {
+            query.put("Tag", request.tagShrink);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -2888,7 +2918,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建前端监控应用</p>
+     * <p>Create a Real User Monitoring (RUM) application.</p>
      * 
      * @param request CreateRumAppRequest
      * @return CreateRumAppResponse
@@ -2899,8 +2929,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation returns a file upload URL. You can use the file upload URL to upload files. For more information, see <a href="https://help.aliyun.com/zh/oss/user-guide/upload-a-file-using-a-file-url">Use a URL to upload files</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建前端监控上传oss的URL</p>
+     * <p>Creates a file upload URL to upload SourceMap files, symbol table files, or dSYM files.</p>
      * 
      * @param request CreateRumUploadFileUrlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2959,8 +2992,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation returns a file upload URL. You can use the file upload URL to upload files. For more information, see <a href="https://help.aliyun.com/zh/oss/user-guide/upload-a-file-using-a-file-url">Use a URL to upload files</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建前端监控上传oss的URL</p>
+     * <p>Creates a file upload URL to upload SourceMap files, symbol table files, or dSYM files.</p>
      * 
      * @param request CreateRumUploadFileUrlRequest
      * @return CreateRumUploadFileUrlResponse
@@ -3102,7 +3138,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建云拨测定时任务</p>
+     * <p>Creates a scheduled synthetic test task.</p>
      * 
      * @param tmpReq CreateTimingSyntheticTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3204,7 +3240,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建云拨测定时任务</p>
+     * <p>Creates a scheduled synthetic test task.</p>
      * 
      * @param request CreateTimingSyntheticTaskRequest
      * @return CreateTimingSyntheticTaskResponse
@@ -3818,7 +3854,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete custom jobs for the environment.</p>
+     * <p>Deletes a custom job for an environment.</p>
      * 
      * @param request DeleteEnvCustomJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3858,7 +3894,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete custom jobs for the environment.</p>
+     * <p>Deletes a custom job for an environment.</p>
      * 
      * @param request DeleteEnvCustomJobRequest
      * @return DeleteEnvCustomJobResponse
@@ -3870,7 +3906,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete the environment PodMonitor.</p>
+     * <p>Deletes the PodMonitor of an environment.</p>
      * 
      * @param request DeleteEnvPodMonitorRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3914,7 +3950,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete the environment PodMonitor.</p>
+     * <p>Deletes the PodMonitor of an environment.</p>
      * 
      * @param request DeleteEnvPodMonitorRequest
      * @return DeleteEnvPodMonitorResponse
@@ -3926,7 +3962,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete the environment ServiceMonitor.</p>
+     * <p>Deletes the ServiceMonitor of an environment.</p>
      * 
      * @param request DeleteEnvServiceMonitorRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3970,7 +4006,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete the environment ServiceMonitor.</p>
+     * <p>Deletes the ServiceMonitor of an environment.</p>
      * 
      * @param request DeleteEnvServiceMonitorRequest
      * @return DeleteEnvServiceMonitorResponse
@@ -4086,7 +4122,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an EventBridge integration that is used to push notifications.</p>
+     * <p>Deletes an EventBridge integration.</p>
      * 
      * @param request DeleteEventBridgeIntegrationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4118,7 +4154,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an EventBridge integration that is used to push notifications.</p>
+     * <p>Deletes an EventBridge integration.</p>
      * 
      * @param request DeleteEventBridgeIntegrationRequest
      * @return DeleteEventBridgeIntegrationResponse
@@ -4183,6 +4219,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p> You can delete workspaces only in Managed Service for Prometheus Beta Edition, which is <code>free of charge</code>.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
      * <p>释放工作区</p>
      * 
@@ -4219,6 +4260,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p> You can delete workspaces only in Managed Service for Prometheus Beta Edition, which is <code>free of charge</code>.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
      * <p>释放工作区</p>
      * 
@@ -4376,11 +4422,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Indicates whether the notification policy was deleted successfully. Valid values:</p>
-     * <ul>
-     * <li><code>true</code>: The notification policy was deleted successfully.</li>
-     * <li><code>false</code>: The notification policy failed to be deleted.</li>
-     * </ul>
+     * <p>Deletes a notification policy based on its ID.</p>
      * 
      * @param request DeleteNotificationPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4412,11 +4454,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Indicates whether the notification policy was deleted successfully. Valid values:</p>
-     * <ul>
-     * <li><code>true</code>: The notification policy was deleted successfully.</li>
-     * <li><code>false</code>: The notification policy failed to be deleted.</li>
-     * </ul>
+     * <p>Deletes a notification policy based on its ID.</p>
      * 
      * @param request DeleteNotificationPolicyRequest
      * @return DeleteNotificationPolicyResponse
@@ -4636,7 +4674,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes one or more remote write configuration items from a Prometheus instance for Container Service or a Prometheus instance for ECS.</p>
+     * <p>Deletes remote write configuration items from a Prometheus instance.</p>
      * 
      * @param request DeletePrometheusRemoteWriteRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4676,7 +4714,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes one or more remote write configuration items from a Prometheus instance for Container Service or a Prometheus instance for ECS.</p>
+     * <p>Deletes remote write configuration items from a Prometheus instance.</p>
      * 
      * @param request DeletePrometheusRemoteWriteRequest
      * @return DeletePrometheusRemoteWriteResponse
@@ -4795,8 +4833,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除前端监控在oss中的文件</p>
+     * <p>Deletes a file such as a symbol table or SourceMap.</p>
      * 
      * @param request DeleteRumUploadFileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4843,8 +4884,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除前端监控在oss中的文件</p>
+     * <p>Deletes a file such as a symbol table or SourceMap.</p>
      * 
      * @param request DeleteRumUploadFileRequest
      * @return DeleteRumUploadFileResponse
@@ -4942,7 +4986,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除SourceMap</p>
+     * <p>Delete s SourceMap file that was uploaded to Browser Monitoring.</p>
      * 
      * @param tmpReq DeleteSourceMapRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4988,7 +5032,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除SourceMap</p>
+     * <p>Delete s SourceMap file that was uploaded to Browser Monitoring.</p>
      * 
      * @param request DeleteSourceMapRequest
      * @return DeleteSourceMapResponse
@@ -5718,7 +5762,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of IM chatbots.</p>
+     * <p>Queries instant messaging (IM) chatbots.</p>
      * 
      * @param request DescribeIMRobotsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5762,7 +5806,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of IM chatbots.</p>
+     * <p>Queries instant messaging (IM) chatbots.</p>
      * 
      * @param request DescribeIMRobotsRequest
      * @return DescribeIMRobotsResponse
@@ -5821,6 +5865,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the license key.</p>
+     * 
      * @param request DescribeTraceLicenseKeyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeTraceLicenseKeyResponse
@@ -5850,6 +5897,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the license key.</p>
+     * 
      * @param request DescribeTraceLicenseKeyRequest
      * @return DescribeTraceLicenseKeyResponse
      */
@@ -5900,7 +5950,55 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>开启指标</p>
+     * <p>执行Insights相关的操作</p>
+     * 
+     * @param request DoInsightsActionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DoInsightsActionResponse
+     */
+    public DoInsightsActionResponse doInsightsActionWithOptions(DoInsightsActionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.data)) {
+            body.put("Data", request.data);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.module)) {
+            body.put("Module", request.module);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DoInsightsAction"),
+            new TeaPair("version", "2019-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DoInsightsActionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>执行Insights相关的操作</p>
+     * 
+     * @param request DoInsightsActionRequest
+     * @return DoInsightsActionResponse
+     */
+    public DoInsightsActionResponse doInsightsAction(DoInsightsActionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.doInsightsActionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Enables a discarded metric.</p>
      * 
      * @param request EnableMetricRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5940,7 +6038,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>开启指标</p>
+     * <p>Enables a discarded metric.</p>
      * 
      * @param request EnableMetricRequest
      * @return EnableMetricResponse
@@ -6140,7 +6238,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>应用各个实例的JVM配置信息</p>
+     * <p>Obtain the JVM configuration information of each instance of the application</p>
      * 
      * @param request GetAppJVMConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6168,7 +6266,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>应用各个实例的JVM配置信息</p>
+     * <p>Obtain the JVM configuration information of each instance of the application</p>
      * 
      * @param request GetAppJVMConfigRequest
      * @return GetAppJVMConfigResponse
@@ -6180,7 +6278,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the authentication token for remote read and write over the Internet.</p>
+     * <p>Obtains an authentication token. When you connect a Container Service for Kubernetes (ACK) cluster to Prometheus Service over the Internet, you must use a token for authentication.</p>
      * 
      * @param request GetAuthTokenRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6216,7 +6314,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the authentication token for remote read and write over the Internet.</p>
+     * <p>Obtains an authentication token. When you connect a Container Service for Kubernetes (ACK) cluster to Prometheus Service over the Internet, you must use a token for authentication.</p>
      * 
      * @param request GetAuthTokenRequest
      * @return GetAuthTokenResponse
@@ -6332,7 +6430,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取商业化状态</p>
+     * <p>Queries whether the current account has activated the commercial edition of a service.</p>
      * 
      * @param request GetCommercialStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6368,7 +6466,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取商业化状态</p>
+     * <p>Queries whether the current account has activated the commercial edition of a service.</p>
      * 
      * @param request GetCommercialStatusRequest
      * @return GetCommercialStatusResponse
@@ -6435,8 +6533,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Note: The list returned by this operation includes the workspaces of Developer Edition, Expert Edition, and Advanced Edition. The list does not include the workspaces of Shared Edition.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取指定工作区</p>
+     * <p>Queries the information about a Grafana workspace.</p>
      * 
      * @param request GetGrafanaWorkspaceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6475,8 +6576,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Note: The list returned by this operation includes the workspaces of Developer Edition, Expert Edition, and Advanced Edition. The list does not include the workspaces of Shared Edition.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取指定工作区</p>
+     * <p>Queries the information about a Grafana workspace.</p>
      * 
      * @param request GetGrafanaWorkspaceRequest
      * @return GetGrafanaWorkspaceResponse
@@ -6488,7 +6592,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取Prometheus中是否已接入某种Integration类型</p>
+     * <p>Queries the integration state of the dashboards and collection rules of Application Real-Time Monitoring Service (ARMS) Prometheus.</p>
      * 
      * @deprecated OpenAPI GetIntegrationState is deprecated, please use ARMS::2019-08-08::DescribeAddonRelease instead.
      * 
@@ -6532,7 +6636,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取Prometheus中是否已接入某种Integration类型</p>
+     * <p>Queries the integration state of the dashboards and collection rules of Application Real-Time Monitoring Service (ARMS) Prometheus.</p>
      * 
      * @deprecated OpenAPI GetIntegrationState is deprecated, please use ARMS::2019-08-08::DescribeAddonRelease instead.
      * 
@@ -6548,7 +6652,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the status of a Prometheus instance of a serverless Kubernetes (ASK) cluster or Elastic Compute Service (ECS) instance.</p>
+     * <p>Queries the installation status of a Prometheus agent in a serverless Kubernetes (ASK) cluster or an Elastic Compute Service (ECS) cluster.</p>
      * 
      * @param request GetManagedPrometheusStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6596,7 +6700,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the status of a Prometheus instance of a serverless Kubernetes (ASK) cluster or Elastic Compute Service (ECS) instance.</p>
+     * <p>Queries the installation status of a Prometheus agent in a serverless Kubernetes (ASK) cluster or an Elastic Compute Service (ECS) cluster.</p>
      * 
      * @param request GetManagedPrometheusStatusRequest
      * @return GetManagedPrometheusStatusResponse
@@ -7102,7 +7206,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>传入SLS查询语句，查询出前端监控数据</p>
+     * <p>Queries the Browser Monitoring data based on a query statement of Log Service.</p>
      * 
      * @param request GetRetcodeDataByQueryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7150,7 +7254,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>传入SLS查询语句，查询出前端监控数据</p>
+     * <p>Queries the Browser Monitoring data based on a query statement of Log Service.</p>
      * 
      * @param request GetRetcodeDataByQueryRequest
      * @return GetRetcodeDataByQueryResponse
@@ -7253,8 +7357,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取前端监控单个应用信息</p>
+     * <p>Queries the information about a Real User Monitoring (RUM) application.</p>
      * 
      * @param request GetRumAppInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7293,8 +7400,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取前端监控单个应用信息</p>
+     * <p>Queries the information about a Real User Monitoring (RUM) application.</p>
      * 
      * @param request GetRumAppInfoRequest
      * @return GetRumAppInfoResponse
@@ -7305,15 +7415,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>summary</b> : 
-     * <p>获取前端监控应用列表信息</p>
+     * <b>description</b> :
+     * <p>Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.</p>
      * 
-     * @param request GetRumAppsRequest
+     * <b>summary</b> : 
+     * <p>Queries a list of Real User Monitoring (RUM) applications.</p>
+     * 
+     * @param tmpReq GetRumAppsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetRumAppsResponse
      */
-    public GetRumAppsResponse getRumAppsWithOptions(GetRumAppsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public GetRumAppsResponse getRumAppsWithOptions(GetRumAppsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GetRumAppsShrinkRequest request = new GetRumAppsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tags)) {
+            request.tagsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tags, "Tags", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.appGroup)) {
             query.put("AppGroup", request.appGroup);
@@ -7335,8 +7454,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResourceGroupId", request.resourceGroupId);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.tags)) {
-            query.put("Tags", request.tags);
+        if (!com.aliyun.teautil.Common.isUnset(request.tagsShrink)) {
+            query.put("Tags", request.tagsShrink);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -7357,8 +7476,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取前端监控应用列表信息</p>
+     * <p>Queries a list of Real User Monitoring (RUM) applications.</p>
      * 
      * @param request GetRumAppsRequest
      * @return GetRumAppsResponse
@@ -7506,7 +7628,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取前端监控在oss中文件</p>
+     * <p>获取RUM OCU统计数据</p>
+     * 
+     * @param tmpReq GetRumOcuStatisticDataRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetRumOcuStatisticDataResponse
+     */
+    public GetRumOcuStatisticDataResponse getRumOcuStatisticDataWithOptions(GetRumOcuStatisticDataRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GetRumOcuStatisticDataShrinkRequest request = new GetRumOcuStatisticDataShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.filter)) {
+            request.filterShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.filter, "Filter", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.group)) {
+            request.groupShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.group, "Group", "json");
+        }
+
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetRumOcuStatisticData"),
+            new TeaPair("version", "2019-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetRumOcuStatisticDataResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取RUM OCU统计数据</p>
+     * 
+     * @param request GetRumOcuStatisticDataRequest
+     * @return GetRumOcuStatisticDataResponse
+     */
+    public GetRumOcuStatisticDataResponse getRumOcuStatisticData(GetRumOcuStatisticDataRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getRumOcuStatisticDataWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries Real User Monitoring (RUM)-related files, such as symbol tables and SourceMap.</p>
      * 
      * @param request GetRumUploadFilesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7545,8 +7720,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取前端监控在oss中文件</p>
+     * <p>Queries Real User Monitoring (RUM)-related files, such as symbol tables and SourceMap.</p>
      * 
      * @param request GetRumUploadFilesRequest
      * @return GetRumUploadFilesResponse
@@ -7558,7 +7736,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取前端监控上传SourceMap的具体信息</p>
+     * <p>Obtains the details of the SourceMap file uploaded in Browser Monitoring.</p>
      * 
      * @param request GetSourceMapInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7610,7 +7788,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取前端监控上传SourceMap的具体信息</p>
+     * <p>Obtains the details of the SourceMap file uploaded in Browser Monitoring.</p>
      * 
      * @param request GetSourceMapInfoRequest
      * @return GetSourceMapInfoResponse
@@ -8058,7 +8236,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取应用监控自定义配置</p>
+     * <p>Queries all custom settings of an application monitored by Application Monitoring, such as trace sampling settings and agent switches.</p>
      * 
      * @param request GetTraceAppConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8090,7 +8268,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取应用监控自定义配置</p>
+     * <p>Queries all custom settings of an application monitored by Application Monitoring, such as trace sampling settings and agent switches.</p>
      * 
      * @param request GetTraceAppConfigRequest
      * @return GetTraceAppConfigResponse
@@ -8448,10 +8626,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If you call the operation to monitor an ASK cluster or an ECS instance, a Prometheus agent is installed in the ASK cluster or ECS instance. Make sure that the ASK cluster or ECS instance has no Prometheus agent installed in advance.</p>
+     * <p>You can call this operation only if the following conditions are met: The resources that you want to monitor are ASK clusters or ECS clusters. No Prometheus agents are installed in the ASK or ECS clusters. Take note that Prometheus agents can be installed only on the cloud service side, not in user clusters.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a Prometheus instance to monitor a serverless Kubernetes (ASK) cluster or an Elastic Compute Service (ECS) instance.</p>
+     * <p>Installs a Prometheus agent for serverless Kubernetes (ASK) clusters or Elastic Compute Service (ECS) clusters.</p>
      * 
      * @param request InstallManagedPrometheusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8519,10 +8697,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If you call the operation to monitor an ASK cluster or an ECS instance, a Prometheus agent is installed in the ASK cluster or ECS instance. Make sure that the ASK cluster or ECS instance has no Prometheus agent installed in advance.</p>
+     * <p>You can call this operation only if the following conditions are met: The resources that you want to monitor are ASK clusters or ECS clusters. No Prometheus agents are installed in the ASK or ECS clusters. Take note that Prometheus agents can be installed only on the cloud service side, not in user clusters.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a Prometheus instance to monitor a serverless Kubernetes (ASK) cluster or an Elastic Compute Service (ECS) instance.</p>
+     * <p>Installs a Prometheus agent for serverless Kubernetes (ASK) clusters or Elastic Compute Service (ECS) clusters.</p>
      * 
      * @param request InstallManagedPrometheusRequest
      * @return InstallManagedPrometheusResponse
@@ -8590,7 +8768,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the Addons installed in the environment.</p>
+     * <p>Queries the add-ons installed in an environment.</p>
      * 
      * @param request ListAddonReleasesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8630,7 +8808,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the Addons installed in the environment.</p>
+     * <p>Queries the add-ons installed in an environment.</p>
      * 
      * @param request ListAddonReleasesRequest
      * @return ListAddonReleasesResponse
@@ -9370,7 +9548,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>环境的feature列表</p>
+     * <p>Queries the features in an environment.</p>
      * 
      * @param request ListEnvironmentFeaturesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9410,7 +9588,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>环境的feature列表</p>
+     * <p>Queries the features in an environment.</p>
      * 
      * @param request ListEnvironmentFeaturesRequest
      * @return ListEnvironmentFeaturesResponse
@@ -9536,7 +9714,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries EventBridge integrations that are used to push notifications.</p>
+     * <p>Queries an EventBridge integration.</p>
      * 
      * @param request ListEventBridgeIntegrationsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9564,7 +9742,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries EventBridge integrations that are used to push notifications.</p>
+     * <p>Queries an EventBridge integration.</p>
      * 
      * @param request ListEventBridgeIntegrationsRequest
      * @return ListEventBridgeIntegrationsResponse
@@ -9698,7 +9876,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>ListIntegration</p>
+     * <p>Queries alert integrations.</p>
      * 
      * @param request ListIntegrationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9726,7 +9904,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>ListIntegration</p>
+     * <p>Queries alert integrations.</p>
      * 
      * @param request ListIntegrationRequest
      * @return ListIntegrationResponse
@@ -9738,7 +9916,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries notification policies based on specified conditions.</p>
+     * <p>Queries notification policies based on specific conditions.</p>
      * 
      * @param request ListNotificationPoliciesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9794,7 +9972,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries notification policies based on specified conditions.</p>
+     * <p>Queries notification policies based on specific conditions.</p>
      * 
      * @param request ListNotificationPoliciesRequest
      * @return ListNotificationPoliciesResponse
@@ -10058,7 +10236,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all Prometheus instances in a region.</p>
+     * <p>Obtains all Prometheus instances in a region.</p>
      * 
      * @param request ListPrometheusInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10098,7 +10276,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all Prometheus instances in a region.</p>
+     * <p>Obtains all Prometheus instances in a region.</p>
      * 
      * @param request ListPrometheusInstancesRequest
      * @return ListPrometheusInstancesResponse
@@ -10214,7 +10392,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the remote write configuration items of a Prometheus instance for Container Service or a Prometheus instance for ECS.</p>
+     * <p>Queries the remote write configuration items of a Prometheus instance.</p>
      * 
      * @param request ListPrometheusRemoteWritesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10250,7 +10428,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the remote write configuration items of a Prometheus instance for Container Service or a Prometheus instance for ECS.</p>
+     * <p>Queries the remote write configuration items of a Prometheus instance.</p>
      * 
      * @param request ListPrometheusRemoteWritesRequest
      * @return ListPrometheusRemoteWritesResponse
@@ -10598,7 +10776,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the recording rule of a Prometheus instance.</p>
+     * <p>Obtains the recording rule of a cluster monitored by Prometheus Service.</p>
      * 
      * @param request ManageGetRecordingRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10638,7 +10816,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the recording rule of a Prometheus instance.</p>
+     * <p>Obtains the recording rule of a cluster monitored by Prometheus Service.</p>
      * 
      * @param request ManageGetRecordingRuleRequest
      * @return ManageGetRecordingRuleResponse
@@ -10650,7 +10828,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the recording rule of a Prometheus instance.</p>
+     * <p>Edits the recording rule of a cluster monitored by Prometheus Service.</p>
      * 
      * @param request ManageRecordingRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10694,7 +10872,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the recording rule of a Prometheus instance.</p>
+     * <p>Edits the recording rule of a cluster monitored by Prometheus Service.</p>
      * 
      * @param request ManageRecordingRuleRequest
      * @return ManageRecordingRuleResponse
@@ -10706,7 +10884,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Assigns the service-linked role AliyunServiceRoleForARMS to Application Real-Time Monitoring Service (ARMS).</p>
+     * <p>Activates the service-linked role AliyunServiceRoleForARMS for Application Real-Time Monitoring Service (ARMS).</p>
      * 
      * @param request OpenArmsDefaultSLRRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10738,7 +10916,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Assigns the service-linked role AliyunServiceRoleForARMS to Application Real-Time Monitoring Service (ARMS).</p>
+     * <p>Activates the service-linked role AliyunServiceRoleForARMS for Application Real-Time Monitoring Service (ARMS).</p>
      * 
      * @param request OpenArmsDefaultSLRRequest
      * @return OpenArmsDefaultSLRResponse
@@ -11045,6 +11223,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the amount of data written to Application Monitoring, Managed Service for OpenTelemetry, Managed Service for Prometheus, and Real User Monitoring (RUM).</p>
+     * 
      * @param request QueryCommercialUsageRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryCommercialUsageResponse
@@ -11110,6 +11291,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the amount of data written to Application Monitoring, Managed Service for OpenTelemetry, Managed Service for Prometheus, and Real User Monitoring (RUM).</p>
+     * 
      * @param request QueryCommercialUsageRequest
      * @return QueryCommercialUsageResponse
      */
@@ -12054,7 +12238,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries Application Monitoring tasks by page.</p>
+     * <p>Queries application monitoring tasks by page.</p>
      * 
      * @param request SearchTraceAppByPageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12106,7 +12290,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries Application Monitoring tasks by page.</p>
+     * <p>Queries application monitoring tasks by page.</p>
      * 
      * @param request SearchTraceAppByPageRequest
      * @return SearchTraceAppByPageResponse
@@ -13440,7 +13624,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>编辑工作区</p>
+     * <p>Updates the information about a Grafana workspace.</p>
      * 
      * @param request UpdateGrafanaWorkspaceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13488,7 +13672,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>编辑工作区</p>
+     * <p>Updates the information about a Grafana workspace.</p>
      * 
      * @param request UpdateGrafanaWorkspaceRequest
      * @return UpdateGrafanaWorkspaceResponse
@@ -13499,8 +13683,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Note: The list returned by this operation includes the workspaces of Developer Edition, Expert Edition, and Advanced Edition. The list does not include the workspaces of Shared Edition.</p>
+     * 
      * <b>summary</b> : 
-     * <p>升级指定工作区版本</p>
+     * <p>Updates the version of a Grafana workspace.</p>
      * 
      * @param request UpdateGrafanaWorkspaceVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13543,8 +13730,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Note: The list returned by this operation includes the workspaces of Developer Edition, Expert Edition, and Advanced Edition. The list does not include the workspaces of Shared Edition.</p>
+     * 
      * <b>summary</b> : 
-     * <p>升级指定工作区版本</p>
+     * <p>Updates the version of a Grafana workspace.</p>
      * 
      * @param request UpdateGrafanaWorkspaceVersionRequest
      * @return UpdateGrafanaWorkspaceVersionResponse
@@ -13652,7 +13842,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新删除的metric</p>
+     * <p>Updates the list of discarded metrics.</p>
      * 
      * @param request UpdateMetricDropRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13692,7 +13882,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新删除的metric</p>
+     * <p>Updates the list of discarded metrics.</p>
      * 
      * @param request UpdateMetricDropRequest
      * @return UpdateMetricDropResponse
@@ -13864,7 +14054,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update Prometheus instance config.</p>
+     * <p>Updates the information about a Prometheus instance.</p>
      * 
      * @param request UpdatePrometheusInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13912,7 +14102,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update Prometheus instance config.</p>
+     * <p>Updates the information about a Prometheus instance.</p>
      * 
      * @param request UpdatePrometheusInstanceRequest
      * @return UpdatePrometheusInstanceResponse
@@ -14163,8 +14353,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新前端监控应用信息</p>
+     * <p>Updates a Real User Monitoring (RUM) application.</p>
      * 
      * @param request UpdateRumAppRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14175,6 +14368,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.autoRestart)) {
             query.put("AutoRestart", request.autoRestart);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bonreeSDKConfigJson)) {
+            query.put("BonreeSDKConfigJson", request.bonreeSDKConfigJson);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
@@ -14227,8 +14424,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新前端监控应用信息</p>
+     * <p>Updates a Real User Monitoring (RUM) application.</p>
      * 
      * @param request UpdateRumAppRequest
      * @return UpdateRumAppResponse
@@ -14239,8 +14439,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新Sourcemap文件状态</p>
+     * <p>Updates the status of a Real User Monitoring (RUM) file. You can call this operation after the RUM file is uploaded.</p>
      * 
      * @param request UpdateRumFileStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14295,8 +14498,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新Sourcemap文件状态</p>
+     * <p>Updates the status of a Real User Monitoring (RUM) file. You can call this operation after the RUM file is uploaded.</p>
      * 
      * @param request UpdateRumFileStatusRequest
      * @return UpdateRumFileStatusResponse
@@ -14500,7 +14706,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update the AddonRelease information.</p>
+     * <p>Updates the release information of an add-on.</p>
      * 
      * @param request UpgradeAddonReleaseRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14552,7 +14758,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update the AddonRelease information.</p>
+     * <p>Updates the release information of an add-on.</p>
      * 
      * @param request UpgradeAddonReleaseRequest
      * @return UpgradeAddonReleaseResponse

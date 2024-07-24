@@ -7,6 +7,9 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
     @NameInMap("AvailableAssertions")
     public java.util.List<CreateTimingSyntheticTaskRequestAvailableAssertions> availableAssertions;
 
+    /**
+     * <p>The general settings.</p>
+     */
     @NameInMap("CommonSetting")
     public CreateTimingSyntheticTaskRequestCommonSetting commonSetting;
 
@@ -32,6 +35,7 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
     public Integer monitorCategory;
 
     /**
+     * <p>The monitoring configurations.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("MonitorConf")
@@ -44,6 +48,7 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
     public java.util.List<CreateTimingSyntheticTaskRequestMonitors> monitors;
 
     /**
+     * <p>The name of the task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,6 +58,7 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -72,6 +78,8 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
     public java.util.List<CreateTimingSyntheticTaskRequestTags> tags;
 
     /**
+     * <p>The type of the task. Valid values:</p>
+     * <p>1: ICMP. 2: TCP. 3: DNS. 4: HTTP. 5: website speed measurement. 6: file download.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -257,6 +265,7 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
 
     public static class CreateTimingSyntheticTaskRequestCommonSettingCustomHostHosts extends TeaModel {
         /**
+         * <p>The domain name</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -266,6 +275,12 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
         public String domain;
 
         /**
+         * <p>The IP version. Valid values:</p>
+         * <ul>
+         * <li>0: A version is automatically selected.</li>
+         * <li>1: IPv4.</li>
+         * <li>2: IPv6.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -275,6 +290,7 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
         public Integer ipType;
 
         /**
+         * <p>The list of IP addresses.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("Ips")
@@ -313,12 +329,18 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
 
     public static class CreateTimingSyntheticTaskRequestCommonSettingCustomHost extends TeaModel {
         /**
+         * <p>The list of hosts.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("Hosts")
         public java.util.List<CreateTimingSyntheticTaskRequestCommonSettingCustomHostHosts> hosts;
 
         /**
+         * <p>The selection mode. Valid values:</p>
+         * <ul>
+         * <li>0: random</li>
+         * <li>1: polling</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -392,15 +414,39 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
     }
 
     public static class CreateTimingSyntheticTaskRequestCommonSettingCustomVPCSetting extends TeaModel {
+        /**
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The ID of the security group to which the client belongs. The security group specifies the inbound and outbound rules of the client for the VPC. You need to allow the security group to which the client belongs to access the security group to which the VPC belongs. Otherwise, the client cannot access resources in the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-bp13wzf9vuwegmpxxxxx</p>
+         */
         @NameInMap("SecureGroupId")
         public String secureGroupId;
 
+        /**
+         * <p>The vSwitch ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp14crq29vpycxp8xxxxx</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        /**
+         * <p>VPC ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1muectbr8f90vjxxxxx</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
@@ -444,35 +490,77 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
     }
 
     public static class CreateTimingSyntheticTaskRequestCommonSetting extends TeaModel {
+        /**
+         * <p>The custom host settings.</p>
+         */
         @NameInMap("CustomHost")
         public CreateTimingSyntheticTaskRequestCommonSettingCustomHost customHost;
 
         @NameInMap("CustomPrometheusSetting")
         public CreateTimingSyntheticTaskRequestCommonSettingCustomPrometheusSetting customPrometheusSetting;
 
+        /**
+         * <p>The information about the virtual private cloud (VPC). If the destination URL is an Alibaba Cloud internal endpoint, you need to configure a VPC.</p>
+         */
         @NameInMap("CustomVPCSetting")
         public CreateTimingSyntheticTaskRequestCommonSettingCustomVPCSetting customVPCSetting;
 
         /**
+         * <p>The IP version. Valid values:</p>
+         * <ul>
+         * <li>0: A version is automatically selected.</li>
+         * <li>1: IPv4.</li>
+         * <li>2: IPv6.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("IpType")
         public Integer ipType;
 
+        /**
+         * <p>Specifies whether to enable tracing.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsOpenTrace")
         public Boolean isOpenTrace;
 
         /**
+         * <p>Specifies whether to evenly distribute monitoring samples. Valid values:</p>
+         * <ul>
+         * <li>0: no</li>
+         * <li>1: yes</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("MonitorSamples")
         public Integer monitorSamples;
 
+        /**
+         * <p>The type of the client for tracing. Valid values:</p>
+         * <ul>
+         * <li>0: ARMS agent</li>
+         * <li>1: OpenTelemetry</li>
+         * <li>2: Jaeger</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TraceClientType")
         public Integer traceClientType;
 
+        /**
+         * <p>The region to which trace data is reported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("XtraceRegion")
         public String xtraceRegion;
 
@@ -591,6 +679,8 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
 
     public static class CreateTimingSyntheticTaskRequestMonitorConfApiHTTPRequestBody extends TeaModel {
         /**
+         * <p>The content of the request body. Format: JSON string. The parameter is required if the Type parameter is set to text/plain, application/json, application/xml, or text/html. Format: JSON string.</p>
+         * 
          * <strong>example:</strong>
          * <p>{
          *   &quot;key1&quot;: &quot;value1&quot;,
@@ -601,6 +691,8 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
         public String content;
 
         /**
+         * <p>The type of the request body. Valid values: text/plain, application/json, application/x-www-form-urlencoded, multipart/form-data, application/xml, and text/html.</p>
+         * 
          * <strong>example:</strong>
          * <p>application/json</p>
          */
@@ -631,10 +723,18 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
     }
 
     public static class CreateTimingSyntheticTaskRequestMonitorConfApiHTTP extends TeaModel {
+        /**
+         * <p>Specifies whether to verify the certificate. Default value: no.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("CheckCert")
         public Boolean checkCert;
 
         /**
+         * <p>The connection timeout period. Unit: milliseconds. Default value: 5000. Minimum value: 1000. Maximum value: 300000.</p>
+         * 
          * <strong>example:</strong>
          * <p>5000</p>
          */
@@ -642,22 +742,35 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
         public Long connectTimeout;
 
         /**
+         * <p>The request method. Valid values: GET and POST.</p>
+         * 
          * <strong>example:</strong>
          * <p>GET</p>
          */
         @NameInMap("Method")
         public String method;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ProtocolAlpnProtocol")
         public Integer protocolAlpnProtocol;
 
+        /**
+         * <p>The HTTP request body.</p>
+         */
         @NameInMap("RequestBody")
         public CreateTimingSyntheticTaskRequestMonitorConfApiHTTPRequestBody requestBody;
 
+        /**
+         * <p>The HTTP request header.</p>
+         */
         @NameInMap("RequestHeaders")
         public java.util.Map<String, String> requestHeaders;
 
         /**
+         * <p>The URL or request path for synthetic monitoring.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -667,6 +780,8 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
         public String targetUrl;
 
         /**
+         * <p>The timeout period. Unit: milliseconds. Default value: 10000. Minimum value: 1000. Maximum value: 300000.</p>
+         * 
          * <strong>example:</strong>
          * <p>10000</p>
          */
@@ -746,16 +861,28 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
 
     public static class CreateTimingSyntheticTaskRequestMonitorConfFileDownload extends TeaModel {
         /**
+         * <p>Unit: milliseconds. Minimum value: 1000. Maximum value: 120000. Default value: 5000.</p>
+         * 
          * <strong>example:</strong>
          * <p>5000</p>
          */
         @NameInMap("ConnectionTimeout")
         public Long connectionTimeout;
 
+        /**
+         * <p>The content of the custom request header.</p>
+         */
         @NameInMap("CustomHeaderContent")
         public java.util.Map<String, String> customHeaderContent;
 
         /**
+         * <p>The kernel type. Valid values:</p>
+         * <ul>
+         * <li>1: curl</li>
+         * <li>0: WinInet</li>
+         * </ul>
+         * <p>Default value: 1</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -763,6 +890,8 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
         public Integer downloadKernel;
 
         /**
+         * <p>Specifies whether to ignore CA certificate authentication errors. Valid values: 0: no. 1: yes. Default value: 1.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -770,6 +899,8 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
         public Integer ignoreCertificateAuthError;
 
         /**
+         * <p>Specifies whether to ignore certificate revocation errors. Valid values: 0: no. 1: yes. Default value: 1.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -777,6 +908,8 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
         public Integer ignoreCertificateCanceledError;
 
         /**
+         * <p>Specifies whether to ignore certificate invalidity. Valid values: 0: no. 1: yes. Default value: 1.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -784,6 +917,8 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
         public Integer ignoreCertificateOutOfDateError;
 
         /**
+         * <p>Specifies whether to ignore certificate status errors. Valid values: 0: no. 1: yes. Default value: 1.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -791,6 +926,8 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
         public Integer ignoreCertificateStatusError;
 
         /**
+         * <p>Specifies whether to ignore certificate incredibility. Valid values: 0: no. 1: yes. Default value: 1.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -798,6 +935,8 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
         public Integer ignoreCertificateUntrustworthyError;
 
         /**
+         * <p>Specifies whether to ignore certificate usage errors. Valid values: 0: no. 1: yes. Default value: 1.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -805,6 +944,8 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
         public Integer ignoreCertificateUsingError;
 
         /**
+         * <p>Specifies whether to ignore host invalidity. Valid values: 0: no. 1: yes. Default value: 1.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -812,6 +953,8 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
         public Integer ignoreInvalidHostError;
 
         /**
+         * <p>The monitoring timeout period. Unit: milliseconds. Minimum value: 1000. Maximum value: 120000. Default value: 60000.</p>
+         * 
          * <strong>example:</strong>
          * <p>60000</p>
          */
@@ -819,6 +962,14 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
         public Long monitorTimeout;
 
         /**
+         * <p>The QUIC protocol type. Valid values:</p>
+         * <ul>
+         * <li>1: HTTP/1</li>
+         * <li>2: HTTP/2</li>
+         * <li>3: HTTP/3</li>
+         * </ul>
+         * <p>Default value: 1</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -826,6 +977,8 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
         public Integer quickProtocol;
 
         /**
+         * <p>Specifies whether to support redirection. Valid values: 0: no. 1: yes. Default value: 1.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -833,6 +986,7 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
         public Integer redirection;
 
         /**
+         * <p>The URL that is used to download the file.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -842,18 +996,43 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
         public String targetUrl;
 
         /**
+         * <p>The maximum file size of a single transfer. Unit: KB. Minimum value: 1. Maximum value: 20480. Valid values: 2048.</p>
+         * 
          * <strong>example:</strong>
          * <p>2048</p>
          */
         @NameInMap("TransmissionSize")
         public Long transmissionSize;
 
+        /**
+         * <p>The keyword that is used in verification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliyun</p>
+         */
         @NameInMap("ValidateKeywords")
         public String validateKeywords;
 
+        /**
+         * <p>The verification method. Valid values:</p>
+         * <ul>
+         * <li>0: no verification</li>
+         * <li>1: string verification</li>
+         * <li>2: MD5 verification</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("VerifyWay")
         public Integer verifyWay;
 
+        /**
+         * <p>The whitelisted objects that are used to avoid DNS hijacking. The objects can be IP addresses, wildcard mask, subnet mask, or CNAME records. Separate multiple objects with vertical bars (|). Example: <a href="http://www.aliyun.com:203.0.3.55%7C203.3.44.67">www.aliyun.com:203.0.3.55|203.3.44.67</a>. It indicates that all IP addresses that belong to the <a href="http://www.aliyun.com">www.aliyun.com</a> domain name except 203.0.3.55 and 203.3.44.67 are hijacked.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyun.com:203.0.3.55%7C203.3.44.67">www.aliyun.com:203.0.3.55|203.3.44.67</a></p>
+         */
         @NameInMap("WhiteList")
         public String whiteList;
 
@@ -1010,6 +1189,13 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
 
     public static class CreateTimingSyntheticTaskRequestMonitorConfNetDNS extends TeaModel {
         /**
+         * <p>The IP version of the DNS server.</p>
+         * <ul>
+         * <li>0 (default value): IPv4.</li>
+         * <li>1: IPv6.</li>
+         * <li>2: A version is automatically selected.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1017,6 +1203,8 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
         public Integer dnsServerIpType;
 
         /**
+         * <p>The IP address of the DNS server. Default value: 114.114.114.114.</p>
+         * 
          * <strong>example:</strong>
          * <p>114.114.114.114</p>
          */
@@ -1024,6 +1212,12 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
         public String nsServer;
 
         /**
+         * <p>The DNS query method. Valid values:</p>
+         * <ul>
+         * <li>0 (default value): recursive</li>
+         * <li>1: iterative</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1031,6 +1225,7 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
         public Integer queryMethod;
 
         /**
+         * <p>The destination domain name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1040,6 +1235,8 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
         public String targetUrl;
 
         /**
+         * <p>The timeout period for the DNS synthetic test. Unit: milliseconds. Minimum value: 1000. Maximum value: 45000. Default value: 5000.</p>
+         * 
          * <strong>example:</strong>
          * <p>5000</p>
          */
@@ -1095,6 +1292,8 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
 
     public static class CreateTimingSyntheticTaskRequestMonitorConfNetICMP extends TeaModel {
         /**
+         * <p>The interval at which ICMP packets are sent. Unit: milliseconds. Minimum value: 200. Maximum value: 2000. Default value: 200.</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
@@ -1102,6 +1301,8 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
         public Long interval;
 
         /**
+         * <p>The number of ICMP packets that are sent. Minimum value: 1. Maximum value: 50. Default value: 4.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -1109,6 +1310,8 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
         public Integer packageNum;
 
         /**
+         * <p>The size of each ICMP packet. Unit: bytes. Valid values: 32, 64, 128, 256, 512, 1024, 1080, and 1450.</p>
+         * 
          * <strong>example:</strong>
          * <p>32</p>
          */
@@ -1116,6 +1319,8 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
         public Integer packageSize;
 
         /**
+         * <p>Specifies whether to split ICMP packets. Default value: true.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -1123,6 +1328,7 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
         public Boolean splitPackage;
 
         /**
+         * <p>The destination IP address or domain name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1132,6 +1338,8 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
         public String targetUrl;
 
         /**
+         * <p>The timeout period for the ICMP synthetic test. Unit: milliseconds. Minimum value: 1000. Maximum value: 300000. Default value: 20000.</p>
+         * 
          * <strong>example:</strong>
          * <p>20000</p>
          */
@@ -1139,6 +1347,8 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
         public Long timeout;
 
         /**
+         * <p>Specifies whether to enable the tracert command. Default value: true.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -1146,6 +1356,8 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
         public Boolean tracertEnable;
 
         /**
+         * <p>The maximum number of hops for the tracert command. Minimum value: 1. Maximum value: 128. Default value: 20.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -1153,6 +1365,8 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
         public Integer tracertNumMax;
 
         /**
+         * <p>The timeout period of the tracert command. Unit: milliseconds. Minimum value: 1000. Maximum value: 300000. Default value: 60000.</p>
+         * 
          * <strong>example:</strong>
          * <p>60000</p>
          */
@@ -1240,6 +1454,8 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
 
     public static class CreateTimingSyntheticTaskRequestMonitorConfNetTCP extends TeaModel {
         /**
+         * <p>The number of TCP connections that are established. Minimum value: 1. Maximum value: 16. Default value: 4.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -1247,6 +1463,8 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
         public Integer connectTimes;
 
         /**
+         * <p>The interval at which TCP connections are established. Unit: milliseconds. Minimum value: 200. Maximum value: 10000. Default value: 200.</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
@@ -1254,6 +1472,7 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
         public Long interval;
 
         /**
+         * <p>The IP address of the destination host.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1263,6 +1482,8 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
         public String targetUrl;
 
         /**
+         * <p>The timeout period for the TCP synthetic test. Unit: milliseconds. Minimum value: 1000. Maximum value: 300000. Default value: 20000.</p>
+         * 
          * <strong>example:</strong>
          * <p>20000</p>
          */
@@ -1270,6 +1491,8 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
         public Long timeout;
 
         /**
+         * <p>Specifies whether to enable the tracert command. Default value: true.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -1277,6 +1500,8 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
         public Boolean tracertEnable;
 
         /**
+         * <p>The maximum number of hops for the tracert command. Minimum value: 1. Maximum value: 128. Default value: 20.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -1284,6 +1509,8 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
         public Integer tracertNumMax;
 
         /**
+         * <p>The timeout period of the tracert command. Unit: milliseconds. Minimum value: 1000. Maximum value: 300000. Default value: 60000.</p>
+         * 
          * <strong>example:</strong>
          * <p>60000</p>
          */
@@ -1354,24 +1581,71 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
     }
 
     public static class CreateTimingSyntheticTaskRequestMonitorConfStream extends TeaModel {
+        /**
+         * <p>The custom header. Format: JSON map.</p>
+         */
         @NameInMap("CustomHeaderContent")
         public java.util.Map<String, String> customHeaderContent;
 
+        /**
+         * <p>The player. Default value: 12. Valid values:</p>
+         * <ul>
+         * <li>12: VLC</li>
+         * <li>2: Flash Player</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("PlayerType")
         public Integer playerType;
 
+        /**
+         * <p>The address type of the resource. Valid values:</p>
+         * <ul>
+         * <li>1: resource URL</li>
+         * <li>0 (default value): page URL</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("StreamAddressType")
         public Integer streamAddressType;
 
+        /**
+         * <p>The monitoring duration. Unit: seconds. Maximum and default value: 60.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("StreamMonitorTimeout")
         public Integer streamMonitorTimeout;
 
+        /**
+         * <p>Specifies whether the resource is a video or audio. Valid values: 0: video. 1: audio.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("StreamType")
         public Integer streamType;
 
+        /**
+         * <p>The resource URL of the streaming media.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyun.com/stream/test.mp4">http://www.aliyun.com/stream/test.mp4</a></p>
+         */
         @NameInMap("TargetUrl")
         public String targetUrl;
 
+        /**
+         * <p>The whitelisted objects that are used to avoid DNS hijacking. The objects can be IP addresses, wildcard mask, subnet mask, or CNAME records. Separate multiple objects with vertical bars (|). Example: <a href="http://www.aliyun.com:203.0.3.55%7C203.3.44.67">www.aliyun.com:203.0.3.55|203.3.44.67</a>. It indicates that all IP addresses that belong to the <a href="http://www.aliyun.com">www.aliyun.com</a> domain name except 203.0.3.55 and 203.3.44.67 are hijacked.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyun.com:203.0.3.55%7C203.3.44.67">www.aliyun.com:203.0.3.55|203.3.44.67</a></p>
+         */
         @NameInMap("WhiteList")
         public String whiteList;
 
@@ -1440,6 +1714,12 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
 
     public static class CreateTimingSyntheticTaskRequestMonitorConfWebsite extends TeaModel {
         /**
+         * <p>Specifies whether to automatically scroll up and down the screen to load a page.</p>
+         * <ul>
+         * <li>0 (default value): no</li>
+         * <li>1: yes</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1447,19 +1727,42 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
         public Integer automaticScrolling;
 
         /**
+         * <p>Specifies whether to create a custom header.</p>
+         * <ul>
+         * <li>0 (default value): No custom header is created.</li>
+         * <li>1: A custom header is created for the first packet.</li>
+         * <li>2: A custom header is created for all packets.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("CustomHeader")
         public Integer customHeader;
 
+        /**
+         * <p>The custom header. Format: JSON map.</p>
+         */
         @NameInMap("CustomHeaderContent")
         public java.util.Map<String, String> customHeaderContent;
 
+        /**
+         * <p>If the IP address or CNAME record resolved from a domain name is not included in the DNS whitelist, you cannot access the domain name, or an IP address that belongs to a different domain name is returned. If the IP address or CNAME record is included in the DNS whitelist, DNS hijacking does not occur.</p>
+         * <p>Format: \<domain name>:\<objects>. The objects can be IP addresses, wildcard mask, subnet mask, or CNAME records. Separate multiple objects with vertical bars (|). Example: <a href="http://www.aliyun.com:203.0.3.55%7C203.3.44.67">www.aliyun.com:203.0.3.55|203.3.44.67</a>. It indicates that all IP addresses that belong to the <a href="http://www.aliyun.com">www.aliyun.com</a> domain name except 203.0.3.55 and 203.3.44.67 are hijacked.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyun.com:203.0.3.55%7C203.3.44.67">www.aliyun.com:203.0.3.55|203.3.44.67</a></p>
+         */
         @NameInMap("DNSHijackWhitelist")
         public String DNSHijackWhitelist;
 
         /**
+         * <p>Specifies whether to disable caching.</p>
+         * <ul>
+         * <li>0: no</li>
+         * <li>1 (default value): yes</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -1467,29 +1770,53 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
         public Integer disableCache;
 
         /**
+         * <p>Specifies whether to accept compressed files based on the HTTP Accept-Encoding request header. Valid values: 0: no. 1: yes. Default value: 0.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("DisableCompression")
         public Integer disableCompression;
 
+        /**
+         * <p>The elements not to be loaded in the page loading process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com/a.jpg">www.example.com/a.jpg</a></p>
+         */
         @NameInMap("ElementBlacklist")
         public String elementBlacklist;
 
         /**
+         * <p>Specifies whether to exclude invalid IP addresses. Valid values: 0: yes. 1: no. Default value: 0.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("FilterInvalidIP")
         public Integer filterInvalidIP;
 
+        /**
+         * <p>The total number of elements on the page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("FlowHijackJumpTimes")
         public Integer flowHijackJumpTimes;
 
+        /**
+         * <p>The keyword that is used to identify hijacking. Asterisks (\*) are allowed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliyun</p>
+         */
         @NameInMap("FlowHijackLogo")
         public String flowHijackLogo;
 
         /**
+         * <p>Specifies whether to ignore certificate errors during certificate verification in the SSL handshake process and continue browsing. Valid values: 0: no. 1: yes. Default value: 1.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -1497,16 +1824,27 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
         public Integer ignoreCertificateError;
 
         /**
+         * <p>The monitoring timeout period. Unit: milliseconds. This parameter is optional. Default value: 20000.</p>
+         * 
          * <strong>example:</strong>
          * <p>20000</p>
          */
         @NameInMap("MonitorTimeout")
         public Long monitorTimeout;
 
+        /**
+         * <p>Elements that are not included in the whitelist and appear on the page are tampered with. These elements can be pop-up ads, floating ads, and page redirection.</p>
+         * <p>Format: \<domain name>:\<elements>. The elements can be wildcard masks. Separate multiple elements with vertical bars (|). Example: <a href="http://www.aliyun.com:%7C/cc/bb/a.gif%7C/vv/bb/cc.jpg">www.aliyun.com:|/cc/bb/a.gif|/vv/bb/cc.jpg</a>. It indicates that all elements that belong to the <a href="http://www.aliyun.com">www.aliyun.com</a> domain name except the basic documents, /cc/bb/a.gif, and /vv/bb/cc.jpg are tampered with.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyun.com:%7C/cc/bb/a.gif%7C/vv/bb/cc.jpg">www.aliyun.com:|/cc/bb/a.gif|/vv/bb/cc.jpg</a></p>
+         */
         @NameInMap("PageTamper")
         public String pageTamper;
 
         /**
+         * <p>Specifies whether to continue browsing after redirection. Valid values: 0: no. 1: yes. Default value: 1.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -1514,6 +1852,8 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
         public Integer redirection;
 
         /**
+         * <p>The time threshold that is used to define a slow element. Unit: milliseconds. Default value: 5000. Minimum value: 1. Maximum value: 300000.</p>
+         * 
          * <strong>example:</strong>
          * <p>5000</p>
          */
@@ -1521,6 +1861,7 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
         public Long slowElementThreshold;
 
         /**
+         * <p>The URL of the website.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1529,13 +1870,27 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
         @NameInMap("TargetUrl")
         public String targetUrl;
 
+        /**
+         * <p>An arbitrary string in the source code of the page for verification. If the source code returned by the client contains a string that is in the blacklist, the 650 error code is reported, which indicates that the string fails to be verified. Separate multiple strings with vertical bars (|).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>error</p>
+         */
         @NameInMap("VerifyStringBlacklist")
         public String verifyStringBlacklist;
 
+        /**
+         * <p>An arbitrary string in the source code of the page for verification. If the source code returned by the client contains a string that is not in the whitelist, the 650 error code is reported, which indicates that the string fails to be verified. Separate multiple strings with vertical bars (|).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
+         */
         @NameInMap("VerifyStringWhitelist")
         public String verifyStringWhitelist;
 
         /**
+         * <p>The maximum waiting time. Unit: milliseconds. Default value: 5000. Minimum value: 5000. Maximum value: 300000.</p>
+         * 
          * <strong>example:</strong>
          * <p>5000</p>
          */
@@ -1702,24 +2057,45 @@ public class CreateTimingSyntheticTaskRequest extends TeaModel {
     }
 
     public static class CreateTimingSyntheticTaskRequestMonitorConf extends TeaModel {
+        /**
+         * <p>The parameters of the HTTP(S) synthetic test.</p>
+         */
         @NameInMap("ApiHTTP")
         public CreateTimingSyntheticTaskRequestMonitorConfApiHTTP apiHTTP;
 
+        /**
+         * <p>The parameters of file downloading.</p>
+         */
         @NameInMap("FileDownload")
         public CreateTimingSyntheticTaskRequestMonitorConfFileDownload fileDownload;
 
+        /**
+         * <p>The parameters of the DNS synthetic test. This parameter is required if the TaskType parameter is set to 3.</p>
+         */
         @NameInMap("NetDNS")
         public CreateTimingSyntheticTaskRequestMonitorConfNetDNS netDNS;
 
+        /**
+         * <p>The parameters of the ICMP synthetic test. This parameter is required if the TaskType parameter is set to 1.</p>
+         */
         @NameInMap("NetICMP")
         public CreateTimingSyntheticTaskRequestMonitorConfNetICMP netICMP;
 
+        /**
+         * <p>The parameters of the TCP synthetic test. This parameter is required if the TaskType parameter is set to 2.</p>
+         */
         @NameInMap("NetTCP")
         public CreateTimingSyntheticTaskRequestMonitorConfNetTCP netTCP;
 
+        /**
+         * <p>The parameters of the streaming-media synthetic test.</p>
+         */
         @NameInMap("Stream")
         public CreateTimingSyntheticTaskRequestMonitorConfStream stream;
 
+        /**
+         * <p>The parameters of the website speed measurement.</p>
+         */
         @NameInMap("Website")
         public CreateTimingSyntheticTaskRequestMonitorConfWebsite website;
 

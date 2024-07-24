@@ -11,7 +11,7 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
     public SearchRetcodeAppByPageResponseBodyPageBean pageBean;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>626037F5-FDEB-45B0-804C-B3C92797A64E</p>
@@ -120,7 +120,7 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
         public String nickName;
 
         /**
-         * <p>The PID of the application.</p>
+         * <p>The process identifier (PID) of the application.</p>
          * 
          * <strong>example:</strong>
          * <p>eb4zdose6v@9781be0f44d****</p>
@@ -129,7 +129,7 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
         public String pid;
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -164,7 +164,7 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
         public String retcodeAppType;
 
         /**
-         * <p>The tags.</p>
+         * <p>The tag.</p>
          */
         @NameInMap("Tags")
         public java.util.List<SearchRetcodeAppByPageResponseBodyPageBeanRetcodeAppsTags> tags;
@@ -192,7 +192,7 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
         public Long updateTime;
 
         /**
-         * <p>The ID of the user.</p>
+         * <p>The user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>12341234</p>
@@ -323,7 +323,7 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The Browser Monitoring tasks that are returned.</p>
+         * <p>The browser monitoring tasks that are returned.</p>
          */
         @NameInMap("RetcodeApps")
         public java.util.List<SearchRetcodeAppByPageResponseBodyPageBeanRetcodeApps> retcodeApps;

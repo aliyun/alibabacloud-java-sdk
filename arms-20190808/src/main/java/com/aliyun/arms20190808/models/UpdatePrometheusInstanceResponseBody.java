@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdatePrometheusInstanceResponseBody extends TeaModel {
     /**
-     * <p>The status code. The status code 200 indicates that the request was successful.</p>
+     * <p>The returned status code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class UpdatePrometheusInstanceResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The returned result.</p>
+     * <p>The result of the operation.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -32,7 +32,7 @@ public class UpdatePrometheusInstanceResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>6A9AEA84-7186-4D8D-B498-4585C6A2****</p>

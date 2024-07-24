@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateOrUpdateNotificationPolicyRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable simple mode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("DirectedMode")
     public Boolean directedMode;
@@ -180,6 +183,8 @@ public class CreateOrUpdateNotificationPolicyRequest extends TeaModel {
     public Boolean sendRecoverMessage;
 
     /**
+     * <p>Specifies whether to enable the notification policy. Valid values: enable and disable.</p>
+     * 
      * <strong>example:</strong>
      * <p>enable</p>
      */

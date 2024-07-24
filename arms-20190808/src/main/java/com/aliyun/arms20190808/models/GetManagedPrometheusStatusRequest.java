@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetManagedPrometheusStatusRequest extends TeaModel {
     /**
-     * <p>The ID of the ASK cluster. This parameter is required if the ClusterType parameter is set to ask.</p>
+     * <p>The cluster ID. This parameter is required if the ClusterType parameter is set to ask.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetManagedPrometheusStatusRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The type of the monitoring object. Valid values: ask , acs , one and ecs.</p>
+     * <p>The type of the cluster. Valid values: ask and ecs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class GetManagedPrometheusStatusRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which the Prometheus instance belongs.</p>
+     * <p>The resource group id of the Prometheus instance.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmxyexli2****</p>
@@ -44,7 +44,7 @@ public class GetManagedPrometheusStatusRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>This parameter is required if the ClusterType parameter is set to ecs.</p>
+     * <p>The ID of the virtual private cloud (VPC). This parameter is required if the ClusterType parameter is set to ecs.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-***</p>

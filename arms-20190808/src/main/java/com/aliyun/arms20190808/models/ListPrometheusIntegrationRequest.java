@@ -15,7 +15,7 @@ public class ListPrometheusIntegrationRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The integration type.</p>
+     * <p>The integration type. Valid values: kafka, mysql, redis, snmp, emr, nubela, and tidb.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

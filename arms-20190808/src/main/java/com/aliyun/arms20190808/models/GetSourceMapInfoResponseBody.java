@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class GetSourceMapInfoResponseBody extends TeaModel {
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>C21AB7CF-B7AF-410F-BD61-82D1567F****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The details of the SourceMap file.</p>
+     */
     @NameInMap("SourceMapList")
     public java.util.List<GetSourceMapInfoResponseBodySourceMapList> sourceMapList;
 
@@ -36,10 +41,15 @@ public class GetSourceMapInfoResponseBody extends TeaModel {
     }
 
     public static class GetSourceMapInfoResponseBodySourceMapList extends TeaModel {
+        /**
+         * <p>The ID of the SourceMap file.</p>
+         */
         @NameInMap("Fid")
         public String fid;
 
         /**
+         * <p>The name of the SourceMap file.</p>
+         * 
          * <strong>example:</strong>
          * <p>test.sourcemap.js</p>
          */
@@ -47,6 +57,8 @@ public class GetSourceMapInfoResponseBody extends TeaModel {
         public String fileName;
 
         /**
+         * <p>The size of the file. Unit: KB.</p>
+         * 
          * <strong>example:</strong>
          * <p>201223</p>
          */
@@ -54,6 +66,8 @@ public class GetSourceMapInfoResponseBody extends TeaModel {
         public String size;
 
         /**
+         * <p>The timestamp that indicates when the file was uploaded.</p>
+         * 
          * <strong>example:</strong>
          * <p>1590657842000</p>
          */
@@ -61,6 +75,8 @@ public class GetSourceMapInfoResponseBody extends TeaModel {
         public String uploadTime;
 
         /**
+         * <p>The version of the file.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.0.0</p>
          */

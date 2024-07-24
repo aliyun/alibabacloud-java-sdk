@@ -8,28 +8,8 @@ public class CreateEnvironmentRequest extends TeaModel {
      * <p>The language. Default value: zh.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li><p>en</p>
-     * <!-- -->
-     * 
-     * <p>:</p>
-     * <!-- -->
-     * 
-     * <p>English</p>
-     * <!-- -->
-     * 
-     * <p>.</p>
-     * </li>
-     * <li><p>zh</p>
-     * <!-- -->
-     * 
-     * <p>:</p>
-     * <!-- -->
-     * 
-     * <p>Chinese</p>
-     * <!-- -->
-     * 
-     * <p>.</p>
-     * </li>
+     * <li>en: English</li>
+     * <li>zh: Chinese</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -61,8 +41,8 @@ public class CreateEnvironmentRequest extends TeaModel {
     /**
      * <p>The subtype of the environment. Valid values:</p>
      * <ul>
-     * <li>CS: ACK</li>
-     * <li>ECS: ECS</li>
+     * <li>CS: Container Service for Kubernetes (ACK) or Distributed Cloud Container Platform for Kubernetes (ACK One)</li>
+     * <li>ECS: Elastic Compute Service (ECS)</li>
      * <li>Cloud: cloud service</li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -102,7 +82,7 @@ public class CreateEnvironmentRequest extends TeaModel {
     public String feePackage;
 
     /**
-     * <p>环境绑定的grafana工作区id。传空时，表示使用默认的共享grafana。</p>
+     * <p>The ID of the Grafana workspace associated with the environment. If this parameter is left empty, the default shared Grafana workspace is used.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>
@@ -110,6 +90,12 @@ public class CreateEnvironmentRequest extends TeaModel {
     @NameInMap("GrafanaWorkspaceId")
     public String grafanaWorkspaceId;
 
+    /**
+     * <p>Whether to initialize the environment.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("InitEnvironment")
     public Boolean initEnvironment;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddIntegrationRequest extends TeaModel {
     /**
-     * <p>The ID of an Alibaba Cloud Container Service for Kubernetes cluster.</p>
+     * <p>The ID of the Container Service for Kubernetes (ACK) cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class AddIntegrationRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The software abbreviation that is supported by ARMS. Valid values (case-insensitive): <code>ASM</code>, <code>IoT</code>, and <code>Flink</code>.</p>
+     * <p>The abbreviation of the software that is supported by Application Real-Time Monitoring Service (ARMS). Valid values (case-insensitive): <code>ASM</code>, <code>IoT</code>, and <code>Flink</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class AddIntegrationRequest extends TeaModel {
     public String integration;
 
     /**
-     * <p>The region ID of the instance.</p>
+     * <p>The ID of the region.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

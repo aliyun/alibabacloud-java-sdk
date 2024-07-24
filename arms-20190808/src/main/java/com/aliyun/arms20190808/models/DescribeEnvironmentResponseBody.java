@@ -76,7 +76,7 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
 
     public static class DescribeEnvironmentResponseBodyDataTags extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>user1</p>
@@ -85,7 +85,7 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>p_dev</p>
@@ -322,7 +322,7 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
         public String grafanaFolderUrl;
 
         /**
-         * <p>grafana工作区id</p>
+         * <p>The ID of the Grafana workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>grafana-cn-27a3m8eem0a</p>
@@ -381,6 +381,12 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
+         * <p>The security group ID bound to the environment.</p>
+         */
+        @NameInMap("SecurityGroupId")
+        public String securityGroupId;
+
+        /**
          * <p>The tags.</p>
          */
         @NameInMap("Tags")
@@ -403,6 +409,12 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
          */
         @NameInMap("VpcId")
         public String vpcId;
+
+        /**
+         * <p>The switch ID bound to the environment.</p>
+         */
+        @NameInMap("VswitchId")
+        public String vswitchId;
 
         public static DescribeEnvironmentResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DescribeEnvironmentResponseBodyData self = new DescribeEnvironmentResponseBodyData();
@@ -593,6 +605,14 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
             return this.resourceGroupId;
         }
 
+        public DescribeEnvironmentResponseBodyData setSecurityGroupId(String securityGroupId) {
+            this.securityGroupId = securityGroupId;
+            return this;
+        }
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
         public DescribeEnvironmentResponseBodyData setTags(java.util.List<DescribeEnvironmentResponseBodyDataTags> tags) {
             this.tags = tags;
             return this;
@@ -615,6 +635,14 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
         }
         public String getVpcId() {
             return this.vpcId;
+        }
+
+        public DescribeEnvironmentResponseBodyData setVswitchId(String vswitchId) {
+            this.vswitchId = vswitchId;
+            return this;
+        }
+        public String getVswitchId() {
+            return this.vswitchId;
         }
 
     }

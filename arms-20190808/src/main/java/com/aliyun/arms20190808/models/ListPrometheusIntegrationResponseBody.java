@@ -29,7 +29,7 @@ public class ListPrometheusIntegrationResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1F1D8840-5330-5804-A8DB-C3C5C5CED6BB</p>
@@ -130,7 +130,7 @@ public class ListPrometheusIntegrationResponseBody extends TeaModel {
         public String exporterType;
 
         /**
-         * <p>The exporter ID.</p>
+         * <p>The ID of the exporter.</p>
          * 
          * <strong>example:</strong>
          * <p>29374</p>
@@ -148,7 +148,7 @@ public class ListPrometheusIntegrationResponseBody extends TeaModel {
         public String instanceName;
 
         /**
-         * <p>The integration type.</p>
+         * <p>The integration type. Valid values: kafka, mysql, redis, snmp, emr, nubela, and tidb.</p>
          * 
          * <strong>example:</strong>
          * <p>Kafka, mysql, redis, snmp, emr, nubela, and tidb</p>
@@ -219,7 +219,7 @@ public class ListPrometheusIntegrationResponseBody extends TeaModel {
         public Boolean showLog;
 
         /**
-         * <p>The state of the exporter.</p>
+         * <p>The status of the exporter.</p>
          * 
          * <strong>example:</strong>
          * <p>installed</p>

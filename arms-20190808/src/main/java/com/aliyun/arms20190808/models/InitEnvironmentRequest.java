@@ -14,7 +14,7 @@ public class InitEnvironmentRequest extends TeaModel {
     public String aliyunLang;
 
     /**
-     * <p>Whether to create a Token in order to enhance the security of data retrieval.</p>
+     * <p>Specifies whether to create a token to improve data security.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>

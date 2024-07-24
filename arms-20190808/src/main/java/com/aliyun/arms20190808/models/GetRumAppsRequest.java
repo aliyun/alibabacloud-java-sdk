@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetRumAppsRequest extends TeaModel {
     /**
+     * <p>The group to which the application belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>default</p>
      */
@@ -12,6 +14,8 @@ public class GetRumAppsRequest extends TeaModel {
     public String appGroup;
 
     /**
+     * <p>The application ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>b590lhguqs@28f515462******</p>
      */
@@ -19,6 +23,8 @@ public class GetRumAppsRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>The name of the application. You can specify only one application name in each request.</p>
+     * 
      * <strong>example:</strong>
      * <p>test-app</p>
      */
@@ -26,6 +32,7 @@ public class GetRumAppsRequest extends TeaModel {
     public String appName;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,12 +42,17 @@ public class GetRumAppsRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The ID of the resource group.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-acfmxyexli2****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<GetRumAppsRequestTags> tags;
 
@@ -99,6 +111,8 @@ public class GetRumAppsRequest extends TeaModel {
 
     public static class GetRumAppsRequestTags extends TeaModel {
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>TestKey</p>
          */
@@ -106,6 +120,8 @@ public class GetRumAppsRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>TestValue</p>
          */

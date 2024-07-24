@@ -24,7 +24,7 @@ public class OpenVClusterRequest extends TeaModel {
     public Integer length;
 
     /**
-     * <p>The name of the cloud service. This parameter is required if you set ClusterType to <code>cloud-product-prometheus</code>. Valid values: influxdb, mongodb, and DLA. You cannot specify multiple service names.</p>
+     * <p>The name of the cloud service. This parameter must be specified when ClusterType is set to <code>cloud-product-prometheus</code>. Valid values: influxdb, mongodb, and DLA. You cannot specify multiple service names.</p>
      * 
      * <strong>example:</strong>
      * <p>influxdb</p>

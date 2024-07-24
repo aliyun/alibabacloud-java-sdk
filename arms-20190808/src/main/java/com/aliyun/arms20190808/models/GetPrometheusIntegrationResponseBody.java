@@ -14,7 +14,7 @@ public class GetPrometheusIntegrationResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The struct returned.</p>
+     * <p>The returned struct.</p>
      */
     @NameInMap("Data")
     public GetPrometheusIntegrationResponseBodyData data;
@@ -29,7 +29,7 @@ public class GetPrometheusIntegrationResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>9BEF2832-9D95-5E3E-9B10-74887CA17B94</p>
@@ -130,7 +130,7 @@ public class GetPrometheusIntegrationResponseBody extends TeaModel {
         public String exporterType;
 
         /**
-         * <p>The exporter ID.</p>
+         * <p>The ID of the exporter.</p>
          * 
          * <strong>example:</strong>
          * <p>2893</p>
@@ -148,7 +148,7 @@ public class GetPrometheusIntegrationResponseBody extends TeaModel {
         public String instanceName;
 
         /**
-         * <p>The type of the integration.</p>
+         * <p>The integration type. Valid values: kafka, mysql, redis, snmp, emr, nubela, and tidb.</p>
          * 
          * <strong>example:</strong>
          * <p>tidb</p>
@@ -175,7 +175,7 @@ public class GetPrometheusIntegrationResponseBody extends TeaModel {
         public Boolean needUpgrade;
 
         /**
-         * <p>The configurations of the exporter. The value is a JSON string.</p>
+         * <p>The parameters of the exporter. Format: JSON string.</p>
          * 
          * <strong>example:</strong>
          * <p>{

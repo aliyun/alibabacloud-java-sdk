@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class InstallManagedPrometheusRequest extends TeaModel {
     /**
-     * <p>The ID of the ACK cluster.</p>
+     * <p>The ID of the ASK cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>cc7a37ee31aea4ed1a059eff8034b****</p>
@@ -14,7 +14,7 @@ public class InstallManagedPrometheusRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The name of the ECS instance. If you set the ClusterType parameter to ecs, you must configure this parameter.</p>
+     * <p>The name of the cluster. This parameter is required if the ClusterType parameter is set to ecs.</p>
      * 
      * <strong>example:</strong>
      * <p>prd-ecs</p>
@@ -23,37 +23,7 @@ public class InstallManagedPrometheusRequest extends TeaModel {
     public String clusterName;
 
     /**
-     * <p>The cluster type.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>ecs</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>one</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>ask</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>pro</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- --></li>
-     * </ul>
+     * <p>The type of the cluster. Valid values: ask and ecs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -63,7 +33,7 @@ public class InstallManagedPrometheusRequest extends TeaModel {
     public String clusterType;
 
     /**
-     * <p>The ID of the Grafana workspace used by the ASK cluster or ECS instance. If you set the value to free or leave the parameter empty, a shared Grafana workspace is used.</p>
+     * <p>The ID of the Grafana workspace in which the cluster resides. If you set this parameter to free or leave this parameter empty, the cluster is deployed in a shared Grafana workspace.</p>
      * 
      * <strong>example:</strong>
      * <p>grafana-bp1*****</p>
@@ -72,7 +42,7 @@ public class InstallManagedPrometheusRequest extends TeaModel {
     public String grafanaInstanceId;
 
     /**
-     * <p>This parameter is not supported.</p>
+     * <p>The parameter is not supported.</p>
      * 
      * <strong>example:</strong>
      * <ul>
@@ -95,7 +65,7 @@ public class InstallManagedPrometheusRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which the Prometheus instance belongs.</p>
+     * <p>Prometheus实例的资源组ID。</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmxyexli2****</p>
@@ -104,7 +74,7 @@ public class InstallManagedPrometheusRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The security group of the ASK cluster or ECS instance.</p>
+     * <p>The ID of the security group to which the cluster belongs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -114,7 +84,7 @@ public class InstallManagedPrometheusRequest extends TeaModel {
     public String securityGroupId;
 
     /**
-     * <p>The vSwitch used by the ASK cluster or ECS instance.</p>
+     * <p>The ID of the vSwitch that is used by the cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -124,7 +94,7 @@ public class InstallManagedPrometheusRequest extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>The virtual private cloud (VPC) where the ASK cluster or ECS instance resides.</p>
+     * <p>The virtual private cloud (VPC) where the cluster resides.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

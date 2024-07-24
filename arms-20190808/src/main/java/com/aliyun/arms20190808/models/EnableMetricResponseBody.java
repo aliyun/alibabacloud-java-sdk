@@ -5,13 +5,7 @@ import com.aliyun.tea.*;
 
 public class EnableMetricResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code returned for the request. Valid values:</p>
-     * <ul>
-     * <li>2XX: The request is successful.</li>
-     * <li>3XX: A redirection message is returned.</li>
-     * <li>4XX: The request is invalid.</li>
-     * <li>5XX: A server error occurs.</li>
-     * </ul>
+     * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -47,11 +41,7 @@ public class EnableMetricResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful. Valid values:</p>
-     * <ul>
-     * <li><code>true</code>: The call was successful.</li>
-     * <li><code>false</code>: The call failed.</li>
-     * </ul>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

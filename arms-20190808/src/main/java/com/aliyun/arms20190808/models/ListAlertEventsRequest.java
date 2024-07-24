@@ -41,6 +41,12 @@ public class ListAlertEventsRequest extends TeaModel {
     @NameInMap("Page")
     public Long page;
 
+    /**
+     * <p>Whether to display the associated notification policies.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("ShowNotificationPolicies")
     public Boolean showNotificationPolicies;
 

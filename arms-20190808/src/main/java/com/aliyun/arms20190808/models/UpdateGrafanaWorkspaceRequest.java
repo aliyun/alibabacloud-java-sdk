@@ -5,16 +5,22 @@ import com.aliyun.tea.*;
 
 public class UpdateGrafanaWorkspaceRequest extends TeaModel {
     /**
+     * <p>The language. Valid values: zh and en. Default value: zh.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
     @NameInMap("AliyunLang")
     public String aliyunLang;
 
+    /**
+     * <p>The description of the workspace.</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>The ID of the workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,6 +30,8 @@ public class UpdateGrafanaWorkspaceRequest extends TeaModel {
     public String grafanaWorkspaceId;
 
     /**
+     * <p>The workspace name.</p>
+     * 
      * <strong>example:</strong>
      * <p>testGrafana</p>
      */
@@ -31,6 +39,7 @@ public class UpdateGrafanaWorkspaceRequest extends TeaModel {
     public String grafanaWorkspaceName;
 
     /**
+     * <p>The region ID. Default value: <code>cn-hangzhou</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SaveTraceAppConfigResponseBody extends TeaModel {
     /**
-     * <p>The status code. The status code 200 indicates that the request was successful. If another status code is returned, the request failed.</p>
+     * <p>The HTTP status code. 2XX indicates that the request was successful. 3XX indicates that the request was redirected. 4XX indicates that a request error occurred. 5XX indicates that a server error occurred.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -43,8 +43,8 @@ public class SaveTraceAppConfigResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><code>true</code></li>
-     * <li><code>false</code></li>
+     * <li>true</li>
+     * <li>false</li>
      * </ul>
      * 
      * <strong>example:</strong>

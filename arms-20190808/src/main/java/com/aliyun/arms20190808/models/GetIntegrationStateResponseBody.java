@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetIntegrationStateResponseBody extends TeaModel {
     /**
-     * <p>状态码。200为成功，其他状态码为异常。</p>
+     * <p>Status code. 200 means success, other status codes are exceptions.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class GetIntegrationStateResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>返回结果的提示信息。</p>
+     * <p>The prompt information of the returned result.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -23,6 +23,8 @@ public class GetIntegrationStateResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>1A9C645C-C83F-4C9D-8CCB-29BEC9E1****</p>
      */
@@ -30,6 +32,12 @@ public class GetIntegrationStateResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The integration state of Prometheus dashboards and collection rules. Valid values:</p>
+     * <ul>
+     * <li><code>true</code>: The Prometheus dashboards and collection rules that monitor the software are integrated.</li>
+     * <li><code>false</code>: The Prometheus dashboards and collection rules that monitor the software are not integrated.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
