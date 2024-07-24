@@ -34,6 +34,13 @@ public class ModifyPhoneBusinessProfileResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("Success")
+    public Boolean success;
+
     public static ModifyPhoneBusinessProfileResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ModifyPhoneBusinessProfileResponseBody self = new ModifyPhoneBusinessProfileResponseBody();
         return TeaModel.build(map, self);
@@ -69,6 +76,14 @@ public class ModifyPhoneBusinessProfileResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public ModifyPhoneBusinessProfileResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
 }

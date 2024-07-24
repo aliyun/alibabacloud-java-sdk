@@ -23,7 +23,6 @@ public class DeleteChatappTemplateRequest extends TeaModel {
      * <p>65921621816****</p>
      */
     @NameInMap("CustWabaId")
-    @Deprecated
     public String custWabaId;
 
     /**
@@ -42,6 +41,15 @@ public class DeleteChatappTemplateRequest extends TeaModel {
     @NameInMap("Language")
     public String language;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     /**
      * <p>The code of the message template.</p>
      * 
@@ -53,7 +61,7 @@ public class DeleteChatappTemplateRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>test_name</p>
+     * <p>test</p>
      */
     @NameInMap("TemplateName")
     public String templateName;
@@ -100,6 +108,30 @@ public class DeleteChatappTemplateRequest extends TeaModel {
     }
     public String getLanguage() {
         return this.language;
+    }
+
+    public DeleteChatappTemplateRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DeleteChatappTemplateRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DeleteChatappTemplateRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public DeleteChatappTemplateRequest setTemplateCode(String templateCode) {

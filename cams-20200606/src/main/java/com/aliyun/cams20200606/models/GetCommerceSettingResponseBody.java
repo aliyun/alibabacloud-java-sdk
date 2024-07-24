@@ -4,6 +4,9 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class GetCommerceSettingResponseBody extends TeaModel {
+    @NameInMap("AccessDeniedDetail")
+    public String accessDeniedDetail;
+
     /**
      * <p>The response code.</p>
      * <ul>
@@ -25,6 +28,9 @@ public class GetCommerceSettingResponseBody extends TeaModel {
 
     /**
      * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Message")
     public String message;
@@ -38,9 +44,24 @@ public class GetCommerceSettingResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("Success")
+    public Boolean success;
+
     public static GetCommerceSettingResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetCommerceSettingResponseBody self = new GetCommerceSettingResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetCommerceSettingResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     public GetCommerceSettingResponseBody setCode(String code) {
@@ -73,6 +94,14 @@ public class GetCommerceSettingResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public GetCommerceSettingResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public static class GetCommerceSettingResponseBodyData extends TeaModel {

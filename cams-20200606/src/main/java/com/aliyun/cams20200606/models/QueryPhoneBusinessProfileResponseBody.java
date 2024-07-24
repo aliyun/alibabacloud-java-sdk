@@ -44,6 +44,13 @@ public class QueryPhoneBusinessProfileResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("Success")
+    public Boolean success;
+
     public static QueryPhoneBusinessProfileResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryPhoneBusinessProfileResponseBody self = new QueryPhoneBusinessProfileResponseBody();
         return TeaModel.build(map, self);
@@ -89,7 +96,19 @@ public class QueryPhoneBusinessProfileResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public QueryPhoneBusinessProfileResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public static class QueryPhoneBusinessProfileResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>关于</p>
+         */
         @NameInMap("About")
         public String about;
 

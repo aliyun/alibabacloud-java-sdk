@@ -44,6 +44,13 @@ public class QueryWabaBusinessInfoResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("Success")
+    public Boolean success;
+
     public static QueryWabaBusinessInfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryWabaBusinessInfoResponseBody self = new QueryWabaBusinessInfoResponseBody();
         return TeaModel.build(map, self);
@@ -87,6 +94,14 @@ public class QueryWabaBusinessInfoResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public QueryWabaBusinessInfoResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public static class QueryWabaBusinessInfoResponseBodyData extends TeaModel {

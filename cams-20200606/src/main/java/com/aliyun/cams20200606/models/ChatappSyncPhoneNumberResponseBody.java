@@ -44,6 +44,13 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("Success")
+    public Boolean success;
+
     public static ChatappSyncPhoneNumberResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ChatappSyncPhoneNumberResponseBody self = new ChatappSyncPhoneNumberResponseBody();
         return TeaModel.build(map, self);
@@ -87,6 +94,14 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public ChatappSyncPhoneNumberResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public static class ChatappSyncPhoneNumberResponseBodyPhoneNumbers extends TeaModel {

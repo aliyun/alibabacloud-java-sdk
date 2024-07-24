@@ -158,6 +158,13 @@ public class ListChatappTemplateResponseBody extends TeaModel {
         public String language;
 
         /**
+         * <strong>example:</strong>
+         * <p>1711006633000</p>
+         */
+        @NameInMap("LastUpdateTime")
+        public Long lastUpdateTime;
+
+        /**
          * <p>The reason for the review failure.</p>
          * 
          * <strong>example:</strong>
@@ -220,6 +227,14 @@ public class ListChatappTemplateResponseBody extends TeaModel {
         }
         public String getLanguage() {
             return this.language;
+        }
+
+        public ListChatappTemplateResponseBodyListTemplate setLastUpdateTime(Long lastUpdateTime) {
+            this.lastUpdateTime = lastUpdateTime;
+            return this;
+        }
+        public Long getLastUpdateTime() {
+            return this.lastUpdateTime;
         }
 
         public ListChatappTemplateResponseBodyListTemplate setReason(String reason) {

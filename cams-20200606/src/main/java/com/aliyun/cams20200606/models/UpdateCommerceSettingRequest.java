@@ -34,6 +34,9 @@ public class UpdateCommerceSettingRequest extends TeaModel {
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     /**
      * <p>The phone number.</p>
      * <p>This parameter is required.</p>
@@ -43,6 +46,12 @@ public class UpdateCommerceSettingRequest extends TeaModel {
      */
     @NameInMap("PhoneNumber")
     public String phoneNumber;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     public static UpdateCommerceSettingRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateCommerceSettingRequest self = new UpdateCommerceSettingRequest();
@@ -73,12 +82,36 @@ public class UpdateCommerceSettingRequest extends TeaModel {
         return this.custSpaceId;
     }
 
+    public UpdateCommerceSettingRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
     public UpdateCommerceSettingRequest setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
     }
     public String getPhoneNumber() {
         return this.phoneNumber;
+    }
+
+    public UpdateCommerceSettingRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public UpdateCommerceSettingRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
 }

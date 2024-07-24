@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class ChatappVerifyAndRegisterRequest extends TeaModel {
     /**
-     * <p>The space ID of the user under the independent software vendor (ISV) account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,22 +13,29 @@ public class ChatappVerifyAndRegisterRequest extends TeaModel {
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     /**
-     * <p>The phone number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>8613800001234</p>
+     * <p>86138000000</p>
      */
     @NameInMap("PhoneNumber")
     public String phoneNumber;
 
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     /**
-     * <p>The verification code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>223222</p>
+     * <p>123466</p>
      */
     @NameInMap("VerifyCode")
     public String verifyCode;
@@ -47,12 +53,36 @@ public class ChatappVerifyAndRegisterRequest extends TeaModel {
         return this.custSpaceId;
     }
 
+    public ChatappVerifyAndRegisterRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
     public ChatappVerifyAndRegisterRequest setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
     }
     public String getPhoneNumber() {
         return this.phoneNumber;
+    }
+
+    public ChatappVerifyAndRegisterRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public ChatappVerifyAndRegisterRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public ChatappVerifyAndRegisterRequest setVerifyCode(String verifyCode) {

@@ -4,6 +4,9 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class UpdateCommerceSettingResponseBody extends TeaModel {
+    @NameInMap("AccessDeniedDetail")
+    public String accessDeniedDetail;
+
     /**
      * <p>The response code.</p>
      * <ul>
@@ -35,9 +38,24 @@ public class UpdateCommerceSettingResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("Success")
+    public Boolean success;
+
     public static UpdateCommerceSettingResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateCommerceSettingResponseBody self = new UpdateCommerceSettingResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateCommerceSettingResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     public UpdateCommerceSettingResponseBody setCode(String code) {
@@ -62,6 +80,14 @@ public class UpdateCommerceSettingResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public UpdateCommerceSettingResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
 }
