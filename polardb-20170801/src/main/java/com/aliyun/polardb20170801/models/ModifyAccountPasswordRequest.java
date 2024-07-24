@@ -45,6 +45,12 @@ public class ModifyAccountPasswordRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The password type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Tair</p>
+     */
     @NameInMap("PasswordType")
     public String passwordType;
 

@@ -268,7 +268,7 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
 
     public static class DescribeDBClusterMigrationResponseBodyDBClusterEndpointListAddressItems extends TeaModel {
         /**
-         * <p>The connection string.</p>
+         * <p>The endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>pc-**************.rwlb.rds.aliyuncs.com</p>
@@ -423,7 +423,7 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
          * <ul>
          * <li><strong>Cluster</strong>: the default cluster endpoint</li>
          * <li><strong>Primary</strong>: the primary endpoint</li>
-         * <li><strong>Custom</strong>: the custom cluster endpoint</li>
+         * <li><strong>Custom</strong>: the custom endpoint</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -432,6 +432,16 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
         @NameInMap("EndpointType")
         public String endpointType;
 
+        /**
+         * <p>The read/write mode. Valid values:</p>
+         * <ul>
+         * <li>ReadWrite: receives and forwards read and write requests (automatic read-write splitting).</li>
+         * <li>ReadOnly (default): receives and forwards read requests only.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ReadOnly</p>
+         */
         @NameInMap("ReadWriteMode")
         public String readWriteMode;
 
@@ -476,7 +486,7 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
 
     public static class DescribeDBClusterMigrationResponseBodyRdsEndpointListAddressItems extends TeaModel {
         /**
-         * <p>The connection string.</p>
+         * <p>The endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>rm-***********.mysql.rds.aliyuncs.com</p>
@@ -617,6 +627,9 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
         @NameInMap("AddressItems")
         public java.util.List<DescribeDBClusterMigrationResponseBodyRdsEndpointListAddressItems> addressItems;
 
+        /**
+         * <p>The type of the source database.</p>
+         */
         @NameInMap("CustinsType")
         public String custinsType;
 

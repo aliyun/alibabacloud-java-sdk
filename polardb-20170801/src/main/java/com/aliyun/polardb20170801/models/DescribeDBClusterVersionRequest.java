@@ -15,10 +15,10 @@ public class DescribeDBClusterVersionRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>Specify to return the latest version information or a list of upgradeable versions.Valid values:</p>
+     * <p>Specifies whether to query the information about the latest versions or the versions to which the cluster can be updated. Valid values:</p>
      * <ul>
-     * <li>AVAILABLE_VERSION</li>
-     * <li>LATEST_VERSION</li>
+     * <li>LATEST_VERSION: the information about the latest versions.</li>
+     * <li>AVAILABLE_VERSION: the information about the versions to which the cluster can be updated.</li>
      * </ul>
      * 
      * <strong>example:</strong>

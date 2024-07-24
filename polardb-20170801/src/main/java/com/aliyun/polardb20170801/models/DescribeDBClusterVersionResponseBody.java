@@ -130,6 +130,15 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
     @NameInMap("ProxyRevisionVersion")
     public String proxyRevisionVersion;
 
+    /**
+     * <p>The release status of the PolarProxy version. Valid values:</p>
+     * <ul>
+     * <li><strong>Stable</strong>: The PolarProxy revision version is stable.</li>
+     * <li><strong>Old</strong>: The PolarProxy revision version is outdated. We recommend that you do not update the PolarProxy to this revision version.</li>
+     * <li><strong>HighRisk</strong>: The PolarProxy revision version has critical defects. We recommend that you do not update the PolarProxy to this revision version.</li>
+     * <li><strong>Beta</strong>: The PolarProxy revision version is a Beta version.</li>
+     * </ul>
+     */
     @NameInMap("ProxyRevisionVersionList")
     public java.util.List<DescribeDBClusterVersionResponseBodyProxyRevisionVersionList> proxyRevisionVersionList;
 
@@ -276,7 +285,7 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
 
     public static class DescribeDBClusterVersionResponseBodyDBRevisionVersionList extends TeaModel {
         /**
-         * <p>The release notes for the revision version.</p>
+         * <p>The release notes for the database engine revision version.</p>
          * 
          * <strong>example:</strong>
          * <p>ReleaseNote</p>
@@ -285,11 +294,12 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
         public String releaseNote;
 
         /**
-         * <p>The release status of the revision version. Valid values:</p>
+         * <p>The release status of the database engine revision version. Valid values:</p>
          * <ul>
-         * <li><strong>Stable</strong>: The revision version is stable.</li>
-         * <li><strong>Old</strong>: The revision version is outdated. We recommend that you do not update the cluster to this version.</li>
-         * <li><strong>HighRisk</strong>: The revision version has critical defects. We recommend that you do not update the cluster to this version.</li>
+         * <li><strong>Stable</strong>: The database engine revision version is stable.</li>
+         * <li><strong>Old</strong>: The database engine revision version is outdated. We recommend that you do not update the database engine to this revision version.</li>
+         * <li><strong>HighRisk</strong>: The database engine revision version has critical defects. We recommend that you do not update the database engine to this revision version.</li>
+         * <li><strong>Beta</strong>: The database engine revision version is a Beta version.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -299,7 +309,7 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
         public String releaseType;
 
         /**
-         * <p>The code of the revision version of the database engine to which the cluster can be upgraded.</p>
+         * <p>The code of the database engine revision version. You can use the code to specify the database engine revision version.</p>
          * 
          * <strong>example:</strong>
          * <p>20230707</p>
@@ -308,7 +318,7 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
         public String revisionVersionCode;
 
         /**
-         * <p>The revision version of the database engine.</p>
+         * <p>The database engine revision version number.</p>
          * 
          * <strong>example:</strong>
          * <p>8.0.1.1.35.1</p>
@@ -356,15 +366,43 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
     }
 
     public static class DescribeDBClusterVersionResponseBodyProxyRevisionVersionList extends TeaModel {
+        /**
+         * <p>The release notes for the PolarProxy revision version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ReleaseNote</p>
+         */
         @NameInMap("ReleaseNote")
         public String releaseNote;
 
+        /**
+         * <p>The release type. Valid values:</p>
+         * <ul>
+         * <li><strong>LTS</strong>: a long-term version</li>
+         * <li><strong>BETA</strong>: a preview version</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Stable</p>
+         */
         @NameInMap("ReleaseType")
         public String releaseType;
 
+        /**
+         * <p>The PolarProxy revision version code. You can use this code to specify the PolarProxy revision version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20230707</p>
+         */
         @NameInMap("RevisionVersionCode")
         public String revisionVersionCode;
 
+        /**
+         * <p>The PolarProxy revision version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.8.24</p>
+         */
         @NameInMap("RevisionVersionName")
         public String revisionVersionName;
 
