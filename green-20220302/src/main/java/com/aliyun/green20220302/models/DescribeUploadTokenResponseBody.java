@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DescribeUploadTokenResponseBody extends TeaModel {
     /**
+     * <p>The returned HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public DescribeUploadTokenResponseBodyData data;
 
     /**
+     * <p>The message that is returned in response to the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -22,6 +29,8 @@ public class DescribeUploadTokenResponseBody extends TeaModel {
     public String msg;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
      */
@@ -67,6 +76,8 @@ public class DescribeUploadTokenResponseBody extends TeaModel {
 
     public static class DescribeUploadTokenResponseBodyData extends TeaModel {
         /**
+         * <p>The AccessKey ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>STS.NUEUjvDqMuvH6oQA1TXxxH4wVR</p>
          */
@@ -74,6 +85,8 @@ public class DescribeUploadTokenResponseBody extends TeaModel {
         public String accessKeyId;
 
         /**
+         * <p>The AccessKey secret.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxxx</p>
          */
@@ -81,6 +94,8 @@ public class DescribeUploadTokenResponseBody extends TeaModel {
         public String accessKeySecret;
 
         /**
+         * <p>The bucket name.</p>
+         * 
          * <strong>example:</strong>
          * <p>oss-cip-shanghai</p>
          */
@@ -88,6 +103,8 @@ public class DescribeUploadTokenResponseBody extends TeaModel {
         public String bucketName;
 
         /**
+         * <p>The time when the file sharing link expires.</p>
+         * 
          * <strong>example:</strong>
          * <p>1720577200</p>
          */
@@ -95,6 +112,8 @@ public class DescribeUploadTokenResponseBody extends TeaModel {
         public Integer expiration;
 
         /**
+         * <p>The file prefix.</p>
+         * 
          * <strong>example:</strong>
          * <p>upload/1xxb89/</p>
          */
@@ -102,6 +121,8 @@ public class DescribeUploadTokenResponseBody extends TeaModel {
         public String fileNamePrefix;
 
         /**
+         * <p>the oss intranet point.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://oss-cn-shanghai-internal.aliyuncs.com">https://oss-cn-shanghai-internal.aliyuncs.com</a></p>
          */
@@ -109,6 +130,8 @@ public class DescribeUploadTokenResponseBody extends TeaModel {
         public String ossInternalEndPoint;
 
         /**
+         * <p>the oss internet point.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://oss-cn-shanghai.aliyuncs.com">https://oss-cn-shanghai.aliyuncs.com</a></p>
          */
@@ -116,6 +139,8 @@ public class DescribeUploadTokenResponseBody extends TeaModel {
         public String ossInternetEndPoint;
 
         /**
+         * <p>The security token.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxxx</p>
          */

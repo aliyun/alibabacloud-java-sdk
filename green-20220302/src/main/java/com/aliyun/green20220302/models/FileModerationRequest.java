@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class FileModerationRequest extends TeaModel {
     /**
+     * <p>The type of the moderation service.</p>
+     * 
      * <strong>example:</strong>
      * <p>document_detection</p>
      */
@@ -12,6 +14,8 @@ public class FileModerationRequest extends TeaModel {
     public String service;
 
     /**
+     * <p>The parameters required by the moderation service. The value is a JSON string.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;url&quot;:&quot;<a href="https://detect-obj.oss-cn-hangzhou.aliyuncs.com/sample/xxxx.pdf%22%7D">https://detect-obj.oss-cn-hangzhou.aliyuncs.com/sample/xxxx.pdf&quot;}</a></p>
      */

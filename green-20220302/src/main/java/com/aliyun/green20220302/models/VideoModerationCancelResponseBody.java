@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class VideoModerationCancelResponseBody extends TeaModel {
     /**
+     * <p>The returned HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class VideoModerationCancelResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>The message that is returned in response to the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -19,7 +23,7 @@ public class VideoModerationCancelResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>6CF2815C-<strong><strong>-</strong></strong>-B52E-FF6E2****492</p>

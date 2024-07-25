@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class TextModerationResponseBody extends TeaModel {
     /**
+     * <p>The returned HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The moderation results.</p>
+     */
     @NameInMap("Data")
     public TextModerationResponseBodyData data;
 
     /**
+     * <p>The message that is returned in response to the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -22,6 +29,8 @@ public class TextModerationResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
      */
@@ -66,19 +75,39 @@ public class TextModerationResponseBody extends TeaModel {
     }
 
     public static class TextModerationResponseBodyData extends TeaModel {
+        /**
+         * <p>The ID of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
+         */
         @NameInMap("accountId")
         public String accountId;
 
+        /**
+         * <p>The device ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxxx</p>
+         */
         @NameInMap("deviceId")
         public String deviceId;
 
         /**
+         * <p>Labels.</p>
+         * 
          * <strong>example:</strong>
          * <p>porn</p>
          */
         @NameInMap("labels")
         public String labels;
 
+        /**
+         * <p>The JSON string used to locate the cause.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;detectedLanguage\&quot;:\&quot;ar\&quot;,\&quot;riskTips\&quot;:\&quot;sexuality_Suggestive\&quot;,\&quot;riskWords\&quot;:\&quot;pxxxxy\&quot;,\&quot;translatedContent\&quot;:\&quot;pxxxxy sxxxx\&quot;}</p>
+         */
         @NameInMap("reason")
         public String reason;
 

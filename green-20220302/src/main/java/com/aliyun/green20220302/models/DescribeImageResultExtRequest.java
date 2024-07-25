@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeImageResultExtRequest extends TeaModel {
     /**
+     * <p>The content of the information to be obtained. Multiple values are separated by commas.</p>
+     * 
      * <strong>example:</strong>
      * <p>customImage,textInImage</p>
      */
@@ -12,6 +14,8 @@ public class DescribeImageResultExtRequest extends TeaModel {
     public String infoType;
 
     /**
+     * <p>The reqId field returned by the Url Async Moderation API.</p>
+     * 
      * <strong>example:</strong>
      * <p>638EDDC65C82AB39319A9F60</p>
      */
