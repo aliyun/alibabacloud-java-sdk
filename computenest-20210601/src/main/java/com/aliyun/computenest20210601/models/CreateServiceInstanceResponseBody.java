@@ -5,16 +5,26 @@ import com.aliyun.tea.*;
 
 public class CreateServiceInstanceResponseBody extends TeaModel {
     /**
+     * <p>The MartketInstance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>786***45</p>
      */
     @NameInMap("MarketInstanceId")
     public String marketInstanceId;
 
+    /**
+     * <p>The order ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2306175xxxxxxxx</p>
+     */
     @NameInMap("OrderId")
     public String orderId;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>4DB0F536-B3BE-4F0D-BD29-E83FB56D****</p>
      */
@@ -22,6 +32,8 @@ public class CreateServiceInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The service instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>si-d6ab3a63ccbb4b17****</p>
      */
@@ -29,6 +41,13 @@ public class CreateServiceInstanceResponseBody extends TeaModel {
     public String serviceInstanceId;
 
     /**
+     * <p>Indicates whether the synchronization task was created. Valid values:</p>
+     * <ul>
+     * <li><strong>1</strong>: Created.</li>
+     * <li><strong>0</strong>: Creation failed. The tables in the synchronization task are duplicate. The duplicate tables are returned for the <strong>RepeatedDbs</strong> parameter.</li>
+     * <li><strong>-1</strong>: Creation failed. The cause why the creation failed is returned for the <strong>ErrorMsg</strong> parameter.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Created</p>
      */

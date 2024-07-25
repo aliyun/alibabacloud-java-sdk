@@ -1,3 +1,20 @@
+2024-07-25 Version: 3.2.0
+- Support API CancelServiceUsage.
+- Support API CreateServiceUsage.
+- Support API GenerateServicePolicy.
+- Support API GetServiceEstimateCost.
+- Support API GetServiceProvisions.
+- Support API ListServiceCategories.
+- Support API ListServiceUsages.
+- Support API ListTagKeys.
+- Support API ListTagValues.
+- Support API TagResources.
+- Support API UnTagResources.
+- Support API UpdateServiceUsage.
+- Update API CreateServiceInstance: update param Commodity.
+- Update API ListServiceInstanceLogs: add param Filter.
+
+
 2024-07-01 Version: 3.1.1
 - Update API CreateServiceInstance: add param ResourceAutoPay.
 
