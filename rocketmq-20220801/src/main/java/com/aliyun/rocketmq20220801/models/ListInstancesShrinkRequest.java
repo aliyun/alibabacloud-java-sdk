@@ -3,7 +3,7 @@ package com.aliyun.rocketmq20220801.models;
 
 import com.aliyun.tea.*;
 
-public class ListInstancesRequest extends TeaModel {
+public class ListInstancesShrinkRequest extends TeaModel {
     /**
      * <p>The filter condition that is used to query instances. If you do not configure this parameter, all instances are queried.</p>
      * 
@@ -45,7 +45,7 @@ public class ListInstancesRequest extends TeaModel {
     public String resourceGroupId;
 
     @NameInMap("seriesCodes")
-    public java.util.List<String> seriesCodes;
+    public String seriesCodesShrink;
 
     /**
      * <p>The tags that are used to filter instances.</p>
@@ -56,12 +56,12 @@ public class ListInstancesRequest extends TeaModel {
     @NameInMap("tags")
     public String tags;
 
-    public static ListInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
-        ListInstancesRequest self = new ListInstancesRequest();
+    public static ListInstancesShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListInstancesShrinkRequest self = new ListInstancesShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListInstancesRequest setFilter(String filter) {
+    public ListInstancesShrinkRequest setFilter(String filter) {
         this.filter = filter;
         return this;
     }
@@ -69,7 +69,7 @@ public class ListInstancesRequest extends TeaModel {
         return this.filter;
     }
 
-    public ListInstancesRequest setPageNumber(Integer pageNumber) {
+    public ListInstancesShrinkRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
@@ -77,7 +77,7 @@ public class ListInstancesRequest extends TeaModel {
         return this.pageNumber;
     }
 
-    public ListInstancesRequest setPageSize(Integer pageSize) {
+    public ListInstancesShrinkRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
@@ -85,7 +85,7 @@ public class ListInstancesRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListInstancesRequest setResourceGroupId(String resourceGroupId) {
+    public ListInstancesShrinkRequest setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;
     }
@@ -93,15 +93,15 @@ public class ListInstancesRequest extends TeaModel {
         return this.resourceGroupId;
     }
 
-    public ListInstancesRequest setSeriesCodes(java.util.List<String> seriesCodes) {
-        this.seriesCodes = seriesCodes;
+    public ListInstancesShrinkRequest setSeriesCodesShrink(String seriesCodesShrink) {
+        this.seriesCodesShrink = seriesCodesShrink;
         return this;
     }
-    public java.util.List<String> getSeriesCodes() {
-        return this.seriesCodes;
+    public String getSeriesCodesShrink() {
+        return this.seriesCodesShrink;
     }
 
-    public ListInstancesRequest setTags(String tags) {
+    public ListInstancesShrinkRequest setTags(String tags) {
         this.tags = tags;
         return this;
     }
