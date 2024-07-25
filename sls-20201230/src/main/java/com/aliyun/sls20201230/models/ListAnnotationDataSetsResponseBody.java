@@ -12,6 +12,9 @@ public class ListAnnotationDataSetsResponseBody extends TeaModel {
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("total")
     public Integer total;

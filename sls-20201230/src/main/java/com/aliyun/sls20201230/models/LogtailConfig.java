@@ -6,10 +6,17 @@ import com.aliyun.tea.*;
 public class LogtailConfig extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-config</p>
      */
     @NameInMap("configName")
     public String configName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1655176807</p>
+     */
     @NameInMap("createTime")
     public Long createTime;
 
@@ -21,13 +28,24 @@ public class LogtailConfig extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>file</p>
      */
     @NameInMap("inputType")
     public String inputType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1655176807</p>
+     */
     @NameInMap("lastModifyTime")
     public Long lastModifyTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-06-14 11:13:29.796 | DEBUG    | <strong>main</strong>:<module>:1 - hello world</p>
+     */
     @NameInMap("logSample")
     public String logSample;
 
@@ -39,6 +57,9 @@ public class LogtailConfig extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LogService</p>
      */
     @NameInMap("outputType")
     public String outputType;
@@ -115,16 +136,26 @@ public class LogtailConfig extends TeaModel {
     public static class LogtailConfigOutputDetail extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-intranet.log.aliyuncs.com</p>
          */
         @NameInMap("endpoint")
         public String endpoint;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-logstore</p>
          */
         @NameInMap("logstoreName")
         public String logstoreName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("region")
         public String region;
 

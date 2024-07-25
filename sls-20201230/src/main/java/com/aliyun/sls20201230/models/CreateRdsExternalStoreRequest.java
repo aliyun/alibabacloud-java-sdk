@@ -6,15 +6,16 @@ import com.aliyun.tea.*;
 public class CreateRdsExternalStoreRequest extends TeaModel {
     /**
      * <p>The name of the external store. The name must be unique in a project and must be different from Logstore names.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rds_store</p>
      */
     @NameInMap("externalStoreName")
     public String externalStoreName;
 
     /**
      * <p>The parameter struct.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("parameter")
@@ -22,8 +23,10 @@ public class CreateRdsExternalStoreRequest extends TeaModel {
 
     /**
      * <p>The storage type. Set the value to rds-vpc, which indicates an ApsaraDB RDS for MySQL database in a virtual private cloud (VPC).</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rds-vpc</p>
      */
     @NameInMap("storeType")
     public String storeType;
@@ -60,66 +63,87 @@ public class CreateRdsExternalStoreRequest extends TeaModel {
     public static class CreateRdsExternalStoreRequestParameter extends TeaModel {
         /**
          * <p>The name of the database in the ApsaraDB RDS for MySQL instance.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>meta</p>
          */
         @NameInMap("db")
         public String db;
 
         /**
          * <p>The internal or public endpoint of the ApsaraDB RDS for MySQL instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         @NameInMap("host")
         public String host;
 
         /**
          * <p>The ID of the ApsaraDB RDS for MySQL instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1b6c719dfa08exf****</p>
          */
         @NameInMap("instance-id")
         public String instanceId;
 
         /**
          * <p>The password that is used to log on to the ApsaraDB RDS for MySQL instance.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sfdsfldsfksfls****</p>
          */
         @NameInMap("password")
         public String password;
 
         /**
          * <p>The internal or public port of the ApsaraDB RDS for MySQL instance.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3306</p>
          */
         @NameInMap("port")
         public String port;
 
         /**
          * <p>The region where the ApsaraDB RDS for MySQL instance resides. Valid values: cn-qingdao, cn-beijing, and cn-hangzhou.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-qingdao</p>
          */
         @NameInMap("region")
         public String region;
 
         /**
          * <p>The name of the database table in the ApsaraDB RDS for MySQL instance.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>join_meta</p>
          */
         @NameInMap("table")
         public String table;
 
         /**
          * <p>The username that is used to log on to the ApsaraDB RDS for MySQL instance.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>root</p>
          */
         @NameInMap("username")
         public String username;
 
         /**
          * <p>The ID of the VPC to which the ApsaraDB RDS for MySQL instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1aevy8sofi8mh1q****</p>
          */
         @NameInMap("vpc-id")
         public String vpcId;

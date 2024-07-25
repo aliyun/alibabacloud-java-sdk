@@ -10,17 +10,27 @@ public class CreateETLRequest extends TeaModel {
     @NameInMap("configuration")
     public ETLConfiguration configuration;
 
+    /**
+     * <strong>example:</strong>
+     * <p>this is ETL</p>
+     */
     @NameInMap("description")
     public String description;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sls-test-etl</p>
      */
     @NameInMap("displayName")
     public String displayName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>etl-123456</p>
      */
     @NameInMap("name")
     public String name;

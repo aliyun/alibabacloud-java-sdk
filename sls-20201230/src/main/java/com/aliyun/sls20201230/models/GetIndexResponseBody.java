@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetIndexResponseBody extends TeaModel {
     /**
      * <p>The type of the index.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>v2</p>
      */
     @NameInMap("index_mode")
     public String indexMode;
@@ -18,6 +21,9 @@ public class GetIndexResponseBody extends TeaModel {
 
     /**
      * <p>The time when the index configurations were last updated. The value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1524155379</p>
      */
     @NameInMap("lastModifyTime")
     public Long lastModifyTime;
@@ -30,6 +36,9 @@ public class GetIndexResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the log clustering feature is enabled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("log_reduce")
     public Boolean logReduce;
@@ -48,18 +57,27 @@ public class GetIndexResponseBody extends TeaModel {
 
     /**
      * <p>The maximum length of a field value that can be retained. Default value: 2048. Unit: bytes. The default value is equal to 2 KB. You can change the value of the max_text_len parameter. Valid values: 64 to 16384. Unit: bytes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2048</p>
      */
     @NameInMap("max_text_len")
     public Integer maxTextLen;
 
     /**
      * <p>The storage type. The value is fixed as pg.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pg</p>
      */
     @NameInMap("storage")
     public String storage;
 
     /**
      * <p>The lifecycle of the index file. Valid values: 7, 30, and 90. Unit: day.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("ttl")
     public Integer ttl;
@@ -152,18 +170,26 @@ public class GetIndexResponseBody extends TeaModel {
     public static class GetIndexResponseBodyLine extends TeaModel {
         /**
          * <p>Indicates whether case sensitivity is enabled. Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("caseSensitive")
         public Boolean caseSensitive;
 
         /**
          * <p>Indicates whether Chinese characters are included. Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("chn")
         public Boolean chn;

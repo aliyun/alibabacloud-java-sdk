@@ -4,24 +4,44 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class MLServiceParam extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>某某服务</p>
+     */
     @NameInMap("description")
     public String description;
 
     @NameInMap("model")
     public MLServiceParamModel model;
 
+    /**
+     * <strong>example:</strong>
+     * <p>service_name</p>
+     */
     @NameInMap("name")
     public String name;
 
     @NameInMap("resource")
     public MLServiceParamResource resource;
 
+    /**
+     * <strong>example:</strong>
+     * <p>sls_builtin</p>
+     */
     @NameInMap("serviceType")
     public String serviceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>running</p>
+     */
     @NameInMap("status")
     public String status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1695090077</p>
+     */
     @NameInMap("updateTimestamp")
     public Long updateTimestamp;
 
@@ -87,9 +107,17 @@ public class MLServiceParam extends TeaModel {
     }
 
     public static class MLServiceParamModel extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>xxxx</p>
+         */
         @NameInMap("modelResourceId")
         public String modelResourceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxx_type</p>
+         */
         @NameInMap("modelResourceType")
         public String modelResourceType;
 
@@ -117,15 +145,31 @@ public class MLServiceParam extends TeaModel {
     }
 
     public static class MLServiceParamResource extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("cpuLimit")
         public Integer cpuLimit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("gpu")
         public Integer gpu;
 
+        /**
+         * <strong>example:</strong>
+         * <p>64</p>
+         */
         @NameInMap("memoryLimit")
         public Integer memoryLimit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("replica")
         public Integer replica;
 

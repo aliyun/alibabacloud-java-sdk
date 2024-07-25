@@ -4,39 +4,87 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class Ticket extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1000000000</p>
+     */
     @NameInMap("callerUid")
     public Long callerUid;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-09-06 14:57:07</p>
+     */
     @NameInMap("createDate")
     public String createDate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("expirationTime")
     public Long expirationTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-09-06 14:58:07</p>
+     */
     @NameInMap("expireDate")
     public String expireDate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;xx&quot;:&quot;yy&quot;}</p>
+     */
     @NameInMap("extra")
     public String extra;
 
+    /**
+     * <strong>example:</strong>
+     * <p>测试</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("number")
     public Integer number;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;type&quot;:&quot;aliyun&quot;,&quot;ids&quot;:[1,2]}</p>
+     */
     @NameInMap("sharingTo")
     public String sharingTo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>xxxxx</p>
+     */
     @NameInMap("ticket")
     public String ticket;
 
+    /**
+     * <strong>example:</strong>
+     * <p>xxxxx</p>
+     */
     @NameInMap("ticketId")
     public String ticketId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("usedNumber")
     public Integer usedNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("valid")
     public Boolean valid;
 

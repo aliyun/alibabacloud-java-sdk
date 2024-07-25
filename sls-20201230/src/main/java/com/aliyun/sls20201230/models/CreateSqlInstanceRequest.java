@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateSqlInstanceRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("cu")
     public Integer cu;

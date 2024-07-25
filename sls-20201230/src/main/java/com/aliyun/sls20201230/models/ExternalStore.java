@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ExternalStore extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rds_store</p>
      */
     @NameInMap("externalStoreName")
     public String externalStoreName;
@@ -18,6 +21,9 @@ public class ExternalStore extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rds-vpc</p>
      */
     @NameInMap("storeType")
     public String storeType;

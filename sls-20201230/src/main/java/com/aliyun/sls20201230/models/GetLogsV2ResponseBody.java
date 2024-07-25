@@ -92,6 +92,9 @@ public class GetLogsV2ResponseBody extends TeaModel {
     public static class GetLogsV2ResponseBodyMeta extends TeaModel {
         /**
          * <p>The SQL statement after | in the query statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>select *</p>
          */
         @NameInMap("aggQuery")
         public String aggQuery;
@@ -101,6 +104,9 @@ public class GetLogsV2ResponseBody extends TeaModel {
 
         /**
          * <p>The number of rows that are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("count")
         public Integer count;
@@ -113,12 +119,18 @@ public class GetLogsV2ResponseBody extends TeaModel {
 
         /**
          * <p>The amount of time that is consumed by the request. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("elapsedMillisecond")
         public Long elapsedMillisecond;
 
         /**
          * <p>Indicates whether the query is an SQL query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("hasSQL")
         public Boolean hasSQL;
@@ -128,6 +140,9 @@ public class GetLogsV2ResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether the returned result is accurate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("isAccurate")
         public Boolean isAccurate;
@@ -149,21 +164,31 @@ public class GetLogsV2ResponseBody extends TeaModel {
 
         /**
          * <p>The number of logs that are processed in the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         @NameInMap("processedBytes")
         public Long processedBytes;
 
         /**
          * <p>The number of rows that are processed in the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         @NameInMap("processedRows")
         public Integer processedRows;
 
         /**
          * <p>Indicates whether the query result is complete. Valid values:</p>
-         * <br>
-         * <p>*   Complete: The query was successful, and the complete result is returned.</p>
-         * <p>*   Incomplete: The query was successful, but the query result is incomplete. To obtain the complete result, you must call the operation again.</p>
+         * <ul>
+         * <li>Complete: The query was successful, and the complete result is returned.</li>
+         * <li>Incomplete: The query was successful, but the query result is incomplete. To obtain the complete result, you must call the operation again.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Complete</p>
          */
         @NameInMap("progress")
         public String progress;
@@ -173,6 +198,9 @@ public class GetLogsV2ResponseBody extends TeaModel {
 
         /**
          * <p>The type of observable data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         @NameInMap("telementryType")
         public String telementryType;
@@ -185,6 +213,11 @@ public class GetLogsV2ResponseBody extends TeaModel {
 
         /**
          * <p>The part before | in the query statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         @NameInMap("whereQuery")
         public String whereQuery;

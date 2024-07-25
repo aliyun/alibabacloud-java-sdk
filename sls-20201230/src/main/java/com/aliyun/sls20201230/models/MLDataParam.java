@@ -4,6 +4,10 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class MLDataParam extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>dc74b0f569126bb310e1ba6454c351ac</p>
+     */
     @NameInMap("annotationdataId")
     public String annotationdataId;
 
@@ -13,24 +17,48 @@ public class MLDataParam extends TeaModel {
     @NameInMap("config")
     public java.util.Map<String, String> config;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1695094335</p>
+     */
     @NameInMap("createTime")
     public Long createTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>59db060bd89468245d76416a68a510ac</p>
+     */
     @NameInMap("dataHash")
     public String dataHash;
 
+    /**
+     * <strong>example:</strong>
+     * <p>a9bd488f6dd42d294495fb780858e83d</p>
+     */
     @NameInMap("datasetId")
     public String datasetId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1695094335</p>
+     */
     @NameInMap("lastModifyTime")
     public Long lastModifyTime;
 
     @NameInMap("predictions")
     public java.util.Map<String, MLDataParamPredictionsValue> predictions;
 
+    /**
+     * <strong>example:</strong>
+     * <p>xxx/xxx/xxx/</p>
+     */
     @NameInMap("value")
     public String value;
 
+    /**
+     * <strong>example:</strong>
+     * <p>oss</p>
+     */
     @NameInMap("valueType")
     public String valueType;
 

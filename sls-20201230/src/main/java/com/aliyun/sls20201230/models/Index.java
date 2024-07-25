@@ -7,12 +7,20 @@ public class Index extends TeaModel {
     @NameInMap("keys")
     public java.util.Map<String, IndexKeysValue> keys;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1622186280</p>
+     */
     @NameInMap("lastModifyTime")
     public Long lastModifyTime;
 
     @NameInMap("line")
     public IndexLine line;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("log_reduce")
     public Boolean logReduce;
 
@@ -22,11 +30,18 @@ public class Index extends TeaModel {
     @NameInMap("log_reduce_white_list")
     public java.util.List<String> logReduceWhiteList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2048</p>
+     */
     @NameInMap("max_text_len")
     public Integer maxTextLen;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("ttl")
     public Integer ttl;
@@ -101,9 +116,17 @@ public class Index extends TeaModel {
     }
 
     public static class IndexLine extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("caseSensitive")
         public Boolean caseSensitive;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("chn")
         public Boolean chn;
 

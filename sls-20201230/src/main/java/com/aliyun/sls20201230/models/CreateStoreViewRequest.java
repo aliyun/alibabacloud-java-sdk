@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreateStoreViewRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my_storeview</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>logstore</p>
      */
     @NameInMap("storeType")
     public String storeType;

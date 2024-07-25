@@ -6,9 +6,13 @@ import com.aliyun.tea.*;
 public class GetCheckPointRequest extends TeaModel {
     /**
      * <p>The shard ID.</p>
-     * <br>
-     * <p>*   If the specified shard does not exist, an empty list is returned.</p>
-     * <p>*   If no shard ID is specified, the checkpoints of all shards are returned.</p>
+     * <ul>
+     * <li>If the specified shard does not exist, an empty list is returned.</li>
+     * <li>If no shard ID is specified, the checkpoints of all shards are returned.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("shard")
     public Integer shard;

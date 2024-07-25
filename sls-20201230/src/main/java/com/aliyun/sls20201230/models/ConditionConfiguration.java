@@ -4,9 +4,17 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class ConditionConfiguration extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>cnt &gt; 100</p>
+     */
     @NameInMap("condition")
     public String condition;
 
+    /**
+     * <strong>example:</strong>
+     * <p><strong>count</strong> &gt; 5</p>
+     */
     @NameInMap("countCondition")
     public String countCondition;
 

@@ -12,29 +12,44 @@ public class ETLConfigurationSink extends TeaModel {
     @Deprecated
     public String accessKeySecret;
 
+    @NameInMap("datasets")
+    public java.util.List<String> datasets;
+
     @NameInMap("endpoint")
     public String endpoint;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-logstore</p>
      */
     @NameInMap("logstore")
     public String logstore;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-etljob</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-project</p>
      */
     @NameInMap("project")
     public String project;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acs:ram::13234:role/logtarget</p>
      */
     @NameInMap("roleArn")
     public String roleArn;
@@ -58,6 +73,14 @@ public class ETLConfigurationSink extends TeaModel {
     }
     public String getAccessKeySecret() {
         return this.accessKeySecret;
+    }
+
+    public ETLConfigurationSink setDatasets(java.util.List<String> datasets) {
+        this.datasets = datasets;
+        return this;
+    }
+    public java.util.List<String> getDatasets() {
+        return this.datasets;
     }
 
     public ETLConfigurationSink setEndpoint(String endpoint) {

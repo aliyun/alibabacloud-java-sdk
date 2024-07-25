@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class SplitShardRequest extends TeaModel {
     /**
      * <p>The position where the shard is split.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ef000000000000000000000000000000</p>
      */
     @NameInMap("key")
     public String key;
 
     /**
      * <p>The number of new shards that are generated after splitting.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("shardCount")
     public Integer shardCount;

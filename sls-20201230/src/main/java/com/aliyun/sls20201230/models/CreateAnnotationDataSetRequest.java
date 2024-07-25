@@ -12,6 +12,9 @@ public class CreateAnnotationDataSetRequest extends TeaModel {
 
     /**
      * <p>The unique identifier of the dataset.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cb8cc4eb51a85e823471cdb368fae9be</p>
      */
     @NameInMap("datasetId")
     public String datasetId;

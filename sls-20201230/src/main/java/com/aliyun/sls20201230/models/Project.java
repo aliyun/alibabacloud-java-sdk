@@ -7,6 +7,10 @@ public class Project extends TeaModel {
     @NameInMap("createTime")
     public String createTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>LRS</p>
+     */
     @NameInMap("dataRedundancyType")
     public String dataRedundancyType;
 

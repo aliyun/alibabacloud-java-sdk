@@ -13,11 +13,18 @@ public class Alert extends TeaModel {
     @NameInMap("createTime")
     public Long createTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Alert Desc</p>
+     */
     @NameInMap("description")
     public String description;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alertNameExample</p>
      */
     @NameInMap("displayName")
     public String displayName;
@@ -27,6 +34,9 @@ public class Alert extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alert-123456</p>
      */
     @NameInMap("name")
     public String name;
@@ -37,6 +47,10 @@ public class Alert extends TeaModel {
     @NameInMap("schedule")
     public Schedule schedule;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ENABLED/DISABLED</p>
+     */
     @NameInMap("status")
     public String status;
 

@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class ListSavedSearchResponseBody extends TeaModel {
     /**
      * <p>The number of saved searches returned on the current page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
      */
     @NameInMap("count")
     public Integer count;
 
     /**
      * <p>The saved searches.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[ &quot;test-1&quot;, &quot;test-2&quot; ]</p>
      */
     @NameInMap("savedsearchItems")
     public java.util.List<SavedSearch> savedsearchItems;
 
     /**
      * <p>The total number of saved searches that meet the query conditions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
      */
     @NameInMap("total")
     public Integer total;

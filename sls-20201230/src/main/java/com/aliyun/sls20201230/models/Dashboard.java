@@ -15,15 +15,25 @@ public class Dashboard extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dashboard-1609294922657-434834</p>
      */
     @NameInMap("dashboardName")
     public String dashboardName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>这是一个仪表盘。</p>
+     */
     @NameInMap("description")
     public String description;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-alert</p>
      */
     @NameInMap("displayName")
     public String displayName;

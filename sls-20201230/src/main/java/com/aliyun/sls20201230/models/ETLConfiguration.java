@@ -14,27 +14,50 @@ public class ETLConfiguration extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1714274900</p>
      */
     @NameInMap("fromTime")
     public Long fromTime;
 
     /**
+     * <strong>example:</strong>
+     * <p>SPL</p>
+     */
+    @NameInMap("lang")
+    public String lang;
+
+    /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-logstore</p>
      */
     @NameInMap("logstore")
     public String logstore;
 
+    /**
+     * <strong>example:</strong>
+     * <p>config.vpc.vpc_id.test1：vpc-uf6mskb0b****n9yj</p>
+     */
     @NameInMap("parameters")
     public java.util.Map<String, ?> parameters;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acs:ram::13234:role/logtarget</p>
      */
     @NameInMap("roleArn")
     public String roleArn;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>e_set(&quot;key&quot;,&quot;value&quot;)</p>
      */
     @NameInMap("script")
     public String script;
@@ -47,6 +70,9 @@ public class ETLConfiguration extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1714274970</p>
      */
     @NameInMap("toTime")
     public Long toTime;
@@ -78,6 +104,14 @@ public class ETLConfiguration extends TeaModel {
     }
     public Long getFromTime() {
         return this.fromTime;
+    }
+
+    public ETLConfiguration setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
     }
 
     public ETLConfiguration setLogstore(String logstore) {

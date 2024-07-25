@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class LogTag extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>key-test</p>
      */
     @NameInMap("Key")
     public String key;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>value-test</p>
      */
     @NameInMap("Value")
     public String value;

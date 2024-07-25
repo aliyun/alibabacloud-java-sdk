@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListDomainsResponseBody extends TeaModel {
     /**
      * <p>The number of domain names that are returned on the current page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("count")
     public Long count;
@@ -18,6 +21,9 @@ public class ListDomainsResponseBody extends TeaModel {
 
     /**
      * <p>The total number of domain names that are returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("total")
     public Long total;

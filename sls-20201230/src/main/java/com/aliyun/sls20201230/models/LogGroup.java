@@ -16,11 +16,18 @@ public class LogGroup extends TeaModel {
     @NameInMap("Logs")
     public java.util.List<LogItem> logs;
 
+    /**
+     * <strong>example:</strong>
+     * <p>192.1.1.1</p>
+     */
     @NameInMap("Source")
     public String source;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>topic-test</p>
      */
     @NameInMap("Topic")
     public String topic;

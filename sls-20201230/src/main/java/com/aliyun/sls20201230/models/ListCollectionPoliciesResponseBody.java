@@ -4,12 +4,23 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class ListCollectionPoliciesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("currentCount")
     public Integer currentCount;
 
     @NameInMap("data")
     public java.util.List<ListCollectionPoliciesResponseBodyData> data;
 
+    @NameInMap("statistics")
+    public java.util.List<ListCollectionPoliciesResponseBodyStatistics> statistics;
+
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("totalCount")
     public Integer totalCount;
 
@@ -34,6 +45,14 @@ public class ListCollectionPoliciesResponseBody extends TeaModel {
         return this.data;
     }
 
+    public ListCollectionPoliciesResponseBody setStatistics(java.util.List<ListCollectionPoliciesResponseBodyStatistics> statistics) {
+        this.statistics = statistics;
+        return this;
+    }
+    public java.util.List<ListCollectionPoliciesResponseBodyStatistics> getStatistics() {
+        return this.statistics;
+    }
+
     public ListCollectionPoliciesResponseBody setTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
@@ -42,46 +61,32 @@ public class ListCollectionPoliciesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public static class ListCollectionPoliciesResponseBodyDataAttribute extends TeaModel {
-        @NameInMap("app")
-        public String app;
-
-        @NameInMap("policyGroup")
-        public String policyGroup;
-
-        public static ListCollectionPoliciesResponseBodyDataAttribute build(java.util.Map<String, ?> map) throws Exception {
-            ListCollectionPoliciesResponseBodyDataAttribute self = new ListCollectionPoliciesResponseBodyDataAttribute();
-            return TeaModel.build(map, self);
-        }
-
-        public ListCollectionPoliciesResponseBodyDataAttribute setApp(String app) {
-            this.app = app;
-            return this;
-        }
-        public String getApp() {
-            return this.app;
-        }
-
-        public ListCollectionPoliciesResponseBodyDataAttribute setPolicyGroup(String policyGroup) {
-            this.policyGroup = policyGroup;
-            return this;
-        }
-        public String getPolicyGroup() {
-            return this.policyGroup;
-        }
-
-    }
-
     public static class ListCollectionPoliciesResponseBodyDataCentralizeConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>your-sls-logstore-in-beijing</p>
+         */
         @NameInMap("destLogstore")
         public String destLogstore;
 
+        /**
+         * <strong>example:</strong>
+         * <p>your-sls-project-in-beijing</p>
+         */
         @NameInMap("destProject")
         public String destProject;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
+         */
         @NameInMap("destRegion")
         public String destRegion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>your-sls-logstore-ttl</p>
+         */
         @NameInMap("destTTL")
         public Integer destTTL;
 
@@ -124,6 +129,36 @@ public class ListCollectionPoliciesResponseBody extends TeaModel {
 
     }
 
+    public static class ListCollectionPoliciesResponseBodyDataDataConfig extends TeaModel {
+        @NameInMap("dataProject")
+        public String dataProject;
+
+        @NameInMap("dataRegion")
+        public String dataRegion;
+
+        public static ListCollectionPoliciesResponseBodyDataDataConfig build(java.util.Map<String, ?> map) throws Exception {
+            ListCollectionPoliciesResponseBodyDataDataConfig self = new ListCollectionPoliciesResponseBodyDataDataConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public ListCollectionPoliciesResponseBodyDataDataConfig setDataProject(String dataProject) {
+            this.dataProject = dataProject;
+            return this;
+        }
+        public String getDataProject() {
+            return this.dataProject;
+        }
+
+        public ListCollectionPoliciesResponseBodyDataDataConfig setDataRegion(String dataRegion) {
+            this.dataRegion = dataRegion;
+            return this;
+        }
+        public String getDataRegion() {
+            return this.dataRegion;
+        }
+
+    }
+
     public static class ListCollectionPoliciesResponseBodyDataPolicyConfig extends TeaModel {
         @NameInMap("instanceIds")
         public java.util.List<String> instanceIds;
@@ -131,6 +166,10 @@ public class ListCollectionPoliciesResponseBody extends TeaModel {
         @NameInMap("regions")
         public java.util.List<String> regions;
 
+        /**
+         * <strong>example:</strong>
+         * <p>all</p>
+         */
         @NameInMap("resourceMode")
         public String resourceMode;
 
@@ -176,42 +215,93 @@ public class ListCollectionPoliciesResponseBody extends TeaModel {
 
     }
 
-    public static class ListCollectionPoliciesResponseBodyData extends TeaModel {
-        @NameInMap("attribute")
-        public ListCollectionPoliciesResponseBodyDataAttribute attribute;
+    public static class ListCollectionPoliciesResponseBodyDataResourceDirectory extends TeaModel {
+        @NameInMap("accountGroupType")
+        public String accountGroupType;
 
+        @NameInMap("members")
+        public java.util.List<String> members;
+
+        public static ListCollectionPoliciesResponseBodyDataResourceDirectory build(java.util.Map<String, ?> map) throws Exception {
+            ListCollectionPoliciesResponseBodyDataResourceDirectory self = new ListCollectionPoliciesResponseBodyDataResourceDirectory();
+            return TeaModel.build(map, self);
+        }
+
+        public ListCollectionPoliciesResponseBodyDataResourceDirectory setAccountGroupType(String accountGroupType) {
+            this.accountGroupType = accountGroupType;
+            return this;
+        }
+        public String getAccountGroupType() {
+            return this.accountGroupType;
+        }
+
+        public ListCollectionPoliciesResponseBodyDataResourceDirectory setMembers(java.util.List<String> members) {
+            this.members = members;
+            return this;
+        }
+        public java.util.List<String> getMembers() {
+            return this.members;
+        }
+
+    }
+
+    public static class ListCollectionPoliciesResponseBodyData extends TeaModel {
         @NameInMap("centralizeConfig")
         public ListCollectionPoliciesResponseBodyDataCentralizeConfig centralizeConfig;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("centralizeEnabled")
         public Boolean centralizeEnabled;
 
+        /**
+         * <strong>example:</strong>
+         * <p>access_log</p>
+         */
         @NameInMap("dataCode")
         public String dataCode;
 
+        @NameInMap("dataConfig")
+        public ListCollectionPoliciesResponseBodyDataDataConfig dataConfig;
+
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("enabled")
         public Boolean enabled;
+
+        @NameInMap("internalPolicy")
+        public Boolean internalPolicy;
 
         @NameInMap("policyConfig")
         public ListCollectionPoliciesResponseBodyDataPolicyConfig policyConfig;
 
+        /**
+         * <strong>example:</strong>
+         * <p>your_log_policy</p>
+         */
         @NameInMap("policyName")
         public String policyName;
 
+        @NameInMap("policyUid")
+        public String policyUid;
+
+        /**
+         * <strong>example:</strong>
+         * <p>oss</p>
+         */
         @NameInMap("productCode")
         public String productCode;
+
+        @NameInMap("resourceDirectory")
+        public ListCollectionPoliciesResponseBodyDataResourceDirectory resourceDirectory;
 
         public static ListCollectionPoliciesResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListCollectionPoliciesResponseBodyData self = new ListCollectionPoliciesResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public ListCollectionPoliciesResponseBodyData setAttribute(ListCollectionPoliciesResponseBodyDataAttribute attribute) {
-            this.attribute = attribute;
-            return this;
-        }
-        public ListCollectionPoliciesResponseBodyDataAttribute getAttribute() {
-            return this.attribute;
         }
 
         public ListCollectionPoliciesResponseBodyData setCentralizeConfig(ListCollectionPoliciesResponseBodyDataCentralizeConfig centralizeConfig) {
@@ -238,12 +328,28 @@ public class ListCollectionPoliciesResponseBody extends TeaModel {
             return this.dataCode;
         }
 
+        public ListCollectionPoliciesResponseBodyData setDataConfig(ListCollectionPoliciesResponseBodyDataDataConfig dataConfig) {
+            this.dataConfig = dataConfig;
+            return this;
+        }
+        public ListCollectionPoliciesResponseBodyDataDataConfig getDataConfig() {
+            return this.dataConfig;
+        }
+
         public ListCollectionPoliciesResponseBodyData setEnabled(Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
         public Boolean getEnabled() {
             return this.enabled;
+        }
+
+        public ListCollectionPoliciesResponseBodyData setInternalPolicy(Boolean internalPolicy) {
+            this.internalPolicy = internalPolicy;
+            return this;
+        }
+        public Boolean getInternalPolicy() {
+            return this.internalPolicy;
         }
 
         public ListCollectionPoliciesResponseBodyData setPolicyConfig(ListCollectionPoliciesResponseBodyDataPolicyConfig policyConfig) {
@@ -262,7 +368,83 @@ public class ListCollectionPoliciesResponseBody extends TeaModel {
             return this.policyName;
         }
 
+        public ListCollectionPoliciesResponseBodyData setPolicyUid(String policyUid) {
+            this.policyUid = policyUid;
+            return this;
+        }
+        public String getPolicyUid() {
+            return this.policyUid;
+        }
+
         public ListCollectionPoliciesResponseBodyData setProductCode(String productCode) {
+            this.productCode = productCode;
+            return this;
+        }
+        public String getProductCode() {
+            return this.productCode;
+        }
+
+        public ListCollectionPoliciesResponseBodyData setResourceDirectory(ListCollectionPoliciesResponseBodyDataResourceDirectory resourceDirectory) {
+            this.resourceDirectory = resourceDirectory;
+            return this;
+        }
+        public ListCollectionPoliciesResponseBodyDataResourceDirectory getResourceDirectory() {
+            return this.resourceDirectory;
+        }
+
+    }
+
+    public static class ListCollectionPoliciesResponseBodyStatisticsPolicySourceList extends TeaModel {
+        @NameInMap("policyName")
+        public String policyName;
+
+        @NameInMap("policyUid")
+        public String policyUid;
+
+        public static ListCollectionPoliciesResponseBodyStatisticsPolicySourceList build(java.util.Map<String, ?> map) throws Exception {
+            ListCollectionPoliciesResponseBodyStatisticsPolicySourceList self = new ListCollectionPoliciesResponseBodyStatisticsPolicySourceList();
+            return TeaModel.build(map, self);
+        }
+
+        public ListCollectionPoliciesResponseBodyStatisticsPolicySourceList setPolicyName(String policyName) {
+            this.policyName = policyName;
+            return this;
+        }
+        public String getPolicyName() {
+            return this.policyName;
+        }
+
+        public ListCollectionPoliciesResponseBodyStatisticsPolicySourceList setPolicyUid(String policyUid) {
+            this.policyUid = policyUid;
+            return this;
+        }
+        public String getPolicyUid() {
+            return this.policyUid;
+        }
+
+    }
+
+    public static class ListCollectionPoliciesResponseBodyStatistics extends TeaModel {
+        @NameInMap("policySourceList")
+        public java.util.List<ListCollectionPoliciesResponseBodyStatisticsPolicySourceList> policySourceList;
+
+        @NameInMap("productCode")
+        public String productCode;
+
+        public static ListCollectionPoliciesResponseBodyStatistics build(java.util.Map<String, ?> map) throws Exception {
+            ListCollectionPoliciesResponseBodyStatistics self = new ListCollectionPoliciesResponseBodyStatistics();
+            return TeaModel.build(map, self);
+        }
+
+        public ListCollectionPoliciesResponseBodyStatistics setPolicySourceList(java.util.List<ListCollectionPoliciesResponseBodyStatisticsPolicySourceList> policySourceList) {
+            this.policySourceList = policySourceList;
+            return this;
+        }
+        public java.util.List<ListCollectionPoliciesResponseBodyStatisticsPolicySourceList> getPolicySourceList() {
+            return this.policySourceList;
+        }
+
+        public ListCollectionPoliciesResponseBodyStatistics setProductCode(String productCode) {
             this.productCode = productCode;
             return this;
         }

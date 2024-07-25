@@ -12,6 +12,9 @@ public class LogItem extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1690254376</p>
      */
     @NameInMap("Time")
     public Integer time;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListMachinesResponseBody extends TeaModel {
     /**
      * <p>The number of machines that are returned on the current page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("count")
     public Integer count;
@@ -18,6 +21,9 @@ public class ListMachinesResponseBody extends TeaModel {
 
     /**
      * <p>The total number of machines.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8</p>
      */
     @NameInMap("total")
     public Integer total;

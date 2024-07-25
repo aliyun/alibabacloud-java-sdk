@@ -12,6 +12,9 @@ public class ListAnnotationLabelsResponseBody extends TeaModel {
 
     /**
      * <p>The total number of tags that meet the query conditions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("total")
     public Integer total;

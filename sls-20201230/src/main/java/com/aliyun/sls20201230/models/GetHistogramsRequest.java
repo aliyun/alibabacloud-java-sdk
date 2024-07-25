@@ -6,28 +6,38 @@ import com.aliyun.tea.*;
 public class GetHistogramsRequest extends TeaModel {
     /**
      * <p>The start time of the subinterval. The value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1409529600</p>
      */
     @NameInMap("from")
     public Long from;
 
     /**
-     * <p>The search statement. Only search statements are supported. Analytic statements are not supported. For more information about the syntax of search statements, see [Log search overview](https://help.aliyun.com/document_detail/43772.html).</p>
+     * <p>The search statement. Only search statements are supported. Analytic statements are not supported. For more information about the syntax of search statements, see <a href="https://help.aliyun.com/document_detail/43772.html">Log search overview</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>with_pack_meta</p>
      */
     @NameInMap("query")
     public String query;
 
     /**
      * <p>The end time of the subinterval. The value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1409569200</p>
      */
     @NameInMap("to")
     public Long to;
 
     /**
      * <p>The topic of the logs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>topic</p>
      */
     @NameInMap("topic")
     public String topic;

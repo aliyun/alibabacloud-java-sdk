@@ -4,12 +4,24 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class ListAlertsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ali-test-logstore</p>
+     */
     @NameInMap("logstore")
     public String logstore;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("offset")
     public Integer offset;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("size")
     public Integer size;
 

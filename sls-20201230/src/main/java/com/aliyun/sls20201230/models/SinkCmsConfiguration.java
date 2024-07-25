@@ -4,6 +4,10 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class SinkCmsConfiguration extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("enabled")
     public Boolean enabled;
 

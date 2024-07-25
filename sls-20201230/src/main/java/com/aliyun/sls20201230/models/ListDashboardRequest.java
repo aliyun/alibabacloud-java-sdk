@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ListDashboardRequest extends TeaModel {
     /**
      * <p>The line from which the query starts. Default value: 0.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("offset")
     public Integer offset;
 
     /**
      * <p>The number of entries per page. Maximum value: 500. Default value: 500.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("size")
     public Integer size;

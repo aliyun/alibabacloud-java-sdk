@@ -4,12 +4,20 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class ListScheduledSQLsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("count")
     public Integer count;
 
     @NameInMap("results")
     public java.util.List<ScheduledSQL> results;
 
+    /**
+     * <strong>example:</strong>
+     * <p>80</p>
+     */
     @NameInMap("total")
     public Integer total;
 

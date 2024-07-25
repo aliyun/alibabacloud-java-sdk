@@ -9,6 +9,9 @@ public class GroupConfiguration extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>custom</p>
      */
     @NameInMap("type")
     public String type;

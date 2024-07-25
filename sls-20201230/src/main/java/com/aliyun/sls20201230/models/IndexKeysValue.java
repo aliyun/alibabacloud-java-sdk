@@ -4,24 +4,43 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class IndexKeysValue extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("chn")
     public Boolean chn;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("caseSensitive")
     public Boolean caseSensitive;
 
     @NameInMap("token")
     public java.util.List<String> token;
 
+    /**
+     * <strong>example:</strong>
+     * <p>myAlias</p>
+     */
     @NameInMap("alias")
     public String alias;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>text</p>
      */
     @NameInMap("type")
     public String type;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("doc_value")
     public Boolean docValue;
 

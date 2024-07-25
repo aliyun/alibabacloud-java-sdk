@@ -12,15 +12,16 @@ public class UpdateLogtailPipelineConfigRequest extends TeaModel {
 
     /**
      * <p>The name of the configuration.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-config</p>
      */
     @NameInMap("configName")
     public String configName;
 
     /**
      * <p>The data output plug-ins.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("flushers")
@@ -34,7 +35,6 @@ public class UpdateLogtailPipelineConfigRequest extends TeaModel {
 
     /**
      * <p>The data source plug-ins.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("inputs")
@@ -42,6 +42,9 @@ public class UpdateLogtailPipelineConfigRequest extends TeaModel {
 
     /**
      * <p>The sample log.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-06-14 11:13:29.796 | DEBUG    | <strong>main</strong>:<module>:1 - hello world</p>
      */
     @NameInMap("logSample")
     public String logSample;

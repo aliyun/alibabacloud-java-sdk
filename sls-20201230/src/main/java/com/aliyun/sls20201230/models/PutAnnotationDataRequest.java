@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class PutAnnotationDataRequest extends TeaModel {
     /**
      * <p>The unique identifier of the data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2156d560fc7c01420542df92cd6365ds</p>
      */
     @NameInMap("annotationdataId")
     public String annotationdataId;

@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class ListMachineGroupRequest extends TeaModel {
     /**
      * <p>The name of the machine group. This parameter is used to filter machine groups. Partial match is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-machine-group</p>
      */
     @NameInMap("groupName")
     public String groupName;
 
     /**
      * <p>The line from which the query starts. Default value: 0.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("offset")
     public Integer offset;
 
     /**
      * <p>The number of entries per page. Maximum value: 500.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("size")
     public Integer size;

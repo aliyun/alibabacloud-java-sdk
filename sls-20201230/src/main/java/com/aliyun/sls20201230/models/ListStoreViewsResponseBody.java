@@ -4,12 +4,20 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class ListStoreViewsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("count")
     public Integer count;
 
     @NameInMap("storeviews")
     public java.util.List<String> storeviews;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("total")
     public Integer total;
 

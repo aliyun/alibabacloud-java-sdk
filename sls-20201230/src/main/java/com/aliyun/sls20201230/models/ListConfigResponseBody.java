@@ -12,12 +12,18 @@ public class ListConfigResponseBody extends TeaModel {
 
     /**
      * <p>The number of Logtail configurations that are returned on the current page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("count")
     public Integer count;
 
     /**
      * <p>The total number of Logtail configurations that meet the query conditions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("total")
     public Integer total;

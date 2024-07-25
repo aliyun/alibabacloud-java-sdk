@@ -4,18 +4,34 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class OSSExportConfiguration extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1714123644</p>
+     */
     @NameInMap("fromTime")
     public Long fromTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>logstore-demo</p>
+     */
     @NameInMap("logstore")
     public String logstore;
 
+    /**
+     * <strong>example:</strong>
+     * <p>acs:ram::123456789:role/aliyunlogdefaultrole</p>
+     */
     @NameInMap("roleArn")
     public String roleArn;
 
     @NameInMap("sink")
     public OSSExportConfigurationSink sink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1714357112</p>
+     */
     @NameInMap("toTime")
     public Long toTime;
 
@@ -67,62 +83,113 @@ public class OSSExportConfiguration extends TeaModel {
     public static class OSSExportConfigurationSink extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-bucket</p>
          */
         @NameInMap("bucket")
         public String bucket;
 
+        /**
+         * <strong>example:</strong>
+         * <p>300</p>
+         */
         @NameInMap("bufferInterval")
         public Long bufferInterval;
 
+        /**
+         * <strong>example:</strong>
+         * <p>256</p>
+         */
         @NameInMap("bufferSize")
         public Long bufferSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>snappy</p>
+         */
         @NameInMap("compressionType")
         public String compressionType;
 
         @NameInMap("contentDetail")
         public java.util.Map<String, ?> contentDetail;
 
+        /**
+         * <strong>example:</strong>
+         * <p>json</p>
+         */
         @NameInMap("contentType")
         public String contentType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>900</p>
+         */
         @NameInMap("delaySec")
         @Deprecated
         public Long delaySec;
 
+        /**
+         * <strong>example:</strong>
+         * <p>900</p>
+         */
         @NameInMap("delaySeconds")
         public Long delaySeconds;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://oss-cn-hangzhou-internal.aliyuncs.com">http://oss-cn-hangzhou-internal.aliyuncs.com</a></p>
          */
         @NameInMap("endpoint")
         public String endpoint;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>%Y/%m/%d/%H/%M</p>
          */
         @NameInMap("pathFormat")
         public String pathFormat;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>time</p>
          */
         @NameInMap("pathFormatType")
         public String pathFormatType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>demo/</p>
+         */
         @NameInMap("prefix")
         public String prefix;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::123456789:role/aliyunlogdefaultrole</p>
          */
         @NameInMap("roleArn")
         public String roleArn;
 
+        /**
+         * <strong>example:</strong>
+         * <p>.json</p>
+         */
         @NameInMap("suffix")
         public String suffix;
 
+        /**
+         * <strong>example:</strong>
+         * <p>+0800</p>
+         */
         @NameInMap("timeZone")
         public String timeZone;
 

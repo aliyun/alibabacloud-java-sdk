@@ -4,18 +4,38 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class Shard extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1453949705</p>
+     */
     @NameInMap("createTime")
     public Integer createTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>8000000000000000000000000000000</p>
+     */
     @NameInMap("exclusiveEndKey")
     public String exclusiveEndKey;
 
+    /**
+     * <strong>example:</strong>
+     * <p>00000000000000000000000000000000</p>
+     */
     @NameInMap("inclusiveBeginKey")
     public String inclusiveBeginKey;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("shardID")
     public Integer shardID;
 
+    /**
+     * <strong>example:</strong>
+     * <p>readwrite</p>
+     */
     @NameInMap("status")
     public String status;
 

@@ -6,30 +6,39 @@ import com.aliyun.tea.*;
 public class ListConfigRequest extends TeaModel {
     /**
      * <p>The name of the Logtail configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>logtail-config-sample</p>
      */
     @NameInMap("configName")
     public String configName;
 
     /**
      * <p>The name of the Logstore.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ali-test-logstore</p>
      */
     @NameInMap("logstoreName")
     public String logstoreName;
 
     /**
      * <p>The line from which the query starts. Default value: 0.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("offset")
     public Long offset;
 
     /**
      * <p>The number of entries per page. Maximum value: 500.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("size")
     public Long size;

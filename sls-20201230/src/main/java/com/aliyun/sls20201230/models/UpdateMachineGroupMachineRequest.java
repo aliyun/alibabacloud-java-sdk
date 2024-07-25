@@ -6,13 +6,15 @@ import com.aliyun.tea.*;
 public class UpdateMachineGroupMachineRequest extends TeaModel {
     /**
      * <p>The operation on the machine. Valid values: add and delete. A value of add specifies to add the machine to the machine group. A value of delete specifies to remove the machine from the machine group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>add</p>
      */
     @NameInMap("action")
     public String action;
 
     /**
      * <p>The machines to be added or removed.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("body")

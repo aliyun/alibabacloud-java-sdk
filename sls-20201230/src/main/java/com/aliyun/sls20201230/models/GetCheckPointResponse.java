@@ -45,24 +45,36 @@ public class GetCheckPointResponse extends TeaModel {
     public static class GetCheckPointResponseBody extends TeaModel {
         /**
          * <p>The shard ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("shard")
         public Integer shard;
 
         /**
          * <p>The value of the checkpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MTUyNDE1NTM3OTM3MzkwODQ5Ng==</p>
          */
         @NameInMap("checkpoint")
         public String checkpoint;
 
         /**
          * <p>The time when the checkpoint was last updated. The value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1524224984800922</p>
          */
         @NameInMap("updateTime")
         public Long updateTime;
 
         /**
          * <p>The consumer at the checkpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>consumer_1</p>
          */
         @NameInMap("consumer")
         public String consumer;

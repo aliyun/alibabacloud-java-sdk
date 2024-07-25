@@ -10,23 +10,41 @@ public class ScheduledSQL extends TeaModel {
     @NameInMap("configuration")
     public ScheduledSQLConfiguration configuration;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1714123644</p>
+     */
     @NameInMap("createTime")
     public Long createTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>schedule-sql-test</p>
+     */
     @NameInMap("description")
     public String description;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>scheduleSqlTest</p>
      */
     @NameInMap("displayName")
     public String displayName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1714123644</p>
+     */
     @NameInMap("lastModifiedTime")
     public Long lastModifiedTime;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sql-1714123463-225223</p>
      */
     @NameInMap("name")
     public String name;
@@ -37,9 +55,17 @@ public class ScheduledSQL extends TeaModel {
     @NameInMap("schedule")
     public Schedule schedule;
 
+    /**
+     * <strong>example:</strong>
+     * <p>e73f43732852064ad5d091914e39342f</p>
+     */
     @NameInMap("scheduleId")
     public String scheduleId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ENABLED</p>
+     */
     @NameInMap("status")
     public String status;
 

@@ -20,21 +20,34 @@ public class MaxComputeExportConfigurationSink extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://xxxxxxxx">http://xxxxxxxx</a></p>
      */
     @NameInMap("odpsEndpoint")
     public String odpsEndpoint;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>demo_project</p>
      */
     @NameInMap("odpsProject")
     public String odpsProject;
 
+    /**
+     * <strong>example:</strong>
+     * <p>acs:ram::xxxxxxx</p>
+     */
     @NameInMap("odpsRolearn")
     public String odpsRolearn;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>demo_table</p>
      */
     @NameInMap("odpsTable")
     public String odpsTable;
@@ -53,12 +66,18 @@ public class MaxComputeExportConfigurationSink extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>%Y_%m_%d</p>
      */
     @NameInMap("partitionTimeFormat")
     public String partitionTimeFormat;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>+0800</p>
      */
     @NameInMap("timeZone")
     public String timeZone;

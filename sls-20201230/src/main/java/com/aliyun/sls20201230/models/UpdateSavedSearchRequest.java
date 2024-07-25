@@ -6,40 +6,50 @@ import com.aliyun.tea.*;
 public class UpdateSavedSearchRequest extends TeaModel {
     /**
      * <p>The display name.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>displayname</p>
      */
     @NameInMap("displayName")
     public String displayName;
 
     /**
      * <p>The name of the Logstore to which the saved search belongs.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>aliyun-test-logstore</p>
      */
     @NameInMap("logstore")
     public String logstore;
 
     /**
      * <p>The name of the saved search. The name must be 3 to 63 characters in length.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>savedsearch-name</p>
      */
     @NameInMap("savedsearchName")
     public String savedsearchName;
 
     /**
      * <p>The search statement or the query statement of the saved search. A query statement consists of a search statement and an analytic statement in the Search statement|Analytic statement format.</p>
-     * <br>
      * <p>For more information, see Log search overview and Log analysis overview.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><em>|select date_format(<strong>time</strong>-<strong>time</strong>%60, \&quot;%H:%i:%s\&quot;) as time, COUNT(</em>) as pv group by time</p>
      */
     @NameInMap("searchQuery")
     public String searchQuery;
 
     /**
      * <p>The topic of the logs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>theme</p>
      */
     @NameInMap("topic")
     public String topic;

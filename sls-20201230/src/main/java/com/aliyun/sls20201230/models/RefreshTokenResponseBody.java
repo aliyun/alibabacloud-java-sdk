@@ -4,6 +4,10 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class RefreshTokenResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>eyJ***************.eyJ******************.KUT****************</p>
+     */
     @NameInMap("accessToken")
     public String accessToken;
 

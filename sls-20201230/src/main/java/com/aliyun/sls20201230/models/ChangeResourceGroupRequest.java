@@ -6,22 +6,29 @@ import com.aliyun.tea.*;
 public class ChangeResourceGroupRequest extends TeaModel {
     /**
      * <p>The ID of the resource group.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-aek2i7nhaxifxey</p>
      */
     @NameInMap("resourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>The ID of the resource.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ali-test-project</p>
      */
     @NameInMap("resourceId")
     public String resourceId;
 
     /**
      * <p>The type of the resource. Only PROJECT is supported. Set the value to PROJECT.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PROJECT</p>
      */
     @NameInMap("resourceType")
     public String resourceType;

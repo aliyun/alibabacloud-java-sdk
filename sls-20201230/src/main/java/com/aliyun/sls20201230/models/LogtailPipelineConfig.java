@@ -9,10 +9,17 @@ public class LogtailPipelineConfig extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-config</p>
      */
     @NameInMap("configName")
     public String configName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1655176807</p>
+     */
     @NameInMap("createTime")
     public Long createTime;
 
@@ -31,9 +38,17 @@ public class LogtailPipelineConfig extends TeaModel {
     @NameInMap("inputs")
     public java.util.List<java.util.Map<String, ?>> inputs;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1655176807</p>
+     */
     @NameInMap("lastModifyTime")
     public Long lastModifyTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>127.0.0.1 - - [10/Jun/2022:12:36:49 +0800] &quot;GET /index.html HTTP/1.1&quot; 200</p>
+     */
     @NameInMap("logSample")
     public String logSample;
 

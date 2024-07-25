@@ -9,6 +9,9 @@ public class MachineGroup extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-group</p>
      */
     @NameInMap("groupName")
     public String groupName;
@@ -18,6 +21,9 @@ public class MachineGroup extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ip</p>
      */
     @NameInMap("machineIdentifyType")
     public String machineIdentifyType;
@@ -74,9 +80,17 @@ public class MachineGroup extends TeaModel {
     }
 
     public static class MachineGroupGroupAttribute extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>test-group</p>
+         */
         @NameInMap("externalName")
         public String externalName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test-topic</p>
+         */
         @NameInMap("groupTopic")
         public String groupTopic;
 

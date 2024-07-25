@@ -5,33 +5,46 @@ import com.aliyun.tea.*;
 
 public class KeysValue extends TeaModel {
     /**
-     * <p>Specifies whether to enable case sensitivity. This parameter is required only when **type** is set to **text**. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false (default)</p>
+     * <p>Specifies whether to enable case sensitivity. This parameter is required only when <strong>type</strong> is set to <strong>text</strong>. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false (default)</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("caseSensitive")
     public Boolean caseSensitive;
 
     /**
-     * <p>Specifies whether to include Chinese characters. This parameter is required only when **type** is set to **text**. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false (default)</p>
+     * <p>Specifies whether to include Chinese characters. This parameter is required only when <strong>type</strong> is set to <strong>text</strong>. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false (default)</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("chn")
     public Boolean chn;
 
     /**
      * <p>The data type of the field value. Valid values: text, json, double, and long.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>text</p>
      */
     @NameInMap("type")
     public String type;
 
     /**
      * <p>The alias of the field.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>myAlias</p>
      */
     @NameInMap("alias")
     public String alias;
@@ -44,9 +57,18 @@ public class KeysValue extends TeaModel {
 
     /**
      * <p>Specifies whether to turn on Enable Analytics for the field.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("doc_value")
     public Boolean docValue;
+
+    @NameInMap("vector_index")
+    public String vectorIndex;
+
+    @NameInMap("embedding")
+    public String embedding;
 
     public static KeysValue build(java.util.Map<String, ?> map) throws Exception {
         KeysValue self = new KeysValue();
@@ -99,6 +121,22 @@ public class KeysValue extends TeaModel {
     }
     public Boolean getDocValue() {
         return this.docValue;
+    }
+
+    public KeysValue setVectorIndex(String vectorIndex) {
+        this.vectorIndex = vectorIndex;
+        return this;
+    }
+    public String getVectorIndex() {
+        return this.vectorIndex;
+    }
+
+    public KeysValue setEmbedding(String embedding) {
+        this.embedding = embedding;
+        return this;
+    }
+    public String getEmbedding() {
+        return this.embedding;
     }
 
 }

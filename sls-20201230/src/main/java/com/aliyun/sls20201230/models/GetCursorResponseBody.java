@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetCursorResponseBody extends TeaModel {
     /**
      * <p>The value of the cursor.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MTQ0NzI5OTYwNjg5NjYzMjM1Ng==</p>
      */
     @NameInMap("cursor")
     public String cursor;

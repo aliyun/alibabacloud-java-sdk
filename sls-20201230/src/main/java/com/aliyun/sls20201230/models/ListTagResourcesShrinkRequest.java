@@ -5,22 +5,30 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesShrinkRequest extends TeaModel {
     /**
-     * <p>The IDs of the resources for which you want to query tags. You must specify at least one of resourceId and tags.</p>
+     * <p>The IDs of the resources whose tags you want to query. You must specify at least one of resourceId and tags.</p>
      */
     @NameInMap("resourceId")
     public String resourceIdShrink;
 
     /**
-     * <p>The type of the resource. Set the value to project.</p>
-     * <br>
+     * <p>The type of the resource. Valid values:</p>
+     * <ul>
+     * <li>project</li>
+     * <li>logstore</li>
+     * <li>dashboard</li>
+     * <li>MachineGroup</li>
+     * <li>LogtailConfig</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>project</p>
      */
     @NameInMap("resourceType")
     public String resourceType;
 
     /**
      * <p>The tags that you want to use to filter resources based on exact match. Each tag is a key-value pair. You must specify at least one of resourceId and tags.</p>
-     * <br>
      * <p>You can enter up to 20 tags.</p>
      */
     @NameInMap("tags")

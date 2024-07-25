@@ -5,17 +5,45 @@ import com.aliyun.tea.*;
 
 public class ConsumerGroupUpdateCheckPointRequest extends TeaModel {
     /**
-     * <p>Shard ID。</p>
+     * <p>The value of the checkpoint.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MTUyNDE1NTM3OTM3MzkwODQ5Ng==</p>
      */
-    @NameInMap("body")
-    public java.util.List<ConsumerGroupUpdateCheckPointRequestBody> body;
+    @NameInMap("checkpoint")
+    public String checkpoint;
 
     /**
+     * <p>The ID of the shard.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
+    @NameInMap("shard")
+    public Integer shard;
+
+    /**
+     * <p>The consumer.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>consumer_1</p>
      */
     @NameInMap("consumer")
     public String consumer;
 
+    /**
+     * <p>Specifies whether to enable forceful updates. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>False</p>
+     */
     @NameInMap("forceSuccess")
     public Boolean forceSuccess;
 
@@ -24,12 +52,20 @@ public class ConsumerGroupUpdateCheckPointRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ConsumerGroupUpdateCheckPointRequest setBody(java.util.List<ConsumerGroupUpdateCheckPointRequestBody> body) {
-        this.body = body;
+    public ConsumerGroupUpdateCheckPointRequest setCheckpoint(String checkpoint) {
+        this.checkpoint = checkpoint;
         return this;
     }
-    public java.util.List<ConsumerGroupUpdateCheckPointRequestBody> getBody() {
-        return this.body;
+    public String getCheckpoint() {
+        return this.checkpoint;
+    }
+
+    public ConsumerGroupUpdateCheckPointRequest setShard(Integer shard) {
+        this.shard = shard;
+        return this;
+    }
+    public Integer getShard() {
+        return this.shard;
     }
 
     public ConsumerGroupUpdateCheckPointRequest setConsumer(String consumer) {
@@ -46,44 +82,6 @@ public class ConsumerGroupUpdateCheckPointRequest extends TeaModel {
     }
     public Boolean getForceSuccess() {
         return this.forceSuccess;
-    }
-
-    public static class ConsumerGroupUpdateCheckPointRequestBody extends TeaModel {
-        /**
-         * <p>This parameter is required.</p>
-         */
-        @NameInMap("checkpoint")
-        public String checkpoint;
-
-        /**
-         * <p>Shard ID。</p>
-         * <br>
-         * <p>This parameter is required.</p>
-         */
-        @NameInMap("shard")
-        public Integer shard;
-
-        public static ConsumerGroupUpdateCheckPointRequestBody build(java.util.Map<String, ?> map) throws Exception {
-            ConsumerGroupUpdateCheckPointRequestBody self = new ConsumerGroupUpdateCheckPointRequestBody();
-            return TeaModel.build(map, self);
-        }
-
-        public ConsumerGroupUpdateCheckPointRequestBody setCheckpoint(String checkpoint) {
-            this.checkpoint = checkpoint;
-            return this;
-        }
-        public String getCheckpoint() {
-            return this.checkpoint;
-        }
-
-        public ConsumerGroupUpdateCheckPointRequestBody setShard(Integer shard) {
-            this.shard = shard;
-            return this;
-        }
-        public Integer getShard() {
-            return this.shard;
-        }
-
     }
 
 }

@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ListAnnotationDataRequest extends TeaModel {
     /**
      * <p>The line from which the query starts.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("offset")
     public Integer offset;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("size")
     public Integer size;

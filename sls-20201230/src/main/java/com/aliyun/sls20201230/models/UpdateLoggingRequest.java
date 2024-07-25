@@ -6,7 +6,6 @@ import com.aliyun.tea.*;
 public class UpdateLoggingRequest extends TeaModel {
     /**
      * <p>The configurations of service logs.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("loggingDetails")
@@ -14,8 +13,10 @@ public class UpdateLoggingRequest extends TeaModel {
 
     /**
      * <p>The name of the project to which you want to save service logs.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my-project</p>
      */
     @NameInMap("loggingProject")
     public String loggingProject;
@@ -44,25 +45,30 @@ public class UpdateLoggingRequest extends TeaModel {
     public static class UpdateLoggingRequestLoggingDetails extends TeaModel {
         /**
          * <p>The name of the Logstore to which you want to save service logs.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-logstore</p>
          */
         @NameInMap("logstore")
         public String logstore;
 
         /**
          * <p>The type of service logs. Valid values:</p>
-         * <br>
-         * <p>*   consumergroup_log: the consumption delay logs of consumer groups.</p>
-         * <p>*   logtail_alarm: the alert logs of Logtail.</p>
-         * <p>*   operation_log: the operation logs.</p>
-         * <p>*   logtail_profile: the collection logs of Logtail.</p>
-         * <p>*   metering: the metering logs.</p>
-         * <p>*   logtail_status: the status logs of Logtail.</p>
-         * <p>*   scheduledsqlalert: the operational logs of Scheduled SQL jobs.</p>
-         * <p>*   etl_alert: the operational logs of data transformation jobs.</p>
-         * <br>
+         * <ul>
+         * <li>consumergroup_log: the consumption delay logs of consumer groups.</li>
+         * <li>logtail_alarm: the alert logs of Logtail.</li>
+         * <li>operation_log: the operation logs.</li>
+         * <li>logtail_profile: the collection logs of Logtail.</li>
+         * <li>metering: the metering logs.</li>
+         * <li>logtail_status: the status logs of Logtail.</li>
+         * <li>scheduledsqlalert: the operational logs of Scheduled SQL jobs.</li>
+         * <li>etl_alert: the operational logs of data transformation jobs.</li>
+         * </ul>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>consumergroup_log</p>
          */
         @NameInMap("type")
         public String type;
