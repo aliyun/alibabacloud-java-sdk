@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListServiceInstanceResourcesResponseBody extends TeaModel {
     /**
+     * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -12,6 +14,8 @@ public class ListServiceInstanceResourcesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>A pagination token.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAc3HCuYhJi/wvpk4xOr0VLbAx7BkQzyYC+ONO+WudHGKEdB0uWSY7AGnM3qCgm/Ynge7zU6NWdbj0Tegyajyqyc=</p>
      */
@@ -19,12 +23,17 @@ public class ListServiceInstanceResourcesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>B288A0BE-D927-4888-B0F7-B35EF84B6E6F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The resources.</p>
+     */
     @NameInMap("Resources")
     public java.util.List<ListServiceInstanceResourcesResponseBodyResources> resources;
 
@@ -67,6 +76,8 @@ public class ListServiceInstanceResourcesResponseBody extends TeaModel {
 
     public static class ListServiceInstanceResourcesResponseBodyResources extends TeaModel {
         /**
+         * <p>The time when the resource was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-01-01T12:00:00</p>
          */
@@ -74,6 +85,8 @@ public class ListServiceInstanceResourcesResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The time when the resource expires.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-03-01T12:00:00</p>
          */
@@ -81,6 +94,12 @@ public class ListServiceInstanceResourcesResponseBody extends TeaModel {
         public String expireTime;
 
         /**
+         * <p>The billing method. Valid values:</p>
+         * <ul>
+         * <li>Subscription</li>
+         * <li>PayAsYouGo</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Subscription</p>
          */
@@ -88,6 +107,8 @@ public class ListServiceInstanceResourcesResponseBody extends TeaModel {
         public String payType;
 
         /**
+         * <p>The code of the cloud service.</p>
+         * 
          * <strong>example:</strong>
          * <p>rds</p>
          */
@@ -95,6 +116,8 @@ public class ListServiceInstanceResourcesResponseBody extends TeaModel {
         public String productCode;
 
         /**
+         * <p>The type of the cloud service.</p>
+         * 
          * <strong>example:</strong>
          * <p>RDS</p>
          */
@@ -102,6 +125,13 @@ public class ListServiceInstanceResourcesResponseBody extends TeaModel {
         public String productType;
 
         /**
+         * <p>The renewal state. Valid values:</p>
+         * <ul>
+         * <li>AutoRenewal</li>
+         * <li>ManualRenewal</li>
+         * <li>NotRenewal</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>AutoRenewal</p>
          */
@@ -109,6 +139,8 @@ public class ListServiceInstanceResourcesResponseBody extends TeaModel {
         public String renewStatus;
 
         /**
+         * <p>The renewal period.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -116,6 +148,12 @@ public class ListServiceInstanceResourcesResponseBody extends TeaModel {
         public Integer renewalPeriod;
 
         /**
+         * <p>The unit of the renewal period. Valid values:</p>
+         * <ul>
+         * <li>Month</li>
+         * <li>Year</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Month</p>
          */
@@ -123,12 +161,28 @@ public class ListServiceInstanceResourcesResponseBody extends TeaModel {
         public String renewalPeriodUnit;
 
         /**
+         * <p>The ARN of the resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>arn:acs:sag:cn-hangzhou:130920852836****:ccn/ccn-b3qf0q439sq2de****</p>
          */
         @NameInMap("ResourceARN")
         public String resourceARN;
 
+        /**
+         * <p>The state of the resource. Valid values:</p>
+         * <ul>
+         * <li>running</li>
+         * <li>waiting</li>
+         * <li>terminated</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is returned only for containers.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>running</p>
+         */
         @NameInMap("Status")
         public String status;
 

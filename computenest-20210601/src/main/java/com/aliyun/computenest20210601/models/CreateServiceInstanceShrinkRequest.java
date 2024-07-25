@@ -5,17 +5,22 @@ import com.aliyun.tea.*;
 
 public class CreateServiceInstanceShrinkRequest extends TeaModel {
     /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The information about the order placed in Alibaba Cloud Marketplace. You do not need to specify this parameter if the service is not published in Alibaba Cloud Marketplace or uses the pay-as-you-go billing method.</p>
+     */
     @NameInMap("Commodity")
     public CreateServiceInstanceShrinkRequestCommodity commodity;
 
     /**
-     * <p>接收告警的云监控联系人组。</p>
+     * <p>The alert contact group.</p>
      * 
      * <strong>example:</strong>
      * <p>云账号报警联系人</p>
@@ -24,6 +29,12 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
     public String contactGroup;
 
     /**
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: performs a dry run. The system checks the required parameters, request syntax, and limits. </li>
+     * <li><strong>false</strong> (default): sends the request.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -31,6 +42,8 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
+     * <p>Indicates whether the service instance supports the operation feature.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -38,6 +51,8 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
     public Boolean enableInstanceOps;
 
     /**
+     * <p>Whether to enable Prometheus monitoring.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -45,13 +60,7 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
     public Boolean enableUserPrometheus;
 
     /**
-     * <p>服务实例名称。格式要求如下：</p>
-     * <ul>
-     * <li><p>长度不超过64个字符。</p>
-     * </li>
-     * <li><p>必须以数字或英文字母开头，可包含数字、英文字母、短划线（-）和下划线（_）。</p>
-     * </li>
-     * </ul>
+     * <p>The serviceInstance name.</p>
      * 
      * <strong>example:</strong>
      * <p>TestName</p>
@@ -59,10 +68,18 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The operation metadata.</p>
+     */
     @NameInMap("OperationMetadata")
     public CreateServiceInstanceShrinkRequestOperationMetadata operationMetadata;
 
     /**
+     * <p>The parameters that the customer specifies to deploy the service instance.</p>
+     * <blockquote>
+     * <p> If region information is required to create a service instance, you must specify the region ID in the value of Parameters.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;NodeCount&quot;: 3, &quot;SystemDiskSize&quot;: 40, &quot;InstancePassword&quot;: &quot;******&quot;}</p>
      */
@@ -70,6 +87,11 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
     public String parametersShrink;
 
     /**
+     * <p>The region ID. Valid values:</p>
+     * <ul>
+     * <li>cn-hangzhou: China (Hangzhou).</li>
+     * <li>ap-southeast-1: Singapore.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -78,10 +100,19 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>Whether the resource pays automatically.Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     */
     @NameInMap("ResourceAutoPay")
     public Boolean resourceAutoPay;
 
     /**
+     * <p>The resource group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-bp67acfmxazb4p****</p>
      */
@@ -89,6 +120,7 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
+     * <p>The service ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -98,6 +130,8 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
     public String serviceId;
 
     /**
+     * <p>The service version.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -105,6 +139,8 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
     public String serviceVersion;
 
     /**
+     * <p>Specification code.</p>
+     * 
      * <strong>example:</strong>
      * <p>yuncode5425200001</p>
      */
@@ -112,7 +148,7 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
     public String specificationCode;
 
     /**
-     * <p>套餐规格名称。</p>
+     * <p>The package name.</p>
      * 
      * <strong>example:</strong>
      * <p>套餐一</p>
@@ -121,21 +157,28 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
     public String specificationName;
 
     /**
-     * <p>用户自定义标签。</p>
+     * <p>The tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateServiceInstanceShrinkRequestTag> tag;
 
+    /**
+     * <p>The name of the template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>模板1</p>
+     */
     @NameInMap("TemplateName")
     public String templateName;
 
     /**
-     * <p>使用类型。可选值：</p>
+     * <p>The trial type of serviceInstance. 
+     * Valid values:</p>
      * <ul>
-     * <li><p>Trial：支持试用。</p>
-     * </li>
-     * <li><p>NotTrial：不支持试用。</p>
-     * </li>
+     * <li>Created: </li>
+     * <li>Deploying</li>
+     * <li>DeployedFailed</li>
+     * <li>Deployed</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -302,13 +345,38 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
     }
 
     public static class CreateServiceInstanceShrinkRequestCommodity extends TeaModel {
+        /**
+         * <p>Specifies whether to automatically complete the payment. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("AutoPay")
         public Boolean autoPay;
 
+        /**
+         * <p>Specifies whether to enable auto-renewal for the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("AutoRenew")
         public Boolean autoRenew;
 
+        @NameInMap("CouponId")
+        public String couponId;
+
         /**
+         * <p>The subscription duration.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -316,6 +384,13 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
         public Long payPeriod;
 
         /**
+         * <p>The unit of the subscription duration. Valid values:</p>
+         * <ul>
+         * <li>Year</li>
+         * <li>Month</li>
+         * <li>Day</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Year</p>
          */
@@ -343,6 +418,14 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
             return this.autoRenew;
         }
 
+        public CreateServiceInstanceShrinkRequestCommodity setCouponId(String couponId) {
+            this.couponId = couponId;
+            return this;
+        }
+        public String getCouponId() {
+            return this.couponId;
+        }
+
         public CreateServiceInstanceShrinkRequestCommodity setPayPeriod(Long payPeriod) {
             this.payPeriod = payPeriod;
             return this;
@@ -363,6 +446,8 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
 
     public static class CreateServiceInstanceShrinkRequestOperationMetadata extends TeaModel {
         /**
+         * <p>The operation end time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-01-28T06:48:56Z</p>
          */
@@ -370,6 +455,8 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
         public String endTime;
 
         /**
+         * <p>The additional information.</p>
+         * 
          * <strong>example:</strong>
          * <pre><code class="language-json">  {
          *     &quot;vncInfo&quot;: [
@@ -387,6 +474,8 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
         public String extraInfo;
 
         /**
+         * <p>Imported resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>{   &quot;RegionId&quot;: &quot;cn-hangzhou&quot;,   &quot;Type&quot;: &quot;ResourceIds&quot;,   &quot;ResourceIds&quot;: {     &quot;ALIYUN::ECS::INSTANCE&quot;: [&quot;i-xxx&quot;, &quot;i-yyy&quot;],     &quot;ALIYUN::RDS::INSTANCE&quot;: [&quot;rm-xxx&quot;, &quot;rm-yyy&quot;],     &quot;ALIYUN::VPC::VPC&quot;: [&quot;vpc-xxx&quot;, &quot;vpc-yyy&quot;],     &quot;ALIYUN::SLB::INSTANCE&quot;: [&quot;lb-xxx&quot;, &quot;lb-yyy&quot;]   } }</p>
          */
@@ -394,6 +483,8 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
         public String resources;
 
         /**
+         * <p>The ID of the service instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>si-d6ab3a63ccbb4b17****</p>
          */
@@ -401,6 +492,8 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
         public String serviceInstanceId;
 
         /**
+         * <p>The operation start time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-12-29T06:48:56Z</p>
          */
@@ -456,7 +549,7 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
 
     public static class CreateServiceInstanceShrinkRequestTag extends TeaModel {
         /**
-         * <p>标签键。</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>key1</p>
@@ -465,7 +558,7 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>标签值。</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>value1</p>

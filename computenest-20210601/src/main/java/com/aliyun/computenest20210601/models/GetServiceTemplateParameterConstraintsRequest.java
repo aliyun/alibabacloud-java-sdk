@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetServiceTemplateParameterConstraintsRequest extends TeaModel {
     /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
@@ -12,6 +14,7 @@ public class GetServiceTemplateParameterConstraintsRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The region ID of the service instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,16 +24,26 @@ public class GetServiceTemplateParameterConstraintsRequest extends TeaModel {
     public String deployRegionId;
 
     /**
+     * <p>Specifies whether to enable the private connection. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("EnablePrivateVpcConnection")
     public Boolean enablePrivateVpcConnection;
 
+    /**
+     * <p>The configuration parameters of the service instance.</p>
+     */
     @NameInMap("Parameters")
     public java.util.List<GetServiceTemplateParameterConstraintsRequestParameters> parameters;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,6 +53,7 @@ public class GetServiceTemplateParameterConstraintsRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The service ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,6 +63,8 @@ public class GetServiceTemplateParameterConstraintsRequest extends TeaModel {
     public String serviceId;
 
     /**
+     * <p>The service instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>si-461ee95f46ca46xxxxxx</p>
      */
@@ -56,22 +72,40 @@ public class GetServiceTemplateParameterConstraintsRequest extends TeaModel {
     public String serviceInstanceId;
 
     /**
+     * <p>The service version.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("ServiceVersion")
     public String serviceVersion;
 
+    /**
+     * <p>The name of the specification package.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>套餐一</p>
+     */
     @NameInMap("SpecificationName")
     public String specificationName;
 
     /**
+     * <p>The template name.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>模板1</p>
      */
     @NameInMap("TemplateName")
     public String templateName;
 
     /**
+     * <p>The trial policy. Valid values:</p>
+     * <ul>
+     * <li>Trial: Trials are supported.</li>
+     * <li>NotTrial: Trials are not supported.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>NotTrial</p>
      */
@@ -173,6 +207,11 @@ public class GetServiceTemplateParameterConstraintsRequest extends TeaModel {
 
     public static class GetServiceTemplateParameterConstraintsRequestParameters extends TeaModel {
         /**
+         * <p>The name of the parameter. If you do not specify Parameters, the parameters and values in the template are used.</p>
+         * <blockquote>
+         * <p> Parameters is an optional parameter. ParameterKey is required if you specify Parameters.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>InstanceType</p>
          */
@@ -180,6 +219,11 @@ public class GetServiceTemplateParameterConstraintsRequest extends TeaModel {
         public String parameterKey;
 
         /**
+         * <p>The parameter value that is defined in the template.</p>
+         * <blockquote>
+         * <p> Parameters is an optional parameter. ParameterValue is required if you specify Parameters.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-j</p>
          */

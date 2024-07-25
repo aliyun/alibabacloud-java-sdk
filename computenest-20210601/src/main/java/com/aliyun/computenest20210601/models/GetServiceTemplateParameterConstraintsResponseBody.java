@@ -4,13 +4,21 @@ package com.aliyun.computenest20210601.models;
 import com.aliyun.tea.*;
 
 public class GetServiceTemplateParameterConstraintsResponseBody extends TeaModel {
+    /**
+     * <p>The package family constraints.</p>
+     */
     @NameInMap("FamilyConstraints")
     public java.util.List<String> familyConstraints;
 
+    /**
+     * <p>The constraints on the parameters.</p>
+     */
     @NameInMap("ParameterConstraints")
     public java.util.List<GetServiceTemplateParameterConstraintsResponseBodyParameterConstraints> parameterConstraints;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>449DC03D-A039-56A6-8D6F-6EBCCCE0EE2C</p>
      */
@@ -47,10 +55,15 @@ public class GetServiceTemplateParameterConstraintsResponseBody extends TeaModel
     }
 
     public static class GetServiceTemplateParameterConstraintsResponseBodyParameterConstraintsOriginalConstraints extends TeaModel {
+        /**
+         * <p>The valid values of the parameter.</p>
+         */
         @NameInMap("AllowedValues")
         public java.util.List<String> allowedValues;
 
         /**
+         * <p>The property name.</p>
+         * 
          * <strong>example:</strong>
          * <p>ZoneId</p>
          */
@@ -58,6 +71,8 @@ public class GetServiceTemplateParameterConstraintsResponseBody extends TeaModel
         public String propertyName;
 
         /**
+         * <p>The name of the resource that is defined in the template.</p>
+         * 
          * <strong>example:</strong>
          * <p>MyECS</p>
          */
@@ -65,6 +80,8 @@ public class GetServiceTemplateParameterConstraintsResponseBody extends TeaModel
         public String resourceName;
 
         /**
+         * <p>The resource type.</p>
+         * 
          * <strong>example:</strong>
          * <p>ALIYUN::ECS::InstanceGroup</p>
          */
@@ -111,12 +128,30 @@ public class GetServiceTemplateParameterConstraintsResponseBody extends TeaModel
     }
 
     public static class GetServiceTemplateParameterConstraintsResponseBodyParameterConstraintsQueryErrors extends TeaModel {
+        /**
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>record not exist</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <p>The resource name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyECS</p>
+         */
         @NameInMap("ResourceName")
         public String resourceName;
 
+        /**
+         * <p>The resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALIYUN::ECS::InstanceGroup</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
@@ -152,13 +187,29 @@ public class GetServiceTemplateParameterConstraintsResponseBody extends TeaModel
     }
 
     public static class GetServiceTemplateParameterConstraintsResponseBodyParameterConstraints extends TeaModel {
+        /**
+         * <p>The valid values of the parameter.</p>
+         */
         @NameInMap("AllowedValues")
         public java.util.List<String> allowedValues;
 
+        /**
+         * <p>The names of the associated parameters.</p>
+         */
         @NameInMap("AssociationParameterNames")
         public java.util.List<String> associationParameterNames;
 
         /**
+         * <p>The behavior of the parameter. Valid values:</p>
+         * <ul>
+         * <li>NoLimit: No limit is imposed on the value of this parameter.</li>
+         * <li>NotSupport: The value of this parameter cannot be queried.</li>
+         * <li>QueryError: This parameter failed to be queried.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If AllowedValues is not returned, Behavior and BehaviorReason are returned, which indicate the behavior of the parameter and the reason for the behavior.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>NoLimit</p>
          */
@@ -166,26 +217,38 @@ public class GetServiceTemplateParameterConstraintsResponseBody extends TeaModel
         public String behavior;
 
         /**
+         * <p>The reason why the behavior of the parameter is returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>No resource property refer to the parameter</p>
          */
         @NameInMap("BehaviorReason")
         public String behaviorReason;
 
+        /**
+         * <p>The original constraint information.</p>
+         */
         @NameInMap("OriginalConstraints")
         public java.util.List<GetServiceTemplateParameterConstraintsResponseBodyParameterConstraintsOriginalConstraints> originalConstraints;
 
         /**
+         * <p>The name of the parameter.</p>
+         * 
          * <strong>example:</strong>
          * <p>ZoneInfo</p>
          */
         @NameInMap("ParameterKey")
         public String parameterKey;
 
+        /**
+         * <p>The error details that are returned if the request fails.</p>
+         */
         @NameInMap("QueryErrors")
         public java.util.List<GetServiceTemplateParameterConstraintsResponseBodyParameterConstraintsQueryErrors> queryErrors;
 
         /**
+         * <p>The data type of the parameter.</p>
+         * 
          * <strong>example:</strong>
          * <p>String</p>
          */

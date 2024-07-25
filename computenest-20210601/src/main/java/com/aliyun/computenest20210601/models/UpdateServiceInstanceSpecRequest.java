@@ -5,16 +5,27 @@ import com.aliyun.tea.*;
 
 public class UpdateServiceInstanceSpecRequest extends TeaModel {
     /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-42665544****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The information about the order placed in Alibaba Cloud Marketplace. You do not need to specify this parameter if the service is not published in Alibaba Cloud Marketplace or uses the pay-as-you-go billing method.</p>
+     */
     @NameInMap("Commodity")
     public UpdateServiceInstanceSpecRequestCommodity commodity;
 
     /**
+     * <p>Specifies whether to perform only a dry run for the request to check information such as the permissions and instance status. Valid values:</p>
+     * <ul>
+     * <li><strong>true: performs a dry run for the request, but does not create a service instance.</strong></li>
+     * <li><strong>false: performs a dry run for the request, and creates a service instance if the request passes the dry run.</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -22,16 +33,30 @@ public class UpdateServiceInstanceSpecRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
+     * <p>Specifies whether to enable Prometheus on the customer side. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("EnableUserPrometheus")
     public Boolean enableUserPrometheus;
 
+    /**
+     * <p>The name of the configuration update operation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>package modify</p>
+     */
     @NameInMap("OperationName")
     public String operationName;
 
     /**
+     * <p>The configuration parameters of the service instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>{
      *   &quot;InstanceType&quot;: &quot;ecs.g8ise.2xlarge&quot;
@@ -40,10 +65,17 @@ public class UpdateServiceInstanceSpecRequest extends TeaModel {
     @NameInMap("Parameters")
     public java.util.Map<String, ?> parameters;
 
+    /**
+     * <p>The name of the specification package.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>package One</p>
+     */
     @NameInMap("PredefinedParametersName")
     public String predefinedParametersName;
 
     /**
+     * <p>The service instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -123,6 +155,12 @@ public class UpdateServiceInstanceSpecRequest extends TeaModel {
 
     public static class UpdateServiceInstanceSpecRequestCommodity extends TeaModel {
         /**
+         * <p>Specifies whether to automatically complete the payment. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */

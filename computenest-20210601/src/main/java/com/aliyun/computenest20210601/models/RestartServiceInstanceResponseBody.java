@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RestartServiceInstanceResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>13FE89A5-C036-56BF-A0FF-A31C59819FD7</p>
      */

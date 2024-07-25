@@ -5,6 +5,9 @@ import com.aliyun.tea.*;
 
 public class ListServiceInstanceResourcesRequest extends TeaModel {
     /**
+     * <p>End time of resource usage. 
+     * <notice>Note: Only supports querying service instances on private deployments.</p>
+     * 
      * <strong>example:</strong>
      * <p>2022-03-01T12:00:00</p>
      */
@@ -12,6 +15,9 @@ public class ListServiceInstanceResourcesRequest extends TeaModel {
     public String expireTimeEnd;
 
     /**
+     * <p>Start time of resource usage. 
+     * <notice>Note: Only supports querying service instances on private deployments.</p>
+     * 
      * <strong>example:</strong>
      * <p>2022-01-01T12:00:00</p>
      */
@@ -19,6 +25,8 @@ public class ListServiceInstanceResourcesRequest extends TeaModel {
     public String expireTimeStart;
 
     /**
+     * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -26,6 +34,12 @@ public class ListServiceInstanceResourcesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token that determines the start point of the next query. Valid values:</p>
+     * <ul>
+     * <li>If <strong>NextToken</strong> is not returned, it indicates that no additional results exist.</li>
+     * <li>If <strong>NextToken</strong> was returned in the previous query, specify the value to obtain the next set of results.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAc3HCuYhJi/wvpk4xOr0VLbAx7BkQzyYC+ONO+WudHGKEdB0uWSY7AGnM3qCgm/Ynge7zU6NWdbj0Tegyajyqyc=</p>
      */
@@ -33,6 +47,12 @@ public class ListServiceInstanceResourcesRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The billing method of the read-only instance. Valid values:</p>
+     * <ul>
+     * <li><strong>Postpaid</strong>: pay-as-you-go</li>
+     * <li><strong>Prepaid</strong>: subscription</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Subscription</p>
      */
@@ -40,16 +60,26 @@ public class ListServiceInstanceResourcesRequest extends TeaModel {
     public String payType;
 
     /**
+     * <p>The region ID. Valid values:</p>
+     * <ul>
+     * <li>cn-hangzhou: China (Hangzhou).</li>
+     * <li>ap-southeast-1: Singapore.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The Alibaba Cloud Resource Name (ARN) of a resource.</p>
+     */
     @NameInMap("ResourceARN")
     public java.util.List<String> resourceARN;
 
     /**
+     * <p>The ID of the service instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -58,9 +88,18 @@ public class ListServiceInstanceResourcesRequest extends TeaModel {
     @NameInMap("ServiceInstanceId")
     public String serviceInstanceId;
 
+    /**
+     * <p>Service Instance resource type，include AliyunResource and ContainerResource.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AliyunResource</p>
+     */
     @NameInMap("ServiceInstanceResourceType")
     public String serviceInstanceResourceType;
 
+    /**
+     * <p>The tag key and value.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<ListServiceInstanceResourcesRequestTag> tag;
 
@@ -151,6 +190,8 @@ public class ListServiceInstanceResourcesRequest extends TeaModel {
 
     public static class ListServiceInstanceResourcesRequestTag extends TeaModel {
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>key1</p>
          */
@@ -158,6 +199,8 @@ public class ListServiceInstanceResourcesRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>value1</p>
          */

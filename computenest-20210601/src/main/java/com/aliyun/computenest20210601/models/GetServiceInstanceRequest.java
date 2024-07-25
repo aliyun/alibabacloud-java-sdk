@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetServiceInstanceRequest extends TeaModel {
     /**
+     * <p>The MarketInstance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>704***59</p>
      */
@@ -12,6 +14,7 @@ public class GetServiceInstanceRequest extends TeaModel {
     public String marketInstanceId;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,11 @@ public class GetServiceInstanceRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The service instance ID.</p>
+     * <blockquote>
+     * <p> You must specify either <code>ServiceInstanceId</code> or <code>MarketInstanceId</code>. Otherwise, the operation fails.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>si-d6ab3a63ccbb4b17****</p>
      */
