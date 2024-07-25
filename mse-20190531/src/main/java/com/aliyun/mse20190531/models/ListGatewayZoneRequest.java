@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListGatewayZoneRequest extends TeaModel {
     /**
+     * <p>The language in which you want to display the results. Valid values: zh and en. zh indicates Chinese, which is the default value. en indicates English.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */

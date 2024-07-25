@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateGatewayFlowRuleResponseBody extends TeaModel {
     /**
+     * <p>The ID of the rule.</p>
+     * 
      * <strong>example:</strong>
      * <p>608</p>
      */
@@ -12,6 +14,8 @@ public class CreateGatewayFlowRuleResponseBody extends TeaModel {
     public Long data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>72FC625E-9629-591B-9C01-3F0BFDAB****</p>
      */

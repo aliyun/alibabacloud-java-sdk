@@ -20,7 +20,7 @@ public class GetServiceListenersRequest extends TeaModel {
     /**
      * <p>The ID of the MSE instance to which the service belongs.</p>
      * <blockquote>
-     * <p>You must specify InstanceId or ClusterId.</p>
+     * <p> You must specify InstanceId or ClusterId.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

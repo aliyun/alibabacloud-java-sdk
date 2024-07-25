@@ -14,7 +14,7 @@ public class QueryConfigResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The details of the data.</p>
+     * <p>The data returned.</p>
      */
     @NameInMap("Data")
     public QueryConfigResponseBodyData data;
@@ -138,6 +138,9 @@ public class QueryConfigResponseBody extends TeaModel {
     }
 
     public static class QueryConfigResponseBodyData extends TeaModel {
+        /**
+         * <p>Indicates whether Simple Authentication and Security Layer (SASL) forced identity authentication is enabled for the ZooKeeper instance.</p>
+         */
         @NameInMap("AuthEnabled")
         public Boolean authEnabled;
 
