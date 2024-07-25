@@ -97,9 +97,6 @@ public class File extends TeaModel {
     @NameInMap("FileModifiedTime")
     public String fileModifiedTime;
 
-    @NameInMap("FileStatus")
-    public String fileStatus;
-
     @NameInMap("Filename")
     public String filename;
 
@@ -171,6 +168,9 @@ public class File extends TeaModel {
 
     @NameInMap("ObjectId")
     public String objectId;
+
+    @NameInMap("ObjectStatus")
+    public String objectStatus;
 
     @NameInMap("ObjectType")
     public String objectType;
@@ -506,14 +506,6 @@ public class File extends TeaModel {
         return this.fileModifiedTime;
     }
 
-    public File setFileStatus(String fileStatus) {
-        this.fileStatus = fileStatus;
-        return this;
-    }
-    public String getFileStatus() {
-        return this.fileStatus;
-    }
-
     public File setFilename(String filename) {
         this.filename = filename;
         return this;
@@ -704,6 +696,14 @@ public class File extends TeaModel {
     }
     public String getObjectId() {
         return this.objectId;
+    }
+
+    public File setObjectStatus(String objectStatus) {
+        this.objectStatus = objectStatus;
+        return this;
+    }
+    public String getObjectStatus() {
+        return this.objectStatus;
     }
 
     public File setObjectType(String objectType) {
