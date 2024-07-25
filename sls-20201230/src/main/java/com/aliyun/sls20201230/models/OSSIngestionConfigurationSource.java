@@ -6,27 +6,43 @@ import com.aliyun.tea.*;
 public class OSSIngestionConfigurationSource extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ossbucket</p>
      */
     @NameInMap("bucket")
     public String bucket;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>none</p>
      */
     @NameInMap("compressionCodec")
     public String compressionCodec;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UTF-8</p>
      */
     @NameInMap("encoding")
     public String encoding;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1714360481</p>
+     */
     @NameInMap("endTime")
     public Long endTime;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss-cn-hangzhou.aliyuncs.com</p>
      */
     @NameInMap("endpoint")
     public String endpoint;
@@ -39,39 +55,81 @@ public class OSSIngestionConfigurationSource extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>never</p>
      */
     @NameInMap("interval")
     public String interval;
 
+    /**
+     * <strong>example:</strong>
+     * <p>.*</p>
+     */
     @NameInMap("pattern")
     public String pattern;
 
+    /**
+     * <strong>example:</strong>
+     * <p>prefix</p>
+     */
     @NameInMap("prefix")
     public String prefix;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("restoreObjectEnabled")
     public Boolean restoreObjectEnabled;
 
+    /**
+     * <strong>example:</strong>
+     * <p>acs:ram::12345:role/aliyunlogdefaultrole</p>
+     */
     @NameInMap("roleARN")
     public String roleARN;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1714274081</p>
+     */
     @NameInMap("startTime")
     public Long startTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p><strong>time</strong></p>
+     */
     @NameInMap("timeField")
     public String timeField;
 
+    /**
+     * <strong>example:</strong>
+     * <p>yyyy-MM-dd HH:mm:ss</p>
+     */
     @NameInMap("timeFormat")
     public String timeFormat;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[0-9]{0,2}/[0-9a-zA-Z]+/[0-9:,]+</p>
+     */
     @NameInMap("timePattern")
     public String timePattern;
 
+    /**
+     * <strong>example:</strong>
+     * <p>GMT+08:00</p>
+     */
     @NameInMap("timeZone")
     public String timeZone;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("useMetaIndex")
     public Boolean useMetaIndex;

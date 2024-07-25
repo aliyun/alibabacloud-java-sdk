@@ -13,11 +13,18 @@ public class MaxComputeExport extends TeaModel {
     @NameInMap("createTime")
     public Long createTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>MaxComputeExport</p>
+     */
     @NameInMap("description")
     public String description;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MaxComputeExport</p>
      */
     @NameInMap("displayName")
     public String displayName;
@@ -27,10 +34,17 @@ public class MaxComputeExport extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MaxComputeExport</p>
      */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>RUNNING</p>
+     */
     @NameInMap("status")
     public String status;
 

@@ -18,6 +18,9 @@ public class CreateIndexRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to turn on LogReduce. After you turn on LogReduce, either the whitelist or blacklist takes effect.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("log_reduce")
     public Boolean logReduce;
@@ -36,12 +39,18 @@ public class CreateIndexRequest extends TeaModel {
 
     /**
      * <p>The maximum length of a field value that can be retained. Default value: 2048. Unit: bytes. The default value is equal to 2 KB. You can change the value of max_text_len. Valid values: 64 to 16384.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2048</p>
      */
     @NameInMap("max_text_len")
     public Integer maxTextLen;
 
     /**
      * <p>The retention period of logs. Unit: days. Valid values: 7, 30, and 90.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("ttl")
     public Integer ttl;
@@ -110,18 +119,26 @@ public class CreateIndexRequest extends TeaModel {
     public static class CreateIndexRequestLine extends TeaModel {
         /**
          * <p>Specifies whether to enable case sensitivity. Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false (default)</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false (default)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("caseSensitive")
         public Boolean caseSensitive;
 
         /**
          * <p>Specifies whether to include Chinese characters. Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false (default)</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false (default)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("chn")
         public Boolean chn;
@@ -140,7 +157,6 @@ public class CreateIndexRequest extends TeaModel {
 
         /**
          * <p>The delimiters. You can specify a delimiter to delimit the content of a field value. For more information about delimiters, see Example.</p>
-         * <br>
          * <p>This parameter is required.</p>
          */
         @NameInMap("token")

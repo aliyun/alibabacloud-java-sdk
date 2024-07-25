@@ -4,9 +4,17 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class RefreshTokenRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>600</p>
+     */
     @NameInMap("accessTokenExpirationTime")
     public Long accessTokenExpirationTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>eyJ***************.eyJ******************.KUT****************</p>
+     */
     @NameInMap("ticket")
     public String ticket;
 

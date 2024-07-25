@@ -15,12 +15,18 @@ public class CreateScheduledSQLRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ali-test-scheduled-sql</p>
      */
     @NameInMap("displayName")
     public String displayName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sql-123456789-123456</p>
      */
     @NameInMap("name")
     public String name;

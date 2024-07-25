@@ -17,7 +17,10 @@ public class UpdateIndexRequest extends TeaModel {
     public UpdateIndexRequestLine line;
 
     /**
-     * <p>Specifies whether to turn on LogReduce. If you turn on LogReduce, only one of `log_reduce_white_list` and `log_reduce_black_list` takes effect.</p>
+     * <p>Specifies whether to turn on LogReduce. If you turn on LogReduce, only one of <code>log_reduce_white_list</code> and <code>log_reduce_black_list</code> takes effect.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("log_reduce")
     public Boolean logReduce;
@@ -36,14 +39,19 @@ public class UpdateIndexRequest extends TeaModel {
 
     /**
      * <p>The maximum length of a field value that can be retained.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2048</p>
      */
     @NameInMap("max_text_len")
     public Integer maxTextLen;
 
     /**
      * <p>The retention period of data. Unit: days. Valid values: 7, 30, and 90.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("ttl")
     public Integer ttl;
@@ -112,22 +120,28 @@ public class UpdateIndexRequest extends TeaModel {
     public static class UpdateIndexRequestLine extends TeaModel {
         /**
          * <p>Specifies whether to enable case sensitivity. Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
-         * <br>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("caseSensitive")
         public Boolean caseSensitive;
 
         /**
          * <p>Specifies whether to include Chinese characters. Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
-         * <br>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("chn")
         public Boolean chn;
@@ -146,7 +160,6 @@ public class UpdateIndexRequest extends TeaModel {
 
         /**
          * <p>The delimiters that are used to split text.</p>
-         * <br>
          * <p>This parameter is required.</p>
          */
         @NameInMap("token")

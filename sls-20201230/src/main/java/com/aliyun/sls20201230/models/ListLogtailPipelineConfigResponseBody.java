@@ -12,12 +12,18 @@ public class ListLogtailPipelineConfigResponseBody extends TeaModel {
 
     /**
      * <p>The number of Logtail pipeline configurations that are returned on the current page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("count")
     public Integer count;
 
     /**
      * <p>The total number of Logtail pipeline configurations in the current project.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("total")
     public Integer total;

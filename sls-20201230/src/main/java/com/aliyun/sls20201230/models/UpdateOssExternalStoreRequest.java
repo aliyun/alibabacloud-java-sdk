@@ -6,15 +6,16 @@ import com.aliyun.tea.*;
 public class UpdateOssExternalStoreRequest extends TeaModel {
     /**
      * <p>The name of the external store.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-oss-store</p>
      */
     @NameInMap("externalStoreName")
     public String externalStoreName;
 
     /**
      * <p>The parameters that are configured for the external store.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("parameter")
@@ -22,8 +23,10 @@ public class UpdateOssExternalStoreRequest extends TeaModel {
 
     /**
      * <p>The type of the external store. Set the value to oss.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss</p>
      */
     @NameInMap("storeType")
     public String storeType;
@@ -60,16 +63,20 @@ public class UpdateOssExternalStoreRequest extends TeaModel {
     public static class UpdateOssExternalStoreRequestParameterColumns extends TeaModel {
         /**
          * <p>The name of the field.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>The type of the field.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>varchar</p>
          */
         @NameInMap("type")
         public String type;
@@ -100,31 +107,36 @@ public class UpdateOssExternalStoreRequest extends TeaModel {
     public static class UpdateOssExternalStoreRequestParameter extends TeaModel {
         /**
          * <p>The AccessKey ID of your account.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LTAI5tFsHGGeYry*****1Sz</p>
          */
         @NameInMap("accessid")
         public String accessid;
 
         /**
          * <p>The AccessKey secret of your account.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GyviCLDVHkHrOztdkxuE6******Rp6</p>
          */
         @NameInMap("accesskey")
         public String accesskey;
 
         /**
          * <p>The name of the OSS bucket.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-bucket</p>
          */
         @NameInMap("bucket")
         public String bucket;
 
         /**
          * <p>The fields that are associated to the external store.</p>
-         * <br>
          * <p>This parameter is required.</p>
          */
         @NameInMap("columns")
@@ -132,15 +144,16 @@ public class UpdateOssExternalStoreRequest extends TeaModel {
 
         /**
          * <p>The Object Storage Service (OSS) endpoint.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss-cn-hangzhou.aliyuncs.com</p>
          */
         @NameInMap("endpoint")
         public String endpoint;
 
         /**
          * <p>The names of the OSS objects that are associated to the external store.</p>
-         * <br>
          * <p>This parameter is required.</p>
          */
         @NameInMap("objects")

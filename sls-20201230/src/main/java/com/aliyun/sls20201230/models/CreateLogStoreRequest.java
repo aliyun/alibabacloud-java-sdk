@@ -6,27 +6,39 @@ import com.aliyun.tea.*;
 public class CreateLogStoreRequest extends TeaModel {
     /**
      * <p>Specifies whether to record public IP addresses. Default value: false. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("appendMeta")
     public Boolean appendMeta;
 
     /**
      * <p>Specifies whether to enable automatic sharding. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("autoSplit")
     public Boolean autoSplit;
 
     /**
      * <p>Specifies whether to enable the web tracking feature. Default value: false. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("enable_tracking")
     public Boolean enableTracking;
@@ -39,8 +51,10 @@ public class CreateLogStoreRequest extends TeaModel {
 
     /**
      * <p>The retention period of data in the hot storage tier of the Logstore. Unit: days. You can specify a value that ranges from 30 to the value of ttl.</p>
-     * <br>
-     * <p>Hot data that is stored for longer than the period specified by hot_ttl is converted to cold data. For more information, see [Enable hot and cold-tiered storage for a Logstore](https://help.aliyun.com/document_detail/308645.html).</p>
+     * <p>Hot data that is stored for longer than the period specified by hot_ttl is converted to cold data. For more information, see <a href="https://help.aliyun.com/document_detail/308645.html">Enable hot and cold-tiered storage for a Logstore</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60</p>
      */
     @NameInMap("hot_ttl")
     public Integer hotTtl;
@@ -50,57 +64,77 @@ public class CreateLogStoreRequest extends TeaModel {
 
     /**
      * <p>The name of the Logstore. The name must meet the following requirements:</p>
-     * <br>
-     * <p>*   The name must be unique in a project.</p>
-     * <p>*   The name can contain only lowercase letters, digits, hyphens (-), and underscores (_).</p>
-     * <p>*   The name must start and end with a lowercase letter or a digit.</p>
-     * <p>*   The name must be 3 to 63 characters in length.</p>
-     * <br>
+     * <ul>
+     * <li>The name must be unique in a project.</li>
+     * <li>The name can contain only lowercase letters, digits, hyphens (-), and underscores (_).</li>
+     * <li>The name must start and end with a lowercase letter or a digit.</li>
+     * <li>The name must be 3 to 63 characters in length.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my-logstore</p>
      */
     @NameInMap("logstoreName")
     public String logstoreName;
 
     /**
      * <p>The maximum number of shards into which existing shards can be automatically split. Valid values: 1 to 64.</p>
-     * <br>
-     * <p>> If you set autoSplit to true, you must configure this parameter.</p>
+     * <blockquote>
+     * <p>If you set autoSplit to true, you must configure this parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>64</p>
      */
     @NameInMap("maxSplitShard")
     public Integer maxSplitShard;
 
     /**
      * <p>The type of the Logstore. Log Service provides the following types of Logstores: Standard Logstores and Query Logstores. Valid values:</p>
-     * <br>
-     * <p>*   **standard**: Standard Logstore. This type of Logstore supports the log analysis feature and is suitable for scenarios such as real-time monitoring and interactive analysis. You can also use this type of Logstore to build a comprehensive observability system.</p>
-     * <p>*   **query**: Query Logstore. This type of Logstore supports high-performance queries. The index traffic fee of a Query Logstore is approximately half that of a Standard Logstore. Query Logstores do not support SQL analysis. Query Logstores are suitable for scenarios in which the amount of data is large, the log retention period is long, or log analysis is not required. Log retention periods of weeks or months are considered long.</p>
+     * <ul>
+     * <li><strong>standard</strong>: Standard Logstore. This type of Logstore supports the log analysis feature and is suitable for scenarios such as real-time monitoring and interactive analysis. You can also use this type of Logstore to build a comprehensive observability system.</li>
+     * <li><strong>query</strong>: Query Logstore. This type of Logstore supports high-performance queries. The index traffic fee of a Query Logstore is approximately half that of a Standard Logstore. Query Logstores do not support SQL analysis. Query Logstores are suitable for scenarios in which the amount of data is large, the log retention period is long, or log analysis is not required. Log retention periods of weeks or months are considered long.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>standard</p>
      */
     @NameInMap("mode")
     public String mode;
 
     /**
      * <p>The number of shards.</p>
-     * <br>
-     * <p>> You cannot call the CreateLogStore operation to change the number of shards. You can call the SplitShard or MergeShards operation to change the number of shards.</p>
-     * <br>
+     * <blockquote>
+     * <p>You cannot call the CreateLogStore operation to change the number of shards. You can call the SplitShard or MergeShards operation to change the number of shards.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("shardCount")
     public Integer shardCount;
 
     /**
      * <p>The type of the observable data. Valid values:</p>
-     * <br>
-     * <p>*   None: logs</p>
-     * <p>*   Metrics: metrics</p>
+     * <ul>
+     * <li>None: logs</li>
+     * <li>Metrics: metrics</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
      */
     @NameInMap("telemetryType")
     public String telemetryType;
 
     /**
      * <p>The retention period of data. Unit: days. Valid values: 1 to 3000. If you set this parameter to 3650, data is permanently stored.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("ttl")
     public Integer ttl;

@@ -10,9 +10,6 @@ public class DeleteCollectionPolicyResponse extends TeaModel {
     @NameInMap("statusCode")
     public Integer statusCode;
 
-    @NameInMap("body")
-    public DeleteCollectionPolicyResponseBody body;
-
     public static DeleteCollectionPolicyResponse build(java.util.Map<String, ?> map) throws Exception {
         DeleteCollectionPolicyResponse self = new DeleteCollectionPolicyResponse();
         return TeaModel.build(map, self);
@@ -32,14 +29,6 @@ public class DeleteCollectionPolicyResponse extends TeaModel {
     }
     public Integer getStatusCode() {
         return this.statusCode;
-    }
-
-    public DeleteCollectionPolicyResponse setBody(DeleteCollectionPolicyResponseBody body) {
-        this.body = body;
-        return this;
-    }
-    public DeleteCollectionPolicyResponseBody getBody() {
-        return this.body;
     }
 
 }

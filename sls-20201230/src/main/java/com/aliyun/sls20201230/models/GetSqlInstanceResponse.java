@@ -43,18 +43,38 @@ public class GetSqlInstanceResponse extends TeaModel {
     }
 
     public static class GetSqlInstanceResponseBody extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>project_name</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("cu")
         public Integer cu;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1710230272</p>
+         */
         @NameInMap("createTime")
         public Integer createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1710230272</p>
+         */
         @NameInMap("updateTime")
         public Integer updateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("useAsDefault")
         public Boolean useAsDefault;
 

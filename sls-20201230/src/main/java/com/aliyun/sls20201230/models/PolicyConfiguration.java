@@ -4,12 +4,24 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class PolicyConfiguration extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>example_action_policy</p>
+     */
     @NameInMap("actionPolicyId")
     public String actionPolicyId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>sls.builtin.dynamic</p>
+     */
     @NameInMap("alertPolicyId")
     public String alertPolicyId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10m</p>
+     */
     @NameInMap("repeatInterval")
     public String repeatInterval;
 

@@ -4,23 +4,33 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class UpsertCollectionPolicyRequest extends TeaModel {
-    @NameInMap("attribute")
-    public UpsertCollectionPolicyRequestAttribute attribute;
-
     @NameInMap("centralizeConfig")
     public UpsertCollectionPolicyRequestCentralizeConfig centralizeConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("centralizeEnabled")
     public Boolean centralizeEnabled;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>access_log</p>
      */
     @NameInMap("dataCode")
     public String dataCode;
 
+    @NameInMap("dataConfig")
+    public UpsertCollectionPolicyRequestDataConfig dataConfig;
+
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("enabled")
     public Boolean enabled;
@@ -33,27 +43,28 @@ public class UpsertCollectionPolicyRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>your_log_policy</p>
      */
     @NameInMap("policyName")
     public String policyName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss</p>
      */
     @NameInMap("productCode")
     public String productCode;
 
+    @NameInMap("resourceDirectory")
+    public UpsertCollectionPolicyRequestResourceDirectory resourceDirectory;
+
     public static UpsertCollectionPolicyRequest build(java.util.Map<String, ?> map) throws Exception {
         UpsertCollectionPolicyRequest self = new UpsertCollectionPolicyRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpsertCollectionPolicyRequest setAttribute(UpsertCollectionPolicyRequestAttribute attribute) {
-        this.attribute = attribute;
-        return this;
-    }
-    public UpsertCollectionPolicyRequestAttribute getAttribute() {
-        return this.attribute;
     }
 
     public UpsertCollectionPolicyRequest setCentralizeConfig(UpsertCollectionPolicyRequestCentralizeConfig centralizeConfig) {
@@ -78,6 +89,14 @@ public class UpsertCollectionPolicyRequest extends TeaModel {
     }
     public String getDataCode() {
         return this.dataCode;
+    }
+
+    public UpsertCollectionPolicyRequest setDataConfig(UpsertCollectionPolicyRequestDataConfig dataConfig) {
+        this.dataConfig = dataConfig;
+        return this;
+    }
+    public UpsertCollectionPolicyRequestDataConfig getDataConfig() {
+        return this.dataConfig;
     }
 
     public UpsertCollectionPolicyRequest setEnabled(Boolean enabled) {
@@ -112,46 +131,40 @@ public class UpsertCollectionPolicyRequest extends TeaModel {
         return this.productCode;
     }
 
-    public static class UpsertCollectionPolicyRequestAttribute extends TeaModel {
-        @NameInMap("app")
-        public String app;
-
-        @NameInMap("policyGroup")
-        public String policyGroup;
-
-        public static UpsertCollectionPolicyRequestAttribute build(java.util.Map<String, ?> map) throws Exception {
-            UpsertCollectionPolicyRequestAttribute self = new UpsertCollectionPolicyRequestAttribute();
-            return TeaModel.build(map, self);
-        }
-
-        public UpsertCollectionPolicyRequestAttribute setApp(String app) {
-            this.app = app;
-            return this;
-        }
-        public String getApp() {
-            return this.app;
-        }
-
-        public UpsertCollectionPolicyRequestAttribute setPolicyGroup(String policyGroup) {
-            this.policyGroup = policyGroup;
-            return this;
-        }
-        public String getPolicyGroup() {
-            return this.policyGroup;
-        }
-
+    public UpsertCollectionPolicyRequest setResourceDirectory(UpsertCollectionPolicyRequestResourceDirectory resourceDirectory) {
+        this.resourceDirectory = resourceDirectory;
+        return this;
+    }
+    public UpsertCollectionPolicyRequestResourceDirectory getResourceDirectory() {
+        return this.resourceDirectory;
     }
 
     public static class UpsertCollectionPolicyRequestCentralizeConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>your-sls-logstore-in-beijing</p>
+         */
         @NameInMap("destLogstore")
         public String destLogstore;
 
+        /**
+         * <strong>example:</strong>
+         * <p>your-sls-project-in-beijing</p>
+         */
         @NameInMap("destProject")
         public String destProject;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
+         */
         @NameInMap("destRegion")
         public String destRegion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>your-sls-logstore-ttl</p>
+         */
         @NameInMap("destTTL")
         public Integer destTTL;
 
@@ -194,6 +207,25 @@ public class UpsertCollectionPolicyRequest extends TeaModel {
 
     }
 
+    public static class UpsertCollectionPolicyRequestDataConfig extends TeaModel {
+        @NameInMap("dataRegion")
+        public String dataRegion;
+
+        public static UpsertCollectionPolicyRequestDataConfig build(java.util.Map<String, ?> map) throws Exception {
+            UpsertCollectionPolicyRequestDataConfig self = new UpsertCollectionPolicyRequestDataConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public UpsertCollectionPolicyRequestDataConfig setDataRegion(String dataRegion) {
+            this.dataRegion = dataRegion;
+            return this;
+        }
+        public String getDataRegion() {
+            return this.dataRegion;
+        }
+
+    }
+
     public static class UpsertCollectionPolicyRequestPolicyConfig extends TeaModel {
         @NameInMap("instanceIds")
         public java.util.List<String> instanceIds;
@@ -203,6 +235,9 @@ public class UpsertCollectionPolicyRequest extends TeaModel {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>all</p>
          */
         @NameInMap("resourceMode")
         public String resourceMode;
@@ -245,6 +280,36 @@ public class UpsertCollectionPolicyRequest extends TeaModel {
         }
         public java.util.Map<String, ?> getResourceTags() {
             return this.resourceTags;
+        }
+
+    }
+
+    public static class UpsertCollectionPolicyRequestResourceDirectory extends TeaModel {
+        @NameInMap("accountGroupType")
+        public String accountGroupType;
+
+        @NameInMap("members")
+        public java.util.List<String> members;
+
+        public static UpsertCollectionPolicyRequestResourceDirectory build(java.util.Map<String, ?> map) throws Exception {
+            UpsertCollectionPolicyRequestResourceDirectory self = new UpsertCollectionPolicyRequestResourceDirectory();
+            return TeaModel.build(map, self);
+        }
+
+        public UpsertCollectionPolicyRequestResourceDirectory setAccountGroupType(String accountGroupType) {
+            this.accountGroupType = accountGroupType;
+            return this;
+        }
+        public String getAccountGroupType() {
+            return this.accountGroupType;
+        }
+
+        public UpsertCollectionPolicyRequestResourceDirectory setMembers(java.util.List<String> members) {
+            this.members = members;
+            return this;
+        }
+        public java.util.List<String> getMembers() {
+            return this.members;
         }
 
     }

@@ -4,9 +4,17 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class JoinConfiguration extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>$0.id == $1.id</p>
+     */
     @NameInMap("condition")
     public String condition;
 
+    /**
+     * <strong>example:</strong>
+     * <p>left_join</p>
+     */
     @NameInMap("type")
     public String type;
 

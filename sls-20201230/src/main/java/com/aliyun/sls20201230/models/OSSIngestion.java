@@ -10,23 +10,41 @@ public class OSSIngestion extends TeaModel {
     @NameInMap("configuration")
     public OSSIngestionConfiguration configuration;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1714360481</p>
+     */
     @NameInMap("createTime")
     public Long createTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>oss ingestion</p>
+     */
     @NameInMap("description")
     public String description;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss ingestion</p>
      */
     @NameInMap("displayName")
     public String displayName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1714360481</p>
+     */
     @NameInMap("lastModifiedTime")
     public Long lastModifiedTime;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ingest-oss-123456</p>
      */
     @NameInMap("name")
     public String name;
@@ -37,6 +55,17 @@ public class OSSIngestion extends TeaModel {
     @NameInMap("schedule")
     public Schedule schedule;
 
+    /**
+     * <strong>example:</strong>
+     * <p>c7f01719d9feb105fc9d8df92af62010</p>
+     */
+    @NameInMap("scheduleId")
+    public String scheduleId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>RUNNING</p>
+     */
     @NameInMap("status")
     public String status;
 
@@ -99,6 +128,14 @@ public class OSSIngestion extends TeaModel {
     }
     public Schedule getSchedule() {
         return this.schedule;
+    }
+
+    public OSSIngestion setScheduleId(String scheduleId) {
+        this.scheduleId = scheduleId;
+        return this;
+    }
+    public String getScheduleId() {
+        return this.scheduleId;
     }
 
     public OSSIngestion setStatus(String status) {

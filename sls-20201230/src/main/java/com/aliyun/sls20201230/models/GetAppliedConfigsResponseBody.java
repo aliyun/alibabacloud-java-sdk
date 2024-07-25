@@ -12,6 +12,9 @@ public class GetAppliedConfigsResponseBody extends TeaModel {
 
     /**
      * <p>The number of Logtail configurations.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("count")
     public Integer count;

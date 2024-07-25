@@ -6,54 +6,81 @@ import com.aliyun.tea.*;
 public class ScheduledSQLConfiguration extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>log2log</p>
      */
     @NameInMap("dataFormat")
     public String dataFormat;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-intranet.log.aliyuncs.com</p>
      */
     @NameInMap("destEndpoint")
     public String destEndpoint;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dest-logstore-demo</p>
      */
     @NameInMap("destLogstore")
     public String destLogstore;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>project-demo</p>
      */
     @NameInMap("destProject")
     public String destProject;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acs:ram::123456789:role/aliyunlogetlrole</p>
      */
     @NameInMap("destRoleArn")
     public String destRoleArn;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1712592000</p>
      */
     @NameInMap("fromTime")
     public Long fromTime;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>@m-1m</p>
      */
     @NameInMap("fromTimeExpr")
     public String fromTimeExpr;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("maxRetries")
     public Long maxRetries;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>600</p>
      */
     @NameInMap("maxRunTimeInSeconds")
     public Long maxRunTimeInSeconds;
@@ -66,42 +93,65 @@ public class ScheduledSQLConfiguration extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>enhanced</p>
      */
     @NameInMap("resourcePool")
     public String resourcePool;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acs:ram::123456789:role/aliyunlogetlrole</p>
      */
     @NameInMap("roleArn")
     public String roleArn;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <ul>
+     * <li>| select *</li>
+     * </ul>
      */
     @NameInMap("script")
     public String script;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>source-logstore-demo</p>
      */
     @NameInMap("sourceLogstore")
     public String sourceLogstore;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>searchQuery</p>
      */
     @NameInMap("sqlType")
     public String sqlType;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("toTime")
     public Long toTime;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>@m</p>
      */
     @NameInMap("toTimeExpr")
     public String toTimeExpr;

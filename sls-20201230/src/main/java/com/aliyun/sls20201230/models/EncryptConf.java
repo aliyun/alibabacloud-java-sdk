@@ -10,6 +10,10 @@ public class EncryptConf extends TeaModel {
     @NameInMap("enable")
     public Boolean enable;
 
+    /**
+     * <strong>example:</strong>
+     * <p>default</p>
+     */
     @NameInMap("encrypt_type")
     public String encryptType;
 

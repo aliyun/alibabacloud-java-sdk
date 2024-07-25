@@ -10,30 +10,56 @@ public class ETL extends TeaModel {
     @NameInMap("configuration")
     public ETLConfiguration configuration;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1714274900</p>
+     */
     @NameInMap("createTime")
     public Long createTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>加工作业</p>
+     */
     @NameInMap("description")
     public String description;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>etljob</p>
      */
     @NameInMap("displayName")
     public String displayName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1714274900</p>
+     */
     @NameInMap("lastModifiedTime")
     public Long lastModifiedTime;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>etl-20240426</p>
      */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>f0eb655e501a8780808d1970ef6d04c4</p>
+     */
     @NameInMap("scheduleId")
     public String scheduleId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>RUNNING</p>
+     */
     @NameInMap("status")
     public String status;
 

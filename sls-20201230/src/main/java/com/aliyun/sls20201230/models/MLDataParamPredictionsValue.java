@@ -4,9 +4,17 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class MLDataParamPredictionsValue extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>xxx</p>
+     */
     @NameInMap("annotatedBy")
     public String annotatedBy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1694761550</p>
+     */
     @NameInMap("updateTime")
     public Long updateTime;
 

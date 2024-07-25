@@ -10,9 +10,6 @@ public class UpsertCollectionPolicyResponse extends TeaModel {
     @NameInMap("statusCode")
     public Integer statusCode;
 
-    @NameInMap("body")
-    public UpsertCollectionPolicyResponseBody body;
-
     public static UpsertCollectionPolicyResponse build(java.util.Map<String, ?> map) throws Exception {
         UpsertCollectionPolicyResponse self = new UpsertCollectionPolicyResponse();
         return TeaModel.build(map, self);
@@ -32,14 +29,6 @@ public class UpsertCollectionPolicyResponse extends TeaModel {
     }
     public Integer getStatusCode() {
         return this.statusCode;
-    }
-
-    public UpsertCollectionPolicyResponse setBody(UpsertCollectionPolicyResponseBody body) {
-        this.body = body;
-        return this;
-    }
-    public UpsertCollectionPolicyResponseBody getBody() {
-        return this.body;
     }
 
 }

@@ -6,38 +6,49 @@ import com.aliyun.tea.*;
 public class CreateSavedSearchRequest extends TeaModel {
     /**
      * <p>The display name.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>displayname</p>
      */
     @NameInMap("displayName")
     public String displayName;
 
     /**
      * <p>The name of the Logstore to which the saved search belongs.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>aliyun-test-logstore</p>
      */
     @NameInMap("logstore")
     public String logstore;
 
     /**
      * <p>The name of the saved search. The name must be 3 to 63 characters in length.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pv in minutes</p>
      */
     @NameInMap("savedsearchName")
     public String savedsearchName;
 
     /**
-     * <p>The query statement of the saved search. A query statement consists of a search statement and an analytic statement in the `Search statement|Analytic statement` format. For more information about search statements and analytic statements, see [Log search overview](https://help.aliyun.com/document_detail/43772.html) and [Log analysis overview](https://help.aliyun.com/document_detail/53608.html).</p>
-     * <br>
+     * <p>The query statement of the saved search. A query statement consists of a search statement and an analytic statement in the <code>Search statement|Analytic statement</code> format. For more information about search statements and analytic statements, see <a href="https://help.aliyun.com/document_detail/43772.html">Log search overview</a> and <a href="https://help.aliyun.com/document_detail/53608.html">Log analysis overview</a>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><em>|select date_format(<strong>time</strong>-<strong>time</strong>%60, \&quot;%H:%i:%s\&quot;) as time, COUNT(</em>) as pv group by time</p>
      */
     @NameInMap("searchQuery")
     public String searchQuery;
 
     /**
      * <p>The topic of the log.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>theme</p>
      */
     @NameInMap("topic")
     public String topic;

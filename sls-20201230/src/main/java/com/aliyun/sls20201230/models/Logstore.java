@@ -4,15 +4,27 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class Logstore extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("appendMeta")
     public Boolean appendMeta;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("autoSplit")
     public Boolean autoSplit;
 
     @NameInMap("createTime")
     public Integer createTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("enable_tracking")
     public Boolean enableTracking;
 
@@ -22,6 +34,10 @@ public class Logstore extends TeaModel {
     @NameInMap("hot_ttl")
     public Integer hotTtl;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("infrequentAccessTTL")
     public Integer infrequentAccessTTL;
 
@@ -30,13 +46,24 @@ public class Logstore extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my-logstore</p>
      */
     @NameInMap("logstoreName")
     public String logstoreName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("maxSplitShard")
     public Integer maxSplitShard;
 
+    /**
+     * <strong>example:</strong>
+     * <p>standard</p>
+     */
     @NameInMap("mode")
     public String mode;
 
@@ -45,6 +72,9 @@ public class Logstore extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("shardCount")
     public Integer shardCount;
@@ -54,6 +84,9 @@ public class Logstore extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("ttl")
     public Integer ttl;

@@ -24,9 +24,17 @@ public class GetStoreViewIndexResponseBody extends TeaModel {
         @NameInMap("index")
         public Index index;
 
+        /**
+         * <strong>example:</strong>
+         * <p>my-logstore</p>
+         */
         @NameInMap("logstore")
         public String logstore;
 
+        /**
+         * <strong>example:</strong>
+         * <p>example-project</p>
+         */
         @NameInMap("project")
         public String project;
 

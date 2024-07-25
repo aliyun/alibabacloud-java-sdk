@@ -4,35 +4,61 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class AlertQuery extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>chartExmaple</p>
+     */
     @NameInMap("chartTitle")
     public String chartTitle;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dashboardExample</p>
+     */
     @NameInMap("dashboardId")
     public String dashboardId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>now</p>
      */
     @NameInMap("end")
     public String end;
 
+    /**
+     * <strong>example:</strong>
+     * <p>auto</p>
+     */
     @NameInMap("powerSqlMode")
     public String powerSqlMode;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>projectExample</p>
      */
     @NameInMap("project")
     public String project;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <ul>
+     * <li>| select *</li>
+     * </ul>
      */
     @NameInMap("query")
     public String query;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("region")
     public String region;
@@ -42,24 +68,36 @@ public class AlertQuery extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>-5m</p>
      */
     @NameInMap("start")
     public String start;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>store Example</p>
      */
     @NameInMap("store")
     public String store;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>log</p>
      */
     @NameInMap("storeType")
     public String storeType;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Relative</p>
      */
     @NameInMap("timeSpanType")
     public String timeSpanType;

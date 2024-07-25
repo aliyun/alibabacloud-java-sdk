@@ -4,18 +4,38 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class SinkEventStoreConfiguration extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("enabled")
     public Boolean enabled;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-shanghai-intranet.log.aliyuncs.com</p>
+     */
     @NameInMap("endpoint")
     public String endpoint;
 
+    /**
+     * <strong>example:</strong>
+     * <p>exampleStore</p>
+     */
     @NameInMap("eventStore")
     public String eventStore;
 
+    /**
+     * <strong>example:</strong>
+     * <p>exampleProject</p>
+     */
     @NameInMap("project")
     public String project;
 
+    /**
+     * <strong>example:</strong>
+     * <p>acs:ram::123456789:role/aliyunlogetlrole</p>
+     */
     @NameInMap("roleArn")
     public String roleArn;
 

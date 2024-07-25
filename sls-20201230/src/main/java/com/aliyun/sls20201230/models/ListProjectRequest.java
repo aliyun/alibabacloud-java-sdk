@@ -9,12 +9,18 @@ public class ListProjectRequest extends TeaModel {
 
     /**
      * <p>The line from which the query starts. Default value: 0.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("offset")
     public Integer offset;
 
     /**
      * <p>The name of the project.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ali-test-project</p>
      */
     @NameInMap("projectName")
     public String projectName;
@@ -24,6 +30,9 @@ public class ListProjectRequest extends TeaModel {
 
     /**
      * <p>The number of entries per page. Default value: 100. This operation can return up to 500 projects.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("size")
     public Integer size;

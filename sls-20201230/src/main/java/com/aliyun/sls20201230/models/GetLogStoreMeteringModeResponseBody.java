@@ -4,6 +4,10 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class GetLogStoreMeteringModeResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ChargeByFunction</p>
+     */
     @NameInMap("meteringMode")
     public String meteringMode;
 

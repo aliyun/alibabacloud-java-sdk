@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class ListMachineGroupResponseBody extends TeaModel {
     /**
      * <p>The number of machine groups that are returned on the current page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("count")
     public Integer count;
 
     /**
      * <p>The machine groups that meet the query conditions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[ &quot;test-machine-group-1&quot;, &quot;test-machine-group-2&quot; ]</p>
      */
     @NameInMap("machinegroups")
     public java.util.List<String> machinegroups;
 
     /**
      * <p>The total number of machine groups that meet the query conditions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("total")
     public Integer total;

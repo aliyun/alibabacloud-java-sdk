@@ -5,19 +5,28 @@ import com.aliyun.tea.*;
 
 public class ListDomainsRequest extends TeaModel {
     /**
-     * <p>The domain name that is used to match custom domain names. For example, if you set domainName to `example.com`, the matched domain names are `a.example.com` and `b.example.com`.</p>
+     * <p>The domain name that is used to match custom domain names. For example, if you set domainName to <code>example.com</code>, the matched domain names are <code>a.example.com</code> and <code>b.example.com</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("domainName")
     public String domainName;
 
     /**
      * <p>The line from which the query starts. Default value: 0.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("offset")
     public Integer offset;
 
     /**
      * <p>The number of entries per page. Default value: 500. Maximum value: 500.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("size")
     public Integer size;

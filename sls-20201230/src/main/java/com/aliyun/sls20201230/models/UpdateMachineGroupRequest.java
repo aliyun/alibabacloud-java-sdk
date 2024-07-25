@@ -12,36 +12,47 @@ public class UpdateMachineGroupRequest extends TeaModel {
 
     /**
      * <p>The name of the machine group.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-machine-group</p>
      */
     @NameInMap("groupName")
     public String groupName;
 
     /**
      * <p>The type of the machine group. Set the value to an empty string.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
      */
     @NameInMap("groupType")
     public String groupType;
 
     /**
      * <p>The identifier type of the machine group. Valid values:</p>
-     * <br>
-     * <p>*   ip: The machine group uses IP addresses as identifiers.</p>
-     * <p>*   userdefined: The machine group uses custom identifiers.</p>
-     * <br>
+     * <ul>
+     * <li>ip: The machine group uses IP addresses as identifiers.</li>
+     * <li>userdefined: The machine group uses custom identifiers.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>userdefined</p>
      */
     @NameInMap("machineIdentifyType")
     public String machineIdentifyType;
 
     /**
      * <p>The identifiers of the machines in the machine group.</p>
-     * <br>
-     * <p>*   If you set machineIdentifyType to ip, enter the IP addresses of the machines.</p>
-     * <p>*   If you set machineIdentifyType to userdefined, enter a custom identifier.</p>
-     * <br>
+     * <ul>
+     * <li>If you set machineIdentifyType to ip, enter the IP addresses of the machines.</li>
+     * <li>If you set machineIdentifyType to userdefined, enter a custom identifier.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[uu_id_1，uu_id_2]</p>
      */
     @NameInMap("machineList")
     public java.util.List<String> machineList;
@@ -94,12 +105,18 @@ public class UpdateMachineGroupRequest extends TeaModel {
     public static class UpdateMachineGroupRequestGroupAttribute extends TeaModel {
         /**
          * <p>The identifier of the external management system on which the machine group depends. This parameter is empty by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testgroup2</p>
          */
         @NameInMap("externalName")
         public String externalName;
 
         /**
          * <p>The topic of the machine group. This parameter is empty by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testtopic2</p>
          */
         @NameInMap("groupTopic")
         public String groupTopic;

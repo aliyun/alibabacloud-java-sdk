@@ -7,9 +7,17 @@ public class ListOSSHDFSExportsRequest extends TeaModel {
     @NameInMap("logstore")
     public String logstore;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("offset")
     public Integer offset;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("size")
     public Integer size;
 

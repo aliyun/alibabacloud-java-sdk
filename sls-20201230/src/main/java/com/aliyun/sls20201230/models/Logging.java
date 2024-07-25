@@ -12,6 +12,9 @@ public class Logging extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my-project</p>
      */
     @NameInMap("loggingProject")
     public String loggingProject;
@@ -40,12 +43,18 @@ public class Logging extends TeaModel {
     public static class LoggingLoggingDetails extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-logstore</p>
          */
         @NameInMap("logstore")
         public String logstore;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>consumergroup_log</p>
          */
         @NameInMap("type")
         public String type;

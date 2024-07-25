@@ -4,9 +4,17 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class AlertTag extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>title</p>
+     */
     @NameInMap("key")
     public String key;
 
+    /**
+     * <strong>example:</strong>
+     * <p>example value</p>
+     */
     @NameInMap("value")
     public String value;
 

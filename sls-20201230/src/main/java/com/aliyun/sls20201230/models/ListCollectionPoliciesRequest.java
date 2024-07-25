@@ -4,38 +4,54 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class ListCollectionPoliciesRequest extends TeaModel {
-    @NameInMap("attribute")
-    public ListCollectionPoliciesRequestAttribute attribute;
+    @NameInMap("centralProject")
+    public String centralProject;
 
+    /**
+     * <strong>example:</strong>
+     * <p>access_log</p>
+     */
     @NameInMap("dataCode")
     public String dataCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>your-test-bucket1</p>
+     */
     @NameInMap("instanceId")
     public String instanceId;
 
-    @NameInMap("pageNum")
-    public Integer pageNum;
+    @NameInMap("offset")
+    public Integer offset;
 
-    @NameInMap("pageSize")
-    public Integer pageSize;
-
+    /**
+     * <strong>example:</strong>
+     * <p>your_log_policy</p>
+     */
     @NameInMap("policyName")
     public String policyName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>oss</p>
+     */
     @NameInMap("productCode")
     public String productCode;
+
+    @NameInMap("size")
+    public Integer size;
 
     public static ListCollectionPoliciesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListCollectionPoliciesRequest self = new ListCollectionPoliciesRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListCollectionPoliciesRequest setAttribute(ListCollectionPoliciesRequestAttribute attribute) {
-        this.attribute = attribute;
+    public ListCollectionPoliciesRequest setCentralProject(String centralProject) {
+        this.centralProject = centralProject;
         return this;
     }
-    public ListCollectionPoliciesRequestAttribute getAttribute() {
-        return this.attribute;
+    public String getCentralProject() {
+        return this.centralProject;
     }
 
     public ListCollectionPoliciesRequest setDataCode(String dataCode) {
@@ -54,20 +70,12 @@ public class ListCollectionPoliciesRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public ListCollectionPoliciesRequest setPageNum(Integer pageNum) {
-        this.pageNum = pageNum;
+    public ListCollectionPoliciesRequest setOffset(Integer offset) {
+        this.offset = offset;
         return this;
     }
-    public Integer getPageNum() {
-        return this.pageNum;
-    }
-
-    public ListCollectionPoliciesRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
+    public Integer getOffset() {
+        return this.offset;
     }
 
     public ListCollectionPoliciesRequest setPolicyName(String policyName) {
@@ -86,34 +94,12 @@ public class ListCollectionPoliciesRequest extends TeaModel {
         return this.productCode;
     }
 
-    public static class ListCollectionPoliciesRequestAttribute extends TeaModel {
-        @NameInMap("app")
-        public String app;
-
-        @NameInMap("policyGroup")
-        public String policyGroup;
-
-        public static ListCollectionPoliciesRequestAttribute build(java.util.Map<String, ?> map) throws Exception {
-            ListCollectionPoliciesRequestAttribute self = new ListCollectionPoliciesRequestAttribute();
-            return TeaModel.build(map, self);
-        }
-
-        public ListCollectionPoliciesRequestAttribute setApp(String app) {
-            this.app = app;
-            return this;
-        }
-        public String getApp() {
-            return this.app;
-        }
-
-        public ListCollectionPoliciesRequestAttribute setPolicyGroup(String policyGroup) {
-            this.policyGroup = policyGroup;
-            return this;
-        }
-        public String getPolicyGroup() {
-            return this.policyGroup;
-        }
-
+    public ListCollectionPoliciesRequest setSize(Integer size) {
+        this.size = size;
+        return this;
+    }
+    public Integer getSize() {
+        return this.size;
     }
 
 }

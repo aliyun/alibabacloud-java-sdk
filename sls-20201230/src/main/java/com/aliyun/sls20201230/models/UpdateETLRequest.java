@@ -10,11 +10,18 @@ public class UpdateETLRequest extends TeaModel {
     @NameInMap("configuration")
     public ETLConfiguration configuration;
 
+    /**
+     * <strong>example:</strong>
+     * <p>this is description</p>
+     */
     @NameInMap("description")
     public String description;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>this is update</p>
      */
     @NameInMap("displayName")
     public String displayName;

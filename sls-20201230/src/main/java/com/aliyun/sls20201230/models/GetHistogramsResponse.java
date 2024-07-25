@@ -45,32 +45,40 @@ public class GetHistogramsResponse extends TeaModel {
     public static class GetHistogramsResponseBody extends TeaModel {
         /**
          * <p>The start time of the subinterval. The value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
-         * <br>
          * <p>The time range that is specified in this operation is a left-closed, right-open interval. The interval includes the start time specified by the from parameter, but does not include the end time specified by the to parameter. If you specify the same value for the from and to parameters, the interval is invalid, and an error message is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1409529600</p>
          */
         @NameInMap("from")
         public Long from;
 
         /**
          * <p>The end time of the subinterval. The value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
-         * <br>
          * <p>The time range that is specified in this operation is a left-closed, right-open interval. The interval includes the start time specified by the from parameter, but does not include the end time specified by the to parameter. If you specify the same value for the from and to parameters, the interval is invalid, and an error message is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1409569200</p>
          */
         @NameInMap("to")
         public Long to;
 
         /**
          * <p>The number of logs that are generated within the subinterval.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("count")
         public Long count;
 
         /**
          * <p>Indicates whether the query and analysis results in the subinterval is complete. Valid values:</p>
-         * <br>
          * <p>Complete: The query is successful, and the complete query and analysis results are returned.</p>
-         * <br>
          * <p>Incomplete: The query is successful, but the query and analysis results are incomplete. To obtain the complete results, you must repeat the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Complete</p>
          */
         @NameInMap("progress")
         public String progress;

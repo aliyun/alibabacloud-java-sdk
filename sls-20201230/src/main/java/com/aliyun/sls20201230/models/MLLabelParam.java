@@ -4,24 +4,48 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class MLLabelParam extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1695090077</p>
+     */
     @NameInMap("createTime")
     public Long createTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>默认表</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>abbd488f6dd42d294495fb780858e83d</p>
+     */
     @NameInMap("labelId")
     public String labelId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1695090077</p>
+     */
     @NameInMap("lastModifyTime")
     public Long lastModifyTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>标签表</p>
+     */
     @NameInMap("name")
     public String name;
 
     @NameInMap("settings")
     public java.util.List<MLLabelParamSettings> settings;
 
+    /**
+     * <strong>example:</strong>
+     * <p>xxx</p>
+     */
     @NameInMap("type")
     public String type;
 
@@ -87,15 +111,31 @@ public class MLLabelParam extends TeaModel {
     }
 
     public static class MLLabelParamSettings extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("config")
         public String config;
 
+        /**
+         * <strong>example:</strong>
+         * <p>builtin</p>
+         */
         @NameInMap("mode")
         public String mode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Trace.RCA</p>
+         */
         @NameInMap("type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.01</p>
+         */
         @NameInMap("version")
         public String version;
 

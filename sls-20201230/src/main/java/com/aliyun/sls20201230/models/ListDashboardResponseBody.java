@@ -40,12 +40,18 @@ public class ListDashboardResponseBody extends TeaModel {
     public static class ListDashboardResponseBodyDashboardItems extends TeaModel {
         /**
          * <p>The dashboard ID. The ID must be unique in a project. Fuzzy search is supported. For example, if you enter da, all dashboards whose IDs start with da are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dashboard-1609294922657-434834</p>
          */
         @NameInMap("dashboardName")
         public String dashboardName;
 
         /**
          * <p>The display name of the dashboard.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>data-ingest</p>
          */
         @NameInMap("displayName")
         public String displayName;

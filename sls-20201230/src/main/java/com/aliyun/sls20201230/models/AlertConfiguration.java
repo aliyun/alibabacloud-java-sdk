@@ -9,6 +9,9 @@ public class AlertConfiguration extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("autoAnnotation")
     public Boolean autoAnnotation;
@@ -16,6 +19,10 @@ public class AlertConfiguration extends TeaModel {
     @NameInMap("conditionConfiguration")
     public ConditionConfiguration conditionConfiguration;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dasnboardExample</p>
+     */
     @NameInMap("dashboard")
     public String dashboard;
 
@@ -31,15 +38,26 @@ public class AlertConfiguration extends TeaModel {
     @NameInMap("labels")
     public java.util.List<AlertTag> labels;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1698907508</p>
+     */
     @NameInMap("muteUntil")
     public Long muteUntil;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("noDataFire")
     public Boolean noDataFire;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6</p>
+     */
     @NameInMap("noDataSeverity")
     public Integer noDataSeverity;
 
@@ -54,6 +72,9 @@ public class AlertConfiguration extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("sendResolved")
     public Boolean sendResolved;
@@ -81,15 +102,25 @@ public class AlertConfiguration extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("threshold")
     public Integer threshold;
 
+    /**
+     * <strong>example:</strong>
+     * <p>default</p>
+     */
     @NameInMap("type")
     public String type;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2.0</p>
      */
     @NameInMap("version")
     public String version;

@@ -15,6 +15,9 @@ public class UpdateScheduledSQLRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ali-test-scheduled-sql</p>
      */
     @NameInMap("displayName")
     public String displayName;

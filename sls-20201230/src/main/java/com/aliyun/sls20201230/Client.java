@@ -6,21 +6,22 @@ import com.aliyun.sls20201230.models.*;
 
 public class Client extends com.aliyun.teaopenapi.Client {
 
-    public com.aliyun.gateway.spi.Client _client;
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._client = new com.aliyun.gateway.sls.Client();
-        this._spi = _client;
+        com.aliyun.gateway.sls.Client gatewayClient = new com.aliyun.gateway.sls.Client();
+        this._spi = gatewayClient;
         this._signatureAlgorithm = "v2";
         this._endpointRule = "central";
     }
 
 
     /**
-     * @summary Applies a Logtail configuration to a machine group.
-     *
-     * @description Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Applies a Logtail configuration to a machine group.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return ApplyConfigToMachineGroupResponse
@@ -47,10 +48,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Applies a Logtail configuration to a machine group.
-     *
-     * @description Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Applies a Logtail configuration to a machine group.</p>
      * @return ApplyConfigToMachineGroupResponse
      */
     public ApplyConfigToMachineGroupResponse applyConfigToMachineGroup(String project, String machineGroup, String configName) throws Exception {
@@ -60,8 +62,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the resource group of a resource.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the resource group of a resource.</p>
+     * 
      * @param request ChangeResourceGroupRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -104,8 +107,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the resource group of a resource.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the resource group of a resource.</p>
+     * 
      * @param request ChangeResourceGroupRequest
      * @return ChangeResourceGroupResponse
      */
@@ -116,12 +120,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Sends heartbeats to a server from a consumer.
-     *
-     * @description ### Usage notes
-     * *   Connections between consumers and servers are established by sending heartbeats at regular intervals. If a server does not receive heartbeats from a consumer on schedule, the server deletes the consumer.
-     * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <ul>
+     * <li>Connections between consumers and servers are established by sending heartbeats at regular intervals. If a server does not receive heartbeats from a consumer on schedule, the server deletes the consumer.</li>
+     * <li>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Sends heartbeats to a server from a consumer.</p>
+     * 
      * @param request ConsumerGroupHeartBeatRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -157,12 +165,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Sends heartbeats to a server from a consumer.
-     *
-     * @description ### Usage notes
-     * *   Connections between consumers and servers are established by sending heartbeats at regular intervals. If a server does not receive heartbeats from a consumer on schedule, the server deletes the consumer.
-     * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <ul>
+     * <li>Connections between consumers and servers are established by sending heartbeats at regular intervals. If a server does not receive heartbeats from a consumer on schedule, the server deletes the consumer.</li>
+     * <li>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Sends heartbeats to a server from a consumer.</p>
+     * 
      * @param request ConsumerGroupHeartBeatRequest
      * @return ConsumerGroupHeartBeatResponse
      */
@@ -173,8 +185,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新指定消费组消费数据时Shard的checkpoint。
-     *
+     * <b>description</b> :
+     * <p>  If you do not specify a consumer, you must set <strong>forceSuccess</strong> to <strong>true</strong>. Otherwise, the checkpoint cannot be updated.</p>
+     * <ul>
+     * <li>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</li>
+     * <li>An AccessKey pair is created and obtained. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
+     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a Resource Access Management (RAM) user to call API operations or perform routine O\&amp;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and authorize the RAM user to access Simple Log Service</a>.</li>
+     * <li>The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong, the region of the project, and the name of the Logstore to which the logs belong. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage a project</a> and <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the data consumption progress.</p>
+     * 
      * @param request ConsumerGroupUpdateCheckPointRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -193,11 +215,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("forceSuccess", request.forceSuccess);
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.checkpoint)) {
+            body.put("checkpoint", request.checkpoint);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.shard)) {
+            body.put("shard", request.shard);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.teautil.Common.toArray(request.body))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ConsumerGroupUpdateCheckPoint"),
@@ -214,8 +245,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新指定消费组消费数据时Shard的checkpoint。
-     *
+     * <b>description</b> :
+     * <p>  If you do not specify a consumer, you must set <strong>forceSuccess</strong> to <strong>true</strong>. Otherwise, the checkpoint cannot be updated.</p>
+     * <ul>
+     * <li>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</li>
+     * <li>An AccessKey pair is created and obtained. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
+     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a Resource Access Management (RAM) user to call API operations or perform routine O\&amp;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and authorize the RAM user to access Simple Log Service</a>.</li>
+     * <li>The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong, the region of the project, and the name of the Logstore to which the logs belong. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage a project</a> and <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the data consumption progress.</p>
+     * 
      * @param request ConsumerGroupUpdateCheckPointRequest
      * @return ConsumerGroupUpdateCheckPointResponse
      */
@@ -226,8 +267,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary CreateAlert
-     *
+     * <b>summary</b> : 
+     * <p>CreateAlert</p>
+     * 
      * @param request CreateAlertRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -278,8 +320,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary CreateAlert
-     *
+     * <b>summary</b> : 
+     * <p>CreateAlert</p>
+     * 
      * @param request CreateAlertRequest
      * @return CreateAlertResponse
      */
@@ -290,8 +333,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a dataset.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a dataset.</p>
+     * 
      * @param request CreateAnnotationDataSetRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -324,8 +368,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a dataset.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a dataset.</p>
+     * 
      * @param request CreateAnnotationDataSetRequest
      * @return CreateAnnotationDataSetResponse
      */
@@ -336,8 +381,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a tag table.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a tag table.</p>
+     * 
      * @param request CreateAnnotationLabelRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -364,8 +410,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a tag table.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a tag table.</p>
+     * 
      * @param request CreateAnnotationLabelRequest
      * @return CreateAnnotationLabelResponse
      */
@@ -376,16 +423,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a Logtail configuration.
-     *
-     * @description ### [](#)Usage notes
-     * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](https://help.aliyun.com/document_detail/29009.html).
-     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Log Service](https://help.aliyun.com/document_detail/47664.html).
-     * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong, the region of the project, and the name of the Logstore to which the logs belong. For more information, see [Manage a project](https://help.aliyun.com/document_detail/48984.html).
-     * *   You can create up to 100 Logtail configurations in a project.
-     * *   The Logtail configuration is planned out. For more information, see [Logtail configurations](https://help.aliyun.com/document_detail/29058.html).
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Usage notes</h3>
+     * <ul>
+     * <li>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</li>
+     * <li>An AccessKey pair is created and obtained. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
+     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\&amp;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and authorize the RAM user to access Log Service</a>.</li>
+     * <li>The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong, the region of the project, and the name of the Logstore to which the logs belong. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage a project</a>.</li>
+     * <li>You can create up to 100 Logtail configurations in a project.</li>
+     * <li>The Logtail configuration is planned out. For more information, see <a href="https://help.aliyun.com/document_detail/29058.html">Logtail configurations</a>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a Logtail configuration.</p>
+     * 
      * @param request CreateConfigRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -415,16 +466,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a Logtail configuration.
-     *
-     * @description ### [](#)Usage notes
-     * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](https://help.aliyun.com/document_detail/29009.html).
-     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Log Service](https://help.aliyun.com/document_detail/47664.html).
-     * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong, the region of the project, and the name of the Logstore to which the logs belong. For more information, see [Manage a project](https://help.aliyun.com/document_detail/48984.html).
-     * *   You can create up to 100 Logtail configurations in a project.
-     * *   The Logtail configuration is planned out. For more information, see [Logtail configurations](https://help.aliyun.com/document_detail/29058.html).
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Usage notes</h3>
+     * <ul>
+     * <li>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</li>
+     * <li>An AccessKey pair is created and obtained. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
+     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\&amp;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and authorize the RAM user to access Log Service</a>.</li>
+     * <li>The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong, the region of the project, and the name of the Logstore to which the logs belong. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage a project</a>.</li>
+     * <li>You can create up to 100 Logtail configurations in a project.</li>
+     * <li>The Logtail configuration is planned out. For more information, see <a href="https://help.aliyun.com/document_detail/29058.html">Logtail configurations</a>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a Logtail configuration.</p>
+     * 
      * @param request CreateConfigRequest
      * @return CreateConfigResponse
      */
@@ -435,13 +490,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a consumer group for a Logstore.
-     *
-     * @description ### Usage notes
-     * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     * *   You can create up to 30 consumer groups for a Logstore.
-     * *   Simple Log Service provides examples of both regular log consumption and consumer group-based log consumption by using Simple Log Service SDKs for Java. For more information, see [Consume log data](https://help.aliyun.com/document_detail/120035.html) and [Use consumer groups to consume data](https://help.aliyun.com/document_detail/28998.html).
-     *
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <ul>
+     * <li>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</li>
+     * <li>You can create up to 30 consumer groups for a Logstore.</li>
+     * <li>Simple Log Service provides examples of both regular log consumption and consumer group-based log consumption by using Simple Log Service SDKs for Java. For more information, see <a href="https://help.aliyun.com/document_detail/120035.html">Consume log data</a> and <a href="https://help.aliyun.com/document_detail/28998.html">Use consumer groups to consume data</a>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a consumer group for a specified Logstore.</p>
+     * 
      * @param request CreateConsumerGroupRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -484,13 +543,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a consumer group for a Logstore.
-     *
-     * @description ### Usage notes
-     * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     * *   You can create up to 30 consumer groups for a Logstore.
-     * *   Simple Log Service provides examples of both regular log consumption and consumer group-based log consumption by using Simple Log Service SDKs for Java. For more information, see [Consume log data](https://help.aliyun.com/document_detail/120035.html) and [Use consumer groups to consume data](https://help.aliyun.com/document_detail/28998.html).
-     *
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <ul>
+     * <li>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</li>
+     * <li>You can create up to 30 consumer groups for a Logstore.</li>
+     * <li>Simple Log Service provides examples of both regular log consumption and consumer group-based log consumption by using Simple Log Service SDKs for Java. For more information, see <a href="https://help.aliyun.com/document_detail/120035.html">Consume log data</a> and <a href="https://help.aliyun.com/document_detail/28998.html">Use consumer groups to consume data</a>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a consumer group for a specified Logstore.</p>
+     * 
      * @param request CreateConsumerGroupRequest
      * @return CreateConsumerGroupResponse
      */
@@ -501,14 +564,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a dashboard.
-     *
-     * @description ### [](#)Usage notes
-     * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](https://help.aliyun.com/document_detail/29009.html).
-     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](https://help.aliyun.com/document_detail/47664.html).
-     * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](https://help.aliyun.com/document_detail/48984.html).
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Usage notes</h3>
+     * <ul>
+     * <li>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</li>
+     * <li>An AccessKey pair is created and obtained. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
+     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\&amp;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and authorize the RAM user to access Simple Log Service</a>.</li>
+     * <li>The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage a project</a>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a dashboard.</p>
+     * 
      * @param request CreateDashboardRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -538,14 +605,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a dashboard.
-     *
-     * @description ### [](#)Usage notes
-     * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](https://help.aliyun.com/document_detail/29009.html).
-     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](https://help.aliyun.com/document_detail/47664.html).
-     * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](https://help.aliyun.com/document_detail/48984.html).
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Usage notes</h3>
+     * <ul>
+     * <li>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</li>
+     * <li>An AccessKey pair is created and obtained. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
+     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\&amp;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and authorize the RAM user to access Simple Log Service</a>.</li>
+     * <li>The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage a project</a>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a dashboard.</p>
+     * 
      * @param request CreateDashboardRequest
      * @return CreateDashboardResponse
      */
@@ -556,10 +627,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Binds a new custom domain name to a project.
-     *
-     * @description Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Binds a new custom domain name to a project.</p>
+     * 
      * @param request CreateDomainRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -594,10 +667,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Binds a new custom domain name to a project.
-     *
-     * @description Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Binds a new custom domain name to a project.</p>
+     * 
      * @param request CreateDomainRequest
      * @return CreateDomainResponse
      */
@@ -608,8 +683,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建数据加工任务
-     *
+     * <b>summary</b> : 
+     * <p>创建数据加工任务</p>
+     * 
      * @param request CreateETLRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -656,8 +732,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建数据加工任务
-     *
+     * <b>summary</b> : 
+     * <p>创建数据加工任务</p>
+     * 
      * @param request CreateETLRequest
      * @return CreateETLResponse
      */
@@ -668,10 +745,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates indexes for a Logstore.
-     *
-     * @description Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates indexes for a Logstore.</p>
+     * 
      * @param request CreateIndexRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -730,10 +809,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates indexes for a Logstore.
-     *
-     * @description Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates indexes for a Logstore.</p>
+     * 
      * @param request CreateIndexRequest
      * @return CreateIndexResponse
      */
@@ -744,11 +825,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Create a Logstore
-     *
-     * @description ### Usage notes
-     * Host consists of a project name and a Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>Host consists of a project name and a Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Create a Logstore</p>
+     * 
      * @param request CreateLogStoreRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -827,11 +910,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Create a Logstore
-     *
-     * @description ### Usage notes
-     * Host consists of a project name and a Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>Host consists of a project name and a Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Create a Logstore</p>
+     * 
      * @param request CreateLogStoreRequest
      * @return CreateLogStoreResponse
      */
@@ -842,10 +927,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables the service log feature for a project.
-     *
-     * @description Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables the service log feature for a project.</p>
+     * 
      * @param request CreateLoggingRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -884,10 +971,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables the service log feature for a project.
-     *
-     * @description Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables the service log feature for a project.</p>
+     * 
      * @param request CreateLoggingRequest
      * @return CreateLoggingResponse
      */
@@ -898,10 +987,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a Logtail pipeline configuration.
-     *
-     * @description The UK (London) region is supported. Supported regions are constantly updated.
-     *
+     * <b>description</b> :
+     * <p>The UK (London) region is supported. Supported regions are constantly updated.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a Logtail pipeline configuration.</p>
+     * 
      * @param request CreateLogtailPipelineConfigRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -960,10 +1051,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a Logtail pipeline configuration.
-     *
-     * @description The UK (London) region is supported. Supported regions are constantly updated.
-     *
+     * <b>description</b> :
+     * <p>The UK (London) region is supported. Supported regions are constantly updated.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a Logtail pipeline configuration.</p>
+     * 
      * @param request CreateLogtailPipelineConfigRequest
      * @return CreateLogtailPipelineConfigResponse
      */
@@ -974,11 +1067,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a machine group.
-     *
-     * @description ### Usage notes
-     * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a machine group.</p>
+     * 
      * @param request CreateMachineGroupRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1029,11 +1124,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a machine group.
-     *
-     * @description ### Usage notes
-     * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a machine group.</p>
+     * 
      * @param request CreateMachineGroupRequest
      * @return CreateMachineGroupResponse
      */
@@ -1044,8 +1141,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建OSS投递任务
-     *
+     * <b>summary</b> : 
+     * <p>创建OSS投递任务</p>
+     * 
      * @param request CreateOSSExportRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1092,8 +1190,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建OSS投递任务
-     *
+     * <b>summary</b> : 
+     * <p>创建OSS投递任务</p>
+     * 
      * @param request CreateOSSExportRequest
      * @return CreateOSSExportResponse
      */
@@ -1104,8 +1203,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建OSSHDFS投递任务
-     *
+     * <b>summary</b> : 
+     * <p>创建OSSHDFS投递任务</p>
+     * 
      * @param request CreateOSSHDFSExportRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1152,8 +1252,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建OSSHDFS投递任务
-     *
+     * <b>summary</b> : 
+     * <p>创建OSSHDFS投递任务</p>
+     * 
      * @param request CreateOSSHDFSExportRequest
      * @return CreateOSSHDFSExportResponse
      */
@@ -1164,8 +1265,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建OSS导入任务
-     *
+     * <b>summary</b> : 
+     * <p>创建OSS导入任务</p>
+     * 
      * @param request CreateOSSIngestionRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1216,8 +1318,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建OSS导入任务
-     *
+     * <b>summary</b> : 
+     * <p>创建OSS导入任务</p>
+     * 
      * @param request CreateOSSIngestionRequest
      * @return CreateOSSIngestionResponse
      */
@@ -1228,11 +1331,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates an Object Storage Service (OSS) external store.
-     *
-     * @description ### [](#)Usage notes
-     * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Usage notes</h3>
+     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an Object Storage Service (OSS) external store.</p>
+     * 
      * @param request CreateOssExternalStoreRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1275,11 +1380,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates an Object Storage Service (OSS) external store.
-     *
-     * @description ### [](#)Usage notes
-     * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Usage notes</h3>
+     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an Object Storage Service (OSS) external store.</p>
+     * 
      * @param request CreateOssExternalStoreRequest
      * @return CreateOssExternalStoreResponse
      */
@@ -1290,8 +1397,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a project.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a project.</p>
+     * 
      * @param request CreateProjectRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1335,8 +1443,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a project.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a project.</p>
+     * 
      * @param request CreateProjectRequest
      * @return CreateProjectResponse
      */
@@ -1347,10 +1456,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates an ApsaraDB RDS external store.
-     *
-     * @description Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an ApsaraDB RDS external store.</p>
+     * 
      * @param request CreateRdsExternalStoreRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1393,10 +1504,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates an ApsaraDB RDS external store.
-     *
-     * @description Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an ApsaraDB RDS external store.</p>
+     * 
      * @param request CreateRdsExternalStoreRequest
      * @return CreateRdsExternalStoreResponse
      */
@@ -1407,11 +1520,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a saved search.
-     *
-     * @description ### Usage notes
-     * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a saved search.</p>
+     * 
      * @param request CreateSavedSearchRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1462,11 +1577,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a saved search.
-     *
-     * @description ### Usage notes
-     * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a saved search.</p>
+     * 
      * @param request CreateSavedSearchRequest
      * @return CreateSavedSearchResponse
      */
@@ -1477,8 +1594,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建定时SQL任务
-     *
+     * <b>summary</b> : 
+     * <p>创建定时SQL任务</p>
+     * 
      * @param request CreateScheduledSQLRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1529,8 +1647,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建定时SQL任务
-     *
+     * <b>summary</b> : 
+     * <p>创建定时SQL任务</p>
+     * 
      * @param request CreateScheduledSQLRequest
      * @return CreateScheduledSQLResponse
      */
@@ -1541,8 +1660,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建独享sql实例
-     *
+     * <b>summary</b> : 
+     * <p>创建独享sql实例</p>
+     * 
      * @param request CreateSqlInstanceRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1581,8 +1701,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建独享sql实例
-     *
+     * <b>summary</b> : 
+     * <p>创建独享sql实例</p>
+     * 
      * @param request CreateSqlInstanceRequest
      * @return CreateSqlInstanceResponse
      */
@@ -1593,8 +1714,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建StoreView
-     *
+     * <b>summary</b> : 
+     * <p>创建StoreView</p>
+     * 
      * @param request CreateStoreViewRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1637,8 +1759,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建StoreView
-     *
+     * <b>summary</b> : 
+     * <p>创建StoreView</p>
+     * 
      * @param request CreateStoreViewRequest
      * @return CreateStoreViewResponse
      */
@@ -1649,8 +1772,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建Ticket
-     *
+     * <b>summary</b> : 
+     * <p>创建Ticket</p>
+     * 
      * @param request CreateTicketRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1686,8 +1810,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建Ticket
-     *
+     * <b>summary</b> : 
+     * <p>创建Ticket</p>
+     * 
      * @param request CreateTicketRequest
      * @return CreateTicketResponse
      */
@@ -1698,8 +1823,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除告警
-     *
+     * <b>summary</b> : 
+     * <p>删除告警</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteAlertResponse
@@ -1726,8 +1852,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除告警
-     *
+     * <b>summary</b> : 
+     * <p>删除告警</p>
      * @return DeleteAlertResponse
      */
     public DeleteAlertResponse deleteAlert(String project, String alertName) throws Exception {
@@ -1737,8 +1863,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Removes data from a dataset.
-     *
+     * <b>summary</b> : 
+     * <p>Removes data from a dataset.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteAnnotationDataResponse
@@ -1762,8 +1889,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Removes data from a dataset.
-     *
+     * <b>summary</b> : 
+     * <p>Removes data from a dataset.</p>
      * @return DeleteAnnotationDataResponse
      */
     public DeleteAnnotationDataResponse deleteAnnotationData(String datasetId, String annotationdataId) throws Exception {
@@ -1773,10 +1900,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a dataset.
-     *
-     * @description You can delete a dataset only if no data exists in the dataset.
-     *
+     * <b>description</b> :
+     * <p>You can delete a dataset only if no data exists in the dataset.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a dataset.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteAnnotationDataSetResponse
@@ -1800,10 +1929,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a dataset.
-     *
-     * @description You can delete a dataset only if no data exists in the dataset.
-     *
+     * <b>description</b> :
+     * <p>You can delete a dataset only if no data exists in the dataset.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a dataset.</p>
      * @return DeleteAnnotationDataSetResponse
      */
     public DeleteAnnotationDataSetResponse deleteAnnotationDataSet(String datasetId) throws Exception {
@@ -1813,10 +1943,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a tag table.
-     *
-     * @description Only non-built-in tags can be deleted.
-     *
+     * <b>description</b> :
+     * <p>Only non-built-in tags can be deleted.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a tag table.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteAnnotationLabelResponse
@@ -1840,10 +1972,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a tag table.
-     *
-     * @description Only non-built-in tags can be deleted.
-     *
+     * <b>description</b> :
+     * <p>Only non-built-in tags can be deleted.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a tag table.</p>
      * @return DeleteAnnotationLabelResponse
      */
     public DeleteAnnotationLabelResponse deleteAnnotationLabel(String labelId) throws Exception {
@@ -1853,8 +1986,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 通过调用DeleteCollectionPolicy删除配置的日志采集规则
-     *
+     * <b>description</b> :
+     * <p>You must use the Simple Log Service endpoint for the China (Shanghai) or Singapore region to call the operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>通过调用DeleteCollectionPolicy删除配置的日志采集规则</p>
+     * 
      * @param request DeleteCollectionPolicyRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1884,14 +2021,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
+            new TeaPair("bodyType", "none")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new DeleteCollectionPolicyResponse());
     }
 
     /**
-     * @summary 通过调用DeleteCollectionPolicy删除配置的日志采集规则
-     *
+     * <b>description</b> :
+     * <p>You must use the Simple Log Service endpoint for the China (Shanghai) or Singapore region to call the operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>通过调用DeleteCollectionPolicy删除配置的日志采集规则</p>
+     * 
      * @param request DeleteCollectionPolicyRequest
      * @return DeleteCollectionPolicyResponse
      */
@@ -1902,16 +2043,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a Logtail configuration.
-     *
-     * @description ### [](#)Usage notes
-     * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     * *   If a Logtail configuration is applied to a machine group, you cannot collect data from the machine group after you delete the Logtail configuration.
-     * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](https://help.aliyun.com/document_detail/29009.html).
-     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](https://help.aliyun.com/document_detail/47664.html).
-     * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](https://help.aliyun.com/document_detail/48984.html).
-     * *   The name of the required Logtail configuration is obtained. For more information, see [ListConfig](https://help.aliyun.com/document_detail/29043.html).
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Usage notes</h3>
+     * <ul>
+     * <li>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</li>
+     * <li>If a Logtail configuration is applied to a machine group, you cannot collect data from the machine group after you delete the Logtail configuration.</li>
+     * <li>An AccessKey pair is created and obtained. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
+     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\&amp;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and authorize the RAM user to access Simple Log Service</a>.</li>
+     * <li>The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage a project</a>.</li>
+     * <li>The name of the required Logtail configuration is obtained. For more information, see <a href="https://help.aliyun.com/document_detail/29043.html">ListConfig</a>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a Logtail configuration.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteConfigResponse
@@ -1938,16 +2083,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a Logtail configuration.
-     *
-     * @description ### [](#)Usage notes
-     * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     * *   If a Logtail configuration is applied to a machine group, you cannot collect data from the machine group after you delete the Logtail configuration.
-     * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](https://help.aliyun.com/document_detail/29009.html).
-     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](https://help.aliyun.com/document_detail/47664.html).
-     * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](https://help.aliyun.com/document_detail/48984.html).
-     * *   The name of the required Logtail configuration is obtained. For more information, see [ListConfig](https://help.aliyun.com/document_detail/29043.html).
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Usage notes</h3>
+     * <ul>
+     * <li>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</li>
+     * <li>If a Logtail configuration is applied to a machine group, you cannot collect data from the machine group after you delete the Logtail configuration.</li>
+     * <li>An AccessKey pair is created and obtained. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
+     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\&amp;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and authorize the RAM user to access Simple Log Service</a>.</li>
+     * <li>The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage a project</a>.</li>
+     * <li>The name of the required Logtail configuration is obtained. For more information, see <a href="https://help.aliyun.com/document_detail/29043.html">ListConfig</a>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a Logtail configuration.</p>
      * @return DeleteConfigResponse
      */
     public DeleteConfigResponse deleteConfig(String project, String configName) throws Exception {
@@ -1957,10 +2105,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a consumer group.
-     *
-     * @description Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a consumer group.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteConsumerGroupResponse
@@ -1987,10 +2137,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a consumer group.
-     *
-     * @description Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a consumer group.</p>
      * @return DeleteConsumerGroupResponse
      */
     public DeleteConsumerGroupResponse deleteConsumerGroup(String project, String logstore, String consumerGroup) throws Exception {
@@ -2000,14 +2151,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a dashboard.
-     *
-     * @description ### [](#)Usage notes
-     * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](https://help.aliyun.com/document_detail/29009.html).
-     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](https://help.aliyun.com/document_detail/47664.html).
-     * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](https://help.aliyun.com/document_detail/48984.html).
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Usage notes</h3>
+     * <ul>
+     * <li>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</li>
+     * <li>An AccessKey pair is created and obtained. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
+     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\&amp;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and authorize the RAM user to access Simple Log Service</a>.</li>
+     * <li>The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage a project</a>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a dashboard.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteDashboardResponse
@@ -2034,14 +2189,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a dashboard.
-     *
-     * @description ### [](#)Usage notes
-     * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](https://help.aliyun.com/document_detail/29009.html).
-     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](https://help.aliyun.com/document_detail/47664.html).
-     * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](https://help.aliyun.com/document_detail/48984.html).
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Usage notes</h3>
+     * <ul>
+     * <li>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</li>
+     * <li>An AccessKey pair is created and obtained. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
+     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\&amp;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and authorize the RAM user to access Simple Log Service</a>.</li>
+     * <li>The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage a project</a>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a dashboard.</p>
      * @return DeleteDashboardResponse
      */
     public DeleteDashboardResponse deleteDashboard(String project, String dashboardName) throws Exception {
@@ -2051,10 +2209,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a custom domain name that is bound to a project.
-     *
-     * @description Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a custom domain name that is bound to a project.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteDomainResponse
@@ -2081,10 +2241,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a custom domain name that is bound to a project.
-     *
-     * @description Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a custom domain name that is bound to a project.</p>
      * @return DeleteDomainResponse
      */
     public DeleteDomainResponse deleteDomain(String project, String domainName) throws Exception {
@@ -2094,8 +2255,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除数据加工任务
-     *
+     * <b>summary</b> : 
+     * <p>删除数据加工任务</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteETLResponse
@@ -2122,8 +2284,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除数据加工任务
-     *
+     * <b>summary</b> : 
+     * <p>删除数据加工任务</p>
      * @return DeleteETLResponse
      */
     public DeleteETLResponse deleteETL(String project, String etlName) throws Exception {
@@ -2133,10 +2295,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes an external store.
-     *
-     * @description Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an external store.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteExternalStoreResponse
@@ -2163,10 +2327,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes an external store.
-     *
-     * @description Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an external store.</p>
      * @return DeleteExternalStoreResponse
      */
     public DeleteExternalStoreResponse deleteExternalStore(String project, String externalStoreName) throws Exception {
@@ -2176,11 +2341,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes an index of a Logstore.
-     *
-     * @description ### Usage notes
-     * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an index of a Logstore.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteIndexResponse
@@ -2207,11 +2374,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes an index of a Logstore.
-     *
-     * @description ### Usage notes
-     * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an index of a Logstore.</p>
      * @return DeleteIndexResponse
      */
     public DeleteIndexResponse deleteIndex(String project, String logstore) throws Exception {
@@ -2221,11 +2389,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a Logstore, including all shards and indexes in the Logstore.
-     *
-     * @description ### Usage notes
-     * Host consists of a project name and a Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>Host consists of a project name and a Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a Logstore, including all shards and indexes in the Logstore.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteLogStoreResponse
@@ -2252,11 +2422,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a Logstore, including all shards and indexes in the Logstore.
-     *
-     * @description ### Usage notes
-     * Host consists of a project name and a Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>Host consists of a project name and a Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a Logstore, including all shards and indexes in the Logstore.</p>
      * @return DeleteLogStoreResponse
      */
     public DeleteLogStoreResponse deleteLogStore(String project, String logstore) throws Exception {
@@ -2266,8 +2437,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 关闭项目的服务日志记录。
-     *
+     * <b>summary</b> : 
+     * <p>关闭项目的服务日志记录。</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteLoggingResponse
@@ -2294,8 +2466,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 关闭项目的服务日志记录。
-     *
+     * <b>summary</b> : 
+     * <p>关闭项目的服务日志记录。</p>
      * @return DeleteLoggingResponse
      */
     public DeleteLoggingResponse deleteLogging(String project) throws Exception {
@@ -2305,10 +2477,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a Logtail pipeline configuration.
-     *
-     * @description The UK (London) region is supported. Supported regions are constantly updated.
-     *
+     * <b>description</b> :
+     * <p>The UK (London) region is supported. Supported regions are constantly updated.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a Logtail pipeline configuration.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteLogtailPipelineConfigResponse
@@ -2335,10 +2509,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a Logtail pipeline configuration.
-     *
-     * @description The UK (London) region is supported. Supported regions are constantly updated.
-     *
+     * <b>description</b> :
+     * <p>The UK (London) region is supported. Supported regions are constantly updated.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a Logtail pipeline configuration.</p>
      * @return DeleteLogtailPipelineConfigResponse
      */
     public DeleteLogtailPipelineConfigResponse deleteLogtailPipelineConfig(String project, String configName) throws Exception {
@@ -2348,11 +2523,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a machine group. If the Logtail configurations for log collection are applied to a machine group, the configurations are disassociated from the machine group after the machine group is deleted.
-     *
-     * @description ### Usage notes
-     * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a machine group. If the Logtail configurations for log collection are applied to a machine group, the configurations are disassociated from the machine group after the machine group is deleted.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteMachineGroupResponse
@@ -2379,11 +2556,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a machine group. If the Logtail configurations for log collection are applied to a machine group, the configurations are disassociated from the machine group after the machine group is deleted.
-     *
-     * @description ### Usage notes
-     * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a machine group. If the Logtail configurations for log collection are applied to a machine group, the configurations are disassociated from the machine group after the machine group is deleted.</p>
      * @return DeleteMachineGroupResponse
      */
     public DeleteMachineGroupResponse deleteMachineGroup(String project, String machineGroup) throws Exception {
@@ -2393,8 +2571,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除OSS投递任务
-     *
+     * <b>summary</b> : 
+     * <p>Deletes an Object Storage Service (OSS) data shipping job.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteOSSExportResponse
@@ -2421,8 +2600,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除OSS投递任务
-     *
+     * <b>summary</b> : 
+     * <p>Deletes an Object Storage Service (OSS) data shipping job.</p>
      * @return DeleteOSSExportResponse
      */
     public DeleteOSSExportResponse deleteOSSExport(String project, String ossExportName) throws Exception {
@@ -2432,8 +2611,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除OSSHDFS投递任务
-     *
+     * <b>summary</b> : 
+     * <p>删除OSSHDFS投递任务</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteOSSHDFSExportResponse
@@ -2460,8 +2640,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除OSSHDFS投递任务
-     *
+     * <b>summary</b> : 
+     * <p>删除OSSHDFS投递任务</p>
      * @return DeleteOSSHDFSExportResponse
      */
     public DeleteOSSHDFSExportResponse deleteOSSHDFSExport(String project, String ossExportName) throws Exception {
@@ -2471,8 +2651,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除OSS导入任务
-     *
+     * <b>summary</b> : 
+     * <p>删除OSS导入任务</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteOSSIngestionResponse
@@ -2499,8 +2680,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除OSS导入任务
-     *
+     * <b>summary</b> : 
+     * <p>删除OSS导入任务</p>
      * @return DeleteOSSIngestionResponse
      */
     public DeleteOSSIngestionResponse deleteOSSIngestion(String project, String ossIngestionName) throws Exception {
@@ -2510,8 +2691,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除project
-     *
+     * <b>summary</b> : 
+     * <p>删除project</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteProjectResponse
@@ -2538,8 +2720,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除project
-     *
+     * <b>summary</b> : 
+     * <p>删除project</p>
      * @return DeleteProjectResponse
      */
     public DeleteProjectResponse deleteProject(String project) throws Exception {
@@ -2549,11 +2731,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a project policy.
-     *
-     * @description ### Usage notes
-     * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a project policy.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteProjectPolicyResponse
@@ -2580,11 +2764,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a project policy.
-     *
-     * @description ### Usage notes
-     * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a project policy.</p>
      * @return DeleteProjectPolicyResponse
      */
     public DeleteProjectPolicyResponse deleteProjectPolicy(String project) throws Exception {
@@ -2594,11 +2779,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a saved search.
-     *
-     * @description ### Usage notes
-     * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a saved search.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteSavedSearchResponse
@@ -2625,11 +2812,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a saved search.
-     *
-     * @description ### Usage notes
-     * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a saved search.</p>
      * @return DeleteSavedSearchResponse
      */
     public DeleteSavedSearchResponse deleteSavedSearch(String project, String savedsearchName) throws Exception {
@@ -2639,8 +2827,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除定时SQL任务
-     *
+     * <b>summary</b> : 
+     * <p>删除定时SQL任务</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteScheduledSQLResponse
@@ -2667,8 +2856,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除定时SQL任务
-     *
+     * <b>summary</b> : 
+     * <p>删除定时SQL任务</p>
      * @return DeleteScheduledSQLResponse
      */
     public DeleteScheduledSQLResponse deleteScheduledSQL(String project, String scheduledSQLName) throws Exception {
@@ -2678,57 +2867,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI DeleteShipper is deprecated
-     *
-     * @summary Deletes the log shipping job of a Logstore.
-     *
-     * @description Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
-     * @param headers map
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return DeleteShipperResponse
-     */
-    // Deprecated
-    public DeleteShipperResponse deleteShipperWithOptions(String project, String logstore, String shipperName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
-        hostMap.put("project", project);
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("hostMap", hostMap),
-            new TeaPair("headers", headers)
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DeleteShipper"),
-            new TeaPair("version", "2020-12-30"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/logstores/" + logstore + "/shipper/" + shipperName + ""),
-            new TeaPair("method", "DELETE"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "none")
-        ));
-        return TeaModel.toModel(this.execute(params, req, runtime), new DeleteShipperResponse());
-    }
-
-    /**
-     * @deprecated OpenAPI DeleteShipper is deprecated
-     *
-     * @summary Deletes the log shipping job of a Logstore.
-     *
-     * @description Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
-     * @return DeleteShipperResponse
-     */
-    // Deprecated
-    public DeleteShipperResponse deleteShipper(String project, String logstore, String shipperName) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.deleteShipperWithOptions(project, logstore, shipperName, headers, runtime);
-    }
-
-    /**
-     * @summary 删除StoreView
-     *
+     * <b>summary</b> : 
+     * <p>删除StoreView</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteStoreViewResponse
@@ -2755,8 +2896,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除StoreView
-     *
+     * <b>summary</b> : 
+     * <p>删除StoreView</p>
      * @return DeleteStoreViewResponse
      */
     public DeleteStoreViewResponse deleteStoreView(String project, String name) throws Exception {
@@ -2766,8 +2907,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 禁用告警
-     *
+     * <b>summary</b> : 
+     * <p>禁用告警</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return DisableAlertResponse
@@ -2794,8 +2936,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 禁用告警
-     *
+     * <b>summary</b> : 
+     * <p>禁用告警</p>
      * @return DisableAlertResponse
      */
     public DisableAlertResponse disableAlert(String project, String alertName) throws Exception {
@@ -2805,8 +2947,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 禁用定时SQL任务
-     *
+     * <b>summary</b> : 
+     * <p>禁用定时SQL任务</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return DisableScheduledSQLResponse
@@ -2833,8 +2976,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 禁用定时SQL任务
-     *
+     * <b>summary</b> : 
+     * <p>禁用定时SQL任务</p>
      * @return DisableScheduledSQLResponse
      */
     public DisableScheduledSQLResponse disableScheduledSQL(String project, String scheduledSQLName) throws Exception {
@@ -2844,8 +2987,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 启用告警
-     *
+     * <b>summary</b> : 
+     * <p>启用告警</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return EnableAlertResponse
@@ -2872,8 +3016,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 启用告警
-     *
+     * <b>summary</b> : 
+     * <p>启用告警</p>
      * @return EnableAlertResponse
      */
     public EnableAlertResponse enableAlert(String project, String alertName) throws Exception {
@@ -2883,8 +3027,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 启用定时SQL任务
-     *
+     * <b>summary</b> : 
+     * <p>启用定时SQL任务</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return EnableScheduledSQLResponse
@@ -2911,8 +3056,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 启用定时SQL任务
-     *
+     * <b>summary</b> : 
+     * <p>启用定时SQL任务</p>
      * @return EnableScheduledSQLResponse
      */
     public EnableScheduledSQLResponse enableScheduledSQL(String project, String scheduledSQLName) throws Exception {
@@ -2922,8 +3067,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary GetAlert
-     *
+     * <b>summary</b> : 
+     * <p>GetAlert</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetAlertResponse
@@ -2950,8 +3096,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary GetAlert
-     *
+     * <b>summary</b> : 
+     * <p>GetAlert</p>
      * @return GetAlertResponse
      */
     public GetAlertResponse getAlert(String project, String alertName) throws Exception {
@@ -2961,8 +3107,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries data in a dataset based on the unique identifier of the data.
-     *
+     * <b>summary</b> : 
+     * <p>Queries data in a dataset based on the unique identifier of the data.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetAnnotationDataResponse
@@ -2986,8 +3133,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries data in a dataset based on the unique identifier of the data.
-     *
+     * <b>summary</b> : 
+     * <p>Queries data in a dataset based on the unique identifier of the data.</p>
      * @return GetAnnotationDataResponse
      */
     public GetAnnotationDataResponse getAnnotationData(String datasetId, String annotationdataId) throws Exception {
@@ -2997,8 +3144,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a dataset.
-     *
+     * <b>summary</b> : 
+     * <p>Queries a dataset.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetAnnotationDataSetResponse
@@ -3022,8 +3170,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a dataset.
-     *
+     * <b>summary</b> : 
+     * <p>Queries a dataset.</p>
      * @return GetAnnotationDataSetResponse
      */
     public GetAnnotationDataSetResponse getAnnotationDataSet(String datasetId) throws Exception {
@@ -3033,8 +3181,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a tag table by using a label id.
-     *
+     * <b>summary</b> : 
+     * <p>Queries a tag table by using a label ID.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetAnnotationLabelResponse
@@ -3058,8 +3207,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a tag table by using a label id.
-     *
+     * <b>summary</b> : 
+     * <p>Queries a tag table by using a label ID.</p>
      * @return GetAnnotationLabelResponse
      */
     public GetAnnotationLabelResponse getAnnotationLabel(String labelId) throws Exception {
@@ -3069,10 +3218,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the Logtail configurations that are applied to a machine group.
-     *
-     * @description Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the Logtail configurations that are applied to a machine group.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetAppliedConfigsResponse
@@ -3099,10 +3250,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the Logtail configurations that are applied to a machine group.
-     *
-     * @description Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the Logtail configurations that are applied to a machine group.</p>
      * @return GetAppliedConfigsResponse
      */
     public GetAppliedConfigsResponse getAppliedConfigs(String project, String machineGroup) throws Exception {
@@ -3112,10 +3264,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the machine groups to which a Logtail configuration is bound.
-     *
-     * @description Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the machine groups to which a Logtail configuration is bound.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetAppliedMachineGroupsResponse
@@ -3142,10 +3296,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the machine groups to which a Logtail configuration is bound.
-     *
-     * @description Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the machine groups to which a Logtail configuration is bound.</p>
      * @return GetAppliedMachineGroupsResponse
      */
     public GetAppliedMachineGroupsResponse getAppliedMachineGroups(String project, String configName) throws Exception {
@@ -3155,10 +3310,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the checkpoints of a shard from which data is consumed by a consumer group.
-     *
-     * @description Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the checkpoints of a shard from which data is consumed by a consumer group.</p>
+     * 
      * @param request GetCheckPointRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3193,10 +3350,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the checkpoints of a shard from which data is consumed by a consumer group.
-     *
-     * @description Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the checkpoints of a shard from which data is consumed by a consumer group.</p>
+     * 
      * @param request GetCheckPointRequest
      * @return GetCheckPointResponse
      */
@@ -3207,8 +3366,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 调用GetCollectionPolicy获取对应的规则
-     *
+     * <b>summary</b> : 
+     * <p>调用GetCollectionPolicy获取对应的规则</p>
+     * 
      * @param request GetCollectionPolicyRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3244,8 +3404,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 调用GetCollectionPolicy获取对应的规则
-     *
+     * <b>summary</b> : 
+     * <p>调用GetCollectionPolicy获取对应的规则</p>
+     * 
      * @param request GetCollectionPolicyRequest
      * @return GetCollectionPolicyResponse
      */
@@ -3256,15 +3417,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of a Logtail configuration.
-     *
-     * @description ### [](#)Usage notes
-     * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](https://help.aliyun.com/document_detail/29009.html).
-     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](https://help.aliyun.com/document_detail/47664.html).
-     * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](https://help.aliyun.com/document_detail/48984.html).
-     * *   The name of the required Logtail configuration is obtained. For more information, see [ListConfig](https://help.aliyun.com/document_detail/29043.html).
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Usage notes</h3>
+     * <ul>
+     * <li>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</li>
+     * <li>An AccessKey pair is created and obtained. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
+     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\&amp;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and authorize the RAM user to access Simple Log Service</a>.</li>
+     * <li>The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage a project</a>.</li>
+     * <li>The name of the required Logtail configuration is obtained. For more information, see <a href="https://help.aliyun.com/document_detail/29043.html">ListConfig</a>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of a Logtail configuration.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetConfigResponse
@@ -3291,15 +3456,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of a Logtail configuration.
-     *
-     * @description ### [](#)Usage notes
-     * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](https://help.aliyun.com/document_detail/29009.html).
-     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](https://help.aliyun.com/document_detail/47664.html).
-     * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](https://help.aliyun.com/document_detail/48984.html).
-     * *   The name of the required Logtail configuration is obtained. For more information, see [ListConfig](https://help.aliyun.com/document_detail/29043.html).
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Usage notes</h3>
+     * <ul>
+     * <li>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</li>
+     * <li>An AccessKey pair is created and obtained. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
+     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\&amp;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and authorize the RAM user to access Simple Log Service</a>.</li>
+     * <li>The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage a project</a>.</li>
+     * <li>The name of the required Logtail configuration is obtained. For more information, see <a href="https://help.aliyun.com/document_detail/29043.html">ListConfig</a>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of a Logtail configuration.</p>
      * @return GetConfigResponse
      */
     public GetConfigResponse getConfig(String project, String configName) throws Exception {
@@ -3309,11 +3477,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the contextual logs of a specified log.
-     *
-     * @description *   You can specify a log as the start log. The time range of a contextual query is one day before and one day after the generation time of the start log.
-     * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <p>  You can specify a log as the start log. The time range of a contextual query is one day before and one day after the generation time of the start log.</p>
+     * <ul>
+     * <li>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the contextual logs of a specified log.</p>
+     * 
      * @param request GetContextLogsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3364,11 +3536,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the contextual logs of a specified log.
-     *
-     * @description *   You can specify a log as the start log. The time range of a contextual query is one day before and one day after the generation time of the start log.
-     * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <p>  You can specify a log as the start log. The time range of a contextual query is one day before and one day after the generation time of the start log.</p>
+     * <ul>
+     * <li>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the contextual logs of a specified log.</p>
+     * 
      * @param request GetContextLogsRequest
      * @return GetContextLogsResponse
      */
@@ -3379,15 +3555,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a cursor based on a point in time.
-     *
-     * @description ### Usage notes
-     * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     * *   The following content describes the relationships among a cursor, project, Logstore, and shard:
-     *     *   A project can have multiple Logstores.
-     *     *   A Logstore can have multiple shards.
-     *     *   You can use a cursor to obtain a log in a shard.
-     *
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <ul>
+     * <li>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</li>
+     * <li>The following content describes the relationships among a cursor, project, Logstore, and shard:<ul>
+     * <li>A project can have multiple Logstores.</li>
+     * <li>A Logstore can have multiple shards.</li>
+     * <li>You can use a cursor to obtain a log in a shard.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a cursor based on a point in time.</p>
+     * 
      * @param request GetCursorRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3422,15 +3604,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a cursor based on a point in time.
-     *
-     * @description ### Usage notes
-     * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     * *   The following content describes the relationships among a cursor, project, Logstore, and shard:
-     *     *   A project can have multiple Logstores.
-     *     *   A Logstore can have multiple shards.
-     *     *   You can use a cursor to obtain a log in a shard.
-     *
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <ul>
+     * <li>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</li>
+     * <li>The following content describes the relationships among a cursor, project, Logstore, and shard:<ul>
+     * <li>A project can have multiple Logstores.</li>
+     * <li>A Logstore can have multiple shards.</li>
+     * <li>You can use a cursor to obtain a log in a shard.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a cursor based on a point in time.</p>
+     * 
      * @param request GetCursorRequest
      * @return GetCursorResponse
      */
@@ -3441,8 +3629,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the server time of a cursor.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the server time of a cursor.</p>
+     * 
      * @param request GetCursorTimeRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3477,8 +3666,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the server time of a cursor.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the server time of a cursor.</p>
+     * 
      * @param request GetCursorTimeRequest
      * @return GetCursorTimeResponse
      */
@@ -3489,14 +3679,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a dashboard.
-     *
-     * @description ### [](#)Usage notes
-     * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](https://help.aliyun.com/document_detail/29009.html).
-     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](https://help.aliyun.com/document_detail/47664.html).
-     * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](https://help.aliyun.com/document_detail/48984.html).
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Usage notes</h3>
+     * <ul>
+     * <li>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</li>
+     * <li>An AccessKey pair is created and obtained. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
+     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\&amp;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and authorize the RAM user to access Simple Log Service</a>.</li>
+     * <li>The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage a project</a>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a dashboard.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetDashboardResponse
@@ -3523,14 +3717,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a dashboard.
-     *
-     * @description ### [](#)Usage notes
-     * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](https://help.aliyun.com/document_detail/29009.html).
-     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](https://help.aliyun.com/document_detail/47664.html).
-     * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](https://help.aliyun.com/document_detail/48984.html).
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Usage notes</h3>
+     * <ul>
+     * <li>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</li>
+     * <li>An AccessKey pair is created and obtained. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
+     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\&amp;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and authorize the RAM user to access Simple Log Service</a>.</li>
+     * <li>The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage a project</a>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a dashboard.</p>
      * @return GetDashboardResponse
      */
     public GetDashboardResponse getDashboard(String project, String dashboardName) throws Exception {
@@ -3540,8 +3737,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取数据加工任务信息
-     *
+     * <b>summary</b> : 
+     * <p>获取数据加工任务信息</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetETLResponse
@@ -3568,8 +3766,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取数据加工任务信息
-     *
+     * <b>summary</b> : 
+     * <p>获取数据加工任务信息</p>
      * @return GetETLResponse
      */
     public GetETLResponse getETL(String project, String etlName) throws Exception {
@@ -3579,11 +3777,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of an external store.
-     *
-     * @description *   The supported data sources of external stores include Object Storage Service (OSS) buckets and ApsaraDB RDS for MySQL databases in a virtual private cloud (VPC).
-     * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <p>  The supported data sources of external stores include Object Storage Service (OSS) buckets and ApsaraDB RDS for MySQL databases in a virtual private cloud (VPC).</p>
+     * <ul>
+     * <li>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of an external store.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetExternalStoreResponse
@@ -3610,11 +3812,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of an external store.
-     *
-     * @description *   The supported data sources of external stores include Object Storage Service (OSS) buckets and ApsaraDB RDS for MySQL databases in a virtual private cloud (VPC).
-     * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <p>  The supported data sources of external stores include Object Storage Service (OSS) buckets and ApsaraDB RDS for MySQL databases in a virtual private cloud (VPC).</p>
+     * <ul>
+     * <li>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of an external store.</p>
      * @return GetExternalStoreResponse
      */
     public GetExternalStoreResponse getExternalStore(String project, String externalStoreName) throws Exception {
@@ -3624,19 +3829,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the distribution of logs that meet the specified search conditions in a Logstore.
-     *
-     * @description ### Usage notes
-     * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     * *   The time range is evenly divided into subintervals in the responses. If the time range that is specified in the request remains unchanged, the subintervals in the responses also remain unchanged.
-     * *   If the number of logs in a Logstore significantly changes, Simple Log Service cannot predict the number of times that you must call this operation to obtain the complete result. In this case, you must check the value of the progress parameter in the response of each request and determine whether to call this operation one more time to obtain the complete result. Each time you call this operation, the same number of charge units (CUs) are consumed.
-     * *   After a log is written to a Logstore, you can call the GetHistograms or GetLogs operation to query the log after a short latency. The latency of a query varies based on the type of the log. Simple Log Service classifies logs into the following types based on the log time:
-     *     *   Real-time data: The difference between the time record in a log and the current time on Simple Log Service is within the interval (-180 seconds,900 seconds]. For example, if a log was generated at 12:03:00, September 25, 2014 (UTC) and Simple Log Service received the log at 12:05:00, September 25, 2014 (UTC), Simple Log Service processes the log as real-time data. After real-time data is written to a Logstore, the data can be queried with a maximum latency of 3 seconds.
-     *     *   Historical data: The difference between the time record in a log and the current time on Simple Log Service is within the interval [-604,800 seconds,-180 seconds). For example, if a log was generated at 12:00:00, September 25, 2014 (UTC) and Simple Log Service received the log at 12:05:00, September 25, 2014 (UTC), Simple Log Service processes the log as historical data. This type of log is usually generated in data backfill scenarios.
-     *     After real-time data is written to a Logstore, the data can be queried with a maximum latency of 3 seconds. For 99.9% of queries, the latency is no more than 1 second.
-     * > Simple Log Service calculates the difference between the log time that is specified by the __time__ field and the receiving time that is specified by the __tag__:__receive_time__ field for each log. The receiving time indicates the time at which Simple Log Service receives the log. If the difference is within the interval (-180 seconds,900 seconds], Simple Log Service processes the log as real-time data. If the difference is within the interval [-604,800 seconds,-180 seconds), Simple Log Service processes the log as historical data.
-     * *   Simple Log Service provides examples on how to call the GetHistograms operation by using Simple Log Service SDK for Java. For more information, see [Use GetHistograms to query the distribution of logs](https://help.aliyun.com/document_detail/462234.html).
-     *
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <ul>
+     * <li>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</li>
+     * <li>The time range is evenly divided into subintervals in the responses. If the time range that is specified in the request remains unchanged, the subintervals in the responses also remain unchanged.</li>
+     * <li>If the number of logs in a Logstore significantly changes, Simple Log Service cannot predict the number of times that you must call this operation to obtain the complete result. In this case, you must check the value of the progress parameter in the response of each request and determine whether to call this operation one more time to obtain the complete result. Each time you call this operation, the same number of charge units (CUs) are consumed.</li>
+     * <li>After a log is written to a Logstore, you can call the GetHistograms or GetLogs operation to query the log after a short latency. The latency of a query varies based on the type of the log. Simple Log Service classifies logs into the following types based on the log time:<ul>
+     * <li>Real-time data: The difference between the time record in a log and the current time on Simple Log Service is within the interval (-180 seconds,900 seconds]. For example, if a log was generated at 12:03:00, September 25, 2014 (UTC) and Simple Log Service received the log at 12:05:00, September 25, 2014 (UTC), Simple Log Service processes the log as real-time data. After real-time data is written to a Logstore, the data can be queried with a maximum latency of 3 seconds.</li>
+     * <li>Historical data: The difference between the time record in a log and the current time on Simple Log Service is within the interval [-604,800 seconds,-180 seconds). For example, if a log was generated at 12:00:00, September 25, 2014 (UTC) and Simple Log Service received the log at 12:05:00, September 25, 2014 (UTC), Simple Log Service processes the log as historical data. This type of log is usually generated in data backfill scenarios.
+     * After real-time data is written to a Logstore, the data can be queried with a maximum latency of 3 seconds. For 99.9% of queries, the latency is no more than 1 second.<blockquote>
+     * <p>Simple Log Service calculates the difference between the log time that is specified by the <strong>time</strong> field and the receiving time that is specified by the <strong>tag</strong>:<strong>receive_time</strong> field for each log. The receiving time indicates the time at which Simple Log Service receives the log. If the difference is within the interval (-180 seconds,900 seconds], Simple Log Service processes the log as real-time data. If the difference is within the interval [-604,800 seconds,-180 seconds), Simple Log Service processes the log as historical data.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * </li>
+     * <li>Simple Log Service provides examples on how to call the GetHistograms operation by using Simple Log Service SDK for Java. For more information, see <a href="https://help.aliyun.com/document_detail/462234.html">Use GetHistograms to query the distribution of logs</a>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the distribution of logs that meet the specified search conditions in a Logstore.</p>
+     * 
      * @param request GetHistogramsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3683,19 +3896,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the distribution of logs that meet the specified search conditions in a Logstore.
-     *
-     * @description ### Usage notes
-     * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     * *   The time range is evenly divided into subintervals in the responses. If the time range that is specified in the request remains unchanged, the subintervals in the responses also remain unchanged.
-     * *   If the number of logs in a Logstore significantly changes, Simple Log Service cannot predict the number of times that you must call this operation to obtain the complete result. In this case, you must check the value of the progress parameter in the response of each request and determine whether to call this operation one more time to obtain the complete result. Each time you call this operation, the same number of charge units (CUs) are consumed.
-     * *   After a log is written to a Logstore, you can call the GetHistograms or GetLogs operation to query the log after a short latency. The latency of a query varies based on the type of the log. Simple Log Service classifies logs into the following types based on the log time:
-     *     *   Real-time data: The difference between the time record in a log and the current time on Simple Log Service is within the interval (-180 seconds,900 seconds]. For example, if a log was generated at 12:03:00, September 25, 2014 (UTC) and Simple Log Service received the log at 12:05:00, September 25, 2014 (UTC), Simple Log Service processes the log as real-time data. After real-time data is written to a Logstore, the data can be queried with a maximum latency of 3 seconds.
-     *     *   Historical data: The difference between the time record in a log and the current time on Simple Log Service is within the interval [-604,800 seconds,-180 seconds). For example, if a log was generated at 12:00:00, September 25, 2014 (UTC) and Simple Log Service received the log at 12:05:00, September 25, 2014 (UTC), Simple Log Service processes the log as historical data. This type of log is usually generated in data backfill scenarios.
-     *     After real-time data is written to a Logstore, the data can be queried with a maximum latency of 3 seconds. For 99.9% of queries, the latency is no more than 1 second.
-     * > Simple Log Service calculates the difference between the log time that is specified by the __time__ field and the receiving time that is specified by the __tag__:__receive_time__ field for each log. The receiving time indicates the time at which Simple Log Service receives the log. If the difference is within the interval (-180 seconds,900 seconds], Simple Log Service processes the log as real-time data. If the difference is within the interval [-604,800 seconds,-180 seconds), Simple Log Service processes the log as historical data.
-     * *   Simple Log Service provides examples on how to call the GetHistograms operation by using Simple Log Service SDK for Java. For more information, see [Use GetHistograms to query the distribution of logs](https://help.aliyun.com/document_detail/462234.html).
-     *
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <ul>
+     * <li>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</li>
+     * <li>The time range is evenly divided into subintervals in the responses. If the time range that is specified in the request remains unchanged, the subintervals in the responses also remain unchanged.</li>
+     * <li>If the number of logs in a Logstore significantly changes, Simple Log Service cannot predict the number of times that you must call this operation to obtain the complete result. In this case, you must check the value of the progress parameter in the response of each request and determine whether to call this operation one more time to obtain the complete result. Each time you call this operation, the same number of charge units (CUs) are consumed.</li>
+     * <li>After a log is written to a Logstore, you can call the GetHistograms or GetLogs operation to query the log after a short latency. The latency of a query varies based on the type of the log. Simple Log Service classifies logs into the following types based on the log time:<ul>
+     * <li>Real-time data: The difference between the time record in a log and the current time on Simple Log Service is within the interval (-180 seconds,900 seconds]. For example, if a log was generated at 12:03:00, September 25, 2014 (UTC) and Simple Log Service received the log at 12:05:00, September 25, 2014 (UTC), Simple Log Service processes the log as real-time data. After real-time data is written to a Logstore, the data can be queried with a maximum latency of 3 seconds.</li>
+     * <li>Historical data: The difference between the time record in a log and the current time on Simple Log Service is within the interval [-604,800 seconds,-180 seconds). For example, if a log was generated at 12:00:00, September 25, 2014 (UTC) and Simple Log Service received the log at 12:05:00, September 25, 2014 (UTC), Simple Log Service processes the log as historical data. This type of log is usually generated in data backfill scenarios.
+     * After real-time data is written to a Logstore, the data can be queried with a maximum latency of 3 seconds. For 99.9% of queries, the latency is no more than 1 second.<blockquote>
+     * <p>Simple Log Service calculates the difference between the log time that is specified by the <strong>time</strong> field and the receiving time that is specified by the <strong>tag</strong>:<strong>receive_time</strong> field for each log. The receiving time indicates the time at which Simple Log Service receives the log. If the difference is within the interval (-180 seconds,900 seconds], Simple Log Service processes the log as real-time data. If the difference is within the interval [-604,800 seconds,-180 seconds), Simple Log Service processes the log as historical data.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * </li>
+     * <li>Simple Log Service provides examples on how to call the GetHistograms operation by using Simple Log Service SDK for Java. For more information, see <a href="https://help.aliyun.com/document_detail/462234.html">Use GetHistograms to query the distribution of logs</a>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the distribution of logs that meet the specified search conditions in a Logstore.</p>
+     * 
      * @param request GetHistogramsRequest
      * @return GetHistogramsResponse
      */
@@ -3706,11 +3927,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the index of a Logstore.
-     *
-     * @description ### Usage notes
-     * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the index of a Logstore.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetIndexResponse
@@ -3737,11 +3960,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the index of a Logstore.
-     *
-     * @description ### Usage notes
-     * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the index of a Logstore.</p>
      * @return GetIndexResponse
      */
     public GetIndexResponse getIndex(String project, String logstore) throws Exception {
@@ -3751,11 +3975,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of a Logstore.
-     *
-     * @description ### Usage notes
-     * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of a Logstore.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetLogStoreResponse
@@ -3782,11 +4008,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of a Logstore.
-     *
-     * @description ### Usage notes
-     * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of a Logstore.</p>
      * @return GetLogStoreResponse
      */
     public GetLogStoreResponse getLogStore(String project, String logstore) throws Exception {
@@ -3796,8 +4023,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取LogStore计量模式
-     *
+     * <b>summary</b> : 
+     * <p>获取LogStore计量模式</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetLogStoreMeteringModeResponse
@@ -3824,8 +4052,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取LogStore计量模式
-     *
+     * <b>summary</b> : 
+     * <p>获取LogStore计量模式</p>
      * @return GetLogStoreMeteringModeResponse
      */
     public GetLogStoreMeteringModeResponse getLogStoreMeteringMode(String project, String logstore) throws Exception {
@@ -3835,10 +4063,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the service log configuration of a project.
-     *
-     * @description Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the service log configuration of a project.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetLoggingResponse
@@ -3865,10 +4095,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the service log configuration of a project.
-     *
-     * @description Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the service log configuration of a project.</p>
      * @return GetLoggingResponse
      */
     public GetLoggingResponse getLogging(String project) throws Exception {
@@ -3878,19 +4109,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the logs of a Logstore in a project.
-     *
-     * @description ### Usage notes
-     * > Simple Log Service allows you to create a Scheduled SQL job. For more information, see [Create a Scheduled SQL job](https://help.aliyun.com/document_detail/286457.html).
-     * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     * *   If the number of logs in a Logstore significantly changes, Simple Log Service cannot forecast the number of times that you must call this operation to obtain the complete result. In this case, you must check the value of the x-log-progress parameter in the response of each request and determine whether to call this operation one more time to obtain the complete result. Each time you call this operation, the same number of charge units (CUs) are consumed.
-     * *   After a log is written to a Logstore, you can call the GetHistograms or GetLogs operation to query the log after a short latency. The latency of a query varies based on the type of the log. Simple Log Service classifies logs into the following types based on the log time:
-     *         Real-time data: The difference between the time record in a log and the current time on Simple Log Service is within the interval (-180 seconds,900 seconds]. For example, if a log was generated at 12:03:00, September 25, 2014 (UTC) and Simple Log Service received the log at 12:05:00, September 25, 2014 (UTC), Simple Log Service processes the log as real-time data. This type of log is usually generated in common scenarios. 
-     *     *   Historical data: The difference between the time record in a log and the current time on Simple Log Service is within the interval [-604,800 seconds,-180 seconds). For example, if a log was generated at 12:00:00, September 25, 2014 (UTC) and Simple Log Service received the log at 12:05:00, September 25, 2014 (UTC), Simple Log Service processes the log as historical data. This type of log is usually generated in data backfill scenarios.
-     *     After real-time data is written to a Logstore, the data can be queried with a maximum latency of 3 seconds. For 99.9% of queries, the latency is no more than 1 second.
-     * > Simple Log Service calculates the difference between the log time that is specified by the __time__ field and the receiving time that is specified by the __tag__:**receive_time** field for each log. The receiving time indicates the time at which Simple Log Service receives the log. If the difference is within the interval (-180 seconds,900 seconds], Simple Log Service processes the log as real-time data. If the difference is within the interval [-604,800 seconds,-180 seconds), Simple Log Service processes the log as historical data.
-     * *   Simple Log Service provides examples on how to call the GetLogs operation by using Simple Log Service SDK for Java and Simple Log Service SDK for Python. For more information, see [Examples of calling the GetLogs operation by using Simple Log Service SDK for Java](https://help.aliyun.com/document_detail/407683.html) and [Examples of calling the GetLogs operation by using Simple Log Service SDK for Python](https://help.aliyun.com/document_detail/407684.html).
-     *
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <blockquote>
+     * <p>Simple Log Service allows you to create a Scheduled SQL job. For more information, see <a href="https://help.aliyun.com/document_detail/286457.html">Create a Scheduled SQL job</a>.</p>
+     * </blockquote>
+     * <ul>
+     * <li>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</li>
+     * <li>If the number of logs in a Logstore significantly changes, Simple Log Service cannot forecast the number of times that you must call this operation to obtain the complete result. In this case, you must check the value of the x-log-progress parameter in the response of each request and determine whether to call this operation one more time to obtain the complete result. Each time you call this operation, the same number of charge units (CUs) are consumed.</li>
+     * <li>After a log is written to a Logstore, you can call the GetHistograms or GetLogs operation to query the log after a short latency. The latency of a query varies based on the type of the log. Simple Log Service classifies logs into the following types based on the log time:
+     * Real-time data: The difference between the time record in a log and the current time on Simple Log Service is within the interval (-180 seconds,900 seconds]. For example, if a log was generated at 12:03:00, September 25, 2014 (UTC) and Simple Log Service received the log at 12:05:00, September 25, 2014 (UTC), Simple Log Service processes the log as real-time data. This type of log is usually generated in common scenarios. <ul>
+     * <li>Historical data: The difference between the time record in a log and the current time on Simple Log Service is within the interval [-604,800 seconds,-180 seconds). For example, if a log was generated at 12:00:00, September 25, 2014 (UTC) and Simple Log Service received the log at 12:05:00, September 25, 2014 (UTC), Simple Log Service processes the log as historical data. This type of log is usually generated in data backfill scenarios.
+     * After real-time data is written to a Logstore, the data can be queried with a maximum latency of 3 seconds. For 99.9% of queries, the latency is no more than 1 second.<blockquote>
+     * <p>Simple Log Service calculates the difference between the log time that is specified by the <strong>time</strong> field and the receiving time that is specified by the <strong>tag</strong>:<strong>receive_time</strong> field for each log. The receiving time indicates the time at which Simple Log Service receives the log. If the difference is within the interval (-180 seconds,900 seconds], Simple Log Service processes the log as real-time data. If the difference is within the interval [-604,800 seconds,-180 seconds), Simple Log Service processes the log as historical data.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * </li>
+     * <li>Simple Log Service provides examples on how to call the GetLogs operation by using Simple Log Service SDK for Java and Simple Log Service SDK for Python. For more information, see <a href="https://help.aliyun.com/document_detail/407683.html">Examples of calling the GetLogs operation by using Simple Log Service SDK for Java</a> and <a href="https://help.aliyun.com/document_detail/407684.html">Examples of calling the GetLogs operation by using Simple Log Service SDK for Python</a>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the logs of a Logstore in a project.</p>
+     * 
      * @param request GetLogsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3953,19 +4194,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the logs of a Logstore in a project.
-     *
-     * @description ### Usage notes
-     * > Simple Log Service allows you to create a Scheduled SQL job. For more information, see [Create a Scheduled SQL job](https://help.aliyun.com/document_detail/286457.html).
-     * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     * *   If the number of logs in a Logstore significantly changes, Simple Log Service cannot forecast the number of times that you must call this operation to obtain the complete result. In this case, you must check the value of the x-log-progress parameter in the response of each request and determine whether to call this operation one more time to obtain the complete result. Each time you call this operation, the same number of charge units (CUs) are consumed.
-     * *   After a log is written to a Logstore, you can call the GetHistograms or GetLogs operation to query the log after a short latency. The latency of a query varies based on the type of the log. Simple Log Service classifies logs into the following types based on the log time:
-     *         Real-time data: The difference between the time record in a log and the current time on Simple Log Service is within the interval (-180 seconds,900 seconds]. For example, if a log was generated at 12:03:00, September 25, 2014 (UTC) and Simple Log Service received the log at 12:05:00, September 25, 2014 (UTC), Simple Log Service processes the log as real-time data. This type of log is usually generated in common scenarios. 
-     *     *   Historical data: The difference between the time record in a log and the current time on Simple Log Service is within the interval [-604,800 seconds,-180 seconds). For example, if a log was generated at 12:00:00, September 25, 2014 (UTC) and Simple Log Service received the log at 12:05:00, September 25, 2014 (UTC), Simple Log Service processes the log as historical data. This type of log is usually generated in data backfill scenarios.
-     *     After real-time data is written to a Logstore, the data can be queried with a maximum latency of 3 seconds. For 99.9% of queries, the latency is no more than 1 second.
-     * > Simple Log Service calculates the difference between the log time that is specified by the __time__ field and the receiving time that is specified by the __tag__:**receive_time** field for each log. The receiving time indicates the time at which Simple Log Service receives the log. If the difference is within the interval (-180 seconds,900 seconds], Simple Log Service processes the log as real-time data. If the difference is within the interval [-604,800 seconds,-180 seconds), Simple Log Service processes the log as historical data.
-     * *   Simple Log Service provides examples on how to call the GetLogs operation by using Simple Log Service SDK for Java and Simple Log Service SDK for Python. For more information, see [Examples of calling the GetLogs operation by using Simple Log Service SDK for Java](https://help.aliyun.com/document_detail/407683.html) and [Examples of calling the GetLogs operation by using Simple Log Service SDK for Python](https://help.aliyun.com/document_detail/407684.html).
-     *
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <blockquote>
+     * <p>Simple Log Service allows you to create a Scheduled SQL job. For more information, see <a href="https://help.aliyun.com/document_detail/286457.html">Create a Scheduled SQL job</a>.</p>
+     * </blockquote>
+     * <ul>
+     * <li>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</li>
+     * <li>If the number of logs in a Logstore significantly changes, Simple Log Service cannot forecast the number of times that you must call this operation to obtain the complete result. In this case, you must check the value of the x-log-progress parameter in the response of each request and determine whether to call this operation one more time to obtain the complete result. Each time you call this operation, the same number of charge units (CUs) are consumed.</li>
+     * <li>After a log is written to a Logstore, you can call the GetHistograms or GetLogs operation to query the log after a short latency. The latency of a query varies based on the type of the log. Simple Log Service classifies logs into the following types based on the log time:
+     * Real-time data: The difference between the time record in a log and the current time on Simple Log Service is within the interval (-180 seconds,900 seconds]. For example, if a log was generated at 12:03:00, September 25, 2014 (UTC) and Simple Log Service received the log at 12:05:00, September 25, 2014 (UTC), Simple Log Service processes the log as real-time data. This type of log is usually generated in common scenarios. <ul>
+     * <li>Historical data: The difference between the time record in a log and the current time on Simple Log Service is within the interval [-604,800 seconds,-180 seconds). For example, if a log was generated at 12:00:00, September 25, 2014 (UTC) and Simple Log Service received the log at 12:05:00, September 25, 2014 (UTC), Simple Log Service processes the log as historical data. This type of log is usually generated in data backfill scenarios.
+     * After real-time data is written to a Logstore, the data can be queried with a maximum latency of 3 seconds. For 99.9% of queries, the latency is no more than 1 second.<blockquote>
+     * <p>Simple Log Service calculates the difference between the log time that is specified by the <strong>time</strong> field and the receiving time that is specified by the <strong>tag</strong>:<strong>receive_time</strong> field for each log. The receiving time indicates the time at which Simple Log Service receives the log. If the difference is within the interval (-180 seconds,900 seconds], Simple Log Service processes the log as real-time data. If the difference is within the interval [-604,800 seconds,-180 seconds), Simple Log Service processes the log as historical data.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * </li>
+     * <li>Simple Log Service provides examples on how to call the GetLogs operation by using Simple Log Service SDK for Java and Simple Log Service SDK for Python. For more information, see <a href="https://help.aliyun.com/document_detail/407683.html">Examples of calling the GetLogs operation by using Simple Log Service SDK for Java</a> and <a href="https://help.aliyun.com/document_detail/407684.html">Examples of calling the GetLogs operation by using Simple Log Service SDK for Python</a>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the logs of a Logstore in a project.</p>
+     * 
      * @param request GetLogsRequest
      * @return GetLogsResponse
      */
@@ -3976,14 +4227,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the raw log data in a Logstore of a project. The returned result shows the raw log data in a specific time range. The returned results are compressed and transmitted.
-     *
-     * @description *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     * *   If the number of logs in a Logstore significantly changes, Simple Log Service cannot predict the number of times you must call this API operation to obtain a complete result. In this case, you must check the value of the progress parameter in the response of each request and determine whether to call this operation again to obtain the complete result. Each time you call this operation, the same number of charge units (CUs) are consumed.
-     * *   After a log is written to a Logstore, you can call the GetHistograms or GetLogs operation to query the log. The latency of the query varies based on the type of the log. Simple Log Service classifies logs into the following types based on log timestamps:
-     * 1.  1.  Real-time data: The difference between the time record in the log and the current server time is within the interval (-180 seconds,900 seconds]. For example, if a log was generated at 12:03:00, September 25, 2014 (UTC) and the server received the log at 12:05:00, September 25, 2014 (UTC), the server processes the log as real-time data. This type of log is usually generated in common scenarios.
-     * 2.  2.  Historical data: The difference between the time record in the log and the current server time is within the interval [-604,800 seconds,-180 seconds). For example, if a log was generated at 12:00:00, September 25, 2014 (UTC) and the server received the log at 12:05:00, September 25, 2014 (UTC), the server processes the log as historical data. This type of log is usually generated in data backfill scenarios. After real-time data is written to a Logstore, the data can be queried with a maximum latency of 3 seconds. For 99.9% of queries, the latency is no more than 1 second.
-     *
+     * <b>description</b> :
+     * <p>  Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * <ul>
+     * <li>If the number of logs in a Logstore significantly changes, Simple Log Service cannot predict the number of times you must call this API operation to obtain a complete result. In this case, you must check the value of the progress parameter in the response of each request and determine whether to call this operation again to obtain the complete result. Each time you call this operation, the same number of charge units (CUs) are consumed.</li>
+     * <li>After a log is written to a Logstore, you can call the GetHistograms or GetLogs operation to query the log. The latency of the query varies based on the type of the log. Simple Log Service classifies logs into the following types based on log timestamps:</li>
+     * </ul>
+     * <ol>
+     * <li><ol>
+     * <li>Real-time data: The difference between the time record in the log and the current server time is within the interval (-180 seconds,900 seconds]. For example, if a log was generated at 12:03:00, September 25, 2014 (UTC) and the server received the log at 12:05:00, September 25, 2014 (UTC), the server processes the log as real-time data. This type of log is usually generated in common scenarios.</li>
+     * </ol>
+     * </li>
+     * <li><ol start="2">
+     * <li>Historical data: The difference between the time record in the log and the current server time is within the interval [-604,800 seconds,-180 seconds). For example, if a log was generated at 12:00:00, September 25, 2014 (UTC) and the server received the log at 12:05:00, September 25, 2014 (UTC), the server processes the log as historical data. This type of log is usually generated in data backfill scenarios. After real-time data is written to a Logstore, the data can be queried with a maximum latency of 3 seconds. For 99.9% of queries, the latency is no more than 1 second.</li>
+     * </ol>
+     * </li>
+     * </ol>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the raw log data in a Logstore of a project. The returned result shows the raw log data in a specific time range. The returned results are compressed and transmitted.</p>
+     * 
      * @param request GetLogsV2Request
      * @param headers GetLogsV2Headers
      * @param runtime runtime options for this request RuntimeOptions
@@ -4067,14 +4330,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the raw log data in a Logstore of a project. The returned result shows the raw log data in a specific time range. The returned results are compressed and transmitted.
-     *
-     * @description *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     * *   If the number of logs in a Logstore significantly changes, Simple Log Service cannot predict the number of times you must call this API operation to obtain a complete result. In this case, you must check the value of the progress parameter in the response of each request and determine whether to call this operation again to obtain the complete result. Each time you call this operation, the same number of charge units (CUs) are consumed.
-     * *   After a log is written to a Logstore, you can call the GetHistograms or GetLogs operation to query the log. The latency of the query varies based on the type of the log. Simple Log Service classifies logs into the following types based on log timestamps:
-     * 1.  1.  Real-time data: The difference between the time record in the log and the current server time is within the interval (-180 seconds,900 seconds]. For example, if a log was generated at 12:03:00, September 25, 2014 (UTC) and the server received the log at 12:05:00, September 25, 2014 (UTC), the server processes the log as real-time data. This type of log is usually generated in common scenarios.
-     * 2.  2.  Historical data: The difference between the time record in the log and the current server time is within the interval [-604,800 seconds,-180 seconds). For example, if a log was generated at 12:00:00, September 25, 2014 (UTC) and the server received the log at 12:05:00, September 25, 2014 (UTC), the server processes the log as historical data. This type of log is usually generated in data backfill scenarios. After real-time data is written to a Logstore, the data can be queried with a maximum latency of 3 seconds. For 99.9% of queries, the latency is no more than 1 second.
-     *
+     * <b>description</b> :
+     * <p>  Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * <ul>
+     * <li>If the number of logs in a Logstore significantly changes, Simple Log Service cannot predict the number of times you must call this API operation to obtain a complete result. In this case, you must check the value of the progress parameter in the response of each request and determine whether to call this operation again to obtain the complete result. Each time you call this operation, the same number of charge units (CUs) are consumed.</li>
+     * <li>After a log is written to a Logstore, you can call the GetHistograms or GetLogs operation to query the log. The latency of the query varies based on the type of the log. Simple Log Service classifies logs into the following types based on log timestamps:</li>
+     * </ul>
+     * <ol>
+     * <li><ol>
+     * <li>Real-time data: The difference between the time record in the log and the current server time is within the interval (-180 seconds,900 seconds]. For example, if a log was generated at 12:03:00, September 25, 2014 (UTC) and the server received the log at 12:05:00, September 25, 2014 (UTC), the server processes the log as real-time data. This type of log is usually generated in common scenarios.</li>
+     * </ol>
+     * </li>
+     * <li><ol start="2">
+     * <li>Historical data: The difference between the time record in the log and the current server time is within the interval [-604,800 seconds,-180 seconds). For example, if a log was generated at 12:00:00, September 25, 2014 (UTC) and the server received the log at 12:05:00, September 25, 2014 (UTC), the server processes the log as historical data. This type of log is usually generated in data backfill scenarios. After real-time data is written to a Logstore, the data can be queried with a maximum latency of 3 seconds. For 99.9% of queries, the latency is no more than 1 second.</li>
+     * </ol>
+     * </li>
+     * </ol>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the raw log data in a Logstore of a project. The returned result shows the raw log data in a specific time range. The returned results are compressed and transmitted.</p>
+     * 
      * @param request GetLogsV2Request
      * @return GetLogsV2Response
      */
@@ -4085,10 +4360,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of a Logtail pipeline configuration.
-     *
-     * @description The UK (London) region is supported. Supported regions are constantly updated.
-     *
+     * <b>description</b> :
+     * <p>The UK (London) region is supported. Supported regions are constantly updated.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of a Logtail pipeline configuration.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetLogtailPipelineConfigResponse
@@ -4115,10 +4392,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of a Logtail pipeline configuration.
-     *
-     * @description The UK (London) region is supported. Supported regions are constantly updated.
-     *
+     * <b>description</b> :
+     * <p>The UK (London) region is supported. Supported regions are constantly updated.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of a Logtail pipeline configuration.</p>
      * @return GetLogtailPipelineConfigResponse
      */
     public GetLogtailPipelineConfigResponse getLogtailPipelineConfig(String project, String configName) throws Exception {
@@ -4128,8 +4406,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary GetMLServiceResults
-     *
+     * <b>summary</b> : 
+     * <p>GetMLServiceResults</p>
+     * 
      * @param request GetMLServiceResultsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4166,8 +4445,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary GetMLServiceResults
-     *
+     * <b>summary</b> : 
+     * <p>GetMLServiceResults</p>
+     * 
      * @param request GetMLServiceResultsRequest
      * @return GetMLServiceResultsResponse
      */
@@ -4178,10 +4458,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of a machine group.
-     *
-     * @description Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of a machine group.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetMachineGroupResponse
@@ -4208,10 +4490,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of a machine group.
-     *
-     * @description Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of a machine group.</p>
      * @return GetMachineGroupResponse
      */
     public GetMachineGroupResponse getMachineGroup(String project, String machineGroup) throws Exception {
@@ -4221,8 +4504,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取 MetricStore 计量模式
-     *
+     * <b>summary</b> : 
+     * <p>获取 MetricStore 计量模式</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetMetricStoreMeteringModeResponse
@@ -4249,8 +4533,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取 MetricStore 计量模式
-     *
+     * <b>summary</b> : 
+     * <p>获取 MetricStore 计量模式</p>
      * @return GetMetricStoreMeteringModeResponse
      */
     public GetMetricStoreMeteringModeResponse getMetricStoreMeteringMode(String project, String metricStore) throws Exception {
@@ -4260,8 +4544,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取OSS投递任务
-     *
+     * <b>summary</b> : 
+     * <p>获取OSS投递任务</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetOSSExportResponse
@@ -4288,8 +4573,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取OSS投递任务
-     *
+     * <b>summary</b> : 
+     * <p>获取OSS投递任务</p>
      * @return GetOSSExportResponse
      */
     public GetOSSExportResponse getOSSExport(String project, String ossExportName) throws Exception {
@@ -4299,8 +4584,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Get OSSHDFS Exports
-     *
+     * <b>summary</b> : 
+     * <p>Get OSSHDFS Exports</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetOSSHDFSExportResponse
@@ -4327,8 +4613,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Get OSSHDFS Exports
-     *
+     * <b>summary</b> : 
+     * <p>Get OSSHDFS Exports</p>
      * @return GetOSSHDFSExportResponse
      */
     public GetOSSHDFSExportResponse getOSSHDFSExport(String project, String ossExportName) throws Exception {
@@ -4338,8 +4624,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取oss导入任务信息
-     *
+     * <b>summary</b> : 
+     * <p>获取oss导入任务信息</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetOSSIngestionResponse
@@ -4366,8 +4653,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取oss导入任务信息
-     *
+     * <b>summary</b> : 
+     * <p>获取oss导入任务信息</p>
      * @return GetOSSIngestionResponse
      */
     public GetOSSIngestionResponse getOSSIngestion(String project, String ossIngestionName) throws Exception {
@@ -4377,11 +4664,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of a project.
-     *
-     * @description ### Usage notes
-     * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of a project.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetProjectResponse
@@ -4408,11 +4697,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of a project.
-     *
-     * @description ### Usage notes
-     * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of a project.</p>
      * @return GetProjectResponse
      */
     public GetProjectResponse getProject(String project) throws Exception {
@@ -4422,15 +4712,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries logs in a project. You can use this operation to query logs at the project level.
-     *
-     * @description ### Usage notes
-     * *   You can use the query parameter to specify a standard SQL statement.
-     * *   You must specify a project in the domain name of the request.
-     * *   You must specify a Logstore in the FROM clause of the SQL statement. A Logstore can be used as an SQL table.
-     * *   You must specify a time range in the SQL statement by using the __date__ parameter or __time__ parameter. The value of the __date__ parameter is a timestamp, and the value of the __time__ parameter is an integer. The unit of the __time__ parameter is seconds.
-     * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <ul>
+     * <li>You can use the query parameter to specify a standard SQL statement.</li>
+     * <li>You must specify a project in the domain name of the request.</li>
+     * <li>You must specify a Logstore in the FROM clause of the SQL statement. A Logstore can be used as an SQL table.</li>
+     * <li>You must specify a time range in the SQL statement by using the <strong>date</strong> parameter or <strong>time</strong> parameter. The value of the <strong>date</strong> parameter is a timestamp, and the value of the <strong>time</strong> parameter is an integer. The unit of the <strong>time</strong> parameter is seconds.</li>
+     * <li>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries logs in a project. You can use this operation to query logs at the project level.</p>
+     * 
      * @param request GetProjectLogsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4469,15 +4763,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries logs in a project. You can use this operation to query logs at the project level.
-     *
-     * @description ### Usage notes
-     * *   You can use the query parameter to specify a standard SQL statement.
-     * *   You must specify a project in the domain name of the request.
-     * *   You must specify a Logstore in the FROM clause of the SQL statement. A Logstore can be used as an SQL table.
-     * *   You must specify a time range in the SQL statement by using the __date__ parameter or __time__ parameter. The value of the __date__ parameter is a timestamp, and the value of the __time__ parameter is an integer. The unit of the __time__ parameter is seconds.
-     * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <ul>
+     * <li>You can use the query parameter to specify a standard SQL statement.</li>
+     * <li>You must specify a project in the domain name of the request.</li>
+     * <li>You must specify a Logstore in the FROM clause of the SQL statement. A Logstore can be used as an SQL table.</li>
+     * <li>You must specify a time range in the SQL statement by using the <strong>date</strong> parameter or <strong>time</strong> parameter. The value of the <strong>date</strong> parameter is a timestamp, and the value of the <strong>time</strong> parameter is an integer. The unit of the <strong>time</strong> parameter is seconds.</li>
+     * <li>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries logs in a project. You can use this operation to query logs at the project level.</p>
+     * 
      * @param request GetProjectLogsRequest
      * @return GetProjectLogsResponse
      */
@@ -4488,11 +4786,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a project policy.
-     *
-     * @description ### Usage notes
-     * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Usage notes</h3>
+     * <ul>
+     * <li>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</li>
+     * <li>An AccessKey pair is created and obtained. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
+     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a Resource Access Management (RAM) user to call API operations or perform routine O\&amp;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and authorize the RAM user to access Simple Log Service</a>.</li>
+     * <li>The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage a project</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a project policy.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetProjectPolicyResponse
@@ -4519,11 +4824,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a project policy.
-     *
-     * @description ### Usage notes
-     * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Usage notes</h3>
+     * <ul>
+     * <li>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</li>
+     * <li>An AccessKey pair is created and obtained. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
+     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a Resource Access Management (RAM) user to call API operations or perform routine O\&amp;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and authorize the RAM user to access Simple Log Service</a>.</li>
+     * <li>The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage a project</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a project policy.</p>
      * @return GetProjectPolicyResponse
      */
     public GetProjectPolicyResponse getProjectPolicy(String project) throws Exception {
@@ -4533,11 +4844,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a saved search.
-     *
-     * @description ### Usage notes
-     * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a saved search.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetSavedSearchResponse
@@ -4564,11 +4877,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a saved search.
-     *
-     * @description ### Usage notes
-     * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a saved search.</p>
      * @return GetSavedSearchResponse
      */
     public GetSavedSearchResponse getSavedSearch(String project, String savedsearchName) throws Exception {
@@ -4578,8 +4892,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查看定时SQL任务
-     *
+     * <b>summary</b> : 
+     * <p>查看定时SQL任务</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetScheduledSQLResponse
@@ -4606,8 +4921,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查看定时SQL任务
-     *
+     * <b>summary</b> : 
+     * <p>查看定时SQL任务</p>
      * @return GetScheduledSQLResponse
      */
     public GetScheduledSQLResponse getScheduledSQL(String project, String scheduledSQLName) throws Exception {
@@ -4617,82 +4932,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI GetShipperStatus is deprecated
-     *
-     * @summary Queries the status of a log shipping job.
-     *
-     * @description Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
-     * @param request GetShipperStatusRequest
-     * @param headers map
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return GetShipperStatusResponse
-     */
-    // Deprecated
-    public GetShipperStatusResponse getShipperStatusWithOptions(String project, String logstore, String shipperName, GetShipperStatusRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
-        hostMap.put("project", project);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.from)) {
-            query.put("from", request.from);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.offset)) {
-            query.put("offset", request.offset);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.size)) {
-            query.put("size", request.size);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
-            query.put("status", request.status);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.to)) {
-            query.put("to", request.to);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("hostMap", hostMap),
-            new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "GetShipperStatus"),
-            new TeaPair("version", "2020-12-30"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/logstores/" + logstore + "/shipper/" + shipperName + "/tasks"),
-            new TeaPair("method", "GET"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.execute(params, req, runtime), new GetShipperStatusResponse());
-    }
-
-    /**
-     * @deprecated OpenAPI GetShipperStatus is deprecated
-     *
-     * @summary Queries the status of a log shipping job.
-     *
-     * @description Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
-     * @param request GetShipperStatusRequest
-     * @return GetShipperStatusResponse
-     */
-    // Deprecated
-    public GetShipperStatusResponse getShipperStatus(String project, String logstore, String shipperName, GetShipperStatusRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getShipperStatusWithOptions(project, logstore, shipperName, request, headers, runtime);
-    }
-
-    /**
-     * @summary getSlsService
-     *
+     * <b>summary</b> : 
+     * <p>getSlsService</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetSlsServiceResponse
@@ -4716,8 +4958,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary getSlsService
-     *
+     * <b>summary</b> : 
+     * <p>getSlsService</p>
      * @return GetSlsServiceResponse
      */
     public GetSlsServiceResponse getSlsService() throws Exception {
@@ -4727,8 +4969,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询独享sql实例
-     *
+     * <b>summary</b> : 
+     * <p>查询独享sql实例</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetSqlInstanceResponse
@@ -4755,8 +4998,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询独享sql实例
-     *
+     * <b>summary</b> : 
+     * <p>查询独享sql实例</p>
      * @return GetSqlInstanceResponse
      */
     public GetSqlInstanceResponse getSqlInstance(String project) throws Exception {
@@ -4766,8 +5009,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询StoreView
-     *
+     * <b>summary</b> : 
+     * <p>查询StoreView</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetStoreViewResponse
@@ -4794,8 +5038,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询StoreView
-     *
+     * <b>summary</b> : 
+     * <p>查询StoreView</p>
      * @return GetStoreViewResponse
      */
     public GetStoreViewResponse getStoreView(String project, String name) throws Exception {
@@ -4805,8 +5049,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询StoreView索引
-     *
+     * <b>summary</b> : 
+     * <p>查询StoreView索引</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetStoreViewIndexResponse
@@ -4833,8 +5078,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询StoreView索引
-     *
+     * <b>summary</b> : 
+     * <p>查询StoreView索引</p>
      * @return GetStoreViewIndexResponse
      */
     public GetStoreViewIndexResponse getStoreViewIndex(String project, String name) throws Exception {
@@ -4844,8 +5089,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询告警列表
-     *
+     * <b>summary</b> : 
+     * <p>查询告警列表</p>
+     * 
      * @param request ListAlertsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4888,8 +5134,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询告警列表
-     *
+     * <b>summary</b> : 
+     * <p>查询告警列表</p>
+     * 
      * @param request ListAlertsRequest
      * @return ListAlertsResponse
      */
@@ -4900,8 +5147,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries data in a dataset.
-     *
+     * <b>summary</b> : 
+     * <p>Queries data in datasets.</p>
+     * 
      * @param request ListAnnotationDataRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4937,8 +5185,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries data in a dataset.
-     *
+     * <b>summary</b> : 
+     * <p>Queries data in datasets.</p>
+     * 
      * @param request ListAnnotationDataRequest
      * @return ListAnnotationDataResponse
      */
@@ -4949,8 +5198,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a list of datasets.
-     *
+     * <b>summary</b> : 
+     * <p>Queries a list of datasets.</p>
+     * 
      * @param request ListAnnotationDataSetsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4986,8 +5236,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a list of datasets.
-     *
+     * <b>summary</b> : 
+     * <p>Queries a list of datasets.</p>
+     * 
      * @param request ListAnnotationDataSetsRequest
      * @return ListAnnotationDataSetsResponse
      */
@@ -4998,8 +5249,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a list of tag tables.
-     *
+     * <b>summary</b> : 
+     * <p>Queries a list of tag tables.</p>
+     * 
      * @param request ListAnnotationLabelsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5035,8 +5287,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a list of tag tables.
-     *
+     * <b>summary</b> : 
+     * <p>Queries a list of tag tables.</p>
+     * 
      * @param request ListAnnotationLabelsRequest
      * @return ListAnnotationLabelsResponse
      */
@@ -5047,24 +5300,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 通过调用ListCollectionPolicies接口查看配置的日志采集规则
-     *
-     * @param tmpReq ListCollectionPoliciesRequest
+     * <b>summary</b> : 
+     * <p>通过调用ListCollectionPolicies接口查看配置的日志采集规则</p>
+     * 
+     * @param request ListCollectionPoliciesRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListCollectionPoliciesResponse
      */
-    public ListCollectionPoliciesResponse listCollectionPoliciesWithOptions(ListCollectionPoliciesRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(tmpReq);
-        ListCollectionPoliciesShrinkRequest request = new ListCollectionPoliciesShrinkRequest();
-        com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.attribute)) {
-            request.attributeShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.attribute, "attribute", "json");
-        }
-
+    public ListCollectionPoliciesResponse listCollectionPoliciesWithOptions(ListCollectionPoliciesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.attributeShrink)) {
-            query.put("attribute", request.attributeShrink);
+        if (!com.aliyun.teautil.Common.isUnset(request.centralProject)) {
+            query.put("centralProject", request.centralProject);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.dataCode)) {
@@ -5075,12 +5323,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("instanceId", request.instanceId);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.pageNum)) {
-            query.put("pageNum", request.pageNum);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
-            query.put("pageSize", request.pageSize);
+        if (!com.aliyun.teautil.Common.isUnset(request.offset)) {
+            query.put("offset", request.offset);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.policyName)) {
@@ -5089,6 +5333,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.productCode)) {
             query.put("productCode", request.productCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.size)) {
+            query.put("size", request.size);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -5110,8 +5358,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 通过调用ListCollectionPolicies接口查看配置的日志采集规则
-     *
+     * <b>summary</b> : 
+     * <p>通过调用ListCollectionPolicies接口查看配置的日志采集规则</p>
+     * 
      * @param request ListCollectionPoliciesRequest
      * @return ListCollectionPoliciesResponse
      */
@@ -5122,14 +5371,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries all Logtail configurations in a project.
-     *
-     * @description ### [](#)Usage notes
-     * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](https://help.aliyun.com/document_detail/29009.html).
-     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](https://help.aliyun.com/document_detail/47664.html).
-     * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](https://help.aliyun.com/document_detail/48984.html).
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Usage notes</h3>
+     * <ul>
+     * <li>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</li>
+     * <li>An AccessKey pair is created and obtained. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
+     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\&amp;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and authorize the RAM user to access Simple Log Service</a>.</li>
+     * <li>The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage a project</a>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries all Logtail configurations in a project.</p>
+     * 
      * @param request ListConfigRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5176,14 +5429,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries all Logtail configurations in a project.
-     *
-     * @description ### [](#)Usage notes
-     * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](https://help.aliyun.com/document_detail/29009.html).
-     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](https://help.aliyun.com/document_detail/47664.html).
-     * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](https://help.aliyun.com/document_detail/48984.html).
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Usage notes</h3>
+     * <ul>
+     * <li>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</li>
+     * <li>An AccessKey pair is created and obtained. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
+     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\&amp;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and authorize the RAM user to access Simple Log Service</a>.</li>
+     * <li>The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage a project</a>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries all Logtail configurations in a project.</p>
+     * 
      * @param request ListConfigRequest
      * @return ListConfigResponse
      */
@@ -5194,11 +5451,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries all consumer groups of a Logstore.
-     *
-     * @description ### Usage notes
-     * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries all consumer groups of a Logstore.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListConsumerGroupResponse
@@ -5225,11 +5484,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries all consumer groups of a Logstore.
-     *
-     * @description ### Usage notes
-     * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries all consumer groups of a Logstore.</p>
      * @return ListConsumerGroupResponse
      */
     public ListConsumerGroupResponse listConsumerGroup(String project, String logstore) throws Exception {
@@ -5239,14 +5499,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a list of dashboards.
-     *
-     * @description ### [](#)Usage notes
-     * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](https://help.aliyun.com/document_detail/29009.html).
-     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](https://help.aliyun.com/document_detail/47664.html).
-     * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](https://help.aliyun.com/document_detail/48984.html).
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Usage notes</h3>
+     * <ul>
+     * <li>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</li>
+     * <li>An AccessKey pair is created and obtained. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
+     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\&amp;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and authorize the RAM user to access Simple Log Service</a>.</li>
+     * <li>The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage a project</a>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a list of dashboards.</p>
+     * 
      * @param request ListDashboardRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5285,14 +5549,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a list of dashboards.
-     *
-     * @description ### [](#)Usage notes
-     * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](https://help.aliyun.com/document_detail/29009.html).
-     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](https://help.aliyun.com/document_detail/47664.html).
-     * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](https://help.aliyun.com/document_detail/48984.html).
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Usage notes</h3>
+     * <ul>
+     * <li>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</li>
+     * <li>An AccessKey pair is created and obtained. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
+     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\&amp;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and authorize the RAM user to access Simple Log Service</a>.</li>
+     * <li>The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage a project</a>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a list of dashboards.</p>
+     * 
      * @param request ListDashboardRequest
      * @return ListDashboardResponse
      */
@@ -5303,11 +5571,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the custom domain names that are bound to projects.
-     *
-     * @description *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     * *   Only one custom domain name can be bound to each project.
-     *
+     * <b>description</b> :
+     * <p>  Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * <ul>
+     * <li>Only one custom domain name can be bound to each project.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the custom domain names that are bound to projects.</p>
+     * 
      * @param request ListDomainsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5350,11 +5622,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the custom domain names that are bound to projects.
-     *
-     * @description *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     * *   Only one custom domain name can be bound to each project.
-     *
+     * <b>description</b> :
+     * <p>  Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * <ul>
+     * <li>Only one custom domain name can be bound to each project.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the custom domain names that are bound to projects.</p>
+     * 
      * @param request ListDomainsRequest
      * @return ListDomainsResponse
      */
@@ -5365,8 +5641,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 列出数据加工任务
-     *
+     * <b>summary</b> : 
+     * <p>列出数据加工任务</p>
+     * 
      * @param request ListETLsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5409,8 +5686,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 列出数据加工任务
-     *
+     * <b>summary</b> : 
+     * <p>列出数据加工任务</p>
+     * 
      * @param request ListETLsRequest
      * @return ListETLsResponse
      */
@@ -5421,79 +5699,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a list of external stores.
-     *
-     * @description Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
-     * @param request ListExternalStoreRequest
-     * @param headers map
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return ListExternalStoreResponse
-     */
-    public ListExternalStoreResponse listExternalStoreWithOptions(String project, ListExternalStoreRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
-        hostMap.put("project", project);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.externalStoreName)) {
-            query.put("externalStoreName", request.externalStoreName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.offset)) {
-            query.put("offset", request.offset);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.sizs)) {
-            query.put("sizs", request.sizs);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("hostMap", hostMap),
-            new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ListExternalStore"),
-            new TeaPair("version", "2020-12-30"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/externalstores"),
-            new TeaPair("method", "GET"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.execute(params, req, runtime), new ListExternalStoreResponse());
-    }
-
-    /**
-     * @summary Queries a list of external stores.
-     *
-     * @description Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
-     * @param request ListExternalStoreRequest
-     * @return ListExternalStoreResponse
-     */
-    public ListExternalStoreResponse listExternalStore(String project, ListExternalStoreRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.listExternalStoreWithOptions(project, request, headers, runtime);
-    }
-
-    /**
-     * @summary Queries all Logstores or Logstores that match specific conditions in a project.
-     *
-     * @description ### Usage notes
-     * * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     * * An AccessKey pair is created and obtained. For more information, see [AccessKey pair](https://help.aliyun.com/document_detail/29009.html).
-     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O&#x26;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](https://help.aliyun.com/document_detail/47664.html).
-     * * The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](https://help.aliyun.com/document_detail/48984.html).
-     * ### Authentication resources
-     * The following table describes the authorization information that is required for this operation. You can add the information to the Action element of a RAM policy statement to grant a RAM user or a RAM role the permissions to call this operation.
-     * |Action|Resource|
-     * |:---|:---|
-     * |`log:ListLogStores`|`acs:log:{#regionId}:{#accountId}:project/{#ProjectName}/logstore/*`|
-     *
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <ul>
+     * <li>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</li>
+     * <li>An AccessKey pair is created and obtained. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
+     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O&#x26;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and authorize the RAM user to access Simple Log Service</a>.</li>
+     * <li>The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage a project</a>.</li>
+     * </ul>
+     * <h3>Authentication resources</h3>
+     * <p>The following table describes the authorization information that is required for this operation. You can add the information to the Action element of a RAM policy statement to grant a RAM user or a RAM role the permissions to call this operation.</p>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th align="left">Action</th>
+     * <th align="left">Resource</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td align="left"><code>log:ListLogStores</code></td>
+     * <td align="left"><code>acs:log:{#regionId}:{#accountId}:project/{#ProjectName}/logstore/*</code></td>
+     * </tr>
+     * </tbody></table>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries all Logstores or Logstores that match specific conditions in a project.</p>
+     * 
      * @param request ListLogStoresRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5544,19 +5775,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries all Logstores or Logstores that match specific conditions in a project.
-     *
-     * @description ### Usage notes
-     * * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     * * An AccessKey pair is created and obtained. For more information, see [AccessKey pair](https://help.aliyun.com/document_detail/29009.html).
-     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O&#x26;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](https://help.aliyun.com/document_detail/47664.html).
-     * * The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](https://help.aliyun.com/document_detail/48984.html).
-     * ### Authentication resources
-     * The following table describes the authorization information that is required for this operation. You can add the information to the Action element of a RAM policy statement to grant a RAM user or a RAM role the permissions to call this operation.
-     * |Action|Resource|
-     * |:---|:---|
-     * |`log:ListLogStores`|`acs:log:{#regionId}:{#accountId}:project/{#ProjectName}/logstore/*`|
-     *
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <ul>
+     * <li>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</li>
+     * <li>An AccessKey pair is created and obtained. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
+     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O&#x26;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and authorize the RAM user to access Simple Log Service</a>.</li>
+     * <li>The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage a project</a>.</li>
+     * </ul>
+     * <h3>Authentication resources</h3>
+     * <p>The following table describes the authorization information that is required for this operation. You can add the information to the Action element of a RAM policy statement to grant a RAM user or a RAM role the permissions to call this operation.</p>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th align="left">Action</th>
+     * <th align="left">Resource</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td align="left"><code>log:ListLogStores</code></td>
+     * <td align="left"><code>acs:log:{#regionId}:{#accountId}:project/{#ProjectName}/logstore/*</code></td>
+     * </tr>
+     * </tbody></table>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries all Logstores or Logstores that match specific conditions in a project.</p>
+     * 
      * @param request ListLogStoresRequest
      * @return ListLogStoresResponse
      */
@@ -5567,10 +5811,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a list of Logtail pipeline configurations that meet the specified conditions.
-     *
-     * @description The UK (London) region is supported. Supported regions are constantly updated.
-     *
+     * <b>description</b> :
+     * <p>The UK (London) region is supported. Supported regions are constantly updated.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a list of Logtail pipeline configurations that meet the specified conditions.</p>
+     * 
      * @param request ListLogtailPipelineConfigRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5617,10 +5863,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a list of Logtail pipeline configurations that meet the specified conditions.
-     *
-     * @description The UK (London) region is supported. Supported regions are constantly updated.
-     *
+     * <b>description</b> :
+     * <p>The UK (London) region is supported. Supported regions are constantly updated.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a list of Logtail pipeline configurations that meet the specified conditions.</p>
+     * 
      * @param request ListLogtailPipelineConfigRequest
      * @return ListLogtailPipelineConfigResponse
      */
@@ -5631,10 +5879,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the machine groups of a project.
-     *
-     * @description Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the machine groups of a project.</p>
+     * 
      * @param request ListMachineGroupRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5677,10 +5927,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the machine groups of a project.
-     *
-     * @description Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the machine groups of a project.</p>
+     * 
      * @param request ListMachineGroupRequest
      * @return ListMachineGroupResponse
      */
@@ -5691,10 +5943,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a list of machines that are connected to Simple Log Service in a specified machine group.
-     *
-     * @description Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a list of machines that are connected to Simple Log Service in a specified machine group.</p>
+     * 
      * @param request ListMachinesRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5733,10 +5987,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a list of machines that are connected to Simple Log Service in a specified machine group.
-     *
-     * @description Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a list of machines that are connected to Simple Log Service in a specified machine group.</p>
+     * 
      * @param request ListMachinesRequest
      * @return ListMachinesResponse
      */
@@ -5747,8 +6003,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 列出OSS投递任务
-     *
+     * <b>summary</b> : 
+     * <p>列出OSS投递任务</p>
+     * 
      * @param request ListOSSExportsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5791,8 +6048,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 列出OSS投递任务
-     *
+     * <b>summary</b> : 
+     * <p>列出OSS投递任务</p>
+     * 
      * @param request ListOSSExportsRequest
      * @return ListOSSExportsResponse
      */
@@ -5803,8 +6061,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 列举OSSHDFS投递任务
-     *
+     * <b>summary</b> : 
+     * <p>列举OSSHDFS投递任务</p>
+     * 
      * @param request ListOSSHDFSExportsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5847,8 +6106,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 列举OSSHDFS投递任务
-     *
+     * <b>summary</b> : 
+     * <p>列举OSSHDFS投递任务</p>
+     * 
      * @param request ListOSSHDFSExportsRequest
      * @return ListOSSHDFSExportsResponse
      */
@@ -5859,8 +6119,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 列出oss导入任务
-     *
+     * <b>summary</b> : 
+     * <p>列出oss导入任务</p>
+     * 
      * @param request ListOSSIngestionsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5903,8 +6164,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 列出oss导入任务
-     *
+     * <b>summary</b> : 
+     * <p>列出oss导入任务</p>
+     * 
      * @param request ListOSSIngestionsRequest
      * @return ListOSSIngestionsResponse
      */
@@ -5915,11 +6177,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the projects that meet specified conditions.
-     *
-     * @description ### [](#)Usage notes
-     * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Usage notes</h3>
+     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the projects that meet specified conditions.</p>
+     * 
      * @param request ListProjectRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5967,11 +6231,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the projects that meet specified conditions.
-     *
-     * @description ### [](#)Usage notes
-     * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Usage notes</h3>
+     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the projects that meet specified conditions.</p>
+     * 
      * @param request ListProjectRequest
      * @return ListProjectResponse
      */
@@ -5982,11 +6248,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a list of saved searches.
-     *
-     * @description ### Usage notes
-     * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a list of saved searches.</p>
+     * 
      * @param request ListSavedSearchRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -6025,11 +6293,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a list of saved searches.
-     *
-     * @description ### Usage notes
-     * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a list of saved searches.</p>
+     * 
      * @param request ListSavedSearchRequest
      * @return ListSavedSearchResponse
      */
@@ -6040,8 +6310,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 列举定时SQL任务
-     *
+     * <b>summary</b> : 
+     * <p>列举定时SQL任务</p>
+     * 
      * @param request ListScheduledSQLsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -6084,8 +6355,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 列举定时SQL任务
-     *
+     * <b>summary</b> : 
+     * <p>列举定时SQL任务</p>
+     * 
      * @param request ListScheduledSQLsRequest
      * @return ListScheduledSQLsResponse
      */
@@ -6096,8 +6368,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a list of shards in a Logstore.
-     *
+     * <b>summary</b> : 
+     * <p>Queries a list of shards in a Logstore.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListShardsResponse
@@ -6124,8 +6397,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a list of shards in a Logstore.
-     *
+     * <b>summary</b> : 
+     * <p>Queries a list of shards in a Logstore.</p>
      * @return ListShardsResponse
      */
     public ListShardsResponse listShards(String project, String logstore) throws Exception {
@@ -6135,57 +6408,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI ListShipper is deprecated
-     *
-     * @summary Queries a list of log shipping jobs in a Logstore.
-     *
-     * @description Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
-     * @param headers map
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return ListShipperResponse
-     */
-    // Deprecated
-    public ListShipperResponse listShipperWithOptions(String project, String logstore, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
-        hostMap.put("project", project);
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("hostMap", hostMap),
-            new TeaPair("headers", headers)
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ListShipper"),
-            new TeaPair("version", "2020-12-30"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/logstores/" + logstore + "/shipper"),
-            new TeaPair("method", "GET"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.execute(params, req, runtime), new ListShipperResponse());
-    }
-
-    /**
-     * @deprecated OpenAPI ListShipper is deprecated
-     *
-     * @summary Queries a list of log shipping jobs in a Logstore.
-     *
-     * @description Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
-     * @return ListShipperResponse
-     */
-    // Deprecated
-    public ListShipperResponse listShipper(String project, String logstore) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.listShipperWithOptions(project, logstore, headers, runtime);
-    }
-
-    /**
-     * @summary 查询StoreView列表
-     *
+     * <b>summary</b> : 
+     * <p>查询StoreView列表</p>
+     * 
      * @param request ListStoreViewsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -6232,8 +6457,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询StoreView列表
-     *
+     * <b>summary</b> : 
+     * <p>查询StoreView列表</p>
+     * 
      * @param request ListStoreViewsRequest
      * @return ListStoreViewsResponse
      */
@@ -6244,11 +6470,33 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a list of tags for one or more resources. You can query tags for resources by resource type or filter resources by tag. Each tag is a key-value pair.
-     *
-     * @description ### Usage notes
-     * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <ul>
+     * <li>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</li>
+     * <li>An AccessKey pair is created and obtained. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
+     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a Resource Access Management (RAM) user to call API operations or perform routine O&#x26;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and authorize the RAM user to access Simple Log Service</a>.</li>
+     * <li>The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage a project</a></li>
+     * <li>For more information, see <a href="https://help.aliyun.com/document_detail/29049.html">Authorization rules</a>. The following types of resources are supported: project, Logstore, dashboard, machine group, and Logtail configuration.</li>
+     * </ul>
+     * <h3>Authentication resources</h3>
+     * <p>The following table describes the authorization information that is required for this operation. You can add the information to the Action element of a RAM policy statement to grant a RAM user or a RAM role the permissions to call this operation.</p>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th align="left">Action</th>
+     * <th align="left">Resource</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td align="left"><code>log:ListTagResources</code></td>
+     * <td align="left">The resource format varies based on the resource type.\-<code>acs:log:{#regionId}:{#accountId}:project/{#ProjectName}</code>\-<code>acs:log:${regionName}:${accountId}:project/${projectName}/logstore/${logstoreName}</code>\-<code>acs:log:${regionName}:${accountId}:project/${projectName}/dashboard/${dashboardName}</code>\-<code>acs:log:${regionName}:${accountId}:project/${projectName}/machinegroup/${machineGroupName}</code>\-<code>acs:log:${regionName}:${accountId}:project/${projectName}/logtailconfig/${logtailConfigName}</code></td>
+     * </tr>
+     * </tbody></table>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a list of tags for one or more resources. You can query tags for resources by resource type or filter resources by tag. Each tag is a key-value pair.</p>
+     * 
      * @param tmpReq ListTagResourcesRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -6298,11 +6546,33 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a list of tags for one or more resources. You can query tags for resources by resource type or filter resources by tag. Each tag is a key-value pair.
-     *
-     * @description ### Usage notes
-     * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <ul>
+     * <li>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</li>
+     * <li>An AccessKey pair is created and obtained. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
+     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a Resource Access Management (RAM) user to call API operations or perform routine O&#x26;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and authorize the RAM user to access Simple Log Service</a>.</li>
+     * <li>The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage a project</a></li>
+     * <li>For more information, see <a href="https://help.aliyun.com/document_detail/29049.html">Authorization rules</a>. The following types of resources are supported: project, Logstore, dashboard, machine group, and Logtail configuration.</li>
+     * </ul>
+     * <h3>Authentication resources</h3>
+     * <p>The following table describes the authorization information that is required for this operation. You can add the information to the Action element of a RAM policy statement to grant a RAM user or a RAM role the permissions to call this operation.</p>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th align="left">Action</th>
+     * <th align="left">Resource</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td align="left"><code>log:ListTagResources</code></td>
+     * <td align="left">The resource format varies based on the resource type.\-<code>acs:log:{#regionId}:{#accountId}:project/{#ProjectName}</code>\-<code>acs:log:${regionName}:${accountId}:project/${projectName}/logstore/${logstoreName}</code>\-<code>acs:log:${regionName}:${accountId}:project/${projectName}/dashboard/${dashboardName}</code>\-<code>acs:log:${regionName}:${accountId}:project/${projectName}/machinegroup/${machineGroupName}</code>\-<code>acs:log:${regionName}:${accountId}:project/${projectName}/logtailconfig/${logtailConfigName}</code></td>
+     * </tr>
+     * </tbody></table>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a list of tags for one or more resources. You can query tags for resources by resource type or filter resources by tag. Each tag is a key-value pair.</p>
+     * 
      * @param request ListTagResourcesRequest
      * @return ListTagResourcesResponse
      */
@@ -6313,8 +6583,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 合并两个相邻的readwrite状态的Shards。在参数中指定一个shardID，服务端自动找相邻的下一个Shard进行合并。
-     *
+     * <b>summary</b> : 
+     * <p>合并两个相邻的readwrite状态的Shards。在参数中指定一个shardID，服务端自动找相邻的下一个Shard进行合并。</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return MergeShardResponse
@@ -6341,8 +6612,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 合并两个相邻的readwrite状态的Shards。在参数中指定一个shardID，服务端自动找相邻的下一个Shard进行合并。
-     *
+     * <b>summary</b> : 
+     * <p>合并两个相邻的readwrite状态的Shards。在参数中指定一个shardID，服务端自动找相邻的下一个Shard进行合并。</p>
      * @return MergeShardResponse
      */
     public MergeShardResponse mergeShard(String project, String logstore, String shard) throws Exception {
@@ -6352,8 +6623,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary openSlsService
-     *
+     * <b>summary</b> : 
+     * <p>openSlsService</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return OpenSlsServiceResponse
@@ -6377,8 +6649,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary openSlsService
-     *
+     * <b>summary</b> : 
+     * <p>openSlsService</p>
      * @return OpenSlsServiceResponse
      */
     public OpenSlsServiceResponse openSlsService() throws Exception {
@@ -6388,8 +6660,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Adds data to a dataset for storage.
-     *
+     * <b>summary</b> : 
+     * <p>Adds data to a dataset for storage.</p>
+     * 
      * @param request PutAnnotationDataRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -6431,8 +6704,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Adds data to a dataset for storage.
-     *
+     * <b>summary</b> : 
+     * <p>Adds data to a dataset for storage.</p>
+     * 
      * @param request PutAnnotationDataRequest
      * @return PutAnnotationDataResponse
      */
@@ -6443,15 +6717,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a project policy.
-     *
-     * @description ### Usage notes
-     * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     * *   Alibaba Cloud Simple Log Service allows you to configure a project policy to authorize other users to access the specified Log Service resources.
-     *     *   You must configure a project policy based on policy syntax. Before you configure a project policy, you must be familiar with the Action, Resource, and Condition parameters. For more information, see [RAM](https://help.aliyun.com/document_detail/128139.html).
-     *     *   If you set the Principal element to an asterisk (\\*) and do not configure the Condition element when you configure a project policy, the policy applies to all users except for the project owner. If you set the Principal element to an asterisk (\\*) and configure the Condition element when you configure a project policy, the policy applies to all users including the project owner.
-     *     *   You can configure multiple project policies for a project. The total size of the policies cannot exceed 16 KB.
-     *
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <ul>
+     * <li>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</li>
+     * <li>Alibaba Cloud Simple Log Service allows you to configure a project policy to authorize other users to access the specified Log Service resources.<ul>
+     * <li>You must configure a project policy based on policy syntax. Before you configure a project policy, you must be familiar with the Action, Resource, and Condition parameters. For more information, see <a href="https://help.aliyun.com/document_detail/128139.html">RAM</a>.</li>
+     * <li>If you set the Principal element to an asterisk (\<em>) and do not configure the Condition element when you configure a project policy, the policy applies to all users except for the project owner. If you set the Principal element to an asterisk (\</em>) and configure the Condition element when you configure a project policy, the policy applies to all users including the project owner.</li>
+     * <li>You can configure multiple project policies for a project. The total size of the policies cannot exceed 16 KB.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a project policy.</p>
+     * 
      * @param request PutProjectPolicyRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -6481,15 +6761,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a project policy.
-     *
-     * @description ### Usage notes
-     * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     * *   Alibaba Cloud Simple Log Service allows you to configure a project policy to authorize other users to access the specified Log Service resources.
-     *     *   You must configure a project policy based on policy syntax. Before you configure a project policy, you must be familiar with the Action, Resource, and Condition parameters. For more information, see [RAM](https://help.aliyun.com/document_detail/128139.html).
-     *     *   If you set the Principal element to an asterisk (\\*) and do not configure the Condition element when you configure a project policy, the policy applies to all users except for the project owner. If you set the Principal element to an asterisk (\\*) and configure the Condition element when you configure a project policy, the policy applies to all users including the project owner.
-     *     *   You can configure multiple project policies for a project. The total size of the policies cannot exceed 16 KB.
-     *
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <ul>
+     * <li>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</li>
+     * <li>Alibaba Cloud Simple Log Service allows you to configure a project policy to authorize other users to access the specified Log Service resources.<ul>
+     * <li>You must configure a project policy based on policy syntax. Before you configure a project policy, you must be familiar with the Action, Resource, and Condition parameters. For more information, see <a href="https://help.aliyun.com/document_detail/128139.html">RAM</a>.</li>
+     * <li>If you set the Principal element to an asterisk (\<em>) and do not configure the Condition element when you configure a project policy, the policy applies to all users except for the project owner. If you set the Principal element to an asterisk (\</em>) and configure the Condition element when you configure a project policy, the policy applies to all users including the project owner.</li>
+     * <li>You can configure multiple project policies for a project. The total size of the policies cannot exceed 16 KB.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a project policy.</p>
+     * 
      * @param request PutProjectPolicyRequest
      * @return PutProjectPolicyResponse
      */
@@ -6500,8 +6786,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 设置project传输加速状态
-     *
+     * <b>summary</b> : 
+     * <p>设置project传输加速状态</p>
+     * 
      * @param request PutProjectTransferAccelerationRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -6536,8 +6823,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 设置project传输加速状态
-     *
+     * <b>summary</b> : 
+     * <p>设置project传输加速状态</p>
+     * 
      * @param request PutProjectTransferAccelerationRequest
      * @return PutProjectTransferAccelerationResponse
      */
@@ -6548,17 +6836,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Sends multiple logs to Simple Log Service in one request.
-     *
-     * @description ### [](#)Usage notes
-     * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong, the region of the project, and the name of the Logstore to which the logs belong. For more information, see [Manage a project](https://help.aliyun.com/document_detail/48984.html) and [Manage a Logstore](https://help.aliyun.com/document_detail/48990.html).
-     * *   You can call this operation to collect logs from web pages or clients.
-     * *   If you use web tracking to collect logs and you do not call this operation, you can send only one log to Simple Log Service in a request. For more information, see [Use web tracking to collect logs](https://help.aliyun.com/document_detail/31752.html).
-     * *   If you want to collect a large amount of log data, you can call this operation to send multiple logs to Simple Log Service in one request.
-     * *   Before you can call this operation to send logs to a Logstore, you must enable web tracking for the Logstore. For more information, see [Use web tracking to collect logs](https://help.aliyun.com/document_detail/31752.html).
-     * *   You cannot call this operation to send the logs of multiple topics to Simple Log Service at a time.
-     * *   If you call this operation, anonymous users from the Internet are granted the write permissions on the Logstore. This may generate dirty data because AccessKey pair-based authentication is not performed.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Usage notes</h3>
+     * <ul>
+     * <li>The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong, the region of the project, and the name of the Logstore to which the logs belong. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage a project</a> and <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</li>
+     * <li>You can call this operation to collect logs from web pages or clients.</li>
+     * <li>If you use web tracking to collect logs and you do not call this operation, you can send only one log to Simple Log Service in a request. For more information, see <a href="https://help.aliyun.com/document_detail/31752.html">Use web tracking to collect logs</a>.</li>
+     * <li>If you want to collect a large amount of log data, you can call this operation to send multiple logs to Simple Log Service in one request.</li>
+     * <li>Before you can call this operation to send logs to a Logstore, you must enable web tracking for the Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/31752.html">Use web tracking to collect logs</a>.</li>
+     * <li>You cannot call this operation to send the logs of multiple topics to Simple Log Service at a time.</li>
+     * <li>If you call this operation, anonymous users from the Internet are granted the write permissions on the Logstore. This may generate dirty data because AccessKey pair-based authentication is not performed.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Sends multiple logs to Simple Log Service in one request.</p>
+     * 
      * @param request PutWebtrackingRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -6605,17 +6897,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Sends multiple logs to Simple Log Service in one request.
-     *
-     * @description ### [](#)Usage notes
-     * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong, the region of the project, and the name of the Logstore to which the logs belong. For more information, see [Manage a project](https://help.aliyun.com/document_detail/48984.html) and [Manage a Logstore](https://help.aliyun.com/document_detail/48990.html).
-     * *   You can call this operation to collect logs from web pages or clients.
-     * *   If you use web tracking to collect logs and you do not call this operation, you can send only one log to Simple Log Service in a request. For more information, see [Use web tracking to collect logs](https://help.aliyun.com/document_detail/31752.html).
-     * *   If you want to collect a large amount of log data, you can call this operation to send multiple logs to Simple Log Service in one request.
-     * *   Before you can call this operation to send logs to a Logstore, you must enable web tracking for the Logstore. For more information, see [Use web tracking to collect logs](https://help.aliyun.com/document_detail/31752.html).
-     * *   You cannot call this operation to send the logs of multiple topics to Simple Log Service at a time.
-     * *   If you call this operation, anonymous users from the Internet are granted the write permissions on the Logstore. This may generate dirty data because AccessKey pair-based authentication is not performed.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Usage notes</h3>
+     * <ul>
+     * <li>The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong, the region of the project, and the name of the Logstore to which the logs belong. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage a project</a> and <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</li>
+     * <li>You can call this operation to collect logs from web pages or clients.</li>
+     * <li>If you use web tracking to collect logs and you do not call this operation, you can send only one log to Simple Log Service in a request. For more information, see <a href="https://help.aliyun.com/document_detail/31752.html">Use web tracking to collect logs</a>.</li>
+     * <li>If you want to collect a large amount of log data, you can call this operation to send multiple logs to Simple Log Service in one request.</li>
+     * <li>Before you can call this operation to send logs to a Logstore, you must enable web tracking for the Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/31752.html">Use web tracking to collect logs</a>.</li>
+     * <li>You cannot call this operation to send the logs of multiple topics to Simple Log Service at a time.</li>
+     * <li>If you call this operation, anonymous users from the Internet are granted the write permissions on the Logstore. This may generate dirty data because AccessKey pair-based authentication is not performed.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Sends multiple logs to Simple Log Service in one request.</p>
+     * 
      * @param request PutWebtrackingRequest
      * @return PutWebtrackingResponse
      */
@@ -6626,15 +6922,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>queryMLServiceResults</p>
+     * 
      * @deprecated OpenAPI QueryMLServiceResults is deprecated
-     *
-     * @summary queryMLServiceResults
-     *
+     * 
      * @param request QueryMLServiceResultsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryMLServiceResultsResponse
      */
+    @Deprecated
     // Deprecated
     public QueryMLServiceResultsResponse queryMLServiceResultsWithOptions(String serviceName, QueryMLServiceResultsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -6663,13 +6961,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>queryMLServiceResults</p>
+     * 
      * @deprecated OpenAPI QueryMLServiceResults is deprecated
-     *
-     * @summary queryMLServiceResults
-     *
+     * 
      * @param request QueryMLServiceResultsRequest
      * @return QueryMLServiceResultsResponse
      */
+    @Deprecated
     // Deprecated
     public QueryMLServiceResultsResponse queryMLServiceResults(String serviceName, QueryMLServiceResultsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -6678,8 +6978,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 刷新token
-     *
+     * <b>summary</b> : 
+     * <p>刷新token</p>
+     * 
      * @param request RefreshTokenRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -6715,8 +7016,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 刷新token
-     *
+     * <b>summary</b> : 
+     * <p>刷新token</p>
+     * 
      * @param request RefreshTokenRequest
      * @return RefreshTokenResponse
      */
@@ -6727,10 +7029,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Removes a Logtail configuration from a machine group.
-     *
-     * @description Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Removes a Logtail configuration from a machine group.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return RemoveConfigFromMachineGroupResponse
@@ -6757,10 +7061,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Removes a Logtail configuration from a machine group.
-     *
-     * @description Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Removes a Logtail configuration from a machine group.</p>
      * @return RemoveConfigFromMachineGroupResponse
      */
     public RemoveConfigFromMachineGroupResponse removeConfigFromMachineGroup(String project, String machineGroup, String configName) throws Exception {
@@ -6770,12 +7075,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Splits a shard in the readwrite state.
-     *
-     * @description ### Usage notes
-     * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     * *   Each shard has an MD5 hash range, and each range is a left-closed, right-open interval. The interval is in the `[BeginKey,EndKey)` format. A shard can be in the readwrite or readonly state. You can split a shard and merge shards. For more information, see [Shard](https://help.aliyun.com/document_detail/28976.html).
-     *
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <ul>
+     * <li>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</li>
+     * <li>Each shard has an MD5 hash range, and each range is a left-closed, right-open interval. The interval is in the <code>[BeginKey,EndKey)</code> format. A shard can be in the readwrite or readonly state. You can split a shard and merge shards. For more information, see <a href="https://help.aliyun.com/document_detail/28976.html">Shard</a>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Splits a shard in the readwrite state.</p>
+     * 
      * @param request SplitShardRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -6814,12 +7123,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Splits a shard in the readwrite state.
-     *
-     * @description ### Usage notes
-     * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     * *   Each shard has an MD5 hash range, and each range is a left-closed, right-open interval. The interval is in the `[BeginKey,EndKey)` format. A shard can be in the readwrite or readonly state. You can split a shard and merge shards. For more information, see [Shard](https://help.aliyun.com/document_detail/28976.html).
-     *
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <ul>
+     * <li>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</li>
+     * <li>Each shard has an MD5 hash range, and each range is a left-closed, right-open interval. The interval is in the <code>[BeginKey,EndKey)</code> format. A shard can be in the readwrite or readonly state. You can split a shard and merge shards. For more information, see <a href="https://help.aliyun.com/document_detail/28976.html">Shard</a>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Splits a shard in the readwrite state.</p>
+     * 
      * @param request SplitShardRequest
      * @return SplitShardResponse
      */
@@ -6830,8 +7143,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 启动数据加工任务
-     *
+     * <b>summary</b> : 
+     * <p>启动数据加工任务</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return StartETLResponse
@@ -6858,8 +7172,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 启动数据加工任务
-     *
+     * <b>summary</b> : 
+     * <p>启动数据加工任务</p>
      * @return StartETLResponse
      */
     public StartETLResponse startETL(String project, String etlName) throws Exception {
@@ -6869,8 +7183,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 启动OSS投递任务
-     *
+     * <b>summary</b> : 
+     * <p>启动OSS投递任务</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return StartOSSExportResponse
@@ -6897,8 +7212,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 启动OSS投递任务
-     *
+     * <b>summary</b> : 
+     * <p>启动OSS投递任务</p>
      * @return StartOSSExportResponse
      */
     public StartOSSExportResponse startOSSExport(String project, String ossExportName) throws Exception {
@@ -6908,8 +7223,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 启动OSSHDFS投递任务
-     *
+     * <b>summary</b> : 
+     * <p>启动OSSHDFS投递任务</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return StartOSSHDFSExportResponse
@@ -6936,8 +7252,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 启动OSSHDFS投递任务
-     *
+     * <b>summary</b> : 
+     * <p>启动OSSHDFS投递任务</p>
      * @return StartOSSHDFSExportResponse
      */
     public StartOSSHDFSExportResponse startOSSHDFSExport(String project, String ossExportName) throws Exception {
@@ -6947,8 +7263,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 启动OSS导入任务
-     *
+     * <b>summary</b> : 
+     * <p>启动OSS导入任务</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return StartOSSIngestionResponse
@@ -6975,8 +7292,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 启动OSS导入任务
-     *
+     * <b>summary</b> : 
+     * <p>启动OSS导入任务</p>
      * @return StartOSSIngestionResponse
      */
     public StartOSSIngestionResponse startOSSIngestion(String project, String ossIngestionName) throws Exception {
@@ -6986,8 +7303,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 停止数据加工任务
-     *
+     * <b>summary</b> : 
+     * <p>停止数据加工任务</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return StopETLResponse
@@ -7014,8 +7332,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 停止数据加工任务
-     *
+     * <b>summary</b> : 
+     * <p>停止数据加工任务</p>
      * @return StopETLResponse
      */
     public StopETLResponse stopETL(String project, String etlName) throws Exception {
@@ -7025,8 +7343,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 停止OSS投递任务
-     *
+     * <b>summary</b> : 
+     * <p>停止OSS投递任务</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return StopOSSExportResponse
@@ -7053,8 +7372,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 停止OSS投递任务
-     *
+     * <b>summary</b> : 
+     * <p>停止OSS投递任务</p>
      * @return StopOSSExportResponse
      */
     public StopOSSExportResponse stopOSSExport(String project, String ossExportName) throws Exception {
@@ -7064,8 +7383,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 停止OSSHDFS投递任务
-     *
+     * <b>summary</b> : 
+     * <p>停止OSSHDFS投递任务</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return StopOSSHDFSExportResponse
@@ -7092,8 +7412,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 停止OSSHDFS投递任务
-     *
+     * <b>summary</b> : 
+     * <p>停止OSSHDFS投递任务</p>
      * @return StopOSSHDFSExportResponse
      */
     public StopOSSHDFSExportResponse stopOSSHDFSExport(String project, String ossExportName) throws Exception {
@@ -7103,8 +7423,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 停止OSS导入任务
-     *
+     * <b>summary</b> : 
+     * <p>停止OSS导入任务</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return StopOSSIngestionResponse
@@ -7131,8 +7452,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 停止OSS导入任务
-     *
+     * <b>summary</b> : 
+     * <p>停止OSS导入任务</p>
      * @return StopOSSIngestionResponse
      */
     public StopOSSIngestionResponse stopOSSIngestion(String project, String ossIngestionName) throws Exception {
@@ -7142,11 +7463,33 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates and adds one or more tags to a specified resource. You can add tags only to projects.
-     *
-     * @description ### Usage notes
-     * Host consists of a project name and a Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <ul>
+     * <li>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</li>
+     * <li>An AccessKey pair is created and obtained. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
+     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a Resource Access Management (RAM) user to call API operations or perform routine O&#x26;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and authorize the RAM user to access Simple Log Service</a>.</li>
+     * <li>The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage a project</a></li>
+     * <li>For more information, see <a href="https://help.aliyun.com/document_detail/29049.html">Authorization rules</a>. The following types of resources are supported: project, Logstore, dashboard, machine group, and Logtail configuration.</li>
+     * </ul>
+     * <h3>Authentication resources</h3>
+     * <p>The following table describes the authorization information that is required for this operation. You can add the information to the Action element of a RAM policy statement to grant a RAM user or a RAM role the permissions to call this operation.</p>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th align="left">Action</th>
+     * <th align="left">Resource</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td align="left"><code>log:TagResources</code></td>
+     * <td align="left">The resource format varies based on the resource type.\-<code>acs:log:{#regionId}:{#accountId}:project/{#ProjectName}</code>\-<code>acs:log:${regionName}:${accountId}:project/${projectName}/logstore/${logstoreName}</code>\-<code>acs:log:${regionName}:${accountId}:project/${projectName}/dashboard/${dashboardName}</code>\-<code>acs:log:${regionName}:${accountId}:project/${projectName}/machinegroup/${machineGroupName}</code>\-<code>acs:log:${regionName}:${accountId}:project/${projectName}/logtailconfig/${logtailConfigName}</code></td>
+     * </tr>
+     * </tbody></table>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates and adds tags to a resource. You can add tags only to projects.</p>
+     * 
      * @param request TagResourcesRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -7186,11 +7529,33 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates and adds one or more tags to a specified resource. You can add tags only to projects.
-     *
-     * @description ### Usage notes
-     * Host consists of a project name and a Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <ul>
+     * <li>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</li>
+     * <li>An AccessKey pair is created and obtained. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
+     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a Resource Access Management (RAM) user to call API operations or perform routine O&#x26;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and authorize the RAM user to access Simple Log Service</a>.</li>
+     * <li>The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage a project</a></li>
+     * <li>For more information, see <a href="https://help.aliyun.com/document_detail/29049.html">Authorization rules</a>. The following types of resources are supported: project, Logstore, dashboard, machine group, and Logtail configuration.</li>
+     * </ul>
+     * <h3>Authentication resources</h3>
+     * <p>The following table describes the authorization information that is required for this operation. You can add the information to the Action element of a RAM policy statement to grant a RAM user or a RAM role the permissions to call this operation.</p>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th align="left">Action</th>
+     * <th align="left">Resource</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td align="left"><code>log:TagResources</code></td>
+     * <td align="left">The resource format varies based on the resource type.\-<code>acs:log:{#regionId}:{#accountId}:project/{#ProjectName}</code>\-<code>acs:log:${regionName}:${accountId}:project/${projectName}/logstore/${logstoreName}</code>\-<code>acs:log:${regionName}:${accountId}:project/${projectName}/dashboard/${dashboardName}</code>\-<code>acs:log:${regionName}:${accountId}:project/${projectName}/machinegroup/${machineGroupName}</code>\-<code>acs:log:${regionName}:${accountId}:project/${projectName}/logtailconfig/${logtailConfigName}</code></td>
+     * </tr>
+     * </tbody></table>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates and adds tags to a resource. You can add tags only to projects.</p>
+     * 
      * @param request TagResourcesRequest
      * @return TagResourcesResponse
      */
@@ -7201,11 +7566,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Detaches one or more tags from a resource. You can detach tags only from Simple Log Service projects. You can detach multiple or all tags from a Simple Log Service project at a time.
-     *
-     * @description ### Usage notes
-     * Host consists of a project name and a Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <ul>
+     * <li>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</li>
+     * <li>An AccessKey pair is created and obtained. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
+     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a Resource Access Management (RAM) user to call API operations or perform routine O&#x26;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and authorize the RAM user to access Simple Log Service</a>.</li>
+     * <li>The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage a project</a> For more information, see <a href="https://help.aliyun.com/document_detail/29049.html">Authorization rules</a>. The following types of resources are supported: project, Logstore, dashboard, machine group, and Logtail configuration.</li>
+     * </ul>
+     * <h3>Authentication resources</h3>
+     * <p>The following table describes the authorization information that is required for this operation. You can add the information to the Action element of a RAM policy statement to grant a RAM user or a RAM role the permissions to call this operation.</p>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th align="left">Action</th>
+     * <th align="left">Resource</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td align="left"><code>log:UntagResources</code></td>
+     * <td align="left">The resource format varies based on the resource type.\-<code>acs:log:{#regionId}:{#accountId}:project/{#ProjectName}</code>\-<code>acs:log:${regionName}:${accountId}:project/${projectName}/logstore/${logstoreName}</code>\-<code>acs:log:${regionName}:${accountId}:project/${projectName}/dashboard/${dashboardName}</code>\-<code>acs:log:${regionName}:${accountId}:project/${projectName}/machinegroup/${machineGroupName}</code>\-<code>acs:log:${regionName}:${accountId}:project/${projectName}/logtailconfig/${logtailConfigName}</code></td>
+     * </tr>
+     * </tbody></table>
+     * 
+     * <b>summary</b> : 
+     * <p>Detaches one or more tags from a resource. You can detach tags only from Simple Log Service projects. You can detach multiple or all tags from a Simple Log Service project at a time.</p>
+     * 
      * @param request UntagResourcesRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -7249,11 +7635,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Detaches one or more tags from a resource. You can detach tags only from Simple Log Service projects. You can detach multiple or all tags from a Simple Log Service project at a time.
-     *
-     * @description ### Usage notes
-     * Host consists of a project name and a Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <ul>
+     * <li>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</li>
+     * <li>An AccessKey pair is created and obtained. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
+     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a Resource Access Management (RAM) user to call API operations or perform routine O&#x26;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and authorize the RAM user to access Simple Log Service</a>.</li>
+     * <li>The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage a project</a> For more information, see <a href="https://help.aliyun.com/document_detail/29049.html">Authorization rules</a>. The following types of resources are supported: project, Logstore, dashboard, machine group, and Logtail configuration.</li>
+     * </ul>
+     * <h3>Authentication resources</h3>
+     * <p>The following table describes the authorization information that is required for this operation. You can add the information to the Action element of a RAM policy statement to grant a RAM user or a RAM role the permissions to call this operation.</p>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th align="left">Action</th>
+     * <th align="left">Resource</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td align="left"><code>log:UntagResources</code></td>
+     * <td align="left">The resource format varies based on the resource type.\-<code>acs:log:{#regionId}:{#accountId}:project/{#ProjectName}</code>\-<code>acs:log:${regionName}:${accountId}:project/${projectName}/logstore/${logstoreName}</code>\-<code>acs:log:${regionName}:${accountId}:project/${projectName}/dashboard/${dashboardName}</code>\-<code>acs:log:${regionName}:${accountId}:project/${projectName}/machinegroup/${machineGroupName}</code>\-<code>acs:log:${regionName}:${accountId}:project/${projectName}/logtailconfig/${logtailConfigName}</code></td>
+     * </tr>
+     * </tbody></table>
+     * 
+     * <b>summary</b> : 
+     * <p>Detaches one or more tags from a resource. You can detach tags only from Simple Log Service projects. You can detach multiple or all tags from a Simple Log Service project at a time.</p>
+     * 
      * @param request UntagResourcesRequest
      * @return UntagResourcesResponse
      */
@@ -7264,8 +7671,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新告警
-     *
+     * <b>summary</b> : 
+     * <p>更新告警</p>
+     * 
      * @param request UpdateAlertRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -7312,8 +7720,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新告警
-     *
+     * <b>summary</b> : 
+     * <p>更新告警</p>
+     * 
      * @param request UpdateAlertRequest
      * @return UpdateAlertResponse
      */
@@ -7324,8 +7733,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates a dataset.
-     *
+     * <b>summary</b> : 
+     * <p>Updates a dataset.</p>
+     * 
      * @param request UpdateAnnotationDataSetRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -7352,8 +7762,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates a dataset.
-     *
+     * <b>summary</b> : 
+     * <p>Updates a dataset.</p>
+     * 
      * @param request UpdateAnnotationDataSetRequest
      * @return UpdateAnnotationDataSetResponse
      */
@@ -7364,10 +7775,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates a tag table.
-     *
-     * @description You can update only the names of the tags in a tag set.
-     *
+     * <b>description</b> :
+     * <p>You can update only the names of the tags in a tag set.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates a tag table.</p>
+     * 
      * @param request UpdateAnnotationLabelRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -7394,10 +7807,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates a tag table.
-     *
-     * @description You can update only the names of the tags in a tag set.
-     *
+     * <b>description</b> :
+     * <p>You can update only the names of the tags in a tag set.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates a tag table.</p>
+     * 
      * @param request UpdateAnnotationLabelRequest
      * @return UpdateAnnotationLabelResponse
      */
@@ -7408,16 +7823,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates a Logtail configuration.
-     *
-     * @description ### [](#)Usage notes
-     * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     * *   After you update a Logtail configuration that is applied to a machine group, the new configuration immediately takes effect.
-     * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](https://help.aliyun.com/document_detail/29009.html).
-     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](https://help.aliyun.com/document_detail/47664.html).
-     * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](https://help.aliyun.com/document_detail/48984.html).
-     * *   The Logtail configuration is planned out. For more information, see [Logtail configurations](https://help.aliyun.com/document_detail/29058.html).
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Usage notes</h3>
+     * <ul>
+     * <li>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</li>
+     * <li>After you update a Logtail configuration that is applied to a machine group, the new configuration immediately takes effect.</li>
+     * <li>An AccessKey pair is created and obtained. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
+     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\&amp;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and authorize the RAM user to access Simple Log Service</a>.</li>
+     * <li>The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage a project</a>.</li>
+     * <li>The Logtail configuration is planned out. For more information, see <a href="https://help.aliyun.com/document_detail/29058.html">Logtail configurations</a>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies a Logtail configuration.</p>
+     * 
      * @param request UpdateConfigRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -7447,16 +7866,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates a Logtail configuration.
-     *
-     * @description ### [](#)Usage notes
-     * *   Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     * *   After you update a Logtail configuration that is applied to a machine group, the new configuration immediately takes effect.
-     * *   An AccessKey pair is created and obtained. For more information, see [AccessKey pair](https://help.aliyun.com/document_detail/29009.html).
-     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\\&M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see [Create a RAM user and authorize the RAM user to access Simple Log Service](https://help.aliyun.com/document_detail/47664.html).
-     * *   The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see [Manage a project](https://help.aliyun.com/document_detail/48984.html).
-     * *   The Logtail configuration is planned out. For more information, see [Logtail configurations](https://help.aliyun.com/document_detail/29058.html).
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Usage notes</h3>
+     * <ul>
+     * <li>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</li>
+     * <li>After you update a Logtail configuration that is applied to a machine group, the new configuration immediately takes effect.</li>
+     * <li>An AccessKey pair is created and obtained. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
+     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a RAM user to call API operations or perform routine O\&amp;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and authorize the RAM user to access Simple Log Service</a>.</li>
+     * <li>The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage a project</a>.</li>
+     * <li>The Logtail configuration is planned out. For more information, see <a href="https://help.aliyun.com/document_detail/29058.html">Logtail configurations</a>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies a Logtail configuration.</p>
+     * 
      * @param request UpdateConfigRequest
      * @return UpdateConfigResponse
      */
@@ -7467,11 +7890,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the attributes of a consumer group.
-     *
-     * @description ### Usage notes
-     * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the attributes of a consumer group.</p>
+     * 
      * @param request UpdateConsumerGroupRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -7510,11 +7935,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the attributes of a consumer group.
-     *
-     * @description ### Usage notes
-     * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the attributes of a consumer group.</p>
+     * 
      * @param request UpdateConsumerGroupRequest
      * @return UpdateConsumerGroupResponse
      */
@@ -7525,11 +7952,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates a dashboard.
-     *
-     * @description ### [](#)Usage notes
-     * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Usage notes</h3>
+     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates a dashboard.</p>
+     * 
      * @param request UpdateDashboardRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -7580,11 +8009,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates a dashboard.
-     *
-     * @description ### [](#)Usage notes
-     * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Usage notes</h3>
+     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates a dashboard.</p>
+     * 
      * @param request UpdateDashboardRequest
      * @return UpdateDashboardResponse
      */
@@ -7595,8 +8026,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新数据加工任务
-     *
+     * <b>summary</b> : 
+     * <p>更新数据加工任务</p>
+     * 
      * @param request UpdateETLRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -7639,8 +8071,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新数据加工任务
-     *
+     * <b>summary</b> : 
+     * <p>更新数据加工任务</p>
+     * 
      * @param request UpdateETLRequest
      * @return UpdateETLResponse
      */
@@ -7651,11 +8084,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the indexes of a Logstore.
-     *
-     * @description ### Usage notes
-     * Host consists of a project name and a Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>Host consists of a project name and a Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the indexes of a Logstore.</p>
+     * 
      * @param request UpdateIndexRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -7714,11 +8149,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the indexes of a Logstore.
-     *
-     * @description ### Usage notes
-     * Host consists of a project name and a Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>Host consists of a project name and a Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the indexes of a Logstore.</p>
+     * 
      * @param request UpdateIndexRequest
      * @return UpdateIndexResponse
      */
@@ -7729,12 +8166,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the attributes of a Logstore.
-     *
-     * @description ### Usage notes
-     * *   Host consists of a project name and a Log Service endpoint. You must specify a project in Host.
-     * *   You can call the UpdateLogStore operation to change only the time-to-live (TTL) attribute.
-     *
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <ul>
+     * <li>Host consists of a project name and a Log Service endpoint. You must specify a project in Host.</li>
+     * <li>You can call the UpdateLogStore operation to change only the time-to-live (TTL) attribute.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the attributes of a Logstore.</p>
+     * 
      * @param request UpdateLogStoreRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -7813,12 +8254,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the attributes of a Logstore.
-     *
-     * @description ### Usage notes
-     * *   Host consists of a project name and a Log Service endpoint. You must specify a project in Host.
-     * *   You can call the UpdateLogStore operation to change only the time-to-live (TTL) attribute.
-     *
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <ul>
+     * <li>Host consists of a project name and a Log Service endpoint. You must specify a project in Host.</li>
+     * <li>You can call the UpdateLogStore operation to change only the time-to-live (TTL) attribute.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the attributes of a Logstore.</p>
+     * 
      * @param request UpdateLogStoreRequest
      * @return UpdateLogStoreResponse
      */
@@ -7829,8 +8274,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新LogStore计量模式
-     *
+     * <b>summary</b> : 
+     * <p>Changes the billing mode of a Logstore.</p>
+     * 
      * @param request UpdateLogStoreMeteringModeRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -7865,8 +8311,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新LogStore计量模式
-     *
+     * <b>summary</b> : 
+     * <p>Changes the billing mode of a Logstore.</p>
+     * 
      * @param request UpdateLogStoreMeteringModeRequest
      * @return UpdateLogStoreMeteringModeResponse
      */
@@ -7877,10 +8324,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the service log configurations of a project.
-     *
-     * @description Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the service log configurations of a project.</p>
+     * 
      * @param request UpdateLoggingRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -7919,10 +8368,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the service log configurations of a project.
-     *
-     * @description Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the service log configurations of a project.</p>
+     * 
      * @param request UpdateLoggingRequest
      * @return UpdateLoggingResponse
      */
@@ -7933,10 +8384,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates a Logtail pipeline configuration.
-     *
-     * @description The UK (London) region is supported. Supported regions are constantly updated.
-     *
+     * <b>description</b> :
+     * <p>The UK (London) region is supported. Supported regions are constantly updated.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates a Logtail pipeline configuration.</p>
+     * 
      * @param request UpdateLogtailPipelineConfigRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -7995,10 +8448,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates a Logtail pipeline configuration.
-     *
-     * @description The UK (London) region is supported. Supported regions are constantly updated.
-     *
+     * <b>description</b> :
+     * <p>The UK (London) region is supported. Supported regions are constantly updated.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates a Logtail pipeline configuration.</p>
+     * 
      * @param request UpdateLogtailPipelineConfigRequest
      * @return UpdateLogtailPipelineConfigResponse
      */
@@ -8009,10 +8464,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the configuration of a machine group.
-     *
-     * @description Host consists of a project name and a Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <p>Host consists of a project name and a Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the configuration of a machine group.</p>
+     * 
      * @param request UpdateMachineGroupRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -8063,10 +8520,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the configuration of a machine group.
-     *
-     * @description Host consists of a project name and a Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <p>Host consists of a project name and a Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the configuration of a machine group.</p>
+     * 
      * @param request UpdateMachineGroupRequest
      * @return UpdateMachineGroupResponse
      */
@@ -8077,10 +8536,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the machines in a machine group. You can add machine to or remove machines from the machine group.
-     *
-     * @description Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the machines in a machine group. You can add machine to or remove machines from the machine group.</p>
+     * 
      * @param request UpdateMachineGroupMachineRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -8116,10 +8577,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the machines in a machine group. You can add machine to or remove machines from the machine group.
-     *
-     * @description Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the machines in a machine group. You can add machine to or remove machines from the machine group.</p>
+     * 
      * @param request UpdateMachineGroupMachineRequest
      * @return UpdateMachineGroupMachineResponse
      */
@@ -8130,8 +8593,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新 MetricStore 计量模式
-     *
+     * <b>summary</b> : 
+     * <p>更新 MetricStore 计量模式</p>
+     * 
      * @param request UpdateMetricStoreMeteringModeRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -8166,8 +8630,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新 MetricStore 计量模式
-     *
+     * <b>summary</b> : 
+     * <p>更新 MetricStore 计量模式</p>
+     * 
      * @param request UpdateMetricStoreMeteringModeRequest
      * @return UpdateMetricStoreMeteringModeResponse
      */
@@ -8178,8 +8643,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新OSS投递任务
-     *
+     * <b>summary</b> : 
+     * <p>更新OSS投递任务</p>
+     * 
      * @param request UpdateOSSExportRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -8222,8 +8688,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新OSS投递任务
-     *
+     * <b>summary</b> : 
+     * <p>更新OSS投递任务</p>
+     * 
      * @param request UpdateOSSExportRequest
      * @return UpdateOSSExportResponse
      */
@@ -8234,8 +8701,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新OSSHDFS投递任务
-     *
+     * <b>summary</b> : 
+     * <p>更新OSSHDFS投递任务</p>
+     * 
      * @param request UpdateOSSHDFSExportRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -8278,8 +8746,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新OSSHDFS投递任务
-     *
+     * <b>summary</b> : 
+     * <p>更新OSSHDFS投递任务</p>
+     * 
      * @param request UpdateOSSHDFSExportRequest
      * @return UpdateOSSHDFSExportResponse
      */
@@ -8290,8 +8759,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新oss导入任务
-     *
+     * <b>summary</b> : 
+     * <p>更新oss导入任务</p>
+     * 
      * @param request UpdateOSSIngestionRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -8338,8 +8808,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新oss导入任务
-     *
+     * <b>summary</b> : 
+     * <p>更新oss导入任务</p>
+     * 
      * @param request UpdateOSSIngestionRequest
      * @return UpdateOSSIngestionResponse
      */
@@ -8350,11 +8821,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates an Object Storage Service (OSS) external store.
-     *
-     * @description ### [](#)Usage notes
-     * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Usage notes</h3>
+     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates an Object Storage Service (OSS) external store.</p>
+     * 
      * @param request UpdateOssExternalStoreRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -8397,11 +8870,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates an Object Storage Service (OSS) external store.
-     *
-     * @description ### [](#)Usage notes
-     * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Usage notes</h3>
+     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates an Object Storage Service (OSS) external store.</p>
+     * 
      * @param request UpdateOssExternalStoreRequest
      * @return UpdateOssExternalStoreResponse
      */
@@ -8412,11 +8887,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates a project.
-     *
-     * @description ### Usage notes
-     * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates a project.</p>
+     * 
      * @param request UpdateProjectRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -8451,11 +8928,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates a project.
-     *
-     * @description ### Usage notes
-     * Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates a project.</p>
+     * 
      * @param request UpdateProjectRequest
      * @return UpdateProjectResponse
      */
@@ -8466,10 +8945,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates an ApsaraDB RDS external store.
-     *
-     * @description Host consists of a project name and a Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <p>Host consists of a project name and a Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates an ApsaraDB RDS external store.</p>
+     * 
      * @param request UpdateRdsExternalStoreRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -8512,10 +8993,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates an ApsaraDB RDS external store.
-     *
-     * @description Host consists of a project name and a Log Service endpoint. You must specify a project in Host.
-     *
+     * <b>description</b> :
+     * <p>Host consists of a project name and a Log Service endpoint. You must specify a project in Host.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates an ApsaraDB RDS external store.</p>
+     * 
      * @param request UpdateRdsExternalStoreRequest
      * @return UpdateRdsExternalStoreResponse
      */
@@ -8526,8 +9009,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates a saved search.
-     *
+     * <b>summary</b> : 
+     * <p>Updates a saved search.</p>
+     * 
      * @param request UpdateSavedSearchRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -8578,8 +9062,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates a saved search.
-     *
+     * <b>summary</b> : 
+     * <p>Updates a saved search.</p>
+     * 
      * @param request UpdateSavedSearchRequest
      * @return UpdateSavedSearchResponse
      */
@@ -8590,8 +9075,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新定时SQL任务
-     *
+     * <b>summary</b> : 
+     * <p>更新定时SQL任务</p>
+     * 
      * @param request UpdateScheduledSQLRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -8638,8 +9124,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新定时SQL任务
-     *
+     * <b>summary</b> : 
+     * <p>更新定时SQL任务</p>
+     * 
      * @param request UpdateScheduledSQLRequest
      * @return UpdateScheduledSQLResponse
      */
@@ -8650,8 +9137,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新独享sql实例
-     *
+     * <b>summary</b> : 
+     * <p>更新独享sql实例</p>
+     * 
      * @param request UpdateSqlInstanceRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -8690,8 +9178,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新独享sql实例
-     *
+     * <b>summary</b> : 
+     * <p>更新独享sql实例</p>
+     * 
      * @param request UpdateSqlInstanceRequest
      * @return UpdateSqlInstanceResponse
      */
@@ -8702,8 +9191,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新StoreView
-     *
+     * <b>summary</b> : 
+     * <p>更新StoreView</p>
+     * 
      * @param request UpdateStoreViewRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -8742,8 +9232,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新StoreView
-     *
+     * <b>summary</b> : 
+     * <p>更新StoreView</p>
+     * 
      * @param request UpdateStoreViewRequest
      * @return UpdateStoreViewResponse
      */
@@ -8754,8 +9245,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 调用UpsertCollectionPolicy接口更新采集策略的属性信息
-     *
+     * <b>summary</b> : 
+     * <p>调用UpsertCollectionPolicy接口创建或更新日志采集规则</p>
+     * 
      * @param request UpsertCollectionPolicyRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -8764,10 +9256,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpsertCollectionPolicyResponse upsertCollectionPolicyWithOptions(UpsertCollectionPolicyRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.attribute)) {
-            body.put("attribute", request.attribute);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.centralizeConfig)) {
             body.put("centralizeConfig", request.centralizeConfig);
         }
@@ -8778,6 +9266,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.dataCode)) {
             body.put("dataCode", request.dataCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataConfig)) {
+            body.put("dataConfig", request.dataConfig);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.enabled)) {
@@ -8796,6 +9288,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("productCode", request.productCode);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceDirectory)) {
+            body.put("resourceDirectory", request.resourceDirectory);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
@@ -8809,14 +9305,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
+            new TeaPair("bodyType", "none")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new UpsertCollectionPolicyResponse());
     }
 
     /**
-     * @summary 调用UpsertCollectionPolicy接口更新采集策略的属性信息
-     *
+     * <b>summary</b> : 
+     * <p>调用UpsertCollectionPolicy接口创建或更新日志采集规则</p>
+     * 
      * @param request UpsertCollectionPolicyRequest
      * @return UpsertCollectionPolicyResponse
      */

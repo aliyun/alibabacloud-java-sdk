@@ -7,6 +7,10 @@ public class SeverityConfiguration extends TeaModel {
     @NameInMap("evalCondition")
     public ConditionConfiguration evalCondition;
 
+    /**
+     * <strong>example:</strong>
+     * <p>8</p>
+     */
     @NameInMap("severity")
     public Integer severity;
 

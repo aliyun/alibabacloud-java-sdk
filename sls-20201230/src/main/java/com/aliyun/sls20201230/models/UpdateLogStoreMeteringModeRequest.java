@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class UpdateLogStoreMeteringModeRequest extends TeaModel {
     /**
+     * <p>The billing mode. Valid values: ChargeByFunction and ChargeByDataIngest. Default value: ChargeByFunction. The value ChargeByFunction specifies the pay-by-feature billing mode. The value ChargeByDataIngest specifies the pay-by-ingested-data billing mode.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ChargeByFunction</p>
      */
     @NameInMap("meteringMode")
     public String meteringMode;

@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class ListLogStoresResponseBody extends TeaModel {
     /**
      * <p>The number of entries returned on the current page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("count")
     public Integer count;
 
     /**
      * <p>The Logstores that meet the query conditions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;test-1&quot;,&quot;test-2&quot;]</p>
      */
     @NameInMap("logstores")
     public java.util.List<String> logstores;
 
     /**
      * <p>The number of the Logstores that meet the query conditions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("total")
     public Integer total;

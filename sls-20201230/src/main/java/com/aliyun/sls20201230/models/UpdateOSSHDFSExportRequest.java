@@ -10,6 +10,10 @@ public class UpdateOSSHDFSExportRequest extends TeaModel {
     @NameInMap("description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ali-test-oss-hdfs-job</p>
+     */
     @NameInMap("displayName")
     public String displayName;
 

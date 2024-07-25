@@ -10,6 +10,10 @@ public class UpdateOSSExportRequest extends TeaModel {
     @NameInMap("description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ali-test-oss-job</p>
+     */
     @NameInMap("displayName")
     public String displayName;
 

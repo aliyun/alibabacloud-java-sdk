@@ -7,9 +7,17 @@ public class ListETLsRequest extends TeaModel {
     @NameInMap("logstore")
     public String logstore;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("offset")
     public Integer offset;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("size")
     public Integer size;
 

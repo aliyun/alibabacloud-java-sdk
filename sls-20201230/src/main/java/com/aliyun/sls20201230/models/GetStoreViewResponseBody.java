@@ -4,6 +4,10 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class GetStoreViewResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>logstore</p>
+     */
     @NameInMap("storeType")
     public String storeType;
 

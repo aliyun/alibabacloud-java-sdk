@@ -4,9 +4,17 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class ServiceStatus extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("enabled")
     public Boolean enabled;
 
+    /**
+     * <strong>example:</strong>
+     * <p>NotExist</p>
+     */
     @NameInMap("status")
     public String status;
 

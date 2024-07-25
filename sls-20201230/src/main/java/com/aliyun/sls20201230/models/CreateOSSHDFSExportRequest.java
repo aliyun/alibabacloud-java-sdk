@@ -15,12 +15,18 @@ public class CreateOSSHDFSExportRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ali-test-oss-hdfs-job</p>
      */
     @NameInMap("displayName")
     public String displayName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>job-123456789-123456</p>
      */
     @NameInMap("name")
     public String name;

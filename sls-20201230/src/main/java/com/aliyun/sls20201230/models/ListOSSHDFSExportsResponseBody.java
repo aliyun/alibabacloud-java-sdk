@@ -4,12 +4,20 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class ListOSSHDFSExportsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("count")
     public Integer count;
 
     @NameInMap("results")
     public java.util.List<OSSExport> results;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("total")
     public Integer total;
 

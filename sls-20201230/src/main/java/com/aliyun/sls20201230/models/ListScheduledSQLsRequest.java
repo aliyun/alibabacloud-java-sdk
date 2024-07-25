@@ -7,9 +7,17 @@ public class ListScheduledSQLsRequest extends TeaModel {
     @NameInMap("logstore")
     public String logstore;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("offset")
     public Long offset;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("size")
     public Long size;
 

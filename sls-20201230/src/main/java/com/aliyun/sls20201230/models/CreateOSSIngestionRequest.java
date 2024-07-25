@@ -21,6 +21,9 @@ public class CreateOSSIngestionRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ingest-oss-123456</p>
      */
     @NameInMap("name")
     public String name;
