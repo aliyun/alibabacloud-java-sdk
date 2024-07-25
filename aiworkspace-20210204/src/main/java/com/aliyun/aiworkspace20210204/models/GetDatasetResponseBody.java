@@ -82,6 +82,9 @@ public class GetDatasetResponseBody extends TeaModel {
     @NameInMap("Property")
     public String property;
 
+    @NameInMap("Provider")
+    public String provider;
+
     @NameInMap("ProviderType")
     public String providerType;
 
@@ -226,6 +229,14 @@ public class GetDatasetResponseBody extends TeaModel {
     }
     public String getProperty() {
         return this.property;
+    }
+
+    public GetDatasetResponseBody setProvider(String provider) {
+        this.provider = provider;
+        return this;
+    }
+    public String getProvider() {
+        return this.provider;
     }
 
     public GetDatasetResponseBody setProviderType(String providerType) {

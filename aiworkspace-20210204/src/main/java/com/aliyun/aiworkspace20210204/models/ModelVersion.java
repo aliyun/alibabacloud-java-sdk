@@ -7,6 +7,9 @@ public class ModelVersion extends TeaModel {
     @NameInMap("ApprovalStatus")
     public String approvalStatus;
 
+    @NameInMap("CompressionSpec")
+    public java.util.Map<String, ?> compressionSpec;
+
     @NameInMap("EvaluationSpec")
     public java.util.Map<String, ?> evaluationSpec;
 
@@ -104,6 +107,14 @@ public class ModelVersion extends TeaModel {
     }
     public String getApprovalStatus() {
         return this.approvalStatus;
+    }
+
+    public ModelVersion setCompressionSpec(java.util.Map<String, ?> compressionSpec) {
+        this.compressionSpec = compressionSpec;
+        return this;
+    }
+    public java.util.Map<String, ?> getCompressionSpec() {
+        return this.compressionSpec;
     }
 
     public ModelVersion setEvaluationSpec(java.util.Map<String, ?> evaluationSpec) {
