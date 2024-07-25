@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class VoiceModerationResultResponseBody extends TeaModel {
     /**
+     * <p>The returned HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public VoiceModerationResultResponseBodyData data;
 
     /**
+     * <p>The message that is returned in response to the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
      */
@@ -22,7 +29,7 @@ public class VoiceModerationResultResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2881AD4F-638B-52A3-BA20-F74C5B1CEAE3</p>
@@ -69,35 +76,71 @@ public class VoiceModerationResultResponseBody extends TeaModel {
 
     public static class VoiceModerationResultResponseBodyDataSliceDetails extends TeaModel {
         /**
+         * <p>The end time of the text after audio-to-text conversion. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
         @NameInMap("EndTime")
         public Long endTime;
 
+        /**
+         * <p>The end timestamp of the segment. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1678854649720</p>
+         */
         @NameInMap("EndTimestamp")
         public Long endTimestamp;
 
+        /**
+         * <p>A reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;riskTips\&quot;:\&quot;sexuality_Suggestive\&quot;,\&quot;riskWords\&quot;:\&quot;pxxxxy\&quot;}</p>
+         */
         @NameInMap("Extend")
         public String extend;
 
         /**
+         * <p>The details of the labels.</p>
+         * 
          * <strong>example:</strong>
          * <p>sexual_sounds</p>
          */
         @NameInMap("Labels")
         public String labels;
 
+        /**
+         * <p>Reserved field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("OriginAlgoResult")
         public java.util.Map<String, ?> originAlgoResult;
 
+        /**
+         * <p>The risk details that are hit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sexuality_Suggestive</p>
+         */
         @NameInMap("RiskTips")
         public String riskTips;
 
+        /**
+         * <p>The risk words that are hit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAA,BBB,CCC</p>
+         */
         @NameInMap("RiskWords")
         public String riskWords;
 
         /**
+         * <p>Risk score, default range 0-99.</p>
+         * 
          * <strong>example:</strong>
          * <p>87.01</p>
          */
@@ -105,18 +148,38 @@ public class VoiceModerationResultResponseBody extends TeaModel {
         public Float score;
 
         /**
+         * <p>The start time of the text after audio-to-text conversion. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("StartTime")
         public Long startTime;
 
+        /**
+         * <p>The start timestamp of the segment. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1678854649720</p>
+         */
         @NameInMap("StartTimestamp")
         public Long startTimestamp;
 
+        /**
+         * <p>The text converted from voice.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Disgusting</p>
+         */
         @NameInMap("Text")
         public String text;
 
+        /**
+         * <p>The temporary access address of the audio segment. The validity period of the URL is 30 minutes. You must prepare another URL to store the audio segment at the earliest opportunity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://aliyundoc.com">https://aliyundoc.com</a></p>
+         */
         @NameInMap("Url")
         public String url;
 
@@ -224,26 +287,45 @@ public class VoiceModerationResultResponseBody extends TeaModel {
     }
 
     public static class VoiceModerationResultResponseBodyData extends TeaModel {
+        /**
+         * <p>The ID of the moderated object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>26769ada6e264e7ba9aa048241e12be9</p>
+         */
         @NameInMap("DataId")
         public String dataId;
 
         /**
+         * <p>The unique ID of the live stream.</p>
+         * 
          * <strong>example:</strong>
          * <p>liveId</p>
          */
         @NameInMap("LiveId")
         public String liveId;
 
+        /**
+         * <p>The details about the audio segments.</p>
+         */
         @NameInMap("SliceDetails")
         public java.util.List<VoiceModerationResultResponseBodyDataSliceDetails> sliceDetails;
 
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>kw24ihd0WGkdi5nniVZM@qOj-1x5Ibb</p>
          */
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <p>The URL of the moderation object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://aliyundoc.com">https://aliyundoc.com</a></p>
+         */
         @NameInMap("Url")
         public String url;
 

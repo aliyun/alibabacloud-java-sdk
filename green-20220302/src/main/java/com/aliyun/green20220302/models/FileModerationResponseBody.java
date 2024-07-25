@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class FileModerationResponseBody extends TeaModel {
     /**
+     * <p>The returned HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public FileModerationResponseBodyData data;
 
     /**
+     * <p>The message that is returned in response to the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
      */
@@ -22,7 +29,7 @@ public class FileModerationResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -69,6 +76,8 @@ public class FileModerationResponseBody extends TeaModel {
 
     public static class FileModerationResponseBodyData extends TeaModel {
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxxxx-xxxxx</p>
          */

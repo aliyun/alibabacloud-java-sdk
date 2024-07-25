@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class VideoModerationCancelRequest extends TeaModel {
     /**
+     * <p>The type of the moderation service.</p>
+     * 
      * <strong>example:</strong>
      * <p>videoDetection</p>
      */
@@ -12,6 +14,8 @@ public class VideoModerationCancelRequest extends TeaModel {
     public String service;
 
     /**
+     * <p>The parameters required by the moderation service. The value is a JSON string.</p>
+     * 
      * <strong>example:</strong>
      * <p>{\&quot;taskId\&quot;:\&quot;vi_s_4O9gp7GfNQdx9GOqdekFmk-1z2RJT\&quot;}</p>
      */

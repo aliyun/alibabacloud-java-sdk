@@ -4,10 +4,18 @@ package com.aliyun.green20220302.models;
 import com.aliyun.tea.*;
 
 public class UrlAsyncModerationRequest extends TeaModel {
+    /**
+     * <p>The type of the moderation service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>url_detection</p>
+     */
     @NameInMap("Service")
     public String service;
 
     /**
+     * <p>The parameters required by the moderation service. The value is a JSON string.</p>
+     * 
      * <strong>example:</strong>
      * <p>{
      *         &quot;url&quot;: &quot;<a href="https://help.aliyun.com/">https://help.aliyun.com/</a>&quot;,

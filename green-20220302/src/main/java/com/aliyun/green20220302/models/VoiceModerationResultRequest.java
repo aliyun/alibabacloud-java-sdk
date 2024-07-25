@@ -5,12 +5,20 @@ import com.aliyun.tea.*;
 
 public class VoiceModerationResultRequest extends TeaModel {
     /**
+     * <p>The type of the moderation service.</p>
+     * 
      * <strong>example:</strong>
      * <p>nickname_detection</p>
      */
     @NameInMap("Service")
     public String service;
 
+    /**
+     * <p>The parameters required by the moderation service. The value is a JSON string.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;taskId&quot;:&quot;xxxxx-xxxx&quot;}</p>
+     */
     @NameInMap("ServiceParameters")
     public String serviceParameters;
 

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ImageModerationResponseBody extends TeaModel {
     /**
+     * <p>The returned HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public ImageModerationResponseBodyData data;
 
     /**
+     * <p>The message that is returned in response to the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -22,6 +29,8 @@ public class ImageModerationResponseBody extends TeaModel {
     public String msg;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6CF2815C-C8C7-4A01-B52E-FF6E24F53492</p>
      */
@@ -66,12 +75,30 @@ public class ImageModerationResponseBody extends TeaModel {
     }
 
     public static class ImageModerationResponseBodyDataExtCustomImage extends TeaModel {
+        /**
+         * <p>The image ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
+         */
         @NameInMap("ImageId")
         public String imageId;
 
+        /**
+         * <p>The image library ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lib_123456</p>
+         */
         @NameInMap("LibId")
         public String libId;
 
+        /**
+         * <p>The image library name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("LibName")
         public String libName;
 
@@ -107,15 +134,39 @@ public class ImageModerationResponseBody extends TeaModel {
     }
 
     public static class ImageModerationResponseBodyDataExtLogoDataLocation extends TeaModel {
+        /**
+         * <p>The height of the text area, in pixels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>44</p>
+         */
         @NameInMap("H")
         public Integer h;
 
+        /**
+         * <p>The width of the text area, in pixels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>33</p>
+         */
         @NameInMap("W")
         public Integer w;
 
+        /**
+         * <p>The distance between the upper-left corner of the text area and the y-axis, using the upper-left corner of the image as the coordinate origin, in pixels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
+         */
         @NameInMap("X")
         public Integer x;
 
+        /**
+         * <p>The distance between the upper left corner of the text area and the x-axis, with the upper left corner of the image as the coordinate origin, in pixels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22</p>
+         */
         @NameInMap("Y")
         public Integer y;
 
@@ -159,12 +210,30 @@ public class ImageModerationResponseBody extends TeaModel {
     }
 
     public static class ImageModerationResponseBodyDataExtLogoDataLogo extends TeaModel {
+        /**
+         * <p>The score of the confidence level. Valid values: 0 to 100. The value is accurate to two decimal places. Some labels do not have scores of confidence levels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>99.01</p>
+         */
         @NameInMap("Confidence")
         public Float confidence;
 
+        /**
+         * <p>Logo category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("Label")
         public String label;
 
+        /**
+         * <p>Logo name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -200,9 +269,15 @@ public class ImageModerationResponseBody extends TeaModel {
     }
 
     public static class ImageModerationResponseBodyDataExtLogoData extends TeaModel {
+        /**
+         * <p>Location information.</p>
+         */
         @NameInMap("Location")
         public ImageModerationResponseBodyDataExtLogoDataLocation location;
 
+        /**
+         * <p>Logo information.</p>
+         */
         @NameInMap("Logo")
         public java.util.List<ImageModerationResponseBodyDataExtLogoDataLogo> logo;
 
@@ -230,15 +305,39 @@ public class ImageModerationResponseBody extends TeaModel {
     }
 
     public static class ImageModerationResponseBodyDataExtOcrResultLocation extends TeaModel {
+        /**
+         * <p>The height of the text area, in pixels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>44</p>
+         */
         @NameInMap("H")
         public Integer h;
 
+        /**
+         * <p>The width of the text area, in pixels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>33</p>
+         */
         @NameInMap("W")
         public Integer w;
 
+        /**
+         * <p>The distance between the upper-left corner of the text area and the y-axis, using the upper-left corner of the image as the coordinate origin, in pixels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
+         */
         @NameInMap("X")
         public Integer x;
 
+        /**
+         * <p>The distance between the upper left corner of the text area and the x-axis, with the upper left corner of the image as the coordinate origin, in pixels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22</p>
+         */
         @NameInMap("Y")
         public Integer y;
 
@@ -282,9 +381,18 @@ public class ImageModerationResponseBody extends TeaModel {
     }
 
     public static class ImageModerationResponseBodyDataExtOcrResult extends TeaModel {
+        /**
+         * <p>Location information.</p>
+         */
         @NameInMap("Location")
         public ImageModerationResponseBodyDataExtOcrResultLocation location;
 
+        /**
+         * <p>The text information in the recognized image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("Text")
         public String text;
 
@@ -311,12 +419,79 @@ public class ImageModerationResponseBody extends TeaModel {
 
     }
 
+    public static class ImageModerationResponseBodyDataExtPublicFigureLocation extends TeaModel {
+        @NameInMap("H")
+        public Integer h;
+
+        @NameInMap("W")
+        public Integer w;
+
+        @NameInMap("X")
+        public Integer x;
+
+        @NameInMap("Y")
+        public Integer y;
+
+        public static ImageModerationResponseBodyDataExtPublicFigureLocation build(java.util.Map<String, ?> map) throws Exception {
+            ImageModerationResponseBodyDataExtPublicFigureLocation self = new ImageModerationResponseBodyDataExtPublicFigureLocation();
+            return TeaModel.build(map, self);
+        }
+
+        public ImageModerationResponseBodyDataExtPublicFigureLocation setH(Integer h) {
+            this.h = h;
+            return this;
+        }
+        public Integer getH() {
+            return this.h;
+        }
+
+        public ImageModerationResponseBodyDataExtPublicFigureLocation setW(Integer w) {
+            this.w = w;
+            return this;
+        }
+        public Integer getW() {
+            return this.w;
+        }
+
+        public ImageModerationResponseBodyDataExtPublicFigureLocation setX(Integer x) {
+            this.x = x;
+            return this;
+        }
+        public Integer getX() {
+            return this.x;
+        }
+
+        public ImageModerationResponseBodyDataExtPublicFigureLocation setY(Integer y) {
+            this.y = y;
+            return this;
+        }
+        public Integer getY() {
+            return this.y;
+        }
+
+    }
+
     public static class ImageModerationResponseBodyDataExtPublicFigure extends TeaModel {
+        /**
+         * <p>Identified person coding information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("FigureId")
         public String figureId;
 
+        /**
+         * <p>Identified person name information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("FigureName")
         public String figureName;
+
+        @NameInMap("Location")
+        public java.util.List<ImageModerationResponseBodyDataExtPublicFigureLocation> location;
 
         public static ImageModerationResponseBodyDataExtPublicFigure build(java.util.Map<String, ?> map) throws Exception {
             ImageModerationResponseBodyDataExtPublicFigure self = new ImageModerationResponseBodyDataExtPublicFigure();
@@ -339,12 +514,32 @@ public class ImageModerationResponseBody extends TeaModel {
             return this.figureName;
         }
 
+        public ImageModerationResponseBodyDataExtPublicFigure setLocation(java.util.List<ImageModerationResponseBodyDataExtPublicFigureLocation> location) {
+            this.location = location;
+            return this;
+        }
+        public java.util.List<ImageModerationResponseBodyDataExtPublicFigureLocation> getLocation() {
+            return this.location;
+        }
+
     }
 
     public static class ImageModerationResponseBodyDataExtRecognition extends TeaModel {
+        /**
+         * <p>The category of image recognition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("Classification")
         public String classification;
 
+        /**
+         * <p>The score of the confidence level. Valid values: 0 to 100. The value is accurate to two decimal places. Some labels do not have scores of confidence levels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>99.01</p>
+         */
         @NameInMap("Confidence")
         public Float confidence;
 
@@ -372,12 +567,30 @@ public class ImageModerationResponseBody extends TeaModel {
     }
 
     public static class ImageModerationResponseBodyDataExtTextInImageCustomText extends TeaModel {
+        /**
+         * <p>Custom words, multiple words separated by commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aaa,bbb</p>
+         */
         @NameInMap("KeyWords")
         public String keyWords;
 
+        /**
+         * <p>Custom library ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
+         */
         @NameInMap("LibId")
         public String libId;
 
+        /**
+         * <p>Custom library name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx</p>
+         */
         @NameInMap("LibName")
         public String libName;
 
@@ -413,15 +626,39 @@ public class ImageModerationResponseBody extends TeaModel {
     }
 
     public static class ImageModerationResponseBodyDataExtTextInImageOcrResultLocation extends TeaModel {
+        /**
+         * <p>The height of the text area, in pixels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>33</p>
+         */
         @NameInMap("H")
         public Integer h;
 
+        /**
+         * <p>The width of the text area, in pixels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>44</p>
+         */
         @NameInMap("W")
         public Integer w;
 
+        /**
+         * <p>The distance between the upper-left corner of the text area and the y-axis, using the upper-left corner of the image as the coordinate origin, in pixels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
+         */
         @NameInMap("X")
         public Integer x;
 
+        /**
+         * <p>The distance between the upper left corner of the text area and the x-axis, with the upper left corner of the image as the coordinate origin, in pixels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22</p>
+         */
         @NameInMap("Y")
         public Integer y;
 
@@ -465,9 +702,18 @@ public class ImageModerationResponseBody extends TeaModel {
     }
 
     public static class ImageModerationResponseBodyDataExtTextInImageOcrResult extends TeaModel {
+        /**
+         * <p>Location information.</p>
+         */
         @NameInMap("Location")
         public ImageModerationResponseBodyDataExtTextInImageOcrResultLocation location;
 
+        /**
+         * <p>The text information in the recognized image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("Text")
         public String text;
 
@@ -495,12 +741,21 @@ public class ImageModerationResponseBody extends TeaModel {
     }
 
     public static class ImageModerationResponseBodyDataExtTextInImage extends TeaModel {
+        /**
+         * <p>When a custom text library is hit, the custom library ID, custom library name, and custom word are returned.</p>
+         */
         @NameInMap("CustomText")
         public java.util.List<ImageModerationResponseBodyDataExtTextInImageCustomText> customText;
 
+        /**
+         * <p>Returns the text information in the recognized image.</p>
+         */
         @NameInMap("OcrResult")
         public java.util.List<ImageModerationResponseBodyDataExtTextInImageOcrResult> ocrResult;
 
+        /**
+         * <p>The risk words that are hit. Multiple words are separated by commas (,).</p>
+         */
         @NameInMap("RiskWord")
         public java.util.List<String> riskWord;
 
@@ -536,21 +791,39 @@ public class ImageModerationResponseBody extends TeaModel {
     }
 
     public static class ImageModerationResponseBodyDataExt extends TeaModel {
+        /**
+         * <p>If a custom image library is hit, information about the hit custom image library is returned.</p>
+         */
         @NameInMap("CustomImage")
         public java.util.List<ImageModerationResponseBodyDataExtCustomImage> customImage;
 
+        /**
+         * <p>Logo information.</p>
+         */
         @NameInMap("LogoData")
         public java.util.List<ImageModerationResponseBodyDataExtLogoData> logoData;
 
+        /**
+         * <p>Returns the text information in the recognized image.</p>
+         */
         @NameInMap("OcrResult")
         public java.util.List<ImageModerationResponseBodyDataExtOcrResult> ocrResult;
 
+        /**
+         * <p>Person information list.</p>
+         */
         @NameInMap("PublicFigure")
         public java.util.List<ImageModerationResponseBodyDataExtPublicFigure> publicFigure;
 
+        /**
+         * <p>The result of image recognition.</p>
+         */
         @NameInMap("Recognition")
         public java.util.List<ImageModerationResponseBodyDataExtRecognition> recognition;
 
+        /**
+         * <p>Returns the text information in the hit image.</p>
+         */
         @NameInMap("TextInImage")
         public ImageModerationResponseBodyDataExtTextInImage textInImage;
 
@@ -611,6 +884,8 @@ public class ImageModerationResponseBody extends TeaModel {
 
     public static class ImageModerationResponseBodyDataResult extends TeaModel {
         /**
+         * <p>The score of the confidence level. Valid values: 0 to 100. The value is accurate to two decimal places. Some labels do not have scores of confidence levels.</p>
+         * 
          * <strong>example:</strong>
          * <p>81.22</p>
          */
@@ -618,6 +893,8 @@ public class ImageModerationResponseBody extends TeaModel {
         public Float confidence;
 
         /**
+         * <p>The labels returned after the image moderation.</p>
+         * 
          * <strong>example:</strong>
          * <p>violent_explosion</p>
          */
@@ -649,18 +926,32 @@ public class ImageModerationResponseBody extends TeaModel {
 
     public static class ImageModerationResponseBodyData extends TeaModel {
         /**
+         * <p>The ID of the moderated object.</p>
+         * 
          * <strong>example:</strong>
          * <p>fb5ffab1-993b-449f-b8d6-b97d5e3331f2</p>
          */
         @NameInMap("DataId")
         public String dataId;
 
+        /**
+         * <p>Auxiliary reference information.</p>
+         */
         @NameInMap("Ext")
         public ImageModerationResponseBodyDataExt ext;
 
+        /**
+         * <p>The results of image moderation parameters such as the label parameter and the confidence parameter.</p>
+         */
         @NameInMap("Result")
         public java.util.List<ImageModerationResponseBodyDataResult> result;
 
+        /**
+         * <p>Risk Level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>high</p>
+         */
         @NameInMap("RiskLevel")
         public String riskLevel;
 

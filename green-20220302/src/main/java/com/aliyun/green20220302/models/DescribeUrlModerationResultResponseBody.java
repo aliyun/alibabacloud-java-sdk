@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DescribeUrlModerationResultResponseBody extends TeaModel {
     /**
+     * <p>The returned HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public DescribeUrlModerationResultResponseBodyData data;
 
     /**
+     * <p>The message that is returned in response to the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -22,6 +29,8 @@ public class DescribeUrlModerationResultResponseBody extends TeaModel {
     public String msg;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>01F9144A-2088-5D87-935B-2DB865284B1A</p>
      */
@@ -66,11 +75,26 @@ public class DescribeUrlModerationResultResponseBody extends TeaModel {
     }
 
     public static class DescribeUrlModerationResultResponseBodyDataExtraInfo extends TeaModel {
+        /**
+         * <p>ICP record number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("IcpNo")
         public String icpNo;
 
+        /**
+         * <p>ICP filing type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("IcpType")
         public String icpType;
+
+        @NameInMap("SiteType")
+        public String siteType;
 
         public static DescribeUrlModerationResultResponseBodyDataExtraInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribeUrlModerationResultResponseBodyDataExtraInfo self = new DescribeUrlModerationResultResponseBodyDataExtraInfo();
@@ -93,10 +117,20 @@ public class DescribeUrlModerationResultResponseBody extends TeaModel {
             return this.icpType;
         }
 
+        public DescribeUrlModerationResultResponseBodyDataExtraInfo setSiteType(String siteType) {
+            this.siteType = siteType;
+            return this;
+        }
+        public String getSiteType() {
+            return this.siteType;
+        }
+
     }
 
     public static class DescribeUrlModerationResultResponseBodyDataResult extends TeaModel {
         /**
+         * <p>The score of the confidence level. Valid values: 0 to 100. The value is accurate to two decimal places. Some labels do not have scores of confidence levels.</p>
+         * 
          * <strong>example:</strong>
          * <p>81.22</p>
          */
@@ -104,6 +138,8 @@ public class DescribeUrlModerationResultResponseBody extends TeaModel {
         public Float confidence;
 
         /**
+         * <p>The labels returned after the url async moderation.</p>
+         * 
          * <strong>example:</strong>
          * <p>sexual_url</p>
          */
@@ -135,22 +171,32 @@ public class DescribeUrlModerationResultResponseBody extends TeaModel {
 
     public static class DescribeUrlModerationResultResponseBodyData extends TeaModel {
         /**
+         * <p>The ID of the moderated object.</p>
+         * 
          * <strong>example:</strong>
          * <p>26769ada6e264e7ba9aa048241e12be9</p>
          */
         @NameInMap("DataId")
         public String dataId;
 
+        /**
+         * <p>Supplementary information.</p>
+         */
         @NameInMap("ExtraInfo")
         public DescribeUrlModerationResultResponseBodyDataExtraInfo extraInfo;
 
         /**
+         * <p>The reqId field returned by the Url Async Moderation API.</p>
+         * 
          * <strong>example:</strong>
          * <p>B0963D30-BAB4-562F-9ED0-7A23AEC51C7C</p>
          */
         @NameInMap("ReqId")
         public String reqId;
 
+        /**
+         * <p>The results of url async moderation parameters such as the label parameter and the confidence parameter.</p>
+         */
         @NameInMap("Result")
         public java.util.List<DescribeUrlModerationResultResponseBodyDataResult> result;
 

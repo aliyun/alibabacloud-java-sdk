@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class VideoModerationRequest extends TeaModel {
     /**
+     * <p>The type of the moderation service.</p>
+     * 
      * <strong>example:</strong>
      * <p>videoDetection</p>
      */
@@ -12,6 +14,8 @@ public class VideoModerationRequest extends TeaModel {
     public String service;
 
     /**
+     * <p>The parameters required by the moderation service. The value is a JSON string.</p>
+     * 
      * <strong>example:</strong>
      * <p>{\&quot;url\&quot;: \&quot;<a href="https://talesofai.oss-cn-shanghai.aliyuncs.com/xxx.mp4%5C%5C">https://talesofai.oss-cn-shanghai.aliyuncs.com/xxx.mp4\\</a>&quot;, \&quot;dataId\&quot;: \&quot;94db0b88-f521-11ed-806e-fae21c1f239c\&quot;}</p>
      */

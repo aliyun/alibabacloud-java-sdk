@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ImageAsyncModerationResponseBody extends TeaModel {
     /**
+     * <p>The returned HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public ImageAsyncModerationResponseBodyData data;
 
     /**
+     * <p>The message that is returned in response to the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -22,6 +29,8 @@ public class ImageAsyncModerationResponseBody extends TeaModel {
     public String msg;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>4A926AE2-4C96-573F-824F-0532960799F8</p>
      */
@@ -67,6 +76,8 @@ public class ImageAsyncModerationResponseBody extends TeaModel {
 
     public static class ImageAsyncModerationResponseBodyData extends TeaModel {
         /**
+         * <p>The ID of the moderated object.</p>
+         * 
          * <strong>example:</strong>
          * <p>fb5ffab1-993b-449f-b8d6-b97d5e3331f2</p>
          */
@@ -74,6 +85,8 @@ public class ImageAsyncModerationResponseBody extends TeaModel {
         public String dataId;
 
         /**
+         * <p>The reqId field returned by the Image Async Moderation API. You can use this field to query the detection results.</p>
+         * 
          * <strong>example:</strong>
          * <p>A07B3DB9-D762-5C56-95B1-8EC55CF176D2</p>
          */

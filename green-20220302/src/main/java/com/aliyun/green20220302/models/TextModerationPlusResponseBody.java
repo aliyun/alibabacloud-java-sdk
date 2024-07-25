@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class TextModerationPlusResponseBody extends TeaModel {
     /**
+     * <p>The returned HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public TextModerationPlusResponseBodyData data;
 
     /**
+     * <p>The message that is returned in response to the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -22,7 +29,7 @@ public class TextModerationPlusResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -69,15 +76,29 @@ public class TextModerationPlusResponseBody extends TeaModel {
 
     public static class TextModerationPlusResponseBodyDataAdvice extends TeaModel {
         /**
+         * <p>Answer</p>
+         * 
          * <strong>example:</strong>
          * <p>XXX</p>
          */
         @NameInMap("Answer")
         public String answer;
 
+        /**
+         * <p>Hit Label</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("HitLabel")
         public String hitLabel;
 
+        /**
+         * <p>Hit Library Name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("HitLibName")
         public String hitLibName;
 
@@ -114,12 +135,20 @@ public class TextModerationPlusResponseBody extends TeaModel {
 
     public static class TextModerationPlusResponseBodyDataResultCustomizedHit extends TeaModel {
         /**
+         * <p>Hit keywords, comma separated.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
         @NameInMap("KeyWords")
         public String keyWords;
 
+        /**
+         * <p>Library Name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("LibName")
         public String libName;
 
@@ -148,16 +177,23 @@ public class TextModerationPlusResponseBody extends TeaModel {
 
     public static class TextModerationPlusResponseBodyDataResult extends TeaModel {
         /**
+         * <p>Confidence score, 0 to 100, reserved to 2 decimal places.</p>
+         * 
          * <strong>example:</strong>
          * <p>81.22</p>
          */
         @NameInMap("Confidence")
         public Float confidence;
 
+        /**
+         * <p>Custom keyword hits</p>
+         */
         @NameInMap("CustomizedHit")
         public java.util.List<TextModerationPlusResponseBodyDataResultCustomizedHit> customizedHit;
 
         /**
+         * <p>Labels.</p>
+         * 
          * <strong>example:</strong>
          * <p>porn</p>
          */
@@ -165,6 +201,8 @@ public class TextModerationPlusResponseBody extends TeaModel {
         public String label;
 
         /**
+         * <p>Risk words</p>
+         * 
          * <strong>example:</strong>
          * <p>XXX</p>
          */
@@ -211,16 +249,30 @@ public class TextModerationPlusResponseBody extends TeaModel {
     }
 
     public static class TextModerationPlusResponseBodyData extends TeaModel {
+        /**
+         * <p>Advice</p>
+         */
         @NameInMap("Advice")
         public java.util.List<TextModerationPlusResponseBodyDataAdvice> advice;
 
+        /**
+         * <p>The moderation results.</p>
+         */
         @NameInMap("Result")
         public java.util.List<TextModerationPlusResponseBodyDataResult> result;
 
+        /**
+         * <p>Risk Level</p>
+         * 
+         * <strong>example:</strong>
+         * <p>high</p>
+         */
         @NameInMap("RiskLevel")
         public String riskLevel;
 
         /**
+         * <p>Score.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DescribeImageResultExtResponseBody extends TeaModel {
     /**
+     * <p>The returned HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public DescribeImageResultExtResponseBodyData data;
 
     /**
+     * <p>The message that is returned in response to the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -22,6 +29,8 @@ public class DescribeImageResultExtResponseBody extends TeaModel {
     public String msg;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6CF2815C-C8C7-4A01-B52E-FF6E24F53492</p>
      */
@@ -67,7 +76,7 @@ public class DescribeImageResultExtResponseBody extends TeaModel {
 
     public static class DescribeImageResultExtResponseBodyDataCustomImage extends TeaModel {
         /**
-         * <p>图片ID。</p>
+         * <p>The image ID.</p>
          * 
          * <strong>example:</strong>
          * <p>123456</p>
@@ -76,7 +85,7 @@ public class DescribeImageResultExtResponseBody extends TeaModel {
         public String imageId;
 
         /**
-         * <p>图库ID。</p>
+         * <p>The image library ID.</p>
          * 
          * <strong>example:</strong>
          * <p>123456</p>
@@ -85,7 +94,7 @@ public class DescribeImageResultExtResponseBody extends TeaModel {
         public String libId;
 
         /**
-         * <p>图库名。</p>
+         * <p>The image library name.</p>
          * 
          * <strong>example:</strong>
          * <p>图库123</p>
@@ -126,7 +135,7 @@ public class DescribeImageResultExtResponseBody extends TeaModel {
 
     public static class DescribeImageResultExtResponseBodyDataPublicFigure extends TeaModel {
         /**
-         * <p>人物ID。</p>
+         * <p>Identified person coding information.</p>
          * 
          * <strong>example:</strong>
          * <p>yzazhzou</p>
@@ -150,12 +159,30 @@ public class DescribeImageResultExtResponseBody extends TeaModel {
     }
 
     public static class DescribeImageResultExtResponseBodyDataTextInImageCustomTexts extends TeaModel {
+        /**
+         * <p>Custom words, multiple words separated by commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aaa,bbb</p>
+         */
         @NameInMap("KeyWords")
         public String keyWords;
 
+        /**
+         * <p>Custom library ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
+         */
         @NameInMap("LibId")
         public String libId;
 
+        /**
+         * <p>Custom library name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("LibName")
         public String libName;
 
@@ -191,12 +218,21 @@ public class DescribeImageResultExtResponseBody extends TeaModel {
     }
 
     public static class DescribeImageResultExtResponseBodyDataTextInImage extends TeaModel {
+        /**
+         * <p>When a custom text library is hit, the custom library ID, custom library name, and custom word are returned.</p>
+         */
         @NameInMap("CustomTexts")
         public java.util.List<DescribeImageResultExtResponseBodyDataTextInImageCustomTexts> customTexts;
 
+        /**
+         * <p>Returns the text information in the recognized image.</p>
+         */
         @NameInMap("OcrDatas")
         public java.util.List<String> ocrDatas;
 
+        /**
+         * <p>The risk words that are hit. Multiple words are separated by commas (,).</p>
+         */
         @NameInMap("RiskWords")
         public java.util.List<String> riskWords;
 
@@ -232,12 +268,21 @@ public class DescribeImageResultExtResponseBody extends TeaModel {
     }
 
     public static class DescribeImageResultExtResponseBodyData extends TeaModel {
+        /**
+         * <p>If a custom image library is hit, information about the hit custom image library is returned.</p>
+         */
         @NameInMap("CustomImage")
         public java.util.List<DescribeImageResultExtResponseBodyDataCustomImage> customImage;
 
+        /**
+         * <p>Person information list.</p>
+         */
         @NameInMap("PublicFigure")
         public java.util.List<DescribeImageResultExtResponseBodyDataPublicFigure> publicFigure;
 
+        /**
+         * <p>Returns the text information in the hit image.</p>
+         */
         @NameInMap("TextInImage")
         public DescribeImageResultExtResponseBodyDataTextInImage textInImage;
 

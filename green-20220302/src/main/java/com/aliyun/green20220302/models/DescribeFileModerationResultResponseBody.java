@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DescribeFileModerationResultResponseBody extends TeaModel {
     /**
+     * <p>The returned HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public DescribeFileModerationResultResponseBodyData data;
 
     /**
+     * <p>The message that is returned in response to the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -22,7 +29,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>6CF2815C-C8C7-4A01-B52E-FF6E24F53492</p>
@@ -69,6 +76,8 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
 
     public static class DescribeFileModerationResultResponseBodyDataPageResultImageResultLabelResult extends TeaModel {
         /**
+         * <p>Confidence score, 0 to 100, reserved to 2 decimal places.</p>
+         * 
          * <strong>example:</strong>
          * <p>25.0</p>
          */
@@ -76,6 +85,8 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         public Float confidence;
 
         /**
+         * <p>The details of the labels.</p>
+         * 
          * <strong>example:</strong>
          * <p>nonlabel</p>
          */
@@ -107,6 +118,8 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
 
     public static class DescribeFileModerationResultResponseBodyDataPageResultImageResultLocation extends TeaModel {
         /**
+         * <p>The H value of the coordinate point.</p>
+         * 
          * <strong>example:</strong>
          * <p>44</p>
          */
@@ -114,6 +127,8 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         public Integer h;
 
         /**
+         * <p>The W value of the coordinate point.</p>
+         * 
          * <strong>example:</strong>
          * <p>33</p>
          */
@@ -121,6 +136,8 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         public Integer w;
 
         /**
+         * <p>The X value of the coordinate point.</p>
+         * 
          * <strong>example:</strong>
          * <p>11</p>
          */
@@ -128,6 +145,8 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         public Integer x;
 
         /**
+         * <p>The Y value of the coordinate point.</p>
+         * 
          * <strong>example:</strong>
          * <p>22</p>
          */
@@ -174,16 +193,30 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
     }
 
     public static class DescribeFileModerationResultResponseBodyDataPageResultImageResult extends TeaModel {
+        /**
+         * <p>Description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a title.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>Label information.</p>
+         */
         @NameInMap("LabelResult")
         public java.util.List<DescribeFileModerationResultResponseBodyDataPageResultImageResultLabelResult> labelResult;
 
+        /**
+         * <p>Location information.</p>
+         */
         @NameInMap("Location")
         public DescribeFileModerationResultResponseBodyDataPageResultImageResultLocation location;
 
         /**
+         * <p>The moderation service.</p>
+         * 
          * <strong>example:</strong>
          * <p>baselineCheck</p>
          */
@@ -230,10 +263,18 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
     }
 
     public static class DescribeFileModerationResultResponseBodyDataPageResultTextResult extends TeaModel {
+        /**
+         * <p>Description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a title.</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The details of the labels.</p>
+         * 
          * <strong>example:</strong>
          * <p>porn</p>
          */
@@ -241,6 +282,8 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         public String labels;
 
         /**
+         * <p>The risk details that are hit.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -248,6 +291,8 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         public String riskTips;
 
         /**
+         * <p>The risk words that are hit.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
@@ -255,16 +300,26 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         public String riskWords;
 
         /**
+         * <p>The moderation service.</p>
+         * 
          * <strong>example:</strong>
          * <p>chat_detection</p>
          */
         @NameInMap("Service")
         public String service;
 
+        /**
+         * <p>Text content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a text.</p>
+         */
         @NameInMap("Text")
         public String text;
 
         /**
+         * <p>Text segmentation information.</p>
+         * 
          * <strong>example:</strong>
          * <p>[0,999]</p>
          */
@@ -335,10 +390,15 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
     }
 
     public static class DescribeFileModerationResultResponseBodyDataPageResult extends TeaModel {
+        /**
+         * <p>Image detection results.</p>
+         */
         @NameInMap("ImageResult")
         public java.util.List<DescribeFileModerationResultResponseBodyDataPageResultImageResult> imageResult;
 
         /**
+         * <p>The image url.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://detect-obj.oss-cn-hangzhou.aliyuncs.com/sample/xxxx.jpg">https://detect-obj.oss-cn-hangzhou.aliyuncs.com/sample/xxxx.jpg</a></p>
          */
@@ -346,16 +406,23 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         public String imageUrl;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("PageNum")
         public Integer pageNum;
 
+        /**
+         * <p>Text detection results.</p>
+         */
         @NameInMap("TextResult")
         public java.util.List<DescribeFileModerationResultResponseBodyDataPageResultTextResult> textResult;
 
         /**
+         * <p>the text url.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://detect-obj.oss-cn-hangzhou.aliyuncs.com/sample/xxxx.txt">https://detect-obj.oss-cn-hangzhou.aliyuncs.com/sample/xxxx.txt</a></p>
          */
@@ -411,6 +478,8 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
 
     public static class DescribeFileModerationResultResponseBodyData extends TeaModel {
         /**
+         * <p>The ID of the moderated object.</p>
+         * 
          * <strong>example:</strong>
          * <p>26769ada6e264e7ba9aa048241e12be9</p>
          */
@@ -418,16 +487,23 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         public String dataId;
 
         /**
+         * <p>Optional, document type.</p>
+         * 
          * <strong>example:</strong>
          * <p>doc</p>
          */
         @NameInMap("DocType")
         public String docType;
 
+        /**
+         * <p>The pagination information.</p>
+         */
         @NameInMap("PageResult")
         public java.util.List<DescribeFileModerationResultResponseBodyDataPageResult> pageResult;
 
         /**
+         * <p>The URL of the moderation object.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://detect-obj.oss-cn-hangzhou.aliyuncs.com/sample/xxxx.pdf">https://detect-obj.oss-cn-hangzhou.aliyuncs.com/sample/xxxx.pdf</a></p>
          */
