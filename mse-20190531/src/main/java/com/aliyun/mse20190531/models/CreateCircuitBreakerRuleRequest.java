@@ -127,6 +127,20 @@ public class CreateCircuitBreakerRuleRequest extends TeaModel {
     @NameInMap("Resource")
     public String resource;
 
+    /**
+     * <p>The resource type.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>0: custom interface</li>
+     * <li>1: web</li>
+     * <li>2: RPC</li>
+     * <li>3: route</li>
+     * <li>4: SQL</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("ResourceType")
     public Integer resourceType;
 

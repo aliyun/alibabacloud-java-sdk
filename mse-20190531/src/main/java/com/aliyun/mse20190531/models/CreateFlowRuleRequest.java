@@ -40,23 +40,8 @@ public class CreateFlowRuleRequest extends TeaModel {
      * <p>The throttling effect.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li><p>0</p>
-     * <!-- -->
-     * 
-     * <p>:</p>
-     * <!-- -->
-     * 
-     * <p>fast failure</p>
-     * <!-- -->
-     * </li>
-     * <li><p>2</p>
-     * <!-- -->
-     * 
-     * <p>:</p>
-     * <!-- -->
-     * 
-     * <p>in queue</p>
-     * <!-- --></li>
+     * <li>0: fast failure</li>
+     * <li>2: in queue</li>
      * </ul>
      * 
      * <strong>example:</strong>

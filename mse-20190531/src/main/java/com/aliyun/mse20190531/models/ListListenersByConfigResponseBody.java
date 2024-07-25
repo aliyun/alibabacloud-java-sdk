@@ -173,6 +173,9 @@ public class ListListenersByConfigResponseBody extends TeaModel {
         @NameInMap("Ip")
         public String ip;
 
+        /**
+         * <p>The label of the listener.</p>
+         */
         @NameInMap("Labels")
         public java.util.Map<String, String> labels;
 
@@ -194,6 +197,12 @@ public class ListListenersByConfigResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The current version of the listener. Valid values: gray and normal.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gray</p>
+         */
         @NameInMap("Version")
         public String version;
 

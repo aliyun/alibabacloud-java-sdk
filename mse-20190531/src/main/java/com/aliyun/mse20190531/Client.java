@@ -2279,7 +2279,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建网关路由流控规则</p>
+     * <p>Creates a throttling rule for a gateway.</p>
      * 
      * @param request CreateGatewayFlowRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2355,7 +2355,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建网关路由流控规则</p>
+     * <p>Creates a throttling rule for a gateway.</p>
      * 
      * @param request CreateGatewayFlowRuleRequest
      * @return CreateGatewayFlowRuleResponse
@@ -3093,6 +3093,80 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateOrUpdateSwimmingLaneGroupResponse createOrUpdateSwimmingLaneGroup(CreateOrUpdateSwimmingLaneGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createOrUpdateSwimmingLaneGroupWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建插件配置</p>
+     * 
+     * @param tmpReq CreatePluginConfigRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreatePluginConfigResponse
+     */
+    public CreatePluginConfigResponse createPluginConfigWithOptions(CreatePluginConfigRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreatePluginConfigShrinkRequest request = new CreatePluginConfigShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.resourceIdList)) {
+            request.resourceIdListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.resourceIdList, "ResourceIdList", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.config)) {
+            query.put("Config", request.config);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.configLevel)) {
+            query.put("ConfigLevel", request.configLevel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enable)) {
+            query.put("Enable", request.enable);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gatewayUniqueId)) {
+            query.put("GatewayUniqueId", request.gatewayUniqueId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pluginId)) {
+            query.put("PluginId", request.pluginId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceIdListShrink)) {
+            query.put("ResourceIdList", request.resourceIdListShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreatePluginConfig"),
+            new TeaPair("version", "2019-05-31"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreatePluginConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建插件配置</p>
+     * 
+     * @param request CreatePluginConfigRequest
+     * @return CreatePluginConfigResponse
+     */
+    public CreatePluginConfigResponse createPluginConfig(CreatePluginConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createPluginConfigWithOptions(request, runtime);
     }
 
     /**
@@ -4489,6 +4563,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>删除插件配置</p>
+     * 
+     * @param request DeletePluginConfigRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeletePluginConfigResponse
+     */
+    public DeletePluginConfigResponse deletePluginConfigWithOptions(DeletePluginConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gatewayUniqueId)) {
+            query.put("GatewayUniqueId", request.gatewayUniqueId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pluginConfigId)) {
+            query.put("PluginConfigId", request.pluginConfigId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeletePluginConfig"),
+            new TeaPair("version", "2019-05-31"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeletePluginConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除插件配置</p>
+     * 
+     * @param request DeletePluginConfigRequest
+     * @return DeletePluginConfigResponse
+     */
+    public DeletePluginConfigResponse deletePluginConfig(DeletePluginConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deletePluginConfigWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Deletes a security group rule from a gateway.</p>
      * 
      * @param request DeleteSecurityGroupRuleRequest
@@ -4761,7 +4887,59 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Proxy Protocol开关</p>
+     * <p>Enables HTTP/2 for negotiation between the server and client. The modification takes effect in one to two minutes.</p>
+     * 
+     * @param request EnableHttp2Request
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return EnableHttp2Response
+     */
+    public EnableHttp2Response enableHttp2WithOptions(EnableHttp2Request request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableHttp2)) {
+            query.put("EnableHttp2", request.enableHttp2);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gatewayUniqueId)) {
+            query.put("GatewayUniqueId", request.gatewayUniqueId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "EnableHttp2"),
+            new TeaPair("version", "2019-05-31"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new EnableHttp2Response());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Enables HTTP/2 for negotiation between the server and client. The modification takes effect in one to two minutes.</p>
+     * 
+     * @param request EnableHttp2Request
+     * @return EnableHttp2Response
+     */
+    public EnableHttp2Response enableHttp2(EnableHttp2Request request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.enableHttp2WithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Enables the proxy protocol. When an NLB instance is used as an ingress, you cannot obtain the real IP address of the client if you do not enable the proxy protocol. After you enable the proxy protocol, non-proxy requests are not adversely affected.</p>
      * 
      * @param request EnableProxyProtocolRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4801,7 +4979,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Proxy Protocol开关</p>
+     * <p>Enables the proxy protocol. When an NLB instance is used as an ingress, you cannot obtain the real IP address of the client if you do not enable the proxy protocol. After you enable the proxy protocol, non-proxy requests are not adversely affected.</p>
      * 
      * @param request EnableProxyProtocolRequest
      * @return EnableProxyProtocolResponse
@@ -8965,7 +9143,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取网关可用区列表</p>
+     * <p>Obtains a list of zones where a gateway is available.</p>
      * 
      * @param request ListGatewayZoneRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8997,7 +9175,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取网关可用区列表</p>
+     * <p>Obtains a list of zones where a gateway is available.</p>
      * 
      * @param request ListGatewayZoneRequest
      * @return ListGatewayZoneResponse
@@ -10295,6 +10473,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public OrderClusterHealthCheckRiskNoticeResponse orderClusterHealthCheckRiskNotice(OrderClusterHealthCheckRiskNoticeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.orderClusterHealthCheckRiskNoticeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Specifies whether to convert all letters of a header into lowercase letters. For requests and responses, HTTP/1.1 headers are not case-sensitive. By default, all letters of headers are converted into lowercase letters.</p>
+     * 
+     * @param request PreserveHeaderFormatRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return PreserveHeaderFormatResponse
+     */
+    public PreserveHeaderFormatResponse preserveHeaderFormatWithOptions(PreserveHeaderFormatRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gatewayUniqueId)) {
+            query.put("GatewayUniqueId", request.gatewayUniqueId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.preserveHeaderFormat)) {
+            query.put("PreserveHeaderFormat", request.preserveHeaderFormat);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PreserveHeaderFormat"),
+            new TeaPair("version", "2019-05-31"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PreserveHeaderFormatResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Specifies whether to convert all letters of a header into lowercase letters. For requests and responses, HTTP/1.1 headers are not case-sensitive. By default, all letters of headers are converted into lowercase letters.</p>
+     * 
+     * @param request PreserveHeaderFormatRequest
+     * @return PreserveHeaderFormatResponse
+     */
+    public PreserveHeaderFormatResponse preserveHeaderFormat(PreserveHeaderFormatRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.preserveHeaderFormatWithOptions(request, runtime);
     }
 
     /**
@@ -13683,7 +13913,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新路由waf状态</p>
+     * <p>Updates the WAF status of a route.</p>
      * 
      * @param request UpdateGatewayRouteWafStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13727,7 +13957,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新路由waf状态</p>
+     * <p>Updates the WAF status of a route.</p>
      * 
      * @param request UpdateGatewayRouteWafStatusRequest
      * @return UpdateGatewayRouteWafStatusResponse

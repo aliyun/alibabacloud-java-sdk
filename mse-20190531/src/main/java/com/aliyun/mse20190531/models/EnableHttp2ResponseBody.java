@@ -3,7 +3,7 @@ package com.aliyun.mse20190531.models;
 
 import com.aliyun.tea.*;
 
-public class EnableProxyProtocolResponseBody extends TeaModel {
+public class EnableHttp2ResponseBody extends TeaModel {
     /**
      * <p>The status code. A value of 200 is returned if the request is successful.</p>
      * 
@@ -14,7 +14,7 @@ public class EnableProxyProtocolResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether HTTP/2 is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -32,9 +32,9 @@ public class EnableProxyProtocolResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The dynamic part in the error message. This parameter is used to replace the <strong>%s</strong> variable in the <strong>ErrMessage</strong> parameter.</p>
+     * <p>The dynamic part in the error message. This parameter is used to replace the \<em>\</em>%s\<em>\</em> variable in the <strong>ErrMessage</strong> parameter.</p>
      * <blockquote>
-     * <p> For example, if the return value of the <strong>ErrMessage</strong> parameter is <strong>The Value of Input Parameter %s is not valid</strong> and the return value of the <strong>DynamicMessage</strong> parameter is <strong>DtsJobId</strong>, the <strong>DtsJobId</strong> parameter in the request is invalid.</p>
+     * <p> The request parameter <strong>DtsJobId</strong> is invalid if <strong>The Value of Input Parameter %s is not valid</strong> is returned for <strong>ErrMessage</strong> and <strong>DtsJobId</strong> is returned for <strong>DynamicMessage</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -62,7 +62,7 @@ public class EnableProxyProtocolResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The message returned.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -74,7 +74,7 @@ public class EnableProxyProtocolResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>316F5F64-F73D-42DC-8632-01E308B6****</p>
+     * <p>52BA6DA6-A702-4362-A32F-DFF79655****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -82,8 +82,8 @@ public class EnableProxyProtocolResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: The request was successful.</li>
-     * <li><code>false</code>: The request failed.</li>
+     * <li><code>true</code></li>
+     * <li><code>false</code></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -92,12 +92,12 @@ public class EnableProxyProtocolResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    public static EnableProxyProtocolResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        EnableProxyProtocolResponseBody self = new EnableProxyProtocolResponseBody();
+    public static EnableHttp2ResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        EnableHttp2ResponseBody self = new EnableHttp2ResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public EnableProxyProtocolResponseBody setCode(Integer code) {
+    public EnableHttp2ResponseBody setCode(Integer code) {
         this.code = code;
         return this;
     }
@@ -105,7 +105,7 @@ public class EnableProxyProtocolResponseBody extends TeaModel {
         return this.code;
     }
 
-    public EnableProxyProtocolResponseBody setData(Boolean data) {
+    public EnableHttp2ResponseBody setData(Boolean data) {
         this.data = data;
         return this;
     }
@@ -113,7 +113,7 @@ public class EnableProxyProtocolResponseBody extends TeaModel {
         return this.data;
     }
 
-    public EnableProxyProtocolResponseBody setDynamicCode(String dynamicCode) {
+    public EnableHttp2ResponseBody setDynamicCode(String dynamicCode) {
         this.dynamicCode = dynamicCode;
         return this;
     }
@@ -121,7 +121,7 @@ public class EnableProxyProtocolResponseBody extends TeaModel {
         return this.dynamicCode;
     }
 
-    public EnableProxyProtocolResponseBody setDynamicMessage(String dynamicMessage) {
+    public EnableHttp2ResponseBody setDynamicMessage(String dynamicMessage) {
         this.dynamicMessage = dynamicMessage;
         return this;
     }
@@ -129,7 +129,7 @@ public class EnableProxyProtocolResponseBody extends TeaModel {
         return this.dynamicMessage;
     }
 
-    public EnableProxyProtocolResponseBody setErrorCode(String errorCode) {
+    public EnableHttp2ResponseBody setErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
     }
@@ -137,7 +137,7 @@ public class EnableProxyProtocolResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public EnableProxyProtocolResponseBody setHttpStatusCode(Integer httpStatusCode) {
+    public EnableHttp2ResponseBody setHttpStatusCode(Integer httpStatusCode) {
         this.httpStatusCode = httpStatusCode;
         return this;
     }
@@ -145,7 +145,7 @@ public class EnableProxyProtocolResponseBody extends TeaModel {
         return this.httpStatusCode;
     }
 
-    public EnableProxyProtocolResponseBody setMessage(String message) {
+    public EnableHttp2ResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -153,7 +153,7 @@ public class EnableProxyProtocolResponseBody extends TeaModel {
         return this.message;
     }
 
-    public EnableProxyProtocolResponseBody setRequestId(String requestId) {
+    public EnableHttp2ResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -161,7 +161,7 @@ public class EnableProxyProtocolResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public EnableProxyProtocolResponseBody setSuccess(Boolean success) {
+    public EnableHttp2ResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateGatewayFlowRuleRequest extends TeaModel {
     /**
+     * <p>The language in which you want to display the results. Valid values: zh and en. zh indicates Chinese, which is the default value. en indicates English.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,6 +14,9 @@ public class CreateGatewayFlowRuleRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
+     * <p>The type of the web fallback behavior.</p>
+     * <p>0: returns the specified content.</p>
+     * <p>1: redirects to the specified page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +26,10 @@ public class CreateGatewayFlowRuleRequest extends TeaModel {
     public Integer behaviorType;
 
     /**
+     * <p>The encoding format.</p>
+     * <p>0: normal text</p>
+     * <p>1: JSON</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -28,6 +37,9 @@ public class CreateGatewayFlowRuleRequest extends TeaModel {
     public Integer bodyEncoding;
 
     /**
+     * <p>Specifies whether to enable the throttling rule.</p>
+     * <p>0: disables the throttling rule.</p>
+     * <p>1: enables the throttling rule.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,6 +49,8 @@ public class CreateGatewayFlowRuleRequest extends TeaModel {
     public Integer enable;
 
     /**
+     * <p>The ID of the gateway.</p>
+     * 
      * <strong>example:</strong>
      * <p>14407</p>
      */
@@ -44,6 +58,7 @@ public class CreateGatewayFlowRuleRequest extends TeaModel {
     public Long gatewayId;
 
     /**
+     * <p>The unique ID of the gateway.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,6 +68,8 @@ public class CreateGatewayFlowRuleRequest extends TeaModel {
     public String gatewayUniqueId;
 
     /**
+     * <p>The HTTP text to be returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>text</p>
      */
@@ -60,6 +77,8 @@ public class CreateGatewayFlowRuleRequest extends TeaModel {
     public String responseContentBody;
 
     /**
+     * <p>The address to be redirected to.</p>
+     * 
      * <strong>example:</strong>
      * <p>www.******.com</p>
      */
@@ -67,6 +86,8 @@ public class CreateGatewayFlowRuleRequest extends TeaModel {
     public String responseRedirectUrl;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>429</p>
      */
@@ -74,6 +95,7 @@ public class CreateGatewayFlowRuleRequest extends TeaModel {
     public Integer responseStatusCode;
 
     /**
+     * <p>The ID of the route.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -83,6 +105,7 @@ public class CreateGatewayFlowRuleRequest extends TeaModel {
     public Long routeId;
 
     /**
+     * <p>The name of the routing rule.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -92,6 +115,7 @@ public class CreateGatewayFlowRuleRequest extends TeaModel {
     public String routeName;
 
     /**
+     * <p>The overall queries per second (QPS) threshold.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

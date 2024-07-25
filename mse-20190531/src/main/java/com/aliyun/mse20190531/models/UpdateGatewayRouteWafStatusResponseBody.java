@@ -955,10 +955,10 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
         public String serviceName;
 
         /**
-         * <p>The source type.</p>
+         * <p>The source type of the service.</p>
          * 
          * <strong>example:</strong>
-         * <p>K8S</p>
+         * <p>K8s</p>
          */
         @NameInMap("SourceType")
         public String sourceType;
