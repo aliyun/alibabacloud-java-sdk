@@ -15,6 +15,13 @@ public class GetModelVersionResponseBody extends TeaModel {
      * <strong>example:</strong>
      * <p>{}</p>
      */
+    @NameInMap("CompressionSpec")
+    public java.util.Map<String, ?> compressionSpec;
+
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("EvaluationSpec")
     public java.util.Map<String, ?> evaluationSpec;
 
@@ -145,6 +152,14 @@ public class GetModelVersionResponseBody extends TeaModel {
     }
     public String getApprovalStatus() {
         return this.approvalStatus;
+    }
+
+    public GetModelVersionResponseBody setCompressionSpec(java.util.Map<String, ?> compressionSpec) {
+        this.compressionSpec = compressionSpec;
+        return this;
+    }
+    public java.util.Map<String, ?> getCompressionSpec() {
+        return this.compressionSpec;
     }
 
     public GetModelVersionResponseBody setEvaluationSpec(java.util.Map<String, ?> evaluationSpec) {
