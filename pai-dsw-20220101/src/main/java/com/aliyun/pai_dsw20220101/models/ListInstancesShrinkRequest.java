@@ -18,6 +18,9 @@ public class ListInstancesShrinkRequest extends TeaModel {
     @NameInMap("Accessibility")
     public String accessibility;
 
+    @NameInMap("CreateUserId")
+    public String createUserId;
+
     /**
      * <strong>example:</strong>
      * <p>dsw-730xxxxxxxxxx</p>
@@ -110,6 +113,14 @@ public class ListInstancesShrinkRequest extends TeaModel {
     }
     public String getAccessibility() {
         return this.accessibility;
+    }
+
+    public ListInstancesShrinkRequest setCreateUserId(String createUserId) {
+        this.createUserId = createUserId;
+        return this;
+    }
+    public String getCreateUserId() {
+        return this.createUserId;
     }
 
     public ListInstancesShrinkRequest setInstanceId(String instanceId) {
