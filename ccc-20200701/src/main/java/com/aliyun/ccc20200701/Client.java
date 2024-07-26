@@ -5763,6 +5763,136 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @param request ListCallDetailRecordsV2Request
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListCallDetailRecordsV2Response
+     */
+    public ListCallDetailRecordsV2Response listCallDetailRecordsV2WithOptions(ListCallDetailRecordsV2Request request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accessChannelTypeList)) {
+            query.put("AccessChannelTypeList", request.accessChannelTypeList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.agentId)) {
+            query.put("AgentId", request.agentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.broker)) {
+            query.put("Broker", request.broker);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.calledNumber)) {
+            query.put("CalledNumber", request.calledNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.callingNumber)) {
+            query.put("CallingNumber", request.callingNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.contactDispositionList)) {
+            query.put("ContactDispositionList", request.contactDispositionList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.contactIdList)) {
+            query.put("ContactIdList", request.contactIdList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.contactTypeList)) {
+            query.put("ContactTypeList", request.contactTypeList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.earlyMediaStateList)) {
+            query.put("EarlyMediaStateList", request.earlyMediaStateList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.firstAgentId)) {
+            query.put("FirstAgentId", request.firstAgentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mediaType)) {
+            query.put("MediaType", request.mediaType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.number)) {
+            query.put("Number", request.number);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderByField)) {
+            query.put("OrderByField", request.orderByField);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.satisfactionDescriptionList)) {
+            query.put("SatisfactionDescriptionList", request.satisfactionDescriptionList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.satisfactionRateList)) {
+            query.put("SatisfactionRateList", request.satisfactionRateList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.satisfactionSurveyChannel)) {
+            query.put("SatisfactionSurveyChannel", request.satisfactionSurveyChannel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchPattern)) {
+            query.put("SearchPattern", request.searchPattern);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.skillGroupIdList)) {
+            query.put("SkillGroupIdList", request.skillGroupIdList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortOrder)) {
+            query.put("SortOrder", request.sortOrder);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListCallDetailRecordsV2"),
+            new TeaPair("version", "2020-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListCallDetailRecordsV2Response());
+    }
+
+    /**
+     * @param request ListCallDetailRecordsV2Request
+     * @return ListCallDetailRecordsV2Response
+     */
+    public ListCallDetailRecordsV2Response listCallDetailRecordsV2(ListCallDetailRecordsV2Request request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listCallDetailRecordsV2WithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>列出号码标签</p>
      * 
@@ -6422,6 +6552,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListDocumentsResponse listDocuments(ListDocumentsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listDocumentsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>ListGroupChatMessages</p>
+     * 
+     * @param request ListGroupChatMessagesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListGroupChatMessagesResponse
+     */
+    public ListGroupChatMessagesResponse listGroupChatMessagesWithOptions(ListGroupChatMessagesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
+            query.put("JobId", request.jobId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextPageToken)) {
+            query.put("NextPageToken", request.nextPageToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortOrder)) {
+            query.put("SortOrder", request.sortOrder);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListGroupChatMessages"),
+            new TeaPair("version", "2020-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListGroupChatMessagesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>ListGroupChatMessages</p>
+     * 
+     * @param request ListGroupChatMessagesRequest
+     * @return ListGroupChatMessagesResponse
+     */
+    public ListGroupChatMessagesResponse listGroupChatMessages(ListGroupChatMessagesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listGroupChatMessagesWithOptions(request, runtime);
     }
 
     /**
