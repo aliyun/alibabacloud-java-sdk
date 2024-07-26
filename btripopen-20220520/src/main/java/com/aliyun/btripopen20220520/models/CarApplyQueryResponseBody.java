@@ -499,6 +499,12 @@ public class CarApplyQueryResponseBody extends TeaModel {
         @NameInMap("itinerary_list")
         public java.util.List<CarApplyQueryResponseBodyApplyListItineraryList> itineraryList;
 
+        @NameInMap("order_id")
+        public Long orderId;
+
+        @NameInMap("related_third_apply_id")
+        public String relatedThirdApplyId;
+
         /**
          * <strong>example:</strong>
          * <p>2</p>
@@ -594,6 +600,22 @@ public class CarApplyQueryResponseBody extends TeaModel {
         }
         public java.util.List<CarApplyQueryResponseBodyApplyListItineraryList> getItineraryList() {
             return this.itineraryList;
+        }
+
+        public CarApplyQueryResponseBodyApplyList setOrderId(Long orderId) {
+            this.orderId = orderId;
+            return this;
+        }
+        public Long getOrderId() {
+            return this.orderId;
+        }
+
+        public CarApplyQueryResponseBodyApplyList setRelatedThirdApplyId(String relatedThirdApplyId) {
+            this.relatedThirdApplyId = relatedThirdApplyId;
+            return this;
+        }
+        public String getRelatedThirdApplyId() {
+            return this.relatedThirdApplyId;
         }
 
         public CarApplyQueryResponseBodyApplyList setStatus(Integer status) {

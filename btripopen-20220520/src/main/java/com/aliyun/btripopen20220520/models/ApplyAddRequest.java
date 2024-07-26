@@ -24,6 +24,9 @@ public class ApplyAddRequest extends TeaModel {
     @NameInMap("corp_name")
     public String corpName;
 
+    @NameInMap("default_standard")
+    public ApplyAddRequestDefaultStandard defaultStandard;
+
     /**
      * <strong>example:</strong>
      * <p>departId01</p>
@@ -231,6 +234,14 @@ public class ApplyAddRequest extends TeaModel {
     }
     public String getCorpName() {
         return this.corpName;
+    }
+
+    public ApplyAddRequest setDefaultStandard(ApplyAddRequestDefaultStandard defaultStandard) {
+        this.defaultStandard = defaultStandard;
+        return this;
+    }
+    public ApplyAddRequestDefaultStandard getDefaultStandard() {
+        return this.defaultStandard;
     }
 
     public ApplyAddRequest setDepartId(String departId) {
@@ -515,6 +526,265 @@ public class ApplyAddRequest extends TeaModel {
         }
         public String getScenarioTemplateName() {
             return this.scenarioTemplateName;
+        }
+
+    }
+
+    public static class ApplyAddRequestDefaultStandardHotelCitys extends TeaModel {
+        @NameInMap("city_code")
+        public String cityCode;
+
+        @NameInMap("city_name")
+        public String cityName;
+
+        @NameInMap("fee")
+        public Long fee;
+
+        public static ApplyAddRequestDefaultStandardHotelCitys build(java.util.Map<String, ?> map) throws Exception {
+            ApplyAddRequestDefaultStandardHotelCitys self = new ApplyAddRequestDefaultStandardHotelCitys();
+            return TeaModel.build(map, self);
+        }
+
+        public ApplyAddRequestDefaultStandardHotelCitys setCityCode(String cityCode) {
+            this.cityCode = cityCode;
+            return this;
+        }
+        public String getCityCode() {
+            return this.cityCode;
+        }
+
+        public ApplyAddRequestDefaultStandardHotelCitys setCityName(String cityName) {
+            this.cityName = cityName;
+            return this;
+        }
+        public String getCityName() {
+            return this.cityName;
+        }
+
+        public ApplyAddRequestDefaultStandardHotelCitys setFee(Long fee) {
+            this.fee = fee;
+            return this;
+        }
+        public Long getFee() {
+            return this.fee;
+        }
+
+    }
+
+    public static class ApplyAddRequestDefaultStandardHotelIntlCitys extends TeaModel {
+        @NameInMap("city_code")
+        public String cityCode;
+
+        @NameInMap("city_name")
+        public String cityName;
+
+        @NameInMap("fee")
+        public Long fee;
+
+        public static ApplyAddRequestDefaultStandardHotelIntlCitys build(java.util.Map<String, ?> map) throws Exception {
+            ApplyAddRequestDefaultStandardHotelIntlCitys self = new ApplyAddRequestDefaultStandardHotelIntlCitys();
+            return TeaModel.build(map, self);
+        }
+
+        public ApplyAddRequestDefaultStandardHotelIntlCitys setCityCode(String cityCode) {
+            this.cityCode = cityCode;
+            return this;
+        }
+        public String getCityCode() {
+            return this.cityCode;
+        }
+
+        public ApplyAddRequestDefaultStandardHotelIntlCitys setCityName(String cityName) {
+            this.cityName = cityName;
+            return this;
+        }
+        public String getCityName() {
+            return this.cityName;
+        }
+
+        public ApplyAddRequestDefaultStandardHotelIntlCitys setFee(Long fee) {
+            this.fee = fee;
+            return this;
+        }
+        public Long getFee() {
+            return this.fee;
+        }
+
+    }
+
+    public static class ApplyAddRequestDefaultStandard extends TeaModel {
+        @NameInMap("business_discount")
+        public Integer businessDiscount;
+
+        @NameInMap("economy_discount")
+        public Integer economyDiscount;
+
+        @NameInMap("first_discount")
+        public Integer firstDiscount;
+
+        @NameInMap("flight_cabins")
+        public String flightCabins;
+
+        @NameInMap("flight_intl_rule_code")
+        public Long flightIntlRuleCode;
+
+        @NameInMap("flight_rule_code")
+        public Long flightRuleCode;
+
+        @NameInMap("hotel_citys")
+        public java.util.List<ApplyAddRequestDefaultStandardHotelCitys> hotelCitys;
+
+        @NameInMap("hotel_intl_citys")
+        public java.util.List<ApplyAddRequestDefaultStandardHotelIntlCitys> hotelIntlCitys;
+
+        @NameInMap("hotel_intl_rule_code")
+        public Long hotelIntlRuleCode;
+
+        @NameInMap("hotel_rule_code")
+        public Long hotelRuleCode;
+
+        /**
+         * <strong>example:</strong>
+         * <p>F</p>
+         */
+        @NameInMap("international_flight_cabins")
+        public String internationalFlightCabins;
+
+        @NameInMap("premium_economy_discount")
+        public Integer premiumEconomyDiscount;
+
+        @NameInMap("reserve_type")
+        public Integer reserveType;
+
+        @NameInMap("train_rule_code")
+        public Long trainRuleCode;
+
+        @NameInMap("train_seats")
+        public String trainSeats;
+
+        public static ApplyAddRequestDefaultStandard build(java.util.Map<String, ?> map) throws Exception {
+            ApplyAddRequestDefaultStandard self = new ApplyAddRequestDefaultStandard();
+            return TeaModel.build(map, self);
+        }
+
+        public ApplyAddRequestDefaultStandard setBusinessDiscount(Integer businessDiscount) {
+            this.businessDiscount = businessDiscount;
+            return this;
+        }
+        public Integer getBusinessDiscount() {
+            return this.businessDiscount;
+        }
+
+        public ApplyAddRequestDefaultStandard setEconomyDiscount(Integer economyDiscount) {
+            this.economyDiscount = economyDiscount;
+            return this;
+        }
+        public Integer getEconomyDiscount() {
+            return this.economyDiscount;
+        }
+
+        public ApplyAddRequestDefaultStandard setFirstDiscount(Integer firstDiscount) {
+            this.firstDiscount = firstDiscount;
+            return this;
+        }
+        public Integer getFirstDiscount() {
+            return this.firstDiscount;
+        }
+
+        public ApplyAddRequestDefaultStandard setFlightCabins(String flightCabins) {
+            this.flightCabins = flightCabins;
+            return this;
+        }
+        public String getFlightCabins() {
+            return this.flightCabins;
+        }
+
+        public ApplyAddRequestDefaultStandard setFlightIntlRuleCode(Long flightIntlRuleCode) {
+            this.flightIntlRuleCode = flightIntlRuleCode;
+            return this;
+        }
+        public Long getFlightIntlRuleCode() {
+            return this.flightIntlRuleCode;
+        }
+
+        public ApplyAddRequestDefaultStandard setFlightRuleCode(Long flightRuleCode) {
+            this.flightRuleCode = flightRuleCode;
+            return this;
+        }
+        public Long getFlightRuleCode() {
+            return this.flightRuleCode;
+        }
+
+        public ApplyAddRequestDefaultStandard setHotelCitys(java.util.List<ApplyAddRequestDefaultStandardHotelCitys> hotelCitys) {
+            this.hotelCitys = hotelCitys;
+            return this;
+        }
+        public java.util.List<ApplyAddRequestDefaultStandardHotelCitys> getHotelCitys() {
+            return this.hotelCitys;
+        }
+
+        public ApplyAddRequestDefaultStandard setHotelIntlCitys(java.util.List<ApplyAddRequestDefaultStandardHotelIntlCitys> hotelIntlCitys) {
+            this.hotelIntlCitys = hotelIntlCitys;
+            return this;
+        }
+        public java.util.List<ApplyAddRequestDefaultStandardHotelIntlCitys> getHotelIntlCitys() {
+            return this.hotelIntlCitys;
+        }
+
+        public ApplyAddRequestDefaultStandard setHotelIntlRuleCode(Long hotelIntlRuleCode) {
+            this.hotelIntlRuleCode = hotelIntlRuleCode;
+            return this;
+        }
+        public Long getHotelIntlRuleCode() {
+            return this.hotelIntlRuleCode;
+        }
+
+        public ApplyAddRequestDefaultStandard setHotelRuleCode(Long hotelRuleCode) {
+            this.hotelRuleCode = hotelRuleCode;
+            return this;
+        }
+        public Long getHotelRuleCode() {
+            return this.hotelRuleCode;
+        }
+
+        public ApplyAddRequestDefaultStandard setInternationalFlightCabins(String internationalFlightCabins) {
+            this.internationalFlightCabins = internationalFlightCabins;
+            return this;
+        }
+        public String getInternationalFlightCabins() {
+            return this.internationalFlightCabins;
+        }
+
+        public ApplyAddRequestDefaultStandard setPremiumEconomyDiscount(Integer premiumEconomyDiscount) {
+            this.premiumEconomyDiscount = premiumEconomyDiscount;
+            return this;
+        }
+        public Integer getPremiumEconomyDiscount() {
+            return this.premiumEconomyDiscount;
+        }
+
+        public ApplyAddRequestDefaultStandard setReserveType(Integer reserveType) {
+            this.reserveType = reserveType;
+            return this;
+        }
+        public Integer getReserveType() {
+            return this.reserveType;
+        }
+
+        public ApplyAddRequestDefaultStandard setTrainRuleCode(Long trainRuleCode) {
+            this.trainRuleCode = trainRuleCode;
+            return this;
+        }
+        public Long getTrainRuleCode() {
+            return this.trainRuleCode;
+        }
+
+        public ApplyAddRequestDefaultStandard setTrainSeats(String trainSeats) {
+            this.trainSeats = trainSeats;
+            return this;
+        }
+        public String getTrainSeats() {
+            return this.trainSeats;
         }
 
     }
@@ -1106,6 +1376,9 @@ public class ApplyAddRequest extends TeaModel {
         @NameInMap("project_title")
         public String projectTitle;
 
+        @NameInMap("province_travel_city_adcodes")
+        public java.util.List<String> provinceTravelCityAdcodes;
+
         /**
          * <strong>example:</strong>
          * <p>thirdpart34711</p>
@@ -1263,6 +1536,14 @@ public class ApplyAddRequest extends TeaModel {
             return this.projectTitle;
         }
 
+        public ApplyAddRequestItineraryList setProvinceTravelCityAdcodes(java.util.List<String> provinceTravelCityAdcodes) {
+            this.provinceTravelCityAdcodes = provinceTravelCityAdcodes;
+            return this;
+        }
+        public java.util.List<String> getProvinceTravelCityAdcodes() {
+            return this.provinceTravelCityAdcodes;
+        }
+
         public ApplyAddRequestItineraryList setThirdPartInvoiceId(String thirdPartInvoiceId) {
             this.thirdPartInvoiceId = thirdPartInvoiceId;
             return this;
@@ -1389,6 +1670,9 @@ public class ApplyAddRequest extends TeaModel {
         @NameInMap("project_title")
         public String projectTitle;
 
+        @NameInMap("province_travel_city_adcodes")
+        public java.util.List<String> provinceTravelCityAdcodes;
+
         /**
          * <strong>example:</strong>
          * <p>thridpart12138</p>
@@ -1503,6 +1787,14 @@ public class ApplyAddRequest extends TeaModel {
         }
         public String getProjectTitle() {
             return this.projectTitle;
+        }
+
+        public ApplyAddRequestItinerarySetList setProvinceTravelCityAdcodes(java.util.List<String> provinceTravelCityAdcodes) {
+            this.provinceTravelCityAdcodes = provinceTravelCityAdcodes;
+            return this;
+        }
+        public java.util.List<String> getProvinceTravelCityAdcodes() {
+            return this.provinceTravelCityAdcodes;
         }
 
         public ApplyAddRequestItinerarySetList setThirdPartInvoiceId(String thirdPartInvoiceId) {

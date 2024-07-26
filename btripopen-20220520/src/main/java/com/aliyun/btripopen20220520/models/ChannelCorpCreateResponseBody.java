@@ -119,6 +119,9 @@ public class ChannelCorpCreateResponseBody extends TeaModel {
         @NameInMap("open_agent_id")
         public String openAgentId;
 
+        @NameInMap("user_id")
+        public String userId;
+
         public static ChannelCorpCreateResponseBodyModule build(java.util.Map<String, ?> map) throws Exception {
             ChannelCorpCreateResponseBodyModule self = new ChannelCorpCreateResponseBodyModule();
             return TeaModel.build(map, self);
@@ -162,6 +165,14 @@ public class ChannelCorpCreateResponseBody extends TeaModel {
         }
         public String getOpenAgentId() {
             return this.openAgentId;
+        }
+
+        public ChannelCorpCreateResponseBodyModule setUserId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+        public String getUserId() {
+            return this.userId;
         }
 
     }

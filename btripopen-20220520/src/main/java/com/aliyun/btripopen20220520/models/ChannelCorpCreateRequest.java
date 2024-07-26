@@ -47,6 +47,9 @@ public class ChannelCorpCreateRequest extends TeaModel {
     @NameInMap("third_corp_id")
     public String thirdCorpId;
 
+    @NameInMap("user_id")
+    public String userId;
+
     public static ChannelCorpCreateRequest build(java.util.Map<String, ?> map) throws Exception {
         ChannelCorpCreateRequest self = new ChannelCorpCreateRequest();
         return TeaModel.build(map, self);
@@ -106,6 +109,14 @@ public class ChannelCorpCreateRequest extends TeaModel {
     }
     public String getThirdCorpId() {
         return this.thirdCorpId;
+    }
+
+    public ChannelCorpCreateRequest setUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+    public String getUserId() {
+        return this.userId;
     }
 
 }
