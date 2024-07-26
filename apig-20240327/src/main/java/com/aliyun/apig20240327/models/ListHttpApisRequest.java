@@ -25,6 +25,9 @@ public class ListHttpApisRequest extends TeaModel {
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    @NameInMap("publishedOnly")
+    public Boolean publishedOnly;
+
     public static ListHttpApisRequest build(java.util.Map<String, ?> map) throws Exception {
         ListHttpApisRequest self = new ListHttpApisRequest();
         return TeaModel.build(map, self);
@@ -52,6 +55,14 @@ public class ListHttpApisRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListHttpApisRequest setPublishedOnly(Boolean publishedOnly) {
+        this.publishedOnly = publishedOnly;
+        return this;
+    }
+    public Boolean getPublishedOnly() {
+        return this.publishedOnly;
     }
 
 }
