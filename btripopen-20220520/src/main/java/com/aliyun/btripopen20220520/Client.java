@@ -668,6 +668,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.carRuleShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.carRule, "car_rule", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.defaultStandard)) {
+            request.defaultStandardShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.defaultStandard, "default_standard", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.externalTravelerList)) {
             request.externalTravelerListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.externalTravelerList, "external_traveler_list", "json");
         }
@@ -711,6 +715,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.corpName)) {
             body.put("corp_name", request.corpName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.defaultStandardShrink)) {
+            body.put("default_standard", request.defaultStandardShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.departId)) {
@@ -1214,6 +1222,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.carRuleShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.carRule, "car_rule", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.defaultStandard)) {
+            request.defaultStandardShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.defaultStandard, "default_standard", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.externalTravelerList)) {
             request.externalTravelerListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.externalTravelerList, "external_traveler_list", "json");
         }
@@ -1257,6 +1269,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.corpName)) {
             body.put("corp_name", request.corpName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.defaultStandardShrink)) {
+            body.put("default_standard", request.defaultStandardShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.departId)) {
@@ -2285,6 +2301,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.thirdCorpId)) {
             body.put("third_corp_id", request.thirdCorpId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            body.put("user_id", request.userId);
         }
 
         java.util.Map<String, String> realHeaders = new java.util.HashMap<>();

@@ -24,6 +24,9 @@ public class ApplyModifyShrinkRequest extends TeaModel {
     @NameInMap("corp_name")
     public String corpName;
 
+    @NameInMap("default_standard")
+    public String defaultStandardShrink;
+
     /**
      * <strong>example:</strong>
      * <p>001</p>
@@ -231,6 +234,14 @@ public class ApplyModifyShrinkRequest extends TeaModel {
     }
     public String getCorpName() {
         return this.corpName;
+    }
+
+    public ApplyModifyShrinkRequest setDefaultStandardShrink(String defaultStandardShrink) {
+        this.defaultStandardShrink = defaultStandardShrink;
+        return this;
+    }
+    public String getDefaultStandardShrink() {
+        return this.defaultStandardShrink;
     }
 
     public ApplyModifyShrinkRequest setDepartId(String departId) {

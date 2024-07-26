@@ -169,6 +169,12 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("arr_city_code")
         public String arrCityCode;
 
+        @NameInMap("arr_country")
+        public String arrCountry;
+
+        @NameInMap("arr_country_code")
+        public String arrCountryCode;
+
         /**
          * <strong>example:</strong>
          * <p>2021-10-02</p>
@@ -293,6 +299,12 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
 
         @NameInMap("dep_city_code")
         public String depCityCode;
+
+        @NameInMap("dep_country")
+        public String depCountry;
+
+        @NameInMap("dep_country_code")
+        public String depCountryCode;
 
         @NameInMap("department")
         public String department;
@@ -705,6 +717,22 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             return this.arrCityCode;
         }
 
+        public IeFlightBillSettlementQueryResponseBodyModuleDataList setArrCountry(String arrCountry) {
+            this.arrCountry = arrCountry;
+            return this;
+        }
+        public String getArrCountry() {
+            return this.arrCountry;
+        }
+
+        public IeFlightBillSettlementQueryResponseBodyModuleDataList setArrCountryCode(String arrCountryCode) {
+            this.arrCountryCode = arrCountryCode;
+            return this;
+        }
+        public String getArrCountryCode() {
+            return this.arrCountryCode;
+        }
+
         public IeFlightBillSettlementQueryResponseBodyModuleDataList setArrDate(String arrDate) {
             this.arrDate = arrDate;
             return this;
@@ -887,6 +915,22 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getDepCityCode() {
             return this.depCityCode;
+        }
+
+        public IeFlightBillSettlementQueryResponseBodyModuleDataList setDepCountry(String depCountry) {
+            this.depCountry = depCountry;
+            return this;
+        }
+        public String getDepCountry() {
+            return this.depCountry;
+        }
+
+        public IeFlightBillSettlementQueryResponseBodyModuleDataList setDepCountryCode(String depCountryCode) {
+            this.depCountryCode = depCountryCode;
+            return this;
+        }
+        public String getDepCountryCode() {
+            return this.depCountryCode;
         }
 
         public IeFlightBillSettlementQueryResponseBodyModuleDataList setDepartment(String department) {
