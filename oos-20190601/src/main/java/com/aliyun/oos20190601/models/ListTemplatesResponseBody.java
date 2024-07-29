@@ -85,7 +85,7 @@ public class ListTemplatesResponseBody extends TeaModel {
         public String category;
 
         /**
-         * <p>The constraints of template</p>
+         * <p>The template constraints.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -108,7 +108,7 @@ public class ListTemplatesResponseBody extends TeaModel {
         public String createdBy;
 
         /**
-         * <p>The time when the template was created.</p>
+         * <p>The creation time of the template.</p>
          * 
          * <strong>example:</strong>
          * <p>2019-05-16T10:26:14Z</p>
@@ -135,7 +135,7 @@ public class ListTemplatesResponseBody extends TeaModel {
         public Boolean hasTrigger;
 
         /**
-         * <p>The SHA-256 value of the template content.</p>
+         * <p>The SHA256 value of the template content.</p>
          * 
          * <strong>example:</strong>
          * <p>4bc7d7a21b3e003434b9c223f6e6d2578b5ebfeb5be28c1fcf8a8a1b11907bb4</p>
@@ -144,7 +144,7 @@ public class ListTemplatesResponseBody extends TeaModel {
         public String hash;
 
         /**
-         * <p>The template is favorite or not.</p>
+         * <p>Indicates whether the template is added to favorites.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -155,7 +155,7 @@ public class ListTemplatesResponseBody extends TeaModel {
         /**
          * <p>The popularity of the public template. Valid values: <strong>1-10</strong>. A greater value indicates higher popularity. If <strong>ShareType</strong> is set to <strong>Private</strong>, the value of this parameter is <code>-1</code>.</p>
          * <blockquote>
-         * <p> This parameter is valid only if the value of <strong>ShareType</strong> is set to <strong>Public</strong>.</p>
+         * <p> This parameter is valid only if <strong>ShareType</strong> is set to <strong>Public</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -165,7 +165,7 @@ public class ListTemplatesResponseBody extends TeaModel {
         public Integer popularity;
 
         /**
-         * <p>The publisher of template.</p>
+         * <p>The user who published the template.</p>
          * 
          * <strong>example:</strong>
          * <p>aliyun</p>
@@ -174,7 +174,7 @@ public class ListTemplatesResponseBody extends TeaModel {
         public String publisher;
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmxsn4m4******</p>
@@ -205,7 +205,7 @@ public class ListTemplatesResponseBody extends TeaModel {
         public java.util.Map<String, ?> tags;
 
         /**
-         * <p>The template format. The system automatically determines whether the format is JSON or YAML.</p>
+         * <p>The template format. The system automatically determines whether the format of the template is JSON or YAML.</p>
          * 
          * <strong>example:</strong>
          * <p>JSON</p>
@@ -241,7 +241,7 @@ public class ListTemplatesResponseBody extends TeaModel {
         public String templateType;
 
         /**
-         * <p>The template version. The name of the version consists of the letter v and a number. The number starts from 1.</p>
+         * <p>The template version. The version contains the letter v and a number. The number starts from 1.</p>
          * 
          * <strong>example:</strong>
          * <p>v1</p>
@@ -252,7 +252,7 @@ public class ListTemplatesResponseBody extends TeaModel {
         /**
          * <p>The number of times for which the private template is executed. If <strong>ShareType</strong> is set to <strong>Public</strong>, the value of this parameter is <code>-1</code>.</p>
          * <blockquote>
-         * <p> This parameter is valid only if the value of <strong>ShareType</strong> is <strong>Private</strong>.</p>
+         * <p> This parameter is valid only if <strong>ShareType</strong> is set to <strong>Private</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
