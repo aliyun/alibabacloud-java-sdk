@@ -108,6 +108,9 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
         @NameInMap("CallDuration")
         public String callDuration;
 
+        @NameInMap("CallIds")
+        public String callIds;
+
         /**
          * <strong>example:</strong>
          * <p>1332315****</p>
@@ -322,6 +325,14 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
         }
         public String getCallDuration() {
             return this.callDuration;
+        }
+
+        public ListCallDetailRecordsResponseBodyDataList setCallIds(String callIds) {
+            this.callIds = callIds;
+            return this;
+        }
+        public String getCallIds() {
+            return this.callIds;
         }
 
         public ListCallDetailRecordsResponseBodyDataList setCalledNumber(String calledNumber) {
