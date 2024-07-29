@@ -204,6 +204,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("BizRegionId", request.bizRegionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.gpuAcceleration)) {
+            query.put("GpuAcceleration", request.gpuAcceleration);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.zoneId)) {
             query.put("ZoneId", request.zoneId);
         }
