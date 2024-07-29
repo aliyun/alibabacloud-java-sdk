@@ -4,6 +4,12 @@ package com.aliyun.market20151101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLicenseRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxxxxx</p>
+     */
     @NameInMap("LicenseCode")
     public String licenseCode;
 

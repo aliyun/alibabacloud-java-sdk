@@ -4,9 +4,17 @@ package com.aliyun.market20151101.models;
 import com.aliyun.tea.*;
 
 public class PushMeteringDataResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>6EF60BEC-0242-43AF-BB20-270359FB54A7</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

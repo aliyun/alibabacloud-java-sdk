@@ -7,9 +7,21 @@ public class DescribeDistributionProductsRequest extends TeaModel {
     @NameInMap("Filter")
     public java.util.List<DescribeDistributionProductsRequestFilter> filter;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
@@ -43,9 +55,21 @@ public class DescribeDistributionProductsRequest extends TeaModel {
     }
 
     public static class DescribeDistributionProductsRequestFilter extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>supplierName</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cmj0000000</p>
+         */
         @NameInMap("Value")
         public String value;
 

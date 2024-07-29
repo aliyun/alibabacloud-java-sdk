@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeDistributionProductsLinkResponseBody extends TeaModel {
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5BD09171-BF4D-18D8-890E-C70C067527BE</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -13,9 +16,17 @@ public class DescribeDistributionProductsLinkResponseBody extends TeaModel {
     @NameInMap("Result")
     public java.util.List<DescribeDistributionProductsLinkResponseBodyResult> result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>50</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 

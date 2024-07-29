@@ -4,6 +4,10 @@ package com.aliyun.market20151101.models;
 import com.aliyun.tea.*;
 
 public class CrossAccountVerifyTokenRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>C19D103FEA2D50A584410267CE9FBA56</p>
+     */
     @NameInMap("Token")
     public String token;
 

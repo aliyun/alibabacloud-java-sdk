@@ -4,12 +4,20 @@ package com.aliyun.market20151101.models;
 import com.aliyun.tea.*;
 
 public class DescribeProjectAttachmentsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>e03a9f78-7b40-4fb3-a015-350913e37e3f</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Result")
     public java.util.List<DescribeProjectAttachmentsResponseBodyResult> result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -43,48 +51,96 @@ public class DescribeProjectAttachmentsResponseBody extends TeaModel {
     }
 
     public static class DescribeProjectAttachmentsResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Mzc4NDAtODQ3MjY4MzI=</p>
+         */
         @NameInMap("AttachmentToken")
         public String attachmentToken;
 
+        /**
+         * <strong>example:</strong>
+         * <p>File</p>
+         */
         @NameInMap("AttachmentType")
         public String attachmentType;
 
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://delivery-center.oss-cn-shanghai.aliyuncs.com/6a8****0e2/e0a***f3.jpg?Expires=1589334682&OSSAccessKeyId=wI2r*********&Signature=JWB39pUxs7RCqrcw58qXPEGu6M0%3D">http://delivery-center.oss-cn-shanghai.aliyuncs.com/6a8****0e2/e0a***f3.jpg?Expires=1589334682&amp;OSSAccessKeyId=wI2r*********&amp;Signature=JWB39pUxs7RCqrcw58qXPEGu6M0%3D</a></p>
+         */
         @NameInMap("FileLink")
         public String fileLink;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1589334682404</p>
+         */
         @NameInMap("FileLinkGmtExpired")
         public Long fileLinkGmtExpired;
 
+        /**
+         * <strong>example:</strong>
+         * <p>f8-test-perview.jpeg</p>
+         */
         @NameInMap("FileName")
         public String fileName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>109124</p>
+         */
         @NameInMap("FileSize")
         public Long fileSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>jpg</p>
+         */
         @NameInMap("FileSuffix")
         public String fileSuffix;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1587968858000</p>
+         */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8472</p>
+         */
         @NameInMap("NodeId")
         public Long nodeId;
 
         @NameInMap("NodeName")
         public String nodeName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>45261111****</p>
+         */
         @NameInMap("Operator")
         public Long operator;
 
         @NameInMap("OperatorName")
         public String operatorName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Provider</p>
+         */
         @NameInMap("OperatorRole")
         public String operatorRole;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("StepNo")
         public Integer stepNo;
 

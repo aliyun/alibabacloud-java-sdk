@@ -10,12 +10,18 @@ public class AutoRenewInstanceRequest extends TeaModel {
     @NameInMap("AutoRenewDuration")
     public Integer autoRenewDuration;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("OrderBizId")
     public Long orderBizId;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Type")
     public String type;
 

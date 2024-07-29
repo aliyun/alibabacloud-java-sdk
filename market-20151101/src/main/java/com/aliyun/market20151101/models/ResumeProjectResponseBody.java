@@ -4,12 +4,24 @@ package com.aliyun.market20151101.models;
 import com.aliyun.tea.*;
 
 public class ResumeProjectResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ee69a00f-189b-400f-9fd2-af89749fb50f</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Result")
     public Boolean result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

@@ -6,13 +6,26 @@ import com.aliyun.tea.*;
 public class DescribeProductRequest extends TeaModel {
     /**
      * <p>AliUid</p>
+     * 
+     * <strong>example:</strong>
+     * <p>190********569</p>
      */
     @NameInMap("AliUid")
     public String aliUid;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cmjj01**45</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("QueryDraft")
     public Boolean queryDraft;
 

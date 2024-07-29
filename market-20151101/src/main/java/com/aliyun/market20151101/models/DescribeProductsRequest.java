@@ -7,9 +7,17 @@ public class DescribeProductsRequest extends TeaModel {
     @NameInMap("Filter")
     public java.util.List<DescribeProductsRequestFilter> filter;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -54,9 +62,17 @@ public class DescribeProductsRequest extends TeaModel {
     }
 
     public static class DescribeProductsRequestFilter extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>categoryId</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>53366009</p>
+         */
         @NameInMap("Value")
         public String value;
 

@@ -4,18 +4,42 @@ package com.aliyun.market20151101.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstancesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>cmgj000112,cmgj000113</p>
+     */
     @NameInMap("Codes")
     public String codes;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cmgj000114,cmgj000115</p>
+     */
     @NameInMap("ExceptCodes")
     public String exceptCodes;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("ProductType")
     public String productType;
 

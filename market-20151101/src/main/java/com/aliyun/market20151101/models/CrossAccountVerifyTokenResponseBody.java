@@ -4,14 +4,25 @@ package com.aliyun.market20151101.models;
 import com.aliyun.tea.*;
 
 public class CrossAccountVerifyTokenResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>successful</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>RequestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C19D103F-EA2D-50A5-8441-0267CE9FBA56</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -19,6 +30,10 @@ public class CrossAccountVerifyTokenResponseBody extends TeaModel {
     @NameInMap("Result")
     public CrossAccountVerifyTokenResponseBodyResult result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -71,12 +86,24 @@ public class CrossAccountVerifyTokenResponseBody extends TeaModel {
         @NameInMap("AuthRoles")
         public java.util.List<String> authRoles;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1676974108866</p>
+         */
         @NameInMap("AuthTime")
         public Long authTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>marketplace_wangxiao_test</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1744526877246715</p>
+         */
         @NameInMap("Uid")
         public String uid;
 

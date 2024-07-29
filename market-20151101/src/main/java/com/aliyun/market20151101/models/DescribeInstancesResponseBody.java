@@ -7,15 +7,31 @@ public class DescribeInstancesResponseBody extends TeaModel {
     @NameInMap("InstanceItems")
     public DescribeInstancesResponseBodyInstanceItems instanceItems;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>54C22FB9-0CB1-5629-97A8-653FC7990F00</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>55</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,51 +81,107 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyInstanceItemsInstanceItem extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("ApiJson")
         public String apiJson;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;frontEndUrl&quot;:&quot;https://<em><strong>.aliyun.com&quot;,&quot;password&quot;:&quot;Sjtv</strong></em>&quot;,&quot;adminUrl&quot;:&quot;https://<em><strong>.aiiyun.com&quot;,&quot;username&quot;:&quot;aliyun</strong></em>&quot;}</p>
+         */
         @NameInMap("AppJson")
         public String appJson;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1570634021000</p>
+         */
         @NameInMap("BeganOn")
         public Long beganOn;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1570634021000</p>
+         */
         @NameInMap("CreatedOn")
         public Long createdOn;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1570644021000</p>
+         */
         @NameInMap("EndOn")
         public Long endOn;
 
         @NameInMap("ExtendJson")
         public String extendJson;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;password&quot;:&quot;<em><strong>&quot;,&quot;ip&quot;:&quot;118.31.</strong></em>.41&quot;,&quot;innerIp&quot;:&quot;118.31.<em><strong>.41&quot;,&quot;region&quot;:&quot;&quot;,&quot;username&quot;:&quot;</strong></em>&quot;,&quot;beianInfo&quot;:&quot;&quot;}</p>
+         */
         @NameInMap("HostJson")
         public String hostJson;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("IdaasJson")
         public String idaasJson;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("ImageJson")
         public String imageJson;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1551111111</p>
+         */
         @NameInMap("InstanceId")
         public Long instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>204211111111111</p>
+         */
         @NameInMap("OrderId")
         public Long orderId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cmgj00**11</p>
+         */
         @NameInMap("ProductCode")
         public String productCode;
 
         @NameInMap("ProductName")
         public String productName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cmgj00**11-prepay</p>
+         */
         @NameInMap("ProductSkuCode")
         public String productSkuCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>APP</p>
+         */
         @NameInMap("ProductType")
         public String productType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OPENED</p>
+         */
         @NameInMap("Status")
         public String status;
 

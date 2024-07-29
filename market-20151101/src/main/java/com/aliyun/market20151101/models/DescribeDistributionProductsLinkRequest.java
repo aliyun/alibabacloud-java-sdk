@@ -4,6 +4,9 @@ package com.aliyun.market20151101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDistributionProductsLinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Codes")
     public java.util.List<String> codes;
 

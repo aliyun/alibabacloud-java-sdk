@@ -4,18 +4,34 @@ package com.aliyun.market20151101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDistributionProductsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5BD09171-MB74-18D8-890E-C70C067527BE</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Results")
     public java.util.List<DescribeDistributionProductsResponseBodyResults> results;
 
+    /**
+     * <strong>example:</strong>
+     * <p>50</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,21 +81,37 @@ public class DescribeDistributionProductsResponseBody extends TeaModel {
     }
 
     public static class DescribeDistributionProductsResponseBodyResults extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>cmap*****</p>
+         */
         @NameInMap("Code")
         public String code;
 
         @NameInMap("FirstCategoryName")
         public String firstCategoryName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>//photogallery.oss-cn-hangzhou.aliyuncs.com/photo/1744526877246715/09605255-87fd-44d1-8143-96ebc8019d46.jpeg</p>
+         */
         @NameInMap("ImageUrl")
         public String imageUrl;
 
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Price")
         public String price;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("Score")
         public String score;
 
@@ -89,21 +121,37 @@ public class DescribeDistributionProductsResponseBody extends TeaModel {
         @NameInMap("ShortDescription")
         public String shortDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("SubmissionRadio")
         public String submissionRadio;
 
         @NameInMap("SupplierName")
         public String supplierName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1911534921******</p>
+         */
         @NameInMap("SupplierUId")
         public String supplierUId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>109</p>
+         */
         @NameInMap("TradeCount")
         public String tradeCount;
 
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>55</p>
+         */
         @NameInMap("UserCommentCount")
         public String userCommentCount;
 
