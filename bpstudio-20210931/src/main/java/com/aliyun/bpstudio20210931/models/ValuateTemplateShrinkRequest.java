@@ -6,12 +6,19 @@ import com.aliyun.tea.*;
 public class ValuateTemplateShrinkRequest extends TeaModel {
     /**
      * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("AreaId")
     public String areaId;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1600765710019</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -24,12 +31,19 @@ public class ValuateTemplateShrinkRequest extends TeaModel {
 
     /**
      * <p>The ID of the resource group to which the application belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmyjt3c5om3fi</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>The template ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0KSHPM6SJU03TNZP</p>
      */
     @NameInMap("TemplateId")
     public String templateId;

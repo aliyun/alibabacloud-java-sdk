@@ -6,12 +6,19 @@ import com.aliyun.tea.*;
 public class DeleteApplicationRequest extends TeaModel {
     /**
      * <p>The ID of the application.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>002XWH7MXB8MJRU0</p>
      */
     @NameInMap("ApplicationId")
     public String applicationId;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmyjt3c5om3hi</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

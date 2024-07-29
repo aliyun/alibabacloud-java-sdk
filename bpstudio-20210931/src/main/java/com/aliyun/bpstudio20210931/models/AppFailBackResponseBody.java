@@ -4,15 +4,31 @@ package com.aliyun.bpstudio20210931.models;
 import com.aliyun.tea.*;
 
 public class AppFailBackResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3309</p>
+     */
     @NameInMap("Data")
     public Integer data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OKITHEVRQCN6ULQG</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>7036DDBE-0ABA-52D7-A39D-75E511970F07</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

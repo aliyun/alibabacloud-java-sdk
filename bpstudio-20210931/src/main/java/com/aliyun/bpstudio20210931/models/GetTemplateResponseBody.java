@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetTemplateResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,12 +21,18 @@ public class GetTemplateResponseBody extends TeaModel {
 
     /**
      * <p>The interface returns information</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>Request ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A07FFDF2-78FA-1B48-9E38-88E833A93187</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,24 +77,36 @@ public class GetTemplateResponseBody extends TeaModel {
     public static class GetTemplateResponseBodyDataVariables extends TeaModel {
         /**
          * <p>The name of the variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance_name</p>
          */
         @NameInMap("Attribute")
         public String attribute;
 
         /**
          * <p>The type of the variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>String</p>
          */
         @NameInMap("DataType")
         public String dataType;
 
         /**
          * <p>The default value of the variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cadt-app-01</p>
          */
         @NameInMap("DefaultValue")
         public String defaultValue;
 
         /**
          * <p>The value of the variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>${name}</p>
          */
         @NameInMap("Variable")
         public String variable;
@@ -132,36 +153,54 @@ public class GetTemplateResponseBody extends TeaModel {
     public static class GetTemplateResponseBodyData extends TeaModel {
         /**
          * <p>The time when the template was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-09-22 17:08:31</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>Template DescriptionD</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The path to the template schema image file</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bp-studio-template/sr-U37UD2YQCRJ75X5V.png</p>
          */
         @NameInMap("ImageURL")
         public String imageURL;
 
         /**
          * <p>The name of the template</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cadt-template</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekzhfgmw4e6fwq</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>Template ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>XFKR6WYRVS24S07R</p>
          */
         @NameInMap("TemplateId")
         public String templateId;

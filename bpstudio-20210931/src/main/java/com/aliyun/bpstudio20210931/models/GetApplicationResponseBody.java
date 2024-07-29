@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetApplicationResponseBody extends TeaModel {
     /**
      * <p>The response code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -17,38 +20,19 @@ public class GetApplicationResponseBody extends TeaModel {
     public GetApplicationResponseBodyData data;
 
     /**
-     * <p>Possible application states:</p>
-     * <br>
-     * <p>*   Creating: The application is being created.</p>
-     * <p>*   Modified: The application has been modified.</p>
-     * <p>*   Verifying: The application is being verified.</p>
-     * <p>*   Verified_Failure: The application failed to pass the verification.</p>
-     * <p>*   Verified_Success: The application has passed the verification.</p>
-     * <p>*   Valuating: Fees are being calculated for the application.</p>
-     * <p>*   Valuating_Failure: Fees failed to be calculated for the application.</p>
-     * <p>*   Valuating_Success: Fees are calculated for the application.</p>
-     * <p>*   Deploying: The application is being deployed.</p>
-     * <p>*   Deployed_Failure: The application failed to be deployed.</p>
-     * <p>*   Partially_Deployed_Success: Some resources of the application are deployed.</p>
-     * <p>*   Deployed_Success: The application is deployed.</p>
-     * <p>*   Destroying: The application is being released.</p>
-     * <p>*   Delayed_Destroy: The application release is delayed.</p>
-     * <p>*   Destroyed_Failure: The application failed to be released.</p>
-     * <p>*   Partially_Destroyed_Success: Some resources of the application are released.</p>
-     * <p>*   Destroyed_Success: The application is released.</p>
-     * <p>*   Revised: The application architecture is adjusted.</p>
-     * <p>*   Verifying_In_Revision: The application resources are being verified during architecture adjustment.</p>
-     * <p>*   Verified_Failure_In_Revision: The application resources failed to pass the verification during architecture adjustment.</p>
-     * <p>*   Verified_Success_In_Revision: The application resources are verified during architecture adjustment.</p>
-     * <p>*   Valuating_In_Revision: Fees are being calculated for the application during architecture adjustment.</p>
-     * <p>*   Valuating_Failure_In_Revision: Fees failed to be calculated for the application during architecture adjustment.</p>
-     * <p>*   Valuating_Success_In_Revision: Fees are calculated for the application during architecture adjustment.</p>
+     * <p>Reason for the request failure</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the application.</p>
+     * <p>Request ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A07FFDF2-78FA-1B48-9E38-88E833A93187</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -93,42 +77,63 @@ public class GetApplicationResponseBody extends TeaModel {
     public static class GetApplicationResponseBodyDataChecklist extends TeaModel {
         /**
          * <p>The resource tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Create</p>
          */
         @NameInMap("Lifecycle")
         public String lifecycle;
 
         /**
          * <p>The region in which the instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("Region")
         public String region;
 
         /**
          * <p>The message returned for verification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The ID of the region.</p>
          */
         @NameInMap("Remark")
         public String remark;
 
         /**
          * <p>The service code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc</p>
          */
         @NameInMap("ResourceCode")
         public String resourceCode;
 
         /**
          * <p>The name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc</p>
          */
         @NameInMap("ResourceName")
         public String resourceName;
 
         /**
          * <p>The verification result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Finish</p>
          */
         @NameInMap("Result")
         public String result;
 
         /**
          * <p>The resource specifications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.0.0/16</p>
          */
         @NameInMap("Specification")
         public String specification;
@@ -199,86 +204,128 @@ public class GetApplicationResponseBody extends TeaModel {
     public static class GetApplicationResponseBodyDataPriceList extends TeaModel {
         /**
          * <p>The billing method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PayAsYouGo</p>
          */
         @NameInMap("ChargeType")
         public String chargeType;
 
         /**
          * <p>The quantity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
          * <p>Resource Fill Labels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Create</p>
          */
         @NameInMap("Lifecycle")
         public String lifecycle;
 
         /**
          * <p>The unit price of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.01</p>
          */
         @NameInMap("OnePrice")
         public Double onePrice;
 
         /**
          * <p>The original price of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3.570</p>
          */
         @NameInMap("OriginalPrice")
         public Double originalPrice;
 
         /**
          * <p>The service duration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Period")
         public Integer period;
 
         /**
          * <p>The total price.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.01</p>
          */
         @NameInMap("Price")
         public Double price;
 
         /**
          * <p>Unit: USD per hour</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The service duration.</p>
          */
         @NameInMap("PriceUnit")
         public String priceUnit;
 
         /**
          * <p>The region in which the instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("Region")
         public String region;
 
         /**
          * <p>The error message that is returned when a price query fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.e3.large</p>
          */
         @NameInMap("Remark")
         public String remark;
 
         /**
-         * <p>The service code.</p>
+         * <p>Product code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         @NameInMap("ResourceCode")
         public String resourceCode;
 
         /**
          * <p>The instance type. This parameter indicates the information about the instance type. For example, 192.168.0.0/16 may be returned for a Virtual Private Cloud (VPC) instance, ecs.g5.large may be returned for an Elastic Compute Service (ECS) instance, and slb.s1.small may be returned for a Server Load Balancer (SLB) instance. If the resource does not have a specific type, an empty value is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The billing method.</p>
          */
         @NameInMap("Specification")
         public String specification;
 
         /**
-         * <p>The creation mode. Valid values:\</p>
-         * <p>1: creates a new instance.\</p>
-         * <p>2: imports an instance.</p>
+         * <p>The creation mode. Valid values:\
+         * 1: creates a new instance.\
+         * 2: imports an instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("type")
         public String type;
@@ -405,48 +452,72 @@ public class GetApplicationResponseBody extends TeaModel {
     public static class GetApplicationResponseBodyDataResourceList extends TeaModel {
         /**
          * <p>The billing method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PayAsYouGo</p>
          */
         @NameInMap("ChargeType")
         public String chargeType;
 
         /**
          * <p>The resource tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Create</p>
          */
         @NameInMap("Lifecycle")
         public String lifecycle;
 
         /**
          * <p>The deployment result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;hostName&quot;:&quot;iZ2zehnzxqixu1pywsfbx1Z&quot;,&quot;memory&quot;:32768.0,&quot;creationTime&quot;:&quot;2021-09-28T11:23:46Z&quot;,&quot;instanceName&quot;:&quot;ecs&quot;,&quot;internetMaxBandwidthOut&quot;:0.0,&quot;description&quot;:&quot;&quot;,&quot;clusterId&quot;:&quot;&quot;,&quot;private_ip&quot;:&quot;192.168.0.247&quot;,&quot;instanceId&quot;:&quot;i-2zehnzxqixu1pywsfbx1&quot;,&quot;requestId&quot;:&quot;F1C64344-3723-51A0-855B-5F08B5634323&quot;,&quot;zoneId&quot;:&quot;cn-beijing-b&quot;,&quot;ioOptimized&quot;:&quot;optimized&quot;,&quot;id&quot;:&quot;i-2zehnzxqixu1pywsfbx1&quot;,&quot;instanceNetworkType&quot;:&quot;vpc&quot;,&quot;instanceChargeType&quot;:&quot;PostPaid&quot;,&quot;imageId&quot;:&quot;centos_8_4_x64_20G_alibase_20210824.vhd&quot;,&quot;serialNumber&quot;:&quot;cee246c4-38f3-4bf3-950b-c17e88ff6527&quot;,&quot;vlanId&quot;:&quot;&quot;,&quot;instanceType&quot;:&quot;ecs.e3.large&quot;,&quot;cpu&quot;:4.0,&quot;creditSpecification&quot;:&quot;&quot;,&quot;internetMaxBandwidthIn&quot;:-1.0,&quot;expiredTime&quot;:&quot;2099-12-31T15:59Z&quot;,&quot;internetChargeType&quot;:&quot;PayByTraffic&quot;,&quot;regionId&quot;:&quot;cn-beijing&quot;,&quot;refId&quot;:&quot;79224644_0&quot;,&quot;stoppedMode&quot;:&quot;Not-applicable&quot;,&quot;status&quot;:&quot;Running&quot;}</p>
          */
         @NameInMap("Remark")
         public String remark;
 
         /**
          * <p>The service code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         @NameInMap("ResourceCode")
         public String resourceCode;
 
         /**
          * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-2zehnzxqixu1pywsfbx1</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
          * <p>The name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         @NameInMap("ResourceName")
         public String resourceName;
 
         /**
          * <p>The type of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
          * <p>The resource deployment result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Finish</p>
          */
         @NameInMap("Status")
         public String status;
@@ -524,7 +595,10 @@ public class GetApplicationResponseBody extends TeaModel {
 
     public static class GetApplicationResponseBodyData extends TeaModel {
         /**
-         * <p>The description of the application.</p>
+         * <p>App ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VVK605ZH00OA4MRT</p>
          */
         @NameInMap("ApplicationId")
         public String applicationId;
@@ -536,31 +610,46 @@ public class GetApplicationResponseBody extends TeaModel {
         public java.util.List<GetApplicationResponseBodyDataChecklist> checklist;
 
         /**
-         * <p>The URL of the application topology image.</p>
+         * <p>The time when the app was created</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-08-09 14:37:16</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
-         * <p>The message returned for the request.</p>
+         * <p>Application description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>remark</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         @NameInMap("Error")
         public String error;
 
         /**
          * <p>The URL of the image in the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The details of the application.</p>
          */
         @NameInMap("ImageURL")
         public String imageURL;
 
         /**
-         * <p>The URL of the image in the database.</p>
+         * <p>App name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1411182597819805/sr-8DWU4RUS49NIDII0.png</p>
          */
         @NameInMap("Name")
         public String name;
@@ -572,7 +661,10 @@ public class GetApplicationResponseBody extends TeaModel {
         public java.util.List<GetApplicationResponseBodyDataPriceList> priceList;
 
         /**
-         * <p>1411182597819805/topo-MCEXDI5EL2OM10NY.json</p>
+         * <p>The ID of the resource group to which the app belongs</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekzhfgmw4e6fwq</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
@@ -585,12 +677,18 @@ public class GetApplicationResponseBody extends TeaModel {
 
         /**
          * <p>Verification passed</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Deployed_Success</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>CADT application</p>
+         * <p>The ID of the template associated with the application</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FYS9VZ535U20V7HT</p>
          */
         @NameInMap("TemplateId")
         public String templateId;

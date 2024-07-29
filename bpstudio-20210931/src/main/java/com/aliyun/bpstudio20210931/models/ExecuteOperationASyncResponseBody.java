@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class ExecuteOperationASyncResponseBody extends TeaModel {
     /**
      * <p>Result code, 200 for success; Other representatives fail.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The ID of the operation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>op_xxxxxxxxxxxxxxxxxx_ecs_modifyInstanceType_BYSOQGWUV6PME412_ERMEZLXNN3K9N3OL</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
      * <p>Error message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot; &quot;</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>Request ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SD-WEF-DSW-32ED-323DDSD-2332D</p>
      */
     @NameInMap("RequestId")
     public String requestId;

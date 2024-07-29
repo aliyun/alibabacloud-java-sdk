@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetTokenRequest extends TeaModel {
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-aekzhfgmw4e6fwq</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

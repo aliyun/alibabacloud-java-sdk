@@ -4,6 +4,10 @@ package com.aliyun.bpstudio20210931.models;
 import com.aliyun.tea.*;
 
 public class GetFoTaskStatusRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2615</p>
+     */
     @NameInMap("TaskId")
     public Integer taskId;
 

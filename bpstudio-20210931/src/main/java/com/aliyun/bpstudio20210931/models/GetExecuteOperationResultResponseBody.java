@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetExecuteOperationResultResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code. A value of 200 indicates that the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,12 +21,18 @@ public class GetExecuteOperationResultResponseBody extends TeaModel {
 
     /**
      * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot; &quot;</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,24 +77,36 @@ public class GetExecuteOperationResultResponseBody extends TeaModel {
     public static class GetExecuteOperationResultResponseBodyData extends TeaModel {
         /**
          * <p>The output of the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot; &quot;</p>
          */
         @NameInMap("Arguments")
         public String arguments;
 
         /**
          * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>“ ”</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
          * <p>The ID of the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>op_xxxxxxxx</p>
          */
         @NameInMap("OperationId")
         public String operationId;
 
         /**
          * <p>The status of the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         @NameInMap("Status")
         public String status;

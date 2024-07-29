@@ -4,6 +4,10 @@ package com.aliyun.bpstudio20210931.models;
 import com.aliyun.tea.*;
 
 public class AppFailBackRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>61ZW1DY5Y3FSAOO2</p>
+     */
     @NameInMap("ApplicationId")
     public String applicationId;
 

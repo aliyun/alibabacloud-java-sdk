@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListApplicationResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,24 +21,36 @@ public class ListApplicationResponseBody extends TeaModel {
 
     /**
      * <p>The interface returns information</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The query token returned in this call.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("NextToken")
     public Integer nextToken;
 
     /**
      * <p>The ID of the application.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BFB7F5C8-FE7A-06CA-9F87-ABBF6B848F0C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of returned entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -96,36 +111,54 @@ public class ListApplicationResponseBody extends TeaModel {
     public static class ListApplicationResponseBodyData extends TeaModel {
         /**
          * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>JIX9NEZUALGS46UI</p>
          */
         @NameInMap("ApplicationId")
         public String applicationId;
 
         /**
          * <p>The time when the application was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-09-15  08:30:00</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The URL of the application architecture image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://bp-studio-daily.oss-cn-beijing.aliyuncs.com/1411182597819805/sr-Y3KR7ZSQZR2F0YX3.png">https://bp-studio-daily.oss-cn-beijing.aliyuncs.com/1411182597819805/sr-Y3KR7ZSQZR2F0YX3.png</a></p>
          */
         @NameInMap("ImageURL")
         public String imageURL;
 
         /**
          * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cadt-appName</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The ID of the resource group to which the application belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>The status of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Deployed_Success</p>
          */
         @NameInMap("Status")
         public String status;
