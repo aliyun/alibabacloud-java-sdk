@@ -4,6 +4,9 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class ListDomainsRequest extends TeaModel {
+    @NameInMap("gatewayId")
+    public String gatewayId;
+
     /**
      * <strong>example:</strong>
      * <p>test</p>
@@ -28,6 +31,14 @@ public class ListDomainsRequest extends TeaModel {
     public static ListDomainsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListDomainsRequest self = new ListDomainsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListDomainsRequest setGatewayId(String gatewayId) {
+        this.gatewayId = gatewayId;
+        return this;
+    }
+    public String getGatewayId() {
+        return this.gatewayId;
     }
 
     public ListDomainsRequest setNameLike(String nameLike) {
