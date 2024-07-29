@@ -366,6 +366,88 @@ public class CreateTaskRequest extends TeaModel {
 
     }
 
+    public static class CreateTaskRequestParametersServiceInspectionInspectionContents extends TeaModel {
+        @NameInMap("Content")
+        public String content;
+
+        @NameInMap("Title")
+        public String title;
+
+        public static CreateTaskRequestParametersServiceInspectionInspectionContents build(java.util.Map<String, ?> map) throws Exception {
+            CreateTaskRequestParametersServiceInspectionInspectionContents self = new CreateTaskRequestParametersServiceInspectionInspectionContents();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateTaskRequestParametersServiceInspectionInspectionContents setContent(String content) {
+            this.content = content;
+            return this;
+        }
+        public String getContent() {
+            return this.content;
+        }
+
+        public CreateTaskRequestParametersServiceInspectionInspectionContents setTitle(String title) {
+            this.title = title;
+            return this;
+        }
+        public String getTitle() {
+            return this.title;
+        }
+
+    }
+
+    public static class CreateTaskRequestParametersServiceInspection extends TeaModel {
+        @NameInMap("InspectionContents")
+        public java.util.List<CreateTaskRequestParametersServiceInspectionInspectionContents> inspectionContents;
+
+        @NameInMap("InspectionIntroduction")
+        public String inspectionIntroduction;
+
+        @NameInMap("SceneIntroduction")
+        public String sceneIntroduction;
+
+        @NameInMap("SpeakerMap")
+        public java.util.Map<String, ?> speakerMap;
+
+        public static CreateTaskRequestParametersServiceInspection build(java.util.Map<String, ?> map) throws Exception {
+            CreateTaskRequestParametersServiceInspection self = new CreateTaskRequestParametersServiceInspection();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateTaskRequestParametersServiceInspection setInspectionContents(java.util.List<CreateTaskRequestParametersServiceInspectionInspectionContents> inspectionContents) {
+            this.inspectionContents = inspectionContents;
+            return this;
+        }
+        public java.util.List<CreateTaskRequestParametersServiceInspectionInspectionContents> getInspectionContents() {
+            return this.inspectionContents;
+        }
+
+        public CreateTaskRequestParametersServiceInspection setInspectionIntroduction(String inspectionIntroduction) {
+            this.inspectionIntroduction = inspectionIntroduction;
+            return this;
+        }
+        public String getInspectionIntroduction() {
+            return this.inspectionIntroduction;
+        }
+
+        public CreateTaskRequestParametersServiceInspection setSceneIntroduction(String sceneIntroduction) {
+            this.sceneIntroduction = sceneIntroduction;
+            return this;
+        }
+        public String getSceneIntroduction() {
+            return this.sceneIntroduction;
+        }
+
+        public CreateTaskRequestParametersServiceInspection setSpeakerMap(java.util.Map<String, ?> speakerMap) {
+            this.speakerMap = speakerMap;
+            return this;
+        }
+        public java.util.Map<String, ?> getSpeakerMap() {
+            return this.speakerMap;
+        }
+
+    }
+
     public static class CreateTaskRequestParametersSummarization extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -644,6 +726,12 @@ public class CreateTaskRequest extends TeaModel {
         @NameInMap("PptExtractionEnabled")
         public Boolean pptExtractionEnabled;
 
+        @NameInMap("ServiceInspection")
+        public CreateTaskRequestParametersServiceInspection serviceInspection;
+
+        @NameInMap("ServiceInspectionEnabled")
+        public Boolean serviceInspectionEnabled;
+
         @NameInMap("Summarization")
         public CreateTaskRequestParametersSummarization summarization;
 
@@ -732,6 +820,22 @@ public class CreateTaskRequest extends TeaModel {
         }
         public Boolean getPptExtractionEnabled() {
             return this.pptExtractionEnabled;
+        }
+
+        public CreateTaskRequestParameters setServiceInspection(CreateTaskRequestParametersServiceInspection serviceInspection) {
+            this.serviceInspection = serviceInspection;
+            return this;
+        }
+        public CreateTaskRequestParametersServiceInspection getServiceInspection() {
+            return this.serviceInspection;
+        }
+
+        public CreateTaskRequestParameters setServiceInspectionEnabled(Boolean serviceInspectionEnabled) {
+            this.serviceInspectionEnabled = serviceInspectionEnabled;
+            return this;
+        }
+        public Boolean getServiceInspectionEnabled() {
+            return this.serviceInspectionEnabled;
         }
 
         public CreateTaskRequestParameters setSummarization(CreateTaskRequestParametersSummarization summarization) {
