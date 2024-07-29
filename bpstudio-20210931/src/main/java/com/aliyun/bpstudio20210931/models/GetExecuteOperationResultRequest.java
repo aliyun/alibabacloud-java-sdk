@@ -6,12 +6,19 @@ import com.aliyun.tea.*;
 public class GetExecuteOperationResultRequest extends TeaModel {
     /**
      * <p>The ID of the operation.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>op_xxxxxxxxxxxxxxxxxxxxxx</p>
      */
     @NameInMap("OperationId")
     public String operationId;
 
     /**
      * <p>The ID of the resource group. This parameter is specified to verify the permissions on the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testResourceId</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

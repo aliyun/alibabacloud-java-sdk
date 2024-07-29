@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class CreateApplicationShrinkRequest extends TeaModel {
     /**
      * <p>The ID of the region.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("AreaId")
     public String areaId;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1600765710019</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The parameters that are used to configure the application you want to create. For example, enableMonitor specifies whether to automatically create a CloudMonitor task for the application, and enableReport specifies whether to generate reports.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;enableMonitor&quot;:&quot;0&quot;, &quot;enableReport&quot;:&quot;1&quot;}</p>
      */
     @NameInMap("Configuration")
     public String configurationShrink;
@@ -30,27 +39,42 @@ public class CreateApplicationShrinkRequest extends TeaModel {
 
     /**
      * <p>The name of the application.</p>
-     * <br>
-     * <p>*   The application name must be unique. You can call the [ListApplication](https://www.alibabacloud.com/help/en/bp-studio/latest/api-bpstudio-2021-09-31-listapplication) operation to query the existing applications.</p>
-     * <p>*   The application name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http:// or https://`. The name can contain letters, digits, underscores (\_), and hyphens (-).</p>
+     * <ul>
+     * <li>The application name must be unique. You can call the <a href="https://www.alibabacloud.com/help/en/bp-studio/latest/api-bpstudio-2021-09-31-listapplication">ListApplication</a> operation to query the existing applications.</li>
+     * <li>The application name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <code>http:// or https://</code>. The name can contain letters, digits, underscores (_), and hyphens (-).</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cadt-application</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The ID of the resource group to which the application you want to create belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmyjt3c5om3hi</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>The ID of the template.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0KSHPM6SJU03TNZP</p>
      */
     @NameInMap("TemplateId")
     public String templateId;
 
     /**
      * <p>The parameter values that are contained in the template. If the template contains no parameter values, the default values are used.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;variable1&quot;:&quot;1&quot;}</p>
      */
     @NameInMap("Variables")
     public String variablesShrink;

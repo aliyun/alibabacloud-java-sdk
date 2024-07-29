@@ -4,9 +4,17 @@ package com.aliyun.bpstudio20210931.models;
 import com.aliyun.tea.*;
 
 public class AppFailOverRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>BE68D71ZY5YYIU9R</p>
+     */
     @NameInMap("ApplicationId")
     public String applicationId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-g</p>
+     */
     @NameInMap("FailZone")
     public String failZone;
 

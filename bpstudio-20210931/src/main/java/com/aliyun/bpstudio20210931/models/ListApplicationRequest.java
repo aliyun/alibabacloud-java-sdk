@@ -6,43 +6,78 @@ import com.aliyun.tea.*;
 public class ListApplicationRequest extends TeaModel {
     /**
      * <p>Keywords in the app name</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Keyword")
     public String keyword;
 
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The pagination size of the resulting value cannot be less than the minimum value of 1 and cannot be greater than the maximum value of 50.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The ID of the resource group to which the application belongs.</p>
+     * <p>The pagination page number of the resulting value cannot be less than the minimum value of 1 and cannot be greater than the maximum value of 10000.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("NextToken")
     public Integer nextToken;
 
     /**
      * <p>1 update time,<br>2 creation time</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("OrderType")
     public Long orderType;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>Resource Id</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-xxxxxxxxxxxx</p>
+     */
     @NameInMap("ResourceId")
     public String resourceId;
 
     /**
      * <p>The status of the applications to be returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The following values are &quot;success&quot; and &quot;release&quot;.
+     * If the input value is &quot;success&quot;, the returned application list includes all applications in the Deployed_Success state of successful deployment.
+     * If the input value is release, the returned application list includes all applications in the release success (Destroyed_Success) and release failure (Destroyed_Failure) status.
+     * If this parameter is left blank, the returned app list includes apps in all states.</p>
      */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>Template Id</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0KSXXX6SJU03TXXX</p>
+     */
     @NameInMap("TemplateId")
     public String templateId;
 

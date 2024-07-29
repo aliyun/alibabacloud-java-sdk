@@ -6,48 +6,73 @@ import com.aliyun.tea.*;
 public class ListTemplateRequest extends TeaModel {
     /**
      * <p>The keyword that is used to search for templates.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cadt</p>
      */
     @NameInMap("Keyword")
     public String keyword;
 
     /**
      * <p>The number of entries to return on each page.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The number of the page to return.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("NextToken")
     public Integer nextToken;
 
     /**
      * <p>The criterion by which the returned templates are sorted. Valid values:</p>
-     * <br>
-     * <p>*   1: The templates are sorted by the time when they are updated.</p>
-     * <p>*   2: The templates are sorted by the time when they are created.</p>
-     * <p>*   3: The templates are sorted by the system.</p>
-     * <p>*   4: The templates are sorted by the number of times that they are used.</p>
-     * <p>*   If you specify an integer other than 1, 2, 3, and 4 or do not specify any value, the templates are sorted by the system.</p>
+     * <ul>
+     * <li>1: The templates are sorted by the time when they are updated.</li>
+     * <li>2: The templates are sorted by the time when they are created.</li>
+     * <li>3: The templates are sorted by the system.</li>
+     * <li>4: The templates are sorted by the number of times that they are used.</li>
+     * <li>If you specify an integer other than 1, 2, 3, and 4 or do not specify any value, the templates are sorted by the system.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("OrderType")
     public Long orderType;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmyjt3c5om3hi</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>The tag that you want to use to query templates.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TagList")
     public Integer tagList;
 
     /**
      * <p>The type of the templates to be returned. Valid values: public and private</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>public</p>
      */
     @NameInMap("Type")
     public String type;

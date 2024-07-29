@@ -4,15 +4,27 @@ package com.aliyun.bpstudio20210931.models;
 import com.aliyun.tea.*;
 
 public class GetPotentialFailZonesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public java.util.List<String> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>The specified ResourceIds are not found in our records.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>BFB7F5C8-FE7A-06CA-9F87-ABBF6B848F0C</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

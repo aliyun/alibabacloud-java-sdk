@@ -3,49 +3,49 @@ package com.aliyun.bpstudio20210931.models;
 
 import com.aliyun.tea.*;
 
-public class GetFoTaskStatusResponseBody extends TeaModel {
+public class ExecuteOperationSyncResponseBody extends TeaModel {
     /**
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
-    public String code;
+    public Integer code;
 
     /**
      * <strong>example:</strong>
-     * <p>Running</p>
+     * <p>op_xxxxxxxxxxxxxxxxxx_dds_modifyInstanceType_BYSOQGWUV6PME412_ERMEZLXNN3K9N3OL</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
      * <strong>example:</strong>
-     * <p>OKITHEVRQCN6ULQG</p>
+     * <p>Access key ID cannot be null.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <strong>example:</strong>
-     * <p>923692F0-A15B-58B4-BAF4-2AFA4AF46240</p>
+     * <p>FDC73B05-5331-57AA-BA93-4C9882792FF5</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    public static GetFoTaskStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        GetFoTaskStatusResponseBody self = new GetFoTaskStatusResponseBody();
+    public static ExecuteOperationSyncResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        ExecuteOperationSyncResponseBody self = new ExecuteOperationSyncResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public GetFoTaskStatusResponseBody setCode(String code) {
+    public ExecuteOperationSyncResponseBody setCode(Integer code) {
         this.code = code;
         return this;
     }
-    public String getCode() {
+    public Integer getCode() {
         return this.code;
     }
 
-    public GetFoTaskStatusResponseBody setData(String data) {
+    public ExecuteOperationSyncResponseBody setData(String data) {
         this.data = data;
         return this;
     }
@@ -53,7 +53,7 @@ public class GetFoTaskStatusResponseBody extends TeaModel {
         return this.data;
     }
 
-    public GetFoTaskStatusResponseBody setMessage(String message) {
+    public ExecuteOperationSyncResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -61,7 +61,7 @@ public class GetFoTaskStatusResponseBody extends TeaModel {
         return this.message;
     }
 
-    public GetFoTaskStatusResponseBody setRequestId(String requestId) {
+    public ExecuteOperationSyncResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

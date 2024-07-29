@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ValuateTemplateResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,12 +21,18 @@ public class ValuateTemplateResponseBody extends TeaModel {
 
     /**
      * <p>The error message returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>847C9D0A-BABD-589C-8A9C-6464409EDED9</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,35 +77,53 @@ public class ValuateTemplateResponseBody extends TeaModel {
     public static class ValuateTemplateResponseBodyDataResourceListPriceList extends TeaModel {
         /**
          * <p>The discount amount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>82.99</p>
          */
         @NameInMap("DiscountAmount")
         public Float discountAmount;
 
         /**
          * <p>The error message that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ServiceUnavailable : The request has failed due to a temporary failure of the server.\r\nRequestId : 4AA302DB-3286-5589-8637-FF6D8507B7A9.</p>
          */
         @NameInMap("Error")
         public String error;
 
         /**
          * <p>The resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eip</p>
          */
         @NameInMap("NodeType")
         public String nodeType;
 
         /**
          * <p>The original price.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>83.0</p>
          */
         @NameInMap("OriginalPrice")
         public Float originalPrice;
 
         /**
          * <p>The pricing unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>USD</p>
          */
         @NameInMap("PriceUnit")
         public String priceUnit;
 
         /**
+         * <p>The discount information.</p>
+         * 
+         * <strong>example:</strong>
          * <p>The discount information.</p>
          */
         @NameInMap("PromotionName")
@@ -104,21 +131,30 @@ public class ValuateTemplateResponseBody extends TeaModel {
 
         /**
          * <p>The resource ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1687225092</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
          * <p>The price at which the transaction is made.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.01</p>
          */
         @NameInMap("TradePrice")
         public Float tradePrice;
 
         /**
-         * <p>Indicates whether the instance is newly created. Valid values:\</p>
-         * <p>1: The instance is newly created.\</p>
-         * <p>2: The instance already exists.\</p>
-         * <p>0: The price of the instance is not included.</p>
+         * <p>Indicates whether the instance is newly created. Valid values:\
+         * 1: The instance is newly created.\
+         * 2: The instance already exists.\
+         * 0: The price of the instance is not included.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;1&quot;</p>
          */
         @NameInMap("Type")
         public String type;
@@ -205,24 +241,36 @@ public class ValuateTemplateResponseBody extends TeaModel {
     public static class ValuateTemplateResponseBodyDataResourceList extends TeaModel {
         /**
          * <p>The discount amount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>73</p>
          */
         @NameInMap("DiscountAmount")
         public Double discountAmount;
 
         /**
          * <p>The error message that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidSaleComponentFault : The request not refer to the correct order sale component.</p>
          */
         @NameInMap("Error")
         public String error;
 
         /**
          * <p>The resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         @NameInMap("NodeType")
         public String nodeType;
 
         /**
          * <p>The original price.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>83.0</p>
          */
         @NameInMap("OriginalPrice")
         public Double originalPrice;
@@ -235,11 +283,17 @@ public class ValuateTemplateResponseBody extends TeaModel {
 
         /**
          * <p>The pricing unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>USD</p>
          */
         @NameInMap("PriceUnit")
         public String priceUnit;
 
         /**
+         * <p>The discount information.</p>
+         * 
+         * <strong>example:</strong>
          * <p>The discount information.</p>
          */
         @NameInMap("PromotionName")
@@ -247,6 +301,9 @@ public class ValuateTemplateResponseBody extends TeaModel {
 
         /**
          * <p>The price at which the transaction is made.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0</p>
          */
         @NameInMap("TradePrice")
         public Double tradePrice;

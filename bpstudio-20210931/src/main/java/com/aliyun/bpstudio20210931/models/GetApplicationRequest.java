@@ -6,12 +6,19 @@ import com.aliyun.tea.*;
 public class GetApplicationRequest extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>VVK605ZH00OA4MRT</p>
      */
     @NameInMap("ApplicationId")
     public String applicationId;
 
     /**
      * <p>Queries the basic information, verification results, billing results, and deployment results of an application.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmyjt3c5om3hi</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

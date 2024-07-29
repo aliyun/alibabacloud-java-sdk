@@ -6,18 +6,28 @@ import com.aliyun.tea.*;
 public class GetTemplateRequest extends TeaModel {
     /**
      * <p>Template Area</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("Region")
     public String region;
 
     /**
      * <p>ResourceGroup ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-aekzhfgmw4e6fwq</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>Template ID</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>XFKR6WYRVS24S07R</p>
      */
     @NameInMap("TemplateId")
     public String templateId;

@@ -4,9 +4,17 @@ package com.aliyun.bpstudio20210931.models;
 import com.aliyun.tea.*;
 
 public class GetPotentialFailZonesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IsPlanId")
     public Boolean isPlanId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>FS3ATPTOSC4SE1GG</p>
+     */
     @NameInMap("ObjectId")
     public String objectId;
 
