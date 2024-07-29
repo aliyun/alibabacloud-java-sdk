@@ -55,11 +55,17 @@ public class ListTemplatesRequest extends TeaModel {
     @NameInMap("HasTrigger")
     public Boolean hasTrigger;
 
+    /**
+     * <p>Specifies whether the template is an example template</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("IsExample")
     public Boolean isExample;
 
     /**
-     * <p>The template is favorite or not.</p>
+     * <p>Specifies whether the template is added to favorites.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -68,7 +74,7 @@ public class ListTemplatesRequest extends TeaModel {
     public Boolean isFavorite;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: 10 to 100. Default value: 50.</p>
+     * <p>The number of entries per page. Valid values: 10 to 100. Default value: 50.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
