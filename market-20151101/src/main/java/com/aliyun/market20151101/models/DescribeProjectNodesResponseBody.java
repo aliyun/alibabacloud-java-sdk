@@ -4,12 +4,20 @@ package com.aliyun.market20151101.models;
 import com.aliyun.tea.*;
 
 public class DescribeProjectNodesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>937fee1f-26bb-4b6e-8def-977a6bdaa1e5</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Result")
     public java.util.List<DescribeProjectNodesResponseBodyResult> result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -43,48 +51,104 @@ public class DescribeProjectNodesResponseBody extends TeaModel {
     }
 
     public static class DescribeProjectNodesResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("AllowRollbackNode")
         public Boolean allowRollbackNode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("AutoFinishNode")
         public Boolean autoFinishNode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("FinalStepNo")
         public Integer finalStepNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1588834325000</p>
+         */
         @NameInMap("GmtExpired")
         public Long gmtExpired;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1588834325000</p>
+         */
         @NameInMap("GmtFinished")
         public Long gmtFinished;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1588834325000</p>
+         */
         @NameInMap("GmtStart")
         public Long gmtStart;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("NeedAttachment")
         public Boolean needAttachment;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8472</p>
+         */
         @NameInMap("NextNodeId")
         public Long nextNodeId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8471</p>
+         */
         @NameInMap("NodeId")
         public Long nodeId;
 
         @NameInMap("NodeName")
         public String nodeName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Finish</p>
+         */
         @NameInMap("NodeStatus")
         public String nodeStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>System</p>
+         */
         @NameInMap("OperatorRole")
         public String operatorRole;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ParentNodeId")
         public Long parentNodeId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8470</p>
+         */
         @NameInMap("PreviousNodeId")
         public Long previousNodeId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("StepNo")
         public Integer stepNo;
 

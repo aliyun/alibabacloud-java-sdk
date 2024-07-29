@@ -4,60 +4,124 @@ package com.aliyun.market20151101.models;
 import com.aliyun.tea.*;
 
 public class DescribeOrderResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("AccountQuantity")
     public Long accountQuantity;
 
+    /**
+     * <strong>example:</strong>
+     * <p>190311111111****</p>
+     */
     @NameInMap("AliUid")
     public Long aliUid;
 
     @NameInMap("Components")
     public java.util.Map<String, ?> components;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0.0</p>
+     */
     @NameInMap("CouponPrice")
     public Float couponPrice;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1531191564000</p>
+     */
     @NameInMap("CreatedOn")
     public Long createdOn;
 
     @NameInMap("InstanceIds")
     public DescribeOrderResponseBodyInstanceIds instanceIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>202211111111111</p>
+     */
     @NameInMap("OrderId")
     public Long orderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>NORMAL</p>
+     */
     @NameInMap("OrderStatus")
     public String orderStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>NEW</p>
+     */
     @NameInMap("OrderType")
     public String orderType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10.0</p>
+     */
     @NameInMap("OriginalPrice")
     public Float originalPrice;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1531191675000</p>
+     */
     @NameInMap("PaidOn")
     public Long paidOn;
 
+    /**
+     * <strong>example:</strong>
+     * <p>PAID</p>
+     */
     @NameInMap("PayStatus")
     public String payStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0.0</p>
+     */
     @NameInMap("PaymentPrice")
     public Float paymentPrice;
 
+    /**
+     * <strong>example:</strong>
+     * <p>MONTH</p>
+     */
     @NameInMap("PeriodType")
     public String periodType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cmgj02****</p>
+     */
     @NameInMap("ProductCode")
     public String productCode;
 
     @NameInMap("ProductName")
     public String productName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cmgj02****-prepay</p>
+     */
     @NameInMap("ProductSkuCode")
     public String productSkuCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Quantity")
     public Integer quantity;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6EF60BEC-0242-43AF-BB20-270359FB54A7</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -67,6 +131,10 @@ public class DescribeOrderResponseBody extends TeaModel {
     @NameInMap("SupplierTelephones")
     public DescribeOrderResponseBodySupplierTelephones supplierTelephones;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0.0</p>
+     */
     @NameInMap("TotalPrice")
     public Float totalPrice;
 

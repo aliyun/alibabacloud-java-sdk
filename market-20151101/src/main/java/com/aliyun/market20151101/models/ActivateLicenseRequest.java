@@ -4,9 +4,19 @@ package com.aliyun.market20151101.models;
 import com.aliyun.tea.*;
 
 public class ActivateLicenseRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>129****1111</p>
+     */
     @NameInMap("Identification")
     public String identification;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>APSEDH8TA5CSGK-********_6CNTACBH9EQPOATFXJQL4B2COE7M43VVQ7GUGKAA</p>
+     */
     @NameInMap("LicenseCode")
     public String licenseCode;
 

@@ -4,14 +4,25 @@ package com.aliyun.market20151101.models;
 import com.aliyun.tea.*;
 
 public class DescribeApiMeteringResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("Count")
     public Long count;
 
     /**
      * <p>fatal</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("Fatal")
     public Boolean fatal;
@@ -19,21 +30,41 @@ public class DescribeApiMeteringResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>62FC432C55A1A63534A6CB34</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Result")
     public java.util.List<DescribeApiMeteringResponseBodyResult> result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1.0</p>
+     */
     @NameInMap("Version")
     public String version;
 
@@ -123,18 +154,37 @@ public class DescribeApiMeteringResponseBody extends TeaModel {
     }
 
     public static class DescribeApiMeteringResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>102277855749****</p>
+         */
         @NameInMap("AliyunPk")
         public Long aliyunPk;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cmapi0004****</p>
+         */
         @NameInMap("ProductCode")
         public String productCode;
 
         @NameInMap("ProductName")
         public String productName;
 
+        @NameInMap("TotalCapacity")
+        public Long totalCapacity;
+
+        /**
+         * <strong>example:</strong>
+         * <p>98</p>
+         */
         @NameInMap("TotalQuota")
         public Long totalQuota;
 
+        /**
+         * <strong>example:</strong>
+         * <p>220</p>
+         */
         @NameInMap("TotalUsage")
         public Long totalUsage;
 
@@ -168,6 +218,14 @@ public class DescribeApiMeteringResponseBody extends TeaModel {
         }
         public String getProductName() {
             return this.productName;
+        }
+
+        public DescribeApiMeteringResponseBodyResult setTotalCapacity(Long totalCapacity) {
+            this.totalCapacity = totalCapacity;
+            return this;
+        }
+        public Long getTotalCapacity() {
+            return this.totalCapacity;
         }
 
         public DescribeApiMeteringResponseBodyResult setTotalQuota(Long totalQuota) {

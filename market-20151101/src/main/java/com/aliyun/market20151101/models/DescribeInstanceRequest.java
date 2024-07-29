@@ -4,9 +4,19 @@ package com.aliyun.market20151101.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>155****11</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>NEW</p>
+     */
     @NameInMap("OrderType")
     public String orderType;
 

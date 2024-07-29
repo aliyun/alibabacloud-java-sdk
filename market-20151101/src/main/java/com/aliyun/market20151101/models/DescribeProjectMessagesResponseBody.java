@@ -4,15 +4,27 @@ package com.aliyun.market20151101.models;
 import com.aliyun.tea.*;
 
 public class DescribeProjectMessagesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>00eb4de1-6cff-4f56-833e-7b1e070e398d</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Result")
     public java.util.List<DescribeProjectMessagesResponseBodyResult> result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>28</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -57,15 +69,27 @@ public class DescribeProjectMessagesResponseBody extends TeaModel {
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1589015560000</p>
+         */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>452611111****</p>
+         */
         @NameInMap("Operator")
         public Long operator;
 
         @NameInMap("OperatorName")
         public String operatorName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Provider</p>
+         */
         @NameInMap("OperatorRole")
         public String operatorRole;
 

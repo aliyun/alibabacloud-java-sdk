@@ -7,9 +7,17 @@ public class CreateOrderResponseBody extends TeaModel {
     @NameInMap("InstanceIds")
     public CreateOrderResponseBodyInstanceIds instanceIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>202********0117</p>
+     */
     @NameInMap("OrderId")
     public String orderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4ca591b5-bc30-4fa7-aeaa-c4d0ec5d24ed</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

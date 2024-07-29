@@ -4,60 +4,122 @@ package com.aliyun.market20151101.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceResponseBody extends TeaModel {
+    @NameInMap("ActiveAddress")
+    public String activeAddress;
+
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;frontEndUrl&quot;:&quot;https://<em><em><strong>.aliyundoc.com&quot;,&quot;password&quot;:&quot;Sjtv</strong></em>&quot;,&quot;adminUrl&quot;:&quot;https://</em><em><strong>.aliyundoc.com&quot;,&quot;username&quot;:&quot;aliyun</strong></em>&quot;}</p>
+     */
     @NameInMap("AppJson")
     public String appJson;
 
     @NameInMap("AutoRenewal")
     public String autoRenewal;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1570634021000</p>
+     */
     @NameInMap("BeganOn")
     public Long beganOn;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;package_version&quot;:&quot;yuncode000111&quot;}</p>
+     */
     @NameInMap("ComponentJson")
     public String componentJson;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("Constraints")
     public String constraints;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1570634018000</p>
+     */
     @NameInMap("CreatedOn")
     public Long createdOn;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1602259200000</p>
+     */
     @NameInMap("EndOn")
     public Long endOn;
 
     @NameInMap("ExtendJson")
     public String extendJson;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;password&quot;:&quot;<em><strong>&quot;,&quot;ip&quot;:&quot;118.31.</strong></em>.41&quot;,&quot;innerIp&quot;:&quot;118.31.<em><strong>.41&quot;,&quot;region&quot;:&quot;&quot;,&quot;username&quot;:&quot;</strong></em>&quot;,&quot;beianInfo&quot;:&quot;&quot;}</p>
+     */
     @NameInMap("HostJson")
     public String hostJson;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1551111111</p>
+     */
     @NameInMap("InstanceId")
     public Long instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IsTrial")
     public Boolean isTrial;
+
+    @NameInMap("LicenseCode")
+    public String licenseCode;
 
     @NameInMap("Modules")
     public DescribeInstanceResponseBodyModules modules;
 
+    /**
+     * <strong>example:</strong>
+     * <p>204211111111111</p>
+     */
     @NameInMap("OrderId")
     public Long orderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cmgj00**11</p>
+     */
     @NameInMap("ProductCode")
     public String productCode;
 
     @NameInMap("ProductName")
     public String productName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cmgj00**11-prepay</p>
+     */
     @NameInMap("ProductSkuCode")
     public String productSkuCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>APP</p>
+     */
     @NameInMap("ProductType")
     public String productType;
 
     @NameInMap("RelationalData")
     public DescribeInstanceResponseBodyRelationalData relationalData;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OPENED</p>
+     */
     @NameInMap("Status")
     public String status;
 
@@ -67,6 +129,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
     public static DescribeInstanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstanceResponseBody self = new DescribeInstanceResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeInstanceResponseBody setActiveAddress(String activeAddress) {
+        this.activeAddress = activeAddress;
+        return this;
+    }
+    public String getActiveAddress() {
+        return this.activeAddress;
     }
 
     public DescribeInstanceResponseBody setAppJson(String appJson) {
@@ -157,6 +227,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
         return this.isTrial;
     }
 
+    public DescribeInstanceResponseBody setLicenseCode(String licenseCode) {
+        this.licenseCode = licenseCode;
+        return this;
+    }
+    public String getLicenseCode() {
+        return this.licenseCode;
+    }
+
     public DescribeInstanceResponseBody setModules(DescribeInstanceResponseBodyModules modules) {
         this.modules = modules;
         return this;
@@ -230,24 +308,52 @@ public class DescribeInstanceResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceResponseBodyModulesModulePropertiesPropertyPropertyValuesPropertyValue extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("Max")
         public String max;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("Min")
         public String min;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("Remark")
         public String remark;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("Step")
         public String step;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -334,18 +440,34 @@ public class DescribeInstanceResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceResponseBodyModulesModulePropertiesProperty extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("DisplayUnit")
         public String displayUnit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("Name")
         public String name;
 
         @NameInMap("PropertyValues")
         public DescribeInstanceResponseBodyModulesModulePropertiesPropertyPropertyValues propertyValues;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("ShowType")
         public String showType;
 
@@ -416,9 +538,17 @@ public class DescribeInstanceResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceResponseBodyModulesModule extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>package_config</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <strong>example:</strong>
+         * <p>101*********026</p>
+         */
         @NameInMap("Id")
         public String id;
 
@@ -487,6 +617,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceResponseBodyRelationalData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>STARTED</p>
+         */
         @NameInMap("ServiceStatus")
         public String serviceStatus;
 

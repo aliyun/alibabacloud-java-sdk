@@ -4,6 +4,12 @@ package com.aliyun.market20151101.models;
 import com.aliyun.tea.*;
 
 public class DescribeProjectNodesRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4****89</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

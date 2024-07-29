@@ -4,9 +4,21 @@ package com.aliyun.market20151101.models;
 import com.aliyun.tea.*;
 
 public class DescribePriceRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;components&quot;:{&quot;package_version&quot;:&quot;yuncode12928000016&quot;},&quot;duration&quot;:1,&quot;pricingCycle&quot;:&quot;YEAR&quot;,&quot;productCode&quot;:&quot;cmgj01**28&quot;,&quot;quantity&quot;:1,&quot;skuCode&quot;:&quot;prepay&quot;}</p>
+     */
     @NameInMap("Commodity")
     public String commodity;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>INSTANCE_BUY</p>
+     */
     @NameInMap("OrderType")
     public String orderType;
 

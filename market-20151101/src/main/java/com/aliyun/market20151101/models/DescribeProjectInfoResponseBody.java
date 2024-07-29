@@ -4,12 +4,20 @@ package com.aliyun.market20151101.models;
 import com.aliyun.tea.*;
 
 public class DescribeProjectInfoResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ee3e1b3b-6c38-4bcf-be40-5a946cfda761</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Result")
     public DescribeProjectInfoResponseBodyResult result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -43,54 +51,114 @@ public class DescribeProjectInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeProjectInfoResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("CurrentStepNo")
         public Integer currentStepNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>27291111****</p>
+         */
         @NameInMap("CustomerAliUid")
         public Long customerAliUid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("FinalStepNo")
         public Integer finalStepNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("FinishType")
         public String finishType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1588834324000</p>
+         */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1620403200000</p>
+         */
         @NameInMap("GmtExpired")
         public Long gmtExpired;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1620403200000</p>
+         */
         @NameInMap("GmtFinished")
         public Long gmtFinished;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4****89</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2059111111111</p>
+         */
         @NameInMap("OrderId")
         public Long orderId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cmgj***055</p>
+         */
         @NameInMap("ProductCode")
         public String productCode;
 
         @NameInMap("ProductName")
         public String productName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>yuncode****500001</p>
+         */
         @NameInMap("ProductSkuCode")
         public String productSkuCode;
 
         @NameInMap("ProductSkuName")
         public String productSkuName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Starting</p>
+         */
         @NameInMap("ProjectStatus")
         public String projectStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>45121111****</p>
+         */
         @NameInMap("SupplierAliUid")
         public Long supplierAliUid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>410</p>
+         */
         @NameInMap("TemplateId")
         public Long templateId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Public</p>
+         */
         @NameInMap("TemplateType")
         public String templateType;
 

@@ -4,21 +4,50 @@ package com.aliyun.market20151101.models;
 import com.aliyun.tea.*;
 
 public class CreateOrderRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2709c68a-d569-4819-9c5d-1222ed2ee924</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Commodity")
     public String commodity;
 
+    /**
+     * <strong>example:</strong>
+     * <p>abc</p>
+     */
     @NameInMap("OrderSouce")
     public String orderSouce;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>INSTANCE_BUY</p>
+     */
     @NameInMap("OrderType")
     public String orderType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>111********11</p>
+     */
     @NameInMap("OwnerId")
     public String ownerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>HAND</p>
+     */
     @NameInMap("PaymentType")
     public String paymentType;
 

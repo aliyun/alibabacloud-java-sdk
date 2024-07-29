@@ -4,18 +4,34 @@ package com.aliyun.market20151101.models;
 import com.aliyun.tea.*;
 
 public class DescribeProductsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("ProductItems")
     public DescribeProductsResponseBodyProductItems productItems;
 
+    /**
+     * <strong>example:</strong>
+     * <p>A077D99E-0C4D-421E-A5D4-F533F6657817</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>75</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,9 +81,17 @@ public class DescribeProductsResponseBody extends TeaModel {
     }
 
     public static class DescribeProductsResponseBodyProductItemsProductItem extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>53398003</p>
+         */
         @NameInMap("CategoryId")
         public Long categoryId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cmjj02****</p>
+         */
         @NameInMap("Code")
         public String code;
 
@@ -77,18 +101,34 @@ public class DescribeProductsResponseBody extends TeaModel {
         @NameInMap("DeliveryWay")
         public String deliveryWay;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://oss.aliyuncs.com/photogallery/photo/1904996544835414/7549/767d6d07-8366-4822-b84e-61f6ea10d146.png">https://oss.aliyuncs.com/photogallery/photo/1904996544835414/7549/767d6d07-8366-4822-b84e-61f6ea10d146.png</a></p>
+         */
         @NameInMap("ImageUrl")
         public String imageUrl;
 
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>windows</p>
+         */
         @NameInMap("OperationSystem")
         public String operationSystem;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{\&quot;DiscountPrice\&quot;: 0.0, \&quot;TradePrice\&quot;: 15750.0, \&quot;Currency\&quot;: \&quot;CNY\&quot;, \&quot;OriginalPrice\&quot;: 15750.0, \&quot;RuleIds\&quot;: {\&quot;RuleId\&quot;: []}, \&quot;Coupons\&quot;: {\&quot;Coupon\&quot;: []}}</p>
+         */
         @NameInMap("PriceInfo")
         public String priceInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5.0</p>
+         */
         @NameInMap("Score")
         public String score;
 
@@ -98,6 +138,10 @@ public class DescribeProductsResponseBody extends TeaModel {
         @NameInMap("SuggestedPrice")
         public String suggestedPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>228399</p>
+         */
         @NameInMap("SupplierId")
         public Long supplierId;
 
@@ -107,6 +151,10 @@ public class DescribeProductsResponseBody extends TeaModel {
         @NameInMap("Tags")
         public String tags;
 
+        /**
+         * <strong>example:</strong>
+         * <p>/products/53616009/cmjj02****.html</p>
+         */
         @NameInMap("TargetUrl")
         public String targetUrl;
 

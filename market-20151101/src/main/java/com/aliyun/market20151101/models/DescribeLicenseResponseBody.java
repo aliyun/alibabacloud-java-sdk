@@ -7,6 +7,10 @@ public class DescribeLicenseResponseBody extends TeaModel {
     @NameInMap("License")
     public DescribeLicenseResponseBodyLicense license;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6EF60BEC-0242-43AF-BB20-270359FB54A7</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +36,21 @@ public class DescribeLicenseResponseBody extends TeaModel {
     }
 
     public static class DescribeLicenseResponseBodyLicenseExtendArrayLicenseAttribute extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -81,15 +97,33 @@ public class DescribeLicenseResponseBody extends TeaModel {
     }
 
     public static class DescribeLicenseResponseBodyLicenseExtendInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
+         */
         @NameInMap("AccountQuantity")
         public Long accountQuantity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>190311111111****</p>
+         */
         @NameInMap("AliUid")
         public Long aliUid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>id***@**.com</p>
+         */
         @NameInMap("Email")
         public String email;
 
+        /**
+         * <strong>example:</strong>
+         * <p>129****1111</p>
+         */
         @NameInMap("Mobile")
         public String mobile;
 
@@ -133,12 +167,24 @@ public class DescribeLicenseResponseBody extends TeaModel {
     }
 
     public static class DescribeLicenseResponseBodyLicense extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2019-05-25 09:00:00</p>
+         */
         @NameInMap("ActivateTime")
         public String activateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2019-05-25 09:00:00</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2019-06-25 09:00:00</p>
+         */
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
@@ -148,21 +194,43 @@ public class DescribeLicenseResponseBody extends TeaModel {
         @NameInMap("ExtendInfo")
         public DescribeLicenseResponseBodyLicenseExtendInfo extendInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1551111111</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
+         */
         @NameInMap("LicenseCode")
         public String licenseCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ACTIVATED</p>
+         */
         @NameInMap("LicenseStatus")
         public String licenseStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cmgj02****</p>
+         */
         @NameInMap("ProductCode")
         public String productCode;
 
         @NameInMap("ProductName")
         public String productName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cmgj02****-prepay</p>
+         */
         @NameInMap("ProductSkuId")
         public String productSkuId;
 
