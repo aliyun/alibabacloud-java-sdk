@@ -20,6 +20,9 @@ public class CheckResourceStockRequest extends TeaModel {
     @NameInMap("BizRegionId")
     public String bizRegionId;
 
+    @NameInMap("GpuAcceleration")
+    public Boolean gpuAcceleration;
+
     /**
      * <strong>example:</strong>
      * <p>cn-hangzhou-i</p>
@@ -46,6 +49,14 @@ public class CheckResourceStockRequest extends TeaModel {
     }
     public String getBizRegionId() {
         return this.bizRegionId;
+    }
+
+    public CheckResourceStockRequest setGpuAcceleration(Boolean gpuAcceleration) {
+        this.gpuAcceleration = gpuAcceleration;
+        return this;
+    }
+    public Boolean getGpuAcceleration() {
+        return this.gpuAcceleration;
     }
 
     public CheckResourceStockRequest setZoneId(String zoneId) {
