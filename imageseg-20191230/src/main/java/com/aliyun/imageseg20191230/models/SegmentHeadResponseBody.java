@@ -7,6 +7,10 @@ public class SegmentHeadResponseBody extends TeaModel {
     @NameInMap("Data")
     public SegmentHeadResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>89BBDA42-E1CA-426E-9A46-C703D8DBB1E2</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +36,38 @@ public class SegmentHeadResponseBody extends TeaModel {
     }
 
     public static class SegmentHeadResponseBodyDataElements extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>180</p>
+         */
         @NameInMap("Height")
         public Integer height;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://viapi-cn-shanghai-dha-segmenter.oss-cn-shanghai.aliyuncs.com/upload/result_headsegmenter/2020-6-2/invi_headsegmenter_015910809094981099086_TAamhR.png?Expires=1591082709&OSSAccessKeyId=LTAI4FoLmvQ9urWXgSRp****&Signature=xuUE%2FbYeB9LpR18VXawOVeutQU">http://viapi-cn-shanghai-dha-segmenter.oss-cn-shanghai.aliyuncs.com/upload/result_headsegmenter/2020-6-2/invi_headsegmenter_015910809094981099086_TAamhR.png?Expires=1591082709&amp;OSSAccessKeyId=LTAI4FoLmvQ9urWXgSRp****&amp;Signature=xuUE%2FbYeB9LpR18VXawOVeutQU</a>****</p>
+         */
         @NameInMap("ImageURL")
         public String imageURL;
 
+        /**
+         * <strong>example:</strong>
+         * <p>116</p>
+         */
         @NameInMap("Width")
         public Integer width;
 
+        /**
+         * <strong>example:</strong>
+         * <p>445</p>
+         */
         @NameInMap("X")
         public Integer x;
 
+        /**
+         * <strong>example:</strong>
+         * <p>102</p>
+         */
         @NameInMap("Y")
         public Integer y;
 

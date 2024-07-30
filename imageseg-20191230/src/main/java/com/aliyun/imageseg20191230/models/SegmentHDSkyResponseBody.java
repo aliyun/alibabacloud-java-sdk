@@ -7,6 +7,10 @@ public class SegmentHDSkyResponseBody extends TeaModel {
     @NameInMap("Data")
     public SegmentHDSkyResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1173F38F-B4F4-4A07-AB2E-D490C01347E5</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +36,10 @@ public class SegmentHDSkyResponseBody extends TeaModel {
     }
 
     public static class SegmentHDSkyResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://vibktprfx-prod-prod-aic-gd-cn-shanghai.oss-cn-shanghai.aliyuncs.com/sky-segmentation-hd/res/1173F38F-B4F4-4A07-AB2E-D490C01347E5_0d56_20201027-061858.jpg?Expires=1603781339&OSSAccessKeyId=LTAI4FoLmvQ9urWXgSRp****&Signature=2F8%2Bj%2FWruWOMqDezwpnJOkcNJD">http://vibktprfx-prod-prod-aic-gd-cn-shanghai.oss-cn-shanghai.aliyuncs.com/sky-segmentation-hd/res/1173F38F-B4F4-4A07-AB2E-D490C01347E5_0d56_20201027-061858.jpg?Expires=1603781339&amp;OSSAccessKeyId=LTAI4FoLmvQ9urWXgSRp****&amp;Signature=2F8%2Bj%2FWruWOMqDezwpnJOkcNJD</a>****</p>
+         */
         @NameInMap("ImageURL")
         public String imageURL;
 

@@ -7,6 +7,10 @@ public class GetAsyncJobResultResponseBody extends TeaModel {
     @NameInMap("Data")
     public GetAsyncJobResultResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>43A0AEB6-45F4-4138-8E89-E1A5D63200E3</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +36,38 @@ public class GetAsyncJobResultResponseBody extends TeaModel {
     }
 
     public static class GetAsyncJobResultResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>InvalidParameter</p>
+         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>paramsIllegal</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <strong>example:</strong>
+         * <p>49E2CC28-ED1D-4CC5-854D-7D0AE2B20976</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;ImageUrl&quot;:&quot;<a href="http://viapi-cn-shanghai-dha-segmenter.oss-cn-shanghai.aliyuncs.com/upload/result_/2020-4-2/invi__015858226731531000018_UE7B9p.png?Expires=1585824473&OSSAccessKeyId=LTAI4FoLmvQ9urWXgSR****&Signature=etyeYQQ%2BWAyQTqQKd8Xq0GiOW****%22%7D">http://viapi-cn-shanghai-dha-segmenter.oss-cn-shanghai.aliyuncs.com/upload/result_/2020-4-2/invi__015858226731531000018_UE7B9p.png?Expires=1585824473&amp;OSSAccessKeyId=LTAI4FoLmvQ9urWXgSR****&amp;Signature=etyeYQQ%2BWAyQTqQKd8Xq0GiOW****&quot;}</a></p>
+         */
         @NameInMap("Result")
         public String result;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PROCESS_SUCCESS</p>
+         */
         @NameInMap("Status")
         public String status;
 

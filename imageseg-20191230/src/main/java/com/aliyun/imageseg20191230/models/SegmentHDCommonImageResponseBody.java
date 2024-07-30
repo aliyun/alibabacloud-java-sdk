@@ -10,6 +10,10 @@ public class SegmentHDCommonImageResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>EC994171-7964-44B3-85AF-A715CB56747D</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,6 +47,10 @@ public class SegmentHDCommonImageResponseBody extends TeaModel {
     }
 
     public static class SegmentHDCommonImageResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://viapi-cn-shanghai-dha-segmenter.oss-cn-shanghai.aliyuncs.com/upload/result_commoditysegmenter/2020-10-27/invi_commoditysegmenter_016037842193171000000_5pn2QM.png?Expires=1603786019&OSSAccessKeyId=LTAI4FoLmvQ9urWXgSRp****&Signature=HwUztguGBYXmXGEmuTh%2FL3ztoh">http://viapi-cn-shanghai-dha-segmenter.oss-cn-shanghai.aliyuncs.com/upload/result_commoditysegmenter/2020-10-27/invi_commoditysegmenter_016037842193171000000_5pn2QM.png?Expires=1603786019&amp;OSSAccessKeyId=LTAI4FoLmvQ9urWXgSRp****&amp;Signature=HwUztguGBYXmXGEmuTh%2FL3ztoh</a>****</p>
+         */
         @NameInMap("ImageUrl")
         public String imageUrl;
 
