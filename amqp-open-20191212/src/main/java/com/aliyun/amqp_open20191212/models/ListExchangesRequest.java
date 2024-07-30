@@ -16,7 +16,6 @@ public class ListExchangesRequest extends TeaModel {
 
     /**
      * <p>The maximum number of entries to return. Valid values: <strong>1 to 100</strong></p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
