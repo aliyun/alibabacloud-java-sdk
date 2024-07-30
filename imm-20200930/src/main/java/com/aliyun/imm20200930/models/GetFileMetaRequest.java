@@ -22,6 +22,9 @@ public class GetFileMetaRequest extends TeaModel {
     @NameInMap("URI")
     public String URI;
 
+    @NameInMap("WithFields")
+    public java.util.List<String> withFields;
+
     public static GetFileMetaRequest build(java.util.Map<String, ?> map) throws Exception {
         GetFileMetaRequest self = new GetFileMetaRequest();
         return TeaModel.build(map, self);
@@ -49,6 +52,14 @@ public class GetFileMetaRequest extends TeaModel {
     }
     public String getURI() {
         return this.URI;
+    }
+
+    public GetFileMetaRequest setWithFields(java.util.List<String> withFields) {
+        this.withFields = withFields;
+        return this;
+    }
+    public java.util.List<String> getWithFields() {
+        return this.withFields;
     }
 
 }

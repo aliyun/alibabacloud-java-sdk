@@ -353,6 +353,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.URIsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.URIs, "URIs", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.withFields)) {
+            request.withFieldsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.withFields, "WithFields", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.datasetName)) {
             query.put("DatasetName", request.datasetName);
@@ -364,6 +368,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.URIsShrink)) {
             query.put("URIs", request.URIsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.withFieldsShrink)) {
+            query.put("WithFields", request.withFieldsShrink);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -4547,12 +4555,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>获取文件元信息</p>
      * 
-     * @param request GetFileMetaRequest
+     * @param tmpReq GetFileMetaRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetFileMetaResponse
      */
-    public GetFileMetaResponse getFileMetaWithOptions(GetFileMetaRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public GetFileMetaResponse getFileMetaWithOptions(GetFileMetaRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GetFileMetaShrinkRequest request = new GetFileMetaShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.withFields)) {
+            request.withFieldsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.withFields, "WithFields", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.datasetName)) {
             query.put("DatasetName", request.datasetName);
@@ -4564,6 +4578,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.URI)) {
             query.put("URI", request.URI);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.withFieldsShrink)) {
+            query.put("WithFields", request.withFieldsShrink);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
