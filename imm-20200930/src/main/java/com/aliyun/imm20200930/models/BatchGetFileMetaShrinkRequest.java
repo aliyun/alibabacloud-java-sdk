@@ -22,6 +22,9 @@ public class BatchGetFileMetaShrinkRequest extends TeaModel {
     @NameInMap("URIs")
     public String URIsShrink;
 
+    @NameInMap("WithFields")
+    public String withFieldsShrink;
+
     public static BatchGetFileMetaShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         BatchGetFileMetaShrinkRequest self = new BatchGetFileMetaShrinkRequest();
         return TeaModel.build(map, self);
@@ -49,6 +52,14 @@ public class BatchGetFileMetaShrinkRequest extends TeaModel {
     }
     public String getURIsShrink() {
         return this.URIsShrink;
+    }
+
+    public BatchGetFileMetaShrinkRequest setWithFieldsShrink(String withFieldsShrink) {
+        this.withFieldsShrink = withFieldsShrink;
+        return this;
+    }
+    public String getWithFieldsShrink() {
+        return this.withFieldsShrink;
     }
 
 }

@@ -3,7 +3,7 @@ package com.aliyun.imm20200930.models;
 
 import com.aliyun.tea.*;
 
-public class BatchGetFileMetaRequest extends TeaModel {
+public class GetFileMetaShrinkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
      */
@@ -19,18 +19,18 @@ public class BatchGetFileMetaRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
      */
-    @NameInMap("URIs")
-    public java.util.List<String> URIs;
+    @NameInMap("URI")
+    public String URI;
 
     @NameInMap("WithFields")
-    public java.util.List<String> withFields;
+    public String withFieldsShrink;
 
-    public static BatchGetFileMetaRequest build(java.util.Map<String, ?> map) throws Exception {
-        BatchGetFileMetaRequest self = new BatchGetFileMetaRequest();
+    public static GetFileMetaShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        GetFileMetaShrinkRequest self = new GetFileMetaShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public BatchGetFileMetaRequest setDatasetName(String datasetName) {
+    public GetFileMetaShrinkRequest setDatasetName(String datasetName) {
         this.datasetName = datasetName;
         return this;
     }
@@ -38,7 +38,7 @@ public class BatchGetFileMetaRequest extends TeaModel {
         return this.datasetName;
     }
 
-    public BatchGetFileMetaRequest setProjectName(String projectName) {
+    public GetFileMetaShrinkRequest setProjectName(String projectName) {
         this.projectName = projectName;
         return this;
     }
@@ -46,20 +46,20 @@ public class BatchGetFileMetaRequest extends TeaModel {
         return this.projectName;
     }
 
-    public BatchGetFileMetaRequest setURIs(java.util.List<String> URIs) {
-        this.URIs = URIs;
+    public GetFileMetaShrinkRequest setURI(String URI) {
+        this.URI = URI;
         return this;
     }
-    public java.util.List<String> getURIs() {
-        return this.URIs;
+    public String getURI() {
+        return this.URI;
     }
 
-    public BatchGetFileMetaRequest setWithFields(java.util.List<String> withFields) {
-        this.withFields = withFields;
+    public GetFileMetaShrinkRequest setWithFieldsShrink(String withFieldsShrink) {
+        this.withFieldsShrink = withFieldsShrink;
         return this;
     }
-    public java.util.List<String> getWithFields() {
-        return this.withFields;
+    public String getWithFieldsShrink() {
+        return this.withFieldsShrink;
     }
 
 }
