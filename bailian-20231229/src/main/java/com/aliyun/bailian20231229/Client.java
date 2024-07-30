@@ -27,6 +27,55 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @param request AddCategoryRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AddCategoryResponse
+     */
+    public AddCategoryResponse addCategoryWithOptions(String WorkspaceId, AddCategoryRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.categoryName)) {
+            body.put("CategoryName", request.categoryName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.categoryType)) {
+            body.put("CategoryType", request.categoryType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.parentCategoryId)) {
+            body.put("ParentCategoryId", request.parentCategoryId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AddCategory"),
+            new TeaPair("version", "2023-12-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/" + com.aliyun.openapiutil.Client.getEncodeParam(WorkspaceId) + "/datacenter/category/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AddCategoryResponse());
+    }
+
+    /**
+     * @param request AddCategoryRequest
+     * @return AddCategoryResponse
+     */
+    public AddCategoryResponse addCategory(String WorkspaceId, AddCategoryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.addCategoryWithOptions(WorkspaceId, request, headers, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>将临时上传的文档导入百炼数据中心，导入成功之后会自动触发文档解析。</p>
      * 
@@ -258,6 +307,38 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteCategoryResponse
+     */
+    public DeleteCategoryResponse deleteCategoryWithOptions(String CategoryId, String WorkspaceId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteCategory"),
+            new TeaPair("version", "2023-12-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/" + com.aliyun.openapiutil.Client.getEncodeParam(WorkspaceId) + "/datacenter/category/" + com.aliyun.openapiutil.Client.getEncodeParam(CategoryId) + "/"),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteCategoryResponse());
+    }
+
+    /**
+     * @return DeleteCategoryResponse
+     */
+    public DeleteCategoryResponse deleteCategory(String CategoryId, String WorkspaceId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteCategoryWithOptions(CategoryId, WorkspaceId, headers, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>删除文档</p>
      * 
@@ -484,6 +565,65 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getIndexJobStatusWithOptions(WorkspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>ListCategory</p>
+     * 
+     * @param request ListCategoryRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListCategoryResponse
+     */
+    public ListCategoryResponse listCategoryWithOptions(String WorkspaceId, ListCategoryRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.categoryType)) {
+            body.put("CategoryType", request.categoryType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            body.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            body.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.parentCategoryId)) {
+            body.put("ParentCategoryId", request.parentCategoryId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListCategory"),
+            new TeaPair("version", "2023-12-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/" + com.aliyun.openapiutil.Client.getEncodeParam(WorkspaceId) + "/datacenter/categories"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListCategoryResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>ListCategory</p>
+     * 
+     * @param request ListCategoryRequest
+     * @return ListCategoryResponse
+     */
+    public ListCategoryResponse listCategory(String WorkspaceId, ListCategoryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listCategoryWithOptions(WorkspaceId, request, headers, runtime);
     }
 
     /**
