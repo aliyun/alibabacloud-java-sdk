@@ -4,6 +4,9 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
+    @NameInMap("AgileScaleMax")
+    public String agileScaleMax;
+
     /**
      * <p>Indicates whether the no-activity suspension feature is enabled. Default value: false. Valid values:</p>
      * <ul>
@@ -98,9 +101,20 @@ public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
     @NameInMap("Switchs")
     public String switchs;
 
+    @NameInMap("TraditionalScaleMaxThreshold")
+    public String traditionalScaleMaxThreshold;
+
     public static DescribeDBClusterServerlessConfResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBClusterServerlessConfResponseBody self = new DescribeDBClusterServerlessConfResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDBClusterServerlessConfResponseBody setAgileScaleMax(String agileScaleMax) {
+        this.agileScaleMax = agileScaleMax;
+        return this;
+    }
+    public String getAgileScaleMax() {
+        return this.agileScaleMax;
     }
 
     public DescribeDBClusterServerlessConfResponseBody setAllowShutDown(String allowShutDown) {
@@ -213,6 +227,14 @@ public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
     }
     public String getSwitchs() {
         return this.switchs;
+    }
+
+    public DescribeDBClusterServerlessConfResponseBody setTraditionalScaleMaxThreshold(String traditionalScaleMaxThreshold) {
+        this.traditionalScaleMaxThreshold = traditionalScaleMaxThreshold;
+        return this;
+    }
+    public String getTraditionalScaleMaxThreshold() {
+        return this.traditionalScaleMaxThreshold;
     }
 
 }
