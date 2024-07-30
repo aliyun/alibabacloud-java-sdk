@@ -4,6 +4,10 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class ListNetworkAccessEndpointAvailableZonesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,12 +38,18 @@ public class ListNetworkAccessEndpointAvailableZonesResponseBody extends TeaMode
     public static class ListNetworkAccessEndpointAvailableZonesResponseBodyZones extends TeaModel {
         /**
          * <p>可用区名称。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>华东1（杭州）可用区J</p>
          */
         @NameInMap("LocalName")
         public String localName;
 
         /**
          * <p>可用区ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-j</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;

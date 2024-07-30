@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class EnableInitDomainAutoRedirectRequest extends TeaModel {
     /**
      * <p>IDaaS EIAM实例的ID。</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

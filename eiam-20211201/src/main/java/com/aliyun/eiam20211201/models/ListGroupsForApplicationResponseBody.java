@@ -12,12 +12,18 @@ public class ListGroupsForApplicationResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -54,6 +60,9 @@ public class ListGroupsForApplicationResponseBody extends TeaModel {
     public static class ListGroupsForApplicationResponseBodyGroups extends TeaModel {
         /**
          * <p>The group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>group_miu8e4t4d7i4u7uwezgr54xxxx</p>
          */
         @NameInMap("GroupId")
         public String groupId;

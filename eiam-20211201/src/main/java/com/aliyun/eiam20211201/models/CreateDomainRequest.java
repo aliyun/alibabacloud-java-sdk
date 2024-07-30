@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class CreateDomainRequest extends TeaModel {
     /**
      * <p>域名。最大长度限制255，格式由数字、字母、横线（-）点（.）组成;</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://www.example.com">www.example.com</a></p>
      */
     @NameInMap("Domain")
     public String domain;
@@ -20,8 +22,10 @@ public class CreateDomainRequest extends TeaModel {
 
     /**
      * <p>IDaaS EIAM实例的ID。</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -58,6 +62,9 @@ public class CreateDomainRequest extends TeaModel {
     public static class CreateDomainRequestFiling extends TeaModel {
         /**
          * <p>域名关联的备案号，长度最大限制64。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>浙xx-xxxxxx</p>
          */
         @NameInMap("IcpNumber")
         public String icpNumber;

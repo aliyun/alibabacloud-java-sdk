@@ -6,16 +6,20 @@ import com.aliyun.tea.*;
 public class GetDomainDnsChallengeRequest extends TeaModel {
     /**
      * <p>域名。</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dm_examplexxxx</p>
      */
     @NameInMap("Domain")
     public String domain;
 
     /**
      * <p>IDaaS EIAM实例的ID。</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

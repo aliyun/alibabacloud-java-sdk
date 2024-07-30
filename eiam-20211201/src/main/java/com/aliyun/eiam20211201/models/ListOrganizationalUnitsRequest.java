@@ -6,44 +6,64 @@ import com.aliyun.tea.*;
 public class ListOrganizationalUnitsRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>组织ID列表。size限制最大100。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[ou_wovwffm62xifdziem7an7xxxxx]</p>
      */
     @NameInMap("OrganizationalUnitIds")
     public java.util.List<String> organizationalUnitIds;
 
     /**
      * <p>The name of the organizational unit.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>name_001</p>
      */
     @NameInMap("OrganizationalUnitName")
     public String organizationalUnitName;
 
     /**
      * <p>组织名称，左匹配</p>
+     * 
+     * <strong>example:</strong>
+     * <p>name</p>
      */
     @NameInMap("OrganizationalUnitNameStartsWith")
     public String organizationalUnitNameStartsWith;
 
     /**
      * <p>The number of the page to return. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
      * <p>The number of entries to return on each page. Default value: 20.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
      * <p>The ID of the parent organizational unit.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ou_wovwffm62xifdziem7an7xxxxx</p>
      */
     @NameInMap("ParentId")
     public String parentId;

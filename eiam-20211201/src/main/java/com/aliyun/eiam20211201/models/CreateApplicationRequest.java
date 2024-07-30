@@ -6,56 +6,75 @@ import com.aliyun.tea.*;
 public class CreateApplicationRequest extends TeaModel {
     /**
      * <p>The name of the application.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Ram Account SSO</p>
      */
     @NameInMap("ApplicationName")
     public String applicationName;
 
     /**
      * <p>The type of the application source. Valid values:</p>
-     * <br>
-     * <p>*   urn:alibaba:idaas:app:source:template: application template</p>
-     * <p>*   urn:alibaba:idaas:app:source:standard: standard protocol</p>
-     * <br>
+     * <ul>
+     * <li>urn:alibaba:idaas:app:source:template: application template</li>
+     * <li>urn:alibaba:idaas:app:source:standard: standard protocol</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>urn:alibaba:idaas:app:source:standard</p>
      */
     @NameInMap("ApplicationSourceType")
     public String applicationSourceType;
 
     /**
      * <p>The ID of the application template. This parameter is required if you set the ApplicationSourceType parameter to urn:alibaba:idaas:app:source:template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>template_cloud_ram</p>
      */
     @NameInMap("ApplicationTemplateId")
     public String applicationTemplateId;
 
     /**
      * <p>The description of the application.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RAM user SSO application</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The ID of the instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>idaas_ue2jvisn35ea5lmthk2676xxxx</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The URL of the application logo.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://oss.cn-hangzhou.aliyuncs.com/logo.png">https://oss.cn-hangzhou.aliyuncs.com/logo.png</a></p>
      */
     @NameInMap("LogoUrl")
     public String logoUrl;
 
     /**
      * <p>The SSO protocol. Valid values:</p>
-     * <br>
-     * <p>*   saml2: the SAML 2.0 protocol.</p>
-     * <p>*   oidc: the OpenID Connect protocol.</p>
-     * <br>
+     * <ul>
+     * <li>saml2: the SAML 2.0 protocol.</li>
+     * <li>oidc: the OpenID Connect protocol.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>saml2</p>
      */
     @NameInMap("SsoType")
     public String ssoType;

@@ -6,67 +6,96 @@ import com.aliyun.tea.*;
 public class ListUsersRequest extends TeaModel {
     /**
      * <p>账户展示名，模糊匹配</p>
+     * 
+     * <strong>example:</strong>
+     * <p>name_001</p>
      */
     @NameInMap("DisplayNameStartsWith")
     public String displayNameStartsWith;
 
     /**
      * <p>The email address of the user who owns the account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="mailto:user@example.com">user@example.com</a></p>
      */
     @NameInMap("Email")
     public String email;
 
     /**
      * <p>The ID of the instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The ID of the organizational unit.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ou_wovwffm62xifdziem7an7xxxxx</p>
      */
     @NameInMap("OrganizationalUnitId")
     public String organizationalUnitId;
 
     /**
      * <p>The number of the page to return. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
      * <p>The number of entries to return on each page. Default value: 20.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
      * <p>The mobile number of the user who owns the account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>156xxxxxxx</p>
      */
     @NameInMap("PhoneNumber")
     public String phoneNumber;
 
     /**
      * <p>The country code of the mobile number. For example, the country code of China is 86 without 00 or +.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>86</p>
      */
     @NameInMap("PhoneRegion")
     public String phoneRegion;
 
     /**
      * <p>The status of the account. Valid values:</p>
-     * <br>
-     * <p>*   enabled: The account is enabled.</p>
-     * <p>*   disabled: The account is disabled.</p>
+     * <ul>
+     * <li>enabled: The account is enabled.</li>
+     * <li>disabled: The account is disabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>enable</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
      * <p>The external ID of the account. The external ID can be used by external data to map the data of the account in IDaaS EIAM.</p>
-     * <br>
      * <p>For accounts with the same source type and source ID, each account has a unique external ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>id_wovwffm62xifdziem7an7xxxxx</p>
      */
     @NameInMap("UserExternalId")
     public String userExternalId;
@@ -79,25 +108,34 @@ public class ListUsersRequest extends TeaModel {
 
     /**
      * <p>The source ID of the account.</p>
-     * <br>
      * <p>If the account was created in IDaaS, its source ID is the ID of the IDaaS instance. If the account was imported, its source ID is the enterprise ID in the source. For example, if the account was imported from DingTalk, its source ID is the corpId value of the enterprise in DingTalk.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
      */
     @NameInMap("UserSourceId")
     public String userSourceId;
 
     /**
      * <p>The source type of the account. Valid values:</p>
-     * <br>
-     * <p>*   build_in: The account was created in IDaaS.</p>
-     * <p>*   ding_talk: The account was imported from DingTalk.</p>
-     * <p>*   ad: The account was imported from Microsoft Active Directory (AD).</p>
-     * <p>*   ldap: The account was imported from a Lightweight Directory Access Protocol (LDAP) service.</p>
+     * <ul>
+     * <li>build_in: The account was created in IDaaS.</li>
+     * <li>ding_talk: The account was imported from DingTalk.</li>
+     * <li>ad: The account was imported from Microsoft Active Directory (AD).</li>
+     * <li>ldap: The account was imported from a Lightweight Directory Access Protocol (LDAP) service.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>build_in</p>
      */
     @NameInMap("UserSourceType")
     public String userSourceType;
 
     /**
      * <p>账户名，左模糊匹配</p>
+     * 
+     * <strong>example:</strong>
+     * <p>name_001</p>
      */
     @NameInMap("UsernameStartsWith")
     public String usernameStartsWith;

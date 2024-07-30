@@ -12,12 +12,18 @@ public class ListInstancesResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -54,15 +60,22 @@ public class ListInstancesResponseBody extends TeaModel {
     public static class ListInstancesResponseBodyInstancesDefaultEndpoint extends TeaModel {
         /**
          * <p>The endpoint of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-xxx.aliyunidaas.com</p>
          */
         @NameInMap("Endpoint")
         public String endpoint;
 
         /**
          * <p>The status of the endpoint. Valid values:</p>
-         * <br>
-         * <p>*   resolved</p>
-         * <p>*   unresolved</p>
+         * <ul>
+         * <li>resolved</li>
+         * <li>unresolved</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>resolved</p>
          */
         @NameInMap("Status")
         public String status;
@@ -93,6 +106,9 @@ public class ListInstancesResponseBody extends TeaModel {
     public static class ListInstancesResponseBodyInstances extends TeaModel {
         /**
          * <p>The time when the instance was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1550115455000</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
@@ -111,15 +127,22 @@ public class ListInstancesResponseBody extends TeaModel {
 
         /**
          * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idaas_eypq6ljgyeuwmlw672sulxxxxx</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The status of the instance. Valid values:</p>
-         * <br>
-         * <p>*   creating</p>
-         * <p>*   running</p>
+         * <ul>
+         * <li>creating</li>
+         * <li>running</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>running</p>
          */
         @NameInMap("Status")
         public String status;

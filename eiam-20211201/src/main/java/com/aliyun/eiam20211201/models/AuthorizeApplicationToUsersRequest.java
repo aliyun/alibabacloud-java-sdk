@@ -6,24 +6,30 @@ import com.aliyun.tea.*;
 public class AuthorizeApplicationToUsersRequest extends TeaModel {
     /**
      * <p>The ID of the application on which you want to grant permissions.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>app_mkv7rgt4d7i4u7zqtzev2mxxxx</p>
      */
     @NameInMap("ApplicationId")
     public String applicationId;
 
     /**
      * <p>The ID of the instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>idaas_ue2jvisn35ea5lmthk2676xxxx</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The IDs of the accounts to which you want to grant permissions. You can grant permissions to a maximum of 100 accounts at a time.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>user_d6sbsuumeta4h66ec3il7yxxxx</p>
      */
     @NameInMap("UserIds")
     public java.util.List<String> userIds;

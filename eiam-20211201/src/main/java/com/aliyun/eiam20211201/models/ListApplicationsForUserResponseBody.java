@@ -12,12 +12,18 @@ public class ListApplicationsForUserResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of the returned entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -54,24 +60,35 @@ public class ListApplicationsForUserResponseBody extends TeaModel {
     public static class ListApplicationsForUserResponseBodyApplications extends TeaModel {
         /**
          * <p>The ID of the application that the EIAM account can access.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app_mkv7rgt4d7i4u7zqtzev2mxxxx</p>
          */
         @NameInMap("ApplicationId")
         public String applicationId;
 
         /**
          * <p>Indicates whether the EIAM account has direct permissions on the application. Valid values:</p>
-         * <br>
-         * <p>*   true: The EIAM account has direct permissions on the application.</p>
-         * <p>*   false: The EIAM account does not have direct permissions on the application.</p>
+         * <ul>
+         * <li>true: The EIAM account has direct permissions on the application.</li>
+         * <li>false: The EIAM account does not have direct permissions on the application.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("HasDirectAuthorization")
         public Boolean hasDirectAuthorization;
 
         /**
          * <p>Indicates whether the EIAM account has inherited permissions on the application. Valid values:</p>
-         * <br>
-         * <p>*   true: A parent organization or an organization to which the EIAM account belongs has direct permissions on the application.</p>
-         * <p>*   false: A parent organization or an organization to which the EIAM account belongs does not have direct permissions on the application.</p>
+         * <ul>
+         * <li>true: A parent organization or an organization to which the EIAM account belongs has direct permissions on the application.</li>
+         * <li>false: A parent organization or an organization to which the EIAM account belongs does not have direct permissions on the application.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("HasInheritAuthorization")
         public Boolean hasInheritAuthorization;

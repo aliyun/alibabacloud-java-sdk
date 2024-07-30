@@ -12,6 +12,9 @@ public class CreateApplicationClientSecretResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,18 +43,27 @@ public class CreateApplicationClientSecretResponseBody extends TeaModel {
     public static class CreateApplicationClientSecretResponseBodyApplicationClientSecret extends TeaModel {
         /**
          * <p>The client ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app_mkv7rgt4d7i4u7zqtzev2mxxxx</p>
          */
         @NameInMap("ClientId")
         public String clientId;
 
         /**
          * <p>The client key secret of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CSEHDcHcrUKHw1CuxkJEHPveWRXBGqVqRsxxxx</p>
          */
         @NameInMap("ClientSecret")
         public String clientSecret;
 
         /**
          * <p>The client key ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sci_k52x2ru63rlkflina5utgkxxxx</p>
          */
         @NameInMap("SecretId")
         public String secretId;

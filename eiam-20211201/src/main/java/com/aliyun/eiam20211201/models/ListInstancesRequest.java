@@ -12,21 +12,31 @@ public class ListInstancesRequest extends TeaModel {
 
     /**
      * <p>The number of the page to return.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
      * <p>The number of entries to return on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
      * <p>The status of the instance. Valid values:</p>
-     * <br>
-     * <p>*   creating</p>
-     * <p>*   running</p>
+     * <ul>
+     * <li>creating</li>
+     * <li>running</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>running</p>
      */
     @NameInMap("Status")
     public String status;

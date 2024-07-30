@@ -12,12 +12,18 @@ public class ListGroupsResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned. The maximum number of entries returned at a time depends on the value of PageSize.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -54,56 +60,81 @@ public class ListGroupsResponseBody extends TeaModel {
     public static class ListGroupsResponseBodyGroups extends TeaModel {
         /**
          * <p>The time at which the group was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1652085686179</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
          * <p>The description of the group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test group</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The external ID of the group, which can be used to associate the group with an external system. By default, the external ID is the group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>group_d6sbsuumeta4h66ec3il7yxxxx</p>
          */
         @NameInMap("GroupExternalId")
         public String groupExternalId;
 
         /**
          * <p>The group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>group_d6sbsuumeta4h66ec3il7yxxxx</p>
          */
         @NameInMap("GroupId")
         public String groupId;
 
         /**
          * <p>The name of the group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>group_name</p>
          */
         @NameInMap("GroupName")
         public String groupName;
 
         /**
          * <p>The source ID of the group. If the group was imported from other services, this value indicates the external source ID. By default, the source ID is the instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
          */
         @NameInMap("GroupSourceId")
         public String groupSourceId;
 
         /**
          * <p>The source type of the group. Only build_in may be returned, which indicates that the group was created in IDaaS.</p>
-         * <br>
-         * <p>*</p>
+         * 
+         * <strong>example:</strong>
+         * <p>build_in</p>
          */
         @NameInMap("GroupSourceType")
         public String groupSourceType;
 
         /**
          * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The time at which the group was last updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1652085686179</p>
          */
         @NameInMap("UpdateTime")
         public Long updateTime;

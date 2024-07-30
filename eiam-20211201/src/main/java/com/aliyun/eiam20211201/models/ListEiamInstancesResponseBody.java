@@ -7,6 +7,10 @@ public class ListEiamInstancesResponseBody extends TeaModel {
     @NameInMap("Instances")
     public java.util.List<ListEiamInstancesResponseBodyInstances> instances;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -40,54 +44,81 @@ public class ListEiamInstancesResponseBody extends TeaModel {
 
         /**
          * <p>实例developer私网域名地址</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eiam-developerapi-cn.vpc-proxy.aliyuncs.com</p>
          */
         @NameInMap("DeveloperAPIPrivateDomain")
         public String developerAPIPrivateDomain;
 
         /**
          * <p>实例developer公网域名地址</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eiam-developerapi.cn-hangzhou.aliyuncs.com</p>
          */
         @NameInMap("DeveloperAPIPublicDomain")
         public String developerAPIPublicDomain;
 
         /**
          * <p>实例id</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idaas_eypq6ljgyeuwmlw672sulxxxxx</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>实例状态，Pending(初始状态)、Creating(创建中)、Running(运行中)、Disabled(禁用)、CreateFailed(创建失败)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
          */
         @NameInMap("InstanceStatus")
         public String instanceStatus;
 
         /**
          * <p>实例版本，EIAM2.0/ EIAM1.0</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EIAM 2.0</p>
          */
         @NameInMap("InstanceVersion")
         public String instanceVersion;
 
         /**
          * <p>实例openApi私网域名地址</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eiam-cn.vpc-proxy.aliyuncs.com</p>
          */
         @NameInMap("OpenAPIPrivateDomain")
         public String openAPIPrivateDomain;
 
         /**
          * <p>实例openApi公网域名地址</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eiam.cn-hangzhou.aliyuncs.com</p>
          */
         @NameInMap("OpenAPIPublicDomain")
         public String openAPIPublicDomain;
 
         /**
          * <p>实例域名地址</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx.aliyunidaas.com</p>
          */
         @NameInMap("SSODomain")
         public String SSODomain;
 
         /**
          * <p>实例的创建时间</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1677810869300</p>
          */
         @NameInMap("StartTime")
         public Long startTime;

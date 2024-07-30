@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListGroupsRequest extends TeaModel {
     /**
      * <p>The external ID of the group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>group_external_id</p>
      */
     @NameInMap("GroupExternalId")
     public String groupExternalId;
@@ -18,32 +21,46 @@ public class ListGroupsRequest extends TeaModel {
 
     /**
      * <p>The name of the group. If you specify this parameter, the query is based on an exact match.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>name_test</p>
      */
     @NameInMap("GroupName")
     public String groupName;
 
     /**
      * <p>The prefix of the group name. If you specify this parameter, the query follows the leftmost matching principle.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>name</p>
      */
     @NameInMap("GroupNameStartsWith")
     public String groupNameStartsWith;
 
     /**
      * <p>The instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The number of the page to return.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
      * <p>The number of entries to return on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;

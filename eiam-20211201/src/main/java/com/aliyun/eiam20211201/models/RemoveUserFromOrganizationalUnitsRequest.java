@@ -6,15 +6,16 @@ import com.aliyun.tea.*;
 public class RemoveUserFromOrganizationalUnitsRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The organization IDs. You can remove an account from a maximum of 100 organizations.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("OrganizationalUnitIds")
@@ -22,8 +23,10 @@ public class RemoveUserFromOrganizationalUnitsRequest extends TeaModel {
 
     /**
      * <p>The account ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>user_d6sbsuumeta4h66ec3il7yxxxx</p>
      */
     @NameInMap("UserId")
     public String userId;

@@ -12,6 +12,9 @@ public class GetPasswordInitializationConfigurationResponseBody extends TeaModel
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,32 +43,47 @@ public class GetPasswordInitializationConfigurationResponseBody extends TeaModel
     public static class GetPasswordInitializationConfigurationResponseBodyPasswordInitializationConfiguration extends TeaModel {
         /**
          * <p>Indicates whether forcible password change upon first logon is enabled. Valid values:</p>
-         * <br>
-         * <p>*   enabled</p>
-         * <p>*   disabled</p>
+         * <ul>
+         * <li>enabled</li>
+         * <li>disabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>enabled</p>
          */
         @NameInMap("PasswordForcedUpdateStatus")
         public String passwordForcedUpdateStatus;
 
         /**
          * <p>The methods for receiving password initialization notifications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>email</p>
          */
         @NameInMap("PasswordInitializationNotificationChannels")
         public java.util.List<String> passwordInitializationNotificationChannels;
 
         /**
          * <p>Indicates whether the password initialization feature is enabled. Valid values:</p>
-         * <br>
-         * <p>*   enabled</p>
-         * <p>*   disabled</p>
+         * <ul>
+         * <li>enabled</li>
+         * <li>disabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>enabled</p>
          */
         @NameInMap("PasswordInitializationStatus")
         public String passwordInitializationStatus;
 
         /**
          * <p>The password initialization method. Set the value to random.</p>
-         * <br>
-         * <p>*   random: A randomly generated password is used.</p>
+         * <ul>
+         * <li>random: A randomly generated password is used.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>random</p>
          */
         @NameInMap("PasswordInitializationType")
         public String passwordInitializationType;

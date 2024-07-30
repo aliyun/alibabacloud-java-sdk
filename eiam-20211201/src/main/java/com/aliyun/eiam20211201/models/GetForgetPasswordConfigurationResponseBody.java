@@ -12,6 +12,9 @@ public class GetForgetPasswordConfigurationResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -46,18 +49,27 @@ public class GetForgetPasswordConfigurationResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether the forgot password feature is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Enable")
         public Boolean enable;
 
         /**
          * <p>Indicates whether email authentication is enabled for the forgot password feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("EnableEmail")
         public Boolean enableEmail;
 
         /**
          * <p>Indicates whether Short Message Service (SMS) authentication is enabled for the forgot password feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("EnableSms")
         public Boolean enableSms;

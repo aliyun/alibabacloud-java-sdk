@@ -6,50 +6,72 @@ import com.aliyun.tea.*;
 public class ListApplicationsRequest extends TeaModel {
     /**
      * <p>The IDs of the applications.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Ram Account SSO</p>
      */
     @NameInMap("ApplicationIds")
     public java.util.List<String> applicationIds;
 
     /**
      * <p>The name of the application. Only fuzzy match from the leftmost character is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Ram Account SSO</p>
      */
     @NameInMap("ApplicationName")
     public String applicationName;
 
     /**
      * <p>The authorization of the application. Valid values:</p>
-     * <br>
-     * <p>*   authorize_required: Only the user with explicit authorization can access the application.</p>
-     * <p>*   default_all: By default, all users can access the application.</p>
+     * <ul>
+     * <li>authorize_required: Only the user with explicit authorization can access the application.</li>
+     * <li>default_all: By default, all users can access the application.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>authorize_required</p>
      */
     @NameInMap("AuthorizationType")
     public String authorizationType;
 
     /**
      * <p>The ID of the instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The number of the page to return.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
      * <p>The number of entries to return on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
      * <p>The status of the application. Valid values:</p>
-     * <br>
-     * <p>*   Enabled: The application is enabled.</p>
-     * <p>*   Disabled: The application is disabled.</p>
+     * <ul>
+     * <li>Enabled: The application is enabled.</li>
+     * <li>Disabled: The application is disabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>enabled</p>
      */
     @NameInMap("Status")
     public String status;

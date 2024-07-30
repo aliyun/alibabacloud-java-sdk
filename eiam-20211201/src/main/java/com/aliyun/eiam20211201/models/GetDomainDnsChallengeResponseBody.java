@@ -7,6 +7,10 @@ public class GetDomainDnsChallengeResponseBody extends TeaModel {
     @NameInMap("DomainDnsChallenge")
     public GetDomainDnsChallengeResponseBodyDomainDnsChallenge domainDnsChallenge;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,18 +38,27 @@ public class GetDomainDnsChallengeResponseBody extends TeaModel {
     public static class GetDomainDnsChallengeResponseBodyDomainDnsChallenge extends TeaModel {
         /**
          * <p>DNS challenge名称。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>_idaas-challenge.${domain}</p>
          */
         @NameInMap("DnsChallengeName")
         public String dnsChallengeName;
 
         /**
          * <p>DNS challenge值。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>exmple123xxx</p>
          */
         @NameInMap("DnsChallengeValue")
         public String dnsChallengeValue;
 
         /**
          * <p>DNS记录类型。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>枚举，目前只支持TXT类型</p>
          */
         @NameInMap("DnsType")
         public String dnsType;

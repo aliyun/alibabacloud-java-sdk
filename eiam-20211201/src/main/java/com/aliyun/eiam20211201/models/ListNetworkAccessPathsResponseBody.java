@@ -7,6 +7,10 @@ public class ListNetworkAccessPathsResponseBody extends TeaModel {
     @NameInMap("NetworkAccessPaths")
     public java.util.List<ListNetworkAccessPathsResponseBodyNetworkAccessPaths> networkAccessPaths;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,54 +38,81 @@ public class ListNetworkAccessPathsResponseBody extends TeaModel {
     public static class ListNetworkAccessPathsResponseBodyNetworkAccessPaths extends TeaModel {
         /**
          * <p>专属网络端点访问路径创建时间，Unix时间戳格式，单位为毫秒。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1649830226000</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
          * <p>实例ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>专属网络端点ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nae_examplexxx</p>
          */
         @NameInMap("NetworkAccessEndpointId")
         public String networkAccessEndpointId;
 
         /**
          * <p>专属网络端点访问路径ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nap_examplexxx</p>
          */
         @NameInMap("NetworkAccessPathId")
         public String networkAccessPathId;
 
         /**
          * <p>专属网络端点访问路径使用的ENI ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eni-examplexxx</p>
          */
         @NameInMap("NetworkInterfaceId")
         public String networkInterfaceId;
 
         /**
          * <p>专属网络端点访问路径使用的ENI私网地址。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("PrivateIpAddress")
         public String privateIpAddress;
 
         /**
          * <p>专属网络端点访问路径状态。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>running</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>专属网络端点访问路径最近更新时间，Unix时间戳格式，单位为毫秒。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1649830226000</p>
          */
         @NameInMap("UpdateTime")
         public Long updateTime;
 
         /**
          * <p>专属网络端点访问路径的ENI归属的交换机ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-examplexxx</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;

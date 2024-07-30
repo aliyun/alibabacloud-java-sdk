@@ -6,39 +6,52 @@ import com.aliyun.tea.*;
 public class UpdateUserPasswordRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The new password of the account. For more information about the password format, see the "Password Policies" topic.</p>
-     * <br>
+     * <p>The new password of the account. For more information about the password format, see the &quot;Password Policies&quot; topic.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("Password")
     public String password;
 
     /**
      * <p>Specifies whether to enable forcible password change upon first logon. Default value: disabled. Valid values:</p>
-     * <br>
-     * <p>*   enabled</p>
-     * <p>*   disabled</p>
+     * <ul>
+     * <li>enabled</li>
+     * <li>disabled</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>enabled</p>
      */
     @NameInMap("PasswordForcedUpdateStatus")
     public String passwordForcedUpdateStatus;
 
     /**
      * <p>The account ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>user_d6sbsuumeta4h66ec3il7yxxxx</p>
      */
     @NameInMap("UserId")
     public String userId;
 
     /**
      * <p>The methods for receiving password notifications.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sms</p>
      */
     @NameInMap("UserNotificationChannels")
     public java.util.List<String> userNotificationChannels;

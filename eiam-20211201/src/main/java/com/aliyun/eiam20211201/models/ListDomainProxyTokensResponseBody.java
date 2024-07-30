@@ -7,6 +7,10 @@ public class ListDomainProxyTokensResponseBody extends TeaModel {
     @NameInMap("DomainProxyTokens")
     public java.util.List<ListDomainProxyTokensResponseBodyDomainProxyTokens> domainProxyTokens;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,48 +38,72 @@ public class ListDomainProxyTokensResponseBody extends TeaModel {
     public static class ListDomainProxyTokensResponseBodyDomainProxyTokens extends TeaModel {
         /**
          * <p>域名代理Token创建时间，Unix时间戳格式，单位为毫秒。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1649830226000</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
          * <p>域名ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dm_examplexxxx</p>
          */
         @NameInMap("DomainId")
         public String domainId;
 
         /**
          * <p>域名代理Token。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PTxxxxxxxx</p>
          */
         @NameInMap("DomainProxyToken")
         public String domainProxyToken;
 
         /**
          * <p>域名代理Token ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pt_examplexxxx</p>
          */
         @NameInMap("DomainProxyTokenId")
         public String domainProxyTokenId;
 
         /**
          * <p>实例ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>域名代理Token最近使用时间，Unix时间戳格式，单位为毫秒。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1649830226000</p>
          */
         @NameInMap("LastUsedTime")
         public Long lastUsedTime;
 
         /**
          * <p>token状态，枚举类型：(enabled）启用,（disabled）禁用。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>enabled</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>域名代理Token最近更新时间，Unix时间戳格式，单位为毫秒。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1649830226000</p>
          */
         @NameInMap("UpdateTime")
         public Long updateTime;
