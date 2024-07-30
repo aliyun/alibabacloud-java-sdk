@@ -6,31 +6,42 @@ import com.aliyun.tea.*;
 public class SetApplicationSsoConfigRequest extends TeaModel {
     /**
      * <p>The ID of the application.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>app_mkv7rgt4d7i4u7zqtzev2mxxxx</p>
      */
     @NameInMap("ApplicationId")
     public String applicationId;
 
     /**
      * <p>The initial SSO method. Valid values:</p>
-     * <br>
-     * <p>*   only_app_init_sso: Only application-initiated SSO is allowed. This method is selected by default when the SSO protocol of the application is an OIDC protocol. If this method is selected when the SSO protocol of the application is SAML, the InitLoginUrl parameter is required.</p>
-     * <p>*   idaas_or_app_init_sso: IDaaS-initiated SSO and application-initiated SSO are allowed. This method is selected by default when the SSO protocol of the application is SAML. If this method is selected when the SSO protocol of the application is an OIDC protocol, the InitLoginUrl parameter is required.</p>
+     * <ul>
+     * <li>only_app_init_sso: Only application-initiated SSO is allowed. This method is selected by default when the SSO protocol of the application is an OIDC protocol. If this method is selected when the SSO protocol of the application is SAML, the InitLoginUrl parameter is required.</li>
+     * <li>idaas_or_app_init_sso: IDaaS-initiated SSO and application-initiated SSO are allowed. This method is selected by default when the SSO protocol of the application is SAML. If this method is selected when the SSO protocol of the application is an OIDC protocol, the InitLoginUrl parameter is required.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>only_app_init_sso</p>
      */
     @NameInMap("InitLoginType")
     public String initLoginType;
 
     /**
      * <p>The initial webhook URL of SSO. This parameter is required when the SSO protocol of the application is an OIDC protocol and the InitLoginType parameters is set to idaas_or_app_init_sso or when the SSO protocol of the application is SAML and the InitLoginType parameter is set to only_app_init_sso.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://127.0.0.1:8000/start_login?enterprise_code=ABCDEF">http://127.0.0.1:8000/start_login?enterprise_code=ABCDEF</a></p>
      */
     @NameInMap("InitLoginUrl")
     public String initLoginUrl;
 
     /**
      * <p>The ID of the instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -103,12 +114,18 @@ public class SetApplicationSsoConfigRequest extends TeaModel {
     public static class SetApplicationSsoConfigRequestOidcSsoConfigCustomClaims extends TeaModel {
         /**
          * <p>The claim name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;Role&quot;</p>
          */
         @NameInMap("ClaimName")
         public String claimName;
 
         /**
          * <p>The expression that is used to generate the value of the claim.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user.dict.applicationRole</p>
          */
         @NameInMap("ClaimValueExpression")
         public String claimValueExpression;
@@ -139,12 +156,18 @@ public class SetApplicationSsoConfigRequest extends TeaModel {
     public static class SetApplicationSsoConfigRequestOidcSsoConfig extends TeaModel {
         /**
          * <p>The validity period of the issued access token. Unit: seconds. Default value: 1200.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1200</p>
          */
         @NameInMap("AccessTokenEffectiveTime")
         public Long accessTokenEffectiveTime;
 
         /**
          * <p>The validity period of the issued code. Unit: seconds. Default value: 60.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         @NameInMap("CodeEffectiveTime")
         public Long codeEffectiveTime;
@@ -157,42 +180,63 @@ public class SetApplicationSsoConfigRequest extends TeaModel {
 
         /**
          * <p>The scopes of user attributes that can be returned for the UserInfo endpoint or ID token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>profile，email</p>
          */
         @NameInMap("GrantScopes")
         public java.util.List<String> grantScopes;
 
         /**
          * <p>The list of grant types that are supported for OIDC protocols.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>authorization_code</p>
          */
         @NameInMap("GrantTypes")
         public java.util.List<String> grantTypes;
 
         /**
          * <p>The validity period of the issued ID token. Unit: seconds. Default value: 300.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         @NameInMap("IdTokenEffectiveTime")
         public Long idTokenEffectiveTime;
 
         /**
          * <p>The ID of the identity authentication source in password mode. Specify this parameter only when the value of the GrantTypes parameter includes the password mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ia_password</p>
          */
         @NameInMap("PasswordAuthenticationSourceId")
         public String passwordAuthenticationSourceId;
 
         /**
          * <p>Specifies whether time-based one-time password (TOTP) authentication is required in password mode. Specify this parameter only when the value of the GrantTypes parameter includes the password mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("PasswordTotpMfaRequired")
         public Boolean passwordTotpMfaRequired;
 
         /**
          * <p>The algorithms that are used to calculate the code challenge for PKCE.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>S256</p>
          */
         @NameInMap("PkceChallengeMethods")
         public java.util.List<String> pkceChallengeMethods;
 
         /**
          * <p>Specifies whether the SSO of the application requires Proof Key for Code Exchange (PKCE) (RFC 7636).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("PkceRequired")
         public Boolean pkceRequired;
@@ -211,18 +255,27 @@ public class SetApplicationSsoConfigRequest extends TeaModel {
 
         /**
          * <p>The validity period of the issued refresh token. Unit: seconds. Default value: 86400.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86400</p>
          */
         @NameInMap("RefreshTokenEffective")
         public Long refreshTokenEffective;
 
         /**
          * <p>The response types that are supported by the application. Specify this parameter when the value of the GrantTypes parameter includes the implicit mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>token id_token</p>
          */
         @NameInMap("ResponseTypes")
         public java.util.List<String> responseTypes;
 
         /**
          * <p>The custom expression that is used to generate the subject ID returned for the ID token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user.userid</p>
          */
         @NameInMap("SubjectIdExpression")
         public String subjectIdExpression;
@@ -357,12 +410,18 @@ public class SetApplicationSsoConfigRequest extends TeaModel {
     public static class SetApplicationSsoConfigRequestSamlSsoConfigAttributeStatements extends TeaModel {
         /**
          * <p>The attribute name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://www.aliyun.com/SAML-Role/Attributes/RoleSessionName">https://www.aliyun.com/SAML-Role/Attributes/RoleSessionName</a></p>
          */
         @NameInMap("AttributeName")
         public String attributeName;
 
         /**
          * <p>The expression that is used to generate the value of the attribute.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user.username</p>
          */
         @NameInMap("AttributeValueExpression")
         public String attributeValueExpression;
@@ -393,6 +452,9 @@ public class SetApplicationSsoConfigRequest extends TeaModel {
     public static class SetApplicationSsoConfigRequestSamlSsoConfig extends TeaModel {
         /**
          * <p>assertion是否签名</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("AssertionSigned")
         public Boolean assertionSigned;
@@ -405,47 +467,69 @@ public class SetApplicationSsoConfigRequest extends TeaModel {
 
         /**
          * <p>The default value of the RelayState attribute. If the SSO request is initiated in EIAM, the RelayState attribute in the SAML response is set to this default value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://home.console.aliyun.com">https://home.console.aliyun.com</a></p>
          */
         @NameInMap("DefaultRelayState")
         public String defaultRelayState;
 
         /**
          * <p>The Format attribute of the NameID element in the SAML assertion. Valid values:</p>
-         * <br>
-         * <p>*   urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified: No format is specified. How to resolve the NameID element depends on the application.</p>
-         * <p>*   urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress: The NameID element must be an email address.</p>
-         * <p>*   urn:oasis:names:tc:SAML:2.0:nameid-format:persistent: The NameID element must be persistent.</p>
-         * <p>*   urn:oasis:names:tc:SAML:2.0:nameid-format:transient: The NameID element must be transient.</p>
+         * <ul>
+         * <li>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified: No format is specified. How to resolve the NameID element depends on the application.</li>
+         * <li>urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress: The NameID element must be an email address.</li>
+         * <li>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent: The NameID element must be persistent.</li>
+         * <li>urn:oasis:names:tc:SAML:2.0:nameid-format:transient: The NameID element must be transient.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified</p>
          */
         @NameInMap("NameIdFormat")
         public String nameIdFormat;
 
         /**
          * <p>The expression that is used to generate the value of NameID in the SAML assertion.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user.email</p>
          */
         @NameInMap("NameIdValueExpression")
         public String nameIdValueExpression;
 
         /**
          * <p>response是否签名</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("ResponseSigned")
         public Boolean responseSigned;
 
         /**
          * <p>The algorithm that is used to calculate the signature for the SAML assertion.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RSA-SHA256</p>
          */
         @NameInMap("SignatureAlgorithm")
         public String signatureAlgorithm;
 
         /**
          * <p>The entity ID of the application in SAML. The application assumes the role of service provider.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>urn:alibaba:cloudcomputing</p>
          */
         @NameInMap("SpEntityId")
         public String spEntityId;
 
         /**
          * <p>The Assertion Consumer Service (ACS) URL of the application in SAML. The application assumes the role of service provider.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://signin.aliyun.com/saml-role/sso">https://signin.aliyun.com/saml-role/sso</a></p>
          */
         @NameInMap("SpSsoAcsUrl")
         public String spSsoAcsUrl;

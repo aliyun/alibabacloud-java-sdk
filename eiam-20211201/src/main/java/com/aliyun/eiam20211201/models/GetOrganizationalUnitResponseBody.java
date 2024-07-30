@@ -12,6 +12,9 @@ public class GetOrganizationalUnitResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,75 +43,107 @@ public class GetOrganizationalUnitResponseBody extends TeaModel {
     public static class GetOrganizationalUnitResponseBodyOrganizationalUnit extends TeaModel {
         /**
          * <p>The time when the organizational unit was created. This value is a UNIX timestamp. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1652085686179</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
          * <p>The description of the organizational unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test organizational unit</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>Indicates whether the node is a leaf node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Leaf")
         public Boolean leaf;
 
         /**
          * <p>The external ID of the organizational unit. The external ID can be used by external data to map the data of the organizational unit in IDaaS EIAM. By default, the external ID is the organizational unit ID.</p>
-         * <br>
          * <p>For organizational units with the same source type and source ID, each organizational unit has a unique external ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ou_wovwffm62xifdziem7an7xxxxx</p>
          */
         @NameInMap("OrganizationalUnitExternalId")
         public String organizationalUnitExternalId;
 
         /**
          * <p>The ID of the organizational unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ou_wovwffm62xifdziem7an7xxxxx</p>
          */
         @NameInMap("OrganizationalUnitId")
         public String organizationalUnitId;
 
         /**
          * <p>组织名称。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_organizationalUnit_name</p>
          */
         @NameInMap("OrganizationalUnitName")
         public String organizationalUnitName;
 
         /**
          * <p>The source ID of the organizational unit.</p>
-         * <br>
          * <p>If the organizational unit was created in IDaaS, its source ID is the ID of the IDaaS instance. If the organizational unit was imported, its source ID is the enterprise ID in the source. For example, if the organizational unit was imported from DingTalk, its source ID is the corpId value of the enterprise in DingTalk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
          */
         @NameInMap("OrganizationalUnitSourceId")
         public String organizationalUnitSourceId;
 
         /**
          * <p>The source type of the organizational unit. Valid values:</p>
-         * <br>
-         * <p>*   build_in: The organizational unit was created in IDaaS.</p>
-         * <p>*   ding_talk: The organizational unit was imported from DingTalk.</p>
-         * <p>*   ad: The organizational unit was imported from Microsoft Active Directory (AD).</p>
-         * <p>*   ldap: The organizational unit was imported from a Lightweight Directory Access Protocol (LDAP) service.</p>
+         * <ul>
+         * <li>build_in: The organizational unit was created in IDaaS.</li>
+         * <li>ding_talk: The organizational unit was imported from DingTalk.</li>
+         * <li>ad: The organizational unit was imported from Microsoft Active Directory (AD).</li>
+         * <li>ldap: The organizational unit was imported from a Lightweight Directory Access Protocol (LDAP) service.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>build_in</p>
          */
         @NameInMap("OrganizationalUnitSourceType")
         public String organizationalUnitSourceType;
 
         /**
          * <p>The ID of the parent organizational unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ou_wovwffm62xifdziem7an7xxxxx</p>
          */
         @NameInMap("ParentId")
         public String parentId;
 
         /**
          * <p>The time when the organizational unit was last updated. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1652085686179</p>
          */
         @NameInMap("UpdateTime")
         public Long updateTime;

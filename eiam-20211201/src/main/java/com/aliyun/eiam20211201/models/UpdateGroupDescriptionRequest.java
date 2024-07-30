@@ -6,22 +6,29 @@ import com.aliyun.tea.*;
 public class UpdateGroupDescriptionRequest extends TeaModel {
     /**
      * <p>The description of the account group. The value can be up to 256 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>group_d6sbsuumeta4h66ec3il7yxxxx</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The ID of the account group.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>group_d6sbsuumeta4h66ec3il7yxxxx</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
      * <p>The instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

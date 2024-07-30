@@ -12,6 +12,9 @@ public class GetPasswordComplexityConfigurationResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,15 +43,19 @@ public class GetPasswordComplexityConfigurationResponseBody extends TeaModel {
     public static class GetPasswordComplexityConfigurationResponseBodyPasswordComplexityConfigurationPasswordComplexityRules extends TeaModel {
         /**
          * <p>The type of the password check. Valid values:</p>
-         * <br>
-         * <p>*   inclusion_upper_case: The password must contain uppercase letters.</p>
-         * <p>*   inclusion_lower_case: The password must contain lowercase letters.</p>
-         * <p>*   inclusion_special_case: The password must contain one or more of the following special characters: @ % + \\ / \\" ! # $ ^ ? : , ( ) { } [ ] ~ - _ .</p>
-         * <p>*   inclusion_number: The password must contain digits.</p>
-         * <p>*   exclusion_username: The password cannot contain a username.</p>
-         * <p>*   exclusion_email: The password cannot contain an email prefix.</p>
-         * <p>*   exclusion_phone_number: The password cannot contain a mobile number.</p>
-         * <p>*   exclusion_display_name: The password cannot contain a display name.</p>
+         * <ul>
+         * <li>inclusion_upper_case: The password must contain uppercase letters.</li>
+         * <li>inclusion_lower_case: The password must contain lowercase letters.</li>
+         * <li>inclusion_special_case: The password must contain one or more of the following special characters: @ % + \ / \&quot; ! # $ ^ ? : , ( ) { } [ ] ~ - _ .</li>
+         * <li>inclusion_number: The password must contain digits.</li>
+         * <li>exclusion_username: The password cannot contain a username.</li>
+         * <li>exclusion_email: The password cannot contain an email prefix.</li>
+         * <li>exclusion_phone_number: The password cannot contain a mobile number.</li>
+         * <li>exclusion_display_name: The password cannot contain a display name.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>inclusion_upper_case</p>
          */
         @NameInMap("PasswordCheckType")
         public String passwordCheckType;
@@ -77,6 +84,9 @@ public class GetPasswordComplexityConfigurationResponseBody extends TeaModel {
 
         /**
          * <p>The minimum number of characters in a password.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("PasswordMinLength")
         public Integer passwordMinLength;

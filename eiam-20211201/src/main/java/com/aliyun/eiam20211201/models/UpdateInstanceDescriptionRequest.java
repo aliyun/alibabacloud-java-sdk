@@ -6,14 +6,19 @@ import com.aliyun.tea.*;
 public class UpdateInstanceDescriptionRequest extends TeaModel {
     /**
      * <p>The new description of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>测试实例</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The ID of the instance whose description you want to modify.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

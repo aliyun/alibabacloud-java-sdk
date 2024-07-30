@@ -12,12 +12,18 @@ public class ListOrganizationalUnitsForApplicationResponseBody extends TeaModel 
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of the returned entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -54,6 +60,9 @@ public class ListOrganizationalUnitsForApplicationResponseBody extends TeaModel 
     public static class ListOrganizationalUnitsForApplicationResponseBodyOrganizationalUnits extends TeaModel {
         /**
          * <p>The ID of the organization that is allowed to access the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ou_wovwffm62xifdziem7an7xxxxx</p>
          */
         @NameInMap("OrganizationalUnitId")
         public String organizationalUnitId;

@@ -12,12 +12,18 @@ public class ListApplicationsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of the returned entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -54,21 +60,31 @@ public class ListApplicationsResponseBody extends TeaModel {
     public static class ListApplicationsResponseBodyApplications extends TeaModel {
         /**
          * <p>The ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app_mkv7rgt4d7i4u7zqtzev2mxxxx</p>
          */
         @NameInMap("ApplicationId")
         public String applicationId;
 
         /**
          * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SAML Application</p>
          */
         @NameInMap("ApplicationName")
         public String applicationName;
 
         /**
          * <p>The origin of the application. Valid values:</p>
-         * <br>
-         * <p>*   urn:alibaba:idaas:app:source:template: The application is created based on a template.</p>
-         * <p>*   urn:alibaba:idaas: The application is created based on the standard protocol.</p>
+         * <ul>
+         * <li>urn:alibaba:idaas:app:source:template: The application is created based on a template.</li>
+         * <li>urn:alibaba:idaas: The application is created based on the standard protocol.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>urn:alibaba:idaas:app:source:standard</p>
          */
         @NameInMap("ApplicationSourceType")
         public String applicationSourceType;
@@ -81,76 +97,112 @@ public class ListApplicationsResponseBody extends TeaModel {
 
         /**
          * <p>The client ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app_mkv7rgt4d7i4u7zqtzev2mxxxx</p>
          */
         @NameInMap("ClientId")
         public String clientId;
 
         /**
          * <p>The time when the application was created. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1649830226000</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
          * <p>The description of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A single application. The code is pkces.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The features that are supported by the application. The value is a JSON array. Valid values:</p>
-         * <br>
-         * <p>*   sso: The application supports SSO.</p>
-         * <p>*   provision: The application supports account synchronization.</p>
-         * <p>*   api_invoke: The application supports custom APIs.</p>
+         * <ul>
+         * <li>sso: The application supports SSO.</li>
+         * <li>provision: The application supports account synchronization.</li>
+         * <li>api_invoke: The application supports custom APIs.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;sso&quot;, &quot;provision&quot;]</p>
          */
         @NameInMap("Features")
         public String features;
 
         /**
          * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The URL of the application icon.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://img.alicdn.com/imgextra/i4/O1CN01lvYwpv1aGowQXDML9_!!6000000003303-0-tps-580-580.jpg">https://img.alicdn.com/imgextra/i4/O1CN01lvYwpv1aGowQXDML9_!!6000000003303-0-tps-580-580.jpg</a></p>
          */
         @NameInMap("LogoUrl")
         public String logoUrl;
 
         /**
          * <p>The service code of the cloud service that manages the application template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rpa</p>
          */
         @NameInMap("ManagedServiceCode")
         public String managedServiceCode;
 
         /**
          * <p>Indicates whether the application template is managed by a cloud service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("ServiceManaged")
         public Boolean serviceManaged;
 
         /**
          * <p>The type of the single sign-on (SSO) protocol. Valid values:</p>
-         * <br>
-         * <p>*   saml2: the Security Assertion Markup Language (SAML) 2.0 protocol.</p>
-         * <p>*   oidc: the OpenID Connect (OIDC) protocol.</p>
+         * <ul>
+         * <li>saml2: the Security Assertion Markup Language (SAML) 2.0 protocol.</li>
+         * <li>oidc: the OpenID Connect (OIDC) protocol.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>saml2</p>
          */
         @NameInMap("SsoType")
         public String ssoType;
 
         /**
          * <p>The status of the application. Valid values:</p>
-         * <br>
-         * <p>*   Enabled: The application is enabled.</p>
-         * <p>*   Disabled: The application is disabled.</p>
+         * <ul>
+         * <li>Enabled: The application is enabled.</li>
+         * <li>Disabled: The application is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>enabled</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The time when the application was last updated. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1649830226000</p>
          */
         @NameInMap("UpdateTime")
         public Long updateTime;

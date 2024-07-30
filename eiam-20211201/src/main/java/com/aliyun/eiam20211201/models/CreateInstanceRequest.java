@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateInstanceRequest extends TeaModel {
     /**
      * <p>The description of the instance. The description can be up to 128 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>instance_for_test</p>
      */
     @NameInMap("Description")
     public String description;

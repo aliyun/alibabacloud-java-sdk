@@ -12,6 +12,9 @@ public class GetPasswordExpirationConfigurationResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,52 +43,76 @@ public class GetPasswordExpirationConfigurationResponseBody extends TeaModel {
     public static class GetPasswordExpirationConfigurationResponseBodyPasswordExpirationConfiguration extends TeaModel {
         /**
          * <p>The action to take when a password expires. Valid values:</p>
-         * <br>
-         * <p>*   forbid_login: Prohibit the user from using the password to log on to IDaaS.</p>
-         * <p>*   force_update_password: Force the user to change the password.</p>
-         * <p>*   remind_update_password: Remind the user to change the password.</p>
+         * <ul>
+         * <li>forbid_login: Prohibit the user from using the password to log on to IDaaS.</li>
+         * <li>force_update_password: Force the user to change the password.</li>
+         * <li>remind_update_password: Remind the user to change the password.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>forbid_login</p>
          */
         @NameInMap("PasswordExpirationAction")
         public String passwordExpirationAction;
 
         /**
          * <p>The methods for receiving password expiration notifications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>login</p>
          */
         @NameInMap("PasswordExpirationNotificationChannels")
         public java.util.List<String> passwordExpirationNotificationChannels;
 
         /**
          * <p>The number of days before the expiration date during which password expiration notifications are sent. Unit: day.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         @NameInMap("PasswordExpirationNotificationDuration")
         public Integer passwordExpirationNotificationDuration;
 
         /**
          * <p>Indicates whether the password expiration notification feature is enabled. Valid values:</p>
-         * <br>
-         * <p>*   enabled</p>
-         * <p>*   disabled</p>
+         * <ul>
+         * <li>enabled</li>
+         * <li>disabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>enabled</p>
          */
         @NameInMap("PasswordExpirationNotificationStatus")
         public String passwordExpirationNotificationStatus;
 
         /**
          * <p>Indicates whether the password expiration feature is enabled. Valid values:</p>
-         * <br>
-         * <p>*   enabled</p>
-         * <p>*   disabled</p>
+         * <ul>
+         * <li>enabled</li>
+         * <li>disabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>enabled</p>
          */
         @NameInMap("PasswordExpirationStatus")
         public String passwordExpirationStatus;
 
         /**
          * <p>The number of days before which users must change the password to prevent password expiration. Unit: day.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("PasswordForcedUpdateDuration")
         public Integer passwordForcedUpdateDuration;
 
         /**
          * <p>The validity period of a password. Unit: day.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>180</p>
          */
         @NameInMap("PasswordValidMaxDay")
         public Integer passwordValidMaxDay;

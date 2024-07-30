@@ -7,6 +7,10 @@ public class ListEiamRegionsResponseBody extends TeaModel {
     @NameInMap("Regions")
     public java.util.List<ListEiamRegionsResponseBodyRegions> regions;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,12 +38,18 @@ public class ListEiamRegionsResponseBody extends TeaModel {
     public static class ListEiamRegionsResponseBodyRegions extends TeaModel {
         /**
          * <p>地域名称</p>
+         * 
+         * <strong>example:</strong>
+         * <p>华东1（杭州）</p>
          */
         @NameInMap("LocalName")
         public String localName;
 
         /**
          * <p>地域ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;

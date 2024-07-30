@@ -9,13 +9,24 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
 
     /**
      * <p>本次调用返回的查询凭证（Token）值，用于下一次翻页查询。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NTxxxexample</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -59,66 +70,99 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
     public static class ListNetworkAccessEndpointsResponseBodyNetworkAccessEndpoints extends TeaModel {
         /**
          * <p>专属网络端点创建时间，Unix时间戳格式，单位为毫秒。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1649830226000</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
          * <p>实例ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>专属网络端点ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nae_examplexxx</p>
          */
         @NameInMap("NetworkAccessEndpointId")
         public String networkAccessEndpointId;
 
         /**
          * <p>专属网络端点名称。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx业务VPC访问端点</p>
          */
         @NameInMap("NetworkAccessEndpointName")
         public String networkAccessEndpointName;
 
         /**
          * <p>专属网络端点连接的类型。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>private</p>
          */
         @NameInMap("NetworkAccessEndpointType")
         public String networkAccessEndpointType;
 
         /**
          * <p>专属网络端点使用的安全组ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-examplexxx</p>
          */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
         /**
          * <p>专属网络端点状态。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>running</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>专属网络端点最近更新时间，Unix时间戳格式，单位为毫秒。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1649830226000</p>
          */
         @NameInMap("UpdateTime")
         public Long updateTime;
 
         /**
          * <p>专属网络端点连接的指定vSwitch列表。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-examplexxx</p>
          */
         @NameInMap("VSwitchIds")
         public java.util.List<String> vSwitchIds;
 
         /**
          * <p>专属网络端点连接的VpcID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-examplexxx</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
 
         /**
          * <p>专属网络端点连接的Vpc所属地域。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("VpcRegionId")
         public String vpcRegionId;

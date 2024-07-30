@@ -12,6 +12,9 @@ public class GetPasswordHistoryConfigurationResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,15 +43,22 @@ public class GetPasswordHistoryConfigurationResponseBody extends TeaModel {
     public static class GetPasswordHistoryConfigurationResponseBodyPasswordHistoryConfiguration extends TeaModel {
         /**
          * <p>The maximum number of recent passwords that are retained.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("PasswordHistoryMaxRetention")
         public Integer passwordHistoryMaxRetention;
 
         /**
          * <p>Indicates whether the password history feature is enabled. Valid values:</p>
-         * <br>
-         * <p>*   enabled</p>
-         * <p>*   disabled</p>
+         * <ul>
+         * <li>enabled</li>
+         * <li>disabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>enabled</p>
          */
         @NameInMap("PasswordHistoryStatus")
         public String passwordHistoryStatus;

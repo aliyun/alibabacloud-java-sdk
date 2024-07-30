@@ -6,36 +6,48 @@ import com.aliyun.tea.*;
 public class CreateOrganizationalUnitRequest extends TeaModel {
     /**
      * <p>The description of the organization. The value can be up to 256 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>description</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The external ID of the organization, which can be used to associate the organization with an external system. By default, the external ID is the organization ID. The value can be up to 64 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ou_wovwffm62xifdziem7an7xxxxx</p>
      */
     @NameInMap("OrganizationalUnitExternalId")
     public String organizationalUnitExternalId;
 
     /**
      * <p>The name of the organization. The name can be up to 64 characters in length.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test_ou_name</p>
      */
     @NameInMap("OrganizationalUnitName")
     public String organizationalUnitName;
 
     /**
      * <p>The parent organization ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ou_wovwffm62xifdziem7an7xxxxx</p>
      */
     @NameInMap("ParentId")
     public String parentId;

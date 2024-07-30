@@ -11,7 +11,10 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
     public GetApplicationProvisioningConfigResponseBodyApplicationProvisioningConfig applicationProvisioningConfig;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,21 +43,31 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
     public static class GetApplicationProvisioningConfigResponseBodyApplicationProvisioningConfigCallbackProvisioningConfig extends TeaModel {
         /**
          * <p>The URL that the application uses to receive IDaaS event callbacks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.com/event/callback">https://example.com/event/callback</a></p>
          */
         @NameInMap("CallbackUrl")
         public String callbackUrl;
 
         /**
          * <p>The symmetric key for IDaaS event callbacks. The key is an AES-256 encryption key in the HEX format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1adfdfdfd******111</p>
          */
         @NameInMap("EncryptKey")
         public String encryptKey;
 
         /**
          * <p>Indicates whether IDaaS event callback messages are encrypted. Valid values:</p>
-         * <br>
-         * <p>*   true: The messages are encrypted.</p>
-         * <p>*   false: The messages are transmitted in plaintext.</p>
+         * <ul>
+         * <li>true: The messages are encrypted.</li>
+         * <li>false: The messages are transmitted in plaintext.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("EncryptRequired")
         public Boolean encryptRequired;
@@ -107,33 +120,49 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
     public static class GetApplicationProvisioningConfigResponseBodyApplicationProvisioningConfigScimProvisioningConfigAuthnConfigurationAuthnParam extends TeaModel {
         /**
          * <p>The access token. This parameter is returned when the GrantType parameter is set to bearer_token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>k52x2ru63rlkflina5utgkxxxx</p>
          */
         @NameInMap("AccessToken")
         public String accessToken;
 
         /**
          * <p>The authentication mode of the SCIM protocol. Valid values:</p>
-         * <br>
-         * <p>*   client_secret_basic: The client secret is passed in the request header.</p>
-         * <p>*   client_secret_post: The client secret is passed in the request body.</p>
+         * <ul>
+         * <li>client_secret_basic: The client secret is passed in the request header.</li>
+         * <li>client_secret_post: The client secret is passed in the request body.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>client_secret_basic</p>
          */
         @NameInMap("AuthnMethod")
         public String authnMethod;
 
         /**
          * <p>The client ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mkv7rgt4d7i4u7zqtzev2mxxxx</p>
          */
         @NameInMap("ClientId")
         public String clientId;
 
         /**
          * <p>The client secret of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CSEHDcHcrUKHw1CuxkJEHPveWRXBGqVqRsxxxx</p>
          */
         @NameInMap("ClientSecret")
         public String clientSecret;
 
         /**
          * <p>The token endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://www.example.com/oauth/token">https://www.example.com/oauth/token</a></p>
          */
         @NameInMap("TokenEndpoint")
         public String tokenEndpoint;
@@ -188,26 +217,35 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
     public static class GetApplicationProvisioningConfigResponseBodyApplicationProvisioningConfigScimProvisioningConfigAuthnConfiguration extends TeaModel {
         /**
          * <p>The authentication mode of the SCIM protocol. Valid value:</p>
-         * <br>
-         * <p>*   oauth2: OAuth2.0 mode.</p>
+         * <ul>
+         * <li>oauth2: OAuth2.0 mode.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>oauth2</p>
          */
         @NameInMap("AuthnMode")
         public String authnMode;
 
         /**
          * <p>The configuration parameters related to authorization.</p>
-         * <br>
-         * <p>*   If the GrantType parameter is set to client_credentials, the configuration parameters ClientId, ClientSecret, and AuthnMethod are returned.</p>
-         * <p>*   If the GrantType parameter is set to bearer_token, the configuration parameter AccessToken is returned.</p>
+         * <ul>
+         * <li>If the GrantType parameter is set to client_credentials, the configuration parameters ClientId, ClientSecret, and AuthnMethod are returned.</li>
+         * <li>If the GrantType parameter is set to bearer_token, the configuration parameter AccessToken is returned.</li>
+         * </ul>
          */
         @NameInMap("AuthnParam")
         public GetApplicationProvisioningConfigResponseBodyApplicationProvisioningConfigScimProvisioningConfigAuthnConfigurationAuthnParam authnParam;
 
         /**
          * <p>The grant type of the SCIM protocol. Valid values:</p>
-         * <br>
-         * <p>*   client_credentials: client mode.</p>
-         * <p>*   bearer_token: key mode.</p>
+         * <ul>
+         * <li>client_credentials: client mode.</li>
+         * <li>bearer_token: key mode.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>bearer_token</p>
          */
         @NameInMap("GrantType")
         public String grantType;
@@ -252,24 +290,29 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
 
         /**
          * <p>The full synchronization scope of the SCIM protocol. Valid value:</p>
-         * <br>
-         * <p>*   urn:alibaba:idaas:app:scim:User:PUSH: full account data synchronization.</p>
+         * <ul>
+         * <li>urn:alibaba:idaas:app:scim:User:PUSH: full account data synchronization.</li>
+         * </ul>
          */
         @NameInMap("FullPushScopes")
         public java.util.List<String> fullPushScopes;
 
         /**
          * <p>The resource operations of the SCIM protocol. Valid values:</p>
-         * <br>
-         * <p>*   urn:alibaba:idaas:app:scim:User:CREATE: account creation.</p>
-         * <p>*   urn:alibaba:idaas:app:scim:User:UPDATE: account update.</p>
-         * <p>*   urn:alibaba:idaas:app:scim:User:DELETE: account deletion.</p>
+         * <ul>
+         * <li>urn:alibaba:idaas:app:scim:User:CREATE: account creation.</li>
+         * <li>urn:alibaba:idaas:app:scim:User:UPDATE: account update.</li>
+         * <li>urn:alibaba:idaas:app:scim:User:DELETE: account deletion.</li>
+         * </ul>
          */
         @NameInMap("ProvisioningActions")
         public java.util.List<String> provisioningActions;
 
         /**
          * <p>The base URL that the application uses to receive the SCIM protocol for IDaaS synchronization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.com/scim">https://example.com/scim</a></p>
          */
         @NameInMap("ScimBaseUrl")
         public String scimBaseUrl;
@@ -316,6 +359,9 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
     public static class GetApplicationProvisioningConfigResponseBodyApplicationProvisioningConfig extends TeaModel {
         /**
          * <p>The ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app_mkv7rgt4d7i4u7zqtzev2mxxxx</p>
          */
         @NameInMap("ApplicationId")
         public String applicationId;
@@ -327,39 +373,58 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
         public GetApplicationProvisioningConfigResponseBodyApplicationProvisioningConfigCallbackProvisioningConfig callbackProvisioningConfig;
 
         /**
-         * <p>Client-side rendering, Valid values: </p>
-         * <p>- standard：standard mode.</p>
-         * <p>- template：template mode.</p>
+         * <p>The rendering mode of the account synchronization page. Valid values:</p>
+         * <ul>
+         * <li>standard: standard mode</li>
+         * <li>template: template mode</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>standard</p>
          */
         @NameInMap("ConfigOperateMode")
         public String configOperateMode;
 
         /**
          * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The public key endpoint for signature verification of the synchronization callback information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://eiam-api-cn-hangzhou.aliyuncs.com/v2/idaas_ue2jvisn35ea5lmthk267xxxxx/app_mkv7rgt4d7i4u7zqtzev2mxxxx/provisioning/jwks">https://eiam-api-cn-hangzhou.aliyuncs.com/v2/idaas_ue2jvisn35ea5lmthk267xxxxx/app_mkv7rgt4d7i4u7zqtzev2mxxxx/provisioning/jwks</a></p>
          */
         @NameInMap("ProvisionJwksEndpoint")
         public String provisionJwksEndpoint;
 
         /**
          * <p>Indicates whether the password is synchronized in IDaaS user event callbacks. Valid values:</p>
-         * <br>
-         * <p>*   true: The password is synchronized.</p>
-         * <p>*   false: The password is not synchronized.</p>
+         * <ul>
+         * <li>true: The password is synchronized.</li>
+         * <li>false: The password is not synchronized.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("ProvisionPassword")
         public Boolean provisionPassword;
 
         /**
          * <p>The synchronization protocol type of the application. Valid values:</p>
-         * <br>
-         * <p>*   idaas_callback: custom event callback protocol of IDaaS.</p>
-         * <p>*   scim2: System for Cross-domain Identity Management (SCIM) protocol.</p>
+         * <ul>
+         * <li>idaas_callback: custom event callback protocol of IDaaS.</li>
+         * <li>scim2: System for Cross-domain Identity Management (SCIM) protocol.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>idaas_callback</p>
          */
         @NameInMap("ProvisionProtocolType")
         public String provisionProtocolType;
@@ -372,9 +437,13 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
 
         /**
          * <p>The status of the IDaaS account synchronization feature. Valid values:</p>
-         * <br>
-         * <p>*   enabled: The feature is enabled.</p>
-         * <p>*   disabled: The feature is disabled.</p>
+         * <ul>
+         * <li>enabled: The feature is enabled.</li>
+         * <li>disabled: The feature is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>enabled</p>
          */
         @NameInMap("Status")
         public String status;

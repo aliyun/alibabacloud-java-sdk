@@ -6,25 +6,33 @@ import com.aliyun.tea.*;
 public class SetPasswordHistoryConfigurationRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The maximum number of recent passwords that can be retained. This parameter must be specified when PasswordHistoryStatus is set to enabled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("PasswordHistoryMaxRetention")
     public Integer passwordHistoryMaxRetention;
 
     /**
      * <p>Specifies whether to enable the password history feature. Valid values:</p>
-     * <br>
-     * <p>*   enabled</p>
-     * <p>*   disabled</p>
-     * <br>
+     * <ul>
+     * <li>enabled</li>
+     * <li>disabled</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>enabled</p>
      */
     @NameInMap("PasswordHistoryStatus")
     public String passwordHistoryStatus;

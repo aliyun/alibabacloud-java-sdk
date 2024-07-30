@@ -6,22 +6,29 @@ import com.aliyun.tea.*;
 public class SetForgetPasswordConfigurationRequest extends TeaModel {
     /**
      * <p>身份认证渠道。枚举取值:email(邮件)、sms(短信)</p>
+     * 
+     * <strong>example:</strong>
+     * <p>email</p>
      */
     @NameInMap("AuthenticationChannels")
     public java.util.List<String> authenticationChannels;
 
     /**
      * <p>忘记密码配置状态。枚举取值:enabled(开启)、disabled(禁用)</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>enabled</p>
      */
     @NameInMap("ForgetPasswordStatus")
     public String forgetPasswordStatus;
 
     /**
      * <p>The instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eiam-111ccc1111</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

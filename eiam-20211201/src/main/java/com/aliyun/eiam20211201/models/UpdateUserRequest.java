@@ -12,58 +12,83 @@ public class UpdateUserRequest extends TeaModel {
 
     /**
      * <p>The display name of the account. The display name can be up to 64 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test_name</p>
      */
     @NameInMap("DisplayName")
     public String displayName;
 
     /**
      * <p>The email address. The prefix of the email address can contain letters, digits, periods (.), underscores (_), and hyphens (-).</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="mailto:example@example.com">example@example.com</a></p>
      */
     @NameInMap("Email")
     public String email;
 
     /**
      * <p>Specifies whether the email address is verified. This parameter must be specified if you specify Email. You can set this parameter to true if you have no special business requirements.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("EmailVerified")
     public Boolean emailVerified;
 
     /**
      * <p>The instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The mobile number. The mobile number must be 6 to 15 digits in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>156xxxxxxxxx</p>
      */
     @NameInMap("PhoneNumber")
     public String phoneNumber;
 
     /**
      * <p>Specifies whether the mobile number is verified. This parameter must be specified if you specify PhoneNumber. You can set this parameter to true if you have no special business requirements.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("PhoneNumberVerified")
     public Boolean phoneNumberVerified;
 
     /**
      * <p>The area code of the mobile number. For example, the area code of a mobile number in the Chinese mainland is 86 without 00 or the plus sign (+). This parameter must be specified if you specify PhoneNumber.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>86</p>
      */
     @NameInMap("PhoneRegion")
     public String phoneRegion;
 
     /**
      * <p>The account ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>user_d6sbsuumeta4h66ec3il7yxxxx</p>
      */
     @NameInMap("UserId")
     public String userId;
 
     /**
      * <p>The name of the account. The name can be up to 64 characters in length. It can contain letters, digits, and the following special characters: _ . @ -</p>
+     * 
+     * <strong>example:</strong>
+     * <p>username_test</p>
      */
     @NameInMap("Username")
     public String username;
@@ -156,22 +181,32 @@ public class UpdateUserRequest extends TeaModel {
     public static class UpdateUserRequestCustomFields extends TeaModel {
         /**
          * <p>The name of the extended field. You must create an extended field before you specify this parameter. To create an extended field, go to the Extended Fields page of the specified EIAM instance in the IDaaS console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nick_name</p>
          */
         @NameInMap("FieldName")
         public String fieldName;
 
         /**
          * <p>The value of the extended field. The value follows the limits on the properties of the extended field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_value</p>
          */
         @NameInMap("FieldValue")
         public String fieldValue;
 
         /**
          * <p>The operation type of the extended field. Valid values:</p>
-         * <br>
-         * <p>*   add: adds a value to the extended field of the account.</p>
-         * <p>*   replace: replaces the existing value of the extended field of the account. If the existing value to be replaced does not exist, this operation changes to the add operation.</p>
-         * <p>*   remove: removes a value from the extended field of the account.</p>
+         * <ul>
+         * <li>add: adds a value to the extended field of the account.</li>
+         * <li>replace: replaces the existing value of the extended field of the account. If the existing value to be replaced does not exist, this operation changes to the add operation.</li>
+         * <li>remove: removes a value from the extended field of the account.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>add</p>
          */
         @NameInMap("Operation")
         public String operation;

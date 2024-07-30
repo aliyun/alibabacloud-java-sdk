@@ -7,6 +7,10 @@ public class ListOrganizationalUnitParentsResponseBody extends TeaModel {
     @NameInMap("Parents")
     public java.util.List<ListOrganizationalUnitParentsResponseBodyParents> parents;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,12 +38,18 @@ public class ListOrganizationalUnitParentsResponseBody extends TeaModel {
     public static class ListOrganizationalUnitParentsResponseBodyParents extends TeaModel {
         /**
          * <p>组织ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ou_4lag76zc2km5ssg5vsmm2lznvu</p>
          */
         @NameInMap("OrganizationalUnitId")
         public String organizationalUnitId;
 
         /**
          * <p>父组织ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ou_x3beoyepv2ls5iwuge3xhjkwbm</p>
          */
         @NameInMap("ParentId")
         public String parentId;

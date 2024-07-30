@@ -6,38 +6,55 @@ import com.aliyun.tea.*;
 public class CreateUserRequest extends TeaModel {
     /**
      * <p>The extended fields.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>description</p>
      */
     @NameInMap("CustomFields")
     public java.util.List<CreateUserRequestCustomFields> customFields;
 
     /**
      * <p>The description of the organizational unit. The description can be up to 256 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>description text</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The display name of the account. The display name can be up to 64 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>name_001</p>
      */
     @NameInMap("DisplayName")
     public String displayName;
 
     /**
      * <p>The email address of the user who owns the account. The email address prefix can contain letters, digits, underscores (_), periods (.), and hyphens (-).</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="mailto:example@example.com">example@example.com</a></p>
      */
     @NameInMap("Email")
     public String email;
 
     /**
      * <p>Specifies whether the email address is a trusted email address. This parameter is required if the Email parameter is specified. If you have no special business requirements, set this parameter to true.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("EmailVerified")
     public Boolean emailVerified;
 
     /**
      * <p>The ID of the instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -50,6 +67,9 @@ public class CreateUserRequest extends TeaModel {
 
     /**
      * <p>The password of the account. For more information, view the password policy of the instance in the IDaaS console.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("Password")
     public String password;
@@ -62,40 +82,56 @@ public class CreateUserRequest extends TeaModel {
 
     /**
      * <p>The mobile phone number, which contains 6 to 15 digits.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12345678901</p>
      */
     @NameInMap("PhoneNumber")
     public String phoneNumber;
 
     /**
      * <p>Specifies whether the mobile phone number is a trusted mobile phone number. This parameter is required if the PhoneNumber parameter is specified. If you have no special business requirements, set this parameter to true.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("PhoneNumberVerified")
     public Boolean phoneNumberVerified;
 
     /**
      * <p>The country code of the mobile phone number. The country code contains only digits and does not contain a plus sign (+).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>86</p>
      */
     @NameInMap("PhoneRegion")
     public String phoneRegion;
 
     /**
      * <p>The ID of the primary organizational unit to which the account belongs.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ou_wovwffm62xifdziem7an7xxxxx</p>
      */
     @NameInMap("PrimaryOrganizationalUnitId")
     public String primaryOrganizationalUnitId;
 
     /**
      * <p>The external ID of the account. The external ID can be used to associate the account with an external system. The external ID can be up to 64 characters in length. If you do not specify an external ID for the account, the ID of the account is used as the external ID by default.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>user_d6sbsuumeta4h66ec3il7yxxxx</p>
      */
     @NameInMap("UserExternalId")
     public String userExternalId;
 
     /**
      * <p>The name of the account. The name can be up to 64 characters in length and can contain letters, digits, underscores (_), periods (.), at signs (@), and hyphens (-).</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>user_001</p>
      */
     @NameInMap("Username")
     public String username;
@@ -227,13 +263,19 @@ public class CreateUserRequest extends TeaModel {
 
     public static class CreateUserRequestCustomFields extends TeaModel {
         /**
-         * <p>The name of the extended field. You must create the extended field in advance. To create an extended field, log on to the IDaaS console. In the left-side navigation pane, choose Accounts > Extended Fields, and then click Create Field on the Extended Fields page.</p>
+         * <p>The name of the extended field. You must create the extended field in advance. To create an extended field, log on to the IDaaS console. In the left-side navigation pane, choose Accounts &gt; Extended Fields, and then click Create Field on the Extended Fields page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>age</p>
          */
         @NameInMap("FieldName")
         public String fieldName;
 
         /**
          * <p>The value of the extended field. The value follows the limits on the properties of the extended field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("FieldValue")
         public String fieldValue;
@@ -264,32 +306,47 @@ public class CreateUserRequest extends TeaModel {
     public static class CreateUserRequestPasswordInitializationConfig extends TeaModel {
         /**
          * <p>Specifies whether to forcibly change the password status. Default value: disabled. Valid values:</p>
-         * <br>
-         * <p>*   enabled: forcibly changes the password status.</p>
-         * <p>*   disabled: does not forcibly change the password status.</p>
+         * <ul>
+         * <li>enabled: forcibly changes the password status.</li>
+         * <li>disabled: does not forcibly change the password status.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>enabled</p>
          */
         @NameInMap("PasswordForcedUpdateStatus")
         public String passwordForcedUpdateStatus;
 
         /**
          * <p>The priority of the password initialization policy. By default, this parameter does not take effect. Valid values:</p>
-         * <br>
-         * <p>*   global: The password initialization policy globally takes effect.</p>
-         * <p>*   custom: The password initialization policy takes effect based on custom settings.</p>
+         * <ul>
+         * <li>global: The password initialization policy globally takes effect.</li>
+         * <li>custom: The password initialization policy takes effect based on custom settings.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>global</p>
          */
         @NameInMap("PasswordInitializationPolicyPriority")
         public String passwordInitializationPolicyPriority;
 
         /**
          * <p>The password initialization method. Set the value to random,</p>
-         * <br>
-         * <p>*   which indicates that the password is randomly generated.</p>
+         * <ul>
+         * <li>which indicates that the password is randomly generated.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>random</p>
          */
         @NameInMap("PasswordInitializationType")
         public String passwordInitializationType;
 
         /**
          * <p>The password notification methods.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sms</p>
          */
         @NameInMap("UserNotificationChannels")
         public java.util.List<String> userNotificationChannels;

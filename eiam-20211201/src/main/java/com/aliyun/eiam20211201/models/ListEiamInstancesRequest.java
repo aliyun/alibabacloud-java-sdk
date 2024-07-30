@@ -12,6 +12,9 @@ public class ListEiamInstancesRequest extends TeaModel {
 
     /**
      * <p>实例所属Region</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("InstanceRegionId")
     public String instanceRegionId;

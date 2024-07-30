@@ -6,16 +6,20 @@ import com.aliyun.tea.*;
 public class EnableApplicationRequest extends TeaModel {
     /**
      * <p>The ID of the application that you want to enable.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>app_mkv7rgt4d7i4u7zqtzev2mxxxx</p>
      */
     @NameInMap("ApplicationId")
     public String applicationId;
 
     /**
      * <p>The ID of the instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

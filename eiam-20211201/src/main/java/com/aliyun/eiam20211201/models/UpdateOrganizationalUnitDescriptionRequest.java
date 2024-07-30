@@ -6,22 +6,29 @@ import com.aliyun.tea.*;
 public class UpdateOrganizationalUnitDescriptionRequest extends TeaModel {
     /**
      * <p>The description of the organization. The value can be up to 256 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>organizationalUnit_test</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The organization ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ou_wovwffm62xifdziem7an7xxxxx</p>
      */
     @NameInMap("OrganizationalUnitId")
     public String organizationalUnitId;

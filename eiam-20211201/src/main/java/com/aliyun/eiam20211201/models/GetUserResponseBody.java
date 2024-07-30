@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetUserResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class GetUserResponseBody extends TeaModel {
     public static class GetUserResponseBodyUserCustomFields extends TeaModel {
         /**
          * <p>The identifier of the custom field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>age</p>
          */
         @NameInMap("FieldName")
         public String fieldName;
 
         /**
          * <p>The value of the custom field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("FieldValue")
         public String fieldValue;
@@ -76,18 +85,27 @@ public class GetUserResponseBody extends TeaModel {
     public static class GetUserResponseBodyUserGroups extends TeaModel {
         /**
          * <p>The description of the organizational unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>this is a test.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The ID of the organizational unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>group_d6sbsuumeta4h66ec3il7yxxxx</p>
          */
         @NameInMap("GroupId")
         public String groupId;
 
         /**
          * <p>The name of the organizational unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>group_test_name</p>
          */
         @NameInMap("GroupName")
         public String groupName;
@@ -126,18 +144,27 @@ public class GetUserResponseBody extends TeaModel {
     public static class GetUserResponseBodyUserOrganizationalUnits extends TeaModel {
         /**
          * <p>The ID of the organizational unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ou_wovwffm62xifdziem7an7xxxxx</p>
          */
         @NameInMap("OrganizationalUnitId")
         public String organizationalUnitId;
 
         /**
          * <p>The name of the organizational unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_ou_name</p>
          */
         @NameInMap("OrganizationalUnitName")
         public String organizationalUnitName;
 
         /**
          * <p>Indicates whether the organization is the primary organization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Primary")
         public Boolean primary;
@@ -176,12 +203,18 @@ public class GetUserResponseBody extends TeaModel {
     public static class GetUserResponseBodyUser extends TeaModel {
         /**
          * <p>The time when the account expires. This value is a UNIX timestamp. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1652085686179</p>
          */
         @NameInMap("AccountExpireTime")
         public Long accountExpireTime;
 
         /**
          * <p>The time when the account was created. This value is a UNIX timestamp. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1652085686179</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
@@ -194,24 +227,36 @@ public class GetUserResponseBody extends TeaModel {
 
         /**
          * <p>The description of the account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test account</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The display name of the account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>display_name001</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
          * <p>The email address of the user who owns the account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:user@example.com">user@example.com</a></p>
          */
         @NameInMap("Email")
         public String email;
 
         /**
          * <p>Indicates whether the email address has been verified. A value of true indicates that the email address has been verified by the user or has been set to the verified status by the administrator. A value of false indicates that the email address has not been verified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("EmailVerified")
         public Boolean emailVerified;
@@ -224,12 +269,18 @@ public class GetUserResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the instance</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The time when the account lock expires. This value is a UNIX timestamp. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1652085686179</p>
          */
         @NameInMap("LockExpireTime")
         public Long lockExpireTime;
@@ -242,103 +293,150 @@ public class GetUserResponseBody extends TeaModel {
 
         /**
          * <p>The time when the password of the account expires. This value is a UNIX timestamp. Unit: milliseconds.</p>
-         * <br>
-         * <p>*   If the value -1 is returned, the password does not expire.</p>
-         * <p>*   If no value is returned, the password does not expire.</p>
-         * <p>*   If a UNIX timestamp is returned, the password expires at the indicated point of time.</p>
+         * <ul>
+         * <li>If the value -1 is returned, the password does not expire.</li>
+         * <li>If no value is returned, the password does not expire.</li>
+         * <li>If a UNIX timestamp is returned, the password expires at the indicated point of time.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1652085686179</p>
          */
         @NameInMap("PasswordExpireTime")
         public Long passwordExpireTime;
 
         /**
          * <p>Indicates whether a password is set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("PasswordSet")
         public Boolean passwordSet;
 
         /**
          * <p>The mobile number of the user who owns the account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>156xxxxxxx</p>
          */
         @NameInMap("PhoneNumber")
         public String phoneNumber;
 
         /**
          * <p>Indicates whether the mobile number has been verified. A value of true indicates that the mobile number has been verified by the user or has been set to the verified status by the administrator. A value of false indicates that the mobile number has not been verified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("PhoneNumberVerified")
         public Boolean phoneNumberVerified;
 
         /**
          * <p>The country code of the mobile number. For example, the country code of China is 86 without 00 or +.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86</p>
          */
         @NameInMap("PhoneRegion")
         public String phoneRegion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>en-US</p>
+         */
         @NameInMap("PreferredLanguage")
         public String preferredLanguage;
 
         /**
          * <p>The ID of the primary organizational unit to which the account belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ou_wovwffm62xifdziem7an7xxxxx</p>
          */
         @NameInMap("PrimaryOrganizationalUnitId")
         public String primaryOrganizationalUnitId;
 
         /**
          * <p>The time when the account was registered. This value is a UNIX timestamp. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1652085686179</p>
          */
         @NameInMap("RegisterTime")
         public Long registerTime;
 
         /**
          * <p>The status of the account. Valid values:</p>
-         * <br>
-         * <p>*   enabled: The account is enabled.</p>
-         * <p>*   disabled: The account is disabled.</p>
+         * <ul>
+         * <li>enabled: The account is enabled.</li>
+         * <li>disabled: The account is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>enabled</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The time when the account was last updated. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1652085686179</p>
          */
         @NameInMap("UpdateTime")
         public Long updateTime;
 
         /**
          * <p>The external ID of the account. The external ID can be used by external data to map the data of the account in IDaaS EIAM. By default, the external ID is the account ID.</p>
-         * <br>
          * <p>For accounts with the same source type and source ID, each account has a unique external ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user_d6sbsuumeta4h66ec3il7yxxxx</p>
          */
         @NameInMap("UserExternalId")
         public String userExternalId;
 
         /**
          * <p>The ID of the account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user_d6sbsuumeta4h66ec3il7yxxxx</p>
          */
         @NameInMap("UserId")
         public String userId;
 
         /**
          * <p>The source ID of the account.</p>
-         * <br>
          * <p>If the account was created in IDaaS, its source ID is the ID of the IDaaS instance. If the account was imported, its source ID is the enterprise ID in the source. For example, if the account was imported from DingTalk, its source ID is the corpId value of the enterprise in DingTalk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
          */
         @NameInMap("UserSourceId")
         public String userSourceId;
 
         /**
          * <p>The source type of the account. Valid values:</p>
-         * <br>
-         * <p>*   build_in: The account was created in IDaaS.</p>
-         * <p>*   ding_talk: The account was imported from DingTalk.</p>
-         * <p>*   ad: The account was imported from Microsoft Active Directory (AD).</p>
-         * <p>*   ldap: The account was imported from a Lightweight Directory Access Protocol (LDAP) service.</p>
+         * <ul>
+         * <li>build_in: The account was created in IDaaS.</li>
+         * <li>ding_talk: The account was imported from DingTalk.</li>
+         * <li>ad: The account was imported from Microsoft Active Directory (AD).</li>
+         * <li>ldap: The account was imported from a Lightweight Directory Access Protocol (LDAP) service.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>build_in</p>
          */
         @NameInMap("UserSourceType")
         public String userSourceType;
 
         /**
          * <p>The username of the account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name001</p>
          */
         @NameInMap("Username")
         public String username;

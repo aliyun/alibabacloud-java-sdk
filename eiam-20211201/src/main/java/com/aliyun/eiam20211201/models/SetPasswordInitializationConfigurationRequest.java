@@ -6,42 +6,58 @@ import com.aliyun.tea.*;
 public class SetPasswordInitializationConfigurationRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>Specifies whether to enable forcible password change upon first logon. Valid values:</p>
-     * <br>
-     * <p>*   enabled</p>
-     * <p>*   disabled</p>
+     * <ul>
+     * <li>enabled</li>
+     * <li>disabled</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>enabled</p>
      */
     @NameInMap("PasswordForcedUpdateStatus")
     public String passwordForcedUpdateStatus;
 
     /**
      * <p>The methods for receiving password initialization notifications.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>email</p>
      */
     @NameInMap("PasswordInitializationNotificationChannels")
     public java.util.List<String> passwordInitializationNotificationChannels;
 
     /**
      * <p>Specifies whether to enable password initialization. Valid values:</p>
-     * <br>
-     * <p>*   enabled</p>
-     * <p>*   disabled</p>
-     * <br>
+     * <ul>
+     * <li>enabled</li>
+     * <li>disabled</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>enabled</p>
      */
     @NameInMap("PasswordInitializationStatus")
     public String passwordInitializationStatus;
 
     /**
      * <p>The password initialization method. This parameter is required when PasswordInitializationStatus is set to enabled. Set the value to random.</p>
-     * <br>
-     * <p>*   random: A randomly generated password is used.</p>
+     * <ul>
+     * <li>random: A randomly generated password is used.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>random</p>
      */
     @NameInMap("PasswordInitializationType")
     public String passwordInitializationType;

@@ -6,44 +6,58 @@ import com.aliyun.tea.*;
 public class CreateNetworkAccessEndpointRequest extends TeaModel {
     /**
      * <p>保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>client-token-example</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>IDaaS EIAM实例的ID。</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>专属网络端点名称。</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xx业务VPC访问端点</p>
      */
     @NameInMap("NetworkAccessEndpointName")
     public String networkAccessEndpointName;
 
     /**
      * <p>专属网络端点连接的指定vSwitch。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-examplexxx</p>
      */
     @NameInMap("VSwitchIds")
     public java.util.List<String> vSwitchIds;
 
     /**
      * <p>专属网络端点连接的VpcID。</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-examplexxx</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
 
     /**
      * <p>专属网络端点连接的VpcID所属地域，该地域取值必须在ListNetworkAccessEndpointAvailableRegions接口中返回。</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("VpcRegionId")
     public String vpcRegionId;

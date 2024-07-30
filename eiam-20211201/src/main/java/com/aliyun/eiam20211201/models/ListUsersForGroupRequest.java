@@ -6,34 +6,47 @@ import com.aliyun.tea.*;
 public class ListUsersForGroupRequest extends TeaModel {
     /**
      * <p>The group ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>group_d6sbsuumeta4h66ec3il7yxxxx</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
      * <p>The instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The number of the page to return. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
      * <p>The number of entries to return on each page. Default value: 20. Maximum value: 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
      * <p>The account IDs. A maximum of 100 accounts can be queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[ou_001]</p>
      */
     @NameInMap("UserIds")
     public java.util.List<String> userIds;

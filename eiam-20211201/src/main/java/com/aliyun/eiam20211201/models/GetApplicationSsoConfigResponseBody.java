@@ -12,6 +12,9 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
     public static class GetApplicationSsoConfigResponseBodyApplicationSsoConfigOidcSsoConfigCustomClaims extends TeaModel {
         /**
          * <p>The claim name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>userOuIds</p>
          */
         @NameInMap("ClaimName")
         public String claimName;
 
         /**
          * <p>The expression that is used to generate the value of the claim.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ObjectToJsonString(user.organizationalUnits)</p>
          */
         @NameInMap("ClaimValueExpression")
         public String claimValueExpression;
@@ -76,12 +85,18 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
     public static class GetApplicationSsoConfigResponseBodyApplicationSsoConfigOidcSsoConfig extends TeaModel {
         /**
          * <p>The validity period of the issued access token. Unit: seconds. Default value: 1200.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1200</p>
          */
         @NameInMap("AccessTokenEffectiveTime")
         public Long accessTokenEffectiveTime;
 
         /**
          * <p>The validity period of the issued code. Unit: seconds. Default value: 60.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         @NameInMap("CodeEffectiveTime")
         public Long codeEffectiveTime;
@@ -94,42 +109,63 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
 
         /**
          * <p>The scopes of user attributes that can be returned for the UserInfo endpoint or ID token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>profile，email</p>
          */
         @NameInMap("GrantScopes")
         public java.util.List<String> grantScopes;
 
         /**
          * <p>The list of grant types that are supported for OIDC protocols.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>authorization_code</p>
          */
         @NameInMap("GrantTypes")
         public java.util.List<String> grantTypes;
 
         /**
          * <p>The validity period of the issued ID token. Unit: seconds. Default value: 300.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1200</p>
          */
         @NameInMap("IdTokenEffectiveTime")
         public Long idTokenEffectiveTime;
 
         /**
          * <p>The ID of the identity authentication source in password mode. This parameter is returned only when the value of the GrantTypes parameter includes the password mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ia_password</p>
          */
         @NameInMap("PasswordAuthenticationSourceId")
         public String passwordAuthenticationSourceId;
 
         /**
          * <p>Indicates whether time-based one-time password (TOTP) authentication is required in password mode. This parameter is returned only when the value of the GrantTypes parameter includes the password mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("PasswordTotpMfaRequired")
         public Boolean passwordTotpMfaRequired;
 
         /**
          * <p>The algorithms that are used to calculate the code challenge for PKCE.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>S256</p>
          */
         @NameInMap("PkceChallengeMethods")
         public java.util.List<String> pkceChallengeMethods;
 
         /**
          * <p>Indicates whether the SSO of the application requires Proof Key for Code Exchange (PKCE) (RFC 7636).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("PkceRequired")
         public Boolean pkceRequired;
@@ -148,18 +184,27 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
 
         /**
          * <p>The validity period of the issued refresh token. Unit: seconds. Default value: 86400.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86400</p>
          */
         @NameInMap("RefreshTokenEffective")
         public Long refreshTokenEffective;
 
         /**
          * <p>The response types that are supported by the application. This parameter is returned when the value of the GrantTypes parameter includes the implicit mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>token id_token</p>
          */
         @NameInMap("ResponseTypes")
         public java.util.List<String> responseTypes;
 
         /**
          * <p>The custom expression that is used to generate the subject ID returned for the ID token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user.userid</p>
          */
         @NameInMap("SubjectIdExpression")
         public String subjectIdExpression;
@@ -294,60 +339,90 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
     public static class GetApplicationSsoConfigResponseBodyApplicationSsoConfigProtocolEndpointDomain extends TeaModel {
         /**
          * <p>The OAuth2.0 authorization endpoint. This parameter is returned only when the SSO protocol of the application is an OIDC protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://l1seshcn.aliyunidaas.com/login/app/app_mltta64q65enci54slingvvsgq/oauth2/authorize">https://l1seshcn.aliyunidaas.com/login/app/app_mltta64q65enci54slingvvsgq/oauth2/authorize</a></p>
          */
         @NameInMap("Oauth2AuthorizationEndpoint")
         public String oauth2AuthorizationEndpoint;
 
         /**
          * <p>The OAuth2.0 device authorization endpoint. This parameter is returned only when the SSO protocol of the application is an OIDC protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://eiam-api-cn-hangzhou.aliyuncs.com/v2/idaas_ue2jvisn35ea5lmthk2676rypm/app_mltta64q65enci54slingvvsgq/oauth2/device/code">https://eiam-api-cn-hangzhou.aliyuncs.com/v2/idaas_ue2jvisn35ea5lmthk2676rypm/app_mltta64q65enci54slingvvsgq/oauth2/device/code</a></p>
          */
         @NameInMap("Oauth2DeviceAuthorizationEndpoint")
         public String oauth2DeviceAuthorizationEndpoint;
 
         /**
          * <p>The OAuth2.0 token revocation endpoint. This parameter is returned only when the SSO protocol of the application is an OIDC protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://eiam-api-cn-hangzhou.aliyuncs.com/v2/idaas_ue2jvisn35ea5lmthk2676rypm/app_mltta64q65enci54slingvvsgq/oauth2/revoke">https://eiam-api-cn-hangzhou.aliyuncs.com/v2/idaas_ue2jvisn35ea5lmthk2676rypm/app_mltta64q65enci54slingvvsgq/oauth2/revoke</a></p>
          */
         @NameInMap("Oauth2RevokeEndpoint")
         public String oauth2RevokeEndpoint;
 
         /**
          * <p>The OAuth2.0 token endpoint. This parameter is returned only when the SSO protocol of the application is an OIDC protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://eiam-api-cn-hangzhou.aliyuncs.com/v2/idaas_ue2jvisn35ea5lmthk2676rypm/app_mltta64q65enci54slingvvsgq/oauth2/token">https://eiam-api-cn-hangzhou.aliyuncs.com/v2/idaas_ue2jvisn35ea5lmthk2676rypm/app_mltta64q65enci54slingvvsgq/oauth2/token</a></p>
          */
         @NameInMap("Oauth2TokenEndpoint")
         public String oauth2TokenEndpoint;
 
         /**
          * <p>The OIDC UserInfo endpoint. This parameter is returned only when the SSO protocol of the application is an OIDC protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://eiam-api-cn-hangzhou.aliyuncs.com/v2/idaas_ue2jvisn35ea5lmthk2676rypm/app_mltta64q65enci54slingvvsgq/oauth2/userinfo">https://eiam-api-cn-hangzhou.aliyuncs.com/v2/idaas_ue2jvisn35ea5lmthk2676rypm/app_mltta64q65enci54slingvvsgq/oauth2/userinfo</a></p>
          */
         @NameInMap("Oauth2UserinfoEndpoint")
         public String oauth2UserinfoEndpoint;
 
         /**
          * <p>The information about the OIDC issuer. This parameter is returned only when the SSO protocol of the application is an OIDC protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://eiam-api-cn-hangzhou.aliyuncs.com/v2/idaas_ue2jvisn35ea5lmthk2676rypm/app_mltta64q65enci54slingvvsgq/oidc">https://eiam-api-cn-hangzhou.aliyuncs.com/v2/idaas_ue2jvisn35ea5lmthk2676rypm/app_mltta64q65enci54slingvvsgq/oidc</a></p>
          */
         @NameInMap("OidcIssuer")
         public String oidcIssuer;
 
         /**
          * <p>The JSON Web Key Set (JWKS) URL of the OIDC issuer. This parameter is returned only when the SSO protocol of the application is an OIDC protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://eiam-api-cn-hangzhou.aliyuncs.com/v2/idaas_ue2jvisn35ea5lmthk2676rypm/app_mltta64q65enci54slingvvsgq/oidc/jwks">https://eiam-api-cn-hangzhou.aliyuncs.com/v2/idaas_ue2jvisn35ea5lmthk2676rypm/app_mltta64q65enci54slingvvsgq/oidc/jwks</a></p>
          */
         @NameInMap("OidcJwksEndpoint")
         public String oidcJwksEndpoint;
 
         /**
          * <p>The OIDC relying party (RP)-initiated logout endpoint. This parameter is returned only when the SSO protocol of the application is an OIDC protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://l1seshcn.aliyunidaas.com/login/app/app_mltta64q65enci54slingvvsgq/oauth2/logout">https://l1seshcn.aliyunidaas.com/login/app/app_mltta64q65enci54slingvvsgq/oauth2/logout</a></p>
          */
         @NameInMap("OidcLogoutEndpoint")
         public String oidcLogoutEndpoint;
 
         /**
          * <p>The metadata URL of the SAML protocol. This parameter is returned only when the SSO protocol of the application is SAML 2.0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://l1seshcn.aliyunidaas.com/api/v2/app_mltuxdwd4lq4eer6tmtlmaxm5e/saml2/meta">https://l1seshcn.aliyunidaas.com/api/v2/app_mltuxdwd4lq4eer6tmtlmaxm5e/saml2/meta</a></p>
          */
         @NameInMap("SamlMetaEndpoint")
         public String samlMetaEndpoint;
 
         /**
          * <p>The request receiving URL of the SAML protocol. This parameter is returned only when the SSO protocol of the application is SAML 2.0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://l1seshcn.aliyunidaas.com/login/app/app_mltuxdwd4lq4eer6tmtlmaxm5e/saml2/sso">https://l1seshcn.aliyunidaas.com/login/app/app_mltuxdwd4lq4eer6tmtlmaxm5e/saml2/sso</a></p>
          */
         @NameInMap("SamlSsoEndpoint")
         public String samlSsoEndpoint;
@@ -442,12 +517,18 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
     public static class GetApplicationSsoConfigResponseBodyApplicationSsoConfigSamlSsoConfigAttributeStatements extends TeaModel {
         /**
          * <p>The attribute name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://www.aliyun.com/SAML-Role/Attributes/RoleSessionName">https://www.aliyun.com/SAML-Role/Attributes/RoleSessionName</a></p>
          */
         @NameInMap("AttributeName")
         public String attributeName;
 
         /**
          * <p>The expression that is used to generate the value of the attribute.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user.username</p>
          */
         @NameInMap("AttributeValueExpression")
         public String attributeValueExpression;
@@ -478,6 +559,9 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
     public static class GetApplicationSsoConfigResponseBodyApplicationSsoConfigSamlSsoConfig extends TeaModel {
         /**
          * <p>assertion是否签名</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("AssertionSigned")
         public Boolean assertionSigned;
@@ -490,47 +574,69 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
 
         /**
          * <p>The default value of the RelayState attribute. If the SSO request is initiated in EIAM, the RelayState attribute in the SAML response is set to this default value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://home.console.aliyun.com">https://home.console.aliyun.com</a></p>
          */
         @NameInMap("DefaultRelayState")
         public String defaultRelayState;
 
         /**
          * <p>The Format attribute of the NameID element in the SAML assertion. Valid values:</p>
-         * <br>
-         * <p>*   urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified: No format is specified. How to resolve the NameID element depends on the application.</p>
-         * <p>*   urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress: The NameID element must be an email address.</p>
-         * <p>*   urn:oasis:names:tc:SAML:2.0:nameid-format:persistent: The NameID element must be persistent.</p>
-         * <p>*   urn:oasis:names:tc:SAML:2.0:nameid-format:transient: The NameID element must be transient.</p>
+         * <ul>
+         * <li>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified: No format is specified. How to resolve the NameID element depends on the application.</li>
+         * <li>urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress: The NameID element must be an email address.</li>
+         * <li>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent: The NameID element must be persistent.</li>
+         * <li>urn:oasis:names:tc:SAML:2.0:nameid-format:transient: The NameID element must be transient.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified</p>
          */
         @NameInMap("NameIdFormat")
         public String nameIdFormat;
 
         /**
          * <p>The expression that is used to generate the value of NameID in the SAML assertion.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user.username</p>
          */
         @NameInMap("NameIdValueExpression")
         public String nameIdValueExpression;
 
         /**
          * <p>response是否签名</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("ResponseSigned")
         public Boolean responseSigned;
 
         /**
          * <p>The algorithm that is used to calculate the signature for the SAML assertion.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RSA-SHA256</p>
          */
         @NameInMap("SignatureAlgorithm")
         public String signatureAlgorithm;
 
         /**
          * <p>The entity ID of the application in SAML. The application assumes the role of service provider.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>urn:alibaba:cloudcomputing</p>
          */
         @NameInMap("SpEntityId")
         public String spEntityId;
 
         /**
          * <p>The Assertion Consumer Service (ACS) URL of the application in SAML. The application assumes the role of service provider.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://signin.aliyun.com/saml-role/sso">https://signin.aliyun.com/saml-role/sso</a></p>
          */
         @NameInMap("SpSsoAcsUrl")
         public String spSsoAcsUrl;
@@ -617,15 +723,22 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
     public static class GetApplicationSsoConfigResponseBodyApplicationSsoConfig extends TeaModel {
         /**
          * <p>The initial SSO method. Valid values:</p>
-         * <br>
-         * <p>*   only_app_init_sso: Only application-initiated SSO is allowed. This method is selected by default when the SSO protocol of the application is an OIDC protocol. If this method is selected when the SSO protocol of the application is SAML, the InitLoginUrl parameter is required.</p>
-         * <p>*   idaas_or_app_init_sso: IDaaS-initiated SSO and application-initiated SSO are allowed. This method is selected by default when the SSO protocol of the application is SAML. If this method is selected when the SSO protocol of the application is an OIDC protocol, the InitLoginUrl parameter is required.</p>
+         * <ul>
+         * <li>only_app_init_sso: Only application-initiated SSO is allowed. This method is selected by default when the SSO protocol of the application is an OIDC protocol. If this method is selected when the SSO protocol of the application is SAML, the InitLoginUrl parameter is required.</li>
+         * <li>idaas_or_app_init_sso: IDaaS-initiated SSO and application-initiated SSO are allowed. This method is selected by default when the SSO protocol of the application is SAML. If this method is selected when the SSO protocol of the application is an OIDC protocol, the InitLoginUrl parameter is required.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>only_app_init_sso</p>
          */
         @NameInMap("InitLoginType")
         public String initLoginType;
 
         /**
          * <p>The initial webhook URL of SSO. This parameter is required when the SSO protocol of the application is an OIDC protocol and the InitLoginType parameters is set to idaas_or_app_init_sso or when the SSO protocol of the application is SAML and the InitLoginType parameter is set to only_app_init_sso.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://127.0.0.1:8000/start_login?enterprise_code=ABCDEF">http://127.0.0.1:8000/start_login?enterprise_code=ABCDEF</a></p>
          */
         @NameInMap("InitLoginUrl")
         public String initLoginUrl;
@@ -650,9 +763,13 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
 
         /**
          * <p>The SSO feature status of the application. Valid values:</p>
-         * <br>
-         * <p>*   enabled: The feature is enabled.</p>
-         * <p>*   disabled: The feature is disabled.</p>
+         * <ul>
+         * <li>enabled: The feature is enabled.</li>
+         * <li>disabled: The feature is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>enabled</p>
          */
         @NameInMap("SsoStatus")
         public String ssoStatus;
