@@ -4,9 +4,19 @@ package com.aliyun.imageseg20191230.models;
 import com.aliyun.tea.*;
 
 public class SegmentHeadRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://viapi-test.oss-cn-shanghai.aliyuncs.com/viapi-3.0domepic/imageseg/SegmentHead/SegmentHead1.jpg">http://viapi-test.oss-cn-shanghai.aliyuncs.com/viapi-3.0domepic/imageseg/SegmentHead/SegmentHead1.jpg</a></p>
+     */
     @NameInMap("ImageURL")
     public String imageURL;
 
+    /**
+     * <strong>example:</strong>
+     * <p>mask</p>
+     */
     @NameInMap("ReturnForm")
     public String returnForm;
 

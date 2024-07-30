@@ -7,6 +7,10 @@ public class SegmentFoodResponseBody extends TeaModel {
     @NameInMap("Data")
     public SegmentFoodResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>38265D08-AD0F-4752-8E96-D1D9FB96C3D9</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +36,10 @@ public class SegmentFoodResponseBody extends TeaModel {
     }
 
     public static class SegmentFoodResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://viapi-cn-shanghai-dha-segmenter.oss-cn-shanghai.aliyuncs.com/upload/foodsegmenter-2020-06-17-15-24-00-8658fc85b8-8ds8k/2020-6-18/invi__015924442076191000002_WqJ99N.png?Expires=1592446007&OSSAccessKeyId=LTAI4FoLmvQ9urWXgSRp****&Signature=5ITSd6ndSuP7pUfoDFpgLPUOGg">http://viapi-cn-shanghai-dha-segmenter.oss-cn-shanghai.aliyuncs.com/upload/foodsegmenter-2020-06-17-15-24-00-8658fc85b8-8ds8k/2020-6-18/invi__015924442076191000002_WqJ99N.png?Expires=1592446007&amp;OSSAccessKeyId=LTAI4FoLmvQ9urWXgSRp****&amp;Signature=5ITSd6ndSuP7pUfoDFpgLPUOGg</a>****</p>
+         */
         @NameInMap("ImageURL")
         public String imageURL;
 

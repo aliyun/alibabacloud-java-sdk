@@ -7,6 +7,10 @@ public class RefineMaskResponseBody extends TeaModel {
     @NameInMap("Data")
     public RefineMaskResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>E948F80B-86D9-54E0-9FF9-ACF3B1DA83C4</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +36,10 @@ public class RefineMaskResponseBody extends TeaModel {
     }
 
     public static class RefineMaskResponseBodyDataElements extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://algo-app-taobao-mm-cn-shanghai-prod.oss-cn-shanghai.aliyuncs.com/pixelai-portrait-beauty%2F2020_03_04%2F61f544a1a5004c88a2bf29452db494e9.jpeg?OSSAccessKeyId=LTAI4Fmdm1gQonFLrghJ****&Expires=1583406122&Signature=Heet1ivG0xFP3YlO6usvd0pmrH">http://algo-app-taobao-mm-cn-shanghai-prod.oss-cn-shanghai.aliyuncs.com/pixelai-portrait-beauty%2F2020_03_04%2F61f544a1a5004c88a2bf29452db494e9.jpeg?OSSAccessKeyId=LTAI4Fmdm1gQonFLrghJ****&amp;Expires=1583406122&amp;Signature=Heet1ivG0xFP3YlO6usvd0pmrH</a>****</p>
+         */
         @NameInMap("ImageURL")
         public String imageURL;
 

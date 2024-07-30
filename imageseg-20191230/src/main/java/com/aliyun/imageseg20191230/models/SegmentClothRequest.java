@@ -7,8 +7,17 @@ public class SegmentClothRequest extends TeaModel {
     @NameInMap("ClothClass")
     public java.util.List<String> clothClass;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://viapi-test.oss-cn-shanghai.aliyuncs.com/viapi-3.0domepic/imageseg/SegmentCloth/SegmentCloth1.jpg">http://viapi-test.oss-cn-shanghai.aliyuncs.com/viapi-3.0domepic/imageseg/SegmentCloth/SegmentCloth1.jpg</a></p>
+     */
     @NameInMap("ImageURL")
     public String imageURL;
+
+    @NameInMap("OutMode")
+    public Long outMode;
 
     @NameInMap("ReturnForm")
     public String returnForm;
@@ -32,6 +41,14 @@ public class SegmentClothRequest extends TeaModel {
     }
     public String getImageURL() {
         return this.imageURL;
+    }
+
+    public SegmentClothRequest setOutMode(Long outMode) {
+        this.outMode = outMode;
+        return this;
+    }
+    public Long getOutMode() {
+        return this.outMode;
     }
 
     public SegmentClothRequest setReturnForm(String returnForm) {

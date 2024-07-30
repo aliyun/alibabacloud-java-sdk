@@ -7,6 +7,10 @@ public class SegmentSkinResponseBody extends TeaModel {
     @NameInMap("Data")
     public SegmentSkinResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DA007354-6CF5-45BE-8333-E06318D848C0</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +36,10 @@ public class SegmentSkinResponseBody extends TeaModel {
     }
 
     public static class SegmentSkinResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://viapi-cn-shanghai-dha-segmenter.oss-cn-shanghai.aliyuncs.com/upload/result_skinsegmenter/2020-9-27/invi_skinsegmenter_016011971641871000001_wQbLq9.jpg?Expires=1601198964&OSSAccessKeyId=LTAI4FoLmvQ9urWXgSRp****&Signature=xjKc%2BScprmB86cxtI%2B1T0R6TlE">http://viapi-cn-shanghai-dha-segmenter.oss-cn-shanghai.aliyuncs.com/upload/result_skinsegmenter/2020-9-27/invi_skinsegmenter_016011971641871000001_wQbLq9.jpg?Expires=1601198964&amp;OSSAccessKeyId=LTAI4FoLmvQ9urWXgSRp****&amp;Signature=xjKc%2BScprmB86cxtI%2B1T0R6TlE</a>****</p>
+         */
         @NameInMap("URL")
         public String URL;
 
