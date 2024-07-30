@@ -1087,6 +1087,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("OwnerId", request.ownerId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.polarSccTimeoutAction)) {
+            query.put("PolarSccTimeoutAction", request.polarSccTimeoutAction);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.polarSccWaitTimeout)) {
+            query.put("PolarSccWaitTimeout", request.polarSccWaitTimeout);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.readWriteMode)) {
             query.put("ReadWriteMode", request.readWriteMode);
         }
@@ -1097,6 +1105,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
             query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sccMode)) {
+            query.put("SccMode", request.sccMode);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -8195,6 +8207,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("OwnerId", request.ownerId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.polarSccTimeoutAction)) {
+            query.put("PolarSccTimeoutAction", request.polarSccTimeoutAction);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.polarSccWaitTimeout)) {
+            query.put("PolarSccWaitTimeout", request.polarSccWaitTimeout);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.readWriteMode)) {
             query.put("ReadWriteMode", request.readWriteMode);
         }
@@ -8205,6 +8225,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
             query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sccMode)) {
+            query.put("SccMode", request.sccMode);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

@@ -1184,6 +1184,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @NameInMap("MemorySize")
         public String memorySize;
 
+        @NameInMap("MirrorInsName")
+        public String mirrorInsName;
+
         @NameInMap("Orca")
         public String orca;
 
@@ -1352,6 +1355,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         }
         public String getMemorySize() {
             return this.memorySize;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyDBNodes setMirrorInsName(String mirrorInsName) {
+            this.mirrorInsName = mirrorInsName;
+            return this;
+        }
+        public String getMirrorInsName() {
+            return this.mirrorInsName;
         }
 
         public DescribeDBClusterAttributeResponseBodyDBNodes setOrca(String orca) {

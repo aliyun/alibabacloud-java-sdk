@@ -305,6 +305,12 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
         @NameInMap("Nodes")
         public String nodes;
 
+        @NameInMap("PolarSccTimeoutAction")
+        public String polarSccTimeoutAction;
+
+        @NameInMap("PolarSccWaitTimeout")
+        public String polarSccWaitTimeout;
+
         /**
          * <p>The read/write mode. Valid values:</p>
          * <ul>
@@ -317,6 +323,9 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
          */
         @NameInMap("ReadWriteMode")
         public String readWriteMode;
+
+        @NameInMap("SccMode")
+        public String sccMode;
 
         public static DescribeDBClusterEndpointsResponseBodyItems build(java.util.Map<String, ?> map) throws Exception {
             DescribeDBClusterEndpointsResponseBodyItems self = new DescribeDBClusterEndpointsResponseBodyItems();
@@ -395,12 +404,36 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
             return this.nodes;
         }
 
+        public DescribeDBClusterEndpointsResponseBodyItems setPolarSccTimeoutAction(String polarSccTimeoutAction) {
+            this.polarSccTimeoutAction = polarSccTimeoutAction;
+            return this;
+        }
+        public String getPolarSccTimeoutAction() {
+            return this.polarSccTimeoutAction;
+        }
+
+        public DescribeDBClusterEndpointsResponseBodyItems setPolarSccWaitTimeout(String polarSccWaitTimeout) {
+            this.polarSccWaitTimeout = polarSccWaitTimeout;
+            return this;
+        }
+        public String getPolarSccWaitTimeout() {
+            return this.polarSccWaitTimeout;
+        }
+
         public DescribeDBClusterEndpointsResponseBodyItems setReadWriteMode(String readWriteMode) {
             this.readWriteMode = readWriteMode;
             return this;
         }
         public String getReadWriteMode() {
             return this.readWriteMode;
+        }
+
+        public DescribeDBClusterEndpointsResponseBodyItems setSccMode(String sccMode) {
+            this.sccMode = sccMode;
+            return this;
+        }
+        public String getSccMode() {
+            return this.sccMode;
         }
 
     }

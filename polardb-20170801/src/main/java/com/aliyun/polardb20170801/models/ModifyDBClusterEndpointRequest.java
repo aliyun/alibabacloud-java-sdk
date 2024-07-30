@@ -156,6 +156,12 @@ public class ModifyDBClusterEndpointRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("PolarSccTimeoutAction")
+    public String polarSccTimeoutAction;
+
+    @NameInMap("PolarSccWaitTimeout")
+    public String polarSccWaitTimeout;
+
     /**
      * <p>The read/write mode. Valid values:</p>
      * <ul>
@@ -174,6 +180,9 @@ public class ModifyDBClusterEndpointRequest extends TeaModel {
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
+
+    @NameInMap("SccMode")
+    public String sccMode;
 
     public static ModifyDBClusterEndpointRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDBClusterEndpointRequest self = new ModifyDBClusterEndpointRequest();
@@ -244,6 +253,22 @@ public class ModifyDBClusterEndpointRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public ModifyDBClusterEndpointRequest setPolarSccTimeoutAction(String polarSccTimeoutAction) {
+        this.polarSccTimeoutAction = polarSccTimeoutAction;
+        return this;
+    }
+    public String getPolarSccTimeoutAction() {
+        return this.polarSccTimeoutAction;
+    }
+
+    public ModifyDBClusterEndpointRequest setPolarSccWaitTimeout(String polarSccWaitTimeout) {
+        this.polarSccWaitTimeout = polarSccWaitTimeout;
+        return this;
+    }
+    public String getPolarSccWaitTimeout() {
+        return this.polarSccWaitTimeout;
+    }
+
     public ModifyDBClusterEndpointRequest setReadWriteMode(String readWriteMode) {
         this.readWriteMode = readWriteMode;
         return this;
@@ -266,6 +291,14 @@ public class ModifyDBClusterEndpointRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public ModifyDBClusterEndpointRequest setSccMode(String sccMode) {
+        this.sccMode = sccMode;
+        return this;
+    }
+    public String getSccMode() {
+        return this.sccMode;
     }
 
 }
