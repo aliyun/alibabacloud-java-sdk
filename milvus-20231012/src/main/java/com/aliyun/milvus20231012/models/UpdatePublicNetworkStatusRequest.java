@@ -4,6 +4,9 @@ package com.aliyun.milvus20231012.models;
 import com.aliyun.tea.*;
 
 public class UpdatePublicNetworkStatusRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Cidr")
     public String cidr;
 
@@ -26,6 +29,8 @@ public class UpdatePublicNetworkStatusRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
