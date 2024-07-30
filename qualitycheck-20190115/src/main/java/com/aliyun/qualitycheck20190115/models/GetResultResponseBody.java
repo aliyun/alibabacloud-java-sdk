@@ -207,6 +207,9 @@ public class GetResultResponseBody extends TeaModel {
         @NameInMap("End")
         public Long end;
 
+        @NameInMap("Identity")
+        public String identity;
+
         @NameInMap("Role")
         public String role;
 
@@ -251,6 +254,14 @@ public class GetResultResponseBody extends TeaModel {
         }
         public Long getEnd() {
             return this.end;
+        }
+
+        public GetResultResponseBodyDataResultInfoAsrResultAsrResult setIdentity(String identity) {
+            this.identity = identity;
+            return this;
+        }
+        public String getIdentity() {
+            return this.identity;
         }
 
         public GetResultResponseBodyDataResultInfoAsrResultAsrResult setRole(String role) {
