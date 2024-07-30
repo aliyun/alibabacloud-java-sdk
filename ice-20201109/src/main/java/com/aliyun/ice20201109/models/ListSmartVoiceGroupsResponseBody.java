@@ -44,6 +44,9 @@ public class ListSmartVoiceGroupsResponseBody extends TeaModel {
         @NameInMap("Remark")
         public String remark;
 
+        @NameInMap("SupportSampleRate")
+        public String supportSampleRate;
+
         @NameInMap("Tag")
         public String tag;
 
@@ -95,6 +98,14 @@ public class ListSmartVoiceGroupsResponseBody extends TeaModel {
         }
         public String getRemark() {
             return this.remark;
+        }
+
+        public ListSmartVoiceGroupsResponseBodyVoiceGroupsVoiceList setSupportSampleRate(String supportSampleRate) {
+            this.supportSampleRate = supportSampleRate;
+            return this;
+        }
+        public String getSupportSampleRate() {
+            return this.supportSampleRate;
         }
 
         public ListSmartVoiceGroupsResponseBodyVoiceGroupsVoiceList setTag(String tag) {
