@@ -5,31 +5,43 @@ import com.aliyun.tea.*;
 
 public class ListDisksResponseBody extends TeaModel {
     /**
-     * <p>Details about the disks.</p>
+     * <p>The queried disks.</p>
      */
     @NameInMap("Disks")
     public java.util.List<ListDisksResponseBodyDisks> disks;
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20758A-585D-4A41-A9B2-28DA8F4F534F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -79,97 +91,197 @@ public class ListDisksResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class ListDisksResponseBodyDisksTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
+         */
+        @NameInMap("Key")
+        public String key;
+
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
+         */
+        @NameInMap("Value")
+        public String value;
+
+        public static ListDisksResponseBodyDisksTags build(java.util.Map<String, ?> map) throws Exception {
+            ListDisksResponseBodyDisksTags self = new ListDisksResponseBodyDisksTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListDisksResponseBodyDisksTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListDisksResponseBodyDisksTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class ListDisksResponseBodyDisks extends TeaModel {
         /**
          * <p>The category of the disk. Valid values:</p>
-         * <br>
-         * <p>*   ESSD: an enhanced SSD (ESSD) at performance level 0 (PL0).</p>
-         * <p>*   SSD: a standard SSD.</p>
+         * <ul>
+         * <li>ESSD: enhanced SSD (ESSD) of PL0</li>
+         * <li>SSD: standard SSD</li>
+         * <li>CLOUD_EFFICIENCY: ultra disk</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ESSD</p>
          */
         @NameInMap("Category")
         public String category;
 
         /**
-         * <p>The time when the disk was created. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The time when the disk was created. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-03-08T05:31:06Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
-         * <p>The device name of the disk on the simple application server.</p>
+         * <p>The device name of the disk after the disk is attached to the simple application server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/dev/xvda</p>
          */
         @NameInMap("Device")
         public String device;
 
         /**
          * <p>The billing method of the disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PrePaid</p>
          */
         @NameInMap("DiskChargeType")
         public String diskChargeType;
 
         /**
-         * <p>The ID of the disk.</p>
+         * <p>The disk ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-bp14wq0149cpp2x****</p>
          */
         @NameInMap("DiskId")
         public String diskId;
 
         /**
          * <p>The name of the disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SystemDisk</p>
          */
         @NameInMap("DiskName")
         public String diskName;
 
         /**
-         * <p>The type of the disk. Valid values:</p>
-         * <br>
-         * <p>*   System: system disk.</p>
-         * <p>*   Data: data disk.</p>
+         * <p>The disk type. Valid values:</p>
+         * <ul>
+         * <li>system: system disk</li>
+         * <li>data: data disk</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>System</p>
          */
         @NameInMap("DiskType")
         public String diskType;
 
         /**
          * <p>The ID of the simple application server to which the disk is attached.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2ad1ae67295445f598017499dc****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>Name of the simple application server.</p>
+         * <p>The name of the simple application server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myInstance</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
-         * <p>The region ID of the disks.</p>
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>Description about the disk.</p>
+         * <p>The remarks of the disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>remark</p>
          */
         @NameInMap("Remark")
         public String remark;
 
         /**
+         * <p>The ID of the resource group to which the disk belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek2bti7cf7****</p>
+         */
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
+        /**
          * <p>The size of the disk. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         @NameInMap("Size")
         public Integer size;
 
         /**
          * <p>The status of the disk. Valid values:</p>
-         * <br>
-         * <p>*   ReIniting: The disk is being initialized.</p>
-         * <p>*   Creating: The disk is being created.</p>
-         * <p>*   In_Use: The disk is being used.</p>
-         * <p>*   Available: The disk can be attached.</p>
-         * <p>*   Attaching: The disk is being attached.</p>
-         * <p>*   Detaching: The disk is being detached.</p>
+         * <ul>
+         * <li>ReIniting: The disk is being initialized.</li>
+         * <li>Creating: The disk is being created.</li>
+         * <li>In_use: The disk is in use.</li>
+         * <li>Available: The disk can be attached.</li>
+         * <li>Attaching: The disk is being attached.</li>
+         * <li>Detaching: The disk is being detached.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>In_use</p>
          */
         @NameInMap("Status")
         public String status;
+
+        /**
+         * <p>The tags that are added to the disks.</p>
+         */
+        @NameInMap("Tags")
+        public java.util.List<ListDisksResponseBodyDisksTags> tags;
 
         public static ListDisksResponseBodyDisks build(java.util.Map<String, ?> map) throws Exception {
             ListDisksResponseBodyDisks self = new ListDisksResponseBodyDisks();
@@ -264,6 +376,14 @@ public class ListDisksResponseBody extends TeaModel {
             return this.remark;
         }
 
+        public ListDisksResponseBodyDisks setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
         public ListDisksResponseBodyDisks setSize(Integer size) {
             this.size = size;
             return this;
@@ -278,6 +398,14 @@ public class ListDisksResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public ListDisksResponseBodyDisks setTags(java.util.List<ListDisksResponseBodyDisksTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListDisksResponseBodyDisksTags> getTags() {
+            return this.tags;
         }
 
     }

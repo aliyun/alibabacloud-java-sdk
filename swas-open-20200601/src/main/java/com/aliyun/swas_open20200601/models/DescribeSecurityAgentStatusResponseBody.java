@@ -6,16 +6,23 @@ import com.aliyun.tea.*;
 public class DescribeSecurityAgentStatusResponseBody extends TeaModel {
     /**
      * <p>The status of the Security Center agent. Valid values:</p>
-     * <br>
-     * <p>*   pause: The Security Center agent suspends protection for your server.</p>
-     * <p>*   online: The Security Center agent is protecting your server.</p>
-     * <p>*   offline: The Security Center agent does not protect your server.</p>
+     * <ul>
+     * <li>pause: The Security Center agent suspends protection for your server.</li>
+     * <li>online: The Security Center agent is protecting your server.</li>
+     * <li>offline: The Security Center agent does not protect your server.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>online</p>
      */
     @NameInMap("ClientStatus")
     public String clientStatus;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20758A-585D-4A41-A9B2-28DA8F4F534F</p>
      */
     @NameInMap("RequestId")
     public String requestId;

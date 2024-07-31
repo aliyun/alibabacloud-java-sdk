@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class ListSnapshotsResponseBody extends TeaModel {
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20758A-585D-4A41-A9B2-28DA8F4F534F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -30,6 +39,9 @@ public class ListSnapshotsResponseBody extends TeaModel {
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -79,81 +91,172 @@ public class ListSnapshotsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class ListSnapshotsResponseBodySnapshotsTags extends TeaModel {
+        /**
+         * <p>The tag key of the snapshot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
+         */
+        @NameInMap("Key")
+        public String key;
+
+        /**
+         * <p>The tag value of the snapshot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
+         */
+        @NameInMap("Value")
+        public String value;
+
+        public static ListSnapshotsResponseBodySnapshotsTags build(java.util.Map<String, ?> map) throws Exception {
+            ListSnapshotsResponseBodySnapshotsTags self = new ListSnapshotsResponseBodySnapshotsTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListSnapshotsResponseBodySnapshotsTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListSnapshotsResponseBodySnapshotsTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class ListSnapshotsResponseBodySnapshots extends TeaModel {
         /**
-         * <p>The time when the snapshot was created. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The time when the snapshot was created. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-03-09T07:12:49Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The ID of the simple application server.</p>
-         * <br>
-         * <p>Note: This parameter has a value for system disk snapshots. This parameter is left empty for data disk snapshots.</p>
+         * <p>Note: This parameter has a value returned for only system disk snapshots.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2ad1ae67295445f598017499dc****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The progress of snapshot creation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100%</p>
          */
         @NameInMap("Progress")
         public String progress;
 
         /**
-         * <p>The region ID of the snapshots.</p>
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The remarks of the snapshot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-Remark</p>
          */
         @NameInMap("Remark")
         public String remark;
 
         /**
+         * <p>The ID of the resource group to which the snapshot belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek2bti7cf7****</p>
+         */
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
+        /**
          * <p>The time when the last disk rollback was performed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-03-09T07:12:49Z</p>
          */
         @NameInMap("RollbackTime")
         public String rollbackTime;
 
         /**
          * <p>The snapshot ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-bp16oazlsold4dks****</p>
          */
         @NameInMap("SnapshotId")
         public String snapshotId;
 
         /**
          * <p>The name of the snapshot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-SnapshotName</p>
          */
         @NameInMap("SnapshotName")
         public String snapshotName;
 
         /**
-         * <p>The ID of the source disk based on which the snapshot is created. This parameter has a value even if the source disk is released.</p>
+         * <p>The ID of the source disk. This parameter has a value even after the source disk is released.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-bp14wq0149cpp2xy****</p>
          */
         @NameInMap("SourceDiskId")
         public String sourceDiskId;
 
         /**
          * <p>The type of the source disk. Valid values:</p>
-         * <br>
-         * <p>*   system: system disk.</p>
-         * <p>*   data: data disk.</p>
+         * <ul>
+         * <li>system: system disk.</li>
+         * <li>data: data disk.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>System</p>
          */
         @NameInMap("SourceDiskType")
         public String sourceDiskType;
 
         /**
          * <p>The status of the snapshot. Valid values:</p>
-         * <br>
-         * <p>*   Progressing: The snapshot is being created.</p>
-         * <p>*   Accomplished: The snapshot is created.</p>
-         * <p>*   Failed: The snapshot failed to be created.</p>
+         * <ul>
+         * <li>Progressing: The snapshot is being created.</li>
+         * <li>Accomplished: The snapshot is created.</li>
+         * <li>Failed: The snapshot failed to be created.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Accomplished</p>
          */
         @NameInMap("Status")
         public String status;
+
+        /**
+         * <p>The tags of the snapshot.</p>
+         */
+        @NameInMap("Tags")
+        public java.util.List<ListSnapshotsResponseBodySnapshotsTags> tags;
 
         public static ListSnapshotsResponseBodySnapshots build(java.util.Map<String, ?> map) throws Exception {
             ListSnapshotsResponseBodySnapshots self = new ListSnapshotsResponseBodySnapshots();
@@ -198,6 +301,14 @@ public class ListSnapshotsResponseBody extends TeaModel {
         }
         public String getRemark() {
             return this.remark;
+        }
+
+        public ListSnapshotsResponseBodySnapshots setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public ListSnapshotsResponseBodySnapshots setRollbackTime(String rollbackTime) {
@@ -246,6 +357,14 @@ public class ListSnapshotsResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public ListSnapshotsResponseBodySnapshots setTags(java.util.List<ListSnapshotsResponseBodySnapshotsTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListSnapshotsResponseBodySnapshotsTags> getTags() {
+            return this.tags;
         }
 
     }

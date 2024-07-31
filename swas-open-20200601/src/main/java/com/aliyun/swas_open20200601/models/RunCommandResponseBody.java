@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class RunCommandResponseBody extends TeaModel {
     /**
      * <p>The execution ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>t-hz02p9545t6****</p>
      */
     @NameInMap("InvokeId")
     public String invokeId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

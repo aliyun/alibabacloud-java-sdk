@@ -6,12 +6,20 @@ import com.aliyun.tea.*;
 public class DescribeDatabaseInstanceParametersRequest extends TeaModel {
     /**
      * <p>The ID of the Simple Database Service instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>db-38263fa955774501a2ae1bdaed6f****</p>
      */
     @NameInMap("DatabaseInstanceId")
     public String databaseInstanceId;
 
     /**
-     * <p>The region ID of the Simple Database Service instance. You can call the [ListRegions](~~189315~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the Simple Database Service instance. You can call the <a href="https://help.aliyun.com/document_detail/189315.html">ListRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

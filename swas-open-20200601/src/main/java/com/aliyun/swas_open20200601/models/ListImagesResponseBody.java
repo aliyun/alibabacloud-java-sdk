@@ -6,15 +6,19 @@ import com.aliyun.tea.*;
 public class ListImagesResponseBody extends TeaModel {
     /**
      * <p>The OS type of the image. Valid values:</p>
-     * <br>
-     * <p>*   Linux</p>
-     * <p>*   Windows</p>
+     * <ul>
+     * <li>Linux</li>
+     * <li>Windows</li>
+     * </ul>
      */
     @NameInMap("Images")
     public java.util.List<ListImagesResponseBodyImages> images;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20758A-585D-4A41-A9B2-28DA8F4F534F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -49,31 +53,45 @@ public class ListImagesResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>794c230fd3e64ea19f83f4d7a0ad****</p>
          */
         @NameInMap("ImageId")
         public String imageId;
 
         /**
          * <p>The name of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WordPress-4.8.1</p>
          */
         @NameInMap("ImageName")
         public String imageName;
 
         /**
          * <p>The type of the image. Valid values:</p>
-         * <br>
-         * <p>*   system</p>
-         * <p>*   app</p>
-         * <p>*   custom</p>
+         * <ul>
+         * <li>system</li>
+         * <li>app</li>
+         * <li>custom</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>app</p>
          */
         @NameInMap("ImageType")
         public String imageType;
 
         /**
          * <p>The operating system type of the image. Valid values:</p>
-         * <br>
-         * <p>*   Linux</p>
-         * <p>*   Windows</p>
+         * <ul>
+         * <li>Linux</li>
+         * <li>Windows</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Linux</p>
          */
         @NameInMap("Platform")
         public String platform;

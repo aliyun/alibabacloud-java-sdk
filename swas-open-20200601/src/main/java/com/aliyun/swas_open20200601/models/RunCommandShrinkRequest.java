@@ -6,99 +6,136 @@ import com.aliyun.tea.*;
 public class RunCommandShrinkRequest extends TeaModel {
     /**
      * <p>The content of the command. Take note of the following items:</p>
-     * <br>
-     * <p>*   If you set `EnableParameter` to true, the custom parameter feature is enabled in the command content and you can configure custom parameters based on the following rules:</p>
-     * <p>*   Define custom parameters in the {{}} format. Within `{{}}`, the spaces and line feeds before and after the parameter names are ignored.</p>
-     * <p>*   The number of custom parameters cannot be greater than 20.</p>
-     * <p>*   A custom parameter name can contain only letters, digits, underscores (\_), and hyphens (-). The name is case-insensitive.</p>
-     * <p>*   Each custom parameter name cannot exceed 64 bytes in length.</p>
+     * <ul>
+     * <li>If you set <code>EnableParameter</code> to true, the custom parameter feature is enabled in the command content and you can configure custom parameters based on the following rules:</li>
+     * <li>Define custom parameters in the {{}} format. Within <code>{{}}</code>, the spaces and line feeds before and after the parameter names are ignored.</li>
+     * <li>The number of custom parameters cannot be greater than 20.</li>
+     * <li>A custom parameter name can contain only letters, digits, underscores (_), and hyphens (-). The name is case-insensitive.</li>
+     * <li>Each custom parameter name cannot exceed 64 bytes in length.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ifconfig -s</p>
      */
     @NameInMap("CommandContent")
     public String commandContent;
 
     /**
      * <p>Specifies whether to enable the custom parameter feature.</p>
-     * <br>
      * <p>Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("EnableParameter")
     public Boolean enableParameter;
 
     /**
      * <p>The ID of the simple application server.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ace0706b2ac4454d984295a94213****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The name of the command.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testName</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The custom parameters in the key-value pair format that are to be passed in when the command includes custom parameters. For example, if the command content is `echo {{name}}`, you can use `Parameters` to pass in the `{"name":"Jack"}` key-value pair. The `name` key of the custom parameter is automatically replaced with the paired Jack value to generate a new command. As a result, the `echo Jack` command is executed.</p>
-     * <br>
+     * <p>The custom parameters in the key-value pair format that are to be passed in when the command includes custom parameters. For example, if the command content is <code>echo {{name}}</code>, you can use <code>Parameters</code> to pass in the <code>{&quot;name&quot;:&quot;Jack&quot;}</code> key-value pair. The <code>name</code> key of the custom parameter is automatically replaced with the paired Jack value to generate a new command. As a result, the <code>echo Jack</code> command is executed.</p>
      * <p>Number of custom parameters ranges from 0 to 20. Take note of the following items:</p>
-     * <br>
-     * <p>*   The key cannot be an empty string. It can be up to 64 characters in length.</p>
-     * <p>*   The value can be an empty string.</p>
-     * <p>*   After custom parameters and original command content are encoded in Base64, the command cannot exceed 16 KB in size.</p>
-     * <p>*   The custom parameter names that are specified by Parameters must be included in the custom parameter names that you specified when you created the command. You can use empty strings to represent the parameters that are not passed in.</p>
-     * <br>
+     * <ul>
+     * <li>The key cannot be an empty string. It can be up to 64 characters in length.</li>
+     * <li>The value can be an empty string.</li>
+     * <li>After custom parameters and original command content are encoded in Base64, the command cannot exceed 16 KB in size.</li>
+     * <li>The custom parameter names that are specified by Parameters must be included in the custom parameter names that you specified when you created the command. You can use empty strings to represent the parameters that are not passed in.</li>
+     * </ul>
      * <p>This parameter is empty by default, which indicates to disable the custom parameter feature.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;name&quot;:&quot;Jack&quot;, &quot;accessKey&quot;:&quot;LTAIdyvdIqaRY****&quot;}</p>
      */
     @NameInMap("Parameters")
     public String parametersShrink;
 
     /**
-     * <p>The region ID of the simple application server. You can call the [ListRegions](~~189315~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the simple application server. You can call the <a href="https://help.aliyun.com/document_detail/189315.html">ListRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The timeout period of the command on the server.</p>
-     * <br>
      * <p>If a command execution task times out, Command Assistant forcibly terminates the task process. Valid values: 10 to 86400. Unit: seconds. The period of 86400 seconds is equal to 24 hours.</p>
-     * <br>
      * <p>Default value: 60.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60</p>
      */
     @NameInMap("Timeout")
     public Integer timeout;
 
     /**
      * <p>The language type of the command. Valid values:</p>
-     * <br>
-     * <p>*   RunBatScript: batch commands (applicable to Windows servers).</p>
-     * <p>*   RunPowerShellScript: PowerShell commands (applicable to Windows servers).</p>
-     * <p>*   RunShellScript: shell commands (applicable to Linux servers).</p>
+     * <ul>
+     * <li>RunBatScript: batch commands (applicable to Windows servers).</li>
+     * <li>RunPowerShellScript: PowerShell commands (applicable to Windows servers).</li>
+     * <li>RunShellScript: shell commands (applicable to Linux servers).</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RunShellScript</p>
      */
     @NameInMap("Type")
     public String type;
 
     /**
      * <p>The name of the password to be used to run the command on a Windows server.</p>
-     * <br>
-     * <p>If you want to use a username other than the default "system" username to run the command on a Windows server, you must specify both the WindowsPasswordName and WorkingUser parameters. To mitigate the risk of password leaks, the password is stored in plaintext in Operation Orchestration Service (OOS) Parameter Store, and only the name of the password is passed in by using WindowsPasswordName.</p>
+     * <p>If you want to use a username other than the default &quot;system&quot; username to run the command on a Windows server, you must specify both the WindowsPasswordName and WorkingUser parameters. To mitigate the risk of password leaks, the password is stored in plaintext in Operation Orchestration Service (OOS) Parameter Store, and only the name of the password is passed in by using WindowsPasswordName.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>axtSecretPassword</p>
      */
     @NameInMap("WindowsPasswordName")
     public String windowsPasswordName;
 
     /**
-     * <p>The execution path of the command. You can specify a value for the parameter. Default execution paths vary based on the operating systems of the servers.</p>
-     * <br>
-     * <p>*   For Linux servers, the default execution path is the /home directory of the root user.</p>
-     * <p>*   For Windows servers, the default execution path is C:\Windows\system32.</p>
+     * <p>The execution path of the command. Custom paths are supported. Default execution paths vary based on the operating systems of the servers.</p>
+     * <ul>
+     * <li>For Linux servers, the default path is /root of the root user.</li>
+     * <li>For Windows servers, the default path is C:\Windows\system32.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>/home/</p>
      */
     @NameInMap("WorkingDir")
     public String workingDir;
 
     /**
      * <p>A user of the server who runs the command. We recommend that you run the command as a regular user to reduce security risks. Default values:</p>
-     * <br>
-     * <p>*   For Linux servers, the default value is root.</p>
-     * <p>*   For Windows servers, the default value is system.</p>
+     * <ul>
+     * <li>For Linux servers, the default value is root.</li>
+     * <li>For Windows servers, the default value is system.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>root</p>
      */
     @NameInMap("WorkingUser")
     public String workingUser;

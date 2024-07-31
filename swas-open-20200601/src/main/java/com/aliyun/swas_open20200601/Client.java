@@ -27,13 +27,73 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * By default, no public endpoints are assigned to Simple Database Service instances. If you want to access the databases of a Simple Database Service instance over the Internet by using Simple Container Service or Data Management (DMS), you must apply for a public endpoint for the Simple Database Service instance.
-      * ### QPS limit
-      * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~347607~~).
-      *
-      * @param request AllocatePublicConnectionRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return AllocatePublicConnectionResponse
+     * <b>summary</b> : 
+     * <p>共享镜像给用户</p>
+     * 
+     * @param request AddCustomImageShareAccountRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AddCustomImageShareAccountResponse
+     */
+    public AddCustomImageShareAccountResponse addCustomImageShareAccountWithOptions(AddCustomImageShareAccountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.account)) {
+            query.put("Account", request.account);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageId)) {
+            query.put("ImageId", request.imageId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AddCustomImageShareAccount"),
+            new TeaPair("version", "2020-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AddCustomImageShareAccountResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>共享镜像给用户</p>
+     * 
+     * @param request AddCustomImageShareAccountRequest
+     * @return AddCustomImageShareAccountResponse
+     */
+    public AddCustomImageShareAccountResponse addCustomImageShareAccount(AddCustomImageShareAccountRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.addCustomImageShareAccountWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>By default, no public endpoints are assigned to Simple Database Service instances. If you want to access the databases of a Simple Database Service instance over the Internet by using Simple Container Service or Data Management (DMS), you must apply for a public endpoint for the Simple Database Service instance.</p>
+     * <h3>QPS limit</h3>
+     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Applies for a public endpoint for a Simple Database Service instance.</p>
+     * 
+     * @param request AllocatePublicConnectionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AllocatePublicConnectionResponse
      */
     public AllocatePublicConnectionResponse allocatePublicConnectionWithOptions(AllocatePublicConnectionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -68,18 +128,158 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * By default, no public endpoints are assigned to Simple Database Service instances. If you want to access the databases of a Simple Database Service instance over the Internet by using Simple Container Service or Data Management (DMS), you must apply for a public endpoint for the Simple Database Service instance.
-      * ### QPS limit
-      * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~347607~~).
-      *
-      * @param request AllocatePublicConnectionRequest
-      * @return AllocatePublicConnectionResponse
+     * <b>description</b> :
+     * <p>By default, no public endpoints are assigned to Simple Database Service instances. If you want to access the databases of a Simple Database Service instance over the Internet by using Simple Container Service or Data Management (DMS), you must apply for a public endpoint for the Simple Database Service instance.</p>
+     * <h3>QPS limit</h3>
+     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Applies for a public endpoint for a Simple Database Service instance.</p>
+     * 
+     * @param request AllocatePublicConnectionRequest
+     * @return AllocatePublicConnectionResponse
      */
     public AllocatePublicConnectionResponse allocatePublicConnection(AllocatePublicConnectionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.allocatePublicConnectionWithOptions(request, runtime);
     }
 
+    /**
+     * <b>description</b> :
+     * <p>If the port range, protocol, and source IP address of a firewall rule in a firewall template are the same as the port range, protocol, and source IP address of an existing rule, the new rule overwrites the existing rule regardless of whether the existing rule is enabled or disabled.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Uses a firewall template to apply firewall rules to multiple simple application servers at a time. This improves your efficiency of setting firewall rules.</p>
+     * 
+     * @param request ApplyFirewallTemplateRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ApplyFirewallTemplateResponse
+     */
+    public ApplyFirewallTemplateResponse applyFirewallTemplateWithOptions(ApplyFirewallTemplateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.firewallTemplateId)) {
+            query.put("FirewallTemplateId", request.firewallTemplateId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceIds)) {
+            query.put("InstanceIds", request.instanceIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ApplyFirewallTemplate"),
+            new TeaPair("version", "2020-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ApplyFirewallTemplateResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>If the port range, protocol, and source IP address of a firewall rule in a firewall template are the same as the port range, protocol, and source IP address of an existing rule, the new rule overwrites the existing rule regardless of whether the existing rule is enabled or disabled.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Uses a firewall template to apply firewall rules to multiple simple application servers at a time. This improves your efficiency of setting firewall rules.</p>
+     * 
+     * @param request ApplyFirewallTemplateRequest
+     * @return ApplyFirewallTemplateResponse
+     */
+    public ApplyFirewallTemplateResponse applyFirewallTemplate(ApplyFirewallTemplateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.applyFirewallTemplateWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>You can bind only one key pair to a simple application server in the Simple Application Server console. If a simple application server has a key pair bound, the new key pair overwrites the original key pair.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Binds a key pair to simple application servers.</p>
+     * 
+     * @param request AttachKeyPairRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AttachKeyPairResponse
+     */
+    public AttachKeyPairResponse attachKeyPairWithOptions(AttachKeyPairRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceIds)) {
+            query.put("InstanceIds", request.instanceIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.keyPairName)) {
+            query.put("KeyPairName", request.keyPairName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AttachKeyPair"),
+            new TeaPair("version", "2020-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AttachKeyPairResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>You can bind only one key pair to a simple application server in the Simple Application Server console. If a simple application server has a key pair bound, the new key pair overwrites the original key pair.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Binds a key pair to simple application servers.</p>
+     * 
+     * @param request AttachKeyPairRequest
+     * @return AttachKeyPairResponse
+     */
+    public AttachKeyPairResponse attachKeyPair(AttachKeyPairRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.attachKeyPairWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a Cloud Assistant command.</p>
+     * 
+     * @param request CreateCommandRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateCommandResponse
+     */
     public CreateCommandResponse createCommandWithOptions(CreateCommandRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -101,6 +301,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.timeout)) {
@@ -132,27 +340,42 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateCommandResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a Cloud Assistant command.</p>
+     * 
+     * @param request CreateCommandRequest
+     * @return CreateCommandResponse
+     */
     public CreateCommandResponse createCommand(CreateCommandRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createCommandWithOptions(request, runtime);
     }
 
     /**
-      * A custom image is created based on a snapshot of a simple application server. You can use a custom image to create multiple simple application servers that have the same configurations. You can also share custom images to ECS and use the shared images to create ECS instances or replace the OSs of existing ECS instances. For more information about custom images, see [Overview of custom images](~~199375~~).
-      * You must create a system disk snapshot of a simple application server before you create a custom image based on the snapshot. For more information, see [CreateSnapshot](~~190452~~).
-      * > If you need the data on the data disk of a simple application server when you create a custom image, create a snapshot for the data disk first.
-      * Before you create a custom image, take note of the following items:
-      * *   The custom image and the corresponding simple application server must reside in the same region.
-      * *   The maximum number of custom images that can be maintained in an Alibaba Cloud account is triple the number of simple application servers in the account. The value cannot be greater than 15.
-      * *   You can directly create a custom image only based on the system disk snapshot of a simple application server. If you want a custom image to contain the data on the data disk of the simple application server, you must select a data disk snapshot when you create the custom image.
-      * *   If a simple application server is released due to expiration or refunds, the custom images that are created based on a snapshot of the server are also released.
-      * *   If you reset a simple application server by changing the application system or OS of the server or replacing the image of the server, the disk data on the server is cleared. Back up the disk data as needed.
-      * ### QPS limit
-      * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~347607~~).
-      *
-      * @param request CreateCustomImageRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return CreateCustomImageResponse
+     * <b>description</b> :
+     * <p>A custom image is created based on a snapshot of a simple application server. You can use a custom image to create multiple simple application servers that have the same configurations. You can also share custom images to ECS and use the shared images to create ECS instances or replace the OSs of existing ECS instances. For more information about custom images, see <a href="https://help.aliyun.com/document_detail/199375.html">Overview of custom images</a>.
+     * You must create a system disk snapshot of a simple application server before you create a custom image based on the snapshot. For more information, see <a href="https://help.aliyun.com/document_detail/190452.html">CreateSnapshot</a>.</p>
+     * <blockquote>
+     * <p>If you need the data on the data disk of a simple application server when you create a custom image, create a snapshot for the data disk first.
+     * Before you create a custom image, take note of the following items:</p>
+     * </blockquote>
+     * <ul>
+     * <li>The custom image and the corresponding simple application server must reside in the same region.</li>
+     * <li>The maximum number of custom images that can be maintained in an Alibaba Cloud account is triple the number of simple application servers in the account. The value cannot be greater than 15.</li>
+     * <li>You can directly create a custom image only based on the system disk snapshot of a simple application server. If you want a custom image to contain the data on the data disk of the simple application server, you must select a data disk snapshot when you create the custom image.</li>
+     * <li>If a simple application server is released due to expiration or refunds, the custom images that are created based on a snapshot of the server are also released.</li>
+     * <li>If you reset a simple application server by changing the application system or OS of the server or replacing the image of the server, the disk data on the server is cleared. Back up the disk data as needed.</li>
+     * </ul>
+     * <h3>QPS limit</h3>
+     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a custom image based on a snapshot of a simple application server.</p>
+     * 
+     * @param request CreateCustomImageRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateCustomImageResponse
      */
     public CreateCustomImageResponse createCustomImageWithOptions(CreateCustomImageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -181,8 +404,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resoureGroupId)) {
+            query.put("ResoureGroupId", request.resoureGroupId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.systemSnapshotId)) {
             query.put("SystemSnapshotId", request.systemSnapshotId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -203,20 +434,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * A custom image is created based on a snapshot of a simple application server. You can use a custom image to create multiple simple application servers that have the same configurations. You can also share custom images to ECS and use the shared images to create ECS instances or replace the OSs of existing ECS instances. For more information about custom images, see [Overview of custom images](~~199375~~).
-      * You must create a system disk snapshot of a simple application server before you create a custom image based on the snapshot. For more information, see [CreateSnapshot](~~190452~~).
-      * > If you need the data on the data disk of a simple application server when you create a custom image, create a snapshot for the data disk first.
-      * Before you create a custom image, take note of the following items:
-      * *   The custom image and the corresponding simple application server must reside in the same region.
-      * *   The maximum number of custom images that can be maintained in an Alibaba Cloud account is triple the number of simple application servers in the account. The value cannot be greater than 15.
-      * *   You can directly create a custom image only based on the system disk snapshot of a simple application server. If you want a custom image to contain the data on the data disk of the simple application server, you must select a data disk snapshot when you create the custom image.
-      * *   If a simple application server is released due to expiration or refunds, the custom images that are created based on a snapshot of the server are also released.
-      * *   If you reset a simple application server by changing the application system or OS of the server or replacing the image of the server, the disk data on the server is cleared. Back up the disk data as needed.
-      * ### QPS limit
-      * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~347607~~).
-      *
-      * @param request CreateCustomImageRequest
-      * @return CreateCustomImageResponse
+     * <b>description</b> :
+     * <p>A custom image is created based on a snapshot of a simple application server. You can use a custom image to create multiple simple application servers that have the same configurations. You can also share custom images to ECS and use the shared images to create ECS instances or replace the OSs of existing ECS instances. For more information about custom images, see <a href="https://help.aliyun.com/document_detail/199375.html">Overview of custom images</a>.
+     * You must create a system disk snapshot of a simple application server before you create a custom image based on the snapshot. For more information, see <a href="https://help.aliyun.com/document_detail/190452.html">CreateSnapshot</a>.</p>
+     * <blockquote>
+     * <p>If you need the data on the data disk of a simple application server when you create a custom image, create a snapshot for the data disk first.
+     * Before you create a custom image, take note of the following items:</p>
+     * </blockquote>
+     * <ul>
+     * <li>The custom image and the corresponding simple application server must reside in the same region.</li>
+     * <li>The maximum number of custom images that can be maintained in an Alibaba Cloud account is triple the number of simple application servers in the account. The value cannot be greater than 15.</li>
+     * <li>You can directly create a custom image only based on the system disk snapshot of a simple application server. If you want a custom image to contain the data on the data disk of the simple application server, you must select a data disk snapshot when you create the custom image.</li>
+     * <li>If a simple application server is released due to expiration or refunds, the custom images that are created based on a snapshot of the server are also released.</li>
+     * <li>If you reset a simple application server by changing the application system or OS of the server or replacing the image of the server, the disk data on the server is cleared. Back up the disk data as needed.</li>
+     * </ul>
+     * <h3>QPS limit</h3>
+     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a custom image based on a snapshot of a simple application server.</p>
+     * 
+     * @param request CreateCustomImageRequest
+     * @return CreateCustomImageResponse
      */
     public CreateCustomImageResponse createCustomImage(CreateCustomImageRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -224,13 +463,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Firewalls serve to control network access to simple application servers and isolate security domains in the cloud. By default, SSH port 22, HTTP port 80, and HTTPS port 443 are enabled for simple application servers. Other ports are disabled. You can add firewall rules to enable more ports.
-      * ### QPS limits
-      * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~347607~~).
-      *
-      * @param request CreateFirewallRuleRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return CreateFirewallRuleResponse
+     * <b>description</b> :
+     * <p>Firewalls serve to control network access to simple application servers and isolate security domains in the cloud. By default, SSH port 22, HTTP port 80, and HTTPS port 443 are enabled for simple application servers. Other ports are disabled. You can add firewall rules to enable more ports.</p>
+     * <h3>QPS limits</h3>
+     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a firewall rule for a simple application server.</p>
+     * 
+     * @param request CreateFirewallRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateFirewallRuleResponse
      */
     public CreateFirewallRuleResponse createFirewallRuleWithOptions(CreateFirewallRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -277,12 +520,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Firewalls serve to control network access to simple application servers and isolate security domains in the cloud. By default, SSH port 22, HTTP port 80, and HTTPS port 443 are enabled for simple application servers. Other ports are disabled. You can add firewall rules to enable more ports.
-      * ### QPS limits
-      * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~347607~~).
-      *
-      * @param request CreateFirewallRuleRequest
-      * @return CreateFirewallRuleResponse
+     * <b>description</b> :
+     * <p>Firewalls serve to control network access to simple application servers and isolate security domains in the cloud. By default, SSH port 22, HTTP port 80, and HTTPS port 443 are enabled for simple application servers. Other ports are disabled. You can add firewall rules to enable more ports.</p>
+     * <h3>QPS limits</h3>
+     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a firewall rule for a simple application server.</p>
+     * 
+     * @param request CreateFirewallRuleRequest
+     * @return CreateFirewallRuleResponse
      */
     public CreateFirewallRuleResponse createFirewallRule(CreateFirewallRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -290,11 +537,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Firewalls serve to control network access to simple application servers and isolate security domains in the cloud. By default, SSH port 22, HTTP port 80, and HTTPS port 443 are enabled for simple application servers. Other ports are disabled. You can add firewall rules to enable more ports.
-      *
-      * @param tmpReq CreateFirewallRulesRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return CreateFirewallRulesResponse
+     * <b>description</b> :
+     * <p>Firewalls serve to control network access to simple application servers and isolate security domains in the cloud. By default, SSH port 22, HTTP port 80, and HTTPS port 443 are enabled for simple application servers. Other ports are disabled. You can add firewall rules to enable more ports.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates multiple firewall rules for a simple application server at a time.</p>
+     * 
+     * @param tmpReq CreateFirewallRulesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateFirewallRulesResponse
      */
     public CreateFirewallRulesResponse createFirewallRulesWithOptions(CreateFirewallRulesRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
@@ -321,6 +572,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -339,16 +594,148 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Firewalls serve to control network access to simple application servers and isolate security domains in the cloud. By default, SSH port 22, HTTP port 80, and HTTPS port 443 are enabled for simple application servers. Other ports are disabled. You can add firewall rules to enable more ports.
-      *
-      * @param request CreateFirewallRulesRequest
-      * @return CreateFirewallRulesResponse
+     * <b>description</b> :
+     * <p>Firewalls serve to control network access to simple application servers and isolate security domains in the cloud. By default, SSH port 22, HTTP port 80, and HTTPS port 443 are enabled for simple application servers. Other ports are disabled. You can add firewall rules to enable more ports.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates multiple firewall rules for a simple application server at a time.</p>
+     * 
+     * @param request CreateFirewallRulesRequest
+     * @return CreateFirewallRulesResponse
      */
     public CreateFirewallRulesResponse createFirewallRules(CreateFirewallRulesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createFirewallRulesWithOptions(request, runtime);
     }
 
+    /**
+     * <b>description</b> :
+     * <p>Simple Application Server supports the firewall template feature that provides multiple firewall rules. You can use a template to add a group of firewall rules to one or more simple application servers at a time. This improves the efficiency of setting firewall rules.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a firewall template.</p>
+     * 
+     * @param request CreateFirewallTemplateRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateFirewallTemplateResponse
+     */
+    public CreateFirewallTemplateResponse createFirewallTemplateWithOptions(CreateFirewallTemplateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.firewallRule)) {
+            query.put("FirewallRule", request.firewallRule);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateFirewallTemplate"),
+            new TeaPair("version", "2020-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateFirewallTemplateResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Simple Application Server supports the firewall template feature that provides multiple firewall rules. You can use a template to add a group of firewall rules to one or more simple application servers at a time. This improves the efficiency of setting firewall rules.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a firewall template.</p>
+     * 
+     * @param request CreateFirewallTemplateRequest
+     * @return CreateFirewallTemplateResponse
+     */
+    public CreateFirewallTemplateResponse createFirewallTemplate(CreateFirewallTemplateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createFirewallTemplateWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Adding firewall rules to a firewall template does not affect the firewall rules that have been applied to simple application servers..</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Adds firewall rules to a firewall template based on your business requirements.</p>
+     * 
+     * @param request CreateFirewallTemplateRulesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateFirewallTemplateRulesResponse
+     */
+    public CreateFirewallTemplateRulesResponse createFirewallTemplateRulesWithOptions(CreateFirewallTemplateRulesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.firewallRule)) {
+            query.put("FirewallRule", request.firewallRule);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.firewallTemplateId)) {
+            query.put("FirewallTemplateId", request.firewallTemplateId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateFirewallTemplateRules"),
+            new TeaPair("version", "2020-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateFirewallTemplateRulesResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Adding firewall rules to a firewall template does not affect the firewall rules that have been applied to simple application servers..</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Adds firewall rules to a firewall template based on your business requirements.</p>
+     * 
+     * @param request CreateFirewallTemplateRulesRequest
+     * @return CreateFirewallTemplateRulesResponse
+     */
+    public CreateFirewallTemplateRulesResponse createFirewallTemplateRules(CreateFirewallTemplateRulesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createFirewallTemplateRulesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a key pair for a simple application server.</p>
+     * 
+     * @param request CreateInstanceKeyPairRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateInstanceKeyPairResponse
+     */
     public CreateInstanceKeyPairResponse createInstanceKeyPairWithOptions(CreateInstanceKeyPairRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -385,21 +772,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateInstanceKeyPairResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a key pair for a simple application server.</p>
+     * 
+     * @param request CreateInstanceKeyPairRequest
+     * @return CreateInstanceKeyPairResponse
+     */
     public CreateInstanceKeyPairResponse createInstanceKeyPair(CreateInstanceKeyPairRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createInstanceKeyPairWithOptions(request, runtime);
     }
 
     /**
-      * *   Before you call this operation, we recommend that you understand the billing of Simple Application Server. For more information, see [Billable items](~~58623~~).
-      * *   A maximum of 20 simple application servers can be maintained in an Alibaba Cloud account.
-      * *   When you call this operation to create simple application servers, make sure that the balance in your account is sufficient to pay for the servers. If the balance in your account is insufficient, the servers cannot be created.
-      * ### QPS limit
-      * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~347607~~).
-      *
-      * @param request CreateInstancesRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return CreateInstancesResponse
+     * <b>description</b> :
+     * <p>  Before you call this operation, we recommend that you understand the billing of Simple Application Server. For more information, see <a href="https://help.aliyun.com/document_detail/58623.html">Billable items</a>.</p>
+     * <ul>
+     * <li>A maximum of 20 simple application servers can be maintained in an Alibaba Cloud account.</li>
+     * <li>When you call this operation to create simple application servers, make sure that the balance in your account is sufficient to pay for the servers. If the balance in your account is insufficient, the servers cannot be created.</li>
+     * </ul>
+     * <h3>QPS limit</h3>
+     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates subscription simple application servers.</p>
+     * 
+     * @param request CreateInstancesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateInstancesResponse
      */
     public CreateInstancesResponse createInstancesWithOptions(CreateInstancesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -462,14 +862,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   Before you call this operation, we recommend that you understand the billing of Simple Application Server. For more information, see [Billable items](~~58623~~).
-      * *   A maximum of 20 simple application servers can be maintained in an Alibaba Cloud account.
-      * *   When you call this operation to create simple application servers, make sure that the balance in your account is sufficient to pay for the servers. If the balance in your account is insufficient, the servers cannot be created.
-      * ### QPS limit
-      * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~347607~~).
-      *
-      * @param request CreateInstancesRequest
-      * @return CreateInstancesResponse
+     * <b>description</b> :
+     * <p>  Before you call this operation, we recommend that you understand the billing of Simple Application Server. For more information, see <a href="https://help.aliyun.com/document_detail/58623.html">Billable items</a>.</p>
+     * <ul>
+     * <li>A maximum of 20 simple application servers can be maintained in an Alibaba Cloud account.</li>
+     * <li>When you call this operation to create simple application servers, make sure that the balance in your account is sufficient to pay for the servers. If the balance in your account is insufficient, the servers cannot be created.</li>
+     * </ul>
+     * <h3>QPS limit</h3>
+     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates subscription simple application servers.</p>
+     * 
+     * @param request CreateInstancesRequest
+     * @return CreateInstancesResponse
      */
     public CreateInstancesResponse createInstances(CreateInstancesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -477,19 +883,95 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * A snapshot is a point-in-time backup of a disk. Snapshots can be used to back up data, recover data after accidental operations on instances, recover data after network attacks, and create custom images.
-      * > You are not charged for creating snapshots for disks of simple application servers.
-      * ### Precautions
-      * *   You can create up to three snapshots for disks of each simple application server.
-      * *   The maximum number of snapshots that can be retained in an Alibaba Cloud account is triple the number of simple application servers that you maintain. The value cannot be greater than 15.
-      * *   If a simple application server is automatically released due to expiration, the snapshots created for the server are deleted.
-      * *   If you reset the simple application server after you create a snapshot for a server, the snapshot is retained but cannot be used to roll back the disks of the server.
-      * ### QPS limit
-      * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~347607~~).
-      *
-      * @param request CreateSnapshotRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return CreateSnapshotResponse
+     * <b>description</b> :
+     * <p>Alibaba Cloud SSH key pairs offer a secure and efficient logon authentication mechanism, facilitating both verification and encrypted communication within the SSH protocol framework. An SSH key pair is essentially constituted by a public key and a private key. Tailored for Linux-based simple application servers, this security measure enhances security and convenience, effectively addressing your heightened security requirements.</p>
+     * <ul>
+     * <li>The key pair logon method is only valid for Linux-based simple application servers.</li>
+     * <li>A maximum of 10 key pairs can be created in a region for an Alibaba Cloud account.</li>
+     * <li>Only RSA 2048-bit key pairs can be created in the Simple Application Server console.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a key pair.</p>
+     * 
+     * @param request CreateKeyPairRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateKeyPairResponse
+     */
+    public CreateKeyPairResponse createKeyPairWithOptions(CreateKeyPairRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.keyPairName)) {
+            query.put("KeyPairName", request.keyPairName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateKeyPair"),
+            new TeaPair("version", "2020-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateKeyPairResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Alibaba Cloud SSH key pairs offer a secure and efficient logon authentication mechanism, facilitating both verification and encrypted communication within the SSH protocol framework. An SSH key pair is essentially constituted by a public key and a private key. Tailored for Linux-based simple application servers, this security measure enhances security and convenience, effectively addressing your heightened security requirements.</p>
+     * <ul>
+     * <li>The key pair logon method is only valid for Linux-based simple application servers.</li>
+     * <li>A maximum of 10 key pairs can be created in a region for an Alibaba Cloud account.</li>
+     * <li>Only RSA 2048-bit key pairs can be created in the Simple Application Server console.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a key pair.</p>
+     * 
+     * @param request CreateKeyPairRequest
+     * @return CreateKeyPairResponse
+     */
+    public CreateKeyPairResponse createKeyPair(CreateKeyPairRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createKeyPairWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>A snapshot is a point-in-time backup of a disk. Snapshots can be used to back up data, recover data after accidental operations on instances, recover data after network attacks, and create custom images.</p>
+     * <blockquote>
+     * <p>You are not charged for creating snapshots for disks of simple application servers.</p>
+     * </blockquote>
+     * <h3>Precautions</h3>
+     * <ul>
+     * <li>You can create up to three snapshots for disks of each simple application server.</li>
+     * <li>The maximum number of snapshots that can be retained in an Alibaba Cloud account is triple the number of simple application servers that you maintain. The value cannot be greater than 15.</li>
+     * <li>If a simple application server is automatically released due to expiration, the snapshots created for the server are deleted.</li>
+     * <li>If you reset the simple application server after you create a snapshot for a server, the snapshot is retained but cannot be used to roll back the disks of the server.</li>
+     * </ul>
+     * <h3>QPS limit</h3>
+     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a snapshot for a disk.</p>
+     * 
+     * @param request CreateSnapshotRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateSnapshotResponse
      */
     public CreateSnapshotResponse createSnapshotWithOptions(CreateSnapshotRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -506,8 +988,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.snapshotName)) {
             query.put("SnapshotName", request.snapshotName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -528,24 +1018,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * A snapshot is a point-in-time backup of a disk. Snapshots can be used to back up data, recover data after accidental operations on instances, recover data after network attacks, and create custom images.
-      * > You are not charged for creating snapshots for disks of simple application servers.
-      * ### Precautions
-      * *   You can create up to three snapshots for disks of each simple application server.
-      * *   The maximum number of snapshots that can be retained in an Alibaba Cloud account is triple the number of simple application servers that you maintain. The value cannot be greater than 15.
-      * *   If a simple application server is automatically released due to expiration, the snapshots created for the server are deleted.
-      * *   If you reset the simple application server after you create a snapshot for a server, the snapshot is retained but cannot be used to roll back the disks of the server.
-      * ### QPS limit
-      * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~347607~~).
-      *
-      * @param request CreateSnapshotRequest
-      * @return CreateSnapshotResponse
+     * <b>description</b> :
+     * <p>A snapshot is a point-in-time backup of a disk. Snapshots can be used to back up data, recover data after accidental operations on instances, recover data after network attacks, and create custom images.</p>
+     * <blockquote>
+     * <p>You are not charged for creating snapshots for disks of simple application servers.</p>
+     * </blockquote>
+     * <h3>Precautions</h3>
+     * <ul>
+     * <li>You can create up to three snapshots for disks of each simple application server.</li>
+     * <li>The maximum number of snapshots that can be retained in an Alibaba Cloud account is triple the number of simple application servers that you maintain. The value cannot be greater than 15.</li>
+     * <li>If a simple application server is automatically released due to expiration, the snapshots created for the server are deleted.</li>
+     * <li>If you reset the simple application server after you create a snapshot for a server, the snapshot is retained but cannot be used to roll back the disks of the server.</li>
+     * </ul>
+     * <h3>QPS limit</h3>
+     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a snapshot for a disk.</p>
+     * 
+     * @param request CreateSnapshotRequest
+     * @return CreateSnapshotResponse
      */
     public CreateSnapshotResponse createSnapshot(CreateSnapshotRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createSnapshotWithOptions(request, runtime);
     }
 
+    /**
+     * <b>description</b> :
+     * <p>You cannot delete commands that are being run.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a Command Assistant command.</p>
+     * 
+     * @param request DeleteCommandRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteCommandResponse
+     */
     public DeleteCommandResponse deleteCommandWithOptions(DeleteCommandRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -574,20 +1083,36 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteCommandResponse());
     }
 
+    /**
+     * <b>description</b> :
+     * <p>You cannot delete commands that are being run.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a Command Assistant command.</p>
+     * 
+     * @param request DeleteCommandRequest
+     * @return DeleteCommandResponse
+     */
     public DeleteCommandResponse deleteCommand(DeleteCommandRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteCommandWithOptions(request, runtime);
     }
 
     /**
-      * You can delete a custom image that you no longer need. After the custom image is deleted, you cannot use the custom image to reset the simple application servers that were created based on the custom image.
-      * > If a custom image is shared to Elastic Compute Service (ECS), you must unshare the image before you can delete it. After you unshare the custom image, you cannot query the custom image by using the ECS console or by calling ECS API operations. If you need to use the custom image in ECS, we recommend that you copy the image before you delete it. For more information, see [Copy a shared image of a simple application server in the ECS console](~~199378~~).
-      * ### QPS limit
-      * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~347607~~).
-      *
-      * @param request DeleteCustomImageRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DeleteCustomImageResponse
+     * <b>description</b> :
+     * <p>You can delete a custom image that you no longer need. After the custom image is deleted, you cannot use the custom image to reset the simple application servers that were created based on the custom image.</p>
+     * <blockquote>
+     * <p>If a custom image is shared to Elastic Compute Service (ECS), you must unshare the image before you can delete it. After you unshare the custom image, you cannot query the custom image by using the ECS console or by calling ECS API operations. If you need to use the custom image in ECS, we recommend that you copy the image before you delete it. For more information, see <a href="https://help.aliyun.com/document_detail/199378.html">Copy a shared image of a simple application server in the ECS console</a>.</p>
+     * </blockquote>
+     * <h3>QPS limit</h3>
+     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a custom image.</p>
+     * 
+     * @param request DeleteCustomImageRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteCustomImageResponse
      */
     public DeleteCustomImageResponse deleteCustomImageWithOptions(DeleteCustomImageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -622,13 +1147,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can delete a custom image that you no longer need. After the custom image is deleted, you cannot use the custom image to reset the simple application servers that were created based on the custom image.
-      * > If a custom image is shared to Elastic Compute Service (ECS), you must unshare the image before you can delete it. After you unshare the custom image, you cannot query the custom image by using the ECS console or by calling ECS API operations. If you need to use the custom image in ECS, we recommend that you copy the image before you delete it. For more information, see [Copy a shared image of a simple application server in the ECS console](~~199378~~).
-      * ### QPS limit
-      * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~347607~~).
-      *
-      * @param request DeleteCustomImageRequest
-      * @return DeleteCustomImageResponse
+     * <b>description</b> :
+     * <p>You can delete a custom image that you no longer need. After the custom image is deleted, you cannot use the custom image to reset the simple application servers that were created based on the custom image.</p>
+     * <blockquote>
+     * <p>If a custom image is shared to Elastic Compute Service (ECS), you must unshare the image before you can delete it. After you unshare the custom image, you cannot query the custom image by using the ECS console or by calling ECS API operations. If you need to use the custom image in ECS, we recommend that you copy the image before you delete it. For more information, see <a href="https://help.aliyun.com/document_detail/199378.html">Copy a shared image of a simple application server in the ECS console</a>.</p>
+     * </blockquote>
+     * <h3>QPS limit</h3>
+     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a custom image.</p>
+     * 
+     * @param request DeleteCustomImageRequest
+     * @return DeleteCustomImageResponse
      */
     public DeleteCustomImageResponse deleteCustomImage(DeleteCustomImageRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -636,13 +1167,75 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * After a firewall rule is deleted, your business deployed on the simple application server may become inaccessible. Before you delete a firewall rule, make sure that the firewall rule is no longer needed by the simple application server.
-      * ### QPS limit
-      * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~347607~~).
-      *
-      * @param request DeleteFirewallRuleRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DeleteFirewallRuleResponse
+     * <b>description</b> :
+     * <p>If a custom image is shared, you must unshare the image before you can delete it. After a custom image is unshared, you cannot query the custom image by using the Elastic Compute Service (ECS) console or by calling an ECS API operation. If you want to use a custom image to create ECS instances, we recommend that you copy the custom image before you delete it. For more information, see the &quot;Copy custom images&quot; topic.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes custom images. If you no longer require a custom image, you can call this operation to delete the custom image. You can also call this operation to delete multiple custom images at the same time. After a custom image is deleted, you cannot use the custom image to reset the simple application servers that were created based on the custom image.</p>
+     * 
+     * @param request DeleteCustomImagesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteCustomImagesResponse
+     */
+    public DeleteCustomImagesResponse deleteCustomImagesWithOptions(DeleteCustomImagesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageIds)) {
+            query.put("ImageIds", request.imageIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteCustomImages"),
+            new TeaPair("version", "2020-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteCustomImagesResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>If a custom image is shared, you must unshare the image before you can delete it. After a custom image is unshared, you cannot query the custom image by using the Elastic Compute Service (ECS) console or by calling an ECS API operation. If you want to use a custom image to create ECS instances, we recommend that you copy the custom image before you delete it. For more information, see the &quot;Copy custom images&quot; topic.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes custom images. If you no longer require a custom image, you can call this operation to delete the custom image. You can also call this operation to delete multiple custom images at the same time. After a custom image is deleted, you cannot use the custom image to reset the simple application servers that were created based on the custom image.</p>
+     * 
+     * @param request DeleteCustomImagesRequest
+     * @return DeleteCustomImagesResponse
+     */
+    public DeleteCustomImagesResponse deleteCustomImages(DeleteCustomImagesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteCustomImagesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>After a firewall rule is deleted, your business deployed on the simple application server may become inaccessible. Before you delete a firewall rule, make sure that the firewall rule is no longer needed by the simple application server.</p>
+     * <h3>QPS limit</h3>
+     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a firewall rule of a simple application server.</p>
+     * 
+     * @param request DeleteFirewallRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteFirewallRuleResponse
      */
     public DeleteFirewallRuleResponse deleteFirewallRuleWithOptions(DeleteFirewallRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -681,18 +1274,226 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * After a firewall rule is deleted, your business deployed on the simple application server may become inaccessible. Before you delete a firewall rule, make sure that the firewall rule is no longer needed by the simple application server.
-      * ### QPS limit
-      * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~347607~~).
-      *
-      * @param request DeleteFirewallRuleRequest
-      * @return DeleteFirewallRuleResponse
+     * <b>description</b> :
+     * <p>After a firewall rule is deleted, your business deployed on the simple application server may become inaccessible. Before you delete a firewall rule, make sure that the firewall rule is no longer needed by the simple application server.</p>
+     * <h3>QPS limit</h3>
+     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a firewall rule of a simple application server.</p>
+     * 
+     * @param request DeleteFirewallRuleRequest
+     * @return DeleteFirewallRuleResponse
      */
     public DeleteFirewallRuleResponse deleteFirewallRule(DeleteFirewallRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteFirewallRuleWithOptions(request, runtime);
     }
 
+    /**
+     * <b>description</b> :
+     * <p>After a firewall rule is deleted, your business deployed on the simple application server may become inaccessible. Before you delete a firewall rule, make sure that the firewall rule is no longer needed by the simple application server.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes multiple firewall rules of a simple application server.</p>
+     * 
+     * @param tmpReq DeleteFirewallRulesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteFirewallRulesResponse
+     */
+    public DeleteFirewallRulesResponse deleteFirewallRulesWithOptions(DeleteFirewallRulesRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DeleteFirewallRulesShrinkRequest request = new DeleteFirewallRulesShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.ruleIds)) {
+            request.ruleIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.ruleIds, "RuleIds", "simple");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleIdsShrink)) {
+            query.put("RuleIds", request.ruleIdsShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteFirewallRules"),
+            new TeaPair("version", "2020-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteFirewallRulesResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>After a firewall rule is deleted, your business deployed on the simple application server may become inaccessible. Before you delete a firewall rule, make sure that the firewall rule is no longer needed by the simple application server.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes multiple firewall rules of a simple application server.</p>
+     * 
+     * @param request DeleteFirewallRulesRequest
+     * @return DeleteFirewallRulesResponse
+     */
+    public DeleteFirewallRulesResponse deleteFirewallRules(DeleteFirewallRulesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteFirewallRulesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Deletion of firewall rules does not affect the firewall rules that have been applied to simple application servers.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes firewall rules from a firewall template based on your requirements.</p>
+     * 
+     * @param request DeleteFirewallTemplateRulesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteFirewallTemplateRulesResponse
+     */
+    public DeleteFirewallTemplateRulesResponse deleteFirewallTemplateRulesWithOptions(DeleteFirewallTemplateRulesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.firewallTemplateId)) {
+            query.put("FirewallTemplateId", request.firewallTemplateId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.firewallTemplateRuleId)) {
+            query.put("FirewallTemplateRuleId", request.firewallTemplateRuleId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteFirewallTemplateRules"),
+            new TeaPair("version", "2020-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteFirewallTemplateRulesResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Deletion of firewall rules does not affect the firewall rules that have been applied to simple application servers.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes firewall rules from a firewall template based on your requirements.</p>
+     * 
+     * @param request DeleteFirewallTemplateRulesRequest
+     * @return DeleteFirewallTemplateRulesResponse
+     */
+    public DeleteFirewallTemplateRulesResponse deleteFirewallTemplateRules(DeleteFirewallTemplateRulesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteFirewallTemplateRulesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Deleting a firewall template does not affect the firewall rules that have been applied to simple application servers. You can delete firewall templates that you no longer need.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes firewall templates from a simple application server.</p>
+     * 
+     * @param request DeleteFirewallTemplatesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteFirewallTemplatesResponse
+     */
+    public DeleteFirewallTemplatesResponse deleteFirewallTemplatesWithOptions(DeleteFirewallTemplatesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.firewallTemplateId)) {
+            query.put("FirewallTemplateId", request.firewallTemplateId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteFirewallTemplates"),
+            new TeaPair("version", "2020-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteFirewallTemplatesResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Deleting a firewall template does not affect the firewall rules that have been applied to simple application servers. You can delete firewall templates that you no longer need.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes firewall templates from a simple application server.</p>
+     * 
+     * @param request DeleteFirewallTemplatesRequest
+     * @return DeleteFirewallTemplatesResponse
+     */
+    public DeleteFirewallTemplatesResponse deleteFirewallTemplates(DeleteFirewallTemplatesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteFirewallTemplatesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes the key pair of a simple application server.</p>
+     * 
+     * @param request DeleteInstanceKeyPairRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteInstanceKeyPairResponse
+     */
     public DeleteInstanceKeyPairResponse deleteInstanceKeyPairWithOptions(DeleteInstanceKeyPairRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -725,20 +1526,91 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteInstanceKeyPairResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes the key pair of a simple application server.</p>
+     * 
+     * @param request DeleteInstanceKeyPairRequest
+     * @return DeleteInstanceKeyPairResponse
+     */
     public DeleteInstanceKeyPairResponse deleteInstanceKeyPair(DeleteInstanceKeyPairRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteInstanceKeyPairWithOptions(request, runtime);
     }
 
     /**
-      * You can delete a snapshot if you no longer need it.
-      * > If a custom image was created based on the snapshot, delete the custom image before you delete the snapshot.
-      * ### QPS limit
-      * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~347607~~).
-      *
-      * @param request DeleteSnapshotRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DeleteSnapshotResponse
+     * <b>description</b> :
+     * <p>You must unbind SSH key pairs that you no longer use from simple application servers before you delete the SSH key pairs.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes the SSH key pairs of simple application servers.</p>
+     * 
+     * @param request DeleteKeyPairsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteKeyPairsResponse
+     */
+    public DeleteKeyPairsResponse deleteKeyPairsWithOptions(DeleteKeyPairsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.keyPairNames)) {
+            query.put("KeyPairNames", request.keyPairNames);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteKeyPairs"),
+            new TeaPair("version", "2020-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteKeyPairsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>You must unbind SSH key pairs that you no longer use from simple application servers before you delete the SSH key pairs.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes the SSH key pairs of simple application servers.</p>
+     * 
+     * @param request DeleteKeyPairsRequest
+     * @return DeleteKeyPairsResponse
+     */
+    public DeleteKeyPairsResponse deleteKeyPairs(DeleteKeyPairsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteKeyPairsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>You can delete a snapshot if you no longer need it.</p>
+     * <blockquote>
+     * <p>If a custom image was created based on the snapshot, delete the custom image before you delete the snapshot.</p>
+     * </blockquote>
+     * <h3>QPS limit</h3>
+     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a snapshot of a simple application server.</p>
+     * 
+     * @param request DeleteSnapshotRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteSnapshotResponse
      */
     public DeleteSnapshotResponse deleteSnapshotWithOptions(DeleteSnapshotRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -773,19 +1645,33 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can delete a snapshot if you no longer need it.
-      * > If a custom image was created based on the snapshot, delete the custom image before you delete the snapshot.
-      * ### QPS limit
-      * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~347607~~).
-      *
-      * @param request DeleteSnapshotRequest
-      * @return DeleteSnapshotResponse
+     * <b>description</b> :
+     * <p>You can delete a snapshot if you no longer need it.</p>
+     * <blockquote>
+     * <p>If a custom image was created based on the snapshot, delete the custom image before you delete the snapshot.</p>
+     * </blockquote>
+     * <h3>QPS limit</h3>
+     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a snapshot of a simple application server.</p>
+     * 
+     * @param request DeleteSnapshotRequest
+     * @return DeleteSnapshotResponse
      */
     public DeleteSnapshotResponse deleteSnapshot(DeleteSnapshotRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteSnapshotWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes snapshots of a simple application server.</p>
+     * 
+     * @param request DeleteSnapshotsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteSnapshotsResponse
+     */
     public DeleteSnapshotsResponse deleteSnapshotsWithOptions(DeleteSnapshotsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -818,17 +1704,90 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteSnapshotsResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes snapshots of a simple application server.</p>
+     * 
+     * @param request DeleteSnapshotsRequest
+     * @return DeleteSnapshotsResponse
+     */
     public DeleteSnapshotsResponse deleteSnapshots(DeleteSnapshotsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteSnapshotsWithOptions(request, runtime);
     }
 
     /**
-      * By default, the Cloud Assistant client is installed on simple application servers. If you have manually uninstalled the client, you must reinstall the client. Otherwise, you cannot run commands on the servers.
-      *
-      * @param tmpReq DescribeCloudAssistantStatusRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DescribeCloudAssistantStatusResponse
+     * <b>summary</b> : 
+     * <p>Queries the Command Assistant information of simple application servers.</p>
+     * 
+     * @param tmpReq DescribeCloudAssistantAttributesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeCloudAssistantAttributesResponse
+     */
+    public DescribeCloudAssistantAttributesResponse describeCloudAssistantAttributesWithOptions(DescribeCloudAssistantAttributesRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DescribeCloudAssistantAttributesShrinkRequest request = new DescribeCloudAssistantAttributesShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.instanceIds)) {
+            request.instanceIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.instanceIds, "InstanceIds", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceIdsShrink)) {
+            query.put("InstanceIds", request.instanceIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeCloudAssistantAttributes"),
+            new TeaPair("version", "2020-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeCloudAssistantAttributesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the Command Assistant information of simple application servers.</p>
+     * 
+     * @param request DescribeCloudAssistantAttributesRequest
+     * @return DescribeCloudAssistantAttributesResponse
+     */
+    public DescribeCloudAssistantAttributesResponse describeCloudAssistantAttributes(DescribeCloudAssistantAttributesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeCloudAssistantAttributesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>By default, the Cloud Assistant client is installed on simple application servers. If you have manually uninstalled the client, you must reinstall the client. Otherwise, you cannot run commands on the servers.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries whether the Cloud Assistant client is installed on simple application servers.</p>
+     * 
+     * @param tmpReq DescribeCloudAssistantStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeCloudAssistantStatusResponse
      */
     public DescribeCloudAssistantStatusResponse describeCloudAssistantStatusWithOptions(DescribeCloudAssistantStatusRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
@@ -873,16 +1832,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * By default, the Cloud Assistant client is installed on simple application servers. If you have manually uninstalled the client, you must reinstall the client. Otherwise, you cannot run commands on the servers.
-      *
-      * @param request DescribeCloudAssistantStatusRequest
-      * @return DescribeCloudAssistantStatusResponse
+     * <b>description</b> :
+     * <p>By default, the Cloud Assistant client is installed on simple application servers. If you have manually uninstalled the client, you must reinstall the client. Otherwise, you cannot run commands on the servers.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries whether the Cloud Assistant client is installed on simple application servers.</p>
+     * 
+     * @param request DescribeCloudAssistantStatusRequest
+     * @return DescribeCloudAssistantStatusResponse
      */
     public DescribeCloudAssistantStatusResponse describeCloudAssistantStatus(DescribeCloudAssistantStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeCloudAssistantStatusWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the status of the CloudMonitor agent on simple application servers.</p>
+     * 
+     * @param request DescribeCloudMonitorAgentStatusesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeCloudMonitorAgentStatusesResponse
+     */
     public DescribeCloudMonitorAgentStatusesResponse describeCloudMonitorAgentStatusesWithOptions(DescribeCloudMonitorAgentStatusesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -915,11 +1886,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeCloudMonitorAgentStatusesResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the status of the CloudMonitor agent on simple application servers.</p>
+     * 
+     * @param request DescribeCloudMonitorAgentStatusesRequest
+     * @return DescribeCloudMonitorAgentStatusesResponse
+     */
     public DescribeCloudMonitorAgentStatusesResponse describeCloudMonitorAgentStatuses(DescribeCloudMonitorAgentStatusesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeCloudMonitorAgentStatusesWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the executions and execution status of a Cloud Assistant command.</p>
+     * 
+     * @param request DescribeCommandInvocationsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeCommandInvocationsResponse
+     */
     public DescribeCommandInvocationsResponse describeCommandInvocationsWithOptions(DescribeCommandInvocationsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -976,11 +1962,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeCommandInvocationsResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the executions and execution status of a Cloud Assistant command.</p>
+     * 
+     * @param request DescribeCommandInvocationsRequest
+     * @return DescribeCommandInvocationsResponse
+     */
     public DescribeCommandInvocationsResponse describeCommandInvocations(DescribeCommandInvocationsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeCommandInvocationsWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the commands that you created or the common commands that Alibaba Cloud provides.</p>
+     * 
+     * @param request DescribeCommandsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeCommandsResponse
+     */
     public DescribeCommandsResponse describeCommandsWithOptions(DescribeCommandsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1008,6 +2009,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.type)) {
             query.put("Type", request.type);
         }
@@ -1029,18 +2038,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeCommandsResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the commands that you created or the common commands that Alibaba Cloud provides.</p>
+     * 
+     * @param request DescribeCommandsRequest
+     * @return DescribeCommandsResponse
+     */
     public DescribeCommandsResponse describeCommands(DescribeCommandsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeCommandsWithOptions(request, runtime);
     }
 
     /**
-      * You can call this operation to query the error logs of databases in a Simple Database Service instance and locate faults based on the error logs.
-      * \\### QPS limit You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~347607~~).
-      *
-      * @param request DescribeDatabaseErrorLogsRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DescribeDatabaseErrorLogsResponse
+     * <b>description</b> :
+     * <p>You can call this operation to query the error logs of databases in a Simple Database Service instance and locate faults based on the error logs.
+     * \### QPS limit You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries error logs of databases in a Simple Database Service instance.</p>
+     * 
+     * @param request DescribeDatabaseErrorLogsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeDatabaseErrorLogsResponse
      */
     public DescribeDatabaseErrorLogsResponse describeDatabaseErrorLogsWithOptions(DescribeDatabaseErrorLogsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1087,11 +2107,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation to query the error logs of databases in a Simple Database Service instance and locate faults based on the error logs.
-      * \\### QPS limit You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~347607~~).
-      *
-      * @param request DescribeDatabaseErrorLogsRequest
-      * @return DescribeDatabaseErrorLogsResponse
+     * <b>description</b> :
+     * <p>You can call this operation to query the error logs of databases in a Simple Database Service instance and locate faults based on the error logs.
+     * \### QPS limit You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries error logs of databases in a Simple Database Service instance.</p>
+     * 
+     * @param request DescribeDatabaseErrorLogsRequest
+     * @return DescribeDatabaseErrorLogsResponse
      */
     public DescribeDatabaseErrorLogsResponse describeDatabaseErrorLogs(DescribeDatabaseErrorLogsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -1099,13 +2123,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * After you create a Simple Database Service instance, you can query the details about the vCPU, memory, disk size, storage IOPS (input/output operations per second), and total current connection number of the instance.
-      * ### QPS limit
-      * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~347607~~).
-      *
-      * @param request DescribeDatabaseInstanceMetricDataRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DescribeDatabaseInstanceMetricDataResponse
+     * <b>description</b> :
+     * <p>After you create a Simple Database Service instance, you can query the details about the vCPU, memory, disk size, storage IOPS (input/output operations per second), and total current connection number of the instance.</p>
+     * <h3>QPS limit</h3>
+     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the monitoring information about a Simple Database Service instance.</p>
+     * 
+     * @param request DescribeDatabaseInstanceMetricDataRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeDatabaseInstanceMetricDataResponse
      */
     public DescribeDatabaseInstanceMetricDataResponse describeDatabaseInstanceMetricDataWithOptions(DescribeDatabaseInstanceMetricDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1148,12 +2176,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * After you create a Simple Database Service instance, you can query the details about the vCPU, memory, disk size, storage IOPS (input/output operations per second), and total current connection number of the instance.
-      * ### QPS limit
-      * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~347607~~).
-      *
-      * @param request DescribeDatabaseInstanceMetricDataRequest
-      * @return DescribeDatabaseInstanceMetricDataResponse
+     * <b>description</b> :
+     * <p>After you create a Simple Database Service instance, you can query the details about the vCPU, memory, disk size, storage IOPS (input/output operations per second), and total current connection number of the instance.</p>
+     * <h3>QPS limit</h3>
+     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the monitoring information about a Simple Database Service instance.</p>
+     * 
+     * @param request DescribeDatabaseInstanceMetricDataRequest
+     * @return DescribeDatabaseInstanceMetricDataResponse
      */
     public DescribeDatabaseInstanceMetricDataResponse describeDatabaseInstanceMetricData(DescribeDatabaseInstanceMetricDataRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -1161,11 +2193,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation to query the information about parameters of a Simple Database Service instance.
-      *
-      * @param request DescribeDatabaseInstanceParametersRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DescribeDatabaseInstanceParametersResponse
+     * <b>description</b> :
+     * <p>You can call this operation to query the information about parameters of a Simple Database Service instance.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the parameters of a Simple Database Service instance.</p>
+     * 
+     * @param request DescribeDatabaseInstanceParametersRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeDatabaseInstanceParametersResponse
      */
     public DescribeDatabaseInstanceParametersResponse describeDatabaseInstanceParametersWithOptions(DescribeDatabaseInstanceParametersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1196,10 +2232,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation to query the information about parameters of a Simple Database Service instance.
-      *
-      * @param request DescribeDatabaseInstanceParametersRequest
-      * @return DescribeDatabaseInstanceParametersResponse
+     * <b>description</b> :
+     * <p>You can call this operation to query the information about parameters of a Simple Database Service instance.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the parameters of a Simple Database Service instance.</p>
+     * 
+     * @param request DescribeDatabaseInstanceParametersRequest
+     * @return DescribeDatabaseInstanceParametersResponse
      */
     public DescribeDatabaseInstanceParametersResponse describeDatabaseInstanceParameters(DescribeDatabaseInstanceParametersRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -1207,13 +2247,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation to query the details of Simple Database Service instances in a region, including the IDs, names, plans, database versions, public endpoint, internal endpoint, creation time, and expiration time of the instances.
-      * ### QPS limit
-      * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~347607~~).
-      *
-      * @param request DescribeDatabaseInstancesRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DescribeDatabaseInstancesResponse
+     * <b>description</b> :
+     * <p>You can call this operation to query the details of Simple Database Service instances in a region, including the IDs, names, plans, database versions, public endpoint, internal endpoint, creation time, and expiration time of the instances.</p>
+     * <h3>QPS limit</h3>
+     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information about Simple Database Service instances.</p>
+     * 
+     * @param request DescribeDatabaseInstancesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeDatabaseInstancesResponse
      */
     public DescribeDatabaseInstancesResponse describeDatabaseInstancesWithOptions(DescribeDatabaseInstancesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1252,12 +2296,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation to query the details of Simple Database Service instances in a region, including the IDs, names, plans, database versions, public endpoint, internal endpoint, creation time, and expiration time of the instances.
-      * ### QPS limit
-      * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~347607~~).
-      *
-      * @param request DescribeDatabaseInstancesRequest
-      * @return DescribeDatabaseInstancesResponse
+     * <b>description</b> :
+     * <p>You can call this operation to query the details of Simple Database Service instances in a region, including the IDs, names, plans, database versions, public endpoint, internal endpoint, creation time, and expiration time of the instances.</p>
+     * <h3>QPS limit</h3>
+     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information about Simple Database Service instances.</p>
+     * 
+     * @param request DescribeDatabaseInstancesRequest
+     * @return DescribeDatabaseInstancesResponse
      */
     public DescribeDatabaseInstancesResponse describeDatabaseInstances(DescribeDatabaseInstancesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -1265,22 +2313,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can query the slow query log details of a Simple Database Service instance and locate faults based on the log details.
-      * > Slow query log details are retained for 7 days.
-      * ### QPS limit
-      * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~347607~~).
-      *
-      * @param request DescribeDatabaseSlowLogRecordsRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DescribeDatabaseSlowLogRecordsResponse
+     * <b>description</b> :
+     * <p>You can query the slow query log details of a Simple Database Service instance and locate faults based on the log details.</p>
+     * <blockquote>
+     * <p>Slow query log details are retained for 7 days.</p>
+     * </blockquote>
+     * <h3>QPS limit</h3>
+     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the slow query log details of a Simple Database Service instance.</p>
+     * 
+     * @param request DescribeDatabaseSlowLogRecordsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeDatabaseSlowLogRecordsResponse
      */
     public DescribeDatabaseSlowLogRecordsResponse describeDatabaseSlowLogRecordsWithOptions(DescribeDatabaseSlowLogRecordsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.acsProduct)) {
-            query.put("AcsProduct", request.acsProduct);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.databaseInstanceId)) {
             query.put("DatabaseInstanceId", request.databaseInstanceId);
         }
@@ -1323,19 +2373,221 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can query the slow query log details of a Simple Database Service instance and locate faults based on the log details.
-      * > Slow query log details are retained for 7 days.
-      * ### QPS limit
-      * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~347607~~).
-      *
-      * @param request DescribeDatabaseSlowLogRecordsRequest
-      * @return DescribeDatabaseSlowLogRecordsResponse
+     * <b>description</b> :
+     * <p>You can query the slow query log details of a Simple Database Service instance and locate faults based on the log details.</p>
+     * <blockquote>
+     * <p>Slow query log details are retained for 7 days.</p>
+     * </blockquote>
+     * <h3>QPS limit</h3>
+     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the slow query log details of a Simple Database Service instance.</p>
+     * 
+     * @param request DescribeDatabaseSlowLogRecordsRequest
+     * @return DescribeDatabaseSlowLogRecordsResponse
      */
     public DescribeDatabaseSlowLogRecordsResponse describeDatabaseSlowLogRecords(DescribeDatabaseSlowLogRecordsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDatabaseSlowLogRecordsWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the result of applying a firewall template to simple application servers.</p>
+     * 
+     * @param request DescribeFirewallTemplateApplyResultsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeFirewallTemplateApplyResultsResponse
+     */
+    public DescribeFirewallTemplateApplyResultsResponse describeFirewallTemplateApplyResultsWithOptions(DescribeFirewallTemplateApplyResultsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.firewallTemplateId)) {
+            query.put("FirewallTemplateId", request.firewallTemplateId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            query.put("TaskId", request.taskId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeFirewallTemplateApplyResults"),
+            new TeaPair("version", "2020-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeFirewallTemplateApplyResultsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the result of applying a firewall template to simple application servers.</p>
+     * 
+     * @param request DescribeFirewallTemplateApplyResultsRequest
+     * @return DescribeFirewallTemplateApplyResultsResponse
+     */
+    public DescribeFirewallTemplateApplyResultsResponse describeFirewallTemplateApplyResults(DescribeFirewallTemplateApplyResultsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeFirewallTemplateApplyResultsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the result of applying a firewall template rule to simple application servers.</p>
+     * 
+     * @param request DescribeFirewallTemplateRulesApplyResultRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeFirewallTemplateRulesApplyResultResponse
+     */
+    public DescribeFirewallTemplateRulesApplyResultResponse describeFirewallTemplateRulesApplyResultWithOptions(DescribeFirewallTemplateRulesApplyResultRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.firewallTemplateId)) {
+            query.put("FirewallTemplateId", request.firewallTemplateId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            query.put("TaskId", request.taskId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeFirewallTemplateRulesApplyResult"),
+            new TeaPair("version", "2020-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeFirewallTemplateRulesApplyResultResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the result of applying a firewall template rule to simple application servers.</p>
+     * 
+     * @param request DescribeFirewallTemplateRulesApplyResultRequest
+     * @return DescribeFirewallTemplateRulesApplyResultResponse
+     */
+    public DescribeFirewallTemplateRulesApplyResultResponse describeFirewallTemplateRulesApplyResult(DescribeFirewallTemplateRulesApplyResultRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeFirewallTemplateRulesApplyResultWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries details about firewall templates.</p>
+     * 
+     * @param request DescribeFirewallTemplatesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeFirewallTemplatesResponse
+     */
+    public DescribeFirewallTemplatesResponse describeFirewallTemplatesWithOptions(DescribeFirewallTemplatesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.firewallTemplateId)) {
+            query.put("FirewallTemplateId", request.firewallTemplateId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeFirewallTemplates"),
+            new TeaPair("version", "2020-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeFirewallTemplatesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries details about firewall templates.</p>
+     * 
+     * @param request DescribeFirewallTemplatesRequest
+     * @return DescribeFirewallTemplatesResponse
+     */
+    public DescribeFirewallTemplatesResponse describeFirewallTemplates(DescribeFirewallTemplatesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeFirewallTemplatesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries information about the key pair of a simple application server.</p>
+     * 
+     * @param request DescribeInstanceKeyPairRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeInstanceKeyPairResponse
+     */
     public DescribeInstanceKeyPairResponse describeInstanceKeyPairWithOptions(DescribeInstanceKeyPairRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1368,11 +2620,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeInstanceKeyPairResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries information about the key pair of a simple application server.</p>
+     * 
+     * @param request DescribeInstanceKeyPairRequest
+     * @return DescribeInstanceKeyPairResponse
+     */
     public DescribeInstanceKeyPairResponse describeInstanceKeyPair(DescribeInstanceKeyPairRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeInstanceKeyPairWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Checks whether a password is set for a simple application server.</p>
+     * 
+     * @param request DescribeInstancePasswordsSettingRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeInstancePasswordsSettingResponse
+     */
     public DescribeInstancePasswordsSettingResponse describeInstancePasswordsSettingWithOptions(DescribeInstancePasswordsSettingRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1405,11 +2672,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeInstancePasswordsSettingResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Checks whether a password is set for a simple application server.</p>
+     * 
+     * @param request DescribeInstancePasswordsSettingRequest
+     * @return DescribeInstancePasswordsSettingResponse
+     */
     public DescribeInstancePasswordsSettingResponse describeInstancePasswordsSetting(DescribeInstancePasswordsSettingRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeInstancePasswordsSettingWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the VNC connection address of a simple application server.</p>
+     * 
+     * @param request DescribeInstanceVncUrlRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeInstanceVncUrlResponse
+     */
     public DescribeInstanceVncUrlResponse describeInstanceVncUrlWithOptions(DescribeInstanceVncUrlRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1442,18 +2724,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeInstanceVncUrlResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the VNC connection address of a simple application server.</p>
+     * 
+     * @param request DescribeInstanceVncUrlRequest
+     * @return DescribeInstanceVncUrlResponse
+     */
     public DescribeInstanceVncUrlResponse describeInstanceVncUrl(DescribeInstanceVncUrlRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeInstanceVncUrlWithOptions(request, runtime);
     }
 
     /**
-      * *   After you execute a command, the command may not succeed or return the expected results. You can call this operation to query the execution result of a command.
-      * *   You can query the execution results that were generated within the last two weeks. A maximum of 100,000 entries of execution results can be retained.
-      *
-      * @param request DescribeInvocationResultRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DescribeInvocationResultResponse
+     * <b>description</b> :
+     * <p>  After you execute a command, the command may not succeed or return the expected results. You can call this operation to query the execution result of a command.</p>
+     * <ul>
+     * <li>You can query the execution results that were generated within the last two weeks. A maximum of 100,000 entries of execution results can be retained.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the execution result of a command.</p>
+     * 
+     * @param request DescribeInvocationResultRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeInvocationResultResponse
      */
     public DescribeInvocationResultResponse describeInvocationResultWithOptions(DescribeInvocationResultRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1488,11 +2783,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   After you execute a command, the command may not succeed or return the expected results. You can call this operation to query the execution result of a command.
-      * *   You can query the execution results that were generated within the last two weeks. A maximum of 100,000 entries of execution results can be retained.
-      *
-      * @param request DescribeInvocationResultRequest
-      * @return DescribeInvocationResultResponse
+     * <b>description</b> :
+     * <p>  After you execute a command, the command may not succeed or return the expected results. You can call this operation to query the execution result of a command.</p>
+     * <ul>
+     * <li>You can query the execution results that were generated within the last two weeks. A maximum of 100,000 entries of execution results can be retained.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the execution result of a command.</p>
+     * 
+     * @param request DescribeInvocationResultRequest
+     * @return DescribeInvocationResultResponse
      */
     public DescribeInvocationResultResponse describeInvocationResult(DescribeInvocationResultRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -1500,12 +2801,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   After you execute a command, the command may not succeed or return the expected results. You can call this operation to query the actual execution results.
-      * *   You can query the execution results that were generated within the last two weeks. Up to 100,000 entries of execution results can be retained.
-      *
-      * @param request DescribeInvocationsRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DescribeInvocationsResponse
+     * <b>description</b> :
+     * <p>  After you execute a command, the command may not succeed or return the expected results. You can call this operation to query the actual execution results.</p>
+     * <ul>
+     * <li>You can query the execution results that were generated within the last two weeks. Up to 100,000 entries of execution results can be retained.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries details about command execution.</p>
+     * 
+     * @param request DescribeInvocationsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeInvocationsResponse
      */
     public DescribeInvocationsResponse describeInvocationsWithOptions(DescribeInvocationsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1548,17 +2855,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   After you execute a command, the command may not succeed or return the expected results. You can call this operation to query the actual execution results.
-      * *   You can query the execution results that were generated within the last two weeks. Up to 100,000 entries of execution results can be retained.
-      *
-      * @param request DescribeInvocationsRequest
-      * @return DescribeInvocationsResponse
+     * <b>description</b> :
+     * <p>  After you execute a command, the command may not succeed or return the expected results. You can call this operation to query the actual execution results.</p>
+     * <ul>
+     * <li>You can query the execution results that were generated within the last two weeks. Up to 100,000 entries of execution results can be retained.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries details about command execution.</p>
+     * 
+     * @param request DescribeInvocationsRequest
+     * @return DescribeInvocationsResponse
      */
     public DescribeInvocationsResponse describeInvocations(DescribeInvocationsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeInvocationsWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the monitoring information about vCPUs, memory, disk IOPS, and traffic of a simple application server.</p>
+     * 
+     * @param request DescribeMonitorDataRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeMonitorDataResponse
+     */
     public DescribeMonitorDataResponse describeMonitorDataWithOptions(DescribeMonitorDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1615,11 +2936,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeMonitorDataResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the monitoring information about vCPUs, memory, disk IOPS, and traffic of a simple application server.</p>
+     * 
+     * @param request DescribeMonitorDataRequest
+     * @return DescribeMonitorDataResponse
+     */
     public DescribeMonitorDataResponse describeMonitorData(DescribeMonitorDataRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeMonitorDataWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the status of the Security Center agent on a simple application server.</p>
+     * 
+     * @param request DescribeSecurityAgentStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeSecurityAgentStatusResponse
+     */
     public DescribeSecurityAgentStatusResponse describeSecurityAgentStatusWithOptions(DescribeSecurityAgentStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1652,11 +2988,88 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeSecurityAgentStatusResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the status of the Security Center agent on a simple application server.</p>
+     * 
+     * @param request DescribeSecurityAgentStatusRequest
+     * @return DescribeSecurityAgentStatusResponse
+     */
     public DescribeSecurityAgentStatusResponse describeSecurityAgentStatus(DescribeSecurityAgentStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeSecurityAgentStatusWithOptions(request, runtime);
     }
 
+    /**
+     * <b>description</b> :
+     * <p>If you want to change the SSH key pairs that are bound to your simple application servers or your end user no longer needs to access a specific simple application server, you can unbind the SSH key pairs from simple application servers to improve the security of the simple application servers or restrict access to the specific simple application server.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Unbinds key pairs from simple application servers.</p>
+     * 
+     * @param request DetachKeyPairRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DetachKeyPairResponse
+     */
+    public DetachKeyPairResponse detachKeyPairWithOptions(DetachKeyPairRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceIds)) {
+            query.put("InstanceIds", request.instanceIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.keyPairName)) {
+            query.put("KeyPairName", request.keyPairName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DetachKeyPair"),
+            new TeaPair("version", "2020-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DetachKeyPairResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>If you want to change the SSH key pairs that are bound to your simple application servers or your end user no longer needs to access a specific simple application server, you can unbind the SSH key pairs from simple application servers to improve the security of the simple application servers or restrict access to the specific simple application server.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Unbinds key pairs from simple application servers.</p>
+     * 
+     * @param request DetachKeyPairRequest
+     * @return DetachKeyPairResponse
+     */
+    public DetachKeyPairResponse detachKeyPair(DetachKeyPairRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.detachKeyPairWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Disables a firewall rule of a simple application server.</p>
+     * 
+     * @param request DisableFirewallRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DisableFirewallRuleResponse
+     */
     public DisableFirewallRuleResponse disableFirewallRuleWithOptions(DisableFirewallRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1697,11 +3110,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DisableFirewallRuleResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Disables a firewall rule of a simple application server.</p>
+     * 
+     * @param request DisableFirewallRuleRequest
+     * @return DisableFirewallRuleResponse
+     */
     public DisableFirewallRuleResponse disableFirewallRule(DisableFirewallRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.disableFirewallRuleWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Enables a firewall rule for a simple application server.</p>
+     * 
+     * @param request EnableFirewallRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return EnableFirewallRuleResponse
+     */
     public EnableFirewallRuleResponse enableFirewallRuleWithOptions(EnableFirewallRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1746,17 +3174,90 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new EnableFirewallRuleResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Enables a firewall rule for a simple application server.</p>
+     * 
+     * @param request EnableFirewallRuleRequest
+     * @return EnableFirewallRuleResponse
+     */
     public EnableFirewallRuleResponse enableFirewallRule(EnableFirewallRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.enableFirewallRuleWithOptions(request, runtime);
     }
 
     /**
-      * To run commands on your simple application servers, you must install the Cloud Assistant client on your servers. You can call the [DescribeCloudAssistantStatus](~~439512~~) operation to check whether the Cloud Assistant client is installed on your simple application servers. If you have not installed the Cloud Assistant client, you can call the InstallCloudAssistant operation to install the client. Then, you can call the [RebootInstance](~~190443~~) operation to restart the servers to allow the client to take effect.
-      *
-      * @param tmpReq InstallCloudAssistantRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return InstallCloudAssistantResponse
+     * <b>description</b> :
+     * <p>You can call this operation to import an existing key pair to the Simple Application Server console. This way, you can use the key pair to log on to simple application servers. The existing key pair that you want to import must use a supported encryption method. For more information, see <a href="https://help.aliyun.com/document_detail/59085.html">Q2: Which encryption methods must be used by key pairs when I import existing key pairs to the Simple Application Server console?</a></p>
+     * 
+     * <b>summary</b> : 
+     * <p>Imports an existing key pair to the Simple Application Server console.</p>
+     * 
+     * @param request ImportKeyPairRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ImportKeyPairResponse
+     */
+    public ImportKeyPairResponse importKeyPairWithOptions(ImportKeyPairRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.keyPairName)) {
+            query.put("KeyPairName", request.keyPairName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.publicKeyBody)) {
+            query.put("PublicKeyBody", request.publicKeyBody);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ImportKeyPair"),
+            new TeaPair("version", "2020-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ImportKeyPairResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>You can call this operation to import an existing key pair to the Simple Application Server console. This way, you can use the key pair to log on to simple application servers. The existing key pair that you want to import must use a supported encryption method. For more information, see <a href="https://help.aliyun.com/document_detail/59085.html">Q2: Which encryption methods must be used by key pairs when I import existing key pairs to the Simple Application Server console?</a></p>
+     * 
+     * <b>summary</b> : 
+     * <p>Imports an existing key pair to the Simple Application Server console.</p>
+     * 
+     * @param request ImportKeyPairRequest
+     * @return ImportKeyPairResponse
+     */
+    public ImportKeyPairResponse importKeyPair(ImportKeyPairRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.importKeyPairWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>To run commands on your simple application servers, you must install the Cloud Assistant client on your servers. You can call the <a href="https://help.aliyun.com/document_detail/439512.html">DescribeCloudAssistantStatus</a> operation to check whether the Cloud Assistant client is installed on your simple application servers. If you have not installed the Cloud Assistant client, you can call the InstallCloudAssistant operation to install the client. Then, you can call the <a href="https://help.aliyun.com/document_detail/190443.html">RebootInstance</a> operation to restart the servers to allow the client to take effect.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Installs the Cloud Assistant client on simple application servers at a time.</p>
+     * 
+     * @param tmpReq InstallCloudAssistantRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return InstallCloudAssistantResponse
      */
     public InstallCloudAssistantResponse installCloudAssistantWithOptions(InstallCloudAssistantRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
@@ -1793,16 +3294,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * To run commands on your simple application servers, you must install the Cloud Assistant client on your servers. You can call the [DescribeCloudAssistantStatus](~~439512~~) operation to check whether the Cloud Assistant client is installed on your simple application servers. If you have not installed the Cloud Assistant client, you can call the InstallCloudAssistant operation to install the client. Then, you can call the [RebootInstance](~~190443~~) operation to restart the servers to allow the client to take effect.
-      *
-      * @param request InstallCloudAssistantRequest
-      * @return InstallCloudAssistantResponse
+     * <b>description</b> :
+     * <p>To run commands on your simple application servers, you must install the Cloud Assistant client on your servers. You can call the <a href="https://help.aliyun.com/document_detail/439512.html">DescribeCloudAssistantStatus</a> operation to check whether the Cloud Assistant client is installed on your simple application servers. If you have not installed the Cloud Assistant client, you can call the InstallCloudAssistant operation to install the client. Then, you can call the <a href="https://help.aliyun.com/document_detail/190443.html">RebootInstance</a> operation to restart the servers to allow the client to take effect.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Installs the Cloud Assistant client on simple application servers at a time.</p>
+     * 
+     * @param request InstallCloudAssistantRequest
+     * @return InstallCloudAssistantResponse
      */
     public InstallCloudAssistantResponse installCloudAssistant(InstallCloudAssistantRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.installCloudAssistantWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Installs the CloudMonitor agent for a simple application server.</p>
+     * 
+     * @param request InstallCloudMonitorAgentRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return InstallCloudMonitorAgentResponse
+     */
     public InstallCloudMonitorAgentResponse installCloudMonitorAgentWithOptions(InstallCloudMonitorAgentRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1839,11 +3352,37 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new InstallCloudMonitorAgentResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Installs the CloudMonitor agent for a simple application server.</p>
+     * 
+     * @param request InstallCloudMonitorAgentRequest
+     * @return InstallCloudMonitorAgentResponse
+     */
     public InstallCloudMonitorAgentResponse installCloudMonitorAgent(InstallCloudMonitorAgentRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.installCloudMonitorAgentWithOptions(request, runtime);
     }
 
+    /**
+     * <b>description</b> :
+     * <p>  The simple application servers for which you want to call the operation must meet the following conditions. If a simple application server cannot meet the conditions, you must call this operation again.
+     *     *   The simple application servers are in the <code>Running</code> state. You can call the <a href="https://help.aliyun.com/document_detail/2361065.html">ListInstances</a> operation to query the status of simple application servers.
+     *     *   Cloud Assistant Agent is installed on the simple application servers. For more information, see <a href="https://help.aliyun.com/document_detail/2361030.html">InstallCloudAssistant</a>.
+     *     *   If you run a PowerShell command, make sure that the PowerShell module is configured for the simple application servers.</p>
+     * <ul>
+     * <li>The command may fail to be run due to the abnormal states of simple application servers, network exceptions, or exceptions in Cloud Assistant Agent. If the command fails to be run, no execution information is generated.</li>
+     * <li>If you enable the custom parameter feature when you create a command, you must set the <code>Parameters</code> parameter to specify custom parameters when you run the command.</li>
+     * <li>When you call this operation, you can select only one common command or a custom command that you have created.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Runs a Command Assistant command for one or more simple application servers.</p>
+     * 
+     * @param tmpReq InvokeCommandRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return InvokeCommandResponse
+     */
     public InvokeCommandResponse invokeCommandWithOptions(InvokeCommandRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         InvokeCommandShrinkRequest request = new InvokeCommandShrinkRequest();
@@ -1890,11 +3429,97 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new InvokeCommandResponse());
     }
 
+    /**
+     * <b>description</b> :
+     * <p>  The simple application servers for which you want to call the operation must meet the following conditions. If a simple application server cannot meet the conditions, you must call this operation again.
+     *     *   The simple application servers are in the <code>Running</code> state. You can call the <a href="https://help.aliyun.com/document_detail/2361065.html">ListInstances</a> operation to query the status of simple application servers.
+     *     *   Cloud Assistant Agent is installed on the simple application servers. For more information, see <a href="https://help.aliyun.com/document_detail/2361030.html">InstallCloudAssistant</a>.
+     *     *   If you run a PowerShell command, make sure that the PowerShell module is configured for the simple application servers.</p>
+     * <ul>
+     * <li>The command may fail to be run due to the abnormal states of simple application servers, network exceptions, or exceptions in Cloud Assistant Agent. If the command fails to be run, no execution information is generated.</li>
+     * <li>If you enable the custom parameter feature when you create a command, you must set the <code>Parameters</code> parameter to specify custom parameters when you run the command.</li>
+     * <li>When you call this operation, you can select only one common command or a custom command that you have created.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Runs a Command Assistant command for one or more simple application servers.</p>
+     * 
+     * @param request InvokeCommandRequest
+     * @return InvokeCommandResponse
+     */
     public InvokeCommandResponse invokeCommand(InvokeCommandRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.invokeCommandWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>查询镜像共享给的用户</p>
+     * 
+     * @param request ListCustomImageShareAccountsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListCustomImageShareAccountsResponse
+     */
+    public ListCustomImageShareAccountsResponse listCustomImageShareAccountsWithOptions(ListCustomImageShareAccountsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageId)) {
+            query.put("ImageId", request.imageId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListCustomImageShareAccounts"),
+            new TeaPair("version", "2020-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListCustomImageShareAccountsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询镜像共享给的用户</p>
+     * 
+     * @param request ListCustomImageShareAccountsRequest
+     * @return ListCustomImageShareAccountsResponse
+     */
+    public ListCustomImageShareAccountsResponse listCustomImageShareAccounts(ListCustomImageShareAccountsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listCustomImageShareAccountsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the information about custom images in a region.</p>
+     * 
+     * @param request ListCustomImagesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListCustomImagesResponse
+     */
     public ListCustomImagesResponse listCustomImagesWithOptions(ListCustomImagesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1914,6 +3539,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ImageNames", request.imageNames);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
             query.put("PageNumber", request.pageNumber);
         }
@@ -1926,8 +3555,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.share)) {
+            query.put("Share", request.share);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.systemSnapshotId)) {
             query.put("SystemSnapshotId", request.systemSnapshotId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -1947,19 +3588,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListCustomImagesResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the information about custom images in a region.</p>
+     * 
+     * @param request ListCustomImagesRequest
+     * @return ListCustomImagesResponse
+     */
     public ListCustomImagesResponse listCustomImages(ListCustomImagesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listCustomImagesWithOptions(request, runtime);
     }
 
     /**
-      * You can specify multiple request parameters such as `InstanceId` and `DiskIds`. Specified parameters have logical AND relations. Only the specified parameters are included in the filter conditions.
-      * ### QPS limit
-      * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limit](~~347607~~).
-      *
-      * @param request ListDisksRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ListDisksResponse
+     * <b>description</b> :
+     * <p>You can specify multiple request parameters that you want to query, such as <code>InstanceId</code>, <code>DiskIds</code>, and <code>ResourceGroupId</code>. Specified request parameters have logical AND relations. Only the specified parameters are included in the filter conditions.</p>
+     * <h3><a href="#qps-"></a>QPS limits</h3>
+     * <p>You can call this operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information about disks in a region.</p>
+     * 
+     * @param request ListDisksRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListDisksResponse
      */
     public ListDisksResponse listDisksWithOptions(ListDisksRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1988,6 +3640,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -2006,12 +3666,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can specify multiple request parameters such as `InstanceId` and `DiskIds`. Specified parameters have logical AND relations. Only the specified parameters are included in the filter conditions.
-      * ### QPS limit
-      * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limit](~~347607~~).
-      *
-      * @param request ListDisksRequest
-      * @return ListDisksResponse
+     * <b>description</b> :
+     * <p>You can specify multiple request parameters that you want to query, such as <code>InstanceId</code>, <code>DiskIds</code>, and <code>ResourceGroupId</code>. Specified request parameters have logical AND relations. Only the specified parameters are included in the filter conditions.</p>
+     * <h3><a href="#qps-"></a>QPS limits</h3>
+     * <p>You can call this operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information about disks in a region.</p>
+     * 
+     * @param request ListDisksRequest
+     * @return ListDisksResponse
      */
     public ListDisksResponse listDisks(ListDisksRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -2019,17 +3683,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call the ListFirewallRules operation to query the firewall rule details of a simple application server, including the port range, firewall rule ID, and transport layer protocol.
-      * ### QPS limit
-      * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~347607~~).
-      *
-      * @param request ListFirewallRulesRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ListFirewallRulesResponse
+     * <b>description</b> :
+     * <p>You can call the ListFirewallRules operation to query the firewall rule details of a simple application server, including the port range, firewall rule ID, and transport layer protocol.</p>
+     * <h3>QPS limit</h3>
+     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the firewall rules of a simple application server.</p>
+     * 
+     * @param request ListFirewallRulesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListFirewallRulesResponse
      */
     public ListFirewallRulesResponse listFirewallRulesWithOptions(ListFirewallRulesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.firewallRuleId)) {
+            query.put("FirewallRuleId", request.firewallRuleId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
         }
@@ -2044,6 +3716,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -2064,12 +3740,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call the ListFirewallRules operation to query the firewall rule details of a simple application server, including the port range, firewall rule ID, and transport layer protocol.
-      * ### QPS limit
-      * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~347607~~).
-      *
-      * @param request ListFirewallRulesRequest
-      * @return ListFirewallRulesResponse
+     * <b>description</b> :
+     * <p>You can call the ListFirewallRules operation to query the firewall rule details of a simple application server, including the port range, firewall rule ID, and transport layer protocol.</p>
+     * <h3>QPS limit</h3>
+     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the firewall rules of a simple application server.</p>
+     * 
+     * @param request ListFirewallRulesRequest
+     * @return ListFirewallRulesResponse
      */
     public ListFirewallRulesResponse listFirewallRules(ListFirewallRulesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -2077,13 +3757,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can query information about images in a region, including the IDs, names, and types of the images.
-      * ### QPS limit
-      * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~347607~~).
-      *
-      * @param request ListImagesRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ListImagesResponse
+     * <b>description</b> :
+     * <p>You can query information about images in a region, including the IDs, names, and types of the images.</p>
+     * <h3>QPS limit</h3>
+     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information about images in a region.</p>
+     * 
+     * @param request ListImagesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListImagesResponse
      */
     public ListImagesResponse listImagesWithOptions(ListImagesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -2118,12 +3802,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can query information about images in a region, including the IDs, names, and types of the images.
-      * ### QPS limit
-      * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~347607~~).
-      *
-      * @param request ListImagesRequest
-      * @return ListImagesResponse
+     * <b>description</b> :
+     * <p>You can query information about images in a region, including the IDs, names, and types of the images.</p>
+     * <h3>QPS limit</h3>
+     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information about images in a region.</p>
+     * 
+     * @param request ListImagesRequest
+     * @return ListImagesResponse
      */
     public ListImagesResponse listImages(ListImagesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -2131,15 +3819,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * If the plan of your simple application server does not meet your business requirements, you can call the ListInstancePlansModification operation to obtain a list of plans to which you can upgrade your simple application server. Then, you can call the [UpgradeInstance](~~190445~~) operation to upgrade the server.
-      * > We recommend that you create snapshots for the disks of your simple application server to back up data before you upgrade the server. For more information, see [CreateSnapshot](~~190452~~).
-      * For the precautions about plan upgrade, see [Upgrade a simple application server](~~61433~~).
-      * ### QPS limit
-      * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~347607~~).
-      *
-      * @param request ListInstancePlansModificationRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ListInstancePlansModificationResponse
+     * <b>description</b> :
+     * <p>If the plan of your simple application server does not meet your business requirements, you can call the ListInstancePlansModification operation to obtain a list of plans to which you can upgrade your simple application server. Then, you can call the <a href="https://help.aliyun.com/document_detail/190445.html">UpgradeInstance</a> operation to upgrade the server.</p>
+     * <blockquote>
+     * <p>We recommend that you create snapshots for the disks of your simple application server to back up data before you upgrade the server. For more information, see <a href="https://help.aliyun.com/document_detail/190452.html">CreateSnapshot</a>.
+     * For the precautions about plan upgrade, see <a href="https://help.aliyun.com/document_detail/61433.html">Upgrade a simple application server</a>.</p>
+     * </blockquote>
+     * <h3>QPS limit</h3>
+     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the plans to which you can upgrade your simple application server.</p>
+     * 
+     * @param request ListInstancePlansModificationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListInstancePlansModificationResponse
      */
     public ListInstancePlansModificationResponse listInstancePlansModificationWithOptions(ListInstancePlansModificationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -2170,20 +3864,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * If the plan of your simple application server does not meet your business requirements, you can call the ListInstancePlansModification operation to obtain a list of plans to which you can upgrade your simple application server. Then, you can call the [UpgradeInstance](~~190445~~) operation to upgrade the server.
-      * > We recommend that you create snapshots for the disks of your simple application server to back up data before you upgrade the server. For more information, see [CreateSnapshot](~~190452~~).
-      * For the precautions about plan upgrade, see [Upgrade a simple application server](~~61433~~).
-      * ### QPS limit
-      * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~347607~~).
-      *
-      * @param request ListInstancePlansModificationRequest
-      * @return ListInstancePlansModificationResponse
+     * <b>description</b> :
+     * <p>If the plan of your simple application server does not meet your business requirements, you can call the ListInstancePlansModification operation to obtain a list of plans to which you can upgrade your simple application server. Then, you can call the <a href="https://help.aliyun.com/document_detail/190445.html">UpgradeInstance</a> operation to upgrade the server.</p>
+     * <blockquote>
+     * <p>We recommend that you create snapshots for the disks of your simple application server to back up data before you upgrade the server. For more information, see <a href="https://help.aliyun.com/document_detail/190452.html">CreateSnapshot</a>.
+     * For the precautions about plan upgrade, see <a href="https://help.aliyun.com/document_detail/61433.html">Upgrade a simple application server</a>.</p>
+     * </blockquote>
+     * <h3>QPS limit</h3>
+     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the plans to which you can upgrade your simple application server.</p>
+     * 
+     * @param request ListInstancePlansModificationRequest
+     * @return ListInstancePlansModificationResponse
      */
     public ListInstancePlansModificationResponse listInstancePlansModification(ListInstancePlansModificationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listInstancePlansModificationWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the status of simple application servers.</p>
+     * 
+     * @param request ListInstanceStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListInstanceStatusResponse
+     */
     public ListInstanceStatusResponse listInstanceStatusWithOptions(ListInstanceStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2220,19 +3928,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListInstanceStatusResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the status of simple application servers.</p>
+     * 
+     * @param request ListInstanceStatusRequest
+     * @return ListInstanceStatusResponse
+     */
     public ListInstanceStatusResponse listInstanceStatus(ListInstanceStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listInstanceStatusWithOptions(request, runtime);
     }
 
     /**
-      * You can call this operation to query the details of simple application servers in a specified region, including the names, public IP addresses, internal IP addresses, creation time, and expiration time of the servers.
-      * ### QPS limit
-      * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~347607~~).
-      *
-      * @param request ListInstancesRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ListInstancesResponse
+     * <b>description</b> :
+     * <p>You can call this operation to query the details of simple application servers in a specified region, including the names, public IP addresses, internal IP addresses, creation time, and expiration time of the servers.</p>
+     * <h3>QPS limit</h3>
+     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information about simple application servers in a region.</p>
+     * 
+     * @param request ListInstancesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListInstancesResponse
      */
     public ListInstancesResponse listInstancesWithOptions(ListInstancesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -2243,6 +3962,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceIds)) {
             query.put("InstanceIds", request.instanceIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceName)) {
+            query.put("InstanceName", request.instanceName);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
@@ -2261,8 +3984,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.status)) {
             query.put("Status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -2283,12 +4014,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation to query the details of simple application servers in a specified region, including the names, public IP addresses, internal IP addresses, creation time, and expiration time of the servers.
-      * ### QPS limit
-      * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~347607~~).
-      *
-      * @param request ListInstancesRequest
-      * @return ListInstancesResponse
+     * <b>description</b> :
+     * <p>You can call this operation to query the details of simple application servers in a specified region, including the names, public IP addresses, internal IP addresses, creation time, and expiration time of the servers.</p>
+     * <h3>QPS limit</h3>
+     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information about simple application servers in a region.</p>
+     * 
+     * @param request ListInstancesRequest
+     * @return ListInstancesResponse
      */
     public ListInstancesResponse listInstances(ListInstancesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -2296,26 +4031,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can query the details of data transfer plans of simple application servers, including the data transfer quota, used amount and unused amount of the data transfer quota, and excess data transfers beyond the quota in the current month.
-      * Simple Application Server provides data transfer quotas in plans. Plan prices include prices of data transfer quotas. You are charged for data transfers that exceed the quotas. Take note of the following items:
-      * *   Only outbound data transfers of simple application servers over the Internet are calculated. Outbound data transfers include the data transfer quota and the excess data transfers beyond the quota. Inbound data transfers of simple application servers over the Internet are not calculated.
-      * *   Outbound data transfers from simple application servers to other Alibaba Cloud services over the Internet first consume data transfer quotas. If the quotas are exhausted, you are charged for excess data transfers.
-      * *   You are not charged for data transfers between simple application servers within the same virtual private cloud (VPC).
-      * For more information, see [Quotas and billing of data transfers](~~86281~~).
-      * ### QPS limit
-      * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~347607~~).
-      *
-      * @param request ListInstancesTrafficPackagesRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ListInstancesTrafficPackagesResponse
+     * <b>description</b> :
+     * <p>You can query the details of data transfer plans of simple application servers, including the data transfer quota, used amount and unused amount of the data transfer quota, and excess data transfers beyond the quota in the current month.
+     * Simple Application Server provides data transfer quotas in plans. Plan prices include prices of data transfer quotas. You are charged for data transfers that exceed the quotas. Take note of the following items:</p>
+     * <ul>
+     * <li>Only outbound data transfers of simple application servers over the Internet are calculated. Outbound data transfers include the data transfer quota and the excess data transfers beyond the quota. Inbound data transfers of simple application servers over the Internet are not calculated.</li>
+     * <li>Outbound data transfers from simple application servers to other Alibaba Cloud services over the Internet first consume data transfer quotas. If the quotas are exhausted, you are charged for excess data transfers.</li>
+     * <li>You are not charged for data transfers between simple application servers within the same virtual private cloud (VPC).
+     * For more information, see <a href="https://help.aliyun.com/document_detail/86281.html">Quotas and billing of data transfers</a>.</li>
+     * </ul>
+     * <h3>QPS limit</h3>
+     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details about data transfer plans of simple application servers.</p>
+     * 
+     * @param request ListInstancesTrafficPackagesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListInstancesTrafficPackagesResponse
      */
     public ListInstancesTrafficPackagesResponse listInstancesTrafficPackagesWithOptions(ListInstancesTrafficPackagesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.acsProduct)) {
-            query.put("AcsProduct", request.acsProduct);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.instanceIds)) {
             query.put("InstanceIds", request.instanceIds);
         }
@@ -2342,17 +4079,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can query the details of data transfer plans of simple application servers, including the data transfer quota, used amount and unused amount of the data transfer quota, and excess data transfers beyond the quota in the current month.
-      * Simple Application Server provides data transfer quotas in plans. Plan prices include prices of data transfer quotas. You are charged for data transfers that exceed the quotas. Take note of the following items:
-      * *   Only outbound data transfers of simple application servers over the Internet are calculated. Outbound data transfers include the data transfer quota and the excess data transfers beyond the quota. Inbound data transfers of simple application servers over the Internet are not calculated.
-      * *   Outbound data transfers from simple application servers to other Alibaba Cloud services over the Internet first consume data transfer quotas. If the quotas are exhausted, you are charged for excess data transfers.
-      * *   You are not charged for data transfers between simple application servers within the same virtual private cloud (VPC).
-      * For more information, see [Quotas and billing of data transfers](~~86281~~).
-      * ### QPS limit
-      * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~347607~~).
-      *
-      * @param request ListInstancesTrafficPackagesRequest
-      * @return ListInstancesTrafficPackagesResponse
+     * <b>description</b> :
+     * <p>You can query the details of data transfer plans of simple application servers, including the data transfer quota, used amount and unused amount of the data transfer quota, and excess data transfers beyond the quota in the current month.
+     * Simple Application Server provides data transfer quotas in plans. Plan prices include prices of data transfer quotas. You are charged for data transfers that exceed the quotas. Take note of the following items:</p>
+     * <ul>
+     * <li>Only outbound data transfers of simple application servers over the Internet are calculated. Outbound data transfers include the data transfer quota and the excess data transfers beyond the quota. Inbound data transfers of simple application servers over the Internet are not calculated.</li>
+     * <li>Outbound data transfers from simple application servers to other Alibaba Cloud services over the Internet first consume data transfer quotas. If the quotas are exhausted, you are charged for excess data transfers.</li>
+     * <li>You are not charged for data transfers between simple application servers within the same virtual private cloud (VPC).
+     * For more information, see <a href="https://help.aliyun.com/document_detail/86281.html">Quotas and billing of data transfers</a>.</li>
+     * </ul>
+     * <h3>QPS limit</h3>
+     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details about data transfer plans of simple application servers.</p>
+     * 
+     * @param request ListInstancesTrafficPackagesRequest
+     * @return ListInstancesTrafficPackagesResponse
      */
     public ListInstancesTrafficPackagesResponse listInstancesTrafficPackages(ListInstancesTrafficPackagesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -2360,13 +4103,57 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can query the details of all plans provided by Simple Application Server in a region, including the IDs, prices, disk sizes, and disk categories of the plans.
-      * ### QPS limit
-      * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~347607~~).
-      *
-      * @param request ListPlansRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ListPlansResponse
+     * <b>summary</b> : 
+     * <p>Queries the AccessKey pairs that are bound to simple application servers in a specific region.</p>
+     * 
+     * @param request ListKeyPairsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListKeyPairsResponse
+     */
+    public ListKeyPairsResponse listKeyPairsWithOptions(ListKeyPairsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListKeyPairs"),
+            new TeaPair("version", "2020-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListKeyPairsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the AccessKey pairs that are bound to simple application servers in a specific region.</p>
+     * 
+     * @param request ListKeyPairsRequest
+     * @return ListKeyPairsResponse
+     */
+    public ListKeyPairsResponse listKeyPairs(ListKeyPairsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listKeyPairsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>You can query the details of all plans provided by Simple Application Server in a region, including the IDs, prices, disk sizes, and disk categories of the plans.</p>
+     * <h3>QPS limit</h3>
+     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries all plans provided by Simple Application Server in a region.</p>
+     * 
+     * @param request ListPlansRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListPlansResponse
      */
     public ListPlansResponse listPlansWithOptions(ListPlansRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -2393,12 +4180,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can query the details of all plans provided by Simple Application Server in a region, including the IDs, prices, disk sizes, and disk categories of the plans.
-      * ### QPS limit
-      * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~347607~~).
-      *
-      * @param request ListPlansRequest
-      * @return ListPlansResponse
+     * <b>description</b> :
+     * <p>You can query the details of all plans provided by Simple Application Server in a region, including the IDs, prices, disk sizes, and disk categories of the plans.</p>
+     * <h3>QPS limit</h3>
+     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries all plans provided by Simple Application Server in a region.</p>
+     * 
+     * @param request ListPlansRequest
+     * @return ListPlansResponse
      */
     public ListPlansResponse listPlans(ListPlansRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -2406,16 +4197,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The query results include all the Alibaba Cloud regions where Simple Application Server is supported on the international site (alibabacloud.com) and the China site (aliyun.com).
-      * ### QPS limit
-      * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~347607~~).
-      *
-      * @param request ListRegionsRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ListRegionsResponse
+     * <b>description</b> :
+     * <p>The query results include all the Alibaba Cloud regions where Simple Application Server is supported on the international site (alibabacloud.com) and the China site (aliyun.com).</p>
+     * <h3>QPS limit</h3>
+     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries all regions in which Simple Application Server is supported.</p>
+     * 
+     * @param request ListRegionsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListRegionsResponse
      */
-    public ListRegionsResponse listRegionsWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+    public ListRegionsResponse listRegionsWithOptions(ListRegionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ListRegions"),
             new TeaPair("version", "2020-06-01"),
@@ -2431,33 +4234,38 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The query results include all the Alibaba Cloud regions where Simple Application Server is supported on the international site (alibabacloud.com) and the China site (aliyun.com).
-      * ### QPS limit
-      * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~347607~~).
-      *
-      * @return ListRegionsResponse
+     * <b>description</b> :
+     * <p>The query results include all the Alibaba Cloud regions where Simple Application Server is supported on the international site (alibabacloud.com) and the China site (aliyun.com).</p>
+     * <h3>QPS limit</h3>
+     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries all regions in which Simple Application Server is supported.</p>
+     * 
+     * @param request ListRegionsRequest
+     * @return ListRegionsResponse
      */
-    public ListRegionsResponse listRegions() throws Exception {
+    public ListRegionsResponse listRegions(ListRegionsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.listRegionsWithOptions(runtime);
+        return this.listRegionsWithOptions(request, runtime);
     }
 
     /**
-      * You can specify multiple request parameters such as `InstanceId`, `DiskId`, and `SnapshotIds` to query snapshots. Specified parameters have logical AND relations. Only the specified parameters are included in the filter conditions.
-      * ### QPS limit
-      * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~347607~~).
-      *
-      * @param request ListSnapshotsRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ListSnapshotsResponse
+     * <b>description</b> :
+     * <p>You can specify multiple request parameters that you want to query, such as <code>InstanceId</code>, <code>DiskId</code>, <code>SnapshotIds</code>, and <code>ResourceGroupId</code>. Specified parameters have logical AND relations. Only the specified parameters are included in the filter conditions.</p>
+     * <h3><a href="#qps-"></a>QPS limits</h3>
+     * <p>You can call this operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information about snapshots that are created for a simple application server.</p>
+     * 
+     * @param request ListSnapshotsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListSnapshotsResponse
      */
     public ListSnapshotsResponse listSnapshotsWithOptions(ListSnapshotsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.acsProduct)) {
-            query.put("AcsProduct", request.acsProduct);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.diskId)) {
             query.put("DiskId", request.diskId);
         }
@@ -2478,12 +4286,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.snapshotIds)) {
             query.put("SnapshotIds", request.snapshotIds);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.sourceDiskType)) {
             query.put("SourceDiskType", request.sourceDiskType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -2504,12 +4320,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can specify multiple request parameters such as `InstanceId`, `DiskId`, and `SnapshotIds` to query snapshots. Specified parameters have logical AND relations. Only the specified parameters are included in the filter conditions.
-      * ### QPS limit
-      * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~347607~~).
-      *
-      * @param request ListSnapshotsRequest
-      * @return ListSnapshotsResponse
+     * <b>description</b> :
+     * <p>You can specify multiple request parameters that you want to query, such as <code>InstanceId</code>, <code>DiskId</code>, <code>SnapshotIds</code>, and <code>ResourceGroupId</code>. Specified parameters have logical AND relations. Only the specified parameters are included in the filter conditions.</p>
+     * <h3><a href="#qps-"></a>QPS limits</h3>
+     * <p>You can call this operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information about snapshots that are created for a simple application server.</p>
+     * 
+     * @param request ListSnapshotsRequest
+     * @return ListSnapshotsResponse
      */
     public ListSnapshotsResponse listSnapshots(ListSnapshotsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -2517,12 +4337,79 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ##
-      * After you create a simple application server, you can log on to the simple application server to build environments and applications on the server.
-      *
-      * @param request LoginInstanceRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return LoginInstanceResponse
+     * <b>summary</b> : 
+     * <p>云产品查标签接口</p>
+     * 
+     * @param request ListTagResourcesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListTagResourcesResponse
+     */
+    public ListTagResourcesResponse listTagResourcesWithOptions(ListTagResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceId)) {
+            query.put("ResourceId", request.resourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            query.put("ResourceType", request.resourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListTagResources"),
+            new TeaPair("version", "2020-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListTagResourcesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>云产品查标签接口</p>
+     * 
+     * @param request ListTagResourcesRequest
+     * @return ListTagResourcesResponse
+     */
+    public ListTagResourcesResponse listTagResources(ListTagResourcesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listTagResourcesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>After you create a simple application server, you can log on to the simple application server to build environments and applications on the server.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Logs on to a simple application server on Workbench.</p>
+     * 
+     * @param request LoginInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return LoginInstanceResponse
      */
     public LoginInstanceResponse loginInstanceWithOptions(LoginInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -2533,6 +4420,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.password)) {
             query.put("Password", request.password);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.port)) {
+            query.put("Port", request.port);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -2561,11 +4452,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ##
-      * After you create a simple application server, you can log on to the simple application server to build environments and applications on the server.
-      *
-      * @param request LoginInstanceRequest
-      * @return LoginInstanceResponse
+     * <b>description</b> :
+     * <p>After you create a simple application server, you can log on to the simple application server to build environments and applications on the server.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Logs on to a simple application server on Workbench.</p>
+     * 
+     * @param request LoginInstanceRequest
+     * @return LoginInstanceResponse
      */
     public LoginInstanceResponse loginInstance(LoginInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -2573,13 +4467,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation to modify the description of a Simple Database Service instance.
-      * ### QPS limit
-      * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~347607~~).
-      *
-      * @param request ModifyDatabaseInstanceDescriptionRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ModifyDatabaseInstanceDescriptionResponse
+     * <b>description</b> :
+     * <p>You can call this operation to modify the description of a Simple Database Service instance.</p>
+     * <h3>QPS limit</h3>
+     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the description of a Simple Database Service instance.</p>
+     * 
+     * @param request ModifyDatabaseInstanceDescriptionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyDatabaseInstanceDescriptionResponse
      */
     public ModifyDatabaseInstanceDescriptionResponse modifyDatabaseInstanceDescriptionWithOptions(ModifyDatabaseInstanceDescriptionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -2618,12 +4516,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation to modify the description of a Simple Database Service instance.
-      * ### QPS limit
-      * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~347607~~).
-      *
-      * @param request ModifyDatabaseInstanceDescriptionRequest
-      * @return ModifyDatabaseInstanceDescriptionResponse
+     * <b>description</b> :
+     * <p>You can call this operation to modify the description of a Simple Database Service instance.</p>
+     * <h3>QPS limit</h3>
+     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the description of a Simple Database Service instance.</p>
+     * 
+     * @param request ModifyDatabaseInstanceDescriptionRequest
+     * @return ModifyDatabaseInstanceDescriptionResponse
      */
     public ModifyDatabaseInstanceDescriptionResponse modifyDatabaseInstanceDescription(ModifyDatabaseInstanceDescriptionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -2631,13 +4533,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * After you create a Simple Database Service instance, you can view the parameters of the instance or modify the parameters of the instance based on your business requirements.
-      * ### QPS limit
-      * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~347607~~).
-      *
-      * @param request ModifyDatabaseInstanceParameterRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ModifyDatabaseInstanceParameterResponse
+     * <b>description</b> :
+     * <p>After you create a Simple Database Service instance, you can view the parameters of the instance or modify the parameters of the instance based on your business requirements.</p>
+     * <h3>QPS limit</h3>
+     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the parameters of a Simple Database Service instance.</p>
+     * 
+     * @param request ModifyDatabaseInstanceParameterRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyDatabaseInstanceParameterResponse
      */
     public ModifyDatabaseInstanceParameterResponse modifyDatabaseInstanceParameterWithOptions(ModifyDatabaseInstanceParameterRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -2680,18 +4586,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * After you create a Simple Database Service instance, you can view the parameters of the instance or modify the parameters of the instance based on your business requirements.
-      * ### QPS limit
-      * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~347607~~).
-      *
-      * @param request ModifyDatabaseInstanceParameterRequest
-      * @return ModifyDatabaseInstanceParameterResponse
+     * <b>description</b> :
+     * <p>After you create a Simple Database Service instance, you can view the parameters of the instance or modify the parameters of the instance based on your business requirements.</p>
+     * <h3>QPS limit</h3>
+     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the parameters of a Simple Database Service instance.</p>
+     * 
+     * @param request ModifyDatabaseInstanceParameterRequest
+     * @return ModifyDatabaseInstanceParameterResponse
      */
     public ModifyDatabaseInstanceParameterResponse modifyDatabaseInstanceParameter(ModifyDatabaseInstanceParameterRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyDatabaseInstanceParameterWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the firewall rule of a simple application server.</p>
+     * 
+     * @param request ModifyFirewallRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyFirewallRuleResponse
+     */
     public ModifyFirewallRuleResponse modifyFirewallRuleWithOptions(ModifyFirewallRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2744,23 +4662,112 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyFirewallRuleResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the firewall rule of a simple application server.</p>
+     * 
+     * @param request ModifyFirewallRuleRequest
+     * @return ModifyFirewallRuleResponse
+     */
     public ModifyFirewallRuleResponse modifyFirewallRule(ModifyFirewallRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyFirewallRuleWithOptions(request, runtime);
     }
 
     /**
-      * You can share a custom image with ECS. If the configurations of your simple application server cannot meet your business requirements, or you want to use ECS instances to deploy your business, you can share your custom image with ECS to transfer your business from Simple Application Server to ECS.
-      * > The shared image in ECS resides in the same region as the custom image in Simple Application Server.
-      * You can unshare a custom image based on your business requirements or when you want to delete the custom image. Take note of the following items:
-      * *   After you unshare a custom image, you cannot query or use the custom image in the ECS console or by calling ECS API operations.
-      * *   After you unshare a custom image, you cannot re-initialize the disks of the ECS instances that were created based on the shared image.
-      * ### QPS limit
-      * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~347607~~).
-      *
-      * @param request ModifyImageShareStatusRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ModifyImageShareStatusResponse
+     * <b>description</b> :
+     * <p>Modifying a firewall template does not affect the firewall rules that have been applied to simple application servers.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the firewall rule in a firewall template. You can apply the new firewall rule to simple application servers.</p>
+     * 
+     * @param request ModifyFirewallTemplateRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyFirewallTemplateResponse
+     */
+    public ModifyFirewallTemplateResponse modifyFirewallTemplateWithOptions(ModifyFirewallTemplateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.firewallTemplateId)) {
+            query.put("FirewallTemplateId", request.firewallTemplateId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.firewallTemplateRule)) {
+            query.put("FirewallTemplateRule", request.firewallTemplateRule);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyFirewallTemplate"),
+            new TeaPair("version", "2020-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyFirewallTemplateResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Modifying a firewall template does not affect the firewall rules that have been applied to simple application servers.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the firewall rule in a firewall template. You can apply the new firewall rule to simple application servers.</p>
+     * 
+     * @param request ModifyFirewallTemplateRequest
+     * @return ModifyFirewallTemplateResponse
+     */
+    public ModifyFirewallTemplateResponse modifyFirewallTemplate(ModifyFirewallTemplateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyFirewallTemplateWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>You can share a custom image with ECS. If the configurations of your simple application server cannot meet your business requirements, or you want to use ECS instances to deploy your business, you can share your custom image with ECS to transfer your business from Simple Application Server to ECS.</p>
+     * <blockquote>
+     * <p>The shared image in ECS resides in the same region as the custom image in Simple Application Server.
+     * You can unshare a custom image based on your business requirements or when you want to delete the custom image. Take note of the following items:</p>
+     * </blockquote>
+     * <ul>
+     * <li>After you unshare a custom image, you cannot query or use the custom image in the ECS console or by calling ECS API operations.</li>
+     * <li>After you unshare a custom image, you cannot re-initialize the disks of the ECS instances that were created based on the shared image.</li>
+     * </ul>
+     * <h3>QPS limit</h3>
+     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Shares or unshares a custom image to Elastic Compute Service (ECS).</p>
+     * 
+     * @param request ModifyImageShareStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyImageShareStatusResponse
      */
     public ModifyImageShareStatusResponse modifyImageShareStatusWithOptions(ModifyImageShareStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -2799,22 +4806,38 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can share a custom image with ECS. If the configurations of your simple application server cannot meet your business requirements, or you want to use ECS instances to deploy your business, you can share your custom image with ECS to transfer your business from Simple Application Server to ECS.
-      * > The shared image in ECS resides in the same region as the custom image in Simple Application Server.
-      * You can unshare a custom image based on your business requirements or when you want to delete the custom image. Take note of the following items:
-      * *   After you unshare a custom image, you cannot query or use the custom image in the ECS console or by calling ECS API operations.
-      * *   After you unshare a custom image, you cannot re-initialize the disks of the ECS instances that were created based on the shared image.
-      * ### QPS limit
-      * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~347607~~).
-      *
-      * @param request ModifyImageShareStatusRequest
-      * @return ModifyImageShareStatusResponse
+     * <b>description</b> :
+     * <p>You can share a custom image with ECS. If the configurations of your simple application server cannot meet your business requirements, or you want to use ECS instances to deploy your business, you can share your custom image with ECS to transfer your business from Simple Application Server to ECS.</p>
+     * <blockquote>
+     * <p>The shared image in ECS resides in the same region as the custom image in Simple Application Server.
+     * You can unshare a custom image based on your business requirements or when you want to delete the custom image. Take note of the following items:</p>
+     * </blockquote>
+     * <ul>
+     * <li>After you unshare a custom image, you cannot query or use the custom image in the ECS console or by calling ECS API operations.</li>
+     * <li>After you unshare a custom image, you cannot re-initialize the disks of the ECS instances that were created based on the shared image.</li>
+     * </ul>
+     * <h3>QPS limit</h3>
+     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Shares or unshares a custom image to Elastic Compute Service (ECS).</p>
+     * 
+     * @param request ModifyImageShareStatusRequest
+     * @return ModifyImageShareStatusResponse
      */
     public ModifyImageShareStatusResponse modifyImageShareStatus(ModifyImageShareStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyImageShareStatusWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Changes the VNC password of a simple application server.</p>
+     * 
+     * @param request ModifyInstanceVncPasswordRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyInstanceVncPasswordResponse
+     */
     public ModifyInstanceVncPasswordResponse modifyInstanceVncPasswordWithOptions(ModifyInstanceVncPasswordRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2851,20 +4874,33 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyInstanceVncPasswordResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Changes the VNC password of a simple application server.</p>
+     * 
+     * @param request ModifyInstanceVncPasswordRequest
+     * @return ModifyInstanceVncPasswordResponse
+     */
     public ModifyInstanceVncPasswordResponse modifyInstanceVncPassword(ModifyInstanceVncPasswordRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyInstanceVncPasswordWithOptions(request, runtime);
     }
 
     /**
-      * *   Only simple application servers that are in the Running state can be restarted.
-      * *   After you restart a simple application server, it enters the Starting state.
-      * ### QPS limit
-      * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~347607~~).
-      *
-      * @param request RebootInstanceRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return RebootInstanceResponse
+     * <b>description</b> :
+     * <p>  Only simple application servers that are in the Running state can be restarted.</p>
+     * <ul>
+     * <li>After you restart a simple application server, it enters the Starting state.</li>
+     * </ul>
+     * <h3>QPS limit</h3>
+     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Restarts a simple application server.</p>
+     * 
+     * @param request RebootInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RebootInstanceResponse
      */
     public RebootInstanceResponse rebootInstanceWithOptions(RebootInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -2899,19 +4935,33 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   Only simple application servers that are in the Running state can be restarted.
-      * *   After you restart a simple application server, it enters the Starting state.
-      * ### QPS limit
-      * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~347607~~).
-      *
-      * @param request RebootInstanceRequest
-      * @return RebootInstanceResponse
+     * <b>description</b> :
+     * <p>  Only simple application servers that are in the Running state can be restarted.</p>
+     * <ul>
+     * <li>After you restart a simple application server, it enters the Starting state.</li>
+     * </ul>
+     * <h3>QPS limit</h3>
+     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Restarts a simple application server.</p>
+     * 
+     * @param request RebootInstanceRequest
+     * @return RebootInstanceResponse
      */
     public RebootInstanceResponse rebootInstance(RebootInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.rebootInstanceWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Restarts simple application servers.</p>
+     * 
+     * @param request RebootInstancesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RebootInstancesResponse
+     */
     public RebootInstancesResponse rebootInstancesWithOptions(RebootInstancesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2948,19 +4998,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new RebootInstancesResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Restarts simple application servers.</p>
+     * 
+     * @param request RebootInstancesRequest
+     * @return RebootInstancesResponse
+     */
     public RebootInstancesResponse rebootInstances(RebootInstancesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.rebootInstancesWithOptions(request, runtime);
     }
 
     /**
-      * If you no longer need to use a public endpoint to access a Simple Database Service instance, you can release the public endpoint.
-      * ### QPS limit
-      * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~347607~~).
-      *
-      * @param request ReleasePublicConnectionRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ReleasePublicConnectionResponse
+     * <b>description</b> :
+     * <p>If you no longer need to use a public endpoint to access a Simple Database Service instance, you can release the public endpoint.</p>
+     * <h3>QPS limit</h3>
+     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Releases the public endpoint of a Simple Database Service instance.</p>
+     * 
+     * @param request ReleasePublicConnectionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ReleasePublicConnectionResponse
      */
     public ReleasePublicConnectionResponse releasePublicConnectionWithOptions(ReleasePublicConnectionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -2995,12 +5056,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * If you no longer need to use a public endpoint to access a Simple Database Service instance, you can release the public endpoint.
-      * ### QPS limit
-      * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~347607~~).
-      *
-      * @param request ReleasePublicConnectionRequest
-      * @return ReleasePublicConnectionResponse
+     * <b>description</b> :
+     * <p>If you no longer need to use a public endpoint to access a Simple Database Service instance, you can release the public endpoint.</p>
+     * <h3>QPS limit</h3>
+     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Releases the public endpoint of a Simple Database Service instance.</p>
+     * 
+     * @param request ReleasePublicConnectionRequest
+     * @return ReleasePublicConnectionResponse
      */
     public ReleasePublicConnectionResponse releasePublicConnection(ReleasePublicConnectionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -3008,14 +5073,76 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   Before you call this operation, we recommend that you understand the billing of Simple Application Server. For more information, see [Billable items](~~58623~~).
-      * *   When you call this operation to renew a server, make sure that the balance in your account is sufficient. If the balance in your account is insufficient, the server cannot be renewed.
-      * ### QPS limit
-      * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~347607~~).
-      *
-      * @param request RenewInstanceRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return RenewInstanceResponse
+     * <b>summary</b> : 
+     * <p>取消共享镜像到用户</p>
+     * 
+     * @param request RemoveCustomImageShareAccountRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RemoveCustomImageShareAccountResponse
+     */
+    public RemoveCustomImageShareAccountResponse removeCustomImageShareAccountWithOptions(RemoveCustomImageShareAccountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.account)) {
+            query.put("Account", request.account);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageId)) {
+            query.put("ImageId", request.imageId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RemoveCustomImageShareAccount"),
+            new TeaPair("version", "2020-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RemoveCustomImageShareAccountResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>取消共享镜像到用户</p>
+     * 
+     * @param request RemoveCustomImageShareAccountRequest
+     * @return RemoveCustomImageShareAccountResponse
+     */
+    public RemoveCustomImageShareAccountResponse removeCustomImageShareAccount(RemoveCustomImageShareAccountRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.removeCustomImageShareAccountWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, we recommend that you understand the billing of Simple Application Server. For more information, see <a href="https://help.aliyun.com/document_detail/58623.html">Billable items</a>.</p>
+     * <ul>
+     * <li>When you call this operation to renew a server, make sure that the balance in your account is sufficient. If the balance in your account is insufficient, the server cannot be renewed.</li>
+     * </ul>
+     * <h3>QPS limit</h3>
+     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Renews a simple application server.</p>
+     * 
+     * @param request RenewInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RenewInstanceResponse
      */
     public RenewInstanceResponse renewInstanceWithOptions(RenewInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -3054,13 +5181,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   Before you call this operation, we recommend that you understand the billing of Simple Application Server. For more information, see [Billable items](~~58623~~).
-      * *   When you call this operation to renew a server, make sure that the balance in your account is sufficient. If the balance in your account is insufficient, the server cannot be renewed.
-      * ### QPS limit
-      * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~347607~~).
-      *
-      * @param request RenewInstanceRequest
-      * @return RenewInstanceResponse
+     * <b>description</b> :
+     * <p>  Before you call this operation, we recommend that you understand the billing of Simple Application Server. For more information, see <a href="https://help.aliyun.com/document_detail/58623.html">Billable items</a>.</p>
+     * <ul>
+     * <li>When you call this operation to renew a server, make sure that the balance in your account is sufficient. If the balance in your account is insufficient, the server cannot be renewed.</li>
+     * </ul>
+     * <h3>QPS limit</h3>
+     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Renews a simple application server.</p>
+     * 
+     * @param request RenewInstanceRequest
+     * @return RenewInstanceResponse
      */
     public RenewInstanceResponse renewInstance(RenewInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -3068,13 +5201,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * If the password of your Simple Database Service instance is not strong, you can call this operation to change the password of the administrator account of the instance. To ensure security of the instance, we recommend that you regularly change the password of the instance.
-      * ### QPS limit
-      * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~347607~~).
-      *
-      * @param request ResetDatabaseAccountPasswordRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ResetDatabaseAccountPasswordResponse
+     * <b>description</b> :
+     * <p>If the password of your Simple Database Service instance is not strong, you can call this operation to change the password of the administrator account of the instance. To ensure security of the instance, we recommend that you regularly change the password of the instance.</p>
+     * <h3>QPS limit</h3>
+     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Resets the password of the administrator account of a Simple Database Service instance.</p>
+     * 
+     * @param request ResetDatabaseAccountPasswordRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ResetDatabaseAccountPasswordResponse
      */
     public ResetDatabaseAccountPasswordResponse resetDatabaseAccountPasswordWithOptions(ResetDatabaseAccountPasswordRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -3113,12 +5250,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * If the password of your Simple Database Service instance is not strong, you can call this operation to change the password of the administrator account of the instance. To ensure security of the instance, we recommend that you regularly change the password of the instance.
-      * ### QPS limit
-      * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~347607~~).
-      *
-      * @param request ResetDatabaseAccountPasswordRequest
-      * @return ResetDatabaseAccountPasswordResponse
+     * <b>description</b> :
+     * <p>If the password of your Simple Database Service instance is not strong, you can call this operation to change the password of the administrator account of the instance. To ensure security of the instance, we recommend that you regularly change the password of the instance.</p>
+     * <h3>QPS limit</h3>
+     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Resets the password of the administrator account of a Simple Database Service instance.</p>
+     * 
+     * @param request ResetDatabaseAccountPasswordRequest
+     * @return ResetDatabaseAccountPasswordResponse
      */
     public ResetDatabaseAccountPasswordResponse resetDatabaseAccountPassword(ResetDatabaseAccountPasswordRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -3126,16 +5267,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   You can call this operation to roll back a disk only if the associated simple application server is in the Stopped state.
-      * *   After a disk is rolled back, all data changes that are made from when the snapshot was created to when the disk is rolled back are lost. Back up disk data based on your needs before you roll back the disk.
-      * ### Precautions
-      * After you reset a simple application server, the disk data on the server is deleted. Snapshots created before the resetting operation are retained but cannot be used to roll back the disks of the server.
-      * ### QPS limit
-      * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~347607~~).
-      *
-      * @param request ResetDiskRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ResetDiskResponse
+     * <b>description</b> :
+     * <p>  You can call this operation to roll back a disk only if the associated simple application server is in the Stopped state.</p>
+     * <ul>
+     * <li>After a disk is rolled back, all data changes that are made from when the snapshot was created to when the disk is rolled back are lost. Back up disk data based on your needs before you roll back the disk.</li>
+     * </ul>
+     * <h3>Precautions</h3>
+     * <p>After you reset a simple application server, the disk data on the server is deleted. Snapshots created before the resetting operation are retained but cannot be used to roll back the disks of the server.</p>
+     * <h3>QPS limit</h3>
+     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Rolls back a disk based on a snapshot.</p>
+     * 
+     * @param request ResetDiskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ResetDiskResponse
      */
     public ResetDiskResponse resetDiskWithOptions(ResetDiskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -3174,15 +5321,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   You can call this operation to roll back a disk only if the associated simple application server is in the Stopped state.
-      * *   After a disk is rolled back, all data changes that are made from when the snapshot was created to when the disk is rolled back are lost. Back up disk data based on your needs before you roll back the disk.
-      * ### Precautions
-      * After you reset a simple application server, the disk data on the server is deleted. Snapshots created before the resetting operation are retained but cannot be used to roll back the disks of the server.
-      * ### QPS limit
-      * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~347607~~).
-      *
-      * @param request ResetDiskRequest
-      * @return ResetDiskResponse
+     * <b>description</b> :
+     * <p>  You can call this operation to roll back a disk only if the associated simple application server is in the Stopped state.</p>
+     * <ul>
+     * <li>After a disk is rolled back, all data changes that are made from when the snapshot was created to when the disk is rolled back are lost. Back up disk data based on your needs before you roll back the disk.</li>
+     * </ul>
+     * <h3>Precautions</h3>
+     * <p>After you reset a simple application server, the disk data on the server is deleted. Snapshots created before the resetting operation are retained but cannot be used to roll back the disks of the server.</p>
+     * <h3>QPS limit</h3>
+     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Rolls back a disk based on a snapshot.</p>
+     * 
+     * @param request ResetDiskRequest
+     * @return ResetDiskResponse
      */
     public ResetDiskResponse resetDisk(ResetDiskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -3190,33 +5343,49 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can reset a simple application server to re-install its application system or OS and re-initialize the server. You can reset a simple application server by resetting the current system or replacing the image.
-      * You can use one of the following methods to reset a simple application server:
-      * *   Reset the current system. You can re-install the operating system without replacing the image.
-      * *   Replace the image. You can select an Alibaba Cloud image or a custom image that is different from the existing image of the server to reinstall the OS of the server.
-      * ### Precautions
-      * *   After you reset a simple application server, the disk data on the server is cleared. Back up the data as needed.
-      * *   After you reset a simple application server, the monitoring operations that are performed on the server may fail. In this case, you can use one of the following methods to install the CloudMonitor agent on the server:
-      *     *   Connect to the server: For more information, see [Manually install the CloudMonitor agent for C++ on an ECS instance](~~183482~~).
-      *     *   Use Command Assistant: For more information, see [Use Command Assistant](~~438681~~). You can obtain the command that can be used to install CloudMonitor from the "Common commands" section of the [Use Command Assistant](~~438681~~) topic.
-      * ### Limits
-      * *   Snapshots that are created before a server is reset are retained, but the snapshots cannot be used to roll back the disks of the server.
-      * *   You cannot reset simple application servers that were created based on custom images that contain data of data disks.
-      * *   Before you reset a simple application server by replacing the existing image with a custom image, take note of the following items:
-      *     *   The custom image must reside in the same region as the current server.
-      *     *   The custom image cannot be created based on the current server. If you want to recover the data on the server, you can use a snapshot of the server to roll back the disks of the server.
-      *     *   If your simple application server resides outside the Chinese mainland, you cannot switch the OS of the server between Windows Server and Linux. You cannot use a Windows Server custom image to reset a Linux simple application server. You also cannot use a Linux custom image to reset a Windows Server simple application server. You can switch the OSs of simple application servers only between Windows Server OSs or between Linux distributions.
-      *     *   The following limits apply to the disks attached to the simple application server:
-      *         *   If the custom image contains a system disk and a data disk but only a system disk is attached to the simple application server and no data disk is attached, you cannot use the custom image to reset the simple application server.
-      *         *   If the system disk size of the custom image is greater than the system disk size of the simple application server, you cannot directly use the custom image to reset the simple application server.
-      *         *   Only if the system disk size of the simple application server is greater than or equal to the system disk size of the custom image, you can use the custom image to reset the simple application server. To increase the system disk size of your simple application server, you can upgrade the server. For more information, see Upgrade a simple application server.
-      *         *   If the data disk size of the custom image is greater than the data disk size of the simple application server, you cannot use the custom image to reset the simple application server.
-      * ### QPS limit
-      * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~347607~~).
-      *
-      * @param request ResetSystemRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ResetSystemResponse
+     * <b>description</b> :
+     * <p>You can reset a simple application server to re-install its application system or OS and re-initialize the server. You can reset a simple application server by resetting the current system or replacing the image.
+     * You can use one of the following methods to reset a simple application server:</p>
+     * <ul>
+     * <li>Reset the current system. You can re-install the operating system without replacing the image.</li>
+     * <li>Replace the image. You can select an Alibaba Cloud image or a custom image that is different from the existing image of the server to reinstall the OS of the server.</li>
+     * </ul>
+     * <h3>Precautions</h3>
+     * <ul>
+     * <li>After you reset a simple application server, the disk data on the server is cleared. Back up the data as needed.</li>
+     * <li>After you reset a simple application server, the monitoring operations that are performed on the server may fail. In this case, you can use one of the following methods to install the CloudMonitor agent on the server:<ul>
+     * <li>Connect to the server: For more information, see <a href="https://help.aliyun.com/document_detail/183482.html">Manually install the CloudMonitor agent for C++ on an ECS instance</a>.</li>
+     * <li>Use Command Assistant: For more information, see <a href="https://help.aliyun.com/document_detail/438681.html">Use Command Assistant</a>. You can obtain the command that can be used to install CloudMonitor from the &quot;Common commands&quot; section of the <a href="https://help.aliyun.com/document_detail/438681.html">Use Command Assistant</a> topic.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * <h3>Limits</h3>
+     * <ul>
+     * <li>Snapshots that are created before a server is reset are retained, but the snapshots cannot be used to roll back the disks of the server.</li>
+     * <li>You cannot reset simple application servers that were created based on custom images that contain data of data disks.</li>
+     * <li>Before you reset a simple application server by replacing the existing image with a custom image, take note of the following items:<ul>
+     * <li>The custom image must reside in the same region as the current server.</li>
+     * <li>The custom image cannot be created based on the current server. If you want to recover the data on the server, you can use a snapshot of the server to roll back the disks of the server.</li>
+     * <li>If your simple application server resides outside the Chinese mainland, you cannot switch the OS of the server between Windows Server and Linux. You cannot use a Windows Server custom image to reset a Linux simple application server. You also cannot use a Linux custom image to reset a Windows Server simple application server. You can switch the OSs of simple application servers only between Windows Server OSs or between Linux distributions.</li>
+     * <li>The following limits apply to the disks attached to the simple application server:<ul>
+     * <li>If the custom image contains a system disk and a data disk but only a system disk is attached to the simple application server and no data disk is attached, you cannot use the custom image to reset the simple application server.</li>
+     * <li>If the system disk size of the custom image is greater than the system disk size of the simple application server, you cannot directly use the custom image to reset the simple application server.</li>
+     * <li>Only if the system disk size of the simple application server is greater than or equal to the system disk size of the custom image, you can use the custom image to reset the simple application server. To increase the system disk size of your simple application server, you can upgrade the server. For more information, see Upgrade a simple application server.</li>
+     * <li>If the data disk size of the custom image is greater than the data disk size of the simple application server, you cannot use the custom image to reset the simple application server.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * </li>
+     * </ul>
+     * <h3>QPS limit</h3>
+     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Resets a simple application server.</p>
+     * 
+     * @param request ResetSystemRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ResetSystemResponse
      */
     public ResetSystemResponse resetSystemWithOptions(ResetSystemRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -3255,32 +5424,48 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can reset a simple application server to re-install its application system or OS and re-initialize the server. You can reset a simple application server by resetting the current system or replacing the image.
-      * You can use one of the following methods to reset a simple application server:
-      * *   Reset the current system. You can re-install the operating system without replacing the image.
-      * *   Replace the image. You can select an Alibaba Cloud image or a custom image that is different from the existing image of the server to reinstall the OS of the server.
-      * ### Precautions
-      * *   After you reset a simple application server, the disk data on the server is cleared. Back up the data as needed.
-      * *   After you reset a simple application server, the monitoring operations that are performed on the server may fail. In this case, you can use one of the following methods to install the CloudMonitor agent on the server:
-      *     *   Connect to the server: For more information, see [Manually install the CloudMonitor agent for C++ on an ECS instance](~~183482~~).
-      *     *   Use Command Assistant: For more information, see [Use Command Assistant](~~438681~~). You can obtain the command that can be used to install CloudMonitor from the "Common commands" section of the [Use Command Assistant](~~438681~~) topic.
-      * ### Limits
-      * *   Snapshots that are created before a server is reset are retained, but the snapshots cannot be used to roll back the disks of the server.
-      * *   You cannot reset simple application servers that were created based on custom images that contain data of data disks.
-      * *   Before you reset a simple application server by replacing the existing image with a custom image, take note of the following items:
-      *     *   The custom image must reside in the same region as the current server.
-      *     *   The custom image cannot be created based on the current server. If you want to recover the data on the server, you can use a snapshot of the server to roll back the disks of the server.
-      *     *   If your simple application server resides outside the Chinese mainland, you cannot switch the OS of the server between Windows Server and Linux. You cannot use a Windows Server custom image to reset a Linux simple application server. You also cannot use a Linux custom image to reset a Windows Server simple application server. You can switch the OSs of simple application servers only between Windows Server OSs or between Linux distributions.
-      *     *   The following limits apply to the disks attached to the simple application server:
-      *         *   If the custom image contains a system disk and a data disk but only a system disk is attached to the simple application server and no data disk is attached, you cannot use the custom image to reset the simple application server.
-      *         *   If the system disk size of the custom image is greater than the system disk size of the simple application server, you cannot directly use the custom image to reset the simple application server.
-      *         *   Only if the system disk size of the simple application server is greater than or equal to the system disk size of the custom image, you can use the custom image to reset the simple application server. To increase the system disk size of your simple application server, you can upgrade the server. For more information, see Upgrade a simple application server.
-      *         *   If the data disk size of the custom image is greater than the data disk size of the simple application server, you cannot use the custom image to reset the simple application server.
-      * ### QPS limit
-      * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~347607~~).
-      *
-      * @param request ResetSystemRequest
-      * @return ResetSystemResponse
+     * <b>description</b> :
+     * <p>You can reset a simple application server to re-install its application system or OS and re-initialize the server. You can reset a simple application server by resetting the current system or replacing the image.
+     * You can use one of the following methods to reset a simple application server:</p>
+     * <ul>
+     * <li>Reset the current system. You can re-install the operating system without replacing the image.</li>
+     * <li>Replace the image. You can select an Alibaba Cloud image or a custom image that is different from the existing image of the server to reinstall the OS of the server.</li>
+     * </ul>
+     * <h3>Precautions</h3>
+     * <ul>
+     * <li>After you reset a simple application server, the disk data on the server is cleared. Back up the data as needed.</li>
+     * <li>After you reset a simple application server, the monitoring operations that are performed on the server may fail. In this case, you can use one of the following methods to install the CloudMonitor agent on the server:<ul>
+     * <li>Connect to the server: For more information, see <a href="https://help.aliyun.com/document_detail/183482.html">Manually install the CloudMonitor agent for C++ on an ECS instance</a>.</li>
+     * <li>Use Command Assistant: For more information, see <a href="https://help.aliyun.com/document_detail/438681.html">Use Command Assistant</a>. You can obtain the command that can be used to install CloudMonitor from the &quot;Common commands&quot; section of the <a href="https://help.aliyun.com/document_detail/438681.html">Use Command Assistant</a> topic.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * <h3>Limits</h3>
+     * <ul>
+     * <li>Snapshots that are created before a server is reset are retained, but the snapshots cannot be used to roll back the disks of the server.</li>
+     * <li>You cannot reset simple application servers that were created based on custom images that contain data of data disks.</li>
+     * <li>Before you reset a simple application server by replacing the existing image with a custom image, take note of the following items:<ul>
+     * <li>The custom image must reside in the same region as the current server.</li>
+     * <li>The custom image cannot be created based on the current server. If you want to recover the data on the server, you can use a snapshot of the server to roll back the disks of the server.</li>
+     * <li>If your simple application server resides outside the Chinese mainland, you cannot switch the OS of the server between Windows Server and Linux. You cannot use a Windows Server custom image to reset a Linux simple application server. You also cannot use a Linux custom image to reset a Windows Server simple application server. You can switch the OSs of simple application servers only between Windows Server OSs or between Linux distributions.</li>
+     * <li>The following limits apply to the disks attached to the simple application server:<ul>
+     * <li>If the custom image contains a system disk and a data disk but only a system disk is attached to the simple application server and no data disk is attached, you cannot use the custom image to reset the simple application server.</li>
+     * <li>If the system disk size of the custom image is greater than the system disk size of the simple application server, you cannot directly use the custom image to reset the simple application server.</li>
+     * <li>Only if the system disk size of the simple application server is greater than or equal to the system disk size of the custom image, you can use the custom image to reset the simple application server. To increase the system disk size of your simple application server, you can upgrade the server. For more information, see Upgrade a simple application server.</li>
+     * <li>If the data disk size of the custom image is greater than the data disk size of the simple application server, you cannot use the custom image to reset the simple application server.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * </li>
+     * </ul>
+     * <h3>QPS limit</h3>
+     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Resets a simple application server.</p>
+     * 
+     * @param request ResetSystemRequest
+     * @return ResetSystemResponse
      */
     public ResetSystemResponse resetSystem(ResetSystemRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -3288,13 +5473,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation to restart a Simple Database Service instance that is in the Running state.
-      * ### QPS limit
-      * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~347607~~).
-      *
-      * @param request RestartDatabaseInstanceRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return RestartDatabaseInstanceResponse
+     * <b>description</b> :
+     * <p>You can call this operation to restart a Simple Database Service instance that is in the Running state.</p>
+     * <h3>QPS limit</h3>
+     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Restarts a Simple Database Service instance.</p>
+     * 
+     * @param request RestartDatabaseInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RestartDatabaseInstanceResponse
      */
     public RestartDatabaseInstanceResponse restartDatabaseInstanceWithOptions(RestartDatabaseInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -3329,12 +5518,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation to restart a Simple Database Service instance that is in the Running state.
-      * ### QPS limit
-      * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~347607~~).
-      *
-      * @param request RestartDatabaseInstanceRequest
-      * @return RestartDatabaseInstanceResponse
+     * <b>description</b> :
+     * <p>You can call this operation to restart a Simple Database Service instance that is in the Running state.</p>
+     * <h3>QPS limit</h3>
+     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Restarts a Simple Database Service instance.</p>
+     * 
+     * @param request RestartDatabaseInstanceRequest
+     * @return RestartDatabaseInstanceResponse
      */
     public RestartDatabaseInstanceResponse restartDatabaseInstance(RestartDatabaseInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -3342,14 +5535,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Command Assistant is an automated O\\&M tool for Simple Application Server. You can maintain simple application servers by running shell, PowerShell, and batch commands in the Simple Application Server console without remotely logging on to the servers.
-      * Before you use Command Assistant, take note of the following items:
-      * *   The simple application server must be in the Running state.
-      * *   The Cloud Assistant client is installed on the server. By default, the Cloud Assistant client is installed on simple application servers. If you have manually uninstalled the client, you must reinstall it. For more information, see [Install the Cloud Assistant Agent](~~64921~~).
-      *
-      * @param tmpReq RunCommandRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return RunCommandResponse
+     * <b>description</b> :
+     * <p>Command Assistant is an automated O\&amp;M tool for Simple Application Server. You can maintain simple application servers by running shell, PowerShell, and batch commands in the Simple Application Server console without remotely logging on to the servers.
+     * Before you use Command Assistant, take note of the following items:</p>
+     * <ul>
+     * <li>The simple application server must be in the Running state.</li>
+     * <li>The Cloud Assistant client is installed on the server. By default, the Cloud Assistant client is installed on simple application servers. If you have manually uninstalled the client, you must reinstall it. For more information, see <a href="https://help.aliyun.com/document_detail/64921.html">Install the Cloud Assistant Agent</a>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Runs commands on a simple application server.</p>
+     * 
+     * @param tmpReq RunCommandRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RunCommandResponse
      */
     public RunCommandResponse runCommandWithOptions(RunCommandRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
@@ -3422,13 +5621,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Command Assistant is an automated O\\&M tool for Simple Application Server. You can maintain simple application servers by running shell, PowerShell, and batch commands in the Simple Application Server console without remotely logging on to the servers.
-      * Before you use Command Assistant, take note of the following items:
-      * *   The simple application server must be in the Running state.
-      * *   The Cloud Assistant client is installed on the server. By default, the Cloud Assistant client is installed on simple application servers. If you have manually uninstalled the client, you must reinstall it. For more information, see [Install the Cloud Assistant Agent](~~64921~~).
-      *
-      * @param request RunCommandRequest
-      * @return RunCommandResponse
+     * <b>description</b> :
+     * <p>Command Assistant is an automated O\&amp;M tool for Simple Application Server. You can maintain simple application servers by running shell, PowerShell, and batch commands in the Simple Application Server console without remotely logging on to the servers.
+     * Before you use Command Assistant, take note of the following items:</p>
+     * <ul>
+     * <li>The simple application server must be in the Running state.</li>
+     * <li>The Cloud Assistant client is installed on the server. By default, the Cloud Assistant client is installed on simple application servers. If you have manually uninstalled the client, you must reinstall it. For more information, see <a href="https://help.aliyun.com/document_detail/64921.html">Install the Cloud Assistant Agent</a>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Runs commands on a simple application server.</p>
+     * 
+     * @param request RunCommandRequest
+     * @return RunCommandResponse
      */
     public RunCommandResponse runCommand(RunCommandRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -3436,13 +5641,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation to start a Simple Database Service instance that is in the Stopped state.
-      * ### QPS limit
-      * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~347607~~).
-      *
-      * @param request StartDatabaseInstanceRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return StartDatabaseInstanceResponse
+     * <b>description</b> :
+     * <p>You can call this operation to start a Simple Database Service instance that is in the Stopped state.</p>
+     * <h3>QPS limit</h3>
+     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Starts a Simple Database Service instance.</p>
+     * 
+     * @param request StartDatabaseInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StartDatabaseInstanceResponse
      */
     public StartDatabaseInstanceResponse startDatabaseInstanceWithOptions(StartDatabaseInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -3477,12 +5686,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation to start a Simple Database Service instance that is in the Stopped state.
-      * ### QPS limit
-      * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~347607~~).
-      *
-      * @param request StartDatabaseInstanceRequest
-      * @return StartDatabaseInstanceResponse
+     * <b>description</b> :
+     * <p>You can call this operation to start a Simple Database Service instance that is in the Stopped state.</p>
+     * <h3>QPS limit</h3>
+     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Starts a Simple Database Service instance.</p>
+     * 
+     * @param request StartDatabaseInstanceRequest
+     * @return StartDatabaseInstanceResponse
      */
     public StartDatabaseInstanceResponse startDatabaseInstance(StartDatabaseInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -3490,13 +5703,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation to start a simple application server that is in the Stopped state.
-      * ### QPS limit
-      * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~347607~~).
-      *
-      * @param request StartInstanceRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return StartInstanceResponse
+     * <b>description</b> :
+     * <p>You can call this operation to start a simple application server that is in the Stopped state.</p>
+     * <h3>QPS limit</h3>
+     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Starts a simple application server.</p>
+     * 
+     * @param request StartInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StartInstanceResponse
      */
     public StartInstanceResponse startInstanceWithOptions(StartInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -3531,18 +5748,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation to start a simple application server that is in the Stopped state.
-      * ### QPS limit
-      * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~347607~~).
-      *
-      * @param request StartInstanceRequest
-      * @return StartInstanceResponse
+     * <b>description</b> :
+     * <p>You can call this operation to start a simple application server that is in the Stopped state.</p>
+     * <h3>QPS limit</h3>
+     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Starts a simple application server.</p>
+     * 
+     * @param request StartInstanceRequest
+     * @return StartInstanceResponse
      */
     public StartInstanceResponse startInstance(StartInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.startInstanceWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Starts simple application servers.</p>
+     * 
+     * @param request StartInstancesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StartInstancesResponse
+     */
     public StartInstancesResponse startInstancesWithOptions(StartInstancesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3575,11 +5804,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new StartInstancesResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Starts simple application servers.</p>
+     * 
+     * @param request StartInstancesRequest
+     * @return StartInstancesResponse
+     */
     public StartInstancesResponse startInstances(StartInstancesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.startInstancesWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a session for a simple application server.</p>
+     * 
+     * @param request StartTerminalSessionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StartTerminalSessionResponse
+     */
     public StartTerminalSessionResponse startTerminalSessionWithOptions(StartTerminalSessionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3608,19 +5852,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new StartTerminalSessionResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a session for a simple application server.</p>
+     * 
+     * @param request StartTerminalSessionRequest
+     * @return StartTerminalSessionResponse
+     */
     public StartTerminalSessionResponse startTerminalSession(StartTerminalSessionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.startTerminalSessionWithOptions(request, runtime);
     }
 
     /**
-      * You can call this operation to stop a Simple Database Service instance that is in the Running state. After the instance is stopped, you cannot log on to or access the instance.
-      * ### QPS limit
-      * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~347607~~).
-      *
-      * @param request StopDatabaseInstanceRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return StopDatabaseInstanceResponse
+     * <b>description</b> :
+     * <p>You can call this operation to stop a Simple Database Service instance that is in the Running state. After the instance is stopped, you cannot log on to or access the instance.</p>
+     * <h3>QPS limit</h3>
+     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Stops a Simple Database Service instance.</p>
+     * 
+     * @param request StopDatabaseInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StopDatabaseInstanceResponse
      */
     public StopDatabaseInstanceResponse stopDatabaseInstanceWithOptions(StopDatabaseInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -3655,12 +5910,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation to stop a Simple Database Service instance that is in the Running state. After the instance is stopped, you cannot log on to or access the instance.
-      * ### QPS limit
-      * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~347607~~).
-      *
-      * @param request StopDatabaseInstanceRequest
-      * @return StopDatabaseInstanceResponse
+     * <b>description</b> :
+     * <p>You can call this operation to stop a Simple Database Service instance that is in the Running state. After the instance is stopped, you cannot log on to or access the instance.</p>
+     * <h3>QPS limit</h3>
+     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Stops a Simple Database Service instance.</p>
+     * 
+     * @param request StopDatabaseInstanceRequest
+     * @return StopDatabaseInstanceResponse
      */
     public StopDatabaseInstanceResponse stopDatabaseInstance(StopDatabaseInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -3668,14 +5927,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can stop a simple application server that you do not use for the time being.
-      * >  Stopping a simple application server may interrupt your business. We recommend that you perform the stop operation during off-peak hours.
-      * ### QPS limit
-      * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~347607~~).
-      *
-      * @param request StopInstanceRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return StopInstanceResponse
+     * <b>description</b> :
+     * <p>You can stop a simple application server that you do not use for the time being.</p>
+     * <blockquote>
+     * <p> Stopping a simple application server may interrupt your business. We recommend that you perform the stop operation during off-peak hours.</p>
+     * </blockquote>
+     * <h3>QPS limit</h3>
+     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Stops a simple application server.</p>
+     * 
+     * @param request StopInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StopInstanceResponse
      */
     public StopInstanceResponse stopInstanceWithOptions(StopInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -3710,19 +5975,33 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can stop a simple application server that you do not use for the time being.
-      * >  Stopping a simple application server may interrupt your business. We recommend that you perform the stop operation during off-peak hours.
-      * ### QPS limit
-      * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~347607~~).
-      *
-      * @param request StopInstanceRequest
-      * @return StopInstanceResponse
+     * <b>description</b> :
+     * <p>You can stop a simple application server that you do not use for the time being.</p>
+     * <blockquote>
+     * <p> Stopping a simple application server may interrupt your business. We recommend that you perform the stop operation during off-peak hours.</p>
+     * </blockquote>
+     * <h3>QPS limit</h3>
+     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Stops a simple application server.</p>
+     * 
+     * @param request StopInstanceRequest
+     * @return StopInstanceResponse
      */
     public StopInstanceResponse stopInstance(StopInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.stopInstanceWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Stops simple application servers.</p>
+     * 
+     * @param request StopInstancesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StopInstancesResponse
+     */
     public StopInstancesResponse stopInstancesWithOptions(StopInstancesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3759,11 +6038,150 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new StopInstancesResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Stops simple application servers.</p>
+     * 
+     * @param request StopInstancesRequest
+     * @return StopInstancesResponse
+     */
     public StopInstancesResponse stopInstances(StopInstancesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.stopInstancesWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>打标签接口</p>
+     * 
+     * @param request TagResourcesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return TagResourcesResponse
+     */
+    public TagResourcesResponse tagResourcesWithOptions(TagResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceId)) {
+            query.put("ResourceId", request.resourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            query.put("ResourceType", request.resourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "TagResources"),
+            new TeaPair("version", "2020-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new TagResourcesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>打标签接口</p>
+     * 
+     * @param request TagResourcesRequest
+     * @return TagResourcesResponse
+     */
+    public TagResourcesResponse tagResources(TagResourcesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.tagResourcesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删标签接口</p>
+     * 
+     * @param request UntagResourcesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UntagResourcesResponse
+     */
+    public UntagResourcesResponse untagResourcesWithOptions(UntagResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.all)) {
+            query.put("All", request.all);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceId)) {
+            query.put("ResourceId", request.resourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            query.put("ResourceType", request.resourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagKey)) {
+            query.put("TagKey", request.tagKey);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UntagResources"),
+            new TeaPair("version", "2020-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UntagResourcesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删标签接口</p>
+     * 
+     * @param request UntagResourcesRequest
+     * @return UntagResourcesResponse
+     */
+    public UntagResourcesResponse untagResources(UntagResourcesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.untagResourcesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifys the parameter of a command.</p>
+     * 
+     * @param request UpdateCommandAttributeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateCommandAttributeResponse
+     */
     public UpdateCommandAttributeResponse updateCommandAttributeWithOptions(UpdateCommandAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3808,11 +6226,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateCommandAttributeResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Modifys the parameter of a command.</p>
+     * 
+     * @param request UpdateCommandAttributeRequest
+     * @return UpdateCommandAttributeResponse
+     */
     public UpdateCommandAttributeResponse updateCommandAttribute(UpdateCommandAttributeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateCommandAttributeWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the remarks for the data disk that is attached to a simple application server.</p>
+     * 
+     * @param request UpdateDiskAttributeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateDiskAttributeResponse
+     */
     public UpdateDiskAttributeResponse updateDiskAttributeWithOptions(UpdateDiskAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3849,20 +6282,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateDiskAttributeResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the remarks for the data disk that is attached to a simple application server.</p>
+     * 
+     * @param request UpdateDiskAttributeRequest
+     * @return UpdateDiskAttributeResponse
+     */
     public UpdateDiskAttributeResponse updateDiskAttribute(UpdateDiskAttributeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateDiskAttributeWithOptions(request, runtime);
     }
 
     /**
-      * ## Usage notes
-      * After you change the password of a simple application server, you must restart the server by calling the [RebootInstance](~~190443~~) operation to allow the new password to take effect.
-      * ### QPS limits
-      * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~347607~~).
-      *
-      * @param request UpdateInstanceAttributeRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return UpdateInstanceAttributeResponse
+     * <b>description</b> :
+     * <h2>Usage notes</h2>
+     * <p>After you change the password of a simple application server, you must restart the server by calling the <a href="https://help.aliyun.com/document_detail/190443.html">RebootInstance</a> operation to allow the new password to take effect.</p>
+     * <h3>QPS limits</h3>
+     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the information of a simple application server, including the server name and the password that you use to log on to the server.</p>
+     * 
+     * @param request UpdateInstanceAttributeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateInstanceAttributeResponse
      */
     public UpdateInstanceAttributeResponse updateInstanceAttributeWithOptions(UpdateInstanceAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -3905,19 +6349,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## Usage notes
-      * After you change the password of a simple application server, you must restart the server by calling the [RebootInstance](~~190443~~) operation to allow the new password to take effect.
-      * ### QPS limits
-      * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~347607~~).
-      *
-      * @param request UpdateInstanceAttributeRequest
-      * @return UpdateInstanceAttributeResponse
+     * <b>description</b> :
+     * <h2>Usage notes</h2>
+     * <p>After you change the password of a simple application server, you must restart the server by calling the <a href="https://help.aliyun.com/document_detail/190443.html">RebootInstance</a> operation to allow the new password to take effect.</p>
+     * <h3>QPS limits</h3>
+     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the information of a simple application server, including the server name and the password that you use to log on to the server.</p>
+     * 
+     * @param request UpdateInstanceAttributeRequest
+     * @return UpdateInstanceAttributeResponse
      */
     public UpdateInstanceAttributeResponse updateInstanceAttribute(UpdateInstanceAttributeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateInstanceAttributeWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the remarks of a snapshot of a simple application server.</p>
+     * 
+     * @param request UpdateSnapshotAttributeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateSnapshotAttributeResponse
+     */
     public UpdateSnapshotAttributeResponse updateSnapshotAttributeWithOptions(UpdateSnapshotAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3954,20 +6410,33 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateSnapshotAttributeResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the remarks of a snapshot of a simple application server.</p>
+     * 
+     * @param request UpdateSnapshotAttributeRequest
+     * @return UpdateSnapshotAttributeResponse
+     */
     public UpdateSnapshotAttributeResponse updateSnapshotAttribute(UpdateSnapshotAttributeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateSnapshotAttributeWithOptions(request, runtime);
     }
 
     /**
-      * *   The plan of a simple application server cannot be downgraded, but can only be upgraded. For more information about plans, see [Billable items](~~58623~~).
-      * *   When you call this operation to upgrade a server, make sure that the balance in your account is sufficient. If the balance in your account is insufficient, the server cannot be upgraded.
-      * ### QPS limit
-      * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~347607~~).
-      *
-      * @param request UpgradeInstanceRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return UpgradeInstanceResponse
+     * <b>description</b> :
+     * <p>  The plan of a simple application server cannot be downgraded, but can only be upgraded. For more information about plans, see <a href="https://help.aliyun.com/document_detail/58623.html">Billable items</a>.</p>
+     * <ul>
+     * <li>When you call this operation to upgrade a server, make sure that the balance in your account is sufficient. If the balance in your account is insufficient, the server cannot be upgraded.</li>
+     * </ul>
+     * <h3>QPS limit</h3>
+     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Upgrades the plan for a simple application server.</p>
+     * 
+     * @param request UpgradeInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpgradeInstanceResponse
      */
     public UpgradeInstanceResponse upgradeInstanceWithOptions(UpgradeInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -4006,19 +6475,33 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   The plan of a simple application server cannot be downgraded, but can only be upgraded. For more information about plans, see [Billable items](~~58623~~).
-      * *   When you call this operation to upgrade a server, make sure that the balance in your account is sufficient. If the balance in your account is insufficient, the server cannot be upgraded.
-      * ### QPS limit
-      * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~347607~~).
-      *
-      * @param request UpgradeInstanceRequest
-      * @return UpgradeInstanceResponse
+     * <b>description</b> :
+     * <p>  The plan of a simple application server cannot be downgraded, but can only be upgraded. For more information about plans, see <a href="https://help.aliyun.com/document_detail/58623.html">Billable items</a>.</p>
+     * <ul>
+     * <li>When you call this operation to upgrade a server, make sure that the balance in your account is sufficient. If the balance in your account is insufficient, the server cannot be upgraded.</li>
+     * </ul>
+     * <h3>QPS limit</h3>
+     * <p>You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/347607.html">QPS limits</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Upgrades the plan for a simple application server.</p>
+     * 
+     * @param request UpgradeInstanceRequest
+     * @return UpgradeInstanceResponse
      */
     public UpgradeInstanceResponse upgradeInstance(UpgradeInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.upgradeInstanceWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Imports a key pair for a simple application server.</p>
+     * 
+     * @param request UploadInstanceKeyPairRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UploadInstanceKeyPairResponse
+     */
     public UploadInstanceKeyPairResponse uploadInstanceKeyPairWithOptions(UploadInstanceKeyPairRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4059,6 +6542,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UploadInstanceKeyPairResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Imports a key pair for a simple application server.</p>
+     * 
+     * @param request UploadInstanceKeyPairRequest
+     * @return UploadInstanceKeyPairResponse
+     */
     public UploadInstanceKeyPairResponse uploadInstanceKeyPair(UploadInstanceKeyPairRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.uploadInstanceKeyPairWithOptions(request, runtime);

@@ -12,6 +12,9 @@ public class ListInstancesTrafficPackagesResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20758A-585D-4A41-A9B2-28DA8F4F****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,32 +43,48 @@ public class ListInstancesTrafficPackagesResponseBody extends TeaModel {
     public static class ListInstancesTrafficPackagesResponseBodyInstanceTrafficPackageUsages extends TeaModel {
         /**
          * <p>The ID of the simple application server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccscqwqwqqqw****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The data transfers that exceeds the quota of the data transfer plan in the current month. Unit: Byte.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("TrafficOverflow")
         public Long trafficOverflow;
 
         /**
          * <p>The unused quota of the data transfer plan in the current month. Unit: Byte.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         @NameInMap("TrafficPackageRemaining")
         public Long trafficPackageRemaining;
 
         /**
          * <p>The quota of the data transfer plan in the current month. Unit: Byte.</p>
-         * <br>
-         * <p>>  TrafficPackageTotal = TrafficUsed + TrafficPackageRemaining</p>
+         * <blockquote>
+         * <p> TrafficPackageTotal = TrafficUsed + TrafficPackageRemaining</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>20000</p>
          */
         @NameInMap("TrafficPackageTotal")
         public Long trafficPackageTotal;
 
         /**
          * <p>The used quota of the data transfer plan in the current month. Unit: Byte.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         @NameInMap("TrafficUsed")
         public Long trafficUsed;

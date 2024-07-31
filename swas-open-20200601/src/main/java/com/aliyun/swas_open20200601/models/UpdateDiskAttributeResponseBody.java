@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateDiskAttributeResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20758A-585D-4A41-A9B2-28D****534F</p>
      */
     @NameInMap("RequestId")
     public String requestId;

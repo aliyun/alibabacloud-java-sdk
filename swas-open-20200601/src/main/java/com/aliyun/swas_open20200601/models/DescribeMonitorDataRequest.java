@@ -5,88 +5,120 @@ import com.aliyun.tea.*;
 
 public class DescribeMonitorDataRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The **token** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <strong>token</strong> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The end of the time range to query. The following formats are supported:</p>
-     * <br>
-     * <p>*   UNIX timestamp: the number of milliseconds that have elapsed since 00:00:00 January 1, 1970.</p>
-     * <p>*   Time format: YYYY-MM-DDThh:mm:ssZ.</p>
-     * <br>
-     * <p>> The interval between the start time and the end time is less than or equal to 31 days.</p>
+     * <ul>
+     * <li>UNIX timestamp: the number of milliseconds that have elapsed since 00:00:00 January 1, 1970.</li>
+     * <li>Time format: YYYY-MM-DDThh:mm:ssZ.</li>
+     * </ul>
+     * <blockquote>
+     * <p>The interval between the start time and the end time is less than or equal to 31 days.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-09-08T08:04:44Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The ID of the simple application server.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2ad1ae67295445f598017499dc****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The number of entries per page. Valid values: 1 to 1440.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("Length")
     public String length;
 
     /**
-     * <p>The metric name. Valid values:</p>
-     * <br>
-     * <p>*   MEMORY_ACTUALUSEDSPACE: the memory usage. Unit: bytes.</p>
-     * <p>*   DISKUSAGE_USED: the disk usage. Unit: bytes.</p>
-     * <p>*   CPU_UTILIZATION: the CPU utilization in percentage.</p>
-     * <p>*   VPC_PUBLICIP_INTERNETOUT_RATE: the outbound bandwidth rate of the network. Unit: bits/s.</p>
-     * <p>*   VPC_PUBLICIP_INTERNETIN_RATE: the inbound bandwidth rate of the network. Unit: bits/s.</p>
-     * <p>*   DISK_READ_IOPS: the read IOPS of the disk. Unit: count/s.</p>
-     * <p>*   DISK_WRITE_IOPS: the write IOPS of the disk. Unit: count/s.</p>
-     * <p>*   FLOW_USED: the traffic usage. Unit: bytes.</p>
+     * <p>The name of the metric. Valid values:</p>
+     * <ul>
+     * <li>MEMORY_ACTUALUSEDSPACE: the memory usage. Unit: bytes.</li>
+     * <li>DISKUSAGE_USED: the disk usage. Unit: bytes.</li>
+     * <li>CPU_UTILIZATION: the CPU usage, in percentage.</li>
+     * <li>VPC_PUBLICIP_INTERNETOUT_RATE: the outbound bandwidth. Unit: bits/s.</li>
+     * <li>VPC_PUBLICIP_INTERNETIN_RATE: the inbound bandwidth. Unit: bits/s.</li>
+     * <li>DISK_READ_IOPS: the read IOPS of the disk. Unit: count/s.</li>
+     * <li>DISK_WRITE_IOPS: the write IOPS of the disk. Unit: count/s.</li>
+     * <li>FLOW_USED: the traffic usage. Unit: bytes.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DISKUSAGE_USED</p>
      */
     @NameInMap("MetricName")
     public String metricName;
 
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AAAAAV3MpHK1AP0pfERHZN5pu6nOc1nj4M9UaAZ/I8db***</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The interval at which the monitoring data is queried. Valid values: 60, 300, and 900. Unit: seconds.</p>
-     * <br>
-     * <p>> </p>
-     * <br>
+     * <blockquote>
+     * </blockquote>
      * <p>If MetricName is set to FLOW_USED, Period is set to 3600 (one hour). In other cases, set Period based on your business requirements.</p>
-     * <br>
      * <p>**</p>
-     * <br>
-     * <p>****</p>
+     * <hr>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60</p>
      */
     @NameInMap("Period")
     public String period;
 
     /**
-     * <p>The region ID of the simple application server. You can call the [ListRegions](~~189315~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the simple application server. You can call the <a href="https://help.aliyun.com/document_detail/189315.html">ListRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The beginning of the time range to query. The following formats are supported:</p>
-     * <br>
-     * <p>*   UNIX timestamp: the number of milliseconds that have elapsed since 00:00:00 January 1, 1970.</p>
-     * <p>*   Time format: YYYY-MM-DDThh:mm:ssZ.</p>
-     * <br>
-     * <p>> The specified time range includes the end time and excludes the start time. The start time must be earlier than the end time.</p>
-     * <br>
+     * <ul>
+     * <li>UNIX timestamp: the number of milliseconds that have elapsed since 00:00:00 January 1, 1970.</li>
+     * <li>Time format: YYYY-MM-DDThh:mm:ssZ.</li>
+     * </ul>
+     * <blockquote>
+     * <p>The specified time range includes the end time and excludes the start time. The start time must be earlier than the end time.</p>
+     * </blockquote>
      * <p>The interval between the start time and the end time is less than or equal to 31 days.</p>
-     * <br>
      * <p>**</p>
-     * <br>
-     * <p>****</p>
+     * <hr>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-09-07T04:04:44Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;

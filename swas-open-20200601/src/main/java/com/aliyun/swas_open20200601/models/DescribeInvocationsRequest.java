@@ -6,42 +6,56 @@ import com.aliyun.tea.*;
 public class DescribeInvocationsRequest extends TeaModel {
     /**
      * <p>The ID of the simple application server.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3a658ca270df4df39f22e289b338****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The status of the command execution. Valid values:</p>
-     * <br>
-     * <p>*   Running: The command is being executed.</p>
-     * <p>*   Finished: The execution is complete.</p>
-     * <p>*   Failed: The execution fails.</p>
+     * <ul>
+     * <li>Running: The command is being executed.</li>
+     * <li>Finished: The execution is complete.</li>
+     * <li>Failed: The execution fails.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Finished</p>
      */
     @NameInMap("InvokeStatus")
     public String invokeStatus;
 
     /**
      * <p>The page number.</p>
-     * <br>
      * <p>Pages start from page 1.</p>
-     * <br>
      * <p>Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
-     * <br>
      * <p>Maximum value: 50.</p>
-     * <br>
      * <p>Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the simple application server. You can call the [ListRegions](~~189315~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the simple application server. You can call the <a href="https://help.aliyun.com/document_detail/189315.html">ListRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -5,31 +5,43 @@ import com.aliyun.tea.*;
 
 public class ListCustomImagesResponseBody extends TeaModel {
     /**
-     * <p>The queried custom images.</p>
+     * <p>The array of queried custom images.</p>
      */
     @NameInMap("CustomImages")
     public java.util.List<ListCustomImagesResponseBodyCustomImages> customImages;
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public String pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20758A-585D-4A41-A9B2-28DA8F4F534F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
      */
     @NameInMap("TotalCount")
     public String totalCount;
@@ -79,88 +91,216 @@ public class ListCustomImagesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public static class ListCustomImagesResponseBodyCustomImages extends TeaModel {
+    public static class ListCustomImagesResponseBodyCustomImagesTags extends TeaModel {
         /**
-         * <p>The time when the snapshot was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The tag key of the custom image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
+         */
+        @NameInMap("Key")
+        public String key;
+
+        /**
+         * <p>The tag value of the custom image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
+         */
+        @NameInMap("Value")
+        public String value;
+
+        public static ListCustomImagesResponseBodyCustomImagesTags build(java.util.Map<String, ?> map) throws Exception {
+            ListCustomImagesResponseBodyCustomImagesTags self = new ListCustomImagesResponseBodyCustomImagesTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListCustomImagesResponseBodyCustomImagesTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListCustomImagesResponseBodyCustomImagesTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class ListCustomImagesResponseBodyCustomImages extends TeaModel {
+        @NameInMap("CreateInstances")
+        public java.util.List<String> createInstances;
+
+        /**
+         * <p>The time when the snapshot was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-10-09T02:28:06Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The ID of the data disk snapshot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-bp19rn9u8eqzlfb***</p>
          */
         @NameInMap("DataSnapshotId")
         public String dataSnapshotId;
 
         /**
          * <p>The name of the data disk snapshot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>data disk snapshot</p>
          */
         @NameInMap("DataSnapshotName")
         public String dataSnapshotName;
 
         /**
          * <p>The description of the custom image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-custom-image</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The ID of the custom image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-bp1e79zktg26n2b***</p>
          */
         @NameInMap("ImageId")
         public String imageId;
 
         /**
-         * <p>Indicates whether the custom image is shared with Elastic Compute Service (ECS).</p>
+         * <p>Indicates whether the custom image is shared to Elastic Compute Service (ECS).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("InShare")
         public Boolean inShare;
 
         /**
+         * <strong>example:</strong>
+         * <p>False</p>
+         */
+        @NameInMap("InShareUser")
+        public Boolean inShareUser;
+
+        /**
          * <p>The ID of the simple application server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2d06ee0520b44de1ae88d4be****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The name of the simple application server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>swas-asdf23***</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
          * <p>The name of the custom image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hua</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The region ID of the custom images.</p>
+         * <strong>example:</strong>
+         * <p>Linux</p>
+         */
+        @NameInMap("OsType")
+        public String osType;
+
+        /**
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm2h2lvp3ublq</p>
+         */
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
+        /**
          * <p>The status of the custom image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The ID of the system disk snapshot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-bp1h173hj21puxb***</p>
          */
         @NameInMap("SystemSnapshotId")
         public String systemSnapshotId;
 
         /**
          * <p>The name of the system disk snapshot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>system disk snapshot</p>
          */
         @NameInMap("SystemSnapshotName")
         public String systemSnapshotName;
 
+        /**
+         * <p>The tags of the custom image.</p>
+         */
+        @NameInMap("Tags")
+        public java.util.List<ListCustomImagesResponseBodyCustomImagesTags> tags;
+
+        /**
+         * <strong>example:</strong>
+         * <p>180185828710****</p>
+         */
+        @NameInMap("UserId")
+        public Long userId;
+
         public static ListCustomImagesResponseBodyCustomImages build(java.util.Map<String, ?> map) throws Exception {
             ListCustomImagesResponseBodyCustomImages self = new ListCustomImagesResponseBodyCustomImages();
             return TeaModel.build(map, self);
+        }
+
+        public ListCustomImagesResponseBodyCustomImages setCreateInstances(java.util.List<String> createInstances) {
+            this.createInstances = createInstances;
+            return this;
+        }
+        public java.util.List<String> getCreateInstances() {
+            return this.createInstances;
         }
 
         public ListCustomImagesResponseBodyCustomImages setCreationTime(String creationTime) {
@@ -211,6 +351,14 @@ public class ListCustomImagesResponseBody extends TeaModel {
             return this.inShare;
         }
 
+        public ListCustomImagesResponseBodyCustomImages setInShareUser(Boolean inShareUser) {
+            this.inShareUser = inShareUser;
+            return this;
+        }
+        public Boolean getInShareUser() {
+            return this.inShareUser;
+        }
+
         public ListCustomImagesResponseBodyCustomImages setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
@@ -235,12 +383,28 @@ public class ListCustomImagesResponseBody extends TeaModel {
             return this.name;
         }
 
+        public ListCustomImagesResponseBodyCustomImages setOsType(String osType) {
+            this.osType = osType;
+            return this;
+        }
+        public String getOsType() {
+            return this.osType;
+        }
+
         public ListCustomImagesResponseBodyCustomImages setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public ListCustomImagesResponseBodyCustomImages setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public ListCustomImagesResponseBodyCustomImages setStatus(String status) {
@@ -265,6 +429,22 @@ public class ListCustomImagesResponseBody extends TeaModel {
         }
         public String getSystemSnapshotName() {
             return this.systemSnapshotName;
+        }
+
+        public ListCustomImagesResponseBodyCustomImages setTags(java.util.List<ListCustomImagesResponseBodyCustomImagesTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListCustomImagesResponseBodyCustomImagesTags> getTags() {
+            return this.tags;
+        }
+
+        public ListCustomImagesResponseBodyCustomImages setUserId(Long userId) {
+            this.userId = userId;
+            return this;
+        }
+        public Long getUserId() {
+            return this.userId;
         }
 
     }
