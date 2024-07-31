@@ -201,6 +201,9 @@ public class MealOrderDetailQueryResponseBody extends TeaModel {
         @NameInMap("settle_time")
         public String settleTime;
 
+        @NameInMap("third_part_apply_id")
+        public String thirdPartApplyId;
+
         /**
          * <strong>example:</strong>
          * <p>17509140000</p>
@@ -354,6 +357,14 @@ public class MealOrderDetailQueryResponseBody extends TeaModel {
         }
         public String getSettleTime() {
             return this.settleTime;
+        }
+
+        public MealOrderDetailQueryResponseBodyModule setThirdPartApplyId(String thirdPartApplyId) {
+            this.thirdPartApplyId = thirdPartApplyId;
+            return this;
+        }
+        public String getThirdPartApplyId() {
+            return this.thirdPartApplyId;
         }
 
         public MealOrderDetailQueryResponseBodyModule setUserAlipayId(String userAlipayId) {
