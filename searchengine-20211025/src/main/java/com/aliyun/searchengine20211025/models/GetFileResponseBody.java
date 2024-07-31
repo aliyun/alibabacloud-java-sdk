@@ -59,6 +59,9 @@ public class GetFileResponseBody extends TeaModel {
         @NameInMap("dataSource")
         public String dataSource;
 
+        @NameInMap("extend")
+        public java.util.Map<String, java.util.List<String>> extend;
+
         /**
          * <p>The full path of the file.</p>
          * 
@@ -114,6 +117,14 @@ public class GetFileResponseBody extends TeaModel {
         }
         public String getDataSource() {
             return this.dataSource;
+        }
+
+        public GetFileResponseBodyResult setExtend(java.util.Map<String, java.util.List<String>> extend) {
+            this.extend = extend;
+            return this;
+        }
+        public java.util.Map<String, java.util.List<String>> getExtend() {
+            return this.extend;
         }
 
         public GetFileResponseBodyResult setFullPathName(String fullPathName) {

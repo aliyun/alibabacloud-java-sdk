@@ -651,6 +651,9 @@ public class GetIndexResponseBody extends TeaModel {
         @NameInMap("domain")
         public String domain;
 
+        @NameInMap("extend")
+        public java.util.Map<String, java.util.List<String>> extend;
+
         /**
          * <p>The time when full data in the index was last updated.</p>
          * 
@@ -796,6 +799,14 @@ public class GetIndexResponseBody extends TeaModel {
         }
         public String getDomain() {
             return this.domain;
+        }
+
+        public GetIndexResponseBodyResult setExtend(java.util.Map<String, java.util.List<String>> extend) {
+            this.extend = extend;
+            return this;
+        }
+        public java.util.Map<String, java.util.List<String>> getExtend() {
+            return this.extend;
         }
 
         public GetIndexResponseBodyResult setFullUpdateTime(String fullUpdateTime) {

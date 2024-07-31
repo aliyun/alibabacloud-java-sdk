@@ -1313,7 +1313,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a public endpoint.</p>
+     * <p>删除公网域名</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1339,7 +1339,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a public endpoint.</p>
+     * <p>删除公网域名</p>
      * @return DeletePublicUrlResponse
      */
     public DeletePublicUrlResponse deletePublicUrl(String instanceId) throws Exception {
@@ -1531,10 +1531,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>\### Method</p>
+     * <h3><a href="#"></a>Method</h3>
      * <pre><code class="language-java">PUT
      * </code></pre>
-     * <h3>URI</h3>
+     * <h3><a href="#uri"></a>URI</h3>
      * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/force-switch/{fsmId}
      * </code></pre>
      * 
@@ -1565,10 +1565,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>\### Method</p>
+     * <h3><a href="#"></a>Method</h3>
      * <pre><code class="language-java">PUT
      * </code></pre>
-     * <h3>URI</h3>
+     * <h3><a href="#uri"></a>URI</h3>
      * <pre><code class="language-java">/openapi/ha3/instances/{instanceId}/force-switch/{fsmId}
      * </code></pre>
      * 
@@ -4474,7 +4474,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies an online policy of an index.</p>
+     * <p>Modifies the online policy of an index.</p>
      * 
      * @param request ModifyIndexOnlineStrategyRequest
      * @param headers map
@@ -4508,7 +4508,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies an online policy of an index.</p>
+     * <p>Modifies the online policy of an index.</p>
      * 
      * @param request ModifyIndexOnlineStrategyRequest
      * @return ModifyIndexOnlineStrategyResponse
