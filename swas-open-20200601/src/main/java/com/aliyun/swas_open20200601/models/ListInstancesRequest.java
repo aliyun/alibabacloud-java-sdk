@@ -6,64 +6,110 @@ import com.aliyun.tea.*;
 public class ListInstancesRequest extends TeaModel {
     /**
      * <p>The billing method of the simple application servers. Set the value to PrePaid, which indicates the subscription billing method.</p>
-     * <br>
      * <p>Default value: PrePaid.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PrePaid</p>
      */
     @NameInMap("ChargeType")
     public String chargeType;
 
     /**
      * <p>The IDs of the simple application servers. The value can be a JSON array that consists of up to 100 simple application server IDs. Separate multiple server IDs with commas (,).</p>
-     * <br>
-     * <p>> If you specify both `InstanceIds` and `PublicIpAddresses`, make sure that the specified IDs and the specified public IP addresses belong to the same simple application servers. Otherwise, an empty result is returned.</p>
+     * <blockquote>
+     * <p>If you specify both <code>InstanceIds</code> and <code>PublicIpAddresses</code>, make sure that the specified IDs and the specified public IP addresses belong to the same simple application servers. Otherwise, an empty result is returned.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;2ad1ae67295445f598017499dc****&quot;, &quot;2ad1ae67295445f598017123dc****&quot;]</p>
      */
     @NameInMap("InstanceIds")
     public String instanceIds;
 
     /**
+     * <p>The name of the simple application servers, which supports fuzzy search using wildcard *.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
+    @NameInMap("InstanceName")
+    public String instanceName;
+
+    /**
      * <p>The page number.</p>
-     * <br>
      * <p>Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page. Maximum value: 100.</p>
-     * <br>
      * <p>Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The public IP addresses of the simple application servers. The value can be a JSON array that consists of up to 100 IP addresses. Separate multiple IP addresses with commas (,).</p>
-     * <br>
-     * <p>> If you specify both `InstanceIds` and `PublicIpAddresses`, make sure that the specified IDs and the specified public IP addresses belong to the same simple application servers. Otherwise, an empty result is returned.</p>
+     * <blockquote>
+     * <p>If you specify both <code>InstanceIds</code> and <code>PublicIpAddresses</code>, make sure that the specified IDs and the specified public IP addresses belong to the same simple application servers. Otherwise, an empty result is returned.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;42.1.**.<strong>&quot;, &quot;42.2.**.</strong>&quot;]</p>
      */
     @NameInMap("PublicIpAddresses")
     public String publicIpAddresses;
 
     /**
      * <p>The region ID of the simple application servers.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>实例状态，可能值：</p>
-     * <br>
-     * <p>- Pending：准备中</p>
-     * <p>- Starting：启动中</p>
-     * <p>- Running：运行中</p>
-     * <p>- Stopping：停止中</p>
-     * <p>- Stopped：停止</p>
-     * <p>- Resetting：重置中</p>
-     * <p>- Upgrading：升级中</p>
-     * <p>- Disabled：不可用</p>
+     * <p>The ID of the resource group to which the simple application servers belong.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-aek2bti7cf7****</p>
+     */
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
+    /**
+     * <p>The status of the simple application servers. Valid values:</p>
+     * <ul>
+     * <li>Pending</li>
+     * <li>Starting</li>
+     * <li>Running</li>
+     * <li>Stopping</li>
+     * <li>Stopped</li>
+     * <li>Resetting</li>
+     * <li>Upgrading</li>
+     * <li>Disabled</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Running</p>
      */
     @NameInMap("Status")
     public String status;
+
+    /**
+     * <p>The tags that are added to the simple application servers.</p>
+     */
+    @NameInMap("Tag")
+    public java.util.List<ListInstancesRequestTag> tag;
 
     public static ListInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListInstancesRequest self = new ListInstancesRequest();
@@ -84,6 +130,14 @@ public class ListInstancesRequest extends TeaModel {
     }
     public String getInstanceIds() {
         return this.instanceIds;
+    }
+
+    public ListInstancesRequest setInstanceName(String instanceName) {
+        this.instanceName = instanceName;
+        return this;
+    }
+    public String getInstanceName() {
+        return this.instanceName;
     }
 
     public ListInstancesRequest setPageNumber(Integer pageNumber) {
@@ -118,12 +172,70 @@ public class ListInstancesRequest extends TeaModel {
         return this.regionId;
     }
 
+    public ListInstancesRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public ListInstancesRequest setStatus(String status) {
         this.status = status;
         return this;
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public ListInstancesRequest setTag(java.util.List<ListInstancesRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<ListInstancesRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class ListInstancesRequestTag extends TeaModel {
+        /**
+         * <p>The tag key of the simple application servers. A tag key can be 1 to 64 characters in length. Valid values of N: 1 to 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
+        @NameInMap("Key")
+        public String key;
+
+        /**
+         * <p>The tag value of the simple application servers. A tag value can be 1 to 64 characters in length. Valid values of N: 1 to 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>01</p>
+         */
+        @NameInMap("Value")
+        public String value;
+
+        public static ListInstancesRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            ListInstancesRequestTag self = new ListInstancesRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public ListInstancesRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListInstancesRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

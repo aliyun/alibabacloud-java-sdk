@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class LoginInstanceResponseBody extends TeaModel {
     /**
      * <p>The URL that you use to log on to the server.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://ecs-workbench.aliyun.com/view/instance/single/gbktfz">https://ecs-workbench.aliyun.com/view/instance/single/gbktfz</a>****</p>
      */
     @NameInMap("RedirectUrl")
     public String redirectUrl;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C2DE174B-7196-5778-A00D-6EA2601B****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

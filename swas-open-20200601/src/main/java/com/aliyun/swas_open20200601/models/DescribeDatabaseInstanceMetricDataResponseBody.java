@@ -6,44 +6,62 @@ import com.aliyun.tea.*;
 public class DescribeDatabaseInstanceMetricDataResponseBody extends TeaModel {
     /**
      * <p>The data format. Valid values:</p>
-     * <br>
-     * <p>*   cpuusage\&memusage</p>
-     * <p>*   active_session\&total_session</p>
-     * <p>*   ins_size\&data_size\&log_size\&tmp_size\&other_size</p>
-     * <p>*   io</p>
+     * <ul>
+     * <li>cpuusage\&amp;memusage</li>
+     * <li>active_session\&amp;total_session</li>
+     * <li>ins_size\&amp;data_size\&amp;log_size\&amp;tmp_size\&amp;other_size</li>
+     * <li>io</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>cpuusage&amp;memusage</p>
      */
     @NameInMap("DataFormat")
     public String dataFormat;
 
     /**
      * <p>The monitoring data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[  {     \&quot;date&quot;\: &quot; 2022-09-06T04:04:00Z&quot;,\&quot;value\&quot;:\&quot;0.77&amp;3.69\&quot;  } ]</p>
      */
     @NameInMap("MetricData")
     public String metricData;
 
     /**
      * <p>The name of the metric. Valid values:</p>
-     * <br>
-     * <p>*   MySQL_MemCpuUsage: The CPU utilization and memory usage of the instance within the entire operating system.</p>
-     * <p>*   MySQL_DetailedSpaceUsage: The total space usage, data space, log space, temporary space, and system space of the instance.</p>
-     * <p>*   MySQL_Sessions : The total number of active connections.</p>
-     * <p>*   MySQL_IOPS: The IOPS of the instance.</p>
+     * <ul>
+     * <li>MySQL_MemCpuUsage: The CPU utilization and memory usage of the instance within the entire operating system.</li>
+     * <li>MySQL_DetailedSpaceUsage: The total space usage, data space, log space, temporary space, and system space of the instance.</li>
+     * <li>MySQL_Sessions : The total number of active connections.</li>
+     * <li>MySQL_IOPS: The IOPS of the instance.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>MySQL_MemCpuUsage</p>
      */
     @NameInMap("MetricName")
     public String metricName;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30637AD6-D977-4833-A54C-CC89483E****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The unit of the monitoring metric.</p>
-     * <br>
-     * <p>*   %</p>
-     * <p>*   int</p>
-     * <p>*   MB</p>
+     * <ul>
+     * <li>%</li>
+     * <li>int</li>
+     * <li>MB</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>%</p>
      */
     @NameInMap("Unit")
     public String unit;

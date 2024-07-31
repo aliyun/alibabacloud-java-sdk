@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreateFirewallRuleResponseBody extends TeaModel {
     /**
      * <p>The ID of the firewall rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8007e18c61024aafbd776d52d0****</p>
      */
     @NameInMap("FirewallId")
     public String firewallId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20758A-585D-4A41-A9B2-28DA8F4F534F</p>
      */
     @NameInMap("RequestId")
     public String requestId;

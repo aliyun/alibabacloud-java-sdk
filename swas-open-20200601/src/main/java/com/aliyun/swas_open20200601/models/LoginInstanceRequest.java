@@ -6,30 +6,53 @@ import com.aliyun.tea.*;
 public class LoginInstanceRequest extends TeaModel {
     /**
      * <p>The ID of the simple application server.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9ae7106e68eb4402b0dcbd48a9de****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The password that corresponds to the username.</p>
-     * <br>
-     * <p>*   For a Linux server, you do not need to enter a password.</p>
-     * <p>*   For a Windows server, enter the password that you set. If you have not set a password for the simple application server, set a password. For more information, see [Reset the password](~~60055~~).</p>
+     * <ul>
+     * <li>For a Linux server, you do not need to enter a password.</li>
+     * <li>For a Windows server, enter the password that you set. If you have not set a password for the simple application server, set a password. For more information, see <a href="https://help.aliyun.com/document_detail/60055.html">Reset the password</a>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Test****</p>
      */
     @NameInMap("Password")
     public String password;
 
     /**
-     * <p>The region ID of the simple application server. You can call the [ListRegions](~~189315~~) operation to query the most recent region list.</p>
+     * <strong>example:</strong>
+     * <p>3389</p>
+     */
+    @NameInMap("Port")
+    public Integer port;
+
+    /**
+     * <p>The region ID of the simple application server. You can call the <a href="https://help.aliyun.com/document_detail/189315.html">ListRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The username of the simple application server.</p>
-     * <br>
-     * <p>*   For a Linux server, you do not need to enter a username.</p>
-     * <p>*   For a Windows server, the default username is `administrator`.</p>
+     * <ul>
+     * <li>For a Linux server, you do not need to enter a username.</li>
+     * <li>For a Windows server, the default username <code>administrator</code> is used.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>administrator</p>
      */
     @NameInMap("Username")
     public String username;
@@ -53,6 +76,14 @@ public class LoginInstanceRequest extends TeaModel {
     }
     public String getPassword() {
         return this.password;
+    }
+
+    public LoginInstanceRequest setPort(Integer port) {
+        this.port = port;
+        return this;
+    }
+    public Integer getPort() {
+        return this.port;
     }
 
     public LoginInstanceRequest setRegionId(String regionId) {

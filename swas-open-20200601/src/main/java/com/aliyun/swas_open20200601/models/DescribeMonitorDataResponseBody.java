@@ -6,32 +6,41 @@ import com.aliyun.tea.*;
 public class DescribeMonitorDataResponseBody extends TeaModel {
     /**
      * <p>The monitoring data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[]</p>
      */
     @NameInMap("Datapoints")
     public String datapoints;
 
     /**
      * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AAAAAV3MpHK1AP0pfERHZN5pu6nOc1nj4M9UaAZ/I8db***</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The interval at which the monitoring data is queried. Valid values: 60, 300, and 900. Unit: seconds.</p>
-     * <br>
-     * <p>> </p>
-     * <br>
+     * <blockquote>
+     * </blockquote>
      * <p>If MetricName is set to FLOW_USED, the value of Period is 3600 (one hour).</p>
-     * <br>
      * <p>**</p>
-     * <br>
-     * <p>****</p>
+     * <hr>
+     * 
+     * <strong>example:</strong>
+     * <p>60</p>
      */
     @NameInMap("Period")
     public String period;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30637AD6-D977-4833-A54C-CC89483E****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

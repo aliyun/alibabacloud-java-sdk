@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class AllocatePublicConnectionResponseBody extends TeaModel {
     /**
      * <p>The public endpoint that is assigned to the Simple Database Service instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>db-38263fa955774501a2ae1bdaed6f****.mysql.rds.aliyuncs.com</p>
      */
     @NameInMap("PublicConnection")
     public String publicConnection;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30637AD6-D977-4833-A54C-CC89483E****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

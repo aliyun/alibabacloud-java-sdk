@@ -5,31 +5,43 @@ import com.aliyun.tea.*;
 
 public class ListFirewallRulesResponseBody extends TeaModel {
     /**
-     * <p>Details about the firewall rules.</p>
+     * <p>The array of firewall rules.</p>
      */
     @NameInMap("FirewallRules")
     public java.util.List<ListFirewallRulesResponseBodyFirewallRules> firewallRules;
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20758A-585D-4A41-A9B2-28DA8F4F534F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -79,49 +91,117 @@ public class ListFirewallRulesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class ListFirewallRulesResponseBodyFirewallRulesTags extends TeaModel {
+        /**
+         * <p>The key of tag N to be added to the firewall rule. Valid values of N: 1 to 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
+         */
+        @NameInMap("Key")
+        public String key;
+
+        /**
+         * <p>The value of tag N to be added to the firewall rule. Valid values of N: 1 to 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
+         */
+        @NameInMap("Value")
+        public String value;
+
+        public static ListFirewallRulesResponseBodyFirewallRulesTags build(java.util.Map<String, ?> map) throws Exception {
+            ListFirewallRulesResponseBodyFirewallRulesTags self = new ListFirewallRulesResponseBodyFirewallRulesTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListFirewallRulesResponseBodyFirewallRulesTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListFirewallRulesResponseBodyFirewallRulesTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class ListFirewallRulesResponseBodyFirewallRules extends TeaModel {
         /**
-         * <p>The firewall policy.</p>
-         * <br>
-         * <p>*   accept: Access is allowed.</p>
-         * <p>*   drop: Access is refused.</p>
+         * <p>The firewall policy. Valid values:</p>
+         * <ul>
+         * <li>accept: Access is allowed.</li>
+         * <li>drop: Access is refused.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>accept</p>
          */
         @NameInMap("Policy")
         public String policy;
 
         /**
          * <p>The port range.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3306</p>
          */
         @NameInMap("Port")
         public String port;
 
         /**
          * <p>The remarks of the firewall rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TEST</p>
          */
         @NameInMap("Remark")
         public String remark;
 
         /**
          * <p>The ID of the firewall rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eeea34d9867b4d55a4ff8d5fcfbd****</p>
          */
         @NameInMap("RuleId")
         public String ruleId;
 
         /**
          * <p>The transport layer protocol. Valid values:</p>
-         * <br>
-         * <p>*   TCP: the TCP protocol.</p>
-         * <p>*   UDP: the UDP protocol</p>
-         * <p>*   TCP+UDP: the TCP and UDP protocols</p>
+         * <ul>
+         * <li>TCP</li>
+         * <li>UDP</li>
+         * <li>TCP+UDP</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>TCP</p>
          */
         @NameInMap("RuleProtocol")
         public String ruleProtocol;
 
         /**
-         * <p>The IP address or CIDR block that is allowed by the firewall rule.</p>
+         * <p>The source CIDR block.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0.0.0/0</p>
          */
         @NameInMap("SourceCidrIp")
         public String sourceCidrIp;
+
+        /**
+         * <p>The tags of the firewall rule.</p>
+         */
+        @NameInMap("Tags")
+        public java.util.List<ListFirewallRulesResponseBodyFirewallRulesTags> tags;
 
         public static ListFirewallRulesResponseBodyFirewallRules build(java.util.Map<String, ?> map) throws Exception {
             ListFirewallRulesResponseBodyFirewallRules self = new ListFirewallRulesResponseBodyFirewallRules();
@@ -174,6 +254,14 @@ public class ListFirewallRulesResponseBody extends TeaModel {
         }
         public String getSourceCidrIp() {
             return this.sourceCidrIp;
+        }
+
+        public ListFirewallRulesResponseBodyFirewallRules setTags(java.util.List<ListFirewallRulesResponseBodyFirewallRulesTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListFirewallRulesResponseBodyFirewallRulesTags> getTags() {
+            return this.tags;
         }
 
     }

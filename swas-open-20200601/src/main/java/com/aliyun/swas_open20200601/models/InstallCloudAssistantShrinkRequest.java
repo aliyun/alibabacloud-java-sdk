@@ -6,12 +6,17 @@ import com.aliyun.tea.*;
 public class InstallCloudAssistantShrinkRequest extends TeaModel {
     /**
      * <p>The IDs of the simple application servers.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceIds")
     public String instanceIdsShrink;
 
     /**
-     * <p>The region ID of the simple application servers. You can call the [ListRegions](~~189315~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the simple application servers. You can call the <a href="https://help.aliyun.com/document_detail/189315.html">ListRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

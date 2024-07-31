@@ -6,37 +6,49 @@ import com.aliyun.tea.*;
 public class DescribeDatabaseInstanceParametersResponseBody extends TeaModel {
     /**
      * <p>The range of ParameterValue.</p>
-     * <br>
-     * <p>> The value of CheckingCode varies based on the value of ParameterName.</p>
+     * <blockquote>
+     * <p>The value of CheckingCode varies based on the value of ParameterName.</p>
+     * </blockquote>
      */
     @NameInMap("ConfigParameters")
     public java.util.List<DescribeDatabaseInstanceParametersResponseBodyConfigParameters> configParameters;
 
     /**
      * <p>The database engine that the instance runs. The value must be MySQL.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MySQL</p>
      */
     @NameInMap("Engine")
     public String engine;
 
     /**
      * <p>The version of the database engine. Valid values:</p>
-     * <br>
-     * <p>*   5.7: MySQL 5.7.</p>
-     * <p>*   8.0: MySQL 8.0.</p>
+     * <ul>
+     * <li>5.7: MySQL 5.7.</li>
+     * <li>8.0: MySQL 8.0.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>5.5</p>
      */
     @NameInMap("EngineVersion")
     public String engineVersion;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30637AD6-D977-4833-A54C-CC89483E****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The range of ParameterValue.</p>
-     * <br>
-     * <p>> The value of CheckingCode varies based on the value of ParameterName.</p>
+     * <blockquote>
+     * <p>The value of CheckingCode varies based on the value of ParameterName.</p>
+     * </blockquote>
      */
     @NameInMap("RunningParameters")
     public java.util.List<DescribeDatabaseInstanceParametersResponseBodyRunningParameters> runningParameters;
@@ -87,21 +99,68 @@ public class DescribeDatabaseInstanceParametersResponseBody extends TeaModel {
     }
 
     public static class DescribeDatabaseInstanceParametersResponseBodyConfigParameters extends TeaModel {
+        /**
+         * <p>The check code that indicates the valid values of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[1-65535]</p>
+         */
         @NameInMap("CheckingCode")
         public String checkingCode;
 
+        /**
+         * <p>Does it support modifying parameter values. Possible values:</p>
+         * <ul>
+         * <li><p>true:Support modifying parameter values.</p>
+         * </li>
+         * <li><p>false:Modifying parameter values is not supported.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("ForceModify")
         public String forceModify;
 
+        /**
+         * <p>Specifies whether to forcibly restart the instance after parameters are modified. Valid values:</p>
+         * <ul>
+         * <li>true: forcibly restarts the instance. If a new parameter value takes effect only after the instance restarts, you must set this parameter to true. Otherwise, the new parameter value cannot take effect.</li>
+         * <li>false: does not forcibly restart the instance.</li>
+         * </ul>
+         * <p>Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("ForceRestart")
         public String forceRestart;
 
+        /**
+         * <p>The description of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Auto-increment columns are incremented by this</p>
+         */
         @NameInMap("ParameterDescription")
         public String parameterDescription;
 
+        /**
+         * <p>The name of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>auto_increment_increment</p>
+         */
         @NameInMap("ParameterName")
         public String parameterName;
 
+        /**
+         * <p>The value of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ParameterValue")
         public String parameterValue;
 
@@ -161,21 +220,68 @@ public class DescribeDatabaseInstanceParametersResponseBody extends TeaModel {
     }
 
     public static class DescribeDatabaseInstanceParametersResponseBodyRunningParameters extends TeaModel {
+        /**
+         * <p>The check code that indicates the valid values of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[ON|OFF]</p>
+         */
         @NameInMap("CheckingCode")
         public String checkingCode;
 
+        /**
+         * <p>Does it support modifying parameter values. Possible values:</p>
+         * <ul>
+         * <li><p>true:Support modifying parameter values.</p>
+         * </li>
+         * <li><p>false:Modifying parameter values is not supported.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("ForceModify")
         public String forceModify;
 
+        /**
+         * <p>Specifies whether to forcibly restart the instance after parameters are modified. Valid values:</p>
+         * <ul>
+         * <li>true: forcibly restarts the instance. If a new parameter value takes effect only after the instance restarts, you must set this parameter to true. Otherwise, the new parameter value cannot take effect.</li>
+         * <li>false: does not forcibly restart the instance.</li>
+         * </ul>
+         * <p>Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("ForceRestart")
         public String forceRestart;
 
+        /**
+         * <p>The description of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>When this variable has a value of 1 (the default), the server automatically grants the EXECUTE and ALTER ROUTINE privileges to the creator of a stored routine, if the user cannot already execute and alter or drop the routine. (The ALTER ROUTINE privilege is required to drop the routine.) The server also automatically drops those privileges from the creator when the routine is dropped. If automatic_sp_privileges is 0, the server does not automatically add or drop these privileges.</p>
+         */
         @NameInMap("ParameterDescription")
         public String parameterDescription;
 
+        /**
+         * <p>The name of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>autocommit</p>
+         */
         @NameInMap("ParameterName")
         public String parameterName;
 
+        /**
+         * <p>The value of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ON</p>
+         */
         @NameInMap("ParameterValue")
         public String parameterValue;
 
