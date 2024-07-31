@@ -72,11 +72,6 @@
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
-      <artifactId>alibabacloud-gateway-spi</artifactId>
-      <version>0.0.1</version>
-    </dependency>
-    <dependency>
-      <groupId>com.aliyun</groupId>
       <artifactId>alibabacloud-gateway-pop</artifactId>
       <version>0.0.6</version>
     </dependency>
