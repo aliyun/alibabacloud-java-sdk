@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyPublicUrlIpListRequest extends TeaModel {
     /**
-     * <p>The request parameters.</p>
+     * <p>The request body.</p>
      */
     @NameInMap("body")
     public java.util.Map<String, String> body;

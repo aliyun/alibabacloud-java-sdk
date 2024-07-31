@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListInstanceSpecsResponseBody extends TeaModel {
     /**
-     * <p>id of request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>10D5E615-69F7-5F49-B850-00169ADE513C</p>
@@ -14,7 +14,7 @@ public class ListInstanceSpecsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The result.</p>
+     * <p>The instance types.</p>
      */
     @NameInMap("result")
     public java.util.List<ListInstanceSpecsResponseBodyResult> result;
@@ -42,7 +42,7 @@ public class ListInstanceSpecsResponseBody extends TeaModel {
 
     public static class ListInstanceSpecsResponseBodyResult extends TeaModel {
         /**
-         * <p>The number of CPU cores.</p>
+         * <p>The number of vCPUs.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -51,7 +51,7 @@ public class ListInstanceSpecsResponseBody extends TeaModel {
         public Integer cpu;
 
         /**
-         * <p>The maximum storage space of a Searcher worker.</p>
+         * <p>The maximum storage of a single data node. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>600</p>
@@ -60,7 +60,7 @@ public class ListInstanceSpecsResponseBody extends TeaModel {
         public Integer maxDisk;
 
         /**
-         * <p>The memory. Unit: GB.</p>
+         * <p>The memory of the instance. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -69,7 +69,7 @@ public class ListInstanceSpecsResponseBody extends TeaModel {
         public Integer mem;
 
         /**
-         * <p>The minimum storage space of a Searcher worker.</p>
+         * <p>The minimum storage of a single data node. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
