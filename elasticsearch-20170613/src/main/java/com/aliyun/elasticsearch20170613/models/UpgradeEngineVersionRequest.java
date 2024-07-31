@@ -4,6 +4,9 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class UpgradeEngineVersionRequest extends TeaModel {
+    @NameInMap("plugins")
+    public java.util.List<UpgradeEngineVersionRequestPlugins> plugins;
+
     /**
      * <strong>example:</strong>
      * <p>engineVersion</p>
@@ -47,6 +50,14 @@ public class UpgradeEngineVersionRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public UpgradeEngineVersionRequest setPlugins(java.util.List<UpgradeEngineVersionRequestPlugins> plugins) {
+        this.plugins = plugins;
+        return this;
+    }
+    public java.util.List<UpgradeEngineVersionRequestPlugins> getPlugins() {
+        return this.plugins;
+    }
+
     public UpgradeEngineVersionRequest setType(String type) {
         this.type = type;
         return this;
@@ -77,6 +88,47 @@ public class UpgradeEngineVersionRequest extends TeaModel {
     }
     public Boolean getDryRun() {
         return this.dryRun;
+    }
+
+    public static class UpgradeEngineVersionRequestPlugins extends TeaModel {
+        @NameInMap("fileVersion")
+        public String fileVersion;
+
+        @NameInMap("name")
+        public String name;
+
+        @NameInMap("version")
+        public String version;
+
+        public static UpgradeEngineVersionRequestPlugins build(java.util.Map<String, ?> map) throws Exception {
+            UpgradeEngineVersionRequestPlugins self = new UpgradeEngineVersionRequestPlugins();
+            return TeaModel.build(map, self);
+        }
+
+        public UpgradeEngineVersionRequestPlugins setFileVersion(String fileVersion) {
+            this.fileVersion = fileVersion;
+            return this;
+        }
+        public String getFileVersion() {
+            return this.fileVersion;
+        }
+
+        public UpgradeEngineVersionRequestPlugins setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public UpgradeEngineVersionRequestPlugins setVersion(String version) {
+            this.version = version;
+            return this;
+        }
+        public String getVersion() {
+            return this.version;
+        }
+
     }
 
 }
