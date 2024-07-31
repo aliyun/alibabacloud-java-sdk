@@ -11,6 +11,9 @@ public class DescAccountSummaryResponseBody extends TeaModel {
     @NameInMap("DailyQuota")
     public Integer dailyQuota;
 
+    @NameInMap("DailyRemainFreeQuota")
+    public Integer dailyRemainFreeQuota;
+
     /**
      * <strong>example:</strong>
      * <p>0</p>
@@ -130,6 +133,14 @@ public class DescAccountSummaryResponseBody extends TeaModel {
     }
     public Integer getDailyQuota() {
         return this.dailyQuota;
+    }
+
+    public DescAccountSummaryResponseBody setDailyRemainFreeQuota(Integer dailyRemainFreeQuota) {
+        this.dailyRemainFreeQuota = dailyRemainFreeQuota;
+        return this;
+    }
+    public Integer getDailyRemainFreeQuota() {
+        return this.dailyRemainFreeQuota;
     }
 
     public DescAccountSummaryResponseBody setDayuStatus(Integer dayuStatus) {
