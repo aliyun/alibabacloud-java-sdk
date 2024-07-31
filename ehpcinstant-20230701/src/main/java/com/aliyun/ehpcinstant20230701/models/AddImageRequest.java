@@ -10,11 +10,18 @@ public class AddImageRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>V1.0</p>
+     */
     @NameInMap("ImageVersion")
     public String imageVersion;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>app-image</p>
      */
     @NameInMap("Name")
     public String name;
@@ -68,12 +75,24 @@ public class AddImageRequest extends TeaModel {
     }
 
     public static class AddImageRequestContainerImageSpecRegistryCredential extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>userpassword</p>
+         */
         @NameInMap("Password")
         public String password;
 
+        /**
+         * <strong>example:</strong>
+         * <p>registry-vpc.cn-hangzhou.aliyuncs.com</p>
+         */
         @NameInMap("Server")
         public String server;
 
+        /**
+         * <strong>example:</strong>
+         * <p>username</p>
+         */
         @NameInMap("UserName")
         public String userName;
 
@@ -109,18 +128,34 @@ public class AddImageRequest extends TeaModel {
     }
 
     public static class AddImageRequestContainerImageSpec extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>True</p>
+         */
         @NameInMap("IsACREnterprise")
         public Boolean isACREnterprise;
 
+        /**
+         * <strong>example:</strong>
+         * <p>True</p>
+         */
         @NameInMap("IsACRRegistry")
         public Boolean isACRRegistry;
 
         @NameInMap("RegistryCredential")
         public AddImageRequestContainerImageSpecRegistryCredential registryCredential;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cri-xyz795ygf8k9****</p>
+         */
         @NameInMap("RegistryCriId")
         public String registryCriId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>registry-vpc.cn-hangzhou.aliyuncs.com/ehpc_open/nginx:latest</p>
+         */
         @NameInMap("RegistryUrl")
         public String registryUrl;
 
@@ -172,6 +207,10 @@ public class AddImageRequest extends TeaModel {
     }
 
     public static class AddImageRequestVMImageSpec extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>m-bp1akkkr1rkxtb******</p>
+         */
         @NameInMap("ImageId")
         public String imageId;
 

@@ -7,6 +7,10 @@ public class GetJobResponseBody extends TeaModel {
     @NameInMap("JobInfo")
     public GetJobResponseBodyJobInfo jobInfo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>896D338C-E4F4-41EC-A154-D605E5DE****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -51,6 +55,10 @@ public class GetJobResponseBody extends TeaModel {
     }
 
     public static class GetJobResponseBodyJobInfoDeploymentPolicy extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Dedicated</p>
+         */
         @NameInMap("AllocationSpec")
         public String allocationSpec;
 
@@ -81,12 +89,24 @@ public class GetJobResponseBody extends TeaModel {
     }
 
     public static class GetJobResponseBodyJobInfoTasksExecutorPolicyArraySpec extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>9</p>
+         */
         @NameInMap("IndexEnd")
         public Integer indexEnd;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("IndexStart")
         public Integer indexStart;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("IndexStep")
         public Integer indexStep;
 
@@ -125,6 +145,10 @@ public class GetJobResponseBody extends TeaModel {
         @NameInMap("ArraySpec")
         public GetJobResponseBodyJobInfoTasksExecutorPolicyArraySpec arraySpec;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("MaxCount")
         public Integer maxCount;
 
@@ -152,21 +176,45 @@ public class GetJobResponseBody extends TeaModel {
     }
 
     public static class GetJobResponseBodyJobInfoTasksExecutorStatus extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ArrayId")
         public Integer arrayId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-02-04 13:54:10</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-02-04 13:54:10</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-02-04 13:54:10</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Running</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Creating executor</p>
+         */
         @NameInMap("StatusReason")
         public String statusReason;
 
@@ -226,9 +274,17 @@ public class GetJobResponseBody extends TeaModel {
     }
 
     public static class GetJobResponseBodyJobInfoTasksTaskSpecResourceDisks extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Size")
         public Integer size;
 
+        /**
+         * <strong>example:</strong>
+         * <p>System</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -256,12 +312,20 @@ public class GetJobResponseBody extends TeaModel {
     }
 
     public static class GetJobResponseBodyJobInfoTasksTaskSpecResource extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Cores")
         public Float cores;
 
         @NameInMap("Disks")
         public java.util.List<GetJobResponseBodyJobInfoTasksTaskSpecResourceDisks> disks;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("Memory")
         public Integer memory;
 
@@ -297,12 +361,24 @@ public class GetJobResponseBody extends TeaModel {
     }
 
     public static class GetJobResponseBodyJobInfoTasksTaskSpecTaskExecutorVM extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>m-xxxx</p>
+         */
         @NameInMap("Image")
         public String image;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ZWNobyAiMTIzNCIgPiBgZGF0ZSArJXNg</p>
+         */
         @NameInMap("PrologScript")
         public String prologScript;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ZWNobyAiMTIzNCIgPiBgZGF0ZSArJXNg</p>
+         */
         @NameInMap("Script")
         public String script;
 
@@ -393,12 +469,20 @@ public class GetJobResponseBody extends TeaModel {
         @NameInMap("ExecutorStatus")
         public java.util.List<GetJobResponseBodyJobInfoTasksExecutorStatus> executorStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>task0</p>
+         */
         @NameInMap("TaskName")
         public String taskName;
 
         @NameInMap("TaskSpec")
         public GetJobResponseBodyJobInfoTasksTaskSpec taskSpec;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("TaskSustainable")
         public Boolean taskSustainable;
 
@@ -450,27 +534,58 @@ public class GetJobResponseBody extends TeaModel {
     }
 
     public static class GetJobResponseBodyJobInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2024-03-05 20:00:46</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
         @NameInMap("DeploymentPolicy")
         public GetJobResponseBodyJobInfoDeploymentPolicy deploymentPolicy;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-03-05 20:01:48</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Demo</p>
+         */
         @NameInMap("JobDescription")
         public String jobDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>job-xxxx</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>testJob</p>
+         */
         @NameInMap("JobName")
         public String jobName;
 
+        @NameInMap("JobScheduler")
+        public String jobScheduler;
+
+        /**
+         * <strong>example:</strong>
+         * <p>2024-03-05 20:00:48</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Succeed</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -528,6 +643,14 @@ public class GetJobResponseBody extends TeaModel {
         }
         public String getJobName() {
             return this.jobName;
+        }
+
+        public GetJobResponseBodyJobInfo setJobScheduler(String jobScheduler) {
+            this.jobScheduler = jobScheduler;
+            return this;
+        }
+        public String getJobScheduler() {
+            return this.jobScheduler;
         }
 
         public GetJobResponseBodyJobInfo setStartTime(String startTime) {

@@ -4,6 +4,10 @@ package com.aliyun.ehpcinstant20230701.models;
 import com.aliyun.tea.*;
 
 public class DeleteJobsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>04F0F334-1335-436C-A1D7-6C044FE7****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

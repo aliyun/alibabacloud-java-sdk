@@ -35,6 +35,10 @@ public class DeleteJobsRequest extends TeaModel {
         @NameInMap("ArrayIndex")
         public java.util.List<Integer> arrayIndex;
 
+        /**
+         * <strong>example:</strong>
+         * <p>task0</p>
+         */
         @NameInMap("TaskName")
         public String taskName;
 
@@ -62,6 +66,10 @@ public class DeleteJobsRequest extends TeaModel {
     }
 
     public static class DeleteJobsRequestJobSpec extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>job-xxxx</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 

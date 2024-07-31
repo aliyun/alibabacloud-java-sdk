@@ -16,9 +16,17 @@ public class ListImagesShrinkRequest extends TeaModel {
     @NameInMap("ImageType")
     public String imageType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
