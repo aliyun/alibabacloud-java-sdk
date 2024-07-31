@@ -4,12 +4,24 @@ package com.aliyun.ehpcinstant20230701.models;
 import com.aliyun.tea.*;
 
 public class DescribeJobMetricDataResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>[{&quot;timestamp&quot;:1709540685000,&quot;Minimum&quot;:28.45,&quot;Maximum&quot;:28.45,&quot;Average&quot;:28.45}]</p>
+     */
     @NameInMap("DataPoints")
     public String dataPoints;
 
+    /**
+     * <strong>example:</strong>
+     * <p>15</p>
+     */
     @NameInMap("Period")
     public Integer period;
 
+    /**
+     * <strong>example:</strong>
+     * <p>04F0F334-1335-436C-A1D7-6C044FE7****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

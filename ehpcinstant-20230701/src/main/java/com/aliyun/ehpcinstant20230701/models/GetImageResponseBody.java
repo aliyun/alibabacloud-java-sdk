@@ -7,12 +7,24 @@ public class GetImageResponseBody extends TeaModel {
     @NameInMap("Image")
     public GetImageResponseBodyImage image;
 
+    /**
+     * <strong>example:</strong>
+     * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -54,12 +66,24 @@ public class GetImageResponseBody extends TeaModel {
     }
 
     public static class GetImageResponseBodyImageContainerImageSpecRegistryCredential extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>userpassword</p>
+         */
         @NameInMap("Password")
         public String password;
 
+        /**
+         * <strong>example:</strong>
+         * <p>registry-vpc.cn-hangzhou.aliyuncs.com</p>
+         */
         @NameInMap("Server")
         public String server;
 
+        /**
+         * <strong>example:</strong>
+         * <p>username</p>
+         */
         @NameInMap("UserName")
         public String userName;
 
@@ -95,18 +119,34 @@ public class GetImageResponseBody extends TeaModel {
     }
 
     public static class GetImageResponseBodyImageContainerImageSpec extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>True</p>
+         */
         @NameInMap("IsACREnterprise")
         public Boolean isACREnterprise;
 
+        /**
+         * <strong>example:</strong>
+         * <p>True</p>
+         */
         @NameInMap("IsACRRegistry")
         public Boolean isACRRegistry;
 
         @NameInMap("RegistryCredential")
         public GetImageResponseBodyImageContainerImageSpecRegistryCredential registryCredential;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cri-xyz795ygf8k9****</p>
+         */
         @NameInMap("RegistryCriId")
         public String registryCriId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>registry-vpc.cn-hangzhou.aliyuncs.com/ehpc_open/nginx:latest</p>
+         */
         @NameInMap("RegistryUrl")
         public String registryUrl;
 
@@ -158,15 +198,31 @@ public class GetImageResponseBody extends TeaModel {
     }
 
     public static class GetImageResponseBodyImageVMImageSpec extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>x86_64</p>
+         */
         @NameInMap("Architecture")
         public String architecture;
 
+        /**
+         * <strong>example:</strong>
+         * <p>m-uf60twafjtaart******</p>
+         */
         @NameInMap("ImageId")
         public String imageId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CentOS  7.6 64 bit</p>
+         */
         @NameInMap("OsTag")
         public String osTag;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CentOS</p>
+         */
         @NameInMap("Platform")
         public String platform;
 
@@ -216,6 +272,10 @@ public class GetImageResponseBody extends TeaModel {
         @NameInMap("ContainerImageSpec")
         public GetImageResponseBodyImageContainerImageSpec containerImageSpec;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-12-23T09:51:39Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
@@ -224,13 +284,24 @@ public class GetImageResponseBody extends TeaModel {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VM</p>
          */
         @NameInMap("ImageType")
         public String imageType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>app-image</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>40 GiB</p>
+         */
         @NameInMap("Size")
         public String size;
 
@@ -240,6 +311,10 @@ public class GetImageResponseBody extends TeaModel {
         @NameInMap("VMImageSpec")
         public GetImageResponseBodyImageVMImageSpec VMImageSpec;
 
+        /**
+         * <strong>example:</strong>
+         * <p>v1.0</p>
+         */
         @NameInMap("Version")
         public String version;
 

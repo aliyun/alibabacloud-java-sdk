@@ -9,6 +9,9 @@ public class GetImageRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>m-2ze74g5mvy4pjg*****</p>
      */
     @NameInMap("ImageId")
     public String imageId;

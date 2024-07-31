@@ -7,6 +7,10 @@ public class DescribeJobMetricLastResponseBody extends TeaModel {
     @NameInMap("Metrics")
     public java.util.List<DescribeJobMetricLastResponseBodyMetrics> metrics;
 
+    /**
+     * <strong>example:</strong>
+     * <p>04F0F334-1335-436C-A1D7-6C044FE7****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +36,17 @@ public class DescribeJobMetricLastResponseBody extends TeaModel {
     }
 
     public static class DescribeJobMetricLastResponseBodyMetrics extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ArrayIndex")
         public Integer arrayIndex;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;memory_utilization&quot;: 37.42,&quot;cpu_utilization&quot;: 1.008, &quot;disk_utilization&quot;: 3.562}</p>
+         */
         @NameInMap("Metric")
         public String metric;
 

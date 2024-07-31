@@ -7,21 +7,45 @@ public class ListJobExecutorsResponseBody extends TeaModel {
     @NameInMap("Executors")
     public java.util.List<ListJobExecutorsResponseBodyExecutors> executors;
 
+    /**
+     * <strong>example:</strong>
+     * <p>job-xxxx</p>
+     */
     @NameInMap("JobId")
     public String jobId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public String pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public String pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>896D338C-E4F4-41EC-A154-D605E5DE****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>task0</p>
+     */
     @NameInMap("TaskName")
     public String taskName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>50</p>
+     */
     @NameInMap("TotalCount")
     public String totalCount;
 
@@ -87,12 +111,24 @@ public class ListJobExecutorsResponseBody extends TeaModel {
     }
 
     public static class ListJobExecutorsResponseBodyExecutors extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ArrayIndex")
         public Integer arrayIndex;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-02-20 10:04:10</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-02-20 10:04:18</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
@@ -102,9 +138,17 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         @NameInMap("IpAddress")
         public java.util.List<String> ipAddress;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Running</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Creating executor</p>
+         */
         @NameInMap("StatusReason")
         public String statusReason;
 

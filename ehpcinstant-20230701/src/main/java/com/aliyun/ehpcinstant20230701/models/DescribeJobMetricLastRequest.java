@@ -7,9 +7,17 @@ public class DescribeJobMetricLastRequest extends TeaModel {
     @NameInMap("ArrayIndex")
     public java.util.List<Integer> arrayIndex;
 
+    /**
+     * <strong>example:</strong>
+     * <p>job-xxxxx</p>
+     */
     @NameInMap("JobId")
     public String jobId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Task0</p>
+     */
     @NameInMap("TaskName")
     public String taskName;
 

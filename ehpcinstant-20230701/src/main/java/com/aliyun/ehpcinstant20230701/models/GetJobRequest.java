@@ -4,6 +4,10 @@ package com.aliyun.ehpcinstant20230701.models;
 import com.aliyun.tea.*;
 
 public class GetJobRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>job-xxxx</p>
+     */
     @NameInMap("JobId")
     public String jobId;
 

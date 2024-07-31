@@ -7,15 +7,31 @@ public class ListJobsResponseBody extends TeaModel {
     @NameInMap("JobList")
     public java.util.List<ListJobsResponseBodyJobList> jobList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>896D338C-E4F4-41EC-A154-D605E5DE****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,36 +81,80 @@ public class ListJobsResponseBody extends TeaModel {
     }
 
     public static class ListJobsResponseBodyJobList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2024-01-25 12:29:21</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-01-25 12:35:23</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ExecutorCount")
         public Integer executorCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Demo</p>
+         */
         @NameInMap("JobDescription")
         public String jobDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>job-xxx</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>testJob</p>
+         */
         @NameInMap("JobName")
         public String jobName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>129**********</p>
+         */
         @NameInMap("OwnerUid")
         public String ownerUid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-01-25 12:29:23</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Running</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TaskCount")
         public Integer taskCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("TaskSustainable")
         public Boolean taskSustainable;
 

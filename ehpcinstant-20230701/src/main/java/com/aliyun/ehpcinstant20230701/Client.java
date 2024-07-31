@@ -27,8 +27,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 添加托管侧用户自定义镜像
-     *
+     * <b>summary</b> : 
+     * <p>添加托管侧用户自定义镜像</p>
+     * 
      * @param tmpReq AddImageRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AddImageResponse
@@ -84,8 +85,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 添加托管侧用户自定义镜像
-     *
+     * <b>summary</b> : 
+     * <p>添加托管侧用户自定义镜像</p>
+     * 
      * @param request AddImageRequest
      * @return AddImageResponse
      */
@@ -95,8 +97,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 提交任务
-     *
+     * <b>summary</b> : 
+     * <p>提交任务</p>
+     * 
      * @param tmpReq CreateJobRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateJobResponse
@@ -126,6 +129,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("JobName", request.jobName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.jobScheduler)) {
+            query.put("JobScheduler", request.jobScheduler);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.tasksShrink)) {
             query.put("Tasks", request.tasksShrink);
         }
@@ -148,8 +155,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 提交任务
-     *
+     * <b>summary</b> : 
+     * <p>提交任务</p>
+     * 
      * @param request CreateJobRequest
      * @return CreateJobResponse
      */
@@ -159,8 +167,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除作业
-     *
+     * <b>summary</b> : 
+     * <p>删除作业</p>
+     * 
      * @param tmpReq DeleteJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteJobsResponse
@@ -204,8 +213,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除作业
-     *
+     * <b>summary</b> : 
+     * <p>删除作业</p>
+     * 
      * @param request DeleteJobsRequest
      * @return DeleteJobsResponse
      */
@@ -215,8 +225,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询作业性能数据
-     *
+     * <b>summary</b> : 
+     * <p>查询作业性能数据</p>
+     * 
      * @param tmpReq DescribeJobMetricDataRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeJobMetricDataResponse
@@ -264,8 +275,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询作业性能数据
-     *
+     * <b>summary</b> : 
+     * <p>查询作业性能数据</p>
+     * 
      * @param request DescribeJobMetricDataRequest
      * @return DescribeJobMetricDataResponse
      */
@@ -275,8 +287,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询作业即时监控项
-     *
+     * <b>summary</b> : 
+     * <p>查询作业即时监控项</p>
+     * 
      * @param tmpReq DescribeJobMetricLastRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeJobMetricLastResponse
@@ -320,8 +333,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询作业即时监控项
-     *
+     * <b>summary</b> : 
+     * <p>查询作业即时监控项</p>
+     * 
      * @param request DescribeJobMetricLastRequest
      * @return DescribeJobMetricLastResponse
      */
@@ -331,8 +345,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询托管侧镜像详情。
-     *
+     * <b>summary</b> : 
+     * <p>查询托管侧镜像详情。</p>
+     * 
      * @param request GetImageRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetImageResponse
@@ -370,8 +385,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询托管侧镜像详情。
-     *
+     * <b>summary</b> : 
+     * <p>查询托管侧镜像详情。</p>
+     * 
      * @param request GetImageRequest
      * @return GetImageResponse
      */
@@ -381,8 +397,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询作业详情
-     *
+     * <b>summary</b> : 
+     * <p>查询作业详情</p>
+     * 
      * @param request GetJobRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetJobResponse
@@ -412,8 +429,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询作业详情
-     *
+     * <b>summary</b> : 
+     * <p>查询作业详情</p>
+     * 
      * @param request GetJobRequest
      * @return GetJobResponse
      */
@@ -423,8 +441,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询全局Executor信息
-     *
+     * <b>summary</b> : 
+     * <p>查询全局Executor信息</p>
+     * 
      * @param tmpReq ListExecutorsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListExecutorsResponse
@@ -468,8 +487,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询全局Executor信息
-     *
+     * <b>summary</b> : 
+     * <p>查询全局Executor信息</p>
+     * 
      * @param request ListExecutorsRequest
      * @return ListExecutorsResponse
      */
@@ -479,8 +499,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查看托管侧镜像列表
-     *
+     * <b>summary</b> : 
+     * <p>查看托管侧镜像列表</p>
+     * 
      * @param tmpReq ListImagesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListImagesResponse
@@ -540,8 +561,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查看托管侧镜像列表
-     *
+     * <b>summary</b> : 
+     * <p>查看托管侧镜像列表</p>
+     * 
      * @param request ListImagesRequest
      * @return ListImagesResponse
      */
@@ -551,8 +573,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询作业Executor信息
-     *
+     * <b>summary</b> : 
+     * <p>查询作业Executor信息</p>
+     * 
      * @param request ListJobExecutorsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListJobExecutorsResponse
@@ -594,8 +617,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询作业Executor信息
-     *
+     * <b>summary</b> : 
+     * <p>查询作业Executor信息</p>
+     * 
      * @param request ListJobExecutorsRequest
      * @return ListJobExecutorsResponse
      */
@@ -605,8 +629,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询作业列表
-     *
+     * <b>summary</b> : 
+     * <p>查询作业列表</p>
+     * 
      * @param tmpReq ListJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListJobsResponse
@@ -658,8 +683,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询作业列表
-     *
+     * <b>summary</b> : 
+     * <p>查询作业列表</p>
+     * 
      * @param request ListJobsRequest
      * @return ListJobsResponse
      */
@@ -669,8 +695,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 移除托管侧镜像信息。
-     *
+     * <b>summary</b> : 
+     * <p>移除托管侧镜像信息。</p>
+     * 
      * @param request RemoveImageRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RemoveImageResponse
@@ -700,8 +727,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 移除托管侧镜像信息。
-     *
+     * <b>summary</b> : 
+     * <p>移除托管侧镜像信息。</p>
+     * 
      * @param request RemoveImageRequest
      * @return RemoveImageResponse
      */

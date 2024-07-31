@@ -7,14 +7,24 @@ public class CreateJobRequest extends TeaModel {
     @NameInMap("DeploymentPolicy")
     public CreateJobRequestDeploymentPolicy deploymentPolicy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Demo</p>
+     */
     @NameInMap("JobDescription")
     public String jobDescription;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testjob</p>
      */
     @NameInMap("JobName")
     public String jobName;
+
+    @NameInMap("JobScheduler")
+    public String jobScheduler;
 
     /**
      * <p>This parameter is required.</p>
@@ -51,6 +61,14 @@ public class CreateJobRequest extends TeaModel {
         return this.jobName;
     }
 
+    public CreateJobRequest setJobScheduler(String jobScheduler) {
+        this.jobScheduler = jobScheduler;
+        return this;
+    }
+    public String getJobScheduler() {
+        return this.jobScheduler;
+    }
+
     public CreateJobRequest setTasks(java.util.List<CreateJobRequestTasks> tasks) {
         this.tasks = tasks;
         return this;
@@ -79,6 +97,10 @@ public class CreateJobRequest extends TeaModel {
     }
 
     public static class CreateJobRequestDeploymentPolicy extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Dedicated</p>
+         */
         @NameInMap("AllocationSpec")
         public String allocationSpec;
 
@@ -109,12 +131,24 @@ public class CreateJobRequest extends TeaModel {
     }
 
     public static class CreateJobRequestTasksExecutorPolicyArraySpec extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>9</p>
+         */
         @NameInMap("IndexEnd")
         public Integer indexEnd;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("IndexStart")
         public Integer indexStart;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("IndexStep")
         public Integer indexStep;
 
@@ -153,6 +187,10 @@ public class CreateJobRequest extends TeaModel {
         @NameInMap("ArraySpec")
         public CreateJobRequestTasksExecutorPolicyArraySpec arraySpec;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("MaxCount")
         public Integer maxCount;
 
@@ -180,9 +218,17 @@ public class CreateJobRequest extends TeaModel {
     }
 
     public static class CreateJobRequestTasksTaskSpecResourceDisks extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>40</p>
+         */
         @NameInMap("Size")
         public Integer size;
 
+        /**
+         * <strong>example:</strong>
+         * <p>System</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -210,12 +256,20 @@ public class CreateJobRequest extends TeaModel {
     }
 
     public static class CreateJobRequestTasksTaskSpecResource extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("Cores")
         public Float cores;
 
         @NameInMap("Disks")
         public java.util.List<CreateJobRequestTasksTaskSpecResourceDisks> disks;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("Memory")
         public Float memory;
 
@@ -251,9 +305,17 @@ public class CreateJobRequest extends TeaModel {
     }
 
     public static class CreateJobRequestTasksTaskSpecTaskExecutorContainerEnvironmentVars extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>PATH</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>/usr/local/bin</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -292,10 +354,17 @@ public class CreateJobRequest extends TeaModel {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>registry-vpc.cn-hangzhou.aliyuncs.com/ehpc/hpl:latest</p>
          */
         @NameInMap("Image")
         public String image;
 
+        /**
+         * <strong>example:</strong>
+         * <p>/usr/local/</p>
+         */
         @NameInMap("WorkingDir")
         public String workingDir;
 
@@ -352,13 +421,24 @@ public class CreateJobRequest extends TeaModel {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-xxxx</p>
          */
         @NameInMap("Image")
         public String image;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ZWNobyBoZWxsbyBlY3Mh</p>
+         */
         @NameInMap("PrologScript")
         public String prologScript;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ZWNobyBoZWxsbyBlY3Mh</p>
+         */
         @NameInMap("Script")
         public String script;
 
@@ -432,12 +512,24 @@ public class CreateJobRequest extends TeaModel {
     }
 
     public static class CreateJobRequestTasksTaskSpecVolumeMount extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;server&quot;:&quot;xxxxx-xxxxx.cn-heyuan.nas.aliyuncs.com&quot;,&quot;vers&quot;:&quot;3&quot;,&quot;path&quot;:&quot;/data&quot;,&quot;options&quot;:&quot;nolock,tcp,noresvport&quot;}</p>
+         */
         @NameInMap("MountOptions")
         public String mountOptions;
 
+        /**
+         * <strong>example:</strong>
+         * <p>/mnt</p>
+         */
         @NameInMap("MountPath")
         public String mountPath;
 
+        /**
+         * <strong>example:</strong>
+         * <p>alicloud/nas</p>
+         */
         @NameInMap("VolumeDriver")
         public String volumeDriver;
 
@@ -520,12 +612,20 @@ public class CreateJobRequest extends TeaModel {
         @NameInMap("ExecutorPolicy")
         public CreateJobRequestTasksExecutorPolicy executorPolicy;
 
+        /**
+         * <strong>example:</strong>
+         * <p>task0</p>
+         */
         @NameInMap("TaskName")
         public String taskName;
 
         @NameInMap("TaskSpec")
         public CreateJobRequestTasksTaskSpec taskSpec;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("TaskSustainable")
         public Boolean taskSustainable;
 

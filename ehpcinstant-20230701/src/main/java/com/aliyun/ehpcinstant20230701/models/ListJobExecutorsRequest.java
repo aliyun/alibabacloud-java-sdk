@@ -4,15 +4,31 @@ package com.aliyun.ehpcinstant20230701.models;
 import com.aliyun.tea.*;
 
 public class ListJobExecutorsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>job-xxx</p>
+     */
     @NameInMap("JobId")
     public String jobId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public String pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public String pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>task0</p>
+     */
     @NameInMap("TaskName")
     public String taskName;
 

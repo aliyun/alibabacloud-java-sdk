@@ -7,18 +7,38 @@ public class ListImagesResponseBody extends TeaModel {
     @NameInMap("Images")
     public java.util.List<ListImagesResponseBodyImages> images;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>896D338C-E4F4-41EC-A154-D605E5DE****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -82,6 +102,10 @@ public class ListImagesResponseBody extends TeaModel {
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-12-09T07:06:34Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
@@ -90,19 +114,33 @@ public class ListImagesResponseBody extends TeaModel {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-bp181x855551ww5yq****</p>
          */
         @NameInMap("ImageId")
         public String imageId;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VM</p>
          */
         @NameInMap("ImageType")
         public String imageType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>app-image</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>v1.0</p>
+         */
         @NameInMap("Version")
         public String version;
 

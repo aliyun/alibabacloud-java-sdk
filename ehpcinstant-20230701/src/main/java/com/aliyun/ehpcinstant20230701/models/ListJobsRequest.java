@@ -7,9 +7,17 @@ public class ListJobsRequest extends TeaModel {
     @NameInMap("Filter")
     public ListJobsRequestFilter filter;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public String pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>50</p>
+     */
     @NameInMap("PageSize")
     public String pageSize;
 
@@ -54,18 +62,38 @@ public class ListJobsRequest extends TeaModel {
     }
 
     public static class ListJobsRequestFilter extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>job-xxxx</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>testJob</p>
+         */
         @NameInMap("JobName")
         public String jobName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Running</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1703819914</p>
+         */
         @NameInMap("TimeCreatedAfter")
         public Integer timeCreatedAfter;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1703820113</p>
+         */
         @NameInMap("TimeCreatedBefore")
         public Integer timeCreatedBefore;
 
@@ -117,9 +145,17 @@ public class ListJobsRequest extends TeaModel {
     }
 
     public static class ListJobsRequestSortBy extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>time_start</p>
+         */
         @NameInMap("Label")
         public String label;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ASC</p>
+         */
         @NameInMap("Order")
         public String order;
 

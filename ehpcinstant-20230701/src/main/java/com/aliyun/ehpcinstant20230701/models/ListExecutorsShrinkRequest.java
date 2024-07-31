@@ -7,9 +7,17 @@ public class ListExecutorsShrinkRequest extends TeaModel {
     @NameInMap("Filter")
     public String filterShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public String pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>50</p>
+     */
     @NameInMap("PageSize")
     public String pageSize;
 

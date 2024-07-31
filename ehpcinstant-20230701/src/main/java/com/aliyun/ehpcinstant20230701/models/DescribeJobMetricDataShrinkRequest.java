@@ -7,12 +7,24 @@ public class DescribeJobMetricDataShrinkRequest extends TeaModel {
     @NameInMap("ArrayIndex")
     public String arrayIndexShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>job-xxxxx</p>
+     */
     @NameInMap("JobId")
     public String jobId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cpu_utilization</p>
+     */
     @NameInMap("MetricName")
     public String metricName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Task0</p>
+     */
     @NameInMap("TaskName")
     public String taskName;
 
