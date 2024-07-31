@@ -1223,6 +1223,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ImageType", request.imageType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.outputOricoord)) {
+            query.put("OutputOricoord", request.outputOricoord);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.subject)) {
             query.put("Subject", request.subject);
         }
