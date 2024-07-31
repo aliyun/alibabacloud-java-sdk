@@ -2763,6 +2763,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询实例</p>
+     * 
+     * @param request DescribeRtcRobotInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeRtcRobotInstanceResponse
+     */
+    public DescribeRtcRobotInstanceResponse describeRtcRobotInstanceWithOptions(DescribeRtcRobotInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeRtcRobotInstance"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeRtcRobotInstanceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询实例</p>
+     * 
+     * @param request DescribeRtcRobotInstanceRequest
+     * @return DescribeRtcRobotInstanceResponse
+     */
+    public DescribeRtcRobotInstanceResponse describeRtcRobotInstance(DescribeRtcRobotInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeRtcRobotInstanceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>本接口用来检测用户的朗读是否有明显的发音错误、嘈杂的环境等</p>
      * 
      * @param request DetectAudioForCustomizedVoiceJobRequest
@@ -8201,6 +8245,76 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>开启一个机器人实例</p>
+     * 
+     * @param tmpReq StartRtcRobotInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StartRtcRobotInstanceResponse
+     */
+    public StartRtcRobotInstanceResponse startRtcRobotInstanceWithOptions(StartRtcRobotInstanceRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        StartRtcRobotInstanceShrinkRequest request = new StartRtcRobotInstanceShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.config)) {
+            request.configShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.config, "Config", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authToken)) {
+            query.put("AuthToken", request.authToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.channelId)) {
+            query.put("ChannelId", request.channelId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.configShrink)) {
+            query.put("Config", request.configShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.robotId)) {
+            query.put("RobotId", request.robotId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userData)) {
+            query.put("UserData", request.userData);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            query.put("UserId", request.userId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StartRtcRobotInstance"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StartRtcRobotInstanceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>开启一个机器人实例</p>
+     * 
+     * @param request StartRtcRobotInstanceRequest
+     * @return StartRtcRobotInstanceResponse
+     */
+    public StartRtcRobotInstanceResponse startRtcRobotInstance(StartRtcRobotInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.startRtcRobotInstanceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>启动工作流</p>
      * 
      * @param request StartWorkflowRequest
@@ -8249,6 +8363,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public StartWorkflowResponse startWorkflow(StartWorkflowRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.startWorkflowWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>停止一个机器人实例</p>
+     * 
+     * @param request StopRtcRobotInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StopRtcRobotInstanceResponse
+     */
+    public StopRtcRobotInstanceResponse stopRtcRobotInstanceWithOptions(StopRtcRobotInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StopRtcRobotInstance"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StopRtcRobotInstanceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>停止一个机器人实例</p>
+     * 
+     * @param request StopRtcRobotInstanceRequest
+     * @return StopRtcRobotInstanceResponse
+     */
+    public StopRtcRobotInstanceResponse stopRtcRobotInstance(StopRtcRobotInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.stopRtcRobotInstanceWithOptions(request, runtime);
     }
 
     /**
@@ -10861,6 +11019,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdatePipelineResponse updatePipeline(UpdatePipelineRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updatePipelineWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改实例的配置</p>
+     * 
+     * @param tmpReq UpdateRtcRobotInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateRtcRobotInstanceResponse
+     */
+    public UpdateRtcRobotInstanceResponse updateRtcRobotInstanceWithOptions(UpdateRtcRobotInstanceRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateRtcRobotInstanceShrinkRequest request = new UpdateRtcRobotInstanceShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.config)) {
+            request.configShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.config, "Config", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.configShrink)) {
+            query.put("Config", request.configShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateRtcRobotInstance"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateRtcRobotInstanceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改实例的配置</p>
+     * 
+     * @param request UpdateRtcRobotInstanceRequest
+     * @return UpdateRtcRobotInstanceResponse
+     */
+    public UpdateRtcRobotInstanceResponse updateRtcRobotInstance(UpdateRtcRobotInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateRtcRobotInstanceWithOptions(request, runtime);
     }
 
     /**
