@@ -5,38 +5,64 @@ import com.aliyun.tea.*;
 
 public class UmountDirectoryResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   true: The request was successful.</p>
-     * <p>*   false: The request failed.</p>
+     * <p>The number of directories that are removed. Valid values:</p>
+     * <ul>
+     * <li>0: No directories are removed. The left-side navigation pane may not contain the specified directory.</li>
+     * <li>1: One directory is removed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Data")
     public Integer data;
 
+    /**
+     * <p>The error code. The value 200 indicates that the task is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The error code returned. The value 200 indicates that the remove task is successful.</p>
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>You have no permission.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
-     * <p>The error message returned if the request failed.</p>
+     * <p>The HTTP status code. The value 200 indicates that the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
-     * <p>The number of directories that are removed. Valid values:</p>
-     * <br>
-     * <p>*   0: No directories are removed. The left-side navigation pane may not contain the specified directory.</p>
-     * <p>*   1: One directory is removed.</p>
+     * <p>The request ID. You can use the ID to troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0bc5aa2716455247597991794e65bd</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

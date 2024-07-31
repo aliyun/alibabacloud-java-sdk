@@ -5,37 +5,52 @@ import com.aliyun.tea.*;
 
 public class ListDagsResponseBody extends TeaModel {
     /**
-     * <p>The entities returned.</p>
+     * <p>The details of DAGs.</p>
      */
     @NameInMap("Data")
     public ListDagsResponseBodyData data;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Invalid.Tenant.ConnectionNotExists</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The error code returned.</p>
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The connection does not exist.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
-     * <p>The ID of the request. You can locate logs and troubleshoot issues based on the ID.</p>
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The request ID. You can use the ID to locate logs and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7782a299-b291-4fee-8424-cf8058efa8e8</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The details of DAGs.</p>
+     * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -95,76 +110,130 @@ public class ListDagsResponseBody extends TeaModel {
 
     public static class ListDagsResponseBodyDataDags extends TeaModel {
         /**
-         * <p>The name of the DAG.</p>
+         * <p>The data timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1605052800000</p>
          */
         @NameInMap("Bizdate")
         public Long bizdate;
 
         /**
-         * <p>The ID of the workspace.</p>
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1605052800000</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
-         * <p>The data timestamp.</p>
+         * <p>The creator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1736629400048545</p>
          */
         @NameInMap("CreateUser")
         public String createUser;
 
         /**
-         * <p>The time at which the DAG was scheduled to run.</p>
+         * <p>The DAG ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>351249682</p>
          */
         @NameInMap("DagId")
         public Long dagId;
 
         /**
-         * <p>The time at which the DAG was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The end time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1605052800000</p>
          */
         @NameInMap("FinishTime")
         public Long finishTime;
 
         /**
-         * <p>The time at which the DAG started to run.</p>
+         * <p>The actual running time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1605052800000</p>
          */
         @NameInMap("Gmtdate")
         public Long gmtdate;
 
         /**
-         * <p>The sequence number of the operation.</p>
+         * <p>The modification time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1605052800000</p>
          */
         @NameInMap("ModifyTime")
         public Long modifyTime;
 
         /**
-         * <p>The time at which the DAG was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The name of the DAG.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_dag</p>
          */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The sequence number of the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("OpSeq")
         public Long opSeq;
 
         /**
-         * <p>The ID of the DAG.</p>
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>112345</p>
          */
         @NameInMap("ProjectId")
         public Long projectId;
 
         /**
-         * <p>The user who created the DAG.</p>
+         * <p>The start time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1605052800000</p>
          */
         @NameInMap("StartTime")
         public Long startTime;
 
         /**
-         * <p>The time at which the DAG finished running. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The status of the DAG. Valid values:</p>
+         * <ul>
+         * <li>CREATED</li>
+         * <li>RUNNING</li>
+         * <li>FAILURE</li>
+         * <li>SUCCESS</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>FAILURE</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The status of the DAG. Valid values: CREATED, RUNNING, FAILURE, and SUCCESS.</p>
+         * <p>The type of the DAG. Valid values:</p>
+         * <ul>
+         * <li>MANUAL: DAG for a manually triggered workflow</li>
+         * <li>SMOKE_TEST: DAG for a smoke testing workflow</li>
+         * <li>SUPPLY_DATA: DAG for a data backfill instance</li>
+         * <li>BUSINESS_PROCESS_DAG: DAG for a one-time workflow</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>MANUAL_FLOW</p>
          */
         @NameInMap("Type")
         public String type;
@@ -282,7 +351,7 @@ public class ListDagsResponseBody extends TeaModel {
 
     public static class ListDagsResponseBodyData extends TeaModel {
         /**
-         * <p>The type of the DAG. Valid values: MANUAL, SMOKE_TEST, SUPPLY_DATA, and BUSINESS_PROCESS_DAG.</p>
+         * <p>The entities returned.</p>
          */
         @NameInMap("Dags")
         public java.util.List<ListDagsResponseBodyDataDags> dags;

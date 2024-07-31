@@ -5,25 +5,37 @@ import com.aliyun.tea.*;
 
 public class ListTableThemeRequest extends TeaModel {
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNum")
     public Integer pageNum;
 
     /**
-     * <p>The number of entries to return on each page. Default value:10. Maximum value: 100.</p>
+     * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the parent table folder.</p>
+     * <p>The ID of the parent table theme.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>121</p>
      */
     @NameInMap("ParentId")
     public Long parentId;
 
     /**
-     * <p>The ID of the DataWorks workspace.</p>
+     * <p>The DataWorks workspace ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;

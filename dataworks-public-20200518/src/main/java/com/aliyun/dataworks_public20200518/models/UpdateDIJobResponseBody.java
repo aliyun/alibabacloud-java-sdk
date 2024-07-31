@@ -4,6 +4,12 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class UpdateDIJobResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AAC30B35-820D-5F3E-A42C-E96BB6379325</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

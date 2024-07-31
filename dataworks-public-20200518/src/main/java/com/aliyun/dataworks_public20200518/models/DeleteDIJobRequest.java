@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class DeleteDIJobRequest extends TeaModel {
     /**
+     * <p>The task ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>11126</p>
      */
     @NameInMap("DIJobId")
     public Long DIJobId;

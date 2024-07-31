@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class GetDDLJobStatusRequest extends TeaModel {
     /**
      * <p>The ID of the DDL task.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>abc</p>
      */
     @NameInMap("TaskId")
     public String taskId;

@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetInstanceStatusStatisticResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request. You can use the ID to search for logs and troubleshoot issues based on the logs.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0000-ABCD-EFG****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,42 +43,63 @@ public class GetInstanceStatusStatisticResponseBody extends TeaModel {
     public static class GetInstanceStatusStatisticResponseBodyStatusCount extends TeaModel {
         /**
          * <p>The number of instances that failed to run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("FailureCount")
         public Integer failureCount;
 
         /**
          * <p>The number of instances that are not run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("NotRunCount")
         public Integer notRunCount;
 
         /**
          * <p>The number of instances that are running.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("RunningCount")
         public Integer runningCount;
 
         /**
          * <p>The number of instances that are successfully run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("SuccessCount")
         public Integer successCount;
 
         /**
-         * <p>The total number of instances.</p>
+         * <p>The total number of instances returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;
 
         /**
          * <p>The number of instances that are waiting for resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("WaitResCount")
         public Integer waitResCount;
 
         /**
          * <p>The number of instances that are waiting to run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("WaitTimeCount")
         public Integer waitTimeCount;

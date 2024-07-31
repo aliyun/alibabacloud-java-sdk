@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateTableAddColumnRequest extends TeaModel {
     /**
+     * <p>The list of fields.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Column")
@@ -12,8 +13,10 @@ public class UpdateTableAddColumnRequest extends TeaModel {
 
     /**
      * <p>The globally unique identifier (GUID) of the MaxCompute table. Specify the GUID in the odps.projectName.tableName format.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>odps.engine_name.table_name</p>
      */
     @NameInMap("TableGuid")
     public String tableGuid;
@@ -42,8 +45,10 @@ public class UpdateTableAddColumnRequest extends TeaModel {
     public static class UpdateTableAddColumnRequestColumn extends TeaModel {
         /**
          * <p>The name of the field.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         @NameInMap("ColumnName")
         public String columnName;
@@ -56,8 +61,10 @@ public class UpdateTableAddColumnRequest extends TeaModel {
 
         /**
          * <p>The type of the field. For more information, see MaxCompute field types.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>string</p>
          */
         @NameInMap("ColumnType")
         public String columnType;

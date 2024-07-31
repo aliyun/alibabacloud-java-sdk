@@ -5,31 +5,46 @@ import com.aliyun.tea.*;
 
 public class ListTableLevelResponseBody extends TeaModel {
     /**
-     * <p>The error code returned.</p>
+     * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1031203110005</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The specified parameters are invalid.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>abc</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -96,30 +111,45 @@ public class ListTableLevelResponseBody extends TeaModel {
     public static class ListTableLevelResponseBodyTableLevelInfoLevelList extends TeaModel {
         /**
          * <p>The description of the table level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The ID of the table level.</p>
+         * <p>The table level ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("LevelId")
         public Long levelId;
 
         /**
-         * <p>The type of the table level. Valid values: 1 and 2. A value of 1 indicates the logical level. A value of 2 indicates the physical level.</p>
+         * <p>The table level type. Valid values: 1 and 2. The value 1 indicates the logical level. The value 2 indicates the physical level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("LevelType")
         public Integer levelType;
 
         /**
          * <p>The name of the table level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The ID of the DataWorks workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("ProjectId")
         public Long projectId;
@@ -180,6 +210,9 @@ public class ListTableLevelResponseBody extends TeaModel {
 
         /**
          * <p>The total number of table levels returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("TotalCount")
         public Long totalCount;

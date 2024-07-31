@@ -5,25 +5,48 @@ import com.aliyun.tea.*;
 
 public class ListMeasureDataRequest extends TeaModel {
     /**
+     * <p>The measurement component.</p>
+     * <ul>
+     * <li>This parameter is set to Count if the DomainCode parameter is set to DideAlarmPhone or DideAlarmSms. In this case, statistics on the number of phone calls or text messages that are used to send alert notifications are collected.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Count</p>
      */
     @NameInMap("ComponentCode")
     public String componentCode;
 
     /**
+     * <p>The item to be measured. Valid values:</p>
+     * <ul>
+     * <li>DideAlarmPhone: phone call-based alerts</li>
+     * <li>DideAlarmSms: text message-based alerts</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DideAlarmPhone</p>
      */
     @NameInMap("DomainCode")
     public String domainCode;
 
     /**
+     * <p>The end timestamp of the measurement period, in milliseconds. The measurement period is calculated in days. You can query only the data within the last 30 days.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1717430400000</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
 
     /**
+     * <p>The start timestamp of the measurement period, in milliseconds. The measurement period is calculated in days. You can query only the data within the last 30 days.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1717344000000</p>
      */
     @NameInMap("StartTime")
     public Long startTime;

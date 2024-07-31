@@ -4,9 +4,17 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class UserEntityTag extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>priority</p>
+     */
     @NameInMap("TagKey")
     public String tagKey;
 
+    /**
+     * <strong>example:</strong>
+     * <p>p1</p>
+     */
     @NameInMap("TagValue")
     public String tagValue;
 

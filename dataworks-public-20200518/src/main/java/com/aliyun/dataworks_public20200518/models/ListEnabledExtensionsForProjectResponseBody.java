@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class ListEnabledExtensionsForProjectResponseBody extends TeaModel {
     /**
-     * <p>The unique code of the extension.</p>
+     * <p>The details of the extension.</p>
      */
     @NameInMap("Extensions")
     public java.util.List<ListEnabledExtensionsForProjectResponseBodyExtensions> extensions;
 
     /**
-     * <p>The details of the extension.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4F2CA7ED-27E5-59EA-A8C4-F1F7A1FF0B22</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,49 +42,67 @@ public class ListEnabledExtensionsForProjectResponseBody extends TeaModel {
 
     public static class ListEnabledExtensionsForProjectResponseBodyExtensions extends TeaModel {
         /**
-         * <p>The modifier of the extension.</p>
+         * <p>The creator of the extension.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3444434343555</p>
          */
         @NameInMap("CreateUser")
         public String createUser;
 
         /**
-         * <p>The name of the extension.</p>
+         * <p>The unique code of the extension.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a94a8e23bc0b4dfab9a5e4d2f374d645</p>
          */
         @NameInMap("ExtensionCode")
         public String extensionCode;
 
         /**
-         * <p>The owner ID.</p>
+         * <p>The description of the extension.</p>
          */
         @NameInMap("ExtensionDesc")
         public String extensionDesc;
 
         /**
-         * <p>The ID of the tenant.</p>
+         * <p>The name of the extension.</p>
          */
         @NameInMap("ExtensionName")
         public String extensionName;
 
         /**
-         * <p>The description of the extension.</p>
+         * <p>The modifier of the extension.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34452335611988</p>
          */
         @NameInMap("ModifyUser")
         public String modifyUser;
 
         /**
-         * <p>The parameter settings of the extension. For more information, see [Configure extension parameters](https://help.aliyun.com/document_detail/405354.html).</p>
+         * <p>The owner ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21323672*******55500</p>
          */
         @NameInMap("Owner")
         public String owner;
 
         /**
-         * <p>The time when the extension was created.</p>
+         * <p>The parameter settings of the extension. For more information, see <a href="https://help.aliyun.com/document_detail/405354.html">Configure extension parameters</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>extension.fileType.23.deploy-file.enabled=true</p>
          */
         @NameInMap("ParameterSetting")
         public String parameterSetting;
 
         /**
-         * <p>The creator of the extension.</p>
+         * <p>The tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>529889518659842</p>
          */
         @NameInMap("TenantId")
         public Long tenantId;

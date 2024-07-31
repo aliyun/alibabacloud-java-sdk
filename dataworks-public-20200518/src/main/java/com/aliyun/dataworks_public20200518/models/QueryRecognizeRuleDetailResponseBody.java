@@ -4,21 +4,55 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class QueryRecognizeRuleDetailResponseBody extends TeaModel {
+    /**
+     * <p>The details of the sensitive field in the JSON format.</p>
+     */
     @NameInMap("Data")
     public Object data;
 
+    /**
+     * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9990030003</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The request ID. You can use the request ID to query logs and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10000001</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

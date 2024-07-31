@@ -12,6 +12,9 @@ public class ListDataServiceApiTestResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ESDAFWEA</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,48 +43,72 @@ public class ListDataServiceApiTestResponseBody extends TeaModel {
     public static class ListDataServiceApiTestResponseBodyData extends TeaModel {
         /**
          * <p>The ID of the DataService Studio API on which the test is performed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2343</p>
          */
         @NameInMap("ApiId")
         public Long apiId;
 
         /**
          * <p>The time that is consumed to complete the test.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("CostTime")
         public Integer costTime;
 
         /**
          * <p>The time when the test was initiated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1651824913000</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
          * <p>The request parameters configured for the test.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;name&quot;:&quot;test&quot;}</p>
          */
         @NameInMap("ParamMap")
         public String paramMap;
 
         /**
          * <p>The status code returned for the test. If the test is not complete, this parameter is not returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("RetCode")
         public Long retCode;
 
         /**
          * <p>The result returned for the test.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;id&quot;:2}</p>
          */
         @NameInMap("RetResult")
         public String retResult;
 
         /**
          * <p>The status of the test. Valid values: RUNNING and FINISHED.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FINISHED</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The ID of the test.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("TestId")
         public Long testId;

@@ -5,20 +5,30 @@ import com.aliyun.tea.*;
 
 public class DeleteQualityFollowerRequest extends TeaModel {
     /**
-     * <p>The ID of the subscription relationship between the partition filter expression and the subscriber. You can call the [GetQualityFollower](https://help.aliyun.com/document_detail/174000.html) operation to obtain the ID of the subscription relationship.</p>
-     * <br>
+     * <p>The ID of the subscription relationship between the partition filter expression and the subscriber. You can call the <a href="https://help.aliyun.com/document_detail/174000.html">GetQualityFollower</a> operation to obtain the ID of the subscription relationship.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234</p>
      */
     @NameInMap("FollowerId")
     public Long followerId;
 
+    /**
+     * <p>The DataWorks workspace ID. You can log on to the DataWorks console and go to the Workspace page to obtain the workspace ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10000</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 
     /**
-     * <p>The name of the compute engine or data source for which the partition filter expression is configured. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Monitoring Rules page of Data Quality to obtain the name.</p>
-     * <br>
+     * <p>The name of the compute engine or data source for which the partition filter expression is configured. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the rule configuration page of Data Quality page to obtain the name.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>autotest</p>
      */
     @NameInMap("ProjectName")
     public String projectName;

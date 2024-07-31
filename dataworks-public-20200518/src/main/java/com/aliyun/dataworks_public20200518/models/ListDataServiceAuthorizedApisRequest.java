@@ -6,32 +6,46 @@ import com.aliyun.tea.*;
 public class ListDataServiceAuthorizedApisRequest extends TeaModel {
     /**
      * <p>The keyword in API names. The keyword is used to search for the APIs whose names contain the keyword.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>My API Name</p>
      */
     @NameInMap("ApiNameKeyword")
     public String apiNameKeyword;
 
     /**
-     * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 10. Maximum value: 100.</p>
+     * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the workspace.</p>
-     * <br>
+     * <p>The workspace ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10000</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;
 
     /**
-     * <p>The ID of the tenant.</p>
+     * <p>The tenant ID. This parameter is deprecated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10001</p>
      */
     @NameInMap("TenantId")
     public Long tenantId;

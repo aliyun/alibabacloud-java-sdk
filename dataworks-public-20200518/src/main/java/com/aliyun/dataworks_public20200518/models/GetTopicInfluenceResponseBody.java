@@ -7,18 +7,38 @@ public class GetTopicInfluenceResponseBody extends TeaModel {
     @NameInMap("Data")
     public GetTopicInfluenceResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1031203110005</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>The specified parameters are invalid.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0000-ABCD-EFG****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,30 +96,62 @@ public class GetTopicInfluenceResponseBody extends TeaModel {
     }
 
     public static class GetTopicInfluenceResponseBodyDataInfluences extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1234</p>
+         */
         @NameInMap("BaselineId")
         public Long baselineId;
 
         @NameInMap("BaselineName")
         public String baselineName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1553356800000</p>
+         */
         @NameInMap("Bizdate")
         public Long bizdate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>360</p>
+         */
         @NameInMap("Buffer")
         public Long buffer;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("InGroupId")
         public Integer inGroupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>952795****</p>
+         */
         @NameInMap("Owner")
         public String owner;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Priority")
         public Integer priority;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1234</p>
+         */
         @NameInMap("ProjectId")
         public Long projectId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SAFE</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -186,6 +238,10 @@ public class GetTopicInfluenceResponseBody extends TeaModel {
         @NameInMap("Influences")
         public java.util.List<GetTopicInfluenceResponseBodyDataInfluences> influences;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1234</p>
+         */
         @NameInMap("TopicId")
         public Long topicId;
 

@@ -5,18 +5,20 @@ import com.aliyun.tea.*;
 
 public class ScanSensitiveDataResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0000-ABCD-EFG****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The result of the check.</p>
-     * <br>
-     * <p>sensDatas indicates the rules that are used to check the sensitive data. sensDatas includes the following parameters:</p>
-     * <br>
-     * <p>*   hitCount: the number of times that the sensitive data hits the rule</p>
-     * <p>*   ruleName: the name of the rule</p>
+     * <p>The check result. sensDatas indicates the rules that are used to check the sensitive data. sensDatas includes the following parameters:</p>
+     * <ul>
+     * <li>hitCount: the number of times that the sensitive data hits the rule.</li>
+     * <li>ruleName: the name of the rule.</li>
+     * </ul>
      */
     @NameInMap("Sensitives")
     public java.util.Map<String, ?> sensitives;

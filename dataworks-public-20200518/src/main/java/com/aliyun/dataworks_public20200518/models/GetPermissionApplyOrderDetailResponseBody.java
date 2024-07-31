@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
     /**
-     * <p>Details about the permission request order.</p>
+     * <p>The details of the permission request order.</p>
      */
     @NameInMap("ApplyOrderDetail")
     public GetPermissionApplyOrderDetailResponseBodyApplyOrderDetail applyOrderDetail;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0bc1ec92159376****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,7 +42,10 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
 
     public static class GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailApproveAccountList extends TeaModel {
         /**
-         * <p>The unique ID of the Alibaba Cloud account that is used to approve the permission request order.</p>
+         * <p>The ID of the Alibaba Cloud account that is used to process the permission request order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>182293110403****</p>
          */
         @NameInMap("BaseId")
         public String baseId;
@@ -68,10 +74,19 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
 
         /**
          * <p>The name of the column on which you request permissions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aColumnName</p>
          */
         @NameInMap("ColumnName")
         public String columnName;
 
+        /**
+         * <p>The security level of the column on which you request permissions. Valid values: 0 to 9.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9</p>
+         */
         @NameInMap("SecurityLevel")
         public String securityLevel;
 
@@ -115,6 +130,9 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
 
         /**
          * <p>The name of the table on which you request permissions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aTableName</p>
          */
         @NameInMap("ObjectName")
         public String objectName;
@@ -145,18 +163,24 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
     public static class GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailApproveContentProjectMeta extends TeaModel {
         /**
          * <p>The MaxCompute project to which the object on which you request permissions belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aMaxComputeProject</p>
          */
         @NameInMap("MaxComputeProjectName")
         public String maxComputeProjectName;
 
         /**
-         * <p>Details about the object on which you request permissions.</p>
+         * <p>The details about the object on which you request permissions.</p>
          */
         @NameInMap("ObjectMetaList")
         public java.util.List<GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailApproveContentProjectMetaObjectMetaList> objectMetaList;
 
         /**
          * <p>The ID of the DataWorks workspace that is associated with the object on which you request permissions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         @NameInMap("WorkspaceId")
         public Integer workspaceId;
@@ -194,27 +218,34 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
 
     public static class GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailApproveContent extends TeaModel {
         /**
-         * <p>The reason for your request. The administrator decides whether to approve the request based on the request reason.</p>
+         * <p>The reason of the permission request. The administrator processes the request based on the reason.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>I need to use this table</p>
          */
         @NameInMap("ApplyReason")
         public String applyReason;
 
         /**
-         * <p>The expiration time of the permissions that you requested. The parameter value is a UNIX timestamp.</p>
-         * <br>
-         * <p>If LabelSecurity is disabled in the MaxCompute project, or the security level of fields in the MaxCompute table on which you request permissions is 0 or is less than or equal to the security level of the Alibaba Cloud account for which you request permissions, you can request only permanent permissions.</p>
+         * <p>The expiration time of the permissions that you request. The value is a UNIX timestamp. If LabelSecurity is disabled for the MaxCompute project in which you want to request permissions on the fields of a table, or the security level of the fields is 0 or is lower than or equal to the security level of the Alibaba Cloud account for which you want to request permissions, you can request only permanent permissions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1617115071885</p>
          */
         @NameInMap("Deadline")
         public Long deadline;
 
         /**
-         * <p>The type of the permission request order. The parameter value is 1 and cannot be changed. 1 indicates that ACL-based authorization is requested.</p>
+         * <p>The type of the permission request order. The parameter value is 1 and cannot be changed. This value indicates ACL-based authorization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("OrderType")
         public Integer orderType;
 
         /**
-         * <p>The information about the project and workspace that are associated with the object on which you requested permissions.</p>
+         * <p>The information about the project and workspace that are associated with the object on which you request permissions.</p>
          */
         @NameInMap("ProjectMeta")
         public GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailApproveContentProjectMeta projectMeta;
@@ -260,32 +291,46 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
 
     public static class GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailGranteeObjectList extends TeaModel {
         /**
-         * <p>The unique ID of the account that is used to request permissions.</p>
+         * <p>The ID of the account that is used to request permissions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>267842600408993176</p>
          */
         @NameInMap("GranteeId")
         public String granteeId;
 
         /**
          * <p>The name of the account that is used to request permissions. The name is in the same format as that of the account used to access the MaxCompute project.</p>
-         * <br>
-         * <p>*   An Alibaba Cloud account is in the format of ALIYUN$+Account name.</p>
-         * <p>*   A RAM user is in the format of RAM$+Account name.</p>
+         * <ul>
+         * <li>If the account is an Alibaba Cloud account, the value is in the ALIYUN$+Account name format.</li>
+         * <li>If the account is a RAM user, the value is in the RAM$+Account name format.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>RAM$dataworks_3h1_1:StsRamUser(StsRamUser)</p>
          */
         @NameInMap("GranteeName")
         public String granteeName;
 
         /**
-         * <p>The type of the subject that requests permissions. The parameter value is 1 and cannot be changed. It indicates user.</p>
+         * <p>The type of the subject that requests permissions. The value is fixed as 1, which indicates users.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("GranteeType")
         public Integer granteeType;
 
         /**
          * <p>The subtype of the subject that requests permissions. Valid values:</p>
-         * <br>
-         * <p>*   101: production account</p>
-         * <p>*   103: individual account</p>
-         * <p>*   105: account that requests permissions for others</p>
+         * <ul>
+         * <li>101: production account</li>
+         * <li>103: individual account</li>
+         * <li>105: account that requests permissions for others</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>103</p>
          */
         @NameInMap("GranteeTypeSub")
         public Integer granteeTypeSub;
@@ -331,19 +376,25 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
 
     public static class GetPermissionApplyOrderDetailResponseBodyApplyOrderDetail extends TeaModel {
         /**
-         * <p>The unique ID of the Alibaba Cloud account that is used to submit the permission request order.</p>
+         * <p>The ID of the Alibaba Cloud account that was used to submit the permission request order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>267842600408993176</p>
          */
         @NameInMap("ApplyBaseId")
         public String applyBaseId;
 
         /**
-         * <p>The time when the permission request order was submitted. The parameter value is a UNIX timestamp.</p>
+         * <p>The time when the permission request order was submitted. The value is a UNIX timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1615284086000</p>
          */
         @NameInMap("ApplyTimestamp")
         public Long applyTimestamp;
 
         /**
-         * <p>The list of Alibaba Cloud accounts that are used to approve the permission request order.</p>
+         * <p>The list of Alibaba Cloud accounts that are used to process the permission request order.</p>
          */
         @NameInMap("ApproveAccountList")
         public java.util.List<GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailApproveAccountList> approveAccountList;
@@ -356,23 +407,30 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the permission request order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ad8da78d-8135-455e-9486-27cf213fc140</p>
          */
         @NameInMap("FlowId")
         public String flowId;
 
         /**
          * <p>The status of the permission request order. Valid values:</p>
-         * <br>
-         * <p>*   1: pending approval</p>
-         * <p>*   2: approved and authorized</p>
-         * <p>*   3: approved but authorization failed</p>
-         * <p>*   4: rejected</p>
+         * <ul>
+         * <li>1: to be processed</li>
+         * <li>2: approved and authorized</li>
+         * <li>3: approved but authorization failed</li>
+         * <li>4: rejected</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("FlowStatus")
         public Integer flowStatus;
 
         /**
-         * <p>Information about the account that is used to request permissions.</p>
+         * <p>The information about the account that is used to request permissions.</p>
          */
         @NameInMap("GranteeObjectList")
         public java.util.List<GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailGranteeObjectList> granteeObjectList;

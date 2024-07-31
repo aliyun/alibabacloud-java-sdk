@@ -6,34 +6,47 @@ import com.aliyun.tea.*;
 public class ListBusinessRequest extends TeaModel {
     /**
      * <p>The keyword that is used to perform a fuzzy match.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my</p>
      */
     @NameInMap("Keyword")
     public String keyword;
 
     /**
      * <p>The number of the page to return.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page. Default value: 10. Maximum value: 100.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the DataWorks workspace. You can log on to the DataWorks console and go to the Workspace Management page to obtain the workspace ID. You must configure either this parameter or the ProjectIdentifier parameter to determine the DataWorks workspace to which the operation is applied.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10000</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;
 
     /**
      * <p>The name of the DataWorks workspace. You can log on to the DataWorks console and go to the Workspace Management page to obtain the workspace name. You must configure either this parameter or ProjectId parameter to determine the DataWorks workspace to which the operation is applied.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dw_project</p>
      */
     @NameInMap("ProjectIdentifier")
     public String projectIdentifier;

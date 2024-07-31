@@ -11,7 +11,10 @@ public class GetDDLJobStatusResponseBody extends TeaModel {
     public GetDDLJobStatusResponseBodyData data;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>abc</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,24 +43,36 @@ public class GetDDLJobStatusResponseBody extends TeaModel {
     public static class GetDDLJobStatusResponseBodyData extends TeaModel {
         /**
          * <p>The content of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         @NameInMap("Content")
         public String content;
 
         /**
          * <p>The ID of the ongoing task. If no value is returned for this parameter, all subtasks are complete.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc1</p>
          */
         @NameInMap("NextTaskId")
         public String nextTaskId;
 
         /**
-         * <p>The status of the task</p>
+         * <p>The status of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The ID of the task.</p>
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         @NameInMap("TaskId")
         public String taskId;

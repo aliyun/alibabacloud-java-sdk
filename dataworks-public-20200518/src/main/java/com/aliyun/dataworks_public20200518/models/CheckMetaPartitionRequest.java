@@ -5,39 +5,56 @@ import com.aliyun.tea.*;
 
 public class CheckMetaPartitionRequest extends TeaModel {
     /**
-     * <p>The name of the table.</p>
+     * <p>This parameter is deprecated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>abc</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>Indicates whether the partition exists.</p>
+     * <p>The type of the data source. Set the value to odps.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>emr</p>
      */
     @NameInMap("DataSourceType")
     public String dataSourceType;
 
     /**
-     * <p>The type of the data source. Valid values: odps and emr.</p>
+     * <p>The name of the metadatabase.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>abc</p>
      */
     @NameInMap("DatabaseName")
     public String databaseName;
 
     /**
-     * <p>The name of the database.</p>
-     * <br>
+     * <p>The name of the partition in the MaxCompute metatable.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ds=202005</p>
      */
     @NameInMap("Partition")
     public String partition;
 
     /**
-     * <p>The ID of the E-MapReduce (EMR) cluster.</p>
+     * <p>The GUID of the MaxCompute metatable.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>odps.engine_name.table_name</p>
      */
     @NameInMap("TableGuid")
     public String tableGuid;
 
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The name of the metatable.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>abc</p>
      */
     @NameInMap("TableName")
     public String tableName;

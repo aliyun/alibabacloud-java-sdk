@@ -4,9 +4,18 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetInstanceErrorRankResponseBody extends TeaModel {
+    /**
+     * <p>The ranking data of nodes on which errors occurred.</p>
+     */
     @NameInMap("InstanceErrorRank")
     public GetInstanceErrorRankResponseBodyInstanceErrorRank instanceErrorRank;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>952795279527****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,21 +41,54 @@ public class GetInstanceErrorRankResponseBody extends TeaModel {
     }
 
     public static class GetInstanceErrorRankResponseBodyInstanceErrorRankErrorRank extends TeaModel {
+        /**
+         * <p>The number of errors that occurred on the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <p>The node ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9527</p>
+         */
         @NameInMap("NodeId")
         public Long nodeId;
 
+        /**
+         * <p>The name of the node.</p>
+         */
         @NameInMap("NodeName")
         public String nodeName;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account used by the node owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>952795279527</p>
+         */
         @NameInMap("Owner")
         public String owner;
 
+        /**
+         * <p>The type of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PrgType")
         public Integer prgType;
 
+        /**
+         * <p>The DataWorks workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9527</p>
+         */
         @NameInMap("ProjectId")
         public Long projectId;
 
@@ -106,9 +148,18 @@ public class GetInstanceErrorRankResponseBody extends TeaModel {
     }
 
     public static class GetInstanceErrorRankResponseBodyInstanceErrorRank extends TeaModel {
+        /**
+         * <p>The ranking data of nodes on which errors occurred within the last month.</p>
+         */
         @NameInMap("ErrorRank")
         public java.util.List<GetInstanceErrorRankResponseBodyInstanceErrorRankErrorRank> errorRank;
 
+        /**
+         * <p>The timestamp at which the rankings were updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1600963200000</p>
+         */
         @NameInMap("UpdateTime")
         public Long updateTime;
 

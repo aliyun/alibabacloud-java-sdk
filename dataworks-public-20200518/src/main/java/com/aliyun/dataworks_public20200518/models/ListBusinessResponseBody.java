@@ -12,30 +12,45 @@ public class ListBusinessResponseBody extends TeaModel {
 
     /**
      * <p>The error code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Invalid.Tenant.ConnectionNotExists</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The connection does not exist.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The ID of the request. You can use the ID to troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0000-ABCD-EFG****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -96,36 +111,54 @@ public class ListBusinessResponseBody extends TeaModel {
     public static class ListBusinessResponseBodyDataBusiness extends TeaModel {
         /**
          * <p>The ID of the workflow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3000001</p>
          */
         @NameInMap("BusinessId")
         public Long businessId;
 
         /**
          * <p>The name of the workflow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>My first workflow</p>
          */
         @NameInMap("BusinessName")
         public String businessName;
 
         /**
          * <p>The description of the workflow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>My first workflow</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The owner of the workflow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34824327****</p>
          */
         @NameInMap("Owner")
         public String owner;
 
         /**
          * <p>The ID of the workspace to which the workflow belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         @NameInMap("ProjectId")
         public Long projectId;
 
         /**
          * <p>The module to which the workflow belongs. Valid values: NORMAL and MANUAL_BIZ. The value NORMAL indicates that the workflow belongs to auto triggered workflows. The value MANUAL_BIZ indicates that the workflow belongs to manually triggered workflows.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         @NameInMap("UseType")
         public String useType;
@@ -194,18 +227,27 @@ public class ListBusinessResponseBody extends TeaModel {
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

@@ -5,41 +5,52 @@ import com.aliyun.tea.*;
 
 public class GetDataSourceMetaRequest extends TeaModel {
     /**
-     * <p>The number of the page to return.</p>
-     * <br>
+     * <p>The name of the data source.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mysql_name</p>
      */
     @NameInMap("DatasourceName")
     public String datasourceName;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   true: The request was successful.</p>
-     * <p>*   false: The request failed.</p>
+     * <p>The environment in which the data source resides. Valid values:</p>
+     * <ul>
+     * <li>0: development environment</li>
+     * <li>1: production environment</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("EnvType")
     public String envType;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>The environment to which the data source belongs. Valid values:</p>
-     * <br>
-     * <p>*   0: development environment</p>
-     * <p>*   1: production environment</p>
+     * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
-     * <p>The name of the data source.</p>
-     * <br>
+     * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to obtain the ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10000</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;

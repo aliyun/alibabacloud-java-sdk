@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class GetDIAlarmRuleRequest extends TeaModel {
     /**
+     * <p>The alert rule ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>34994</p>
      */
     @NameInMap("DIAlarmRuleId")
     public Long DIAlarmRuleId;

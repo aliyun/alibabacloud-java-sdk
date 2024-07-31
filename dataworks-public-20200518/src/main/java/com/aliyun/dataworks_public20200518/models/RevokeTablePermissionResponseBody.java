@@ -5,13 +5,19 @@ import com.aliyun.tea.*;
 
 public class RevokeTablePermissionResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0bc1ec92159376****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the permissions on the table are revoked.</p>
+     * <p>Indicates whether the permissions are revoked.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("RevokeSuccess")
     public Boolean revokeSuccess;

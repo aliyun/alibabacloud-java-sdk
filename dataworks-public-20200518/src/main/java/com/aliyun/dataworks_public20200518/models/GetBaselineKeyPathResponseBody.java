@@ -4,24 +4,46 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetBaselineKeyPathResponseBody extends TeaModel {
+    /**
+     * <p>The information about the key path.</p>
+     */
     @NameInMap("Data")
     public java.util.List<GetBaselineKeyPathResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1031203110005</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>The specified parameters are invalid.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The timestamp when the event was found.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0000-ABCD-EFG****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -79,27 +101,75 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
     }
 
     public static class GetBaselineKeyPathResponseBodyDataRuns extends TeaModel {
+        /**
+         * <p>The timestamp obtained by adding the predicted time when the instance started to run to the historical average running duration of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1553531402000</p>
+         */
         @NameInMap("AbsTime")
         public Long absTime;
 
+        /**
+         * <p>The timestamp of the predicted time when the instance started to run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1553531686000</p>
+         */
         @NameInMap("BeginCast")
         public Long beginCast;
 
+        /**
+         * <p>The timestamp of the actual time when the instance started to run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1553531401000</p>
+         */
         @NameInMap("BeginRunningTime")
         public Long beginRunningTime;
 
+        /**
+         * <p>The timestamp when the instance started to wait for resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1553531401000</p>
+         */
         @NameInMap("BeginWaitResTime")
         public Long beginWaitResTime;
 
+        /**
+         * <p>The timestamp when the instance started to wait for the scheduling time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1553531400000</p>
+         */
         @NameInMap("BeginWaitTimeTime")
         public Long beginWaitTimeTime;
 
+        /**
+         * <p>The timestamp of the predicted time when the instance finished running.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1553531687000</p>
+         */
         @NameInMap("EndCast")
         public Long endCast;
 
+        /**
+         * <p>The timestamp of the actual time when the instance finished running.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1553531401000</p>
+         */
         @NameInMap("FinishTime")
         public Long finishTime;
 
+        /**
+         * <p>The status of the instance. Valid values: NOT_RUN, WAIT_TIME, WAIT_RESOURCE, RUNNING, CHECKING, CHECKING_CONDITION, FAILURE, and SUCCESS. The value NOT_RUN indicates that the instance is not run. The value WAIT_TIME indicates that the instance is waiting to be run. The value WAIT_RESOURCE indicates that the instance is waiting for resources. The value RUNNING indicates that the instance is running. The value CHECKING indicates that data quality is being checked for the instance. The value CHECKING_CONDITION indicates that branch conditions are being checked for the instance. The value FAILURE indicates that the instance fails to run. The value SUCCESS indicates that the instance is run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -175,15 +245,39 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
     }
 
     public static class GetBaselineKeyPathResponseBodyDataTopics extends TeaModel {
+        /**
+         * <p>The timestamp when the event was found.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1553531401000</p>
+         */
         @NameInMap("AddTime")
         public Long addTime;
 
+        /**
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
+         */
         @NameInMap("InstanceId")
         public Long instanceId;
 
+        /**
+         * <p>The event ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
+         */
         @NameInMap("TopicId")
         public Long topicId;
 
+        /**
+         * <p>The name of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
+         */
         @NameInMap("TopicName")
         public String topicName;
 
@@ -227,33 +321,84 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
     }
 
     public static class GetBaselineKeyPathResponseBodyData extends TeaModel {
+        /**
+         * <p>The data timestamp of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1553443200000</p>
+         */
         @NameInMap("Bizdate")
         public Long bizdate;
 
+        /**
+         * <p>The ID of the scheduling cycle of the instance. Valid values: 1 to 288.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("InGroupId")
         public Integer inGroupId;
 
+        /**
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
+         */
         @NameInMap("InstanceId")
         public Long instanceId;
 
+        /**
+         * <p>The node ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
+         */
         @NameInMap("NodeId")
         public Long nodeId;
 
+        /**
+         * <p>The name of the node.</p>
+         */
         @NameInMap("NodeName")
         public String nodeName;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account used by the node owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9527952****</p>
+         */
         @NameInMap("Owner")
         public String owner;
 
+        /**
+         * <p>The type of the node. Valid values: 23, 10, 6, and 99. The value 23 indicates that the node is a Data Integration node. The value 10 indicates that the node is a MaxCompute SQL node. The value 6 indicates that the node is a Shell node. The value 99 indicates that the node is a zero load node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PrgType")
         public Integer prgType;
 
+        /**
+         * <p>The ID of the workspace to which the node belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
+         */
         @NameInMap("ProjectId")
         public Long projectId;
 
+        /**
+         * <p>The running records of the instance.</p>
+         */
         @NameInMap("Runs")
         public java.util.List<GetBaselineKeyPathResponseBodyDataRuns> runs;
 
+        /**
+         * <p>The information about the events that are associated with the instance.</p>
+         */
         @NameInMap("Topics")
         public java.util.List<GetBaselineKeyPathResponseBodyDataTopics> topics;
 

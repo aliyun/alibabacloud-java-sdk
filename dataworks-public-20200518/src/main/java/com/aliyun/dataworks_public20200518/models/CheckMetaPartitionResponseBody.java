@@ -5,32 +5,60 @@ import com.aliyun.tea.*;
 
 public class CheckMetaPartitionResponseBody extends TeaModel {
     /**
-     * <p>The error message.</p>
+     * <p>Indicates whether the partition in the MaxCompute metatable exists. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Data")
     public Boolean data;
 
+    /**
+     * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Invalid.Tenant.ConnectionNotExists</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The connection does not exist.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
-     * <p>The error code.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0bc1ec92159376</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

@@ -5,37 +5,52 @@ import com.aliyun.tea.*;
 
 public class GetQualityRuleResponseBody extends TeaModel {
     /**
-     * <p>The information of the monitoring rule.</p>
+     * <p>The information about the monitoring rule.</p>
      */
     @NameInMap("Data")
     public GetQualityRuleResponseBodyData data;
 
     /**
-     * <p>The error code returned.</p>
+     * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>401</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>You have no permission.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>576b9457-2cf5-4****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -96,24 +111,31 @@ public class GetQualityRuleResponseBody extends TeaModel {
     public static class GetQualityRuleResponseBodyData extends TeaModel {
         /**
          * <p>The strength of the monitoring rule. The strength of a monitoring rule indicates the importance of the rule. Valid values:</p>
-         * <br>
-         * <p>*   1: indicates that the monitoring rule is a strong rule.</p>
-         * <br>
-         * <p>*   0: indicates that the monitoring rule is a weak rule.</p>
-         * <br>
-         * <p>    You can specify whether a monitoring rule is a strong rule based on your business requirements. If a strong rule is used and an error alert is triggered, nodes are blocked.</p>
+         * <ul>
+         * <li>1: the monitoring rule is a strong rule.</li>
+         * <li>0: the monitoring rule is a weak rule. You can specify whether a monitoring rule is a strong rule based on your business requirements. If a monitoring rule is a strong rule and the critical threshold is exceeded, a critical alert is reported and tasks that are associated with the rule are blocked from running.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("BlockType")
         public Integer blockType;
 
         /**
-         * <p>The ID of the checker. The value of this parameter corresponds to the ID at the frontend and is converted from the ID of the primary key.</p>
+         * <p>The checker ID. The value of this parameter corresponds to the ID at the frontend and is converted from the ID of the primary key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9</p>
          */
         @NameInMap("Checker")
         public Integer checker;
 
         /**
          * <p>The name of the checker.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>compared with a fixed value</p>
          */
         @NameInMap("CheckerName")
         public String checkerName;
@@ -125,79 +147,124 @@ public class GetQualityRuleResponseBody extends TeaModel {
         public String comment;
 
         /**
-         * <p>The threshold for an error alert. The threshold indicates the deviation of the monitoring result from the expected value. You can customize this threshold based on your business requirements. If a strong rule is used and an error alert is triggered, nodes are blocked.</p>
+         * <p>The threshold for a critical alert. The threshold indicates the deviation of the check result from the expected value. You can specify a value for the threshold based on your business requirements. If a monitoring rule is a strong rule and the critical threshold is exceeded, a critical alert is reported and tasks that are associated with the rule are blocked from running.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("CriticalThreshold")
         public String criticalThreshold;
 
         /**
          * <p>The ID of the partition filter expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>165523</p>
          */
         @NameInMap("EntityId")
         public Long entityId;
 
         /**
          * <p>The expected value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         @NameInMap("ExpectValue")
         public String expectValue;
 
         /**
          * <p>Indicates whether the monitoring is performed based on a fixed value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("FixCheck")
         public Boolean fixCheck;
 
         /**
-         * <p>The ID of the monitoring rule.</p>
+         * <p>The monitoring rule ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123232</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
-         * <p>The ID of the sampling method of the monitoring rule.</p>
+         * <p>The ID of the task that is associated with the partition filter expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         @NameInMap("MethodId")
         public Integer methodId;
 
         /**
-         * <p>The name of the method that is used to collect sample data, such as avg, count, sum, min, max, count_distinct, user_defined, table_count, table_size, table_dt_load_count, table_dt_refuseload_count, null_value, null_value/table_count, (table_count-count_distinct)/table_count, or table_count-count_distinct.</p>
+         * <p>The method that is used to collect sample data, such as avg, count, sum, min, max, count_distinct, user_defined, table_count, table_size, table_dt_load_count, table_dt_refuseload_count, null_value, null_value/table_count, (table_count-count_distinct)/table_count, or table_count-count_distinct.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>table_count</p>
          */
         @NameInMap("MethodName")
         public String methodName;
 
         /**
          * <p>The ID of the Alibaba Cloud account that is used to configure the monitoring rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1822931****</p>
          */
         @NameInMap("OnDuty")
         public String onDuty;
 
         /**
          * <p>The name of the Alibaba Cloud account that is used to configure the monitoring rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("OnDutyAccountName")
         public String onDutyAccountName;
 
+        /**
+         * <p>Indicates whether the monitoring rule is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("OpenSwitch")
         public Boolean openSwitch;
 
         /**
          * <p>The comparison operator of the monitoring rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <blockquote>
+         * <p>=</p>
+         * </blockquote>
          */
         @NameInMap("Operator")
         public String operator;
 
         /**
          * <p>Indicates whether the threshold is a dynamic threshold. Valid values:</p>
-         * <br>
-         * <p>*   0: The threshold is not a dynamic threshold.</p>
-         * <p>*   1: The threshold is a dynamic threshold.</p>
+         * <ul>
+         * <li>0: The threshold is not a dynamic threshold.</li>
+         * <li>1: The threshold is a dynamic threshold.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("PredictType")
         public Integer predictType;
 
         /**
-         * <p>The field that is monitored. This field is a column name in the data source table that is monitored.</p>
+         * <p>The field whose data quality is checked based on the monitoring rule. This field is a column in the data source table that is monitored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>id</p>
          */
         @NameInMap("Property")
         public String property;
@@ -210,36 +277,57 @@ public class GetQualityRuleResponseBody extends TeaModel {
 
         /**
          * <p>The type of the monitoring rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("RuleType")
         public Integer ruleType;
 
+        @NameInMap("TaskSetting")
+        public String taskSetting;
+
         /**
          * <p>The ID of the monitoring template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         @NameInMap("TemplateId")
         public Integer templateId;
 
         /**
          * <p>The name of the monitoring template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SQL task table rows, 1,7, 30 days fluctuation test</p>
          */
         @NameInMap("TemplateName")
         public String templateName;
 
         /**
-         * <p>The trend of the monitoring result.</p>
+         * <p>The trend of the check result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abs</p>
          */
         @NameInMap("Trend")
         public String trend;
 
         /**
-         * <p>The threshold for a warning alert. The threshold indicates the deviation of the monitoring result from the expected value. You can customize this threshold based on your business requirements.</p>
+         * <p>The threshold for a warning alert. The threshold indicates the deviation of the check result from the expected value. You can customize this threshold based on your business requirements.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("WarningThreshold")
         public String warningThreshold;
 
         /**
          * <p>The filter condition or custom SQL statement that is used for monitoring.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>id&gt;10</p>
          */
         @NameInMap("WhereCondition")
         public String whereCondition;
@@ -399,6 +487,14 @@ public class GetQualityRuleResponseBody extends TeaModel {
         }
         public Integer getRuleType() {
             return this.ruleType;
+        }
+
+        public GetQualityRuleResponseBodyData setTaskSetting(String taskSetting) {
+            this.taskSetting = taskSetting;
+            return this;
+        }
+        public String getTaskSetting() {
+            return this.taskSetting;
         }
 
         public GetQualityRuleResponseBodyData setTemplateId(Integer templateId) {

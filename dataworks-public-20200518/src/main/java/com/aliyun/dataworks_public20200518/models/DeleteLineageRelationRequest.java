@@ -5,16 +5,30 @@ import com.aliyun.tea.*;
 
 public class DeleteLineageRelationRequest extends TeaModel {
     /**
+     * <p>The unique identifier of the destination entity.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>custom-report.report123</p>
      */
     @NameInMap("DestEntityQualifiedName")
     public String destEntityQualifiedName;
 
+    /**
+     * <p>The unique identifier of the lineage.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dfazcdfdfccdedd</p>
+     */
     @NameInMap("RelationshipGuid")
     public String relationshipGuid;
 
     /**
+     * <p>The unique identifier of the source entity.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>maxcompute-table.project.table</p>
      */
     @NameInMap("SrcEntityQualifiedName")
     public String srcEntityQualifiedName;

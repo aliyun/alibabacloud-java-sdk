@@ -4,30 +4,66 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class Collection extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>album</p>
+     */
     @NameInMap("CollectionType")
     public String collectionType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>comment</p>
+     */
     @NameInMap("Comment")
     public String comment;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1668600147617</p>
+     */
     @NameInMap("CreateTime")
     public Long createTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Level")
     public Integer level;
 
+    /**
+     * <strong>example:</strong>
+     * <p>collectionName</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1234444</p>
+     */
     @NameInMap("OwnerId")
     public String ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>owner</p>
+     */
     @NameInMap("OwnerName")
     public String ownerName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>album.12334</p>
+     */
     @NameInMap("QualifiedName")
     public String qualifiedName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1668600148617</p>
+     */
     @NameInMap("UpdateTime")
     public Long updateTime;
 

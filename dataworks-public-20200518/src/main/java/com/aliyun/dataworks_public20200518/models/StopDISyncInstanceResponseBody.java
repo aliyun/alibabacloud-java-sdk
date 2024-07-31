@@ -5,22 +5,29 @@ import com.aliyun.tea.*;
 
 public class StopDISyncInstanceResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the synchronization node is stopped. Valid values:</p>
-     * <br>
-     * <p>*   success: The synchronization node is stopped.</p>
-     * <p>*   fail: The synchronization node fails to be stopped.</p>
+     * <p>The information returned for the synchronization task.</p>
      */
     @NameInMap("Data")
     public StopDISyncInstanceResponseBodyData data;
 
     /**
-     * <p>The information returned for the synchronization node.</p>
+     * <p>The request ID. You can locate logs and troubleshoot issues based on the ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0bc1411515937635973****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The ID of the request. You can locate logs and troubleshoot issues based on the ID.</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -55,13 +62,25 @@ public class StopDISyncInstanceResponseBody extends TeaModel {
     }
 
     public static class StopDISyncInstanceResponseBodyData extends TeaModel {
+        /**
+         * <p>The reason why the synchronization task fails to be stopped.</p>
+         * <p>If the synchronization task is stopped, the value null is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fileId:[100] is invalid.</p>
+         */
         @NameInMap("Message")
         public String message;
 
         /**
-         * <p>The reason why the synchronization node fails to be stopped.</p>
-         * <br>
-         * <p>If the synchronization node is stopped, the value null is returned.</p>
+         * <p>Indicates whether the synchronization task is stopped. Valid values:</p>
+         * <ul>
+         * <li>success</li>
+         * <li>fail</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         @NameInMap("Status")
         public String status;

@@ -5,53 +5,68 @@ import com.aliyun.tea.*;
 
 public class ListRefDISyncTasksRequest extends TeaModel {
     /**
-     * <p>The name of the data source. You can call the [ListDataSources](https://help.aliyun.com/document_detail/211431.html) operation to query the name of the data source.</p>
-     * <br>
+     * <p>The name of the data source. You can call the <a href="https://help.aliyun.com/document_detail/211431.html">ListDataSources</a> operation to query the name of the data source.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mysql_datasource</p>
      */
     @NameInMap("DatasourceName")
     public String datasourceName;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number. Valid values: 1 to 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
-     * <p>The ID of the DataWorks workspace. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace Management page to obtain the workspace ID.</p>
-     * <br>
+     * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to obtain the ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10000</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;
 
     /**
-     * <p>The condition used to filter sync nodes. Valid values:</p>
-     * <br>
-     * <p>*   from: queries the sync nodes that use the data source as the source data source.</p>
-     * <p>*   to: queries the sync nodes that use the data source as the destination data source.</p>
-     * <br>
+     * <p>The condition used to filter synchronization tasks. Valid values:</p>
+     * <ul>
+     * <li>from: queries the synchronization tasks that use the data source as the source.</li>
+     * <li>to: queries the synchronization tasks that use the data source as the destination.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>from</p>
      */
     @NameInMap("RefType")
     public String refType;
 
     /**
-     * <p>The type of the sync node that you want to query. Valid values:</p>
-     * <br>
-     * <p>*   DI_OFFLINE: batch sync node</p>
-     * <p>*   DI_REALTIME: real-time sync node</p>
-     * <br>
-     * <p>You can specify only one type. The sync solution type is not supported.</p>
-     * <br>
+     * <p>The type of the synchronization task that you want to query. Valid values:</p>
+     * <ul>
+     * <li>DI_OFFLINE: batch synchronization task</li>
+     * <li>DI_REALTIME: real-time synchronization task</li>
+     * </ul>
+     * <p>You can call the ListRefDISyncTasks operation to query only one type of the task.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DI_OFFLINE</p>
      */
     @NameInMap("TaskType")
     public String taskType;

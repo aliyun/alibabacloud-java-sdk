@@ -11,7 +11,10 @@ public class GetDataServiceGroupResponseBody extends TeaModel {
     public GetDataServiceGroupResponseBodyGroup group;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0000-ABCD-EF****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,54 +43,81 @@ public class GetDataServiceGroupResponseBody extends TeaModel {
     public static class GetDataServiceGroupResponseBodyGroup extends TeaModel {
         /**
          * <p>The ID of the API group that is associated with the business process in the API Gateway console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100abc</p>
          */
         @NameInMap("ApiGatewayGroupId")
         public String apiGatewayGroupId;
 
         /**
          * <p>The time when the business process was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-09-24T18:37:51+0800</p>
          */
         @NameInMap("CreatedTime")
         public String createdTime;
 
         /**
          * <p>The user identifier (UID) of the creator of the business process. The value of this parameter may be empty for creators of some existing business processes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
          */
         @NameInMap("CreatorId")
         public String creatorId;
 
         /**
          * <p>The description of the business process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The ID of the business process.</p>
+         * <p>The business process ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ds_123abc</p>
          */
         @NameInMap("GroupId")
         public String groupId;
 
         /**
          * <p>The name of the business process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test</p>
          */
         @NameInMap("GroupName")
         public String groupName;
 
         /**
          * <p>The time when the business process was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-09-24T18:37:51+0800</p>
          */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
         /**
-         * <p>The ID of the workspace.</p>
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10002</p>
          */
         @NameInMap("ProjectId")
         public Long projectId;
 
         /**
-         * <p>The ID of the tenant.</p>
+         * <p>The tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10003</p>
          */
         @NameInMap("TenantId")
         public Long tenantId;

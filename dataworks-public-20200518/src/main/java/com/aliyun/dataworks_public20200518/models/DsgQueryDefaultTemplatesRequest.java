@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class DsgQueryDefaultTemplatesRequest extends TeaModel {
     /**
+     * <p>The ID of the level-2 data masking scenario. You can call the <a href="https://help.aliyun.com/document_detail/2786322.html">DsgSceneQuerySceneListByName</a> operation to query the list of IDs.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("SceneId")
     public Integer sceneId;

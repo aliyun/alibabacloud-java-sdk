@@ -5,37 +5,52 @@ import com.aliyun.tea.*;
 
 public class SearchMetaTablesResponseBody extends TeaModel {
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The search results.</p>
      */
     @NameInMap("Data")
     public SearchMetaTablesResponseBodyData data;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1031203110005</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The specified parameters are invalid.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
-     * <p>The error code returned.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0bc1ec92159376****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The business data returned.</p>
+     * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -95,68 +110,109 @@ public class SearchMetaTablesResponseBody extends TeaModel {
 
     public static class SearchMetaTablesResponseBodyDataDataEntityList extends TeaModel {
         /**
-         * <p>The ID of the tenant.</p>
+         * <p>The ID of the EMR cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
 
         /**
-         * <p>The name of the workspace.</p>
+         * <p>The name of the metadatabase.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         @NameInMap("DatabaseName")
         public String databaseName;
 
         /**
-         * <p>The ID of the workspace.</p>
+         * <p>The type of the metatable. Valid values:</p>
+         * <ul>
+         * <li>0: table</li>
+         * <li>1: view</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("EntityType")
         public Integer entityType;
 
         /**
-         * <p>The schema information of the table. This parameter is returned only if you enable the table schema in MaxCompute.</p>
+         * <p>The type of the environment. Valid values:</p>
+         * <ul>
+         * <li>1: production environment</li>
+         * <li>0: development environment</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("EnvType")
         public Integer envType;
 
         /**
-         * <p>The type of the environment. Valid values:</p>
-         * <br>
-         * <p>*   1: production environment</p>
-         * <p>*   0: development environment</p>
+         * <p>The ID of the Alibaba Cloud account used by the workspace owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("OwnerId")
         public String ownerId;
 
         /**
-         * <p>The ID of the Alibaba Cloud account used by the workspace owner.</p>
+         * <p>The ID of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>323</p>
          */
         @NameInMap("ProjectId")
         public Long projectId;
 
         /**
-         * <p>The GUID of the metatable.</p>
+         * <p>The name of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("ProjectName")
         public String projectName;
 
+        /**
+         * <p>The schema information of the table. You must configure this parameter if you enable the three-layer model of MaxCompute.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
+         */
         @NameInMap("Schema")
         public String schema;
 
         /**
-         * <p>The ID of the EMR cluster.</p>
+         * <p>The GUID of the metatable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>odps.engine_name.test_name</p>
          */
         @NameInMap("TableGuid")
         public String tableGuid;
 
         /**
-         * <p>The type of the metatable. Valid values:</p>
-         * <br>
-         * <p>*   0: table</p>
-         * <p>*   1: view</p>
+         * <p>The name of the metatable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_name</p>
          */
         @NameInMap("TableName")
         public String tableName;
 
+        /**
+         * <p>The tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
+         */
         @NameInMap("TenantId")
         public Long tenantId;
 
@@ -257,25 +313,34 @@ public class SearchMetaTablesResponseBody extends TeaModel {
 
     public static class SearchMetaTablesResponseBodyData extends TeaModel {
         /**
-         * <p>The name of the metadatabase.</p>
+         * <p>The list of metatables.</p>
          */
         @NameInMap("DataEntityList")
         public java.util.List<SearchMetaTablesResponseBodyDataDataEntityList> dataEntityList;
 
         /**
-         * <p>The total number of metatables.</p>
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
         /**
-         * <p>The list of metatables.</p>
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
-         * <p>The name of the metatable.</p>
+         * <p>The total number of metatables.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("TotalCount")
         public Long totalCount;

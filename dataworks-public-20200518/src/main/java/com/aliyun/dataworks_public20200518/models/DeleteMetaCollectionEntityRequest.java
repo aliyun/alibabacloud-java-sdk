@@ -6,16 +6,20 @@ import com.aliyun.tea.*;
 public class DeleteMetaCollectionEntityRequest extends TeaModel {
     /**
      * <p>The unique identifier of the collection.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>album.12345</p>
      */
     @NameInMap("CollectionQualifiedName")
     public String collectionQualifiedName;
 
     /**
      * <p>The unique identifier of the entity.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>maxcompute.projectA.tableB</p>
      */
     @NameInMap("EntityQualifiedName")
     public String entityQualifiedName;

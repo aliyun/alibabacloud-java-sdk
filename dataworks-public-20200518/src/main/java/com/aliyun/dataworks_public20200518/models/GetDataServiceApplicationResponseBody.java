@@ -12,30 +12,45 @@ public class GetDataServiceApplicationResponseBody extends TeaModel {
 
     /**
      * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Normal</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0000-ABCD-EFG****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -96,36 +111,54 @@ public class GetDataServiceApplicationResponseBody extends TeaModel {
     public static class GetDataServiceApplicationResponseBodyData extends TeaModel {
         /**
          * <p>The AppCode for simple authentication. You can select simple authentication or signature authentication when you call an API operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CODE123</p>
          */
         @NameInMap("ApplicationCode")
         public String applicationCode;
 
         /**
-         * <p>The ID of the application.</p>
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         @NameInMap("ApplicationId")
         public Long applicationId;
 
         /**
          * <p>The AppKey for signature authentication. You can select simple authentication or signature authentication when you call an API operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>KEY123</p>
          */
         @NameInMap("ApplicationKey")
         public String applicationKey;
 
         /**
          * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test application</p>
          */
         @NameInMap("ApplicationName")
         public String applicationName;
 
         /**
          * <p>The AppSecret for signature authentication. You can select simple authentication or signature authentication when you call an API operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SECRET123</p>
          */
         @NameInMap("ApplicationSecret")
         public String applicationSecret;
 
         /**
-         * <p>The ID of the workspace.</p>
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
          */
         @NameInMap("ProjectId")
         public Long projectId;

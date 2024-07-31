@@ -5,21 +5,29 @@ import com.aliyun.tea.*;
 
 public class ListProjectMembersRequest extends TeaModel {
     /**
-     * <p>The page number.</p>
+     * <p>The page number. Valid values: 1 to 30. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: 1 to 100. Default value: 10.</p>
+     * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The DataWorks workspace ID.</p>
-     * <br>
+     * <p>The ID of the DataWorks workspace.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>27</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;

@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class DeleteDataSourceRequest extends TeaModel {
     /**
-     * <p>The ID of the data source. You can call the [ListDataSources](https://help.aliyun.com/document_detail/211431.html) operation to obtain the ID.</p>
-     * <br>
+     * <p>The data source ID. You can call the <a href="https://help.aliyun.com/document_detail/211431.html">ListDataSources</a> operation to query the ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("DataSourceId")
     public Long dataSourceId;

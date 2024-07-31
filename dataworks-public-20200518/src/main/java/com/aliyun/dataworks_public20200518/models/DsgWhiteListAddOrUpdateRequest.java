@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DsgWhiteListAddOrUpdateRequest extends TeaModel {
     /**
+     * <p>A collection of whitelists.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("WhiteLists")
@@ -24,25 +25,50 @@ public class DsgWhiteListAddOrUpdateRequest extends TeaModel {
     }
 
     public static class DsgWhiteListAddOrUpdateRequestWhiteLists extends TeaModel {
+        /**
+         * <p>The end of the time range to query. If you enter null, the whitelist is valid permanently.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <p>The ID of the data masking whitelist.</p>
+         * <ul>
+         * <li>If you do not configure this parameter, the current operation is to add a data masking whitelist.</li>
+         * <li>If you configure this parameter, the current operation is to modify a data masking whitelist. You can call the <a href="https://help.aliyun.com/document_detail/2786508.html">DsgWhiteListQueryList</a> operation to query the whitelist ID.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("Id")
         public Integer id;
 
         /**
+         * <p>The ID of the data masking rule. You can call the <a href="https://help.aliyun.com/document_detail/2786578.html">DsgDesensPlanQueryList</a> operation to query the ID of the data masking rule.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("RuleId")
         public Integer ruleId;
 
         /**
+         * <p>The beginning of the time range to query.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-04-10 00:00:00</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
         /**
+         * <p>A collection of user group IDs.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("UserGroupIds")

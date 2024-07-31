@@ -13,15 +13,31 @@ public class CreateBusinessRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1000000000001</p>
+     */
     @NameInMap("Owner")
     public String owner;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10000</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dw_project</p>
+     */
     @NameInMap("ProjectIdentifier")
     public String projectIdentifier;
 
+    /**
+     * <strong>example:</strong>
+     * <p>NORMAL</p>
+     */
     @NameInMap("UseType")
     public String useType;
 

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DsgUserGroupAddOrUpdateRequest extends TeaModel {
     /**
+     * <p>The information about the user group.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UserGroups")
@@ -25,31 +26,69 @@ public class DsgUserGroupAddOrUpdateRequest extends TeaModel {
 
     public static class DsgUserGroupAddOrUpdateRequestUserGroups extends TeaModel {
         /**
+         * <p>The users in the group.</p>
+         * <ul>
+         * <li>If a user group is created by using an Alibaba Cloud account and a RAM role, you can call the <a href="https://help.aliyun.com/document_detail/2786445.html">DsgUserGroupQueryUserList</a> operation to query the users in the group.</li>
+         * <li>If a user group is created by using a MaxCompute role, you can call the <a href="https://help.aliyun.com/document_detail/2785695.html">DsgUserGroupQueryUserList</a> operation to query the users in the group.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          */
         @NameInMap("Accounts")
         public java.util.List<String> accounts;
 
+        /**
+         * <p>The user group ID.</p>
+         * <ul>
+         * <li>If you do not configure this parameter, the current operation is to add a user group.</li>
+         * <li>If you configure this parameter, the current operation is to modify a user group. You can call the <a href="https://help.aliyun.com/document_detail/2786441.html">DsgUserGroupQueryList</a> operation to query the user group ID.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("Id")
         public Long id;
 
         /**
+         * <p>The name of the user group.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yun_group</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>The owner of the user group.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user1</p>
          */
         @NameInMap("Owner")
         public String owner;
 
+        /**
+         * <p>The name of the MaxCompute project. You must configure this parameter when you create a MaxCompute user group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dev_project</p>
+         */
         @NameInMap("ProjectName")
         public String projectName;
 
         /**
+         * <p>The type of the user group. Valid values:</p>
+         * <ul>
+         * <li>1: Alibaba Cloud account</li>
+         * <li>2: RAM role</li>
+         * <li>3: MaxCompute role</li>
+         * </ul>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("UserGroupType")
         public Integer userGroupType;

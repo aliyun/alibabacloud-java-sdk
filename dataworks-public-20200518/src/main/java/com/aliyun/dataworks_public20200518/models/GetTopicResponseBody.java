@@ -5,37 +5,52 @@ import com.aliyun.tea.*;
 
 public class GetTopicResponseBody extends TeaModel {
     /**
-     * <p>The name of the event.</p>
+     * <p>The details of the event.</p>
      */
     @NameInMap("Data")
     public GetTopicResponseBodyData data;
 
     /**
-     * <p>The details of the event.</p>
+     * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1031203110005</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The specified parameters are invalid.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
-     * <p>The error code returned.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0000-ABCD-EFGH-IJKLMNOPQ</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The ID of the Apsara Stack tenant account used by the event owner.</p>
+     * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -94,134 +109,200 @@ public class GetTopicResponseBody extends TeaModel {
     }
 
     public static class GetTopicResponseBodyData extends TeaModel {
+        /**
+         * <p>The timestamp when the event was found.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1553524393000</p>
+         */
         @NameInMap("AddTime")
         public Long addTime;
 
         /**
-         * <p>The ID of the Apsara Stack tenant account used by the alert recipient.</p>
+         * <p>The timestamp when the first alert was reported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1553524393000</p>
          */
         @NameInMap("AlertTime")
         public Long alertTime;
 
         /**
-         * <p>The timestamp when the event was found.</p>
+         * <p>The ID of the Alibaba Cloud account used by the alert recipient.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>952795****</p>
          */
         @NameInMap("Assigner")
         public String assigner;
 
         /**
-         * <p>The status of the event. Valid values: IGNORE, NEW, FIXING, and RECOVER. A value of IGNORE indicates that the event is ignored. A value of NEW indicates that the event is a new event. A value of FIXING indicates that the event is being processed. A value of RECOVER indicates that the event is processed.</p>
+         * <p>The margin of the worst baseline instance. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3600</p>
          */
         @NameInMap("BaselineBuffer")
         public Long baselineBuffer;
 
         /**
-         * <p>The timestamp when the first alert was reported.</p>
+         * <p>The ID of the baseline to which the worst baseline instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         @NameInMap("BaselineId")
         public Long baselineId;
 
         /**
-         * <p>The type of the event. Valid values: SLOW and ERROR. A value of SLOW indicates that the duration of the task is significantly longer than the average duration of the task in previous cycles. A value of ERROR indicates that the task fails to run.</p>
+         * <p>The ID of the cycle of the worst baseline instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("BaselineInGroupId")
         public Integer baselineInGroupId;
 
         /**
-         * <p>The name of the node that triggered the event.</p>
+         * <p>The name of the baseline to which the worst baseline instance belongs.</p>
          */
         @NameInMap("BaselineName")
         public String baselineName;
 
         /**
-         * <p>The timestamp when the system reports the next alert.</p>
+         * <p>The status of the baseline. Valid values: ERROR, SAFE, DANGROUS, and OVER. The value ERROR indicates that no nodes are associated with the baseline, or all nodes associated with the baseline are suspended. The value SAFE indicates that nodes are run before the alert duration begins. The value DANGROUS indicates that nodes are still running after the alert duration ends but the committed completion time does not arrive. The value OVER indicates that nodes are still running after the committed completion time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SAFE</p>
          */
         @NameInMap("BaselineStatus")
         public String baselineStatus;
 
         /**
-         * <p>The ID of the event.</p>
+         * <p>The margin of the event. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1200</p>
          */
         @NameInMap("Buffer")
         public Long buffer;
 
         /**
-         * <p>The name of the baseline to which the worst baseline instance belongs.</p>
+         * <p>The timestamp when the event was last processed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1553524393000</p>
          */
         @NameInMap("DealTime")
         public Long dealTime;
 
         /**
-         * <p>The ID of the baseline to which the worst baseline instance belongs.</p>
+         * <p>The ID of the Alibaba Cloud account used by the user who last processed the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>952795****</p>
          */
         @NameInMap("DealUser")
         public String dealUser;
 
         /**
-         * <p>The margin of the worst baseline instance. Unit: seconds.</p>
+         * <p>The timestamp when the event was processed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1553524393000</p>
          */
         @NameInMap("FixTime")
         public Long fixTime;
 
         /**
-         * <p>The ID of the Apsara Stack tenant account used by the user who last processed the event.</p>
+         * <p>The timestamp when the event occurred. A time difference may exist between the time when the event occurred and the time when the event was found.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1553524393000</p>
          */
         @NameInMap("HappenTime")
         public Long happenTime;
 
         /**
-         * <p>The ID of the cycle of the worst baseline instance.</p>
+         * <p>The ID of the instance that triggered the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         @NameInMap("InstanceId")
         public Long instanceId;
 
         /**
-         * <p>The timestamp when the event was processed.</p>
+         * <p>The timestamp when the system reports the next alert.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1553524393000</p>
          */
         @NameInMap("NextAlertTime")
         public Long nextAlertTime;
 
+        /**
+         * <p>The ID of the node that triggered the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
+         */
         @NameInMap("NodeId")
         public Long nodeId;
 
         /**
-         * <p>The margin of the event. Unit: seconds.</p>
+         * <p>The name of the node that triggered the event.</p>
          */
         @NameInMap("NodeName")
         public String nodeName;
 
         /**
-         * <p>The status of the baseline. Valid values: ERROR, SAFE, DANGROUS, and OVER. A value of ERROR indicates that no nodes are associated with the baseline, or all nodes associated with the baseline are suspended. A value of SAFE indicates that nodes are run before the alert duration begins. A value of DANGROUS indicates that nodes are still running after the alert duration ends but the committed time does not arrive. A value of OVER indicates that nodes are still running after the committed time.</p>
+         * <p>The ID of the Alibaba Cloud account used by the event owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>952795****</p>
          */
         @NameInMap("Owner")
         public String owner;
 
         /**
-         * <p>The ID of the instance that triggered the event.</p>
+         * <p>The ID of the workspace to which the node that triggered the event belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         @NameInMap("ProjectId")
         public Long projectId;
 
         /**
-         * <p>The ID of the node that triggered the event.</p>
+         * <p>The event ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         @NameInMap("TopicId")
         public Long topicId;
 
         /**
-         * <p>The ID of the workspace to which the node that triggered the event belongs.</p>
+         * <p>The name of the event.</p>
          */
         @NameInMap("TopicName")
         public String topicName;
 
         /**
-         * <p>The timestamp when the event was last processed.</p>
+         * <p>The status of the event. Valid values: IGNORE, NEW, FIXING, and RECOVER.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FIXING</p>
          */
         @NameInMap("TopicStatus")
         public String topicStatus;
 
         /**
-         * <p>The timestamp when the system event occurred. A time difference may exist between the time when the event occurred and the time when the event was found.</p>
+         * <p>The type of the event. Valid values: SLOW and ERROR. The value SLOW indicates that the duration of the task is significantly longer than the average duration of the task in previous cycles. The value ERROR indicates that the task fails to run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ERROR</p>
          */
         @NameInMap("TopicType")
         public String topicType;

@@ -5,22 +5,29 @@ import com.aliyun.tea.*;
 
 public class UpdateDIProjectConfigResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the default global configuration of synchronization solutions was modified. Valid values:</p>
-     * <br>
-     * <p>*   success: The default global configuration of synchronization solutions was modified.</p>
-     * <p>*   fail: The default global configuration of synchronization solutions failed to be modified.</p>
+     * <p>The information about the modification.</p>
      */
     @NameInMap("Data")
     public UpdateDIProjectConfigResponseBodyData data;
 
     /**
-     * <p>The information about the modification.</p>
+     * <p>The request ID. You can locate logs and troubleshoot issues based on the ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0000-ABCD-EFG</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The ID of the request. You can use the ID to locate logs and troubleshoot issues.</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -55,6 +62,16 @@ public class UpdateDIProjectConfigResponseBody extends TeaModel {
     }
 
     public static class UpdateDIProjectConfigResponseBodyData extends TeaModel {
+        /**
+         * <p>Indicates whether the default global configuration of synchronization solutions is modified. Valid values:</p>
+         * <ul>
+         * <li>success</li>
+         * <li>fail</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
+         */
         @NameInMap("Status")
         public String status;
 

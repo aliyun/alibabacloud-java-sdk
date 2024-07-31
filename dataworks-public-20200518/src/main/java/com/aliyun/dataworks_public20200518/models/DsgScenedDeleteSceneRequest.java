@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DsgScenedDeleteSceneRequest extends TeaModel {
     /**
+     * <p>The IDs of level-2 data masking scenarios.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Ids")

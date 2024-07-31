@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class TopTenErrorTimesInstanceRequest extends TeaModel {
     /**
-     * <p>The ID of the DataWorks workspace. You can log on to the DataWorks console and go to the Workspace Management page to obtain the ID.</p>
-     * <br>
+     * <p>The DataWorks workspace ID. You can log on to the DataWorks console and go to the Workspace page to obtain the workspace ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9527</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;

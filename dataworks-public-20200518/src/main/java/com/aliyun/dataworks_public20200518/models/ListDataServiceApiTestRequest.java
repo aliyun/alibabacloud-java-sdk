@@ -6,14 +6,19 @@ import com.aliyun.tea.*;
 public class ListDataServiceApiTestRequest extends TeaModel {
     /**
      * <p>The ID of the DataService Studio API on which tests are performed.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12345</p>
      */
     @NameInMap("ApiId")
     public Long apiId;
 
     /**
      * <p>The number of entries to return on each page. Maximum value: 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

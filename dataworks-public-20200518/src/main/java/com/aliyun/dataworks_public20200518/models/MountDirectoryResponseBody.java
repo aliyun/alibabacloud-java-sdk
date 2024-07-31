@@ -5,32 +5,64 @@ import com.aliyun.tea.*;
 
 public class MountDirectoryResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   true: The request was successful.</p>
-     * <p>*   false: The request failed.</p>
+     * <p>The number of directories that are added. Valid values:</p>
+     * <ul>
+     * <li>0: No directories are added. The left-side navigation pane may contain the specified directory.</li>
+     * <li>1: One directory is added.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Data")
     public Integer data;
 
+    /**
+     * <p>The error code. The value 200 indicates that the task is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>You have no permission.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
-     * <p>The error message returned if the request failed.</p>
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
-     * <p>The error code returned. The value 200 indicates that the add task is successful.</p>
+     * <p>The request ID. You can use the ID to troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C27D4FB9-C59B-5E17-BD6C-1099B9D6A381</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

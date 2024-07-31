@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class CreatePermissionApplyOrderResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request order. If you request permissions on multiple objects but each object has a different request approver, one request order is generated for each object and is sent to the related approver. In this case, an array is returned.</p>
+     * <p>The request order ID.</p>
      */
     @NameInMap("FlowId")
     public java.util.List<String> flowId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0bc1ec92159376****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class GetProjectDetailRequest extends TeaModel {
     /**
+     * <p>The DataWorks workspace ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>27</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;

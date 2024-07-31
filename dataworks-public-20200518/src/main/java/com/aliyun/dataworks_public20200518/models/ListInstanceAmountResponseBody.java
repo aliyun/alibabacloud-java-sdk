@@ -11,7 +11,10 @@ public class ListInstanceAmountResponseBody extends TeaModel {
     public java.util.List<ListInstanceAmountResponseBodyInstanceCounts> instanceCounts;
 
     /**
-     * <p>The ID of the request. You can use the ID to troubleshoot issues.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>95279527adhfj****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class ListInstanceAmountResponseBody extends TeaModel {
     public static class ListInstanceAmountResponseBodyInstanceCounts extends TeaModel {
         /**
          * <p>The number of auto triggered node instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9527</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The data timestamp at which the number of auto triggered node instances was obtained. This value is a UNIX timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1623772800000</p>
          */
         @NameInMap("Date")
         public Long date;

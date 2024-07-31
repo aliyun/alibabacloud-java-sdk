@@ -5,13 +5,19 @@ import com.aliyun.tea.*;
 
 public class UpdateMetaTableIntroWikiResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID. You can troubleshoot issues based on the ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>abcde</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The updated instructions.</p>
+     * <p>Indicates whether the instructions on how to use the table are updated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("UpdateResult")
     public Boolean updateResult;

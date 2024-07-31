@@ -5,17 +5,31 @@ import com.aliyun.tea.*;
 
 public class SubmitDataServiceApiRequest extends TeaModel {
     /**
+     * <p>The API ID. You can call the <a href="~~ListDataServiceApis~~">ListDataServiceApis</a> operation to obtain the ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12345</p>
      */
     @NameInMap("ApiId")
     public Long apiId;
 
     /**
+     * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to obtain the workspace ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10000</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;
 
+    /**
+     * <p>The tenant ID. To obtain the tenant ID, perform the following steps: Log on to the DataWorks console. Find your workspace and go to the <a href="https://ds-cn-shanghai.data.aliyun.com/">DataService Studio</a> page. On the DataService Studio page, click the logon username in the upper-right corner and click User Info in the Menu section.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10001</p>
+     */
     @NameInMap("TenantId")
     public Long tenantId;
 

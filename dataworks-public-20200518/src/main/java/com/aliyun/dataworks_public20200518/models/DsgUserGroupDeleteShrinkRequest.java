@@ -4,6 +4,9 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class DsgUserGroupDeleteShrinkRequest extends TeaModel {
+    /**
+     * <p>The information about the user group.</p>
+     */
     @NameInMap("Ids")
     public String idsShrink;
 

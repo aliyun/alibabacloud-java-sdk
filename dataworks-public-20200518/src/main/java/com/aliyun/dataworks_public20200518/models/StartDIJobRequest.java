@@ -5,14 +5,27 @@ import com.aliyun.tea.*;
 
 public class StartDIJobRequest extends TeaModel {
     /**
+     * <p>The task ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>11743</p>
      */
     @NameInMap("DIJobId")
     public Long DIJobId;
 
+    /**
+     * <p>Specifies whether to forcefully rerun all synchronization steps. If you do not configure this parameter, the system does not forcefully rerun the task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("ForceToRerun")
     public Boolean forceToRerun;
 
+    /**
+     * <p>The settings for the start.</p>
+     */
     @NameInMap("RealtimeStartSettings")
     public StartDIJobRequestRealtimeStartSettings realtimeStartSettings;
 
@@ -46,9 +59,21 @@ public class StartDIJobRequest extends TeaModel {
     }
 
     public static class StartDIJobRequestRealtimeStartSettingsFailoverSettings extends TeaModel {
+        /**
+         * <p>The failover interval. Unit: minutes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Interval")
         public Long interval;
 
+        /**
+         * <p>The maximum number of failovers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("UpperLimit")
         public Long upperLimit;
 
@@ -76,9 +101,18 @@ public class StartDIJobRequest extends TeaModel {
     }
 
     public static class StartDIJobRequestRealtimeStartSettings extends TeaModel {
+        /**
+         * <p>The failover settings.</p>
+         */
         @NameInMap("FailoverSettings")
         public StartDIJobRequestRealtimeStartSettingsFailoverSettings failoverSettings;
 
+        /**
+         * <p>The timestamp of the start offset. Unit: seconds. If you do not configure this parameter, the offset is not reset by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1671516776</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 

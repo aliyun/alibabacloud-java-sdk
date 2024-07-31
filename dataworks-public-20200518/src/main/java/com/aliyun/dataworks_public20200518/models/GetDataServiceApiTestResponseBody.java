@@ -7,6 +7,10 @@ public class GetDataServiceApiTestResponseBody extends TeaModel {
     @NameInMap("Data")
     public GetDataServiceApiTestResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>adssdsewe</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,27 +36,59 @@ public class GetDataServiceApiTestResponseBody extends TeaModel {
     }
 
     public static class GetDataServiceApiTestResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>12343</p>
+         */
         @NameInMap("ApiId")
         public Long apiId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("CostTime")
         public String costTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>[&lt;span style=\&quot;color: #92D581;\&quot;&gt;INFO</span>] [16:15:13.240] resource group is 498774069027041[&lt;span style=\&quot;color: #92D581;\&quot;&gt;INFO</span>]</p>
+         */
         @NameInMap("DebugInfo")
         public String debugInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>[&lt;span style=\&quot;color: #92D581;\&quot;&gt;INFO</span>] [16:15:13.240] resource group is 498774069027041[&lt;span style=\&quot;color: #92D581;\&quot;&gt;INFO</span>]</p>
+         */
         @NameInMap("NodesDebugInfo")
         public String nodesDebugInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;name&quot;:&quot;test&quot;}</p>
+         */
         @NameInMap("ParamMap")
         public String paramMap;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("RetCode")
         public Long retCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;id&quot;:2}</p>
+         */
         @NameInMap("RetResult")
         public String retResult;
 
+        /**
+         * <strong>example:</strong>
+         * <p>FINISHED</p>
+         */
         @NameInMap("Status")
         public String status;
 

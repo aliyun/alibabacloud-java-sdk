@@ -11,7 +11,10 @@ public class ListPermissionApplyOrdersResponseBody extends TeaModel {
     public ListPermissionApplyOrdersResponseBodyApplyOrders applyOrders;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0bc1ec92159376****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -38,16 +41,14 @@ public class ListPermissionApplyOrdersResponseBody extends TeaModel {
     }
 
     public static class ListPermissionApplyOrdersResponseBodyApplyOrdersApplyOrderApproveContentProjectMetaObjectMetaList extends TeaModel {
-        /**
-         * <p>The permission that you wanted to request. If you wanted to request multiple permissions at the same time, separate them with commas (,).</p>
-         * <br>
-         * <p>You can request only the following permissions: Select, Describe, Drop, Alter, Update, and Download.</p>
-         */
         @NameInMap("Actions")
         public java.util.List<String> actions;
 
         /**
          * <p>The name of the table on which you requested permissions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aTableName</p>
          */
         @NameInMap("ObjectName")
         public String objectName;
@@ -83,7 +84,10 @@ public class ListPermissionApplyOrdersResponseBody extends TeaModel {
         public java.util.List<ListPermissionApplyOrdersResponseBodyApplyOrdersApplyOrderApproveContentProjectMetaObjectMetaList> objectMetaList;
 
         /**
-         * <p>The name of the DataWorks workspace that was associated with the MaxCompute project in which you requested permissions on a table.</p>
+         * <p>The name of the DataWorks workspace that is associated with the MaxCompute project in which you requested permissions on a table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aWorkspaceName</p>
          */
         @NameInMap("WorkspaceName")
         public String workspaceName;
@@ -114,12 +118,18 @@ public class ListPermissionApplyOrdersResponseBody extends TeaModel {
     public static class ListPermissionApplyOrdersResponseBodyApplyOrdersApplyOrderApproveContent extends TeaModel {
         /**
          * <p>The reason for your request. The administrator determines whether to approve the request based on the reason.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>I need to use this table</p>
          */
         @NameInMap("ApplyReason")
         public String applyReason;
 
         /**
          * <p>The type of the permission request order. The parameter value is 1 and cannot be changed. This value indicates ACL-based authorization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("OrderType")
         public Integer orderType;
@@ -163,13 +173,19 @@ public class ListPermissionApplyOrdersResponseBody extends TeaModel {
 
     public static class ListPermissionApplyOrdersResponseBodyApplyOrdersApplyOrder extends TeaModel {
         /**
-         * <p>The unique ID of the Alibaba Cloud account that was used to submit the permission request order.</p>
+         * <p>The ID of the Alibaba Cloud account that was used to submit the permission request order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>267842600408993176</p>
          */
         @NameInMap("ApplyBaseId")
         public String applyBaseId;
 
         /**
          * <p>The time when the permission request order was submitted. The parameter value is a UNIX timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1615284086000</p>
          */
         @NameInMap("ApplyTimestamp")
         public Long applyTimestamp;
@@ -182,17 +198,24 @@ public class ListPermissionApplyOrdersResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the permission request order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ad8da78d-8135-455e-9486-27cf213fc140</p>
          */
         @NameInMap("FlowId")
         public String flowId;
 
         /**
          * <p>The status of the permission request order. Valid values:</p>
-         * <br>
-         * <p>*   1: pending approval</p>
-         * <p>*   2: approved and authorized</p>
-         * <p>*   3: approved but authorization failed</p>
-         * <p>*   4: rejected</p>
+         * <ul>
+         * <li>1: to be processed</li>
+         * <li>2: approved and authorized</li>
+         * <li>3: approved but authorization failed</li>
+         * <li>4: rejected</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("FlowStatus")
         public Integer flowStatus;
@@ -252,19 +275,28 @@ public class ListPermissionApplyOrdersResponseBody extends TeaModel {
         public java.util.List<ListPermissionApplyOrdersResponseBodyApplyOrdersApplyOrder> applyOrder;
 
         /**
-         * <p>The number of the returned page.</p>
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
-         * <p>The total number of permission request orders returned.</p>
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>150</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

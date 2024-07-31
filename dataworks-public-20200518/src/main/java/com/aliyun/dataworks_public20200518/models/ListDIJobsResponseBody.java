@@ -4,9 +4,18 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListDIJobsResponseBody extends TeaModel {
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("DIJobPaging")
     public ListDIJobsResponseBodyDIJobPaging DIJobPaging;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7263E4AC-9D2E-5B29-B8AF-7C5012E92A41</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,24 +41,79 @@ public class ListDIJobsResponseBody extends TeaModel {
     }
 
     public static class ListDIJobsResponseBodyDIJobPagingDIJobs extends TeaModel {
+        /**
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16626</p>
+         */
         @NameInMap("DIJobId")
         public Long DIJobId;
 
+        /**
+         * <p>The type of the destination. The value Hologres is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hologres</p>
+         */
         @NameInMap("DestinationDataSourceType")
         public String destinationDataSourceType;
 
+        /**
+         * <p>The task name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql_to_holo_sync_8772</p>
+         */
         @NameInMap("JobName")
         public String jobName;
 
+        /**
+         * <p>The task status. Valid values:</p>
+         * <ul>
+         * <li>Finished</li>
+         * <li>Initialized</li>
+         * <li>Stopped</li>
+         * <li>Failed</li>
+         * <li>Running</li>
+         * <li>Stopping</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Finished</p>
+         */
         @NameInMap("JobStatus")
         public String jobStatus;
 
+        /**
+         * <p>The synchronization type. Valid values:</p>
+         * <ul>
+         * <li>FullAndRealtimeIncremental: one-time full synchronization and real-time incremental synchronization</li>
+         * <li>RealtimeIncremental: real-time incremental synchronization</li>
+         * <li>Full: one-time full synchronization</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Full</p>
+         */
         @NameInMap("MigrationType")
         public String migrationType;
 
+        /**
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1967</p>
+         */
         @NameInMap("ProjectId")
         public Long projectId;
 
+        /**
+         * <p>The type of the source. The value MySQL is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
+         */
         @NameInMap("SourceDataSourceType")
         public String sourceDataSourceType;
 
@@ -117,15 +181,36 @@ public class ListDIJobsResponseBody extends TeaModel {
     }
 
     public static class ListDIJobsResponseBodyDIJobPaging extends TeaModel {
+        /**
+         * <p>The list of tasks.</p>
+         */
         @NameInMap("DIJobs")
         public java.util.List<ListDIJobsResponseBodyDIJobPagingDIJobs> DIJobs;
 
+        /**
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class ListExtensionsResponseBody extends TeaModel {
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The pagination information.</p>
      */
     @NameInMap("PagingInfo")
     public ListExtensionsResponseBodyPagingInfo pagingInfo;
 
     /**
-     * <p>The extensions returned on pages.</p>
+     * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0000-ABCD-EFG</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -38,11 +41,17 @@ public class ListExtensionsResponseBody extends TeaModel {
     }
 
     public static class ListExtensionsResponseBodyPagingInfoExtensionsBindEventList extends TeaModel {
+        /**
+         * <p>The code of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>commit-file</p>
+         */
         @NameInMap("EventCode")
         public String eventCode;
 
         /**
-         * <p>The code of the event.</p>
+         * <p>The name of the event.</p>
          */
         @NameInMap("EventName")
         public String eventName;
@@ -72,37 +81,43 @@ public class ListExtensionsResponseBody extends TeaModel {
 
     public static class ListExtensionsResponseBodyPagingInfoExtensions extends TeaModel {
         /**
-         * <p>The name of the event.</p>
+         * <p>The list of extension point events.</p>
          */
         @NameInMap("BindEventList")
         public java.util.List<ListExtensionsResponseBodyPagingInfoExtensionsBindEventList> bindEventList;
 
         /**
-         * <p>The extension point events.</p>
+         * <p>The unique code of the extension.</p>
          */
         @NameInMap("ExtensionCode")
         public String extensionCode;
 
         /**
-         * <p>The name of the extension.</p>
+         * <p>The description of the extension.</p>
          */
         @NameInMap("ExtensionDesc")
         public String extensionDesc;
 
         /**
-         * <p>The ID of the RAM user.</p>
+         * <p>The name of the extension.</p>
          */
         @NameInMap("ExtensionName")
         public String extensionName;
 
         /**
-         * <p>The unique code of the extension.</p>
+         * <p>The ID of the RAM user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2003****</p>
          */
         @NameInMap("Owner")
         public String owner;
 
         /**
-         * <p>The description of the extension.</p>
+         * <p>The state of the extension. Valid values: 0: Testing 1: Publishing 3: Disabled 4: Processing 5: Approved 6: Approve Failed</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Status")
         public Integer status;
@@ -164,37 +179,34 @@ public class ListExtensionsResponseBody extends TeaModel {
 
     public static class ListExtensionsResponseBodyPagingInfo extends TeaModel {
         /**
-         * <p>The state of the extension. Valid values:</p>
-         * <br>
-         * <p>0: Testing</p>
-         * <br>
-         * <p>1: Publishing</p>
-         * <br>
-         * <p>3: Disabled</p>
-         * <br>
-         * <p>4: Processing</p>
-         * <br>
-         * <p>5: Approved</p>
-         * <br>
-         * <p>6: Approve Failed</p>
+         * <p>The list of extensions.</p>
          */
         @NameInMap("Extensions")
         public java.util.List<ListExtensionsResponseBodyPagingInfoExtensions> extensions;
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
-         * <p>The extensions.</p>
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

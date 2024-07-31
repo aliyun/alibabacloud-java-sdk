@@ -11,31 +11,46 @@ public class GetNodeResponseBody extends TeaModel {
     public GetNodeResponseBodyData data;
 
     /**
-     * <p>The ID of the node. You can call the [ListNodes](https://help.aliyun.com/document_detail/173979.html) operation to query the node ID.</p>
+     * <p>The ID of the node. You can call the <a href="https://help.aliyun.com/document_detail/173979.html">ListNodes</a> operation to query the node ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Invalid.Tenant.ConnectionNotExists</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The connection string.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The connection does not exist.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **GetNode**.</p>
+     * <p>The operation that you want to perform. Set the value to <strong>GetNode</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>Other parameters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E6F0DBDD-5AD****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the workflow.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -96,18 +111,27 @@ public class GetNodeResponseBody extends TeaModel {
     public static class GetNodeResponseBodyData extends TeaModel {
         /**
          * <p>The description of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         @NameInMap("BaselineId")
         public Long baselineId;
 
         /**
-         * <p>The operation that you want to perform. Set the value to **GetNode**.</p>
+         * <p>The operation that you want to perform. Set the value to <strong>GetNode</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("BusinessId")
         public Long businessId;
 
         /**
          * <p>The environment of the workspace. Valid values: PROD and DEV.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>odps_first_dev</p>
          */
         @NameInMap("Connection")
         public String connection;
@@ -117,6 +141,9 @@ public class GetNodeResponseBody extends TeaModel {
 
         /**
          * <p>The environment of the workspace. Valid values: PROD and DEV.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00 00 00 * * ?</p>
          */
         @NameInMap("CronExpress")
         public String cronExpress;
@@ -126,18 +153,27 @@ public class GetNodeResponseBody extends TeaModel {
 
         /**
          * <p>The name of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The ID of the node. You can call the [ListNodes](https://help.aliyun.com/document_detail/173979.html) operation to query the node ID.</p>
+         * <p>The ID of the node. You can call the <a href="https://help.aliyun.com/document_detail/173979.html">ListNodes</a> operation to query the node ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;projectName&quot;:&quot;test_0923001&quot;,&quot;tableName&quot;:&quot;test_table_001&quot;,&quot;partition&quot;:&quot;ds\u003d$[yyyymmdd]&quot;},{&quot;projectName&quot;:&quot;test_0923001&quot;,&quot;tableName&quot;:&quot;test_table_002&quot;,&quot;partition&quot;:&quot;NOTAPARTITIONTABLE&quot;}]</p>
          */
         @NameInMap("DqcDescription")
         public String dqcDescription;
 
         /**
          * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("DqcType")
         public Integer dqcType;
@@ -156,65 +192,96 @@ public class GetNodeResponseBody extends TeaModel {
 
         /**
          * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         @NameInMap("NodeId")
         public Long nodeId;
 
         /**
          * <p>The scheduling type of the node. Valid values:</p>
-         * <br>
-         * <p>*   NORMAL: The node is an auto triggered node.</p>
-         * <p>*   MANUAL: The node is a manually triggered node. Manually triggered nodes cannot be automatically triggered.</p>
-         * <p>*   PAUSE: The node is a paused node.</p>
-         * <p>*   SKIP: The node is a dry-run node. Dry-run nodes are started as scheduled but the system sets the status of the nodes to successful when it starts to run them.</p>
+         * <ul>
+         * <li>NORMAL: The node is an auto triggered node.</li>
+         * <li>MANUAL: The node is a manually triggered node. Manually triggered nodes cannot be automatically triggered.</li>
+         * <li>PAUSE: The node is a paused node.</li>
+         * <li>SKIP: The node is a dry-run node. Dry-run nodes are started as scheduled but the system sets the status of the nodes to successful when it starts to run them.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>The ID of the baseline.</p>
          */
         @NameInMap("NodeName")
         public String nodeName;
 
         /**
          * <p>The ID of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>17366294****</p>
          */
         @NameInMap("OwnerId")
         public String ownerId;
 
         /**
          * <p>The CRON expression returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a=b</p>
          */
         @NameInMap("ParamValues")
         public String paramValues;
 
         /**
          * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Priority")
         public Integer priority;
 
         /**
          * <p>The ID of the owner of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ODPS_SQL</p>
          */
         @NameInMap("ProgramType")
         public String programType;
 
         /**
          * <p>Indicates whether the node can be rerun.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         @NameInMap("ProjectId")
         public Long projectId;
 
         /**
          * <p>Indicates whether the node is associated with Data Quality. Valid values: 0 and 1. A value of 0 indicates that the node is associated with Data Quality. A value of 1 indicates that the node is not associated with Data Quality.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("RelatedFlowId")
         public Long relatedFlowId;
 
         /**
          * <p>The ID of the workflow to which the node belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         @NameInMap("RepeatInterval")
         public Long repeatInterval;
 
         /**
          * <p>The type of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Repeatability")
         public String repeatability;
@@ -224,12 +291,18 @@ public class GetNodeResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the request. You can use the ID to locate logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The table and partition filter expression in Data Quality that are associated with the node.</p>
          */
         @NameInMap("ResGroupName")
         public String resGroupName;
 
         /**
          * <p>The ID of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         @NameInMap("SchedulerType")
         public String schedulerType;

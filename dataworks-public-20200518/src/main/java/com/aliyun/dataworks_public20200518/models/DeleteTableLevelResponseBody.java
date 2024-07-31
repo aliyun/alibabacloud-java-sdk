@@ -5,13 +5,19 @@ import com.aliyun.tea.*;
 
 public class DeleteTableLevelResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the table level is deleted.</p>
+     * <p>Indicates whether the table level was deleted.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("DeleteResult")
     public Boolean deleteResult;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>abcde</p>
      */
     @NameInMap("RequestId")
     public String requestId;

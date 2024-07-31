@@ -5,34 +5,40 @@ import com.aliyun.tea.*;
 
 public class GetDISyncTaskRequest extends TeaModel {
     /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
-     * <br>
-     * <p>*   true: The request is successful.</p>
-     * <p>*   false: The request fails.</p>
-     * <br>
+     * <ul>
+     * <li>If you set TaskType to DI_REALTIME, set this parameter to the ID of the real-time synchronization task that you want to deploy.</li>
+     * <li>If you set TaskType to DI_SOLUTION, set this parameter to the ID of the data synchronization solution that you want to deploy.</li>
+     * </ul>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/173942.html">ListFiles</a> operation to query the ID of the real-time synchronization task or data synchronization solution.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("FileId")
     public Long fileId;
 
     /**
-     * <p>The type of the object that you want to query. Valid values:</p>
-     * <br>
-     * <p>*   DI_REALTIME: real-time synchronization node</p>
-     * <p>*   DI_SOLUTION: data synchronization solution</p>
-     * <br>
+     * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to obtain the workspace ID.</p>
+     * <p>You must configure this parameter to specify the DataWorks workspace to which the API operation is applied.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10000</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;
 
     /**
-     * <p>*   If you set the TaskType parameter to DI_REALTIME, set the FileId parameter to the ID of the real-time synchronization node that you want to query.</p>
-     * <p>*   If you set the TaskType parameter to DI_SOLUTION, set the FileId parameter to the ID of the data synchronization solution that you want to query.</p>
-     * <br>
-     * <p>You can call the [ListFiles](https://help.aliyun.com/document_detail/173942.html) operation to query the ID of the real-time synchronization node or data synchronization solution.</p>
-     * <br>
+     * <p>The type of the object that you want to query. Valid values:</p>
+     * <ul>
+     * <li>DI_REALTIME: real-time synchronization task</li>
+     * <li>DI_SOLUTION: data synchronization solution</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DI_REALTIME</p>
      */
     @NameInMap("TaskType")
     public String taskType;

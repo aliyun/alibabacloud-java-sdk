@@ -5,51 +5,74 @@ import com.aliyun.tea.*;
 
 public class GetMetaTableLineageRequest extends TeaModel {
     /**
-     * <p>The name of the metatable.</p>
+     * <p>The ID of the E-MapReduce (EMR) cluster. Configure this parameter only if you want to query the lineage of an EMR table.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>abc</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>The error message.</p>
+     * <p>The type of the data source. Valid values: odps and emr.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>emr</p>
      */
     @NameInMap("DataSourceType")
     public String dataSourceType;
 
     /**
-     * <p>The type of the data source. Valid values: odps and emr.</p>
+     * <p>The name of the database.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>abc</p>
      */
     @NameInMap("DatabaseName")
     public String databaseName;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 10. Maximum value: 100.</p>
-     * <br>
+     * <p>Specifies the ancestor or descendant lineage that you want to query for a field. Valid values: up and down. The value up indicates the ancestor lineage. The value down indicates the descendant lineage.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>up</p>
      */
     @NameInMap("Direction")
     public String direction;
 
     /**
-     * <p>The ID of the E-MapReduce (EMR) cluster. Set this parameter only when you query data in an EMR compute engine instance.</p>
+     * <p>The logic of paging. Configure this parameter based on the value of the response parameter NextPrimaryKey when the value of the response parameter HasNext is true in the previous request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>odps.engine_name.table_name1</p>
      */
     @NameInMap("NextPrimaryKey")
     public String nextPrimaryKey;
 
     /**
-     * <p>The name of the metadatabase.</p>
+     * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The logic of paging. Set this parameter based on the value of the response parameter NextPrimaryKey when the value of the response parameter HasNext is true in the last query.</p>
+     * <p>The unique identifier of the table.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>odps.engine_name.table_name</p>
      */
     @NameInMap("TableGuid")
     public String tableGuid;
 
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The name of the table.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>abc</p>
      */
     @NameInMap("TableName")
     public String tableName;

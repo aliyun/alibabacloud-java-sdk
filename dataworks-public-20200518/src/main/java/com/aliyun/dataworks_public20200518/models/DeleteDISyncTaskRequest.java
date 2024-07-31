@@ -5,30 +5,32 @@ import com.aliyun.tea.*;
 
 public class DeleteDISyncTaskRequest extends TeaModel {
     /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
-     * <br>
-     * <p>*   true: The request is successful.</p>
-     * <p>*   false: The request failed.</p>
-     * <br>
+     * <p>The ID of the real-time synchronization task. You can call the <a href="https://help.aliyun.com/document_detail/173942.html">ListFiles</a> operation to query the ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("FileId")
     public Long fileId;
 
     /**
-     * <p>The type of the synchronization node in Data Integration.</p>
-     * <br>
-     * <p>The parameter value is DI_REALTIME and cannot be changed. The value indicates a real-time synchronization node.</p>
-     * <br>
+     * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to obtain the workspace ID.</p>
+     * <p>You must configure this parameter to specify the DataWorks workspace to which the operation is applied.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10000</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;
 
     /**
-     * <p>The ID of the real-time synchronization node. You can call the [ListFiles](https://help.aliyun.com/document_detail/173942.html) operation to query the ID of the node.</p>
-     * <br>
+     * <p>The type of the task. Set the value to DI_REALTIME, which indicates a real-time synchronization task.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DI_REALTIME</p>
      */
     @NameInMap("TaskType")
     public String taskType;

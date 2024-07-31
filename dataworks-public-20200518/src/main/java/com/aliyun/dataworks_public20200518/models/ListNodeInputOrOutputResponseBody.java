@@ -11,31 +11,46 @@ public class ListNodeInputOrOutputResponseBody extends TeaModel {
     public java.util.List<ListNodeInputOrOutputResponseBodyData> data;
 
     /**
-     * <p>The error code returned if the request fails.</p>
+     * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Invalid.Tenant.ProjectNotExists</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The error message returned if the request fails.</p>
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The project does not exist.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
-     * <p>The ID of the request. You can use the ID to query logs and troubleshoot issues.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E6F0DBDD-5AD****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -96,18 +111,27 @@ public class ListNodeInputOrOutputResponseBody extends TeaModel {
     public static class ListNodeInputOrOutputResponseBodyData extends TeaModel {
         /**
          * <p>The name of the ancestor or descendant node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx.123141254_out</p>
          */
         @NameInMap("Data")
         public String data;
 
         /**
-         * <p>The ID of the node.</p>
+         * <p>The node ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234667</p>
          */
         @NameInMap("NodeId")
         public Long nodeId;
 
         /**
-         * <p>The name of the associated table.</p>
+         * <p>This parameter does not take effect. You cannot obtain the parameter settings.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dwd_xxx_table</p>
          */
         @NameInMap("TableName")
         public String tableName;

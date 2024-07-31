@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DsgWhiteListDeleteListRequest extends TeaModel {
     /**
+     * <p>The IDs of the whitelists.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Ids")

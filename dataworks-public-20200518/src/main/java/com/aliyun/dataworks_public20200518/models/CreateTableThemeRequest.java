@@ -5,29 +5,39 @@ import com.aliyun.tea.*;
 
 public class CreateTableThemeRequest extends TeaModel {
     /**
-     * <p>The level of the table folder. Valid values: 1 and 2. A value of 1 indicates a first-level table folder. A value of 2 indicates a second-level table folder.</p>
-     * <br>
+     * <p>The level of the table theme. Valid values: 1 and 2. The value 1 indicates the first level. The value 2 indicates the second level.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Level")
     public Integer level;
 
     /**
-     * <p>The name of the table folder.</p>
-     * <br>
+     * <p>The name of the table theme.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The ID of the level of the parent table folder.</p>
+     * <p>The ID of the level of the parent table theme.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>122</p>
      */
     @NameInMap("ParentId")
     public Long parentId;
 
     /**
-     * <p>The ID of the DataWorks workspace.</p>
+     * <p>The DataWorks workspace ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;

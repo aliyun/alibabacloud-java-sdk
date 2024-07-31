@@ -4,9 +4,18 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetDIAlarmRuleResponseBody extends TeaModel {
+    /**
+     * <p>The details of the alert rule.</p>
+     */
     @NameInMap("DIAlarmRule")
     public GetDIAlarmRuleResponseBodyDIAlarmRule DIAlarmRule;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4A807D85-AC9F-55F7-A58F-998D5249CAD9</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +41,22 @@ public class GetDIAlarmRuleResponseBody extends TeaModel {
     }
 
     public static class GetDIAlarmRuleResponseBodyDIAlarmRuleNotificationSettingsNotificationChannels extends TeaModel {
+        /**
+         * <p>The alert notification methods.</p>
+         */
         @NameInMap("Channels")
         public java.util.List<String> channels;
 
+        /**
+         * <p>The severity level. Valid values:</p>
+         * <ul>
+         * <li>Warning</li>
+         * <li>Critical</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Warning</p>
+         */
         @NameInMap("Severity")
         public String severity;
 
@@ -62,9 +84,22 @@ public class GetDIAlarmRuleResponseBody extends TeaModel {
     }
 
     public static class GetDIAlarmRuleResponseBodyDIAlarmRuleNotificationSettingsNotificationReceivers extends TeaModel {
+        /**
+         * <p>The recipient type.</p>
+         * <ul>
+         * <li>If the alert notification method is Mail, Phone, or Sms, the recipient type is Alibaba Cloud account ID.</li>
+         * <li>If the alert notification method is Ding, the recipient type is DingTalk chatbot token.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DingToken</p>
+         */
         @NameInMap("ReceiverType")
         public String receiverType;
 
+        /**
+         * <p>The recipients.</p>
+         */
         @NameInMap("ReceiverValues")
         public java.util.List<String> receiverValues;
 
@@ -92,12 +127,24 @@ public class GetDIAlarmRuleResponseBody extends TeaModel {
     }
 
     public static class GetDIAlarmRuleResponseBodyDIAlarmRuleNotificationSettings extends TeaModel {
+        /**
+         * <p>The duration of the alert suppression interval. Unit: minutes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("InhibitionInterval")
         public Integer inhibitionInterval;
 
+        /**
+         * <p>The alert notification methods.</p>
+         */
         @NameInMap("NotificationChannels")
         public java.util.List<GetDIAlarmRuleResponseBodyDIAlarmRuleNotificationSettingsNotificationChannels> notificationChannels;
 
+        /**
+         * <p>The alert notification recipients.</p>
+         */
         @NameInMap("NotificationReceivers")
         public java.util.List<GetDIAlarmRuleResponseBodyDIAlarmRuleNotificationSettingsNotificationReceivers> notificationReceivers;
 
@@ -133,12 +180,39 @@ public class GetDIAlarmRuleResponseBody extends TeaModel {
     }
 
     public static class GetDIAlarmRuleResponseBodyDIAlarmRuleTriggerConditions extends TeaModel {
+        /**
+         * <p>The time interval for alert calculation. Unit: minutes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
+         */
         @NameInMap("Duration")
         public Long duration;
 
+        /**
+         * <p>The severity level. Valid values:</p>
+         * <ul>
+         * <li>Warning</li>
+         * <li>Critical</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Warning</p>
+         */
         @NameInMap("Severity")
         public String severity;
 
+        /**
+         * <p>The alert threshold.</p>
+         * <ul>
+         * <li>If the alert rule is for task status, no threshold is used.</li>
+         * <li>If the alert rule is for failovers, specify the number of failovers.</li>
+         * <li>If the alert rule is for latency, the threshold is the latency duration, in seconds.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("Threshold")
         public Long threshold;
 
@@ -174,36 +248,98 @@ public class GetDIAlarmRuleResponseBody extends TeaModel {
     }
 
     public static class GetDIAlarmRuleResponseBodyDIAlarmRule extends TeaModel {
+        /**
+         * <p>The timestamp when the alert rule was created. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1663573162</p>
+         */
         @NameInMap("CreatedTime")
         public Long createdTime;
 
+        /**
+         * <p>The ID of the user who creates the alert rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000001</p>
+         */
         @NameInMap("CreatedUid")
         public String createdUid;
 
+        /**
+         * <p>The alert rule ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34988</p>
+         */
         @NameInMap("DIAlarmRuleId")
         public Long DIAlarmRuleId;
 
+        /**
+         * <p>The ID of the task with which the alert rule is associated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11170</p>
+         */
         @NameInMap("DIJobId")
         public Long DIJobId;
 
+        /**
+         * <p>The description of the alert rule.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>Indicates whether the alert rule is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Enabled")
         public Boolean enabled;
 
+        /**
+         * <p>The metric type in the alert rule. Valid values:</p>
+         * <ul>
+         * <li>Heartbeat</li>
+         * <li>FailoverCount</li>
+         * <li>Delay</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Heartbeat</p>
+         */
         @NameInMap("MetricType")
         public String metricType;
 
+        /**
+         * <p>The alert notification settings.</p>
+         */
         @NameInMap("NotificationSettings")
         public GetDIAlarmRuleResponseBodyDIAlarmRuleNotificationSettings notificationSettings;
 
+        /**
+         * <p>The conditions that can trigger the alert rule.</p>
+         */
         @NameInMap("TriggerConditions")
         public java.util.List<GetDIAlarmRuleResponseBodyDIAlarmRuleTriggerConditions> triggerConditions;
 
+        /**
+         * <p>The timestamp when the alert rule was last updated. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1663573163</p>
+         */
         @NameInMap("UpdatedTime")
         public Long updatedTime;
 
+        /**
+         * <p>The ID of the user who last updates the alert rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000001</p>
+         */
         @NameInMap("UpdatedUid")
         public String updatedUid;
 

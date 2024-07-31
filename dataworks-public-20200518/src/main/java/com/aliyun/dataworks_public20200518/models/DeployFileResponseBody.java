@@ -5,37 +5,55 @@ import com.aliyun.tea.*;
 
 public class DeployFileResponseBody extends TeaModel {
     /**
-     * <p>The ID of the deployment task. The ID is used as the value of a specific request parameter when you call the [GetDeployment](https://help.aliyun.com/document_detail/173950.html) operation to query the details of the deployment task.</p>
+     * <p>The ID of the deployment task. The ID is used as the value of a specific request parameter when you call the <a href="https://help.aliyun.com/document_detail/173950.html">GetDeployment</a> operation to query the details of the deployment task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30000001</p>
      */
     @NameInMap("Data")
     public Long data;
 
     /**
      * <p>The error code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Invalid.Tenant.ConnectionNotExists</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The connection does not exist.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The ID of the request. You can troubleshoot issues based on the ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0000-ABCD-EFG****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

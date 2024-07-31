@@ -5,40 +5,56 @@ import com.aliyun.tea.*;
 
 public class ListMetaCollectionsResponseBody extends TeaModel {
     /**
-     * <p>The object returned.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("Data")
     public ListMetaCollectionsResponseBodyData data;
 
     /**
-     * <p>The error code returned.</p>
+     * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Invalid.Collection.NotExists</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The specified parameters are invalid.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
-     * <p>The ID of the request. You can use the ID to query logs and troubleshoot issues.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E25887B7-579C-54A5-9C4F-83A0DE367DDE</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   true: The request was successful.</p>
-     * <p>*   false: The request failed.</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -104,7 +120,10 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
         public java.util.List<Collection> collectionList;
 
         /**
-         * <p>The token that is used for the next query.</p>
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>37ae2053d87d380f28ce0dc0853ca51e</p>
          */
         @NameInMap("NextToken")
         public String nextToken;

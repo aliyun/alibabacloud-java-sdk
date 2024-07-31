@@ -5,28 +5,32 @@ import com.aliyun.tea.*;
 
 public class TerminateDISyncInstanceRequest extends TeaModel {
     /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
-     * <br>
-     * <p>*   true: The request is successful.</p>
-     * <p>*   false: The request fails.</p>
-     * <br>
+     * <p>The ID of the real-time synchronization task.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("FileId")
     public Long fileId;
 
     /**
-     * <p>The type of the node. A value of DI_REALTIME indicates that the node is a real-time synchronization node.</p>
-     * <br>
+     * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to obtain the workspace ID.</p>
+     * <p>You must configure this parameter to specify the DataWorks workspace to which the API operation is applied.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10000</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;
 
     /**
-     * <p>The ID of the real-time synchronization node.</p>
-     * <br>
+     * <p>The value DI_REALTIME indicates that the task is a real-time synchronization task.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DI_REALTIME</p>
      */
     @NameInMap("TaskType")
     public String taskType;

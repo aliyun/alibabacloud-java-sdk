@@ -5,37 +5,52 @@ import com.aliyun.tea.*;
 
 public class GetMetaTableIntroWikiResponseBody extends TeaModel {
     /**
-     * <p>The business data returned.</p>
+     * <p>The business data.</p>
      */
     @NameInMap("Data")
     public GetMetaTableIntroWikiResponseBodyData data;
 
     /**
-     * <p>The error code returned.</p>
+     * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Invalid.Tenant.ConnectionNotExists</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The connection does not exist.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0bc1ec92159376</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -96,36 +111,54 @@ public class GetMetaTableIntroWikiResponseBody extends TeaModel {
     public static class GetMetaTableIntroWikiResponseBodyData extends TeaModel {
         /**
          * <p>The description of the metatable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>\# Business requirements\n\n\&lt;a name=\&quot;xiw5n\&quot;</p>
          */
         @NameInMap("Content")
         public String content;
 
         /**
          * <p>The time when the metatable was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1584444247000</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
          * <p>The creator of the metatable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         @NameInMap("Creator")
         public String creator;
 
         /**
-         * <p>The name of the user who created the metatable.</p>
+         * <p>The name of the user who creates the metatable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         @NameInMap("CreatorName")
         public String creatorName;
 
         /**
-         * <p>The time when the metatable was modified.</p>
+         * <p>The time when the metatable was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1584444247000</p>
          */
         @NameInMap("ModifiedTime")
         public Long modifiedTime;
 
         /**
          * <p>The version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Version")
         public Long version;

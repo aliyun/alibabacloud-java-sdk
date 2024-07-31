@@ -5,73 +5,95 @@ import com.aliyun.tea.*;
 
 public class CreateProjectRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. We recommend that you set this parameter to a UUID.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. This parameter can be left empty.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ABFUOEUOTRTRJKE</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>Specifies whether to disable the Development role. Valid values:</p>
-     * <br>
-     * <p>*   false: enables the Development role.</p>
-     * <p>*   true: disables the Development role.</p>
-     * <p>*   Default value: false.</p>
+     * <p>Specifies whether to disable the Develop role. Valid values:</p>
+     * <ul>
+     * <li><strong>false</strong> (default)</li>
+     * <li><strong>true</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("DisableDevelopment")
     public Boolean disableDevelopment;
 
     /**
-     * <p>Specifies whether query result download from DataStudio is allowed. Valid values:</p>
-     * <br>
-     * <p>*   1: allowed</p>
-     * <p>*   0: not allowed</p>
-     * <p>*   Default value: 1.</p>
+     * <p>Specifies whether to allow you to download the query result from DataStudio. Valid values:</p>
+     * <ul>
+     * <li><strong>1</strong> (default): allows you to download the query result from DataStudio.</li>
+     * <li><strong>0</strong>: does not allow you to download the query result from DataStudio.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("IsAllowDownload")
     public Integer isAllowDownload;
 
     /**
      * <p>The description of the workspace.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test_describe</p>
      */
     @NameInMap("ProjectDescription")
     public String projectDescription;
 
     /**
-     * <p>The name of the workspace. The name can contain letters, digits, and underscores (_) and must start with a letter or digit.</p>
-     * <br>
+     * <p>The name of the workspace. The name can contain only letters, digits, and underscores (_) and must start with a letter or digit.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test_project</p>
      */
     @NameInMap("ProjectIdentifier")
     public String projectIdentifier;
 
     /**
-     * <p>The mode of the workspace. For more information about the differences between the modes of workspaces, see [Differences between workspaces in basic mode and workspaces in standard mode](https://help.aliyun.com/document_detail/85772.html). Valid values:</p>
-     * <br>
-     * <p>*   2: basic mode</p>
-     * <p>*   3: standard mode</p>
-     * <p>*   Default value: 2.</p>
+     * <p>The mode of the workspace. For more information about the differences between the modes of workspaces, see <a href="https://help.aliyun.com/document_detail/85772.html">Differences between workspaces in basic mode and workspaces in standard mode</a>.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li><strong>2</strong> (default): basic mode</li>
+     * <li><strong>3</strong>: standard mode</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("ProjectMode")
     public Integer projectMode;
 
     /**
      * <p>The display name of the workspace.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test_project</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
 
     /**
      * <p>The resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmzbn7pti3****</p>
      */
     @NameInMap("ResourceManagerResourceGroupId")
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The tags.</p>
+     * <p>The tags added to the workspace.</p>
      */
     @NameInMap("Tags")
     public java.util.List<CreateProjectRequestTags> tags;
@@ -156,16 +178,20 @@ public class CreateProjectRequest extends TeaModel {
     public static class CreateProjectRequestTags extends TeaModel {
         /**
          * <p>The tag key.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value</p>
          */
         @NameInMap("Value")
         public String value;

@@ -5,41 +5,54 @@ import com.aliyun.tea.*;
 
 public class GetMetaCollectionDetailResponseBody extends TeaModel {
     /**
-     * <p>The details of the collection.</p>
+     * <p>The information about the collection.</p>
      */
     @NameInMap("Collection")
     public Collection collection;
 
     /**
      * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9999</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>album.xxxx does not exist.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID. You can locate logs and troubleshoot issues based on the ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0000-ABCD-E****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
      * <p>true</p>
-     * <br>
      * <p>false</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

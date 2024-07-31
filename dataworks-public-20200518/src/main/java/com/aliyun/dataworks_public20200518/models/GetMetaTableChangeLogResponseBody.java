@@ -5,37 +5,52 @@ import com.aliyun.tea.*;
 
 public class GetMetaTableChangeLogResponseBody extends TeaModel {
     /**
-     * <p>The number of entries returned per page. Default value: 10. Maximum value: 100.</p>
+     * <p>The business data.</p>
      */
     @NameInMap("Data")
     public GetMetaTableChangeLogResponseBodyData data;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Invalid.Tenant.ConnectionNotExists</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The connection does not exist.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
-     * <p>The error code returned.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0bc1ec92159376</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The business data returned.</p>
+     * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -95,32 +110,56 @@ public class GetMetaTableChangeLogResponseBody extends TeaModel {
 
     public static class GetMetaTableChangeLogResponseBodyDataDataEntityList extends TeaModel {
         /**
-         * <p>The type of the change.</p>
+         * <p>The content of the change.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;[{\&quot;action\&quot;:\&quot;ADD_COLUMN\&quot;,\&quot;value\&quot;:[{\&quot;originName\&quot;:\&quot;\&quot;,\&quot;originType\&quot;:\&quot;\&quot;,\&quot;originComment\&quot;:\&quot;\&quot;,\&quot;name\&quot;:\&quot;id\&quot;,\&quot;type\&quot;:\&quot;struct<a href="name:string">name:string</a>\&quot;,\&quot;comment\&quot;:\&quot;\&quot;}]}]&quot;,</p>
          */
         @NameInMap("ChangeContent")
         public String changeContent;
 
+        /**
+         * <p>The type of the change.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CREATE_TABLE</p>
+         */
         @NameInMap("ChangeType")
         public String changeType;
 
         /**
-         * <p>The name of the operator.</p>
+         * <p>The time when the metatable was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1590722845000</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
-         * <p>The content of the change.</p>
+         * <p>The time when the metatable was modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1590722845000</p>
          */
         @NameInMap("ModifiedTime")
         public Long modifiedTime;
 
         /**
-         * <p>The time when the metatable was created.</p>
+         * <p>The entity on which the change was made. Valid values: TABLE and PARTITION.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TABLE</p>
          */
         @NameInMap("ObjectType")
         public String objectType;
 
+        /**
+         * <p>The name of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
+         */
         @NameInMap("Operator")
         public String operator;
 
@@ -181,25 +220,34 @@ public class GetMetaTableChangeLogResponseBody extends TeaModel {
 
     public static class GetMetaTableChangeLogResponseBodyData extends TeaModel {
         /**
-         * <p>The last time when the metatable was modified.</p>
+         * <p>The list of instances.</p>
          */
         @NameInMap("DataEntityList")
         public java.util.List<GetMetaTableChangeLogResponseBodyDataDataEntityList> dataEntityList;
 
         /**
-         * <p>The total number of returned entries.</p>
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
         /**
-         * <p>The information about the change logs of the metatable.</p>
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
-         * <p>The entity on which the change was made. Valid values: TABLE and PARTITION.</p>
+         * <p>The total number of metatables.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("TotalCount")
         public Long totalCount;

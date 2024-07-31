@@ -4,12 +4,31 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class DataDesensPlanTemplateValue extends TeaModel {
+    /**
+     * <p>The name of the data masking method.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hash</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>Indicates whether a watermark is added. Valid values:</p>
+     * <ul>
+     * <li>true: allow</li>
+     * <li>false: disallow</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("SupportWaterMark")
     public Boolean supportWaterMark;
 
+    /**
+     * <p>The data masking parameters and their descriptions.</p>
+     */
     @NameInMap("ExtParamTemplate")
     public java.util.List<?> extParamTemplate;
 

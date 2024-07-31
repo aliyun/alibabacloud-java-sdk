@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class ListEntityTagsRequest extends TeaModel {
     /**
+     * <p>The unique identifier of the entity. Example: maxcompute-table.projectA.tableA.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>maxcompute-table.projectA.tableA</p>
      */
     @NameInMap("QualifiedName")
     public String qualifiedName;

@@ -11,31 +11,46 @@ public class ListAlertMessagesResponseBody extends TeaModel {
     public ListAlertMessagesResponseBodyData data;
 
     /**
-     * <p>The error code returned.</p>
+     * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Invalid.Tenant.ConnectionNotExists</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The specified parameters are invalid.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
-     * <p>The ID of the request. You can use the ID to troubleshoot issues.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0000-ABCD-EFG****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -95,13 +110,19 @@ public class ListAlertMessagesResponseBody extends TeaModel {
 
     public static class ListAlertMessagesResponseBodyDataAlertMessagesInstances extends TeaModel {
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         @NameInMap("InstanceId")
         public Long instanceId;
 
         /**
-         * <p>The ID of the node.</p>
+         * <p>The node ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         @NameInMap("NodeId")
         public Long nodeId;
@@ -114,12 +135,18 @@ public class ListAlertMessagesResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the workspace to which the node belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         @NameInMap("ProjectId")
         public Long projectId;
 
         /**
-         * <p>The status of the instance. Valid values: NOT_RUN, WAIT_TIME, WAIT_RESOURCE, RUNNING, CHECKING, CHECKING_CONDITION, FAILURE, and SUCCESS. The value NOT_RUN indicates that the instance is not run. The value WAIT_TIME indicates that the instance is waiting to be run. The value WAIT_RESOURCE indicates that the instance is waiting for resources. The value RUNNING indicates that the instance is running. The value CHECKING indicates that data quality is being checked for the node. The value CHECKING_CONDITION indicates that branch conditions are being checked for the node. The value FAILURE indicates that the instance fails to run. The value SUCCESS indicates that the instance is successfully run.</p>
+         * <p>The status of the instance. Valid values: NOT_RUN, WAIT_TIME, WAIT_RESOURCE, RUNNING, CHECKING, CHECKING_CONDITION, FAILURE, and SUCCESS. The value NOT_RUN indicates that the instance is not run. The value WAIT_TIME indicates that the instance is waiting to be run. The value WAIT_RESOURCE indicates that the instance is waiting for resources. The value RUNNING indicates that the instance is running. The value CHECKING indicates that data quality is being checked for the node for which the instance is generated. The value CHECKING_CONDITION indicates that branch conditions are being checked for the node for which the instance is generated. The value FAILURE indicates that the instance fails to run. The value SUCCESS indicates that the instance is successfully run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NOT_RUN</p>
          */
         @NameInMap("Status")
         public String status;
@@ -173,7 +200,10 @@ public class ListAlertMessagesResponseBody extends TeaModel {
 
     public static class ListAlertMessagesResponseBodyDataAlertMessagesNodes extends TeaModel {
         /**
-         * <p>The ID of the node.</p>
+         * <p>The node ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         @NameInMap("NodeId")
         public Long nodeId;
@@ -185,13 +215,19 @@ public class ListAlertMessagesResponseBody extends TeaModel {
         public String nodeName;
 
         /**
-         * <p>The ID of the Alibaba Cloud account used by the owner of the node.</p>
+         * <p>The ID of the Alibaba Cloud account used by the node owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>95279527952****</p>
          */
         @NameInMap("Owner")
         public String owner;
 
         /**
          * <p>The ID of the workspace to which the node belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         @NameInMap("ProjectId")
         public Long projectId;
@@ -237,7 +273,10 @@ public class ListAlertMessagesResponseBody extends TeaModel {
 
     public static class ListAlertMessagesResponseBodyDataAlertMessagesSlaAlert extends TeaModel {
         /**
-         * <p>The ID of the baseline.</p>
+         * <p>The baseline ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         @NameInMap("BaselineId")
         public Long baselineId;
@@ -250,30 +289,45 @@ public class ListAlertMessagesResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the Alibaba Cloud account used by the baseline owner. Multiple IDs are separated by commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>952795279****</p>
          */
         @NameInMap("BaselineOwner")
         public String baselineOwner;
 
         /**
          * <p>The data timestamp of the baseline instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1553443200000</p>
          */
         @NameInMap("Bizdate")
         public Long bizdate;
 
         /**
-         * <p>The ID of the cycle of the baseline instance. Valid values of the ID of an hour-level cycle: 1 to 24. The ID of a day-level cycle is 1.</p>
+         * <p>The ID of the cycle of the baseline instance. Valid values of the ID of an hour-level cycle: [1,24]. The ID of a day-level cycle is 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("InGroupId")
         public Integer inGroupId;
 
         /**
          * <p>The ID of the workspace to which the baseline belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         @NameInMap("ProjectId")
         public Long projectId;
 
         /**
-         * <p>The status of the baseline. Valid values: ERROR, SAFE, DANGROUS, and OVER. The value ERROR indicates that no nodes are associated with the baseline, or all nodes associated with the baseline are suspended. The value SAFE indicates that nodes are run before the alert duration begins. The value DANGROUS indicates that nodes are still running after the alert duration ends but the committed time does not arrive. The value OVER indicates that nodes are still running after the committed time.</p>
+         * <p>The status of the baseline. Valid values: ERROR, SAFE, DANGEROUS, and OVER. The value ERROR indicates that no nodes are associated with the baseline, or all nodes associated with the baseline are suspended. The value SAFE indicates that nodes are run before the alert duration begins. The value DANGEROUS indicates that nodes are still running after the alert duration ends but the committed completion time does not arrive. The value OVER indicates that nodes are still running after the committed completion time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SAFE</p>
          */
         @NameInMap("Status")
         public String status;
@@ -344,18 +398,27 @@ public class ListAlertMessagesResponseBody extends TeaModel {
     public static class ListAlertMessagesResponseBodyDataAlertMessagesTopics extends TeaModel {
         /**
          * <p>The ID of the instance that triggered the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         @NameInMap("InstanceId")
         public Long instanceId;
 
         /**
          * <p>The ID of the node that triggered the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         @NameInMap("NodeId")
         public Long nodeId;
 
         /**
-         * <p>The ID of the event.</p>
+         * <p>The event ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         @NameInMap("TopicId")
         public Long topicId;
@@ -368,12 +431,18 @@ public class ListAlertMessagesResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the Alibaba Cloud account used by the event owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9527952795****</p>
          */
         @NameInMap("TopicOwner")
         public String topicOwner;
 
         /**
          * <p>The status of the event. Valid values: IGNORE, NEW, FIXING, and RECOVER. The value IGNORE indicates that the event is ignored. The value NEW indicates that the event is a new event. The value FIXING indicates that the event is being handled. The value RECOVER indicates that the event is handled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FIXING</p>
          */
         @NameInMap("TopicStatus")
         public String topicStatus;
@@ -435,31 +504,46 @@ public class ListAlertMessagesResponseBody extends TeaModel {
 
     public static class ListAlertMessagesResponseBodyDataAlertMessages extends TeaModel {
         /**
-         * <p>The ID of the alert.</p>
+         * <p>The alert ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         @NameInMap("AlertId")
         public Long alertId;
 
         /**
          * <p>The sending status of the notification. Valid values: READY_TO_SEND, SEND_FAIL, SEND_SUCCESS, and SEND_OVERLIMIT. The value READY_TO_SEND indicates that the notification is waiting to be sent. The value SEND_FAIL indicates that the notification fails to be sent. The value SEND_SUCCESS indicates that the notification is sent. The value SEND_OVERLIMIT indicates that the number of notifications that are sent exceeds the upper limit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>READY_TO_SEND</p>
          */
         @NameInMap("AlertMessageStatus")
         public String alertMessageStatus;
 
         /**
-         * <p>The notification method. Valid values: MAIL, SMS, and PHONE. The value MAIL indicates that the notification is sent by email. The value SMS indicates that the notification is sent by text message. The value PHONE indicates that the notification is sent by phone call. Only DataWorks Professional Edition and more advanced editions support the PHONE notification method.</p>
+         * <p>The notification method. Valid values: MAIL, SMS, and PHONE. Only DataWorks Professional Edition and more advanced editions support the PHONE notification method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SMS</p>
          */
         @NameInMap("AlertMethod")
         public String alertMethod;
 
         /**
          * <p>The timestamp when the alert was reported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1553531401000</p>
          */
         @NameInMap("AlertTime")
         public Long alertTime;
 
         /**
          * <p>The ID of the Alibaba Cloud used by the alert recipient.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9527952795****</p>
          */
         @NameInMap("AlertUser")
         public String alertUser;
@@ -478,15 +562,19 @@ public class ListAlertMessagesResponseBody extends TeaModel {
 
         /**
          * <p>The nodes returned for different alert sources.</p>
-         * <br>
-         * <p>*   The nodes that form a loop are returned if the value of the Source parameter is NODE_CYCLE_ALERT.</p>
-         * <p>*   The nodes that are isolated are returned if the value of the Source parameter is NODE_LONELY_ALERT.</p>
+         * <ul>
+         * <li>The nodes that form a loop are returned if the value of the Source parameter is NODE_CYCLE_ALERT.</li>
+         * <li>The nodes that are isolated are returned if the value of the Source parameter is NODE_LONELY_ALERT.</li>
+         * </ul>
          */
         @NameInMap("Nodes")
         public java.util.List<ListAlertMessagesResponseBodyDataAlertMessagesNodes> nodes;
 
         /**
          * <p>The ID of the custom alert rule that was triggered. This parameter is returned if the value of the Source parameter is REMIND_ALERT.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         @NameInMap("RemindId")
         public Long remindId;
@@ -505,6 +593,9 @@ public class ListAlertMessagesResponseBody extends TeaModel {
 
         /**
          * <p>The type of the alert. Valid values: REMIND_ALERT, TOPIC_ALERT, SLA_ALERT, NODE_CYCLE_ALERT, and NODE_LONELY_ALERT. The value REMIND_ALERT indicates that the alert is a custom alert. The value TOPIC_ALERT indicates that the alert is an event alert. The value SLA_ALERT indicates that the alert is a baseline alert. The value NODE_CYCLE_ALERT indicates that the alert is reported for a node dependency loop. The value NODE_LONELY_ALERT indicates that the alert is reported for isolated nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>REMIND_ALERT</p>
          */
         @NameInMap("Source")
         public String source;
@@ -634,19 +725,28 @@ public class ListAlertMessagesResponseBody extends TeaModel {
         public java.util.List<ListAlertMessagesResponseBodyDataAlertMessages> alertMessages;
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageNumber")
         public String pageNumber;
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public String pageSize;
 
         /**
-         * <p>The total number of returned alerts.</p>
+         * <p>The total number of alerts returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("TotalCount")
         public String totalCount;

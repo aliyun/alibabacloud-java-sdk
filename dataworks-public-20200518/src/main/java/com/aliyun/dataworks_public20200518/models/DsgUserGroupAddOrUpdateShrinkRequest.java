@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DsgUserGroupAddOrUpdateShrinkRequest extends TeaModel {
     /**
+     * <p>The information about the user group.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UserGroups")

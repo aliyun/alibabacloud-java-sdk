@@ -5,13 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListExtensionsRequest extends TeaModel {
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

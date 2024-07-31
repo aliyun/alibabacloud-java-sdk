@@ -5,38 +5,50 @@ import com.aliyun.tea.*;
 
 public class ListLineageRequest extends TeaModel {
     /**
-     * <p>The lineage type. Valid values:</p>
-     * <br>
-     * <p>*   up: ancestor lineage</p>
-     * <p>*   down: descendant lineage</p>
-     * <br>
+     * <p>The lineage type. Valid values:\
+     * up: ancestor lineage\
+     * down: descendant lineage</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>up</p>
      */
     @NameInMap("Direction")
     public String direction;
 
     /**
      * <p>The unique identifier of the entity.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>maxcompute-table.project.table</p>
      */
     @NameInMap("EntityQualifiedName")
     public String entityQualifiedName;
 
     /**
      * <p>The keyword of the entity name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>name-keyword</p>
      */
     @NameInMap("Keyword")
     public String keyword;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>next-token-from-previous-request</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The number of entries per page. Maximum value: 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

@@ -5,22 +5,32 @@ import com.aliyun.tea.*;
 
 public class CreateExportMigrationResponseBody extends TeaModel {
     /**
-     * <p>The ID of the export task.</p>
+     * <p>The export task ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234</p>
      */
     @NameInMap("Data")
     public Long data;
 
     /**
-     * <p>The ID of the request. You can use the ID to locate logs and troubleshoot errors.</p>
+     * <p>The request ID. You can locate logs and troubleshoot issues based on the ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>34267E2E-0335-1A60-A1F0-ADA530890CBA</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
-     * <br>
-     * <p>*   true: The call succeeded.</p>
-     * <p>*   false: The call failed. You can locate errors based on the request ID.</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

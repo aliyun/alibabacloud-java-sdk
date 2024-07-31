@@ -6,24 +6,30 @@ import com.aliyun.tea.*;
 public class GetBaselineStatusRequest extends TeaModel {
     /**
      * <p>The ID of the baseline.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234</p>
      */
     @NameInMap("BaselineId")
     public Long baselineId;
 
     /**
-     * <p>The data timestamp of the baseline instance. Specify the time in the ISO 8601 standard in the yyyy-MM-dd\\"T\\"HH:mm:ssZ format. The time must be in UTC.</p>
-     * <br>
+     * <p>The data timestamp of the baseline instance. Specify the time in the ISO 8601 standard in the yyyy-MM-dd\&quot;T\&quot;HH:mm:ssZ format. The time must be in UTC.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-07-07T00:00:00+0800</p>
      */
     @NameInMap("Bizdate")
     public String bizdate;
 
     /**
      * <p>The ID of the scheduling cycle of the baseline instance. For a baseline instance that is scheduled by day, the value of this parameter is 1. For a baseline instance that is scheduled by hour, the value of this parameter ranges from 1 to 24.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("InGroupId")
     public Integer inGroupId;

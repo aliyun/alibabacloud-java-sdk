@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DsgDesensPlanAddOrUpdateShrinkRequest extends TeaModel {
     /**
+     * <p>A collection of data masking rules that you want to add or modify.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DesensRules")

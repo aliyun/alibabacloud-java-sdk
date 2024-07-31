@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetDataServiceApiTestRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123434</p>
      */
     @NameInMap("TestId")
     public Long testId;

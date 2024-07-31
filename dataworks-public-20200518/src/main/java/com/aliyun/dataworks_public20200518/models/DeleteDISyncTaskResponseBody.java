@@ -5,22 +5,29 @@ import com.aliyun.tea.*;
 
 public class DeleteDISyncTaskResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the synchronization node in Data Integration is deleted. Valid values:</p>
-     * <br>
-     * <p>*   success: The synchronization node in Data Integration is deleted.</p>
-     * <p>*   fail: The synchronization node in Data Integration failed to be deleted. You can troubleshoot the issue based on the failure reason.</p>
+     * <p>The deletion result.</p>
      */
     @NameInMap("Data")
     public DeleteDISyncTaskResponseBodyData data;
 
     /**
-     * <p>The result returned after you called the DeleteDISyncTask operation.</p>
+     * <p>The request ID. You can locate logs and troubleshoot issues based on the ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0bc1411515937635973****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The ID of the request. You can use the ID to locate logs and troubleshoot issues.</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -55,13 +62,24 @@ public class DeleteDISyncTaskResponseBody extends TeaModel {
     }
 
     public static class DeleteDISyncTaskResponseBodyData extends TeaModel {
+        /**
+         * <p>The reason why the synchronization task fails to be deleted. If the synchronization task is deleted, the value null is returned for this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fileId:[100] is invalid.</p>
+         */
         @NameInMap("Message")
         public String message;
 
         /**
-         * <p>The reason why the synchronization node in Data Integration failed to be deleted.</p>
-         * <br>
-         * <p>If the synchronization node in Data Integration is deleted, the value null is returned.</p>
+         * <p>Indicates whether the synchronization task is deleted. Valid values:</p>
+         * <ul>
+         * <li>success: The synchronization task is deleted.</li>
+         * <li>fail: The synchronization task fails to be deleted. You can troubleshoot the issue based on the failure reason.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>fail</p>
          */
         @NameInMap("Status")
         public String status;

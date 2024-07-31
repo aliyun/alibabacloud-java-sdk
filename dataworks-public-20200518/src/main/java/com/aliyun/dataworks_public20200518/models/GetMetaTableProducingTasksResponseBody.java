@@ -7,18 +7,38 @@ public class GetMetaTableProducingTasksResponseBody extends TeaModel {
     @NameInMap("Data")
     public java.util.List<GetMetaTableProducingTasksResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;0&quot;</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>00000-00000-00000-00000</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,6 +96,10 @@ public class GetMetaTableProducingTasksResponseBody extends TeaModel {
     }
 
     public static class GetMetaTableProducingTasksResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>9876543210</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 

@@ -5,37 +5,54 @@ import com.aliyun.tea.*;
 
 public class RunCycleDagNodesResponseBody extends TeaModel {
     /**
-     * <p>The IDs of the nodes in the workflow.</p>
+     * <p>The IDs of the nodes in the workflow. You can query instances based on the IDs.</p>
      */
     @NameInMap("Data")
     public java.util.List<Long> data;
 
     /**
-     * <p>The error code returned.</p>
+     * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Invalid.Tenant.ConnectionNotExists</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The connection does not exist.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
-     * <p>The ID of the request. You can locate logs and troubleshoot issues based on the ID.</p>
+     * <p>The request ID. You can use the request ID to query logs and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <blockquote>
+     * <p>E6F0DBDD-5AD****</p>
+     * </blockquote>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

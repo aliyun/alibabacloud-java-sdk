@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class RemoveProjectMemberFromRoleResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1AFAE64E-D1BE-432B-A9****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

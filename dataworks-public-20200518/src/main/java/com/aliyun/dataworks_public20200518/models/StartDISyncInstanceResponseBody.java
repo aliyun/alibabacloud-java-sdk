@@ -5,22 +5,29 @@ import com.aliyun.tea.*;
 
 public class StartDISyncInstanceResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the real-time synchronization node or the data synchronization solution is started. Valid values:</p>
-     * <br>
-     * <p>*   success: The real-time synchronization node or the data synchronization solution is started.</p>
-     * <p>*   fail: The real-time synchronization node or the data synchronization solution fails to be started. You can troubleshoot the issue based on the provided cause.</p>
+     * <p>The result returned for the start.</p>
      */
     @NameInMap("Data")
     public StartDISyncInstanceResponseBodyData data;
 
     /**
-     * <p>The result returned for the start.</p>
+     * <p>The request ID. You can locate logs and troubleshoot issues based on the ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0bc1411515937635973****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The ID of the request. You can locate logs and troubleshoot issues based on the ID.</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -55,13 +62,25 @@ public class StartDISyncInstanceResponseBody extends TeaModel {
     }
 
     public static class StartDISyncInstanceResponseBodyData extends TeaModel {
+        /**
+         * <p>The reason why the real-time synchronization task or the data synchronization solution fails to be started.</p>
+         * <p>If the real-time synchronization task or the data synchronization solution is started, the value null is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fileId:[100] is invalid.</p>
+         */
         @NameInMap("Message")
         public String message;
 
         /**
-         * <p>The reason why the real-time synchronization node or the data synchronization solution fails to be started.</p>
-         * <br>
-         * <p>If the real-time synchronization node or the data synchronization solution is started, the value null is returned.</p>
+         * <p>Indicates whether the real-time synchronization task or the data synchronization solution is started. Valid values:</p>
+         * <ul>
+         * <li>success: The real-time synchronization task or the data synchronization solution is started.</li>
+         * <li>fail: The real-time synchronization task or the data synchronization solution fails to be started. You can troubleshoot the issue based on the provided cause.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         @NameInMap("Status")
         public String status;

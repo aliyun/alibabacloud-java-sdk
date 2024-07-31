@@ -5,25 +5,34 @@ import com.aliyun.tea.*;
 
 public class ListProjectsShrinkRequest extends TeaModel {
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The page number. Valid values: 1 to 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The tags.</p>
+     * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The tag key.</p>
+     * <p>The resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmzbn7pti3zfa</p>
      */
     @NameInMap("ResourceManagerResourceGroupId")
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The tag value.</p>
+     * <p>The tags to add to the workspace.</p>
      */
     @NameInMap("Tags")
     public String tagsShrink;

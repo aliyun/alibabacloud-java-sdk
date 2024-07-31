@@ -11,7 +11,10 @@ public class GetDataServiceFolderResponseBody extends TeaModel {
     public GetDataServiceFolderResponseBodyFolder folder;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0000-ABCD-EF****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,48 +43,72 @@ public class GetDataServiceFolderResponseBody extends TeaModel {
     public static class GetDataServiceFolderResponseBodyFolder extends TeaModel {
         /**
          * <p>The time when the folder was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-09-24T18:37:51+0800</p>
          */
         @NameInMap("CreatedTime")
         public String createdTime;
 
         /**
-         * <p>The ID of the folder.</p>
+         * <p>The folder ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
          */
         @NameInMap("FolderId")
         public Long folderId;
 
         /**
          * <p>The name of the folder.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1</p>
          */
         @NameInMap("FolderName")
         public String folderName;
 
         /**
          * <p>The ID of the business process to which the folder belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ds_1234</p>
          */
         @NameInMap("GroupId")
         public String groupId;
 
         /**
          * <p>The time when the folder was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-09-24T18:37:51+0800</p>
          */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
         /**
-         * <p>The ID of the parent folder. The ID of the root folder in a business process is 0, and the ID of a folder created by a user in a business process is greater than 0.</p>
+         * <p>The parent folder ID. The ID of the root folder in a business process is 0, and the ID of a folder created by a user in a business process is greater than 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ParentId")
         public Long parentId;
 
         /**
-         * <p>The ID of the workspace.</p>
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
          */
         @NameInMap("ProjectId")
         public Long projectId;
 
         /**
-         * <p>The ID of the tenant.</p>
+         * <p>The tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10002</p>
          */
         @NameInMap("TenantId")
         public Long tenantId;

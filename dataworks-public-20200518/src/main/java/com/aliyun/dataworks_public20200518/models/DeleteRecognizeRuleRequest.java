@@ -5,13 +5,21 @@ import com.aliyun.tea.*;
 
 public class DeleteRecognizeRuleRequest extends TeaModel {
     /**
+     * <p>The sensitive field ID. You can call the <a href="https://help.aliyun.com/document_detail/2747189.html">QuerySensNodeInfo</a> operation to obtain the ID of the sensitive field.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>27f5f5e2-ec60-4567-b1e4-779ac3681024</p>
      */
     @NameInMap("SensitiveId")
     public String sensitiveId;
 
     /**
+     * <p>The tenant ID. To obtain the tenant ID, perform the following steps: Log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>. Find your workspace and go to the DataStudio page. On the DataStudio page, click the logon username in the upper-right corner and click User Info in the Menu section.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10241024</p>
      */
     @NameInMap("TenantId")
     public String tenantId;

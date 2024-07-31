@@ -4,9 +4,21 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class CreateDIAlarmRuleResponseBody extends TeaModel {
+    /**
+     * <p>The alert rule ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>34988</p>
+     */
     @NameInMap("DIAlarmRuleId")
     public Long DIAlarmRuleId;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C636A747-7E4E-594D-94CD-2B4F8A9A9A63</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

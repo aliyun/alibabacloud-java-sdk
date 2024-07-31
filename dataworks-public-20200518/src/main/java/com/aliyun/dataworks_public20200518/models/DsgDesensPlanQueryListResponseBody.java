@@ -4,21 +4,58 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class DsgDesensPlanQueryListResponseBody extends TeaModel {
+    /**
+     * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1029030003</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>param error</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>400</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PageData")
     public DsgDesensPlanQueryListResponseBodyPageData pageData;
 
+    /**
+     * <p>The request ID. You can use the ID to locate logs and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>102400001</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,9 +113,18 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
     }
 
     public static class DsgDesensPlanQueryListResponseBodyPageDataDataDesensPlan extends TeaModel {
+        /**
+         * <p>The type of the data masking rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hash</p>
+         */
         @NameInMap("DesensPlanType")
         public String desensPlanType;
 
+        /**
+         * <p>The parameters for the data masking rule. For more information about the parameters, see the <a href="https://help.aliyun.com/document_detail/2786295.html">DsgDesensPlanAddOrUpdate</a> API reference.</p>
+         */
         @NameInMap("ExtParam")
         public java.util.Map<String, ?> extParam;
 
@@ -106,45 +152,142 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
     }
 
     public static class DsgDesensPlanQueryListResponseBodyPageDataData extends TeaModel {
+        /**
+         * <p>Indicates whether a watermark is added. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("CheckWatermark")
         public Boolean checkWatermark;
 
+        /**
+         * <p>The sensitive field type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>phone</p>
+         */
         @NameInMap("DataType")
         public String dataType;
 
+        /**
+         * <p>The type of the data masking method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HASH</p>
+         */
         @NameInMap("DesenMode")
         public String desenMode;
 
+        /**
+         * <p>The details of the data masking rule.</p>
+         */
         @NameInMap("DesensPlan")
         public DsgDesensPlanQueryListResponseBodyPageDataDataDesensPlan desensPlan;
 
+        /**
+         * <p>The data masking rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HASH</p>
+         */
         @NameInMap("DesensRule")
         public String desensRule;
 
+        /**
+         * <p>The data masking method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HASH</p>
+         */
         @NameInMap("DesensWay")
         public String desensWay;
 
+        /**
+         * <p>The time when the data masking rule was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-05-09 15:46:20</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <p>The time when the data masking rule was modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-05-09 15:46:20</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <p>The ID of the data masking rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The owner of the data masking rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user1</p>
+         */
         @NameInMap("Owner")
         public String owner;
 
+        /**
+         * <p>The name of the data masking rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>phone_hash</p>
+         */
         @NameInMap("RuleName")
         public String ruleName;
 
+        /**
+         * <p>The code of the level-1 data masking scenario to which the rule belongs. Valid values:</p>
+         * <ul>
+         * <li>dataworks_display_desense_code: masking of displayed data in DataStudio and Data Map</li>
+         * <li>maxcompute_desense_code: data masking at the MaxCompute compute engine layer</li>
+         * <li>maxcompute_new_desense_code: data masking at the MaxCompute compute engine layer (new)</li>
+         * <li>hologres_display_desense_code: data masking at the Hologres compute engine layer</li>
+         * <li>dataworks_data_integration_desense_code: static data masking in Data Integration</li>
+         * <li>dataworks_analysis_desense_code: masking of displayed data in DataAnalysis</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>dataworks_display_desense_code</p>
+         */
         @NameInMap("SceneCode")
         public String sceneCode;
 
+        /**
+         * <p>The name of the level-2 data masking scenario to which the data masking rule belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_scene</p>
+         */
         @NameInMap("SceneName")
         public String sceneName;
 
+        /**
+         * <p>The status of the data masking rule. Valid values:</p>
+         * <ul>
+         * <li>0: expired</li>
+         * <li>1: effective</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
@@ -268,15 +411,36 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
     }
 
     public static class DsgDesensPlanQueryListResponseBodyPageData extends TeaModel {
+        /**
+         * <p>The information about the data masking rule.</p>
+         */
         @NameInMap("Data")
         public java.util.List<DsgDesensPlanQueryListResponseBodyPageDataData> data;
 
+        /**
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <p>The number of entries per page. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The number of data masking rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

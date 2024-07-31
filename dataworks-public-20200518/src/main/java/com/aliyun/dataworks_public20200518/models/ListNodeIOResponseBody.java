@@ -4,21 +4,54 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListNodeIOResponseBody extends TeaModel {
+    /**
+     * <p>The node information.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListNodeIOResponseBodyData> data;
 
+    /**
+     * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Invalid.Tenant.ProjectNotExists</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The project does not exist.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E6F0DBDD-5AD****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,12 +109,30 @@ public class ListNodeIOResponseBody extends TeaModel {
     }
 
     public static class ListNodeIOResponseBodyData extends TeaModel {
+        /**
+         * <p>The name of the ancestor or descendant node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dataworks_a.1234_out</p>
+         */
         @NameInMap("Data")
         public String data;
 
+        /**
+         * <p>The node ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123123</p>
+         */
         @NameInMap("NodeId")
         public Long nodeId;
 
+        /**
+         * <p>The name of the input or output table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dataworks_a.datastudio_tenant_waitres_alarm</p>
+         */
         @NameInMap("TableName")
         public String tableName;
 

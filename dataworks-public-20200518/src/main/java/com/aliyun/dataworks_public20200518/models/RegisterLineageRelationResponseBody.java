@@ -4,21 +4,58 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class RegisterLineageRelationResponseBody extends TeaModel {
+    /**
+     * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1010210001</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The entity of lineage not exist, xxx</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The lineage.</p>
+     */
     @NameInMap("LineageRelation")
     public RegisterLineageRelationResponseBodyLineageRelation lineageRelation;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EE50E05E-028C-182B-9xxx</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,12 +113,30 @@ public class RegisterLineageRelationResponseBody extends TeaModel {
     }
 
     public static class RegisterLineageRelationResponseBodyLineageRelation extends TeaModel {
+        /**
+         * <p>The unique identifier of the destination entity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>custom-report.month_stat_user</p>
+         */
         @NameInMap("DestEntityQualifiedName")
         public String destEntityQualifiedName;
 
+        /**
+         * <p>The ID of the lineage between entities.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dfsldfdlsfdsaaaabbbb</p>
+         */
         @NameInMap("RelationshipGuid")
         public String relationshipGuid;
 
+        /**
+         * <p>The unique identifier of the source entity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>maxcompute-table.project.table</p>
+         */
         @NameInMap("SrcEntityQualifiedName")
         public String srcEntityQualifiedName;
 

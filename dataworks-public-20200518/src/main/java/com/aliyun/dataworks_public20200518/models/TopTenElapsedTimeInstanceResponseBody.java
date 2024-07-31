@@ -11,7 +11,10 @@ public class TopTenElapsedTimeInstanceResponseBody extends TeaModel {
     public TopTenElapsedTimeInstanceResponseBodyInstanceConsumeTimeRank instanceConsumeTimeRank;
 
     /**
-     * <p>The ID of the request. You can troubleshoot errors based on the ID.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6347364dadsfadf****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,24 +43,36 @@ public class TopTenElapsedTimeInstanceResponseBody extends TeaModel {
     public static class TopTenElapsedTimeInstanceResponseBodyInstanceConsumeTimeRankConsumeTimeRank extends TeaModel {
         /**
          * <p>The data timestamp of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1600963200000</p>
          */
         @NameInMap("BusinessDate")
         public Long businessDate;
 
         /**
-         * <p>The running duration of the instance. Unit: seconds.</p>
+         * <p>The run time length of the instance. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         @NameInMap("Consumed")
         public Long consumed;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>95279527</p>
          */
         @NameInMap("InstanceId")
         public Long instanceId;
 
         /**
-         * <p>The ID of the node.</p>
+         * <p>The node ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9527</p>
          */
         @NameInMap("NodeId")
         public Long nodeId;
@@ -69,17 +84,19 @@ public class TopTenElapsedTimeInstanceResponseBody extends TeaModel {
         public String nodeName;
 
         /**
-         * <p>The ID of the Alibaba Cloud account used by the owner of the node.</p>
+         * <p>The ID of the Alibaba Cloud account used by the node owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>952795279527</p>
          */
         @NameInMap("Owner")
         public String owner;
 
         /**
-         * <p>The type of the node.</p>
-         * <br>
-         * <p>Valid values:</p>
-         * <br>
-         * <p>6 (Shell), 10 (ODPS SQL), 11 (ODPS MR), 23 (Data Integration), 24 (ODPS Script), 99 (zero load), 221 (PyODPS 2), 225 (ODPS Spark), 227 (EMR Hive), 228 (EMR Spark), 229 (EMR Spark SQL), 230 (EMR MR), 239 (OSS object inspection), 257 (EMR Shell), 258 (EMR Spark Shell), 259 (EMR Presto), 260 (EMR Impala), 900 (real-time synchronization), 1089 (cross-tenant collaboration), 1091 (Hologres development), 1093 (Hologres SQL), 1100 (assignment), and 1221 (PyODPS 3)</p>
+         * <p>The type of the node. Valid values: 6 (Shell), 10 (ODPS SQL), 11 (ODPS MR), 23 (Data Integration), 24 (ODPS Script), 99 (zero load), 221 (PyODPS 2), 225 (ODPS Spark), 227 (EMR Hive), 228 (EMR Spark), 229 (EMR Spark SQL), 230 (EMR MR), 239 (OSS object inspection), 257 (EMR Shell), 258 (EMR Spark Shell), 259 (EMR Presto), 260 (EMR Impala), 900 (real-time synchronization), 1089 (cross-tenant collaboration), 1091 (Hologres development), 1093 (Hologres SQL), 1100 (assignment), and 1221 (PyODPS 3)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("ProgramType")
         public Integer programType;
@@ -156,6 +173,9 @@ public class TopTenElapsedTimeInstanceResponseBody extends TeaModel {
 
         /**
          * <p>The timestamp at which the ranking of the running durations of the instances was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1600963200000</p>
          */
         @NameInMap("UpdateTime")
         public Long updateTime;

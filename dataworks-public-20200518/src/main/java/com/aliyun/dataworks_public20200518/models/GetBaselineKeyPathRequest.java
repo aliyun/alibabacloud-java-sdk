@@ -6,24 +6,30 @@ import com.aliyun.tea.*;
 public class GetBaselineKeyPathRequest extends TeaModel {
     /**
      * <p>The name of the event.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234</p>
      */
     @NameInMap("BaselineId")
     public Long baselineId;
 
     /**
      * <p>The ID of the instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-07-07T00:00:00+0800</p>
      */
     @NameInMap("Bizdate")
     public String bizdate;
 
     /**
      * <p>The ID of the event.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("InGroupId")
     public Integer inGroupId;

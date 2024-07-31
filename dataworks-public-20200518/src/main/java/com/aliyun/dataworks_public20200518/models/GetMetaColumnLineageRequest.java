@@ -6,56 +6,82 @@ import com.aliyun.tea.*;
 public class GetMetaColumnLineageRequest extends TeaModel {
     /**
      * <p>The ID of the E-MapReduce (EMR) cluster. Configure this parameter only when you query data in an EMR compute engine instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>abc</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>The GUID of the field.</p>
+     * <p>The unique identifier of the field.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>odps.engine_name.table_name.column_name</p>
      */
     @NameInMap("ColumnGuid")
     public String columnGuid;
 
     /**
      * <p>The name of the field.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>abc</p>
      */
     @NameInMap("ColumnName")
     public String columnName;
 
     /**
      * <p>The type of the data source. Valid values: odps and emr.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>emr</p>
      */
     @NameInMap("DataSourceType")
     public String dataSourceType;
 
     /**
      * <p>The name of the database.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>abc</p>
      */
     @NameInMap("DatabaseName")
     public String databaseName;
 
     /**
      * <p>Specifies whether to query the ancestor or descendant lineage of the field. The value up indicates the ancestor lineage. The value down indicates the descendant lineage.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>up</p>
      */
     @NameInMap("Direction")
     public String direction;
 
     /**
      * <p>The number of the page to return.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNum")
     public Integer pageNum;
 
     /**
      * <p>The number of entries to return on each page. Default value: 10. Maximum value: 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The name of the metatable.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>abc</p>
      */
     @NameInMap("TableName")
     public String tableName;

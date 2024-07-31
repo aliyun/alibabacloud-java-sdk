@@ -4,6 +4,10 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class CreateResourceFileRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SHOW TABLES;</p>
+     */
     @NameInMap("Content")
     public String content;
 
@@ -24,37 +28,65 @@ public class CreateResourceFileRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("FileType")
     public Integer fileType;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>origin_file_name.sql</p>
      */
     @NameInMap("OriginResourceName")
     public String originResourceName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1000000000001</p>
+     */
     @NameInMap("Owner")
     public String owner;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10000</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("RegisterToCalcEngine")
     public Boolean registerToCalcEngine;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="http://bucketname1.oss-cn-shanghai.aliyuncs.com/example">http://bucketname1.oss-cn-shanghai.aliyuncs.com/example</a></p>
+     */
     @NameInMap("ResourceFile")
     public String resourceFile;
 
+    /**
+     * <strong>example:</strong>
+     * <p>oss://oss-cn-shanghai.aliyuncs.com/emr-test</p>
+     */
     @NameInMap("StorageURL")
     public String storageURL;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("UploadMode")
     public Boolean uploadMode;
 

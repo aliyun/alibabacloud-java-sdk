@@ -5,30 +5,54 @@ import com.aliyun.tea.*;
 
 public class UpdateDIAlarmRuleRequest extends TeaModel {
     /**
+     * <p>The alert rule ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>34982</p>
      */
     @NameInMap("DIAlarmRuleId")
     public Long DIAlarmRuleId;
 
+    /**
+     * <p>The description of the alert rule.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>Specifies whether to enable the alert rule. By default, the alert rule is disabled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Enabled")
     public Boolean enabled;
 
     /**
+     * <p>The metric type in the alert rule. Valid values:</p>
+     * <ul>
+     * <li>Heartbeat</li>
+     * <li>FailoverCount</li>
+     * <li>Delay</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Heartbeat</p>
      */
     @NameInMap("MetricType")
     public String metricType;
 
     /**
+     * <p>The alert notification settings.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("NotificationSettings")
     public UpdateDIAlarmRuleRequestNotificationSettings notificationSettings;
 
     /**
+     * <p>The conditions that can trigger the alert rule.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("TriggerConditions")
@@ -88,9 +112,22 @@ public class UpdateDIAlarmRuleRequest extends TeaModel {
     }
 
     public static class UpdateDIAlarmRuleRequestNotificationSettingsNotificationChannels extends TeaModel {
+        /**
+         * <p>The alert notification methods.</p>
+         */
         @NameInMap("Channels")
         public java.util.List<String> channels;
 
+        /**
+         * <p>The severity level. Valid values:</p>
+         * <ul>
+         * <li>Warning</li>
+         * <li>Critical</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Warning</p>
+         */
         @NameInMap("Severity")
         public String severity;
 
@@ -118,9 +155,22 @@ public class UpdateDIAlarmRuleRequest extends TeaModel {
     }
 
     public static class UpdateDIAlarmRuleRequestNotificationSettingsNotificationReceivers extends TeaModel {
+        /**
+         * <p>The recipient type.</p>
+         * <ul>
+         * <li>If the alert notification method is Mail, Phone, or Sms, the recipient type is Alibaba Cloud account ID.</li>
+         * <li>If the alert notification method is Ding, the recipient type is DingTalk chatbot token.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DingToken</p>
+         */
         @NameInMap("ReceiverType")
         public String receiverType;
 
+        /**
+         * <p>The recipients.</p>
+         */
         @NameInMap("ReceiverValues")
         public java.util.List<String> receiverValues;
 
@@ -148,16 +198,24 @@ public class UpdateDIAlarmRuleRequest extends TeaModel {
     }
 
     public static class UpdateDIAlarmRuleRequestNotificationSettings extends TeaModel {
+        /**
+         * <p>The duration of the alert suppression interval. Default value: 5. Unit: minutes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("InhibitionInterval")
         public Integer inhibitionInterval;
 
         /**
+         * <p>The alert notification methods.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("NotificationChannels")
         public java.util.List<UpdateDIAlarmRuleRequestNotificationSettingsNotificationChannels> notificationChannels;
 
         /**
+         * <p>The alert notification recipients.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("NotificationReceivers")
@@ -195,12 +253,39 @@ public class UpdateDIAlarmRuleRequest extends TeaModel {
     }
 
     public static class UpdateDIAlarmRuleRequestTriggerConditions extends TeaModel {
+        /**
+         * <p>The time interval for alert calculation. Unit: minutes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
+         */
         @NameInMap("Duration")
         public Long duration;
 
+        /**
+         * <p>The severity level. Valid values:</p>
+         * <ul>
+         * <li>Warning</li>
+         * <li>Critical</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Warning</p>
+         */
         @NameInMap("Severity")
         public String severity;
 
+        /**
+         * <p>The alert threshold.</p>
+         * <ul>
+         * <li>If the alert rule is for task status, you do not need to specify a threshold.</li>
+         * <li>If the alert rule is for failovers, specify the number of failovers.</li>
+         * <li>If the alert rule is for latency, specify the latency duration, in seconds.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("Threshold")
         public Long threshold;
 

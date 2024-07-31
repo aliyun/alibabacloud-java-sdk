@@ -6,27 +6,43 @@ import com.aliyun.tea.*;
 public class CreateDagTestRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-05-26 00:00:00</p>
      */
     @NameInMap("Bizdate")
     public String bizdate;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xm_create_test</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234</p>
      */
     @NameInMap("NodeId")
     public Long nodeId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>bizdate=$bizdate tbods=$tbods</p>
+     */
     @NameInMap("NodeParams")
     public String nodeParams;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PROD</p>
      */
     @NameInMap("ProjectEnv")
     public String projectEnv;

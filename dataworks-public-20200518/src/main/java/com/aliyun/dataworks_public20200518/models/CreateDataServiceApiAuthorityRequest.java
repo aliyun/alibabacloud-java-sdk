@@ -6,38 +6,49 @@ import com.aliyun.tea.*;
 public class CreateDataServiceApiAuthorityRequest extends TeaModel {
     /**
      * <p>The ID of the API.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10001</p>
      */
     @NameInMap("ApiId")
     public Long apiId;
 
     /**
      * <p>The ID of the workspace to which the access permissions on the API are granted.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10002</p>
      */
     @NameInMap("AuthorizedProjectId")
     public Long authorizedProjectId;
 
     /**
      * <p>The end time of the validity period of the access permissions. The time must be a UNIX timestamp. Unit: seconds. Example: 1600531564, which indicates 2020-09-20 00:06:04 (UTC+8).</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1600531564</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
 
     /**
      * <p>The ID of the workspace.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10003</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;
 
     /**
-     * <p>The ID of the tenant.</p>
+     * <p>The tenant ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1004</p>
      */
     @NameInMap("TenantId")
     public Long tenantId;

@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class GetBaselineConfigRequest extends TeaModel {
     /**
-     * <p>The ID of the baseline. You can call the [GetNode](https://help.aliyun.com/document_detail/173977.html) operation to obtain the ID.</p>
-     * <br>
+     * <p>The baseline ID. You can call the <a href="https://help.aliyun.com/document_detail/173977.html">GetNode</a> operation to query the baseline ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234</p>
      */
     @NameInMap("BaselineId")
     public Long baselineId;

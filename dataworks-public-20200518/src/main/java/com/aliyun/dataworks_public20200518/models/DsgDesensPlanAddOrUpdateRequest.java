@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DsgDesensPlanAddOrUpdateRequest extends TeaModel {
     /**
+     * <p>A collection of data masking rules that you want to add or modify.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DesensRules")
@@ -25,11 +26,27 @@ public class DsgDesensPlanAddOrUpdateRequest extends TeaModel {
 
     public static class DsgDesensPlanAddOrUpdateRequestDesensRulesDesensPlan extends TeaModel {
         /**
+         * <p>The masking method configured in the data masking rule. Valid values:</p>
+         * <ul>
+         * <li>hash</li>
+         * <li>mapping</li>
+         * <li>mask</li>
+         * <li>charreplacement</li>
+         * <li>intervalselect</li>
+         * <li>decimalpoint</li>
+         * <li>emptydesens</li>
+         * </ul>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hash</p>
          */
         @NameInMap("DesensPlanType")
         public String desensPlanType;
 
+        /**
+         * <p>The parameters for the data masking rule.</p>
+         */
         @NameInMap("ExtParam")
         public java.util.Map<String, ?> extParam;
 
@@ -57,42 +74,82 @@ public class DsgDesensPlanAddOrUpdateRequest extends TeaModel {
     }
 
     public static class DsgDesensPlanAddOrUpdateRequestDesensRules extends TeaModel {
+        /**
+         * <p>Specifies whether to add a watermark. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("CheckWatermark")
         public Boolean checkWatermark;
 
         /**
+         * <p>The sensitive field type.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>phone</p>
          */
         @NameInMap("DataType")
         public String dataType;
 
         /**
+         * <p>The data masking rule.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("DesensPlan")
         public DsgDesensPlanAddOrUpdateRequestDesensRulesDesensPlan desensPlan;
 
+        /**
+         * <p>The ID of the data masking rule. You can call the <a href="https://help.aliyun.com/document_detail/2786578.html">DsgDesensPlanQueryList</a> operation to query the ID of the data masking rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("Id")
         public Integer id;
 
         /**
+         * <p>The owner of the data masking rule.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_user</p>
          */
         @NameInMap("Owner")
         public String owner;
 
         /**
+         * <p>The name of the data masking rule.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>phone_hash</p>
          */
         @NameInMap("RuleName")
         public String ruleName;
 
         /**
+         * <p>The level-2 data masking scenario.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("SceneIds")
         public java.util.List<Integer> sceneIds;
 
+        /**
+         * <p>The status of the data masking rule. Valid values:</p>
+         * <ul>
+         * <li>0: expired</li>
+         * <li>1: effective</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Status")
         public Integer status;
 

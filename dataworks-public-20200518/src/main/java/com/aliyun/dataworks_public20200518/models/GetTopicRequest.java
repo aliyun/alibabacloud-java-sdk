@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class GetTopicRequest extends TeaModel {
     /**
-     * <p>The ID of the request. You can troubleshoot issues based on the ID.</p>
-     * <br>
+     * <p>The event ID. You can call the <a href="https://help.aliyun.com/document_detail/173973.html">ListTopics</a> operation to query the ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234</p>
      */
     @NameInMap("TopicId")
     public Long topicId;

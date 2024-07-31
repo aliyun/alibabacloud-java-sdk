@@ -6,52 +6,74 @@ import com.aliyun.tea.*;
 public class ListNodesRequest extends TeaModel {
     /**
      * <p>The error code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test_bizName</p>
      */
     @NameInMap("BizName")
     public String bizName;
 
     /**
      * <p>The ID of the baseline with which the node is associated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>liux_test_n****</p>
      */
     @NameInMap("NodeName")
     public String nodeName;
 
     /**
      * <p>The description of the node.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>193379****</p>
      */
     @NameInMap("Owner")
     public String owner;
 
     /**
      * <p>The number of entries to return on each page. Default value: 10. Maximum value: 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The ID of the workspace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **ListNodes**.</p>
+     * <p>The operation that you want to perform. Set the value to <strong>ListNodes</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ODPS_SQL</p>
      */
     @NameInMap("ProgramType")
     public String programType;
 
     /**
      * <p>The number of entries returned per page. Default value: 10. Maximum value: 100.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PROD</p>
      */
     @NameInMap("ProjectEnv")
     public String projectEnv;
 
     /**
      * <p>The ID of the owner.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;

@@ -4,21 +4,58 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class QueryRecognizeRulesTypeResponseBody extends TeaModel {
+    /**
+     * <p>The returned data about the built-in sensitive data identification rule that is used to configure a sensitive field. The data is in the JSON format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{   &quot;HttpStatusCode&quot;: 200,   &quot;Data&quot;: [     {       &quot;Regular Expression&quot;: &quot;1&quot;     },     {       &quot;Recognize Rule&quot;: &quot;2&quot;     },     {       &quot;Sample Library&quot;: &quot;3&quot;     },     {       &quot;Model&quot;: &quot;4&quot;     }   ],   &quot;Success&quot;: true }</p>
+     */
     @NameInMap("Data")
     public Object data;
 
+    /**
+     * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9990030003</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10000001</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

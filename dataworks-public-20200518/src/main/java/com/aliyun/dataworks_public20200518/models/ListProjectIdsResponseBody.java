@@ -5,15 +5,16 @@ import com.aliyun.tea.*;
 
 public class ListProjectIdsResponseBody extends TeaModel {
     /**
-     * <p>The IDs of the DataWorks workspaces.</p>
-     * <br>
-     * <p>The IDs of the workspaces on which the specific Alibaba Cloud account has permissions were returned. In this example, a single workspace ID is used.</p>
+     * <p>The IDs of the DataWorks workspaces. The IDs of the workspaces on which the desired Alibaba Cloud account has permissions were returned.</p>
      */
     @NameInMap("ProjectIds")
     public java.util.List<Long> projectIds;
 
     /**
-     * <p>The ID of the request. You can troubleshoot errors based on the ID.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0b57ff7216278945532771749d****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

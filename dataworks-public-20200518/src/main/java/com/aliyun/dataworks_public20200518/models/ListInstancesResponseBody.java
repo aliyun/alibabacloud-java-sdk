@@ -5,39 +5,53 @@ import com.aliyun.tea.*;
 
 public class ListInstancesResponseBody extends TeaModel {
     /**
-     * <p>The ID of the node. You can call the [ListNodes](https://help.aliyun.com/document_detail/173979.html) operation to query the ID of the node.</p>
+     * <p>The ID of the node. You can call the <a href="https://help.aliyun.com/document_detail/173979.html">ListNodes</a> operation to query the ID of the node.</p>
      */
     @NameInMap("Data")
     public ListInstancesResponseBodyData data;
 
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Invalid.Tenant.ProjectNotExists</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The project does not exist.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The error message that is returned for the instance.</p>
-     * <br>
-     * <p>This parameter is deprecated. You can call the [GetInstanceLog](https://help.aliyun.com/document_detail/173983.html) operation to query the error information related to the node.</p>
+     * <p>This parameter is deprecated. You can call the <a href="https://help.aliyun.com/document_detail/173983.html">GetInstanceLog</a> operation to query the error information related to the node.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The name of the node.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E6F0DBDD-5AD****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The beginning of the time range to query. Specify the time in the yyyy-MM-dd HH:mm:ss format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -98,213 +112,301 @@ public class ListInstancesResponseBody extends TeaModel {
     public static class ListInstancesResponseBodyDataInstances extends TeaModel {
         /**
          * <p>The type of the workflow. Valid values:</p>
-         * <br>
-         * <p>*   DAILY: The workflow is used to run auto triggered nodes.</p>
-         * <p>*   MANUAL: The workflow is used to run manually triggered nodes.</p>
-         * <p>*   SMOKE_TEST: The workflow is used to perform smoke testing.</p>
-         * <p>*   SUPPLY_DATA: The workflow is used to backfill data.</p>
+         * <ul>
+         * <li>DAILY: The workflow is used to run auto triggered nodes.</li>
+         * <li>MANUAL: The workflow is used to run manually triggered nodes.</li>
+         * <li>SMOKE_TEST: The workflow is used to perform smoke testing.</li>
+         * <li>SUPPLY_DATA: The workflow is used to backfill data.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>123123</p>
          */
         @NameInMap("BaselineId")
         public Long baselineId;
 
         /**
          * <p>The time when the instance started to run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1590416703313</p>
          */
         @NameInMap("BeginRunningTime")
         public Long beginRunningTime;
 
         /**
          * <p>The time when the node stopped running.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1590416703313</p>
          */
         @NameInMap("BeginWaitResTime")
         public Long beginWaitResTime;
 
         /**
          * <p>The ID of the request. You can use the ID to locate logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1590416703313</p>
          */
         @NameInMap("BeginWaitTimeTime")
         public Long beginWaitTimeTime;
 
         /**
          * <p>The number of entries to return on each page. Default value: 10. Maximum value: 100.</p>
-         * <br>
          * <p>You cannot specify the sorting method for the instances to be returned by this operation. By default, the instances are sorted in descending order of the time when the instances were created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1590336000000</p>
          */
         @NameInMap("Bizdate")
         public Long bizdate;
 
         /**
          * <p>The ID of the workflow to which the node belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("BusinessId")
         public Long businessId;
 
         /**
          * <p>The number of times the node can be rerun. The value of this parameter can be empty or an integer that is greater than or equal to 0.</p>
-         * <br>
-         * <p>*   If the value of this parameter is empty, the number of times that the node can be rerun is not specified.</p>
-         * <p>*   If the value of this parameter is 0, the node cannot be rerun.</p>
-         * <p>*   If the value of this parameter is a positive integer such as n, the node can be rerun n times. For example, if the value of this parameter is 1, the node can be rerun once. If the value of this parameter is 2, the node can be rerun twice.</p>
+         * <ul>
+         * <li>If the value of this parameter is empty, the number of times that the node can be rerun is not specified.</li>
+         * <li>If the value of this parameter is 0, the node cannot be rerun.</li>
+         * <li>If the value of this parameter is a positive integer such as n, the node can be rerun n times. For example, if the value of this parameter is 1, the node can be rerun once. If the value of this parameter is 2, the node can be rerun twice.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>odps_first</p>
          */
         @NameInMap("Connection")
         public String connection;
 
         /**
          * <p>The interval at which the node is rerun after the node fails to run. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1590416703313</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
-         * <p>The ID of the node. You can call the [ListNodes](https://help.aliyun.com/document_detail/173979.html) operation to query the ID of the node.</p>
+         * <p>The ID of the node. You can call the <a href="https://help.aliyun.com/document_detail/173979.html">ListNodes</a> operation to query the ID of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test</p>
          */
         @NameInMap("CreateUser")
         public String createUser;
 
         /**
          * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1590422400000</p>
          */
         @NameInMap("CycTime")
         public Long cycTime;
 
         /**
          * <p>The time when the instance started to wait for resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>33845</p>
          */
         @NameInMap("DagId")
         public Long dagId;
 
         /**
          * <p>The data timestamp of the instance. In most cases, the value is one day before the time when the instance was run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DAILY</p>
          */
         @NameInMap("DagType")
         public String dagType;
 
         /**
          * <p>The operation that you want to perform.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;projectName&quot;:&quot;ztjy_dim&quot;,&quot;tableName&quot;:&quot;dim_user_agent_manage_area_a&quot;,&quot;partition&quot;:&quot;ds\u003d$[yyyy-mm-dd-1]&quot;}]</p>
          */
         @NameInMap("DqcDescription")
         public String dqcDescription;
 
         /**
          * <p>The status of the node. Valid values:</p>
-         * <br>
-         * <p>*   NOT_RUN: The node is not run.</p>
-         * <p>*   WAIT_TIME: The node is waiting for the scheduling time to arrive.</p>
-         * <p>*   WAIT_RESOURCE: The node is waiting for resources.</p>
-         * <p>*   RUNNING: The node is running.</p>
-         * <p>*   CHECKING: Data quality is being checked for the node.</p>
-         * <p>*   CHECKING_CONDITION: Branch conditions are being checked for the node.</p>
-         * <p>*   FAILURE: The node fails to run.</p>
-         * <p>*   SUCCESS: The node is successfully run.</p>
+         * <ul>
+         * <li>NOT_RUN: The node is not run.</li>
+         * <li>WAIT_TIME: The node is waiting for the scheduling time to arrive.</li>
+         * <li>WAIT_RESOURCE: The node is waiting for resources.</li>
+         * <li>RUNNING: The node is running.</li>
+         * <li>CHECKING: Data quality is being checked for the node.</li>
+         * <li>CHECKING_CONDITION: Branch conditions are being checked for the node.</li>
+         * <li>FAILURE: The node fails to run.</li>
+         * <li>SUCCESS: The node is successfully run.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("DqcType")
         public Integer dqcType;
 
         /**
          * <p>The name of the account that is used to run the instance. For example, if an account named Test was used to run the instance to backfill data, the value of this parameter is Test.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>error message</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         /**
          * <p>The ID of the Alibaba Cloud account used by the workspace administrator. You can log on to the Alibaba Cloud Management Console and view the ID on the Security Settings page of the Account Center console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1590416703313</p>
          */
         @NameInMap("FinishTime")
         public Long finishTime;
 
         /**
          * <p>The number of the page to return. Minimum value:1. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         @NameInMap("InstanceId")
         public Long instanceId;
 
         /**
-         * <p>The name of the workflow. You can call the [ListBusiness](https://help.aliyun.com/document_detail/173945.html) operation to query the name of the workflow.</p>
+         * <p>The name of the workflow. You can call the <a href="https://help.aliyun.com/document_detail/173945.html">ListBusiness</a> operation to query the name of the workflow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1590416703313</p>
          */
         @NameInMap("ModifyTime")
         public Long modifyTime;
 
         /**
          * <p>The environment of the workspace. Valid values: PROD and DEV. The value PROD indicates the production environment. The value DEV indicates the development environment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>33115</p>
          */
         @NameInMap("NodeId")
         public Long nodeId;
 
         /**
          * <p>The ID of the workflow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kzh</p>
          */
         @NameInMap("NodeName")
         public String nodeName;
 
         /**
          * <p>The table and partition filter expression in Data Quality that are associated with the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bizdate=$bizdate tbods=$tbods</p>
          */
         @NameInMap("ParamValues")
         public String paramValues;
 
         /**
          * <p>The total number of instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Priority")
         public Integer priority;
 
         /**
-         * <p>The type of the node. You can call the [ListNodes](https://help.aliyun.com/document_detail/173979.html) operation to query the type of the node.</p>
+         * <p>The type of the node. You can call the <a href="https://help.aliyun.com/document_detail/173979.html">ListNodes</a> operation to query the type of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         @NameInMap("RelatedFlowId")
         public Long relatedFlowId;
 
         /**
          * <p>The scheduling type of the node. Valid values:</p>
-         * <br>
-         * <p>*   NORMAL(0): The node is an auto triggered node. The scheduling system regularly runs the node.</p>
-         * <br>
-         * <p>*   MANUAL(1): The node is a manually triggered node. The scheduling system does not regularly run the node.</p>
-         * <br>
-         * <p>*   PAUSE(2): The node is a frozen node. The scheduling system regularly runs the node but sets the status of the node to failed when the scheduling system starts to run the node.</p>
-         * <br>
-         * <p>*   SKIP(3): The node is a dry-run node. The scheduling system regularly runs the node but sets the status of the node to succeeded when the scheduling system starts to run the node.</p>
-         * <br>
-         * <p>*   SKIP_UNCHOOSE(4): The node is an unselected node in a temporary workflow. This type of node exists only in temporary workflows. The scheduling system sets the status of the node to succeeded when the scheduling system starts to run the node.</p>
-         * <br>
-         * <p>*   SKIP_CYCLE(5): The node is a node that is scheduled by week or month and is waiting for the scheduling time to arrive. The scheduling system regularly runs the node but sets the status of the node to succeeded when the scheduling system starts to run the node.</p>
-         * <br>
-         * <p>*   CONDITION_UNCHOOSE(6): The node is not selected by its ancestor branch node and is run as a dry-run node.</p>
-         * <br>
-         * <p>    REALTIME_DEPRECATED(7): The node has instances that are generated in real time but deprecated. The scheduling system sets the status of the node to succeeded.</p>
+         * <ul>
+         * <li><p>NORMAL(0): The node is an auto triggered node. The scheduling system regularly runs the node.</p>
+         * </li>
+         * <li><p>MANUAL(1): The node is a manually triggered node. The scheduling system does not regularly run the node.</p>
+         * </li>
+         * <li><p>PAUSE(2): The node is a frozen node. The scheduling system regularly runs the node but sets the status of the node to failed when the scheduling system starts to run the node.</p>
+         * </li>
+         * <li><p>SKIP(3): The node is a dry-run node. The scheduling system regularly runs the node but sets the status of the node to succeeded when the scheduling system starts to run the node.</p>
+         * </li>
+         * <li><p>SKIP_UNCHOOSE(4): The node is an unselected node in a temporary workflow. This type of node exists only in temporary workflows. The scheduling system sets the status of the node to succeeded when the scheduling system starts to run the node.</p>
+         * </li>
+         * <li><p>SKIP_CYCLE(5): The node is a node that is scheduled by week or month and is waiting for the scheduling time to arrive. The scheduling system regularly runs the node but sets the status of the node to succeeded when the scheduling system starts to run the node.</p>
+         * </li>
+         * <li><p>CONDITION_UNCHOOSE(6): The node is not selected by its ancestor branch node and is run as a dry-run node.</p>
+         * <p>REALTIME_DEPRECATED(7): The node has instances that are generated in real time but deprecated. The scheduling system sets the status of the node to succeeded.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>60000</p>
          */
         @NameInMap("RepeatInterval")
         public Long repeatInterval;
 
         /**
          * <p>The status of the node. Valid values:</p>
-         * <br>
-         * <p>*   NOT_RUN: The node is not run.</p>
-         * <p>*   WAIT_TIME: The node is waiting for the scheduling time to arrive.</p>
-         * <p>*   WAIT_RESOURCE: The node is waiting for resources.</p>
-         * <p>*   RUNNING: The node is running.</p>
-         * <p>*   CHECKING: Data quality is being checked for the node.</p>
-         * <p>*   CHECKING_CONDITION: Branch conditions are being checked for the node.</p>
-         * <p>*   FAILURE: The node fails to run.</p>
-         * <p>*   SUCCESS: The node is successfully run.</p>
+         * <ul>
+         * <li>NOT_RUN: The node is not run.</li>
+         * <li>WAIT_TIME: The node is waiting for the scheduling time to arrive.</li>
+         * <li>WAIT_RESOURCE: The node is waiting for resources.</li>
+         * <li>RUNNING: The node is running.</li>
+         * <li>CHECKING: Data quality is being checked for the node.</li>
+         * <li>CHECKING_CONDITION: Branch conditions are being checked for the node.</li>
+         * <li>FAILURE: The node fails to run.</li>
+         * <li>SUCCESS: The node is successfully run.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Repeatability")
         public Boolean repeatability;
 
         /**
          * <p>The data timestamp of the instances that you want to query. Specify the timestamp in the yyyy-MM-dd HH:mm:ss format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NOT_RUN</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The ID of the workspace. You can call the [ListProjects](https://help.aliyun.com/document_detail/178393.html) operation to query the ID of the workspace.</p>
+         * <p>The ID of the workspace. You can call the <a href="https://help.aliyun.com/document_detail/178393.html">ListProjects</a> operation to query the ID of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("TaskRerunTime")
         public Integer taskRerunTime;
 
         /**
          * <p>The information about the instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL(0)</p>
          */
         @NameInMap("TaskType")
         public String taskType;
@@ -542,27 +644,35 @@ public class ListInstancesResponseBody extends TeaModel {
 
     public static class ListInstancesResponseBodyData extends TeaModel {
         /**
-         * <p>The name of the node. You can call the [ListNodes](https://help.aliyun.com/document_detail/173979.html) operation to query the name of the node.</p>
+         * <p>The name of the node. You can call the <a href="https://help.aliyun.com/document_detail/173979.html">ListNodes</a> operation to query the name of the node.</p>
          */
         @NameInMap("Instances")
         public java.util.List<ListInstancesResponseBodyDataInstances> instances;
 
         /**
          * <p>The time when the node was scheduled to run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
         /**
          * <p>The end of the time range to query. Specify the time in the yyyy-MM-dd HH:mm:ss format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The priority of the instance. Valid values: 1, 3, 5, 7, and 8.</p>
-         * <br>
          * <p>A greater value indicates a higher priority. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>66</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

@@ -5,37 +5,52 @@ import com.aliyun.tea.*;
 
 public class GetMetaCategoryResponseBody extends TeaModel {
     /**
-     * <p>The returned result.</p>
+     * <p>The business data.</p>
      */
     @NameInMap("Data")
     public GetMetaCategoryResponseBodyData data;
 
     /**
-     * <p>The error code returned.</p>
+     * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Invalid.Tenant.ConnectionNotExists</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The connection does not exist.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0bc1ec92159376</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -95,55 +110,82 @@ public class GetMetaCategoryResponseBody extends TeaModel {
 
     public static class GetMetaCategoryResponseBodyDataDataEntityList extends TeaModel {
         /**
-         * <p>The ID of the category.</p>
+         * <p>The category ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>133</p>
          */
         @NameInMap("CategoryId")
         public Long categoryId;
 
         /**
          * <p>The remarks of the category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>category 1</p>
          */
         @NameInMap("Comment")
         public String comment;
 
         /**
          * <p>The time when the category was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1541576644000</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
          * <p>The number of category levels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Depth")
         public Integer depth;
 
         /**
          * <p>The ID of the user that performed the last operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         @NameInMap("LastOperatorId")
         public String lastOperatorId;
 
         /**
          * <p>The time when the category was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1541576644000</p>
          */
         @NameInMap("ModifiedTime")
         public Long modifiedTime;
 
         /**
          * <p>The name of the category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>category 1</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The ID of the category owner.</p>
+         * <p>The category owner ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("OwnerId")
         public String ownerId;
 
         /**
-         * <p>The ID of the parent category.</p>
+         * <p>The parent category ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         @NameInMap("ParentCategoryId")
         public Long parentCategoryId;
@@ -235,19 +277,28 @@ public class GetMetaCategoryResponseBody extends TeaModel {
         public java.util.List<GetMetaCategoryResponseBodyDataDataEntityList> dataEntityList;
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageNum")
         public Integer pageNum;
 
         /**
-         * <p>The number of entries returned per page. Default value: 10. Maximum value: 100.</p>
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
-         * <p>The total number of categories.</p>
+         * <p>The total number of categories returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("TotalCount")
         public Long totalCount;

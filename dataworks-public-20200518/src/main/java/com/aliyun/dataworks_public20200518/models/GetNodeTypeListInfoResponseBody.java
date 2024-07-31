@@ -4,9 +4,18 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetNodeTypeListInfoResponseBody extends TeaModel {
+    /**
+     * <p>The list of node types.</p>
+     */
     @NameInMap("NodeTypeInfoList")
     public GetNodeTypeListInfoResponseBodyNodeTypeInfoList nodeTypeInfoList;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0000-ABCD-EFG****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +41,21 @@ public class GetNodeTypeListInfoResponseBody extends TeaModel {
     }
 
     public static class GetNodeTypeListInfoResponseBodyNodeTypeInfoListNodeTypeInfo extends TeaModel {
+        /**
+         * <p>The type of the node, which is specified by a number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("NodeType")
         public Integer nodeType;
 
+        /**
+         * <p>The name of the node type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ODPS SQL</p>
+         */
         @NameInMap("NodeTypeName")
         public String nodeTypeName;
 
@@ -62,15 +83,36 @@ public class GetNodeTypeListInfoResponseBody extends TeaModel {
     }
 
     public static class GetNodeTypeListInfoResponseBodyNodeTypeInfoList extends TeaModel {
+        /**
+         * <p>The information about a node type.</p>
+         */
         @NameInMap("NodeTypeInfo")
         public java.util.List<GetNodeTypeListInfoResponseBodyNodeTypeInfoListNodeTypeInfo> nodeTypeInfo;
 
+        /**
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

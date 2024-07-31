@@ -5,19 +5,29 @@ import com.aliyun.tea.*;
 
 public class ListRefDISyncTasksResponseBody extends TeaModel {
     /**
-     * <p>The data returned for the query.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("Data")
     public ListRefDISyncTasksResponseBodyData data;
 
+    /**
+     * <p>The request ID. You can locate logs and troubleshoot issues based on the ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0bc1411515937635973****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   true: The request was successful.</p>
-     * <p>*   false: The request failed.</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -53,42 +63,50 @@ public class ListRefDISyncTasksResponseBody extends TeaModel {
 
     public static class ListRefDISyncTasksResponseBodyDataDISyncTasks extends TeaModel {
         /**
-         * <p>The destination data source of the sync node.</p>
-         * <br>
-         * <p>If the sync node has multiple destination data sources, the return value is a JSON array, such as \\\\"odps_writer\\\\", \\\\"mysql\\\\".</p>
-         * <br>
-         * <p>If the RefType parameter is set to to, the sync nodes that use the specified data source as the destination data source are returned. In this case, the value of this parameter indicates the specified data source.</p>
+         * <p>The destination of the synchronization task. If the synchronization task has multiple destinations, the return value is a JSON array, such as \\&quot;odps_writer\\&quot;, \\&quot;mysql\\&quot;. If the RefType parameter is set to to, the synchronization tasks that use the specified data source as the destination are returned. In this case, the value of this parameter indicates the specified data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[\&quot;qcc_polardb2\&quot;]</p>
          */
         @NameInMap("DiDestinationDatasource")
         public String diDestinationDatasource;
 
         /**
-         * <p>The source data source of the sync node.</p>
-         * <br>
-         * <p>If the sync node has multiple source data sources, the return value is a JSON array, such as \\\\"odps_writer\\\\", \\\\"mysql\\\\".</p>
-         * <br>
-         * <p>If the RefType parameter is set to from, the sync nodes that use the specified data source as the source data source are returned. In this case, the value of this parameter indicates the specified data source.</p>
+         * <p>The source of the synchronization task. If the synchronization task has multiple sources, the return value is a JSON array, such as \\&quot;odps_writer\\&quot;, \\&quot;mysql\\&quot;. If the RefType parameter is set to from, the synchronization tasks that use the specified data source as the source are returned. In this case, the value of this parameter indicates the specified data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[\&quot;odps_writer\&quot;]</p>
          */
         @NameInMap("DiSourceDatasource")
         public String diSourceDatasource;
 
         /**
-         * <p>The ID of the sync node.</p>
+         * <p>The ID of the synchronization task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100000</p>
          */
         @NameInMap("NodeId")
         public Long nodeId;
 
         /**
-         * <p>The name of the sync node.</p>
+         * <p>The name of the synchronization task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abcd1234</p>
          */
         @NameInMap("NodeName")
         public String nodeName;
 
         /**
-         * <p>The type of the sync node. Valid values:</p>
-         * <br>
-         * <p>*   DI_OFFLINE: batch sync node</p>
-         * <p>*   DI_REALTIME: real-time sync node</p>
+         * <p>The type of the synchronization task. Valid values:</p>
+         * <ul>
+         * <li>DI_OFFLINE: batch synchronization task</li>
+         * <li>DI_REALTIME: real-time synchronization task</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DI_OFFLINE</p>
          */
         @NameInMap("TaskType")
         public String taskType;
@@ -142,9 +160,7 @@ public class ListRefDISyncTasksResponseBody extends TeaModel {
 
     public static class ListRefDISyncTasksResponseBodyData extends TeaModel {
         /**
-         * <p>The details of the sync nodes.</p>
-         * <br>
-         * <p>A data source is usually associated with multiple sync nodes. Therefore, the value of this parameter is an array. The following parameters are the elements in the array. The sample values of these parameters show the details of a sync node.</p>
+         * <p>The details of the synchronization tasks. In most cases, a data source is used by multiple synchronization tasks. Therefore, the value of this parameter is an array. The following parameters are the elements in the array. The sample values of these parameters show the details of a synchronization task.</p>
          */
         @NameInMap("DISyncTasks")
         public java.util.List<ListRefDISyncTasksResponseBodyDataDISyncTasks> DISyncTasks;

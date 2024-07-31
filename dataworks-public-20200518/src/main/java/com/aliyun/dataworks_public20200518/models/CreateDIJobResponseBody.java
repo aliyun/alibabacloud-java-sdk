@@ -4,11 +4,20 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class CreateDIJobResponseBody extends TeaModel {
+    /**
+     * <p>The synchronization task ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>11792</p>
+     */
     @NameInMap("DIJobId")
     public Long DIJobId;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID. You can use the request ID to query logs and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4F6AB6B3-41FB-5EBB-AFB2-0C98D49DA2BB</p>
      */
     @NameInMap("RequestId")
     public String requestId;

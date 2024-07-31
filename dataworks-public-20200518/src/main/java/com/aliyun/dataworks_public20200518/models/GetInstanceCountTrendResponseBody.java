@@ -4,9 +4,18 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetInstanceCountTrendResponseBody extends TeaModel {
+    /**
+     * <p>The quantity trend of instances.</p>
+     */
     @NameInMap("InstanceCounts")
     public java.util.List<GetInstanceCountTrendResponseBodyInstanceCounts> instanceCounts;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>95279527adhfj****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +41,21 @@ public class GetInstanceCountTrendResponseBody extends TeaModel {
     }
 
     public static class GetInstanceCountTrendResponseBodyInstanceCounts extends TeaModel {
+        /**
+         * <p>The number of instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9527</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <p>The data timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1600963200000</p>
+         */
         @NameInMap("Date")
         public Long date;
 

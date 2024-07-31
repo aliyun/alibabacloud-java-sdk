@@ -4,21 +4,31 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetQualityRuleRequest extends TeaModel {
+    /**
+     * <p>The DataWorks workspace ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12345</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 
     /**
-     * <p>The name of the compute engine instance or data source.</p>
-     * <br>
+     * <p>The name of the compute engine or data source.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>autotest</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
 
     /**
-     * <p>The ID of the monitoring rule. You can call the [ListQualityRules](https://help.aliyun.com/document_detail/173995.html) operation to query the ID.</p>
-     * <br>
+     * <p>The monitoring rule ID. You can call the <a href="https://help.aliyun.com/document_detail/173995.html">ListQualityRules</a> operation to query the ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234</p>
      */
     @NameInMap("RuleId")
     public Long ruleId;

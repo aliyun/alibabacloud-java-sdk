@@ -12,30 +12,45 @@ public class GetDeploymentResponseBody extends TeaModel {
 
     /**
      * <p>The error code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Invalid.Tenant.ConnectionNotExists</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The connection does not exist.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The ID of the request. You can troubleshoot errors based on the ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0000-ABCD-EFG****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -94,12 +109,24 @@ public class GetDeploymentResponseBody extends TeaModel {
     }
 
     public static class GetDeploymentResponseBodyDataDeployedItems extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>507642378</p>
+         */
         @NameInMap("FileId")
         public Long fileId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>7</p>
+         */
         @NameInMap("FileVersion")
         public Long fileVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
@@ -137,21 +164,31 @@ public class GetDeploymentResponseBody extends TeaModel {
     public static class GetDeploymentResponseBodyDataDeployment extends TeaModel {
         /**
          * <p>The check status of one or more files in the deployment task. If the value of the ToEnvironment parameter is 1, the files can be deployed to the production environment only when the value of the Status parameter is 1 and the CheckingStatus parameter is empty. Valid values:</p>
-         * <br>
-         * <p>*   7: The file failed the check.</p>
-         * <p>*   8: The file is being checked.</p>
+         * <ul>
+         * <li>7: The file failed the check.</li>
+         * <li>8: The file is being checked.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         @NameInMap("CheckingStatus")
         public Integer checkingStatus;
 
         /**
          * <p>The time when the deployment task was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1593877765000</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
          * <p>The ID of the Alibaba Cloud account used by the user who created the deployment task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20030****</p>
          */
         @NameInMap("CreatorId")
         public String creatorId;
@@ -164,36 +201,54 @@ public class GetDeploymentResponseBody extends TeaModel {
 
         /**
          * <p>The time when the deployment task was run. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1593877765000</p>
          */
         @NameInMap("ExecuteTime")
         public Long executeTime;
 
         /**
          * <p>The environment in which the deployment task was run. Valid values: 0 and 1. A value of 0 indicates the on-premises environment. A value of 1 indicates the development environment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("FromEnvironment")
         public Integer fromEnvironment;
 
         /**
          * <p>The ID of the Alibaba Cloud account used by the user who ran the deployment task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2003****</p>
          */
         @NameInMap("HandlerId")
         public String handlerId;
 
         /**
          * <p>The name of the deployment task. The value is the same as the name of the specific deployment task that is displayed on the Release Package page in the Deploy module.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ods_user_info_d-2020-07-04_20030****</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The status of the deployment task. Valid values: 0, 1, and 2. A value of 0 indicates that the task is ready. A value of 1 indicates that the task was successful. A value of 2 indicates that the task failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Status")
         public Integer status;
 
         /**
          * <p>The environment to which the file was deployed. Valid values: 1 and 2. A value of 1 indicates the development environment. A value of 2 indicates the production environment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ToEnvironment")
         public Integer toEnvironment;

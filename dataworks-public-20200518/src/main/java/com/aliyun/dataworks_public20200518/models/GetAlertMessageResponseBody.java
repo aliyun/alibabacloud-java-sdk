@@ -4,21 +4,58 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetAlertMessageResponseBody extends TeaModel {
+    /**
+     * <p>The details of the returned data.</p>
+     */
     @NameInMap("Data")
     public GetAlertMessageResponseBodyData data;
 
+    /**
+     * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Invalid.Tenant.ConnectionNotExists</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The specified parameters are invalid.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0000-ABCD-EFG****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,18 +113,55 @@ public class GetAlertMessageResponseBody extends TeaModel {
     }
 
     public static class GetAlertMessageResponseBodyDataInstances extends TeaModel {
+        /**
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12312312</p>
+         */
         @NameInMap("InstanceId")
         public Long instanceId;
 
+        /**
+         * <p>The node ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
+         */
         @NameInMap("NodeId")
         public Long nodeId;
 
+        /**
+         * <p>The name of the node.</p>
+         */
         @NameInMap("NodeName")
         public String nodeName;
 
+        /**
+         * <p>The ID of the workspace to which the node belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
+         */
         @NameInMap("ProjectId")
         public Long projectId;
 
+        /**
+         * <p>The status of the instance. Valid values:</p>
+         * <ul>
+         * <li>NOT_RUN</li>
+         * <li>WAIT_TIME</li>
+         * <li>WAIT_RESOURCE</li>
+         * <li>RUNNING</li>
+         * <li>CHECKING</li>
+         * <li>CHECKING_CONDITION</li>
+         * <li>FAILURE</li>
+         * <li>SUCCESS</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NOT_RUN</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -139,15 +213,36 @@ public class GetAlertMessageResponseBody extends TeaModel {
     }
 
     public static class GetAlertMessageResponseBodyDataNodes extends TeaModel {
+        /**
+         * <p>The node ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
+         */
         @NameInMap("NodeId")
         public Long nodeId;
 
+        /**
+         * <p>The name of the node.</p>
+         */
         @NameInMap("NodeName")
         public String nodeName;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account used by the node owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>95279527952****</p>
+         */
         @NameInMap("Owner")
         public String owner;
 
+        /**
+         * <p>The ID of the workspace to which the node belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
+         */
         @NameInMap("ProjectId")
         public Long projectId;
 
@@ -191,24 +286,69 @@ public class GetAlertMessageResponseBody extends TeaModel {
     }
 
     public static class GetAlertMessageResponseBodyDataSlaAlert extends TeaModel {
+        /**
+         * <p>The baseline ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15142123</p>
+         */
         @NameInMap("BaselineId")
         public Long baselineId;
 
+        /**
+         * <p>The name of the baseline.</p>
+         */
         @NameInMap("BaselineName")
         public String baselineName;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account used by the baseline owner. Multiple IDs are separated by commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>952795279****</p>
+         */
         @NameInMap("BaselineOwner")
         public String baselineOwner;
 
+        /**
+         * <p>The data timestamp of the baseline instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1553443200000</p>
+         */
         @NameInMap("Bizdate")
         public Long bizdate;
 
+        /**
+         * <p>The ID of the cycle of the baseline instance. Valid values of the ID of an hour-level cycle: [1,24]. The ID of a day-level cycle is 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("InGroupId")
         public Integer inGroupId;
 
+        /**
+         * <p>The ID of the workspace to which the baseline belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
+         */
         @NameInMap("ProjectId")
         public Long projectId;
 
+        /**
+         * <p>The status of the baseline. Valid values:</p>
+         * <ul>
+         * <li>ERROR</li>
+         * <li>SAFE</li>
+         * <li>DANGEROUS</li>
+         * <li>OVER</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SAFE</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -276,21 +416,60 @@ public class GetAlertMessageResponseBody extends TeaModel {
     }
 
     public static class GetAlertMessageResponseBodyDataTopics extends TeaModel {
+        /**
+         * <p>The ID of the instance that triggered the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
+         */
         @NameInMap("InstanceId")
         public Long instanceId;
 
+        /**
+         * <p>The ID of the node that triggered the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
+         */
         @NameInMap("NodeId")
         public Long nodeId;
 
+        /**
+         * <p>The event ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>412431</p>
+         */
         @NameInMap("TopicId")
         public Long topicId;
 
+        /**
+         * <p>The name of the event.</p>
+         */
         @NameInMap("TopicName")
         public String topicName;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account used by the event owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9527952795****</p>
+         */
         @NameInMap("TopicOwner")
         public String topicOwner;
 
+        /**
+         * <p>The status of the event. Valid values:</p>
+         * <ul>
+         * <li>IGNORE</li>
+         * <li>NEW</li>
+         * <li>FIXING</li>
+         * <li>RECOVER</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>FIXING</p>
+         */
         @NameInMap("TopicStatus")
         public String topicStatus;
 
@@ -350,42 +529,120 @@ public class GetAlertMessageResponseBody extends TeaModel {
     }
 
     public static class GetAlertMessageResponseBodyData extends TeaModel {
+        /**
+         * <p>The alert ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("AlertId")
         public Long alertId;
 
+        /**
+         * <p>The sending status of the notification. Valid values:</p>
+         * <ul>
+         * <li>READY_TO_SEND: The notification is waiting to be sent.</li>
+         * <li>SEND_FAIL: The notification fails to be sent.</li>
+         * <li>SEND_SUCCESS: The notification is sent.</li>
+         * <li>SEND_OVERLIMIT: The number of notifications that are sent exceeds the upper limit.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>READY_TO_SEND</p>
+         */
         @NameInMap("AlertMessageStatus")
         public String alertMessageStatus;
 
+        /**
+         * <p>The notification method. Valid values:</p>
+         * <ul>
+         * <li>MAIL.</li>
+         * <li>SMS.</li>
+         * <li>PHONE. Only DataWorks Professional Edition and more advanced editions support the PHONE notification method.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SMS</p>
+         */
         @NameInMap("AlertMethod")
         public String alertMethod;
 
+        /**
+         * <p>The time when the alert was reported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1553524393000</p>
+         */
         @NameInMap("AlertTime")
         public Long alertTime;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account used by the alert recipient.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9527952795****</p>
+         */
         @NameInMap("AlertUser")
         public String alertUser;
 
+        /**
+         * <p>The content of the alert.</p>
+         */
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <p>The instances that triggered the custom alert rule. This parameter is returned if the value of the Source parameter is REMIND_ALERT. This parameter is left empty if the value of the Source parameter is not REMIND_ALERT.</p>
+         */
         @NameInMap("Instances")
         public java.util.List<GetAlertMessageResponseBodyDataInstances> instances;
 
+        /**
+         * <p>The nodes returned for different alert sources. The nodes that form a loop are returned if the value of the Source parameter is NODE_CYCLE_ALERT. The nodes that are isolated are returned if the value of the Source parameter is NODE_LONELY_ALERT.</p>
+         */
         @NameInMap("Nodes")
         public java.util.List<GetAlertMessageResponseBodyDataNodes> nodes;
 
+        /**
+         * <p>The ID of the custom alert rule that was triggered. This parameter is returned if the value of the Source parameter is REMIND_ALERT.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
+         */
         @NameInMap("RemindId")
         public Long remindId;
 
+        /**
+         * <p>The name of the custom alert rule that was triggered. This parameter is returned if the value of the Source parameter is REMIND_ALERT.</p>
+         */
         @NameInMap("RemindName")
         public String remindName;
 
+        /**
+         * <p>The basic information about the baseline instance that triggered an alert. This parameter is returned if the value of the Source parameter is SLA_ALERT. This parameter is left empty if the value of the Source parameter is not SLA_ALERT.</p>
+         */
         @NameInMap("SlaAlert")
         public GetAlertMessageResponseBodyDataSlaAlert slaAlert;
 
+        /**
+         * <p>The type of the alert. Valid values:</p>
+         * <ul>
+         * <li>REMIND_ALERT: The alert is a custom alert.</li>
+         * <li>TOPIC_ALERT: The alert is an event alert.</li>
+         * <li>SLA_ALERT: The alert is a baseline alert.</li>
+         * <li>NODE_CYCLE_ALERT: The alert is reported for a node dependency loop.</li>
+         * <li>NODE_LONELY_ALERT: The alert is reported for isolated nodes.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>REMIND_ALERT</p>
+         */
         @NameInMap("Source")
         public String source;
 
+        /**
+         * <p>The events that triggered alerts. This parameter is returned if the value of the Source parameter is TOPIC_ALERT. This parameter is left empty if the value of the Source parameter is not TOPIC_ALERT.</p>
+         */
         @NameInMap("Topics")
         public java.util.List<GetAlertMessageResponseBodyDataTopics> topics;
 

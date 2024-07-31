@@ -12,6 +12,9 @@ public class GetFileTypeStatisticResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request. You can use the ID to locate logs and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SDFSDFSDF-SDFSDF-SDFDSF-SDFSDF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,16 +43,20 @@ public class GetFileTypeStatisticResponseBody extends TeaModel {
     public static class GetFileTypeStatisticResponseBodyProgramTypeAndCounts extends TeaModel {
         /**
          * <p>The number of nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The type of the node.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
          * <p>6 (Shell node), 10 (ODPS SQL node), 11 (ODPS MR node), 23 (Data Integration node), 24 (ODPS Script node), 99 (zero load node), 221 (PyODPS 2 node), 225 (ODPS Spark node), 227 (EMR Hive node), 228 (EMR Spark node), 229 (EMR Spark SQL node), 230 (EMR MR node), 239 (OSS object inspection node), 257 (EMR Shell node), 258 (EMR Spark Shell node), 259 (EMR Presto node), 260 (EMR Impala node), 900 (real-time data synchronization node), 1089 (cross-tenant collaboration node), 1091 (Hologres development node), 1093 (Hologres SQL node), 1100 (assignment node), and 1221 (PyODPS 3 node).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ODPS_SQL</p>
          */
         @NameInMap("ProgramType")
         public String programType;

@@ -4,6 +4,12 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class CreateProjectMemberResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1AFAE64E-D1BE-432B-A9****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

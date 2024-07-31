@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class TopTenErrorTimesInstanceResponseBody extends TeaModel {
     /**
-     * <p>The ranking of nodes on which errors occur.</p>
+     * <p>The ranking data of nodes on which errors occurred.</p>
      */
     @NameInMap("InstanceErrorRank")
     public TopTenErrorTimesInstanceResponseBodyInstanceErrorRank instanceErrorRank;
 
     /**
-     * <p>The ID of the request. You can use the ID to troubleshoot issues.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>952795279527****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,13 +42,19 @@ public class TopTenErrorTimesInstanceResponseBody extends TeaModel {
 
     public static class TopTenErrorTimesInstanceResponseBodyInstanceErrorRankErrorRank extends TeaModel {
         /**
-         * <p>The number of errors that occur on the node.</p>
+         * <p>The number of errors that occurred on the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
-         * <p>The ID of the node.</p>
+         * <p>The node ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9527</p>
          */
         @NameInMap("NodeId")
         public Long nodeId;
@@ -57,23 +66,28 @@ public class TopTenErrorTimesInstanceResponseBody extends TeaModel {
         public String nodeName;
 
         /**
-         * <p>The user identifier (UID) of the Alibaba Cloud account used by the owner of the node.</p>
+         * <p>The ID of the Alibaba Cloud account used by the node owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>952795279527</p>
          */
         @NameInMap("Owner")
         public String owner;
 
         /**
-         * <p>The type of the node.</p>
-         * <br>
-         * <p>Valid values:</p>
-         * <br>
-         * <p>6 (Shell node), 10 (ODPS SQL node), 11 (ODPS MR node), 23 (Data Integration node), 24 (ODPS Script node), 99 (zero load node), 221 (PyODPS 2 node), 225 (ODPS Spark node), 227 (EMR Hive node), 228 (EMR Spark node), 229 (EMR Spark SQL node), 230 (EMR MR node), 239 (OSS object inspection node), 257 (EMR Shell node), 258 (EMR Spark Shell node), 259 (EMR Presto node), 260 (EMR Impala node), 900 (real-time data synchronization node), 1089 (cross-tenant collaboration node), 1091 (Hologres development node), 1093 (Hologres SQL node), 1100 (assignment node), and 1221 (PyODPS 3 node).</p>
+         * <p>The type of the node. Valid values: 6 (Shell), 10 (ODPS SQL), 11 (ODPS MR), 23 (Data Integration), 24 (ODPS Script), 99 (zero load), 221 (PyODPS 2), 225 (ODPS Spark), 227 (EMR Hive), 228 (EMR Spark), 229 (EMR Spark SQL), 230 (EMR MR), 239 (OSS object inspection), 257 (EMR Shell), 258 (EMR Spark Shell), 259 (EMR Presto), 260 (EMR Impala), 900 (real-time synchronization), 1089 (cross-tenant collaboration), 1091 (Hologres development), 1093 (Hologres SQL), 1100 (assignment), and 1221 (PyODPS 3)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("ProgramType")
         public Integer programType;
 
         /**
-         * <p>The ID of the DataWorks workspace.</p>
+         * <p>The DataWorks workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9527</p>
          */
         @NameInMap("ProjectId")
         public Long projectId;
@@ -135,13 +149,16 @@ public class TopTenErrorTimesInstanceResponseBody extends TeaModel {
 
     public static class TopTenErrorTimesInstanceResponseBodyInstanceErrorRank extends TeaModel {
         /**
-         * <p>The ranking of nodes on which errors occur within the last month.</p>
+         * <p>The ranking data of nodes on which errors occurred within the last month.</p>
          */
         @NameInMap("ErrorRank")
         public java.util.List<TopTenErrorTimesInstanceResponseBodyInstanceErrorRankErrorRank> errorRank;
 
         /**
-         * <p>The time when the ranking was updated.</p>
+         * <p>The timestamp at which the rankings were updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1600963200000</p>
          */
         @NameInMap("UpdateTime")
         public Long updateTime;
