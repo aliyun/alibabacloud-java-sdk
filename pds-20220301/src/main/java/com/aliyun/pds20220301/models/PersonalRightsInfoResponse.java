@@ -23,7 +23,7 @@ public class PersonalRightsInfoResponse extends TeaModel {
     public PersonalRightsInfoResponse otherRights;
 
     @NameInMap("privileges")
-    public DataBoxPrivileges privileges;
+    public java.util.List<DataBoxPrivileges> privileges;
 
     @NameInMap("spu_id")
     public String spuId;
@@ -84,11 +84,11 @@ public class PersonalRightsInfoResponse extends TeaModel {
         return this.otherRights;
     }
 
-    public PersonalRightsInfoResponse setPrivileges(DataBoxPrivileges privileges) {
+    public PersonalRightsInfoResponse setPrivileges(java.util.List<DataBoxPrivileges> privileges) {
         this.privileges = privileges;
         return this;
     }
-    public DataBoxPrivileges getPrivileges() {
+    public java.util.List<DataBoxPrivileges> getPrivileges() {
         return this.privileges;
     }
 
