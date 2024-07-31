@@ -230,6 +230,80 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>接入云产品资源</p>
+     * 
+     * @param tmpReq CreateCloudResourceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateCloudResourceResponse
+     */
+    public CreateCloudResourceResponse createCloudResourceWithOptions(CreateCloudResourceRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateCloudResourceShrinkRequest request = new CreateCloudResourceShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.listen)) {
+            request.listenShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.listen, "Listen", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.redirect)) {
+            request.redirectShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.redirect, "Redirect", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.listenShrink)) {
+            query.put("Listen", request.listenShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerUserId)) {
+            query.put("OwnerUserId", request.ownerUserId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.redirectShrink)) {
+            query.put("Redirect", request.redirectShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceManagerResourceGroupId)) {
+            query.put("ResourceManagerResourceGroupId", request.resourceManagerResourceGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateCloudResource"),
+            new TeaPair("version", "2021-10-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateCloudResourceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>接入云产品资源</p>
+     * 
+     * @param request CreateCloudResourceRequest
+     * @return CreateCloudResourceResponse
+     */
+    public CreateCloudResourceResponse createCloudResource(CreateCloudResourceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createCloudResourceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Creates a protected object group.</p>
      * 
      * @param request CreateDefenseResourceGroupRequest
@@ -508,6 +582,86 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateDomainResponse createDomain(CreateDomainRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createDomainWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a node group for a hybrid cloud cluster.</p>
+     * 
+     * @param request CreateHybridCloudGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateHybridCloudGroupResponse
+     */
+    public CreateHybridCloudGroupResponse createHybridCloudGroupWithOptions(CreateHybridCloudGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.backSourceMark)) {
+            query.put("BackSourceMark", request.backSourceMark);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            query.put("ClusterId", request.clusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupName)) {
+            query.put("GroupName", request.groupName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupType)) {
+            query.put("GroupType", request.groupType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.loadBalanceIp)) {
+            query.put("LoadBalanceIp", request.loadBalanceIp);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.locationCode)) {
+            query.put("LocationCode", request.locationCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.remark)) {
+            query.put("Remark", request.remark);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceManagerResourceGroupId)) {
+            query.put("ResourceManagerResourceGroupId", request.resourceManagerResourceGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateHybridCloudGroup"),
+            new TeaPair("version", "2021-10-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateHybridCloudGroupResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a node group for a hybrid cloud cluster.</p>
+     * 
+     * @param request CreateHybridCloudGroupRequest
+     * @return CreateHybridCloudGroupResponse
+     */
+    public CreateHybridCloudGroupResponse createHybridCloudGroup(CreateHybridCloudGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createHybridCloudGroupWithOptions(request, runtime);
     }
 
     /**
@@ -894,6 +1048,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteApisecEventResponse deleteApisecEvent(DeleteApisecEventRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteApisecEventWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除云产品资源</p>
+     * 
+     * @param request DeleteCloudResourceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteCloudResourceResponse
+     */
+    public DeleteCloudResourceResponse deleteCloudResourceWithOptions(DeleteCloudResourceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.port)) {
+            query.put("Port", request.port);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceInstanceId)) {
+            query.put("ResourceInstanceId", request.resourceInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceManagerResourceGroupId)) {
+            query.put("ResourceManagerResourceGroupId", request.resourceManagerResourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceProduct)) {
+            query.put("ResourceProduct", request.resourceProduct);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteCloudResource"),
+            new TeaPair("version", "2021-10-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteCloudResourceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除云产品资源</p>
+     * 
+     * @param request DeleteCloudResourceRequest
+     * @return DeleteCloudResourceResponse
+     */
+    public DeleteCloudResourceResponse deleteCloudResource(DeleteCloudResourceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteCloudResourceWithOptions(request, runtime);
     }
 
     /**
@@ -1910,6 +2128,138 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询云产品的端口详情</p>
+     * 
+     * @param request DescribeCloudResourceAccessPortDetailsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeCloudResourceAccessPortDetailsResponse
+     */
+    public DescribeCloudResourceAccessPortDetailsResponse describeCloudResourceAccessPortDetailsWithOptions(DescribeCloudResourceAccessPortDetailsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.port)) {
+            query.put("Port", request.port);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.protocol)) {
+            query.put("Protocol", request.protocol);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceInstanceId)) {
+            query.put("ResourceInstanceId", request.resourceInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceManagerResourceGroupId)) {
+            query.put("ResourceManagerResourceGroupId", request.resourceManagerResourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceProduct)) {
+            query.put("ResourceProduct", request.resourceProduct);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeCloudResourceAccessPortDetails"),
+            new TeaPair("version", "2021-10-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeCloudResourceAccessPortDetailsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询云产品的端口详情</p>
+     * 
+     * @param request DescribeCloudResourceAccessPortDetailsRequest
+     * @return DescribeCloudResourceAccessPortDetailsResponse
+     */
+    public DescribeCloudResourceAccessPortDetailsResponse describeCloudResourceAccessPortDetails(DescribeCloudResourceAccessPortDetailsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeCloudResourceAccessPortDetailsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询已接入云产品的端口列表</p>
+     * 
+     * @param request DescribeCloudResourceAccessedPortsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeCloudResourceAccessedPortsResponse
+     */
+    public DescribeCloudResourceAccessedPortsResponse describeCloudResourceAccessedPortsWithOptions(DescribeCloudResourceAccessedPortsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceInstanceId)) {
+            query.put("ResourceInstanceId", request.resourceInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceManagerResourceGroupId)) {
+            query.put("ResourceManagerResourceGroupId", request.resourceManagerResourceGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeCloudResourceAccessedPorts"),
+            new TeaPair("version", "2021-10-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeCloudResourceAccessedPortsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询已接入云产品的端口列表</p>
+     * 
+     * @param request DescribeCloudResourceAccessedPortsRequest
+     * @return DescribeCloudResourceAccessedPortsResponse
+     */
+    public DescribeCloudResourceAccessedPortsResponse describeCloudResourceAccessedPorts(DescribeCloudResourceAccessedPortsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeCloudResourceAccessedPortsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries cloud service resources that are added to Web Application Firewall (WAF).</p>
      * 
      * @param request DescribeCloudResourcesRequest
@@ -2106,6 +2456,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeDDoSStatusResponse describeDDoSStatus(DescribeDDoSStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDDoSStatusWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询默认HTTPS配置</p>
+     * 
+     * @param request DescribeDefaultHttpsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeDefaultHttpsResponse
+     */
+    public DescribeDefaultHttpsResponse describeDefaultHttpsWithOptions(DescribeDefaultHttpsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceManagerResourceGroupId)) {
+            query.put("ResourceManagerResourceGroupId", request.resourceManagerResourceGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeDefaultHttps"),
+            new TeaPair("version", "2021-10-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDefaultHttpsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询默认HTTPS配置</p>
+     * 
+     * @param request DescribeDefaultHttpsRequest
+     * @return DescribeDefaultHttpsResponse
+     */
+    public DescribeDefaultHttpsResponse describeDefaultHttps(DescribeDefaultHttpsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeDefaultHttpsWithOptions(request, runtime);
     }
 
     /**
@@ -3266,6 +3668,98 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Obtains the rule information about a hybrid cloud cluster.</p>
+     * 
+     * @param request DescribeHybridCloudClusterRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeHybridCloudClusterRuleResponse
+     */
+    public DescribeHybridCloudClusterRuleResponse describeHybridCloudClusterRuleWithOptions(DescribeHybridCloudClusterRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeHybridCloudClusterRule"),
+            new TeaPair("version", "2021-10-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeHybridCloudClusterRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Obtains the rule information about a hybrid cloud cluster.</p>
+     * 
+     * @param request DescribeHybridCloudClusterRuleRequest
+     * @return DescribeHybridCloudClusterRuleResponse
+     */
+    public DescribeHybridCloudClusterRuleResponse describeHybridCloudClusterRule(DescribeHybridCloudClusterRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeHybridCloudClusterRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询混合云集群列表</p>
+     * 
+     * @param request DescribeHybridCloudClustersRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeHybridCloudClustersResponse
+     */
+    public DescribeHybridCloudClustersResponse describeHybridCloudClustersWithOptions(DescribeHybridCloudClustersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceManagerResourceGroupId)) {
+            query.put("ResourceManagerResourceGroupId", request.resourceManagerResourceGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeHybridCloudClusters"),
+            new TeaPair("version", "2021-10-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeHybridCloudClustersResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询混合云集群列表</p>
+     * 
+     * @param request DescribeHybridCloudClustersRequest
+     * @return DescribeHybridCloudClustersResponse
+     */
+    public DescribeHybridCloudClustersResponse describeHybridCloudClusters(DescribeHybridCloudClustersRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeHybridCloudClustersWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the hybrid cloud node groups that are added to Web Application Firewall (WAF).</p>
      * 
      * @param request DescribeHybridCloudGroupsRequest
@@ -3410,6 +3904,138 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeHybridCloudResourcesResponse describeHybridCloudResources(DescribeHybridCloudResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeHybridCloudResourcesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries information about the regions that the hybrid cloud mode supports, such as the Internet service providers (ISPs), continents, and cities.</p>
+     * 
+     * @param request DescribeHybridCloudServerRegionsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeHybridCloudServerRegionsResponse
+     */
+    public DescribeHybridCloudServerRegionsResponse describeHybridCloudServerRegionsWithOptions(DescribeHybridCloudServerRegionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionCode)) {
+            query.put("RegionCode", request.regionCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionType)) {
+            query.put("RegionType", request.regionType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceManagerResourceGroupId)) {
+            query.put("ResourceManagerResourceGroupId", request.resourceManagerResourceGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeHybridCloudServerRegions"),
+            new TeaPair("version", "2021-10-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeHybridCloudServerRegionsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries information about the regions that the hybrid cloud mode supports, such as the Internet service providers (ISPs), continents, and cities.</p>
+     * 
+     * @param request DescribeHybridCloudServerRegionsRequest
+     * @return DescribeHybridCloudServerRegionsResponse
+     */
+    public DescribeHybridCloudServerRegionsResponse describeHybridCloudServerRegions(DescribeHybridCloudServerRegionsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeHybridCloudServerRegionsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries servers that are not assigned to a hybrid cloud cluster.</p>
+     * 
+     * @param request DescribeHybridCloudUnassignedMachinesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeHybridCloudUnassignedMachinesResponse
+     */
+    public DescribeHybridCloudUnassignedMachinesResponse describeHybridCloudUnassignedMachinesWithOptions(DescribeHybridCloudUnassignedMachinesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            query.put("ClusterId", request.clusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.hostName)) {
+            query.put("HostName", request.hostName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ip)) {
+            query.put("Ip", request.ip);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceManagerResourceGroupId)) {
+            query.put("ResourceManagerResourceGroupId", request.resourceManagerResourceGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeHybridCloudUnassignedMachines"),
+            new TeaPair("version", "2021-10-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeHybridCloudUnassignedMachinesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries servers that are not assigned to a hybrid cloud cluster.</p>
+     * 
+     * @param request DescribeHybridCloudUnassignedMachinesRequest
+     * @return DescribeHybridCloudUnassignedMachinesResponse
+     */
+    public DescribeHybridCloudUnassignedMachinesResponse describeHybridCloudUnassignedMachines(DescribeHybridCloudUnassignedMachinesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeHybridCloudUnassignedMachinesWithOptions(request, runtime);
     }
 
     /**
@@ -3650,7 +4276,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取用户暂停防护状态</p>
+     * <p>Queries the protection status of Web Application Firewall (WAF).</p>
      * 
      * @param request DescribePauseProtectionStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3690,7 +4316,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取用户暂停防护状态</p>
+     * <p>Queries the protection status of Web Application Firewall (WAF).</p>
      * 
      * @param request DescribePauseProtectionStatusRequest
      * @return DescribePauseProtectionStatusResponse
@@ -5586,6 +6212,148 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>修改云产品资源</p>
+     * 
+     * @param tmpReq ModifyCloudResourceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyCloudResourceResponse
+     */
+    public ModifyCloudResourceResponse modifyCloudResourceWithOptions(ModifyCloudResourceRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ModifyCloudResourceShrinkRequest request = new ModifyCloudResourceShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.listen)) {
+            request.listenShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.listen, "Listen", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.redirect)) {
+            request.redirectShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.redirect, "Redirect", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.listenShrink)) {
+            query.put("Listen", request.listenShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.redirectShrink)) {
+            query.put("Redirect", request.redirectShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceManagerResourceGroupId)) {
+            query.put("ResourceManagerResourceGroupId", request.resourceManagerResourceGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyCloudResource"),
+            new TeaPair("version", "2021-10-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyCloudResourceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改云产品资源</p>
+     * 
+     * @param request ModifyCloudResourceRequest
+     * @return ModifyCloudResourceResponse
+     */
+    public ModifyCloudResourceResponse modifyCloudResource(ModifyCloudResourceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyCloudResourceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改默认HTTPS配置</p>
+     * 
+     * @param request ModifyDefaultHttpsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyDefaultHttpsResponse
+     */
+    public ModifyDefaultHttpsResponse modifyDefaultHttpsWithOptions(ModifyDefaultHttpsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.certId)) {
+            query.put("CertId", request.certId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cipherSuite)) {
+            query.put("CipherSuite", request.cipherSuite);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customCiphers)) {
+            query.put("CustomCiphers", request.customCiphers);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableTLSv3)) {
+            query.put("EnableTLSv3", request.enableTLSv3);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceManagerResourceGroupId)) {
+            query.put("ResourceManagerResourceGroupId", request.resourceManagerResourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.TLSVersion)) {
+            query.put("TLSVersion", request.TLSVersion);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyDefaultHttps"),
+            new TeaPair("version", "2021-10-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyDefaultHttpsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改默认HTTPS配置</p>
+     * 
+     * @param request ModifyDefaultHttpsRequest
+     * @return ModifyDefaultHttpsResponse
+     */
+    public ModifyDefaultHttpsResponse modifyDefaultHttps(ModifyDefaultHttpsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyDefaultHttpsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Modifies the configurations of a protected object group.</p>
      * 
      * @param request ModifyDefenseResourceGroupRequest
@@ -6224,6 +6992,394 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Modifies the rule of a hybrid cloud cluster.</p>
+     * 
+     * @param request ModifyHybridCloudClusterRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyHybridCloudClusterRuleResponse
+     */
+    public ModifyHybridCloudClusterRuleResponse modifyHybridCloudClusterRuleWithOptions(ModifyHybridCloudClusterRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            query.put("ClusterId", request.clusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceManagerResourceGroupId)) {
+            query.put("ResourceManagerResourceGroupId", request.resourceManagerResourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleConfig)) {
+            query.put("RuleConfig", request.ruleConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleStatus)) {
+            query.put("RuleStatus", request.ruleStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleType)) {
+            query.put("RuleType", request.ruleType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyHybridCloudClusterRule"),
+            new TeaPair("version", "2021-10-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyHybridCloudClusterRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the rule of a hybrid cloud cluster.</p>
+     * 
+     * @param request ModifyHybridCloudClusterRuleRequest
+     * @return ModifyHybridCloudClusterRuleResponse
+     */
+    public ModifyHybridCloudClusterRuleResponse modifyHybridCloudClusterRule(ModifyHybridCloudClusterRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyHybridCloudClusterRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改组信息</p>
+     * 
+     * @param request ModifyHybridCloudGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyHybridCloudGroupResponse
+     */
+    public ModifyHybridCloudGroupResponse modifyHybridCloudGroupWithOptions(ModifyHybridCloudGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            query.put("ClusterId", request.clusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
+            query.put("GroupId", request.groupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupName)) {
+            query.put("GroupName", request.groupName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.remark)) {
+            query.put("Remark", request.remark);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceManagerResourceGroupId)) {
+            query.put("ResourceManagerResourceGroupId", request.resourceManagerResourceGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyHybridCloudGroup"),
+            new TeaPair("version", "2021-10-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyHybridCloudGroupResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改组信息</p>
+     * 
+     * @param request ModifyHybridCloudGroupRequest
+     * @return ModifyHybridCloudGroupResponse
+     */
+    public ModifyHybridCloudGroupResponse modifyHybridCloudGroup(ModifyHybridCloudGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyHybridCloudGroupWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Adds a node to a node group of a hybrid cloud cluster.</p>
+     * 
+     * @param request ModifyHybridCloudGroupExpansionServerRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyHybridCloudGroupExpansionServerResponse
+     */
+    public ModifyHybridCloudGroupExpansionServerResponse modifyHybridCloudGroupExpansionServerWithOptions(ModifyHybridCloudGroupExpansionServerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            query.put("ClusterId", request.clusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
+            query.put("GroupId", request.groupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mids)) {
+            query.put("Mids", request.mids);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceManagerResourceGroupId)) {
+            query.put("ResourceManagerResourceGroupId", request.resourceManagerResourceGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyHybridCloudGroupExpansionServer"),
+            new TeaPair("version", "2021-10-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyHybridCloudGroupExpansionServerResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Adds a node to a node group of a hybrid cloud cluster.</p>
+     * 
+     * @param request ModifyHybridCloudGroupExpansionServerRequest
+     * @return ModifyHybridCloudGroupExpansionServerResponse
+     */
+    public ModifyHybridCloudGroupExpansionServerResponse modifyHybridCloudGroupExpansionServer(ModifyHybridCloudGroupExpansionServerRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyHybridCloudGroupExpansionServerWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a node from a node group of a hybrid cloud cluster.</p>
+     * 
+     * @param request ModifyHybridCloudGroupShrinkServerRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyHybridCloudGroupShrinkServerResponse
+     */
+    public ModifyHybridCloudGroupShrinkServerResponse modifyHybridCloudGroupShrinkServerWithOptions(ModifyHybridCloudGroupShrinkServerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            query.put("ClusterId", request.clusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
+            query.put("GroupId", request.groupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mids)) {
+            query.put("Mids", request.mids);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceManagerResourceGroupId)) {
+            query.put("ResourceManagerResourceGroupId", request.resourceManagerResourceGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyHybridCloudGroupShrinkServer"),
+            new TeaPair("version", "2021-10-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyHybridCloudGroupShrinkServerResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a node from a node group of a hybrid cloud cluster.</p>
+     * 
+     * @param request ModifyHybridCloudGroupShrinkServerRequest
+     * @return ModifyHybridCloudGroupShrinkServerResponse
+     */
+    public ModifyHybridCloudGroupShrinkServerResponse modifyHybridCloudGroupShrinkServer(ModifyHybridCloudGroupShrinkServerRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyHybridCloudGroupShrinkServerWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the traffic redirection status of a hybrid cloud cluster by using an SDK.</p>
+     * 
+     * @param request ModifyHybridCloudSdkPullinStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyHybridCloudSdkPullinStatusResponse
+     */
+    public ModifyHybridCloudSdkPullinStatusResponse modifyHybridCloudSdkPullinStatusWithOptions(ModifyHybridCloudSdkPullinStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mid)) {
+            query.put("Mid", request.mid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pullinStatus)) {
+            query.put("PullinStatus", request.pullinStatus);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyHybridCloudSdkPullinStatus"),
+            new TeaPair("version", "2021-10-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyHybridCloudSdkPullinStatusResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the traffic redirection status of a hybrid cloud cluster by using an SDK.</p>
+     * 
+     * @param request ModifyHybridCloudSdkPullinStatusRequest
+     * @return ModifyHybridCloudSdkPullinStatusResponse
+     */
+    public ModifyHybridCloudSdkPullinStatusResponse modifyHybridCloudSdkPullinStatus(ModifyHybridCloudSdkPullinStatusRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyHybridCloudSdkPullinStatusWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the information about a hybrid cloud node.</p>
+     * 
+     * @param request ModifyHybridCloudServerRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyHybridCloudServerResponse
+     */
+    public ModifyHybridCloudServerResponse modifyHybridCloudServerWithOptions(ModifyHybridCloudServerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.continents)) {
+            query.put("Continents", request.continents);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customName)) {
+            query.put("CustomName", request.customName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mid)) {
+            query.put("Mid", request.mid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.operator)) {
+            query.put("Operator", request.operator);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionCode)) {
+            query.put("RegionCode", request.regionCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceManagerResourceGroupId)) {
+            query.put("ResourceManagerResourceGroupId", request.resourceManagerResourceGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyHybridCloudServer"),
+            new TeaPair("version", "2021-10-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyHybridCloudServerResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the information about a hybrid cloud node.</p>
+     * 
+     * @param request ModifyHybridCloudServerRequest
+     * @return ModifyHybridCloudServerResponse
+     */
+    public ModifyHybridCloudServerResponse modifyHybridCloudServer(ModifyHybridCloudServerRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyHybridCloudServerWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Modifies an IP address blacklist for major event protection.</p>
      * 
      * @param request ModifyMajorProtectionBlackIpRequest
@@ -6360,7 +7516,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改用户暂停防护状态</p>
+     * <p>Modifies the protection status of Web Application Firewall (WAF).</p>
      * 
      * @param request ModifyPauseProtectionStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6404,7 +7560,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改用户暂停防护状态</p>
+     * <p>Modifies the protection status of Web Application Firewall (WAF).</p>
      * 
      * @param request ModifyPauseProtectionStatusRequest
      * @return ModifyPauseProtectionStatusResponse

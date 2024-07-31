@@ -64,18 +64,18 @@ public class CreateDefenseRuleRequest extends TeaModel {
     /**
      * <p>The configurations of the protection rule. Specify a string that contains multiple parameters in the JSON format.</p>
      * <blockquote>
-     * <p> The parameters vary based on the value of the <strong>DefenseScene</strong> parameter. For more information, see the &quot;<strong>Protection rule parameters</strong>&quot; section in this topic.</p>
+     * <p> The parameters vary based on the value of the <strong>DefenseScene</strong> parameter.**** For more information, see the &quot;<strong>Protection rule parameters</strong>&quot; section in this topic.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>For more information, see the following section.</p>
+     * <p>For more information, see the following section</p>
      */
     @NameInMap("Rules")
     public String rules;
 
     /**
-     * <p>The ID of the protection rule template for which you want to create a protection rule.</p>
+     * <p>The ID of the rule template for which you want to create a protection rule.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
