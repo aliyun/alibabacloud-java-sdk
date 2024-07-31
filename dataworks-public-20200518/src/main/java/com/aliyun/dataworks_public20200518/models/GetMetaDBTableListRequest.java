@@ -5,37 +5,55 @@ import com.aliyun.tea.*;
 
 public class GetMetaDBTableListRequest extends TeaModel {
     /**
-     * <p>The name of the metadatabase.</p>
+     * <p>The GUID of the MaxCompute project. Specify the GUID in the <code>odps.{projectName}</code> format. You must configure this parameter only if you set the DataSourceType parameter to odps.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>odps.testProjectName</p>
      */
     @NameInMap("AppGuid")
     public String appGuid;
 
     /**
-     * <p>The type of the data source. Valid values: odps and emr.</p>
+     * <p>The E-MapReduce (EMR) cluster ID. You must configure this parameter only if you set the DataSourceType parameter to emr.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>abc</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>The business data.</p>
+     * <p>The type of the data source. Valid values: odps and emr.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>odps</p>
      */
     @NameInMap("DataSourceType")
     public String dataSourceType;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The name of the metadatabase.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>abc</p>
      */
     @NameInMap("DatabaseName")
     public String databaseName;
 
     /**
-     * <p>The globally unique identifier (GUID) of the MaxCompute project. Specify the GUID in the `odps.{projectName}` format. This parameter must be configured if you set the DataSourceType parameter to odps.</p>
+     * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The ID of the E-MapReduce (EMR) cluster. This parameter must be configured if you set the DataSourceType parameter to emr.</p>
+     * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

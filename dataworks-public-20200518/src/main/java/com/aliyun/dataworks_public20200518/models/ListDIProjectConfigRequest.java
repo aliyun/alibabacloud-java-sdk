@@ -5,29 +5,30 @@ import com.aliyun.tea.*;
 
 public class ListDIProjectConfigRequest extends TeaModel {
     /**
-     * <p>The type of the destination data source of the sync solution. This parameter cannot be left empty.</p>
-     * <br>
-     * <p>Valid values: analyticdb_for_mysql, odps, elasticsearch, holo, mysql, and polardb. You can call the ListDIProjectConfig operation to query the supported types of destination data sources.</p>
-     * <br>
+     * <p>The type of the destinations of the synchronization solutions. This parameter cannot be left empty. Valid values: analyticdb_for_mysql, odps, elasticsearch, holo, mysql, and polardb.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>elasticsearch</p>
      */
     @NameInMap("DestinationType")
     public String destinationType;
 
     /**
-     * <p>The ID of the DataWorks workspace. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace Management page to obtain the workspace ID.</p>
-     * <br>
+     * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to obtain the ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1000</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;
 
     /**
-     * <p>The type of the source data source of the sync solution.</p>
-     * <br>
-     * <p>Valid values: oracle, mysql, polardb, datahub, drds, and analyticdb_for_mysql. You can call the ListDIProjectConfig operation to query the supported types of source data sources.</p>
-     * <br>
-     * <p>If you do not set this parameter, DataWorks applies the default global configuration to all the source data sources of the preceding types.</p>
+     * <p>The type of the sources of the synchronization solutions. Valid values: oracle, mysql, polardb, datahub, drds, and analyticdb_for_mysql. If you do not configure this parameter, DataWorks applies the default global configuration to all sources.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mysql</p>
      */
     @NameInMap("SourceType")
     public String sourceType;

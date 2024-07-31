@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DsgSceneAddOrUpdateSceneShrinkRequest extends TeaModel {
     /**
+     * <p>The information about the level-2 data masking scenario.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("scenes")

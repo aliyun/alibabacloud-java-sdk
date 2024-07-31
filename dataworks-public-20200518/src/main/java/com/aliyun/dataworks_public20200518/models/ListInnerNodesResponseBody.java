@@ -5,19 +5,25 @@ import com.aliyun.tea.*;
 
 public class ListInnerNodesResponseBody extends TeaModel {
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The pagination information.</p>
      */
     @NameInMap("Paging")
     public ListInnerNodesResponseBodyPaging paging;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E6F0DBDD-5AD****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The paging information.</p>
+     * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -53,106 +59,166 @@ public class ListInnerNodesResponseBody extends TeaModel {
 
     public static class ListInnerNodesResponseBodyPagingNodes extends TeaModel {
         /**
-         * <p>The description of the inner node.</p>
+         * <p>The baseline ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         @NameInMap("BaselineId")
         public Long baselineId;
 
         /**
-         * <p>The table and partition filter expression in Data Quality that are associated with the inner node.</p>
+         * <p>The workflow ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("BusinessId")
         public Long businessId;
 
         /**
-         * <p>The values of other parameters related to the inner node.</p>
+         * <p>The connection string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>odps_first</p>
          */
         @NameInMap("Connection")
         public String connection;
 
         /**
-         * <p>The ID of the inner node.</p>
+         * <p>The CRON expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00 00 00 * * ?</p>
          */
         @NameInMap("CronExpress")
         public String cronExpress;
 
         /**
-         * <p>The name of the inner node.</p>
+         * <p>The description of the inner node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The cron expression.</p>
+         * <p>The table and partition filter expression in Data Quality that are associated with the inner node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;projectName&quot;:&quot;ztjy_dim&quot;,&quot;tableName&quot;:&quot;dim_user_agent_manage_area_a&quot;,&quot;partition&quot;:&quot;ds\u003d$[yyyy-mm-dd-1]&quot;}]</p>
          */
         @NameInMap("DqcDescription")
         public String dqcDescription;
 
         /**
-         * <p>The ID of the baseline with which the inner node is associated.</p>
+         * <p>Indicates whether the inner node is associated with a monitoring rule in Data Quality. Valid values: 0 and 1. The value 0 indicates that the inner node is associated with a monitoring rule in Data Quality. The value 1 indicates that the inner node is not associated with a monitoring rule in Data Quality.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("DqcType")
         public String dqcType;
 
+        /**
+         * <p>The inner node ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("NodeId")
         public Long nodeId;
 
         /**
-         * <p>The name of the resource group.</p>
+         * <p>The name of the inner node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>liux_test_n****</p>
          */
         @NameInMap("NodeName")
         public String nodeName;
 
         /**
-         * <p>The connection string.</p>
+         * <p>The owner ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1933****36551</p>
          */
         @NameInMap("OwnerId")
         public String ownerId;
 
         /**
-         * <p>Indicates whether the node is associated with Data Quality. Valid values: 0 and 1. The value 0 indicates that the node is associated with Data Quality. The value 1 indicates that the node is not associated with Data Quality.</p>
+         * <p>The additional parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a=b</p>
          */
         @NameInMap("ParamValues")
         public String paramValues;
 
         /**
-         * <p>The ID of the owner of the inner node.</p>
+         * <p>The priority of the inner node. Valid values: 1, 3, 5, 7, and 8.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Priority")
         public Integer priority;
 
         /**
-         * <p>The priority of the inner node. Valid values: 1, 3, 5, 7, and 8.</p>
+         * <p>The type of the inner node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ODPS_SQL</p>
          */
         @NameInMap("ProgramType")
         public String programType;
 
         /**
-         * <p>The type of the inner node.</p>
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("ProjectId")
         public Long projectId;
 
         /**
-         * <p>Indicates whether the inner node can be rerun.</p>
+         * <p>The interval at which the inner node is rerun after the inner node fails to run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         @NameInMap("RepeatInterval")
         public Long repeatInterval;
 
         /**
-         * <p>The ID of the workspace.</p>
+         * <p>Indicates whether the inner node can be rerun.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Repeatability")
         public Boolean repeatability;
 
         /**
-         * <p>The ID of the workflow.</p>
+         * <p>The name of the resource group.</p>
          */
         @NameInMap("ResGroupName")
         public String resGroupName;
 
         /**
-         * <p>The interval at which the inner node is rerun after the inner node fails to be run.</p>
+         * <p>The scheduling type of the inner node. Valid values:</p>
+         * <ul>
+         * <li>NORMAL: The inner node is an auto triggered node.</li>
+         * <li>MANUAL: The inner node is a manually triggered node. The scheduling system does not run the node on a regular basis.</li>
+         * <li>PAUSE: The inner node is a paused node.</li>
+         * <li>SKIP: The inner node is a dry-run node. Dry-run nodes are started as scheduled, but the scheduling system sets the status of the nodes to successful when it starts to run them.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         @NameInMap("SchedulerType")
         public String schedulerType;
@@ -310,30 +376,34 @@ public class ListInnerNodesResponseBody extends TeaModel {
 
     public static class ListInnerNodesResponseBodyPaging extends TeaModel {
         /**
-         * <p>The scheduling type of the inner node. Valid values:</p>
-         * <br>
-         * <p>*   NORMAL: The inner node is an auto triggered node.</p>
-         * <p>*   MANUAL: The inner node is a manually triggered node. Manually triggered nodes cannot be automatically triggered.</p>
-         * <p>*   PAUSE: The inner node is a paused node.</p>
-         * <p>*   SKIP: The inner node is a dry-run node. Dry-run nodes are started as scheduled but the scheduling system sets the status of the nodes to succeeded when the scheduling system starts to run the nodes.</p>
+         * <p>The list of inner nodes.</p>
          */
         @NameInMap("Nodes")
         public java.util.List<ListInnerNodesResponseBodyPagingNodes> nodes;
 
         /**
-         * <p>The number of entries returned per page. Default value: 10. Maximum value: 100.</p>
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
         /**
-         * <p>The total number of inner nodes returned.</p>
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
-         * <p>The list of inner nodes.</p>
+         * <p>The total number of inner nodes returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

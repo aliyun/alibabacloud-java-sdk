@@ -12,30 +12,45 @@ public class ListNodesResponseBody extends TeaModel {
 
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Invalid.Tenant.ConnectionNotExists</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The connection does not exist.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The interval at which the node is rerun after the node fails to run.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The list of nodes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E6F0DBDD-5AD****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the node can be rerun.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -96,18 +111,27 @@ public class ListNodesResponseBody extends TeaModel {
     public static class ListNodesResponseBodyDataNodes extends TeaModel {
         /**
          * <p>The number of the page to return. Minimum value: 1. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         @NameInMap("BaselineId")
         public Long baselineId;
 
         /**
-         * <p>The operation that you want to perform. Set the value to **ListNodes**.</p>
+         * <p>The operation that you want to perform. Set the value to <strong>ListNodes</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("BusinessId")
         public Long businessId;
 
         /**
          * <p>The name of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>odps_first</p>
          */
         @NameInMap("Connection")
         public String connection;
@@ -117,6 +141,9 @@ public class ListNodesResponseBody extends TeaModel {
 
         /**
          * <p>The name of the workflow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00 00 00 * * ?</p>
          */
         @NameInMap("CronExpress")
         public String cronExpress;
@@ -126,18 +153,27 @@ public class ListNodesResponseBody extends TeaModel {
 
         /**
          * <p>The priority for running the node. Valid values: 1, 3, 5, 7, and 8.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The ID of the owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;projectName&quot;:&quot;ztjy_dim&quot;,&quot;tableName&quot;:&quot;dim_user_agent_manage_area_a&quot;,&quot;partition&quot;:&quot;ds\u003d$[yyyy-mm-dd-1]&quot;}]</p>
          */
         @NameInMap("DqcDescription")
         public String dqcDescription;
 
         /**
          * <p>The connection string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("DqcType")
         public Integer dqcType;
@@ -155,61 +191,91 @@ public class ListNodesResponseBody extends TeaModel {
         public Long modifyTime;
 
         /**
-         * <p>The types of the nodes. You can call the [ListNodes](https://help.aliyun.com/document_detail/173979.html) operation to query the type of the node.</p>
+         * <p>The types of the nodes. You can call the <a href="https://help.aliyun.com/document_detail/173979.html">ListNodes</a> operation to query the type of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         @NameInMap("NodeId")
         public Long nodeId;
 
         /**
          * <p>The total number of nodes returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>liux_test_n****</p>
          */
         @NameInMap("NodeName")
         public String nodeName;
 
         /**
          * <p>The additional parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>19337906836551</p>
          */
         @NameInMap("OwnerId")
         public String ownerId;
 
         /**
          * <p>The type of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a=b</p>
          */
         @NameInMap("ParamValues")
         public String paramValues;
 
         /**
          * <p>The ID of the owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Priority")
         public Integer priority;
 
         /**
          * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ODPS_SQL</p>
          */
         @NameInMap("ProgramType")
         public String programType;
 
         /**
          * <p>The information about the nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>33671</p>
          */
         @NameInMap("ProjectId")
         public Long projectId;
 
         /**
          * <p>The table and partition filter expression in Data Quality that are associated with the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1231123</p>
          */
         @NameInMap("RelatedFlowId")
         public Long relatedFlowId;
 
         /**
          * <p>The environment of the workspace. Valid values: PROD and DEV.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         @NameInMap("RepeatInterval")
         public Long repeatInterval;
 
         /**
          * <p>The name of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Repeatability")
         public Boolean repeatability;
@@ -219,12 +285,18 @@ public class ListNodesResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the workflow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The ID of the request. You can use the ID to query logs and troubleshoot issues.</p>
          */
         @NameInMap("ResGroupName")
         public String resGroupName;
 
         /**
-         * <p>The types of the nodes. You can call the [ListNodes](https://help.aliyun.com/document_detail/173979.html) operation to query the type of the node.</p>
+         * <p>The types of the nodes. You can call the <a href="https://help.aliyun.com/document_detail/173979.html">ListNodes</a> operation to query the type of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         @NameInMap("SchedulerType")
         public String schedulerType;
@@ -447,29 +519,39 @@ public class ListNodesResponseBody extends TeaModel {
     public static class ListNodesResponseBodyData extends TeaModel {
         /**
          * <p>The scheduling type of the node. Valid values:</p>
-         * <br>
-         * <p>*   NORMAL: indicates that the node is a normal auto triggered node.</p>
-         * <p>*   MANUAL: indicates that the node is a manually triggered node.</p>
-         * <p>*   PAUSE: indicates that the node is a paused node.</p>
-         * <p>*   SKIP: indicates that the node is a dry-run node. Dry-run nodes are started as scheduled but the system sets the status of the nodes to successful when it starts to run them.</p>
+         * <ul>
+         * <li>NORMAL: indicates that the node is a normal auto triggered node.</li>
+         * <li>MANUAL: indicates that the node is a manually triggered node.</li>
+         * <li>PAUSE: indicates that the node is a paused node.</li>
+         * <li>SKIP: indicates that the node is a dry-run node. Dry-run nodes are started as scheduled but the system sets the status of the nodes to successful when it starts to run them.</li>
+         * </ul>
          */
         @NameInMap("Nodes")
         public java.util.List<ListNodesResponseBodyDataNodes> nodes;
 
         /**
          * <p>The name of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
         /**
          * <p>The cron expression returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The name of the workflow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>66</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

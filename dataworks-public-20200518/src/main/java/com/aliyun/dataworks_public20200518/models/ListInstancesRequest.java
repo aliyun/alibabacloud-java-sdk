@@ -6,45 +6,67 @@ import com.aliyun.tea.*;
 public class ListInstancesRequest extends TeaModel {
     /**
      * <p>The parameters related to the node.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-02-02 00:00:00</p>
      */
     @NameInMap("BeginBizdate")
     public String beginBizdate;
 
     /**
      * <p>The ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test_bizName</p>
      */
     @NameInMap("BizName")
     public String bizName;
 
     /**
      * <p>The number of entries returned per page. Default value: 10. Maximum value: 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-02-02 00:00:00</p>
      */
     @NameInMap("Bizdate")
     public String bizdate;
 
     /**
      * <p>The environment of the workspace. Valid values: PROD and DEV. The value PROD indicates the production environment. The value DEV indicates the development environment.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>11111</p>
      */
     @NameInMap("DagId")
     public Long dagId;
 
     /**
      * <p>The ID of the workflow.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-02-03 00:00:00</p>
      */
     @NameInMap("EndBizdate")
     public String endBizdate;
 
     /**
      * <p>Indicates whether the instance is associated with a monitoring rule in Data Quality. Valid values:</p>
-     * <br>
-     * <p>*   0: The instance is associated with a monitoring rule in Data Quality.</p>
-     * <p>*   1: The instance is not associated with a monitoring rule in Data Quality.</p>
+     * <ul>
+     * <li>0: The instance is associated with a monitoring rule in Data Quality.</li>
+     * <li>1: The instance is not associated with a monitoring rule in Data Quality.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>100000000000</p>
      */
     @NameInMap("NodeId")
     public Long nodeId;
 
     /**
      * <p>Indicates whether the node can be rerun.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>openmr_8****</p>
      */
     @NameInMap("NodeName")
     public String nodeName;
@@ -54,46 +76,65 @@ public class ListInstancesRequest extends TeaModel {
 
     /**
      * <p>The connection string.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>193379****</p>
      */
     @NameInMap("Owner")
     public String owner;
 
     /**
      * <p>The operation that you want to perform.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The ID of the node.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The error code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ODPS_SQL</p>
      */
     @NameInMap("ProgramType")
     public String programType;
 
     /**
      * <p>The time when the node was last modified.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PROD</p>
      */
     @NameInMap("ProjectEnv")
     public String projectEnv;
 
     /**
      * <p>The ID of the baseline.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12345</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;
 
     /**
      * <p>The time when the instance started to wait to be scheduled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NOT_RUN</p>
      */
     @NameInMap("Status")
     public String status;

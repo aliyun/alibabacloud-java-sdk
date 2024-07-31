@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class UpdateNodeRunModeResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request. You can use the ID to obtain logs and troubleshoot issues.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E6F0DBDD-5AD****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
-     * <br>
-     * <p>*   true: indicates that the request is successful.</p>
-     * <p>*   false: indicates that the request fails.</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

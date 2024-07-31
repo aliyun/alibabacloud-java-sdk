@@ -5,36 +5,38 @@ import com.aliyun.tea.*;
 
 public class GetProjectResponseBody extends TeaModel {
     /**
-     * <p>This parameter is deprecated.</p>
+     * <p>The information about the workspace.</p>
      */
     @NameInMap("Data")
     public GetProjectResponseBodyData data;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
-     * <p>The description of the workspace.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0bc1411515937635973****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The status of the workspace. Valid values:</p>
-     * <br>
-     * <p>*   AVAILABLE(0): The workspace is in a normal state.</p>
-     * <p>*   DELETED(1): The workspace is deleted.</p>
-     * <p>*   INITIALIZING(2): The workspace is being initialized.</p>
-     * <p>*   INIT_FAILED(3): The workspace fails to be initialized.</p>
-     * <p>*   FORBIDDEN(4): The workspace is manually disabled.</p>
-     * <p>*   DELETING(5): The workspace is being deleted.</p>
-     * <p>*   DEL_FAILED(6): The workspace fails to be deleted.</p>
-     * <p>*   FROZEN(7): The workspace is frozen due to overdue payments.</p>
-     * <p>*   UPDATING(8): The workspace is being updated. The workspace enters this state after you associate a new compute engine with the workspace and the compute engine is being initialized.</p>
-     * <p>*   UPDATE_FAILED(9): The workspace fails to be updated.</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -77,9 +79,21 @@ public class GetProjectResponseBody extends TeaModel {
     }
 
     public static class GetProjectResponseBodyDataTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Env</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -108,212 +122,305 @@ public class GetProjectResponseBody extends TeaModel {
 
     public static class GetProjectResponseBodyData extends TeaModel {
         /**
-         * <p>Indicates whether the workspace is a default workspace. Valid values:</p>
-         * <br>
-         * <p>*   1: The workspace is a default workspace.</p>
-         * <p>*   0: The workspace is not a default workspace.</p>
+         * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Appkey")
         public String appkey;
 
         /**
-         * <p>The time when the workspace was created. Example: Dec 3, 2019 9:12:20 PM.</p>
+         * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("BaseProject")
         public Boolean baseProject;
 
+        /**
+         * <p>The ID of the resource group that was allocated by default when you purchased an exclusive resource group for MaxCompute.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>group_280749521****</p>
+         */
         @NameInMap("DefaultDiResourceGroupIdentifier")
         public String defaultDiResourceGroupIdentifier;
 
         /**
-         * <p>The unique identifier of the workspace.</p>
+         * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Destination")
         public Integer destination;
 
         /**
          * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("DevStorageQuota")
         public String devStorageQuota;
 
         /**
-         * <p>The default maximum number of automatic reruns that are allowed after an error occurs.</p>
+         * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         @NameInMap("DevelopmentType")
         public Integer developmentType;
 
         /**
-         * <p>This parameter is deprecated.</p>
+         * <p>Indicates whether the Develop role is disabled. Valid values:</p>
+         * <ul>
+         * <li><strong>false</strong> (default)</li>
+         * <li><strong>true</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("DisableDevelopment")
         public Boolean disableDevelopment;
 
         /**
-         * <p>The list of tags.</p>
-         * <br>
-         * <p>The tags are added to resources in the workspace and used for authentication and cost allocation.</p>
+         * <p>The environment information of the workspace.</p>
          */
         @NameInMap("EnvTypes")
         public java.util.List<String> envTypes;
 
         /**
-         * <p>The environment of the workspace. Valid values: PROD and DEV.</p>
-         * <br>
-         * <p>*   The value PROD indicates the production environment. Workspaces in basic mode provide only the production environment.</p>
-         * <p>*   The value DEV indicates the development environment. Workspaces in standard mode provide both the development environment and the production environment.</p>
+         * <p>The time when the workspace was created. Example: <code>Dec 3, 2019 9:12:20 PM</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Oct 10, 2019 3:42:53 PM</p>
          */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
         /**
-         * <p>The description of the workspace.</p>
+         * <p>The time when the workspace was last modified. Example: <code>Dec 3, 2019 9:12:20 PM</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Dec 3, 2019 9:12:20 PM</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
 
         /**
-         * <p>The time when the workspace was last modified. Example: Dec 3, 2019 9:12:20 PM.</p>
+         * <p>Indicates whether you are allowed to download the query result from DataStudio. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: You are allowed to download the query result from DataStudio.</li>
+         * <li><strong>0</strong>: You are not allowed to download the query result from DataStudio.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("IsAllowDownload")
         public Integer isAllowDownload;
 
         /**
-         * <p>The display name of the workspace.</p>
+         * <p>Indicates whether the workspace is a default workspace. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: The workspace is a default workspace.</li>
+         * <li><strong>0</strong>: The workspace is not a default workspace.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("IsDefault")
         public Integer isDefault;
 
         /**
-         * <p>Indicates whether you are allowed to download the query result from DataStudio. Valid values:</p>
-         * <br>
-         * <p>*   1: You are allowed to download the query result from DataStudio.</p>
-         * <p>*   0: You are not allowed to download the query result from DataStudio.</p>
+         * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("MaxFlowNode")
         public Integer maxFlowNode;
 
         /**
-         * <p>The development type of the workspace. The value is fixed as 4. This parameter is deprecated.</p>
+         * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ProdStorageQuota")
         public String prodStorageQuota;
 
         /**
-         * <p>Indicates whether the MaxCompute tables in the workspace are visible to the users within a tenant. Valid values:</p>
-         * <br>
-         * <p>*   0: The MaxCompute tables are invisible to the users within a tenant.</p>
-         * <p>*   1: The MaxCompute tables are visible to the users within a tenant.</p>
+         * <p>The description of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         @NameInMap("ProjectDescription")
         public String projectDescription;
 
         /**
-         * <p>The mode of the workspace. Valid values:</p>
-         * <br>
-         * <p>*   2: The workspace is in basic mode.</p>
-         * <p>*   3: The workspace is in standard mode.</p>
+         * <p>The ID of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>27</p>
          */
         @NameInMap("ProjectId")
         public Integer projectId;
 
         /**
-         * <p>The ID of the Alibaba Cloud account used by the workspace owner.</p>
+         * <p>The name of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         @NameInMap("ProjectIdentifier")
         public String projectIdentifier;
 
         /**
-         * <p>This parameter is deprecated.</p>
+         * <p>The mode of the workspace. Valid values:</p>
+         * <ul>
+         * <li><strong>2</strong>: The workspace is in basic mode.</li>
+         * <li><strong>3</strong>: The workspace is in standard mode.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("ProjectMode")
         public Integer projectMode;
 
         /**
-         * <p>Indicates whether the Development role is disabled. Valid values:</p>
-         * <br>
-         * <p>*   false: The Development role is enabled.</p>
-         * <p>*   true: The Development role is disabled.</p>
-         * <br>
-         * <p><!----></p>
-         * <br>
-         * <p>*   Default value: false.</p>
+         * <p>The display name of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         @NameInMap("ProjectName")
         public String projectName;
 
         /**
-         * <p>Indicates whether a proxy account is used to access the MaxCompute compute engine instance associated with the workspace.</p>
+         * <p>The ID of the Alibaba Cloud account used by the workspace owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18229311****</p>
          */
         @NameInMap("ProjectOwnerBaseId")
         public String projectOwnerBaseId;
 
         /**
-         * <p>This parameter is deprecated.</p>
+         * <p>Indicates whether the workspace protection feature is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: enabled</li>
+         * <li><strong>0</strong>: disabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ProtectedMode")
         public Integer protectedMode;
 
+        /**
+         * <p>The type of the workspace. Valid values:</p>
+         * <ul>
+         * <li><strong>private</strong></li>
+         * <li><strong>swap</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>private</p>
+         */
         @NameInMap("ResidentArea")
         public String residentArea;
 
         /**
-         * <p>The keys of the tags that are added to resources in the workspace. The tag keys must meet the following conditions:</p>
-         * <br>
-         * <p>*   The number of tag keys that can be added to resources ranges from 1 to 20.</p>
-         * <p>*   Each tag key can be a maximum of 128 characters in length.</p>
-         * <p>*   The tag keys cannot start with acs: or aliyun:.</p>
-         * <p>*   The tag keys cannot contain http:// or https://.</p>
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzbn7pti3zfa</p>
          */
         @NameInMap("ResourceManagerResourceGroupId")
         public String resourceManagerResourceGroupId;
 
         /**
-         * <p>The interval between automatic reruns after an error occurs. Unit: milliseconds. The maximum interval is 30 minutes. You must pay attention to the conversion between units.</p>
+         * <p>The default maximum number of automatic reruns that are allowed after an error occurs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("SchedulerMaxRetryTimes")
         public Integer schedulerMaxRetryTimes;
 
         /**
-         * <p>This parameter is deprecated.</p>
+         * <p>The default interval between automatic reruns after an error occurs. Unit: milliseconds. The maximum interval is 30 minutes. You must pay attention to the conversion between units.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120000</p>
          */
         @NameInMap("SchedulerRetryInterval")
         public Integer schedulerRetryInterval;
 
         /**
-         * <p>The ID of the workspace.</p>
+         * <p>The status of the workspace. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: AVAILABLE, which indicates that the workspace runs as expected.</li>
+         * <li><strong>1</strong>: DELETED, which indicates that the workspace is deleted.</li>
+         * <li><strong>2</strong>: INITIALIZING, which indicates that the workspace is being initialized.</li>
+         * <li><strong>3</strong>: INIT_FAILED, which indicates that the workspace fails to be initialized.</li>
+         * <li><strong>4</strong>: FORBIDDEN, which indicates that the workspace is manually disabled.</li>
+         * <li><strong>5</strong>: DELETING, which indicates that the workspace is being deleted.</li>
+         * <li><strong>6</strong>: DEL_FAILED, which indicates that the workspace fails to be deleted.</li>
+         * <li><strong>7</strong>: FROZEN, which indicates that the workspace is frozen due to overdue payments.</li>
+         * <li><strong>8</strong>: UPDATING, which indicates that the workspace is being updated. The workspace enters this state after you associate a new compute engine with the workspace and the compute engine is initialized.</li>
+         * <li><strong>9</strong>: UPDATE_FAILED, which indicates that the workspace fails to be updated.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Status")
         public Integer status;
 
         /**
-         * <p>Indicates whether the workspace protection feature is enabled. Valid values:</p>
-         * <br>
-         * <p>*   1: The workspace protection feature is enabled.</p>
-         * <p>*   0: The workspace protection feature is disabled.</p>
+         * <p>Indicates whether the MaxCompute tables in the workspace are visible to the users within a tenant. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: invisible</li>
+         * <li><strong>1</strong>: visible</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("TablePrivacyMode")
         public Integer tablePrivacyMode;
 
         /**
-         * <p>The values of the tags that are added to resources in the workspace. The tag values must meet the following conditions:</p>
-         * <br>
-         * <p>*   The number of tag values that can be added to resources ranges from 1 to 20.</p>
-         * <p>*   Each tag value can be a maximum of 128 characters in length.</p>
-         * <p>*   The tag values cannot start with acs:.</p>
-         * <p>*   The tag values cannot contain http:// or https://.</p>
+         * <p>The tags added to the workspace.</p>
          */
         @NameInMap("Tags")
         public java.util.List<GetProjectResponseBodyDataTags> tags;
 
         /**
-         * <p>The ID of the resource group used in the workspace.</p>
+         * <p>The tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>280749521</p>
          */
         @NameInMap("TenantId")
         public Long tenantId;
 
         /**
-         * <p>The ID of the tenant.</p>
+         * <p>Indicates whether a proxy account is used to access the MaxCompute compute engine associated with the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("UseProxyOdpsAccount")
         public Boolean useProxyOdpsAccount;

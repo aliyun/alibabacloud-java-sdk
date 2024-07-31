@@ -5,43 +5,58 @@ import com.aliyun.tea.*;
 
 public class GetMetaTableOutputRequest extends TeaModel {
     /**
-     * <p>The HTTP status code returned.</p>
-     * <br>
+     * <p>The end date.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-02-15</p>
      */
     @NameInMap("EndDate")
     public String endDate;
 
     /**
-     * <p>The Globally Unique Identifier (GUID) of the MaxCompute metatable.</p>
+     * <p>The page number. Valid values: 1 to 30. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The start date of the time range to query. The start date must be within the previous 30 days.</p>
+     * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the node.</p>
-     * <br>
+     * <p>The start date.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-02-02</p>
      */
     @NameInMap("StartDate")
     public String startDate;
 
     /**
-     * <p>The end date of the time range to query. The end date must be within the previous 30 days.</p>
-     * <br>
+     * <p>The GUID of the metatable.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>odps.sample_project.sample_table</p>
      */
     @NameInMap("TableGuid")
     public String tableGuid;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The task ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1048576</p>
      */
     @NameInMap("TaskId")
     public String taskId;

@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class DeleteMetaCategoryRequest extends TeaModel {
     /**
      * <p>The ID of the category.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>23</p>
      */
     @NameInMap("CategoryId")
     public Long categoryId;

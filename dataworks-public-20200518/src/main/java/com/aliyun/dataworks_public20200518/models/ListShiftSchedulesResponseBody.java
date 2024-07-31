@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class ListShiftSchedulesResponseBody extends TeaModel {
     /**
-     * <p>The page number of the returned page. Minimum value:1. Maximum value: 100.</p>
+     * <p>The pagination data.</p>
      */
     @NameInMap("Paging")
     public ListShiftSchedulesResponseBodyPaging paging;
 
     /**
-     * <p>The pagination data.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E6F0DBDD-5AD****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,11 +42,17 @@ public class ListShiftSchedulesResponseBody extends TeaModel {
 
     public static class ListShiftSchedulesResponseBodyPagingShiftSchedules extends TeaModel {
         /**
-         * <p>The name of the shift schedule.</p>
+         * <p>The unique identifier of the shift schedule. You can use the identifier to query the on-duty engineers in the shift schedule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2ab6456ada634b2f938ee******9b45b</p>
          */
         @NameInMap("ShiftScheduleIdentifier")
         public String shiftScheduleIdentifier;
 
+        /**
+         * <p>The name of the shift schedule.</p>
+         */
         @NameInMap("ShiftScheduleName")
         public String shiftScheduleName;
 
@@ -72,25 +81,34 @@ public class ListShiftSchedulesResponseBody extends TeaModel {
 
     public static class ListShiftSchedulesResponseBodyPaging extends TeaModel {
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The page number. Minimum value: 1. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
-         * <p>The unique identifier of the shift schedule. You can use the identifier to query the on-duty engineers in the shift schedule.</p>
+         * <p>The shift schedules.</p>
          */
         @NameInMap("ShiftSchedules")
         public java.util.List<ListShiftSchedulesResponseBodyPagingShiftSchedules> shiftSchedules;
 
         /**
-         * <p>The shift schedules.</p>
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

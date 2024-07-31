@@ -6,49 +6,85 @@ import com.aliyun.tea.*;
 public class GetInstanceStatusStatisticRequest extends TeaModel {
     /**
      * <p>The date on which the numbers of instances in different states are obtained. Specify the date in the yyyy-MM-dd format.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-01-01</p>
      */
     @NameInMap("BizDate")
     public String bizDate;
 
     /**
      * <p>The type of the directed acyclic graph (DAG). Valid values:</p>
-     * <br>
-     * <p>*   MANUAL: DAG for a manually triggered workflow</p>
-     * <p>*   SMOKE_TEST: DAG for a smoke testing workflow</p>
-     * <p>*   SUPPLY_DATA: DAG for a data backfill instance</p>
-     * <p>*   BUSINESS_PROCESS_DAG: DAG for a one-time workflow</p>
+     * <ul>
+     * <li>MANUAL: DAG for a manually triggered workflow</li>
+     * <li>SMOKE_TEST: DAG for a smoke testing workflow</li>
+     * <li>SUPPLY_DATA: DAG for a data backfill instance</li>
+     * <li>BUSINESS_PROCESS_DAG: DAG for a one-time workflow</li>
+     * </ul>
+     * <!---->
+     * 
+     * <ul>
+     * <li>DAILY</li>
+     * <li>MANUAL</li>
+     * <li>SMOKE_TEST</li>
+     * <li>SUPPLY_DATA</li>
+     * <li>BUSINESS_PROCESS_DAG</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>MANUAL</p>
      */
     @NameInMap("DagType")
     public String dagType;
 
     /**
-     * <p>The environment of the workspace. Valid values: PROD and DEV. The value PROD indicates the production environment. The value DEV indicates the development environment.</p>
-     * <br>
+     * <p>The runtime environment. Valid values: PROD and DEV.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PROD</p>
      */
     @NameInMap("ProjectEnv")
     public String projectEnv;
 
     /**
-     * <p>The ID of the DataWorks workspace. You can log on to the DataWorks console and go to the Workspace Management page to obtain the workspace ID.</p>
-     * <br>
+     * <p>The DataWorks workspace ID. You can log on to the DataWorks console and go to the Workspace page to query the ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;
 
+    /**
+     * <p>The scheduling cycle. Valid values:</p>
+     * <ul>
+     * <li>MINUTE</li>
+     * <li>HOUR</li>
+     * <li>DAY</li>
+     * <li>WEEK</li>
+     * <li>MONTH</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>DAY</p>
+     */
     @NameInMap("SchedulerPeriod")
     public String schedulerPeriod;
 
     /**
      * <p>The scheduling type of the node. Valid values:</p>
-     * <br>
-     * <p>*   NORMAL: auto triggered node</p>
-     * <p>*   MANUAL: manually triggered node</p>
-     * <p>*   PAUSE: paused node</p>
-     * <p>*   SKIP: dry-run node</p>
+     * <ul>
+     * <li>NORMAL: auto triggered node</li>
+     * <li>MANUAL: manually triggered node</li>
+     * <li>PAUSE: paused node</li>
+     * <li>SKIP: dry-run node</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>NORMAL</p>
      */
     @NameInMap("SchedulerType")
     public String schedulerType;

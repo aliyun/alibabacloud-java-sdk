@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class GetMetaDBInfoResponseBody extends TeaModel {
     /**
-     * <p>The time when the compute engine instance was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The basic metadata information.</p>
      */
     @NameInMap("Data")
     public GetMetaDBInfoResponseBodyData data;
 
     /**
-     * <p>test table</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0bc1411515937****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,85 +42,145 @@ public class GetMetaDBInfoResponseBody extends TeaModel {
 
     public static class GetMetaDBInfoResponseBodyData extends TeaModel {
         /**
-         * <p>The display name of the workspace.</p>
+         * <p>The compute engine instance ID. Specify the ID in the <code>Engine type.Engine name</code> format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>odps.engine_name</p>
          */
         @NameInMap("AppGuid")
         public String appGuid;
 
         /**
-         * <p>The time when the compute engine instance was modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The EMR cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         @NameInMap("ClusterBizId")
         public String clusterBizId;
 
         /**
-         * <p>The name of the workspace.</p>
+         * <p>The comment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The ID of the compute engine instance. The ID is in the Engine type.Engine name format.</p>
          */
         @NameInMap("Comment")
         public String comment;
 
         /**
-         * <p>The name of the workspace owner.</p>
+         * <p>The time when the compute engine instance was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1541576644000</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
-         * <p>The ID of the tenant.</p>
+         * <p>The endpoint of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://service.odpsstg.aliyun-inc.com/">http://service.odpsstg.aliyun-inc.com/</a></p>
          */
         @NameInMap("Endpoint")
         public String endpoint;
 
         /**
-         * <p>The ID of the EMR cluster. This parameter is returned only for an EMR compute engine instance.</p>
+         * <p>The type of the environment. Valid values: 0 and 1. The value 0 indicates the development environment. The value 1 indicates the production environment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("EnvType")
         public Integer envType;
 
+        /**
+         * <p>The storage path of the metadatabase of the EMR cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hdfs://</p>
+         */
         @NameInMap("Location")
         public String location;
 
+        /**
+         * <p>The time when the compute engine instance was modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1541576644000</p>
+         */
         @NameInMap("ModifyTime")
         public Long modifyTime;
 
+        /**
+         * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The endpoint of the service.</p>
+         * <p>The ID of the Alibaba Cloud account used by the workspace owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23</p>
          */
         @NameInMap("OwnerId")
         public String ownerId;
 
         /**
-         * <p>Test items</p>
+         * <p>The name of the workspace owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>323</p>
          */
         @NameInMap("OwnerName")
         public String ownerName;
 
         /**
-         * <p>The ID of the Alibaba Cloud account used by the workspace owner.</p>
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22</p>
          */
         @NameInMap("ProjectId")
         public Long projectId;
 
         /**
-         * <p>The type of the environment. Valid values: 0 and 1. The value 0 indicates the development environment. The value 1 indicates the production environment.</p>
+         * <p>The name of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("ProjectName")
         public String projectName;
 
         /**
-         * <p>The name of the metadatabase.</p>
+         * <p>The display name of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The storage path of the metadatabase of the EMR cluster.</p>
          */
         @NameInMap("ProjectNameCn")
         public String projectNameCn;
 
+        /**
+         * <p>The tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>233</p>
+         */
         @NameInMap("TenantId")
         public Long tenantId;
 
         /**
-         * <p>The ID of the workspace.</p>
+         * <p>The type of the metadatabase.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hive</p>
          */
         @NameInMap("Type")
         public String type;

@@ -5,17 +5,21 @@ import com.aliyun.tea.*;
 
 public class ListDagsRequest extends TeaModel {
     /**
-     * <p>The environment of the workspace. Valid values: PROD and DEV. PROD indicates the production environment. DEV indicates the development environment.</p>
-     * <br>
+     * <p>The sequence number that uniquely identifies the data backfill operation. You can call the <a href="https://help.aliyun.com/document_detail/189753.html">GetDag</a> operation to query the sequence number.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("OpSeq")
     public Long opSeq;
 
     /**
-     * <p>The HTTP status code returned.</p>
-     * <br>
+     * <p>The environment of the workspace. Valid values: PROD and DEV. The value PROD indicates the production environment, and the value DEV indicates the development environment.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PROD</p>
      */
     @NameInMap("ProjectEnv")
     public String projectEnv;

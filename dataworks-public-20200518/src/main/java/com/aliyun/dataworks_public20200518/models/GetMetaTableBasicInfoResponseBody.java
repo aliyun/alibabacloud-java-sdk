@@ -12,30 +12,45 @@ public class GetMetaTableBasicInfoResponseBody extends TeaModel {
 
     /**
      * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Invalid.Tenant.ConnectionNotExists</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The connection does not exist.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0bc1411515937</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -96,176 +111,261 @@ public class GetMetaTableBasicInfoResponseBody extends TeaModel {
     public static class GetMetaTableBasicInfoResponseBodyData extends TeaModel {
         /**
          * <p>The display name of the metatable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Caption")
         public String caption;
 
         /**
          * <p>The ID of the EMR cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
 
         /**
          * <p>The number of fields.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("ColumnCount")
         public Integer columnCount;
 
         /**
          * <p>The comment of the metatable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test table</p>
          */
         @NameInMap("Comment")
         public String comment;
 
         /**
          * <p>The time when the metatable was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1589870294000</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
          * <p>The size of storage space that is occupied by the metatable. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("DataSize")
         public Long dataSize;
 
         /**
          * <p>The name of the metadatabase.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         @NameInMap("DatabaseName")
         public String databaseName;
 
         /**
          * <p>The type of the environment. Valid values:</p>
-         * <br>
-         * <p>*   0: development environment</p>
-         * <p>*   1: production environment</p>
+         * <ul>
+         * <li>0: development environment</li>
+         * <li>1: production environment</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("EnvType")
         public Integer envType;
 
         /**
          * <p>The number of times the metatable was added to a favorite list. This parameter is returned only if you set the Extension parameter to true and takes effect only if you set the DataSourceType parameter to odps.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         @NameInMap("FavoriteCount")
         public Long favoriteCount;
 
         /**
          * <p>Indicates whether the metatable is a partitioned table. Valid values:</p>
-         * <br>
-         * <p>*   true: The metatable is a partitioned table.</p>
-         * <p>*   false: The metatable is a non-partitioned table.</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("IsPartitionTable")
         public Boolean isPartitionTable;
 
         /**
          * <p>Indicates whether the metatable is a view. Valid values:</p>
-         * <br>
-         * <p>*   true: The metatable is a view.</p>
-         * <p>*   false: The metatable is not a view.</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("IsView")
         public Boolean isView;
 
         /**
          * <p>The scope in which the metatable is visible. Valid values:</p>
-         * <br>
-         * <p>*   0: The metatable is visible to workspace members.</p>
-         * <p>*   1: The metatable is visible to users within the tenant.</p>
-         * <p>*   2: The metatable is visible to all tenants.</p>
-         * <p>*   3: The metatable is visible only to the metatable owner.</p>
+         * <ul>
+         * <li>0: The metatable is visible to workspace members.</li>
+         * <li>1: The metatable is visible to users within the tenant.</li>
+         * <li>2: The metatable is visible to all tenants.</li>
+         * <li>3: The metatable is visible only to the metatable owner.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("IsVisible")
         public Integer isVisible;
 
         /**
          * <p>The time when the metatable was last accessed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1589870294000</p>
          */
         @NameInMap("LastAccessTime")
         public Long lastAccessTime;
 
         /**
          * <p>The time when the schema of the metatable was last changed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1589870294000</p>
          */
         @NameInMap("LastDdlTime")
         public Long lastDdlTime;
 
         /**
          * <p>The time when the metatable was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1589870294000</p>
          */
         @NameInMap("LastModifyTime")
         public Long lastModifyTime;
 
         /**
          * <p>The lifecycle of the metatable. Unit: days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("LifeCycle")
         public Integer lifeCycle;
 
         /**
          * <p>The storage path of the Hive metadatabase.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hdfs://</p>
          */
         @NameInMap("Location")
         public String location;
 
         /**
          * <p>The ID of the metatable owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("OwnerId")
         public String ownerId;
 
         /**
          * <p>The partition key of the Hive metatable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ab</p>
          */
         @NameInMap("PartitionKeys")
         public String partitionKeys;
 
         /**
          * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>232</p>
          */
         @NameInMap("ProjectId")
         public Long projectId;
 
         /**
          * <p>The name of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("ProjectName")
         public String projectName;
 
         /**
          * <p>The number of times the metatable was read. This parameter is returned only if you set the Extension parameter to true and takes effect only if you set the DataSourceType parameter to odps.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("ReadCount")
         public Long readCount;
 
         /**
-         * <p>The schema information of the metatable. This parameter is returned only if you enable the table schema in MaxCompute.</p>
+         * <p>The schema information of the metatable. This parameter is returned if the three-layer model of MaxCompute is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("Schema")
         public String schema;
 
         /**
          * <p>The GUID of the metatable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>odps.engine_name.table_name</p>
          */
         @NameInMap("TableGuid")
         public String tableGuid;
 
         /**
          * <p>The name of the metatable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>table_name</p>
          */
         @NameInMap("TableName")
         public String tableName;
 
         /**
          * <p>The tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         @NameInMap("TenantId")
         public Long tenantId;
 
         /**
          * <p>The number of times the metatable was viewed. This parameter is returned only if you set the Extension parameter to true and takes effect only if you set the DataSourceType parameter to odps.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("ViewCount")
         public Long viewCount;

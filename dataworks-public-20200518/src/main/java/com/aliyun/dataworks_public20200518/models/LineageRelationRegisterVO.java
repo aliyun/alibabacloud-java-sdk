@@ -4,6 +4,10 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class LineageRelationRegisterVO extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1684327487964</p>
+     */
     @NameInMap("CreateTimestamp")
     public Long createTimestamp;
 

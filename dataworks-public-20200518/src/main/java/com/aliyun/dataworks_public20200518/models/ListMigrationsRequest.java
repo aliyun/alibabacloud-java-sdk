@@ -5,35 +5,51 @@ import com.aliyun.tea.*;
 
 public class ListMigrationsRequest extends TeaModel {
     /**
-     * <p>The ID of the owner.</p>
-     * <br>
+     * <p>The migration task type. Valid values: IMPORT and EXPORT.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>IMPORT</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>false</p>
      */
     @NameInMap("MigrationType")
     public String migrationType;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The owner ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>193379****</p>
      */
     @NameInMap("Owner")
     public String owner;
 
     /**
-     * <p>The number of entries to return on each page. Maximum value: 100.</p>
+     * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The number of entries per page. Maximum value: 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The type of the migration task. Valid values: IMPORT and EXPORT.</p>
-     * <br>
+     * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to obtain the workspace ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12345</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;

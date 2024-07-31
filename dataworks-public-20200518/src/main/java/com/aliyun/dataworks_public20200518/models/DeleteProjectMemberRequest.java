@@ -5,15 +5,21 @@ import com.aliyun.tea.*;
 
 public class DeleteProjectMemberRequest extends TeaModel {
     /**
-     * <p>The ID of the region.</p>
-     * <br>
+     * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to obtain the workspace ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>27</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;
 
     /**
+     * <p>The user ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234</p>
      */
     @NameInMap("UserId")
     public String userId;

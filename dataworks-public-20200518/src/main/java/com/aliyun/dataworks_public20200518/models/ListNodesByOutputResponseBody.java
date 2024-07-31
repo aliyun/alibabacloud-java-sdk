@@ -11,31 +11,46 @@ public class ListNodesByOutputResponseBody extends TeaModel {
     public java.util.List<ListNodesByOutputResponseBodyData> data;
 
     /**
-     * <p>The error code returned.</p>
+     * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Invalid.Tenant.ConnectionNotExists</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The connection does not exist.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
-     * <p>The ID of the request. You can use the ID to locate logs and troubleshoot issues.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SDFSDFSDF-asdfDFSDF-SDFSDf-SDfSFD</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -95,107 +110,155 @@ public class ListNodesByOutputResponseBody extends TeaModel {
 
     public static class ListNodesByOutputResponseBodyDataNodeList extends TeaModel {
         /**
-         * <p>The ID of the baseline.</p>
+         * <p>The baseline ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1235667</p>
          */
         @NameInMap("BaselineId")
         public Long baselineId;
 
         /**
          * <p>The name of the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>odps_first</p>
          */
         @NameInMap("Connection")
         public String connection;
 
         /**
-         * <p>The cron expression.</p>
+         * <p>The CRON expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00 00 00 * * ?</p>
          */
         @NameInMap("CronExpress")
         public String cronExpress;
 
         /**
          * <p>The description of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The table and partition filter expression in Data Quality that are associated with the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;projectName&quot;:&quot;ztjy_dim&quot;,&quot;tableName&quot;:&quot;dim_user_agent_manage_area_a&quot;,&quot;partition&quot;:&quot;ds\u003d$[yyyy-mm-dd-1]&quot;}]</p>
          */
         @NameInMap("DqcDescription")
         public String dqcDescription;
 
         /**
-         * <p>Indicates whether the node is associated with Data Quality. Valid values: 0 and 1. The value 0 indicates that node is associated with Data Quality, and the value 1 indicates that the node is not associated with Data Quality.</p>
+         * <p>Indicates whether the node is associated with a monitoring rule in Data Quality. Valid values: 0 and 1. The value 0 indicates that the node is associated with a monitoring rule in Data Quality. The value 1 indicates that the node is not associated with a monitoring rule in Data Quality.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("DqcType")
         public Integer dqcType;
 
         /**
-         * <p>The type of the node.</p>
-         * <br>
-         * <p>Valid values:</p>
-         * <br>
-         * <p>6 (Shell node), 10 (ODPS SQL node), 11 (ODPS MR node), 23 (Data Integration node), 24 (ODPS Script node), 99 (zero-load node), 221 (PyODPS 2 node), 225 (ODPS Spark node), 227 (EMR Hive node), 228 (EMR Spark node), 229 (EMR Spark SQL node), 230 (EMR MR node), 239 (OSS object inspection node), 257 (EMR Shell node), 258 (EMR Spark Shell node), 259 (EMR Presto node), 260 (EMR Impala node), 900 (real-time synchronization node), 1089 (cross-tenant collaboration node), 1091 (Hologres development node), 1093 (Hologres SQL node), 1100 (assignment node), and 1221 (PyODPS 3 node).</p>
+         * <p>The node type. Valid values:</p>
+         * <p>6 (Shell), 10 (ODPS SQL), 11 (ODPS MR), 23 (Data Integration), 24 (ODPS Script), 99 (zero load), 221 (PyODPS 2), 225 (ODPS Spark), 227 (EMR Hive), 228 (EMR Spark), 229 (EMR Spark SQL), 230 (EMR MR), 239 (OSS object inspection), 257 (EMR Shell), 258 (EMR Spark Shell), 259 (EMR Presto), 260 (EMR Impala), 900 (real-time synchronization), 1089 (cross-tenant collaboration), 1091 (Hologres development), 1093 (Hologres SQL), 1100 (assignment), and 1221 (PyODPS 3)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ODPS_SQL</p>
          */
         @NameInMap("FileType")
         public String fileType;
 
         /**
-         * <p>The ID of the node.</p>
+         * <p>The node ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>125677</p>
          */
         @NameInMap("NodeId")
         public Long nodeId;
 
         /**
          * <p>The name of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>liux_test_n****</p>
          */
         @NameInMap("NodeName")
         public String nodeName;
 
         /**
-         * <p>The ID of the node owner.</p>
+         * <p>The owner ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>19337906836551</p>
          */
         @NameInMap("OwnerId")
         public String ownerId;
 
         /**
-         * <p>The values of the scheduling parameters configured for the node.</p>
+         * <p>The scheduling parameters of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a=b</p>
          */
         @NameInMap("ParamValues")
         public String paramValues;
 
         /**
-         * <p>The priority of the node. Valid values: 1, 3, 5, 7, and 8. A large value indicates a high priority. Default value: 1.</p>
+         * <p>The priority of the node. Valid values: 1, 3, 5, 7, and 8. A greater value indicates a higher priority. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Priority")
         public Integer priority;
 
         /**
-         * <p>The type of the node. This parameter is deprecated. For more information about node types, see the valid values of FileType.</p>
+         * <p>The node type. This parameter is deprecated. For more information about node types, see valid values of the FileType parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ODPS_SQL</p>
          */
         @NameInMap("ProgramType")
         public String programType;
 
         /**
-         * <p>The ID of the workspace.</p>
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>33671</p>
          */
         @NameInMap("ProjectId")
         public Long projectId;
 
         /**
-         * <p>The ID of the associated workflow.</p>
+         * <p>The ID of the workflow to which the node belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1235655464</p>
          */
         @NameInMap("RelatedFlowId")
         public Long relatedFlowId;
 
         /**
          * <p>The interval at which the node is rerun after the node fails to run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         @NameInMap("RepeatInterval")
         public Integer repeatInterval;
 
         /**
          * <p>Indicates whether the node can be rerun.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Repeatability")
         public Boolean repeatability;
@@ -208,11 +271,15 @@ public class ListNodesByOutputResponseBody extends TeaModel {
 
         /**
          * <p>The scheduling type of the node. Valid values:</p>
-         * <br>
-         * <p>*   NORAMAL: The node is an auto triggered node. The node is scheduled on a regular basis.</p>
-         * <p>*   MANUAL: The node is a manually triggered node. The node is not scheduled on a regular basis.</p>
-         * <p>*   PAUSE: The node is a frozen node. The system schedules the node on a regular basis but sets it to FAILURE when the system starts to schedule it.</p>
-         * <p>*   SKIP: The node is a dry-run node. The system schedules the node on a regular basis but sets it to SUCCESS when the system starts to schedule it.</p>
+         * <ul>
+         * <li>NORMAL: The node is an auto triggered node. The scheduling system regularly runs the node.</li>
+         * <li>MANUAL: The node is a manually triggered node. The scheduling system does not regularly run the node.</li>
+         * <li>PAUSE: The node is a frozen node. The scheduling system regularly runs the node but sets the status of the node to failed when the scheduling system starts to run the node.</li>
+         * <li>SKIP: The node is a dry-run node. The scheduling system regularly runs the node but sets the status of the node to successful when the scheduling system starts to run the node.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         @NameInMap("SchedulerType")
         public String schedulerType;
@@ -378,13 +445,16 @@ public class ListNodesByOutputResponseBody extends TeaModel {
 
     public static class ListNodesByOutputResponseBodyData extends TeaModel {
         /**
-         * <p>The information of the nodes returned.</p>
+         * <p>The information about the nodes returned.</p>
          */
         @NameInMap("NodeList")
         public java.util.List<ListNodesByOutputResponseBodyDataNodeList> nodeList;
 
         /**
          * <p>The output name of the current node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_0709_1.630003556_out</p>
          */
         @NameInMap("Output")
         public String output;

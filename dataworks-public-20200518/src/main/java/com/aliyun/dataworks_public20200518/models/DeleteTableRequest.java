@@ -6,32 +6,58 @@ import com.aliyun.tea.*;
 public class DeleteTableRequest extends TeaModel {
     /**
      * <p>The globally unique identifier (GUID) of the MaxCompute project. Specify the GUID in the odps.{projectName} format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>odps.test</p>
      */
     @NameInMap("AppGuid")
     public String appGuid;
 
     /**
-     * <p>The environment of the DataWorks workspace. Valid values: 0 and 1. The value 0 indicates the development environment. The value 1 indicates the production environment.</p>
+     * <p>The type of the compute engine or data source. Valid values:</p>
+     * <ul>
+     * <li>cdh</li>
+     * <li>analyticdb_for_mysql</li>
+     * <li>odps</li>
+     * <li>emr</li>
+     * <li>hadoop</li>
+     * <li>holodb</li>
+     * <li>hybriddb_for_postgresql</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("EnvType")
     public Integer envType;
 
     /**
      * <p>The ID of the DataWorks workspace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>101</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;
 
     /**
      * <p>The schema information of the table. You need to enter the schema information of the table if you enable the table schema in MaxCompute.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
      */
     @NameInMap("Schema")
     public String schema;
 
     /**
      * <p>The name of the MaxCompute table.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>table1</p>
      */
     @NameInMap("TableName")
     public String tableName;

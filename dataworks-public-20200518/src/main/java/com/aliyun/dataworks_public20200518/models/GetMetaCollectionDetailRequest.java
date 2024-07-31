@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class GetMetaCollectionDetailRequest extends TeaModel {
     /**
      * <p>The unique identifier of the collection.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>album.12345</p>
      */
     @NameInMap("QualifiedName")
     public String qualifiedName;

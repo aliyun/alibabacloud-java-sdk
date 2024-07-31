@@ -4,56 +4,93 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class CreateDagComplementRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>00:00:00</p>
+     */
     @NameInMap("BizBeginTime")
     public String bizBeginTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>23:00:00</p>
+     */
     @NameInMap("BizEndTime")
     public String bizEndTime;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-05-21 00:00:00</p>
      */
     @NameInMap("EndBizDate")
     public String endBizDate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1234</p>
+     */
     @NameInMap("ExcludeNodeIds")
     public String excludeNodeIds;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>74324,74325</p>
      */
     @NameInMap("IncludeNodeIds")
     public String includeNodeIds;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xm_test</p>
      */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{74324:&quot;key1=val1 key2=val&quot;}</p>
+     */
     @NameInMap("NodeParams")
     public String nodeParams;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("Parallelism")
     public Boolean parallelism;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PROD</p>
      */
     @NameInMap("ProjectEnv")
     public String projectEnv;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234</p>
      */
     @NameInMap("RootNodeId")
     public Long rootNodeId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-05-20 00:00:00</p>
      */
     @NameInMap("StartBizDate")
     public String startBizDate;

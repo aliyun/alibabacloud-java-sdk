@@ -5,22 +5,29 @@ import com.aliyun.tea.*;
 
 public class UpdateDISyncTaskResponseBody extends TeaModel {
     /**
-     * <p>The information that indicates whether the sync node was updated.</p>
+     * <p>The information that indicates whether the data synchronization task is updated.</p>
      */
     @NameInMap("Data")
     public UpdateDISyncTaskResponseBodyData data;
 
     /**
-     * <p>The ID of the request. You can locate logs and troubleshoot issues based on the ID.</p>
+     * <p>The request ID. You can locate logs and troubleshoot issues based on the ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0bc1411515937635973****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   true: The request was successful.</p>
-     * <p>*   false: The request failed.</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -56,16 +63,23 @@ public class UpdateDISyncTaskResponseBody extends TeaModel {
 
     public static class UpdateDISyncTaskResponseBodyData extends TeaModel {
         /**
-         * <p>The reason why the sync node failed to be updated. If the sync node was updated, this parameter is left empty.</p>
+         * <p>The error message returned if the data synchronization task fails to be updated. If the data synchronization task is successfully updated, the value null is returned for this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ResourceGroup:[S_res_group_XXX] is invalid.</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
-         * <p>Indicates whether the sync node was updated. Valid values:</p>
-         * <br>
-         * <p>*   success: The sync node was updated.</p>
-         * <p>*   fail: The sync node failed to be updated.</p>
+         * <p>The update status of the data synchronization task. Valid values:</p>
+         * <ul>
+         * <li>success</li>
+         * <li>fail</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         @NameInMap("Status")
         public String status;

@@ -12,30 +12,45 @@ public class GetRemindResponseBody extends TeaModel {
 
     /**
      * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1031203110005</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The specified parameters are invalid.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
-     * <p>The request ID. You can troubleshoot issues based on the ID.</p>
+     * <p>The request ID. You can use the ID to troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0000-ABCD-EFGH-IJKLMNOPQ</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -95,7 +110,10 @@ public class GetRemindResponseBody extends TeaModel {
 
     public static class GetRemindResponseBodyDataBaselines extends TeaModel {
         /**
-         * <p>The ID of the baseline.</p>
+         * <p>The baseline ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         @NameInMap("BaselineId")
         public Long baselineId;
@@ -131,7 +149,10 @@ public class GetRemindResponseBody extends TeaModel {
 
     public static class GetRemindResponseBodyDataBizProcesses extends TeaModel {
         /**
-         * <p>The ID of the workflow.</p>
+         * <p>The workflow ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9527</p>
          */
         @NameInMap("BizId")
         public Long bizId;
@@ -167,7 +188,10 @@ public class GetRemindResponseBody extends TeaModel {
 
     public static class GetRemindResponseBodyDataNodes extends TeaModel {
         /**
-         * <p>The ID of the node.</p>
+         * <p>The node ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         @NameInMap("NodeId")
         public Long nodeId;
@@ -179,13 +203,19 @@ public class GetRemindResponseBody extends TeaModel {
         public String nodeName;
 
         /**
-         * <p>The ID of the Alibaba Cloud account used by the owner of the node.</p>
+         * <p>The ID of the Alibaba Cloud account used by the node owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9527951795****</p>
          */
         @NameInMap("Owner")
         public String owner;
 
         /**
          * <p>The ID of the workspace to which the node belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         @NameInMap("ProjectId")
         public Long projectId;
@@ -231,7 +261,10 @@ public class GetRemindResponseBody extends TeaModel {
 
     public static class GetRemindResponseBodyDataProjects extends TeaModel {
         /**
-         * <p>The ID of the workspace.</p>
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         @NameInMap("ProjectId")
         public Long projectId;
@@ -254,12 +287,18 @@ public class GetRemindResponseBody extends TeaModel {
     public static class GetRemindResponseBodyDataRobots extends TeaModel {
         /**
          * <p>Indicates whether all group members are notified when the alert notification is sent to a DingTalk group. Valid values: true and false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("AtAll")
         public Boolean atAll;
 
         /**
          * <p>The webhook URL of the DingTalk chatbot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=">https://oapi.dingtalk.com/robot/send?access_token=</a>******************************</p>
          */
         @NameInMap("WebUrl")
         public String webUrl;
@@ -290,33 +329,24 @@ public class GetRemindResponseBody extends TeaModel {
     public static class GetRemindResponseBodyData extends TeaModel {
         /**
          * <p>The minimum interval at which alerts are reported. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1800</p>
          */
         @NameInMap("AlertInterval")
         public Integer alertInterval;
 
-        /**
-         * <p>The notification method. Valid values:</p>
-         * <br>
-         * <p>*   MAIL</p>
-         * <br>
-         * <p>*   SMS</p>
-         * <br>
-         * <p>    Alert notifications can be sent by text messages only in the Singapore, Malaysia (Kuala Lumpur), and Germany (Frankfurt) regions.</p>
-         * <br>
-         * <p>*   Multiple notification methods are separated by commas (,).</p>
-         */
         @NameInMap("AlertMethods")
         public java.util.List<String> alertMethods;
 
-        /**
-         * <p>*   If the value of the AlertUnit parameter is OWNER, this parameter is left empty.</p>
-         * <p>*   If the value of the AlertUnit parameter is OTHER, the ID of the Alibaba Cloud account used by the specified user is returned. Multiple IDs are separated by commas (,).</p>
-         */
         @NameInMap("AlertTargets")
         public java.util.List<String> alertTargets;
 
         /**
          * <p>The recipient of the alert. Valid values: OWNER and OTHER. The value OWNER indicates the node owner. The value OTHER indicates a specified user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OWNER</p>
          */
         @NameInMap("AlertUnit")
         public String alertUnit;
@@ -334,35 +364,52 @@ public class GetRemindResponseBody extends TeaModel {
         public java.util.List<GetRemindResponseBodyDataBizProcesses> bizProcesses;
 
         /**
-         * <p>*   If the value of the RemindType parameter is FINISHED, this parameter is left empty.</p>
-         * <p>*   If the value of the RemindType parameter is UNFINISHED, the trigger conditions are returned as key-value pairs. Example: {"hour":23,"minu":59}. Valid values of hour: 0 to 47. Valid values of minu: 0 to 59.</p>
-         * <p>*   If the value of the RemindType parameter is ERROR, this parameter is left empty.</p>
-         * <p>*   If the value of the RemindType parameter is CYCLE_UNFINISHED, the trigger conditions are returned as key-value pairs. Example: {"1":"05:50","2":"06:50","3":"07:50","4":"08:50","5":"09:50","6":"10:50","7":"11:50","8":"12:50","9":"13:50","10":"14:50","11":"15:50","12":"16:50","13":"17:50","14":"18:50","15":"19:50","16":"20:50","17":"21:50","18":"22:50","19":"23:50","20":"24:50","21":"25:50"}. The key indicates the ID of the cycle. Valid values of the ID: 1 to 288. The value indicates the timeout period of the node that is running in the cycle. The value is in the hh:mm format. Valid values of hh: 0 to 47. Valid values of mm: 0 to 59.</p>
-         * <p>*   If the value of the RemindType parameter is TIMEOUT, the timeout period is returned. Unit: seconds. Example: 1800. This value indicates that an alert is reported if the node has run for more than 30 minutes.</p>
+         * <ul>
+         * <li>If the value of the RemindType parameter is FINISHED, this parameter is left empty.</li>
+         * <li>If the value of the RemindType parameter is UNFINISHED, the trigger conditions are returned as key-value pairs. Example: {&quot;hour&quot;:23,&quot;minu&quot;:59}. Valid values of hour: [0,47]. Valid values of minu: [0,59].</li>
+         * <li>If the value of the RemindType parameter is ERROR, this parameter is left empty.</li>
+         * <li>If the value of the RemindType parameter is CYCLE_UNFINISHED, the trigger conditions are returned as key-value pairs. Example: {&quot;1&quot;:&quot;05:50&quot;,&quot;2&quot;:&quot;06:50&quot;,&quot;3&quot;:&quot;07:50&quot;,&quot;4&quot;:&quot;08:50&quot;,&quot;5&quot;:&quot;09:50&quot;,&quot;6&quot;:&quot;10:50&quot;,&quot;7&quot;:&quot;11:50&quot;,&quot;8&quot;:&quot;12:50&quot;,&quot;9&quot;:&quot;13:50&quot;,&quot;10&quot;:&quot;14:50&quot;,&quot;11&quot;:&quot;15:50&quot;,&quot;12&quot;:&quot;16:50&quot;,&quot;13&quot;:&quot;17:50&quot;,&quot;14&quot;:&quot;18:50&quot;,&quot;15&quot;:&quot;19:50&quot;,&quot;16&quot;:&quot;20:50&quot;,&quot;17&quot;:&quot;21:50&quot;,&quot;18&quot;:&quot;22:50&quot;,&quot;19&quot;:&quot;23:50&quot;,&quot;20&quot;:&quot;24:50&quot;,&quot;21&quot;:&quot;25:50&quot;}. The key indicates the ID of the cycle. Valid values: [1,288]. The value indicates the timeout period of the node that is running in the cycle. Specify the value in the hh:mm format. Valid values of hh: [0,47]. Valid values of mm: [0,59].</li>
+         * <li>If the value of the RemindType parameter is TIMEOUT, the timeout period is returned. Unit: seconds. Example: 1800. This value indicates that an alert is reported if the node has run for more than 30 minutes.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;hour&quot;:23,&quot;minu&quot;:59}</p>
          */
         @NameInMap("Detail")
         public String detail;
 
         /**
-         * <p>The end time of the quiet hours. The value is in the hh:mm format. Valid values of hh: 0 to 23. Valid values of mm: 0 to 59.</p>
+         * <p>The end time of the quiet hours. The value is in the hh:mm format. Valid values of hh: [0,23]. Valid values of mm: [0,59].</p>
+         * 
+         * <strong>example:</strong>
+         * <p>08:00</p>
          */
         @NameInMap("DndEnd")
         public String dndEnd;
 
         /**
-         * <p>The start time of the quiet hours. The value is in the hh:mm format. Valid values of hh: 0 to 23. Valid values of mm: 0 to 59.</p>
+         * <p>The start time of the quiet hours. The value is in the hh:mm format. Valid values of hh: [0,23]. Valid values of mm: [0,59].</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00:00</p>
          */
         @NameInMap("DndStart")
         public String dndStart;
 
         /**
          * <p>The ID of the Alibaba Cloud account used by the creator of the custom alert rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9527951795****</p>
          */
         @NameInMap("Founder")
         public String founder;
 
         /**
          * <p>The maximum number of alerts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("MaxAlertTimes")
         public Integer maxAlertTimes;
@@ -380,25 +427,34 @@ public class GetRemindResponseBody extends TeaModel {
         public java.util.List<GetRemindResponseBodyDataProjects> projects;
 
         /**
-         * <p>The ID of the custom alert rule.</p>
+         * <p>The custom alert rule ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         @NameInMap("RemindId")
         public Long remindId;
 
         /**
-         * <p>The name of the custom alert rule.</p>
+         * <p>The name of the rule.</p>
          */
         @NameInMap("RemindName")
         public String remindName;
 
         /**
-         * <p>The conditions that trigger an alert for the node. Valid values: FINISHED, UNFINISHED, ERROR, CYCLE_UNFINISHED, and TIMEOUT. The value FINISHED indicates that the node finishes running. The value UNFINISHED indicates that the node is still running at the specified point in time. The value ERROR indicates that an error occurs when the node is running. The value CYCLE_UNFINISHED indicates that the node does not finish running in the specified scheduling cycle. The value TIMEOUT indicates that the node times out.</p>
+         * <p>The conditions that trigger an alert. Valid values: FINISHED, UNFINISHED, ERROR, CYCLE_UNFINISHED, and TIMEOUT.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FINISHED</p>
          */
         @NameInMap("RemindType")
         public String remindType;
 
         /**
-         * <p>The type of the object to which the custom alert rule is applied. Valid values: NODE, BASELINE, PROJECT, and BIZPROCESS. The value NODE indicates that the monitored object is a node. The value BASELINE indicates that the monitored object is a baseline. The value PROJECT indicates that the monitored object is a workspace. The value BIZPROCESS indicates that the monitored object is a workflow.</p>
+         * <p>The type of the object to which the custom alert rule is applied. Valid values: NODE, BASELINE, PROJECT, and BIZPROCESS. The value NODE indicates a node. The value BASELINE indicates a baseline. The value PROJECT indicates a workspace. The value BIZPROCESS indicates a workflow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NODE</p>
          */
         @NameInMap("RemindUnit")
         public String remindUnit;
@@ -411,15 +467,13 @@ public class GetRemindResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether the custom alert rule is enabled. Valid values: true and false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Useflag")
         public Boolean useflag;
 
-        /**
-         * <p>The webhook URL of the WeCom or Lark chatbot. If multiple webhook URLs are involved, the webhook URLs are separated by commas (,). The value of AlertMethods must include WEBHOOKS. Only DataWorks Enterprise Edition supports this parameter.</p>
-         * <br>
-         * <p>The webhook URL-based alerting feature is supported in the following regions: China (Shanghai), China (Chengdu), China (Zhangjiakou), China (Beijing), China (Hangzhou), China (Shenzhen), China (Hong Kong), Germany (Frankfurt), and Singapore.</p>
-         */
         @NameInMap("Webhooks")
         public java.util.List<String> webhooks;
 

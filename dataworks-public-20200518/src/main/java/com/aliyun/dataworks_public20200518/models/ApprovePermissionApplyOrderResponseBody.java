@@ -5,13 +5,19 @@ import com.aliyun.tea.*;
 
 public class ApprovePermissionApplyOrderResponseBody extends TeaModel {
     /**
-     * <p>Indicates that the approval is successful.</p>
+     * <p>Indicates whether the permission request order is processed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("ApproveSuccess")
     public Boolean approveSuccess;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0bc1ec92159376****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

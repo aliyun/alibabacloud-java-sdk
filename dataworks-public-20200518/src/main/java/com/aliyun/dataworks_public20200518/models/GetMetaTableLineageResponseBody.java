@@ -5,37 +5,52 @@ import com.aliyun.tea.*;
 
 public class GetMetaTableLineageResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the next page has more query results.</p>
+     * <p>The business data.</p>
      */
     @NameInMap("Data")
     public GetMetaTableLineageResponseBodyData data;
 
     /**
-     * <p>The paging information.</p>
+     * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Invalid.Tenant.ConnectionNotExists</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The connection does not exist.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
-     * <p>The error code.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0bc1ec92159376</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The business data.</p>
+     * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -94,17 +109,38 @@ public class GetMetaTableLineageResponseBody extends TeaModel {
     }
 
     public static class GetMetaTableLineageResponseBodyDataDataEntityList extends TeaModel {
+        /**
+         * <p>The time when the table was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1638720736000</p>
+         */
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
+        /**
+         * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>db1</p>
+         */
         @NameInMap("DatabaseName")
         public String databaseName;
 
+        /**
+         * <p>The unique identifier of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>odps.tt.name</p>
+         */
         @NameInMap("TableGuid")
         public String tableGuid;
 
         /**
-         * <p>The time when the metatable was created.</p>
+         * <p>The name of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         @NameInMap("TableName")
         public String tableName;
@@ -150,19 +186,25 @@ public class GetMetaTableLineageResponseBody extends TeaModel {
 
     public static class GetMetaTableLineageResponseBodyData extends TeaModel {
         /**
-         * <p>The GUID of the metatable.</p>
+         * <p>The information about the table.</p>
          */
         @NameInMap("DataEntityList")
         public java.util.List<GetMetaTableLineageResponseBodyDataDataEntityList> dataEntityList;
 
         /**
-         * <p>The name of the metatable.</p>
+         * <p>Indicates whether the next page exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("HasNext")
         public Boolean hasNext;
 
         /**
-         * <p>The information about the metatable.</p>
+         * <p>The logic of paging. If the value true is returned for the HasNext parameter and a value is returned for the NextPrimaryKey parameter in the response of the previous request, you must use the value of the NextPrimaryKey parameter for the next request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>odps | retail_e_commerce_2 | retail_e_commerce_2 | dws_ec_trd__cate_commodity_gmv_kpy_fy</p>
          */
         @NameInMap("NextPrimaryKey")
         public String nextPrimaryKey;

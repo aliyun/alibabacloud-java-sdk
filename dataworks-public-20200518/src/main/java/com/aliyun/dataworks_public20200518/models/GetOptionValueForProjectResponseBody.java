@@ -4,11 +4,20 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetOptionValueForProjectResponseBody extends TeaModel {
+    /**
+     * <p>The data returned In the example, cuNumber is a custom key.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;cuNumber&quot;:&quot;0&quot;}</p>
+     */
     @NameInMap("OptionValue")
     public String optionValue;
 
     /**
-     * <p>The option settings. In the example, cuNumber is a custom key.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E6F0DBDD-5AD****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

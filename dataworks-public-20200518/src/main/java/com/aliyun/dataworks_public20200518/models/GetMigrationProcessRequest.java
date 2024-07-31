@@ -5,17 +5,21 @@ import com.aliyun.tea.*;
 
 public class GetMigrationProcessRequest extends TeaModel {
     /**
-     * <p>The ID of the migration package. You can call the CreateImportMigration operation to query the ID.</p>
-     * <br>
+     * <p>The migration package ID. You can call the CreateImportMigration operation to query the ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("MigrationId")
     public Long migrationId;
 
     /**
-     * <p>The ID of the workspace. You can go to the Workspace Management page of the DataWorks console to view the ID.</p>
-     * <br>
+     * <p>The workspace ID. You can log on to the DataWorks console and go to the Workspace page to query the ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;

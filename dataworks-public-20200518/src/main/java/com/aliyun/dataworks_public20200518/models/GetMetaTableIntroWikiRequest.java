@@ -6,14 +6,19 @@ import com.aliyun.tea.*;
 public class GetMetaTableIntroWikiRequest extends TeaModel {
     /**
      * <p>The GUID of the metatable.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>odps.engine_name.table_name</p>
      */
     @NameInMap("TableGuid")
     public String tableGuid;
 
     /**
      * <p>The version of the instructions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("WikiVersion")
     public Long wikiVersion;

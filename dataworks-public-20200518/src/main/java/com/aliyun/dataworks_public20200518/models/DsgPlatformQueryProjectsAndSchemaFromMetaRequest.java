@@ -5,7 +5,16 @@ import com.aliyun.tea.*;
 
 public class DsgPlatformQueryProjectsAndSchemaFromMetaRequest extends TeaModel {
     /**
+     * <p>The type of the compute engine. Valid values:</p>
+     * <ul>
+     * <li>ODPS.ODPS</li>
+     * <li>EMR</li>
+     * <li>HOLO.POSTGRES</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EMR</p>
      */
     @NameInMap("EngineName")
     public String engineName;

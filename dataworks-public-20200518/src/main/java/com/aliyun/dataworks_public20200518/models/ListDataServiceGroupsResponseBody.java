@@ -11,7 +11,10 @@ public class ListDataServiceGroupsResponseBody extends TeaModel {
     public ListDataServiceGroupsResponseBodyGroupPagingResult groupPagingResult;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0000-ABCD-EF****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,55 +42,82 @@ public class ListDataServiceGroupsResponseBody extends TeaModel {
 
     public static class ListDataServiceGroupsResponseBodyGroupPagingResultGroups extends TeaModel {
         /**
-         * <p>The ID of the API group that is associated with the business process in the API Gateway console.</p>
+         * <p>The ID of the API Gateway group to which the workflow is bound.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100abc</p>
          */
         @NameInMap("ApiGatewayGroupId")
         public String apiGatewayGroupId;
 
         /**
          * <p>The time when the business process was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-09-24T18:37:51+0800</p>
          */
         @NameInMap("CreatedTime")
         public String createdTime;
 
         /**
          * <p>The user identifier (UID) of the creator of the business process. The value of this parameter may be empty for creators of some existing business processes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
          */
         @NameInMap("CreatorId")
         public String creatorId;
 
         /**
          * <p>The description of the business process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The ID of the business process.</p>
+         * <p>The business process ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ds_123abc</p>
          */
         @NameInMap("GroupId")
         public String groupId;
 
         /**
          * <p>The name of the business process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test</p>
          */
         @NameInMap("GroupName")
         public String groupName;
 
         /**
          * <p>The time when the business process was modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-09-24T18:37:51+0800</p>
          */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
         /**
-         * <p>The ID of the workspace.</p>
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10002</p>
          */
         @NameInMap("ProjectId")
         public Long projectId;
 
         /**
-         * <p>The ID of the tenant.</p>
+         * <p>The tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10003</p>
          */
         @NameInMap("TenantId")
         public Long tenantId;
@@ -179,19 +209,28 @@ public class ListDataServiceGroupsResponseBody extends TeaModel {
         public java.util.List<ListDataServiceGroupsResponseBodyGroupPagingResultGroups> groups;
 
         /**
-         * <p>The page number of the returned page. The value of this parameter is the same as that of the PageNumber parameter in the request.</p>
+         * <p>The page number. The value of this parameter is the same as that of the PageNumber parameter in the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
         /**
-         * <p>The number of entries returned per page. Default value: 10. Maximum value: 100.</p>
+         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

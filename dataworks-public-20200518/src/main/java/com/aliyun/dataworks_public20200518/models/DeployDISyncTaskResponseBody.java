@@ -6,21 +6,28 @@ import com.aliyun.tea.*;
 public class DeployDISyncTaskResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the real-time synchronization node or data synchronization solution is deployed. Valid values:</p>
-     * <br>
-     * <p>*   success: The real-time synchronization node or data synchronization solution is deployed.</p>
-     * <p>*   fail: The real-time synchronization node or data synchronization solution fails to be deployed.</p>
+     * <ul>
+     * <li>success: The real-time synchronization node or data synchronization solution is deployed.</li>
+     * <li>fail: The real-time synchronization node or data synchronization solution fails to be deployed.</li>
+     * </ul>
      */
     @NameInMap("Data")
     public DeployDISyncTaskResponseBodyData data;
 
     /**
      * <p>The result of deploying the real-time synchronization node or data synchronization solution.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0bc1411515937635973****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the request. You can query logs and troubleshoot issues based on the ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -55,13 +62,19 @@ public class DeployDISyncTaskResponseBody extends TeaModel {
     }
 
     public static class DeployDISyncTaskResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>submit and deploy fail.</p>
+         */
         @NameInMap("Message")
         public String message;
 
         /**
          * <p>The cause of the failure to deploy the real-time synchronization node or data synchronization solution.</p>
-         * <br>
          * <p>If the real-time synchronization node or data synchronization solution is deployed, the value null is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         @NameInMap("Status")
         public String status;

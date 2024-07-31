@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class ListDeploymentsResponseBody extends TeaModel {
     /**
-     * <p>The return results.</p>
+     * <p>The data returned.</p>
      */
     @NameInMap("Data")
     public ListDeploymentsResponseBodyData data;
 
     /**
-     * <p>The ID of the request. You can use the ID to troubleshoot issues.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0000-ABCD-EFG</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,54 +42,79 @@ public class ListDeploymentsResponseBody extends TeaModel {
 
     public static class ListDeploymentsResponseBodyDataDeployments extends TeaModel {
         /**
-         * <p>The time when the deployment task was created.</p>
+         * <p>The time when the deployment package was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1593877765000</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
-         * <p>The ID of the Alibaba Cloud account used by the user who created the deployment tasks.</p>
+         * <p>The ID of the Alibaba Cloud account used by the user who created the deployment package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2003****</p>
          */
         @NameInMap("Creator")
         public String creator;
 
         /**
-         * <p>The error message returned when the deployment task failed.</p>
+         * <p>The error message returned when the deployment package failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         /**
-         * <p>The time when the deployment task was run. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The time when the deployment package was run. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1593877765000</p>
          */
         @NameInMap("ExecuteTime")
         public Long executeTime;
 
         /**
-         * <p>The ID of the Alibaba Cloud account used by the user who ran the deployment tasks.</p>
+         * <p>The ID of the Alibaba Cloud account used by the user who ran the deployment package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2003****</p>
          */
         @NameInMap("Executor")
         public String executor;
 
         /**
-         * <p>The ID of the deployment task. You can call the [GetDeployment](https://help.aliyun.com/document_detail/173950.html) operation to query the details of the deployment task based on the ID.</p>
+         * <p>The deployment package ID. You can call the <a href="https://help.aliyun.com/document_detail/173950.html">GetDeployment</a> operation to obtain the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11111</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
-         * <p>The name of the deployment task.</p>
+         * <p>The name of the deployment package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>auto_created</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The status of the deployment tasks. Valid values:</p>
-         * <br>
-         * <p>*   0: The deployment tasks are ready.</p>
-         * <p>*   1: The deployment tasks are successful.</p>
-         * <p>*   2: The deployment tasks fail.</p>
-         * <p>*   6: The deployment tasks are rejected.</p>
+         * <p>The status of the deployment package. Valid values:</p>
+         * <ul>
+         * <li>0: The deployment package is ready.</li>
+         * <li>1: The deployment package is deployed.</li>
+         * <li>2: The deployment package fails to be deployed.</li>
+         * <li>6: The deployment package is rejected.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Status")
         public Integer status;
@@ -164,25 +192,34 @@ public class ListDeploymentsResponseBody extends TeaModel {
 
     public static class ListDeploymentsResponseBodyData extends TeaModel {
         /**
-         * <p>The information about the deployment tasks.</p>
+         * <p>The deployment packages.</p>
          */
         @NameInMap("Deployments")
         public java.util.List<ListDeploymentsResponseBodyDataDeployments> deployments;
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageNumber")
         public Long pageNumber;
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Long pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13</p>
          */
         @NameInMap("TotalCount")
         public Long totalCount;

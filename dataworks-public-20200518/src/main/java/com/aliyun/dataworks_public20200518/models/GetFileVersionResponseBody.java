@@ -12,30 +12,45 @@ public class GetFileVersionResponseBody extends TeaModel {
 
     /**
      * <p>The error code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Invalid.Tenant.ConnectionNotExists</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The connection does not exist.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The ID of the request. You can troubleshoot issues based on the ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0000-ABCD-EFG****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -96,6 +111,9 @@ public class GetFileVersionResponseBody extends TeaModel {
     public static class GetFileVersionResponseBodyData extends TeaModel {
         /**
          * <p>The change type of the file version. Valid values: CREATE, UPDATE, and DELETE.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UPDATE</p>
          */
         @NameInMap("ChangeType")
         public String changeType;
@@ -108,66 +126,99 @@ public class GetFileVersionResponseBody extends TeaModel {
 
         /**
          * <p>The time when the version was generated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1593881265000</p>
          */
         @NameInMap("CommitTime")
         public Long commitTime;
 
         /**
          * <p>The ID of the Alibaba Cloud account that is used to create the file version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7384234****</p>
          */
         @NameInMap("CommitUser")
         public String commitUser;
 
         /**
          * <p>The file code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SHOW TABLES;</p>
          */
         @NameInMap("FileContent")
         public String fileContent;
 
         /**
          * <p>The file name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ods_user_info_d</p>
          */
         @NameInMap("FileName")
         public String fileName;
 
         /**
          * <p>The basic information about the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;fileName&quot;:&quot;ods_user_info_d&quot;,&quot;fileType&quot;:10}</p>
          */
         @NameInMap("FilePropertyContent")
         public String filePropertyContent;
 
         /**
          * <p>The file version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("FileVersion")
         public Integer fileVersion;
 
         /**
          * <p>Indicates whether the version is the latest version in the production environment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("IsCurrentProd")
         public Boolean isCurrentProd;
 
         /**
          * <p>The scheduling configurations of the node that corresponds to the file version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;cycleType&quot;:0,&quot;cronExpress&quot;:&quot;00 05 00 * * ?&quot;}</p>
          */
         @NameInMap("NodeContent")
         public String nodeContent;
 
         /**
          * <p>The ID of the node that corresponds to the file version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3000001</p>
          */
         @NameInMap("NodeId")
         public Long nodeId;
 
         /**
          * <p>The status of the file version. Valid values: COMMITTING, COMMITTED, CHECK_OK, PACKAGED, DEPLOYING, DEPLOYED, and CANCELLED. The value CHECK_OK is equivalent to the value COMMITTED.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>COMMITTED</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The functional module to which the file belongs. Valid values: NORMAL, MANUAL, MANUAL_BIZ, SKIP, ADHOCQUERY, and COMPONENT. The value NORMAL indicates DataStudio. The value MANUAL indicates a manually triggered node. The value MANUAL_BIZ indicates a manually triggered workflow. The value SKIP indicates a dry-run DataStudio node. The value ADHOCQUERY indicates an ad hoc query. The value COMPONENT indicates snippets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         @NameInMap("UseType")
         public String useType;

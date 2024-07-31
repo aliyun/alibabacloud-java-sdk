@@ -7,18 +7,38 @@ public class GetQualityFollowerResponseBody extends TeaModel {
     @NameInMap("Data")
     public java.util.List<GetQualityFollowerResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Invalid.Tenant.ConnectionNotExists</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>You have no permission.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>38cbdef0-f6cf-49</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,30 +96,58 @@ public class GetQualityFollowerResponseBody extends TeaModel {
     }
 
     public static class GetQualityFollowerResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("AlarmMode")
         public Integer alarmMode;
 
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1234</p>
+         */
         @NameInMap("EntityId")
         public String entityId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1234</p>
+         */
         @NameInMap("Follower")
         public String follower;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("FollowerAccountName")
         public String followerAccountName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("Id")
         public Long id;
 
         @NameInMap("ModifyTime")
         public Long modifyTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>autotest</p>
+         */
         @NameInMap("ProjectName")
         public String projectName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>dual</p>
+         */
         @NameInMap("TableName")
         public String tableName;
 

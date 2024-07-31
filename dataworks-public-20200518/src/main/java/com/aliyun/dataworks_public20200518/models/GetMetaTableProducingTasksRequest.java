@@ -4,24 +4,47 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetMetaTableProducingTasksRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>C-A_SAMPLE_CLUSTER_ID</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>odps</p>
+     */
     @NameInMap("DataSourceType")
     public String dataSourceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>default</p>
+     */
     @NameInMap("DbName")
     public String dbName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>myschema</p>
+     */
     @NameInMap("SchemaName")
     public String schemaName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>odps.sample_project.sample_table</p>
      */
     @NameInMap("TableGuid")
     public String tableGuid;
 
+    /**
+     * <strong>example:</strong>
+     * <p>sample_table</p>
+     */
     @NameInMap("TableName")
     public String tableName;
 

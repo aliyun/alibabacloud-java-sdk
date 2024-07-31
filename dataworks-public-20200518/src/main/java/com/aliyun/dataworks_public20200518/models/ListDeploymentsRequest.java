@@ -5,70 +5,99 @@ import com.aliyun.tea.*;
 
 public class ListDeploymentsRequest extends TeaModel {
     /**
-     * <p>The ID of the Alibaba Cloud account used by the user who created the deployment tasks.</p>
+     * <p>The ID of the Alibaba Cloud account used by the user who creates the deployment packages.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20030****</p>
      */
     @NameInMap("Creator")
     public String creator;
 
     /**
-     * <p>The time when the deployment tasks to be queried were created. This value must be a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The time when the deployment packages to be queried are created. This value must be a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1593877765000</p>
      */
     @NameInMap("EndCreateTime")
     public Long endCreateTime;
 
     /**
-     * <p>The time when the deployment tasks were run. This value must be a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The time when the deployment packages are run. This value must be a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1593877765000</p>
      */
     @NameInMap("EndExecuteTime")
     public Long endExecuteTime;
 
     /**
-     * <p>The ID of the Alibaba Cloud account used by the user who runs the deployment tasks.</p>
+     * <p>The ID of the Alibaba Cloud account used by the user who runs the deployment packages.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2003****</p>
      */
     @NameInMap("Executor")
     public String executor;
 
     /**
-     * <p>The keyword that is contained in the names of the deployment tasks. The keyword is used to search for deployment tasks in fuzzy mode.</p>
+     * <p>The keyword that is contained in the names of the deployment packages. A fuzzy search is supported. After you enter a keyword, all deployment packages whose names contain the keyword are displayed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hello</p>
      */
     @NameInMap("Keyword")
     public String keyword;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page. Default value: 10. Maximum value: 100.</p>
+     * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the DataWorks workspace. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace Management page to obtain the workspace ID.</p>
-     * <br>
-     * <p>You must configure this parameter or the ProjectIdentifier parameter to determine the DataWorks workspace to which the operation is applied.</p>
+     * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to obtain the workspace ID.</p>
+     * <p>You must configure either this parameter or the ProjectIdentifier parameter to determine the DataWorks workspace to which the operation is applied.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10000</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;
 
     /**
-     * <p>The name of the DataWorks workspace. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace Management page to obtain the workspace name.</p>
-     * <br>
-     * <p>You must configure this parameter or the ProjectId parameter to determine the DataWorks workspace to which the operation is applied.</p>
+     * <p>The name of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to obtain the workspace name.</p>
+     * <p>You must configure either this parameter or the ProjectId parameter to determine the DataWorks workspace to which the operation is applied.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dw_project</p>
      */
     @NameInMap("ProjectIdentifier")
     public String projectIdentifier;
 
     /**
-     * <p>The status of the deployment tasks. Valid values:</p>
-     * <br>
-     * <p>*   0: The deployment tasks are ready.</p>
-     * <p>*   1: The deployment tasks are successful.</p>
-     * <p>*   2: The deployment tasks fail.</p>
-     * <p>*   6: The deployment tasks are rejected.</p>
+     * <p>The status of the deployment packages. Valid values:</p>
+     * <ul>
+     * <li>0: The deployment packages are ready.</li>
+     * <li>1: The deployment packages are deployed.</li>
+     * <li>2: The deployment packages fail to be deployed.</li>
+     * <li>6: The deployment packages are rejected.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Status")
     public Integer status;

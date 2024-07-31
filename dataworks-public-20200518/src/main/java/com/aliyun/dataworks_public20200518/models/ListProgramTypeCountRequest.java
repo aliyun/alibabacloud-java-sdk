@@ -5,17 +5,21 @@ import com.aliyun.tea.*;
 
 public class ListProgramTypeCountRequest extends TeaModel {
     /**
-     * <p>The environment of the workspace, including projects in PROD and DEV.</p>
-     * <br>
+     * <p>The environment of the workspace. Valid values: PROD and DEV.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PROD</p>
      */
     @NameInMap("ProjectEnv")
     public String projectEnv;
 
     /**
-     * <p>The ID of the DataWorks workspace.</p>
-     * <br>
+     * <p>The workspace ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;

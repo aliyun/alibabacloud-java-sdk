@@ -5,31 +5,42 @@ import com.aliyun.tea.*;
 
 public class ExportDataSourcesResponseBody extends TeaModel {
     /**
-     * <p>The information about the export operation.</p>
+     * <p>The information about the exported data sources.</p>
      */
     @NameInMap("Data")
     public ExportDataSourcesResponseBodyData data;
 
     /**
      * <p>The HTTP status code returned. Valid values:</p>
-     * <br>
-     * <p>*   200: The request was successful.</p>
-     * <p>*   Other values: The request failed. You can troubleshoot issues based on the HTTP status code returned.</p>
+     * <ul>
+     * <li>200: The request was successful.</li>
+     * <li>Other values: The request failed. You can troubleshoot issues based on the HTTP status code returned.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
-     * <p>The ID of the request. You can locate logs and troubleshoot issues based on the ID.</p>
+     * <p>The request ID. You can locate logs and troubleshoot issues based on the ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0bc14115159376359****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   true: The request was successful.</p>
-     * <p>*   false: The request failed.</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -73,140 +84,199 @@ public class ExportDataSourcesResponseBody extends TeaModel {
 
     public static class ExportDataSourcesResponseBodyDataDataSources extends TeaModel {
         /**
-         * <p>The ID of the compute engine to which the data source is bound.</p>
+         * <p>The ID of the compute engine that is added as the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("BindingCalcEngineId")
         public Integer bindingCalcEngineId;
 
         /**
          * <p>Indicates whether the data source is connected to an exclusive resource group. Valid values:</p>
-         * <br>
-         * <p>*   1: The data source is connected to at least one exclusive resource group.</p>
-         * <p>*   0: The data source is not connected to any exclusive resource group.</p>
+         * <ul>
+         * <li>1: The data source is connected to at least one exclusive resource group.</li>
+         * <li>0: The data source is not connected to any exclusive resource group.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ConnectStatus")
         public Integer connectStatus;
 
         /**
          * <p>The configuration of the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;pubEndpoint&quot;:&quot;<a href="http://service.cn.maxcompute.aliyun.com/api%22,%22accessId%22:%22TMP.3KecGjvzy3i8MYfn2BGHgF7EHGyBFZcHm7GgngrABVRyvvKQrfF5kskR36xP361C3dqwbGo7SGYptAeGyiTwHXqLaBUvYC%22,%22securityToken%22:null,%22endpoint%22:%22http://service.cn.maxcompute.aliyun-inc.com/api%22,%22accessKey%22:%22***%22,%22name%22:%22PRE_PROJECT_A_engine%22,%22project%22:%22PRE_PROJECT_A%22,%22vpcEndpoint%22:%22http://service.cn.maxcompute.aliyun-inc.com/api%22,%22region%22:%22cn-shanghai%22,%22authType%22:%222%22%7D">http://service.cn.maxcompute.aliyun.com/api&quot;,&quot;accessId&quot;:&quot;TMP.3KecGjvzy3i8MYfn2BGHgF7EHGyBFZcHm7GgngrABVRyvvKQrfF5kskR36xP361C3dqwbGo7SGYptAeGyiTwHXqLaBUvYC&quot;,&quot;securityToken&quot;:null,&quot;endpoint&quot;:&quot;http://service.cn.maxcompute.aliyun-inc.com/api&quot;,&quot;accessKey&quot;:&quot;***&quot;,&quot;name&quot;:&quot;PRE_PROJECT_A_engine&quot;,&quot;project&quot;:&quot;PRE_PROJECT_A&quot;,&quot;vpcEndpoint&quot;:&quot;http://service.cn.maxcompute.aliyun-inc.com/api&quot;,&quot;region&quot;:&quot;cn-shanghai&quot;,&quot;authType&quot;:&quot;2&quot;}</a></p>
          */
         @NameInMap("Content")
         public String content;
 
         /**
          * <p>The type of the data source. Valid values:</p>
-         * <br>
-         * <p>*   odps</p>
-         * <p>*   mysql</p>
-         * <p>*   rds</p>
-         * <p>*   oss</p>
-         * <p>*   sqlserver</p>
-         * <p>*   polardb</p>
-         * <p>*   oracle</p>
-         * <p>*   mongodb</p>
-         * <p>*   emr</p>
-         * <p>*   postgresql</p>
-         * <p>*   analyticdb_for_mysql</p>
-         * <p>*   hybriddb_for_postgresql</p>
-         * <p>*   holo</p>
+         * <ul>
+         * <li>odps</li>
+         * <li>mysql</li>
+         * <li>rds</li>
+         * <li>oss</li>
+         * <li>sqlserver</li>
+         * <li>polardb</li>
+         * <li>oracle</li>
+         * <li>mongodb</li>
+         * <li>emr</li>
+         * <li>postgresql</li>
+         * <li>analyticdb_for_mysql</li>
+         * <li>hybriddb_for_postgresql</li>
+         * <li>holo</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>rds</p>
          */
         @NameInMap("DataSourceType")
         public String dataSourceType;
 
         /**
-         * <p>Indicates whether the compute engine to which the data source is bound is the default compute engine. Valid values:</p>
-         * <br>
-         * <p>*   true: The compute engine is the default compute engine.</p>
-         * <p>*   false: The compute engine is not the default compute engine.</p>
+         * <p>Indicates whether the compute engine that is added as the data source is the default compute engine. Valid values:</p>
+         * <ul>
+         * <li>true: The compute engine is the default compute engine.</li>
+         * <li>false: The compute engine is not the default compute engine.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("DefaultEngine")
         public Boolean defaultEngine;
 
         /**
          * <p>The description of the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a connection</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The environment to which the data source belongs. Valid values:</p>
-         * <br>
-         * <p>*   0: development environment</p>
-         * <p>*   1: production environment</p>
+         * <p>The environment in which the data source resides. Valid values:</p>
+         * <ul>
+         * <li>0: development environment</li>
+         * <li>1: production environment</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("EnvType")
         public Integer envType;
 
         /**
          * <p>The time when the data source was created. Example: Mar 17, 2021 4:09:32 PM.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Mar 17, 2021 4:09:32 PM</p>
          */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
         /**
          * <p>The time when the data source was last modified. Example: Mar 17, 2021 4:09:32 PM.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Mar 17, 2021 4:09:32 PM</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
 
         /**
-         * <p>The ID of the data source.</p>
+         * <p>The data source ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Id")
         public Integer id;
 
         /**
          * <p>The name of the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The ID of the user who exported the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>193543050****</p>
          */
         @NameInMap("Operator")
         public String operator;
 
         /**
          * <p>The ID of the DataWorks workspace to which the data source belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("ProjectId")
         public Integer projectId;
 
         /**
          * <p>The sequence number of the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         @NameInMap("Sequence")
         public Integer sequence;
 
         /**
          * <p>Indicates whether the data source can be shared. Valid values:</p>
-         * <br>
-         * <p>*   true: The data source can be shared.</p>
-         * <p>*   false: The data source cannot be shared.</p>
+         * <ul>
+         * <li>true: The data source can be shared.</li>
+         * <li>false: The data source cannot be shared.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Shared")
         public Boolean shared;
 
         /**
          * <p>Indicates whether the data source is available. Valid values:</p>
-         * <br>
-         * <p>*   1: The data source is available.</p>
-         * <p>*   0: The data source is unavailable.</p>
+         * <ul>
+         * <li>1: The data source is available.</li>
+         * <li>0: The data source is unavailable.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Status")
         public Integer status;
 
         /**
-         * <p>The subtype of the data source. This parameter is returned only if the value of the DataSourceType parameter is rds.</p>
-         * <br>
+         * <p>The subtype of the data source. This parameter takes effect only when the DataSourceType parameter is set to rds.</p>
          * <p>If the value of the DataSourceType parameter is rds, the value of this parameter can be mysql, sqlserver, or postgresql.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql</p>
          */
         @NameInMap("SubType")
         public String subType;
 
         /**
          * <p>The ID of the Alibaba Cloud account to which the data source belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567</p>
          */
         @NameInMap("TenantId")
         public Long tenantId;
@@ -364,27 +434,34 @@ public class ExportDataSourcesResponseBody extends TeaModel {
 
     public static class ExportDataSourcesResponseBodyData extends TeaModel {
         /**
-         * <p>The details of the exported data sources.</p>
-         * <br>
-         * <p>The value is an array. The following parameters are the elements in the array. The sample values of these parameters show the details of a sample data source.</p>
+         * <p>The details of the exported data sources. The value is an array. The following parameters are the elements in the array. The sample values of these parameters show the details of a sample data source.</p>
          */
         @NameInMap("DataSources")
         public java.util.List<ExportDataSourcesResponseBodyDataDataSources> dataSources;
 
         /**
-         * <p>The page number of the returned page. The value of this parameter is a positive integer greater than or equal to 1.</p>
+         * <p>The page number. Pages start from page 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
         /**
-         * <p>The number of entries returned on each page.</p>
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

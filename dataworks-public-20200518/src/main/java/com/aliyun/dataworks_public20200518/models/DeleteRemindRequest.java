@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class DeleteRemindRequest extends TeaModel {
     /**
      * <p>The ID of the custom alert rule.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234</p>
      */
     @NameInMap("RemindId")
     public Long remindId;

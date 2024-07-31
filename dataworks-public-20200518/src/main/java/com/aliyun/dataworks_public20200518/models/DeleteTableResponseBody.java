@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteTableResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>abcde</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,24 +43,36 @@ public class DeleteTableResponseBody extends TeaModel {
     public static class DeleteTableResponseBodyTaskInfo extends TeaModel {
         /**
          * <p>The content of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         @NameInMap("Content")
         public String content;
 
         /**
          * <p>The ID of the task that is running.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc1</p>
          */
         @NameInMap("NextTaskId")
         public String nextTaskId;
 
         /**
          * <p>The status of the task that is complete.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The ID of the task that is complete.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         @NameInMap("TaskId")
         public String taskId;

@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class GetInstanceErrorRankRequest extends TeaModel {
     /**
+     * <p>The DataWorks workspace ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9527</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;

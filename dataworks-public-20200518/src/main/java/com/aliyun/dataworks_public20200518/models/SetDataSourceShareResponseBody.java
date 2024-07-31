@@ -11,16 +11,23 @@ public class SetDataSourceShareResponseBody extends TeaModel {
     public SetDataSourceShareResponseBodyData data;
 
     /**
-     * <p>The ID of the request. You can locate logs and troubleshoot issues based on the ID.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0000-ABCD-EFG</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   true: The request was successful.</p>
-     * <p>*   false: The request failed.</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -56,16 +63,23 @@ public class SetDataSourceShareResponseBody extends TeaModel {
 
     public static class SetDataSourceShareResponseBodyData extends TeaModel {
         /**
-         * <p>The reason why the data source failed to be shared. If the data source was shared, this parameter is left empty.</p>
+         * <p>The reason why the data source failed to be shared. If the data source is successfully shared, the value of this parameter is an empty string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>datasource is wrong</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
          * <p>Indicates whether the data source was shared. Valid values:</p>
-         * <br>
-         * <p>*   success: The data source was shared.</p>
-         * <p>*   fail: The data source failed to be shared. You can troubleshoot issues based on the Message parameter.</p>
+         * <ul>
+         * <li>success.</li>
+         * <li>fail. You can view the value of the Message parameter to identify the cause of the failure.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         @NameInMap("Status")
         public String status;

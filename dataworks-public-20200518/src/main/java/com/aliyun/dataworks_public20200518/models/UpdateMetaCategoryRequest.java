@@ -6,20 +6,28 @@ import com.aliyun.tea.*;
 public class UpdateMetaCategoryRequest extends TeaModel {
     /**
      * <p>The ID of the category.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("CategoryId")
     public Long categoryId;
 
     /**
      * <p>The remarks of the category.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>category name</p>
      */
     @NameInMap("Comment")
     public String comment;
 
     /**
      * <p>The name of the category.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>category name</p>
      */
     @NameInMap("Name")
     public String name;

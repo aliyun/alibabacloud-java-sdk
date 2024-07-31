@@ -11,31 +11,46 @@ public class GetMigrationProcessResponseBody extends TeaModel {
     public java.util.List<GetMigrationProcessResponseBodyData> data;
 
     /**
-     * <p>The error code returned.</p>
+     * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>110001123456</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test error msg</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SADFSDFSD-SDFSDF-XDXCVX-ESWW</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -96,17 +111,24 @@ public class GetMigrationProcessResponseBody extends TeaModel {
     public static class GetMigrationProcessResponseBodyData extends TeaModel {
         /**
          * <p>The name of the step in the migration task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IMPORE_PREPARE</p>
          */
         @NameInMap("TaskName")
         public String taskName;
 
         /**
          * <p>The running status of the step in the migration task. Valid values:</p>
-         * <br>
-         * <p>*   INT</p>
-         * <p>*   RUNNING</p>
-         * <p>*   FAILURE</p>
-         * <p>*   SUCCESS</p>
+         * <ul>
+         * <li>INIT</li>
+         * <li>RUNNING</li>
+         * <li>FAILURE</li>
+         * <li>SUCCESS</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         @NameInMap("TaskStatus")
         public String taskStatus;

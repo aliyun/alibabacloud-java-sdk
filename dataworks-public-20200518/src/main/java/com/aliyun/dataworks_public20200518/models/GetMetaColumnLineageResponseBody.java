@@ -5,37 +5,52 @@ import com.aliyun.tea.*;
 
 public class GetMetaColumnLineageResponseBody extends TeaModel {
     /**
-     * <p>The business data returned.</p>
+     * <p>The business data.</p>
      */
     @NameInMap("Data")
     public GetMetaColumnLineageResponseBodyData data;
 
     /**
-     * <p>The error code returned.</p>
+     * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Invalid.Tenant.ConnectionNotExists</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The connection does not exist.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0bc1ec92159376</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -95,31 +110,46 @@ public class GetMetaColumnLineageResponseBody extends TeaModel {
 
     public static class GetMetaColumnLineageResponseBodyDataDataEntityList extends TeaModel {
         /**
-         * <p>The ID of the EMR cluster.</p>
+         * <p>The EMR cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
 
         /**
-         * <p>The GUID of the field.</p>
+         * <p>The unique identifier of the field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>odps.engine_name.table_name.1</p>
          */
         @NameInMap("ColumnGuid")
         public String columnGuid;
 
         /**
          * <p>The name of the field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ColumnName")
         public String columnName;
 
         /**
          * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         @NameInMap("DatabaseName")
         public String databaseName;
 
         /**
-         * <p>The name of the metatable.</p>
+         * <p>The name of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         @NameInMap("TableName")
         public String tableName;
@@ -173,25 +203,34 @@ public class GetMetaColumnLineageResponseBody extends TeaModel {
 
     public static class GetMetaColumnLineageResponseBodyData extends TeaModel {
         /**
-         * <p>The list of metatables in the compute engine instance.</p>
+         * <p>The returned result.</p>
          */
         @NameInMap("DataEntityList")
         public java.util.List<GetMetaColumnLineageResponseBodyDataDataEntityList> dataEntityList;
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageNum")
         public Integer pageNum;
 
         /**
-         * <p>The number of entries returned per page. Default value: 10. Maximum value: 100.</p>
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of fields.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("TotalCount")
         public Long totalCount;

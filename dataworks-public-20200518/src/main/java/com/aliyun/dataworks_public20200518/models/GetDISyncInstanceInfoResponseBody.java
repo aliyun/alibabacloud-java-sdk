@@ -5,20 +5,29 @@ import com.aliyun.tea.*;
 
 public class GetDISyncInstanceInfoResponseBody extends TeaModel {
     /**
-     * <p>*   If the TaskType parameter is set to DI_REALTIME, the Status parameter indicates the status of the real-time synchronization node. Valid values: PAUSE, NORUN, RUN, KILLING, and WAIT.</p>
-     * <p>*   If the TaskType parameter is set to DI_SOLITION, the Status parameter indicates the status of the data synchronization solution. Valid values: success and fail.</p>
+     * <p>The status of the real-time synchronization task or data synchronization solution.</p>
      */
     @NameInMap("Data")
     public GetDISyncInstanceInfoResponseBodyData data;
 
     /**
-     * <p>The status of the real-time synchronization node or data synchronization solution.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0bc1411515937635973****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The ID of the request. You can use the ID to query logs and troubleshoot issues.</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -53,23 +62,32 @@ public class GetDISyncInstanceInfoResponseBody extends TeaModel {
     }
 
     public static class GetDISyncInstanceInfoResponseBodyDataSolutionInfoStepDetail extends TeaModel {
+        /**
+         * <p>The information of the data synchronization solution.</p>
+         */
         @NameInMap("Info")
         public String info;
 
         /**
-         * <p>The ID of the step in the data synchronization solution.</p>
+         * <p>The status of the step in the data synchronization solution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The name of the step in the data synchronization solution.</p>
+         * <p>The ID of the step in the data synchronization solution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("StepId")
         public Long stepId;
 
         /**
-         * <p>The information of the data synchronization solution.</p>
+         * <p>The name of the step in the data synchronization solution.</p>
          */
         @NameInMap("StepName")
         public String stepName;
@@ -115,25 +133,34 @@ public class GetDISyncInstanceInfoResponseBody extends TeaModel {
 
     public static class GetDISyncInstanceInfoResponseBodyDataSolutionInfo extends TeaModel {
         /**
-         * <p>The step details of the synchronization solution.</p>
+         * <p>The creator of the data synchronization solution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dataworks_3h1</p>
          */
         @NameInMap("CreatorName")
         public String creatorName;
 
         /**
-         * <p>The creator of the data synchronization solution.</p>
+         * <p>The ID of the data synchronization solution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
-         * <p>The ID of the data synchronization solution.</p>
+         * <p>The status of the data synchronization solution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>run</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The status of the step in the data synchronization solution.</p>
+         * <p>The step details of the data synchronization solution.</p>
          */
         @NameInMap("StepDetail")
         public java.util.List<GetDISyncInstanceInfoResponseBodyDataSolutionInfoStepDetail> stepDetail;
@@ -179,27 +206,43 @@ public class GetDISyncInstanceInfoResponseBody extends TeaModel {
 
     public static class GetDISyncInstanceInfoResponseBodyData extends TeaModel {
         /**
-         * <p>*   If the TaskType parameter is set to DI_REALTIME, the Name parameter indicates the name of the real-time synchronization node.</p>
-         * <p>*   If the TaskType parameter is set to DI_SOLITION, the value null is returned.</p>
+         * <p>The cause of the failure to obtain the status of the real-time synchronization task or data synchronization solution. If the status of the real-time synchronization task or data synchronization solution is obtained, the value null is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fileId[100] is invalid</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
-         * <p>*   If the TaskType parameter is set to DI_REALTIME, the value null is returned.</p>
-         * <p>*   If the TaskType parameter is set to DI_SOLITION, the SolutionInfo parameter indicates the details of the data synchronization solution.</p>
+         * <ul>
+         * <li>If the TaskType parameter is set to DI_REALTIME, the Name parameter indicates the name of the real-time synchronization task.</li>
+         * <li>If the TaskType parameter is set to DI_SOLUTION, the value null is returned.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>streamx_name</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The status of the data synchronization solution.</p>
+         * <ul>
+         * <li>If the TaskType parameter is set to DI_REALTIME, the value null is returned.</li>
+         * <li>If the TaskType parameter is set to DI_SOLUTION, the SolutionInfo parameter indicates the details of the data synchronization solution.</li>
+         * </ul>
          */
         @NameInMap("SolutionInfo")
         public GetDISyncInstanceInfoResponseBodyDataSolutionInfo solutionInfo;
 
         /**
-         * <p>The cause of the failure to obtain the status of the real-time synchronization node or data synchronization solution. If the status of the real-time synchronization node or data synchronization solution is obtained, the value null is returned.</p>
+         * <ul>
+         * <li>If the TaskType parameter is set to DI_REALTIME, the Status parameter indicates the status of the real-time synchronization task. Valid values: PAUSE, NORUN, RUN, KILLING, and WAIT.</li>
+         * <li>If the TaskType parameter is set to DI_SOLUTION, the Status parameter indicates the status of the data synchronization solution. Valid values: success and fail.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>RUN</p>
          */
         @NameInMap("Status")
         public String status;

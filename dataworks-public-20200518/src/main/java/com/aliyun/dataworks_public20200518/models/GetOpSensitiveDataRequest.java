@@ -6,53 +6,62 @@ import com.aliyun.tea.*;
 public class GetOpSensitiveDataRequest extends TeaModel {
     /**
      * <p>The date on which access records were generated. Specify the value in the yyyyMMdd format.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20210116</p>
      */
     @NameInMap("Date")
     public String date;
 
     /**
-     * <p>The parameters that you can specify to query the access records. Valid values:</p>
-     * <br>
-     * <p>*   dbType: the data type</p>
-     * <p>*   instanceName: the name of the instance</p>
-     * <p>*   databaseName: the name of the database</p>
-     * <p>*   projectName: the name of the workspace</p>
-     * <p>*   clusterName: the name of the cluster</p>
-     * <br>
-     * <p>The following example shows the parameters configured to query the access records of the sensitive data in the abc database of the ABC Hologres instance:</p>
-     * <br>
-     * <p>{"dbType":"hologres","instanceName":"ABC","databaseName":"abc"}</p>
-     * <br>
-     * <p>You must specify the parameters based on the compute engine that you use in your business.</p>
-     * <br>
+     * <p>The parameters that you can configure to query the access records. Valid values:</p>
+     * <ul>
+     * <li>dbType</li>
+     * <li>instanceName</li>
+     * <li>databaseName</li>
+     * <li>projectName</li>
+     * <li>clusterName</li>
+     * </ul>
+     * <p>The following example shows the parameters configured to query the access records of the sensitive data in the abc database of the Hologres instance ABC: [ {&quot;dbType&quot;:&quot;hologres&quot;,&quot;instanceName&quot;:&quot;ABC&quot;,&quot;databaseName&quot;:&quot;abc&quot;} ]</p>
+     * <p>You must configure the parameters based on the compute engine that you use in your business.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[  {&quot;dbType&quot;:&quot;hologres&quot;,&quot;instanceName&quot;:&quot;ABC&quot;,&quot;databaseName&quot;:&quot;abc&quot;},  {&quot;dbType&quot;:&quot;ODPS.ODPS&quot;,&quot;projectName&quot;:&quot;adbc&quot;}  ]</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The operation that is performed on the data. Valid values:</p>
-     * <br>
-     * <p>*   SQL_SELECT: indicates that the data is accessed. For example, the SELECT statement is executed to query the data.</p>
-     * <p>*   TUNNEL_DOWNLOAD: indicates that the data is downloaded. For example, a Tunnel command is run to download the data.</p>
+     * <ul>
+     * <li>SQL_SELECT: specifies the data access operation. For example, execute a SELECT statement to query data.</li>
+     * <li>TUNNEL_DOWNLOAD: specifies the data download operation. For example, run a Tunnel command to download data.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>SQL_SELECT</p>
      */
     @NameInMap("OpType")
     public String opType;
 
     /**
-     * <p>The number of the page to return. Minimum value:1. Maximum value: 1000.</p>
-     * <br>
+     * <p>The page number. Minimum value: 1. Maximum value: 1000.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("PageNo")
     public Integer pageNo;
 
     /**
-     * <p>The number of entries to return on each page. Minimum value: 1. Maximum value: 1000.</p>
-     * <br>
+     * <p>The number of entries per page. Minimum value: 1. Maximum value: 1000.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

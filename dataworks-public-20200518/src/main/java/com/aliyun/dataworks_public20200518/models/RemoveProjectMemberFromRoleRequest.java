@@ -5,37 +5,42 @@ import com.aliyun.tea.*;
 
 public class RemoveProjectMemberFromRoleRequest extends TeaModel {
     /**
-     * <p>The ID of the DataWorks workspace.</p>
-     * <br>
+     * <p>The DataWorks workspace ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>27</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;
 
     /**
-     * <p>The role in the DataWorks workspace. You can call the ListProjectRoles operation to query codes of the roles in the workspace.</p>
-     * <br>
-     * <p>Valid values:</p>
-     * <br>
-     * <p>*   role_project_owner: workspace owner</p>
-     * <p>*   role_project_admin: workspace administrator</p>
-     * <p>*   role_project_dev: developer</p>
-     * <p>*   role_project_pe: O\\&M engineer</p>
-     * <p>*   role_project_deploy: deployment expert</p>
-     * <p>*   role_project_guest: visitor</p>
-     * <p>*   role_project_security: security administrator</p>
-     * <p>*   role_project_tester: experiencer</p>
-     * <p>*   role_project_erd: model designer</p>
-     * <br>
+     * <p>The code of the role in the DataWorks workspace. You can call the ListProjectRoles operation to query the codes of all roles in a DataWorks workspace. Valid values:</p>
+     * <ul>
+     * <li>role_project_owner: workspace owner</li>
+     * <li>role_project_admin: workspace administrator</li>
+     * <li>role_project_dev: developer</li>
+     * <li>role_project_pe: O\&amp;M engineer</li>
+     * <li>role_project_deploy: deployment expert</li>
+     * <li>role_project_guest: visitor</li>
+     * <li>role_project_security: security administrator</li>
+     * <li>role_project_tester: experiencer</li>
+     * <li>role_project_erd: model designer</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>role_project_guest</p>
      */
     @NameInMap("RoleCode")
     public String roleCode;
 
     /**
-     * <p>The ID of the user.</p>
-     * <br>
+     * <p>The user ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234</p>
      */
     @NameInMap("UserId")
     public String userId;

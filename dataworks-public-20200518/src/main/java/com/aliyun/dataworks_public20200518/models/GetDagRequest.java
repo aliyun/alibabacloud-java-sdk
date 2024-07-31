@@ -5,17 +5,21 @@ import com.aliyun.tea.*;
 
 public class GetDagRequest extends TeaModel {
     /**
-     * <p>The ID of the DAG. You can set this parameter to the value of the DagId parameter returned by the CreateDagComplement, CreateTest, or CreateManualDag operation.</p>
-     * <br>
+     * <p>The DAG ID. You can set this parameter to the value of the DagId parameter returned by the CreateDagComplement, CreateTest, or CreateManualDag operation.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123141452344525</p>
      */
     @NameInMap("DagId")
     public Long dagId;
 
     /**
-     * <p>The environment type. Valid values: PROD and DEV. The value PROD indicates the production environment. The value DEV indicates the development environment.</p>
-     * <br>
+     * <p>The environment of the workspace. Valid values: PROD and DEV.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PROD</p>
      */
     @NameInMap("ProjectEnv")
     public String projectEnv;

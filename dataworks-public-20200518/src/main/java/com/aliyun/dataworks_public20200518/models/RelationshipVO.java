@@ -4,6 +4,10 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class RelationshipVO extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>sql</p>
+     */
     @NameInMap("Type")
     public String type;
 

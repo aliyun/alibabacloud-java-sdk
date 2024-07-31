@@ -5,13 +5,21 @@ import com.aliyun.tea.*;
 
 public class GetInstanceConsumeTimeRankRequest extends TeaModel {
     /**
+     * <p>The data timestamp, accurate to the day. Specify the time in the ISO 8601 standard in the yyyy-MM-dd\&quot;T\&quot;HH:mm:ssZ format. The time must be in UTC.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-09-21T00:00:00+0800</p>
      */
     @NameInMap("Bizdate")
     public String bizdate;
 
     /**
+     * <p>The DataWorks workspace ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100000</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;

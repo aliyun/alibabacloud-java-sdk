@@ -12,30 +12,45 @@ public class ListTopicsResponseBody extends TeaModel {
 
     /**
      * <p>The error code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1031203110005</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The specified parameters are invalid.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The ID of the request. You can use the ID to troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0000-ABCD-EFG****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -96,72 +111,108 @@ public class ListTopicsResponseBody extends TeaModel {
     public static class ListTopicsResponseBodyDataTopics extends TeaModel {
         /**
          * <p>The timestamp when the event was found.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1553524393000</p>
          */
         @NameInMap("AddTime")
         public Long addTime;
 
         /**
          * <p>The timestamp when the event was processed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1553508465000</p>
          */
         @NameInMap("FixTime")
         public Long fixTime;
 
         /**
          * <p>The timestamp when the event occurred. A time difference may exist between the time when the event occurred and the time when the event was found.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1553508465000</p>
          */
         @NameInMap("HappenTime")
         public Long happenTime;
 
         /**
          * <p>The ID of the node instance that triggers the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         @NameInMap("InstanceId")
         public Long instanceId;
 
         /**
          * <p>The ID of the node that triggers the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         @NameInMap("NodeId")
         public Long nodeId;
 
         /**
          * <p>The name of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Node Name</p>
          */
         @NameInMap("NodeName")
         public String nodeName;
 
         /**
          * <p>The ID of the Alibaba Cloud account that is used by the node owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>952795****</p>
          */
         @NameInMap("NodeOwner")
         public String nodeOwner;
 
         /**
          * <p>The ID of the workspace to which the node belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         @NameInMap("ProjectId")
         public Long projectId;
 
         /**
          * <p>The ID of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         @NameInMap("TopicId")
         public Long topicId;
 
         /**
          * <p>The name of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234 Error</p>
          */
         @NameInMap("TopicName")
         public String topicName;
 
         /**
          * <p>The status of the event. Valid values: IGNORE, NEW, FIXING, and RECOVER. The value IGNORE indicates that the event is ignored. The value NEW indicates that the event is a new event. The value FIXING indicates that the event is being processed. The value RECOVER indicates that the event is processed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NEW</p>
          */
         @NameInMap("TopicStatus")
         public String topicStatus;
 
         /**
          * <p>The type of the event. Valid values: SLOW and ERROR. The value SLOW indicates that the running duration of the node in the current scheduling cycle is significantly longer than the average running duration of the node in previous scheduling cycles. The value ERROR indicates that the node fails to run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ERROR</p>
          */
         @NameInMap("TopicType")
         public String topicType;
@@ -272,12 +323,18 @@ public class ListTopicsResponseBody extends TeaModel {
     public static class ListTopicsResponseBodyData extends TeaModel {
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
@@ -290,6 +347,9 @@ public class ListTopicsResponseBody extends TeaModel {
 
         /**
          * <p>The total number of the events returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

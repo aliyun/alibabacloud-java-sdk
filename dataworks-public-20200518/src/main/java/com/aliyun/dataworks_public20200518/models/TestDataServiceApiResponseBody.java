@@ -12,6 +12,9 @@ public class TestDataServiceApiResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>abdsfewe</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,6 +43,9 @@ public class TestDataServiceApiResponseBody extends TeaModel {
     public static class TestDataServiceApiResponseBodyData extends TeaModel {
         /**
          * <p>The ID of the test.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>232432</p>
          */
         @NameInMap("TestId")
         public String testId;

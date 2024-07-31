@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class DeleteConnectionRequest extends TeaModel {
     /**
+     * <p>The data source ID. You can call the <a href="https://help.aliyun.com/document_detail/173911.html">ListConnection</a> operation to query the ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("ConnectionId")
     public Long connectionId;

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DsgWhiteListAddOrUpdateShrinkRequest extends TeaModel {
     /**
+     * <p>A collection of whitelists.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("WhiteLists")

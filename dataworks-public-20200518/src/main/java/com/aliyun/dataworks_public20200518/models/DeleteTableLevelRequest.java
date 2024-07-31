@@ -5,17 +5,21 @@ import com.aliyun.tea.*;
 
 public class DeleteTableLevelRequest extends TeaModel {
     /**
-     * <p>The ID of the table level to be deleted. You can call the ListTableLevel operation to obtain the ID.</p>
-     * <br>
+     * <p>The ID of the table level that you want to delete. You can call the ListTableLevel operation to query the ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("LevelId")
     public Long levelId;
 
     /**
-     * <p>The ID of the DataWorks workspace.</p>
-     * <br>
+     * <p>The DataWorks workspace ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;

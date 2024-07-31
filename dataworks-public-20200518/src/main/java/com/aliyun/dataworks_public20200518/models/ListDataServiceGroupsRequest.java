@@ -6,32 +6,46 @@ import com.aliyun.tea.*;
 public class ListDataServiceGroupsRequest extends TeaModel {
     /**
      * <p>The keyword of a business process name. The keyword is used to search for business processes whose names contain this keyword.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Test business process</p>
      */
     @NameInMap("GroupNameKeyword")
     public String groupNameKeyword;
 
     /**
-     * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 10. Maximum value: 100.</p>
+     * <p>The number of entries per page. Valid values: 1 to 100. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the workspace.</p>
-     * <br>
+     * <p>The workspace ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10000</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;
 
     /**
-     * <p>The ID of the tenant.</p>
+     * <p>The tenant ID. This parameter is deprecated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10001</p>
      */
     @NameInMap("TenantId")
     public Long tenantId;

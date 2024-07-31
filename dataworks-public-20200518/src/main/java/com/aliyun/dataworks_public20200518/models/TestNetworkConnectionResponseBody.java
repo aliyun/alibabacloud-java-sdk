@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class TestNetworkConnectionResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request. You can locate logs and troubleshoot issues based on the ID.</p>
+     * <p>The request ID. You can locate logs and troubleshoot issues based on the ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0000-ABCD-EFG</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   true: The request was successful.</p>
-     * <p>*   false: The request failed.</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -63,9 +70,13 @@ public class TestNetworkConnectionResponseBody extends TeaModel {
 
         /**
          * <p>The result of the connectivity test. Valid values:</p>
-         * <br>
-         * <p>*   true: The data source and the resource group passed the connectivity test.</p>
-         * <p>*   false: The data source and the resource group failed the connectivity test. You can troubleshoot issues based on the ConnectMessage parameter.</p>
+         * <ul>
+         * <li>true: The data source and the resource group passed the connectivity test.</li>
+         * <li>false: The data source and the resource group failed the connectivity test. You can troubleshoot issues based on the ConnectMessage parameter.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("ConnectStatus")
         public Boolean connectStatus;

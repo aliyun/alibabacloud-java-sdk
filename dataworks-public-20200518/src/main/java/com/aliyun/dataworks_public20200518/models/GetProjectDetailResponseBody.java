@@ -4,15 +4,36 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetProjectDetailResponseBody extends TeaModel {
+    /**
+     * <p>The information about the workspace.</p>
+     */
     @NameInMap("Data")
     public GetProjectDetailResponseBodyData data;
 
+    /**
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0bc1411515937635973****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -54,9 +75,21 @@ public class GetProjectDetailResponseBody extends TeaModel {
     }
 
     public static class GetProjectDetailResponseBodyDataTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Env</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -84,75 +117,225 @@ public class GetProjectDetailResponseBody extends TeaModel {
     }
 
     public static class GetProjectDetailResponseBodyData extends TeaModel {
+        /**
+         * <p>The identifier of the shared resource group for Data Integration on which nodes are run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>group_280749521****</p>
+         */
         @NameInMap("DefaultDiResourceGroupIdentifier")
         public String defaultDiResourceGroupIdentifier;
 
+        /**
+         * <p>The development type of the workspace. The value is fixed to 4.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("DevelopmentType")
         public Integer developmentType;
 
+        /**
+         * <p>Indicates whether the Develop role is disabled. Valid values:</p>
+         * <ul>
+         * <li><strong>false</strong> (default)</li>
+         * <li><strong>true</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("DisableDevelopment")
         public Boolean disableDevelopment;
 
+        /**
+         * <p>The environments of workspaces in different modes. Workspaces in basic mode provide only the production environment. Workspaces in standard mode provide both the development environment and the production environment.</p>
+         */
         @NameInMap("EnvTypes")
         public java.util.List<String> envTypes;
 
+        /**
+         * <p>The time when the workspace was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Oct 10, 2019 3:42:53 PM</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <p>The time when the workspace was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Dec 3, 2019 9:12:20 PM</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <p>Indicates whether the download operation is allowed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("IsAllowDownload")
         public Integer isAllowDownload;
 
+        /**
+         * <p>Indicates whether the workspace is a default workspace. Valid values:</p>
+         * <ul>
+         * <li>1: The workspace is a default workspace.</li>
+         * <li>0: The workspace is not a default workspace.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("IsDefault")
         public Integer isDefault;
 
+        /**
+         * <p>The description of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
+         */
         @NameInMap("ProjectDescription")
         public String projectDescription;
 
+        /**
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>27</p>
+         */
         @NameInMap("ProjectId")
         public Integer projectId;
 
+        /**
+         * <p>The unique identifier of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
+         */
         @NameInMap("ProjectIdentifier")
         public String projectIdentifier;
 
+        /**
+         * <p>The mode of the workspace. The value 2 indicates that the workspace is in basic mode. The value 3 indicates that the workspace is in standard mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ProjectMode")
         public Integer projectMode;
 
+        /**
+         * <p>The display name of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
+         */
         @NameInMap("ProjectName")
         public String projectName;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account used by the workspace owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18229311****</p>
+         */
         @NameInMap("ProjectOwnerBaseId")
         public String projectOwnerBaseId;
 
+        /**
+         * <p>Indicates whether the workspace protection feature is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ProtectedMode")
         public Integer protectedMode;
 
+        /**
+         * <p>The type of the workspace. Valid values: private and swap.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>private</p>
+         */
         @NameInMap("ResidentArea")
         public String residentArea;
 
+        /**
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzbn7pti3zfa</p>
+         */
         @NameInMap("ResourceManagerResourceGroupId")
         public String resourceManagerResourceGroupId;
 
+        /**
+         * <p>The default maximum number of automatic reruns that are allowed after an error occurs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("SchedulerMaxRetryTimes")
         public Integer schedulerMaxRetryTimes;
 
+        /**
+         * <p>The interval between automatic reruns after an error occurs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120000</p>
+         */
         @NameInMap("SchedulerRetryInterval")
         public Integer schedulerRetryInterval;
 
+        /**
+         * <p>The status of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <p>Indicates whether the MaxCompute tables in the workspace are visible to the users within a tenant. Valid values:</p>
+         * <ul>
+         * <li>0: The MaxCompute tables in the workspace are not visible to the users within a tenant.</li>
+         * <li>1: The MaxCompute tables in the workspace are visible to the users within a tenant.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TablePrivacyMode")
         public Integer tablePrivacyMode;
 
+        /**
+         * <p>The tag information.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<GetProjectDetailResponseBodyDataTags> tags;
 
+        /**
+         * <p>The tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>280749521950784</p>
+         */
         @NameInMap("TenantId")
         public Long tenantId;
 
+        /**
+         * <p>Indicates whether a proxy account is used to access the MaxCompute compute engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("UseProxyOdpsAccount")
         public Boolean useProxyOdpsAccount;
 

@@ -4,9 +4,18 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetSuccessInstanceTrendResponseBody extends TeaModel {
+    /**
+     * <p>The trend of statistics on the instance status in different time periods.</p>
+     */
     @NameInMap("InstanceStatusTrend")
     public GetSuccessInstanceTrendResponseBodyInstanceStatusTrend instanceStatusTrend;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>952795279527ab****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +41,21 @@ public class GetSuccessInstanceTrendResponseBody extends TeaModel {
     }
 
     public static class GetSuccessInstanceTrendResponseBodyInstanceStatusTrendAvgTrend extends TeaModel {
+        /**
+         * <p>The number of instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <p>The point in time. Valid values: 00:00 to 23:00.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>01:00</p>
+         */
         @NameInMap("TimePoint")
         public String timePoint;
 
@@ -62,9 +83,21 @@ public class GetSuccessInstanceTrendResponseBody extends TeaModel {
     }
 
     public static class GetSuccessInstanceTrendResponseBodyInstanceStatusTrendTodayTrend extends TeaModel {
+        /**
+         * <p>The number of instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <p>The point in time. Valid values: 00:00 to 23:00.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>01:00</p>
+         */
         @NameInMap("TimePoint")
         public String timePoint;
 
@@ -92,9 +125,21 @@ public class GetSuccessInstanceTrendResponseBody extends TeaModel {
     }
 
     public static class GetSuccessInstanceTrendResponseBodyInstanceStatusTrendYesterdayTrend extends TeaModel {
+        /**
+         * <p>The number of instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <p>The point in time. Valid values: 00:00 to 23:00.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>01:00</p>
+         */
         @NameInMap("TimePoint")
         public String timePoint;
 
@@ -122,12 +167,21 @@ public class GetSuccessInstanceTrendResponseBody extends TeaModel {
     }
 
     public static class GetSuccessInstanceTrendResponseBodyInstanceStatusTrend extends TeaModel {
+        /**
+         * <p>The average trend.</p>
+         */
         @NameInMap("AvgTrend")
         public java.util.List<GetSuccessInstanceTrendResponseBodyInstanceStatusTrendAvgTrend> avgTrend;
 
+        /**
+         * <p>The trend on the current day.</p>
+         */
         @NameInMap("TodayTrend")
         public java.util.List<GetSuccessInstanceTrendResponseBodyInstanceStatusTrendTodayTrend> todayTrend;
 
+        /**
+         * <p>The trend on the previous day.</p>
+         */
         @NameInMap("YesterdayTrend")
         public java.util.List<GetSuccessInstanceTrendResponseBodyInstanceStatusTrendYesterdayTrend> yesterdayTrend;
 

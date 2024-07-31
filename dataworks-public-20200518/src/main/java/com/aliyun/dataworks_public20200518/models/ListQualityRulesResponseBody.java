@@ -12,33 +12,49 @@ public class ListQualityRulesResponseBody extends TeaModel {
 
     /**
      * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Invalid.Tenant.ConnectionNotExists</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>You have no permission.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
-     * <p>The ID of the request. You can use the ID to troubleshoot errors.</p>
+     * <p>The request ID. You can troubleshoot errors based on the ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>38cbdef0-f6cf-49****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
-     * <br>
-     * <p>*   true: The request is successful.</p>
-     * <p>*   false: The request fails.</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -99,148 +115,213 @@ public class ListQualityRulesResponseBody extends TeaModel {
     public static class ListQualityRulesResponseBodyDataRules extends TeaModel {
         /**
          * <p>The strength of the monitoring rule. The strength of a monitoring rule indicates the importance of the rule. Valid values:</p>
-         * <br>
-         * <p>*   1: The monitoring rule is a strong rule.</p>
-         * <br>
-         * <p>*   0: The monitoring rule is a weak rule.</p>
-         * <br>
-         * <p>    You can specify whether a monitoring rule is a strong rule based on your business requirements. If a strong rule is used and a critical alert is reported, nodes are blocked.</p>
+         * <ul>
+         * <li>1: The monitoring rule is a strong rule.</li>
+         * <li>0: The monitoring rule is a weak rule. You can specify the strength of a monitoring rule based on your business requirements. If a monitoring rule is a strong rule and the critical threshold is exceeded, a critical alert is reported and tasks that are associated with the rule are blocked from running.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("BlockType")
         public Integer blockType;
 
         /**
-         * <p>The ID of the checker.</p>
+         * <p>The checker ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         @NameInMap("CheckerId")
         public Integer checkerId;
 
         /**
-         * <p>The description of the monitoring rule.</p>
+         * <p>The description of the system defense rule.</p>
          */
         @NameInMap("Comment")
         public String comment;
 
         /**
-         * <p>The threshold for a critical alert. The threshold indicates the deviation of the monitoring result from the expected value. You can customize this threshold based on your business requirements. If a strong rule is used and a critical alert is reported, nodes are blocked.</p>
+         * <p>The threshold for a critical alert. The threshold indicates the deviation of the monitoring result from the expected value. You can specify a custom value for the threshold based on your business requirements. If a monitoring rule is a strong rule and the critical threshold is exceeded, a critical alert is reported and tasks that are associated with the rule are blocked from running.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40</p>
          */
         @NameInMap("CriticalThreshold")
         public String criticalThreshold;
 
         /**
          * <p>The ID of the partition filter expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         @NameInMap("EntityId")
         public Long entityId;
 
         /**
          * <p>The expected value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         @NameInMap("ExpectValue")
         public String expectValue;
 
         /**
          * <p>Indicates whether the monitoring is performed based on a fixed value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("FixCheck")
         public Boolean fixCheck;
 
         /**
          * <p>The historical threshold for a critical alert.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>history max:80%,history min:50%</p>
          */
         @NameInMap("HistoryCriticalThreshold")
         public String historyCriticalThreshold;
 
         /**
          * <p>The historical threshold for a warning alert.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>history max:40%,history min:10%</p>
          */
         @NameInMap("HistoryWarningThreshold")
         public String historyWarningThreshold;
 
         /**
-         * <p>The ID of the monitoring rule.</p>
+         * <p>The monitoring rule ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The partition filter expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dt=$[yyyymmdd]</p>
          */
         @NameInMap("MatchExpression")
         public String matchExpression;
 
         /**
-         * <p>The ID of the sampling method of the monitoring rule.</p>
+         * <p>The ID of the task that is associated with the partition filter expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21</p>
          */
         @NameInMap("MethodId")
         public Integer methodId;
 
         /**
-         * <p>The name of the method that is used to collect sample data, such as avg, count, sum, min, max, count_distinct, user_defined, table_count, table_size, table_dt_load_count, table_dt_refuseload_count, null_value, null_value/table_count, (table_count-count_distinct)/table_count, or table_count-count_distinct.</p>
+         * <p>The method that is used to collect sample data, such as avg, count, sum, min, max, count_distinct, user_defined, table_count, table_size, table_dt_load_count, table_dt_refuseload_count, null_value, null_value/table_count, (table_count-count_distinct)/table_count, or table_count-count_distinct.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>count/table_count</p>
          */
         @NameInMap("MethodName")
         public String methodName;
 
         /**
-         * <p>The ID of the Alibaba Cloud account that is used to configure the monitoring rule.</p>
+         * <p>The name of the Alibaba Cloud account that is used to configure the monitoring rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1912****</p>
          */
         @NameInMap("OnDuty")
         public String onDuty;
 
         /**
          * <p>The name of the Alibaba Cloud account that is used to configure the monitoring rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("OnDutyAccountName")
         public String onDutyAccountName;
 
         /**
-         * <p>The name of the compute engine instance or data source.</p>
+         * <p>The name of the compute engine or data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>autotest</p>
          */
         @NameInMap("ProjectName")
         public String projectName;
 
         /**
-         * <p>The name of the monitored field.</p>
+         * <p>The name of the field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>id</p>
          */
         @NameInMap("Property")
         public String property;
 
         /**
          * <p>The field that is used to associate with monitoring rules at the frontend. This parameter can be ignored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>table_count</p>
          */
         @NameInMap("PropertyKey")
         public String propertyKey;
 
         /**
-         * <p>The ID of the node that is associated with the partition filter expression.</p>
+         * <p>The ID of the task that is associated with the partition filter expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>132323</p>
          */
         @NameInMap("RuleCheckerRelationId")
         public Long ruleCheckerRelationId;
 
         /**
          * <p>The name of the monitoring rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("RuleName")
         public String ruleName;
 
         /**
          * <p>The type of the monitoring rule. Valid values:</p>
-         * <br>
-         * <p>*   0: The monitoring rule is created by the system.</p>
-         * <p>*   1: The monitoring rule is created by a user.</p>
-         * <p>*   2: The monitoring rule is a workspace-level rule.</p>
+         * <ul>
+         * <li>0: The monitoring rule is created by the system.</li>
+         * <li>1: The monitoring rule is created by a user.</li>
+         * <li>2: The monitoring rule is a workspace-level rule.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("RuleType")
         public Integer ruleType;
 
         /**
          * <p>The name of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dual</p>
          */
         @NameInMap("TableName")
         public String tableName;
 
         /**
          * <p>The ID of the monitoring template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         @NameInMap("TemplateId")
         public Integer templateId;
@@ -252,13 +333,19 @@ public class ListQualityRulesResponseBody extends TeaModel {
         public String templateName;
 
         /**
-         * <p>The trend of the monitoring results.</p>
+         * <p>The trend of the monitoring result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abs</p>
          */
         @NameInMap("Trend")
         public String trend;
 
         /**
-         * <p>The threshold for a warning alert. The threshold indicates the deviation of the monitoring result from the expected value. You can customize this threshold based on your business requirements.</p>
+         * <p>The threshold for a warning alert. The threshold specifies the deviation of the monitoring result from the expected value. You can specify a custom value for the threshold based on your business requirements.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("WarningThreshold")
         public String warningThreshold;
@@ -480,25 +567,34 @@ public class ListQualityRulesResponseBody extends TeaModel {
 
     public static class ListQualityRulesResponseBodyData extends TeaModel {
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
         /**
-         * <p>The number of entries returned per page. Default value: 10. Maximum value: 100.</p>
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
-         * <p>The details of the monitoring rules.</p>
+         * <p>The details of the monitoring rule.</p>
          */
         @NameInMap("Rules")
         public java.util.List<ListQualityRulesResponseBodyDataRules> rules;
 
         /**
-         * <p>The total number of returned entries.</p>
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>400</p>
          */
         @NameInMap("TotalCount")
         public Long totalCount;

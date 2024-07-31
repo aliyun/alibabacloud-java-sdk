@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class GetMetaDBTableListResponseBody extends TeaModel {
     /**
-     * <p>The number of entries returned per page. Default value: 10. Maximum value: 100.</p>
+     * <p>The metatable information in a compute engine instance.</p>
      */
     @NameInMap("Data")
     public GetMetaDBTableListResponseBodyData data;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0bc1ec92159376</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -38,14 +41,29 @@ public class GetMetaDBTableListResponseBody extends TeaModel {
     }
 
     public static class GetMetaDBTableListResponseBodyDataTableEntityList extends TeaModel {
+        /**
+         * <p>The name of the metadatabase.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
+         */
         @NameInMap("DatabaseName")
         public String databaseName;
 
+        /**
+         * <p>The GUID of the metatable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>odps.engine_name.tname</p>
+         */
         @NameInMap("TableGuid")
         public String tableGuid;
 
         /**
-         * <p>The name of the metadatabase.</p>
+         * <p>The name of the metatable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tname</p>
          */
         @NameInMap("TableName")
         public String tableName;
@@ -83,25 +101,34 @@ public class GetMetaDBTableListResponseBody extends TeaModel {
 
     public static class GetMetaDBTableListResponseBodyData extends TeaModel {
         /**
-         * <p>The total number of compute engine instances.</p>
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
         /**
-         * <p>The list of metatables in the compute engine instance.</p>
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
-         * <p>The GUID of the metatable.</p>
+         * <p>The list of metatables in the compute engine instance.</p>
          */
         @NameInMap("TableEntityList")
         public java.util.List<GetMetaDBTableListResponseBodyDataTableEntityList> tableEntityList;
 
         /**
-         * <p>The name of the metatable.</p>
+         * <p>The total number of compute engine instances returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("TotalCount")
         public Long totalCount;

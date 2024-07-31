@@ -5,65 +5,81 @@ import com.aliyun.tea.*;
 
 public class CreateQualityRelativeNodeRequest extends TeaModel {
     /**
-     * <p>The type of the compute engine instance or data source.</p>
-     * <br>
+     * <p>The type of the compute engine or data source.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ODPS</p>
      */
     @NameInMap("EnvType")
     public String envType;
 
     /**
      * <p>The partition filter expression.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dt=$[yyyymmdd]</p>
      */
     @NameInMap("MatchExpression")
     public String matchExpression;
 
     /**
-     * <p>The ID of the node.</p>
-     * <br>
+     * <p>The node ID. You can call the <a href="https://help.aliyun.com/document_detail/173979.html">ListNodes</a> operation to query the ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12321</p>
      */
     @NameInMap("NodeId")
     public Long nodeId;
 
     /**
-     * <p>The ID of the workspace.</p>
-     * <br>
+     * <p>The workspace ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;
 
     /**
-     * <p>The name of the compute engine instance or data source.</p>
-     * <br>
+     * <p>The name of the compute engine or data source.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>autotest</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
 
     /**
      * <p>The name of the table.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dual</p>
      */
     @NameInMap("TableName")
     public String tableName;
 
     /**
-     * <p>The ID of the workspace to which the node to be associated with the partition filter expression belongs.</p>
-     * <br>
+     * <p>The ID of the workspace to which the node belongs.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234</p>
      */
     @NameInMap("TargetNodeProjectId")
     public Long targetNodeProjectId;
 
     /**
      * <p>The name of the workspace to which the node to be associated with the partition filter expression belongs.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>autotest</p>
      */
     @NameInMap("TargetNodeProjectName")
     public String targetNodeProjectName;

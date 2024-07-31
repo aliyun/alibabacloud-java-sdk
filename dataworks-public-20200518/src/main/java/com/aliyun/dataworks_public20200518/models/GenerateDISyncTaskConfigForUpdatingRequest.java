@@ -5,62 +5,75 @@ import com.aliyun.tea.*;
 
 public class GenerateDISyncTaskConfigForUpdatingRequest extends TeaModel {
     /**
-     * <p>The ID of the real-time synchronization node or synchronization solution.</p>
-     * <br>
-     * <p>*   If you set the TaskType parameter to DI_REALTIME, set the TaskId parameter to the value of the FileId parameter for the real-time synchronization node.</p>
-     * <p>*   If you set the TaskType parameter to DI_SOLUTION, set the TaskId parameter to the value of the FileId parameter for the synchronization solution.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. This parameter is used to prevent repeated operations that are caused by multiple calls.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ABFUOEUOTRTRJKE</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The type of the object that you want to update in Data Integration in asynchronous mode. Valid values:</p>
-     * <br>
-     * <p>*   DI_REALTIME: real-time synchronization node</p>
-     * <br>
-     * <p>*   DI_SOLUTION: synchronization solution</p>
-     * <br>
-     * <p>    DataWorks allows you to update real-time synchronization nodes and synchronization solutions in Data Integration only in asynchronous mode.</p>
-     * <br>
+     * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to obtain the workspace ID.</p>
+     * <p>You must configure this parameter to specify the DataWorks workspace to which the API operation is applied.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10000</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
-     * <br>
-     * <p>*   true: The request is successful.</p>
-     * <p>*   false: The request fails.</p>
-     * <br>
+     * <p>The task ID.</p>
+     * <ul>
+     * <li>If you set the TaskType parameter to DI_REALTIME, set the TaskId parameter to the value of the FileId parameter for the real-time synchronization task.</li>
+     * <li>If you set the TaskType parameter to DI_SOLUTION, set the TaskId parameter to the value of the FileId parameter for the synchronization solution.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("TaskId")
     public Long taskId;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. This parameter is used to prevent repeated operations that are caused by multiple calls.</p>
-     * <br>
+     * <p>The script for updating the real-time synchronization task in Data Integration. DataWorks allows you to add or remove tables for a real-time synchronization task in Data Integration only in asynchronous mode. The following types of real-time synchronization tasks are supported:</p>
+     * <ul>
+     * <li>Synchronization task that is used to synchronize data from MySQL to MaxCompute</li>
+     * <li>Synchronization task that is used to synchronize data from MySQL data to Kafka</li>
+     * <li>Synchronization task that is used to synchronize data from MySQL to Hologres</li>
+     * </ul>
+     * <p>The SelectedTables parameter is used to specify tables that you want to synchronize from multiple databases. The Tables parameter is used to specify tables that you want to synchronize from a single database.</p>
+     * <ul>
+     * <li>If the script contains the SelectedTables parameter, the system synchronizes data from the tables that you specify in the SelectedTables parameter.</li>
+     * <li>If the script contains the Tables parameter, the system synchronizes data from the tables that you specify in the Tables parameter.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{      &quot;steps&quot;: [         {             &quot;parameter&quot;: {                 &quot;connection&quot;: [                     {                         &quot;table&quot;: [                             &quot;xyx&quot;                         ]                     }                 ]             },             &quot;name&quot;: &quot;Reader&quot;,             &quot;category&quot;: &quot;reader&quot;         }     ] }</p>
      */
     @NameInMap("TaskParam")
     public String taskParam;
 
     /**
-     * <p>The script for updating the real-time synchronization node or synchronization solution in Data Integration.</p>
-     * <br>
-     * <p>DataWorks allows you to add or remove tables for a real-time synchronization node or a synchronization solution in Data Integration only in asynchronous mode. The following types of real-time synchronization nodes and synchronization solutions are supported:</p>
-     * <br>
-     * <p>*   Real-time synchronization node or synchronization solution that is used to synchronize data from MySQL to MaxCompute</p>
-     * <p>*   Real-time synchronization node or synchronization solution that is used to synchronize data from MySQL data to Kafka</p>
-     * <p>*   Real-time synchronization node or synchronization solution that is used to synchronize data from MySQL to Hologres</p>
-     * <br>
-     * <p>The SelectedTables parameter is used to specify tables that you want to synchronize from multiple databases. The Tables parameter is used to specify tables that you want to synchronize from a single database.</p>
-     * <br>
-     * <p>*   If the script contains the SelectedTables parameter, the system synchronizes the tables that you specify in the SelectedTables parameter.</p>
-     * <p>*   If the script contains the Tables parameter, the system synchronizes the tables that you specify in the Tables parameter.</p>
-     * <br>
+     * <p>The type of the object that you want to update in Data Integration in asynchronous mode. Valid values:</p>
+     * <ul>
+     * <li>DI_REALTIME: real-time synchronization task</li>
+     * <li>DI_SOLUTION: synchronization solution DataWorks allows you to create or update real-time synchronization tasks in Data Integration only in asynchronous mode.</li>
+     * </ul>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>DI_OFFLINE</li>
+     * <li>DI_REALTIME</li>
+     * <li>DI_SOLUTION</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DI_REALTIME</p>
      */
     @NameInMap("TaskType")
     public String taskType;

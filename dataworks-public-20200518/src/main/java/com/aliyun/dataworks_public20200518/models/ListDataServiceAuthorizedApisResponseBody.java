@@ -12,30 +12,45 @@ public class ListDataServiceAuthorizedApisResponseBody extends TeaModel {
 
     /**
      * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1031203110005</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The specified parameters are invalid.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0000-ABCD-EFG****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -95,79 +110,118 @@ public class ListDataServiceAuthorizedApisResponseBody extends TeaModel {
 
     public static class ListDataServiceAuthorizedApisResponseBodyDataApiAuthorizedList extends TeaModel {
         /**
-         * <p>The ID of the API.</p>
+         * <p>The API ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10002</p>
          */
         @NameInMap("ApiId")
         public Long apiId;
 
         /**
          * <p>The name of the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>My API Name</p>
          */
         @NameInMap("ApiName")
         public String apiName;
 
         /**
          * <p>The path of the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/test/1</p>
          */
         @NameInMap("ApiPath")
         public String apiPath;
 
         /**
          * <p>The status of the API. Valid values: 0 and 1. The value 0 indicates that the API is not published. The value 1 indicates that the API is published.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ApiStatus")
         public Integer apiStatus;
 
         /**
          * <p>The time when the API was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-06-23T00:21:01+0800</p>
          */
         @NameInMap("CreatedTime")
         public String createdTime;
 
         /**
          * <p>The ID of the Alibaba Cloud account used by the API owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         @NameInMap("CreatorId")
         public String creatorId;
 
         /**
-         * <p>The time when the access permissions of the API were granted.</p>
+         * <p>The time when the access permissions on the API were granted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-06-23T00:21:01+0800</p>
          */
         @NameInMap("GrantCreatedTime")
         public String grantCreatedTime;
 
         /**
-         * <p>The expiration time for the granted access permissions of the API.</p>
+         * <p>The expiration time of the access permissions granted on the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-06-24T00:21:01+0800</p>
          */
         @NameInMap("GrantEndTime")
         public String grantEndTime;
 
         /**
-         * <p>The ID of the Alibaba Cloud account used by the user who granted the access permissions of the API.</p>
+         * <p>The ID of the Alibaba Cloud account used by the user who granted the access permissions on the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23456</p>
          */
         @NameInMap("GrantOperatorId")
         public String grantOperatorId;
 
         /**
-         * <p>The ID of the API group.</p>
+         * <p>The group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abcde123456789</p>
          */
         @NameInMap("GroupId")
         public String groupId;
 
         /**
          * <p>The time when the API was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-06-23T00:21:01+0800</p>
          */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
         /**
-         * <p>The ID of the workspace.</p>
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         @NameInMap("ProjectId")
         public Long projectId;
 
         /**
-         * <p>The ID of the tenant.</p>
+         * <p>The tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
          */
         @NameInMap("TenantId")
         public Long tenantId;
@@ -285,25 +339,34 @@ public class ListDataServiceAuthorizedApisResponseBody extends TeaModel {
 
     public static class ListDataServiceAuthorizedApisResponseBodyData extends TeaModel {
         /**
-         * <p>The list of APIs that you are authorized to access.</p>
+         * <p>The APIs that you are authorized to access.</p>
          */
         @NameInMap("ApiAuthorizedList")
         public java.util.List<ListDataServiceAuthorizedApisResponseBodyDataApiAuthorizedList> apiAuthorizedList;
 
         /**
-         * <p>The page number of the returned page. The value of this parameter is the same as that of the PageNumber parameter in the request.</p>
+         * <p>The page number. The value of this parameter is the same as that of the PageNumber parameter in the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
         /**
-         * <p>The number of entries returned per page. Default value: 10. Maximum value: 100.</p>
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
-         * <p>The total number of returned entries.</p>
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

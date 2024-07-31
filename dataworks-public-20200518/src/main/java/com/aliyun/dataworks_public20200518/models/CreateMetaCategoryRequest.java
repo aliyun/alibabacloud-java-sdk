@@ -6,20 +6,28 @@ import com.aliyun.tea.*;
 public class CreateMetaCategoryRequest extends TeaModel {
     /**
      * <p>The remarks of the category.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>category 1</p>
      */
     @NameInMap("Comment")
     public String comment;
 
     /**
      * <p>The name of the category.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>category_name</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The ID of the parent category.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("ParentId")
     public Long parentId;

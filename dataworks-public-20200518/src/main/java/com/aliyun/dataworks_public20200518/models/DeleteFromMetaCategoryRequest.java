@@ -6,16 +6,20 @@ import com.aliyun.tea.*;
 public class DeleteFromMetaCategoryRequest extends TeaModel {
     /**
      * <p>The ID of the category.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("CategoryId")
     public Long categoryId;
 
     /**
      * <p>The GUID of the metatable.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>odps.engine_name.table_name</p>
      */
     @NameInMap("TableGuid")
     public String tableGuid;

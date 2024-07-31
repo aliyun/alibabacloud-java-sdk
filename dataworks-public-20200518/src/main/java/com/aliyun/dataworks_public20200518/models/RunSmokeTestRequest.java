@@ -6,40 +6,49 @@ import com.aliyun.tea.*;
 public class RunSmokeTestRequest extends TeaModel {
     /**
      * <p>The data timestamp.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-05-26 00:00:00</p>
      */
     @NameInMap("Bizdate")
     public String bizdate;
 
     /**
      * <p>The name of the workflow.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xm_create_test</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The ID of the node. You can call the [ListNodes](https://help.aliyun.com/document_detail/173979.html) operation to query the ID.</p>
-     * <br>
+     * <p>The node ID. You can call the <a href="https://help.aliyun.com/document_detail/173979.html">ListNodes</a> operation to query the ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234</p>
      */
     @NameInMap("NodeId")
     public Long nodeId;
 
     /**
      * <p>The parameters related to the node. Set this parameter to a JSON string. A key in the string indicates a parameter, and a value in the string indicates the value of the related parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bizdate=$bizdate tbods=$tbods</p>
      */
     @NameInMap("NodeParams")
     public String nodeParams;
 
     /**
-     * <p>The environment of the workspace. Valid values: PROD and DEV. The value PROD indicates the production environment, and the value DEV indicates the development environment.</p>
-     * <br>
-     * <p>A workspace in basic mode does not have a development environment. For more information, see [Basic mode and standard mode](https://help.aliyun.com/document_detail/85772.html).</p>
-     * <br>
+     * <p>The environment of the workspace. Valid values: PROD and DEV. The value PROD indicates the production environment, and the value DEV indicates the development environment. A workspace in basic mode does not have a development environment. For more information, see <a href="https://help.aliyun.com/document_detail/85772.html">Differences between workspaces in basic mode and workspaces in standard mode</a>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PROD</p>
      */
     @NameInMap("ProjectEnv")
     public String projectEnv;

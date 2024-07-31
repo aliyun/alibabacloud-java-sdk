@@ -6,34 +6,47 @@ import com.aliyun.tea.*;
 public class UpdateTableLevelRequest extends TeaModel {
     /**
      * <p>The description of the table level.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>level description</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The ID of the table level to be updated. You can call the ListTableLevel operation to obtain the ID.</p>
-     * <br>
+     * <p>The ID of the table level. You can call the ListTableLevel operation to query the ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("LevelId")
     public Long levelId;
 
     /**
-     * <p>The type of the table level. Valid values: 1 and 2. A value of 1 indicates the logical level. A value of 2 indicates the physical level.</p>
+     * <p>The table level type. Valid values: 1 and 2. The value 1 indicates the logical level. The value 2 indicates the physical level.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("LevelType")
     public Integer levelType;
 
     /**
      * <p>The name of the table level.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>level name</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The ID of the DataWorks workspace.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;

@@ -5,37 +5,52 @@ import com.aliyun.tea.*;
 
 public class ListNodesByBaselineResponseBody extends TeaModel {
     /**
-     * <p>The name of the node.</p>
+     * <p>The nodes in the baseline.</p>
      */
     @NameInMap("Data")
     public java.util.List<ListNodesByBaselineResponseBodyData> data;
 
     /**
-     * <p>The nodes in the baseline.</p>
+     * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1031203110005</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The specified parameters are invalid.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
-     * <p>The error code returned.</p>
+     * <p>The request ID. You can use the ID to troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0000-ABCD-E****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The ID of the Alibaba Cloud account used by the node owner.</p>
+     * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public String success;
@@ -94,21 +109,36 @@ public class ListNodesByBaselineResponseBody extends TeaModel {
     }
 
     public static class ListNodesByBaselineResponseBodyData extends TeaModel {
+        /**
+         * <p>The node ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
+         */
         @NameInMap("NodeId")
         public Long nodeId;
 
         /**
-         * <p>The ID of the workspace to which the node belongs.</p>
+         * <p>The name of the node.</p>
          */
         @NameInMap("NodeName")
         public String nodeName;
 
         /**
-         * <p>The ID of the node.</p>
+         * <p>The ID of the Alibaba Cloud account used by the node owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9527952****</p>
          */
         @NameInMap("Owner")
         public String owner;
 
+        /**
+         * <p>The ID of the workspace to which the node belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
+         */
         @NameInMap("ProjectId")
         public Long projectId;
 

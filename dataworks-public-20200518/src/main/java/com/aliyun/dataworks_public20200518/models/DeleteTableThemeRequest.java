@@ -6,14 +6,19 @@ import com.aliyun.tea.*;
 public class DeleteTableThemeRequest extends TeaModel {
     /**
      * <p>The ID of the DataWorks workspace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;
 
     /**
-     * <p>The ID of the table folder.</p>
-     * <br>
+     * <p>The ID of the theme.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("ThemeId")
     public Long themeId;

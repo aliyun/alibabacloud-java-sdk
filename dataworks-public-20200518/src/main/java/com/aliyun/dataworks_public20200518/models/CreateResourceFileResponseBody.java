@@ -4,9 +4,17 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class CreateResourceFileResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1000001</p>
+     */
     @NameInMap("Data")
     public Long data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0000-ABCD-EFG</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

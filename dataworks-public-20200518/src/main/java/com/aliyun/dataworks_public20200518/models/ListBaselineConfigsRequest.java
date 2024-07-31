@@ -5,55 +5,73 @@ import com.aliyun.tea.*;
 
 public class ListBaselineConfigsRequest extends TeaModel {
     /**
-     * <p>The type of the baseline. Valid values: DAILY and HOURLY. A value of DAILY indicates that the baseline is a day-level baseline. A value of HOURLY indicates that the baseline is an hour-level baseline. Separate multiple baseline types with commas (,).</p>
+     * <p>The type of the baseline. Valid values: DAILY and HOURLY. Separate multiple baseline types with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DAILY,HOURLY</p>
      */
     @NameInMap("BaselineTypes")
     public String baselineTypes;
 
     /**
      * <p>The ID of the Alibaba Cloud account used by the baseline owner.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>95279527****</p>
      */
     @NameInMap("Owner")
     public String owner;
 
     /**
-     * <p>The number of the page to return. Valid values: 1 to 30. Default value: 1.</p>
-     * <br>
+     * <p>The page number. Valid values: 1 to 30. Default value: 1.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: 1 to 100. Default value: 10.</p>
-     * <br>
+     * <p>The number of entries per page. Valid values: 1 to 100. Default value: 10.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The priority of the baseline. Valid values: 1, 3, 5, 7, and 8. Separate multiple priorities with commas (,).</p>
+     * <p>The priority of the baseline. Valid values: {1,3,5,7,8}. Separate multiple priorities with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1,3,5,7,8</p>
      */
     @NameInMap("Priority")
     public String priority;
 
     /**
-     * <p>The ID of the workspace. You can call the ListProjects operation to query the ID.</p>
-     * <br>
+     * <p>The workspace ID. You can call the ListProjects operation to query the ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;
 
     /**
-     * <p>The keyword in the baseline name used to search for the baseline.</p>
+     * <p>The keyword in the baseline name, which is used to search for the baseline.</p>
      */
     @NameInMap("SearchText")
     public String searchText;
 
     /**
      * <p>Specifies whether to enable the baseline. Valid values: true and false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Useflag")
     public Boolean useflag;

@@ -4,6 +4,12 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class DsgSceneQuerySceneListByNameRequest extends TeaModel {
+    /**
+     * <p>The name of the data masking scenario. A fuzzy match is performed in the platform based on a keyword to search for the data masking scenario.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dev_</p>
+     */
     @NameInMap("SceneName")
     public String sceneName;
 

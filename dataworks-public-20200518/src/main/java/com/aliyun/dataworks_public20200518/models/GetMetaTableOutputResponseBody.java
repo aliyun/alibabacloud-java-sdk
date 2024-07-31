@@ -5,37 +5,52 @@ import com.aliyun.tea.*;
 
 public class GetMetaTableOutputResponseBody extends TeaModel {
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The business data.</p>
      */
     @NameInMap("Data")
     public GetMetaTableOutputResponseBodyData data;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
-     * <p>The error code returned.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0000-0000-0000-000</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The output node and instance.</p>
+     * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -95,37 +110,64 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
 
     public static class GetMetaTableOutputResponseBodyDataDataEntityList extends TeaModel {
         /**
-         * <p>The start time of the node.</p>
+         * <p>The end time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-02-12 0:32:12</p>
          */
         @NameInMap("EndTime")
         public String endTime;
 
         /**
-         * <p>The GUID of the MaxCompute metatable.</p>
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>128</p>
          */
         @NameInMap("ProjectId")
         public Long projectId;
 
         /**
-         * <p>The duration during which the node waits to start.</p>
+         * <p>The start time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-02-12 0:34:13</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <p>The GUID of the MaxCompute table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>odps.sample_project.sample_table</p>
+         */
         @NameInMap("TableGuid")
         public String tableGuid;
 
+        /**
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1048576</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
         /**
-         * <p>The ID of the workspace.</p>
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>987654321</p>
          */
         @NameInMap("TaskInstanceId")
         public Long taskInstanceId;
 
         /**
-         * <p>The ID of the node.</p>
+         * <p>The waiting time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("WaitTime")
         public String waitTime;
@@ -195,25 +237,34 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
 
     public static class GetMetaTableOutputResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The list of instances.</p>
          */
         @NameInMap("DataEntityList")
         public java.util.List<GetMetaTableOutputResponseBodyDataDataEntityList> dataEntityList;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The page number. Valid values: 1 to 30. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
         /**
-         * <p>The information of the node and instance.</p>
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
-         * <p>The end time of the node.</p>
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>128</p>
          */
         @NameInMap("TotalCount")
         public Long totalCount;

@@ -4,9 +4,18 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetInstanceConsumeTimeRankResponseBody extends TeaModel {
+    /**
+     * <p>The ranking record of the running durations of instances.</p>
+     */
     @NameInMap("InstanceConsumeTimeRank")
     public GetInstanceConsumeTimeRankResponseBodyInstanceConsumeTimeRank instanceConsumeTimeRank;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6347364dadsfadf****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,24 +41,63 @@ public class GetInstanceConsumeTimeRankResponseBody extends TeaModel {
     }
 
     public static class GetInstanceConsumeTimeRankResponseBodyInstanceConsumeTimeRankConsumeTimeRank extends TeaModel {
+        /**
+         * <p>The data timestamp of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1600963200000</p>
+         */
         @NameInMap("Bizdate")
         public Long bizdate;
 
+        /**
+         * <p>The running duration of the instance. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("Consumed")
         public Long consumed;
 
+        /**
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>95279527</p>
+         */
         @NameInMap("InstanceId")
         public Long instanceId;
 
+        /**
+         * <p>The node ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9527</p>
+         */
         @NameInMap("NodeId")
         public Long nodeId;
 
+        /**
+         * <p>The name of the node.</p>
+         */
         @NameInMap("NodeName")
         public String nodeName;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account used by the node owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>952795279527</p>
+         */
         @NameInMap("Owner")
         public String owner;
 
+        /**
+         * <p>The type of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PrgType")
         public Integer prgType;
 
@@ -117,9 +165,18 @@ public class GetInstanceConsumeTimeRankResponseBody extends TeaModel {
     }
 
     public static class GetInstanceConsumeTimeRankResponseBodyInstanceConsumeTimeRank extends TeaModel {
+        /**
+         * <p>The ranking data of the running durations of instances.</p>
+         */
         @NameInMap("ConsumeTimeRank")
         public java.util.List<GetInstanceConsumeTimeRankResponseBodyInstanceConsumeTimeRankConsumeTimeRank> consumeTimeRank;
 
+        /**
+         * <p>The timestamp when the ranking was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1600963200000</p>
+         */
         @NameInMap("UpdateTime")
         public Long updateTime;
 

@@ -5,20 +5,29 @@ import com.aliyun.tea.*;
 
 public class GetDISyncTaskResponseBody extends TeaModel {
     /**
-     * <p>*   If the TaskType parameter is set to DI_REALTIME, the details of the real-time synchronization node are returned.</p>
-     * <p>*   If the TaskType parameter is set to DI_SOLUTION, the value null is returned.</p>
+     * <p>The returned results.</p>
      */
     @NameInMap("Data")
     public GetDISyncTaskResponseBodyData data;
 
     /**
-     * <p>The details of the real-time synchronization node or data synchronization solution.</p>
+     * <p>The request ID. You can locate logs and troubleshoot issues based on the ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0bc1411515937635973****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The ID of the request. You can query logs and troubleshoot issues based on the ID.</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>True</li>
+     * <li>False</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -54,64 +63,112 @@ public class GetDISyncTaskResponseBody extends TeaModel {
 
     public static class GetDISyncTaskResponseBodyDataSolutionDetail extends TeaModel {
         /**
-         * <p>The ID of the project to which the data synchronization solution belongs.</p>
+         * <p>The creator of the data synchronization solution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dataworks_di</p>
          */
         @NameInMap("CreatorName")
         public String creatorName;
 
+        /**
+         * <p>The ID of the data synchronization solution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Id")
         public Long id;
 
         /**
-         * <p>The additional parameters of the data synchronization solution.</p>
+         * <p>The name of the data synchronization solution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>holo_20211206161025</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The name of the data synchronization solution.</p>
+         * <p>The configuration details of the data synchronization solution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;holoDatasource&quot;:&quot;holo&quot;,&quot;offlineSyncConfig&quot;:{&quot;nodeNameRule&quot;:&quot;oneclick_holo_di_${db_table_name_src}<em>to</em>${db_table_name_dest}&quot;,&quot;resourceGroup&quot;:&quot;group_219193793999490&quot;},&quot;processRuleId&quot;:1007,&quot;readerConcurrent&quot;:10,&quot;realtimeSyncConfig&quot;:{&quot;content&quot;:{&quot;order&quot;:{&quot;hops&quot;:[{&quot;from&quot;:&quot;reader&quot;,&quot;to&quot;:&quot;writer&quot;}]},&quot;setting&quot;:{&quot;speed&quot;:{&quot;readerConcurrent&quot;:10}},&quot;steps&quot;:[{&quot;stepType&quot;:&quot;mysql&quot;,&quot;name&quot;:&quot;reader&quot;,&quot;category&quot;:&quot;reader&quot;,&quot;parameter&quot;:{&quot;connection&quot;:[{&quot;datasource&quot;:&quot;mm&quot;,&quot;datasourceType&quot;:&quot;mysql&quot;,&quot;table&quot;:[]}]}},{&quot;stepType&quot;:&quot;holo&quot;,&quot;name&quot;:&quot;writer&quot;,&quot;category&quot;:&quot;writer&quot;,&quot;parameter&quot;:{&quot;datasource&quot;:&quot;holo&quot;,&quot;writeMode&quot;:&quot;replay&quot;,&quot;datasourceSchema&quot;:&quot;public&quot;,&quot;tableMappingRule&quot;:{&quot;datasource&quot;:[{&quot;tableRule&quot;:[],&quot;srcDatasourceName&quot;:&quot;mm&quot;}]}}}]},&quot;extend&quot;:{&quot;mode&quot;:&quot;migration_holo&quot;,&quot;resourceGroup&quot;:&quot;group_219193793999490&quot;}},&quot;setting&quot;:{&quot;autoCreateWorkflow&quot;:true,&quot;userDefinedFileNameExpression&quot;:&quot;oneclick&quot;},&quot;srcType&quot;:&quot;mysql&quot;,&quot;tableMappingRuleFromRealtimeSyncConfig&quot;:{&quot;datasource&quot;:[{&quot;srcDatasourceName&quot;:&quot;mm&quot;,&quot;tableRule&quot;:[]}]}}</p>
          */
         @NameInMap("ProcessContent")
         public String processContent;
 
         /**
-         * <p>The time when the data synchronization solution was committed.</p>
+         * <p>The additional parameters of the data synchronization solution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;processType&quot;:&quot;new&quot;,&quot;tableNum&quot;:300}</p>
          */
         @NameInMap("ProcessExtra")
         public String processExtra;
 
         /**
-         * <p>The type of the source of the data synchronization solution.</p>
+         * <p>The ID of the project to which the data synchronization solution belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         @NameInMap("ProjectId")
         public Long projectId;
 
         /**
-         * <p>The configuration details of the data synchronization solution.</p>
+         * <p>The type of the source of the data synchronization solution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql</p>
          */
         @NameInMap("SourceType")
         public String sourceType;
 
         /**
-         * <p>The creator of the data synchronization solution.</p>
+         * <p>The start time of the data synchronization solution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-07 14:40:51</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
         /**
-         * <p>The type of the data synchronization solution.</p>
+         * <p>The status of the data synchronization solution. Valid values:</p>
+         * <ul>
+         * <li>0: successful</li>
+         * <li>1: not running</li>
+         * <li>2: running</li>
+         * <li>3: failed</li>
+         * <li>4: committed</li>
+         * <li>5: pending manual confirmation</li>
+         * <li>6: manually confirmed</li>
+         * <li>7: others</li>
+         * <li>8: waiting</li>
+         * <li>9: deleted</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The ID of the data synchronization solution.</p>
+         * <p>The time when the data synchronization solution was committed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-07 14:40:51</p>
          */
         @NameInMap("SubmitTime")
         public String submitTime;
 
         /**
-         * <p>The start time of the data synchronization solution.</p>
+         * <p>The type of the data synchronization solution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>holo</p>
          */
         @NameInMap("Type")
         public String type;
@@ -213,43 +270,42 @@ public class GetDISyncTaskResponseBody extends TeaModel {
 
     public static class GetDISyncTaskResponseBodyData extends TeaModel {
         /**
-         * <p>Indicates whether the details of the real-time synchronization node or data synchronization solution are obtained. Valid values:</p>
-         * <br>
-         * <p>success: The details are obtained.</p>
-         * <br>
-         * <p>fail: The details fail to be obtained.</p>
+         * <ul>
+         * <li>If the TaskType parameter is set to DI_REALTIME, the details of the real-time synchronization task are returned.</li>
+         * <li>If the TaskType parameter is set to DI_SOLUTION, the value null is returned.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;extend&quot;:{&quot;mode&quot;:&quot;wizard&quot;,&quot;resourceGroup&quot;:&quot;S_res_group_287114642182658_1560324290517&quot;},&quot;nodeDef&quot;:{},&quot;order&quot;:{&quot;hops&quot;:[{&quot;from&quot;:&quot;datahub_8htXSsfiS2vtZCVG&quot;,&quot;to&quot;:&quot;datahub_CRHBAyGfhSaLmv2f&quot;}]},&quot;setting&quot;:{&quot;errorLimit&quot;:{},&quot;jvmOption&quot;:&quot;&quot;},&quot;steps&quot;:[{&quot;stepType&quot;:&quot;datahub&quot;,&quot;category&quot;:&quot;writer&quot;,&quot;displayName&quot;:&quot;DataHub1&quot;,&quot;parameter&quot;:{&quot;batchSize&quot;:1000,&quot;datasource&quot;:&quot;datahub_cloud_dev_test&quot;,&quot;topic&quot;:&quot;dwd_tfc_opt_speed_rid_amap_rt&quot;},&quot;name&quot;:&quot;datahub_CRHBAyGfhSaLmv2f&quot;,&quot;gui&quot;:{&quot;x&quot;:262,&quot;y&quot;:325}},{&quot;stepType&quot;:&quot;datahub&quot;,&quot;displayName&quot;:&quot;DataHub2&quot;,&quot;parameter&quot;:{&quot;datasource&quot;:&quot;datahub_uric_test&quot;,&quot;topic&quot;:&quot;dwd_tfc_opt_speed_rid_amap_rt_330000&quot;,&quot;batchSize&quot;:1000},&quot;name&quot;:&quot;datahub_8htXSsfiS2vtZCVG&quot;,&quot;gui&quot;:{&quot;x&quot;:268,&quot;y&quot;:160.5},&quot;category&quot;:&quot;writer&quot;}]}</p>
          */
         @NameInMap("Code")
         public String code;
 
         /**
-         * <p>*   If the TaskType parameter is set to DI_REALTIME, the value null is returned.</p>
-         * <p>*   If the TaskType parameter is set to DI_SOLUTION, the details of the data synchronization solution task are returned.</p>
+         * <p>The cause of the failure to obtain the details of the real-time synchronization task or data synchronization solution.</p>
+         * <p>If the details of the real-time synchronization task or data synchronization solution are obtained, the value null is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fileId:[100] is invalid.</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
-         * <p>The status of the data synchronization solution. Valid values:</p>
-         * <br>
-         * <p>*   0: successful</p>
-         * <p>*   1: not running</p>
-         * <p>*   2: running</p>
-         * <p>*   3: failed</p>
-         * <p>*   4: committed</p>
-         * <p>*   5: pending manual confirmation</p>
-         * <p>*   6: manually confirmed</p>
-         * <p>*   7: others</p>
-         * <p>*   8: waiting</p>
-         * <p>*   9: deleted</p>
+         * <ul>
+         * <li>If the TaskType parameter is set to DI_REALTIME, the value null is returned.</li>
+         * <li>If the TaskType parameter is set to DI_SOLUTION, the details of the data synchronization solution are returned.</li>
+         * </ul>
          */
         @NameInMap("SolutionDetail")
         public GetDISyncTaskResponseBodyDataSolutionDetail solutionDetail;
 
         /**
-         * <p>The cause of the failure to obtain the details of the real-time synchronization node or data synchronization solution.</p>
-         * <br>
-         * <p>If the details of the real-time synchronization node or data synchronization solution are obtained, the value null is returned.</p>
+         * <p>Indicates whether the details of the real-time synchronization task or data synchronization solution are obtained. Valid values:</p>
+         * <p>success: The details are obtained. fail: The details fail to be obtained.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         @NameInMap("Status")
         public String status;

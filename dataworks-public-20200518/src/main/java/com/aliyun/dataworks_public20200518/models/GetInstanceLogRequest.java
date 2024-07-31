@@ -6,22 +6,29 @@ import com.aliyun.tea.*;
 public class GetInstanceLogRequest extends TeaModel {
     /**
      * <p>The historical record number of the instance. You can call the ListInstanceHistory operation to query the ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("InstanceHistoryId")
     public Long instanceHistoryId;
 
     /**
      * <p>The ID of the instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234</p>
      */
     @NameInMap("InstanceId")
     public Long instanceId;
 
     /**
      * <p>The environment of the workspace. Valid values: PROD and DEV.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PROD</p>
      */
     @NameInMap("ProjectEnv")
     public String projectEnv;

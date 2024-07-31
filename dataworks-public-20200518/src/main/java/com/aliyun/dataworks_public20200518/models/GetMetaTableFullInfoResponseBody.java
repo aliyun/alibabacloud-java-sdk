@@ -12,30 +12,45 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
 
     /**
      * <p>The error code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1031203110005</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The specified parameters are invalid.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The ID of the request. You can use the ID to query logs and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0bc1411515937****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -96,63 +111,93 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
     public static class GetMetaTableFullInfoResponseBodyDataColumnList extends TeaModel {
         /**
          * <p>The description of the field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>data comment</p>
          */
         @NameInMap("Caption")
         public String caption;
 
         /**
          * <p>The GUID of the field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>odps.engine_name.table_name.1</p>
          */
         @NameInMap("ColumnGuid")
         public String columnGuid;
 
         /**
          * <p>The name of the field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ColumnName")
         public String columnName;
 
         /**
          * <p>The data type of the field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>string</p>
          */
         @NameInMap("ColumnType")
         public String columnType;
 
         /**
          * <p>The remarks of the field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>comment</p>
          */
         @NameInMap("Comment")
         public String comment;
 
         /**
          * <p>Indicates whether the field is a foreign key. Valid values:</p>
-         * <br>
-         * <p>*   true: The field is a foreign key.</p>
-         * <p>*   false: The field is not a foreign key.</p>
+         * <ul>
+         * <li>true: The field is a foreign key.</li>
+         * <li>false: The field is not a foreign key.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("IsForeignKey")
         public Boolean isForeignKey;
 
         /**
          * <p>Indicates whether the field is a partition field. Valid values:</p>
-         * <br>
-         * <p>*   true: The field is a partition field.</p>
-         * <p>*   false: The field is not a partition field.</p>
+         * <ul>
+         * <li>true: The field is a partition field.</li>
+         * <li>false: The field is not a partition field.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("IsPartitionColumn")
         public Boolean isPartitionColumn;
 
         /**
          * <p>Indicates whether the field is the primary key. Valid values:</p>
-         * <br>
-         * <p>*   true: The field is the primary key.</p>
-         * <p>*   false: The field is not the primary key.</p>
+         * <ul>
+         * <li>true: The field is the primary key.</li>
+         * <li>false: The field is not the primary key.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("IsPrimaryKey")
         public Boolean isPrimaryKey;
 
         /**
          * <p>The ordinal number of the field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Position")
         public Integer position;
@@ -239,6 +284,9 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
     public static class GetMetaTableFullInfoResponseBodyData extends TeaModel {
         /**
          * <p>The ID of the EMR cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C-010A704DA760****</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
@@ -251,98 +299,145 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
 
         /**
          * <p>The remarks of the metatable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>comment</p>
          */
         @NameInMap("Comment")
         public String comment;
 
         /**
          * <p>The time when the metatable was created. You can convert the timestamp to the related date based on the time zone that you use.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1589870293000</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
          * <p>The amount of storage resources that are consumed by the metatable. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("DataSize")
         public Long dataSize;
 
         /**
          * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         @NameInMap("DatabaseName")
         public String databaseName;
 
         /**
          * <p>The type of the environment in which the metatable resides. Valid values:</p>
-         * <br>
-         * <p>*   0: indicates that the metatable resides in the development environment.</p>
-         * <p>*   1: indicates that the metatable resides in the production environment.</p>
+         * <ul>
+         * <li>0: indicates that the metatable resides in the development environment.</li>
+         * <li>1: indicates that the metatable resides in the production environment.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("EnvType")
         public Integer envType;
 
         /**
          * <p>The scope in which the metatable is visible. Valid values:</p>
-         * <br>
-         * <p>*   0: indicates that the metatable is visible to workspace members.</p>
-         * <p>*   1: indicates that the metatable is visible to users within a tenant.</p>
-         * <p>*   2: indicates that the metatable is visible to all tenants.</p>
-         * <p>*   3: indicates that the metatable is visible only to the metatable owner.</p>
+         * <ul>
+         * <li>0: indicates that the metatable is visible to workspace members.</li>
+         * <li>1: indicates that the metatable is visible to users within a tenant.</li>
+         * <li>2: indicates that the metatable is visible to all tenants.</li>
+         * <li>3: indicates that the metatable is visible only to the metatable owner.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("IsVisible")
         public Integer isVisible;
 
         /**
          * <p>The time when the metatable was last accessed. You can convert the timestamp to the related date based on the time zone that you use.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1589870294000</p>
          */
         @NameInMap("LastAccessTime")
         public Long lastAccessTime;
 
         /**
          * <p>The time when the schema of the metatable was last changed. You can convert the timestamp to the related date based on the time zone that you use.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1589870294000</p>
          */
         @NameInMap("LastDdlTime")
         public Long lastDdlTime;
 
         /**
          * <p>The time when the metatable was last updated. You can convert the timestamp to the related date based on the time zone that you use.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1589870294000</p>
          */
         @NameInMap("LastModifyTime")
         public Long lastModifyTime;
 
         /**
          * <p>The lifecycle of the metatable. Unit: days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("LifeCycle")
         public Integer lifeCycle;
 
         /**
          * <p>The storage path of the Hive metatable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hdfs://localhost:777/user/hadoop/test.txt</p>
          */
         @NameInMap("Location")
         public String location;
 
         /**
          * <p>The ID of the metatable owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("OwnerId")
         public String ownerId;
 
         /**
          * <p>The partition key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         @NameInMap("PartitionKeys")
         public String partitionKeys;
 
         /**
          * <p>The ID of the workspace to which the metatable belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22</p>
          */
         @NameInMap("ProjectId")
         public Long projectId;
 
         /**
          * <p>The name of the workspace to which the metatable belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("ProjectName")
         public String projectName;
@@ -352,24 +447,36 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
 
         /**
          * <p>The GUID of the metatable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>odps.engine_name.table_name</p>
          */
         @NameInMap("TableGuid")
         public String tableGuid;
 
         /**
          * <p>The name of the metatable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>table_name</p>
          */
         @NameInMap("TableName")
         public String tableName;
 
         /**
          * <p>The ID of the tenant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         @NameInMap("TenantId")
         public Long tenantId;
 
         /**
          * <p>The total number of fields.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22</p>
          */
         @NameInMap("TotalColumnCount")
         public Long totalColumnCount;

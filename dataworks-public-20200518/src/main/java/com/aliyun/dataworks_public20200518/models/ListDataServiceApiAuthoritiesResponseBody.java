@@ -11,31 +11,46 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
     public ListDataServiceApiAuthoritiesResponseBodyData data;
 
     /**
-     * <p>The error code returned.</p>
+     * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Normal</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0000-ABCD-EFG****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -96,24 +111,36 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
     public static class ListDataServiceApiAuthoritiesResponseBodyDataApiAuthorizationListAuthorizationRecords extends TeaModel {
         /**
          * <p>The time when the access permissions on the API were granted to other users.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-06-23T00:21:01+0800</p>
          */
         @NameInMap("CreatedTime")
         public String createdTime;
 
         /**
-         * <p>The ID of the Alibaba Cloud account used by the user who granted other users the access permissions on the API.</p>
+         * <p>The ID of the Alibaba Cloud account used by the API owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         @NameInMap("CreatorId")
         public String creatorId;
 
         /**
          * <p>The end time of the validity period of the authorization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-06-24T00:21:01+0800</p>
          */
         @NameInMap("EndTime")
         public String endTime;
 
         /**
          * <p>The ID of the workspace to which the access permissions on the API are granted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10004</p>
          */
         @NameInMap("ProjectId")
         public Long projectId;
@@ -159,25 +186,37 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
 
     public static class ListDataServiceApiAuthoritiesResponseBodyDataApiAuthorizationList extends TeaModel {
         /**
-         * <p>The ID of the API.</p>
+         * <p>The API ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10002</p>
          */
         @NameInMap("ApiId")
         public Long apiId;
 
         /**
          * <p>The name of the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>My API name</p>
          */
         @NameInMap("ApiName")
         public String apiName;
 
         /**
          * <p>The path of the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/test/1</p>
          */
         @NameInMap("ApiPath")
         public String apiPath;
 
         /**
          * <p>The status of the API. Valid values: 0 and 1. The value 0 indicates that the API is not published. The value 1 indicates that the API is published.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ApiStatus")
         public Integer apiStatus;
@@ -190,36 +229,54 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
 
         /**
          * <p>The time when the API was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-06-23T00:21:01+0800</p>
          */
         @NameInMap("CreatedTime")
         public String createdTime;
 
         /**
          * <p>The ID of the Alibaba Cloud account used by the API owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         @NameInMap("CreatorId")
         public String creatorId;
 
         /**
-         * <p>The ID of the group.</p>
+         * <p>The group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ab123</p>
          */
         @NameInMap("GroupId")
         public String groupId;
 
         /**
-         * <p>The time when the API was last updated.</p>
+         * <p>The time when the API was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-06-23T00:21:01+0800</p>
          */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
         /**
-         * <p>The ID of the workspace.</p>
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         @NameInMap("ProjectId")
         public Long projectId;
 
         /**
-         * <p>The ID of the tenant.</p>
+         * <p>The tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10001</p>
          */
         @NameInMap("TenantId")
         public Long tenantId;
@@ -321,25 +378,34 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
 
     public static class ListDataServiceApiAuthoritiesResponseBodyData extends TeaModel {
         /**
-         * <p>The APIs on which other users are granted the access permissions and the authorization records.</p>
+         * <p>The APIs on which other users are granted the access permissions.</p>
          */
         @NameInMap("ApiAuthorizationList")
         public java.util.List<ListDataServiceApiAuthoritiesResponseBodyDataApiAuthorizationList> apiAuthorizationList;
 
         /**
-         * <p>The page number of the returned page. The value of this parameter is the same as that of the PageNumber parameter in the request.</p>
+         * <p>The page number. The value of this parameter is the same as that of the PageNumber parameter in the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
         /**
-         * <p>The number of entries returned per page. Default value: 10. Maximum value: 100.</p>
+         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

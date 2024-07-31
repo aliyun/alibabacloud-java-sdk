@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class RegisterLineageRelationShrinkRequest extends TeaModel {
     /**
+     * <p>The structure whose lineage you want to register to DataWorks.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("LineageRelationRegisterVO")

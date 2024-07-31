@@ -12,30 +12,45 @@ public class GetBusinessResponseBody extends TeaModel {
 
     /**
      * <p>The error code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Invalid.Tenant.ConnectionNotExists</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The connection does not exist.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The ID of the request. You can use the ID to troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0000-ABCD-EFG****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -96,6 +111,9 @@ public class GetBusinessResponseBody extends TeaModel {
     public static class GetBusinessResponseBodyData extends TeaModel {
         /**
          * <p>The ID of the workflow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000001</p>
          */
         @NameInMap("BusinessId")
         public Long businessId;
@@ -114,18 +132,27 @@ public class GetBusinessResponseBody extends TeaModel {
 
         /**
          * <p>The Alibaba Cloud account ID of the workflow owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20000****</p>
          */
         @NameInMap("Owner")
         public String owner;
 
         /**
          * <p>The ID of the workspace to which the workflow belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         @NameInMap("ProjectId")
         public String projectId;
 
         /**
          * <p>The module to which the workflow belongs. Valid values: NORMAL and MANUAL_BIZ.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         @NameInMap("UseType")
         public String useType;

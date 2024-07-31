@@ -11,27 +11,38 @@ public class DeployFileRequest extends TeaModel {
     public String comment;
 
     /**
-     * <p>The ID of the file. You can call the [ListFiles](https://help.aliyun.com/document_detail/173942.html) operation to query the ID.</p>
-     * <br>
+     * <p>The ID of the file. You can call the <a href="https://help.aliyun.com/document_detail/173942.html">ListFiles</a> operation to query the ID.</p>
      * <p>You must configure either the FileId parameter or the NodeId parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10000001</p>
      */
     @NameInMap("FileId")
     public Long fileId;
 
     /**
      * <p>The ID of the node in the scheduling system that corresponds to the file that you want to deploy. You must configure either the NodeId parameter or the FileId parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2000001</p>
      */
     @NameInMap("NodeId")
     public Long nodeId;
 
     /**
      * <p>The ID of the DataWorks workspace. You can log on to the DataWorks console and go to the Workspace Management page to obtain the workspace ID. You must configure either this parameter or the ProjectIdentifier parameter to determine the DataWorks workspace to which the operation is applied.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10000</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;
 
     /**
      * <p>The name of the DataWorks workspace. You can log on to the DataWorks console and go to the Workspace Management page to obtain the workspace name. You must configure either this parameter or the ProjectId parameter to determine the DataWorks workspace to which the operation is applied.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dw_project</p>
      */
     @NameInMap("ProjectIdentifier")
     public String projectIdentifier;

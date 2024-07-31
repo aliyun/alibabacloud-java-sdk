@@ -11,7 +11,10 @@ public class GetExtensionResponseBody extends TeaModel {
     public GetExtensionResponseBodyExtension extension;
 
     /**
-     * <p>The ID of the request. You can use the ID to query logs and troubleshoot issues.</p>
+     * <p>The request ID. You can use the request ID to query logs and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0000-ABCD-EFG</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,6 +43,9 @@ public class GetExtensionResponseBody extends TeaModel {
     public static class GetExtensionResponseBodyExtensionBindEventList extends TeaModel {
         /**
          * <p>The code of the extension point event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>commit-file</p>
          */
         @NameInMap("EventCode")
         public String eventCode;
@@ -76,6 +82,9 @@ public class GetExtensionResponseBody extends TeaModel {
     public static class GetExtensionResponseBodyExtensionEventCategoryList extends TeaModel {
         /**
          * <p>The code of the event type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>file-change</p>
          */
         @NameInMap("CategoryCode")
         public String categoryCode;
@@ -111,25 +120,31 @@ public class GetExtensionResponseBody extends TeaModel {
 
     public static class GetExtensionResponseBodyExtension extends TeaModel {
         /**
-         * <p>The extension point events.</p>
+         * <p>The list of extension points.</p>
          */
         @NameInMap("BindEventList")
         public java.util.List<GetExtensionResponseBodyExtensionBindEventList> bindEventList;
 
         /**
-         * <p>The URL of the help document about the extension. You can visit the URL for the details of the extension.</p>
+         * <p>The URL of the extension details page, on which users can view the details of the process blocked by the extension.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://www.aliyun.com/">https://www.aliyun.com/</a></p>
          */
         @NameInMap("DetailUrl")
         public String detailUrl;
 
         /**
-         * <p>The types of the events.</p>
+         * <p>The list of event types.</p>
          */
         @NameInMap("EventCategoryList")
         public java.util.List<GetExtensionResponseBodyExtensionEventCategoryList> eventCategoryList;
 
         /**
          * <p>The unique code of the extension.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ce4*********086da5</p>
          */
         @NameInMap("ExtensionCode")
         public String extensionCode;
@@ -147,31 +162,43 @@ public class GetExtensionResponseBody extends TeaModel {
         public String extensionName;
 
         /**
-         * <p>The URL of the help document about the extension.</p>
+         * <p>The URL of the help documentation of the extension.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://www.aliyun.com/">https://www.aliyun.com/</a></p>
          */
         @NameInMap("HelpDocUrl")
         public String helpDocUrl;
 
         /**
-         * <p>The option settings of the extension.</p>
+         * <p>The options defined for the extension.</p>
          */
         @NameInMap("OptionSetting")
         public String optionSetting;
 
         /**
-         * <p>The parameter settings of the extension. For more information, visit https://www.alibabacloud.com/help/en/dataworks/latest/set-extension-parameters.</p>
+         * <p>The parameter settings of the extension. For more information, see <a href="https://help.aliyun.com/document_detail/405354.html">Configure extension parameters</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>extension.project.disabled=projectId1,projectId2,projectId3</p>
          */
         @NameInMap("ParameterSetting")
         public String parameterSetting;
 
         /**
-         * <p>The workspace for testing. If the extension is in the testing state, the extension can be used only in the workspace for testing.</p>
+         * <p>The workspace for testing. If the extension is being tested, the extension can be used only in the workspace for testing.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13552</p>
          */
         @NameInMap("ProjectTesting")
         public Long projectTesting;
 
         /**
-         * <p>The state of the extension. 0: testing. 1: publishing. 3: disabled. 4: approving. 5: approved. 6: approval failed.</p>
+         * <p>The state of the extension. 0: Testing, 1: Publishing, 3: Disabled, 4: Processing, 5: Approved, 6: Approve Failed</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Status")
         public Integer status;

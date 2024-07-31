@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreateDataServiceFolderResponseBody extends TeaModel {
     /**
      * <p>The ID of the created folder.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("FolderId")
     public Long folderId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0000-ABCD-E****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

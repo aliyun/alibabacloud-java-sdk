@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePermissionApplyOrderRequest extends TeaModel {
     /**
+     * <p>The objects on which you want to request permissions.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ApplyObject")
@@ -12,56 +13,67 @@ public class CreatePermissionApplyOrderRequest extends TeaModel {
 
     /**
      * <p>The reason for your request. The administrator determines whether to approve the request based on the reason.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>I need to use this table</p>
      */
     @NameInMap("ApplyReason")
     public String applyReason;
 
     /**
      * <p>The ID of the Alibaba Cloud account for which you want to request permissions. If you want to request permissions for multiple Alibaba Cloud accounts, separate the IDs of the accounts with commas (,).</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>267842600408993176,267842600408993177</p>
      */
     @NameInMap("ApplyUserIds")
     public String applyUserIds;
 
     /**
-     * <p>The expiration time of the permissions that you request. This value is a UNIX timestamp. If you do not specify a value for this parameter, January 1, 2065 is used as the expiration time.</p>
-     * <br>
-     * <p>If LabelSecurity is disabled for the MaxCompute project in which you want to request permissions on the fields of a table, or the security level of the fields is 0 or is lower than or equal to the security level of the Alibaba Cloud account for which you want to request permissions, you can request only permanent permissions.</p>
-     * <br>
-     * <p>You can go to the Workspace Management page of the DataWorks console, click MaxCompute Management in the left-side navigation pane, and then check whether column-level access control is enabled.</p>
-     * <br>
-     * <p>You can go to your DataWorks workspace, view the security level of the fields in DataMap, and then view the security level of the Alibaba Cloud account on the User Management page.</p>
+     * <p>The expiration time of the permissions that you request. This value is a UNIX timestamp. The default value is January 1, 2065. If LabelSecurity is disabled for the MaxCompute project in which you want to request permissions on the fields of a table, or the security level of the fields is 0 or is lower than or equal to the security level of the Alibaba Cloud account for which you want to request permissions, you can request only permanent permissions. You can go to the Workspace Management page in the DataWorks console, click MaxCompute Management in the left-side navigation pane, and then check whether column-level access control is enabled. You can go to your DataWorks workspace, view the security level of the fields in Data Map, and then view the security level of the Alibaba Cloud account on the User Management page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1617115071885</p>
      */
     @NameInMap("Deadline")
     public Long deadline;
 
     /**
-     * <p>The type of the compute engine instance in which you want to request permissions on the fields of a table. The parameter value is odps and cannot be changed. This value indicates that you can request permissions only on fields of tables in MaxCompute compute engine instances.</p>
+     * <p>The type of the compute engine in which you want to request permissions on the fields of a table. The parameter value is odps and cannot be changed. This value indicates that you can request permissions only on fields of tables in the MaxCompute compute engine.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>odps</p>
      */
     @NameInMap("EngineType")
     public String engineType;
 
     /**
      * <p>The name of the MaxCompute project in which you request permissions on the fields of a table.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>aMaxcomputeProjectName</p>
      */
     @NameInMap("MaxComputeProjectName")
     public String maxComputeProjectName;
 
     /**
      * <p>The type of the permission request order. The parameter value is 1 and cannot be changed. This value indicates ACL-based authorization.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("OrderType")
     public Integer orderType;
 
     /**
-     * <p>The ID of the DataWorks workspace that is associated with the MaxCompute project in which you want to request permissions on the fields of a table. You can go to the Workspace Management page in the DataWorks console to view the workspace ID.</p>
-     * <br>
+     * <p>The ID of the DataWorks workspace that is associated with the MaxCompute project in which you want to request permissions on the fields of a table. You can go to the SettingCenter page in the DataWorks console to view the workspace ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12345</p>
      */
     @NameInMap("WorkspaceId")
     public Integer workspaceId;
@@ -137,11 +149,11 @@ public class CreatePermissionApplyOrderRequest extends TeaModel {
 
     public static class CreatePermissionApplyOrderRequestApplyObjectColumnMetaList extends TeaModel {
         /**
-         * <p>The name of the field on which you want to request permissions. If you want to request permissions on an entire table, enter the names of all fields in the table.</p>
-         * <br>
-         * <p>You can request permissions on specific fields of a table in a MaxCompute project only after LabelSecurity is enabled for this project. If LabelSecurity is disabled, you can request permissions only on an entire table.</p>
-         * <br>
+         * <p>The field on which you want to request permissions. If you want to request permissions on an entire table, enter all fields in the table. You can request permissions on specific fields of a table in a MaxCompute project only after LabelSecurity is enabled for this project. If LabelSecurity is disabled, you can request permissions only on an entire table.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aColumnName</p>
          */
         @NameInMap("Name")
         public String name;
@@ -164,13 +176,16 @@ public class CreatePermissionApplyOrderRequest extends TeaModel {
     public static class CreatePermissionApplyOrderRequestApplyObject extends TeaModel {
         /**
          * <p>The permission that you want to request. If you want to request multiple permissions at the same time, separate them with commas (,). You can request only the following permissions: Select, Describe, Drop, Alter, Update, and Download.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Select,Describe</p>
          */
         @NameInMap("Actions")
         public String actions;
 
         /**
+         * <p>The fields on which you want to request permissions.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("ColumnMetaList")
@@ -178,8 +193,10 @@ public class CreatePermissionApplyOrderRequest extends TeaModel {
 
         /**
          * <p>The name of the object on which you want to request permissions. You can request permissions only on MaxCompute tables. Set this parameter to the name of the table on which you want to request permissions.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aTableName</p>
          */
         @NameInMap("Name")
         public String name;

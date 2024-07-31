@@ -5,37 +5,52 @@ import com.aliyun.tea.*;
 
 public class ListRemindsResponseBody extends TeaModel {
     /**
-     * <p>The information about custom alert rules returned.</p>
+     * <p>The data returned.</p>
      */
     @NameInMap("Data")
     public ListRemindsResponseBodyData data;
 
     /**
      * <p>The error code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1031203110005</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The specified parameters are invalid.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The ID of the request. You can use the ID to troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0000-ABCD-EFG****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -95,19 +110,22 @@ public class ListRemindsResponseBody extends TeaModel {
 
     public static class ListRemindsResponseBodyDataReminds extends TeaModel {
         /**
-         * <p>The notification method. Valid values: MAIL, SMS, and PHONE. The value MAIL indicates that the notification is sent by email. The value SMS indicates that the notification is sent by text message. The value PHONE indicates that the notification is sent by call, which is supported only by DataWorks Professional Edition and more advanced editions.</p>
+         * <p>The notification method. Valid values: MAIL, SMS, and PHONE. The value MAIL indicates that the notification is sent by email. Only DataWorks Professional Edition and more advanced editions support the PHONE notification method.</p>
          */
         @NameInMap("AlertMethods")
         public java.util.List<String> alertMethods;
 
         /**
-         * <p>The IDs of the Alibaba Cloud accounts that are used to receive alert notifications.</p>
+         * <p>The IDs of the Alibaba Cloud accounts used by alert recipients.</p>
          */
         @NameInMap("AlertTargets")
         public java.util.List<String> alertTargets;
 
         /**
          * <p>The alert recipient. Valid values: OWNER and OTHER. The value OWNER indicates the node owner. The value OTHER indicates a specified user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OWNER</p>
          */
         @NameInMap("AlertUnit")
         public String alertUnit;
@@ -125,19 +143,28 @@ public class ListRemindsResponseBody extends TeaModel {
         public java.util.List<Long> bizProcessIds;
 
         /**
-         * <p>The end time of the quiet hours. The value is in the hh:mm format. Valid values of hh: 0 to 23. Valid values of mm: 0 to 59.</p>
+         * <p>The end time of the quiet hours. The time is in the hh:mm format. Valid values of hh: [0,23]. Valid values of mm: [0,59].</p>
+         * 
+         * <strong>example:</strong>
+         * <p>08:00</p>
          */
         @NameInMap("DndEnd")
         public String dndEnd;
 
         /**
-         * <p>The start time of the quiet hours. The value is in the hh:mm format. Valid values of hh: 0 to 23. Valid values of mm: 0 to 59.</p>
+         * <p>The start time of the quiet hours. The time is in the hh:mm format. Valid values of hh: [0,23]. Valid values of mm: [0,59].</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00:00</p>
          */
         @NameInMap("DndStart")
         public String dndStart;
 
         /**
-         * <p>The ID of the Alibaba Cloud account that is used to create the custom alert rule.</p>
+         * <p>The ID of the Alibaba Cloud account used by the rule creator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>952795****</p>
          */
         @NameInMap("Founder")
         public String founder;
@@ -155,31 +182,46 @@ public class ListRemindsResponseBody extends TeaModel {
         public java.util.List<Long> projectIds;
 
         /**
-         * <p>The ID of the custom alert rule.</p>
+         * <p>The custom alert rule ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         @NameInMap("RemindId")
         public Long remindId;
 
         /**
          * <p>The name of the custom alert rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alert Rule</p>
          */
         @NameInMap("RemindName")
         public String remindName;
 
         /**
-         * <p>The conditions that trigger an alert for the node. Valid values: FINISHED, UNFINISHED, ERROR, CYCLE_UNFINISHED, and TIMEOUT. The value FINISHED indicates that the node finishes running. The value UNFINISHED indicates that the node is still running at the specified point in time. The value ERROR indicates that an error occurs when the node is running. The value CYCLE_UNFINISHED indicates that the node does not finish running in the specified scheduling cycle. The value TIMEOUT indicates that the node times out.</p>
+         * <p>The condition that triggers an alert. Valid values: FINISHED, UNFINISHED, ERROR, CYCLE_UNFINISHED, and TIMEOUT.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FINISHED</p>
          */
         @NameInMap("RemindType")
         public String remindType;
 
         /**
-         * <p>The type of the object to which the custom alert rule is applied. Valid values: NODE, BASELINE, PROJECT, and BIZPROCESS. The value NODE indicates that the monitored object is a node. The value BASELINE indicates that the monitored object is a baseline. The value PROJECT indicates that the monitored object is a workspace. The value BIZPROCESS indicates that the monitored object is a workflow.</p>
+         * <p>The type of the object to which the custom alert rule is applied. Valid values: NODE, BASELINE, PROJECT, and BIZPROCESS. The value NODE indicates a node. The value BASELINE indicates a baseline. The value PROJECT indicates a workspace. The value BIZPROCESS indicates a workflow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NODE</p>
          */
         @NameInMap("RemindUnit")
         public String remindUnit;
 
         /**
          * <p>Indicates whether the custom alert rule is enabled. Valid values: true and false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Useflag")
         public Boolean useflag;
@@ -314,24 +356,33 @@ public class ListRemindsResponseBody extends TeaModel {
     public static class ListRemindsResponseBodyData extends TeaModel {
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
-         * <p>The custom alert rules returned.</p>
+         * <p>The list of custom alert rules.</p>
          */
         @NameInMap("Reminds")
         public java.util.List<ListRemindsResponseBodyDataReminds> reminds;
 
         /**
          * <p>The total number of custom alert rules returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

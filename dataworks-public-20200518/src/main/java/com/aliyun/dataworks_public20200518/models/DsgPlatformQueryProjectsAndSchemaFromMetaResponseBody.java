@@ -4,21 +4,58 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class DsgPlatformQueryProjectsAndSchemaFromMetaResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public java.util.List<DsgPlatformQueryProjectsAndSchemaFromMetaResponseBodyData> data;
 
+    /**
+     * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1029030003</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>param error</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>400</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The request ID. You can use the ID to locate logs and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>102400001</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,9 +113,21 @@ public class DsgPlatformQueryProjectsAndSchemaFromMetaResponseBody extends TeaMo
     }
 
     public static class DsgPlatformQueryProjectsAndSchemaFromMetaResponseBodyData extends TeaModel {
+        /**
+         * <p>The ID of the EMR cluster. This parameter is generated only when the request parameter EngineName is set to EMR.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-12345</p>
+         */
         @NameInMap("ClusterId")
         public String clusterId;
 
+        /**
+         * <p>The name of the compute engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>emr_test_project</p>
+         */
         @NameInMap("Project")
         public String project;
 

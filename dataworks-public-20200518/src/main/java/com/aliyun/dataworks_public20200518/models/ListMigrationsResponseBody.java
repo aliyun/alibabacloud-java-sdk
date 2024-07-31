@@ -5,22 +5,29 @@ import com.aliyun.tea.*;
 
 public class ListMigrationsResponseBody extends TeaModel {
     /**
-     * <p>The list of migration tasks.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public ListMigrationsResponseBodyData data;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
-     * <br>
-     * <p>*   true: The request is successful.</p>
-     * <p>*   false: The request fails.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F9198AA3-9010-53D5-9714-DC4461427D3E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The data returned.</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -56,113 +63,160 @@ public class ListMigrationsResponseBody extends TeaModel {
 
     public static class ListMigrationsResponseBodyDataMigrations extends TeaModel {
         /**
-         * <p>The time when the migration task was last updated.</p>
+         * <p>The time when the migration task was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123124123123123</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
-         * <p>The name of the user who created the migration task.</p>
+         * <p>The ID of the user who created the migration task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123123****</p>
          */
         @NameInMap("CreateUser")
         public String createUser;
 
         /**
-         * <p>The ID of the user who last updated the migration task.</p>
+         * <p>The name of the user who created the migration task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3h1_test</p>
          */
         @NameInMap("CreateUserName")
         public String createUserName;
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The description of the export task.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The description of the export task.</p>
+         * <p>The URL that is used to download the package of the export task. You can use the URL to download the package of the export task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://geoip-sdk-user.oss-cn-zhangjiakou.aliyuncs.com/product/v1/ipv4/trace/v1.20220424123842.dex?Expires=1650780849&OSSAccessKeyId=XXXXXXeF4Lv5j&Signature=qxxxxx">http://geoip-sdk-user.oss-cn-zhangjiakou.aliyuncs.com/product/v1/ipv4/trace/v1.20220424123842.dex?Expires=1650780849&amp;OSSAccessKeyId=XXXXXXeF4Lv5j&amp;Signature=qxxxxx</a></p>
          */
         @NameInMap("DownloadUrl")
         public String downloadUrl;
 
         /**
-         * <p>The name of the migration task.</p>
+         * <p>The primary key ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>436064</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
-         * <p>The URL that is used to download the package of the export task. You can use the URL to download the package of the export task.</p>
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>An internal system error occurred. datasource kafka region is not cn-chengdu, can\&quot;t open network for it</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
-         * <p>The time when the migration task was created.</p>
+         * <p>The type of the migration task.</p>
+         * <ul>
+         * <li>IMPORT</li>
+         * <li>EXPORT</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>EXPORT</p>
          */
         @NameInMap("MigrationType")
         public String migrationType;
 
         /**
-         * <p>The type of the import or export package. Valid values:</p>
-         * <br>
-         * <p>*   DWMA (standard format)</p>
-         * <p>*   DATAWORKS_MODEL (standard format)</p>
-         * <p>*   DATAWORKS_V2 (Apsara Stack DataWorks V3.6.1 to V3.11)</p>
-         * <p>*   DATAWORKS_V3 (Apsara Stack DataWorks V3.12 and later)</p>
-         * <br>
-         * <p>The DWMA and DATAWORKS_MODEL types are interchangeable.</p>
+         * <p>The name of the migration task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_task_1638498642279</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The type of the migration task.</p>
-         * <br>
-         * <p>*   IMPORT</p>
-         * <p>*   EXPORT</p>
+         * <p>The type of the import or export package. Valid values:</p>
+         * <ul>
+         * <li>DWMA (standard format)</li>
+         * <li>DATAWORKS_MODEL (standard format)</li>
+         * <li>DATAWORKS_V2 (Apsara Stack DataWorks V3.6.1 to V3.11)</li>
+         * <li>DATAWORKS_V3 (Apsara Stack DataWorks V3.12 and later)</li>
+         * </ul>
+         * <p>The DWMA and DATAWORKS_MODEL types are interchangeable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DATAWORKS_MODEL</p>
          */
         @NameInMap("PackageType")
         public String packageType;
 
         /**
-         * <p>The ID of the tenant.</p>
+         * <p>The ID of the DataWorks workspace to which the task belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>72132</p>
          */
         @NameInMap("ProjectId")
         public Long projectId;
 
         /**
-         * <p>The error message returned.</p>
+         * <p>The status of the migration task. Valid values:</p>
+         * <ul>
+         * <li>INIT: The migration task is in the initial state.</li>
+         * <li>EDITING: The migration task is being edited.</li>
+         * <li>RUNNING: The migration task is running.</li>
+         * <li>FAILURE: The migration task fails to run.</li>
+         * <li>SUCCESS: The migration task is successfully run.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The status of the migration task. Valid values:</p>
-         * <br>
-         * <p>*   INIT: The migration task is in the initial state.</p>
-         * <p>*   EDITING: The migration task is being edited.</p>
-         * <p>*   RUNNING: The migration task is running.</p>
-         * <p>*   FAILURE: The migration task fails to run.</p>
-         * <p>*   SUCCESS: The migration task is successfully run.</p>
+         * <p>The tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16307</p>
          */
         @NameInMap("TenantId")
         public Long tenantId;
 
         /**
-         * <p>The ID of the user who created the migration task.</p>
+         * <p>The time when the migration task was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123123123123123</p>
          */
         @NameInMap("UpdateTime")
         public Long updateTime;
 
         /**
-         * <p>The name of the user who last updated the migration task.</p>
+         * <p>The ID of the user who last updated the migration task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1231****</p>
          */
         @NameInMap("UpdateUser")
         public String updateUser;
 
         /**
-         * <p>The ID of the DataWorks workspace to which the task belongs.</p>
+         * <p>The name of the user who last updated the migration task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3h1_test</p>
          */
         @NameInMap("UpdateUserName")
         public String updateUserName;
@@ -304,23 +358,35 @@ public class ListMigrationsResponseBody extends TeaModel {
 
     public static class ListMigrationsResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the primary key.</p>
+         * <p>The list of migration tasks.</p>
          */
         @NameInMap("Migrations")
         public java.util.List<ListMigrationsResponseBodyDataMigrations> migrations;
 
         /**
-         * <p>The number of entries returned per page. Default value: 10. Maximum value: 50.</p>
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The number of entries per page. Default value: 10. Maximum value: 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

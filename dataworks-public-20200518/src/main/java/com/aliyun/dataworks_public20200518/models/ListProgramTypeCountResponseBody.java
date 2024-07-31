@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class ListProgramTypeCountResponseBody extends TeaModel {
     /**
-     * <p>The type and number of nodes.</p>
+     * <p>The list of node types and quantity.</p>
      */
     @NameInMap("ProgramTypeAndCounts")
     public java.util.List<ListProgramTypeCountResponseBodyProgramTypeAndCounts> programTypeAndCounts;
 
     /**
-     * <p>The ID of the request, which is used to locate logs and troubleshoot problems.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E6F0DBDD-5AD****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class ListProgramTypeCountResponseBody extends TeaModel {
     public static class ListProgramTypeCountResponseBodyProgramTypeAndCounts extends TeaModel {
         /**
          * <p>The number of nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
-         * <p>The type of the node.</p>
+         * <p>The node type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ODPS_SQL</p>
          */
         @NameInMap("ProgramType")
         public String programType;

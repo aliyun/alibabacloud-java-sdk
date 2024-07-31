@@ -5,37 +5,52 @@ import com.aliyun.tea.*;
 
 public class ListTableThemeResponseBody extends TeaModel {
     /**
-     * <p>The returned data about the level of the table folder.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("Data")
     public ListTableThemeResponseBodyData data;
 
     /**
-     * <p>The error code returned.</p>
+     * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1031203110005</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The specified parameters are invalid.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>abcde</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -95,43 +110,64 @@ public class ListTableThemeResponseBody extends TeaModel {
 
     public static class ListTableThemeResponseBodyDataThemeList extends TeaModel {
         /**
-         * <p>The time when the level was created.</p>
+         * <p>The time when the table level was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123432343243</p>
          */
         @NameInMap("CreateTimeStamp")
         public Long createTimeStamp;
 
         /**
-         * <p>The creator of the level.</p>
+         * <p>The creator of the table level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123455</p>
          */
         @NameInMap("Creator")
         public String creator;
 
         /**
-         * <p>The level of the table folder. Valid values: 1 and 2. A value of 1 indicates a table folder of level 1. A value of 2 indicates a table folder of level 2.</p>
+         * <p>The level of the table folder. Valid values: 1 and 2. The value 1 indicates the first level. The value 2 indicates the second level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Level")
         public Integer level;
 
         /**
-         * <p>The name of the level of the table folder.</p>
+         * <p>The name of the table level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The ID of the parent node.</p>
+         * <p>The ancestor node ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>122</p>
          */
         @NameInMap("ParentId")
         public Long parentId;
 
         /**
-         * <p>The ID of the DataWorks workspace.</p>
+         * <p>The DataWorks workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("ProjectId")
         public Long projectId;
 
         /**
-         * <p>The ID of the table folder.</p>
+         * <p>The table theme ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("ThemeId")
         public Long themeId;
@@ -201,13 +237,16 @@ public class ListTableThemeResponseBody extends TeaModel {
 
     public static class ListTableThemeResponseBodyData extends TeaModel {
         /**
-         * <p>The list of levels of the table folders.</p>
+         * <p>The list of table levels.</p>
          */
         @NameInMap("ThemeList")
         public java.util.List<ListTableThemeResponseBodyDataThemeList> themeList;
 
         /**
-         * <p>The total number of table folders.</p>
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("TotalCount")
         public Long totalCount;

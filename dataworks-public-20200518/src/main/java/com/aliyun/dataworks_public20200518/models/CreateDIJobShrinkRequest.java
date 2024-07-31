@@ -4,42 +4,106 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class CreateDIJobShrinkRequest extends TeaModel {
+    /**
+     * <p>The description of the synchronization task.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The settings of the destination. Only a single destination is supported.</p>
+     */
     @NameInMap("DestinationDataSourceSettings")
     public String destinationDataSourceSettingsShrink;
 
+    /**
+     * <p>The type of the destination. Valid values: Hologres and Hive.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Hologres</p>
+     */
     @NameInMap("DestinationDataSourceType")
     public String destinationDataSourceType;
 
+    /**
+     * <p>The name of the synchronization task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mysql_to_holo_sync_8772</p>
+     */
     @NameInMap("JobName")
     public String jobName;
 
+    /**
+     * <p>The settings for the dimension of the synchronization task. The settings include processing policies for DDL messages, policies for data type mappings between source fields and destination fields, and runtime parameters of the synchronization task.</p>
+     */
     @NameInMap("JobSettings")
     public String jobSettingsShrink;
 
+    /**
+     * <p>The synchronization type. Valid values:</p>
+     * <ul>
+     * <li>FullAndRealtimeIncremental (one-time full synchronization and real-time incremental synchronization)</li>
+     * <li>RealtimeIncremental (real-time incremental synchronization)</li>
+     * <li>Full (full synchronization)</li>
+     * <li>OfflineIncremental (batch incremental synchronization)</li>
+     * <li>FullAndOfflineIncremental (one-time full synchronization and batch incremental synchronization)</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>FullAndRealtimeIncremental</p>
+     */
     @NameInMap("MigrationType")
     public String migrationType;
 
+    /**
+     * <p>The DataWorks workspace ID. You can call the <a href="https://help.aliyun.com/document_detail/178393.html">ListProjects</a> operation to obtain the ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10000</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 
+    /**
+     * <p>The resource settings.</p>
+     */
     @NameInMap("ResourceSettings")
     public String resourceSettingsShrink;
 
+    /**
+     * <p>The settings of the source. Only a single source is supported.</p>
+     */
     @NameInMap("SourceDataSourceSettings")
     public String sourceDataSourceSettingsShrink;
 
+    /**
+     * <p>The type of the source. Set the value to MySQL.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MySQL</p>
+     */
     @NameInMap("SourceDataSourceType")
     public String sourceDataSourceType;
 
+    /**
+     * <p>Specifies whether to perform system debugging. Valid values: true and false. Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("SystemDebug")
     public String systemDebug;
 
+    /**
+     * <p>The list of mappings between rules used to select synchronization objects in the source and transformation rules applied to the selected synchronization objects. Each entry in the list displays a mapping between a rule used to select synchronization objects and a transformation rule applied to the selected synchronization objects.</p>
+     */
     @NameInMap("TableMappings")
     public String tableMappingsShrink;
 
+    /**
+     * <p>The list of transformation rules for objects involved in the synchronization task. Each entry in the list defines a transformation rule.</p>
+     */
     @NameInMap("TransformationRules")
     public String transformationRulesShrink;
 

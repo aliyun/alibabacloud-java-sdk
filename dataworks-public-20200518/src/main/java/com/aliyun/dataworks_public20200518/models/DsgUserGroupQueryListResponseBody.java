@@ -4,21 +4,58 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class DsgUserGroupQueryListResponseBody extends TeaModel {
+    /**
+     * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1029030003</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>param error</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>400</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PageData")
     public DsgUserGroupQueryListResponseBodyPageData pageData;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>102400001</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,21 +113,54 @@ public class DsgUserGroupQueryListResponseBody extends TeaModel {
     }
 
     public static class DsgUserGroupQueryListResponseBodyPageDataData extends TeaModel {
+        /**
+         * <p>The usernames in the user group.</p>
+         */
         @NameInMap("Accounts")
         public java.util.List<String> accounts;
 
+        /**
+         * <p>The time when the user group was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-05-10 17:14:44</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <p>The time when the user group was modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-05-10 17:14:44</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <p>The user group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("Id")
         public Integer id;
 
+        /**
+         * <p>The name of the user group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_group</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The owner of the user group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user1</p>
+         */
         @NameInMap("Owner")
         public String owner;
 
@@ -150,15 +220,36 @@ public class DsgUserGroupQueryListResponseBody extends TeaModel {
     }
 
     public static class DsgUserGroupQueryListResponseBodyPageData extends TeaModel {
+        /**
+         * <p>The user groups.</p>
+         */
         @NameInMap("Data")
         public java.util.List<DsgUserGroupQueryListResponseBodyPageDataData> data;
 
+        /**
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <p>The number of entries per page. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of user groups returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

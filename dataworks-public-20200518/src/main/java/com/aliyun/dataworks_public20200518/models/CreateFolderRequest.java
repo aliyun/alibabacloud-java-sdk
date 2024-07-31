@@ -6,7 +6,6 @@ import com.aliyun.tea.*;
 public class CreateFolderRequest extends TeaModel {
     /**
      * <p>The HTTP status code returned.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("FolderPath")
@@ -14,12 +13,18 @@ public class CreateFolderRequest extends TeaModel {
 
     /**
      * <p>The name of the DataWorks workspace. You can log on to the DataWorks console and go to the Workspace Management page to obtain the workspace name. You must configure either the ProjectId or ProjectIdentifier parameter to determine the DataWorks workspace to which the operation is applied.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10000</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;
 
     /**
      * <p>The path of the folder.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dw_project</p>
      */
     @NameInMap("ProjectIdentifier")
     public String projectIdentifier;

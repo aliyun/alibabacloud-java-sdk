@@ -12,30 +12,45 @@ public class ListFileVersionsResponseBody extends TeaModel {
 
     /**
      * <p>The error code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Invalid.Tenant.ConnectionNotExists</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The connection does not exist.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0000-ABCD-EFG****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -96,6 +111,9 @@ public class ListFileVersionsResponseBody extends TeaModel {
     public static class ListFileVersionsResponseBodyDataFileVersions extends TeaModel {
         /**
          * <p>The type of the change to the file of the current version. Valid values: CREATE, UPDATE, and DELETE.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UPDATE</p>
          */
         @NameInMap("ChangeType")
         public String changeType;
@@ -108,66 +126,99 @@ public class ListFileVersionsResponseBody extends TeaModel {
 
         /**
          * <p>The time when the file version was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1593881265000</p>
          */
         @NameInMap("CommitTime")
         public Long commitTime;
 
         /**
          * <p>The ID of the Alibaba Cloud account used to create the file of the current version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>73842342****</p>
          */
         @NameInMap("CommitUser")
         public String commitUser;
 
         /**
          * <p>The code in the file of the current version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SHOW TABLES;</p>
          */
         @NameInMap("FileContent")
         public String fileContent;
 
         /**
          * <p>The name of the file of the current version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ods_user_info_d</p>
          */
         @NameInMap("FileName")
         public String fileName;
 
         /**
          * <p>The basic information about the file of the current version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;fileName&quot;:&quot;ods_user_info_d&quot;,&quot;fileType&quot;:10}</p>
          */
         @NameInMap("FilePropertyContent")
         public String filePropertyContent;
 
         /**
          * <p>The version of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("FileVersion")
         public Integer fileVersion;
 
         /**
          * <p>Indicates whether the file version is the same as the latest file version in the production environment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("IsCurrentProd")
         public Boolean isCurrentProd;
 
         /**
          * <p>The scheduling configurations for the node that corresponds to the file of the current version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;cycleType&quot;:0,&quot;cronExpress&quot;:&quot;00 05 00 * * ?&quot;}</p>
          */
         @NameInMap("NodeContent")
         public String nodeContent;
 
         /**
          * <p>The ID of the auto triggered node that corresponds to the file of the current version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         @NameInMap("NodeId")
         public Long nodeId;
 
         /**
          * <p>The status of the file of the current version. Valid values: COMMITTING, COMMITTED, CHECK_OK, PACKAGED, DEPLOYING, DEPLOYED, and CANCELLED.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>COMMITTED</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The functional module to which the file belongs. Valid values: NORMAL, MANUAL, MANUAL_BIZ, SKIP, ADHOCQUERY, and COMPONENT. The value SKIP indicates that the node corresponding to the file is run in dry-run mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         @NameInMap("UseType")
         public String useType;
@@ -292,18 +343,27 @@ public class ListFileVersionsResponseBody extends TeaModel {
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

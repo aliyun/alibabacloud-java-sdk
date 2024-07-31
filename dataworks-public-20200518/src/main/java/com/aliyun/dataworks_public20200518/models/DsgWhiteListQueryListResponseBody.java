@@ -4,21 +4,58 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class DsgWhiteListQueryListResponseBody extends TeaModel {
+    /**
+     * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1029030003</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>param error</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>400</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PageData")
     public DsgWhiteListQueryListResponseBodyPageData pageData;
 
+    /**
+     * <p>The request ID. You can use the ID to locate logs and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>102400001</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,30 +113,81 @@ public class DsgWhiteListQueryListResponseBody extends TeaModel {
     }
 
     public static class DsgWhiteListQueryListResponseBodyPageDataData extends TeaModel {
+        /**
+         * <p>The expiration time of the data masking whitelist cannot be earlier than the time when the data masking whitelist takes effect. Unit: days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-05-10 15:46:20</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <p>The time when the whitelist was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-05-09 15:46:20</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <p>The time when the whitelist was modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-05-09 15:46:20</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <p>The ID of the data masking whitelist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The ID of the data masking rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("RuleId")
         public Long ruleId;
 
+        /**
+         * <p>The ID of the level-2 data masking scenario.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("SceneId")
         public Long sceneId;
 
+        /**
+         * <p>The time when the data masking whitelist takes effect cannot be earlier than the current time. Unit: days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-05-09 15:46:20</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <p>The sensitive field type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>phone</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>A collection of user group names.</p>
+         */
         @NameInMap("UserGroups")
         public java.util.List<String> userGroups;
 
@@ -183,15 +271,36 @@ public class DsgWhiteListQueryListResponseBody extends TeaModel {
     }
 
     public static class DsgWhiteListQueryListResponseBodyPageData extends TeaModel {
+        /**
+         * <p>A collection of whitelists.</p>
+         */
         @NameInMap("Data")
         public java.util.List<DsgWhiteListQueryListResponseBodyPageDataData> data;
 
+        /**
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of data masking whitelists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

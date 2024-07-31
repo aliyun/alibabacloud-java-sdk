@@ -6,34 +6,47 @@ import com.aliyun.tea.*;
 public class GetMetaTablePartitionRequest extends TeaModel {
     /**
      * <p>The ID of the EMR cluster. This parameter is required only if you set the DataSourceType parameter to emr.</p>
-     * <br>
-     * <p>You can log on to the [EMR console](https://emr.console.aliyun.com/?spm=a2c4g.11186623.0.0.965cc5c2GeiHet#/cn-hangzhou) to obtain the ID of the EMR cluster.</p>
+     * <p>You can log on to the <a href="https://emr.console.aliyun.com/?spm=a2c4g.11186623.0.0.965cc5c2GeiHet#/cn-hangzhou">EMR console</a> to obtain the ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>abc</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The type of the data source. Valid values: odps and emr.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>emr</p>
      */
     @NameInMap("DataSourceType")
     public String dataSourceType;
 
     /**
-     * <p>The name of the metadatabase. This parameter is required only if you set the DataSourceType parameter to emr.</p>
-     * <br>
-     * <p>You can call the [ListMetaDB](https://help.aliyun.com/document_detail/185662.html) operation to query the name of the metadatabase.</p>
+     * <p>The name of the database. This parameter is required only if you set the DataSourceType parameter to emr.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2780105.html">ListMetaDB</a> operation to query the name of the metadatabase.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>abc</p>
      */
     @NameInMap("DatabaseName")
     public String databaseName;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 10. Maximum value: 100.</p>
+     * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -45,15 +58,20 @@ public class GetMetaTablePartitionRequest extends TeaModel {
     public GetMetaTablePartitionRequestSortCriterion sortCriterion;
 
     /**
-     * <p>The GUID of the metatable.</p>
+     * <p>The unique identifier of the metatable.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>odps.engine_name.table_name</p>
      */
     @NameInMap("TableGuid")
     public String tableGuid;
 
     /**
      * <p>The name of the metatable in the EMR cluster. This parameter is required only if you set the DataSourceType parameter to emr.</p>
-     * <br>
-     * <p>You can call the [GetMetaDBTableList](https://help.aliyun.com/document_detail/173916.html) operation to query the name of the metatable.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2780086.html">GetMetaDBTableList</a> operation to query the name of the metatable.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>abc</p>
      */
     @NameInMap("TableName")
     public String tableName;
@@ -130,14 +148,18 @@ public class GetMetaTablePartitionRequest extends TeaModel {
     public static class GetMetaTablePartitionRequestSortCriterion extends TeaModel {
         /**
          * <p>The order in which partitions in the metatable are sorted. Valid values: asc and desc. Default value: desc.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         @NameInMap("Order")
         public String order;
 
         /**
-         * <p>The field that is used to sort partitions in the metatable. Valid values: name and modify_time.</p>
-         * <br>
-         * <p>By default, partitions in the metatable are sorted based on their creation time.</p>
+         * <p>The field that is used to sort partitions in the metatable. Valid values: name and modify_time. By default, partitions in the metatable are sorted based on their creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         @NameInMap("SortField")
         public String sortField;

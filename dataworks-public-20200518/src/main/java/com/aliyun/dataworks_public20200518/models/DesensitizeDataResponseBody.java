@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DesensitizeDataResponseBody extends TeaModel {
     /**
      * <p>The data returned after masking.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{     &quot;desensData&quot;: &quot;<strong>198807120510</strong>&quot;   }</p>
      */
     @NameInMap("DesensitizeData")
     public String desensitizeData;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BCA321BA-46C5-40E9-8A08-6******</p>
      */
     @NameInMap("RequestId")
     public String requestId;

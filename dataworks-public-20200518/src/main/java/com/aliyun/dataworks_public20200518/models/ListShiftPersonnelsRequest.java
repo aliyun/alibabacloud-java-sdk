@@ -5,37 +5,49 @@ import com.aliyun.tea.*;
 
 public class ListShiftPersonnelsRequest extends TeaModel {
     /**
-     * <p>The time when the on-duty engineer ends a shift. Set the value to a UNIX timestamp.</p>
-     * <br>
+     * <p>The time when the on-duty engineer starts a shift. Set the value to a UNIX timestamp.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1593950832000</p>
      */
     @NameInMap("BeginTime")
     public Long beginTime;
 
     /**
-     * <p>The ID of the request. You can use the ID to troubleshoot issues.</p>
-     * <br>
+     * <p>The time when the on-duty engineer ends a shift. Set the value to a UNIX timestamp.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1593950832000</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
 
     /**
-     * <p>The time when the on-duty engineer starts a shift. Set the value to a UNIX timestamp.</p>
+     * <p>The ID of the Alibaba Cloud account. You can log on to the DataWorks console and move the pointer over the profile picture in the upper-right corner to view the ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1933790****551</p>
      */
     @NameInMap("ShiftPersonUID")
     public String shiftPersonUID;
 
     /**
-     * <p>The type of on-duty engineers that you want to query. Valid values: ALL, PRIMARY, BACKUP, and DESIGNATED_USER.</p>
-     * <br>
+     * <p>The unique identifier of the shift schedule.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2ab6456ada634b2f938ee******9b45b</p>
      */
     @NameInMap("ShiftScheduleIdentifier")
     public String shiftScheduleIdentifier;
 
     /**
-     * <p>The ID of your Alibaba Cloud account. You can log on to the DataWorks console and move the pointer over the profile picture in the upper-right corner to obtain the ID.</p>
+     * <p>The type of the on-duty engineer that you want to query. Valid values: ALL, PRIMARY, BACKUP, and DESIGNATED_USER.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ALL</p>
      */
     @NameInMap("UserType")
     public String userType;

@@ -5,45 +5,59 @@ import com.aliyun.tea.*;
 
 public class DeleteMetaCollectionEntityResponseBody extends TeaModel {
     /**
-     * <p>The error code returned.</p>
+     * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>999999</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>entity not exist</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0000-ABCD-E****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The result of the operation. Valid values:</p>
-     * <br>
      * <p>true: succeeded</p>
-     * <br>
      * <p>false: failed</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Status")
     public Boolean status;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>true: The request was successful.</p>
-     * <br>
-     * <p>false: The request failed.</p>
+     * <p>true</p>
+     * <p>false</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

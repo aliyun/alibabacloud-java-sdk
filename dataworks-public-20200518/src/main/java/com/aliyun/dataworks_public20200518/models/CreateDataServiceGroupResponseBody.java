@@ -5,13 +5,19 @@ import com.aliyun.tea.*;
 
 public class CreateDataServiceGroupResponseBody extends TeaModel {
     /**
-     * <p>The ID of the business process.</p>
+     * <p>The business process ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ds_12345</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0000-ABCD-EF****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

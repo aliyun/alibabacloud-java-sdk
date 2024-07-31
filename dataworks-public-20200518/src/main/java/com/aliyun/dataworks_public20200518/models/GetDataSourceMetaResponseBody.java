@@ -5,22 +5,29 @@ import com.aliyun.tea.*;
 
 public class GetDataSourceMetaResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the metadata of the data source was retrieved. Valid values:</p>
-     * <br>
-     * <p>*   success: The metadata of the data source was retrieved.</p>
-     * <p>*   fail: The metadata of the data source failed to be retrieved. You can troubleshoot issues based on the Message parameter.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("Data")
     public GetDataSourceMetaResponseBodyData data;
 
     /**
-     * <p>The information about the query operation.</p>
+     * <p>The request ID. You can locate logs and troubleshoot issues based on the ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0000-ABCD-EFG</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The unique ID of the request. You can query logs and troubleshoot issues based on the unique ID.</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -56,26 +63,41 @@ public class GetDataSourceMetaResponseBody extends TeaModel {
 
     public static class GetDataSourceMetaResponseBodyData extends TeaModel {
         /**
-         * <p>The returned metadata of the data source. The returned metadata is in the JSON format.</p>
-         * <br>
-         * <p>`{"dbTables":[{"dbName":"testdb","schema":[{"tableInfos":[{"dbName":"testdb","enable":true,"table":"table1","tableName":"table1"}]},{"tableInfos":[{"dbName":"testdb","enable":true,"table":"table2","tableName":"table2"}]}]}]}`</p>
-         * <br>
-         * <p>Parameter description:</p>
-         * <br>
-         * <p>*   dbName: the name of the database in which the data source resides.</p>
-         * <p>*   schema: the schema of the database.</p>
-         * <p>*   enable: indicates whether the database is available. A value of true indicates that the database is available. A value of false indicates that the database is unavailable.</p>
-         * <p>*   tableName: the name of the table in the database.</p>
-         * <p>*   tableInfos: the information about the table in the database.</p>
+         * <p>The reason why the metadata of the data source fails to be obtained. If the metadata of the data source is obtained, no value is returned for this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>read datasource time out</p>
          */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>The returned metadata of the data source. The returned metadata is in the JSON format.</p>
+         * <p><code>{&quot;dbTables&quot;:[{&quot;dbName&quot;:&quot;testdb&quot;,&quot;schema&quot;:[{&quot;tableInfos&quot;:[{&quot;dbName&quot;:&quot;testdb&quot;,&quot;enable&quot;:true,&quot;table&quot;:&quot;table1&quot;,&quot;tableName&quot;:&quot;table1&quot;}]},{&quot;tableInfos&quot;:[{&quot;dbName&quot;:&quot;testdb&quot;,&quot;enable&quot;:true,&quot;table&quot;:&quot;table2&quot;,&quot;tableName&quot;:&quot;table2&quot;}]}]}]}</code></p>
+         * <p>Parameter description:</p>
+         * <ul>
+         * <li>dbName: the name of the database in which the data source resides.</li>
+         * <li>schema: the schema of the database.</li>
+         * <li>enable: indicates whether the database is available. The valid values are true and false. The value true indicates that the database is available. The value false indicates that the database is unavailable.</li>
+         * <li>tableName: the name of the table in the database.</li>
+         * <li>tableInfos: the information about the table in the database.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;dbTables&quot;:[{&quot;dbName&quot;:&quot;testdb&quot;,&quot;schema&quot;:[{&quot;tableInfos&quot;:[{&quot;dbName&quot;:&quot;testdb&quot;,&quot;enable&quot;:true,&quot;table&quot;:&quot;table1&quot;,&quot;tableName&quot;:&quot;table1&quot;}]},{&quot;tableInfos&quot;:[{&quot;dbName&quot;:&quot;testdb&quot;,&quot;enable&quot;:true,&quot;table&quot;:&quot;table2&quot;,&quot;tableName&quot;:&quot;table2&quot;}]}]}]}</p>
+         */
         @NameInMap("Meta")
         public String meta;
 
         /**
-         * <p>The reason why the metadata of the data source failed to be retrieved. If the metadata of the data source was retrieved, this parameter is left empty.</p>
+         * <p>Indicates whether the metadata of the data source is obtained. Valid values:</p>
+         * <ul>
+         * <li>success: The metadata of the data source is obtained.</li>
+         * <li>fail: The metadata of the data source failed to be obtained. You can troubleshoot issues based on the Message parameter.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         @NameInMap("Status")
         public String status;

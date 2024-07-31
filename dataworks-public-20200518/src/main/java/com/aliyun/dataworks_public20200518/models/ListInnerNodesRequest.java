@@ -5,47 +5,67 @@ import com.aliyun.tea.*;
 
 public class ListInnerNodesRequest extends TeaModel {
     /**
-     * <p>The ID of the node group to which the inner nodes belong.</p>
+     * <p>The name of the node to which the inner nodes belong.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>liux_test_n****</p>
      */
     @NameInMap("NodeName")
     public String nodeName;
 
     /**
-     * <p>The ID of the request. You can use the ID to query logs and troubleshoot issues.</p>
-     * <br>
+     * <p>The ID of the node group to which the inner nodes belong.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234</p>
      */
     @NameInMap("OuterNodeId")
     public Long outerNodeId;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 10. Maximum value: 100.</p>
+     * <p>The page number. Valid values: 1 to 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The ID of the workspace.</p>
+     * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The number of the page to return. Minimum value: 1. Maximum value: 100.</p>
+     * <p>The type of the node to which the inner nodes belong.</p>
+     * <p>Valid values: 6 (Shell), 10 (ODPS SQL), 11 (ODPS MR), 23 (Data Integration), 24 (ODPS Script), 97 (PAI), 98 (node group), 99 (zero load), 221 (PyODPS 2), 225 (ODPS Spark), 227 (EMR Hive), 228 (EMR Spark), 229 (EMR Spark SQL), 230 (EMR MR), 239 (OSS object inspection), 257 (EMR Shell), 258 (EMR Spark Shell), 259 (EMR Presto), 260 (EMR Impala), 900 (real-time synchronization), 1002 (PAI inner node), 1089 (cross-tenant collaboration), 1091 (Hologres development), 1093 (Hologres SQL), 1100 (assignment), 1106 (for-each), and 1221 (PyODPS 3). You can call the ListNodes operation to query the type of the node.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ODPS_SQL</p>
      */
     @NameInMap("ProgramType")
     public String programType;
 
     /**
-     * <p>The name of the node to which the inner nodes belong.</p>
+     * <p>The environment in which the node is run. Valid values: DEV and PROD. Default value: PROD.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PROD</p>
      */
     @NameInMap("ProjectEnv")
     public String projectEnv;
 
     /**
-     * <p>The environment in which the node is run. Valid values: DEV and PROD. Default value: PROD.</p>
-     * <br>
+     * <p>The workspace ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;

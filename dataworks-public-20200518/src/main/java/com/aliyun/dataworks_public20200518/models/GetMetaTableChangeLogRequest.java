@@ -5,53 +5,76 @@ import com.aliyun.tea.*;
 
 public class GetMetaTableChangeLogRequest extends TeaModel {
     /**
-     * <p>The beginning of the time range to query. Specify the time in the yyyy-MM-dd HH:mm:ss format.</p>
-     * <br>
-     * <p>*   By default, the system uses the current time as the value of this parameter if the time that you specify is invalid.</p>
-     * <p>*   If both the values of the StartDate and EndDate parameters are invalid, the system automatically queries the change logs that are generated within the last 30 days.</p>
+     * <p>The type of the change. Valid values: CREATE_TABLE, ALTER_TABLE, DROP_TABLE, ADD_PARTITION, and DROP_PARTITION.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ALTER_TABLE</p>
      */
     @NameInMap("ChangeType")
     public String changeType;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The end of the time range to query. Specify the time in the yyyy-MM-dd HH:mm:ss format.</p>
+     * <ul>
+     * <li>By default, the system uses the current time as the value of this parameter if the time that you specify is invalid.</li>
+     * <li>If both the values of the StartDate and EndDate parameters are invalid, the system automatically queries the change logs that are generated within the last 30 days.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-06-02 00:00:00</p>
      */
     @NameInMap("EndDate")
     public String endDate;
 
     /**
-     * <p>The end of the time range to query. Specify the time in the yyyy-MM-dd HH:mm:ss format.</p>
-     * <br>
-     * <p>*   By default, the system uses the current time as the value of this parameter if the time that you specify is invalid.</p>
-     * <p>*   If both the values of the StartDate and EndDate parameters are invalid, the system automatically queries the change logs that are generated within the last 30 days.</p>
+     * <p>The entity on which the change is made. Valid values: TABLE and PARTITION.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TABLE</p>
      */
     @NameInMap("ObjectType")
     public String objectType;
 
     /**
-     * <p>The globally unique identifier (GUID) of the table. Specify the GUID in the format of odps.projectName.tableName. You can call the [GetMetaDBTableList](https://help.aliyun.com/document_detail/173916.html) operation to query the GUID of the table.</p>
-     * <br>
-     * <p>>  To query the change logs of a MaxCompute table, you must call the [GetMetaTableChangeLog](https://help.aliyun.com/document_detail/173925.html) operation.</p>
+     * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The type of the change. Valid values: CREATE_TABLE, ALTER_TABLE, DROP_TABLE, ADD_PARTITION, and DROP_PARTITION.</p>
+     * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The beginning of the time range to query. Specify the time in the yyyy-MM-dd HH:mm:ss format.</p>
+     * <ul>
+     * <li>By default, the system uses the current time as the value of this parameter if the time that you specify is invalid.</li>
+     * <li>If both the values of the StartDate and EndDate parameters are invalid, the system automatically queries the change logs that are generated within the last 30 days.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-06-01 00:00:00</p>
      */
     @NameInMap("StartDate")
     public String startDate;
 
     /**
-     * <p>The entity on which the change is made. Valid values: TABLE and PARTITION.</p>
-     * <br>
+     * <p>The GUID of the table. Specify the GUID in the odps.projectName.tableName format. You can call the <a href="https://help.aliyun.com/document_detail/2780086.html">GetMetaDBTableList</a> operation to query the GUID.</p>
+     * <blockquote>
+     * <p>To query the change logs of a MaxCompute table, you must call the <a href="https://help.aliyun.com/document_detail/2780094.html">GetMetaTableChangeLog</a> operation.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>odps.engine_name.table_name</p>
      */
     @NameInMap("TableGuid")
     public String tableGuid;

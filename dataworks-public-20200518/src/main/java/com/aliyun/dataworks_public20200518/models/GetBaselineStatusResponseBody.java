@@ -12,30 +12,45 @@ public class GetBaselineStatusResponseBody extends TeaModel {
 
     /**
      * <p>The error code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1031203110005</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The specified parameters are invalid.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The ID of the request. You can use the ID to troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0000-ABCD-EFG****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -96,48 +111,72 @@ public class GetBaselineStatusResponseBody extends TeaModel {
     public static class GetBaselineStatusResponseBodyDataBlockInstance extends TeaModel {
         /**
          * <p>The timestamp of the predicted time when the instance finished running.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1553443200000</p>
          */
         @NameInMap("EndCast")
         public Long endCast;
 
         /**
          * <p>The timestamp of the actual time when the instance finished running.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1553443200000</p>
          */
         @NameInMap("FinishTime")
         public Long finishTime;
 
         /**
          * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         @NameInMap("InstanceId")
         public Long instanceId;
 
         /**
          * <p>The ID of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         @NameInMap("NodeId")
         public Long nodeId;
 
         /**
          * <p>The name of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Node name</p>
          */
         @NameInMap("NodeName")
         public String nodeName;
 
         /**
          * <p>The ID of the Alibaba Cloud account used by the node owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9527952795****</p>
          */
         @NameInMap("Owner")
         public String owner;
 
         /**
          * <p>The ID of the workspace to which the node belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         @NameInMap("ProjectId")
         public Long projectId;
 
         /**
          * <p>The status of the instance. Valid values: NOT_RUN, WAIT_TIME, WAIT_RESOURCE, RUNNING, CHECKING, CHECKING_CONDITION, FAILURE, and SUCCESS. The value NOT_RUN indicates that the instance is not run. The value WAIT_TIME indicates that the instance is waiting to be run. The value WAIT_RESOURCE indicates that the instance is waiting for resources. The value RUNNING indicates that the instance is running. The value CHECKING indicates that data quality is being checked for the instance. The value CHECKING_CONDITION indicates that branch conditions are being checked for the instance. The value FAILURE indicates that the instance fails to run. The value SUCCESS indicates that the instance is run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         @NameInMap("Status")
         public String status;
@@ -216,48 +255,72 @@ public class GetBaselineStatusResponseBody extends TeaModel {
     public static class GetBaselineStatusResponseBodyDataLastInstance extends TeaModel {
         /**
          * <p>The timestamp of the predicted time when the instance finished running.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1553443200000</p>
          */
         @NameInMap("EndCast")
         public Long endCast;
 
         /**
          * <p>The timestamp of the actual time when the instance finished running.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1553443200000</p>
          */
         @NameInMap("FinishTime")
         public Long finishTime;
 
         /**
          * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         @NameInMap("InstanceId")
         public Long instanceId;
 
         /**
          * <p>The ID of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         @NameInMap("NodeId")
         public Long nodeId;
 
         /**
          * <p>The name of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Node name</p>
          */
         @NameInMap("NodeName")
         public String nodeName;
 
         /**
          * <p>The ID of the Alibaba Cloud account used by the node owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9527952795****</p>
          */
         @NameInMap("Owner")
         public String owner;
 
         /**
          * <p>The ID of the workspace to which the node belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         @NameInMap("ProjectId")
         public Long projectId;
 
         /**
          * <p>The status of the instance. Valid values: NOT_RUN, WAIT_TIME, WAIT_RESOURCE, RUNNING, CHECKING, CHECKING_CONDITION, FAILURE, and SUCCESS. The value NOT_RUN indicates that the instance is not run. The value WAIT_TIME indicates that the instance is waiting to be run. The value WAIT_RESOURCE indicates that the instance is waiting for resources. The value RUNNING indicates that the instance is running. The value CHECKING indicates that data quality is being checked for the instance. The value CHECKING_CONDITION indicates that branch conditions are being checked for the instance. The value FAILURE indicates that the instance fails to run. The value SUCCESS indicates that the instance is run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         @NameInMap("Status")
         public String status;
@@ -336,18 +399,27 @@ public class GetBaselineStatusResponseBody extends TeaModel {
     public static class GetBaselineStatusResponseBodyData extends TeaModel {
         /**
          * <p>The ID of the baseline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         @NameInMap("BaselineId")
         public Long baselineId;
 
         /**
          * <p>The name of the baseline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Baseline name</p>
          */
         @NameInMap("BaselineName")
         public String baselineName;
 
         /**
          * <p>The data timestamp of the baseline instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1553443200000</p>
          */
         @NameInMap("Bizdate")
         public Long bizdate;
@@ -360,36 +432,54 @@ public class GetBaselineStatusResponseBody extends TeaModel {
 
         /**
          * <p>The margin of the baseline instance. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1200</p>
          */
         @NameInMap("Buffer")
         public Float buffer;
 
         /**
          * <p>The timestamp of the predicted time when the baseline instance finished running.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1553443200000</p>
          */
         @NameInMap("EndCast")
         public Long endCast;
 
         /**
          * <p>The timestamp of the alerting time of the baseline instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1553443200000</p>
          */
         @NameInMap("ExpTime")
         public Long expTime;
 
         /**
          * <p>The status of the baseline instance. Valid values: UNFINISH and FINISH. The value UNFINISH indicates that the baseline instance is still running. The value FINISH indicates that the baseline instance finishes running.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UNFINISH</p>
          */
         @NameInMap("FinishStatus")
         public String finishStatus;
 
         /**
          * <p>The timestamp of the actual time when the baseline instance finished running. This parameter is returned if the value of the FinishStatus parameter is FINISH.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1553443200000</p>
          */
         @NameInMap("FinishTime")
         public Long finishTime;
 
         /**
          * <p>The ID of the scheduling cycle of the baseline instance. For a baseline instance that is scheduled by day, the value of this parameter is 1. For a baseline instance that is scheduled by hour, the value of this parameter ranges from 1 to 24.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("InGroupId")
         public Integer inGroupId;
@@ -402,30 +492,45 @@ public class GetBaselineStatusResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the Alibaba Cloud account used by the baseline owner. Multiple IDs are separated by commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9527952795****</p>
          */
         @NameInMap("Owner")
         public String owner;
 
         /**
          * <p>The priority of the baseline. Valid values: 1, 2, 5, 7, and 8.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Priority")
         public Integer priority;
 
         /**
          * <p>The ID of the workspace to which the baseline belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         @NameInMap("ProjectId")
         public Long projectId;
 
         /**
          * <p>The timestamp of the committed completion time of the baseline instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1553443200000</p>
          */
         @NameInMap("SlaTime")
         public Long slaTime;
 
         /**
          * <p>The status of the baseline. Valid values: ERROR, SAFE, DANGEROUS, and OVER. The value ERROR indicates that no nodes are associated with the baseline, or all nodes associated with the baseline are suspended. The value SAFE indicates that nodes finish running before the alerting time. The value DANGEROUS indicates that nodes are still running after the alerting time but before the committed completion time. The value OVER indicates that nodes are still running after the committed completion time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SAFE</p>
          */
         @NameInMap("Status")
         public String status;

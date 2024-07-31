@@ -5,37 +5,52 @@ import com.aliyun.tea.*;
 
 public class GetMetaTableColumnResponseBody extends TeaModel {
     /**
-     * <p>The number of entries returned per page. Default value: 10. Maximum value: 100.</p>
+     * <p>The business data.</p>
      */
     @NameInMap("Data")
     public GetMetaTableColumnResponseBodyData data;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Invalid.Tenant.ConnectionNotExists</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The connection does not exist.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
-     * <p>The ID of the request. You can locate logs and troubleshoot issues based on the ID.</p>
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
-     * <p>The error code.</p>
+     * <p>The request ID. You can locate logs and troubleshoot issues based on the ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0bc1ec92159376</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The business data.</p>
+     * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -95,65 +110,104 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
 
     public static class GetMetaTableColumnResponseBodyDataColumnList extends TeaModel {
         /**
-         * <p>The number of times the field is read.</p>
+         * <p>The description of the field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>data column</p>
          */
         @NameInMap("Caption")
         public String caption;
 
         /**
-         * <p>Indicates whether the field is a partition field. Valid values:</p>
-         * <br>
-         * <p>*   true: The field is a partition field.</p>
-         * <p>*   false: The field is not a partition field.</p>
+         * <p>The GUID of the field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>odps.engine_name.table_name.name</p>
          */
         @NameInMap("ColumnGuid")
         public String columnGuid;
 
         /**
-         * <p>The remarks of the field.</p>
+         * <p>The name of the field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         @NameInMap("ColumnName")
         public String columnName;
 
         /**
-         * <p>The ordinal number of the field.</p>
+         * <p>The data type of the field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>string</p>
          */
         @NameInMap("ColumnType")
         public String columnType;
 
         /**
-         * <p>Indicates whether the field is the primary key. Valid values:</p>
-         * <br>
-         * <p>*   true: The field is the primary key.</p>
-         * <p>*   false: The field is not the primary key.</p>
+         * <p>The remarks of the field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>comment</p>
          */
         @NameInMap("Comment")
         public String comment;
 
+        /**
+         * <p>Indicates whether the field is a foreign key. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsForeignKey")
         public Boolean isForeignKey;
 
         /**
-         * <p>The data type of the field.</p>
+         * <p>Indicates whether the field is a partition field. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("IsPartitionColumn")
         public Boolean isPartitionColumn;
 
         /**
-         * <p>The description of the field.</p>
+         * <p>Indicates whether the field is a primary key. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("IsPrimaryKey")
         public Boolean isPrimaryKey;
 
         /**
-         * <p>Indicates whether the field is a foreign key. Valid values:</p>
-         * <br>
-         * <p>*   true: The field is a foreign key.</p>
-         * <p>*   false: The field is not a foreign key.</p>
+         * <p>The sequence number of the field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Position")
         public Integer position;
 
+        /**
+         * <p>The number of times the field is read.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("RelationCount")
         public Long relationCount;
 
@@ -246,25 +300,34 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
 
     public static class GetMetaTableColumnResponseBodyData extends TeaModel {
         /**
-         * <p>The name of the field.</p>
+         * <p>The information about fields.</p>
          */
         @NameInMap("ColumnList")
         public java.util.List<GetMetaTableColumnResponseBodyDataColumnList> columnList;
 
         /**
-         * <p>The total number of fields.</p>
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageNum")
         public Integer pageNum;
 
         /**
-         * <p>The information of fields.</p>
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
-         * <p>The GUID of the field.</p>
+         * <p>The total number of fields.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("TotalCount")
         public Long totalCount;

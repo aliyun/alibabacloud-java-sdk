@@ -11,7 +11,10 @@ public class ListSuccessInstanceAmountResponseBody extends TeaModel {
     public ListSuccessInstanceAmountResponseBodyInstanceStatusTrend instanceStatusTrend;
 
     /**
-     * <p>The ID of the request. You can use the ID to troubleshoot issues.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>952795279527ab****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class ListSuccessInstanceAmountResponseBody extends TeaModel {
     public static class ListSuccessInstanceAmountResponseBodyInstanceStatusTrendAvgTrend extends TeaModel {
         /**
          * <p>The number of instances that are successfully run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The point in time. The value is an exact hour that ranges from 00:00 to 23:00, such as 00:00, 01:00, or 02:00.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>01:00</p>
          */
         @NameInMap("TimePoint")
         public String timePoint;
@@ -76,12 +85,18 @@ public class ListSuccessInstanceAmountResponseBody extends TeaModel {
     public static class ListSuccessInstanceAmountResponseBodyInstanceStatusTrendTodayTrend extends TeaModel {
         /**
          * <p>The number of instances that are successfully run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The point in time. The value is an exact hour that ranges from 00:00 to 23:00, such as 00:00, 01:00, or 02:00.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>01:00</p>
          */
         @NameInMap("TimePoint")
         public String timePoint;
@@ -112,12 +127,18 @@ public class ListSuccessInstanceAmountResponseBody extends TeaModel {
     public static class ListSuccessInstanceAmountResponseBodyInstanceStatusTrendYesterdayTrend extends TeaModel {
         /**
          * <p>The number of instances that are successfully run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The point in time. The value is an exact hour that ranges from 00:00 to 23:00, such as 00:00, 01:00, or 02:00.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>01:00</p>
          */
         @NameInMap("TimePoint")
         public String timePoint;

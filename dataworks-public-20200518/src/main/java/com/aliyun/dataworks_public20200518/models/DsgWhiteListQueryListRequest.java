@@ -4,23 +4,41 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class DsgWhiteListQueryListRequest extends TeaModel {
+    /**
+     * <p>The keyword of the sensitive field type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>phone</p>
+     */
     @NameInMap("DataType")
     public String dataType;
 
     /**
+     * <p>The page number.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Maximum value: 100.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
+     * <p>The ID of the level-2 data masking scenario. You can call the <a href="https://help.aliyun.com/document_detail/2786322.html">DsgSceneQuerySceneListByName</a> operation to query the list of IDs.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("SceneId")
     public Long sceneId;

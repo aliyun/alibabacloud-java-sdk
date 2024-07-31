@@ -4,21 +4,58 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListMeasureDataResponseBody extends TeaModel {
+    /**
+     * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100001001</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The user is not in tenant.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The measurement results.</p>
+     */
     @NameInMap("MeasureDatas")
     public java.util.List<ListMeasureDataResponseBodyMeasureDatas> measureDatas;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1AFAE64E-D1BE-432B-A9****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,18 +113,48 @@ public class ListMeasureDataResponseBody extends TeaModel {
     }
 
     public static class ListMeasureDataResponseBodyMeasureDatas extends TeaModel {
+        /**
+         * <p>The measurement component.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Count</p>
+         */
         @NameInMap("ComponentCode")
         public String componentCode;
 
+        /**
+         * <p>The item that is measured.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DideAlarmPhone</p>
+         */
         @NameInMap("DomainCode")
         public String domainCode;
 
+        /**
+         * <p>The end timestamp of the measurement period, in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1717430400000</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
+        /**
+         * <p>The start timestamp of the measurement period, in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1717344000000</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 
+        /**
+         * <p>The total quantity used within the measurement period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Usage")
         public Long usage;
 

@@ -5,34 +5,56 @@ import com.aliyun.tea.*;
 
 public class GetQualityEntityRequest extends TeaModel {
     /**
-     * <p>The type of the compute engine instance or data source.</p>
-     * <br>
+     * <p>The type of the compute engine or data source. Valid values:</p>
+     * <ul>
+     * <li>cdh</li>
+     * <li>analyticdb_for_mysql</li>
+     * <li>odps</li>
+     * <li>emr</li>
+     * <li>hadoop</li>
+     * <li>holodb</li>
+     * <li>hybriddb_for_postgresql</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>odps</p>
      */
     @NameInMap("EnvType")
     public String envType;
 
     /**
      * <p>The partition filter expression.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dt=$[yyyymmdd]</p>
      */
     @NameInMap("MatchExpression")
     public String matchExpression;
 
+    /**
+     * <strong>example:</strong>
+     * <p>12345</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 
     /**
      * <p>The name of the compute engine instance or data source. You can obtain the name from data source configurations.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>autotest</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
 
     /**
-     * <p>The name of the partitioned table. You can call the [GetMetaTablePartition](https://help.aliyun.com/document_detail/173923.html) operation to obtain the name.</p>
-     * <br>
+     * <p>The name of the partitioned table. You can call the <a href="https://help.aliyun.com/document_detail/173923.html">GetMetaTablePartition</a> operation to obtain the name.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dual</p>
      */
     @NameInMap("TableName")
     public String tableName;

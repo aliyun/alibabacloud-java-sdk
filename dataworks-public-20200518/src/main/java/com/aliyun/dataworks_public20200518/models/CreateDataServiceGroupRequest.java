@@ -6,36 +6,48 @@ import com.aliyun.tea.*;
 public class CreateDataServiceGroupRequest extends TeaModel {
     /**
      * <p>The ID of the API group that is associated with the business process in the API Gateway console. You can log on to the API Gateway console and go to the Group Details page to view the ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1000abcd</p>
      */
     @NameInMap("ApiGatewayGroupId")
     public String apiGatewayGroupId;
 
     /**
      * <p>The description of the business process.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Test business process</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The name of the business process.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Business process name</p>
      */
     @NameInMap("GroupName")
     public String groupName;
 
     /**
      * <p>The ID of the workspace.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10001</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;
 
     /**
-     * <p>The ID of the tenant.</p>
+     * <p>The tenant ID. This parameter is deprecated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10002</p>
      */
     @NameInMap("TenantId")
     public Long tenantId;

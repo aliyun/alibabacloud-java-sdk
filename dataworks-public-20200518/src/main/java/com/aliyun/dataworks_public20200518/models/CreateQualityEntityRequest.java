@@ -5,42 +5,74 @@ import com.aliyun.tea.*;
 
 public class CreateQualityEntityRequest extends TeaModel {
     /**
-     * <p>Valid values: 0 (corrected when SQl is completed) and 1 (corrected when task is completed).</p>
+     * <p>This parameter is deprecated.</p>
+     * <p>The value 0 indicates that the partition filter expression is at the SQL level, and the system checks data quality after each SQL statement is executed.</p>
+     * <ul>
+     * <li></li>
+     * <li></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("EntityLevel")
     public Integer entityLevel;
 
     /**
-     * <p>The engine or data source type.</p>
-     * <br>
+     * <p>The type of the compute engine or data source.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>odps</li>
+     * <li>emr</li>
+     * <li>hadoop</li>
+     * <li>cdh</li>
+     * <li>analyticdb_for_mysql</li>
+     * <li>hybriddb_for_postgresql</li>
+     * <li>holodb</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ODPS</p>
      */
     @NameInMap("EnvType")
     public String envType;
 
     /**
-     * <p>The partition expression.</p>
-     * <br>
+     * <p>The partition filter expression.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dt=$[yyyymmdd]</p>
      */
     @NameInMap("MatchExpression")
     public String matchExpression;
 
+    /**
+     * <p>The DataWorks workspace ID. You can log on to the DataWorks console to query the ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 
     /**
-     * <p>The name of the maxcompute project or data source.</p>
-     * <br>
+     * <p>The name of the compute engine or data source.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>autotest</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
 
     /**
      * <p>The name of the table.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dual</p>
      */
     @NameInMap("TableName")
     public String tableName;

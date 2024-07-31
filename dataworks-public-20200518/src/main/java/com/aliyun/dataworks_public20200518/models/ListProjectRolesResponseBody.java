@@ -12,6 +12,9 @@ public class ListProjectRolesResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1AFAE64E-D1BE-432B-A9****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,24 +43,36 @@ public class ListProjectRolesResponseBody extends TeaModel {
     public static class ListProjectRolesResponseBodyProjectRoleList extends TeaModel {
         /**
          * <p>The code of the role in the DataWorks workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>role_project_guest</p>
          */
         @NameInMap("ProjectRoleCode")
         public String projectRoleCode;
 
         /**
          * <p>The ID of the role in the DataWorks workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ProjectRoleId")
         public Integer projectRoleId;
 
         /**
          * <p>The name of the role in the DataWorks workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>visitor</p>
          */
         @NameInMap("ProjectRoleName")
         public String projectRoleName;
 
         /**
          * <p>The type of the role in the DataWorks workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ProjectRoleType")
         public String projectRoleType;

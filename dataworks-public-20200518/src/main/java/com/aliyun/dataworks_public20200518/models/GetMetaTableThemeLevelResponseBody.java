@@ -11,31 +11,46 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
     public GetMetaTableThemeLevelResponseBodyEntity entity;
 
     /**
-     * <p>The error code returned.</p>
+     * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
-     * <p>The ID of the request. You can troubleshoot errors based on the ID.</p>
+     * <p>The request ID. You can troubleshoot issues based on the ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1324afdsfde</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -95,28 +110,41 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
 
     public static class GetMetaTableThemeLevelResponseBodyEntityLevel extends TeaModel {
         /**
-         * <p>The description of the table level.</p>
+         * <p>The description of the level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The ID of the table level.</p>
+         * <p>The ID of the level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("LevelId")
         public Long levelId;
 
         /**
-         * <p>The name of the table level.</p>
+         * <p>The name of the level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>level1</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The type of the table level. Valid values:</p>
-         * <br>
-         * <p>*   1: indicates the logical level.</p>
-         * <p>*   2: indicates the physical level.</p>
+         * <p>The type of the level. Valid values:</p>
+         * <ul>
+         * <li>1: indicates the logical level.</li>
+         * <li>2: indicates the physical level.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Type")
         public Integer type;
@@ -162,28 +190,41 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
 
     public static class GetMetaTableThemeLevelResponseBodyEntityTheme extends TeaModel {
         /**
-         * <p>The level of the table folder. Valid values:</p>
-         * <br>
-         * <p>*   1: indicates a table folder of level 1.</p>
-         * <p>*   2: indicates a table folder of level 2.</p>
+         * <p>The level of the theme. Valid values:</p>
+         * <ul>
+         * <li>1</li>
+         * <li>2</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Level")
         public Integer level;
 
         /**
-         * <p>The name of the table folder.</p>
+         * <p>The name of the theme.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>theme1</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The ID of the parent table folder.</p>
+         * <p>The ID of the parent theme.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ParentId")
         public Long parentId;
 
         /**
-         * <p>The ID of the table folder.</p>
+         * <p>The ID of the theme.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("ThemeId")
         public Long themeId;
@@ -229,13 +270,13 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
 
     public static class GetMetaTableThemeLevelResponseBodyEntity extends TeaModel {
         /**
-         * <p>The information about the table level.</p>
+         * <p>The information about the levels of the metatable.</p>
          */
         @NameInMap("Level")
         public java.util.List<GetMetaTableThemeLevelResponseBodyEntityLevel> level;
 
         /**
-         * <p>The information about the table folder.</p>
+         * <p>The information about the themes of the metatable.</p>
          */
         @NameInMap("Theme")
         public java.util.List<GetMetaTableThemeLevelResponseBodyEntityTheme> theme;

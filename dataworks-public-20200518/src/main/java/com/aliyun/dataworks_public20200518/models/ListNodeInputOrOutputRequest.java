@@ -6,27 +6,34 @@ import com.aliyun.tea.*;
 public class ListNodeInputOrOutputRequest extends TeaModel {
     /**
      * <p>The type of node that you want to query. Valid values:</p>
-     * <br>
-     * <p>*   input: ancestor nodes</p>
-     * <p>*   output: descendant nodes</p>
-     * <br>
+     * <ul>
+     * <li>input: ancestor node</li>
+     * <li>output: descendant node</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>output</p>
      */
     @NameInMap("IoType")
     public String ioType;
 
     /**
-     * <p>The ID of the node. You can call the [ListNodes](https://help.aliyun.com/document_detail/173979.html) operation to query the node ID.</p>
-     * <br>
+     * <p>The node ID. You can call the <a href="https://help.aliyun.com/document_detail/173979.html">ListNodes</a> operation to query the ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12314567</p>
      */
     @NameInMap("NodeId")
     public Long nodeId;
 
     /**
-     * <p>The environment of the workspace. Valid values: DEV and PROD. A value of DEV indicates the development environment. A value of PROD indicates the production environment.</p>
-     * <br>
+     * <p>The environment of the workspace. Valid values: DEV and PROD.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PROD</p>
      */
     @NameInMap("ProjectEnv")
     public String projectEnv;

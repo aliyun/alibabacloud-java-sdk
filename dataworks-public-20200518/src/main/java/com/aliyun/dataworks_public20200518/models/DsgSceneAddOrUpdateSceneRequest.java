@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DsgSceneAddOrUpdateSceneRequest extends TeaModel {
     /**
+     * <p>The information about the level-2 data masking scenario.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("scenes")
@@ -24,12 +25,35 @@ public class DsgSceneAddOrUpdateSceneRequest extends TeaModel {
     }
 
     public static class DsgSceneAddOrUpdateSceneRequestScenesProjects extends TeaModel {
+        /**
+         * <p>If the data masking scenario takes effect for an E-MapReduce (EMR) compute engine, enter the ID of an EMR cluster. This parameter is required only when you use an EMR compute engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-1234</p>
+         */
         @NameInMap("clusterId")
         public String clusterId;
 
+        /**
+         * <p>The type of the compute engine for which the data masking scenario takes effect. Valid values:</p>
+         * <ul>
+         * <li>ODPS: ODPS.ODPS</li>
+         * <li>HOLO: HOLO.POSTGRES</li>
+         * <li>EMR: EMR</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ODPS.ODPS</p>
+         */
         @NameInMap("dbType")
         public String dbType;
 
+        /**
+         * <p>The name of the compute engine instance for which the data masking scenario takes effect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dev_project</p>
+         */
         @NameInMap("projectName")
         public String projectName;
 
@@ -65,27 +89,60 @@ public class DsgSceneAddOrUpdateSceneRequest extends TeaModel {
     }
 
     public static class DsgSceneAddOrUpdateSceneRequestScenes extends TeaModel {
+        /**
+         * <p>The description.</p>
+         */
         @NameInMap("desc")
         public String desc;
 
+        /**
+         * <p>The ID of the level-2 data masking scenario.</p>
+         * <ul>
+         * <li>If you do not configure this parameter, the current operation is to add a level-2 data masking scenario.</li>
+         * <li>If you configure this parameter, the current operation is to modify a level-2 data masking scenario. You can call the <a href="https://help.aliyun.com/document_detail/2786322.html">DsgSceneQuerySceneListByName</a> operation to query the ID of the level-2 data masking scenario.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("id")
         public String id;
 
+        /**
+         * <p>The information about the compute engine for which the data masking scenario takes effect.</p>
+         */
         @NameInMap("projects")
         public java.util.List<DsgSceneAddOrUpdateSceneRequestScenesProjects> projects;
 
         /**
+         * <p>The code of the level-1 data masking scenario to which the level-2 data masking scenario belongs. Valid values:</p>
+         * <ul>
+         * <li>dataworks_display_desense_code: masking of displayed data in DataStudio and Data Map</li>
+         * <li>maxcompute_desense_code: data masking at the MaxCompute compute engine layer</li>
+         * <li>maxcompute_new_desense_code: data masking at the MaxCompute compute engine layer (new)</li>
+         * <li>dataworks_analysis_desense_code: masking of displayed data in DataAnalysis</li>
+         * </ul>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dataworks_display_desense_code</p>
          */
         @NameInMap("sceneCode")
         public String sceneCode;
 
         /**
+         * <p>The name of the level-2 data masking scenario.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dev_scene</p>
          */
         @NameInMap("sceneName")
         public String sceneName;
 
+        /**
+         * <p>The information about the user group for which the data masking scenario takes effect.</p>
+         */
         @NameInMap("userGroupIds")
         public java.util.List<Long> userGroupIds;
 

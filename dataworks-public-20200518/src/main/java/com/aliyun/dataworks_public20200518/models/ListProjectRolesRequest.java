@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class ListProjectRolesRequest extends TeaModel {
     /**
      * <p>The ID of the DataWorks workspace.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>27</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;

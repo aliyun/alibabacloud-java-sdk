@@ -5,66 +5,85 @@ import com.aliyun.tea.*;
 
 public class ExportDataSourcesRequest extends TeaModel {
     /**
-     * <p>The data source type. Valid values:</p>
-     * <br>
-     * <p>*   odps</p>
-     * <p>*   mysql</p>
-     * <p>*   rds</p>
-     * <p>*   oss</p>
-     * <p>*   sqlserver</p>
-     * <p>*   polardb</p>
-     * <p>*   oracle</p>
-     * <p>*   mongodb</p>
-     * <p>*   emr</p>
-     * <p>*   postgresql</p>
-     * <p>*   analyticdb_for_mysql</p>
-     * <p>*   hybriddb_for_postgresql</p>
-     * <p>*   holo</p>
+     * <p>The type of the data source. Valid values:</p>
+     * <ul>
+     * <li>odps</li>
+     * <li>mysql</li>
+     * <li>rds</li>
+     * <li>oss</li>
+     * <li>sqlserver</li>
+     * <li>polardb</li>
+     * <li>oracle</li>
+     * <li>mongodb</li>
+     * <li>emr</li>
+     * <li>postgresql</li>
+     * <li>analyticdb_for_mysql</li>
+     * <li>hybriddb_for_postgresql</li>
+     * <li>holo</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>rds</p>
      */
     @NameInMap("DataSourceType")
     public String dataSourceType;
 
     /**
-     * <p>The environment to which the data sources belong. Valid values:</p>
-     * <br>
-     * <p>*   0: development environment</p>
-     * <p>*   1: production environment</p>
+     * <p>The environment in which the data source resides. Valid values:</p>
+     * <ul>
+     * <li>0: development environment</li>
+     * <li>1: production environment</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("EnvType")
     public Integer envType;
 
     /**
-     * <p>The keyword contained in the names of the data sources to be exported.</p>
-     * <br>
-     * <p>You can specify only one keyword. For example, if you set this parameter to test, all the data sources whose names contain test in the specified workspace are exported.</p>
+     * <p>The keyword contained in the names of the data sources that you want to export. You can specify only one keyword. For example, if you set this parameter to test, you can call the ExportDataSources operation to export all data sources whose names contain test in the workspace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The number of the page to return. The value of this parameter must be a positive integer greater than or equal to 1.</p>
+     * <p>The page number. Pages start from page 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 10. Maximum value: 100.</p>
+     * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the DataWorks workspace to which the data sources belong. You can call the [ListProjects](https://help.aliyun.com/document_detail/178393.html) operation to query the ID of the workspace.</p>
-     * <br>
+     * <p>The ID of the DataWorks workspace to which the data sources belong. You can call the <a href="https://help.aliyun.com/document_detail/178393.html">ListProjects</a> operation to query the ID of the workspace.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10000</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;
 
     /**
-     * <p>The data source subtype. This parameter takes effect only if the DataSourceType parameter is set to rds.</p>
-     * <br>
-     * <p>If the DataSourceType parameter is set to rds, this parameter can be set to mysql, sqlserver, or postgresql.</p>
+     * <p>The subtype of the data source. This parameter takes effect only when the DataSourceType parameter is set to rds.</p>
+     * <p>If the value of the DataSourceType parameter is rds, the value of this parameter can be mysql, sqlserver, or postgresql.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mysql</p>
      */
     @NameInMap("SubType")
     public String subType;

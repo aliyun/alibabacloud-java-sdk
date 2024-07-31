@@ -5,37 +5,52 @@ import com.aliyun.tea.*;
 
 public class GetNodeChildrenResponseBody extends TeaModel {
     /**
-     * <p>The information of the descendant nodes.</p>
+     * <p>The information about the descendant nodes.</p>
      */
     @NameInMap("Data")
     public GetNodeChildrenResponseBodyData data;
 
     /**
-     * <p>The error code returned.</p>
+     * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1060010000000</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>err</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
-     * <p>The ID of the request. You can use the ID to troubleshoot issues.</p>
+     * <p>The request ID. You can use the ID to troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>adsfasdf-adf-asdf-asdf-asdfadfasdd</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -95,69 +110,101 @@ public class GetNodeChildrenResponseBody extends TeaModel {
 
     public static class GetNodeChildrenResponseBodyDataNodes extends TeaModel {
         /**
-         * <p>The ID of the baseline.</p>
+         * <p>The baseline ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345656</p>
          */
         @NameInMap("BaselineId")
         public Long baselineId;
 
         /**
-         * <p>The cron expression. Cron expressions are used to run auto triggered nodes.</p>
+         * <p>The CRON expression. CRON expressions are used to run auto triggered nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00 00 * * * *</p>
          */
         @NameInMap("CronExpress")
         public String cronExpress;
 
         /**
-         * <p>The ID of the node.</p>
+         * <p>The node ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1244564565</p>
          */
         @NameInMap("NodeId")
         public Long nodeId;
 
         /**
          * <p>The name of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_Node</p>
          */
         @NameInMap("NodeName")
         public String nodeName;
 
         /**
          * <p>The ID of the Alibaba Cloud account used by the node owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123124561341251321</p>
          */
         @NameInMap("OwnerId")
         public String ownerId;
 
         /**
-         * <p>The priority of the node. Valid values: 1 to 8. A large value indicates a high priority.</p>
+         * <p>The priority. Valid values: 1 to 8. A large value indicates a high priority.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("Priority")
         public Integer priority;
 
         /**
          * <p>The type of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ODPS_SQL</p>
          */
         @NameInMap("ProgramType")
         public String programType;
 
         /**
          * <p>The ID of the workspace to which the node belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12315412412</p>
          */
         @NameInMap("ProjectId")
         public Long projectId;
 
         /**
          * <p>Indicates whether the node can be rerun if the node fails to run. Valid values:</p>
-         * <br>
-         * <p>*   true: indicates that the node can be rerun.</p>
-         * <p>*   false: indicates that the node cannot be rerun.</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Repeatability")
         public Boolean repeatability;
 
         /**
          * <p>The scheduling type of the node. Valid values:</p>
-         * <br>
-         * <p>*   NORMAL: indicates that the node is an auto triggered node.</p>
-         * <p>*   MANUAL: indicates that node is a manually triggered node.</p>
-         * <p>*   PAUSE: indicates that the node is a paused node. Paused nodes are started as scheduled but the system sets the status of the nodes to failed when it starts to run them.</p>
-         * <p>*   SKIP: indicates that the node is a dry-run node. Dry-run nodes are started as scheduled but the system sets the status of the nodes to successful when it starts to run them.</p>
+         * <ul>
+         * <li>NORMAL: The node is an auto triggered node.</li>
+         * <li>MANUAL: The node is a manually triggered node. Manually triggered nodes cannot be automatically triggered.</li>
+         * <li>PAUSE: The node is a paused node. Paused nodes are started as scheduled but the system sets the status of the nodes to failed when it starts to run them.</li>
+         * <li>SKIP: The node is a dry-run node. Dry-run nodes are started as scheduled but the system sets the status of the nodes to successful when it starts to run them.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         @NameInMap("SchedulerType")
         public String schedulerType;
@@ -262,7 +309,7 @@ public class GetNodeChildrenResponseBody extends TeaModel {
 
     public static class GetNodeChildrenResponseBodyData extends TeaModel {
         /**
-         * <p>The descendant nodes returned.</p>
+         * <p>The list of descendant nodes.</p>
          */
         @NameInMap("Nodes")
         public java.util.List<GetNodeChildrenResponseBodyDataNodes> nodes;

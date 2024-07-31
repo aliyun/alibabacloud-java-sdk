@@ -5,13 +5,21 @@ import com.aliyun.tea.*;
 
 public class SearchNodesByOutputRequest extends TeaModel {
     /**
+     * <p>The output names of the node. If you specify multiple output names, separate them with commas (,).</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>aaaaa.1231412_out,bbbb.12313123_out</p>
      */
     @NameInMap("Outputs")
     public String outputs;
 
     /**
+     * <p>The environment of Operation Center. Valid values: PROD and DEV.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PROD</p>
      */
     @NameInMap("ProjectEnv")
     public String projectEnv;

@@ -4,21 +4,58 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListBaselinesResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public ListBaselinesResponseBodyData data;
 
+    /**
+     * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>103630001</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The user does not exist. 276571706358178756</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>952795279527ab****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,9 +113,21 @@ public class ListBaselinesResponseBody extends TeaModel {
     }
 
     public static class ListBaselinesResponseBodyDataBaselinesOverTimeSettings extends TeaModel {
+        /**
+         * <p>The cycle that corresponds to the committed completion time. For a day-level baseline, the value of this parameter is 1. For an hour-level baseline, the value of this parameter cannot exceed 24.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Cycle")
         public Integer cycle;
 
+        /**
+         * <p>The committed completion time in the hh:mm format. Valid values of hh: [0,47]. Valid values of mm: [0,59].</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00:00</p>
+         */
         @NameInMap("Time")
         public String time;
 
@@ -106,33 +155,90 @@ public class ListBaselinesResponseBody extends TeaModel {
     }
 
     public static class ListBaselinesResponseBodyDataBaselines extends TeaModel {
+        /**
+         * <p>Indicates whether the alerting feature is enabled. Valid values: true and false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("AlertEnabled")
         public Boolean alertEnabled;
 
+        /**
+         * <p>The alert margin threshold for the baseline instance. Unit: minutes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("AlertMarginThreshold")
         public Integer alertMarginThreshold;
 
+        /**
+         * <p>The baseline ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
+         */
         @NameInMap("BaselineId")
         public Long baselineId;
 
+        /**
+         * <p>The name of the baseline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BaselineName</p>
+         */
         @NameInMap("BaselineName")
         public String baselineName;
 
+        /**
+         * <p>The type of the baseline. Valid values: DAILY and HOURLY.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DAILY</p>
+         */
         @NameInMap("BaselineType")
         public String baselineType;
 
+        /**
+         * <p>Indicates whether the baseline is enabled. Valid values: true and false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Enabled")
         public Boolean enabled;
 
+        /**
+         * <p>The settings of the committed completion time of the baseline.</p>
+         */
         @NameInMap("OverTimeSettings")
         public java.util.List<ListBaselinesResponseBodyDataBaselinesOverTimeSettings> overTimeSettings;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account used by the baseline owner. Multiple IDs can be specified. The IDs are separated by commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>952795****</p>
+         */
         @NameInMap("Owner")
         public String owner;
 
+        /**
+         * <p>The priority of the baseline. Valid values: {1,2,5,7,8}.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Priority")
         public Integer priority;
 
+        /**
+         * <p>The ID of the workspace to which the baseline belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9527</p>
+         */
         @NameInMap("ProjectId")
         public Long projectId;
 
@@ -224,15 +330,36 @@ public class ListBaselinesResponseBody extends TeaModel {
     }
 
     public static class ListBaselinesResponseBodyData extends TeaModel {
+        /**
+         * <p>The baselines.</p>
+         */
         @NameInMap("Baselines")
         public java.util.List<ListBaselinesResponseBodyDataBaselines> baselines;
 
+        /**
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNumber")
         public String pageNumber;
 
+        /**
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public String pageSize;
 
+        /**
+         * <p>The total number of baselines returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("TotalCount")
         public String totalCount;
 

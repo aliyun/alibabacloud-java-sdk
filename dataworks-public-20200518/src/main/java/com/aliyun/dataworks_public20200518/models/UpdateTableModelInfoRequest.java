@@ -6,32 +6,46 @@ import com.aliyun.tea.*;
 public class UpdateTableModelInfoRequest extends TeaModel {
     /**
      * <p>The ID of the first-level table folder.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>101</p>
      */
     @NameInMap("FirstLevelThemeId")
     public Long firstLevelThemeId;
 
     /**
-     * <p>The ID of the table level.</p>
+     * <p>The table level ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>101</p>
      */
     @NameInMap("LevelId")
     public Long levelId;
 
     /**
-     * <p>The type of the table level. Valid values: 1 and 2. A value of 1 indicates the logical level. A value of 2 indicates the physical level.</p>
+     * <p>The type of the table level. Valid values: 1 and 2. The value 1 indicates the logical level. The value 2 indicates the physical level.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("LevelType")
     public Integer levelType;
 
     /**
      * <p>The ID of the second-level table folder.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>101</p>
      */
     @NameInMap("SecondLevelThemeId")
     public Long secondLevelThemeId;
 
     /**
-     * <p>The globally unique identifier (GUID) of the table. Specify the GUID in the format of odps.{projectName}.{tableName}.</p>
-     * <br>
+     * <p>The GUID of the table. Specify the GUID in the odps.{projectName}.{tableName} format.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>odps.test.table1</p>
      */
     @NameInMap("TableGuid")
     public String tableGuid;

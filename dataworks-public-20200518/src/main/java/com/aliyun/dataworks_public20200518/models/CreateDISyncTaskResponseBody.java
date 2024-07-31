@@ -11,13 +11,19 @@ public class CreateDISyncTaskResponseBody extends TeaModel {
     public CreateDISyncTaskResponseBodyData data;
 
     /**
-     * <p>The request ID. You can use the ID to locate logs and troubleshoot issues.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0bc1411515937635973****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values: true and false.</p>
+     * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -54,20 +60,31 @@ public class CreateDISyncTaskResponseBody extends TeaModel {
     public static class CreateDISyncTaskResponseBodyData extends TeaModel {
         /**
          * <p>The ID of the data synchronization task that is created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000001</p>
          */
         @NameInMap("FileId")
         public Long fileId;
 
         /**
-         * <p>The error message that is returned if the data synchronization task fails to be created. If the data synchronization task is successfully created, this parameter is not returned. If the data synchronization task fails to be created, an error message in the "Invalid path: Business Flow/xxxx/Data Integration" format is returned.</p>
+         * <p>The error message that is returned if the data synchronization task fails to be created. If the data synchronization task is successfully created, this parameter is not returned. If the data synchronization task fails to be created, an error message in the &quot;Invalid path: Workflow/xxxx/Data Integration&quot; format is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid path: Business Flow/xxxx/Data Integration</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
          * <p>The creation status of the data synchronization task. Valid values:</p>
-         * <p>- success </p>
-         * <p>- fail</p>
+         * <ul>
+         * <li>success</li>
+         * <li>fail</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         @NameInMap("Status")
         public String status;

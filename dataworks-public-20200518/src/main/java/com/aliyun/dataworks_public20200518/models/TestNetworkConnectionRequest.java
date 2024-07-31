@@ -6,35 +6,44 @@ import com.aliyun.tea.*;
 public class TestNetworkConnectionRequest extends TeaModel {
     /**
      * <p>The name of the data source.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mysql_name</p>
      */
     @NameInMap("DatasourceName")
     public String datasourceName;
 
     /**
-     * <p>The environment to which the data source belongs. Valid values:</p>
-     * <br>
-     * <p>*   0: development environment</p>
-     * <p>*   1: production environment</p>
-     * <br>
+     * <p>The environment in which the data source resides. Valid values:</p>
+     * <ul>
+     * <li>0: development environment</li>
+     * <li>1: production environment</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("EnvType")
     public String envType;
 
     /**
-     * <p>The ID of the DataWorks workspace to which the data source belongs. You can call the [ListProjects](https://help.aliyun.com/document_detail/178393.html) operation to query the ID of the workspace.</p>
-     * <br>
+     * <p>The ID of the DataWorks workspace to which the data sources belong. You can call the <a href="https://help.aliyun.com/document_detail/178393.html">ListProjects</a> operation to query the ID of the workspace.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10000</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;
 
     /**
-     * <p>The identifier of the resource group. You can call the [ListResourceGroups](https://help.aliyun.com/document_detail/173913.html) operation to query the identifier of the resource group.</p>
-     * <br>
+     * <p>The identifier of the resource group. You can call the <a href="https://help.aliyun.com/document_detail/173913.html">ListResourceGroups</a> operation to query the identifier of the resource group.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>S_res_group_2XXXX4_1619100XXXXX</p>
      */
     @NameInMap("ResourceGroup")
     public String resourceGroup;

@@ -6,24 +6,29 @@ import com.aliyun.tea.*;
 public class AddMetaCollectionEntityRequest extends TeaModel {
     /**
      * <p>The unique identifier of the collection.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>album.2222</p>
      */
     @NameInMap("CollectionQualifiedName")
     public String collectionQualifiedName;
 
     /**
-     * <p>The unique identifier of the entity.</p>
-     * <br>
-     * <p>Example: maxcompute-table.projectA.tableA.</p>
-     * <br>
+     * <p>The unique identifier of the entity. Example: maxcompute-table.projectA.tableA.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>maxcompute-table.projectA.tableB</p>
      */
     @NameInMap("EntityQualifiedName")
     public String entityQualifiedName;
 
     /**
-     * <p>The remarks on the entity. Example: latest product table.</p>
+     * <p>The remarks of the entity. Example: latest product table.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>this is a remark</p>
      */
     @NameInMap("Remark")
     public String remark;

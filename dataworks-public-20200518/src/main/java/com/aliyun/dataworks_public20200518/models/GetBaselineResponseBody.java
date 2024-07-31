@@ -4,21 +4,44 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetBaselineResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public GetBaselineResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1031203110005</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>The specified parameters are invalid</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ecb967ec-c137-48a5-860****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,9 +99,21 @@ public class GetBaselineResponseBody extends TeaModel {
     }
 
     public static class GetBaselineResponseBodyDataAlertSettingsDingRobots extends TeaModel {
+        /**
+         * <p>Indicates whether all members were reminded by using the at sign (@).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("AtAll")
         public Boolean atAll;
 
+        /**
+         * <p>The webhook URL of the DingTalk chatbot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=xxx">https://oapi.dingtalk.com/robot/send?access_token=xxx</a></p>
+         */
         @NameInMap("WebUrl")
         public String webUrl;
 
@@ -106,39 +141,117 @@ public class GetBaselineResponseBody extends TeaModel {
     }
 
     public static class GetBaselineResponseBodyDataAlertSettings extends TeaModel {
+        /**
+         * <p>The interval at which an event alert notification is sent. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>900</p>
+         */
         @NameInMap("AlertInterval")
         public Integer alertInterval;
 
+        /**
+         * <p>The maximum number of times an event alert notification is sent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("AlertMaximum")
         public Integer alertMaximum;
 
+        /**
+         * <p>The alert notification methods.</p>
+         */
         @NameInMap("AlertMethods")
         public java.util.List<String> alertMethods;
 
+        /**
+         * <p>The details of the alert recipient.</p>
+         * <ul>
+         * <li>If the value of AlertRecipientType is OWNER, this parameter is left empty.</li>
+         * <li>If the value of AlertRecipientType is SHIFT_SCHEDULE, the value of this parameter is the ID of a shift schedule.</li>
+         * <li>If the value of AlertRecipientType is OTHER, the value of this parameter is the UIDs of specified personnel. Multiple UIDs are separated by commas (,).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>123123</p>
+         */
         @NameInMap("AlertRecipient")
         public String alertRecipient;
 
+        /**
+         * <p>The type of the alert recipient. Valid values:</p>
+         * <ul>
+         * <li>OWNER: indicates the node owner.</li>
+         * <li>OTHER: indicates specified personnel.</li>
+         * <li>SHIFT_SCHEDULE: indicates personnel in a shift schedule.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OWNER</p>
+         */
         @NameInMap("AlertRecipientType")
         public String alertRecipientType;
 
+        /**
+         * <p>The type of the alert. Valid values:</p>
+         * <ul>
+         * <li>BASELINE: indicates a baseline alert.</li>
+         * <li>TOPIC: indicates an event alert.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>BASELINE</p>
+         */
         @NameInMap("AlertType")
         public String alertType;
 
+        /**
+         * <p>Indicates whether the baseline alerting feature is enabled. The feature is specific to baselines. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("BaselineAlertEnabled")
         public Boolean baselineAlertEnabled;
 
+        /**
+         * <p>The DingTalk chatbots.</p>
+         */
         @NameInMap("DingRobots")
         public java.util.List<GetBaselineResponseBodyDataAlertSettingsDingRobots> dingRobots;
 
+        /**
+         * <p>The end of the time range for silence. The time is in the HH:mm:ss format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00:00:00</p>
+         */
         @NameInMap("SilenceEndTime")
         public String silenceEndTime;
 
+        /**
+         * <p>The beginning of the time range for silence. The time is in the HH:mm:ss format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00:00:00</p>
+         */
         @NameInMap("SilenceStartTime")
         public String silenceStartTime;
 
+        /**
+         * <p>The types of event alerts, which are event-specific configurations.</p>
+         */
         @NameInMap("TopicTypes")
         public java.util.List<String> topicTypes;
 
+        /**
+         * <p>The webhook URLs.</p>
+         */
         @NameInMap("Webhooks")
         public java.util.List<String> webhooks;
 
@@ -246,9 +359,21 @@ public class GetBaselineResponseBody extends TeaModel {
     }
 
     public static class GetBaselineResponseBodyDataOverTimeSettings extends TeaModel {
+        /**
+         * <p>The cycle that corresponds to the committed completion time. For a day-level baseline, the value of this parameter is 1. For an hour-level baseline, the value of this parameter cannot exceed 24.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Cycle")
         public Integer cycle;
 
+        /**
+         * <p>The committed completion time in the hh:mm format. Valid values of hh: [0,47]. Valid values of mm: [0,59].</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00:00</p>
+         */
         @NameInMap("Time")
         public String time;
 
@@ -276,24 +401,47 @@ public class GetBaselineResponseBody extends TeaModel {
     }
 
     public static class GetBaselineResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("AlertEnabled")
         public Boolean alertEnabled;
 
+        /**
+         * <strong>example:</strong>
+         * <p>60</p>
+         */
         @NameInMap("AlertMarginThreshold")
         public Integer alertMarginThreshold;
 
+        /**
+         * <p>The alert settings.</p>
+         */
         @NameInMap("AlertSettings")
         public java.util.List<GetBaselineResponseBodyDataAlertSettings> alertSettings;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1001</p>
+         */
         @NameInMap("BaselineId")
         public Long baselineId;
 
         @NameInMap("BaselineName")
         public String baselineName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>DAILY</p>
+         */
         @NameInMap("BaselineType")
         public String baselineType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Enabled")
         public Boolean enabled;
 
@@ -303,12 +451,24 @@ public class GetBaselineResponseBody extends TeaModel {
         @NameInMap("OverTimeSettings")
         public java.util.List<GetBaselineResponseBodyDataOverTimeSettings> overTimeSettings;
 
+        /**
+         * <strong>example:</strong>
+         * <p>9527952****</p>
+         */
         @NameInMap("Owner")
         public String owner;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Priority")
         public Integer priority;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10000</p>
+         */
         @NameInMap("ProjectId")
         public Long projectId;
 

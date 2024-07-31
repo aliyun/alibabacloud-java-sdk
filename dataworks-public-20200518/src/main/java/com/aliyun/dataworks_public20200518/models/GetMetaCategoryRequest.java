@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class GetMetaCategoryRequest extends TeaModel {
     /**
      * <p>The number of the page to return.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNum")
     public Integer pageNum;
 
     /**
      * <p>The number of entries to return on each page. Default value: 10. Maximum value: 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the category tree.</p>
+     * <p>The category tree ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>333</p>
      */
     @NameInMap("ParentCategoryId")
     public Long parentCategoryId;

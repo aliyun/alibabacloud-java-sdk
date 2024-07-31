@@ -12,33 +12,47 @@ public class ListLineageResponseBody extends TeaModel {
 
     /**
      * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1010040007</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>qualifiedName should be in format as entity-table.entity-guid</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
-     * <p>The request ID. You can locate logs and troubleshoot issues based on the ID.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>64B-587A-8CED-969E1973887FXXX-TT</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <p>true</p>
+     * <p>false</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -97,15 +111,41 @@ public class ListLineageResponseBody extends TeaModel {
     }
 
     public static class ListLineageResponseBodyDataDataEntityListRelationList extends TeaModel {
+        /**
+         * <p>The data channel. Valid values:</p>
+         * <pre><code>FIRST_PARTY: DataWorks platformTHIRD_PARTY: user registration
+         * </code></pre>
+         * 
+         * <strong>example:</strong>
+         * <p>THIRD_PARTY</p>
+         */
         @NameInMap("Channel")
         public String channel;
 
+        /**
+         * <p>The name of the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql</p>
+         */
         @NameInMap("Datasource")
         public String datasource;
 
+        /**
+         * <p>The unique relationship ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aaabbccddguid</p>
+         */
         @NameInMap("Guid")
         public String guid;
 
+        /**
+         * <p>The task type, which is used to describe the relationship between entities, such as SQL-based calculation, mapping based on report fields, or API operation definition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sql</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -149,15 +189,24 @@ public class ListLineageResponseBody extends TeaModel {
     }
 
     public static class ListLineageResponseBodyDataDataEntityList extends TeaModel {
+        /**
+         * <p>The time when the lineage was generated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1686215809269</p>
+         */
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
         /**
-         * <p>The array of the entity structure.</p>
+         * <p>The information about the entity.</p>
          */
         @NameInMap("Entity")
         public Entity entity;
 
+        /**
+         * <p>The array of the relationship structure.</p>
+         */
         @NameInMap("RelationList")
         public java.util.List<ListLineageResponseBodyDataDataEntityListRelationList> relationList;
 
@@ -200,7 +249,10 @@ public class ListLineageResponseBody extends TeaModel {
         public java.util.List<ListLineageResponseBodyDataDataEntityList> dataEntityList;
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nextTokenFromRequest-xxxsd-ff</p>
          */
         @NameInMap("NextToken")
         public String nextToken;

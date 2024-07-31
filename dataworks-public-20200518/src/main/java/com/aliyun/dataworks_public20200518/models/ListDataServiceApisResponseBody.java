@@ -12,30 +12,45 @@ public class ListDataServiceApisResponseBody extends TeaModel {
 
     /**
      * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Invalid.Tenant.ConnectionNotExists</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The connection does not exist.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0000-ABCD-EFG****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -96,18 +111,27 @@ public class ListDataServiceApisResponseBody extends TeaModel {
     public static class ListDataServiceApisResponseBodyDataApisRegistrationDetailsRegistrationErrorCodes extends TeaModel {
         /**
          * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1001</p>
          */
         @NameInMap("ErrorCode")
         public String errorCode;
 
         /**
          * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fail to call</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         /**
          * <p>The solution used to fix the error.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>retry</p>
          */
         @NameInMap("ErrorSolution")
         public String errorSolution;
@@ -146,67 +170,95 @@ public class ListDataServiceApisResponseBody extends TeaModel {
     public static class ListDataServiceApisResponseBodyDataApisRegistrationDetailsRegistrationRequestParameters extends TeaModel {
         /**
          * <p>The name of the associated field. This parameter is supported only if the API is generated in wizard mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>column1</p>
          */
         @NameInMap("ColumnName")
         public String columnName;
 
         /**
          * <p>The default value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default1</p>
          */
         @NameInMap("DefaultValue")
         public String defaultValue;
 
         /**
          * <p>The sample value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example1</p>
          */
         @NameInMap("ExampleValue")
         public String exampleValue;
 
         /**
          * <p>Indicates whether the parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("IsRequiredParameter")
         public Boolean isRequiredParameter;
 
         /**
          * <p>The data type of the parameter. Valid values:</p>
-         * <br>
-         * <p>*   0: String</p>
-         * <p>*   1: Int</p>
-         * <p>*   2: Long</p>
-         * <p>*   3: Float</p>
-         * <p>*   4: Double</p>
-         * <p>*   5: Boolean</p>
-         * <p>*   6: StringList</p>
-         * <p>*   7: IntList</p>
-         * <p>*   8: LongList</p>
-         * <p>*   9: FloatList</p>
-         * <p>*   10: DoubleList</p>
-         * <p>*   11: BooleanList</p>
+         * <ul>
+         * <li>0: String</li>
+         * <li>1: Int</li>
+         * <li>2: Long</li>
+         * <li>3: Float</li>
+         * <li>4: Double</li>
+         * <li>5: Boolean</li>
+         * <li>6: StringList</li>
+         * <li>7: IntList</li>
+         * <li>8: LongList</li>
+         * <li>9: FloatList</li>
+         * <li>10: DoubleList</li>
+         * <li>11: BooleanList</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ParameterDataType")
         public Integer parameterDataType;
 
         /**
          * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>description1</p>
          */
         @NameInMap("ParameterDescription")
         public String parameterDescription;
 
         /**
          * <p>The name of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name1</p>
          */
         @NameInMap("ParameterName")
         public String parameterName;
 
         /**
          * <p>The operator used for the value of the parameter. Valid values: 0, 1, 2, and 3. The value 0 indicates the Equal operator. The value 1 indicates the Like operator. The value 2 indicates the Const operator. The value 3 indicates the In operator. APIs generated in wizard mode support the Equal, Like, and In operators. APIs generated in script mode support the Equal operator. APIs generated by registration support the Equal and Const operators.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ParameterOperator")
         public Integer parameterOperator;
 
         /**
          * <p>The position of the parameter. Valid values: 0, 1, 2, and 3. The value 0 indicates that the parameter is in the URL path of the request. The value 1 indicates that the parameter is in the Query parameter of the request URL. The value 2 indicates that the parameter is in the request header. The value 3 indicates that the parameter is in the request body. APIs generated in wizard or script mode support only the Query position. APIs generated by registration whose request method is GET or DELETE support the Query and Head positions. APIs generated by registration whose request method is PUT or POST support the Query, Head, and Body positions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ParameterPosition")
         public Integer parameterPosition;
@@ -293,6 +345,9 @@ public class ListDataServiceApisResponseBody extends TeaModel {
     public static class ListDataServiceApisResponseBodyDataApisRegistrationDetails extends TeaModel {
         /**
          * <p>The sample error response of the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;success&quot;: false}</p>
          */
         @NameInMap("FailedResultSample")
         public String failedResultSample;
@@ -311,30 +366,45 @@ public class ListDataServiceApisResponseBody extends TeaModel {
 
         /**
          * <p>The format in which the response of the API request is returned. Valid values: 0 and 1. The value 0 indicates the JSON format. The value 1 indicates the XML format. APIs generated in wizard or script mode support the JSON format. APIs generated by registration support the JSON and XML formats.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ServiceContentType")
         public Integer serviceContentType;
 
         /**
          * <p>The URL of the backend service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://example.aliyundoc.com">http://example.aliyundoc.com</a></p>
          */
         @NameInMap("ServiceHost")
         public String serviceHost;
 
         /**
          * <p>The path of the backend service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/index</p>
          */
         @NameInMap("ServicePath")
         public String servicePath;
 
         /**
          * <p>The description of the request body initiated to call the backend service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;abc&quot;:1}</p>
          */
         @NameInMap("ServiceRequestBodyDescription")
         public String serviceRequestBodyDescription;
 
         /**
          * <p>The sample success response of the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;success&quot;: true}</p>
          */
         @NameInMap("SuccessfulResultSample")
         public String successfulResultSample;
@@ -413,12 +483,18 @@ public class ListDataServiceApisResponseBody extends TeaModel {
     public static class ListDataServiceApisResponseBodyDataApisScriptDetailsScriptConnection extends TeaModel {
         /**
          * <p>The data source ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("ConnectionId")
         public Long connectionId;
 
         /**
          * <p>The name of the table in the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t</p>
          */
         @NameInMap("TableName")
         public String tableName;
@@ -449,81 +525,109 @@ public class ListDataServiceApisResponseBody extends TeaModel {
     public static class ListDataServiceApisResponseBodyDataApisScriptDetailsScriptRequestParameters extends TeaModel {
         /**
          * <p>The name of the associated field. This parameter is supported only if the API is generated in wizard mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>column1</p>
          */
         @NameInMap("ColumnName")
         public String columnName;
 
         /**
          * <p>The default value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default1</p>
          */
         @NameInMap("DefaultValue")
         public String defaultValue;
 
         /**
          * <p>The sample value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example1</p>
          */
         @NameInMap("ExampleValue")
         public String exampleValue;
 
         /**
          * <p>Indicates whether the parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("IsRequiredParameter")
         public Boolean isRequiredParameter;
 
         /**
          * <p>The data type of the parameter. Valid values:</p>
-         * <br>
-         * <p>*   0: String</p>
-         * <p>*   1: Int</p>
-         * <p>*   2: Long</p>
-         * <p>*   3: Float</p>
-         * <p>*   4: Double</p>
-         * <p>*   5: Boolean</p>
-         * <p>*   6: StringList</p>
-         * <p>*   7: IntList</p>
-         * <p>*   8: LongList</p>
-         * <p>*   9: FloatList</p>
-         * <p>*   10: DoubleList</p>
-         * <p>*   11: BooleanList</p>
+         * <ul>
+         * <li>0: String</li>
+         * <li>1: Int</li>
+         * <li>2: Long</li>
+         * <li>3: Float</li>
+         * <li>4: Double</li>
+         * <li>5: Boolean</li>
+         * <li>6: StringList</li>
+         * <li>7: IntList</li>
+         * <li>8: LongList</li>
+         * <li>9: FloatList</li>
+         * <li>10: DoubleList</li>
+         * <li>11: BooleanList</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ParameterDataType")
         public Integer parameterDataType;
 
         /**
          * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>description1</p>
          */
         @NameInMap("ParameterDescription")
         public String parameterDescription;
 
         /**
          * <p>The name of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>param1</p>
          */
         @NameInMap("ParameterName")
         public String parameterName;
 
         /**
          * <p>The operator used for the value of the parameter. Valid values:</p>
-         * <br>
-         * <p>*   0: Equal</p>
-         * <p>*   1: Like</p>
-         * <p>*   2: Const</p>
-         * <p>*   3: In</p>
-         * <br>
+         * <ul>
+         * <li>0: Equal</li>
+         * <li>1: Like</li>
+         * <li>2: Const</li>
+         * <li>3: In</li>
+         * </ul>
          * <p>APIs generated in wizard mode support the Equal, Like, and In operators. APIs generated in script mode support the Equal operator. APIs generated by registration support the Equal and Const operators.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ParameterOperator")
         public Integer parameterOperator;
 
         /**
          * <p>The position of the parameter. Valid values:</p>
-         * <br>
-         * <p>*   0: indicates that the parameter is in the URL path of the request.</p>
-         * <p>*   1: indicates that the parameter is in the Query parameter of the request URL.</p>
-         * <p>*   2: indicates that the parameter is in the request header.</p>
-         * <p>*   3: indicates that the parameter is in the request body.</p>
-         * <br>
+         * <ul>
+         * <li>0: indicates that the parameter is in the URL path of the request.</li>
+         * <li>1: indicates that the parameter is in the Query parameter of the request URL.</li>
+         * <li>2: indicates that the parameter is in the request header.</li>
+         * <li>3: indicates that the parameter is in the request body.</li>
+         * </ul>
          * <p>APIs generated in wizard or script mode support only the Query position. APIs generated by registration whose request method is GET or DELETE support the Query and Head positions. APIs generated by registration whose request method is PUT or POST support the Query, Head, and Body positions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ParameterPosition")
         public Integer parameterPosition;
@@ -610,43 +714,59 @@ public class ListDataServiceApisResponseBody extends TeaModel {
     public static class ListDataServiceApisResponseBodyDataApisScriptDetailsScriptResponseParameters extends TeaModel {
         /**
          * <p>The name of the associated field. This parameter is supported only if the API is generated in wizard mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>column2</p>
          */
         @NameInMap("ColumnName")
         public String columnName;
 
         /**
          * <p>The sample value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example2</p>
          */
         @NameInMap("ExampleValue")
         public String exampleValue;
 
         /**
          * <p>The data type of the parameter. Valid values:</p>
-         * <br>
-         * <p>*   0: String</p>
-         * <p>*   1: Int</p>
-         * <p>*   2: Long</p>
-         * <p>*   3: Float</p>
-         * <p>*   4: Double</p>
-         * <p>*   5: Boolean</p>
-         * <p>*   6: StringList</p>
-         * <p>*   7: IntList</p>
-         * <p>*   8: LongList</p>
-         * <p>*   9: FloatList</p>
-         * <p>*   10: DoubleList</p>
-         * <p>*   11: BooleanList</p>
+         * <ul>
+         * <li>0: String</li>
+         * <li>1: Int</li>
+         * <li>2: Long</li>
+         * <li>3: Float</li>
+         * <li>4: Double</li>
+         * <li>5: Boolean</li>
+         * <li>6: StringList</li>
+         * <li>7: IntList</li>
+         * <li>8: LongList</li>
+         * <li>9: FloatList</li>
+         * <li>10: DoubleList</li>
+         * <li>11: BooleanList</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ParameterDataType")
         public Integer parameterDataType;
 
         /**
          * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>description2</p>
          */
         @NameInMap("ParameterDescription")
         public String parameterDescription;
 
         /**
          * <p>The name of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>param2</p>
          */
         @NameInMap("ParameterName")
         public String parameterName;
@@ -701,12 +821,18 @@ public class ListDataServiceApisResponseBody extends TeaModel {
     public static class ListDataServiceApisResponseBodyDataApisScriptDetails extends TeaModel {
         /**
          * <p>Indicates whether the entries are returned by page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("IsPagedResponse")
         public Boolean isPagedResponse;
 
         /**
          * <p>The SQL script.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>select a from t</p>
          */
         @NameInMap("Script")
         public String script;
@@ -779,12 +905,18 @@ public class ListDataServiceApisResponseBody extends TeaModel {
     public static class ListDataServiceApisResponseBodyDataApisWizardDetailsWizardConnection extends TeaModel {
         /**
          * <p>The data source ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("ConnectionId")
         public Long connectionId;
 
         /**
          * <p>The name of the table in the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t</p>
          */
         @NameInMap("TableName")
         public String tableName;
@@ -815,67 +947,95 @@ public class ListDataServiceApisResponseBody extends TeaModel {
     public static class ListDataServiceApisResponseBodyDataApisWizardDetailsWizardRequestParameters extends TeaModel {
         /**
          * <p>The name of the associated field. This parameter is supported only if the API is generated in wizard mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>column1</p>
          */
         @NameInMap("ColumnName")
         public String columnName;
 
         /**
          * <p>The default value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default1</p>
          */
         @NameInMap("DefaultValue")
         public String defaultValue;
 
         /**
          * <p>The sample value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example1</p>
          */
         @NameInMap("ExampleValue")
         public String exampleValue;
 
         /**
          * <p>Indicates whether the parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("IsRequiredParameter")
         public Boolean isRequiredParameter;
 
         /**
          * <p>The data type of the parameter. Valid values:</p>
-         * <br>
-         * <p>*   0: String</p>
-         * <p>*   1: Int</p>
-         * <p>*   2: Long</p>
-         * <p>*   3: Float</p>
-         * <p>*   4: Double</p>
-         * <p>*   5: Boolean</p>
-         * <p>*   6: StringList</p>
-         * <p>*   7: IntList</p>
-         * <p>*   8: LongList</p>
-         * <p>*   9: FloatList</p>
-         * <p>*   10: DoubleList</p>
-         * <p>*   11: BooleanList</p>
+         * <ul>
+         * <li>0: String</li>
+         * <li>1: Int</li>
+         * <li>2: Long</li>
+         * <li>3: Float</li>
+         * <li>4: Double</li>
+         * <li>5: Boolean</li>
+         * <li>6: StringList</li>
+         * <li>7: IntList</li>
+         * <li>8: LongList</li>
+         * <li>9: FloatList</li>
+         * <li>10: DoubleList</li>
+         * <li>11: BooleanList</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ParameterDataType")
         public Integer parameterDataType;
 
         /**
          * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>description1</p>
          */
         @NameInMap("ParameterDescription")
         public String parameterDescription;
 
         /**
          * <p>The name of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>param1</p>
          */
         @NameInMap("ParameterName")
         public String parameterName;
 
         /**
          * <p>The operator used for the value of the parameter. Valid values: 0, 1, 2, and 3. The value 0 indicates the Equal operator. The value 1 indicates the Like operator. The value 2 indicates the Const operator. The value 3 indicates the In operator. APIs generated in wizard mode support the Equal, Like, and In operators. APIs generated in script mode support the Equal operator. APIs generated by registration support the Equal and Const operators.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ParameterOperator")
         public Integer parameterOperator;
 
         /**
          * <p>The position of the parameter. Valid values: 0, 1, 2, and 3. The value 0 indicates that the parameter is in the URL path of the request. The value 1 indicates that the parameter is in the Query parameter of the request URL. The value 2 indicates that the parameter is in the request header. The value 3 indicates that the parameter is in the request body. APIs generated in wizard or script mode support only the Query position. APIs generated by registration whose request method is GET or DELETE support the Query and Head positions. APIs generated by registration whose request method is PUT or POST support the Query, Head, and Body positions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ParameterPosition")
         public Integer parameterPosition;
@@ -962,43 +1122,59 @@ public class ListDataServiceApisResponseBody extends TeaModel {
     public static class ListDataServiceApisResponseBodyDataApisWizardDetailsWizardResponseParameters extends TeaModel {
         /**
          * <p>The name of the associated field. This parameter is supported only if the API is generated in wizard mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>column2</p>
          */
         @NameInMap("ColumnName")
         public String columnName;
 
         /**
          * <p>The sample value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example2</p>
          */
         @NameInMap("ExampleValue")
         public String exampleValue;
 
         /**
          * <p>The data type of the parameter. Valid values:</p>
-         * <br>
-         * <p>*   0: String</p>
-         * <p>*   1: Int</p>
-         * <p>*   2: Long</p>
-         * <p>*   3: Float</p>
-         * <p>*   4: Double</p>
-         * <p>*   5: Boolean</p>
-         * <p>*   6: StringList</p>
-         * <p>*   7: IntList</p>
-         * <p>*   8: LongList</p>
-         * <p>*   9: FloatList</p>
-         * <p>*   10: DoubleList</p>
-         * <p>*   11: BooleanList</p>
+         * <ul>
+         * <li>0: String</li>
+         * <li>1: Int</li>
+         * <li>2: Long</li>
+         * <li>3: Float</li>
+         * <li>4: Double</li>
+         * <li>5: Boolean</li>
+         * <li>6: StringList</li>
+         * <li>7: IntList</li>
+         * <li>8: LongList</li>
+         * <li>9: FloatList</li>
+         * <li>10: DoubleList</li>
+         * <li>11: BooleanList</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ParameterDataType")
         public Integer parameterDataType;
 
         /**
          * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>description2</p>
          */
         @NameInMap("ParameterDescription")
         public String parameterDescription;
 
         /**
          * <p>The name of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>param2</p>
          */
         @NameInMap("ParameterName")
         public String parameterName;
@@ -1053,6 +1229,9 @@ public class ListDataServiceApisResponseBody extends TeaModel {
     public static class ListDataServiceApisResponseBodyDataApisWizardDetails extends TeaModel {
         /**
          * <p>Indicates whether the entries are returned by page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("IsPagedResponse")
         public Boolean isPagedResponse;
@@ -1117,12 +1296,18 @@ public class ListDataServiceApisResponseBody extends TeaModel {
     public static class ListDataServiceApisResponseBodyDataApis extends TeaModel {
         /**
          * <p>The API ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10002</p>
          */
         @NameInMap("ApiId")
         public Long apiId;
 
         /**
          * <p>The type of the API. Valid values: 0, 1, and 2. The value 0 indicates that the API is generated in wizard mode. The value 1 indicates that the API is generated in script mode. The value 2 indicates that the API is generated by registration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ApiMode")
         public Integer apiMode;
@@ -1135,18 +1320,27 @@ public class ListDataServiceApisResponseBody extends TeaModel {
 
         /**
          * <p>The path of the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/test/1</p>
          */
         @NameInMap("ApiPath")
         public String apiPath;
 
         /**
          * <p>The time when the API was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-06-23T00:21:01+0800</p>
          */
         @NameInMap("CreatedTime")
         public String createdTime;
 
         /**
          * <p>The ID of the Alibaba Cloud account used by the creator of the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567</p>
          */
         @NameInMap("CreatorId")
         public String creatorId;
@@ -1159,30 +1353,45 @@ public class ListDataServiceApisResponseBody extends TeaModel {
 
         /**
          * <p>The folder ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("FolderId")
         public Long folderId;
 
         /**
          * <p>The group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abcde123456789</p>
          */
         @NameInMap("GroupId")
         public String groupId;
 
         /**
          * <p>The time when the API was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-06-23T00:21:01+0800</p>
          */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
         /**
          * <p>The ID of the Alibaba Cloud account used by the user who last modified the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2345678</p>
          */
         @NameInMap("OperatorId")
         public String operatorId;
 
         /**
          * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         @NameInMap("ProjectId")
         public Long projectId;
@@ -1201,12 +1410,18 @@ public class ListDataServiceApisResponseBody extends TeaModel {
 
         /**
          * <p>The request method of the API. Valid values: 0, 1, 2, and 3. The value 0 indicates the GET method. The value 1 indicates the POST method. The value 2 indicates the PUT method. The value 3 indicates the DELETE method. APIs generated in wizard or script mode support the GET and POST methods. APIs generated by registration support the GET, POST, PUT, and DELETE methods.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("RequestMethod")
         public Integer requestMethod;
 
         /**
          * <p>The format in which the response of the API request is returned. Valid values: 0 and 1. The value 0 indicates the JSON format. The value 1 indicates the XML format. APIs generated in wizard or script mode support the JSON format. APIs generated by registration support the JSON and XML formats.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ResponseContentType")
         public Integer responseContentType;
@@ -1219,24 +1434,36 @@ public class ListDataServiceApisResponseBody extends TeaModel {
 
         /**
          * <p>The status of the API. Valid values: 0 and 1. The value 0 indicates that the API is not published. The value 1 indicates that the API is published.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Status")
         public Integer status;
 
         /**
          * <p>The tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         @NameInMap("TenantId")
         public Long tenantId;
 
         /**
          * <p>The timeout period of the API request. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         @NameInMap("Timeout")
         public Integer timeout;
 
         /**
          * <p>The scope in which the API is visible. Valid values: 0 and 1. The value 0 indicates that the API is visible within the workspace. The value 1 indicates that the API is visible only to its owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("VisibleRange")
         public Integer visibleRange;
@@ -1439,18 +1666,27 @@ public class ListDataServiceApisResponseBody extends TeaModel {
 
         /**
          * <p>The page number. The value of this parameter is the same as that of the PageNumber parameter in the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
         /**
          * <p>The number of entries per page. Valid values: 1 to 50. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

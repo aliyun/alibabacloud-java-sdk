@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class ListMetaDBResponseBody extends TeaModel {
     /**
-     * <p>The list of metadatabases.</p>
+     * <p>The information about the metadatabases.</p>
      */
     @NameInMap("DatabaseInfo")
     public ListMetaDBResponseBodyDatabaseInfo databaseInfo;
 
     /**
-     * <p>The total number of the metadatabases.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>abc</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,37 +42,64 @@ public class ListMetaDBResponseBody extends TeaModel {
 
     public static class ListMetaDBResponseBodyDatabaseInfoDbList extends TeaModel {
         /**
-         * <p>The timestamp at which the metadatabase was updated.</p>
+         * <p>The timestamp at which the metadatabase was created. You can convert the timestamp to the date based on the time zone that you use.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1388776825</p>
          */
         @NameInMap("CreateTimeStamp")
         public Long createTimeStamp;
 
+        /**
+         * <p>The URL of the metadatabase.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hdfs://localhost:777/user/hadoop/test.txt</p>
+         */
         @NameInMap("Location")
         public String location;
 
         /**
-         * <p>The ID of the metadatabase owner.</p>
+         * <p>The timestamp at which the metadatabase was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1388776837</p>
          */
         @NameInMap("ModifiedTimeStamp")
         public Long modifiedTimeStamp;
 
         /**
-         * <p>The URL of the metadatabase.</p>
+         * <p>The name of the metadatabase.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The owner ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1232</p>
+         */
         @NameInMap("OwnerId")
         public String ownerId;
 
         /**
-         * <p>The universally unique identifier (UUID) of the metadatabase.</p>
+         * <p>The type of the metadatabase.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HIVE</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
-         * <p>The name of the metadatabase.</p>
+         * <p>The UUID of the metadatabase.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32342</p>
          */
         @NameInMap("UUID")
         public String UUID;
@@ -139,13 +169,16 @@ public class ListMetaDBResponseBody extends TeaModel {
 
     public static class ListMetaDBResponseBodyDatabaseInfo extends TeaModel {
         /**
-         * <p>The timestamp at which the metadatabase was created. You can convert the timestamp to the related date based on the time zone that you use.</p>
+         * <p>The metadatabases.</p>
          */
         @NameInMap("DbList")
         public java.util.List<ListMetaDBResponseBodyDatabaseInfoDbList> dbList;
 
         /**
-         * <p>The type of the metadatabase.</p>
+         * <p>The total number of the metadatabases returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("TotalCount")
         public Long totalCount;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetQualityFollowerRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234</p>
      */
     @NameInMap("EntityId")
     public Long entityId;
@@ -15,6 +18,9 @@ public class GetQualityFollowerRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>autotest</p>
      */
     @NameInMap("ProjectName")
     public String projectName;

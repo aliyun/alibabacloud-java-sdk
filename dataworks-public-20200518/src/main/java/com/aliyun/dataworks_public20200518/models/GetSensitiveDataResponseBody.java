@@ -5,19 +5,21 @@ import com.aliyun.tea.*;
 
 public class GetSensitiveDataResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0000-ABCD-EFG****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The information of the sensitive data returned. The information includes totalCount and sensDatas.</p>
-     * <br>
-     * <p>sensDatas includes the following parameters:</p>
-     * <br>
-     * <p>*   guid: the ID of the metadata of the tenant. For example, the ID of the metadata in the MaxCompute compute engine is in the Project name.Table name.Column name format.</p>
-     * <p>*   sensType: the type of the sensitive data.</p>
-     * <p>*   sensLevel: the sensitivity level of the sensitive data.</p>
+     * <p>The information about the sensitive data returned. The information includes totalCount and sensDatas. sensDatas includes the following parameters:</p>
+     * <ul>
+     * <li>guid: the ID of the metadata of the tenant. For example, the ID of the metadata in the MaxCompute compute engine is in the Project name.Table name.Column name format.</li>
+     * <li>sensType: the type of the sensitive data.</li>
+     * <li>sensLevel: the sensitivity level of the sensitive data</li>
+     * </ul>
      */
     @NameInMap("SensitiveData")
     public java.util.Map<String, ?> sensitiveData;

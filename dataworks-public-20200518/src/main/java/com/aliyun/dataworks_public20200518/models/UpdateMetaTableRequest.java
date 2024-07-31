@@ -6,66 +6,102 @@ import com.aliyun.tea.*;
 public class UpdateMetaTableRequest extends TeaModel {
     /**
      * <p>The names of the labels that you want to add. Separate the labels with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a,b,c</p>
      */
     @NameInMap("AddedLabels")
     public String addedLabels;
 
     /**
      * <p>The display name of the table.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Caption")
     public String caption;
 
     /**
      * <p>The ID of the category that you want to associate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>101</p>
      */
     @NameInMap("CategoryId")
     public Long categoryId;
 
     /**
      * <p>The environment of the DataWorks workspace. Valid values: 0 and 1. The value 0 indicates the development environment. The value 1 indicates the production environment.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("EnvType")
     public Integer envType;
 
     /**
-     * <p>The ID of the new owner. If this parameter is not specified, the owner ID is not updated.</p>
+     * <p>The new owner ID. If you leave this parameter empty, the owner ID is not updated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12345</p>
      */
     @NameInMap("NewOwnerId")
     public String newOwnerId;
 
     /**
-     * <p>The ID of the DataWorks workspace.</p>
+     * <p>The DataWorks workspace ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>101</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;
 
     /**
-     * <p>The names of labels that you want to delete. Separate the labels with commas (,).</p>
+     * <p>The names of labels that you want to remove. Separate the labels with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a,b,c</p>
      */
     @NameInMap("RemovedLabels")
     public String removedLabels;
 
     /**
-     * <p>The schema information of the table. You need to configure this parameter if you enable the table schema in MaxCompute.</p>
+     * <p>The schema information about the table. You must configure this parameter if you enable the three-layer model of MaxCompute.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
      */
     @NameInMap("Schema")
     public String schema;
 
     /**
-     * <p>The globally unique identifier (GUID) of the table. Specify the GUID in the format of odps.{projectName}.{tableName}.</p>
+     * <p>The GUID of the table. Specify the GUID in the format of odps.{projectName}.{tableName}.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>odps.test.table1</p>
      */
     @NameInMap("TableGuid")
     public String tableGuid;
 
     /**
      * <p>The name of the table.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>table1</p>
      */
     @NameInMap("TableName")
     public String tableName;
 
     /**
-     * <p>The scope in which the table is visible. Valid values: 0, 1, and 2. The value 0 indicates that the table is invisible to all workspace members. The value 1 indicates that the table is visible to all workspace members. The value 2 indicates that the table is visible to workspace members.</p>
+     * <p>The scope in which the table is visible. Valid values: 0, 1, and 2. The value 0 indicates that the table is invisible to all members. The value 1 indicates that the table is visible to all members. The value 2 indicates that the table is visible to workspace members.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Visibility")
     public Integer visibility;

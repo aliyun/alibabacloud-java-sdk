@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class ListShiftPersonnelsResponseBody extends TeaModel {
     /**
-     * <p>The page number of the returned page. Minimum value: 1. Maximum value: 100. Default value: 1.</p>
+     * <p>The pagination data.</p>
      */
     @NameInMap("Paging")
     public ListShiftPersonnelsResponseBodyPaging paging;
 
     /**
-     * <p>The pagination data.</p>
+     * <p>The request ID. You can use the ID to troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0000-ABCD-EFG</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,22 +42,34 @@ public class ListShiftPersonnelsResponseBody extends TeaModel {
 
     public static class ListShiftPersonnelsResponseBodyPagingShiftPersons extends TeaModel {
         /**
-         * <p>The time when the on-duty engineer ends the shift.</p>
+         * <p>The time when the on-duty engineer starts the shift.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1593950832000</p>
          */
         @NameInMap("BeginTime")
         public Long beginTime;
 
+        /**
+         * <p>The time when the on-duty engineer ends the shift.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1593950832000</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
         /**
-         * <p>The time when the on-duty engineer starts the shift.</p>
+         * <p>The name of the on-duty engineer.</p>
          */
         @NameInMap("ShiftPersonName")
         public String shiftPersonName;
 
         /**
-         * <p>The name of the on-duty engineer.</p>
+         * <p>The UID of the on-duty engineer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3726346****</p>
          */
         @NameInMap("ShiftPersonUID")
         public String shiftPersonUID;
@@ -100,25 +115,34 @@ public class ListShiftPersonnelsResponseBody extends TeaModel {
 
     public static class ListShiftPersonnelsResponseBodyPaging extends TeaModel {
         /**
-         * <p>The number of entries returned per page. Default value: 10. Maximum value: 100.</p>
+         * <p>The page number. Valid values: 1 to 100. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
-         * <p>The UID of the on-duty engineer.</p>
+         * <p>A list of on-duty engineers in a shift schedule.</p>
          */
         @NameInMap("ShiftPersons")
         public java.util.List<ListShiftPersonnelsResponseBodyPagingShiftPersons> shiftPersons;
 
         /**
-         * <p>The on-duty engineers in the shift schedule.</p>
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

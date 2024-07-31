@@ -11,31 +11,46 @@ public class ListQualityResultsByRuleResponseBody extends TeaModel {
     public ListQualityResultsByRuleResponseBodyData data;
 
     /**
-     * <p>The error code returned.</p>
+     * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>401</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>You have no permission.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CBA58543-00D4-41****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -95,31 +110,46 @@ public class ListQualityResultsByRuleResponseBody extends TeaModel {
 
     public static class ListQualityResultsByRuleResponseBodyDataRuleChecksReferenceValue extends TeaModel {
         /**
-         * <p>The date on which the business was performed. If the monitored business entity is offline data, the value is usually one day before the monitoring is performed.</p>
+         * <p>The data timestamp. If the monitored business entity is offline data, the value is usually one day before the monitoring is performed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1600704000000</p>
          */
         @NameInMap("BizDate")
         public String bizDate;
 
         /**
          * <p>The values of the sample field that are grouped by using the GROUP BY clause. For example, the values of the Gender field are grouped by using the GROUP BY clause. In this case, the values of DiscreteProperty are Male, Female, and null.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>type1</p>
          */
         @NameInMap("DiscreteProperty")
         public String discreteProperty;
 
         /**
          * <p>The string of the monitoring result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("SingleCheckResult")
         public Integer singleCheckResult;
 
         /**
          * <p>The threshold.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.2</p>
          */
         @NameInMap("Threshold")
         public Float threshold;
 
         /**
          * <p>The sample value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("Value")
         public Float value;
@@ -173,19 +203,28 @@ public class ListQualityResultsByRuleResponseBody extends TeaModel {
 
     public static class ListQualityResultsByRuleResponseBodyDataRuleChecksSampleValue extends TeaModel {
         /**
-         * <p>The date on which the business was performed. If the monitored business entity is offline data, the value is usually one day before the monitoring is performed.</p>
+         * <p>The data timestamp. If the monitored business entity is offline data, the value is usually one day before the monitoring is performed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1600704000000</p>
          */
         @NameInMap("BizDate")
         public String bizDate;
 
         /**
          * <p>The values of the sample field that are grouped by using the GROUP BY clause. For example, the values of the Gender field are grouped by using the GROUP BY clause. In this case, the values of DiscreteProperty are Male, Female, and null.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>type2</p>
          */
         @NameInMap("DiscreteProperty")
         public String discreteProperty;
 
         /**
          * <p>The sample value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23</p>
          */
         @NameInMap("Value")
         public Float value;
@@ -224,60 +263,85 @@ public class ListQualityResultsByRuleResponseBody extends TeaModel {
     public static class ListQualityResultsByRuleResponseBodyDataRuleChecks extends TeaModel {
         /**
          * <p>The partition in the monitored data source table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ds=20200925</p>
          */
         @NameInMap("ActualExpression")
         public String actualExpression;
 
         /**
          * <p>The time when the monitoring started.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1600704000000</p>
          */
         @NameInMap("BeginTime")
         public Long beginTime;
 
         /**
-         * <p>The date on which the business was performed. If the monitored business entity is offline data, the value is usually one day before the monitoring is performed.</p>
+         * <p>The data timestamp. If the monitored business entity is offline data, the value is usually one day before the monitoring is performed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1600704000000</p>
          */
         @NameInMap("BizDate")
         public Long bizDate;
 
         /**
-         * <p>The type of the monitoring rule. The type of a monitoring rule indicates the importance of the rule. Valid values:</p>
-         * <br>
-         * <p>*   1: indicates that the monitoring rule is a strong rule.</p>
-         * <br>
-         * <p>*   0: indicates that the monitoring rule is a weak rule.</p>
-         * <br>
-         * <p>    You can specify whether a monitoring rule is a strong rule based on your business requirements. If a strong rule is used and a critical alert is reported, nodes are blocked.</p>
+         * <p>The strength of the monitoring rule. The strength of a monitoring rule indicates the importance of the rule. Valid values:</p>
+         * <ul>
+         * <li>1: indicates that the monitoring rule is a strong rule.</li>
+         * <li>0: indicates that the monitoring rule is a weak rule. You can specify the strength of a monitoring rule based on your business requirements. If a monitoring rule is a strong rule and the critical threshold is exceeded, a critical alert is reported and tasks that are associated with the rule are blocked from running.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("BlockType")
         public Integer blockType;
 
         /**
          * <p>The monitoring result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("CheckResult")
         public Integer checkResult;
 
         /**
          * <p>The status of the monitoring result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("CheckResultStatus")
         public Integer checkResultStatus;
 
         /**
-         * <p>The ID of the checker.</p>
+         * <p>The checker ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         @NameInMap("CheckerId")
         public Integer checkerId;
 
         /**
          * <p>The name of the checker.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fulx</p>
          */
         @NameInMap("CheckerName")
         public String checkerName;
 
         /**
          * <p>The type of the checker.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("CheckerType")
         public Integer checkerType;
@@ -289,115 +353,176 @@ public class ListQualityResultsByRuleResponseBody extends TeaModel {
         public String comment;
 
         /**
-         * <p>The threshold for a critical alert. The threshold indicates the deviation of the monitoring result from the expected value. You can customize this threshold based on your business requirements. If a strong rule is used and a critical alert is reported, nodes are blocked.</p>
+         * <p>The threshold for a critical alert. The threshold indicates the deviation of the monitoring result from the expected value. You can specify a custom value for the threshold based on your business requirements. If a monitoring rule is a strong rule and the critical threshold is exceeded, a critical alert is reported and tasks that are associated with the rule are blocked from running.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.6</p>
          */
         @NameInMap("CriticalThreshold")
         public Float criticalThreshold;
 
         /**
-         * <p>The type of the scheduling cycle. In most cases, the value of this parameter is YMD. This value indicates year, month, and day.</p>
+         * <p>The scheduling frequency. In most cases, the value of this parameter is YMD. This value indicates year, month, and day.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>YMD</p>
          */
         @NameInMap("DateType")
         public String dateType;
 
         /**
          * <p>Indicates whether the monitoring is discrete monitoring. Valid values:</p>
-         * <br>
-         * <p>*   true: indicates that the monitoring is discrete monitoring.</p>
-         * <p>*   false: indicates that the monitoring is not discrete monitoring.</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("DiscreteCheck")
         public Boolean discreteCheck;
 
         /**
          * <p>The time when the monitoring ended.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1600704000000</p>
          */
         @NameInMap("EndTime")
         public Long endTime;
 
         /**
          * <p>The ID of the partition filter expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14534343</p>
          */
         @NameInMap("EntityId")
         public Long entityId;
 
         /**
          * <p>The expected value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90</p>
          */
         @NameInMap("ExpectValue")
         public Float expectValue;
 
         /**
-         * <p>The ID of the node.</p>
+         * <p>The node ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123112232</p>
          */
         @NameInMap("ExternalId")
         public String externalId;
 
         /**
          * <p>The type of the scheduling system. Only CWF scheduling systems are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CWF2</p>
          */
         @NameInMap("ExternalType")
         public String externalType;
 
         /**
          * <p>Indicates whether the monitoring is performed based on a fixed value. Valid values:</p>
-         * <br>
-         * <p>*   true: indicates that the monitoring is performed based on a fixed value.</p>
-         * <p>*   false: indicates that the monitoring is performed based on a non-fixed value.</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("FixedCheck")
         public Boolean fixedCheck;
 
         /**
-         * <p>The ID of the primary key.</p>
+         * <p>The primary key ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2231123</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>Indicates whether the monitoring result is the same as the predicted result. Valid values:</p>
-         * <br>
-         * <p>*   true: indicates that the monitoring result is the same as the predicted result.</p>
-         * <p>*   false: indicates that the monitoring result is different from the predicted result.</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("IsPrediction")
         public Boolean isPrediction;
 
         /**
-         * <p>The lower limit of the predicted result. The value of this parameter is automatically generated based on the threshold that you specified.</p>
+         * <p>The lower limit of the predicted result. The value of this parameter is automatically generated based on the threshold that you specify.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2344</p>
          */
         @NameInMap("LowerValue")
         public Float lowerValue;
 
         /**
          * <p>The partition filter expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ds=$[yyyymmdd]</p>
          */
         @NameInMap("MatchExpression")
         public String matchExpression;
 
         /**
-         * <p>The method used to collect sample data, such as avg, count, sum, min, max, count_distinct, user_defined, table_count, table_size, table_dt_load_count, table_dt_refuseload_count, null_value, null_value/table_count, (table_count-count_distinct)/table_count, or table_count-count_distinct.</p>
+         * <p>The method used to collect sample data, such as such as avg, count, sum, min, max, count_distinct, user_defined, table_count, table_size, table_dt_load_count, table_dt_refuseload_count, null_value, null_value/table_count, (table_count-count_distinct)/table_count, or table_count-count_distinct.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>max</p>
          */
         @NameInMap("MethodName")
         public String methodName;
 
         /**
          * <p>The comparison operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <blockquote>
+         * </blockquote>
          */
         @NameInMap("Op")
         public String op;
 
+        /**
+         * <p>Indicates whether the monitoring rule is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Open")
         public Boolean open;
 
         /**
-         * <p>The name of the compute engine instance or data source for which data quality is monitored.</p>
+         * <p>The name of the compute engine or data source for which data quality is monitored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>autotest</p>
          */
         @NameInMap("ProjectName")
         public String projectName;
 
         /**
-         * <p>The field of the rule attribute. This field is the column name of the data source table that is monitored.</p>
+         * <p>The field whose data quality is checked based on the monitoring rule. This field is a column in the data source table that is monitored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>type</p>
          */
         @NameInMap("Property")
         public String property;
@@ -410,12 +535,18 @@ public class ListQualityResultsByRuleResponseBody extends TeaModel {
 
         /**
          * <p>The string of the monitoring result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ResultString</p>
          */
         @NameInMap("ResultString")
         public String resultString;
 
         /**
          * <p>The ID of the monitoring rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123421</p>
          */
         @NameInMap("RuleId")
         public Long ruleId;
@@ -427,25 +558,34 @@ public class ListQualityResultsByRuleResponseBody extends TeaModel {
         public String ruleName;
 
         /**
-         * <p>The sample values.</p>
+         * <p>The current sample values.</p>
          */
         @NameInMap("SampleValue")
         public java.util.List<ListQualityResultsByRuleResponseBodyDataRuleChecksSampleValue> sampleValue;
 
         /**
          * <p>The name of the table that is monitored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dual</p>
          */
         @NameInMap("TableName")
         public String tableName;
 
         /**
-         * <p>The ID of the monitoring task.</p>
+         * <p>The monitoring task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16008552981681a0d6****</p>
          */
         @NameInMap("TaskId")
         public String taskId;
 
         /**
          * <p>The ID of the monitoring template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("TemplateId")
         public Integer templateId;
@@ -458,30 +598,45 @@ public class ListQualityResultsByRuleResponseBody extends TeaModel {
 
         /**
          * <p>The time that was taken to run the monitoring task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("TimeCost")
         public String timeCost;
 
         /**
          * <p>The trend of the monitoring result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>up</p>
          */
         @NameInMap("Trend")
         public String trend;
 
         /**
-         * <p>The upper limit of the predicted result. The value of this parameter is automatically generated based on the threshold that you specified.</p>
+         * <p>The upper limit of the predicted result. The value of this parameter is automatically generated based on the threshold that you specify.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22200</p>
          */
         @NameInMap("UpperValue")
         public Float upperValue;
 
         /**
-         * <p>The threshold for a warning alert. The threshold indicates the deviation of the monitoring result from the expected value. You can customize this threshold based on your business requirements.</p>
+         * <p>The threshold for a warning alert. The threshold specifies the deviation of the monitoring result from the expected value. You can specify a custom value for the threshold based on your business requirements.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.1</p>
          */
         @NameInMap("WarningThreshold")
         public Float warningThreshold;
 
         /**
-         * <p>The filter condition of the monitoring rule.</p>
+         * <p>The filter condition of the monitoring task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>type!=\&quot;type2\&quot;</p>
          */
         @NameInMap("WhereCondition")
         public String whereCondition;
@@ -831,25 +986,34 @@ public class ListQualityResultsByRuleResponseBody extends TeaModel {
 
     public static class ListQualityResultsByRuleResponseBodyData extends TeaModel {
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
         /**
-         * <p>The number of entries returned per page. Default value: 10. Maximum value: 100.</p>
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
-         * <p>The monitoring results returned.</p>
+         * <p>The returned monitoring results.</p>
          */
         @NameInMap("RuleChecks")
         public java.util.List<ListQualityResultsByRuleResponseBodyDataRuleChecks> ruleChecks;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         @NameInMap("TotalCount")
         public Long totalCount;

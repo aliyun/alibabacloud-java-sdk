@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class GetNodeOnBaselineRequest extends TeaModel {
     /**
+     * <p>The baseline ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234</p>
      */
     @NameInMap("BaselineId")
     public Long baselineId;

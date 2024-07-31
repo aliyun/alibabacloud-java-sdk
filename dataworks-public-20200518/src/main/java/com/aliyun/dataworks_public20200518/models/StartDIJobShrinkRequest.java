@@ -5,14 +5,27 @@ import com.aliyun.tea.*;
 
 public class StartDIJobShrinkRequest extends TeaModel {
     /**
+     * <p>The task ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>11743</p>
      */
     @NameInMap("DIJobId")
     public Long DIJobId;
 
+    /**
+     * <p>Specifies whether to forcefully rerun all synchronization steps. If you do not configure this parameter, the system does not forcefully rerun the task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("ForceToRerun")
     public Boolean forceToRerun;
 
+    /**
+     * <p>The settings for the start.</p>
+     */
     @NameInMap("RealtimeStartSettings")
     public String realtimeStartSettingsShrink;
 

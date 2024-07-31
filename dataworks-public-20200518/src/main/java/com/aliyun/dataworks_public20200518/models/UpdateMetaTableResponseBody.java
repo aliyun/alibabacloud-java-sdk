@@ -5,13 +5,19 @@ import com.aliyun.tea.*;
 
 public class UpdateMetaTableResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>abcde</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the metadata information about the table is updated.</p>
+     * <p>Indicates whether the metadata information about the table was updated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("UpdateResult")
     public Boolean updateResult;
