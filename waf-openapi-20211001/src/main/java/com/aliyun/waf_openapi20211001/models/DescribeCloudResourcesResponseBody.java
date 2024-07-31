@@ -58,9 +58,17 @@ public class DescribeCloudResourcesResponseBody extends TeaModel {
     }
 
     public static class DescribeCloudResourcesResponseBodyCloudResources extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("HttpPortCount")
         public Integer httpPortCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("HttpsPortCount")
         public Integer httpsPortCount;
 
@@ -101,12 +109,24 @@ public class DescribeCloudResourcesResponseBody extends TeaModel {
         @Deprecated
         public String resourceInstance;
 
+        /**
+         * <strong>example:</strong>
+         * <p>lb-uf60ub45fr9b***</p>
+         */
         @NameInMap("ResourceInstanceId")
         public String resourceInstanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.1.1.1</p>
+         */
         @NameInMap("ResourceInstanceIp")
         public String resourceInstanceIp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test-name</p>
+         */
         @NameInMap("ResourceInstanceName")
         public String resourceInstanceName;
 

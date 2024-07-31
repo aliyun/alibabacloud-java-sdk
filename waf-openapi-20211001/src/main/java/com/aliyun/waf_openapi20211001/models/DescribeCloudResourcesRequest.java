@@ -84,6 +84,10 @@ public class DescribeCloudResourcesRequest extends TeaModel {
     @NameInMap("ResourceInstanceId")
     public String resourceInstanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test-name</p>
+     */
     @NameInMap("ResourceInstanceName")
     public String resourceInstanceName;
 
