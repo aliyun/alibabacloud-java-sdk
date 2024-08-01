@@ -950,6 +950,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("TemplateURL", request.templateURL);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.validationOptions)) {
+            query.put("ValidationOptions", request.validationOptions);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.templateBody)) {
             body.put("TemplateBody", request.templateBody);
@@ -6153,6 +6157,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Description", request.description);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.isDraft)) {
+            query.put("IsDraft", request.isDraft);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.rotateStrategy)) {
+            query.put("RotateStrategy", request.rotateStrategy);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
             query.put("TemplateId", request.templateId);
         }
@@ -6163,6 +6175,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.templateURL)) {
             query.put("TemplateURL", request.templateURL);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.validationOptions)) {
+            query.put("ValidationOptions", request.validationOptions);
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();

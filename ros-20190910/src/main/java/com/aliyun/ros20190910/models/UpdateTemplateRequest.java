@@ -13,6 +13,12 @@ public class UpdateTemplateRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("IsDraft")
+    public Boolean isDraft;
+
+    @NameInMap("RotateStrategy")
+    public String rotateStrategy;
+
     @NameInMap("TemplateBody")
     public String templateBody;
 
@@ -49,6 +55,9 @@ public class UpdateTemplateRequest extends TeaModel {
     @NameInMap("TemplateURL")
     public String templateURL;
 
+    @NameInMap("ValidationOptions")
+    public java.util.List<String> validationOptions;
+
     public static UpdateTemplateRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateTemplateRequest self = new UpdateTemplateRequest();
         return TeaModel.build(map, self);
@@ -60,6 +69,22 @@ public class UpdateTemplateRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public UpdateTemplateRequest setIsDraft(Boolean isDraft) {
+        this.isDraft = isDraft;
+        return this;
+    }
+    public Boolean getIsDraft() {
+        return this.isDraft;
+    }
+
+    public UpdateTemplateRequest setRotateStrategy(String rotateStrategy) {
+        this.rotateStrategy = rotateStrategy;
+        return this;
+    }
+    public String getRotateStrategy() {
+        return this.rotateStrategy;
     }
 
     public UpdateTemplateRequest setTemplateBody(String templateBody) {
@@ -92,6 +117,14 @@ public class UpdateTemplateRequest extends TeaModel {
     }
     public String getTemplateURL() {
         return this.templateURL;
+    }
+
+    public UpdateTemplateRequest setValidationOptions(java.util.List<String> validationOptions) {
+        this.validationOptions = validationOptions;
+        return this;
+    }
+    public java.util.List<String> getValidationOptions() {
+        return this.validationOptions;
     }
 
 }
