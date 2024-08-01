@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class SendMessageToGlobeResponseBody extends TeaModel {
     /**
      * <p>The sender ID returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Alicloud321</p>
      */
     @NameInMap("From")
     public String from;
 
     /**
      * <p>The ID of the message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1008030300****</p>
      */
     @NameInMap("MessageId")
     public String messageId;
@@ -24,30 +30,45 @@ public class SendMessageToGlobeResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F655A8D5-B967-440B-8683-DAD6FF8DE990</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The status code of the delivery request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("ResponseCode")
     public String responseCode;
 
     /**
      * <p>The description of the delivery request status.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The SMS Send Request was accepted</p>
      */
     @NameInMap("ResponseDescription")
     public String responseDescription;
 
     /**
      * <p>The number of messages that incurred fees.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Segments")
     public String segments;
 
     /**
      * <p>The mobile phone number to which the message was sent.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1380000****</p>
      */
     @NameInMap("To")
     public String to;
@@ -124,18 +145,27 @@ public class SendMessageToGlobeResponseBody extends TeaModel {
     public static class SendMessageToGlobeResponseBodyNumberDetail extends TeaModel {
         /**
          * <p>The carrier that owns the mobile phone number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CMI</p>
          */
         @NameInMap("Carrier")
         public String carrier;
 
         /**
          * <p>The country to which the mobile phone number belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>China</p>
          */
         @NameInMap("Country")
         public String country;
 
         /**
          * <p>The region to which the mobile phone number belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HongKong</p>
          */
         @NameInMap("Region")
         public String region;

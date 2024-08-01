@@ -1,3 +1,6 @@
+2024-08-01 Version: 1.0.7
+- Generated java 2018-05-01 for Dysmsapi.
+
 2024-03-28 Version: 1.0.6
 - Update API SendMessageToGlobe: add param ChannelId.
 - Update API SendMessageWithTemplate: add param ChannelId.

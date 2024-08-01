@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class ConversionDataResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F655A8D5-B967-440B-8683-DAD6FF8D****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Status code. Returning OK means the request was successful. For other error codes, please refer to the [Error codes](~~180674~~) list.</p>
+     * <p>Status code. Returning OK means the request was successful. For other error codes, please refer to the <a href="https://help.aliyun.com/document_detail/180674.html">Error codes</a> list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("ResponseCode")
     public String responseCode;
 
     /**
      * <p>The description of the status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("ResponseDescription")
     public String responseDescription;
