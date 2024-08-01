@@ -6,42 +6,63 @@ import com.aliyun.tea.*;
 public class BatchSendMessageToGlobeResponseBody extends TeaModel {
     /**
      * <p>The list of mobile phone numbers that failed to receive the message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;931520581****&quot;,&quot;931530581****&quot;]</p>
      */
     @NameInMap("FailedList")
     public String failedList;
 
     /**
      * <p>The sender ID returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Alicloud321</p>
      */
     @NameInMap("From")
     public String from;
 
     /**
      * <p>The ID of the message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;123****&quot;,&quot;124****&quot;]</p>
      */
     @NameInMap("MessageIdList")
     public String messageIdList;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F655A8D5-B967-440B-8683-DAD6FF8D28D3</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The status code. If OK is returned, the request is successful. For more information, see [Error codes](https://www.alibabacloud.com/help/zh/short-message-service/latest/error-codes).</p>
+     * <p>The status code. If OK is returned, the request is successful. For more information, see <a href="https://www.alibabacloud.com/help/zh/short-message-service/latest/error-codes">Error codes</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("ResponseCode")
     public String responseCode;
 
     /**
      * <p>The description of the status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The SMS Send Request was accepted</p>
      */
     @NameInMap("ResponseDescription")
     public String responseDescription;
 
     /**
      * <p>The number of mobile phone numbers that received the message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("SuccessCount")
     public String successCount;

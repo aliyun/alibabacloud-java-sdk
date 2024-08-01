@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class QueryMessageRequest extends TeaModel {
     /**
      * <p>The ID of the message.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1008030xxx3003</p>
      */
     @NameInMap("MessageId")
     public String messageId;
