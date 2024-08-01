@@ -10,6 +10,10 @@ public class ListCloudGtmMonitorNodesResponseBody extends TeaModel {
     @NameInMap("Ipv6IspCityNodes")
     public ListCloudGtmMonitorNodesResponseBodyIpv6IspCityNodes ipv6IspCityNodes;
 
+    /**
+     * <strong>example:</strong>
+     * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -62,36 +66,60 @@ public class ListCloudGtmMonitorNodesResponseBody extends TeaModel {
     }
 
     public static class ListCloudGtmMonitorNodesResponseBodyIpv4IspCityNodesIpv4IspCityNode extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>503</p>
+         */
         @NameInMap("CityCode")
         public String cityCode;
 
         @NameInMap("CityName")
         public String cityName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>001</p>
+         */
         @NameInMap("CountryCode")
         public String countryCode;
 
         @NameInMap("CountryName")
         public String countryName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("DefaultSelected")
         public Boolean defaultSelected;
 
         @NameInMap("GroupName")
         public String groupName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>BGP</p>
+         */
         @NameInMap("GroupType")
         public String groupType;
 
         @NameInMap("Ips")
         public ListCloudGtmMonitorNodesResponseBodyIpv4IspCityNodesIpv4IspCityNodeIps ips;
 
+        /**
+         * <strong>example:</strong>
+         * <p>465</p>
+         */
         @NameInMap("IspCode")
         public String ispCode;
 
         @NameInMap("IspName")
         public String ispName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>node-ewze1bysndy4gf**j8</p>
+         */
         @NameInMap("NodeId")
         public String nodeId;
 
@@ -229,36 +257,60 @@ public class ListCloudGtmMonitorNodesResponseBody extends TeaModel {
     }
 
     public static class ListCloudGtmMonitorNodesResponseBodyIpv6IspCityNodesIpv6IspCityNode extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>503</p>
+         */
         @NameInMap("CityCode")
         public String cityCode;
 
         @NameInMap("CityName")
         public String cityName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>001</p>
+         */
         @NameInMap("CountryCode")
         public String countryCode;
 
         @NameInMap("CountryName")
         public String countryName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("DefaultSelected")
         public Boolean defaultSelected;
 
         @NameInMap("GroupName")
         public String groupName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>BGP</p>
+         */
         @NameInMap("GroupType")
         public String groupType;
 
         @NameInMap("Ips")
         public ListCloudGtmMonitorNodesResponseBodyIpv6IspCityNodesIpv6IspCityNodeIps ips;
 
+        /**
+         * <strong>example:</strong>
+         * <p>465</p>
+         */
         @NameInMap("IspCode")
         public String ispCode;
 
         @NameInMap("IspName")
         public String ispName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>node-ewze1bysndy4gf**j8</p>
+         */
         @NameInMap("NodeId")
         public String nodeId;
 

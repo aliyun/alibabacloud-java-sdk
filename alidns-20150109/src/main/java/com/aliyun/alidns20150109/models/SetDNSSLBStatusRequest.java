@@ -6,47 +6,68 @@ import com.aliyun.tea.*;
 public class SetDNSSLBStatusRequest extends TeaModel {
     /**
      * <p>The domain name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
      * <p>The language.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The DNS resolution line. The line can be the default line, China Telecom, and China Mobile.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>China Mobile.</p>
      */
     @NameInMap("Line")
     public String line;
 
     /**
      * <p>Specifies whether to enable or disable weighted round-robin. Valid values:</p>
-     * <br>
-     * <p>*   **true** (default): enables weighted round-robin.</p>
-     * <p>*   **false**: disables weighted round-robin.</p>
+     * <ul>
+     * <li><strong>true</strong> (default): enables weighted round-robin.</li>
+     * <li><strong>false</strong>: disables weighted round-robin.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Open")
     public Boolean open;
 
     /**
      * <p>The subdomain name for which you want to enable weighted round-robin. Set the parameter to @.example.com instead of example.com.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://www.example.com">www.example.com</a></p>
      */
     @NameInMap("SubDomain")
     public String subDomain;
 
     /**
      * <p>The type of the Domain Name System (DNS) record. Valid values: A and AAAA. Default value: A.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A</p>
      */
     @NameInMap("Type")
     public String type;
 
     /**
      * <p>The IP address of the client.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.0.2.0</p>
      */
     @NameInMap("UserClientIp")
     public String userClientIp;

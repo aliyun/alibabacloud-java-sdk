@@ -12,6 +12,9 @@ public class DescribeSupportLinesResponseBody extends TeaModel {
 
     /**
      * <p>请求ID。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CFDA0830-7D6E-4C13-8632-B57C7EDCF079</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,24 +43,36 @@ public class DescribeSupportLinesResponseBody extends TeaModel {
     public static class DescribeSupportLinesResponseBodyRecordLinesRecordLine extends TeaModel {
         /**
          * <p>2021-12-06T02:47:26.000+0000</p>
+         * 
+         * <strong>example:</strong>
+         * <p>unicom</p>
          */
         @NameInMap("FatherCode")
         public String fatherCode;
 
         /**
          * <p>子线路Code。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn_unicom_shanxi</p>
          */
         @NameInMap("LineCode")
         public String lineCode;
 
         /**
          * <p>父线路展示名称。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>联通</p>
          */
         @NameInMap("LineDisplayName")
         public String lineDisplayName;
 
         /**
          * <p>子线路展示名称。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>联通_山西</p>
          */
         @NameInMap("LineName")
         public String lineName;

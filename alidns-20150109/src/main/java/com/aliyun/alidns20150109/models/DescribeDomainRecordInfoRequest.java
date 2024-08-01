@@ -6,22 +6,29 @@ import com.aliyun.tea.*;
 public class DescribeDomainRecordInfoRequest extends TeaModel {
     /**
      * <p>The language.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The ID of the DNS record.</p>
-     * <br>
      * <p>This parameter is returned when you add a DNS record or when you query a list of DNS records.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9999985</p>
      */
     @NameInMap("RecordId")
     public String recordId;
 
     /**
      * <p>The IP address of the client.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.0.2.0</p>
      */
     @NameInMap("UserClientIp")
     public String userClientIp;

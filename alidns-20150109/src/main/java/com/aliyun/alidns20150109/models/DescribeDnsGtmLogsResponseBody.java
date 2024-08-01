@@ -12,30 +12,45 @@ public class DescribeDnsGtmLogsResponseBody extends TeaModel {
 
     /**
      * <p>The number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50C60A29-2E93-425A-ABA8-068686E28873</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned on all pages.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalItems")
     public Integer totalItems;
 
     /**
      * <p>The total number of pages returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalPages")
     public Integer totalPages;
@@ -96,18 +111,27 @@ public class DescribeDnsGtmLogsResponseBody extends TeaModel {
     public static class DescribeDnsGtmLogsResponseBodyLogsLog extends TeaModel {
         /**
          * <p>The formatted message content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>addtest-pool-1</p>
          */
         @NameInMap("Content")
         public String content;
 
         /**
          * <p>The ID of the object on which the operation was performed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>121212</p>
          */
         @NameInMap("EntityId")
         public String entityId;
 
         /**
          * <p>The name of the object on which the operation was performed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-pool-1</p>
          */
         @NameInMap("EntityName")
         public String entityName;
@@ -120,6 +144,9 @@ public class DescribeDnsGtmLogsResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the record.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6726</p>
          */
         @NameInMap("Id")
         public Long id;
@@ -132,12 +159,18 @@ public class DescribeDnsGtmLogsResponseBody extends TeaModel {
 
         /**
          * <p>The time when the operation was performed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-01-24T07:35Z</p>
          */
         @NameInMap("OperTime")
         public String operTime;
 
         /**
          * <p>The timestamp of the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1516779348000</p>
          */
         @NameInMap("OperTimestamp")
         public Long operTimestamp;

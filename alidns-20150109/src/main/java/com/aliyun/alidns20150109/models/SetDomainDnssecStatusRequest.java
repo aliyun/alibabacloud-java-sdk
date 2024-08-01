@@ -6,25 +6,33 @@ import com.aliyun.tea.*;
 public class SetDomainDnssecStatusRequest extends TeaModel {
     /**
      * <p>The domain name for which you want to set the DNSSEC status.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
      * <p>The language in which you want the values of some response parameters to be returned. These response parameters support multiple languages. Default value: en. Valid values: en, zh, and ja.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The DNSSEC status. Valid values:</p>
-     * <br>
-     * <p>*   ON: enables DNSSEC for the domain name.</p>
-     * <p>*   OFF: disables DNSSEC for the domain name.</p>
-     * <br>
+     * <ul>
+     * <li>ON: enables DNSSEC for the domain name.</li>
+     * <li>OFF: disables DNSSEC for the domain name.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ON</p>
      */
     @NameInMap("Status")
     public String status;

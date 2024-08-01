@@ -6,14 +6,19 @@ import com.aliyun.tea.*;
 public class DeleteCustomLinesRequest extends TeaModel {
     /**
      * <p>The language.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The unique IDs of the custom lines that you want to delete. Separate the unique IDs with commas (,).</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234,1235</p>
      */
     @NameInMap("LineIds")
     public String lineIds;

@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class PreviewGtmRecoveryPlanResponseBody extends TeaModel {
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -24,18 +30,27 @@ public class PreviewGtmRecoveryPlanResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>853805EA-3D47-47D5-9A1A-A45C24313ABD</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned on all pages.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>15</p>
      */
     @NameInMap("TotalItems")
     public Integer totalItems;
 
     /**
      * <p>The total number of pages returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("TotalPages")
     public Integer totalPages;
@@ -102,6 +117,9 @@ public class PreviewGtmRecoveryPlanResponseBody extends TeaModel {
 
         /**
          * <p>The name of the switching policy for address pools.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>strategy-name-example-1</p>
          */
         @NameInMap("StrategyName")
         public String strategyName;
@@ -151,12 +169,18 @@ public class PreviewGtmRecoveryPlanResponseBody extends TeaModel {
     public static class PreviewGtmRecoveryPlanResponseBodyPreviewsPreview extends TeaModel {
         /**
          * <p>The ID of the GTM instance to which the previewed disaster recovery plan belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance-example</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The name of the GTM instance to which the previewed disaster recovery plan belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name-example</p>
          */
         @NameInMap("Name")
         public String name;
@@ -168,7 +192,10 @@ public class PreviewGtmRecoveryPlanResponseBody extends TeaModel {
         public PreviewGtmRecoveryPlanResponseBodyPreviewsPreviewSwitchInfos switchInfos;
 
         /**
-         * <p>The user\\"s domain name or domain name list.</p>
+         * <p>The user\&quot;s domain name or domain name list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30.yyy.com</p>
          */
         @NameInMap("UserDomainName")
         public String userDomainName;

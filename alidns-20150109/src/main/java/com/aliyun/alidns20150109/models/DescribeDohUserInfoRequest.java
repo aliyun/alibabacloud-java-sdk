@@ -6,22 +6,29 @@ import com.aliyun.tea.*;
 public class DescribeDohUserInfoRequest extends TeaModel {
     /**
      * <p>The end time for the query. Format: YYYY-MM-DD</p>
-     * <br>
      * <p>If you do not specify this parameter, the default value is the time when you perform the query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-07-04</p>
      */
     @NameInMap("EndDate")
     public String endDate;
 
     /**
      * <p>The language in which you want the values of some response parameters to be returned. These response parameters support multiple languages.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The start time for the query. Format: YYYY-MM-DD</p>
-     * <br>
-     * <p>You can query the user information of the last 90 days only. `Set the parameter to a value no earlier than 90 days from the current time`.</p>
+     * <p>You can query the user information of the last 90 days only. <code>Set the parameter to a value no earlier than 90 days from the current time</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-07-04</p>
      */
     @NameInMap("StartDate")
     public String startDate;

@@ -10,6 +10,10 @@ public class DescribeCloudGtmGlobalAlertResponseBody extends TeaModel {
     @NameInMap("AlertGroup")
     public DescribeCloudGtmGlobalAlertResponseBodyAlertGroup alertGroup;
 
+    /**
+     * <strong>example:</strong>
+     * <p>B57C121B-A45F-44D8-A9B2-13E5A5044195</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,15 +47,31 @@ public class DescribeCloudGtmGlobalAlertResponseBody extends TeaModel {
     }
 
     public static class DescribeCloudGtmGlobalAlertResponseBodyAlertConfigAlertConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("DingtalkNotice")
         public Boolean dingtalkNotice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("EmailNotice")
         public Boolean emailNotice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>addr_alert</p>
+         */
         @NameInMap("NoticeType")
         public String noticeType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("SmsNotice")
         public Boolean smsNotice;
 

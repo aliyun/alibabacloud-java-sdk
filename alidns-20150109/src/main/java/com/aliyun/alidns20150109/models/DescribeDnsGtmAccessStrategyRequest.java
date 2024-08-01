@@ -6,14 +6,19 @@ import com.aliyun.tea.*;
 public class DescribeDnsGtmAccessStrategyRequest extends TeaModel {
     /**
      * <p>The language to return some response parameters. Default value: en. Valid values: en, zh, and ja.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The ID of the access policy.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>strategyId1</p>
      */
     @NameInMap("StrategyId")
     public String strategyId;

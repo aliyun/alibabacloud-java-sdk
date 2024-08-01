@@ -6,41 +6,60 @@ import com.aliyun.tea.*;
 public class DescribeBatchResultDetailRequest extends TeaModel {
     /**
      * <p>The type of the batch operation. Valid values:</p>
-     * <br>
-     * <p>*   **DOMAIN_ADD**: adds domain names in batches.</p>
-     * <p>*   **DOMAIN_DEL**: deletes domain names in batches.</p>
-     * <p>*   **RR_ADD**: adds Domain Name System (DNS) records in batches.</p>
-     * <p>*   **RR_DEL**: deletes DNS records in batches.</p>
+     * <ul>
+     * <li><strong>DOMAIN_ADD</strong>: adds domain names in batches.</li>
+     * <li><strong>DOMAIN_DEL</strong>: deletes domain names in batches.</li>
+     * <li><strong>RR_ADD</strong>: adds Domain Name System (DNS) records in batches.</li>
+     * <li><strong>RR_DEL</strong>: deletes DNS records in batches.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>DOMAIN_ADD</p>
      */
     @NameInMap("BatchType")
     public String batchType;
 
     /**
      * <p>The language.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
-     * <p>The page number. Default value: **1**.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The execution result. If you do not specify this parameter, all results are returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
      * <p>The ID of the batch operation task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>83618818</p>
      */
     @NameInMap("TaskId")
     public Long taskId;

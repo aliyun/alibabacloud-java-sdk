@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class DescribeGtmMonitorConfigResponseBody extends TeaModel {
     /**
      * <p>The time when the health check configuration was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2017-12-28T13:08Z</p>
      */
     @NameInMap("CreateTime")
     public String createTime;
 
     /**
      * <p>The timestamp that indicates the time when the health check configuration was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1527690629357</p>
      */
     @NameInMap("CreateTimestamp")
     public Long createTimestamp;
 
     /**
      * <p>The maximum number of consecutive exceptions detected. If the number of consecutive exceptions detected reaches the maximum number, the application service is deemed abnormal.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("EvaluationCount")
     public Integer evaluationCount;
 
     /**
      * <p>The health check interval. Unit: seconds. The value is 60.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60</p>
      */
     @NameInMap("Interval")
     public Integer interval;
@@ -36,61 +48,82 @@ public class DescribeGtmMonitorConfigResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the health check configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234abc</p>
      */
     @NameInMap("MonitorConfigId")
     public String monitorConfigId;
 
     /**
      * <p>The extended information, that is, the parameters required for the protocol. Different protocols require different parameters:</p>
-     * <br>
      * <p>HTTP or HTTPS:</p>
-     * <br>
-     * <p>*   port: the port to check.</p>
-     * <p>*   failureRate: the failure rate.</p>
-     * <p>*   code: the status code threshold. If the returned status code is greater than the specified threshold, the application service is deemed abnormal. Valid values: 400 and 500.</p>
-     * <p>*   host: the host configuration.</p>
-     * <p>*   path: the health check URL.</p>
-     * <br>
+     * <ul>
+     * <li>port: the port to check.</li>
+     * <li>failureRate: the failure rate.</li>
+     * <li>code: the status code threshold. If the returned status code is greater than the specified threshold, the application service is deemed abnormal. Valid values: 400 and 500.</li>
+     * <li>host: the host configuration.</li>
+     * <li>path: the health check URL.</li>
+     * </ul>
      * <p>PING:</p>
-     * <br>
-     * <p>*   packetNum: the number of ping packets.</p>
-     * <p>*   packetLossRate: the loss rate of ping packets.</p>
-     * <p>*   failureRate: the failure rate.</p>
-     * <br>
+     * <ul>
+     * <li>packetNum: the number of ping packets.</li>
+     * <li>packetLossRate: the loss rate of ping packets.</li>
+     * <li>failureRate: the failure rate.</li>
+     * </ul>
      * <p>TCP:</p>
-     * <br>
-     * <p>*   port: the port to check.</p>
-     * <p>*   failureRate: the failure rate.</p>
+     * <ul>
+     * <li>port: the port to check.</li>
+     * <li>failureRate: the failure rate.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;code\&quot;:200,\&quot;path\&quot;:\&quot;\\index.htm\&quot;,\&quot;host\&quot;:\&quot;aliyun.com\&quot;}</p>
      */
     @NameInMap("MonitorExtendInfo")
     public String monitorExtendInfo;
 
     /**
      * <p>The protocol used for the health check.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>HTTP</p>
      */
     @NameInMap("ProtocolType")
     public String protocolType;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6856BCF6-11D6-4D7E-AC53-FD579933522B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The health check timeout period. Unit: milliseconds. Valid values: 2000, 3000, 5000, and 10000.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3000</p>
      */
     @NameInMap("Timeout")
     public Integer timeout;
 
     /**
      * <p>The time when the health check configuration was last updated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2017-12-28T13:08Z</p>
      */
     @NameInMap("UpdateTime")
     public String updateTime;
 
     /**
      * <p>The timestamp that indicates the time when the health check configuration was last updated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1527690629357</p>
      */
     @NameInMap("UpdateTimestamp")
     public Long updateTimestamp;
@@ -199,36 +232,54 @@ public class DescribeGtmMonitorConfigResponseBody extends TeaModel {
     public static class DescribeGtmMonitorConfigResponseBodyIspCityNodesIspCityNode extends TeaModel {
         /**
          * <p>The code of the city where the monitored node is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>503</p>
          */
         @NameInMap("CityCode")
         public String cityCode;
 
         /**
          * <p>The display name of the city where the monitored node is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Zhangjiakou</p>
          */
         @NameInMap("CityName")
         public String cityName;
 
         /**
          * <p>The code of the country where the monitored node is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>001</p>
          */
         @NameInMap("CountryCode")
         public String countryCode;
 
         /**
          * <p>The display name of the country where the monitored node is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>China</p>
          */
         @NameInMap("CountryName")
         public String countryName;
 
         /**
          * <p>The code of the Internet service provider (ISP) to which the monitored node belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>465</p>
          */
         @NameInMap("IspCode")
         public String ispCode;
 
         /**
          * <p>The display name of the ISP to which the monitored node belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alibaba</p>
          */
         @NameInMap("IspName")
         public String ispName;

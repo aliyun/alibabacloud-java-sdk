@@ -6,38 +6,49 @@ import com.aliyun.tea.*;
 public class DeleteSubDomainRecordsRequest extends TeaModel {
     /**
      * <p>The domain name.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
      * <p>The language type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The host record.</p>
-     * <br>
      * <p>For example, to resolve @.example.com, you must set RR to an at sign (@) instead of leaving it blank.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>www</p>
      */
     @NameInMap("RR")
     public String RR;
 
     /**
      * <p>The type of the DNS record. If you do not specify this parameter, all DNS record types corresponding to the subdomain name are returned.</p>
-     * <br>
-     * <p>DNS record types include **A, MX, CNAME, TXT, REDIRECT_URL, FORWORD_URL, NS, AAAA, and SRV**. The value is not case-sensitive.</p>
+     * <p>DNS record types include <strong>A, MX, CNAME, TXT, REDIRECT_URL, FORWORD_URL, NS, AAAA, and SRV</strong>. The value is not case-sensitive.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A</p>
      */
     @NameInMap("Type")
     public String type;
 
     /**
      * <p>The IP address of the client.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.0.2.0</p>
      */
     @NameInMap("UserClientIp")
     public String userClientIp;

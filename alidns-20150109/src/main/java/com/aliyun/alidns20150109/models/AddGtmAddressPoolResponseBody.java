@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class AddGtmAddressPoolResponseBody extends TeaModel {
     /**
      * <p>The ID of the address pool created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hraf3x</p>
      */
     @NameInMap("AddrPoolId")
     public String addrPoolId;
 
     /**
      * <p>The ID of the health check configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hraf14</p>
      */
     @NameInMap("MonitorConfigId")
     public String monitorConfigId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6856BCF6-11D6-4D7E-AC53-FD579933522B</p>
      */
     @NameInMap("RequestId")
     public String requestId;

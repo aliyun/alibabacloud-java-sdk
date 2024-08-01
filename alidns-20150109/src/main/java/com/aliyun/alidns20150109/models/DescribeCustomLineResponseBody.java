@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class DescribeCustomLineResponseBody extends TeaModel {
     /**
      * <p>The code of the custom line.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hra0yc-597</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The domain name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
      * <p>The ID of the custom line.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>597</p>
      */
     @NameInMap("Id")
     public Long id;
@@ -36,6 +45,9 @@ public class DescribeCustomLineResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B57C121B-A45F-44D8-A9B2-13E5A5044195</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -96,12 +108,18 @@ public class DescribeCustomLineResponseBody extends TeaModel {
     public static class DescribeCustomLineResponseBodyIpSegmentList extends TeaModel {
         /**
          * <p>The end IP address of the CIDR block.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11.1.1.3</p>
          */
         @NameInMap("EndIp")
         public String endIp;
 
         /**
          * <p>The start IP address of the CIDR block.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11.1.1.2</p>
          */
         @NameInMap("StartIp")
         public String startIp;

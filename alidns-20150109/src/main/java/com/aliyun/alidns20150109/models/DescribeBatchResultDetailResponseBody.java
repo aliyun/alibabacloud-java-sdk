@@ -12,24 +12,36 @@ public class DescribeBatchResultDetailResponseBody extends TeaModel {
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>75446CC1-FC9A-4595-8D96-089D73D7A63D</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -82,96 +94,144 @@ public class DescribeBatchResultDetailResponseBody extends TeaModel {
     public static class DescribeBatchResultDetailResponseBodyBatchResultDetailsBatchResultDetail extends TeaModel {
         /**
          * <p>The type of the batch operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DOMAIN_ADD</p>
          */
         @NameInMap("BatchType")
         public String batchType;
 
         /**
          * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         @NameInMap("Domain")
         public String domain;
 
         /**
          * <p>The line code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("Line")
         public String line;
 
         /**
          * <p>The new hostname.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo-batch-7</p>
          */
         @NameInMap("NewRr")
         public String newRr;
 
         /**
          * <p>The new record value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.0.2.254</p>
          */
         @NameInMap("NewValue")
         public String newValue;
 
         /**
          * <p>The time when the operation was performed. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-08-22 18:02:58</p>
          */
         @NameInMap("OperateDateStr")
         public String operateDateStr;
 
         /**
          * <p>The priority of the mail exchanger (MX) record.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("Priority")
         public String priority;
 
         /**
          * <p>The cause of the execution failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Task lock fail</p>
          */
         @NameInMap("Reason")
         public String reason;
 
         /**
          * <p>The ID of the DNS record.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456789</p>
          */
         @NameInMap("RecordId")
         public String recordId;
 
         /**
          * <p>The description of the DNS record.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>remark</p>
          */
         @NameInMap("Remark")
         public String remark;
 
         /**
          * <p>The hostname.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>www</p>
          */
         @NameInMap("Rr")
         public String rr;
 
         /**
          * <p>The status of the DNS record.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>stop</p>
          */
         @NameInMap("RrStatus")
         public String rrStatus;
 
         /**
-         * <p>The execution result of the batch operation. Valid values: **true**: The operation succeeded. **false**: The operation failed.</p>
+         * <p>The execution result of the batch operation. Valid values: <strong>true</strong>: The operation succeeded. <strong>false</strong>: The operation failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Status")
         public Boolean status;
 
         /**
          * <p>The time-to-live (TTL) of the DNS record.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>600</p>
          */
         @NameInMap("Ttl")
         public String ttl;
 
         /**
          * <p>The type of the DNS record.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The record value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.0.2.0</p>
          */
         @NameInMap("Value")
         public String value;

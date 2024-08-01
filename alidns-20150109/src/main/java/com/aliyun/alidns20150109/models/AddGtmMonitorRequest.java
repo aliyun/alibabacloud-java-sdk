@@ -6,31 +6,36 @@ import com.aliyun.tea.*;
 public class AddGtmMonitorRequest extends TeaModel {
     /**
      * <p>The ID of the address pool.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxxx</p>
      */
     @NameInMap("AddrPoolId")
     public String addrPoolId;
 
     /**
      * <p>The number of consecutive failures.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("EvaluationCount")
     public Integer evaluationCount;
 
     /**
      * <p>The health check interval. Unit: seconds. Set the value to 60.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60</p>
      */
     @NameInMap("Interval")
     public Integer interval;
 
     /**
      * <p>The nodes for monitoring.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("IspCityNode")
@@ -38,54 +43,64 @@ public class AddGtmMonitorRequest extends TeaModel {
 
     /**
      * <p>The language.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The extended information. The required parameters vary based on the health check protocol.</p>
-     * <br>
      * <p>HTTP or HTTPS</p>
-     * <br>
-     * <p>*   port: the port that you want to check</p>
-     * <p>*   failureRate: the failure rate</p>
-     * <p>*   code: the return code. The health check result is deemed abnormal if the returned value is greater than the specified value. Valid values: 400 and 500.</p>
-     * <p>*   host: the host settings</p>
-     * <p>*   path: the URL path</p>
-     * <br>
+     * <ul>
+     * <li>port: the port that you want to check</li>
+     * <li>failureRate: the failure rate</li>
+     * <li>code: the return code. The health check result is deemed abnormal if the returned value is greater than the specified value. Valid values: 400 and 500.</li>
+     * <li>host: the host settings</li>
+     * <li>path: the URL path</li>
+     * </ul>
      * <p>PING</p>
-     * <br>
-     * <p>*   packetNum: the number of ping packets</p>
-     * <p>*   packetLossRate: the packet loss rate</p>
-     * <p>*   failureRate: the failure rate</p>
-     * <br>
+     * <ul>
+     * <li>packetNum: the number of ping packets</li>
+     * <li>packetLossRate: the packet loss rate</li>
+     * <li>failureRate: the failure rate</li>
+     * </ul>
      * <p>TCP</p>
-     * <br>
-     * <p>*   port: the port that you want to check</p>
-     * <p>*   failureRate: the failure rate</p>
-     * <br>
+     * <ul>
+     * <li>port: the port that you want to check</li>
+     * <li>failureRate: the failure rate</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;code\&quot;:200,\&quot;path\&quot;:\&quot;/index.htm\&quot;,\&quot;host\&quot;:\&quot;aliyun.com\&quot;}</p>
      */
     @NameInMap("MonitorExtendInfo")
     public String monitorExtendInfo;
 
     /**
      * <p>The protocol used for the health check. Valid values:</p>
-     * <br>
-     * <p>*   HTTP</p>
-     * <p>*   HTTPS</p>
-     * <p>*   PING</p>
-     * <p>*   TCP</p>
-     * <br>
+     * <ul>
+     * <li>HTTP</li>
+     * <li>HTTPS</li>
+     * <li>PING</li>
+     * <li>TCP</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>HTTP</p>
      */
     @NameInMap("ProtocolType")
     public String protocolType;
 
     /**
      * <p>The health check timeout period. Unit: milliseconds. Valid values: 2000, 3000, 5000, and 10000.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3000</p>
      */
     @NameInMap("Timeout")
     public Integer timeout;
@@ -162,17 +177,23 @@ public class AddGtmMonitorRequest extends TeaModel {
     public static class AddGtmMonitorRequestIspCityNode extends TeaModel {
         /**
          * <p>The city code.</p>
-         * <br>
          * <p>Specify the parameter according to the value of CityCode returned by the DescribeGtmMonitorAvailableConfig operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>503</p>
          */
         @NameInMap("CityCode")
         public String cityCode;
 
         /**
          * <p>The Internet service provider (ISP) node. Specify the parameter according to the value of IspCode returned by the DescribeGtmMonitorAvailableConfig operation.</p>
-         * <br>
-         * <p>*   If the return value of GroupType for the DescribeGtmMonitorAvailableConfig operation is BGP or Overseas, IspCode is not required and is set to 465 by default.</p>
-         * <p>*   If the return value of GroupType for the DescribeGtmMonitorAvailableConfig operation is not BGP or Overseas, IspCode is required. When IspCode is specified, CityCode is required.</p>
+         * <ul>
+         * <li>If the return value of GroupType for the DescribeGtmMonitorAvailableConfig operation is BGP or Overseas, IspCode is not required and is set to 465 by default.</li>
+         * <li>If the return value of GroupType for the DescribeGtmMonitorAvailableConfig operation is not BGP or Overseas, IspCode is required. When IspCode is specified, CityCode is required.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>465</p>
          */
         @NameInMap("IspCode")
         public String ispCode;

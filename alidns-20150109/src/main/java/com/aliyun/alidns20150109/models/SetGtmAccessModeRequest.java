@@ -6,26 +6,34 @@ import com.aliyun.tea.*;
 public class SetGtmAccessModeRequest extends TeaModel {
     /**
      * <p>The target access policy of the GTM instance. Valid values:</p>
-     * <br>
-     * <p>*   **AUTO**: Automatic switch</p>
-     * <p>*   **DEFAULT**: Default address pool</p>
-     * <p>*   **FAILOVER**: Failover address pool</p>
-     * <br>
+     * <ul>
+     * <li><strong>AUTO</strong>: Automatic switch</li>
+     * <li><strong>DEFAULT</strong>: Default address pool</li>
+     * <li><strong>FAILOVER</strong>: Failover address pool</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AUTO</p>
      */
     @NameInMap("AccessMode")
     public String accessMode;
 
     /**
      * <p>The language used by the user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The ID of the access policy.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hra0hx</p>
      */
     @NameInMap("StrategyId")
     public String strategyId;

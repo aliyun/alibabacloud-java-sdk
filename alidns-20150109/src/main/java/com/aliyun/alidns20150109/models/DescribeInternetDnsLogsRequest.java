@@ -7,27 +7,59 @@ public class DescribeInternetDnsLogsRequest extends TeaModel {
     @NameInMap("AccountId")
     public Long accountId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>example.com</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1709196299999</p>
+     */
     @NameInMap("EndTimestamp")
     public Long endTimestamp;
 
+    /**
+     * <strong>example:</strong>
+     * <p>en</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AUTHORITY</p>
+     */
     @NameInMap("Module")
     public String module;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;sourceIp&quot;:&quot;59.82.XX.XX&quot;,&quot;queryType&quot;:&quot;A&quot;}</p>
+     */
     @NameInMap("QueryCondition")
     public String queryCondition;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1709192640000</p>
+     */
     @NameInMap("StartTimestamp")
     public Long startTimestamp;
 

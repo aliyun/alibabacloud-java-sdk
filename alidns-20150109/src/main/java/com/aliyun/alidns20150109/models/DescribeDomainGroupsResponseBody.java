@@ -11,25 +11,37 @@ public class DescribeDomainGroupsResponseBody extends TeaModel {
     public DescribeDomainGroupsResponseBodyDomainGroups domainGroups;
 
     /**
-     * <p>The page number. Pages start from page **1**. Default value: **1**.</p>
+     * <p>The page number. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: **1 to 100**. Default value: **20**.</p>
+     * <p>The number of entries per page. Valid values: <strong>1 to 100</strong>. Default value: <strong>20</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -82,21 +94,31 @@ public class DescribeDomainGroupsResponseBody extends TeaModel {
     public static class DescribeDomainGroupsResponseBodyDomainGroupsDomainGroup extends TeaModel {
         /**
          * <p>The number of domain name groups.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("DomainCount")
         public Long domainCount;
 
         /**
          * <p>The ID of the domain name group. Valid values:</p>
-         * <br>
-         * <p>*   defaultGroup: the default group</p>
-         * <p>*   If an empty string is returned, it indicates the group that contains all domain names.</p>
+         * <ul>
+         * <li>defaultGroup: the default group</li>
+         * <li>If an empty string is returned, it indicates the group that contains all domain names.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2223</p>
          */
         @NameInMap("GroupId")
         public String groupId;
 
         /**
          * <p>The name of the domain name group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyGroup</p>
          */
         @NameInMap("GroupName")
         public String groupName;

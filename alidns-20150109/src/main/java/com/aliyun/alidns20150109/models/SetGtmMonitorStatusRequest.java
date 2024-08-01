@@ -6,25 +6,33 @@ import com.aliyun.tea.*;
 public class SetGtmMonitorStatusRequest extends TeaModel {
     /**
      * <p>The language used by the user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The health check ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>abc1234</p>
      */
     @NameInMap("MonitorConfigId")
     public String monitorConfigId;
 
     /**
      * <p>Specifies whether health check is enabled for the address pool. Valid values:</p>
-     * <br>
-     * <p>*   **OPEN**: Enabled</p>
-     * <p>*   **CLOSE**: Disabled</p>
-     * <br>
+     * <ul>
+     * <li><strong>OPEN</strong>: Enabled</li>
+     * <li><strong>CLOSE</strong>: Disabled</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OPEN</p>
      */
     @NameInMap("Status")
     public String status;

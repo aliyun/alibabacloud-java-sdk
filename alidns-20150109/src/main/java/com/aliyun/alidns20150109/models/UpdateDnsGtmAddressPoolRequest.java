@@ -6,7 +6,6 @@ import com.aliyun.tea.*;
 public class UpdateDnsGtmAddressPoolRequest extends TeaModel {
     /**
      * <p>The address pools.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Addr")
@@ -14,31 +13,42 @@ public class UpdateDnsGtmAddressPoolRequest extends TeaModel {
 
     /**
      * <p>The ID of the address pool.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testpool1</p>
      */
     @NameInMap("AddrPoolId")
     public String addrPoolId;
 
     /**
      * <p>The language of the values of specific response parameters. Default value: en. Valid values: en, zh, and ja.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The load balancing policy of the address pool. Valid values:</p>
-     * <br>
-     * <p>*   ALL_RR: returns all addresses.</p>
-     * <p>*   RATIO: returns addresses by weight.</p>
-     * <br>
+     * <ul>
+     * <li>ALL_RR: returns all addresses.</li>
+     * <li>RATIO: returns addresses by weight.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>all_rr</p>
      */
     @NameInMap("LbaStrategy")
     public String lbaStrategy;
 
     /**
      * <p>The name of the address pool.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testpoolname</p>
      */
     @NameInMap("Name")
     public String name;
@@ -91,48 +101,65 @@ public class UpdateDnsGtmAddressPoolRequest extends TeaModel {
     public static class UpdateDnsGtmAddressPoolRequestAddr extends TeaModel {
         /**
          * <p>The address in the address pool.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.1.1.1</p>
          */
         @NameInMap("Addr")
         public String addr;
 
         /**
          * <p>The source region of the address, in JSON-formatted string.</p>
-         * <br>
-         * <p>*   LineCode: the line code of the source region of the address. The LineCode field is deprecated, and the lineCodes field is used as a substitute.</p>
-         * <br>
-         * <p>*   LineCodes: the line code list of the source regions of addresses.</p>
-         * <br>
-         * <p>*   lineCodeRectifyType: the rectification type of the line codes. Default value: AUTO. Valid values:</p>
-         * <br>
-         * <p>    *   NO_NEED: no need for rectification.</p>
-         * <p>    *   RECTIFIED: rectified.</p>
-         * <p>    *   AUTO: automatic rectification.</p>
+         * <ul>
+         * <li><p>LineCode: the line code of the source region of the address. The LineCode field is deprecated, and the lineCodes field is used as a substitute.</p>
+         * </li>
+         * <li><p>LineCodes: the line code list of the source regions of addresses.</p>
+         * </li>
+         * <li><p>lineCodeRectifyType: the rectification type of the line codes. Default value: AUTO. Valid values:</p>
+         * <ul>
+         * <li>NO_NEED: no need for rectification.</li>
+         * <li>RECTIFIED: rectified.</li>
+         * <li>AUTO: automatic rectification.</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Linecode:default,lineCodes:[&quot;default&quot;],lineCodeRectifyType:&quot;NO_NEED&quot;</p>
          */
         @NameInMap("AttributeInfo")
         public String attributeInfo;
 
         /**
          * <p>The weight of the address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("LbaWeight")
         public Integer lbaWeight;
 
         /**
          * <p>The response mode: Valid values:</p>
-         * <br>
-         * <p>*   SMART: smart return.</p>
-         * <p>*   ONLINE: always online.</p>
-         * <p>*   OFFLINE: always offline.</p>
-         * <br>
+         * <ul>
+         * <li>SMART: smart return.</li>
+         * <li>ONLINE: always online.</li>
+         * <li>OFFLINE: always offline.</li>
+         * </ul>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>online</p>
          */
         @NameInMap("Mode")
         public String mode;
 
         /**
          * <p>The additional information about the address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Remark")
         public String remark;

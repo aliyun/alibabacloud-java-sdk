@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ListTagResourcesRequest extends TeaModel {
     /**
      * <p>The language in which you want some response parameters to be returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The token that determines the start point of the query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4698691</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -24,8 +30,10 @@ public class ListTagResourcesRequest extends TeaModel {
 
     /**
      * <p>The resource type.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DOMAIN</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
@@ -84,12 +92,18 @@ public class ListTagResourcesRequest extends TeaModel {
     public static class ListTagResourcesRequestTag extends TeaModel {
         /**
          * <p>The key of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abcd</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abcd</p>
          */
         @NameInMap("Value")
         public String value;

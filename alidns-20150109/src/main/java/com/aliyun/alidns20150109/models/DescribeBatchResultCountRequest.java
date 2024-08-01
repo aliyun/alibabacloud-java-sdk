@@ -6,25 +6,34 @@ import com.aliyun.tea.*;
 public class DescribeBatchResultCountRequest extends TeaModel {
     /**
      * <p>The type of the batch operation. Valid values:</p>
-     * <br>
-     * <p>*   **DOMAIN_ADD**: adds domain names in batches.</p>
-     * <p>*   **DOMAIN_DEL**: deletes domain names in batches.</p>
-     * <p>*   **RR_ADD**: adds DNS records in batches.</p>
-     * <p>*   **RR_DEL**: deletes DNS records in batches.</p>
+     * <ul>
+     * <li><strong>DOMAIN_ADD</strong>: adds domain names in batches.</li>
+     * <li><strong>DOMAIN_DEL</strong>: deletes domain names in batches.</li>
+     * <li><strong>RR_ADD</strong>: adds DNS records in batches.</li>
+     * <li><strong>RR_DEL</strong>: deletes DNS records in batches.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>DOMAIN_ADD</p>
      */
     @NameInMap("BatchType")
     public String batchType;
 
     /**
      * <p>The language type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The ID of the task.</p>
-     * <br>
      * <p>If you specify TaskId, the execution result of the specified task is returned. If you do not specify TaskId, the execution result of the last task is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("TaskId")
     public Long taskId;

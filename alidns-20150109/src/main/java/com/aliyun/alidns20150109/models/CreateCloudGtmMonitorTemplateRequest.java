@@ -4,35 +4,59 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class CreateCloudGtmMonitorTemplateRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>en-US</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1ae05db4-10e7-11ef-b126-00163e24**22</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("EvaluationCount")
     public Integer evaluationCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{\&quot;code\&quot;:200,\&quot;path\&quot;:\&quot;\\index.htm\&quot;,\&quot;host\&quot;:\&quot;aliyun.com\&quot;}</p>
+     */
     @NameInMap("ExtendInfo")
     public String extendInfo;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("FailureRate")
     public Integer failureRate;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60</p>
      */
     @NameInMap("Interval")
     public Integer interval;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>IPv4</p>
      */
     @NameInMap("IpVersion")
     public String ipVersion;
@@ -45,18 +69,27 @@ public class CreateCloudGtmMonitorTemplateRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Ping-IPv4</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ping</p>
      */
     @NameInMap("Protocol")
     public String protocol;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5000</p>
      */
     @NameInMap("Timeout")
     public Integer timeout;
@@ -155,9 +188,17 @@ public class CreateCloudGtmMonitorTemplateRequest extends TeaModel {
     }
 
     public static class CreateCloudGtmMonitorTemplateRequestIspCityNodes extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>503</p>
+         */
         @NameInMap("CityCode")
         public String cityCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>465</p>
+         */
         @NameInMap("IspCode")
         public String ispCode;
 

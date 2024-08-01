@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class SetDNSSLBStatusResponseBody extends TeaModel {
     /**
      * <p>Indicates whether weighted round-robin is enabled for the subdomain name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Open")
     public Boolean open;
 
     /**
      * <p>The number of A records that are matched.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8</p>
      */
     @NameInMap("RecordCount")
     public Long recordCount;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
      */
     @NameInMap("RequestId")
     public String requestId;

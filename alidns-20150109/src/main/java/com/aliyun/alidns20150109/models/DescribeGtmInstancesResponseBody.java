@@ -12,30 +12,45 @@ public class DescribeGtmInstancesResponseBody extends TeaModel {
 
     /**
      * <p>The returned page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>193B0163-7F93-42DF-AB05-ACEEB7D22707</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalItems")
     public Integer totalItems;
 
     /**
      * <p>The total number of pages returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalPages")
     public Integer totalPages;
@@ -96,102 +111,152 @@ public class DescribeGtmInstancesResponseBody extends TeaModel {
     public static class DescribeGtmInstancesResponseBodyGtmInstancesGtmInstance extends TeaModel {
         /**
          * <p>The number of access policies.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("AccessStrategyNum")
         public Integer accessStrategyNum;
 
         /**
          * <p>The number of address pools.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("AddressPoolNum")
         public Integer addressPoolNum;
 
         /**
          * <p>The name of the alert group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[\\&quot;R\&amp;D group\\&quot;]</p>
          */
         @NameInMap("AlertGroup")
         public String alertGroup;
 
         /**
          * <p>The CNAME domain name that is used to access the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance1.14.com</p>
          */
         @NameInMap("Cname")
         public String cname;
 
         /**
          * <p>The CNAME domain name used to access the instance. Valid values:</p>
-         * <br>
-         * <p>*   **SYSTEM_ASSIGN**: A CNAME domain name assigned by the system is used.</p>
-         * <p>*   **CUSTOM**: A custom CNAME domain name is used.</p>
+         * <ul>
+         * <li><strong>SYSTEM_ASSIGN</strong>: A CNAME domain name assigned by the system is used.</li>
+         * <li><strong>CUSTOM</strong>: A custom CNAME domain name is used.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM_ASSIGN</p>
          */
         @NameInMap("CnameMode")
         public String cnameMode;
 
         /**
          * <p>The time when the instance was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-06-06T11:34Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The UNIX timestamp that indicates when the instance was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1528284856000</p>
          */
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
         /**
          * <p>The time when the instance expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-06-06T11:34Z</p>
          */
         @NameInMap("ExpireTime")
         public String expireTime;
 
         /**
          * <p>The UNIX timestamp that indicates when the instance expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1528284856000</p>
          */
         @NameInMap("ExpireTimestamp")
         public Long expireTimestamp;
 
         /**
          * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance1</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
          * <p>The load balancing policy that is used. Valid values:</p>
-         * <br>
-         * <p>*   **ALL_RR**: Load balancing</p>
-         * <p>*   **RATIO**: Weighted round-robin</p>
+         * <ul>
+         * <li><strong>ALL_RR</strong>: Load balancing</li>
+         * <li><strong>RATIO</strong>: Weighted round-robin</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>RATIO</p>
          */
         @NameInMap("LbaStrategy")
         public String lbaStrategy;
 
         /**
          * <p>The ID of the resource group to which the instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm2q2jqpjh***</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>The global time to live (TTL).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         @NameInMap("Ttl")
         public Integer ttl;
 
         /**
          * <p>The domain name of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com">www.example.com</a></p>
          */
         @NameInMap("UserDomainName")
         public String userDomainName;
 
         /**
          * <p>The version code of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>biaozhun</p>
          */
         @NameInMap("VersionCode")
         public String versionCode;

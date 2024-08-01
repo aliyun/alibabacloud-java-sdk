@@ -6,39 +6,52 @@ import com.aliyun.tea.*;
 public class DescribeDomainStatisticsRequest extends TeaModel {
     /**
      * <p>The domain name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
      * <p>The type of the domain name. Valid values:</p>
-     * <br>
-     * <p>*   PUBLIC (default): hosted public domain name</p>
-     * <p>*   CACHE: cached public domain name</p>
+     * <ul>
+     * <li>PUBLIC (default): hosted public domain name</li>
+     * <li>CACHE: cached public domain name</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>PUBLIC CACHE</p>
      */
     @NameInMap("DomainType")
     public String domainType;
 
     /**
-     * <p>The end date of the query. Specify the end date in the **YYYY-MM-DD** format.</p>
-     * <br>
+     * <p>The end date of the query. Specify the end date in the <strong>YYYY-MM-DD</strong> format.</p>
      * <p>The default value is the day when you query the data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-07-04</p>
      */
     @NameInMap("EndDate")
     public String endDate;
 
     /**
      * <p>The language.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
-     * <p>The start date of the query. Specify the start date in the **YYYY-MM-DD** format.</p>
-     * <br>
+     * <p>The start date of the query. Specify the start date in the <strong>YYYY-MM-DD</strong> format.</p>
      * <p>You can only query the DNS records within the last 90 days.``</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-07-04</p>
      */
     @NameInMap("StartDate")
     public String startDate;

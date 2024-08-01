@@ -6,7 +6,6 @@ import com.aliyun.tea.*;
 public class OperateBatchDomainRequest extends TeaModel {
     /**
      * <p>The DNS records. You can submit up to 1000 DNS records.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DomainRecordInfo")
@@ -14,19 +13,25 @@ public class OperateBatchDomainRequest extends TeaModel {
 
     /**
      * <p>The language.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The type of the batch operation. Valid values:</p>
-     * <br>
-     * <p>*   **DOMAIN_ADD**: adds domain names in batches.</p>
-     * <p>*   **DOMAIN_DEL**: deletes domain names in batches.</p>
-     * <p>*   **RR_ADD**: adds DNS records in batches.</p>
-     * <p>*   **RR_DEL**: deletes DNS records in batches. This operation deletes the DNS records with the specified hostname or record value. If you do not specify the Rr and Value parameters, this operation deletes the DNS records that are added for the specified domain names.</p>
-     * <br>
+     * <ul>
+     * <li><strong>DOMAIN_ADD</strong>: adds domain names in batches.</li>
+     * <li><strong>DOMAIN_DEL</strong>: deletes domain names in batches.</li>
+     * <li><strong>RR_ADD</strong>: adds DNS records in batches.</li>
+     * <li><strong>RR_DEL</strong>: deletes DNS records in batches. This operation deletes the DNS records with the specified hostname or record value. If you do not specify the Rr and Value parameters, this operation deletes the DNS records that are added for the specified domain names.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RR_ADD</p>
      */
     @NameInMap("Type")
     public String type;
@@ -63,63 +68,98 @@ public class OperateBatchDomainRequest extends TeaModel {
     public static class OperateBatchDomainRequestDomainRecordInfo extends TeaModel {
         /**
          * <p>The domain name.</p>
-         * <br>
-         * <p>>  You can submit 1 to 1,000 domain names. Due to the limit on the length of HTTP request headers, excessive domain names are ignored. Do not enter more than 1,000 domain names.</p>
-         * <br>
+         * <blockquote>
+         * <p> You can submit 1 to 1,000 domain names. Due to the limit on the length of HTTP request headers, excessive domain names are ignored. Do not enter more than 1,000 domain names.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         @NameInMap("Domain")
         public String domain;
 
         /**
          * <p>The resolution line. Default value: default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("Line")
         public String line;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mail</p>
+         */
         @NameInMap("NewRr")
         public String newRr;
 
+        /**
+         * <strong>example:</strong>
+         * <p>AAAA</p>
+         */
         @NameInMap("NewType")
         public String newType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>114.92.XX.XX</p>
+         */
         @NameInMap("NewValue")
         public String newValue;
 
         /**
          * <p>The priority of the mail exchanger (MX) record.</p>
-         * <br>
          * <p>This parameter is required if the type of the DNS record is MX. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("Priority")
         public Integer priority;
 
         /**
          * <p>The hostname.</p>
-         * <br>
-         * <p>>  This parameter is required if you set Type to **RR_ADD** or **RR_DEL**.</p>
+         * <blockquote>
+         * <p> This parameter is required if you set Type to <strong>RR_ADD</strong> or <strong>RR_DEL</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>zhaohui</p>
          */
         @NameInMap("Rr")
         public String rr;
 
         /**
-         * <p>The time-to-live (TTL) value of the cached DNS record. Unit: seconds. Default value: ***600***.</p>
+         * <p>The time-to-live (TTL) value of the cached DNS record. Unit: seconds. Default value: <em><strong>600</strong></em>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>600</p>
          */
         @NameInMap("Ttl")
         public Integer ttl;
 
         /**
          * <p>The type of the DNS record. Valid values: A, AAAA, TXT, MX, and CNAME.</p>
-         * <br>
-         * <p>>  This parameter is required if you set Type to **RR_ADD** or **RR_DEL**.</p>
+         * <blockquote>
+         * <p> This parameter is required if you set Type to <strong>RR_ADD</strong> or <strong>RR_DEL</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>MX</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The record value.</p>
-         * <br>
-         * <p>>  This parameter is required if you set Type to **RR_ADD** or **RR_DEL**.</p>
+         * <blockquote>
+         * <p> This parameter is required if you set Type to <strong>RR_ADD</strong> or <strong>RR_DEL</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>fd87da3c4528844d45af39200155a905</p>
          */
         @NameInMap("Value")
         public String value;

@@ -12,30 +12,45 @@ public class DescribeDnsGtmInstanceAddressPoolsResponseBody extends TeaModel {
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6856BCF6-11D6-4D7E-AC53-FD579933522B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned on all pages.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalItems")
     public Integer totalItems;
 
     /**
      * <p>The total number of pages returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalPages")
     public Integer totalPages;
@@ -96,77 +111,113 @@ public class DescribeDnsGtmInstanceAddressPoolsResponseBody extends TeaModel {
     public static class DescribeDnsGtmInstanceAddressPoolsResponseBodyAddrPoolsAddrPool extends TeaModel {
         /**
          * <p>The number of addresses in the address pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("AddrCount")
         public Integer addrCount;
 
         /**
          * <p>The ID of the address pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pool-1</p>
          */
         @NameInMap("AddrPoolId")
         public String addrPoolId;
 
         /**
          * <p>The time when the address pool was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-12-28T13:08Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The timestamp that indicates when the address pool was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1527690629357</p>
          */
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
         /**
          * <p>The load balancing policy of the address pool. Valid values:</p>
-         * <br>
-         * <p>*   ALL_RR: returns all addresses.</p>
-         * <p>*   RATIO: returns addresses by weight.</p>
+         * <ul>
+         * <li>ALL_RR: returns all addresses.</li>
+         * <li>RATIO: returns addresses by weight.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>all_rr</p>
          */
         @NameInMap("LbaStrategy")
         public String lbaStrategy;
 
         /**
          * <p>The ID of the health check task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc123</p>
          */
         @NameInMap("MonitorConfigId")
         public String monitorConfigId;
 
         /**
          * <p>Indicates whether health checks are configured. Valid values:</p>
-         * <br>
-         * <p>*   OPEN: enabled</p>
-         * <p>*   CLOSE: disabled</p>
-         * <p>*   UNCONFIGURED: not configured</p>
+         * <ul>
+         * <li>OPEN: enabled</li>
+         * <li>CLOSE: disabled</li>
+         * <li>UNCONFIGURED: not configured</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>open</p>
          */
         @NameInMap("MonitorStatus")
         public String monitorStatus;
 
         /**
          * <p>The name of the address pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testpool</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The type of the address pool. Valid values:</p>
-         * <br>
-         * <p>*   IPV4: IPv4 address</p>
-         * <p>*   IPV6: IPv6 address</p>
-         * <p>*   DOMAIN: domain name</p>
+         * <ul>
+         * <li>IPV4: IPv4 address</li>
+         * <li>IPV6: IPv6 address</li>
+         * <li>DOMAIN: domain name</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ipv4</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The time when the address pool was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-12-28T13:08Z</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;
 
         /**
          * <p>The timestamp that indicates when the address pool was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1527690629357</p>
          */
         @NameInMap("UpdateTimestamp")
         public Long updateTimestamp;

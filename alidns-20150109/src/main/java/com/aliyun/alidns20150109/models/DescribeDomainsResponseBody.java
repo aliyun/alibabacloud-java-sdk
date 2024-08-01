@@ -12,24 +12,36 @@ public class DescribeDomainsResponseBody extends TeaModel {
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>68386699-8B9E-4D5B-BC4C-75A28F6C2A00</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of domain names.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -156,18 +168,27 @@ public class DescribeDomainsResponseBody extends TeaModel {
     public static class DescribeDomainsResponseBodyDomainsDomain extends TeaModel {
         /**
          * <p>Indicates whether the domain name was registered in Alibaba Cloud.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("AliDomain")
         public Boolean aliDomain;
 
         /**
          * <p>The time when the domain name was added.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-01-30T05:25Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The time when the domain name was added. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1660546144000</p>
          */
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
@@ -180,6 +201,9 @@ public class DescribeDomainsResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00efd71a-770e-4255-b54e-6fe5659baffe</p>
          */
         @NameInMap("DomainId")
         public String domainId;
@@ -189,72 +213,108 @@ public class DescribeDomainsResponseBody extends TeaModel {
 
         /**
          * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc.com</p>
          */
         @NameInMap("DomainName")
         public String domainName;
 
         /**
          * <p>The ID of the domain name group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2223</p>
          */
         @NameInMap("GroupId")
         public String groupId;
 
         /**
          * <p>The name of the domain name group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mygroup</p>
          */
         @NameInMap("GroupName")
         public String groupName;
 
         /**
          * <p>The time when the Alibaba Cloud DNS instance expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-03-14T16:00Z</p>
          */
         @NameInMap("InstanceEndTime")
         public String instanceEndTime;
 
         /**
          * <p>Indicates whether the Alibaba Cloud DNS instance expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("InstanceExpired")
         public Boolean instanceExpired;
 
         /**
          * <p>The ID of the Alibaba Cloud DNS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-7bg</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The Punycode for the domain name. This parameter is returned only for Chinese domain names.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc.com</p>
          */
         @NameInMap("PunyCode")
         public String punyCode;
 
         /**
          * <p>The number of Domain Name System (DNS) records added for the domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("RecordCount")
         public Long recordCount;
 
         /**
          * <p>The email address of the registrant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:test@example.com">test@example.com</a></p>
          */
         @NameInMap("RegistrantEmail")
         public String registrantEmail;
 
         /**
          * <p>The description of the domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>remark</p>
          */
         @NameInMap("Remark")
         public String remark;
 
         /**
          * <p>The ID of the resource group to which the domain name belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acf</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>Indicates whether the domain name was added to favorites.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Starmark")
         public Boolean starmark;
@@ -267,6 +327,9 @@ public class DescribeDomainsResponseBody extends TeaModel {
 
         /**
          * <p>The edition code of Alibaba Cloud DNS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>version_enterprise_basic</p>
          */
         @NameInMap("VersionCode")
         public String versionCode;

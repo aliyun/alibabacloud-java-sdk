@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class DescribeGtmRecoveryPlansRequest extends TeaModel {
     /**
      * <p>The keyword for the query. Fuzzy match is supported by disaster recovery plan name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Keyword")
     public String keyword;
 
     /**
      * <p>The language in which you want the values of some response parameters to be returned. These response parameters support multiple languages.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
-     * <p>The page number to return. The page number starts from **1**. Default value: **1**.</p>
+     * <p>The page number to return. The page number starts from <strong>1</strong>. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return per page. Maximum value: **100**. Default value: **20**.</p>
+     * <p>The number of entries to return per page. Maximum value: <strong>100</strong>. Default value: <strong>20</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

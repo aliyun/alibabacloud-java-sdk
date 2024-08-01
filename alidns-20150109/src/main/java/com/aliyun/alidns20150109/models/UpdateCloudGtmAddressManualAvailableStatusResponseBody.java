@@ -4,9 +4,17 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class UpdateCloudGtmAddressManualAvailableStatusResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0F32959D-417B-4D66-8463-68606605E3E2</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

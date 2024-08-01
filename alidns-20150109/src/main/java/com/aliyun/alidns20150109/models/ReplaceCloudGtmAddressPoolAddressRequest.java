@@ -4,15 +4,27 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class ReplaceCloudGtmAddressPoolAddressRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>en-US</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>pool-89618921167339**24</p>
+     */
     @NameInMap("AddressPoolId")
     public String addressPoolId;
 
     @NameInMap("Addresses")
     public java.util.List<ReplaceCloudGtmAddressPoolAddressRequestAddresses> addresses;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1ae05db4-10e7-11ef-b126-00163e24**22</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -54,15 +66,27 @@ public class ReplaceCloudGtmAddressPoolAddressRequest extends TeaModel {
     }
 
     public static class ReplaceCloudGtmAddressPoolAddressRequestAddresses extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>addr-89636516932803**44</p>
+         */
         @NameInMap("AddressId")
         public String addressId;
 
         @NameInMap("RequestSource")
         public java.util.List<String> requestSource;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("SerialNumber")
         public Integer serialNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("WeightValue")
         public Integer weightValue;
 

@@ -12,30 +12,45 @@ public class DescribeCustomLinesResponseBody extends TeaModel {
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B57C121B-A45F-44D8-A9B2-13E5A5044195</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of custom lines.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalItems")
     public Integer totalItems;
 
     /**
      * <p>The total number of returned pages.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalPages")
     public Integer totalPages;
@@ -96,18 +111,27 @@ public class DescribeCustomLinesResponseBody extends TeaModel {
     public static class DescribeCustomLinesResponseBodyCustomLines extends TeaModel {
         /**
          * <p>The code of the custom line.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hra0yc-597</p>
          */
         @NameInMap("Code")
         public String code;
 
         /**
          * <p>The unique ID of the custom line.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>597</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The name of the custom line.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hra0yd-597</p>
          */
         @NameInMap("Name")
         public String name;

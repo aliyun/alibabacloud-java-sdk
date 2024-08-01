@@ -12,20 +12,28 @@ public class UpdateGtmAddressPoolRequest extends TeaModel {
 
     /**
      * <p>The ID of the address pool that you want to modify.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234abc</p>
      */
     @NameInMap("AddrPoolId")
     public String addrPoolId;
 
     /**
      * <p>The language used by the user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The minimum number of available addresses in the address pool.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("MinAvailableAddrNum")
     public Integer minAvailableAddrNum;
@@ -38,8 +46,10 @@ public class UpdateGtmAddressPoolRequest extends TeaModel {
 
     /**
      * <p>The type of the address pool that you want to modify.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>IP</p>
      */
     @NameInMap("Type")
     public String type;
@@ -100,22 +110,32 @@ public class UpdateGtmAddressPoolRequest extends TeaModel {
     public static class UpdateGtmAddressPoolRequestAddr extends TeaModel {
         /**
          * <p>The weight of the address pool that you want to modify.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("LbaWeight")
         public Integer lbaWeight;
 
         /**
          * <p>The mode of the address pool that you want to modify.</p>
-         * <br>
-         * <p>*   **SMART**: Intelligent return</p>
-         * <p>*   **ONLINE**: Always online</p>
-         * <p>*   **OFFLINE**: Always offline</p>
+         * <ul>
+         * <li><strong>SMART</strong>: Intelligent return</li>
+         * <li><strong>ONLINE</strong>: Always online</li>
+         * <li><strong>OFFLINE</strong>: Always offline</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SMART</p>
          */
         @NameInMap("Mode")
         public String mode;
 
         /**
          * <p>The addresses in the address pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.1.1.1</p>
          */
         @NameInMap("Value")
         public String value;

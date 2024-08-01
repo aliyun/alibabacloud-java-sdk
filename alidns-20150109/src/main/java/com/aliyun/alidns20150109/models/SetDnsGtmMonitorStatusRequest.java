@@ -6,25 +6,33 @@ import com.aliyun.tea.*;
 public class SetDnsGtmMonitorStatusRequest extends TeaModel {
     /**
      * <p>The language of the values for specific response parameters. Default value: en. Valid values: en, zh, and ja.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The ID of the health check task.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MonitorConfigId1</p>
      */
     @NameInMap("MonitorConfigId")
     public String monitorConfigId;
 
     /**
      * <p>Specifies whether to enable the health check feature. Valid values:</p>
-     * <br>
-     * <p>*   OPEN: enables the health check feature.</p>
-     * <p>*   CLOSE: disables the health check feature.</p>
-     * <br>
+     * <ul>
+     * <li>OPEN: enables the health check feature.</li>
+     * <li>CLOSE: disables the health check feature.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>open</p>
      */
     @NameInMap("Status")
     public String status;

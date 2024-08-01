@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeGtmMonitorAvailableConfigRequest extends TeaModel {
     /**
      * <p>The language of the values of specific response parameters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("Lang")
     public String lang;

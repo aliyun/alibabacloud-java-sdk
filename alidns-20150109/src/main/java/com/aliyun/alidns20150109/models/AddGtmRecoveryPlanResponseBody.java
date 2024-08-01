@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class AddGtmRecoveryPlanResponseBody extends TeaModel {
     /**
      * <p>The ID of the disaster recovery plan created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("RecoveryPlanId")
     public String recoveryPlanId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6856BCF6-11D6-4D7E-AC53-FD579933522B</p>
      */
     @NameInMap("RequestId")
     public String requestId;

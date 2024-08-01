@@ -5,25 +5,37 @@ import com.aliyun.tea.*;
 
 public class DescribeDnsCacheDomainsRequest extends TeaModel {
     /**
-     * <p>The keyword for searches in "%KeyWord%" mode. The value is not case-sensitive.</p>
+     * <p>The keyword for searches in &quot;%KeyWord%&quot; mode. The value is not case-sensitive.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a\&quot;\&quot;</p>
      */
     @NameInMap("Keyword")
     public String keyword;
 
     /**
      * <p>The language.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: **1 to 100**. Default value: **20**.</p>
+     * <p>The number of entries per page. Valid values: <strong>1 to 100</strong>. Default value: <strong>20</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;

@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class DescribeDomainGroupsRequest extends TeaModel {
     /**
      * <p>The keyword of the domain name group for searches in %KeyWord% mode. The value is not case-sensitive.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Group</p>
      */
     @NameInMap("KeyWord")
     public String keyWord;
 
     /**
      * <p>The language.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
-     * <p>The page number. Pages start from page **1**. Default value: **1**.</p>
+     * <p>The page number. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: **1 to 100**. Default value: **20**.</p>
+     * <p>The number of entries per page. Valid values: <strong>1 to 100</strong>. Default value: <strong>20</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;

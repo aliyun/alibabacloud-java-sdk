@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeGtmInstanceSystemCnameResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6856BCF6-11D6-4D7E-AC53-FD579933522B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The CNAME record assigned by the system.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gtm-cn-mp91004xxxx.gtm-a2b4.com</p>
      */
     @NameInMap("SystemCname")
     public String systemCname;

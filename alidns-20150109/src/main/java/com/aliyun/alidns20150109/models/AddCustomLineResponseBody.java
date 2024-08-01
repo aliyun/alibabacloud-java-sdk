@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class AddCustomLineResponseBody extends TeaModel {
     /**
      * <p>The code of the custom line.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hra0yc-597</p>
      */
     @NameInMap("LineCode")
     public String lineCode;
 
     /**
      * <p>The unique ID of the custom line.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>597</p>
      */
     @NameInMap("LineId")
     public Long lineId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B57C121B-A45F-44D8-A9B2-13E5A5044195</p>
      */
     @NameInMap("RequestId")
     public String requestId;

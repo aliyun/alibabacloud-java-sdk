@@ -6,53 +6,78 @@ import com.aliyun.tea.*;
 public class DescribeBatchResultCountResponseBody extends TeaModel {
     /**
      * <p>The type of the batch operation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DOMAIN_ADD</p>
      */
     @NameInMap("BatchType")
     public String batchType;
 
     /**
      * <p>The total number of domain names or DNS records that failed to be processed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("FailedCount")
     public Integer failedCount;
 
     /**
      * <p>The cause of the execution failure.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>failed_reason</p>
      */
     @NameInMap("Reason")
     public String reason;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>75446CC1-FC9A-4595-8D96-089D73D7A63D</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The status of the task. Valid values:</p>
-     * <br>
-     * <p>*   **-1**: No task for importing domain names or DNS records is submitted.</p>
-     * <p>*   **0**: The task is being processed.</p>
-     * <p>*   **1**: The task is completed.</p>
-     * <p>*   **2**: The task failed.</p>
+     * <ul>
+     * <li><strong>-1</strong>: No task for importing domain names or DNS records is submitted.</li>
+     * <li><strong>0</strong>: The task is being processed.</li>
+     * <li><strong>1</strong>: The task is completed.</li>
+     * <li><strong>2</strong>: The task failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("Status")
     public Integer status;
 
     /**
      * <p>The total number of successfully processed domain names or DNS records.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("SuccessCount")
     public Integer successCount;
 
     /**
      * <p>The ID of the last task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("TaskId")
     public Long taskId;
 
     /**
      * <p>The total number of DNS records that were processed in batches.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;

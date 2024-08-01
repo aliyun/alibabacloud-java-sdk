@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeGtmRecoveryPlanAvailableConfigRequest extends TeaModel {
     /**
      * <p>The language used by the user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("Lang")
     public String lang;

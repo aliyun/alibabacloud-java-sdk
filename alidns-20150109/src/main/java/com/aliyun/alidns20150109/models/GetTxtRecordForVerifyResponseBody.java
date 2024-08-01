@@ -6,28 +6,45 @@ import com.aliyun.tea.*;
 public class GetTxtRecordForVerifyResponseBody extends TeaModel {
     /**
      * <p>The domain name.</p>
-     * <br>
-     * <p>>  If you do not specify this parameter, it is not returned.</p>
+     * <blockquote>
+     * <p> If you do not specify this parameter, it is not returned.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
+    @NameInMap("ParentDomainName")
+    public String parentDomainName;
+
     /**
      * <p>The hostname.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>aliyunRetrieval</p>
      */
     @NameInMap("RR")
     public String RR;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9CC0D642-49D4-48DE-A1A5-9F218652E4A7</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The record value.</p>
-     * <br>
-     * <p>>  The validity period is three days.</p>
+     * <blockquote>
+     * <p> The validity period is three days.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>c99419e6997f41daaa3e*****</p>
      */
     @NameInMap("Value")
     public String value;
@@ -43,6 +60,14 @@ public class GetTxtRecordForVerifyResponseBody extends TeaModel {
     }
     public String getDomainName() {
         return this.domainName;
+    }
+
+    public GetTxtRecordForVerifyResponseBody setParentDomainName(String parentDomainName) {
+        this.parentDomainName = parentDomainName;
+        return this;
+    }
+    public String getParentDomainName() {
+        return this.parentDomainName;
     }
 
     public GetTxtRecordForVerifyResponseBody setRR(String RR) {

@@ -4,51 +4,111 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeCloudGtmAddressPoolResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>round_robin</p>
+     */
     @NameInMap("AddressLbStrategy")
     public String addressLbStrategy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>pool-89564674533755**96</p>
+     */
     @NameInMap("AddressPoolId")
     public String addressPoolId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AddressPool-1</p>
+     */
     @NameInMap("AddressPoolName")
     public String addressPoolName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>IPv4</p>
+     */
     @NameInMap("AddressPoolType")
     public String addressPoolType;
 
     @NameInMap("Addresses")
     public DescribeCloudGtmAddressPoolResponseBodyAddresses addresses;
 
+    /**
+     * <strong>example:</strong>
+     * <p>available</p>
+     */
     @NameInMap("AvailableStatus")
     public String availableStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2024-03-15T01:46Z</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1527690629357</p>
+     */
     @NameInMap("CreateTimestamp")
     public Long createTimestamp;
 
+    /**
+     * <strong>example:</strong>
+     * <p>enable</p>
+     */
     @NameInMap("EnableStatus")
     public String enableStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>any_ok</p>
+     */
     @NameInMap("HealthJudgement")
     public String healthJudgement;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ok</p>
+     */
     @NameInMap("HealthStatus")
     public String healthStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("Remark")
     public String remark;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6856BCF6-11D6-4D7E-AC53-FD579933522B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>preemptive</p>
+     */
     @NameInMap("SequenceLbStrategyMode")
     public String sequenceLbStrategyMode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2024-03-15T01:46Z</p>
+     */
     @NameInMap("UpdateTime")
     public String updateTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1527690629357</p>
+     */
     @NameInMap("UpdateTimestamp")
     public Long updateTimestamp;
 
@@ -186,12 +246,24 @@ public class DescribeCloudGtmAddressPoolResponseBody extends TeaModel {
     }
 
     public static class DescribeCloudGtmAddressPoolResponseBodyAddressesAddressHealthTasksHealthTask extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>80</p>
+         */
         @NameInMap("Port")
         public Integer port;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mtp-89518052425100**80</p>
+         */
         @NameInMap("TemplateId")
         public String templateId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>IPv4-Ping</p>
+         */
         @NameInMap("TemplateName")
         public String templateName;
 
@@ -265,66 +337,138 @@ public class DescribeCloudGtmAddressPoolResponseBody extends TeaModel {
     }
 
     public static class DescribeCloudGtmAddressPoolResponseBodyAddressesAddress extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>223.5.XX.XX</p>
+         */
         @NameInMap("Address")
         public String address;
 
+        /**
+         * <strong>example:</strong>
+         * <p>addr-89518218114368**92</p>
+         */
         @NameInMap("AddressId")
         public String addressId;
 
         @NameInMap("AttributeInfo")
         public String attributeInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>auto</p>
+         */
         @NameInMap("AvailableMode")
         public String availableMode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>available</p>
+         */
         @NameInMap("AvailableStatus")
         public String availableStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-03-15T01:46Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1527690629357</p>
+         */
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>enable</p>
+         */
         @NameInMap("EnableStatus")
         public String enableStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>any_ok</p>
+         */
         @NameInMap("HealthJudgement")
         public String healthJudgement;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ok</p>
+         */
         @NameInMap("HealthStatus")
         public String healthStatus;
 
         @NameInMap("HealthTasks")
         public DescribeCloudGtmAddressPoolResponseBodyAddressesAddressHealthTasks healthTasks;
 
+        /**
+         * <strong>example:</strong>
+         * <p>available</p>
+         */
         @NameInMap("ManualAvailableStatus")
         public String manualAvailableStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Address-1</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Remark")
         public String remark;
 
         @NameInMap("RequestSource")
         public DescribeCloudGtmAddressPoolResponseBodyAddressesAddressRequestSource requestSource;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("SeqNonPreemptiveSchedule")
         public Boolean seqNonPreemptiveSchedule;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("SerialNumber")
         public Integer serialNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>IPv4</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-03-15T01:46Z</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1527690629357</p>
+         */
         @NameInMap("UpdateTimestamp")
         public Long updateTimestamp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("WeightValue")
         public Integer weightValue;
 

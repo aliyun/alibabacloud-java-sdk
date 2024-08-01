@@ -7,18 +7,38 @@ public class ListCloudGtmAlertLogsResponseBody extends TeaModel {
     @NameInMap("Logs")
     public ListCloudGtmAlertLogsResponseBodyLogs logs;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>15</p>
+     */
     @NameInMap("TotalItems")
     public Integer totalItems;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalPages")
     public Integer totalPages;
 
@@ -76,15 +96,27 @@ public class ListCloudGtmAlertLogsResponseBody extends TeaModel {
     }
 
     public static class ListCloudGtmAlertLogsResponseBodyLogsLog extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>ALERT</p>
+         */
         @NameInMap("ActionType")
         public String actionType;
 
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <strong>example:</strong>
+         * <p>GTM_ADDRESS</p>
+         */
         @NameInMap("EntityType")
         public String entityType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1711328826977</p>
+         */
         @NameInMap("Timestamp")
         public Long timestamp;
 

@@ -7,18 +7,38 @@ public class SearchCloudGtmInstancesResponseBody extends TeaModel {
     @NameInMap("Instances")
     public SearchCloudGtmInstancesResponseBodyInstances instances;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6856BCF6-11D6-4D7E-AC53-FD579933522B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("TotalItems")
     public Integer totalItems;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalPages")
     public Integer totalPages;
 
@@ -76,51 +96,115 @@ public class SearchCloudGtmInstancesResponseBody extends TeaModel {
     }
 
     public static class SearchCloudGtmInstancesResponseBodyInstancesInstance extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>dns_gtm_public_cn</p>
+         */
         @NameInMap("CommodityCode")
         public String commodityCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-03-15T01:46Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1710467214858</p>
+         */
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-09-05T16:00Z</p>
+         */
         @NameInMap("ExpireTime")
         public Long expireTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1725552000000</p>
+         */
         @NameInMap("ExpireTimestamp")
         public String expireTimestamp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>gtm-cn-wwo3a3hbz**</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("MonitorTaskQuota")
         public Integer monitorTaskQuota;
 
+        /**
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("MonthlyEmailUsed")
         public Integer monthlyEmailUsed;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2000</p>
+         */
         @NameInMap("MonthlySmsQuota")
         public Integer monthlySmsQuota;
 
+        /**
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("MonthlySmsUsed")
         public Integer monthlySmsUsed;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("MonthlyWebhookUsed")
         public Integer monthlyWebhookUsed;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com">www.example.com</a></p>
+         */
         @NameInMap("ScheduleDomainName")
         public String scheduleDomainName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-03-15T01:46Z</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1710467214858</p>
+         */
         @NameInMap("UpdateTimestamp")
         public Long updateTimestamp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ultimate</p>
+         */
         @NameInMap("VersionCode")
         public String versionCode;
 

@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class DescribeDohDomainStatisticsSummaryResponseBody extends TeaModel {
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0F32959D-417B-4D66-8463-68606605E3E2</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -30,12 +39,18 @@ public class DescribeDohDomainStatisticsSummaryResponseBody extends TeaModel {
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>300</p>
      */
     @NameInMap("TotalItems")
     public Integer totalItems;
 
     /**
      * <p>The total number of pages returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("TotalPages")
     public Integer totalPages;
@@ -96,54 +111,81 @@ public class DescribeDohDomainStatisticsSummaryResponseBody extends TeaModel {
     public static class DescribeDohDomainStatisticsSummaryResponseBodyStatistics extends TeaModel {
         /**
          * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         @NameInMap("DomainName")
         public String domainName;
 
         /**
          * <p>The number of HTTP requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3141592653</p>
          */
         @NameInMap("HttpCount")
         public Long httpCount;
 
         /**
          * <p>The number of HTTPS requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3141592653</p>
          */
         @NameInMap("HttpsCount")
         public Long httpsCount;
 
         /**
          * <p>The number of IP addresses.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("IpCount")
         public Long ipCount;
 
         /**
          * <p>The total number of requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14141592653</p>
          */
         @NameInMap("TotalCount")
         public Long totalCount;
 
         /**
          * <p>The number of IPv4-based HTTP requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3141592653</p>
          */
         @NameInMap("V4HttpCount")
         public Long v4HttpCount;
 
         /**
          * <p>The number of IPv4-based HTTPS requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3141592653</p>
          */
         @NameInMap("V4HttpsCount")
         public Long v4HttpsCount;
 
         /**
          * <p>The number of IPv6-based HTTP requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3141592653</p>
          */
         @NameInMap("V6HttpCount")
         public Long v6HttpCount;
 
         /**
          * <p>The number of IPv6-based HTTPS requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3141592653</p>
          */
         @NameInMap("V6HttpsCount")
         public Long v6HttpsCount;

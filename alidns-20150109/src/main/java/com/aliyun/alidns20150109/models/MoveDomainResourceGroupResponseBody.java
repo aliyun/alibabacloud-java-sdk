@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class MoveDomainResourceGroupResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C6F1D541-E7A6-447A-A2B5-9F7A20B2A8FB</p>
      */
     @NameInMap("RequestId")
     public String requestId;

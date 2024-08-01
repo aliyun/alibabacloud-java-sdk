@@ -6,113 +6,158 @@ import com.aliyun.tea.*;
 public class DescribeDomainRecordsRequest extends TeaModel {
     /**
      * <p>The order in which you want to sort the returned DNS records. Valid values: DESC and ASC. Default value: DESC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DESC</p>
      */
     @NameInMap("Direction")
     public String direction;
 
     /**
      * <p>The domain name.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
      * <p>The ID of the domain name group.</p>
-     * <br>
-     * <p>*   If you do not specify GroupId, all domain names are queried.</p>
-     * <p>*   If you set GroupId to 0, no value is returned.</p>
-     * <p>*   If you set GroupId to 1, the domain names in the default group are queried.</p>
-     * <p>*   If you set GroupId to -2, all domain names are queried.</p>
-     * <p>*   You can also specify GroupId based on the actual group ID.</p>
+     * <ul>
+     * <li>If you do not specify GroupId, all domain names are queried.</li>
+     * <li>If you set GroupId to 0, no value is returned.</li>
+     * <li>If you set GroupId to 1, the domain names in the default group are queried.</li>
+     * <li>If you set GroupId to -2, all domain names are queried.</li>
+     * <li>You can also specify GroupId based on the actual group ID.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>2223</p>
      */
     @NameInMap("GroupId")
     public Long groupId;
 
     /**
      * <p>The keyword.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("KeyWord")
     public String keyWord;
 
     /**
      * <p>The language.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
-     * <p>The resolution line. Default value: **default**.</p>
-     * <br>
+     * <p>The resolution line. Default value: <strong>default</strong>.</p>
      * <p>For more information, see</p>
-     * <br>
-     * <p>[DNS lines](https://www.alibabacloud.com/help/zh/doc-detail/29807.htm).</p>
+     * <p><a href="https://www.alibabacloud.com/help/zh/doc-detail/29807.htm">DNS lines</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn_mobile_anhui</p>
      */
     @NameInMap("Line")
     public String line;
 
     /**
      * <p>The method that is used to sort the returned DNS records. By default, the DNS records are sorted in reverse chronological order based on the time when they were added.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
      */
     @NameInMap("OrderBy")
     public String orderBy;
 
     /**
-     * <p>The page number. Pages start from page **1**. Default value: **1**.</p>
+     * <p>The page number. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: **1 to 500**. Default value: **20**.</p>
+     * <p>The number of entries per page. Valid values: <strong>1 to 500</strong>. Default value: <strong>20</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
      * <p>The hostname keyword based on which the system queries DNS records. The system queries DNS records based on the value of this parameter in fuzzy match mode. The value is not case-sensitive.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>www</p>
      */
     @NameInMap("RRKeyWord")
     public String RRKeyWord;
 
     /**
-     * <p>The search mode. Valid values: **LIKE, EXACT, and ADVANCED**.</p>
-     * <br>
-     * <p>*   If you set SearchMode to LIKE or EXACT, specify KeyWord. In this case, RRKeyWord, TypeKeyWord, ValueKeyWord, Type, Line, and Status are invalid.</p>
-     * <br>
-     * <p>*   If you set SearchMode to ADVANCED, specify RRKeyWord, TypeKeyWord, ValueKeyWord, Type, Line, and Status.</p>
-     * <br>
-     * <p>*   If you do not specify SearchMode, the system determines the search mode based on the following rules:</p>
-     * <br>
-     * <p>    *   If KeyWord is specified, the system uses the LIKE mode.</p>
-     * <p>    *   If KeyWord is not specified, the system queries DNS records based on values of RRKeyWord and ValueKeyWord in fuzzy match mode, and based on the values of TypeKeyWord, Type, Line, and Status in exact match mode.</p>
+     * <p>The search mode. Valid values: <strong>LIKE, EXACT, and ADVANCED</strong>.</p>
+     * <ul>
+     * <li><p>If you set SearchMode to LIKE or EXACT, specify KeyWord. In this case, RRKeyWord, TypeKeyWord, ValueKeyWord, Type, Line, and Status are invalid.</p>
+     * </li>
+     * <li><p>If you set SearchMode to ADVANCED, specify RRKeyWord, TypeKeyWord, ValueKeyWord, Type, Line, and Status.</p>
+     * </li>
+     * <li><p>If you do not specify SearchMode, the system determines the search mode based on the following rules:</p>
+     * <ul>
+     * <li>If KeyWord is specified, the system uses the LIKE mode.</li>
+     * <li>If KeyWord is not specified, the system queries DNS records based on values of RRKeyWord and ValueKeyWord in fuzzy match mode, and based on the values of TypeKeyWord, Type, Line, and Status in exact match mode.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>LIKE</p>
      */
     @NameInMap("SearchMode")
     public String searchMode;
 
     /**
-     * <p>The status of the DNS records to query. Valid values: **Enable and Disable**.</p>
+     * <p>The status of the DNS records to query. Valid values: <strong>Enable and Disable</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Enable</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
      * <p>The type of the DNS records to query. For more information, see</p>
-     * <br>
-     * <p>[DNS record types](https://www.alibabacloud.com/help/zh/doc-detail/29805.htm).</p>
+     * <p><a href="https://www.alibabacloud.com/help/zh/doc-detail/29805.htm">DNS record types</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A</p>
      */
     @NameInMap("Type")
     public String type;
 
     /**
      * <p>The type keyword based on which the system queries DNS records. The system queries DNS records based on the value of this parameter in exact match mode. The value is not case-sensitive.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MX</p>
      */
     @NameInMap("TypeKeyWord")
     public String typeKeyWord;
 
     /**
      * <p>The record value keyword based on which the system queries DNS records. The system queries DNS records based on the value of this parameter in fuzzy match mode. The value is not case-sensitive.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>com</p>
      */
     @NameInMap("ValueKeyWord")
     public String valueKeyWord;

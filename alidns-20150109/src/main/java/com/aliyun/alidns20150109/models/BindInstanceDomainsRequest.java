@@ -6,24 +6,32 @@ import com.aliyun.tea.*;
 public class BindInstanceDomainsRequest extends TeaModel {
     /**
      * <p>The domain names.</p>
-     * <br>
-     * <p>>  Separate multiple domain names with commas (,). Up to 100 domain names can be entered.</p>
-     * <br>
+     * <blockquote>
+     * <p> Separate multiple domain names with commas (,). Up to 100 domain names can be entered.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com,example.net</p>
      */
     @NameInMap("DomainNames")
     public String domainNames;
 
     /**
      * <p>The instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sdfasdf</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The language.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("Lang")
     public String lang;

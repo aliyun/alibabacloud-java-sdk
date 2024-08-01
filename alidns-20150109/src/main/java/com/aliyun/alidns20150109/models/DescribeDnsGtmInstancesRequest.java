@@ -6,30 +6,45 @@ import com.aliyun.tea.*;
 public class DescribeDnsGtmInstancesRequest extends TeaModel {
     /**
      * <p>The keyword that you use for query. Fuzzy search by instance ID or instance name is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>instance1</p>
      */
     @NameInMap("Keyword")
     public String keyword;
 
     /**
      * <p>The language to return some response parameters. Default value: en. Valid values: en, zh, and ja.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The number of the page to return.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the resource group where you want to query instances.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-testgroupid</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
