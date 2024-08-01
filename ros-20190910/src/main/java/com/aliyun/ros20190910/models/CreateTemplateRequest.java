@@ -55,6 +55,9 @@ public class CreateTemplateRequest extends TeaModel {
     @NameInMap("TemplateURL")
     public String templateURL;
 
+    @NameInMap("ValidationOptions")
+    public java.util.List<String> validationOptions;
+
     public static CreateTemplateRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateTemplateRequest self = new CreateTemplateRequest();
         return TeaModel.build(map, self);
@@ -106,6 +109,14 @@ public class CreateTemplateRequest extends TeaModel {
     }
     public String getTemplateURL() {
         return this.templateURL;
+    }
+
+    public CreateTemplateRequest setValidationOptions(java.util.List<String> validationOptions) {
+        this.validationOptions = validationOptions;
+        return this;
+    }
+    public java.util.List<String> getValidationOptions() {
+        return this.validationOptions;
     }
 
     public static class CreateTemplateRequestTags extends TeaModel {
