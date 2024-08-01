@@ -99,6 +99,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("CloudDisks", request.cloudDisks);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.credentialConfig)) {
+            body.put("CredentialConfig", request.credentialConfig);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.datasets)) {
             body.put("Datasets", request.datasets);
         }
@@ -1390,8 +1394,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("CloudDisks", request.cloudDisks);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.credentialConfig)) {
+            body.put("CredentialConfig", request.credentialConfig);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.datasets)) {
             body.put("Datasets", request.datasets);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.disassociateCredential)) {
+            body.put("DisassociateCredential", request.disassociateCredential);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.disassociateDatasets)) {
