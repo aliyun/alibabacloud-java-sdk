@@ -4008,6 +4008,52 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询外部出行人</p>
+     * 
+     * @param headers ExternalUserQueryHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ExternalUserQueryResponse
+     */
+    public ExternalUserQueryResponse externalUserQueryWithOptions(String externalUserId, ExternalUserQueryHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsBtripCorpToken)) {
+            realHeaders.put("x-acs-btrip-corp-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsBtripCorpToken));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ExternalUserQuery"),
+            new TeaPair("version", "2022-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/user/v1/externalUsers/" + com.aliyun.openapiutil.Client.getEncodeParam(externalUserId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ExternalUserQueryResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询外部出行人</p>
+     * @return ExternalUserQueryResponse
+     */
+    public ExternalUserQueryResponse externalUserQuery(String externalUserId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        ExternalUserQueryHeaders headers = new ExternalUserQueryHeaders();
+        return this.externalUserQueryWithOptions(externalUserId, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>修改外部出行人与证件信息</p>
      * 
      * @param tmpReq ExternalUserUpdateRequest

@@ -153,6 +153,9 @@ public class ApplyInvoiceTaskRequest extends TeaModel {
         @NameInMap("vehicle_invoice_fee")
         public String vehicleInvoiceFee;
 
+        @NameInMap("vehicle_normal_invoice_fee")
+        public String vehicleNormalInvoiceFee;
+
         public static ApplyInvoiceTaskRequestInvoiceTaskList build(java.util.Map<String, ?> map) throws Exception {
             ApplyInvoiceTaskRequestInvoiceTaskList self = new ApplyInvoiceTaskRequestInvoiceTaskList();
             return TeaModel.build(map, self);
@@ -332,6 +335,14 @@ public class ApplyInvoiceTaskRequest extends TeaModel {
         }
         public String getVehicleInvoiceFee() {
             return this.vehicleInvoiceFee;
+        }
+
+        public ApplyInvoiceTaskRequestInvoiceTaskList setVehicleNormalInvoiceFee(String vehicleNormalInvoiceFee) {
+            this.vehicleNormalInvoiceFee = vehicleNormalInvoiceFee;
+            return this;
+        }
+        public String getVehicleNormalInvoiceFee() {
+            return this.vehicleNormalInvoiceFee;
         }
 
     }

@@ -232,6 +232,9 @@ public class ApplyListQueryResponseBody extends TeaModel {
         @NameInMap("depart_id")
         public String departId;
 
+        @NameInMap("external_user_id")
+        public String externalUserId;
+
         @NameInMap("invoice_name")
         public String invoiceName;
 
@@ -277,6 +280,14 @@ public class ApplyListQueryResponseBody extends TeaModel {
         }
         public String getDepartId() {
             return this.departId;
+        }
+
+        public ApplyListQueryResponseBodyModuleListExternalTravelerList setExternalUserId(String externalUserId) {
+            this.externalUserId = externalUserId;
+            return this;
+        }
+        public String getExternalUserId() {
+            return this.externalUserId;
         }
 
         public ApplyListQueryResponseBodyModuleListExternalTravelerList setInvoiceName(String invoiceName) {

@@ -796,6 +796,9 @@ public class ApplyAddRequest extends TeaModel {
         @NameInMap("cost_center_id")
         public Long costCenterId;
 
+        @NameInMap("external_user_id")
+        public String externalUserId;
+
         @NameInMap("invoice_id")
         public Long invoiceId;
 
@@ -845,6 +848,14 @@ public class ApplyAddRequest extends TeaModel {
         }
         public Long getCostCenterId() {
             return this.costCenterId;
+        }
+
+        public ApplyAddRequestExternalTravelerList setExternalUserId(String externalUserId) {
+            this.externalUserId = externalUserId;
+            return this;
+        }
+        public String getExternalUserId() {
+            return this.externalUserId;
         }
 
         public ApplyAddRequestExternalTravelerList setInvoiceId(Long invoiceId) {

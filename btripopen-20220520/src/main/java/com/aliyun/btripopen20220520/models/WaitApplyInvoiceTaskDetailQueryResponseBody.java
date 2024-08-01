@@ -206,6 +206,9 @@ public class WaitApplyInvoiceTaskDetailQueryResponseBody extends TeaModel {
         @NameInMap("vehicle_invoice_fee")
         public String vehicleInvoiceFee;
 
+        @NameInMap("vehicle_normal_invoice_fee")
+        public String vehicleNormalInvoiceFee;
+
         public static WaitApplyInvoiceTaskDetailQueryResponseBodyModule build(java.util.Map<String, ?> map) throws Exception {
             WaitApplyInvoiceTaskDetailQueryResponseBodyModule self = new WaitApplyInvoiceTaskDetailQueryResponseBodyModule();
             return TeaModel.build(map, self);
@@ -385,6 +388,14 @@ public class WaitApplyInvoiceTaskDetailQueryResponseBody extends TeaModel {
         }
         public String getVehicleInvoiceFee() {
             return this.vehicleInvoiceFee;
+        }
+
+        public WaitApplyInvoiceTaskDetailQueryResponseBodyModule setVehicleNormalInvoiceFee(String vehicleNormalInvoiceFee) {
+            this.vehicleNormalInvoiceFee = vehicleNormalInvoiceFee;
+            return this;
+        }
+        public String getVehicleNormalInvoiceFee() {
+            return this.vehicleNormalInvoiceFee;
         }
 
     }

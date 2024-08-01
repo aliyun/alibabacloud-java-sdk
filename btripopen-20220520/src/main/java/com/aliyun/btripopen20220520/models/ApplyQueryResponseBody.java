@@ -336,6 +336,9 @@ public class ApplyQueryResponseBody extends TeaModel {
         @NameInMap("economy_discount")
         public Integer economyDiscount;
 
+        @NameInMap("external_user_id")
+        public String externalUserId;
+
         /**
          * <strong>example:</strong>
          * <p>1</p>
@@ -462,6 +465,14 @@ public class ApplyQueryResponseBody extends TeaModel {
         }
         public Integer getEconomyDiscount() {
             return this.economyDiscount;
+        }
+
+        public ApplyQueryResponseBodyModuleExternalTravelerList setExternalUserId(String externalUserId) {
+            this.externalUserId = externalUserId;
+            return this;
+        }
+        public String getExternalUserId() {
+            return this.externalUserId;
         }
 
         public ApplyQueryResponseBodyModuleExternalTravelerList setFirstDiscount(Integer firstDiscount) {
