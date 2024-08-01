@@ -7,37 +7,37 @@ public class DescribeAccountAttributesRequest extends TeaModel {
     /**
      * <p>The type of resource quota N. Valid values of N: 1 to 8. Valid values:</p>
      * <ul>
-     * <li><p>instance-network-type: available network types</p>
+     * <li><p>instance-network-type: the available network types.</p>
      * </li>
-     * <li><p>max-security-groups: the maximum number of security groups</p>
+     * <li><p>max-security-groups: the maximum number of security groups.</p>
      * </li>
-     * <li><p>max-elastic-network-interfaces: the maximum number of ENIs</p>
+     * <li><p>max-elastic-network-interfaces: the maximum number of ENIs.</p>
      * </li>
-     * <li><p>max-postpaid-instance-vcpu-count: the maximum number of vCPUs for pay-as-you-go instances</p>
+     * <li><p>max-postpaid-instance-vcpu-count: the maximum number of vCPUs for pay-as-you-go instances.</p>
      * </li>
-     * <li><p>max-spot-instance-vcpu-count: the maximum number of vCPUs for preemptible instances</p>
+     * <li><p>max-spot-instance-vcpu-count: the maximum number of vCPUs for preemptible instances.</p>
      * </li>
-     * <li><p>used-postpaid-instance-vcpu-count: the number of vCPUs that have been allocated to pay-as-you-go instances</p>
+     * <li><p>used-postpaid-instance-vcpu-count: the number of vCPUs that have been allocated to pay-as-you-go instances.</p>
      * </li>
-     * <li><p>used-spot-instance-vcpu-count: the number of vCPUs that have been allocated to preemptible instances</p>
+     * <li><p>used-spot-instance-vcpu-count: the number of vCPUs that have been allocated to preemptible instances.</p>
      * </li>
-     * <li><p>max-postpaid-yundisk-capacity: the maximum capacity of pay-as-you-go data disks(This value is deprecated)</p>
+     * <li><p>max-postpaid-yundisk-capacity: the maximum capacity of pay-as-you-go data disks. (The value is deprecated.)</p>
      * </li>
-     * <li><p>used-postpaid-yundisk-capacity: the capacity of pay-as-you-go disks that have been created(This value is deprecated)</p>
+     * <li><p>used-postpaid-yundisk-capacity: the capacity of pay-as-you-go data disks that have been created. (The value is deprecated.)</p>
      * </li>
-     * <li><p>max-dedicated-hosts: the maximum number of dedicated hosts</p>
+     * <li><p>max-dedicated-hosts: the maximum number of dedicated hosts.</p>
      * </li>
-     * <li><p>supported-postpaid-instance-types: the instance types of pay-as-you-go I/O optimized instances</p>
+     * <li><p>supported-postpaid-instance-types: the instance types of pay-as-you-go I/O optimized instances.</p>
      * </li>
-     * <li><p>max-axt-command-count: the maximum number of Cloud Assistant commands</p>
+     * <li><p>max-axt-command-count: the maximum number of Cloud Assistant commands.</p>
      * </li>
-     * <li><p>max-axt-invocation-daily: the maximum number of Cloud Assistant command executions per day</p>
+     * <li><p>max-axt-invocation-daily: the maximum number of Cloud Assistant command executions per day.</p>
      * </li>
-     * <li><p>real-name-authentication: whether the account has passed the real-name verification</p>
+     * <li><p>real-name-authentication: whether the account has completed the real-name verification.</p>
      * <p>**</p>
-     * <p><strong>Note</strong>You must pass the real-name verification before you create an ECS instance in the Chinese mainland regions.</p>
+     * <p><strong>Note</strong> To create an ECS instance in a region in the Chinese mainland, you must complete the real-name verification.</p>
      * </li>
-     * <li><p>max-cloud-assistant-activation-count: the maximum number of activation codes that can be created to use to register managed instances</p>
+     * <li><p>max-cloud-assistant-activation-count: the maximum number of activation codes that can be created to use to register managed instances.</p>
      * </li>
      * </ul>
      * <p>This parameter is empty by default.</p>

@@ -121,7 +121,7 @@ public class ModifySecurityGroupRuleRequest extends TeaModel {
 
     /**
      * <p>The priority of the security group rule. Valid values: 1 to 100.</p>
-     * <p>Default value: 1</p>
+     * <p>Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

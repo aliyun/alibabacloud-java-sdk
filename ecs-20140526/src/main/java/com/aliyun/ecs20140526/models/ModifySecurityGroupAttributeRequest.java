@@ -14,19 +14,9 @@ public class ModifySecurityGroupAttributeRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
-    /**
-     * <strong>example:</strong>
-     * <p><a href="mailto:ECSforCloud@Alibaba.com">ECSforCloud@Alibaba.com</a></p>
-     */
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
-    /**
-     * <p>RAM用户的虚拟账号ID。</p>
-     * 
-     * <strong>example:</strong>
-     * <p>155780923770</p>
-     */
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -40,21 +30,9 @@ public class ModifySecurityGroupAttributeRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    /**
-     * <p>资源主账号的账号名称。</p>
-     * 
-     * <strong>example:</strong>
-     * <p>ECSforCloud</p>
-     */
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
-    /**
-     * <p>资源主账号的ID，亦即UID。</p>
-     * 
-     * <strong>example:</strong>
-     * <p>155780923770</p>
-     */
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
@@ -69,8 +47,8 @@ public class ModifySecurityGroupAttributeRequest extends TeaModel {
     public String securityGroupId;
 
     /**
-     * <p>The new name of the security group. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
-     * <p>By default, this parameter is left empty.</p>
+     * <p>The new name of the security group. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. The name can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
+     * <p>This parameter is empty by default.</p>
      * 
      * <strong>example:</strong>
      * <p>SecurityGroupTestName</p>

@@ -191,6 +191,9 @@ public class RunCommandShrinkRequest extends TeaModel {
     @NameInMap("KeepCommand")
     public Boolean keepCommand;
 
+    @NameInMap("Launcher")
+    public String launcher;
+
     /**
      * <p>The name of the command. The name supports all character sets and can be up to 128 characters in length.</p>
      * 
@@ -463,6 +466,14 @@ public class RunCommandShrinkRequest extends TeaModel {
     }
     public Boolean getKeepCommand() {
         return this.keepCommand;
+    }
+
+    public RunCommandShrinkRequest setLauncher(String launcher) {
+        this.launcher = launcher;
+        return this;
+    }
+    public String getLauncher() {
+        return this.launcher;
     }
 
     public RunCommandShrinkRequest setName(String name) {

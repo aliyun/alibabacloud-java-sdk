@@ -27,7 +27,7 @@ public class DescribeSecurityGroupReferencesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of security group N. Valid values of N: 1 to 10.</p>
+     * <p>The IDs of N security groups that you want to query. Valid values of N: 1 to 10.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

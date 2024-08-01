@@ -699,6 +699,9 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         @NameInMap("InvokeStatus")
         public String invokeStatus;
 
+        @NameInMap("Launcher")
+        public String launcher;
+
         /**
          * <p>The custom parameters in the command.</p>
          * 
@@ -886,6 +889,14 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         }
         public String getInvokeStatus() {
             return this.invokeStatus;
+        }
+
+        public DescribeInvocationsResponseBodyInvocationsInvocation setLauncher(String launcher) {
+            this.launcher = launcher;
+            return this;
+        }
+        public String getLauncher() {
+            return this.launcher;
         }
 
         public DescribeInvocationsResponseBodyInvocationsInvocation setParameters(String parameters) {

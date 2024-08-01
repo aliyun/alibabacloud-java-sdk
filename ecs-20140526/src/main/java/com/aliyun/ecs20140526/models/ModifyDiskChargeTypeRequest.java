@@ -8,7 +8,7 @@ public class ModifyDiskChargeTypeRequest extends TeaModel {
      * <p>Specifies whether to automatically complete the payment. Valid values:</p>
      * <ul>
      * <li>true (default): The payment is automatically completed. Maintain sufficient balance in your account. Otherwise, your order becomes invalid and must be canceled.</li>
-     * <li>false: An order is generated but no payment is made. If your account balance is insufficient, you can set AutoPay to false to generate an unpaid order. Then, you can go to the <a href="https://usercenter2-intl.aliyun.com/order/list">Orders page</a> in the Expenses and Costs console and pay for the order.</li>
+     * <li>false: An order is generated but no payment is made. If your account balance is insufficient, you can set AutoPay to false to generate an unpaid order. Then, log on to the <strong>Expenses and Costs console</strong>, go to the <a href="https://usercenter2-intl.aliyun.com/order/list">Orders page</a>, and pay for the order.</li>
      * </ul>
      * 
      * <strong>example:</strong>

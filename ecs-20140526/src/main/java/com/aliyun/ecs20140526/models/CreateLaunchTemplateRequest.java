@@ -443,7 +443,7 @@ public class CreateLaunchTemplateRequest extends TeaModel {
     public String spotStrategy;
 
     /**
-     * <p>The tags of the launch template.</p>
+     * <p>The tags to add to the instance, disks, and primary ENI.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateLaunchTemplateRequestTag> tag;
@@ -1617,7 +1617,7 @@ public class CreateLaunchTemplateRequest extends TeaModel {
 
     public static class CreateLaunchTemplateRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N to add to the instance, EBS device, and ENI. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 64 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The key of tag N to add to the instance, disks, and primary ENI. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -1626,7 +1626,7 @@ public class CreateLaunchTemplateRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N to add to the instance, EBS device, and ENI. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length. It cannot start with acs: or aliyun or contain <a href="http://https://%E3%80%82">http:// or https://.</a></p>
+         * <p>The value of tag N to add to the instance, disks, and primary ENI. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>
@@ -1659,7 +1659,7 @@ public class CreateLaunchTemplateRequest extends TeaModel {
 
     public static class CreateLaunchTemplateRequestTemplateTag extends TeaModel {
         /**
-         * <p>The key of tag N to add to the launch template. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The key of tag N to add to the launch template. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -1668,7 +1668,7 @@ public class CreateLaunchTemplateRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N to add to the launch template. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The value of tag N to add to the launch template. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

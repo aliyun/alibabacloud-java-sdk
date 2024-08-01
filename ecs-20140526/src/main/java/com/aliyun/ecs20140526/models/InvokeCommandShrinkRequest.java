@@ -116,6 +116,9 @@ public class InvokeCommandShrinkRequest extends TeaModel {
     @NameInMap("InstanceId")
     public java.util.List<String> instanceId;
 
+    @NameInMap("Launcher")
+    public String launcher;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -318,6 +321,14 @@ public class InvokeCommandShrinkRequest extends TeaModel {
     }
     public java.util.List<String> getInstanceId() {
         return this.instanceId;
+    }
+
+    public InvokeCommandShrinkRequest setLauncher(String launcher) {
+        this.launcher = launcher;
+        return this;
+    }
+    public String getLauncher() {
+        return this.launcher;
     }
 
     public InvokeCommandShrinkRequest setOwnerAccount(String ownerAccount) {

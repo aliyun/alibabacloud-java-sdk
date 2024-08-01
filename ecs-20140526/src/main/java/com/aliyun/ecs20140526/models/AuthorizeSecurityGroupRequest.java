@@ -44,7 +44,7 @@ public class AuthorizeSecurityGroupRequest extends TeaModel {
     public String ipProtocol;
 
     /**
-     * <p>This parameter is deprecated. Use <code>Permissions.N.Ipv6SourceCidrIp</code> to specify the source IPv6 CIDR block.</p>
+     * <p>This parameter is deprecated. Use <code>Permissions.N.Ipv6DestCidrIp</code> to specify the destination IPv6 CIDR block.</p>
      * 
      * <strong>example:</strong>
      * <p>2001:250:6000::***</p>
