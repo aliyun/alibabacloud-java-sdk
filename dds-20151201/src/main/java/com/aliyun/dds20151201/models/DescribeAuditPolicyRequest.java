@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class DescribeAuditPolicyRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dds-bp12c5b040dc****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

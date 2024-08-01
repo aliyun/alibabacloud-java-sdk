@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class DescribeParameterTemplatesResponseBody extends TeaModel {
     /**
      * <p>The database engine of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mongodb</p>
      */
     @NameInMap("Engine")
     public String engine;
 
     /**
      * <p>The database engine version of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5.0</p>
      */
     @NameInMap("EngineVersion")
     public String engineVersion;
 
     /**
      * <p>The number of parameters that are supported by the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("ParameterCount")
     public String parameterCount;
@@ -30,6 +39,9 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BDA54203-9D61-54A3-A568-D281F785****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -82,42 +94,62 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
     public static class DescribeParameterTemplatesResponseBodyParametersTemplateRecord extends TeaModel {
         /**
          * <p>The value range of modifiable parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[0-65536]</p>
          */
         @NameInMap("CheckingCode")
         public String checkingCode;
 
         /**
          * <p>Indicates whether the parameter is modifiable.</p>
-         * <br>
-         * <p>*   **false**: The parameter cannot be modified.</p>
-         * <p>*   **true**: The parameter can be modified.</p>
+         * <ul>
+         * <li><strong>false</strong>: The parameter cannot be modified.</li>
+         * <li><strong>true</strong>: The parameter can be modified.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("ForceModify")
         public Boolean forceModify;
 
         /**
          * <p>Indicates whether a restart is required for parameter modifications to take effect.</p>
-         * <br>
-         * <p>*   **false**: A restart is not required. Parameter modifications immediately take effect.</p>
-         * <p>*   **true**: A restart is required for parameter modifications to take effect.</p>
+         * <ul>
+         * <li><strong>false</strong>: A restart is not required. Parameter modifications immediately take effect.</li>
+         * <li><strong>true</strong>: A restart is required for parameter modifications to take effect.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("ForceRestart")
         public Boolean forceRestart;
 
         /**
          * <p>The description of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The threshold in milliseconds at which the database profiler considers a query slow, default is 100.</p>
          */
         @NameInMap("ParameterDescription")
         public String parameterDescription;
 
         /**
          * <p>The name of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>net.compression.compressors</p>
          */
         @NameInMap("ParameterName")
         public String parameterName;
 
         /**
          * <p>The default value of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("ParameterValue")
         public String parameterValue;

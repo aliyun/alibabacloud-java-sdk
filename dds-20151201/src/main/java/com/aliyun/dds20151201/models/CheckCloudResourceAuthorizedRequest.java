@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class CheckCloudResourceAuthorizedRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dds-bp18f7d6b6a7****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -23,7 +27,11 @@ public class CheckCloudResourceAuthorizedRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to query the region ID of the instance.</p>
+     * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to query the region ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("TargetRegionId")
     public String targetRegionId;

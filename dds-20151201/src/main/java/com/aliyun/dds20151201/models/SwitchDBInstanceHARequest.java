@@ -6,14 +6,22 @@ import com.aliyun.tea.*;
 public class SwitchDBInstanceHARequest extends TeaModel {
     /**
      * <p>The ID of the instance</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dds-bpxxxxxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The ID of the shard node in the sharded cluster instance.</p>
-     * <br>
-     * <p>> You must specify this parameter if you set the **DBInstanceId** parameter to the ID of a sharded cluster instance.</p>
+     * <blockquote>
+     * <p>You must specify this parameter if you set the <strong>DBInstanceId</strong> parameter to the ID of a sharded cluster instance.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>d-bpxxxxxxxx</p>
      */
     @NameInMap("NodeId")
     public String nodeId;
@@ -31,22 +39,31 @@ public class SwitchDBInstanceHARequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The IDs of the roles who switch the primary and secondary nodes for the instance. You can call the [DescribeRoleZoneInfo](~~123802~~) operation to view the IDs and information of roles of nodes.</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   Separate role IDs with commas (,). If this parameter is not specified, the primary and secondary nodes are switched.</p>
-     * <br>
-     * <p>*   If you set the **DBInstanceId** parameter to the ID of a sharded cluster instance, the roles who switch the primary and secondary nodes for the instance must belong to one shard node.</p>
+     * <p>The IDs of the roles who switch the primary and secondary nodes for the instance. You can call the <a href="https://help.aliyun.com/document_detail/123802.html">DescribeRoleZoneInfo</a> operation to view the IDs and information of roles of nodes.</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>Separate role IDs with commas (,). If this parameter is not specified, the primary and secondary nodes are switched.</p>
+     * </li>
+     * <li><p>If you set the <strong>DBInstanceId</strong> parameter to the ID of a sharded cluster instance, the roles who switch the primary and secondary nodes for the instance must belong to one shard node.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>972xxxx,972xxxx</p>
      */
     @NameInMap("RoleIds")
     public String roleIds;
 
     /**
      * <p>The time when the primary and secondary nodes are switched. Valid values:</p>
-     * <br>
-     * <p>*   0: The primary and secondary nodes are immediately switched.</p>
-     * <p>*   1: The primary and secondary nodes are switched during the O\&M time period.</p>
+     * <ul>
+     * <li>0: The primary and secondary nodes are immediately switched.</li>
+     * <li>1: The primary and secondary nodes are switched during the O\&amp;M time period.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("SwitchMode")
     public Integer switchMode;

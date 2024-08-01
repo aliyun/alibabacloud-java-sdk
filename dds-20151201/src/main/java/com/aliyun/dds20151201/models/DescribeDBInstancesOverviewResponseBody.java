@@ -12,12 +12,18 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>52820D2B-B2DD-59F0-BDF2-83EC19C6F1CA</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The number of instances in the query results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public String totalCount;
@@ -54,18 +60,27 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
     public static class DescribeDBInstancesOverviewResponseBodyDBInstancesMongosList extends TeaModel {
         /**
          * <p>The instance type of the mongos node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds.mongos.standard</p>
          */
         @NameInMap("NodeClass")
         public String nodeClass;
 
         /**
          * <p>The description of the mongos node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mongos node describe.</p>
          */
         @NameInMap("NodeDescription")
         public String nodeDescription;
 
         /**
          * <p>The ID of the mongos node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-bp10e3b0d02f****</p>
          */
         @NameInMap("NodeId")
         public String nodeId;
@@ -104,30 +119,45 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
     public static class DescribeDBInstancesOverviewResponseBodyDBInstancesShardList extends TeaModel {
         /**
          * <p>The instance type of the shard node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds.shard.mid</p>
          */
         @NameInMap("NodeClass")
         public String nodeClass;
 
         /**
          * <p>The description of the shard node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testshard</p>
          */
         @NameInMap("NodeDescription")
         public String nodeDescription;
 
         /**
          * <p>The ID of the shard node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-bp1cac6f2083****</p>
          */
         @NameInMap("NodeId")
         public String nodeId;
 
         /**
          * <p>The storage space of the shard node. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("NodeStorage")
         public Integer nodeStorage;
 
         /**
-         * <p>The number of read-only nodes in the shard node. Valid values: **0** to **5**.</p>
+         * <p>The number of read-only nodes in the shard node. Valid values: <strong>0</strong> to <strong>5</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("ReadonlyReplicas")
         public Integer readonlyReplicas;
@@ -181,21 +211,29 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
 
     public static class DescribeDBInstancesOverviewResponseBodyDBInstancesTags extends TeaModel {
         /**
-         * <p>The tag key. Valid values of N: **1** to **20**.</p>
-         * <br>
-         * <p>*   The key cannot start with `aliyun`, `acs:`, `http://`, or `https://`.</p>
-         * <p>*   It can be up to 64 characters in length.</p>
-         * <p>*   It cannot be an empty string.</p>
+         * <p>The tag key. Valid values of N: <strong>1</strong> to <strong>20</strong>.</p>
+         * <ul>
+         * <li>The key cannot start with <code>aliyun</code>, <code>acs:</code>, <code>http://</code>, or <code>https://</code>.</li>
+         * <li>It can be up to 64 characters in length.</li>
+         * <li>It cannot be an empty string.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>testdatabase</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The tag value. Valid values of N: **1** to **20**.</p>
-         * <br>
-         * <p>*   The value cannot start with `aliyun`, `acs:`, `http://`, or `https://`.</p>
-         * <p>*   The value can be up to 128 characters in length.</p>
-         * <p>*   The value can be an empty string.</p>
+         * <p>The tag value. Valid values of N: <strong>1</strong> to <strong>20</strong>.</p>
+         * <ul>
+         * <li>The value cannot start with <code>aliyun</code>, <code>acs:</code>, <code>http://</code>, or <code>https://</code>.</li>
+         * <li>The value can be up to 128 characters in length.</li>
+         * <li>The value can be an empty string.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>apitest</p>
          */
         @NameInMap("Value")
         public String value;
@@ -226,169 +264,240 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
     public static class DescribeDBInstancesOverviewResponseBodyDBInstances extends TeaModel {
         /**
          * <p>The read and write throughput consumed by the instance.</p>
-         * <br>
-         * <p>> </p>
-         * <br>
-         * <p>*   This parameter is returned when the instance is a serverless instance.</p>
-         * <br>
-         * <p>*   Serverless instances are available only in the China site (aliyun.com).</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>This parameter is returned when the instance is a serverless instance.</p>
+         * </li>
+         * <li><p>Serverless instances are available only in the China site (aliyun.com).</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("CapacityUnit")
         public String capacityUnit;
 
         /**
          * <p>The billing method of the instance. Valid values:</p>
-         * <br>
-         * <p>*   **PrePaid**: subscription</p>
-         * <p>*   **PostPaid**: pay-as-you-go</p>
+         * <ul>
+         * <li><strong>PrePaid</strong>: subscription</li>
+         * <li><strong>PostPaid</strong>: pay-as-you-go</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PrePaid</p>
          */
         @NameInMap("ChargeType")
         public String chargeType;
 
         /**
-         * <p>The time when the instance was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the instance was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-01-05T03:18:53Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The instance type. The instance type varies based on the instance architecture. For more information about instance types supported by different instance architectures, see the following references:</p>
-         * <br>
-         * <p>*   [Standalone instance types](~~311407~~)</p>
-         * <p>*   [Replica set instance types](~~311410~~)</p>
-         * <p>*   [Sharded cluster instance types](~~311414~~)</p>
+         * <ul>
+         * <li><a href="https://help.aliyun.com/document_detail/311407.html">Standalone instance types</a></li>
+         * <li><a href="https://help.aliyun.com/document_detail/311410.html">Replica set instance types</a></li>
+         * <li><a href="https://help.aliyun.com/document_detail/311414.html">Sharded cluster instance types</a></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>dds.mongo.mid</p>
          */
         @NameInMap("DBInstanceClass")
         public String DBInstanceClass;
 
         /**
          * <p>The description of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test db</p>
          */
         @NameInMap("DBInstanceDescription")
         public String DBInstanceDescription;
 
         /**
          * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds-bp12c5b040dc****</p>
          */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
         /**
-         * <p>The state of the instance. For more information about valid values, see [Instance states](~~63870~~).</p>
+         * <p>The state of the instance. For more information about valid values, see <a href="https://help.aliyun.com/document_detail/63870.html">Instance states</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         @NameInMap("DBInstanceStatus")
         public String DBInstanceStatus;
 
         /**
          * <p>The storage space of the instance. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("DBInstanceStorage")
         public Integer DBInstanceStorage;
 
         /**
          * <p>The architecture of the instance. Valid values:</p>
-         * <br>
-         * <p>*   **sharding**: sharded cluster instance</p>
-         * <p>*   **replicate**: replica set or standalone instance</p>
+         * <ul>
+         * <li><strong>sharding</strong>: sharded cluster instance</li>
+         * <li><strong>replicate</strong>: replica set or standalone instance</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>replicate</p>
          */
         @NameInMap("DBInstanceType")
         public String DBInstanceType;
 
         /**
          * <p>The time when the instance data was destroyed. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-10T16:00:00Z</p>
          */
         @NameInMap("DestroyTime")
         public String destroyTime;
 
         /**
-         * <p>The database engine of the instance. Set the value to **MongoDB**.</p>
+         * <p>The database engine of the instance. Set the value to <strong>MongoDB</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MongoDB</p>
          */
         @NameInMap("Engine")
         public String engine;
 
         /**
          * <p>The database engine version of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4.2</p>
          */
         @NameInMap("EngineVersion")
         public String engineVersion;
 
         /**
-         * <p>The time when the instance expires. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the instance expires. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-02-05T16:00Z</p>
          */
         @NameInMap("ExpireTime")
         public String expireTime;
 
         /**
          * <p>The kind code of the instance. Valid values:</p>
-         * <br>
-         * <p>*   **0**: physical machine</p>
-         * <p>*   **1**: Elastic Compute Service (ECS) instance</p>
-         * <p>*   **2**: Docker cluster</p>
-         * <p>*   **18**: Kubernetes cluster</p>
+         * <ul>
+         * <li><strong>0</strong>: physical machine</li>
+         * <li><strong>1</strong>: Elastic Compute Service (ECS) instance</li>
+         * <li><strong>2</strong>: Docker cluster</li>
+         * <li><strong>18</strong>: Kubernetes cluster</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("KindCode")
         public String kindCode;
 
         /**
          * <p>The date when the last downgrade operation was performed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-05-08</p>
          */
         @NameInMap("LastDowngradeTime")
         public String lastDowngradeTime;
 
         /**
          * <p>Indicates whether the instance is locked. Valid values:</p>
-         * <br>
-         * <p>*   **Unlock**: The instance is not locked.</p>
-         * <p>*   **ManualLock**: The instance is manually locked.</p>
-         * <p>*   **LockByExpiration**: The instance is automatically locked due to instance expiration.</p>
-         * <p>*   **LockByRestoration**: The instance is automatically locked before it is rolled back.</p>
-         * <p>*   **LockByDiskQuota**: The instance is automatically locked after the storage space is exhausted.</p>
-         * <p>*   **Released**: The instance is released. After an instance is released, the instance cannot be unlocked. You can only restore the backup data of the instance to a new instance. This process requires a long period of time.</p>
+         * <ul>
+         * <li><strong>Unlock</strong>: The instance is not locked.</li>
+         * <li><strong>ManualLock</strong>: The instance is manually locked.</li>
+         * <li><strong>LockByExpiration</strong>: The instance is automatically locked due to instance expiration.</li>
+         * <li><strong>LockByRestoration</strong>: The instance is automatically locked before it is rolled back.</li>
+         * <li><strong>LockByDiskQuota</strong>: The instance is automatically locked after the storage space is exhausted.</li>
+         * <li><strong>Released</strong>: The instance is released. After an instance is released, the instance cannot be unlocked. You can only restore the backup data of the instance to a new instance. This process requires a long period of time.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Unlock</p>
          */
         @NameInMap("LockMode")
         public String lockMode;
 
         /**
          * <p>The details of the mongos nodes.</p>
-         * <br>
-         * <p>>  This parameter is returned when the instance is a sharded cluster instance.</p>
+         * <blockquote>
+         * <p> This parameter is returned when the instance is a sharded cluster instance.</p>
+         * </blockquote>
          */
         @NameInMap("MongosList")
         public java.util.List<DescribeDBInstancesOverviewResponseBodyDBInstancesMongosList> mongosList;
 
         /**
          * <p>The network type of the instance. Valid values:</p>
-         * <br>
-         * <p>*   **Classic**</p>
-         * <p>*   **VPC**</p>
+         * <ul>
+         * <li><strong>Classic</strong></li>
+         * <li><strong>VPC</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         @NameInMap("NetworkType")
         public String networkType;
 
         /**
          * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The number of nodes in the instance.</p>
-         * <br>
-         * <p>>  This parameter is returned when the instance is a replica set instance.</p>
+         * <blockquote>
+         * <p> This parameter is returned when the instance is a replica set instance.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("ReplicationFactor")
         public String replicationFactor;
 
         /**
          * <p>The ID of the resource group to which the instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm22cdcgc****</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>The details of the shard nodes.</p>
-         * <br>
-         * <p>>  This parameter is returned when the instance is a sharded cluster instance.</p>
+         * <blockquote>
+         * <p> This parameter is returned when the instance is a sharded cluster instance.</p>
+         * </blockquote>
          */
         @NameInMap("ShardList")
         public java.util.List<DescribeDBInstancesOverviewResponseBodyDBInstancesShardList> shardList;
@@ -401,15 +510,22 @@ public class DescribeDBInstancesOverviewResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether password-free access over VPC is enabled. Valid values:</p>
-         * <br>
-         * <p>*   **Open**: Password-free access over VPC is enabled.</p>
-         * <p>*   **Close**: Password-free access over VPC is disabled.</p>
+         * <ul>
+         * <li><strong>Open</strong>: Password-free access over VPC is enabled.</li>
+         * <li><strong>Close</strong>: Password-free access over VPC is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Open</p>
          */
         @NameInMap("VpcAuthMode")
         public String vpcAuthMode;
 
         /**
          * <p>The zone ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-i</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyAuditPolicyResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DC04D812-F18D-4568-9B88-F260D9590116</p>
      */
     @NameInMap("RequestId")
     public String requestId;

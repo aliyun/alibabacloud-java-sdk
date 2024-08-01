@@ -12,6 +12,9 @@ public class DescribeAvailabilityZonesResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>19A13A33-0FAD-5120-8AE1-B1636F74DD80</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,24 +42,33 @@ public class DescribeAvailabilityZonesResponseBody extends TeaModel {
 
     public static class DescribeAvailabilityZonesResponseBodyAvailableZones extends TeaModel {
         /**
-         * <p>The ID of the region. You can call the [DescribeRegions](~~61933~~) operation to query the latest available regions.</p>
+         * <p>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the latest available regions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The ID of the zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing-f</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;
 
         /**
          * <p>The name of the zone.</p>
-         * <br>
-         * <p>The return value of the ZoneName parameter is in the language that is specified by the **AcceptLanguage** parameter. For example, if the value of the ZoneId parameter in the response is **cn-hangzhou-h**, the following values are returned for the ZoneName parameter:</p>
-         * <br>
-         * <p>*   If the value of the **AcceptLanguage** parameter is **zh**, **H** is returned for the ZoneName parameter.</p>
-         * <p>*   If the value of the **AcceptLanguage** parameter is **en**, **Hangzhou Zone H** is returned for the ZoneName parameter.</p>
+         * <p>The return value of the ZoneName parameter is in the language that is specified by the <strong>AcceptLanguage</strong> parameter. For example, if the value of the ZoneId parameter in the response is <strong>cn-hangzhou-h</strong>, the following values are returned for the ZoneName parameter:</p>
+         * <ul>
+         * <li>If the value of the <strong>AcceptLanguage</strong> parameter is <strong>zh</strong>, <strong>H</strong> is returned for the ZoneName parameter.</li>
+         * <li>If the value of the <strong>AcceptLanguage</strong> parameter is <strong>en</strong>, <strong>Hangzhou Zone H</strong> is returned for the ZoneName parameter.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Hangzhou Zone H</p>
          */
         @NameInMap("ZoneName")
         public String zoneName;

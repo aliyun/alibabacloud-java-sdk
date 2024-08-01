@@ -6,20 +6,33 @@ import com.aliyun.tea.*;
 public class ModifyDBInstanceMaintainTimeRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dds-bpac2345****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The end time of the maintenance window. Specify the time in the ISO 8601 standard in the *HH:mm*Z format. The time must be in UTC.</p>
-     * <br>
-     * <p>>  The end time must be later than the start time of the maintenance window.</p>
+     * <p>The end time of the maintenance window. Specify the time in the ISO 8601 standard in the <em>HH:mm</em>Z format. The time must be in UTC.</p>
+     * <blockquote>
+     * <p> The end time must be later than the start time of the maintenance window.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>02:00Z</p>
      */
     @NameInMap("MaintainEndTime")
     public String maintainEndTime;
 
     /**
-     * <p>The start time of the maintenance window. Specify the time in the ISO 8601 standard in the *HH:mm*Z format. The time must be in UTC.</p>
+     * <p>The start time of the maintenance window. Specify the time in the ISO 8601 standard in the <em>HH:mm</em>Z format. The time must be in UTC.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>01:00Z</p>
      */
     @NameInMap("MaintainStartTime")
     public String maintainStartTime;

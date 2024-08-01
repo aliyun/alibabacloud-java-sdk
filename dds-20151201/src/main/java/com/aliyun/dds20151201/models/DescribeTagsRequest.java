@@ -6,8 +6,12 @@ import com.aliyun.tea.*;
 public class DescribeTagsRequest extends TeaModel {
     /**
      * <p>The token used to start the next query to retrieve more results.</p>
-     * <br>
-     * <p>>  This parameter is not required in the first query. If not all results are returned in one query, you can pass in the NextToken value returned in the previous query to perform the query again.</p>
+     * <blockquote>
+     * <p> This parameter is not required in the first query. If not all results are returned in one query, you can pass in the NextToken value returned in the previous query to perform the query again.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>212db86****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -19,13 +23,20 @@ public class DescribeTagsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dds-bp17e7a04960****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -37,7 +48,10 @@ public class DescribeTagsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The resource type. Set the value to **INSTANCE**.</p>
+     * <p>The resource type. Set the value to <strong>INSTANCE</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>INSTANCE</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

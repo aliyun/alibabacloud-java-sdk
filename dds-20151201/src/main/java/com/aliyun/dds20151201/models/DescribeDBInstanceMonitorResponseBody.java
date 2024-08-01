@@ -5,13 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstanceMonitorResponseBody extends TeaModel {
     /**
-     * <p>The collection frequency of monitoring data for the instance. Valid value: **5**. Unit: seconds.</p>
+     * <p>The collection frequency of monitoring data for the instance. Valid value: <strong>5</strong>. Unit: seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("Granularity")
     public String granularity;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EFD65226-08CC-4C4D-B6A4-CB3C382F67B0</p>
      */
     @NameInMap("RequestId")
     public String requestId;

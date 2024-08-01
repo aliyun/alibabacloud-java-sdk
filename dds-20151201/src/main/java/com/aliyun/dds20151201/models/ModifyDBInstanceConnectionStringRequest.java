@@ -6,37 +6,60 @@ import com.aliyun.tea.*;
 public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
     /**
      * <p>The current endpoint that is to be modified.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>s-bpxxxxxxxx.mongodb.rds.aliyuncs.com</p>
      */
     @NameInMap("CurrentConnectionString")
     public String currentConnectionString;
 
     /**
      * <p>The instance ID.</p>
-     * <br>
-     * <p>> If you set this parameter to the ID of a sharded cluster instance, you must also specify the **NodeId** parameter.</p>
+     * <blockquote>
+     * <p>If you set this parameter to the ID of a sharded cluster instance, you must also specify the <strong>NodeId</strong> parameter.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dds-bpxxxxxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The new endpoint. It must be 8 to 64 characters in length and can contain letters and digits. It must start with a lowercase letter.</p>
-     * <br>
-     * <p>> You need only to specify the prefix of the endpoint. The content other than the prefix cannot be modified.</p>
+     * <blockquote>
+     * <p>You need only to specify the prefix of the endpoint. The content other than the prefix cannot be modified.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>aliyuntest111</p>
      */
     @NameInMap("NewConnectionString")
     public String newConnectionString;
 
     /**
-     * <p>新的端口，端口范围需要在1000~65535之间。</p>
-     * <p>> 当**DBInstanceId**参数传入的是云盘实例ID时，本参数才可用。</p>
+     * <p>The new port number of the instance. The port number must be within the range from 1000 to 65535.</p>
+     * <blockquote>
+     * <p> This parameter is available only when you set the <strong>DBInstanceId</strong> parameter to the ID of an instance that uses cloud disks.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>3310</p>
      */
     @NameInMap("NewPort")
     public Integer newPort;
 
     /**
      * <p>The ID of the mongos in the specified sharded cluster instance. Only one mongos ID can be specified in each call.</p>
-     * <br>
-     * <p>> This parameter is valid only when you specify the **DBInstanceId** parameter to the ID of a sharded cluster instance.</p>
+     * <blockquote>
+     * <p>This parameter is valid only when you specify the <strong>DBInstanceId</strong> parameter to the ID of a sharded cluster instance.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>s-bpxxxxxxxx</p>
      */
     @NameInMap("NodeId")
     public String nodeId;

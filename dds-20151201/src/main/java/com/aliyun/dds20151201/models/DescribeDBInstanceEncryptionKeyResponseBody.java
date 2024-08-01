@@ -6,57 +6,85 @@ import com.aliyun.tea.*;
 public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
     /**
      * <p>The UID of the key creator.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("Creator")
     public String creator;
 
     /**
      * <p>The scheduled time when the key for the instance will be deleted. If the parameter is left empty, the key will not be deleted.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-07-06T18:22:03Z</p>
      */
     @NameInMap("DeleteDate")
     public String deleteDate;
 
     /**
      * <p>The description of the key for the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>key description example</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The key for the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2axxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx</p>
      */
     @NameInMap("EncryptionKey")
     public String encryptionKey;
 
     /**
      * <p>Indicates whether the key for the instance is enabled. Valid values:</p>
-     * <br>
-     * <p>*   **Enabled**</p>
-     * <p>*   **Disabled**</p>
+     * <ul>
+     * <li><strong>Enabled</strong></li>
+     * <li><strong>Disabled</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Enabled</p>
      */
     @NameInMap("EncryptionKeyStatus")
     public String encryptionKeyStatus;
 
     /**
      * <p>The purpose of the key for the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ENCRYPT/DECRYPT</p>
      */
     @NameInMap("KeyUsage")
     public String keyUsage;
 
     /**
      * <p>The expiration time of the key for the instance. The time is displayed in UTC. If the parameter is left empty, the key for the instance will not expire.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-07-06T18:22:03Z</p>
      */
     @NameInMap("MaterialExpireTime")
     public String materialExpireTime;
 
     /**
      * <p>The source of the key for the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Aliyun_KMS</p>
      */
     @NameInMap("Origin")
     public String origin;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>783C2062-A2D3-4EA8-88AD-E43F990C23BB</p>
      */
     @NameInMap("RequestId")
     public String requestId;

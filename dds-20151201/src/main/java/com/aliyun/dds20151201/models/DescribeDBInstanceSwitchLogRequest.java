@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class DescribeDBInstanceSwitchLogRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dds-uf68f1b5a57exxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-mm-dd*T*hh:mm*Z format. The time must be in UTC. The end time must be later than the start time.</p>
+     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-mm-dd</em>T<em>hh:mm</em>Z format. The time must be in UTC. The end time must be later than the start time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-05-28T02:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The number of the page to return. The value must be an integer that is greater than 0 and less than or equal to the maximum value supported by the integer data type. Default value: **1**.</p>
+     * <p>The number of the page to return. The value must be an integer that is greater than 0 and less than or equal to the maximum value supported by the integer data type. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: **30, 50, and 100**. Default value: **30**.</p>
+     * <p>The number of entries to return on each page. Valid values: <strong>30, 50, and 100</strong>. Default value: <strong>30</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -32,7 +44,10 @@ public class DescribeDBInstanceSwitchLogRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-mm-dd*T*hh:mm*Z format. The time must be in UTC.</p>
+     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-mm-dd</em>T<em>hh:mm</em>Z format. The time must be in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-05-27T02:46Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;

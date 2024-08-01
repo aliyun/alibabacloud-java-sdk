@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeGlobalSecurityIPGroupRelationResponseBody extends TeaModel {
     /**
      * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dds-2ze6069764423m0l</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -18,6 +21,9 @@ public class DescribeGlobalSecurityIPGroupRelationResponseBody extends TeaModel 
 
     /**
      * <p>The unique ID of the request. If the request fails, provide this ID for technical support to troubleshoot the failure.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F8CA8312-530A-413A-9129-F2BB32A8D404</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,26 +60,39 @@ public class DescribeGlobalSecurityIPGroupRelationResponseBody extends TeaModel 
     public static class DescribeGlobalSecurityIPGroupRelationResponseBodyGlobalSecurityIPGroupRel extends TeaModel {
         /**
          * <p>The IP addresses in the whitelist template.</p>
-         * <br>
-         * <p>>  Separate multiple IP addresses with commas (,). You can create up to 1,000 IP addresses or CIDR blocks for all IP whitelists.</p>
+         * <blockquote>
+         * <p> Separate multiple IP addresses with commas (,). You can create up to 1,000 IP addresses or CIDR blocks for all IP whitelists.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>27.16.214.10,111.60.117.181</p>
          */
         @NameInMap("GIpList")
         public String GIpList;
 
         /**
          * <p>The name of the IP whitelist template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dev_baoxian_k8s_bj</p>
          */
         @NameInMap("GlobalIgName")
         public String globalIgName;
 
         /**
          * <p>The ID of the IP whitelist template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>g-gfurfpsh4ycbrm2avst7</p>
          */
         @NameInMap("GlobalSecurityGroupId")
         public String globalSecurityGroupId;
 
         /**
          * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hongkong</p>
          */
         @NameInMap("RegionId")
         public String regionId;

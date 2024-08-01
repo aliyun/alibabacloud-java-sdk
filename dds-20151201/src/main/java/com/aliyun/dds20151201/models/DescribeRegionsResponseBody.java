@@ -12,6 +12,9 @@ public class DescribeRegionsResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4E46C22C-D3B7-4DB8-9C76-63851BE68E20</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,26 +43,36 @@ public class DescribeRegionsResponseBody extends TeaModel {
     public static class DescribeRegionsResponseBodyRegionsDdsRegionZonesZone extends TeaModel {
         /**
          * <p>Indicates whether a virtual private cloud (VPC) is supported. Valid values:</p>
-         * <br>
-         * <p>*   **true**: VPC is supported.</p>
-         * <p>*   **false**: VPC is not supported.</p>
+         * <ul>
+         * <li><strong>true</strong>: VPC is supported.</li>
+         * <li><strong>false</strong>: VPC is not supported.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("VpcEnabled")
         public Boolean vpcEnabled;
 
         /**
          * <p>The zone ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;
 
         /**
          * <p>The name of the zone.</p>
-         * <br>
-         * <p>The value of the ZoneName parameter is in the language that is specified by the **AcceptLanguage** parameter. For example, if the value of the ZoneId parameter in the response is **cn-hangzhou-h**, the following values are returned for the ZoneName parameter:</p>
-         * <br>
-         * <p>*   If the value of the **AcceptLanguage** parameter is **zh**, the value **H** is returned for the ZoneName parameter.</p>
-         * <p>*   If the value of the **AcceptLanguage** parameter is **en**, the value **Hangzhou Zone H** is returned for the ZoneName parameter.</p>
+         * <p>The value of the ZoneName parameter is in the language that is specified by the <strong>AcceptLanguage</strong> parameter. For example, if the value of the ZoneId parameter in the response is <strong>cn-hangzhou-h</strong>, the following values are returned for the ZoneName parameter:</p>
+         * <ul>
+         * <li>If the value of the <strong>AcceptLanguage</strong> parameter is <strong>zh</strong>, the value <strong>H</strong> is returned for the ZoneName parameter.</li>
+         * <li>If the value of the <strong>AcceptLanguage</strong> parameter is <strong>en</strong>, the value <strong>Hangzhou Zone H</strong> is returned for the ZoneName parameter.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Hangzhou Zone H</p>
          */
         @NameInMap("ZoneName")
         public String zoneName;
@@ -117,27 +130,36 @@ public class DescribeRegionsResponseBody extends TeaModel {
     public static class DescribeRegionsResponseBodyRegionsDdsRegion extends TeaModel {
         /**
          * <p>The public endpoint of the region.</p>
-         * <br>
          * <p>For example, if the value of the RegionId parameter in the response is cn-hangzhou, the following value is returned for the EndPoint parameter:</p>
-         * <br>
-         * <p>*   mongodb.aliyuncs.com</p>
+         * <ul>
+         * <li>mongodb.aliyuncs.com</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>mongodb.aliyuncs.com</p>
          */
         @NameInMap("EndPoint")
         public String endPoint;
 
         /**
          * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The name of the region.</p>
-         * <br>
-         * <p>The value of the LocalName parameter is in the language that is specified by the **AcceptLanguage** parameter. For example, if the value of the RegionId parameter in the response is **cn-hangzhou**, the following values are returned for the LocalName parameter:</p>
-         * <br>
-         * <p>*   If the value of the **AcceptLanguage** parameter is **zh**, the value **华东1（杭州）** is returned for the LocalName parameter.</p>
-         * <p>*   If the value of the **AcceptLanguage** parameter is **en**, the value **China (Hangzhou)** is returned for the LocalName parameter.</p>
+         * <p>The value of the LocalName parameter is in the language that is specified by the <strong>AcceptLanguage</strong> parameter. For example, if the value of the RegionId parameter in the response is <strong>cn-hangzhou</strong>, the following values are returned for the LocalName parameter:</p>
+         * <ul>
+         * <li>If the value of the <strong>AcceptLanguage</strong> parameter is <strong>zh</strong>, the value <strong>华东1（杭州）</strong> is returned for the LocalName parameter.</li>
+         * <li>If the value of the <strong>AcceptLanguage</strong> parameter is <strong>en</strong>, the value <strong>China (Hangzhou)</strong> is returned for the LocalName parameter.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>China (Hangzhou)</p>
          */
         @NameInMap("RegionName")
         public String regionName;

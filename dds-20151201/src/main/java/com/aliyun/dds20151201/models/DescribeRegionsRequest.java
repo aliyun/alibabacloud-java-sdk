@@ -5,10 +5,14 @@ import com.aliyun.tea.*;
 
 public class DescribeRegionsRequest extends TeaModel {
     /**
-     * <p>The language of the values of the returned **RegionName** and **ZoneName** parameters. Valid values:</p>
-     * <br>
-     * <p>*   **zh** (default)</p>
-     * <p>*   **en**</p>
+     * <p>The language of the values of the returned <strong>RegionName</strong> and <strong>ZoneName</strong> parameters. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong> (default)</li>
+     * <li><strong>en</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
@@ -21,8 +25,12 @@ public class DescribeRegionsRequest extends TeaModel {
 
     /**
      * <p>The region ID.</p>
-     * <br>
-     * <p>>  If you do not specify this parameter, all supported regions are queried.</p>
+     * <blockquote>
+     * <p> If you do not specify this parameter, all supported regions are queried.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

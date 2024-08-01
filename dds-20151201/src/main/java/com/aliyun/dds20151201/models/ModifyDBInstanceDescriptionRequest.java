@@ -6,30 +6,45 @@ import com.aliyun.tea.*;
 public class ModifyDBInstanceDescriptionRequest extends TeaModel {
     /**
      * <p>The name of the instance.</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   The name cannot start with `http://` or `https://`.</p>
-     * <br>
-     * <p>*   It must start with a letter.</p>
-     * <br>
-     * <p>*   It must be 2 to 256 characters in length, and can contain letters, underscores (\_), hyphens (-), and digits.</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>The name cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * </li>
+     * <li><p>It must start with a letter.</p>
+     * </li>
+     * <li><p>It must be 2 to 256 characters in length, and can contain letters, underscores (_), hyphens (-), and digits.</p>
+     * </li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testdata</p>
      */
     @NameInMap("DBInstanceDescription")
     public String DBInstanceDescription;
 
     /**
      * <p>The instance ID.</p>
-     * <br>
-     * <p>>  To modify the name of a shard or mongos node in a sharded cluster instance, you must also specify the **NodeId** parameter.</p>
+     * <blockquote>
+     * <p> To modify the name of a shard or mongos node in a sharded cluster instance, you must also specify the <strong>NodeId</strong> parameter.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dds-bp2234****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The ID of the shard or mongos node in the sharded cluster instance.</p>
-     * <br>
-     * <p>>  This parameter is valid only if you set the **DBInstanceId** parameter to the ID of a sharded cluster instance.</p>
+     * <blockquote>
+     * <p> This parameter is valid only if you set the <strong>DBInstanceId</strong> parameter to the ID of a sharded cluster instance.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>d-bp89067****</p>
      */
     @NameInMap("NodeId")
     public String nodeId;

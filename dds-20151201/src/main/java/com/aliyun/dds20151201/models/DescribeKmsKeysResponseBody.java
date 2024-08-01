@@ -12,6 +12,9 @@ public class DescribeKmsKeysResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60EEBD77-227C-5B39-86EA-D89163C5****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class DescribeKmsKeysResponseBody extends TeaModel {
     public static class DescribeKmsKeysResponseBodyKmsKeys extends TeaModel {
         /**
          * <p>The alias of the key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key-shh656820f4mh9qxxxxx     alias/test1</p>
          */
         @NameInMap("KeyAlias")
         public String keyAlias;
 
         /**
          * <p>The key ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>37291352-xxxx-xxxx-adbf-fd0630a95583</p>
          */
         @NameInMap("KeyId")
         public String keyId;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyAuditLogFilterResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E209BE2B-F264-4B9D-81F6-A5A5FB1FBF28</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class ModifyTaskInfoResponseBody extends TeaModel {
     /**
      * <p>The error code for the failed task. It is the same as that of the ModifyTaskInfo operation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>The ID of the failed task. The operation returns results after a task fails.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
      */
     @NameInMap("ErrorTaskId")
     public String errorTaskId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6163731A-XXXX-XXXX-B934-3388DE70C217</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The number of successful tasks.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("SuccessCount")
     public String successCount;

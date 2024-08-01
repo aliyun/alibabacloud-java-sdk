@@ -12,6 +12,9 @@ public class DescribeGlobalSecurityIPGroupResponseBody extends TeaModel {
 
     /**
      * <p>The unique ID of the request. If the request fails, provide this ID for technical support to troubleshoot the failure.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>72651AF9-7897-41A7-8B67-6C15C7F26A0A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -46,26 +49,39 @@ public class DescribeGlobalSecurityIPGroupResponseBody extends TeaModel {
 
         /**
          * <p>The IP addresses in the whitelist template.</p>
-         * <br>
-         * <p>> Separate multiple IP addresses with commas (,). You can create up to 1,000 IP addresses or CIDR blocks for all IP address whitelists.</p>
+         * <blockquote>
+         * <p>Separate multiple IP addresses with commas (,). You can create up to 1,000 IP addresses or CIDR blocks for all IP address whitelists.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>117.12.202.19</p>
          */
         @NameInMap("GIpList")
         public String GIpList;
 
         /**
          * <p>The name of the IP whitelist template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dev_baoxian_k8s_bj</p>
          */
         @NameInMap("GlobalIgName")
         public String globalIgName;
 
         /**
          * <p>The ID of the IP whitelist template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>g-sdgwqyp4f5j1x3qk7yvm</p>
          */
         @NameInMap("GlobalSecurityGroupId")
         public String globalSecurityGroupId;
 
         /**
          * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;

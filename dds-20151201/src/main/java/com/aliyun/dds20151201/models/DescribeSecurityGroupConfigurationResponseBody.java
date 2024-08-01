@@ -12,6 +12,9 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3C4A2494-85C4-45C5-93CF-548DB3375193</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,21 +43,31 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
     public static class DescribeSecurityGroupConfigurationResponseBodyItemsRdsEcsSecurityGroupRel extends TeaModel {
         /**
          * <p>The network type of the ECS security group. Valid values:</p>
-         * <br>
-         * <p>*   **vpc**</p>
-         * <p>*   **classic**</p>
+         * <ul>
+         * <li><strong>vpc</strong></li>
+         * <li><strong>classic</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc</p>
          */
         @NameInMap("NetType")
         public String netType;
 
         /**
          * <p>The region ID of the ECS security group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The ID of the ECS security group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-bpxxxxxxxx</p>
          */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;

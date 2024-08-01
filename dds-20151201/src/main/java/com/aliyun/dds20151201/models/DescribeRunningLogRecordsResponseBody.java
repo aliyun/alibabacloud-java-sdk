@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeRunningLogRecordsResponseBody extends TeaModel {
     /**
      * <p>The database engine.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MongoDB</p>
      */
     @NameInMap("Engine")
     public String engine;
@@ -18,24 +21,36 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
 
     /**
      * <p>The number of the page to return.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>45D2B592-DEBA-4347-BBF3-47FF6C97DBBC</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
@@ -96,24 +111,36 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
     public static class DescribeRunningLogRecordsResponseBodyItemsLogRecords extends TeaModel {
         /**
          * <p>The category of the log entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NETWORK</p>
          */
         @NameInMap("Category")
         public String category;
 
         /**
          * <p>The connection information of the log entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>conn18xxxxxx</p>
          */
         @NameInMap("ConnInfo")
         public String connInfo;
 
         /**
          * <p>The content of the log entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>end connection 11.xxx.xxx.xx:3xxxx (0 connections now open)\n</p>
          */
         @NameInMap("Content")
         public String content;
 
         /**
-         * <p>The time when the log entry was generated. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the log entry was generated. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-02-26T12:09:34Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeAvailableResourceResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>344EE51D-8850-4935-B68B-58A8F4DCE3BD</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,18 +43,27 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     public static class DBInstanceStorageRange extends TeaModel {
         /**
          * <p>The maximum storage capacity. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16000</p>
          */
         @NameInMap("Max")
         public Integer max;
 
         /**
          * <p>The minimum storage capacity. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("Min")
         public Integer min;
 
         /**
          * <p>The step size for adjusting the storage capacity. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("Step")
         public Integer step;
@@ -96,12 +108,18 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
 
         /**
          * <p>The instance family.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mdb.shard.2x.xlarge.d</p>
          */
         @NameInMap("InstanceClass")
         public String instanceClass;
 
         /**
          * <p>The type of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4 cores, 8 GB (Dedicated) (Current instance type: mdb.shard.2x.xlarge.d (4 cores, 8 GB (Dedicated cloud-disk), maximum connections: 3000, maximum IOPS: min{1800 + 50 × Storage capacity, 21000}))</p>
          */
         @NameInMap("InstanceClassRemark")
         public String instanceClassRemark;
@@ -165,12 +183,18 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
 
         /**
          * <p>The network type of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         @NameInMap("NetworkTypes")
         public String networkTypes;
 
         /**
          * <p>The number of nodes in the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("NodeType")
         public String nodeType;
@@ -228,6 +252,9 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     public static class DescribeAvailableResourceResponseBodySupportedDBTypesSupportedDBTypeAvailableZonesAvailableZoneSupportedEngineVersionsSupportedEngineVersionSupportedEnginesSupportedEngine extends TeaModel {
         /**
          * <p>The storage engine of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WiredTiger</p>
          */
         @NameInMap("Engine")
         public String engine;
@@ -289,6 +316,9 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
 
         /**
          * <p>The database engine version of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4.0</p>
          */
         @NameInMap("Version")
         public String version;
@@ -338,6 +368,9 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     public static class DescribeAvailableResourceResponseBodySupportedDBTypesSupportedDBTypeAvailableZonesAvailableZone extends TeaModel {
         /**
          * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
@@ -350,6 +383,9 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;
@@ -413,9 +449,13 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
 
         /**
          * <p>The architecture of the instance. Valid values:</p>
-         * <br>
-         * <p>*   **normal**: replica set instance</p>
-         * <p>*   **sharding**: sharded cluster instance</p>
+         * <ul>
+         * <li><strong>normal</strong>: replica set instance</li>
+         * <li><strong>sharding</strong>: sharded cluster instance</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>sharding</p>
          */
         @NameInMap("DbType")
         public String dbType;

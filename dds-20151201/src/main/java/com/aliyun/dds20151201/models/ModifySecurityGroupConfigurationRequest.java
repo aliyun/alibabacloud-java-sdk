@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class ModifySecurityGroupConfigurationRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dds-bpxxxxxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -24,9 +28,16 @@ public class ModifySecurityGroupConfigurationRequest extends TeaModel {
 
     /**
      * <p>The ID of the ECS security group.</p>
-     * <br>
-     * <p>> * You can bind up to 10 ECS security groups to an ApsaraDB for MongoDB instance.</p>
-     * <p>> * You can call the [DescribeSecurityGroup](~~25556~~) operation of ECS to query the security groups in the specified region.</p>
+     * <blockquote>
+     * <ul>
+     * <li>You can bind up to 10 ECS security groups to an ApsaraDB for MongoDB instance.</li>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/25556.html">DescribeSecurityGroup</a> operation of ECS to query the security groups in the specified region.</li>
+     * </ul>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sg-bpxxxxxxxx</p>
      */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;

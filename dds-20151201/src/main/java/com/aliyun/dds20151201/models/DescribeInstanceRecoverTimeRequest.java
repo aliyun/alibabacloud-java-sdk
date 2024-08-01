@@ -4,6 +4,13 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceRecoverTimeRequest extends TeaModel {
+    /**
+     * <p>The instance ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dds-bpxxxxxxxx</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 

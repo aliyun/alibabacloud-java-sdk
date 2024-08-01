@@ -5,31 +5,48 @@ import com.aliyun.tea.*;
 
 public class DescribeBackupsRequest extends TeaModel {
     /**
-     * <p>The ID of the backup set. You can call the [CreateBackup](~~62171~~) operation to query the backup set ID.</p>
-     * <br>
-     * <p>If you set the **DBInstanceId** parameter to the ID of a sharded cluster instance, the number of backup IDs is the same as the number of shard nodes. Multiple backup IDs are separated with commas (,).</p>
+     * <p>The ID of the backup set. You can call the <a href="https://help.aliyun.com/document_detail/62171.html">CreateBackup</a> operation to query the backup set ID.</p>
+     * <p>If you set the <strong>DBInstanceId</strong> parameter to the ID of a sharded cluster instance, the number of backup IDs is the same as the number of shard nodes. Multiple backup IDs are separated with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2072****,2072****,2072****</p>
      */
     @NameInMap("BackupId")
     public String backupId;
 
     /**
      * <p>The instance ID.</p>
-     * <br>
-     * <p>> If you set this parameter to the ID of a sharded cluster instance, you must also specify the **NodeId** parameter.</p>
+     * <blockquote>
+     * <p>If you set this parameter to the ID of a sharded cluster instance, you must also specify the <strong>NodeId</strong> parameter.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dds-bp1a7009eb24****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    @NameInMap("DestRegion")
+    public String destRegion;
+
     /**
-     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC. The end time must be later than the start time.</p>
+     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC. The end time must be later than the start time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-01-14T13:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The ID of the shard node in the sharded cluster instance.</p>
-     * <br>
-     * <p>> This parameter takes effect only when you set the **DBInstanceId** parameter to the ID of a sharded cluster instance.</p>
+     * <blockquote>
+     * <p>This parameter takes effect only when you set the <strong>DBInstanceId</strong> parameter to the ID of a sharded cluster instance.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>d-bp128a003436****</p>
      */
     @NameInMap("NodeId")
     public String nodeId;
@@ -42,16 +59,23 @@ public class DescribeBackupsRequest extends TeaModel {
 
     /**
      * <p>The page number of the page to return.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page. Valid values:</p>
-     * <br>
-     * <p>*   **30** (default)</p>
-     * <p>*   **50**</p>
-     * <p>*   **100**</p>
+     * <ul>
+     * <li><strong>30</strong> (default)</li>
+     * <li><strong>50</strong></li>
+     * <li><strong>100</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -62,8 +86,14 @@ public class DescribeBackupsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("SrcRegion")
+    public String srcRegion;
+
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.</p>
+     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-01-13T13:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -87,6 +117,14 @@ public class DescribeBackupsRequest extends TeaModel {
     }
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    public DescribeBackupsRequest setDestRegion(String destRegion) {
+        this.destRegion = destRegion;
+        return this;
+    }
+    public String getDestRegion() {
+        return this.destRegion;
     }
 
     public DescribeBackupsRequest setEndTime(String endTime) {
@@ -151,6 +189,14 @@ public class DescribeBackupsRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public DescribeBackupsRequest setSrcRegion(String srcRegion) {
+        this.srcRegion = srcRegion;
+        return this;
+    }
+    public String getSrcRegion() {
+        return this.srcRegion;
     }
 
     public DescribeBackupsRequest setStartTime(String startTime) {

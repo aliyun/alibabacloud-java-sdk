@@ -6,9 +6,16 @@ import com.aliyun.tea.*;
 public class DescribeBackupPolicyRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dds-bp16cb162771****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
+
+    @NameInMap("InstanceType")
+    public String instanceType;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
@@ -25,6 +32,9 @@ public class DescribeBackupPolicyRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    @NameInMap("SrcRegion")
+    public String srcRegion;
+
     public static DescribeBackupPolicyRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeBackupPolicyRequest self = new DescribeBackupPolicyRequest();
         return TeaModel.build(map, self);
@@ -36,6 +46,14 @@ public class DescribeBackupPolicyRequest extends TeaModel {
     }
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    public DescribeBackupPolicyRequest setInstanceType(String instanceType) {
+        this.instanceType = instanceType;
+        return this;
+    }
+    public String getInstanceType() {
+        return this.instanceType;
     }
 
     public DescribeBackupPolicyRequest setOwnerAccount(String ownerAccount) {
@@ -76,6 +94,14 @@ public class DescribeBackupPolicyRequest extends TeaModel {
     }
     public String getSecurityToken() {
         return this.securityToken;
+    }
+
+    public DescribeBackupPolicyRequest setSrcRegion(String srcRegion) {
+        this.srcRegion = srcRegion;
+        return this;
+    }
+    public String getSrcRegion() {
+        return this.srcRegion;
     }
 
 }

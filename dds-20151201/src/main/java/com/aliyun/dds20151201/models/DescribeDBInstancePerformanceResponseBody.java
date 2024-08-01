@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
     /**
-     * <p>The end of the queried time range. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.</p>
+     * <p>The end of the queried time range. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time is displayed in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-06-13T11:58Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -18,12 +21,18 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4A300BC7-6D8F-527F-A2DB-A7768D26E9AC</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The beginning of the queried time range. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.</p>
+     * <p>The beginning of the queried time range. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time is displayed in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-06-13T10:58Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -68,12 +77,18 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
     public static class DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceKeyPerformanceValuesPerformanceValue extends TeaModel {
         /**
          * <p>The date and time when the metric value was generated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-06-13T10:58:00Z</p>
          */
         @NameInMap("Date")
         public String date;
 
         /**
          * <p>The value of the performance metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.23</p>
          */
         @NameInMap("Value")
         public String value;
@@ -123,6 +138,9 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
     public static class DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceKey extends TeaModel {
         /**
          * <p>The performance metrics that are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CpuUsage</p>
          */
         @NameInMap("Key")
         public String key;
@@ -135,14 +153,19 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
 
         /**
          * <p>The unit of the performance metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>%</p>
          */
         @NameInMap("Unit")
         public String unit;
 
         /**
-         * <p>The format of the performance metric value. If the performance metric contains multiple fields, the fields are separated with ampersands ( &).</p>
-         * <br>
-         * <p>For example, if you query disk space usage, the returned value of the **ValueFormat** parameter is **ins_size\&data_size\&log_size**.</p>
+         * <p>The format of the performance metric value. If the performance metric contains multiple fields, the fields are separated with ampersands ( &amp;).</p>
+         * <p>For example, if you query disk space usage, the returned value of the <strong>ValueFormat</strong> parameter is <strong>ins_size\&amp;data_size\&amp;log_size</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cpu_usage</p>
          */
         @NameInMap("ValueFormat")
         public String valueFormat;

@@ -4,15 +4,42 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupStorageResponseBody extends TeaModel {
+    /**
+     * <p>The free quota for the storage capacity used for backup. Unit: bytes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>42949672960</p>
+     */
     @NameInMap("FreeSize")
     public Long freeSize;
 
+    /**
+     * <p>The storage capacity used for the full backup. Unit: bytes.</p>
+     * <blockquote>
+     * <p> Instances that use cloud disks support snapshot backup. The size of the storage used for the current full backup is the size of the snapshot chain.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>789221621</p>
+     */
     @NameInMap("FullStorageSize")
     public Long fullStorageSize;
 
+    /**
+     * <p>The storage capacity used for the log backup. Unit: bytes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7892216</p>
+     */
     @NameInMap("LogStorageSize")
     public Long logStorageSize;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D648B367-15B6-1B42-BD4B-4XXXXXXXXX</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

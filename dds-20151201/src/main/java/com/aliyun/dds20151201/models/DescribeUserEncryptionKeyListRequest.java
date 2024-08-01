@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class DescribeUserEncryptionKeyListRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dds-bpxxxxxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -23,7 +27,10 @@ public class DescribeUserEncryptionKeyListRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The zone ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent zone list.</p>
+     * <p>The zone ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the most recent zone list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("TargetRegionId")
     public String targetRegionId;

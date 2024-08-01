@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreateBackupResponseBody extends TeaModel {
     /**
      * <p>The ID of the backup set.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5664****</p>
      */
     @NameInMap("BackupId")
     public String backupId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7016B12F-7F64-40A4-BAFF-013F02AC82FC</p>
      */
     @NameInMap("RequestId")
     public String requestId;

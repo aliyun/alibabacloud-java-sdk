@@ -12,6 +12,9 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EFD65226-08CC-4C4D-B6A4-CB3C382F67B0</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,24 +71,36 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
     public static class DescribeRenewalPriceResponseBodyOrderCouponsCoupon extends TeaModel {
         /**
          * <p>The coupon number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>youhuiquan_promotion_option_id_for_blank</p>
          */
         @NameInMap("CouponNo")
         public String couponNo;
 
         /**
          * <p>The description of the coupon.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>coupondemo</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>Indicates whether the coupon was selected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("IsSelected")
         public String isSelected;
 
         /**
          * <p>The name of the coupon.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>youhuiquan111</p>
          */
         @NameInMap("Name")
         public String name;
@@ -176,21 +191,31 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
 
         /**
          * <p>The type of the currency. Valid values:</p>
-         * <br>
-         * <p>*   USD: United States dollar</p>
-         * <p>*   JPY: Japanese Yen</p>
+         * <ul>
+         * <li>USD: United States dollar</li>
+         * <li>JPY: Japanese Yen</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>USD</p>
          */
         @NameInMap("Currency")
         public String currency;
 
         /**
          * <p>The discount amount of the order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1144.8</p>
          */
         @NameInMap("DiscountAmount")
         public Float discountAmount;
 
         /**
          * <p>The original price of the order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1144.8</p>
          */
         @NameInMap("OriginalAmount")
         public Float originalAmount;
@@ -203,6 +228,9 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
 
         /**
          * <p>The actual price of the order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("TradeAmount")
         public Float tradeAmount;
@@ -265,18 +293,27 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
     public static class DescribeRenewalPriceResponseBodyRulesRule extends TeaModel {
         /**
          * <p>The name of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demoname</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The ID of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11111111</p>
          */
         @NameInMap("RuleDescId")
         public Long ruleDescId;
 
         /**
          * <p>The title of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo</p>
          */
         @NameInMap("Title")
         public String title;
@@ -353,18 +390,27 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
     public static class DescribeRenewalPriceResponseBodySubOrdersSubOrder extends TeaModel {
         /**
          * <p>The discount amount of the order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1144.8</p>
          */
         @NameInMap("DiscountAmount")
         public Float discountAmount;
 
         /**
          * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds-bp12c5b040dc****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The original price of the order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1144.8</p>
          */
         @NameInMap("OriginalAmount")
         public Float originalAmount;
@@ -377,6 +423,9 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
 
         /**
          * <p>The actual price of the order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("TradeAmount")
         public Float tradeAmount;

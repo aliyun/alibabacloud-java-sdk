@@ -5,19 +5,30 @@ import com.aliyun.tea.*;
 
 public class ModifyDBInstanceNetExpireTimeRequest extends TeaModel {
     /**
-     * <p>The retention period of the classic network endpoint of the instance. Valid values: **14**, **30**, **60**, and **120**. Unit: day.</p>
+     * <p>The retention period of the classic network endpoint of the instance. Valid values: <strong>14</strong>, <strong>30</strong>, <strong>60</strong>, and <strong>120</strong>. Unit: day.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("ClassicExpendExpiredDays")
     public Integer classicExpendExpiredDays;
 
     /**
      * <p>The endpoint of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dds-bpxxxxxxxx.mongodb.rds.aliyuncs.com</p>
      */
     @NameInMap("ConnectionString")
     public String connectionString;
 
     /**
      * <p>The instance ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dds-bpxxxxxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

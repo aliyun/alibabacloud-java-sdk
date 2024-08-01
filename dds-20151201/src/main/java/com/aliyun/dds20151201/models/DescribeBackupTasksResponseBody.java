@@ -4,9 +4,18 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupTasksResponseBody extends TeaModel {
+    /**
+     * <p>The details of the backup task.</p>
+     */
     @NameInMap("BackupJobs")
     public java.util.List<DescribeBackupTasksResponseBodyBackupJobs> backupJobs;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D648B367-15B6-1B42-BD4B-47507C9CC****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +41,58 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
     }
 
     public static class DescribeBackupTasksResponseBodyBackupJobs extends TeaModel {
+        /**
+         * <p>The backup task status. Valid values:</p>
+         * <ul>
+         * <li><strong>Scheduled</strong>: The backup task is in planning. Regular backup tasks that have not started are also in this state.</li>
+         * <li><strong>Checking</strong>: The instance is being checked before the backup.</li>
+         * <li><strong>Backuping</strong>: The backup task is in progress.</li>
+         * <li><strong>Finished</strong>: The backup task is completed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Scheduled</p>
+         */
         @NameInMap("BackupSetStatus")
         public String backupSetStatus;
 
+        /**
+         * <p>The start time of the backup task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-01-16T11:04:56Z</p>
+         */
         @NameInMap("BackupStartTime")
         public String backupStartTime;
 
+        /**
+         * <p>The ID of the backup task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>170034</p>
+         */
         @NameInMap("BackupjobId")
         public String backupjobId;
 
+        /**
+         * <p>The backup mode. Valid values:</p>
+         * <ul>
+         * <li><strong>Automated</strong>: automatic backup</li>
+         * <li><strong>Manual</strong>: manual backup</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Manual</p>
+         */
         @NameInMap("JobMode")
         public String jobMode;
 
+        /**
+         * <p>The progress of the backup task. Unit: %. The progress is returned only for running backup tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18%</p>
+         */
         @NameInMap("Progress")
         public String progress;
 

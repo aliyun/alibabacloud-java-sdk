@@ -12,6 +12,9 @@ public class DescribeUserEncryptionKeyListResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7CD51DA4-A499-43CE-B9B5-20CD4FDC648E</p>
      */
     @NameInMap("RequestId")
     public String requestId;

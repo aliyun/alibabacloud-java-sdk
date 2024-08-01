@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyInstanceVpcAuthModeResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BA51E9D9-B14A-4542-B6E6-7DE00BECCB8C</p>
      */
     @NameInMap("RequestId")
     public String requestId;

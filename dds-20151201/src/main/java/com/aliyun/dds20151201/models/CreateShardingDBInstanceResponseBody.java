@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class CreateShardingDBInstanceResponseBody extends TeaModel {
     /**
      * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dds-bp114f14849d****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The order ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>21010996721****</p>
      */
     @NameInMap("OrderId")
     public String orderId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D8F1D721-6439-4257-A89C-F1E8E9C9****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

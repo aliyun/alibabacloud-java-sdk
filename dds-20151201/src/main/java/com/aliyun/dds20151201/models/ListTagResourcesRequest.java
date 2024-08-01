@@ -6,8 +6,12 @@ import com.aliyun.tea.*;
 public class ListTagResourcesRequest extends TeaModel {
     /**
      * <p>The token used to start the next query to retrieve more results.</p>
-     * <br>
-     * <p>>  This parameter is not required in the first query. If not all results are returned in one query, you can pass in the **NextToken** value returned in the previous query to perform the query again.</p>
+     * <blockquote>
+     * <p> This parameter is not required in the first query. If not all results are returned in one query, you can pass in the <strong>NextToken</strong> value returned in the previous query to perform the query again.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>212db86****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -19,13 +23,20 @@ public class ListTagResourcesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to query the region ID of the instance.</p>
+     * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to query the region ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The resource IDs. You must specify this parameter or the Tag parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dds-bpxxxxxxxx</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
@@ -37,7 +48,11 @@ public class ListTagResourcesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The resource type. Set the value to **INSTANCE**.</p>
+     * <p>The resource type. Set the value to <strong>INSTANCE</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>INSTANCE</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
@@ -128,12 +143,18 @@ public class ListTagResourcesRequest extends TeaModel {
     public static class ListTagResourcesRequestTag extends TeaModel {
         /**
          * <p>The key of tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dev</p>
          */
         @NameInMap("Value")
         public String value;

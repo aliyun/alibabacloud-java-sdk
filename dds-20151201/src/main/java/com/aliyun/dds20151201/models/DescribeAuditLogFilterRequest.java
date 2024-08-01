@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class DescribeAuditLogFilterRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dds-bp12c5b040dc****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -24,10 +28,14 @@ public class DescribeAuditLogFilterRequest extends TeaModel {
 
     /**
      * <p>The role of the node in the instance. Valid values:</p>
-     * <br>
-     * <p>* **mongos**: mongos node.</p>
-     * <p>* **db** : shard node.</p>
-     * <p>* **logic** : logical instance.</p>
+     * <ul>
+     * <li><strong>mongos</strong>: mongos node.</li>
+     * <li><strong>db</strong> : shard node.</li>
+     * <li><strong>logic</strong> : logical instance.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>logic</p>
      */
     @NameInMap("RoleType")
     public String roleType;

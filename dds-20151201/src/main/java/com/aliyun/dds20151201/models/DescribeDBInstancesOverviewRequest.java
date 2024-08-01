@@ -6,67 +6,96 @@ import com.aliyun.tea.*;
 public class DescribeDBInstancesOverviewRequest extends TeaModel {
     /**
      * <p>The billing method of the instance. Valid values:</p>
-     * <br>
-     * <p>*   **PrePaid**: subscription</p>
-     * <p>*   **PostPaid**: pay-as-you-go</p>
+     * <ul>
+     * <li><strong>PrePaid</strong>: subscription</li>
+     * <li><strong>PostPaid</strong>: pay-as-you-go</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>PostPaid</p>
      */
     @NameInMap("ChargeType")
     public String chargeType;
 
     /**
-     * <p>The database engine version of the instance. Valid values: **5.0**, **4.4**, **4.2**, **4.0**, and **3.4**.</p>
+     * <p>The database engine version of the instance. Valid values: <strong>5.0</strong>, <strong>4.4</strong>, <strong>4.2</strong>, <strong>4.0</strong>, and <strong>3.4</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4.0</p>
      */
     @NameInMap("EngineVersion")
     public String engineVersion;
 
     /**
      * <p>The instance type. The instance type varies based on the instance architecture. For more information about instance types supported by different instance architectures, see the following references:</p>
-     * <br>
-     * <p>*   [Standalone instance types](~~311407~~)</p>
-     * <p>*   [Replica set instance types](~~311410~~)</p>
-     * <p>*   [Sharded cluster instance types](~~311414~~)</p>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/311407.html">Standalone instance types</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/311410.html">Replica set instance types</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/311414.html">Sharded cluster instance types</a></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>dds.mongo.2xlarge</p>
      */
     @NameInMap("InstanceClass")
     public String instanceClass;
 
     /**
      * <p>The ID of the instance for which you want to query the overview information.</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   If you do not specify this parameter, the overview information of all instances within this account is queried.</p>
-     * <br>
-     * <p>*   Separate the instance IDs with commas (,).</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>If you do not specify this parameter, the overview information of all instances within this account is queried.</p>
+     * </li>
+     * <li><p>Separate the instance IDs with commas (,).</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>dds-bp12c5b040dc****</p>
      */
     @NameInMap("InstanceIds")
     public String instanceIds;
 
     /**
-     * <p>The state of the instance. For more information about valid values, see [Instance states](~~63870~~).</p>
+     * <p>The state of the instance. For more information about valid values, see <a href="https://help.aliyun.com/document_detail/63870.html">Instance states</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Running</p>
      */
     @NameInMap("InstanceStatus")
     public String instanceStatus;
 
     /**
      * <p>The architecture of the instance. Valid values:</p>
-     * <br>
-     * <p>*   **sharding**: sharded cluster instance</p>
-     * <p>*   **replicate**: replica set or standalone instance</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   To query the overview information of a sharded cluster instance, you must set the parameter to **sharding**.</p>
-     * <br>
-     * <p>*   If you do not specify this parameter, the overview information of all instances within this account is queried.</p>
+     * <ul>
+     * <li><strong>sharding</strong>: sharded cluster instance</li>
+     * <li><strong>replicate</strong>: replica set or standalone instance</li>
+     * </ul>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>To query the overview information of a sharded cluster instance, you must set the parameter to <strong>sharding</strong>.</p>
+     * </li>
+     * <li><p>If you do not specify this parameter, the overview information of all instances within this account is queried.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>replicate</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
 
     /**
      * <p>The network type of the instance. Valid values:</p>
-     * <br>
-     * <p>*   **Classic**: classic network</p>
-     * <p>*   **VPC**: Virtual Private Cloud (VPC)</p>
+     * <ul>
+     * <li><strong>Classic</strong>: classic network</li>
+     * <li><strong>VPC</strong>: Virtual Private Cloud (VPC)</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Classic</p>
      */
     @NameInMap("NetworkType")
     public String networkType;
@@ -78,13 +107,20 @@ public class DescribeDBInstancesOverviewRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which the instance belongs. For more information, see [View the basic information of a resource group](~~151181~~).</p>
+     * <p>The ID of the resource group to which the instance belongs. For more information, see <a href="https://help.aliyun.com/document_detail/151181.html">View the basic information of a resource group</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmyiu4ekp****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -97,18 +133,27 @@ public class DescribeDBInstancesOverviewRequest extends TeaModel {
 
     /**
      * <p>The ID of the vSwitch to which the instance is connected.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-bp1e7clcw529l773d****</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
     /**
      * <p>The ID of the VPC in which the instance is deployed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-bp1nme44gek34slfc****</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
 
     /**
      * <p>The zone ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-b</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;

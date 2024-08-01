@@ -4,30 +4,57 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class ReleaseNodePrivateNetworkAddressRequest extends TeaModel {
+    /**
+     * <p>The public endpoint type. Valid values:</p>
+     * <ul>
+     * <li><strong>SRV</strong></li>
+     * <li><strong>Normal</strong></li>
+     * </ul>
+     * <blockquote>
+     * <p> This parameter is valid only when you want to release an SRV endpoint.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>SRV</p>
+     */
     @NameInMap("ConnectionType")
     public String connectionType;
 
     /**
      * <p>The ID of the sharded cluster instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dds-bp1a7009eb24****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The network type of the internal endpoint. Valid values:</p>
-     * <br>
-     * <p>*   **VPC**: virtual private cloud (VPC).</p>
-     * <p>*   **Classic**: classic network.</p>
-     * <br>
-     * <p>>  You can call the [DescribeShardingNetworkAddress](~~62135~~) operation to query the network type of the internal endpoint.</p>
+     * <ul>
+     * <li><strong>VPC</strong>: virtual private cloud (VPC).</li>
+     * <li><strong>Classic</strong>: classic network.</li>
+     * </ul>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/62135.html">DescribeShardingNetworkAddress</a> operation to query the network type of the internal endpoint.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>VPC</p>
      */
     @NameInMap("NetworkType")
     public String networkType;
 
     /**
      * <p>The ID of the shard or Configserver node.</p>
-     * <br>
-     * <p>>  You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to query the ID of the shard or Configserver node.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to query the ID of the shard or Configserver node.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d-bp128a003436****</p>
      */
     @NameInMap("NodeId")
     public String nodeId;

@@ -6,20 +6,29 @@ import com.aliyun.tea.*;
 public class ModifyAuditLogFilterRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dds-bp12c5b040dc****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The type of logs collected by the audit log feature of the instance. Separate multiple types with commas (,). Valid values:</p>
-     * <br>
-     * <p>*   **admin**: O\&M and management operations</p>
-     * <p>*   **slow**: slow query logs</p>
-     * <p>*   **query**: query operations</p>
-     * <p>*   **insert**: insert operations</p>
-     * <p>*   **update**: update operations</p>
-     * <p>*   **delete**: delete operations</p>
-     * <p>*   **command**: protocol commands such as the aggregate method</p>
+     * <ul>
+     * <li><strong>admin</strong>: O\&amp;M and management operations</li>
+     * <li><strong>slow</strong>: slow query logs</li>
+     * <li><strong>query</strong>: query operations</li>
+     * <li><strong>insert</strong>: insert operations</li>
+     * <li><strong>update</strong>: update operations</li>
+     * <li><strong>delete</strong>: delete operations</li>
+     * <li><strong>command</strong>: protocol commands such as the aggregate method</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>insert,query,update,delete</p>
      */
     @NameInMap("Filter")
     public String filter;
@@ -38,9 +47,13 @@ public class ModifyAuditLogFilterRequest extends TeaModel {
 
     /**
      * <p>The role of the node in the instance. Valid values:</p>
-     * <br>
-     * <p>*   **primary**</p>
-     * <p>*   **secondary**</p>
+     * <ul>
+     * <li><strong>primary</strong></li>
+     * <li><strong>secondary</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>primary</p>
      */
     @NameInMap("RoleType")
     public String roleType;

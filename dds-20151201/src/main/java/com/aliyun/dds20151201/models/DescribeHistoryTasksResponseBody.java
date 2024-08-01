@@ -12,24 +12,36 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The maximum number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3C4A2494-XXXX-XXXX-93CF-548DB3375193</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of tasks that meet these conditions without taking pagination into account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,179 +94,241 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
     public static class DescribeHistoryTasksResponseBodyItems extends TeaModel {
         /**
          * <p>A set of allowed actions that can be taken on the task. The system matches the current step name and status of the task to the available actions specified by ActionInfo. If no matching action is found, the current status of the task does not support any action. Example:</p>
-         * <br>
-         * <p>       "steps": [</p>
-         * <p>        {</p>
-         * <p>          "step_name": "exec_task", // The name of the step, which matches the value of CurrentStepName.</p>
-         * <p>          "action_info": {    // The actions supported for this step.</p>
-         * <p>            "Waiting": [      // The status, which matches the value of Status.</p>
-         * <p>              "modifySwitchTime" // The action. Multiple actions are supported.</p>
-         * <p>            ]</p>
-         * <p>          }</p>
-         * <p>        },</p>
-         * <p>        {</p>
-         * <p>          "step_name": "init_task", // The name of the step.</p>
-         * <p>          "action_info": {    // The actions supported for this step.</p>
-         * <p>            "Running": [      // The status.</p>
-         * <p>              "cancel",       // The action.</p>
-         * <p>              "pause"</p>
-         * <p>            ]</p>
-         * <p>          }</p>
-         * <p>        }</p>
-         * <p>      ]</p>
-         * <p>    }</p>
-         * <br>
+         * <pre><code>   &quot;steps&quot;: [
+         *     {
+         *       &quot;step_name&quot;: &quot;exec_task&quot;, // The name of the step, which matches the value of CurrentStepName.
+         *       &quot;action_info&quot;: {    // The actions supported for this step.
+         *         &quot;Waiting&quot;: [      // The status, which matches the value of Status.
+         *           &quot;modifySwitchTime&quot; // The action. Multiple actions are supported.
+         *         ]
+         *       }
+         *     },
+         *     {
+         *       &quot;step_name&quot;: &quot;init_task&quot;, // The name of the step.
+         *       &quot;action_info&quot;: {    // The actions supported for this step.
+         *         &quot;Running&quot;: [      // The status.
+         *           &quot;cancel&quot;,       // The action.
+         *           &quot;pause&quot;
+         *         ]
+         *       }
+         *     }
+         *   ]
+         * }
+         * </code></pre>
          * <p>The system may support the following actions:</p>
-         * <br>
-         * <p>*   retry: makes another attempt.</p>
-         * <p>*   cancel: makes a cancellation.</p>
-         * <p>*   modifySwitchTime: changes the switching or restoration time.</p>
+         * <ul>
+         * <li>retry: makes another attempt.</li>
+         * <li>cancel: makes a cancellation.</li>
+         * <li>modifySwitchTime: changes the switching or restoration time.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p><code>{\\&quot;steps\\&quot;:[{\\&quot;action_info\\&quot;:{\\&quot;Waiting\\&quot;:[\\&quot;modifySwitchTime\\&quot;]},\\&quot;step_name\\&quot;:\\&quot;exec_task\\&quot;}]}</code></p>
          */
         @NameInMap("ActionInfo")
         public String actionInfo;
 
         /**
          * <p>The request source. Valid values: System and User.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>System</p>
          */
         @NameInMap("CallerSource")
         public String callerSource;
 
         /**
          * <p>The ID of the user who made the request. If CallerSource is set to User, CallerUid indicates the unique ID (UID) of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>141345906006****</p>
          */
         @NameInMap("CallerUid")
         public String callerUid;
 
         /**
          * <p>The name of the current step. If this parameter is left empty, the task is not started.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>exec_task</p>
          */
         @NameInMap("CurrentStepName")
         public String currentStepName;
 
         /**
          * <p>The database type. The value is fixed to mongodb.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mongodb</p>
          */
         @NameInMap("DbType")
         public String dbType;
 
         /**
-         * <p>The end time of the performed O\&M task. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The end time of the performed O\&amp;M task. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-03-16T02:59Z</p>
          */
         @NameInMap("EndTime")
         public String endTime;
 
         /**
          * <p>The instance ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds-t4n18194768fxxxx</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-dds</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
          * <p>The instance type of the instance. The value is fixed to Instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Instance</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
 
         /**
          * <p>The product. The value is fixed to dds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds</p>
          */
         @NameInMap("Product")
         public String product;
 
         /**
          * <p>The current progress of the task. The valid values range from 0 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100.0</p>
          */
         @NameInMap("Progress")
         public Float progress;
 
         /**
          * <p>The reason why the current task was initiated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("ReasonCode")
         public String reasonCode;
 
         /**
          * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The estimated remaining execution time. Unit: seconds. The value 0 indicates that the task is completed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         @NameInMap("RemainTime")
         public Integer remainTime;
 
         /**
-         * <p>The start time of the performed O\&M task. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The start time of the performed O\&amp;M task. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-02-11T02:33Z</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
         /**
          * <p>The task status. Valid values:</p>
-         * <br>
-         * <p>*   Scheduled: The task is waiting to be executed.</p>
-         * <p>*   Running: The task is running.</p>
-         * <p>*   Succeed: The task is successful.</p>
-         * <p>*   Failed: The task failed.</p>
-         * <p>*   Cancelling: The task is being terminated.</p>
-         * <p>*   Canceled: The task has been terminated.</p>
-         * <p>*   Waiting: The task is waiting for scheduled time.</p>
+         * <ul>
+         * <li>Scheduled: The task is waiting to be executed.</li>
+         * <li>Running: The task is running.</li>
+         * <li>Succeed: The task is successful.</li>
+         * <li>Failed: The task failed.</li>
+         * <li>Cancelling: The task is being terminated.</li>
+         * <li>Canceled: The task has been terminated.</li>
+         * <li>Waiting: The task is waiting for scheduled time.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Succeed</p>
          */
         @NameInMap("Status")
         public Integer status;
 
         /**
          * <p>The details of the task. The task details vary based on the value of the taskType parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;callerUid\&quot;:\&quot;test\&quot;}</p>
          */
         @NameInMap("TaskDetail")
         public String taskDetail;
 
         /**
          * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-0mq1yyhm3ffl2bxxxx</p>
          */
         @NameInMap("TaskId")
         public String taskId;
 
         /**
          * <p>The task type.</p>
-         * <br>
-         * <p>*   CreateIns: Create an instance.</p>
-         * <p>*   DeleteIns: Delete an instance.</p>
-         * <p>*   ChangeVariable: Modify parameter settings for an instance.</p>
-         * <p>*   ModifyInsConfig: Change the configurations of an instance.</p>
-         * <p>*   RestartIns: Restart an instance.</p>
-         * <p>*   HaSwitch: Perform a primary/secondary switchover on an instance.</p>
-         * <p>*   CloneIns: Clone an instance.</p>
-         * <p>*   KernelVersionUpgrade: Update the minor version of an instance.</p>
-         * <p>*   ProxyVersionUpgrade: Upgrade the agent version of an instance.</p>
-         * <p>*   ModifyAccount: Change the account of an instance.</p>
-         * <p>*   ModifyInsSpec: Change the specifications of an instance or perform a data migration on the instance.</p>
-         * <p>*   CreateReadIns: Create a read-only instance.</p>
-         * <p>*   StartIns: Start an instance.</p>
-         * <p>*   StopIns: Stop an instance.</p>
-         * <p>*   ModifyNetwork: Modify the network type for an instance.</p>
-         * <p>*   LockIns: Lock an instance.</p>
-         * <p>*   UnlockIns: Unlock an instance.</p>
-         * <p>*   DiskOnlineExpansion: Scale out the disks of an instance online.</p>
-         * <p>*   StorageOnlineExpansion: Expend the storage capacity of an instance online.</p>
-         * <p>*   AddInsNode: Add a node to an instance.</p>
-         * <p>*   DeleteInsNode: Delete a node from an instance.</p>
-         * <p>*   ManualBackupIns: Manually back up an instance.</p>
-         * <p>*   ModifyInsStorageType: Modify the storage type for an instance.</p>
+         * <ul>
+         * <li>CreateIns: Create an instance.</li>
+         * <li>DeleteIns: Delete an instance.</li>
+         * <li>ChangeVariable: Modify parameter settings for an instance.</li>
+         * <li>ModifyInsConfig: Change the configurations of an instance.</li>
+         * <li>RestartIns: Restart an instance.</li>
+         * <li>HaSwitch: Perform a primary/secondary switchover on an instance.</li>
+         * <li>CloneIns: Clone an instance.</li>
+         * <li>KernelVersionUpgrade: Update the minor version of an instance.</li>
+         * <li>ProxyVersionUpgrade: Upgrade the agent version of an instance.</li>
+         * <li>ModifyAccount: Change the account of an instance.</li>
+         * <li>ModifyInsSpec: Change the specifications of an instance or perform a data migration on the instance.</li>
+         * <li>CreateReadIns: Create a read-only instance.</li>
+         * <li>StartIns: Start an instance.</li>
+         * <li>StopIns: Stop an instance.</li>
+         * <li>ModifyNetwork: Modify the network type for an instance.</li>
+         * <li>LockIns: Lock an instance.</li>
+         * <li>UnlockIns: Unlock an instance.</li>
+         * <li>DiskOnlineExpansion: Scale out the disks of an instance online.</li>
+         * <li>StorageOnlineExpansion: Expend the storage capacity of an instance online.</li>
+         * <li>AddInsNode: Add a node to an instance.</li>
+         * <li>DeleteInsNode: Delete a node from an instance.</li>
+         * <li>ManualBackupIns: Manually back up an instance.</li>
+         * <li>ModifyInsStorageType: Modify the storage type for an instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CreateIns</p>
          */
         @NameInMap("TaskType")
         public String taskType;
 
         /**
          * <p>The ID of the user to which the resource belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>141345906006****</p>
          */
         @NameInMap("Uid")
         public String uid;

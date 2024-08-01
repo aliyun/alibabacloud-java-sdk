@@ -11,19 +11,28 @@ public class DescribeParametersResponseBody extends TeaModel {
     public DescribeParametersResponseBodyConfigParameters configParameters;
 
     /**
-     * <p>The database engine of the instance. Default value: **mongodb**.</p>
+     * <p>The database engine of the instance. Default value: <strong>mongodb</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mongodb</p>
      */
     @NameInMap("Engine")
     public String engine;
 
     /**
      * <p>The database engine version of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4.0</p>
      */
     @NameInMap("EngineVersion")
     public String engineVersion;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3ADD0C7D-2D2A-4F15-88FF-E7AC9B9FDCC8</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -82,42 +91,62 @@ public class DescribeParametersResponseBody extends TeaModel {
     public static class DescribeParametersResponseBodyConfigParametersParameter extends TeaModel {
         /**
          * <p>The valid values of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[0-65536]</p>
          */
         @NameInMap("CheckingCode")
         public String checkingCode;
 
         /**
          * <p>Indicates whether a restart is required for parameter modifications to take effect. Valid values:</p>
-         * <br>
-         * <p>*   **false**: A restart is not required. Modifications take effect immediately.</p>
-         * <p>*   **true**: A restart is required for parameter modifications to take effect.</p>
+         * <ul>
+         * <li><strong>false</strong>: A restart is not required. Modifications take effect immediately.</li>
+         * <li><strong>true</strong>: A restart is required for parameter modifications to take effect.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("ForceRestart")
         public Boolean forceRestart;
 
         /**
          * <p>Indicates whether the parameter value can be modified. Valid values:</p>
-         * <br>
-         * <p>*   **false**: The parameter value cannot be modified.</p>
-         * <p>*   **true**: The parameter value can be modified.</p>
+         * <ul>
+         * <li><strong>false</strong>: The parameter value cannot be modified.</li>
+         * <li><strong>true</strong>: The parameter value can be modified.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("ModifiableStatus")
         public Boolean modifiableStatus;
 
         /**
          * <p>The description of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The threshold in milliseconds at which the database profiler considers a query slow, default is 100.</p>
          */
         @NameInMap("ParameterDescription")
         public String parameterDescription;
 
         /**
          * <p>The name of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>operationProfiling.slowOpThresholdMs</p>
          */
         @NameInMap("ParameterName")
         public String parameterName;
 
         /**
          * <p>The value of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         @NameInMap("ParameterValue")
         public String parameterValue;
@@ -199,52 +228,76 @@ public class DescribeParametersResponseBody extends TeaModel {
     public static class DescribeParametersResponseBodyRunningParametersParameter extends TeaModel {
         /**
          * <p>实例的角色类型，取值说明：</p>
-         * <br>
-         * <p>- **db**：shard角色。</p>
-         * <p>- **cs**：config server角色。</p>
-         * <p>- **mongos**：mongos角色。</p>
+         * <ul>
+         * <li><strong>db</strong>：shard角色。</li>
+         * <li><strong>cs</strong>：config server角色。</li>
+         * <li><strong>mongos</strong>：mongos角色。</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>db</p>
          */
         @NameInMap("CharacterType")
         public String characterType;
 
         /**
          * <p>The valid values of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[33554432-268435456]</p>
          */
         @NameInMap("CheckingCode")
         public String checkingCode;
 
         /**
          * <p>Indicates whether a restart is required for parameter modifications to take effect. Valid values:</p>
-         * <br>
-         * <p>*   **false**: A restart is not required. Modifications take effect immediately.</p>
-         * <p>*   **true**: A restart is required for parameter modifications to take effect.</p>
+         * <ul>
+         * <li><strong>false</strong>: A restart is not required. Modifications take effect immediately.</li>
+         * <li><strong>true</strong>: A restart is required for parameter modifications to take effect.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("ForceRestart")
         public String forceRestart;
 
         /**
          * <p>Indicates whether the parameter value can be modified. Valid values:</p>
-         * <br>
-         * <p>*   **false**: The parameter value cannot be modified.</p>
-         * <p>*   **true**: The parameter value can be modified.</p>
+         * <ul>
+         * <li><strong>false</strong>: The parameter value cannot be modified.</li>
+         * <li><strong>true</strong>: The parameter value can be modified.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("ModifiableStatus")
         public String modifiableStatus;
 
         /**
          * <p>The description of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The maximum memory bytes that sort stage may use, default is 33554432(i.e. 32MB)</p>
          */
         @NameInMap("ParameterDescription")
         public String parameterDescription;
 
         /**
          * <p>The name of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>setParameter.internalQueryExecMaxBlockingSortBytes</p>
          */
         @NameInMap("ParameterName")
         public String parameterName;
 
         /**
          * <p>The value of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>33554432</p>
          */
         @NameInMap("ParameterValue")
         public String parameterValue;

@@ -6,85 +6,127 @@ import com.aliyun.tea.*;
 public class ModifyNodeSpecRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable automatic payment. Valid values:</p>
-     * <br>
-     * <p>*   **true** (default): enables automatic payment. Make sure that you have sufficient balance within your account.</p>
-     * <p>*   **false**: disables automatic payment. In this case, you must manually pay for the instance.</p>
+     * <ul>
+     * <li><strong>true</strong> (default): enables automatic payment. Make sure that you have sufficient balance within your account.</li>
+     * <li><strong>false</strong>: disables automatic payment. In this case, you must manually pay for the instance.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
     /**
      * <p>The business information. This is an additional parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{“ActivityId&quot;:&quot;000000000&quot;}</p>
      */
     @NameInMap("BusinessInfo")
     public String businessInfo;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ETnLKlblzczshOTUbOCz****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The coupon code. Default value: `youhuiquan_promotion_option_id_for_blank`.</p>
+     * <p>The coupon code. Default value: <code>youhuiquan_promotion_option_id_for_blank</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>youhuiquan_promotion_option_id_for_blank</p>
      */
     @NameInMap("CouponNo")
     public String couponNo;
 
     /**
      * <p>The ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dds-bp1c0b990184****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The time when the changed configurations take effect. Valid values:</p>
-     * <br>
-     * <p>*   **Immediately** (default): The new configurations immediately take effect</p>
-     * <p>*   **MaintainTime**: The new configurations take effect during the maintenance window of the instance.</p>
+     * <ul>
+     * <li><strong>Immediately</strong> (default): The new configurations immediately take effect</li>
+     * <li><strong>MaintainTime</strong>: The new configurations take effect during the maintenance window of the instance.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Immediately</p>
      */
     @NameInMap("EffectiveTime")
     public String effectiveTime;
 
     /**
      * <p>The source of the request. Valid values:</p>
-     * <br>
-     * <p>*   **OpenApi**: the ApsaraDB for MongoDB API</p>
-     * <p>*   **mongo_buy**: the ApsaraDB for MongoDB console</p>
+     * <ul>
+     * <li><strong>OpenApi</strong>: the ApsaraDB for MongoDB API</li>
+     * <li><strong>mongo_buy</strong>: the ApsaraDB for MongoDB console</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>OpenApi</p>
      */
     @NameInMap("FromApp")
     public String fromApp;
 
     /**
-     * <p>The specifications of the shard or mongos node. For more information, see [Instance types](~~57141~~).</p>
+     * <p>The specifications of the shard or mongos node. For more information, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dds.mongos.standard</p>
      */
     @NameInMap("NodeClass")
     public String nodeClass;
 
     /**
-     * <p>The ID of the shard or mongos node in the sharded cluster instance. You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to query the node ID.</p>
-     * <br>
-     * <p>> If you set this parameter to the ID of the shard node, you must also specify the **NodeStorage** parameter.</p>
+     * <p>The ID of the shard or mongos node in the sharded cluster instance. You can call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to query the node ID.</p>
+     * <blockquote>
+     * <p>If you set this parameter to the ID of the shard node, you must also specify the <strong>NodeStorage</strong> parameter.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>s-bp143e1b1637****</p>
      */
     @NameInMap("NodeId")
     public String nodeId;
 
     /**
      * <p>The storage capacity of the shard node. Unit: GB.</p>
-     * <br>
-     * <p>*   Valid values are **10** to **2000** if the instance uses local SSDs.</p>
-     * <p>*   Valid values are **20** to **16000** if the instance uses enhanced SSDs (ESSDs) at PL1.</p>
-     * <br>
-     * <p>> The value must be a multiple of 10.</p>
+     * <ul>
+     * <li>Valid values are <strong>10</strong> to <strong>2000</strong> if the instance uses local SSDs.</li>
+     * <li>Valid values are <strong>20</strong> to <strong>16000</strong> if the instance uses enhanced SSDs (ESSDs) at PL1.</li>
+     * </ul>
+     * <blockquote>
+     * <p>The value must be a multiple of 10.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("NodeStorage")
     public Integer nodeStorage;
 
     /**
      * <p>The order type. Valid values:</p>
-     * <br>
-     * <p>*   **UPGRADE**</p>
-     * <p>*   **DOWNGRADE**</p>
+     * <ul>
+     * <li><strong>UPGRADE</strong></li>
+     * <li><strong>DOWNGRADE</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>UPGRADE</p>
      */
     @NameInMap("OrderType")
     public String orderType;
@@ -97,8 +139,10 @@ public class ModifyNodeSpecRequest extends TeaModel {
 
     /**
      * <p>The number of read-only nodes in the shard node.</p>
-     * <br>
-     * <p>Valid values: **0** to **5**. The value must be an integer. Default value: **0**.</p>
+     * <p>Valid values: <strong>0</strong> to <strong>5</strong>. The value must be an integer. Default value: <strong>0</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("ReadonlyReplicas")
     public Integer readonlyReplicas;
@@ -110,7 +154,10 @@ public class ModifyNodeSpecRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The execution time. Specify the time in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
+     * <p>The execution time. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-01-05T03:18:53Z</p>
      */
     @NameInMap("SwitchTime")
     public String switchTime;

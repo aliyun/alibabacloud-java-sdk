@@ -6,14 +6,22 @@ import com.aliyun.tea.*;
 public class RestartDBInstanceRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dds-bpxxxxxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The ID of the shard or mongos node in the sharded cluster instance.</p>
-     * <br>
-     * <p>> The sharded cluster instance is restarted if you do not specify this parameter.</p>
+     * <blockquote>
+     * <p>The sharded cluster instance is restarted if you do not specify this parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>d-bpxxxxxxxx</p>
      */
     @NameInMap("NodeId")
     public String nodeId;

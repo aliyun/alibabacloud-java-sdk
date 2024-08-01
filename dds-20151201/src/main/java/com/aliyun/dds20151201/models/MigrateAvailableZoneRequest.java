@@ -6,22 +6,33 @@ import com.aliyun.tea.*;
 public class MigrateAvailableZoneRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
-     * <br>
-     * <p>> If the instance is deployed in a VPC, you must specify the **Vswitch** parameter.</p>
+     * <blockquote>
+     * <p>If the instance is deployed in a VPC, you must specify the <strong>Vswitch</strong> parameter.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dds-bp1ece71ff2f****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The time when the instance is migrated to the destination zone. Valid values:</p>
-     * <br>
-     * <p>*   **Immediately**: The instance is immediately migrated to the destination zone.</p>
-     * <p>*   **MaintainTime**: The instance is migrated to the destination zone during the maintenance window of the instance.</p>
-     * <br>
-     * <p>Default value: **Immediately**.</p>
+     * <ul>
+     * <li><strong>Immediately</strong>: The instance is immediately migrated to the destination zone.</li>
+     * <li><strong>MaintainTime</strong>: The instance is migrated to the destination zone during the maintenance window of the instance.</li>
+     * </ul>
+     * <p>Default value: <strong>Immediately</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Immediately</p>
      */
     @NameInMap("EffectiveTime")
     public String effectiveTime;
+
+    @NameInMap("HiddenZoneId")
+    public String hiddenZoneId;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
@@ -35,22 +46,35 @@ public class MigrateAvailableZoneRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("SecondaryZoneId")
+    public String secondaryZoneId;
+
     /**
      * <p>The ID of the vSwitch in the destination zone.</p>
-     * <br>
-     * <p>> If the instance is deployed in a VPC, you must specify this parameter.</p>
+     * <blockquote>
+     * <p>If the instance is deployed in a VPC, you must specify this parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-bp1buy0h9myt5i9e7****</p>
      */
     @NameInMap("Vswitch")
     public String vswitch;
 
     /**
      * <p>The ID of the destination zone.</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   The source zone and the destination zone belong to the same region.</p>
-     * <br>
-     * <p>*   You can call the [DescribeRegions](~~61933~~) operation to query the zone ID.</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>The source zone and the destination zone belong to the same region.</p>
+     * </li>
+     * <li><p>You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the zone ID.</p>
+     * </li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-b</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;
@@ -74,6 +98,14 @@ public class MigrateAvailableZoneRequest extends TeaModel {
     }
     public String getEffectiveTime() {
         return this.effectiveTime;
+    }
+
+    public MigrateAvailableZoneRequest setHiddenZoneId(String hiddenZoneId) {
+        this.hiddenZoneId = hiddenZoneId;
+        return this;
+    }
+    public String getHiddenZoneId() {
+        return this.hiddenZoneId;
     }
 
     public MigrateAvailableZoneRequest setOwnerAccount(String ownerAccount) {
@@ -106,6 +138,14 @@ public class MigrateAvailableZoneRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public MigrateAvailableZoneRequest setSecondaryZoneId(String secondaryZoneId) {
+        this.secondaryZoneId = secondaryZoneId;
+        return this;
+    }
+    public String getSecondaryZoneId() {
+        return this.secondaryZoneId;
     }
 
     public MigrateAvailableZoneRequest setVswitch(String vswitch) {

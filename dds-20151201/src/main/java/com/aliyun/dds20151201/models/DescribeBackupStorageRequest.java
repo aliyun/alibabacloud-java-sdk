@@ -4,9 +4,25 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupStorageRequest extends TeaModel {
+    /**
+     * <p>The instance ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dds-2zeb2d64cb46xxxx</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The ID of the shard node in the sharded cluster instance.</p>
+     * <blockquote>
+     * <p> This parameter is required only when the <strong>DBInstanceId</strong> parameter is set to the ID of a sharded cluster instance.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>d-2zee48956b4axxxx</p>
+     */
     @NameInMap("NodeId")
     public String nodeId;
 
@@ -16,6 +32,12 @@ public class DescribeBackupStorageRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to query the most recent region list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-bejing</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

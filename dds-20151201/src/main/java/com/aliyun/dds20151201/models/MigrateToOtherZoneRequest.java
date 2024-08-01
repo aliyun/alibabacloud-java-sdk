@@ -6,19 +6,27 @@ import com.aliyun.tea.*;
 public class MigrateToOtherZoneRequest extends TeaModel {
     /**
      * <p>The time when the instance is migrated to the destination zone. Valid values:</p>
-     * <br>
-     * <p>*   **Immediately**: The instance is immediately migrated to the destination zone.</p>
-     * <p>*   **MaintainTime**: The instance is migrated during the maintenance period of the instance.</p>
-     * <br>
-     * <p>Default value: **Immediately**.</p>
+     * <ul>
+     * <li><strong>Immediately</strong>: The instance is immediately migrated to the destination zone.</li>
+     * <li><strong>MaintainTime</strong>: The instance is migrated during the maintenance period of the instance.</li>
+     * </ul>
+     * <p>Default value: <strong>Immediately</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Immediately</p>
      */
     @NameInMap("EffectiveTime")
     public String effectiveTime;
 
     /**
      * <p>The ID of the instance.</p>
-     * <br>
-     * <p>>  If the network type of the instance is VPC, you must specify the **Vswitch** parameter .</p>
+     * <blockquote>
+     * <p> If the network type of the instance is VPC, you must specify the <strong>Vswitch</strong> parameter .</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dds-bp2658****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -37,17 +45,28 @@ public class MigrateToOtherZoneRequest extends TeaModel {
 
     /**
      * <p>The ID of the vSwitch in the destination zone.</p>
-     * <br>
-     * <p>>  This parameter is valid and required only when the network type of the instance is VPC.</p>
+     * <blockquote>
+     * <p> This parameter is valid and required only when the network type of the instance is VPC.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-bp67ac****</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
     /**
      * <p>The ID of the destination zone to which you want to migrate the ApsaraDB for MongoDB instance.</p>
-     * <br>
-     * <p>> * The destination and source zones must be in one region.</p>
-     * <p>> * You can call [DescribeRegions](~~61933~~) to query the zone IDs.</p>
+     * <blockquote>
+     * <ul>
+     * <li>The destination and source zones must be in one region.</li>
+     * <li>You can call <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> to query the zone IDs.</li>
+     * </ul>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-b</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;

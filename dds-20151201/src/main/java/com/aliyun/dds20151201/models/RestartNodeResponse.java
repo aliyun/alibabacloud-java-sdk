@@ -3,7 +3,7 @@ package com.aliyun.dds20151201.models;
 
 import com.aliyun.tea.*;
 
-public class RestoreDBInstanceResponse extends TeaModel {
+public class RestartNodeResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class RestoreDBInstanceResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public RestoreDBInstanceResponseBody body;
+    public RestartNodeResponseBody body;
 
-    public static RestoreDBInstanceResponse build(java.util.Map<String, ?> map) throws Exception {
-        RestoreDBInstanceResponse self = new RestoreDBInstanceResponse();
+    public static RestartNodeResponse build(java.util.Map<String, ?> map) throws Exception {
+        RestartNodeResponse self = new RestartNodeResponse();
         return TeaModel.build(map, self);
     }
 
-    public RestoreDBInstanceResponse setHeaders(java.util.Map<String, String> headers) {
+    public RestartNodeResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class RestoreDBInstanceResponse extends TeaModel {
         return this.headers;
     }
 
-    public RestoreDBInstanceResponse setStatusCode(Integer statusCode) {
+    public RestartNodeResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class RestoreDBInstanceResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public RestoreDBInstanceResponse setBody(RestoreDBInstanceResponseBody body) {
+    public RestartNodeResponse setBody(RestartNodeResponseBody body) {
         this.body = body;
         return this;
     }
-    public RestoreDBInstanceResponseBody getBody() {
+    public RestartNodeResponseBody getBody() {
         return this.body;
     }
 

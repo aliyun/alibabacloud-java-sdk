@@ -12,24 +12,36 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
 
     /**
      * <p>The maximum number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The page number of the page returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2F42BB4E-461F-5B55-A37C-53B1141C****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -79,69 +91,183 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class DescribeClusterBackupsResponseBodyClusterBackupsBackupsExtraInfo extends TeaModel {
+        /**
+         * <p>The instance type of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mdb.shard.4x.large.d</p>
+         */
+        @NameInMap("InstanceClass")
+        public String instanceClass;
+
+        /**
+         * <p>The node ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-2ze75ab1fa5d****</p>
+         */
+        @NameInMap("NodeId")
+        public String nodeId;
+
+        /**
+         * <p>The node type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>db</p>
+         */
+        @NameInMap("NodeType")
+        public String nodeType;
+
+        /**
+         * <p>The storage capacity of the node. Unit: MB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20480</p>
+         */
+        @NameInMap("StorageSize")
+        public String storageSize;
+
+        public static DescribeClusterBackupsResponseBodyClusterBackupsBackupsExtraInfo build(java.util.Map<String, ?> map) throws Exception {
+            DescribeClusterBackupsResponseBodyClusterBackupsBackupsExtraInfo self = new DescribeClusterBackupsResponseBodyClusterBackupsBackupsExtraInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeClusterBackupsResponseBodyClusterBackupsBackupsExtraInfo setInstanceClass(String instanceClass) {
+            this.instanceClass = instanceClass;
+            return this;
+        }
+        public String getInstanceClass() {
+            return this.instanceClass;
+        }
+
+        public DescribeClusterBackupsResponseBodyClusterBackupsBackupsExtraInfo setNodeId(String nodeId) {
+            this.nodeId = nodeId;
+            return this;
+        }
+        public String getNodeId() {
+            return this.nodeId;
+        }
+
+        public DescribeClusterBackupsResponseBodyClusterBackupsBackupsExtraInfo setNodeType(String nodeType) {
+            this.nodeType = nodeType;
+            return this;
+        }
+        public String getNodeType() {
+            return this.nodeType;
+        }
+
+        public DescribeClusterBackupsResponseBodyClusterBackupsBackupsExtraInfo setStorageSize(String storageSize) {
+            this.storageSize = storageSize;
+            return this;
+        }
+        public String getStorageSize() {
+            return this.storageSize;
+        }
+
+    }
+
     public static class DescribeClusterBackupsResponseBodyClusterBackupsBackups extends TeaModel {
         /**
          * <p>The URL that is used to download the backup set over the Internet. If the backup set cannot be downloaded, an empty string is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://oss.com/xxx">http://oss.com/xxx</a></p>
          */
         @NameInMap("BackupDownloadURL")
         public String backupDownloadURL;
 
         /**
-         * <p>The end of the backup time range. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The end time of the backup. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-10-16T19:33:20Z</p>
          */
         @NameInMap("BackupEndTime")
         public String backupEndTime;
 
         /**
          * <p>The ID of the backup set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>738025367</p>
          */
         @NameInMap("BackupId")
         public String backupId;
 
         /**
          * <p>The URL that is used to download the backup set over an internal network. If the backup set cannot be downloaded, null is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://oss.com/xxx">http://oss.com/xxx</a></p>
          */
         @NameInMap("BackupIntranetDownloadURL")
         public String backupIntranetDownloadURL;
 
         /**
          * <p>The backup name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345678.tar.gz</p>
          */
         @NameInMap("BackupName")
         public String backupName;
 
         /**
          * <p>The size of the backup file. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>77544597650</p>
          */
         @NameInMap("BackupSize")
         public String backupSize;
 
         /**
-         * <p>The beginning of the backup time range. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The start time of the backup. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-10-16T19:33:20Z</p>
          */
         @NameInMap("BackupStartTime")
         public String backupStartTime;
 
         /**
          * <p>The status of the backup task. Valid values:</p>
-         * <br>
-         * <p>*   **Success**: The backup task is successful.</p>
-         * <p>*   **Failed**: The backup task failed.</p>
+         * <ul>
+         * <li><strong>Success</strong>: The backup task is successful.</li>
+         * <li><strong>Failed</strong>: The backup task failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         @NameInMap("BackupStatus")
         public String backupStatus;
 
         /**
-         * <p>The name of the shard.</p>
+         * <p>The information of the node associated with the backup.</p>
+         */
+        @NameInMap("ExtraInfo")
+        public DescribeClusterBackupsResponseBodyClusterBackupsBackupsExtraInfo extraInfo;
+
+        /**
+         * <p>The shard name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-bp16cb162771****</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
          * <p>Indicates whether the backup set is available. Valid values:</p>
-         * <br>
-         * <p>*   **0**: unavailable</p>
-         * <p>*   **1**: available</p>
+         * <ul>
+         * <li><strong>0</strong>: unavailable</li>
+         * <li><strong>1</strong>: available</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("IsAvail")
         public String isAvail;
@@ -215,6 +341,14 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
             return this.backupStatus;
         }
 
+        public DescribeClusterBackupsResponseBodyClusterBackupsBackups setExtraInfo(DescribeClusterBackupsResponseBodyClusterBackupsBackupsExtraInfo extraInfo) {
+            this.extraInfo = extraInfo;
+            return this;
+        }
+        public DescribeClusterBackupsResponseBodyClusterBackupsBackupsExtraInfo getExtraInfo() {
+            return this.extraInfo;
+        }
+
         public DescribeClusterBackupsResponseBodyClusterBackupsBackups setInstanceName(String instanceName) {
             this.instanceName = instanceName;
             return this;
@@ -235,7 +369,10 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
 
     public static class DescribeClusterBackupsResponseBodyClusterBackupsExtraInfo extends TeaModel {
         /**
-         * <p>Indicates whether the cluster backups are from the historical backup sets. If the value of this parameter is **1**, the cluster backups are migrated from the historical backup sets.</p>
+         * <p>Indicates whether the cluster backups are migrated from the historical backup sets. If the value of this parameter is <strong>1</strong>, the cluster backups are migrated from the historical backup sets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("RegistryFromHistory")
         public String registryFromHistory;
@@ -257,6 +394,25 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
 
     public static class DescribeClusterBackupsResponseBodyClusterBackups extends TeaModel {
         /**
+         * <p>The backup status. Valid values:</p>
+         * <ul>
+         * <li><strong>init</strong>: The backup is being initialized.</li>
+         * <li><strong>No_Need</strong>: Log backup is not performed.</li>
+         * <li><strong>Running</strong>: Log backup is being performed.</li>
+         * <li><strong>Ready</strong>: Log backup is complete.</li>
+         * <li><strong>Failed</strong>: Log backup failed.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If the <strong>ClusterBackupStatus</strong> parameter is set to OK, full backup is successful. If you want to perform point-in-time-restoration on an instance for which log backup is enabled or to implement consistency restoration, make sure that log backup is complete.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Ready</p>
+         */
+        @NameInMap("AttachLogStatus")
+        public String attachLogStatus;
+
+        /**
          * <p>The collection of the backup sets of each child node in a cluster backup set.</p>
          */
         @NameInMap("Backups")
@@ -264,57 +420,82 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
 
         /**
          * <p>The end of the time range within which the cluster backup is performed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-10-16T19:33:20Z</p>
          */
         @NameInMap("ClusterBackupEndTime")
         public String clusterBackupEndTime;
 
         /**
-         * <p>The ID of the cluster backup set.</p>
+         * <p>The backup set ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cb-o8c2ugnxo26kx***</p>
          */
         @NameInMap("ClusterBackupId")
         public String clusterBackupId;
 
         /**
          * <p>The cluster backup mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Automated</p>
          */
         @NameInMap("ClusterBackupMode")
         public String clusterBackupMode;
 
         /**
          * <p>The size of the cluster backup set. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>107374182400</p>
          */
         @NameInMap("ClusterBackupSize")
         public String clusterBackupSize;
 
         /**
          * <p>The beginning of the time range within which the cluster backup is performed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-10-16T19:33:20Z</p>
          */
         @NameInMap("ClusterBackupStartTime")
         public String clusterBackupStartTime;
 
         /**
          * <p>The status of the cluster backup set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         @NameInMap("ClusterBackupStatus")
         public String clusterBackupStatus;
 
         /**
-         * <p>The additional information in JSON format.</p>
+         * <p>The additional information in the JSON format.</p>
          */
         @NameInMap("ExtraInfo")
         public DescribeClusterBackupsResponseBodyClusterBackupsExtraInfo extraInfo;
 
         /**
          * <p>Indicates whether the cluster backup sets take effect. Valid values:</p>
-         * <br>
-         * <p>*   **1**: The cluster backup sets take effect.</p>
-         * <p>*   **0**: The backup sets of child nodes are incomplete or fail.</p>
+         * <ul>
+         * <li><strong>1</strong>: The cluster backup sets take effect.</li>
+         * <li><strong>0</strong>: The backup sets of child nodes are incomplete or fail.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("IsAvail")
         public Integer isAvail;
 
         /**
          * <p>The progress of the backup task. Unit: %. The progress is returned only for running backup tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         @NameInMap("Progress")
         public String progress;
@@ -322,6 +503,14 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
         public static DescribeClusterBackupsResponseBodyClusterBackups build(java.util.Map<String, ?> map) throws Exception {
             DescribeClusterBackupsResponseBodyClusterBackups self = new DescribeClusterBackupsResponseBodyClusterBackups();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeClusterBackupsResponseBodyClusterBackups setAttachLogStatus(String attachLogStatus) {
+            this.attachLogStatus = attachLogStatus;
+            return this;
+        }
+        public String getAttachLogStatus() {
+            return this.attachLogStatus;
         }
 
         public DescribeClusterBackupsResponseBodyClusterBackups setBackups(java.util.List<DescribeClusterBackupsResponseBodyClusterBackupsBackups> backups) {

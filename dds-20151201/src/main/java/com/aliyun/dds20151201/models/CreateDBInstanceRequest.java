@@ -6,172 +6,246 @@ import com.aliyun.tea.*;
 public class CreateDBInstanceRequest extends TeaModel {
     /**
      * <p>The password of the root account. The password must meet the following requirements:</p>
-     * <br>
-     * <p>*   The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</p>
-     * <p>*   Special characters include ! # $ % ^ & \* ( ) \_ + - =</p>
-     * <p>*   The password of the account must be 8 to 32 characters in length.</p>
+     * <ul>
+     * <li>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</li>
+     * <li>Special characters include ! # $ % ^ &amp; \* ( ) _ + - =</li>
+     * <li>The password of the account must be 8 to 32 characters in length.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>123456Aa</p>
      */
     @NameInMap("AccountPassword")
     public String accountPassword;
 
     /**
      * <p>Specifies whether to enable auto-renewal for the instance. Default value: false. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The instance is automatically renewed.</p>
-     * <p>*   **false**: The instance is manually renewed.</p>
-     * <br>
-     * <p>> This parameter is valid and optional when the **ChargeType** parameter is set to **PrePaid**.</p>
+     * <ul>
+     * <li><strong>true</strong>: The instance is automatically renewed.</li>
+     * <li><strong>false</strong>: The instance is manually renewed.</li>
+     * </ul>
+     * <blockquote>
+     * <p>This parameter is valid and optional when the <strong>ChargeType</strong> parameter is set to <strong>PrePaid</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("AutoRenew")
     public String autoRenew;
 
     /**
-     * <p>The ID of the backup set. You can call the [DescribeBackups](~~62172~~) operation to query the backup set ID.</p>
-     * <br>
-     * <p>> When you call this operation to clone an instance based on the backup set, this parameter is required. The **SrcDBInstanceId** parameter is also required.</p>
+     * <p>The ID of the backup set. You can call the <a href="https://help.aliyun.com/document_detail/62172.html">DescribeBackups</a> operation to query the backup set ID.</p>
+     * <blockquote>
+     * <p>When you call this operation to clone an instance based on the backup set, this parameter is required. The <strong>SrcDBInstanceId</strong> parameter is also required.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>32994****</p>
      */
     @NameInMap("BackupId")
     public String backupId;
 
     /**
      * <p>The business information. This is an additional parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{“ActivityId&quot;:&quot;000000000&quot;}</p>
      */
     @NameInMap("BusinessInfo")
     public String businessInfo;
 
     /**
      * <p>The billing method of the instance. Valid values:</p>
-     * <br>
-     * <p>*   **PostPaid**: pay-as-you-go. This is the default value.</p>
-     * <p>*   **PrePaid**: subscription.</p>
-     * <br>
-     * <p>> If you set this parameter to **PrePaid**, you must also specify the **Period** parameter.</p>
+     * <ul>
+     * <li><strong>PostPaid</strong>: pay-as-you-go. This is the default value.</li>
+     * <li><strong>PrePaid</strong>: subscription.</li>
+     * </ul>
+     * <blockquote>
+     * <p>If you set this parameter to <strong>PrePaid</strong>, you must also specify the <strong>Period</strong> parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>PrePaid</p>
      */
     @NameInMap("ChargeType")
     public String chargeType;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ETnLKlblzczshOTUbOCz****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The ID of the dedicated cluster to which the instance belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dhg-2x78****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>Specifies whether to use coupons. Default value: null. Valid values:</p>
-     * <p>- **default** or **null**: uses coupons.</p>
-     * <p>- **youhuiquan_promotion_option_id_for_blank**: does not use coupons.</p>
+     * <ul>
+     * <li><strong>default</strong> or <strong>null</strong>: uses coupons.</li>
+     * <li><strong>youhuiquan_promotion_option_id_for_blank</strong>: does not use coupons.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>youhuiquan_promotion_option_id_for_blank</p>
      */
     @NameInMap("CouponNo")
     public String couponNo;
 
     /**
-     * <p>The instance type. You can also call the [DescribeAvailableResource](~~149719~~) operation to query the instance type.</p>
+     * <p>The instance type. You can also call the <a href="https://help.aliyun.com/document_detail/149719.html">DescribeAvailableResource</a> operation to query the instance type.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dds.mongo.standard</p>
      */
     @NameInMap("DBInstanceClass")
     public String DBInstanceClass;
 
     /**
      * <p>The name of the instance. The name of the instance must meet the following requirements:</p>
-     * <br>
-     * <p>*   The name must start with a letter.</p>
-     * <p>*   The name can contain digits, letters, underscores (\_), and hyphens (-).</p>
-     * <p>*   The name must be 2 to 256 characters in length.</p>
+     * <ul>
+     * <li>The name must start with a letter.</li>
+     * <li>The name can contain digits, letters, underscores (_), and hyphens (-).</li>
+     * <li>The name must be 2 to 256 characters in length.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("DBInstanceDescription")
     public String DBInstanceDescription;
 
     /**
      * <p>The storage capacity of the instance. Unit: GB.</p>
-     * <br>
-     * <p>The values that can be specified for this parameter vary based on the instance types. For more information, see [Replica set instance types](~~311410~~).</p>
+     * <p>The values that can be specified for this parameter vary based on the instance types. For more information, see <a href="https://help.aliyun.com/document_detail/311410.html">Replica set instance types</a>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("DBInstanceStorage")
     public Integer DBInstanceStorage;
 
     /**
      * <p>The name of the database.</p>
-     * <br>
-     * <p>> When you call this operation to clone an instance, you can set this parameter to specify the database to clone. Otherwise, all databases of the instance are cloned.</p>
+     * <blockquote>
+     * <p>When you call this operation to clone an instance, you can set this parameter to specify the database to clone. Otherwise, all databases of the instance are cloned.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>mongodbtest</p>
      */
     @NameInMap("DatabaseNames")
     public String databaseNames;
 
     /**
      * <p>Specifies whether to enable disk encryption.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Encrypted")
     public Boolean encrypted;
 
     /**
      * <p>The ID of the custom key.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2axxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx</p>
      */
     @NameInMap("EncryptionKey")
     public String encryptionKey;
 
     /**
-     * <p>The database engine of the instance. The value is fixed as **MongoDB**.</p>
+     * <p>The database engine of the instance. The value is fixed as <strong>MongoDB</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MongoDB</p>
      */
     @NameInMap("Engine")
     public String engine;
 
     /**
      * <p>The version of the database engine. Valid values:</p>
-     * <br>
-     * <p>*   **6.0**</p>
-     * <p>*   **5.0**</p>
-     * <p>*   **4.4**</p>
-     * <p>*   **4.2**</p>
-     * <p>*   **4.0**</p>
-     * <br>
-     * <p>> When you call this operation to clone an instance or restore an instance from the recycle bin, set the value of this parameter to the engine version of the source instance.</p>
+     * <ul>
+     * <li><strong>6.0</strong></li>
+     * <li><strong>5.0</strong></li>
+     * <li><strong>4.4</strong></li>
+     * <li><strong>4.2</strong></li>
+     * <li><strong>4.0</strong></li>
+     * </ul>
+     * <blockquote>
+     * <p>When you call this operation to clone an instance or restore an instance from the recycle bin, set the value of this parameter to the engine version of the source instance.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4.4</p>
      */
     @NameInMap("EngineVersion")
     public String engineVersion;
 
     /**
      * <p>The global IP address whitelist template name of the instance. Multiple IP address whitelist template names are separated by commas (,) and each template name must be unique. (The template feature is available only in canary release.)</p>
+     * 
+     * <strong>example:</strong>
+     * <p>g-qxieqf40xjst1ngp****</p>
      */
     @NameInMap("GlobalSecurityGroupIds")
     public String globalSecurityGroupIds;
 
     /**
      * <p>The zone where the hidden node resides for multi-zone deployment. Valid values:</p>
-     * <br>
-     * <p>*   **cn-hangzhou-g**: Hangzhou Zone G.</p>
-     * <p>*   **cn-hangzhou-h**: Hangzhou Zone H.</p>
-     * <p>*   **cn-hangzhou-i**: Hangzhou Zone I.</p>
-     * <p>*   **cn-hongkong-b**: Hongkong Zone B.</p>
-     * <p>*   **cn-hongkong-c**: Hongkong Zone C.</p>
-     * <p>*   **cn-hongkong-d**: Hongkong Zone D.</p>
-     * <p>*   **cn-wulanchabu-a**: Ulanqab Zone A.</p>
-     * <p>*   **cn-wulanchabu-b**: Ulanqab Zone B.</p>
-     * <p>*   **cn-wulanchabu-c**: Ulanqab Zone C.</p>
-     * <p>*   **ap-southeast-1a**: Singapore Zone A.</p>
-     * <p>*   **ap-southeast-1b**: Singapore Zone B.</p>
-     * <p>*   **ap-southeast-1c**: Singapore Zone C.</p>
-     * <p>*   **ap-southeast-5a**: Jakarta Zone A.</p>
-     * <p>*   **ap-southeast-5b**: Jakarta Zone B.</p>
-     * <p>*   **ap-southeast-5c**: Jakarta Zone C.</p>
-     * <p>*   **eu-central-1a**: Frankfurt Zone A.</p>
-     * <p>*   **eu-central-1b**: Frankfurt Zone B.</p>
-     * <p>*   **eu-central-1c**: Frankfurt Zone C.</p>
-     * <br>
-     * <p>>  *   This parameter is valid and required when the **EngineVersion** parameter is set to **4.4** or **5.0**.</p>
-     * <p>>  *   The value of this parameter cannot be the same as the value of the **ZoneId** or **SecondaryZoneId** parameter.</p>
+     * <ul>
+     * <li><strong>cn-hangzhou-g</strong>: Hangzhou Zone G.</li>
+     * <li><strong>cn-hangzhou-h</strong>: Hangzhou Zone H.</li>
+     * <li><strong>cn-hangzhou-i</strong>: Hangzhou Zone I.</li>
+     * <li><strong>cn-hongkong-b</strong>: Hongkong Zone B.</li>
+     * <li><strong>cn-hongkong-c</strong>: Hongkong Zone C.</li>
+     * <li><strong>cn-hongkong-d</strong>: Hongkong Zone D.</li>
+     * <li><strong>cn-wulanchabu-a</strong>: Ulanqab Zone A.</li>
+     * <li><strong>cn-wulanchabu-b</strong>: Ulanqab Zone B.</li>
+     * <li><strong>cn-wulanchabu-c</strong>: Ulanqab Zone C.</li>
+     * <li><strong>ap-southeast-1a</strong>: Singapore Zone A.</li>
+     * <li><strong>ap-southeast-1b</strong>: Singapore Zone B.</li>
+     * <li><strong>ap-southeast-1c</strong>: Singapore Zone C.</li>
+     * <li><strong>ap-southeast-5a</strong>: Jakarta Zone A.</li>
+     * <li><strong>ap-southeast-5b</strong>: Jakarta Zone B.</li>
+     * <li><strong>ap-southeast-5c</strong>: Jakarta Zone C.</li>
+     * <li><strong>eu-central-1a</strong>: Frankfurt Zone A.</li>
+     * <li><strong>eu-central-1b</strong>: Frankfurt Zone B.</li>
+     * <li><strong>eu-central-1c</strong>: Frankfurt Zone C.</li>
+     * </ul>
+     * <blockquote>
+     * <ul>
+     * <li>This parameter is valid and required when the <strong>EngineVersion</strong> parameter is set to <strong>4.4</strong> or <strong>5.0</strong>.</li>
+     * <li>The value of this parameter cannot be the same as the value of the <strong>ZoneId</strong> or <strong>SecondaryZoneId</strong> parameter.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-i</p>
      */
     @NameInMap("HiddenZoneId")
     public String hiddenZoneId;
 
     /**
      * <p>The network type of the instance. Valid value:</p>
-     * <br>
-     * <p>**VPC**: Virtual Private Cloud (VPC)</p>
+     * <p><strong>VPC</strong>: Virtual Private Cloud (VPC)</p>
+     * 
+     * <strong>example:</strong>
+     * <p>VPC</p>
      */
     @NameInMap("NetworkType")
     public String networkType;
@@ -184,44 +258,64 @@ public class CreateDBInstanceRequest extends TeaModel {
 
     /**
      * <p>The subscription period of the instance. Unit: months.</p>
-     * <br>
-     * <p>Valid values: **1** to **9**, **12**, **24**, **36**, and **60**.</p>
-     * <br>
-     * <p>> When you set the **ChargeType** parameter to **PrePaid**, this parameter is valid and required.</p>
+     * <p>Valid values: <strong>1</strong> to <strong>9</strong>, <strong>12</strong>, <strong>24</strong>, <strong>36</strong>, and <strong>60</strong>.</p>
+     * <blockquote>
+     * <p>When you set the <strong>ChargeType</strong> parameter to <strong>PrePaid</strong>, this parameter is valid and required.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Period")
     public Integer period;
 
     /**
      * <p>The provisioned IOPS. Valid values: 0 to 50000.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1960</p>
      */
     @NameInMap("ProvisionedIops")
     public Long provisionedIops;
 
     /**
-     * <p>The number of **read-only nodes** in the replica set instance. Default value: **0**. Valid values: **0** to **5**.</p>
+     * <p>The number of <strong>read-only nodes</strong> in the replica set instance. Default value: <strong>0</strong>. Valid values: <strong>0</strong> to <strong>5</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("ReadonlyReplicas")
     public String readonlyReplicas;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The number of **nodes** in the replica set instance. Default value: 3. Valid values:</p>
-     * <br>
-     * <p>*   **3**</p>
-     * <p>*   **5**</p>
-     * <p>*   **7**</p>
+     * <p>The number of <strong>nodes</strong> in the replica set instance. Default value: 3. Valid values:</p>
+     * <ul>
+     * <li><strong>3</strong></li>
+     * <li><strong>5</strong></li>
+     * <li><strong>7</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("ReplicationFactor")
     public String replicationFactor;
 
     /**
      * <p>The ID of the resource group to which the instance belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmyiu4ekp****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -233,82 +327,121 @@ public class CreateDBInstanceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The point in time to which the instance is restored, which must be within seven days. The time is displayed in the *yyyy-MM-dd*T*HH:mm:ss*Z format (UTC time).</p>
-     * <br>
-     * <p>> When you call this operation to restore an instance to the specified time, this parameter is required. The **SrcDBInstanceId** parameter is also required.</p>
+     * <p>The point in time to which the instance is restored, which must be within seven days. The time is displayed in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format (UTC time).</p>
+     * <blockquote>
+     * <p>When you call this operation to restore an instance to the specified time, this parameter is required. The <strong>SrcDBInstanceId</strong> parameter is also required.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-03-13T12:11:14Z</p>
      */
     @NameInMap("RestoreTime")
     public String restoreTime;
 
+    @NameInMap("RestoreType")
+    public String restoreType;
+
     /**
      * <p>The zone where the secondary node resides for multi-zone deployment. Valid values:</p>
-     * <br>
-     * <p>*   **cn-hangzhou-g**: Hangzhou Zone G.</p>
-     * <p>*   **cn-hangzhou-h**: Hangzhou Zone H.</p>
-     * <p>*   **cn-hangzhou-i**: Hangzhou Zone I.</p>
-     * <p>*   **cn-hongkong-b**: Hongkong Zone B.</p>
-     * <p>*   **cn-hongkong-c**: Hongkong Zone C.</p>
-     * <p>*   **cn-hongkong-d**: Hongkong Zone D.</p>
-     * <p>*   **cn-wulanchabu-a**: Ulanqab Zone A.</p>
-     * <p>*   **cn-wulanchabu-b**: Ulanqab Zone B.</p>
-     * <p>*   **cn-wulanchabu-c**: Ulanqab Zone C.</p>
-     * <p>*   **ap-southeast-1a**: Singapore Zone A.</p>
-     * <p>*   **ap-southeast-1b**: Singapore Zone B.</p>
-     * <p>*   **ap-southeast-1c**: Singapore Zone C.</p>
-     * <p>*   **ap-southeast-5a**: Jakarta Zone A.</p>
-     * <p>*   **ap-southeast-5b**: Jakarta Zone B.</p>
-     * <p>*   **ap-southeast-5c**: Jakarta Zone C.</p>
-     * <p>*   **eu-central-1a**: Frankfurt Zone A.</p>
-     * <p>*   **eu-central-1b**: Frankfurt Zone B.</p>
-     * <p>*   **eu-central-1c**: Frankfurt Zone C.</p>
-     * <br>
-     * <p>>  *   This parameter is valid and required when the **EngineVersion** parameter is set to **4.4** or **5.0**.</p>
-     * <p>>  *   The value of this parameter cannot be the same as the value of the **ZoneId** or **HiddenZoneId** parameter.</p>
+     * <ul>
+     * <li><strong>cn-hangzhou-g</strong>: Hangzhou Zone G.</li>
+     * <li><strong>cn-hangzhou-h</strong>: Hangzhou Zone H.</li>
+     * <li><strong>cn-hangzhou-i</strong>: Hangzhou Zone I.</li>
+     * <li><strong>cn-hongkong-b</strong>: Hongkong Zone B.</li>
+     * <li><strong>cn-hongkong-c</strong>: Hongkong Zone C.</li>
+     * <li><strong>cn-hongkong-d</strong>: Hongkong Zone D.</li>
+     * <li><strong>cn-wulanchabu-a</strong>: Ulanqab Zone A.</li>
+     * <li><strong>cn-wulanchabu-b</strong>: Ulanqab Zone B.</li>
+     * <li><strong>cn-wulanchabu-c</strong>: Ulanqab Zone C.</li>
+     * <li><strong>ap-southeast-1a</strong>: Singapore Zone A.</li>
+     * <li><strong>ap-southeast-1b</strong>: Singapore Zone B.</li>
+     * <li><strong>ap-southeast-1c</strong>: Singapore Zone C.</li>
+     * <li><strong>ap-southeast-5a</strong>: Jakarta Zone A.</li>
+     * <li><strong>ap-southeast-5b</strong>: Jakarta Zone B.</li>
+     * <li><strong>ap-southeast-5c</strong>: Jakarta Zone C.</li>
+     * <li><strong>eu-central-1a</strong>: Frankfurt Zone A.</li>
+     * <li><strong>eu-central-1b</strong>: Frankfurt Zone B.</li>
+     * <li><strong>eu-central-1c</strong>: Frankfurt Zone C.</li>
+     * </ul>
+     * <blockquote>
+     * <ul>
+     * <li>This parameter is valid and required when the <strong>EngineVersion</strong> parameter is set to <strong>4.4</strong> or <strong>5.0</strong>.</li>
+     * <li>The value of this parameter cannot be the same as the value of the <strong>ZoneId</strong> or <strong>HiddenZoneId</strong> parameter.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-h</p>
      */
     @NameInMap("SecondaryZoneId")
     public String secondaryZoneId;
 
     /**
      * <p>The IP addresses in an IP address whitelist. Multiple IP addresses are separated by commas (,), and each IP address in the IP address whitelist must be unique. The following types of values are supported:</p>
-     * <br>
-     * <p>*   0.0.0.0/0</p>
-     * <p>*   IP addresses, such as 10.23.12.24.</p>
-     * <p>*   Classless Inter-Domain Routing (CIDR) blocks, such as 10.23.12.0/24. In this case, /24 indicates that the prefix of each IP address is 24-bit long. You can replace 24 with a value within the range of 1 to 32.</p>
-     * <br>
-     * <p>> *   A maximum of 1,000 IP addresses or CIDR blocks can be configured for each instance.</p>
-     * <p>> *   If you enter 0.0.0.0/0, all IP addresses can access the instance. This may introduce security risks to the instance. Proceed with caution.</p>
+     * <ul>
+     * <li>0.0.0.0/0</li>
+     * <li>IP addresses, such as 10.23.12.24.</li>
+     * <li>Classless Inter-Domain Routing (CIDR) blocks, such as 10.23.12.0/24. In this case, /24 indicates that the prefix of each IP address is 24-bit long. You can replace 24 with a value within the range of 1 to 32.</li>
+     * </ul>
+     * <blockquote>
+     * <ul>
+     * <li>A maximum of 1,000 IP addresses or CIDR blocks can be configured for each instance.</li>
+     * <li>If you enter 0.0.0.0/0, all IP addresses can access the instance. This may introduce security risks to the instance. Proceed with caution.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.xx.xx,192.168.xx.xx</p>
      */
     @NameInMap("SecurityIPList")
     public String securityIPList;
 
     /**
      * <p>The ID of the source instance.</p>
-     * <br>
-     * <p>> When you call this operation to clone an instance, this parameter is required. The **BackupId** or **RestoreTime** parameter is also required. When you call this operation to restore an instance from the recycle bin, this parameter is required. The **BackupId** or **RestoreTime** parameter is not required.</p>
+     * <blockquote>
+     * <p>When you call this operation to clone an instance, this parameter is required. The <strong>BackupId</strong> or <strong>RestoreTime</strong> parameter is also required. When you call this operation to restore an instance from the recycle bin, this parameter is required. The <strong>BackupId</strong> or <strong>RestoreTime</strong> parameter is not required.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>dds-bp1ee12ad351****</p>
      */
     @NameInMap("SrcDBInstanceId")
     public String srcDBInstanceId;
 
+    @NameInMap("SrcRegion")
+    public String srcRegion;
+
     /**
      * <p>The storage engine of the instance. Default value: WiredTiger. Valid values:</p>
-     * <br>
-     * <p>*   **WiredTiger**</p>
-     * <p>*   **RocksDB**</p>
-     * <p>*   **TerarkDB**</p>
-     * <br>
-     * <p>>  *   When you call this operation to clone an instance or restore an instance from the recycle bin, set the value of this parameter to the storage engine of the source instance.</p>
-     * <p>>  *   For more information about the limits on database versions and storage engines, see [MongoDB versions and storage engines](~~61906~~).</p>
+     * <ul>
+     * <li><strong>WiredTiger</strong></li>
+     * <li><strong>RocksDB</strong></li>
+     * <li><strong>TerarkDB</strong></li>
+     * </ul>
+     * <blockquote>
+     * <ul>
+     * <li>When you call this operation to clone an instance or restore an instance from the recycle bin, set the value of this parameter to the storage engine of the source instance.</li>
+     * <li>For more information about the limits on database versions and storage engines, see <a href="https://help.aliyun.com/document_detail/61906.html">MongoDB versions and storage engines</a>.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>WiredTiger</p>
      */
     @NameInMap("StorageEngine")
     public String storageEngine;
 
     /**
      * <p>The storage type of the instance. Valid values:</p>
-     * <br>
-     * <p>*   **cloud_essd1** :ESSD PL1.</p>
-     * <p>*   **cloud_essd2**: ESSD PL2.</p>
-     * <p>*   **cloud_essd3**: ESSD PL3.</p>
-     * <p>*   **local_ssd**: local SSD.</p>
+     * <ul>
+     * <li><strong>cloud_essd1</strong> :ESSD PL1.</li>
+     * <li><strong>cloud_essd2</strong>: ESSD PL2.</li>
+     * <li><strong>cloud_essd3</strong>: ESSD PL3.</li>
+     * <li><strong>local_ssd</strong>: local SSD.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>cloud_essd1</p>
      */
     @NameInMap("StorageType")
     public String storageType;
@@ -321,18 +454,27 @@ public class CreateDBInstanceRequest extends TeaModel {
 
     /**
      * <p>The ID of the vSwitch to which the instance is connected.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-bp1gzt31twhlo0sa5****</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
     /**
      * <p>The ID of the VPC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-bp175iuvg8nxqraf2****</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
 
     /**
-     * <p>The zone ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent zone list.</p>
+     * <p>The zone ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the most recent zone list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-g</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;
@@ -582,6 +724,14 @@ public class CreateDBInstanceRequest extends TeaModel {
         return this.restoreTime;
     }
 
+    public CreateDBInstanceRequest setRestoreType(String restoreType) {
+        this.restoreType = restoreType;
+        return this;
+    }
+    public String getRestoreType() {
+        return this.restoreType;
+    }
+
     public CreateDBInstanceRequest setSecondaryZoneId(String secondaryZoneId) {
         this.secondaryZoneId = secondaryZoneId;
         return this;
@@ -604,6 +754,14 @@ public class CreateDBInstanceRequest extends TeaModel {
     }
     public String getSrcDBInstanceId() {
         return this.srcDBInstanceId;
+    }
+
+    public CreateDBInstanceRequest setSrcRegion(String srcRegion) {
+        this.srcRegion = srcRegion;
+        return this;
+    }
+    public String getSrcRegion() {
+        return this.srcRegion;
     }
 
     public CreateDBInstanceRequest setStorageEngine(String storageEngine) {
@@ -657,16 +815,24 @@ public class CreateDBInstanceRequest extends TeaModel {
     public static class CreateDBInstanceRequestTag extends TeaModel {
         /**
          * <p>The key of the tag.</p>
-         * <br>
-         * <p>> **N** specifies the serial number of the tag. For example, **Tag.1.Key** specifies the key of the first tag and **Tag.2.Key** specifies the key of the second tag.</p>
+         * <blockquote>
+         * <p><strong>N</strong> specifies the serial number of the tag. For example, <strong>Tag.1.Key</strong> specifies the key of the first tag and <strong>Tag.2.Key</strong> specifies the key of the second tag.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>testdatabase</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the tag.</p>
-         * <br>
-         * <p>> **N** specifies the serial number of the tag. For example, **Tag.1.Value** specifies the value of the first tag and **Tag.2.Value** specifies the value of the second tag.</p>
+         * <blockquote>
+         * <p><strong>N</strong> specifies the serial number of the tag. For example, <strong>Tag.1.Value</strong> specifies the value of the first tag and <strong>Tag.2.Value</strong> specifies the value of the second tag.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>apitest</p>
          */
         @NameInMap("Value")
         public String value;
