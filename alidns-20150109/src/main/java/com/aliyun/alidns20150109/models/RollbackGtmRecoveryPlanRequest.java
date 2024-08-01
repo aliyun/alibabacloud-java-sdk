@@ -6,14 +6,19 @@ import com.aliyun.tea.*;
 public class RollbackGtmRecoveryPlanRequest extends TeaModel {
     /**
      * <p>The language used by the user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The ID of the disaster recovery plan that you want to roll back.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("RecoveryPlanId")
     public Long recoveryPlanId;

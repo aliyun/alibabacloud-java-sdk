@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class UnbindInstanceDomainsResponseBody extends TeaModel {
     /**
      * <p>The number of domain names that failed to be unbound from the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("FailedCount")
     public Integer failedCount;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The number of domain names that are unbound from the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("SuccessCount")
     public Integer successCount;

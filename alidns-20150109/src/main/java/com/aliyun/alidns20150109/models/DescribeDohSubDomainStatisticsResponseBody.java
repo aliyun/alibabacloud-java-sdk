@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeDohSubDomainStatisticsResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0F32959D-417B-4D66-8463-68606605E3E2</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,36 +43,54 @@ public class DescribeDohSubDomainStatisticsResponseBody extends TeaModel {
     public static class DescribeDohSubDomainStatisticsResponseBodyStatistics extends TeaModel {
         /**
          * <p>The timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1544976000000</p>
          */
         @NameInMap("Timestamp")
         public Long timestamp;
 
         /**
          * <p>The total number of requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3141592653</p>
          */
         @NameInMap("TotalCount")
         public Long totalCount;
 
         /**
          * <p>The number of IPv4-based HTTP requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3141592653</p>
          */
         @NameInMap("V4HttpCount")
         public Long v4HttpCount;
 
         /**
          * <p>The number of IPv4-based HTTPS requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3141592653</p>
          */
         @NameInMap("V4HttpsCount")
         public Long v4HttpsCount;
 
         /**
          * <p>The number of IPv6-based HTTP requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3141592653</p>
          */
         @NameInMap("V6HttpCount")
         public Long v6HttpCount;
 
         /**
          * <p>The number of IPv6-based HTTPS requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3141592653</p>
          */
         @NameInMap("V6HttpsCount")
         public Long v6HttpsCount;

@@ -6,32 +6,46 @@ import com.aliyun.tea.*;
 public class ChangeDomainOfDnsProductRequest extends TeaModel {
     /**
      * <p>Specifies whether to force bind a domain name to the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("Force")
     public Boolean force;
 
     /**
      * <p>The ID of the Alibaba Cloud DNS instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-7sb</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The language in which you want the values of some response parameters to be returned. These response parameters support multiple languages.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The domain name that you want to bind to the instance. If you do not specify this parameter, this operation unbinds the original domain name from the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>newdomain.com</p>
      */
     @NameInMap("NewDomain")
     public String newDomain;
 
     /**
      * <p>The IP address of the client.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.1.1.1</p>
      */
     @NameInMap("UserClientIp")
     public String userClientIp;

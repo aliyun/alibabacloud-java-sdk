@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class DescribeDnsGtmMonitorConfigResponseBody extends TeaModel {
     /**
      * <p>The time when the health check task was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2017-12-28T13:08Z</p>
      */
     @NameInMap("CreateTime")
     public String createTime;
 
     /**
      * <p>The timestamp that indicates when the health check task was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1527690629357</p>
      */
     @NameInMap("CreateTimestamp")
     public Long createTimestamp;
 
     /**
      * <p>The number of consecutive times of failed health check attempts.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("EvaluationCount")
     public Integer evaluationCount;
 
     /**
      * <p>The interval at which the health check task is executed. Unit: seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Interval")
     public Integer interval;
@@ -36,93 +48,127 @@ public class DescribeDnsGtmMonitorConfigResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the health check task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MonitorConfigId1</p>
      */
     @NameInMap("MonitorConfigId")
     public String monitorConfigId;
 
     /**
      * <p>The extended information. The following parameters are required for different health check protocols:</p>
-     * <br>
-     * <p>*   HTTP or HTTPS:</p>
-     * <br>
-     * <p>    *   port: the check port.</p>
-     * <br>
-     * <p>    *   host: the host settings.</p>
-     * <br>
-     * <p>    *   path: the URL path.</p>
-     * <br>
-     * <p>    *   code: the return code greater than the specified value.</p>
-     * <br>
-     * <p>    *   failureRate: the failure rate.</p>
-     * <br>
-     * <p>    *   sni: specifies whether to enable server name indication (SNI). This parameter is used only for the HTTPS protocol. Valid values:</p>
-     * <br>
-     * <p>        *   true: enable SNI.</p>
-     * <p>        *   false: disable SNI.</p>
-     * <br>
-     * <p>    *   nodeType: the type of the node to monitor when the address pool type is DOMAIN. Valid values:</p>
-     * <br>
-     * <p>        *   IPV4</p>
-     * <p>        *   IPV6</p>
-     * <br>
-     * <p>*   PING:</p>
-     * <br>
-     * <p>    *   failureRate: the failure rate.</p>
-     * <br>
-     * <p>    *   packetNum: the number of ping packets.</p>
-     * <br>
-     * <p>    *   packetLossRate: the loss rate of ping packets.</p>
-     * <br>
-     * <p>    *   nodeType: the type of the node to monitor when the address pool type is DOMAIN. Valid values:</p>
-     * <br>
-     * <p>        *   IPV4</p>
-     * <p>        *   IPV6</p>
-     * <br>
-     * <p>*   TCP:</p>
-     * <br>
-     * <p>    *   port: the check port.</p>
-     * <br>
-     * <p>    *   failureRate: the failure rate.</p>
-     * <br>
-     * <p>    *   nodeType: the type of the node to monitor when the address pool type is DOMAIN. Valid values:</p>
-     * <br>
-     * <p>        *   IPV4</p>
-     * <p>        *   IPV6</p>
+     * <ul>
+     * <li><p>HTTP or HTTPS:</p>
+     * <ul>
+     * <li><p>port: the check port.</p>
+     * </li>
+     * <li><p>host: the host settings.</p>
+     * </li>
+     * <li><p>path: the URL path.</p>
+     * </li>
+     * <li><p>code: the return code greater than the specified value.</p>
+     * </li>
+     * <li><p>failureRate: the failure rate.</p>
+     * </li>
+     * <li><p>sni: specifies whether to enable server name indication (SNI). This parameter is used only for the HTTPS protocol. Valid values:</p>
+     * <ul>
+     * <li>true: enable SNI.</li>
+     * <li>false: disable SNI.</li>
+     * </ul>
+     * </li>
+     * <li><p>nodeType: the type of the node to monitor when the address pool type is DOMAIN. Valid values:</p>
+     * <ul>
+     * <li>IPV4</li>
+     * <li>IPV6</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * </li>
+     * <li><p>PING:</p>
+     * <ul>
+     * <li><p>failureRate: the failure rate.</p>
+     * </li>
+     * <li><p>packetNum: the number of ping packets.</p>
+     * </li>
+     * <li><p>packetLossRate: the loss rate of ping packets.</p>
+     * </li>
+     * <li><p>nodeType: the type of the node to monitor when the address pool type is DOMAIN. Valid values:</p>
+     * <ul>
+     * <li>IPV4</li>
+     * <li>IPV6</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * </li>
+     * <li><p>TCP:</p>
+     * <ul>
+     * <li><p>port: the check port.</p>
+     * </li>
+     * <li><p>failureRate: the failure rate.</p>
+     * </li>
+     * <li><p>nodeType: the type of the node to monitor when the address pool type is DOMAIN. Valid values:</p>
+     * <ul>
+     * <li>IPV4</li>
+     * <li>IPV6</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;code\&quot;:200,\&quot;path\&quot;:\&quot;\\index.htm\&quot;,\&quot;host\&quot;:\&quot;aliyun.com\&quot;}</p>
      */
     @NameInMap("MonitorExtendInfo")
     public String monitorExtendInfo;
 
     /**
      * <p>The health check protocol. Valid values:</p>
-     * <br>
-     * <p>*   HTTP</p>
-     * <p>*   HTTPS</p>
-     * <p>*   PING</p>
-     * <p>*   TCP</p>
+     * <ul>
+     * <li>HTTP</li>
+     * <li>HTTPS</li>
+     * <li>PING</li>
+     * <li>TCP</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>http</p>
      */
     @NameInMap("ProtocolType")
     public String protocolType;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6856BCF6-11D6-4D7E-AC53-FD579933522B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The timeout period. Unit: milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3000</p>
      */
     @NameInMap("Timeout")
     public Integer timeout;
 
     /**
      * <p>The time when the information about the health check task was updated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2018-01-03T08:57Z</p>
      */
     @NameInMap("UpdateTime")
     public String updateTime;
 
     /**
      * <p>The timestamp that indicates when the information about the health check task was updated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1527690629357</p>
      */
     @NameInMap("UpdateTimestamp")
     public Long updateTimestamp;
@@ -231,36 +277,54 @@ public class DescribeDnsGtmMonitorConfigResponseBody extends TeaModel {
     public static class DescribeDnsGtmMonitorConfigResponseBodyIspCityNodesIspCityNode extends TeaModel {
         /**
          * <p>The code of the monitored city node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>572</p>
          */
         @NameInMap("CityCode")
         public String cityCode;
 
         /**
          * <p>The display name of the monitored city node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Qingdao</p>
          */
         @NameInMap("CityName")
         public String cityName;
 
         /**
          * <p>The code of the country or region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>001</p>
          */
         @NameInMap("CountryCode")
         public String countryCode;
 
         /**
          * <p>The display name of the country or region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>China</p>
          */
         @NameInMap("CountryName")
         public String countryName;
 
         /**
          * <p>The code of the monitored Internet service provider (ISP) node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("IspCode")
         public String ispCode;
 
         /**
          * <p>The name of the ISP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alibaba</p>
          */
         @NameInMap("IspName")
         public String ispName;

@@ -6,36 +6,54 @@ import com.aliyun.tea.*;
 public class DescribeGtmInstancesRequest extends TeaModel {
     /**
      * <p>The keyword that you use for query. Exact match is supported by instance ID or instance name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Keyword")
     public String keyword;
 
     /**
      * <p>The language in which you want the values of some response parameters to be returned. These response parameters support multiple languages.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
-     * <p>Specifies whether additional information is required. Default value: **false**.</p>
+     * <p>Specifies whether additional information is required. Default value: <strong>false</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("NeedDetailAttributes")
     public Boolean needDetailAttributes;
 
     /**
      * <p>The page number to return.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-xxxxx</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

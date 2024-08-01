@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class GetMainDomainNameResponseBody extends TeaModel {
     /**
      * <p>The level of the entered domain name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("DomainLevel")
     public Long domainLevel;
 
     /**
      * <p>The domain name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
      * <p>The hostname.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>www</p>
      */
     @NameInMap("RR")
     public String RR;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -6,22 +6,29 @@ import com.aliyun.tea.*;
 public class DescribeDomainInfoRequest extends TeaModel {
     /**
      * <p>The domain name.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dns-example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
      * <p>The language type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
-     * <p>Specifies whether detailed attributes are required. The default value is **false**, which indicates that detailed attributes are not required.</p>
-     * <br>
-     * <p>If you set this parameter to **true**, the values of the following parameters are returned: LineType, MinTtl, RecordLineTreeJson, RecordLines, LineCode, LineDisplayName, LineName, RegionLines, and SlaveDns.</p>
+     * <p>Specifies whether detailed attributes are required. The default value is <strong>false</strong>, which indicates that detailed attributes are not required.</p>
+     * <p>If you set this parameter to <strong>true</strong>, the values of the following parameters are returned: LineType, MinTtl, RecordLineTreeJson, RecordLines, LineCode, LineDisplayName, LineName, RegionLines, and SlaveDns.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("NeedDetailAttributes")
     public Boolean needDetailAttributes;

@@ -4,6 +4,10 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class ListCloudGtmMonitorNodesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>en-US</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 

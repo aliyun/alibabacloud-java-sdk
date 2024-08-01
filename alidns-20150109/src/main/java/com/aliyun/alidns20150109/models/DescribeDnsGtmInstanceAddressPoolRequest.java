@@ -6,14 +6,19 @@ import com.aliyun.tea.*;
 public class DescribeDnsGtmInstanceAddressPoolRequest extends TeaModel {
     /**
      * <p>The ID of the address pool.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testpool1</p>
      */
     @NameInMap("AddrPoolId")
     public String addrPoolId;
 
     /**
      * <p>The language of the values of specific response parameters. Default value: en. Valid values: en, zh, and ja.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("Lang")
     public String lang;

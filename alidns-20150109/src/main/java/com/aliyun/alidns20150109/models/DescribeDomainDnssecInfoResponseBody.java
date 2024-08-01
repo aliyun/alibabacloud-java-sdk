@@ -6,63 +6,94 @@ import com.aliyun.tea.*;
 public class DescribeDomainDnssecInfoResponseBody extends TeaModel {
     /**
      * <p>The algorithm type. This parameter is returned if DNSSEC is enabled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>13</p>
      */
     @NameInMap("Algorithm")
     public String algorithm;
 
     /**
      * <p>The digest. This parameter is returned if DNSSEC is enabled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C1A0424B97A049F1F9B2EA139CC298533219668164E343BD21203ABC4608C02A</p>
      */
     @NameInMap("Digest")
     public String digest;
 
     /**
      * <p>The digest type. This parameter is returned if DNSSEC is enabled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SHA256</p>
      */
     @NameInMap("DigestType")
     public String digestType;
 
     /**
      * <p>The domain name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
      * <p>The delegation signer (DS) record. This parameter is returned if DNSSEC is enabled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com. 3600 IN DS 2371 13 2 C1A0424B97A049F1F9B2EA139CC298533219668164E343BD21203ABC4608C02A</p>
      */
     @NameInMap("DsRecord")
     public String dsRecord;
 
     /**
      * <p>The flag. This parameter is returned if DNSSEC is enabled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>257 (KSK)</p>
      */
     @NameInMap("Flags")
     public String flags;
 
     /**
      * <p>The key tag. This parameter is returned if DNSSEC is enabled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>54931</p>
      */
     @NameInMap("KeyTag")
     public String keyTag;
 
     /**
      * <p>The public key. This parameter is returned if DNSSEC is enabled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mdsswUyr3DPW132mOi8V9xESWE8jTo0dxCjjnopKl+GqJxpVXckHAeF+KkxLbxILfDLUT0rAK9iUzy1L53eKGQ==</p>
      */
     @NameInMap("PublicKey")
     public String publicKey;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The state of the DNSSEC. Valid values:</p>
-     * <br>
-     * <p>*   ON</p>
-     * <p>*   OFF</p>
+     * <ul>
+     * <li>ON</li>
+     * <li>OFF</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ON</p>
      */
     @NameInMap("Status")
     public String status;

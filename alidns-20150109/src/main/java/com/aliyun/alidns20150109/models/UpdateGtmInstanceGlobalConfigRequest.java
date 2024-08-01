@@ -6,70 +6,96 @@ import com.aliyun.tea.*;
 public class UpdateGtmInstanceGlobalConfigRequest extends TeaModel {
     /**
      * <p>The alert group. Only one alert group is supported.</p>
-     * <br>
-     * <p>>  This parameter is required only for the first modification.</p>
+     * <blockquote>
+     * <p> This parameter is required only for the first modification.</p>
+     * </blockquote>
      */
     @NameInMap("AlertGroup")
     public String alertGroup;
 
     /**
-     * <p>If you set **CnameMode** to **CUSTOM**, you must specify the CnameCustomDomainName parameter, which must be set to a primary domain name.</p>
+     * <p>If you set <strong>CnameMode</strong> to <strong>CUSTOM</strong>, you must specify the CnameCustomDomainName parameter, which must be set to a primary domain name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://www.example.com">www.example.com</a></p>
      */
     @NameInMap("CnameCustomDomainName")
     public String cnameCustomDomainName;
 
     /**
      * <p>Specifies whether to use a system-assigned canonical name (CNAME) or a custom CNAME to access GTM. Valid values:</p>
-     * <br>
-     * <p>*   **SYSTEM_ASSIGN**: system-assigned CNAME</p>
-     * <p>*   **CUSTOM**: custom CNAME</p>
+     * <ul>
+     * <li><strong>SYSTEM_ASSIGN</strong>: system-assigned CNAME</li>
+     * <li><strong>CUSTOM</strong>: custom CNAME</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>SYSTEM_ASSIGN</p>
      */
     @NameInMap("CnameMode")
     public String cnameMode;
 
     /**
      * <p>The ID of the GTM instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>instance1</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The name of the GTM instance.</p>
-     * <br>
-     * <p>>  This parameter is required only for the first modification.</p>
+     * <blockquote>
+     * <p> This parameter is required only for the first modification.</p>
+     * </blockquote>
      */
     @NameInMap("InstanceName")
     public String instanceName;
 
     /**
      * <p>The language.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The balancing policy. Valid values:</p>
-     * <br>
-     * <p>*   **ALL_RR**: load balancing</p>
-     * <p>*   **RATIO**: weighted round-robin</p>
-     * <br>
-     * <p>>  This parameter is required only for the first modification.</p>
+     * <ul>
+     * <li><strong>ALL_RR</strong>: load balancing</li>
+     * <li><strong>RATIO</strong>: weighted round-robin</li>
+     * </ul>
+     * <blockquote>
+     * <p> This parameter is required only for the first modification.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>RATIO</p>
      */
     @NameInMap("LbaStrategy")
     public String lbaStrategy;
 
     /**
      * <p>The global time-to-live (TTL).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60</p>
      */
     @NameInMap("Ttl")
     public Integer ttl;
 
     /**
      * <p>The primary domain name.</p>
-     * <br>
-     * <p>>  This parameter is required only for the first modification.</p>
+     * <blockquote>
+     * <p> This parameter is required only for the first modification.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://www.example.com">www.example.com</a></p>
      */
     @NameInMap("UserDomainName")
     public String userDomainName;

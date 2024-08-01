@@ -6,96 +6,144 @@ import com.aliyun.tea.*;
 public class DescribeDomainRecordInfoResponseBody extends TeaModel {
     /**
      * <p>The ID of the domain name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>00efd71a-770e-4255-b54e-6fe5659baffe</p>
      */
     @NameInMap("DomainId")
     public String domainId;
 
     /**
      * <p>The domain name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dns-example.top</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
      * <p>The ID of the domain name group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2223</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
      * <p>The name of the domain name group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MyGroup</p>
      */
     @NameInMap("GroupName")
     public String groupName;
 
     /**
      * <p>The DNS resolution line.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
      */
     @NameInMap("Line")
     public String line;
 
     /**
-     * <p>The lock state of the DNS record. Valid values: **true and false**.</p>
+     * <p>The lock state of the DNS record. Valid values: <strong>true and false</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Locked")
     public Boolean locked;
 
     /**
      * <p>The priority of the mail exchanger (MX) record.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("Priority")
     public Long priority;
 
     /**
      * <p>The Punycode for the domain name. This parameter is returned only for Chinese domain names.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xn--fsq270a.com</p>
      */
     @NameInMap("PunyCode")
     public String punyCode;
 
     /**
      * <p>The hostname.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>@</p>
      */
     @NameInMap("RR")
     public String RR;
 
     /**
      * <p>The ID of the DNS record.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9999985</p>
      */
     @NameInMap("RecordId")
     public String recordId;
 
     /**
      * <p>The description of your DNS record.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Remark")
     public String remark;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The state of the DNS records. Valid values: **Enable and Disable**.</p>
+     * <p>The state of the DNS records. Valid values: <strong>Enable and Disable</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Enable</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
      * <p>The time-to-live (TTL) of the DNS record.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>600</p>
      */
     @NameInMap("TTL")
     public Long TTL;
 
     /**
      * <p>The type of the DNS record.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MX</p>
      */
     @NameInMap("Type")
     public String type;
 
     /**
      * <p>The record value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.1.XX.XX</p>
      */
     @NameInMap("Value")
     public String value;

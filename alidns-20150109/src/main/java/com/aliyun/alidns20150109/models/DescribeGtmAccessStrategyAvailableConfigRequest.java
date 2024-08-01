@@ -6,14 +6,19 @@ import com.aliyun.tea.*;
 public class DescribeGtmAccessStrategyAvailableConfigRequest extends TeaModel {
     /**
      * <p>The ID of the Global Traffic Manager (GTM) instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gtm-cn-xxxx</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The language.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("Lang")
     public String lang;

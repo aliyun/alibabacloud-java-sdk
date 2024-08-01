@@ -4,6 +4,16 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeCloudGtmSummaryRequest extends TeaModel {
+    /**
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li>zh-CN: Chinese</li>
+     * <li>en-US: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>en-US</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 

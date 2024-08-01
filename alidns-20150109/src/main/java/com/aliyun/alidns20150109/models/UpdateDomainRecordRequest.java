@@ -6,76 +6,92 @@ import com.aliyun.tea.*;
 public class UpdateDomainRecordRequest extends TeaModel {
     /**
      * <p>The language.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
-     * <p>The DNS resolution line. Default value: **default**.</p>
-     * <br>
+     * <p>The DNS resolution line. Default value: <strong>default</strong>.</p>
      * <p>For more information, see</p>
-     * <br>
-     * <p>[DNS lines](https://www.alibabacloud.com/help/zh/doc-detail/29807.htm).</p>
+     * <p><a href="https://www.alibabacloud.com/help/zh/doc-detail/29807.htm">DNS lines</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
      */
     @NameInMap("Line")
     public String line;
 
     /**
-     * <p>The priority of the mail exchanger (MX) record. Valid values: `1 to 50`.</p>
-     * <br>
+     * <p>The priority of the mail exchanger (MX) record. Valid values: <code>1 to 50</code>.</p>
      * <p>This parameter must be specified if the type of the DNS record is MX.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Priority")
     public Long priority;
 
     /**
      * <p>The hostname.</p>
-     * <br>
      * <p>For example, if you want to resolve @.example.com, you must set RR to an at sign (@) instead of leaving it empty.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>www</p>
      */
     @NameInMap("RR")
     public String RR;
 
     /**
      * <p>The ID of the DNS record.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9999985</p>
      */
     @NameInMap("RecordId")
     public String recordId;
 
     /**
      * <p>The time-to-live (TTL) of the DNS record. Default value: 600. Unit: seconds.</p>
-     * <br>
      * <p>For more information, see</p>
-     * <br>
-     * <p>[TTL definition](https://www.alibabacloud.com/help/zh/doc-detail/29806.htm).</p>
+     * <p><a href="https://www.alibabacloud.com/help/zh/doc-detail/29806.htm">TTL definition</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>600</p>
      */
     @NameInMap("TTL")
     public Long TTL;
 
     /**
      * <p>The type of the DNS record. For more information, see</p>
-     * <br>
-     * <p>[DNS record types](https://www.alibabacloud.com/help/zh/doc-detail/29805.htm).</p>
-     * <br>
+     * <p><a href="https://www.alibabacloud.com/help/zh/doc-detail/29805.htm">DNS record types</a>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A</p>
      */
     @NameInMap("Type")
     public String type;
 
     /**
      * <p>The IP address of the client.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.0.2.0</p>
      */
     @NameInMap("UserClientIp")
     public String userClientIp;
 
     /**
      * <p>The record value.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.0.2.254</p>
      */
     @NameInMap("Value")
     public String value;

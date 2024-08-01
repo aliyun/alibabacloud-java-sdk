@@ -6,14 +6,19 @@ import com.aliyun.tea.*;
 public class DescribeGtmAccessStrategyRequest extends TeaModel {
     /**
      * <p>The language used by the user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The ID of the access policy that you want to query.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hra0hs</p>
      */
     @NameInMap("StrategyId")
     public String strategyId;

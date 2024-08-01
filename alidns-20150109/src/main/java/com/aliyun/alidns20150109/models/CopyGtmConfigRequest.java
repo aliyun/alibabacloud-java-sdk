@@ -6,30 +6,39 @@ import com.aliyun.tea.*;
 public class CopyGtmConfigRequest extends TeaModel {
     /**
      * <p>The type of the object that you want to copy. Only the INSTANCE type is supported.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>INSTANCE</p>
      */
     @NameInMap("CopyType")
     public String copyType;
 
     /**
      * <p>The language that specific response parameters will use.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The ID of the source object. Only instance IDs are supported.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gtm-cn-0pp1j84v60d</p>
      */
     @NameInMap("SourceId")
     public String sourceId;
 
     /**
      * <p>The ID of the target object. Only instance IDs are supported.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gtm-cn-v0h1gaujg06</p>
      */
     @NameInMap("TargetId")
     public String targetId;

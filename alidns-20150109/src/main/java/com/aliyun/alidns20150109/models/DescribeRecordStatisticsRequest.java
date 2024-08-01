@@ -6,53 +6,65 @@ import com.aliyun.tea.*;
 public class DescribeRecordStatisticsRequest extends TeaModel {
     /**
      * <p>The domain name.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dns-example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
      * <p>The type of the domain name. The parameter value is not case-sensitive. Valid values:</p>
-     * <br>
-     * <p>*   PUBLIC (default): hosted public domain name</p>
-     * <p>*   CACHE: cache-accelerated domain name</p>
+     * <ul>
+     * <li>PUBLIC (default): hosted public domain name</li>
+     * <li>CACHE: cache-accelerated domain name</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>PUBLIC</p>
      */
     @NameInMap("DomainType")
     public String domainType;
 
     /**
-     * <p>The end date of the query. Specify the end date in the **YYYY-MM-DD** format.</p>
-     * <br>
+     * <p>The end date of the query. Specify the end date in the <strong>YYYY-MM-DD</strong> format.</p>
      * <p>The default value is the day when you query the data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-07-04</p>
      */
     @NameInMap("EndDate")
     public String endDate;
 
     /**
      * <p>The language.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
-     * <p>The hostname. If you want to resolve the subdomain name www.dns-exmaple.top, set this parameter to www.</p>
-     * <br>
+     * <p>The hostname. If you want to resolve the subdomain name <a href="http://www.dns-exmaple.top">www.dns-exmaple.top</a>, set this parameter to www.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>www</p>
      */
     @NameInMap("Rr")
     public String rr;
 
     /**
-     * <p>The start date of the query. Specify the start date in the **YYYY-MM-DD** format.</p>
-     * <br>
+     * <p>The start date of the query. Specify the start date in the <strong>YYYY-MM-DD</strong> format.</p>
      * <p>You can only query the DNS records within the last 90 days.``</p>
-     * <br>
      * <p>If the time range is less than or equal to seven days, data is returned on an hourly basis.````</p>
-     * <br>
      * <p>If the time range is greater than seven days, data is returned on a daily basis.````</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-07-04</p>
      */
     @NameInMap("StartDate")
     public String startDate;

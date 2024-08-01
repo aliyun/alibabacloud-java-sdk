@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class DescribeGtmAccessStrategiesRequest extends TeaModel {
     /**
      * <p>The ID of the GTM instance whose access policies you want to query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>instance1</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The language used by the user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The number of the page to return.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

@@ -12,6 +12,9 @@ public class DescribeDnsGtmAddressPoolAvailableConfigResponseBody extends TeaMod
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>199C3699-9A7B-41A1-BB5A-F1E862D3CB38</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,30 +43,45 @@ public class DescribeDnsGtmAddressPoolAvailableConfigResponseBody extends TeaMod
     public static class DescribeDnsGtmAddressPoolAvailableConfigResponseBodyAttributeInfosAttributeInfo extends TeaModel {
         /**
          * <p>The parent line code of the source region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>telecom</p>
          */
         @NameInMap("FatherCode")
         public String fatherCode;
 
         /**
          * <p>The code of the source region group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("GroupCode")
         public String groupCode;
 
         /**
          * <p>The name of the request source group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>global</p>
          */
         @NameInMap("GroupName")
         public String groupName;
 
         /**
          * <p>The line code of the source region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("LineCode")
         public String lineCode;
 
         /**
          * <p>The line name of the source region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>global</p>
          */
         @NameInMap("LineName")
         public String lineName;

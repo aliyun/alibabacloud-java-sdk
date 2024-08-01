@@ -6,14 +6,19 @@ import com.aliyun.tea.*;
 public class DescribeGtmInstanceSystemCnameRequest extends TeaModel {
     /**
      * <p>The ID of the Global Traffic Manager (GTM) instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>instance1</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The language used by the user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("Lang")
     public String lang;

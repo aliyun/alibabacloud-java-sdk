@@ -4,12 +4,24 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class CreateCloudGtmInstanceConfigResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>config-000**1</p>
+     */
     @NameInMap("ConfigId")
     public Boolean configId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

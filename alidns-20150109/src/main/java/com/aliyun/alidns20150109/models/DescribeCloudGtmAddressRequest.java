@@ -4,15 +4,26 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeCloudGtmAddressRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>en-US</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>addr-89518218114368**92</p>
      */
     @NameInMap("AddressId")
     public String addressId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1ae05db4-10e7-11ef-b126-00163e24**22</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 

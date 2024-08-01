@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateGtmRecoveryPlanResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6856BCF6-11D6-4D7E-AC53-FD579933522B</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -10,15 +10,31 @@ public class DescribeCloudGtmInstanceConfigAlertResponseBody extends TeaModel {
     @NameInMap("AlertGroup")
     public DescribeCloudGtmInstanceConfigAlertResponseBodyAlertGroup alertGroup;
 
+    /**
+     * <strong>example:</strong>
+     * <p>global</p>
+     */
     @NameInMap("AlertMode")
     public String alertMode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Config-000**11</p>
+     */
     @NameInMap("ConfigId")
     public String configId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>gtm-cn-wwo3a3hbz**</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0F32959D-417B-4D66-8463-68606605E3E2</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -76,15 +92,31 @@ public class DescribeCloudGtmInstanceConfigAlertResponseBody extends TeaModel {
     }
 
     public static class DescribeCloudGtmInstanceConfigAlertResponseBodyAlertConfigAlertConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("DingtalkNotice")
         public Boolean dingtalkNotice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("EmailNotice")
         public Boolean emailNotice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>addr_alert</p>
+         */
         @NameInMap("NoticeType")
         public String noticeType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("SmsNotice")
         public Boolean smsNotice;
 

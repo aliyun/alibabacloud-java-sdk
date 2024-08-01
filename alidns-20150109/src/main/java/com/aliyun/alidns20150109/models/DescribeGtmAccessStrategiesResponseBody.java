@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class DescribeGtmAccessStrategiesResponseBody extends TeaModel {
     /**
      * <p>The number of the page returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0CCC9971-CEC9-4132-824B-4AE611C07623</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -30,12 +39,18 @@ public class DescribeGtmAccessStrategiesResponseBody extends TeaModel {
 
     /**
      * <p>The total number of entries returned on all pages.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalItems")
     public Integer totalItems;
 
     /**
      * <p>The total number of pages returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalPages")
     public Integer totalPages;
@@ -96,6 +111,9 @@ public class DescribeGtmAccessStrategiesResponseBody extends TeaModel {
     public static class DescribeGtmAccessStrategiesResponseBodyStrategiesStrategyLinesLine extends TeaModel {
         /**
          * <p>The code of the access region group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEFAULT</p>
          */
         @NameInMap("GroupCode")
         public String groupCode;
@@ -108,6 +126,9 @@ public class DescribeGtmAccessStrategiesResponseBody extends TeaModel {
 
         /**
          * <p>The code for the line of the access region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("LineCode")
         public String lineCode;
@@ -179,44 +200,66 @@ public class DescribeGtmAccessStrategiesResponseBody extends TeaModel {
     public static class DescribeGtmAccessStrategiesResponseBodyStrategiesStrategy extends TeaModel {
         /**
          * <p>The access policy. Valid values:</p>
-         * <br>
-         * <p>*   **AUTO**: Automatic switch</p>
-         * <p>*   **DEFAULT**: Default address pool</p>
-         * <p>*   **FAILOVER**: Failover address pool</p>
+         * <ul>
+         * <li><strong>AUTO</strong>: Automatic switch</li>
+         * <li><strong>DEFAULT</strong>: Default address pool</li>
+         * <li><strong>FAILOVER</strong>: Failover address pool</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DEFAULT</p>
          */
         @NameInMap("AccessMode")
         public String accessMode;
 
         /**
          * <p>The access status. Valid values:</p>
-         * <br>
-         * <p>*   **DEFAULT**: The default address pool is currently accessed.</p>
-         * <p>*   **FAILOVER**: The failover address pool is currently accessed.</p>
+         * <ul>
+         * <li><strong>DEFAULT</strong>: The default address pool is currently accessed.</li>
+         * <li><strong>FAILOVER</strong>: The failover address pool is currently accessed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DEFAULT</p>
          */
         @NameInMap("AccessStatus")
         public String accessStatus;
 
         /**
          * <p>The time when the access policy was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-08-09T00:10Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1533773400000</p>
+         */
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
         /**
          * <p>The ID of the default address pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hra0i1</p>
          */
         @NameInMap("DefaultAddrPoolId")
         public String defaultAddrPoolId;
 
         /**
          * <p>Indicates whether health check was enabled for the default address pool. Valid values:</p>
-         * <br>
-         * <p>*   **OPEN**: Enabled</p>
-         * <p>*   **CLOSE**: Disabled</p>
-         * <p>*   **UNCONFIGURED**: Not configured</p>
+         * <ul>
+         * <li><strong>OPEN</strong>: Enabled</li>
+         * <li><strong>CLOSE</strong>: Disabled</li>
+         * <li><strong>UNCONFIGURED</strong>: Not configured</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OPEN</p>
          */
         @NameInMap("DefaultAddrPoolMonitorStatus")
         public String defaultAddrPoolMonitorStatus;
@@ -229,21 +272,31 @@ public class DescribeGtmAccessStrategiesResponseBody extends TeaModel {
 
         /**
          * <p>The availability status of the default address pool. Valid values:</p>
-         * <br>
-         * <p>*   **AVAILABLE**: Available</p>
-         * <p>*   **NOT_AVAILABLE**: Unavailable</p>
+         * <ul>
+         * <li><strong>AVAILABLE</strong>: Available</li>
+         * <li><strong>NOT_AVAILABLE</strong>: Unavailable</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>AVAILABLE</p>
          */
         @NameInMap("DefaultAddrPoolStatus")
         public String defaultAddrPoolStatus;
 
         /**
          * <p>The ID of the failover address pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hra0i2</p>
          */
         @NameInMap("FailoverAddrPoolId")
         public String failoverAddrPoolId;
 
         /**
          * <p>Indicates whether health check was enabled for the failover address pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OPEN</p>
          */
         @NameInMap("FailoverAddrPoolMonitorStatus")
         public String failoverAddrPoolMonitorStatus;
@@ -256,12 +309,18 @@ public class DescribeGtmAccessStrategiesResponseBody extends TeaModel {
 
         /**
          * <p>The availability status of the failover address pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AVAILABLE</p>
          */
         @NameInMap("FailoverAddrPoolStatus")
         public String failoverAddrPoolStatus;
 
         /**
          * <p>The ID of the GTM instance whose access policies you want to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance1</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
@@ -274,12 +333,18 @@ public class DescribeGtmAccessStrategiesResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the access policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hra0hs</p>
          */
         @NameInMap("StrategyId")
         public String strategyId;
 
         /**
-         * <p>The mode of the access policy. **SELF_DEFINED** indicates that the access policy is user-defined.</p>
+         * <p>The mode of the access policy. <strong>SELF_DEFINED</strong> indicates that the access policy is user-defined.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SELF_DEFINED</p>
          */
         @NameInMap("StrategyMode")
         public String strategyMode;

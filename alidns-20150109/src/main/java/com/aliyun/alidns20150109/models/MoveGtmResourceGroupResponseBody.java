@@ -4,6 +4,10 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class MoveGtmResourceGroupResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>C6F1D541-E7A6-447A-A2B5-9F7A20B2A8FB</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

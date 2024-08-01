@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeRecordStatisticsResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6AEC7A64-3CB1-4C49-8B35-0B901F1E26BF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class DescribeRecordStatisticsResponseBody extends TeaModel {
     public static class DescribeRecordStatisticsResponseBodyStatisticsStatistic extends TeaModel {
         /**
          * <p>The number of DNS requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15292887</p>
          */
         @NameInMap("Count")
         public Long count;
 
         /**
          * <p>The statistical timestamp. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1556640000000</p>
          */
         @NameInMap("Timestamp")
         public Long timestamp;

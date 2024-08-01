@@ -6,14 +6,19 @@ import com.aliyun.tea.*;
 public class DeleteDnsCacheDomainRequest extends TeaModel {
     /**
      * <p>The domain name.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dns-example.top</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
      * <p>The language.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("Lang")
     public String lang;

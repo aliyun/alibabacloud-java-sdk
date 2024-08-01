@@ -6,15 +6,25 @@ import com.aliyun.tea.*;
 public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
     /**
      * <p>The time when the disaster recovery plan was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-08-11T05:04Z</p>
      */
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1565499867000</p>
+     */
     @NameInMap("CreateTimestamp")
     public Long createTimestamp;
 
     /**
      * <p>The number of faulty address pools.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("FaultAddrPoolNum")
     public Integer faultAddrPoolNum;
@@ -27,66 +37,99 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
 
     /**
      * <p>The last time when the recovery plan was executed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-08-11T05:04Z</p>
      */
     @NameInMap("LastExecuteTime")
     public String lastExecuteTime;
 
     /**
      * <p>A timestamp that indicates the last time when the recovery plan was executed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1565505898000</p>
      */
     @NameInMap("LastExecuteTimestamp")
     public Long lastExecuteTimestamp;
 
     /**
      * <p>The last time when the disaster recovery plan was rolled back.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-08-11T06:45Z</p>
      */
     @NameInMap("LastRollbackTime")
     public String lastRollbackTime;
 
     /**
      * <p>A timestamp that indicates the last time when the disaster recovery plan was rolled back.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1565505919000</p>
      */
     @NameInMap("LastRollbackTimestamp")
     public Long lastRollbackTimestamp;
 
     /**
      * <p>The name of the disaster recovery plan queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>name-example</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The ID of the disaster recovery plan queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>55</p>
      */
     @NameInMap("RecoveryPlanId")
     public Long recoveryPlanId;
 
     /**
      * <p>The remarks on the disaster recovery plan.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>remark-example</p>
      */
     @NameInMap("Remark")
     public String remark;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0A5F4315-D6E8-435E-82DF-24F4C97D6999</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The status of the disaster recovery plan queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UNEXECUTED</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
      * <p>The last time when the disaster recovery plan was updated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-08-11T06:45Z</p>
      */
     @NameInMap("UpdateTime")
     public String updateTime;
 
     /**
      * <p>A timestamp that indicates the last time when the disaster recovery plan was updated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1565499867000</p>
      */
     @NameInMap("UpdateTimestamp")
     public Long updateTimestamp;
@@ -219,18 +262,27 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
     public static class DescribeGtmRecoveryPlanResponseBodyFaultAddrPoolsFaultAddrPoolAddrsAddr extends TeaModel {
         /**
          * <p>The ID of the address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>739</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The address work mode. It is the mode that was set for the IP address to work.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OFFLINE</p>
          */
         @NameInMap("Mode")
         public String mode;
 
         /**
          * <p>The address value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.1.1.1</p>
          */
         @NameInMap("Value")
         public String value;
@@ -288,6 +340,9 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
     public static class DescribeGtmRecoveryPlanResponseBodyFaultAddrPoolsFaultAddrPool extends TeaModel {
         /**
          * <p>The ID of the address pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hra0oq</p>
          */
         @NameInMap("AddrPoolId")
         public String addrPoolId;
@@ -306,6 +361,9 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the GTM instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance-zwy-38</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;

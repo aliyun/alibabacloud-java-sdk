@@ -7,6 +7,9 @@ public class ValidatePdnsUdpIpSegmentRequest extends TeaModel {
     @NameInMap("Ip")
     public String ip;
 
+    @NameInMap("IpToken")
+    public String ipToken;
+
     @NameInMap("Lang")
     public String lang;
 
@@ -21,6 +24,14 @@ public class ValidatePdnsUdpIpSegmentRequest extends TeaModel {
     }
     public String getIp() {
         return this.ip;
+    }
+
+    public ValidatePdnsUdpIpSegmentRequest setIpToken(String ipToken) {
+        this.ipToken = ipToken;
+        return this;
+    }
+    public String getIpToken() {
+        return this.ipToken;
     }
 
     public ValidatePdnsUdpIpSegmentRequest setLang(String lang) {

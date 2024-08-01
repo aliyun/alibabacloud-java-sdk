@@ -7,18 +7,38 @@ public class SearchCloudGtmAddressesResponseBody extends TeaModel {
     @NameInMap("Addresses")
     public SearchCloudGtmAddressesResponseBodyAddresses addresses;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>15</p>
+     */
     @NameInMap("TotalItems")
     public Integer totalItems;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalPages")
     public Integer totalPages;
 
@@ -76,15 +96,31 @@ public class SearchCloudGtmAddressesResponseBody extends TeaModel {
     }
 
     public static class SearchCloudGtmAddressesResponseBodyAddressesAddressHealthTasksHealthTask extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>ok</p>
+         */
         @NameInMap("MonitorStatus")
         public String monitorStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>80</p>
+         */
         @NameInMap("Port")
         public Integer port;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mtp-895180524251002880</p>
+         */
         @NameInMap("TemplateId")
         public String templateId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>IPv4-Ping</p>
+         */
         @NameInMap("TemplateName")
         public String templateName;
 
@@ -147,54 +183,114 @@ public class SearchCloudGtmAddressesResponseBody extends TeaModel {
     }
 
     public static class SearchCloudGtmAddressesResponseBodyAddressesAddress extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>223.5.XX.XX</p>
+         */
         @NameInMap("Address")
         public String address;
 
+        /**
+         * <strong>example:</strong>
+         * <p>addr-89518218114368**92</p>
+         */
         @NameInMap("AddressId")
         public String addressId;
 
         @NameInMap("AttributeInfo")
         public String attributeInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>auto</p>
+         */
         @NameInMap("AvailableMode")
         public String availableMode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>available</p>
+         */
         @NameInMap("AvailableStatus")
         public String availableStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-03-23T13:09Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1527690629357</p>
+         */
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>enable</p>
+         */
         @NameInMap("EnableStatus")
         public String enableStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>p50_ok</p>
+         */
         @NameInMap("HealthJudgement")
         public String healthJudgement;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ok</p>
+         */
         @NameInMap("HealthStatus")
         public String healthStatus;
 
         @NameInMap("HealthTasks")
         public SearchCloudGtmAddressesResponseBodyAddressesAddressHealthTasks healthTasks;
 
+        /**
+         * <strong>example:</strong>
+         * <p>available</p>
+         */
         @NameInMap("ManualAvailableStatus")
         public String manualAvailableStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Address-1</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Remark")
         public String remark;
 
+        /**
+         * <strong>example:</strong>
+         * <p>IPv4</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-03-29T13:20Z</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1527690629357</p>
+         */
         @NameInMap("UpdateTimestamp")
         public Long updateTimestamp;
 

@@ -6,47 +6,68 @@ import com.aliyun.tea.*;
 public class DescribeTransferDomainsRequest extends TeaModel {
     /**
      * <p>Specifies the domain name for which you want to view the transfer record.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alidns.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
      * <p>The user ID from which the domain name was transferred to the current account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("FromUserId")
     public Long fromUserId;
 
     /**
      * <p>The language.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
      * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
      * <p>The user ID to which the domain name was transferred from the current account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("TargetUserId")
     public Long targetUserId;
 
     /**
      * <p>The transfer type. Valid values:</p>
-     * <br>
-     * <p>*   IN: The domain name was transferred to the current account.</p>
-     * <p>*   OUT: The domain name was transferred from the current account.</p>
-     * <br>
+     * <ul>
+     * <li>IN: The domain name was transferred to the current account.</li>
+     * <li>OUT: The domain name was transferred from the current account.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>IN</p>
      */
     @NameInMap("TransferType")
     public String transferType;

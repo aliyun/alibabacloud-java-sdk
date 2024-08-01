@@ -19,6 +19,9 @@ public class DescribePdnsUdpIpSegmentsResponseBody extends TeaModel {
     @NameInMap("TotalCount")
     public Long totalCount;
 
+    @NameInMap("TotalPages")
+    public String totalPages;
+
     public static DescribePdnsUdpIpSegmentsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribePdnsUdpIpSegmentsResponseBody self = new DescribePdnsUdpIpSegmentsResponseBody();
         return TeaModel.build(map, self);
@@ -62,6 +65,14 @@ public class DescribePdnsUdpIpSegmentsResponseBody extends TeaModel {
     }
     public Long getTotalCount() {
         return this.totalCount;
+    }
+
+    public DescribePdnsUdpIpSegmentsResponseBody setTotalPages(String totalPages) {
+        this.totalPages = totalPages;
+        return this;
+    }
+    public String getTotalPages() {
+        return this.totalPages;
     }
 
     public static class DescribePdnsUdpIpSegmentsResponseBodyIpSegments extends TeaModel {

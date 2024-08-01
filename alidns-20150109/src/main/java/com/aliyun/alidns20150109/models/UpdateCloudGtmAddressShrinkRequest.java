@@ -4,14 +4,25 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class UpdateCloudGtmAddressShrinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>en-US</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>223.5.XX.XX</p>
+     */
     @NameInMap("Address")
     public String address;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>addr-89518218114368**92</p>
      */
     @NameInMap("AddressId")
     public String addressId;
@@ -19,15 +30,27 @@ public class UpdateCloudGtmAddressShrinkRequest extends TeaModel {
     @NameInMap("AttributeInfo")
     public String attributeInfo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1ae05db4-10e7-11ef-b126-00163e24**22</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>p50_ok</p>
+     */
     @NameInMap("HealthJudgement")
     public String healthJudgement;
 
     @NameInMap("HealthTasks")
     public String healthTasksShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Address-1</p>
+     */
     @NameInMap("Name")
     public String name;
 

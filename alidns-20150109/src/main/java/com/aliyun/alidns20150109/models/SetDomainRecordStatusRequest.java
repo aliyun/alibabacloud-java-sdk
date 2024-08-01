@@ -6,31 +6,42 @@ import com.aliyun.tea.*;
 public class SetDomainRecordStatusRequest extends TeaModel {
     /**
      * <p>The language.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The ID of the DNS record.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9999985</p>
      */
     @NameInMap("RecordId")
     public String recordId;
 
     /**
      * <p>The state of the DNS record. Valid values:</p>
-     * <br>
-     * <p>*   **Enable**: enables the DNS record.</p>
-     * <p>*   **Disable**: disables the DNS record.</p>
-     * <br>
+     * <ul>
+     * <li><strong>Enable</strong>: enables the DNS record.</li>
+     * <li><strong>Disable</strong>: disables the DNS record.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Disable</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
      * <p>The IP address of the client.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.0.2.0</p>
      */
     @NameInMap("UserClientIp")
     public String userClientIp;

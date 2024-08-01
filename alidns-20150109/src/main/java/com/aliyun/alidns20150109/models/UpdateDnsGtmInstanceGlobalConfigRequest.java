@@ -9,78 +9,114 @@ public class UpdateDnsGtmInstanceGlobalConfigRequest extends TeaModel {
 
     /**
      * <p>The name of the alert group in the JSON format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alertGroup1</p>
      */
     @NameInMap("AlertGroup")
     public String alertGroup;
 
     /**
      * <p>The type of the canonical name (CNAME).</p>
-     * <br>
-     * <p>*   Set the value to PUBLIC.</p>
+     * <ul>
+     * <li>Set the value to PUBLIC.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>public</p>
      */
     @NameInMap("CnameType")
     public String cnameType;
 
     /**
      * <p>Specifies whether to enable force updates. Valid values:</p>
-     * <br>
-     * <p>*   true: enables force update without a conflict alert.</p>
-     * <p>*   false: disables force update. If a conflict occurs, the system displays an alert. null: This valid value of ForceUpdate provides the same information as the false value.</p>
+     * <ul>
+     * <li>true: enables force update without a conflict alert.</li>
+     * <li>false: disables force update. If a conflict occurs, the system displays an alert. null: This valid value of ForceUpdate provides the same information as the false value.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("ForceUpdate")
     public Boolean forceUpdate;
 
     /**
      * <p>The ID of the instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>instance1</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The name of the instance. This parameter is required only for the first update.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("InstanceName")
     public String instanceName;
 
     /**
      * <p>The language of the values of specific response parameters. Default value: en. Valid values: en, zh, and ja.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>Specifies whether to use a custom CNAME domain name or a CNAME domain name assigned by the system to access the instance over the Internet. Valid values:</p>
-     * <br>
-     * <p>*   SYSTEM_ASSIGN: a CNAME domain name assigned by the system</p>
-     * <p>*   CUSTOM: a custom CNAME domain name</p>
+     * <ul>
+     * <li>SYSTEM_ASSIGN: a CNAME domain name assigned by the system</li>
+     * <li>CUSTOM: a custom CNAME domain name</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>custom</p>
      */
     @NameInMap("PublicCnameMode")
     public String publicCnameMode;
 
     /**
      * <p>The hostname corresponding to the CNAME domain name that is used to access the instance over the Internet.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test.rr</p>
      */
     @NameInMap("PublicRr")
     public String publicRr;
 
     /**
      * <p>The service domain name that is used over the Internet.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("PublicUserDomainName")
     public String publicUserDomainName;
 
     /**
      * <p>The CNAME domain name that is used to access the instance over the Internet, which is the primary domain name. This parameter is required when the PublicCnameMode parameter is set to CUSTOM.</p>
-     * <br>
-     * <p>>  You must use the primary domain name. Do not include the hostname specified by the PublicRr parameter.</p>
+     * <blockquote>
+     * <p> You must use the primary domain name. Do not include the hostname specified by the PublicRr parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>gtm-003.com</p>
      */
     @NameInMap("PublicZoneName")
     public String publicZoneName;
 
     /**
      * <p>The global time to live (TTL).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Ttl")
     public Integer ttl;
@@ -187,15 +223,31 @@ public class UpdateDnsGtmInstanceGlobalConfigRequest extends TeaModel {
     }
 
     public static class UpdateDnsGtmInstanceGlobalConfigRequestAlertConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("DingtalkNotice")
         public Boolean dingtalkNotice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("EmailNotice")
         public Boolean emailNotice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ADDR_ALERT</p>
+         */
         @NameInMap("NoticeType")
         public String noticeType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("SmsNotice")
         public Boolean smsNotice;
 

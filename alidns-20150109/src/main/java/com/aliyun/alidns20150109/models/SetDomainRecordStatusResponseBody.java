@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class SetDomainRecordStatusResponseBody extends TeaModel {
     /**
      * <p>The ID of the DNS record.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9999985</p>
      */
     @NameInMap("RecordId")
     public String recordId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The status of the DNS record.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Disable</p>
      */
     @NameInMap("Status")
     public String status;

@@ -4,21 +4,41 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class ListCloudGtmMonitorTemplatesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>75446CC1-FC9A-4595-8D96-089D73D7A63D</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Templates")
     public ListCloudGtmMonitorTemplatesResponseBodyTemplates templates;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("TotalItems")
     public Integer totalItems;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("TotalPages")
     public Integer totalPages;
 
@@ -76,12 +96,20 @@ public class ListCloudGtmMonitorTemplatesResponseBody extends TeaModel {
     }
 
     public static class ListCloudGtmMonitorTemplatesResponseBodyTemplatesTemplateIspCityNodesIspCityNode extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>503</p>
+         */
         @NameInMap("CityCode")
         public String cityCode;
 
         @NameInMap("CityName")
         public String cityName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>001</p>
+         */
         @NameInMap("CountryCode")
         public String countryCode;
 
@@ -91,9 +119,17 @@ public class ListCloudGtmMonitorTemplatesResponseBody extends TeaModel {
         @NameInMap("GroupName")
         public String groupName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>BGP</p>
+         */
         @NameInMap("GroupType")
         public String groupType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>465</p>
+         */
         @NameInMap("IspCode")
         public String ispCode;
 
@@ -191,48 +227,104 @@ public class ListCloudGtmMonitorTemplatesResponseBody extends TeaModel {
     }
 
     public static class ListCloudGtmMonitorTemplatesResponseBodyTemplatesTemplate extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2024-03-23T13:09Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1527690629357</p>
+         */
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("EvaluationCount")
         public Integer evaluationCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{\&quot;code\&quot;:200,\&quot;path\&quot;:\&quot;\\index.htm\&quot;,\&quot;host\&quot;:\&quot;aliyun.com\&quot;}</p>
+         */
         @NameInMap("ExtendInfo")
         public String extendInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>50</p>
+         */
         @NameInMap("FailureRate")
         public Integer failureRate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>60</p>
+         */
         @NameInMap("Interval")
         public Integer interval;
 
+        /**
+         * <strong>example:</strong>
+         * <p>IPv4</p>
+         */
         @NameInMap("IpVersion")
         public String ipVersion;
 
         @NameInMap("IspCityNodes")
         public ListCloudGtmMonitorTemplatesResponseBodyTemplatesTemplateIspCityNodes ispCityNodes;
 
+        /**
+         * <strong>example:</strong>
+         * <p>IPv4-Ping</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ping</p>
+         */
         @NameInMap("Protocol")
         public String protocol;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Remark")
         public String remark;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mtp-89518052425100**80</p>
+         */
         @NameInMap("TemplateId")
         public String templateId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5000</p>
+         */
         @NameInMap("Timeout")
         public Integer timeout;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-03-29T13:20Z</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1527690629357</p>
+         */
         @NameInMap("UpdateTimestamp")
         public Long updateTimestamp;
 

@@ -6,21 +6,31 @@ import com.aliyun.tea.*;
 public class DescribeGtmAccessStrategyResponseBody extends TeaModel {
     /**
      * <p>The access policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AUTO</p>
      */
     @NameInMap("AccessMode")
     public String accessMode;
 
     /**
      * <p>The access status. Valid values:</p>
-     * <br>
-     * <p>*   **DEFAULT**: Indicates normal when the default address pool is accessed.</p>
-     * <p>*   **FAILOVER**: Indicates an exception when a failover address pool is accessed.</p>
+     * <ul>
+     * <li><strong>DEFAULT</strong>: Indicates normal when the default address pool is accessed.</li>
+     * <li><strong>FAILOVER</strong>: Indicates an exception when a failover address pool is accessed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>DEFAULT</p>
      */
     @NameInMap("AccessStatus")
     public String accessStatus;
 
     /**
      * <p>Indicates whether health check is enabled for the default address pool.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OPEN</p>
      */
     @NameInMap("DefaultAddrPoolMonitorStatus")
     public String defaultAddrPoolMonitorStatus;
@@ -33,24 +43,36 @@ public class DescribeGtmAccessStrategyResponseBody extends TeaModel {
 
     /**
      * <p>The availability status of the default address pool.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AVAILABLE</p>
      */
     @NameInMap("DefaultAddrPoolStatus")
     public String defaultAddrPoolStatus;
 
     /**
      * <p>The ID of the default address pool.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hra0i1</p>
      */
     @NameInMap("DefultAddrPoolId")
     public String defultAddrPoolId;
 
     /**
      * <p>The ID of the failover address pool.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hra0i2</p>
      */
     @NameInMap("FailoverAddrPoolId")
     public String failoverAddrPoolId;
 
     /**
      * <p>Indicates whether health check is enabled for the failover address pool.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OPEN</p>
      */
     @NameInMap("FailoverAddrPoolMonitorStatus")
     public String failoverAddrPoolMonitorStatus;
@@ -63,12 +85,18 @@ public class DescribeGtmAccessStrategyResponseBody extends TeaModel {
 
     /**
      * <p>The availability status of the failover address pool.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AVAILABLE</p>
      */
     @NameInMap("FailoverAddrPoolStatus")
     public String failoverAddrPoolStatus;
 
     /**
      * <p>The ID of the GTM instance whose access policy details you want to query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>instance1</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -81,18 +109,27 @@ public class DescribeGtmAccessStrategyResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BA1608CA-834C-4E63-8682-8AF0B11ED72D</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the access policy queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hra0hs</p>
      */
     @NameInMap("StrategyId")
     public String strategyId;
 
     /**
      * <p>The mode of traffic scheduling.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SELF_DEFINED</p>
      */
     @NameInMap("StrategyMode")
     public String strategyMode;
@@ -239,24 +276,36 @@ public class DescribeGtmAccessStrategyResponseBody extends TeaModel {
     public static class DescribeGtmAccessStrategyResponseBodyLinesLine extends TeaModel {
         /**
          * <p>The code of the access region group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEFAULT</p>
          */
         @NameInMap("GroupCode")
         public String groupCode;
 
         /**
          * <p>The name of the access region group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Global</p>
          */
         @NameInMap("GroupName")
         public String groupName;
 
         /**
          * <p>The code for the line of the access region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("LineCode")
         public String lineCode;
 
         /**
          * <p>The name for the line of the access region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Global</p>
          */
         @NameInMap("LineName")
         public String lineName;

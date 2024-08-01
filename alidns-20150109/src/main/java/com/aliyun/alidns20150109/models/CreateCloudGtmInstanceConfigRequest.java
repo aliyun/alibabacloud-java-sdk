@@ -4,33 +4,73 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class CreateCloudGtmInstanceConfigRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>en-US</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1ae05db4-10e7-11ef-b126-00163e24**22</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>enable</p>
+     */
     @NameInMap("EnableStatus")
     public String enableStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>gtm-cn-jmp3qnw**03</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("Remark")
     public String remark;
 
+    /**
+     * <strong>example:</strong>
+     * <p>www</p>
+     */
     @NameInMap("ScheduleHostname")
     public String scheduleHostname;
 
+    /**
+     * <strong>example:</strong>
+     * <p>A</p>
+     */
     @NameInMap("ScheduleRrType")
     public String scheduleRrType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>custom</p>
+     */
     @NameInMap("ScheduleZoneMode")
     public String scheduleZoneMode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>example.com</p>
+     */
     @NameInMap("ScheduleZoneName")
     public String scheduleZoneName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("Ttl")
     public Integer ttl;
 

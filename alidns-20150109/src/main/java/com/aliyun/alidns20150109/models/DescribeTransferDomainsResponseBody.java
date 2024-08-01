@@ -11,25 +11,37 @@ public class DescribeTransferDomainsResponseBody extends TeaModel {
     public DescribeTransferDomainsResponseBodyDomainTransfers domainTransfers;
 
     /**
-     * <p>The page number. Pages start from page **1**. Default value: **1**.</p>
+     * <p>The page number. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
      * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -82,36 +94,54 @@ public class DescribeTransferDomainsResponseBody extends TeaModel {
     public static class DescribeTransferDomainsResponseBodyDomainTransfersDomainTransfer extends TeaModel {
         /**
          * <p>The time when the domain name was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-10-30T07:16Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The time when the domain name was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1572419764000</p>
          */
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
         /**
          * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test.com</p>
          */
         @NameInMap("DomainName")
         public String domainName;
 
         /**
          * <p>The user ID from which the domain name was transferred.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2222</p>
          */
         @NameInMap("FromUserId")
         public Long fromUserId;
 
         /**
          * <p>The ID of the domain name that was transferred.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The user ID to which the domain name was transferred.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>111111</p>
          */
         @NameInMap("TargetUserId")
         public Long targetUserId;

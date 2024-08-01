@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class ChangeDomainGroupResponseBody extends TeaModel {
     /**
      * <p>The ID of the destination domain name group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2223</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
      * <p>The name of the destination domain name group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MyGroup</p>
      */
     @NameInMap("GroupName")
     public String groupName;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
      */
     @NameInMap("RequestId")
     public String requestId;

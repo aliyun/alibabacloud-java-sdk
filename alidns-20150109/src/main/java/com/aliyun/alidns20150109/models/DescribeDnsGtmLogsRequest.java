@@ -6,44 +6,64 @@ import com.aliyun.tea.*;
 public class DescribeDnsGtmLogsRequest extends TeaModel {
     /**
      * <p>The timestamp that specifies the end of the time range to query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1516779348000</p>
      */
     @NameInMap("EndTimestamp")
     public Long endTimestamp;
 
     /**
      * <p>The ID of the instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>instance1</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The keyword for searches in "%KeyWord%" mode. The value is not case-sensitive.</p>
+     * <p>The keyword for searches in &quot;%KeyWord%&quot; mode. The value is not case-sensitive.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>demo</p>
      */
     @NameInMap("Keyword")
     public String keyword;
 
     /**
      * <p>The language to return some response parameters. Default value: en. Valid values: en, zh, and ja.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page. Maximum value: 100. Default value: 20.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The timestamp that specifies the beginning of the time range to query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1516779348000</p>
      */
     @NameInMap("StartTimestamp")
     public Long startTimestamp;

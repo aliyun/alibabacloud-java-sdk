@@ -4,24 +4,48 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeInternetDnsLogsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Complete")
     public Boolean complete;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CurPage")
     public Integer curPage;
 
     @NameInMap("Logs")
     public DescribeInternetDnsLogsResponseBodyLogs logs;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("TotalPage")
     public Integer totalPage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>48</p>
+     */
     @NameInMap("TotalSize")
     public Integer totalSize;
 
@@ -106,30 +130,66 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
     }
 
     public static class DescribeInternetDnsLogsResponseBodyLogsLog extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>3583</p>
+         */
         @NameInMap("DnsMsgId")
         public String dnsMsgId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1709196249000</p>
+         */
         @NameInMap("LogTime")
         public Long logTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>example.com</p>
+         */
         @NameInMap("QueryName")
         public String queryName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>A</p>
+         */
         @NameInMap("QueryType")
         public String queryType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Rt")
         public Integer rt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>140.205.XX.XX</p>
+         */
         @NameInMap("ServerIp")
         public String serverIp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>59.82.XX.XX</p>
+         */
         @NameInMap("SourceIp")
         public String sourceIp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>NOERROR</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>170.33.XX.XX</p>
+         */
         @NameInMap("SubnetIp")
         public String subnetIp;
 

@@ -4,6 +4,10 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeCloudGtmSystemLinesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>389DFFA3-77A5-4A9E-BF3D-147C6F98A5BA</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,18 +47,30 @@ public class DescribeCloudGtmSystemLinesResponseBody extends TeaModel {
     }
 
     public static class DescribeCloudGtmSystemLinesResponseBodySystemLinesSystemLine extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>aliyun_r_ap-south-1</p>
+         */
         @NameInMap("Code")
         public String code;
 
         @NameInMap("DisplayName")
         public String displayName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsAvailable")
         public Boolean isAvailable;
 
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>String	aliyun</p>
+         */
         @NameInMap("ParentCode")
         public String parentCode;
 

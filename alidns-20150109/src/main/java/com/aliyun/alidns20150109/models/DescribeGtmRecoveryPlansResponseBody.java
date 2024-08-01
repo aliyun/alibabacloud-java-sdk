@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeGtmRecoveryPlansResponseBody extends TeaModel {
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -24,18 +30,27 @@ public class DescribeGtmRecoveryPlansResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2BA072CF-CA21-4A34-B6C2-227BE2C58079</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("TotalItems")
     public Integer totalItems;
 
     /**
      * <p>The total number of pages returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalPages")
     public Integer totalPages;
@@ -96,82 +111,122 @@ public class DescribeGtmRecoveryPlansResponseBody extends TeaModel {
     public static class DescribeGtmRecoveryPlansResponseBodyRecoveryPlansRecoveryPlan extends TeaModel {
         /**
          * <p>The time when the disaster recovery plan was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-08-11T06:45Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The UNIX timestamp that indicates when the disaster recovery plan was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1565499867000</p>
          */
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
         /**
          * <p>The number of faulty address pools.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("FaultAddrPoolNum")
         public Integer faultAddrPoolNum;
 
         /**
          * <p>The last time when the disaster recovery plan was executed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-08-11T06:44Z</p>
          */
         @NameInMap("LastExecuteTime")
         public String lastExecuteTime;
 
         /**
          * <p>The UNIX timestamp that indicates the last time when the disaster recovery plan was executed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1565505898000</p>
          */
         @NameInMap("LastExecuteTimestamp")
         public Long lastExecuteTimestamp;
 
         /**
          * <p>The last time when the disaster recovery plan was rolled back.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-08-11T06:45Z</p>
          */
         @NameInMap("LastRollbackTime")
         public String lastRollbackTime;
 
         /**
          * <p>The UNIX timestamp that indicates the last time when the disaster recovery plan was rolled back.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1565505919000</p>
          */
         @NameInMap("LastRollbackTimestamp")
         public Long lastRollbackTimestamp;
 
         /**
          * <p>The name of the disaster recovery plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name-example</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The ID of the disaster recovery plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>55</p>
          */
         @NameInMap("RecoveryPlanId")
         public Long recoveryPlanId;
 
         /**
          * <p>The remarks about the disaster recovery plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>remark-example</p>
          */
         @NameInMap("Remark")
         public String remark;
 
         /**
          * <p>The status of the disaster recovery plan. Valid values:</p>
-         * <br>
-         * <p>*   **UNEXECUTED**: The plan is not executed.</p>
-         * <p>*   **EXECUTED**: The plan is executed.</p>
-         * <p>*   **ROLLED_BACK**: The plan is rolled back.</p>
+         * <ul>
+         * <li><strong>UNEXECUTED</strong>: The plan is not executed.</li>
+         * <li><strong>EXECUTED</strong>: The plan is executed.</li>
+         * <li><strong>ROLLED_BACK</strong>: The plan is rolled back.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>UNEXECUTED</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The last time when the disaster recovery plan was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-08-11T06:45Z</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;
 
         /**
          * <p>The UNIX timestamp that indicates the last time when the disaster recovery plan was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1565505919000</p>
          */
         @NameInMap("UpdateTimestamp")
         public Long updateTimestamp;

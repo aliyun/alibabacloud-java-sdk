@@ -4,36 +4,71 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class UpdateCloudGtmMonitorTemplateShrinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>en-US</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1ae05db4-10e7-11ef-b126-00163e24**22</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("EvaluationCount")
     public Integer evaluationCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{\&quot;code\&quot;:200,\&quot;path\&quot;:\&quot;\\index.htm\&quot;,\&quot;host\&quot;:\&quot;aliyun.com\&quot;}</p>
+     */
     @NameInMap("ExtendInfo")
     public String extendInfo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>50</p>
+     */
     @NameInMap("FailureRate")
     public Integer failureRate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>60</p>
+     */
     @NameInMap("Interval")
     public Integer interval;
 
     @NameInMap("IspCityNodes")
     public String ispCityNodesShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Ping-IPv4</p>
+     */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mtp-89518052425100**80</p>
      */
     @NameInMap("TemplateId")
     public String templateId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5000</p>
+     */
     @NameInMap("Timeout")
     public Integer timeout;
 

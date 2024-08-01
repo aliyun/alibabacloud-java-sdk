@@ -4,24 +4,68 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class UpdateCloudGtmInstanceConfigAlertShrinkRequest extends TeaModel {
+    /**
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li>zh-CN: Chinese</li>
+     * <li>en-US: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh-CN</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    /**
+     * <p>The alert configurations.</p>
+     */
     @NameInMap("AlertConfig")
     public String alertConfigShrink;
 
+    /**
+     * <p>The alert contact groups.</p>
+     */
     @NameInMap("AlertGroup")
     public String alertGroupShrink;
 
+    /**
+     * <p>The alert configuration mode of the instance. Valid values:</p>
+     * <ul>
+     * <li>global: global alert configuration</li>
+     * <li>instance_config: custom alert configuration</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>global</p>
+     */
     @NameInMap("AlertMode")
     public String alertMode;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1ae05db4-10e7-11ef-b126-00163e24**22</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The configuration ID of the access domain name. Two configuration IDs exist when an A record and an AAAA record are configured for the access domain name that is bound to the GTM instance. This ID uniquely identifies a configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Config-000**11</p>
+     */
     @NameInMap("ConfigId")
     public String configId;
 
+    /**
+     * <p>The ID of the Global Traffic Manager (GTM) 3.0 instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gtm-cn-zz11t58**0s</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

@@ -4,27 +4,59 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class SearchCloudGtmAddressesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>en-US</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>223.5.XX.XX</p>
+     */
     @NameInMap("Address")
     public String address;
 
+    /**
+     * <strong>example:</strong>
+     * <p>addr-89518218114368**92</p>
+     */
     @NameInMap("AddressId")
     public String addressId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>available</p>
+     */
     @NameInMap("AvailableStatus")
     public String availableStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>enable</p>
+     */
     @NameInMap("EnableStatus")
     public String enableStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ok</p>
+     */
     @NameInMap("HealthStatus")
     public String healthStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Ping-IPv4</p>
+     */
     @NameInMap("MonitorTemplateName")
     public String monitorTemplateName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>or</p>
+     */
     @NameInMap("NameSearchCondition")
     public String nameSearchCondition;
 
@@ -33,22 +65,36 @@ public class SearchCloudGtmAddressesRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>or</p>
+     */
     @NameInMap("RemarkSearchCondition")
     public String remarkSearchCondition;
 
     @NameInMap("Remarks")
     public java.util.List<String> remarks;
 
+    /**
+     * <strong>example:</strong>
+     * <p>IPv4</p>
+     */
     @NameInMap("Type")
     public String type;
 

@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeDomainNsResponseBody extends TeaModel {
     /**
      * <p>Indicates whether all the name servers are Alibaba Cloud DNS servers.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("AllAliDns")
     public Boolean allAliDns;
 
     /**
      * <p>The cause code of the detection failure.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DnsCheck.Failed</p>
      */
     @NameInMap("DetectFailedReasonCode")
     public String detectFailedReasonCode;
@@ -30,12 +36,18 @@ public class DescribeDomainNsResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the name servers include Alibaba Cloud DNS servers.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IncludeAliDns")
     public Boolean includeAliDns;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16C7DC7A-2FA7-4D14-8B12-88A2BB6373DB</p>
      */
     @NameInMap("RequestId")
     public String requestId;

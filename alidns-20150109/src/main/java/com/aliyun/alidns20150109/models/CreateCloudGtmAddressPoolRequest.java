@@ -4,24 +4,52 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class CreateCloudGtmAddressPoolRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>en-US</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Address pool-1</p>
+     */
     @NameInMap("AddressPoolName")
     public String addressPoolName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>IPv4</p>
+     */
     @NameInMap("AddressPoolType")
     public String addressPoolType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1ae05db4-10e7-11ef-b126-00163e24**22</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>enable</p>
+     */
     @NameInMap("EnableStatus")
     public String enableStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>any_ok</p>
+     */
     @NameInMap("HealthJudgement")
     public String healthJudgement;
 
+    /**
+     * <strong>example:</strong>
+     * <p>app</p>
+     */
     @NameInMap("Remark")
     public String remark;
 

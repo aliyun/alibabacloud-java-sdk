@@ -44,6 +44,9 @@ public class DescribePdnsUserInfoResponseBody extends TeaModel {
         @NameInMap("State")
         public String state;
 
+        @NameInMap("StatisticSwitchStatus")
+        public String statisticSwitchStatus;
+
         @NameInMap("StoppedService")
         public String stoppedService;
 
@@ -82,6 +85,14 @@ public class DescribePdnsUserInfoResponseBody extends TeaModel {
         }
         public String getState() {
             return this.state;
+        }
+
+        public DescribePdnsUserInfoResponseBodyUserInfo setStatisticSwitchStatus(String statisticSwitchStatus) {
+            this.statisticSwitchStatus = statisticSwitchStatus;
+            return this;
+        }
+        public String getStatisticSwitchStatus() {
+            return this.statisticSwitchStatus;
         }
 
         public DescribePdnsUserInfoResponseBodyUserInfo setStoppedService(String stoppedService) {

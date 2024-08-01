@@ -6,32 +6,46 @@ import com.aliyun.tea.*;
 public class UpdateGtmRecoveryPlanRequest extends TeaModel {
     /**
      * <p>The list of faulty address pools.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;hra0or&quot;]</p>
      */
     @NameInMap("FaultAddrPool")
     public String faultAddrPool;
 
     /**
      * <p>The language in which you want the values of some response parameters to be returned. These response parameters support multiple languages.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The name of the disaster recovery plan.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>abc</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The ID of the disaster recovery plan.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("RecoveryPlanId")
     public Long recoveryPlanId;
 
     /**
      * <p>The remarks about the disaster recovery plan.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>remark</p>
      */
     @NameInMap("Remark")
     public String remark;

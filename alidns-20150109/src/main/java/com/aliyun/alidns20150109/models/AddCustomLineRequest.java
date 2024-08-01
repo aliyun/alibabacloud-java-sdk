@@ -6,15 +6,16 @@ import com.aliyun.tea.*;
 public class AddCustomLineRequest extends TeaModel {
     /**
      * <p>The domain name.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
      * <p>The CIDR blocks.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("IpSegment")
@@ -22,13 +23,15 @@ public class AddCustomLineRequest extends TeaModel {
 
     /**
      * <p>The language.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The name of the custom line.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("LineName")
@@ -74,12 +77,18 @@ public class AddCustomLineRequest extends TeaModel {
     public static class AddCustomLineRequestIpSegment extends TeaModel {
         /**
          * <p>The end IP address of the CIDR block.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.0.2.254</p>
          */
         @NameInMap("EndIp")
         public String endIp;
 
         /**
          * <p>The start IP address of the CIDR block.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.0.2.0</p>
          */
         @NameInMap("StartIp")
         public String startIp;

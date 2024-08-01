@@ -12,14 +12,19 @@ public class UpdateCustomLineRequest extends TeaModel {
 
     /**
      * <p>The language.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The unique ID of the custom line.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234</p>
      */
     @NameInMap("LineId")
     public Long lineId;
@@ -70,12 +75,18 @@ public class UpdateCustomLineRequest extends TeaModel {
     public static class UpdateCustomLineRequestIpSegment extends TeaModel {
         /**
          * <p>The end IP address of the CIDR block.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.2.2.2</p>
          */
         @NameInMap("EndIp")
         public String endIp;
 
         /**
          * <p>The start IP address of the CIDR block.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.1.1.1</p>
          */
         @NameInMap("StartIp")
         public String startIp;

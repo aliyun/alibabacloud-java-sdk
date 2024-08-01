@@ -6,14 +6,19 @@ import com.aliyun.tea.*;
 public class GetMainDomainNameRequest extends TeaModel {
     /**
      * <p>The string. The string can be up to 128 characters in length.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://www.example.com">www.example.com</a></p>
      */
     @NameInMap("InputString")
     public String inputString;
 
     /**
      * <p>The language.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("Lang")
     public String lang;

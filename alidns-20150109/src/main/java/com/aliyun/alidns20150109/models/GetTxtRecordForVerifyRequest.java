@@ -6,23 +6,32 @@ import com.aliyun.tea.*;
 public class GetTxtRecordForVerifyRequest extends TeaModel {
     /**
      * <p>The domain name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
      * <p>The language.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The feature verified by using the TXT record. Valid values:</p>
-     * <br>
-     * <p>*   ADD_SUB_DOMAIN</p>
-     * <p>*   RETRIEVAL</p>
-     * <br>
+     * <ul>
+     * <li>ADD_SUB_DOMAIN</li>
+     * <li>RETRIEVAL</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ADD_SUB_DOMAIN</p>
      */
     @NameInMap("Type")
     public String type;

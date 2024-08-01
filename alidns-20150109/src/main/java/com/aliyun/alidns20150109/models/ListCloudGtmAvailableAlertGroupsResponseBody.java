@@ -7,6 +7,10 @@ public class ListCloudGtmAvailableAlertGroupsResponseBody extends TeaModel {
     @NameInMap("AlertGroups")
     public ListCloudGtmAvailableAlertGroupsResponseBodyAlertGroups alertGroups;
 
+    /**
+     * <strong>example:</strong>
+     * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

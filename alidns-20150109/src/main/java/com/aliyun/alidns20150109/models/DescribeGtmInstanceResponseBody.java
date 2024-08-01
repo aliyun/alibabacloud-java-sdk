@@ -6,108 +6,161 @@ import com.aliyun.tea.*;
 public class DescribeGtmInstanceResponseBody extends TeaModel {
     /**
      * <p>The number of access policies of the GTM instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("AccessStrategyNum")
     public Integer accessStrategyNum;
 
     /**
      * <p>The number of address pools of the GTM instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("AddressPoolNum")
     public Integer addressPoolNum;
 
     /**
      * <p>The alert group of the GTM instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[\\&quot;Daily test - R\&amp;D group\\&quot;]</p>
      */
     @NameInMap("AlertGroup")
     public String alertGroup;
 
     /**
      * <p>The domain name of the GTM instance to which the service domain name is mapped by using a CNAME record.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>instance1.14.com</p>
      */
     @NameInMap("Cname")
     public String cname;
 
     /**
      * <p>Indicates whether the CNAME is a custom domain name or is assigned by the system. Valid values:</p>
-     * <br>
-     * <p>*   **SYSTEM_ASSIGN**</p>
-     * <p>*   **CUSTOM**</p>
+     * <ul>
+     * <li><strong>SYSTEM_ASSIGN</strong></li>
+     * <li><strong>CUSTOM</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>SYSTEM_ASSIGN</p>
      */
     @NameInMap("CnameMode")
     public String cnameMode;
 
     /**
      * <p>The time when the GTM instance was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2018-06-06T11:34Z</p>
      */
     @NameInMap("CreateTime")
     public String createTime;
 
     /**
      * <p>The timestamp that indicates the time when the GTM instance was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1528284856000</p>
      */
     @NameInMap("CreateTimestamp")
     public Long createTimestamp;
 
     /**
      * <p>The time when the GTM instance expires.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2018-06-06T11:34Z</p>
      */
     @NameInMap("ExpireTime")
     public String expireTime;
 
     /**
      * <p>The timestamp that indicates the time when the GTM instance expires.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1528284856000</p>
      */
     @NameInMap("ExpireTimestamp")
     public Long expireTimestamp;
 
     /**
      * <p>The ID of the GTM instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>instance1</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The name of the GTM instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("InstanceName")
     public String instanceName;
 
     /**
      * <p>The load balancing policy. Valid values:</p>
-     * <br>
-     * <p>*   **ALL_RR**: round robin</p>
-     * <p>*   **RATIO**: weighted round-robin</p>
+     * <ul>
+     * <li><strong>ALL_RR</strong>: round robin</li>
+     * <li><strong>RATIO</strong>: weighted round-robin</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>RATIO</p>
      */
     @NameInMap("LbaStrategy")
     public String lbaStrategy;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E41AA251-F9BA-48C6-99B2-2B82B26A573A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-testgroupid</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>The global time to live (TTL).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60</p>
      */
     @NameInMap("Ttl")
     public Integer ttl;
 
     /**
      * <p>The domain name of the application.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://www.example.com">www.example.com</a></p>
      */
     @NameInMap("UserDomainName")
     public String userDomainName;
 
     /**
      * <p>The version code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>biaozhun</p>
      */
     @NameInMap("VersionCode")
     public String versionCode;

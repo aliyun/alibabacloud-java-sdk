@@ -6,41 +6,59 @@ import com.aliyun.tea.*;
 public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
     /**
      * <p>The primary/secondary switchover policy for address pool groups. Valid values:</p>
-     * <br>
-     * <p>*   AUTO: performs automatic switchover between the primary and secondary address pool groups upon failures.</p>
-     * <p>*   DEFAULT: uses the primary address pool group.</p>
-     * <p>*   FAILOVER: uses the secondary address pool group.</p>
+     * <ul>
+     * <li>AUTO: performs automatic switchover between the primary and secondary address pool groups upon failures.</li>
+     * <li>DEFAULT: uses the primary address pool group.</li>
+     * <li>FAILOVER: uses the secondary address pool group.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>auto</p>
      */
     @NameInMap("AccessMode")
     public String accessMode;
 
     /**
      * <p>The time when the access policy was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2018-08-09T00:10Z</p>
      */
     @NameInMap("CreateTime")
     public String createTime;
 
     /**
      * <p>The timestamp that indicates when the access policy was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1533773400000</p>
      */
     @NameInMap("CreateTimestamp")
     public Long createTimestamp;
 
     /**
      * <p>The status of the primary address pool group. Valid values:</p>
-     * <br>
-     * <p>*   AVAILABLE: available</p>
-     * <p>*   NOT_AVAILABLE: unavailable</p>
+     * <ul>
+     * <li>AVAILABLE: available</li>
+     * <li>NOT_AVAILABLE: unavailable</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>AVAILABLE</p>
      */
     @NameInMap("DefaultAddrPoolGroupStatus")
     public String defaultAddrPoolGroupStatus;
 
     /**
      * <p>The type of the primary address pool. Valid values:</p>
-     * <br>
-     * <p>*   IPV4</p>
-     * <p>*   IPV6</p>
-     * <p>*   DOMAIN</p>
+     * <ul>
+     * <li>IPV4</li>
+     * <li>IPV6</li>
+     * <li>DOMAIN</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ipv4</p>
      */
     @NameInMap("DefaultAddrPoolType")
     public String defaultAddrPoolType;
@@ -53,64 +71,93 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
 
     /**
      * <p>The number of available addresses in the primary address pool.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("DefaultAvailableAddrNum")
     public Integer defaultAvailableAddrNum;
 
     /**
      * <p>Indicates whether scheduling optimization for latency resolution was enabled for the primary address pool group. Valid values:</p>
-     * <br>
-     * <p>*   OPEN: enabled</p>
-     * <p>*   CLOSE: disabled</p>
+     * <ul>
+     * <li>OPEN: enabled</li>
+     * <li>CLOSE: disabled</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>open</p>
      */
     @NameInMap("DefaultLatencyOptimization")
     public String defaultLatencyOptimization;
 
     /**
      * <p>The load balancing policy of the primary address pool group. Valid values:</p>
-     * <br>
-     * <p>*   ALL_RR: returns all addresses.</p>
-     * <p>*   RATIO: returns addresses by weight.</p>
+     * <ul>
+     * <li>ALL_RR: returns all addresses.</li>
+     * <li>RATIO: returns addresses by weight.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>all_rr</p>
      */
     @NameInMap("DefaultLbaStrategy")
     public String defaultLbaStrategy;
 
     /**
      * <p>The maximum number of addresses returned from the primary address pool group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("DefaultMaxReturnAddrNum")
     public Integer defaultMaxReturnAddrNum;
 
     /**
      * <p>The minimum number of available addresses in the primary address pool group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("DefaultMinAvailableAddrNum")
     public Integer defaultMinAvailableAddrNum;
 
     /**
      * <p>The type of the active address pool group. Valid values:</p>
-     * <br>
-     * <p>*   DEFAULT: the primary address pool group</p>
-     * <p>*   FAILOVER: the secondary address pool group</p>
+     * <ul>
+     * <li>DEFAULT: the primary address pool group</li>
+     * <li>FAILOVER: the secondary address pool group</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>DEFAULT</p>
      */
     @NameInMap("EffectiveAddrPoolGroupType")
     public String effectiveAddrPoolGroupType;
 
     /**
      * <p>The status of the secondary address pool group. Valid values:</p>
-     * <br>
-     * <p>*   AVAILABLE: available</p>
-     * <p>*   NOT_AVAILABLE: unavailable</p>
+     * <ul>
+     * <li>AVAILABLE: available</li>
+     * <li>NOT_AVAILABLE: unavailable</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>AVAILABLE</p>
      */
     @NameInMap("FailoverAddrPoolGroupStatus")
     public String failoverAddrPoolGroupStatus;
 
     /**
      * <p>The type of the secondary address pool. Valid values:</p>
-     * <br>
-     * <p>*   IPV4</p>
-     * <p>*   IPV6</p>
-     * <p>*   DOMAIN</p>
+     * <ul>
+     * <li>IPV4</li>
+     * <li>IPV6</li>
+     * <li>DOMAIN</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ipv4</p>
      */
     @NameInMap("FailoverAddrPoolType")
     public String failoverAddrPoolType;
@@ -123,42 +170,62 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
 
     /**
      * <p>The number of available addresses in the secondary address pool.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("FailoverAvailableAddrNum")
     public Integer failoverAvailableAddrNum;
 
     /**
      * <p>Indicates whether scheduling optimization for latency resolution was enabled for the secondary address pool group. Valid values:</p>
-     * <br>
-     * <p>*   OPEN: enabled</p>
-     * <p>*   CLOSE: disabled</p>
+     * <ul>
+     * <li>OPEN: enabled</li>
+     * <li>CLOSE: disabled</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>open</p>
      */
     @NameInMap("FailoverLatencyOptimization")
     public String failoverLatencyOptimization;
 
     /**
      * <p>The load balancing policy of the secondary address pool group. Valid values:</p>
-     * <br>
-     * <p>*   ALL_RR: returns all addresses.</p>
-     * <p>*   RATIO: returns addresses by weight.</p>
+     * <ul>
+     * <li>ALL_RR: returns all addresses.</li>
+     * <li>RATIO: returns addresses by weight.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>all_rr</p>
      */
     @NameInMap("FailoverLbaStrategy")
     public String failoverLbaStrategy;
 
     /**
      * <p>The maximum number of addresses returned from the secondary address pool group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("FailoverMaxReturnAddrNum")
     public Integer failoverMaxReturnAddrNum;
 
     /**
      * <p>The minimum number of available addresses in the secondary address pool group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("FailoverMinAvailableAddrNum")
     public Integer failoverMinAvailableAddrNum;
 
     /**
      * <p>The ID of the associated instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>instance1</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -171,27 +238,40 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BA1608CA-834C-4E63-8682-8AF0B11ED72D</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the access policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>strategyId1</p>
      */
     @NameInMap("StrategyId")
     public String strategyId;
 
     /**
      * <p>The type of the access policy. Valid values:</p>
-     * <br>
-     * <p>*   GEO: geographical location-based</p>
-     * <p>*   LATENCY: latency-based</p>
+     * <ul>
+     * <li>GEO: geographical location-based</li>
+     * <li>LATENCY: latency-based</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>geo</p>
      */
     @NameInMap("StrategyMode")
     public String strategyMode;
 
     /**
      * <p>The name of the access policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>strategyName1</p>
      */
     @NameInMap("StrategyName")
     public String strategyName;
@@ -412,24 +492,36 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
     public static class DescribeDnsGtmAccessStrategyResponseBodyDefaultAddrPoolsDefaultAddrPool extends TeaModel {
         /**
          * <p>The number of addresses in the address pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("AddrCount")
         public Integer addrCount;
 
         /**
          * <p>The ID of the address pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pool1</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The weight of the address pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("LbaWeight")
         public Integer lbaWeight;
 
         /**
          * <p>The name of the address pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Name")
         public String name;
@@ -495,24 +587,36 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
     public static class DescribeDnsGtmAccessStrategyResponseBodyFailoverAddrPoolsFailoverAddrPool extends TeaModel {
         /**
          * <p>The number of addresses in the address pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("AddrCount")
         public Integer addrCount;
 
         /**
          * <p>The ID of the address pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pool1</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The weight of the address pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("LbaWeight")
         public Integer lbaWeight;
 
         /**
          * <p>The name of the address pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Name")
         public String name;
@@ -578,24 +682,36 @@ public class DescribeDnsGtmAccessStrategyResponseBody extends TeaModel {
     public static class DescribeDnsGtmAccessStrategyResponseBodyLinesLine extends TeaModel {
         /**
          * <p>The code of the source region group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("GroupCode")
         public String groupCode;
 
         /**
          * <p>The name of the source region group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>global</p>
          */
         @NameInMap("GroupName")
         public String groupName;
 
         /**
          * <p>The line code of the source region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("LineCode")
         public String lineCode;
 
         /**
          * <p>The line name of the source region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>global</p>
          */
         @NameInMap("LineName")
         public String lineName;

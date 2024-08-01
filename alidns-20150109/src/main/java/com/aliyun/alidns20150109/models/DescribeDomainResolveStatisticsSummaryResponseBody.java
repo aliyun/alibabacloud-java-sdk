@@ -5,19 +5,28 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainResolveStatisticsSummaryResponseBody extends TeaModel {
     /**
-     * <p>The page number. Pages start from page **1**. Default value: **1**.</p>
+     * <p>The page number. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Maximum value: **100**. Default value: **20**.</p>
+     * <p>The number of entries per page. Maximum value: <strong>100</strong>. Default value: <strong>20</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6856BCF6-11D6-4D7E-AC53-FD579933522B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -30,12 +39,18 @@ public class DescribeDomainResolveStatisticsSummaryResponseBody extends TeaModel
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalItems")
     public Integer totalItems;
 
     /**
      * <p>The total number of pages returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalPages")
     public Integer totalPages;
@@ -96,21 +111,31 @@ public class DescribeDomainResolveStatisticsSummaryResponseBody extends TeaModel
     public static class DescribeDomainResolveStatisticsSummaryResponseBodyStatistics extends TeaModel {
         /**
          * <p>The number of DNS requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>35509014</p>
          */
         @NameInMap("Count")
         public String count;
 
         /**
          * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         @NameInMap("DomainName")
         public String domainName;
 
         /**
          * <p>The type of the domain name. Valid values:</p>
-         * <br>
-         * <p>*   PUBLIC: hosted public domain name</p>
-         * <p>*   CACHE: cache-accelerated domain name</p>
+         * <ul>
+         * <li>PUBLIC: hosted public domain name</li>
+         * <li>CACHE: cache-accelerated domain name</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CACHE</p>
          */
         @NameInMap("DomainType")
         public String domainType;

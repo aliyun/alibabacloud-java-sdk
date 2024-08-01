@@ -12,6 +12,9 @@ public class DescribeGtmMonitorAvailableConfigResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6856BCF6-11D6-4D7E-AC53-FD579933522B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,55 +43,78 @@ public class DescribeGtmMonitorAvailableConfigResponseBody extends TeaModel {
     public static class DescribeGtmMonitorAvailableConfigResponseBodyIspCityNodesIspCityNode extends TeaModel {
         /**
          * <p>The code of the city where the monitored node is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>503</p>
          */
         @NameInMap("CityCode")
         public String cityCode;
 
         /**
          * <p>The display name of the city where the monitored node is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Zhangjiakou</p>
          */
         @NameInMap("CityName")
         public String cityName;
 
         /**
          * <p>Indicates whether the monitored node is selected for the health check by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("DefaultSelected")
         public Boolean defaultSelected;
 
         /**
          * <p>The name of the group to which the monitored node belongs.</p>
-         * <br>
          * <p>Valid values: Overseas Nodes, BGP Nodes, and ISP Nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Overseas Nodes</p>
          */
         @NameInMap("GroupName")
         public String groupName;
 
         /**
          * <p>The type of the group to which the monitored node belongs.</p>
-         * <br>
          * <p>Valid values: BGP, OVERSEAS, and ISP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OVERSEAS</p>
          */
         @NameInMap("GroupType")
         public String groupType;
 
         /**
          * <p>The code of the Internet service provider (ISP) to which the monitored node belongs.</p>
-         * <br>
-         * <p>*   If the value of the GroupType parameter is BGP or OVERSEAS, the value of IspCode is 465 by default.</p>
-         * <p>*   If the value of the GroupType parameter is not BGP or OVERSEAS, valid values of IspCode are 232, 132, and 5. and is used together with CityCode.</p>
+         * <ul>
+         * <li>If the value of the GroupType parameter is BGP or OVERSEAS, the value of IspCode is 465 by default.</li>
+         * <li>If the value of the GroupType parameter is not BGP or OVERSEAS, valid values of IspCode are 232, 132, and 5. and is used together with CityCode.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>465</p>
          */
         @NameInMap("IspCode")
         public String ispCode;
 
         /**
          * <p>The display name of the ISP to which the monitored node belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alibaba</p>
          */
         @NameInMap("IspName")
         public String ispName;
 
         /**
          * <p>Indicates whether the monitored node is deployed in the Chinese mainland.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Mainland")
         public Boolean mainland;

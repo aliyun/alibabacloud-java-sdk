@@ -4,15 +4,39 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeCloudGtmSummaryResponseBody extends TeaModel {
+    /**
+     * <p>The total number of instances within the current account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("InstanceTotalCount")
     public Integer instanceTotalCount;
 
+    /**
+     * <p>The total number of configured health check tasks.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("MonitorTaskTotalCount")
     public Integer monitorTaskTotalCount;
 
+    /**
+     * <p>The quota on the number of health check tasks.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>101</p>
+     */
     @NameInMap("MonitorTaskTotalQuota")
     public Integer monitorTaskTotalQuota;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>199C3699-9A7B-41A1-BB5A-F1E862D3CB38</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

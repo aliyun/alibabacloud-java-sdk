@@ -4,6 +4,10 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class UpdateCloudGtmGlobalAlertRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>en-US</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
@@ -13,6 +17,10 @@ public class UpdateCloudGtmGlobalAlertRequest extends TeaModel {
     @NameInMap("AlertGroup")
     public java.util.List<String> alertGroup;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1ae05db4-10e7-11ef-b126-00163e24**22</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -54,15 +62,31 @@ public class UpdateCloudGtmGlobalAlertRequest extends TeaModel {
     }
 
     public static class UpdateCloudGtmGlobalAlertRequestAlertConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("DingtalkNotice")
         public Boolean dingtalkNotice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("EmailNotice")
         public Boolean emailNotice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>addr_alert</p>
+         */
         @NameInMap("NoticeType")
         public String noticeType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("SmsNotice")
         public Boolean smsNotice;
 

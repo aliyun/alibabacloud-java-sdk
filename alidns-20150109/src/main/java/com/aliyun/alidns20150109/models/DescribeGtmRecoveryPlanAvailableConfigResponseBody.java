@@ -12,6 +12,9 @@ public class DescribeGtmRecoveryPlanAvailableConfigResponseBody extends TeaModel
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F8F8EF50-8B7F-4702-B294-97170A423403</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -46,6 +49,9 @@ public class DescribeGtmRecoveryPlanAvailableConfigResponseBody extends TeaModel
 
         /**
          * <p>The name of the address pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hra0i9</p>
          */
         @NameInMap("Name")
         public String name;
@@ -101,12 +107,18 @@ public class DescribeGtmRecoveryPlanAvailableConfigResponseBody extends TeaModel
 
         /**
          * <p>The ID of the GTM instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance-example</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The name of the GTM instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance-name-example</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;

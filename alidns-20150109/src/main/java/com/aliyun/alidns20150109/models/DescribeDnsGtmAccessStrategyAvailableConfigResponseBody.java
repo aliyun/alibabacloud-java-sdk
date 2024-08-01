@@ -30,6 +30,9 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C2851BA9-CE56-49AF-8D12-4FC6A49EE688</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -45,6 +48,9 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
 
     /**
      * <p>Indicates whether we recommend that you set the source region to global.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("SuggestSetDefaultLine")
     public Boolean suggestSetDefaultLine;
@@ -129,18 +135,27 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
     public static class DescribeDnsGtmAccessStrategyAvailableConfigResponseBodyDomainAddrPoolsDomainAddrPool extends TeaModel {
         /**
          * <p>The number of addresses in the address pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("AddrCount")
         public Integer addrCount;
 
         /**
          * <p>The ID of the address pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pool1</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The name of the address pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testpool</p>
          */
         @NameInMap("Name")
         public String name;
@@ -198,18 +213,27 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
     public static class DescribeDnsGtmAccessStrategyAvailableConfigResponseBodyIpv4AddrPoolsIpv4AddrPool extends TeaModel {
         /**
          * <p>The number of addresses in the address pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("AddrCount")
         public Integer addrCount;
 
         /**
          * <p>The ID of the address pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pool1</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The name of the address pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testpool</p>
          */
         @NameInMap("Name")
         public String name;
@@ -267,18 +291,27 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
     public static class DescribeDnsGtmAccessStrategyAvailableConfigResponseBodyIpv6AddrPoolsIpv6AddrPool extends TeaModel {
         /**
          * <p>The number of addresses in the address pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("AddrCount")
         public Integer addrCount;
 
         /**
          * <p>The ID of the address pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pool1</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The name of the address pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testpool</p>
          */
         @NameInMap("Name")
         public String name;
@@ -336,30 +369,45 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
     public static class DescribeDnsGtmAccessStrategyAvailableConfigResponseBodyLinesLine extends TeaModel {
         /**
          * <p>The parent line code of the source region. Leave it blank if no parent line exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>telecom</p>
          */
         @NameInMap("FatherCode")
         public String fatherCode;
 
         /**
          * <p>The line name of the source region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("GroupCode")
         public String groupCode;
 
         /**
          * <p>The name of the source region group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>global</p>
          */
         @NameInMap("GroupName")
         public String groupName;
 
         /**
          * <p>The line code of the source region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("LineCode")
         public String lineCode;
 
         /**
          * <p>The code of the source region group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>global</p>
          */
         @NameInMap("LineName")
         public String lineName;

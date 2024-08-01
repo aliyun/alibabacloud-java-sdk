@@ -12,36 +12,54 @@ public class AddDomainResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the domain name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>00efd71a-770e-4255-b54e-6fe5659baffe</p>
      */
     @NameInMap("DomainId")
     public String domainId;
 
     /**
      * <p>The domain name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dns-example.top</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
      * <p>The ID of the domain name group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2223</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
      * <p>The name of the domain name group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MyGroup</p>
      */
     @NameInMap("GroupName")
     public String groupName;
 
     /**
      * <p>The Punycode for the domain name. This parameter is returned only for Chinese domain names.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xn--fsq270a.com</p>
      */
     @NameInMap("PunyCode")
     public String punyCode;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
      */
     @NameInMap("RequestId")
     public String requestId;

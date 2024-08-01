@@ -6,51 +6,76 @@ import com.aliyun.tea.*;
 public class DescribeDomainsRequest extends TeaModel {
     /**
      * <p>The ID of the domain name group. If you do not specify this parameter, all domain names are queried by default.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2223</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
-     * <p>The keyword for searches in "%KeyWord%" mode. The value is not case-sensitive.</p>
+     * <p>The keyword for searches in &quot;%KeyWord%&quot; mode. The value is not case-sensitive.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>com</p>
      */
     @NameInMap("KeyWord")
     public String keyWord;
 
     /**
      * <p>The language type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
-     * <p>The number of the page to return. Pages start from page **1**. Default value: **1**.</p>
+     * <p>The number of the page to return. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Maximum value: **100**. Default value: **20**.</p>
+     * <p>The number of entries to return on each page. Maximum value: <strong>100</strong>. Default value: <strong>20</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-resourcegroupid01</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>The search mode. Valid values:</p>
-     * <br>
-     * <p>*   **LIKE**: fuzzy match.</p>
-     * <p>*   **EXACT**: exact match.</p>
+     * <ul>
+     * <li><strong>LIKE</strong>: fuzzy match.</li>
+     * <li><strong>EXACT</strong>: exact match.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>LIKE</p>
      */
     @NameInMap("SearchMode")
     public String searchMode;
 
     /**
      * <p>Specifies whether to query the starmark of the domain name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Starmark")
     public Boolean starmark;

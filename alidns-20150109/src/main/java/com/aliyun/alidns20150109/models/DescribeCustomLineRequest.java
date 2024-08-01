@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeCustomLineRequest extends TeaModel {
     /**
      * <p>The language.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The unique ID of the custom line.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>597</p>
      */
     @NameInMap("LineId")
     public Long lineId;

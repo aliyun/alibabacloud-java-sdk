@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeDnsGtmMonitorAvailableConfigRequest extends TeaModel {
     /**
      * <p>The language of the values of specific response parameters. Default value: en. Valid values: en, zh, and ja.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("Lang")
     public String lang;

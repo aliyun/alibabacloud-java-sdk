@@ -5,21 +5,29 @@ import com.aliyun.tea.*;
 
 public class DescribeDnsProductInstanceRequest extends TeaModel {
     /**
-     * <p>The instance ID. You can call the **DescribeDomainInfo** operation to obtain the instance ID.</p>
-     * <br>
+     * <p>The instance ID. You can call the <strong>DescribeDomainInfo</strong> operation to obtain the instance ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-8fxxxx</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The language.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The IP address of the client.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.0.2.0</p>
      */
     @NameInMap("UserClientIp")
     public String userClientIp;

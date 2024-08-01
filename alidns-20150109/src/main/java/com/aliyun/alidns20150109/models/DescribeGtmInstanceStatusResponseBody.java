@@ -6,48 +6,71 @@ import com.aliyun.tea.*;
 public class DescribeGtmInstanceStatusResponseBody extends TeaModel {
     /**
      * <p>The number of unavailable addresses.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("AddrNotAvailableNum")
     public Integer addrNotAvailableNum;
 
     /**
      * <p>The number of unavailable address pools.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("AddrPoolNotAvailableNum")
     public Integer addrPoolNotAvailableNum;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>389DFFA3-77A5-4A9E-BF3D-147C6F98A5BA</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The status of the instance. Valid values:</p>
-     * <br>
-     * <p>*   ALLOW: Operations on the instance are allowed.</p>
-     * <p>*   DENY: Operations on the instance are not allowed.</p>
+     * <ul>
+     * <li>ALLOW: Operations on the instance are allowed.</li>
+     * <li>DENY: Operations on the instance are not allowed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ALLOW</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
      * <p>List of reasons for an instance status. Valid values:</p>
-     * <br>
-     * <p>*   INSTANCE_OPERATE_BLACK_LIST: The instance is in the blacklist.</p>
-     * <p>*   BETA_INSTANCE: The instance is in public preview.</p>
+     * <ul>
+     * <li>INSTANCE_OPERATE_BLACK_LIST: The instance is in the blacklist.</li>
+     * <li>BETA_INSTANCE: The instance is in public preview.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;BETA_INSTANCE&quot;]</p>
      */
     @NameInMap("StatusReason")
     public String statusReason;
 
     /**
      * <p>The number of access policies that are unavailable in the active address pool.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("StrategyNotAvailableNum")
     public Integer strategyNotAvailableNum;
 
     /**
      * <p>The number of access policies that fail over to the secondary address pool.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("SwitchToFailoverStrategyNum")
     public Integer switchToFailoverStrategyNum;

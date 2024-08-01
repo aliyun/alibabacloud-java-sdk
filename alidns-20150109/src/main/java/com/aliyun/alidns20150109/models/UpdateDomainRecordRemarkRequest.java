@@ -6,14 +6,19 @@ import com.aliyun.tea.*;
 public class UpdateDomainRecordRemarkRequest extends TeaModel {
     /**
      * <p>The language.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The ID of the DNS record.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12345678</p>
      */
     @NameInMap("RecordId")
     public String recordId;
@@ -26,6 +31,9 @@ public class UpdateDomainRecordRemarkRequest extends TeaModel {
 
     /**
      * <p>The IP address of the client.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.0.2.0</p>
      */
     @NameInMap("UserClientIp")
     public String userClientIp;

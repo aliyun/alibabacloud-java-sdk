@@ -6,74 +6,102 @@ import com.aliyun.tea.*;
 public class DescribeRecordStatisticsSummaryRequest extends TeaModel {
     /**
      * <p>The domain name.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dns-example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
      * <p>The type of the domain name. The parameter value is not case-sensitive. Valid values:</p>
-     * <br>
-     * <p>*   PUBLIC (default): hosted public domain name</p>
-     * <p>*   CACHE: cache-accelerated domain name</p>
+     * <ul>
+     * <li>PUBLIC (default): hosted public domain name</li>
+     * <li>CACHE: cache-accelerated domain name</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>PUBLIC</p>
      */
     @NameInMap("DomainType")
     public String domainType;
 
     /**
-     * <p>The end date of the query. Specify the start date in the **YYYY-MM-DD** format.</p>
-     * <br>
+     * <p>The end date of the query. Specify the start date in the <strong>YYYY-MM-DD</strong> format.</p>
      * <p>The default value is the day when you query the data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-07-04</p>
      */
     @NameInMap("EndDate")
     public String endDate;
 
     /**
      * <p>The keyword for searches in %KeyWord% mode. The value is not case-sensitive.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Keyword")
     public String keyword;
 
     /**
      * <p>The language.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
-     * <p>The page number. Pages start from page **1**. Default value: **1**.</p>
+     * <p>The page number. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: **1 to 100**. Default value: **20**.</p>
+     * <p>The number of entries per page. Valid values: <strong>1 to 100</strong>. Default value: <strong>20</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
      * <p>The search mode of the keyword. Valid values:</p>
-     * <br>
-     * <p>*   **LIKE** (default): fuzzy search</p>
-     * <p>*   **EXACT**: exact search</p>
+     * <ul>
+     * <li><strong>LIKE</strong> (default): fuzzy search</li>
+     * <li><strong>EXACT</strong>: exact search</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>EXACT</p>
      */
     @NameInMap("SearchMode")
     public String searchMode;
 
     /**
-     * <p>The start date of the query. Specify the start date in the **YYYY-MM-DD** format.</p>
-     * <br>
+     * <p>The start date of the query. Specify the start date in the <strong>YYYY-MM-DD</strong> format.</p>
      * <p>You can only query the DNS records within the last 90 days.``</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-07-04</p>
      */
     @NameInMap("StartDate")
     public String startDate;
 
     /**
      * <p>The maximum number of DNS requests that you can obtain. You can obtain data about a domain name with DNS request volume less than or equal to the maximum number. For example, if you set this parameter to 100, you can query domain names with less than 100 DNS requests.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12</p>
      */
     @NameInMap("Threshold")
     public Long threshold;

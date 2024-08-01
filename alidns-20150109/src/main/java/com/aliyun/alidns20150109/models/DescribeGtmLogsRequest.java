@@ -6,42 +6,63 @@ import com.aliyun.tea.*;
 public class DescribeGtmLogsRequest extends TeaModel {
     /**
      * <p>The timestamp that specifies the end of the time range to query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1363453350000</p>
      */
     @NameInMap("EndTimestamp")
     public Long endTimestamp;
 
     /**
      * <p>The ID of the GTM instance whose logs you want to query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gtm-cn-xxxxx</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The keyword for searching logs, in case-insensitive "%Keyword%" format.</p>
+     * <p>The keyword for searching logs, in case-insensitive &quot;%Keyword%&quot; format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Keyword")
     public String keyword;
 
     /**
      * <p>The language used by the user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
-     * <p>The number of the page to return. Pages start from page **1**. Default value: **1**.</p>
+     * <p>The number of the page to return. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Maximum value: **100**. Default value: **20**.</p>
+     * <p>The number of entries to return on each page. Maximum value: <strong>100</strong>. Default value: <strong>20</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The beginning of the time range to query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1363453340000</p>
      */
     @NameInMap("StartTimestamp")
     public Long startTimestamp;

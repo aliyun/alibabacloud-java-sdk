@@ -4,18 +4,34 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeCloudGtmAddressReferenceResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>223.5.XX.XX</p>
+     */
     @NameInMap("Address")
     public String address;
 
+    /**
+     * <strong>example:</strong>
+     * <p>addr-89564584963974**40</p>
+     */
     @NameInMap("AddressId")
     public String addressId;
 
     @NameInMap("AddressPools")
     public DescribeCloudGtmAddressReferenceResponseBodyAddressPools addressPools;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Address-1</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -65,48 +81,108 @@ public class DescribeCloudGtmAddressReferenceResponseBody extends TeaModel {
     }
 
     public static class DescribeCloudGtmAddressReferenceResponseBodyAddressPoolsAddressPoolInstanceConfigsInstanceConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>round_robin</p>
+         */
         @NameInMap("AddressPoolLbStrategy")
         public String addressPoolLbStrategy;
 
+        /**
+         * <strong>example:</strong>
+         * <p>available</p>
+         */
         @NameInMap("AvailableStatus")
         public String availableStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>config-00**01</p>
+         */
         @NameInMap("ConfigId")
         public String configId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>enable</p>
+         */
         @NameInMap("EnableStatus")
         public String enableStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ok</p>
+         */
         @NameInMap("HealthStatus")
         public String healthStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>gtm-cn-zz11t58**0k</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Remark")
         public String remark;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com">www.example.com</a></p>
+         */
         @NameInMap("ScheduleDomainName")
         public String scheduleDomainName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>www</p>
+         */
         @NameInMap("ScheduleHostname")
         public String scheduleHostname;
 
+        /**
+         * <strong>example:</strong>
+         * <p>A</p>
+         */
         @NameInMap("ScheduleRrType")
         public String scheduleRrType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>example.com</p>
+         */
         @NameInMap("ScheduleZoneName")
         public String scheduleZoneName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>preemptive</p>
+         */
         @NameInMap("SequenceLbStrategyMode")
         public String sequenceLbStrategyMode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("Ttl")
         public Integer ttl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ultimate</p>
+         */
         @NameInMap("VersionCode")
         public String versionCode;
 
@@ -257,36 +333,76 @@ public class DescribeCloudGtmAddressReferenceResponseBody extends TeaModel {
     }
 
     public static class DescribeCloudGtmAddressReferenceResponseBodyAddressPoolsAddressPool extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>round_robin</p>
+         */
         @NameInMap("AddressLbStrategy")
         public String addressLbStrategy;
 
+        /**
+         * <strong>example:</strong>
+         * <p>pool-895280232254422016</p>
+         */
         @NameInMap("AddressPoolId")
         public String addressPoolId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>AddressPool-1</p>
+         */
         @NameInMap("AddressPoolName")
         public String addressPoolName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>IPv4</p>
+         */
         @NameInMap("AddressPoolType")
         public String addressPoolType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>available</p>
+         */
         @NameInMap("AvailableStatus")
         public String availableStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>enable</p>
+         */
         @NameInMap("EnableStatus")
         public String enableStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>any_ok</p>
+         */
         @NameInMap("HealthJudgement")
         public String healthJudgement;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ok</p>
+         */
         @NameInMap("HealthStatus")
         public String healthStatus;
 
         @NameInMap("InstanceConfigs")
         public DescribeCloudGtmAddressReferenceResponseBodyAddressPoolsAddressPoolInstanceConfigs instanceConfigs;
 
+        /**
+         * <strong>example:</strong>
+         * <p>pool-1</p>
+         */
         @NameInMap("Remark")
         public String remark;
 
+        /**
+         * <strong>example:</strong>
+         * <p>preemptive</p>
+         */
         @NameInMap("SequenceLbStrategyMode")
         public String sequenceLbStrategyMode;
 

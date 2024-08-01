@@ -12,24 +12,36 @@ public class DescribeDomainLogsResponseBody extends TeaModel {
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -82,42 +94,63 @@ public class DescribeDomainLogsResponseBody extends TeaModel {
     public static class DescribeDomainLogsResponseBodyDomainLogsDomainLog extends TeaModel {
         /**
          * <p>The operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Add</p>
          */
         @NameInMap("Action")
         public String action;
 
         /**
          * <p>The time when the operation is performed. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-12-12T09:23Z</p>
          */
         @NameInMap("ActionTime")
         public String actionTime;
 
         /**
          * <p>The time when the operation was performed. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>143562300000</p>
          */
         @NameInMap("ActionTimestamp")
         public Long actionTimestamp;
 
         /**
          * <p>The IP address of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>182.92.253.20</p>
          */
         @NameInMap("ClientIp")
         public String clientIp;
 
         /**
          * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc.com</p>
          */
         @NameInMap("DomainName")
         public String domainName;
 
         /**
          * <p>The message for the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>To the DNS record list</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
          * <p>The ID of the private zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cxfd345sd234</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;

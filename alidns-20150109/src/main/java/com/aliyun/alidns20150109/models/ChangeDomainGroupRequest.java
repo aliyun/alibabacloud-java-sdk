@@ -6,25 +6,34 @@ import com.aliyun.tea.*;
 public class ChangeDomainGroupRequest extends TeaModel {
     /**
      * <p>The domain name.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
      * <p>The ID of the destination domain name group.</p>
-     * <br>
-     * <p>*   If you do not specify GroupId, the domain name is moved to the default group.</p>
-     * <p>*   If you set GroupId to an empty string, the domain name is moved to the default group.</p>
-     * <p>*   If you set GroupId to defaultGroup, the domain name is moved to the default group.</p>
-     * <p>*   If you do not set GroupId to one of the preceding values and set GroupId to an existing group ID, the domain name is moved to the existing group. If you set GroupId to a group ID that does not exist, the domain name remains in the original group.</p>
+     * <ul>
+     * <li>If you do not specify GroupId, the domain name is moved to the default group.</li>
+     * <li>If you set GroupId to an empty string, the domain name is moved to the default group.</li>
+     * <li>If you set GroupId to defaultGroup, the domain name is moved to the default group.</li>
+     * <li>If you do not set GroupId to one of the preceding values and set GroupId to an existing group ID, the domain name is moved to the existing group. If you set GroupId to a group ID that does not exist, the domain name remains in the original group.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>2223</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
      * <p>The language.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("Lang")
     public String lang;

@@ -6,26 +6,34 @@ import com.aliyun.tea.*;
 public class SetDnsGtmAccessModeRequest extends TeaModel {
     /**
      * <p>The primary/secondary switchover policy for address pool groups. Valid values:</p>
-     * <br>
-     * <p>*   AUTO: performs automatic switchover between the primary and secondary address pool groups upon failures.</p>
-     * <p>*   DEFAULT: uses the primary address pool group.</p>
-     * <p>*   FAILOVER: uses the secondary address pool group.</p>
-     * <br>
+     * <ul>
+     * <li>AUTO: performs automatic switchover between the primary and secondary address pool groups upon failures.</li>
+     * <li>DEFAULT: uses the primary address pool group.</li>
+     * <li>FAILOVER: uses the secondary address pool group.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>auto</p>
      */
     @NameInMap("AccessMode")
     public String accessMode;
 
     /**
      * <p>The language to return some response parameters. Default value: en. Valid values: en, zh, and ja.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The ID of the policy.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>strategyId</p>
      */
     @NameInMap("StrategyId")
     public String strategyId;

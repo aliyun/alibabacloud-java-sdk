@@ -6,51 +6,76 @@ import com.aliyun.tea.*;
 public class DescribeDomainLogsRequest extends TeaModel {
     /**
      * <p>The ID of the domain name group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2223</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
-     * <p>The keyword for the query in "%KeyWord%" mode. The keyword is not case-sensitive.</p>
+     * <p>The keyword for the query in &quot;%KeyWord%&quot; mode. The keyword is not case-sensitive.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("KeyWord")
     public String keyWord;
 
     /**
      * <p>The language in which you want the values of some response parameters to be returned. These response parameters support multiple languages.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
-     * <p>The page number to return. The page number starts from **1**. Default value: **1**.</p>
+     * <p>The page number to return. The page number starts from <strong>1</strong>. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>The number of entries to return per page. Maximum value: **100**. Default value: **20**.</p>
+     * <p>The number of entries to return per page. Maximum value: <strong>100</strong>. Default value: <strong>20</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
-     * <p>The start time for the query. Format: **YYYY-MM-DD**</p>
+     * <p>The start time for the query. Format: <strong>YYYY-MM-DD</strong></p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-07-04</p>
      */
     @NameInMap("StartDate")
     public String startDate;
 
     /**
      * <p>The type of object of which you want to query operation logs. Valid values:</p>
-     * <br>
-     * <p>*   domain: domain name</p>
-     * <p>*   slavedns: secondary Domain Name System (DNS)</p>
+     * <ul>
+     * <li>domain: domain name</li>
+     * <li>slavedns: secondary Domain Name System (DNS)</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>domain</p>
      */
     @NameInMap("Type")
     public String type;
 
     /**
-     * <p>The end time for the query. Format: **YYYY-MM-DD**</p>
+     * <p>The end time for the query. Format: <strong>YYYY-MM-DD</strong></p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-07-04</p>
      */
     @NameInMap("endDate")
     public String endDate;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeDomainInfoResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the domain name was registered in Alibaba Cloud.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("AliDomain")
     public Boolean aliDomain;
@@ -18,6 +21,9 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
 
     /**
      * <p>The time when the domain name was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2015-12-12T09:23Z</p>
      */
     @NameInMap("CreateTime")
     public String createTime;
@@ -30,6 +36,9 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the domain name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>00efd71a-770e-4255-b54e-6fe5659baffe</p>
      */
     @NameInMap("DomainId")
     public String domainId;
@@ -39,60 +48,90 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
 
     /**
      * <p>The domain name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
      * <p>The ID of the domain name group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2223</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
      * <p>The name of the domain name group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mygroup</p>
      */
     @NameInMap("GroupName")
     public String groupName;
 
     /**
      * <p>Indicates whether blackhole filtering was triggered.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("InBlackHole")
     public Boolean inBlackHole;
 
     /**
      * <p>Indicates whether traffic scrubbing was in progress.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("InClean")
     public Boolean inClean;
 
     /**
      * <p>The ID of the Alibaba Cloud DNS instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-7bg</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The type of the DNS request line.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>region_province</p>
      */
     @NameInMap("LineType")
     public String lineType;
 
     /**
      * <p>The minimum TTL value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("MinTtl")
     public Long minTtl;
 
     /**
      * <p>The Punycode for the domain name. This parameter is returned only for Chinese domain names.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("PunyCode")
     public String punyCode;
 
     /**
      * <p>The tree-structure DNS request lines.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;default&quot;:{},&quot;unicom&quot;:{},&quot;telecom&quot;:{},&quot;mobile&quot;:{},&quot;edu&quot;:{},&quot;oversea&quot;:{},&quot;baidu&quot;:{},&quot;biying&quot;:{},&quot;google&quot;:{}}</p>
      */
     @NameInMap("RecordLineTreeJson")
     public String recordLineTreeJson;
@@ -105,45 +144,67 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the DNS request lines are regional lines.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("RegionLines")
     public Boolean regionLines;
 
     /**
      * <p>The description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>remark</p>
      */
     @NameInMap("Remark")
     public String remark;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-aek3dj3wvclgcxo</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>Indicates whether secondary DNS is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("SlaveDns")
     public Boolean slaveDns;
 
     /**
      * <p>Indicates whether the queried domain name is a hosted subdomain name. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("SubDomain")
     public Boolean subDomain;
 
     /**
      * <p>The version ID of Alibaba Cloud DNS.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>version1</p>
      */
     @NameInMap("VersionCode")
     public String versionCode;
@@ -400,12 +461,18 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
     public static class DescribeDomainInfoResponseBodyRecordLinesRecordLine extends TeaModel {
         /**
          * <p>The code of the parent line. This parameter is not returned if the line has no parent line.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal</p>
          */
         @NameInMap("FatherCode")
         public String fatherCode;
 
         /**
          * <p>The code of the line.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn_region_xibei</p>
          */
         @NameInMap("LineCode")
         public String lineCode;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class AddDnsCacheDomainResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B57C121B-A45F-44D8-A9B2-XXXXXXX</p>
      */
     @NameInMap("RequestId")
     public String requestId;

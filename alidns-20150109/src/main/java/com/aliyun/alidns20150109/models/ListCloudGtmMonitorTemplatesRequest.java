@@ -4,27 +4,49 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class ListCloudGtmMonitorTemplatesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>en-US</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>IPv4</p>
+     */
     @NameInMap("IpVersion")
     public String ipVersion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>IPv4-Ping</p>
+     */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ping</p>
+     */
     @NameInMap("Protocol")
     public String protocol;
 
