@@ -27,6 +27,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @param request AddCustomLineRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AddCustomLineResponse
+     */
+    public AddCustomLineResponse addCustomLineWithOptions(AddCustomLineRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dnsCategory)) {
+            query.put("DnsCategory", request.dnsCategory);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ipv4s)) {
+            query.put("Ipv4s", request.ipv4s);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            query.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.shareScope)) {
+            query.put("ShareScope", request.shareScope);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AddCustomLine"),
+            new TeaPair("version", "2018-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AddCustomLineResponse());
+    }
+
+    /**
+     * @param request AddCustomLineRequest
+     * @return AddCustomLineResponse
+     */
+    public AddCustomLineResponse addCustomLine(AddCustomLineRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.addCustomLineWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Creates an endpoint.</p>
      * 
@@ -483,6 +537,52 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @param request ChangeZoneDnsGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ChangeZoneDnsGroupResponse
+     */
+    public ChangeZoneDnsGroupResponse changeZoneDnsGroupWithOptions(ChangeZoneDnsGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dnsGroup)) {
+            query.put("DnsGroup", request.dnsGroup);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.zoneId)) {
+            query.put("ZoneId", request.zoneId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ChangeZoneDnsGroup"),
+            new TeaPair("version", "2018-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ChangeZoneDnsGroupResponse());
+    }
+
+    /**
+     * @param request ChangeZoneDnsGroupRequest
+     * @return ChangeZoneDnsGroupResponse
+     */
+    public ChangeZoneDnsGroupResponse changeZoneDnsGroup(ChangeZoneDnsGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.changeZoneDnsGroupWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Checks whether the name of a zone is valid based on specific rules.</p>
      * 
@@ -532,6 +632,48 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CheckZoneNameResponse checkZoneName(CheckZoneNameRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.checkZoneNameWithOptions(request, runtime);
+    }
+
+    /**
+     * @param request DeleteCustomLineRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteCustomLineResponse
+     */
+    public DeleteCustomLineResponse deleteCustomLineWithOptions(DeleteCustomLineRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            query.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lineId)) {
+            query.put("LineId", request.lineId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteCustomLine"),
+            new TeaPair("version", "2018-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteCustomLineResponse());
+    }
+
+    /**
+     * @param request DeleteCustomLineRequest
+     * @return DeleteCustomLineResponse
+     */
+    public DeleteCustomLineResponse deleteCustomLine(DeleteCustomLineRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteCustomLineWithOptions(request, runtime);
     }
 
     /**
@@ -864,6 +1006,94 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeChangeLogsResponse describeChangeLogs(DescribeChangeLogsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeChangeLogsWithOptions(request, runtime);
+    }
+
+    /**
+     * @param request DescribeCustomLineInfoRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeCustomLineInfoResponse
+     */
+    public DescribeCustomLineInfoResponse describeCustomLineInfoWithOptions(DescribeCustomLineInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            query.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lineId)) {
+            query.put("LineId", request.lineId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeCustomLineInfo"),
+            new TeaPair("version", "2018-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeCustomLineInfoResponse());
+    }
+
+    /**
+     * @param request DescribeCustomLineInfoRequest
+     * @return DescribeCustomLineInfoResponse
+     */
+    public DescribeCustomLineInfoResponse describeCustomLineInfo(DescribeCustomLineInfoRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeCustomLineInfoWithOptions(request, runtime);
+    }
+
+    /**
+     * @param request DescribeCustomLinesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeCustomLinesResponse
+     */
+    public DescribeCustomLinesResponse describeCustomLinesWithOptions(DescribeCustomLinesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            query.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeCustomLines"),
+            new TeaPair("version", "2018-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeCustomLinesResponse());
+    }
+
+    /**
+     * @param request DescribeCustomLinesRequest
+     * @return DescribeCustomLinesResponse
+     */
+    public DescribeCustomLinesResponse describeCustomLines(DescribeCustomLinesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeCustomLinesWithOptions(request, runtime);
     }
 
     /**
@@ -1535,6 +1765,44 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @param request DescribeZoneRecordRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeZoneRecordResponse
+     */
+    public DescribeZoneRecordResponse describeZoneRecordWithOptions(DescribeZoneRecordRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.recordId)) {
+            query.put("RecordId", request.recordId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeZoneRecord"),
+            new TeaPair("version", "2018-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeZoneRecordResponse());
+    }
+
+    /**
+     * @param request DescribeZoneRecordRequest
+     * @return DescribeZoneRecordResponse
+     */
+    public DescribeZoneRecordResponse describeZoneRecord(DescribeZoneRecordRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeZoneRecordWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Queries a list of Domain Name System (DNS) records for a zone.</p>
      * 
@@ -1865,6 +2133,80 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @param request SearchCustomLinesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SearchCustomLinesResponse
+     */
+    public SearchCustomLinesResponse searchCustomLinesWithOptions(SearchCustomLinesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.createTimestampEnd)) {
+            query.put("CreateTimestampEnd", request.createTimestampEnd);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.createTimestampStart)) {
+            query.put("CreateTimestampStart", request.createTimestampStart);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.creator)) {
+            query.put("Creator", request.creator);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ipv4)) {
+            query.put("Ipv4", request.ipv4);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            query.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.updateTimestampEnd)) {
+            query.put("UpdateTimestampEnd", request.updateTimestampEnd);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.updateTimestampStart)) {
+            query.put("UpdateTimestampStart", request.updateTimestampStart);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SearchCustomLines"),
+            new TeaPair("version", "2018-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SearchCustomLinesResponse());
+    }
+
+    /**
+     * @param request SearchCustomLinesRequest
+     * @return SearchCustomLinesResponse
+     */
+    public SearchCustomLinesResponse searchCustomLines(SearchCustomLinesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.searchCustomLinesWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Configures the recursive resolution proxy feature.</p>
      * 
@@ -2102,6 +2444,56 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UntagResourcesResponse untagResources(UntagResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.untagResourcesWithOptions(request, runtime);
+    }
+
+    /**
+     * @param request UpdateCustomLineRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateCustomLineResponse
+     */
+    public UpdateCustomLineResponse updateCustomLineWithOptions(UpdateCustomLineRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ipv4s)) {
+            query.put("Ipv4s", request.ipv4s);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            query.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lineId)) {
+            query.put("LineId", request.lineId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateCustomLine"),
+            new TeaPair("version", "2018-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateCustomLineResponse());
+    }
+
+    /**
+     * @param request UpdateCustomLineRequest
+     * @return UpdateCustomLineResponse
+     */
+    public UpdateCustomLineResponse updateCustomLine(UpdateCustomLineRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateCustomLineWithOptions(request, runtime);
     }
 
     /**
