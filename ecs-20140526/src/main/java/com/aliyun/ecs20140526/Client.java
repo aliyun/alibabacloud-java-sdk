@@ -3054,7 +3054,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates an auto provisioning group.</p>
+     * <p>Creates an auto provisioning group. When you call this operation, you can specify parameters, such as ResourceGroupId, AutoProvisioningGroupType, and ValidFrom, in the request.</p>
      * 
      * @param request CreateAutoProvisioningGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3223,7 +3223,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates an auto provisioning group.</p>
+     * <p>Creates an auto provisioning group. When you call this operation, you can specify parameters, such as ResourceGroupId, AutoProvisioningGroupType, and ValidFrom, in the request.</p>
      * 
      * @param request CreateAutoProvisioningGroupRequest
      * @return CreateAutoProvisioningGroupResponse
@@ -3643,7 +3643,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a dedicated host cluster.</p>
+     * <p>Creates a dedicated host cluster. When you call this operation, you can specify parameters, such as ResourceGroupId, DedicatedHostClusterName, and ZoneId, in the request.</p>
      * 
      * @param request CreateDedicatedHostClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3715,7 +3715,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a dedicated host cluster.</p>
+     * <p>Creates a dedicated host cluster. When you call this operation, you can specify parameters, such as ResourceGroupId, DedicatedHostClusterName, and ZoneId, in the request.</p>
      * 
      * @param request CreateDedicatedHostClusterRequest
      * @return CreateDedicatedHostClusterResponse
@@ -5530,7 +5530,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a launch template. A launch template eliminates the need to configure a large number of parameters every time you create an Elastic Compute Service (ECS) instance.</p>
+     * <p>Creates a launch template. When you call this operation, you can specify parameters, such as TemplateTag, LaunchTemplateName, and ImageId, in the request. A launch template eliminates the need to configure a large number of parameters every time you create an Elastic Compute Service (ECS) instance.</p>
      * 
      * @param request CreateLaunchTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5773,7 +5773,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a launch template. A launch template eliminates the need to configure a large number of parameters every time you create an Elastic Compute Service (ECS) instance.</p>
+     * <p>Creates a launch template. When you call this operation, you can specify parameters, such as TemplateTag, LaunchTemplateName, and ImageId, in the request. A launch template eliminates the need to configure a large number of parameters every time you create an Elastic Compute Service (ECS) instance.</p>
      * 
      * @param request CreateLaunchTemplateRequest
      * @return CreateLaunchTemplateResponse
@@ -5789,7 +5789,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>If you want to modify the parameters of a launch template version, you can create another version with different parameter settings for the launch template. You can create up to 30 versions for each launch template.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a version for a launch template.</p>
+     * <p>Creates a version for a launch template. When you call this operation, you can specify parameters, such as LaunchTemplateId, VersionDescription, and Tag, in the request.</p>
      * 
      * @param request CreateLaunchTemplateVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6021,7 +6021,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>If you want to modify the parameters of a launch template version, you can create another version with different parameter settings for the launch template. You can create up to 30 versions for each launch template.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a version for a launch template.</p>
+     * <p>Creates a version for a launch template. When you call this operation, you can specify parameters, such as LaunchTemplateId, VersionDescription, and Tag, in the request.</p>
      * 
      * @param request CreateLaunchTemplateVersionRequest
      * @return CreateLaunchTemplateVersionResponse
@@ -7937,7 +7937,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an auto provisioning group.</p>
+     * <p>Deletes an auto provisioning group. When you call this operation, you can specify AutoProvisioningGroupId and TerminateInstances in the request.</p>
      * 
      * @param request DeleteAutoProvisioningGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7993,7 +7993,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an auto provisioning group.</p>
+     * <p>Deletes an auto provisioning group. When you call this operation, you can specify AutoProvisioningGroupId and TerminateInstances in the request.</p>
      * 
      * @param request DeleteAutoProvisioningGroupRequest
      * @return DeleteAutoProvisioningGroupResponse
@@ -8131,7 +8131,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The ID of the command. You can call the <a href="https://help.aliyun.com/document_detail/64843.html">DescribeCommands</a> operation to query all available command IDs.</p>
+     * <p>Deletes a Cloud Assistant command in a region. This operation cannot delete Cloud Assistant commands that are being run.</p>
      * 
      * @param request DeleteCommandRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8187,7 +8187,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The ID of the command. You can call the <a href="https://help.aliyun.com/document_detail/64843.html">DescribeCommands</a> operation to query all available command IDs.</p>
+     * <p>Deletes a Cloud Assistant command in a region. This operation cannot delete Cloud Assistant commands that are being run.</p>
      * 
      * @param request DeleteCommandRequest
      * @return DeleteCommandResponse
@@ -8199,7 +8199,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a dedicated host cluster.</p>
+     * <p>Deletes a dedicated host cluster. Before you call this operation, migrate the dedicated hosts in the dedicated host cluster that you want to delete to another dedicated host cluster. When you call this operation, you can specify RegionId and DedicatedHostClusterId in the request.</p>
      * 
      * @param request DeleteDedicatedHostClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8251,7 +8251,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a dedicated host cluster.</p>
+     * <p>Deletes a dedicated host cluster. Before you call this operation, migrate the dedicated hosts in the dedicated host cluster that you want to delete to another dedicated host cluster. When you call this operation, you can specify RegionId and DedicatedHostClusterId in the request.</p>
      * 
      * @param request DeleteDedicatedHostClusterRequest
      * @return DeleteDedicatedHostClusterResponse
@@ -8806,8 +8806,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>For information about scenarios in which you cannot delete a custom image and the considerations related to custom image deletion, see <a href="https://help.aliyun.com/document_detail/25466.html">Delete a custom image</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Deletes a custom image.</p>
+     * <p>Deletes a custom image. When you call this operation, you can specify ImageId and Force in the request.</p>
      * 
      * @param request DeleteImageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8862,8 +8865,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>For information about scenarios in which you cannot delete a custom image and the considerations related to custom image deletion, see <a href="https://help.aliyun.com/document_detail/25466.html">Delete a custom image</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Deletes a custom image.</p>
+     * <p>Deletes a custom image. When you call this operation, you can specify ImageId and Force in the request.</p>
      * 
      * @param request DeleteImageRequest
      * @return DeleteImageResponse
@@ -9999,7 +10005,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a security group.</p>
+     * <p>Deletes a security group. When you call this operation, you can specify RegionId and SecurityGroupId in the request. When a security group is deleted, the rules in the security group are also deleted.</p>
      * 
      * @param request DeleteSecurityGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10059,7 +10065,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a security group.</p>
+     * <p>Deletes a security group. When you call this operation, you can specify RegionId and SecurityGroupId in the request. When a security group is deleted, the rules in the security group are also deleted.</p>
      * 
      * @param request DeleteSecurityGroupRequest
      * @return DeleteSecurityGroupResponse
@@ -16849,7 +16855,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p><a href="https://api.aliyun.com/#product=Ecs%5C&api=DescribeLaunchTemplateVersions%5C&type=RPC%5C&version=2014-05-26">OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.</a></p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the versions of a launch template.</p>
+     * <p>Queries the information of launch template versions, such as the total number of launch templates, launch template names, and launch template version numbers. When you call this operation, you can specify parameters, such as LaunchTemplateVersion, LaunchTemplateId, and DetailFlag, in the request.</p>
      * 
      * @param request DescribeLaunchTemplateVersionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16937,7 +16943,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p><a href="https://api.aliyun.com/#product=Ecs%5C&api=DescribeLaunchTemplateVersions%5C&type=RPC%5C&version=2014-05-26">OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.</a></p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the versions of a launch template.</p>
+     * <p>Queries the information of launch template versions, such as the total number of launch templates, launch template names, and launch template version numbers. When you call this operation, you can specify parameters, such as LaunchTemplateVersion, LaunchTemplateId, and DetailFlag, in the request.</p>
      * 
      * @param request DescribeLaunchTemplateVersionsRequest
      * @return DescribeLaunchTemplateVersionsResponse
@@ -16949,7 +16955,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>Queries the information of one or more available launch templates, such as the total number of launch templates, launch template names, and launch template IDs. When you call this operation, you can specify parameters, such as TemplateTag, TemplateResourceGroupId, and LaunchTemplateId, in the request.</p>
      * 
      * @param request DescribeLaunchTemplatesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17021,7 +17027,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>Queries the information of one or more available launch templates, such as the total number of launch templates, launch template names, and launch template IDs. When you call this operation, you can specify parameters, such as TemplateTag, TemplateResourceGroupId, and LaunchTemplateId, in the request.</p>
      * 
      * @param request DescribeLaunchTemplatesRequest
      * @return DescribeLaunchTemplatesResponse
@@ -18027,7 +18033,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the most recent prices of Elastic Compute Resource (ECS) resources.</p>
+     * <p>Queries information about the most recent prices of Elastic Compute Service (ECS) resources, such as the promotion rules, prices, and discounts. When you call this operation, you can specify parameters, such as ResourceType, ImageId, and InstanceType, in the request.</p>
      * 
      * @param request DescribePriceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18195,7 +18201,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the most recent prices of Elastic Compute Resource (ECS) resources.</p>
+     * <p>Queries information about the most recent prices of Elastic Compute Service (ECS) resources, such as the promotion rules, prices, and discounts. When you call this operation, you can specify parameters, such as ResourceType, ImageId, and InstanceType, in the request.</p>
      * 
      * @param request DescribePriceRequest
      * @return DescribePriceResponse
@@ -19241,7 +19247,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries whether a security group is referenced by the rules of other security groups.</p>
+     * <p>Queries the security groups that are referencing specific security groups. When you call this operation, you can specify SecurityGroupId.</p>
      * 
      * @param request DescribeSecurityGroupReferencesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19301,7 +19307,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries whether a security group is referenced by the rules of other security groups.</p>
+     * <p>Queries the security groups that are referencing specific security groups. When you call this operation, you can specify SecurityGroupId.</p>
      * 
      * @param request DescribeSecurityGroupReferencesRequest
      * @return DescribeSecurityGroupReferencesResponse
@@ -19949,7 +19955,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * When you use Alibaba Cloud CLI to call an API operation, you must specify request parameter values of different data types in required formats. For more information, see <a href="https://help.aliyun.com/document_detail/110340.html">Parameter format overview</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries all the snapshots of an Elastic Compute Service (ECS) instance or a disk.</p>
+     * <p>Queries all snapshots of an Elastic Compute Service (ECS) instance or a disk. When you call this operation, you can specify parameters, such as InstanceId, DiskId, SnapshotLinkId, and Status, in the request.</p>
      * 
      * @param request DescribeSnapshotsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -20081,7 +20087,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * When you use Alibaba Cloud CLI to call an API operation, you must specify request parameter values of different data types in required formats. For more information, see <a href="https://help.aliyun.com/document_detail/110340.html">Parameter format overview</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries all the snapshots of an Elastic Compute Service (ECS) instance or a disk.</p>
+     * <p>Queries all snapshots of an Elastic Compute Service (ECS) instance or a disk. When you call this operation, you can specify parameters, such as InstanceId, DiskId, SnapshotLinkId, and Status, in the request.</p>
      * 
      * @param request DescribeSnapshotsRequest
      * @return DescribeSnapshotsResponse
@@ -23331,6 +23337,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InstanceId", request.instanceId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.launcher)) {
+            query.put("Launcher", request.launcher);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
             query.put("OwnerAccount", request.ownerAccount);
         }
@@ -23633,14 +23643,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
      * <blockquote>
-     * <p>This operation is not recommended. We recommend that you call the <a href="https://help.aliyun.com/document_detail/25503.html">ModifyInstanceAttribute</a> operation to add an instance to or remove an instance from a security group, and call the <a href="https://help.aliyun.com/document_detail/58513.html">ModifyNetworkInterfaceAttribute</a> operation to add an ENI to or remove an ENI from a security group.
-     * When you call this operation, take note of the following items:</p>
      * </blockquote>
      * <ul>
-     * <li>Before you remove an instance from a security group, the instance must be in the <strong>Stopped</strong> or <strong>Running</strong> state.</li>
-     * <li>An instance must belong to at least one security group. Therefore, if the instance that you want to remove belongs to only one security group, the LeaveSecurityGroup operation fails.</li>
-     * <li>You cannot remove an instance and an ENI from a security group at the same time. This indicates that you cannot configure both <code>InstanceId</code> and <code>NetworkInterfaceId</code> in a request.</li>
+     * <li>To improve user experience, Alibaba Cloud modified the verification rules for the LeaveSecurityGroup operation on July 8, 2024. When you remove an ECS instance or ENI that does not belong to a security group from the security group, the &quot;InvalidSecurityGroupAssociation.NotFound&quot; error code is returned instead of a success response. Update the LeaveSecurityGroup operation to use the new verification rules with the new error code based on your business requirements.</li>
+     * <li>This operation is not recommended. We recommend that you call the <a href="https://help.aliyun.com/document_detail/25503.html">ModifyInstanceAttribute</a> operation to add an ECS instance to or remove an ECS instance from a security group, and call the <a href="https://help.aliyun.com/document_detail/58513.html">ModifyNetworkInterfaceAttribute</a> operation to add an ENI to or remove an ENI from a security group.
+     * Take note of the following items:</li>
+     * <li>Before you remove an instance from a security group, the instance must be in the <strong>Stopped</strong> (Stopped) or <strong>Running</strong> (Running) state.</li>
+     * <li>An instance must belong to at least one security group. Therefore, if the instance to be removed belongs to only one security group, the LeaveSecurityGroup request fails.</li>
+     * <li>You cannot remove an instance and an ENI from a security group at the same time. This indicates that you cannot specify <code>InstanceId</code> and <code>NetworkInterfaceId</code> in one request.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -23704,14 +23716,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
      * <blockquote>
-     * <p>This operation is not recommended. We recommend that you call the <a href="https://help.aliyun.com/document_detail/25503.html">ModifyInstanceAttribute</a> operation to add an instance to or remove an instance from a security group, and call the <a href="https://help.aliyun.com/document_detail/58513.html">ModifyNetworkInterfaceAttribute</a> operation to add an ENI to or remove an ENI from a security group.
-     * When you call this operation, take note of the following items:</p>
      * </blockquote>
      * <ul>
-     * <li>Before you remove an instance from a security group, the instance must be in the <strong>Stopped</strong> or <strong>Running</strong> state.</li>
-     * <li>An instance must belong to at least one security group. Therefore, if the instance that you want to remove belongs to only one security group, the LeaveSecurityGroup operation fails.</li>
-     * <li>You cannot remove an instance and an ENI from a security group at the same time. This indicates that you cannot configure both <code>InstanceId</code> and <code>NetworkInterfaceId</code> in a request.</li>
+     * <li>To improve user experience, Alibaba Cloud modified the verification rules for the LeaveSecurityGroup operation on July 8, 2024. When you remove an ECS instance or ENI that does not belong to a security group from the security group, the &quot;InvalidSecurityGroupAssociation.NotFound&quot; error code is returned instead of a success response. Update the LeaveSecurityGroup operation to use the new verification rules with the new error code based on your business requirements.</li>
+     * <li>This operation is not recommended. We recommend that you call the <a href="https://help.aliyun.com/document_detail/25503.html">ModifyInstanceAttribute</a> operation to add an ECS instance to or remove an ECS instance from a security group, and call the <a href="https://help.aliyun.com/document_detail/58513.html">ModifyNetworkInterfaceAttribute</a> operation to add an ENI to or remove an ENI from a security group.
+     * Take note of the following items:</li>
+     * <li>Before you remove an instance from a security group, the instance must be in the <strong>Stopped</strong> (Stopped) or <strong>Running</strong> (Running) state.</li>
+     * <li>An instance must belong to at least one security group. Therefore, if the instance to be removed belongs to only one security group, the LeaveSecurityGroup request fails.</li>
+     * <li>You cannot remove an instance and an ENI from a security group at the same time. This indicates that you cannot specify <code>InstanceId</code> and <code>NetworkInterfaceId</code> in one request.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -25400,7 +25414,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h1><a href="#"></a>Usage notes</h1>
-     * <p>After you change the billing method, the payment (if any) is automatically completed. Maintain sufficient balance in your account. Otherwise, your order becomes invalid and must be canceled. If your account balance is insufficient, you can set AutoPay to false to generate an unpaid order. Then, you can go to the <a href="https://usercenter2-intl.aliyun.com/order/list">Orders page</a> in the Expenses and Costs console and pay for the order.
+     * <p>After you change the billing method, the payment (if any) is automatically completed. Maintain sufficient balance in your account. Otherwise, your order becomes invalid and must be canceled. If your account balance is insufficient, you can set AutoPay to false to generate an unpaid order. Then, log on to the <strong>Expenses and Costs console</strong>, go to the <a href="https://usercenter2-intl.aliyun.com/order/list">Orders page</a>, and pay for the order.
      * Take note of the following items:</p>
      * <ul>
      * <li>Only pay-as-you-go disks can be attached to pay-as-you-go instances, and the billing methods of the disks cannot be changed.</li>
@@ -25479,7 +25493,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h1><a href="#"></a>Usage notes</h1>
-     * <p>After you change the billing method, the payment (if any) is automatically completed. Maintain sufficient balance in your account. Otherwise, your order becomes invalid and must be canceled. If your account balance is insufficient, you can set AutoPay to false to generate an unpaid order. Then, you can go to the <a href="https://usercenter2-intl.aliyun.com/order/list">Orders page</a> in the Expenses and Costs console and pay for the order.
+     * <p>After you change the billing method, the payment (if any) is automatically completed. Maintain sufficient balance in your account. Otherwise, your order becomes invalid and must be canceled. If your account balance is insufficient, you can set AutoPay to false to generate an unpaid order. Then, log on to the <strong>Expenses and Costs console</strong>, go to the <a href="https://usercenter2-intl.aliyun.com/order/list">Orders page</a>, and pay for the order.
      * Take note of the following items:</p>
      * <ul>
      * <li>Only pay-as-you-go disks can be attached to pay-as-you-go instances, and the billing methods of the disks cannot be changed.</li>
@@ -28689,14 +28703,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent list of regions.</p>
      * 
      * <b>summary</b> : 
-     * <h2>Description</h2>
-     * <p>When you call this operation, take note of the following items:</p>
-     * <ul>
-     * <li>For information about limits on reserved instances, see the &quot;Limits&quot; section in <a href="https://help.aliyun.com/document_detail/100370.html">Overview</a>.</li>
-     * <li>Before you call this operation to split a reserved instance, make sure that you are familiar with the limits on splitting a reserved instance. For more information, see <a href="https://help.aliyun.com/document_detail/100375.html">Split a reserved instance</a>.</li>
-     * <li>Before you call this operation to merge reserved instances, make sure that you are familiar with the limits on merging reserved instances. For more information, see <a href="https://help.aliyun.com/document_detail/132229.html">Merge reserved instances</a>.</li>
-     * <li>Before you call this operation to modify a reserved instance, make sure that you are familiar with the limits and methods of modifying a reserved instance. For more information, see <a href="https://help.aliyun.com/document_detail/132230.html">Modify a reserved instance</a>.</li>
-     * </ul>
+     * <p>Splits, merges, or modifies reserved instances. When you call this operation, you can specify parameters, such as ReservedInstanceId, ZoneId, InstanceType, and InstanceAmount, in the request.</p>
      * 
      * @param request ModifyReservedInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -28756,14 +28763,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent list of regions.</p>
      * 
      * <b>summary</b> : 
-     * <h2>Description</h2>
-     * <p>When you call this operation, take note of the following items:</p>
-     * <ul>
-     * <li>For information about limits on reserved instances, see the &quot;Limits&quot; section in <a href="https://help.aliyun.com/document_detail/100370.html">Overview</a>.</li>
-     * <li>Before you call this operation to split a reserved instance, make sure that you are familiar with the limits on splitting a reserved instance. For more information, see <a href="https://help.aliyun.com/document_detail/100375.html">Split a reserved instance</a>.</li>
-     * <li>Before you call this operation to merge reserved instances, make sure that you are familiar with the limits on merging reserved instances. For more information, see <a href="https://help.aliyun.com/document_detail/132229.html">Merge reserved instances</a>.</li>
-     * <li>Before you call this operation to modify a reserved instance, make sure that you are familiar with the limits and methods of modifying a reserved instance. For more information, see <a href="https://help.aliyun.com/document_detail/132230.html">Modify a reserved instance</a>.</li>
-     * </ul>
+     * <p>Splits, merges, or modifies reserved instances. When you call this operation, you can specify parameters, such as ReservedInstanceId, ZoneId, InstanceType, and InstanceAmount, in the request.</p>
      * 
      * @param request ModifyReservedInstancesRequest
      * @return ModifyReservedInstancesResponse
@@ -28947,7 +28947,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the name or description of a security group.</p>
+     * <p>Modifies the name or description of a security group. When you call this operation, you can specify parameters, such as SecurityGroupId, SecurityGroupName, and Description, in the request.</p>
      * 
      * @param request ModifySecurityGroupAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -29007,7 +29007,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the name or description of a security group.</p>
+     * <p>Modifies the name or description of a security group. When you call this operation, you can specify parameters, such as SecurityGroupId, SecurityGroupName, and Description, in the request.</p>
      * 
      * @param request ModifySecurityGroupAttributeRequest
      * @return ModifySecurityGroupAttributeResponse
@@ -31555,7 +31555,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Renews a subscription Elastic Compute Service (ECS) instance.</p>
+     * <p>Renews a subscription Elastic Compute Service (ECS) instance. When you call this operation, you can specify parameters, such as InstanceId, Period, and ExpectedRenewDay, in the request.</p>
      * 
      * @param request RenewInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -31627,7 +31627,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Renews a subscription Elastic Compute Service (ECS) instance.</p>
+     * <p>Renews a subscription Elastic Compute Service (ECS) instance. When you call this operation, you can specify parameters, such as InstanceId, Period, and ExpectedRenewDay, in the request.</p>
      * 
      * @param request RenewInstanceRequest
      * @return RenewInstanceResponse
@@ -32805,6 +32805,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.keepCommand)) {
             query.put("KeepCommand", request.keepCommand);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.launcher)) {
+            query.put("Launcher", request.launcher);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {

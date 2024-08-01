@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAccountAttributesResponseBody extends TeaModel {
     /**
-     * <p>Details about account privileges specified by AccountAttributeItem in the specified region.</p>
+     * <p>Details about account privileges in the specified region.</p>
      */
     @NameInMap("AccountAttributeItems")
     public DescribeAccountAttributesResponseBodyAccountAttributeItems accountAttributeItems;
@@ -101,21 +101,21 @@ public class DescribeAccountAttributesResponseBody extends TeaModel {
          * <li>max-spot-instance-vcpu-count</li>
          * <li>used-postpaid-instance-vcpu-count</li>
          * <li>used-spot-instance-vcpu-count</li>
-         * <li>max-postpaid-yundisk-capacity(This value is deprecated)</li>
-         * <li>used-postpaid-yundisk-capacity(This value is deprecated)</li>
+         * <li>max-postpaid-yundisk-capacity (the value is deprecated)</li>
+         * <li>used-postpaid-yundisk-capacity (the value is deprecated)</li>
          * <li>max-dedicated-hosts</li>
          * <li>max-axt-command-count</li>
          * <li>max-axt-invocation-daily</li>
          * <li>max-cloud-assistant-activation-count</li>
          * </ul>
-         * <p>When the AttributeName parameter is set to supported-postpay-instance-types, an instance type is returned. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</p>
-         * <p>When the AttributeName parameter is set to real-name-authentications, one of the following values is returned:</p>
+         * <p>When AttributeName is set to supported-postpay-instance-types, instance types are returned. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</p>
+         * <p>When AttributeName is set to real-name-authentications, one of the following values is returned:</p>
          * <ul>
          * <li>yes</li>
          * <li>none</li>
          * <li>unnecessary</li>
          * </ul>
-         * <p>When the AttributeName parameter is set to instance-network-type, one of the following values is returned:</p>
+         * <p>When AttributeName is set to instance-network-type, one of the following values is returned:</p>
          * <ul>
          * <li>vpc</li>
          * <li>classic</li>
@@ -222,21 +222,21 @@ public class DescribeAccountAttributesResponseBody extends TeaModel {
         /**
          * <p>The type of the resource quota in the specified region. Valid values:</p>
          * <ul>
-         * <li>instance-network-type: available network types</li>
-         * <li>max-security-groups: the maximum number of security groups</li>
-         * <li>max-elastic-network-interfaces: the maximum number of ENIs</li>
-         * <li>max-postpaid-instance-vcpu-count: the maximum number of vCPUs for pay-as-you-go instances</li>
-         * <li>max-spot-instance-vcpu-count: the maximum number of vCPUs for preemptible instances</li>
-         * <li>used-postpaid-instance-vcpu-count: the number of vCPUs that have been allocated to pay-as-you-go instances</li>
-         * <li>used-spot-instance-vcpu-count: the number of vCPUs that have been allocated to preemptible instances</li>
-         * <li>max-postpaid-yundisk-capacity: the maximum capacity of pay-as-you-go data disks(This value is deprecated)</li>
-         * <li>used-postpaid-yundisk-capacity: the capacity of pay-as-you-go disks that have been created(This value is deprecated)</li>
-         * <li>max-dedicated-hosts: the maximum number of dedicated hosts</li>
-         * <li>supported-postpaid-instance-types: the instance types of pay-as-you-go I/O optimized instances</li>
-         * <li>max-axt-command-count: the maximum number of Cloud Assistant commands</li>
-         * <li>max-axt-invocation-daily: the maximum number of Cloud Assistant command executions per day</li>
-         * <li>real-name-authentication: whether the account has passed the real-name verification</li>
-         * <li>max-cloud-assistant-activation-count: the maximum number of activation codes that can be created to use to register managed instances</li>
+         * <li>instance-network-type: the available network types.</li>
+         * <li>max-security-groups: the maximum number of security groups.</li>
+         * <li>max-elastic-network-interfaces: the maximum number of ENIs.</li>
+         * <li>max-postpaid-instance-vcpu-count: the maximum number of vCPUs for pay-as-you-go instances.</li>
+         * <li>max-spot-instance-vcpu-count: the maximum number of vCPUs for preemptible instances.</li>
+         * <li>used-postpaid-instance-vcpu-count: the number of vCPUs that were allocated to pay-as-you-go instances.</li>
+         * <li>used-spot-instance-vcpu-count: the number of vCPUs that were allocated to preemptible instances.</li>
+         * <li>max-postpaid-yundisk-capacity: the maximum capacity of pay-as-you-go data disks. (The value is deprecated.)</li>
+         * <li>used-postpaid-yundisk-capacity: the capacity of pay-as-you-go data disks that were created. (The value is deprecated.)</li>
+         * <li>max-dedicated-hosts: the maximum number of dedicated hosts.</li>
+         * <li>supported-postpaid-instance-types: the instance types of pay-as-you-go I/O optimized instances.</li>
+         * <li>max-axt-command-count: the maximum number of Cloud Assistant commands.</li>
+         * <li>max-axt-invocation-daily: the maximum number of Cloud Assistant command executions per day.</li>
+         * <li>real-name-authentication: whether the account completed the real-name verification.</li>
+         * <li>max-cloud-assistant-activation-count: the maximum number of activation codes that can be created to use to register managed instances.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -246,7 +246,7 @@ public class DescribeAccountAttributesResponseBody extends TeaModel {
         public String attributeName;
 
         /**
-         * <p>The specific values of resource quotas.</p>
+         * <p>The values of resource quotas.</p>
          */
         @NameInMap("AttributeValues")
         public DescribeAccountAttributesResponseBodyAccountAttributeItemsAccountAttributeItemAttributeValues attributeValues;

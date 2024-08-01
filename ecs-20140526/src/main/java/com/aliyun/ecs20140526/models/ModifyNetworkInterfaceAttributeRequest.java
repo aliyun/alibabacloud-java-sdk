@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
     /**
-     * <p>This parameter is unavailable for public use.</p>
+     * <p>This parameter is not publicly available.</p>
      */
     @NameInMap("ConnectionTrackingConfiguration")
     public ModifyNetworkInterfaceAttributeRequestConnectionTrackingConfiguration connectionTrackingConfiguration;
@@ -34,7 +34,7 @@ public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>This parameter is unavailable for public use.</p>
+     * <p>This parameter is not publicly available.</p>
      */
     @NameInMap("EnhancedNetwork")
     public ModifyNetworkInterfaceAttributeRequestEnhancedNetwork enhancedNetwork;
@@ -116,9 +116,9 @@ public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
     public Integer rxQueueSize;
 
     /**
-     * <p>The IDs of the security groups to which to add the secondary ENI. The secondary ENI is added to the specified security groups and are removed from its original security groups.</p>
+     * <p>The IDs of the security groups to which to add the secondary ENI. The secondary ENI is added to the specified security groups and removed from the original security groups.</p>
      * <ul>
-     * <li>The valid value range of N varies based on the number of security groups to which an ENI can be added. For more information, see <a href="~~25412#SecurityGroupQuota~~">Limits</a>.</li>
+     * <li>The valid values of N vary based on the maximum number of security groups to which an ENI can be added. For more information, see the <a href="~~25412#SecurityGroupQuota~~">Security group limits</a> section of the &quot;Limits and quotas&quot; topic.</li>
      * <li>The new security groups take effect after a short delay.</li>
      * </ul>
      */
@@ -274,19 +274,19 @@ public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
 
     public static class ModifyNetworkInterfaceAttributeRequestConnectionTrackingConfiguration extends TeaModel {
         /**
-         * <p>This parameter is unavailable for public use.</p>
+         * <p>This parameter is not publicly available.</p>
          */
         @NameInMap("TcpClosedAndTimeWaitTimeout")
         public Integer tcpClosedAndTimeWaitTimeout;
 
         /**
-         * <p>This parameter is unavailable for public use.</p>
+         * <p>This parameter is not publicly available.</p>
          */
         @NameInMap("TcpEstablishedTimeout")
         public Integer tcpEstablishedTimeout;
 
         /**
-         * <p>This parameter is unavailable for public use.</p>
+         * <p>This parameter is not publicly available.</p>
          */
         @NameInMap("UdpTimeout")
         public Integer udpTimeout;
@@ -324,7 +324,7 @@ public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
 
     public static class ModifyNetworkInterfaceAttributeRequestEnhancedNetwork extends TeaModel {
         /**
-         * <p>This parameter is unavailable for public use.</p>
+         * <p>This parameter is not publicly available.</p>
          */
         @NameInMap("EnableSriov")
         public Boolean enableSriov;

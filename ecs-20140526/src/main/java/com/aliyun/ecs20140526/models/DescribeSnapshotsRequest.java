@@ -192,13 +192,13 @@ public class DescribeSnapshotsRequest extends TeaModel {
     public String snapshotType;
 
     /**
-     * <p>The type of the source disk. Valid values:</p>
+     * <p>The source disk type of the snapshot. Valid values:</p>
      * <ul>
-     * <li>system: system disk</li>
-     * <li>data: data disk</li>
+     * <li>system: system disk.</li>
+     * <li>data: data disk.</li>
      * </ul>
      * <blockquote>
-     * <p> The value of this parameter is not case-sensitive.</p>
+     * <p> The value of this parameter is case-insensitive.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

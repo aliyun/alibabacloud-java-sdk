@@ -322,6 +322,9 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
         @NameInMap("InvokeRecordStatus")
         public String invokeRecordStatus;
 
+        @NameInMap("Launcher")
+        public String launcher;
+
         /**
          * <p>The command output.</p>
          * <ul>
@@ -493,6 +496,14 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
         }
         public String getInvokeRecordStatus() {
             return this.invokeRecordStatus;
+        }
+
+        public DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResult setLauncher(String launcher) {
+            this.launcher = launcher;
+            return this;
+        }
+        public String getLauncher() {
+            return this.launcher;
         }
 
         public DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResult setOutput(String output) {

@@ -116,6 +116,9 @@ public class InvokeCommandRequest extends TeaModel {
     @NameInMap("InstanceId")
     public java.util.List<String> instanceId;
 
+    @NameInMap("Launcher")
+    public String launcher;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -318,6 +321,14 @@ public class InvokeCommandRequest extends TeaModel {
     }
     public java.util.List<String> getInstanceId() {
         return this.instanceId;
+    }
+
+    public InvokeCommandRequest setLauncher(String launcher) {
+        this.launcher = launcher;
+        return this;
+    }
+    public String getLauncher() {
+        return this.launcher;
     }
 
     public InvokeCommandRequest setOwnerAccount(String ownerAccount) {

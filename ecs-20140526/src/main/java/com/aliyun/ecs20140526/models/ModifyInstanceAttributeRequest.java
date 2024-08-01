@@ -153,7 +153,7 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
      * <li>The instance is moved from the current security groups to the replacement security groups. If you want the instance to remain in the current security groups, add the IDs of the current security groups to the list.</li>
      * <li>You can move the instance to security groups of a different type. However, the list cannot contain the IDs of both basic and advanced security groups.</li>
      * <li>The security groups and the instance must belong to the same VPC.</li>
-     * <li>The valid values of N vary based on the maximum number of security groups to which the instance can belong. For more information, see the <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a> section in the &quot;Limits&quot; topic.</li>
+     * <li>The valid values of N vary based on the maximum number of security groups to which the instance can belong. For more information, see the <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a> section in the &quot;Limits and quotas&quot; topic.</li>
      * <li>New security groups become valid for the instance after a short latency.</li>
      * </ul>
      * 

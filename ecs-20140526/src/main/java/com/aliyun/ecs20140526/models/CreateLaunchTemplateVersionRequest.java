@@ -450,7 +450,7 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
     public String spotStrategy;
 
     /**
-     * <p>The tags to add to the activation code.</p>
+     * <p>The tags to add to the instance, disks, and primary ENI.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateLaunchTemplateVersionRequestTag> tag;
@@ -1563,7 +1563,7 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
 
     public static class CreateLaunchTemplateVersionRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N to add to the instance, block storage devices, or primary ENI. Valid values of N: 1 to 5. The tag key cannot be an empty string. It can be up to 64 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The key of tag N to add to the instance, disks, and primary ENI. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -1572,7 +1572,7 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N to add to the instance, block storage devices, or primary ENI. Valid values of N: 1 to 5. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The value of tag N to add to the instance, disks, and primary ENI. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>
