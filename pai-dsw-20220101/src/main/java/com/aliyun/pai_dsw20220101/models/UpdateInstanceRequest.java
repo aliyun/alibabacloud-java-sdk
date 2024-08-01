@@ -21,8 +21,14 @@ public class UpdateInstanceRequest extends TeaModel {
     @NameInMap("CloudDisks")
     public java.util.List<UpdateInstanceRequestCloudDisks> cloudDisks;
 
+    @NameInMap("CredentialConfig")
+    public CredentialConfig credentialConfig;
+
     @NameInMap("Datasets")
     public java.util.List<UpdateInstanceRequestDatasets> datasets;
+
+    @NameInMap("DisassociateCredential")
+    public Boolean disassociateCredential;
 
     /**
      * <strong>example:</strong>
@@ -150,12 +156,28 @@ public class UpdateInstanceRequest extends TeaModel {
         return this.cloudDisks;
     }
 
+    public UpdateInstanceRequest setCredentialConfig(CredentialConfig credentialConfig) {
+        this.credentialConfig = credentialConfig;
+        return this;
+    }
+    public CredentialConfig getCredentialConfig() {
+        return this.credentialConfig;
+    }
+
     public UpdateInstanceRequest setDatasets(java.util.List<UpdateInstanceRequestDatasets> datasets) {
         this.datasets = datasets;
         return this;
     }
     public java.util.List<UpdateInstanceRequestDatasets> getDatasets() {
         return this.datasets;
+    }
+
+    public UpdateInstanceRequest setDisassociateCredential(Boolean disassociateCredential) {
+        this.disassociateCredential = disassociateCredential;
+        return this;
+    }
+    public Boolean getDisassociateCredential() {
+        return this.disassociateCredential;
     }
 
     public UpdateInstanceRequest setDisassociateDatasets(Boolean disassociateDatasets) {

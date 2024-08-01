@@ -21,6 +21,9 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("CloudDisks")
     public java.util.List<CreateInstanceRequestCloudDisks> cloudDisks;
 
+    @NameInMap("CredentialConfig")
+    public CredentialConfig credentialConfig;
+
     @NameInMap("Datasets")
     public java.util.List<CreateInstanceRequestDatasets> datasets;
 
@@ -148,6 +151,14 @@ public class CreateInstanceRequest extends TeaModel {
     }
     public java.util.List<CreateInstanceRequestCloudDisks> getCloudDisks() {
         return this.cloudDisks;
+    }
+
+    public CreateInstanceRequest setCredentialConfig(CredentialConfig credentialConfig) {
+        this.credentialConfig = credentialConfig;
+        return this;
+    }
+    public CredentialConfig getCredentialConfig() {
+        return this.credentialConfig;
     }
 
     public CreateInstanceRequest setDatasets(java.util.List<CreateInstanceRequestDatasets> datasets) {
