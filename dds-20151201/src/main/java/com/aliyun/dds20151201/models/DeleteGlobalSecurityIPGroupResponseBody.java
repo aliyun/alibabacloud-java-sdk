@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteGlobalSecurityIPGroupResponseBody extends TeaModel {
     /**
      * <p>The unique ID of the request. If the request fails, provide this ID for technical support to troubleshoot the failure.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2F42BB4E-461F-5B55-A37C-53B1141C****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

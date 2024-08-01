@@ -6,14 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeAvailableEngineVersionResponseBody extends TeaModel {
     /**
      * <p>The list of one or more engine versions to which an ApsaraDB for MongoDB instance can be upgraded.</p>
-     * <br>
-     * <p>>  An empty string is returned if the latest version is being used.</p>
+     * <blockquote>
+     * <p> An empty string is returned if the latest version is being used.</p>
+     * </blockquote>
      */
     @NameInMap("EngineVersions")
     public DescribeAvailableEngineVersionResponseBodyEngineVersions engineVersions;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>52507B6B-003B-47A3-A0A3-9FE992C7A243</p>
      */
     @NameInMap("RequestId")
     public String requestId;

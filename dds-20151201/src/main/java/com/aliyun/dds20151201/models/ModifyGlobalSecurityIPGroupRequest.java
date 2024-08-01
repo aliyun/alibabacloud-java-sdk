@@ -6,20 +6,33 @@ import com.aliyun.tea.*;
 public class ModifyGlobalSecurityIPGroupRequest extends TeaModel {
     /**
      * <p>The IP addresses in the whitelist template.</p>
-     * <br>
-     * <p>> Separate multiple IP addresses with commas (,). You can create up to 1,000 IP addresses or CIDR blocks for all IP address whitelists.</p>
+     * <blockquote>
+     * <p>Separate multiple IP addresses with commas (,). You can create up to 1,000 IP addresses or CIDR blocks for all IP address whitelists.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>27.16.214.10,111.60.117.181</p>
      */
     @NameInMap("GIpList")
     public String GIpList;
 
     /**
      * <p>The name of the IP whitelist template.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dps</p>
      */
     @NameInMap("GlobalIgName")
     public String globalIgName;
 
     /**
      * <p>The ID of the IP whitelist template.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>g-fwjk62egbsrp4sftxmmr</p>
      */
     @NameInMap("GlobalSecurityGroupId")
     public String globalSecurityGroupId;
@@ -31,7 +44,11 @@ public class ModifyGlobalSecurityIPGroupRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -6,49 +6,69 @@ import com.aliyun.tea.*;
 public class RenewDBInstanceRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable automatic payment. Valid values:</p>
-     * <br>
-     * <p>*   **true**: enables automatic payment. Make sure that you have sufficient balance within your account.</p>
-     * <p>*   **false**: disables automatic payment. You must perform the following operations to pay for the instance: Log on to the ApsaraDB for MongoDB console. In the upper-right corner, click **Expenses** and select **User Center** from the drop-down list. The User Center page appears. In the left-side navigation pane, choose **Order Management** > Renew. On the Renewal tab, find the bill that you want to pay and then click Renew in the Actions column.</p>
-     * <br>
-     * <p>Default value: **true**.</p>
+     * <ul>
+     * <li><strong>true</strong>: enables automatic payment. Make sure that you have sufficient balance within your account.</li>
+     * <li><strong>false</strong>: disables automatic payment. You must perform the following operations to pay for the instance: Log on to the ApsaraDB for MongoDB console. In the upper-right corner, click <strong>Expenses</strong> and select <strong>User Center</strong> from the drop-down list. The User Center page appears. In the left-side navigation pane, choose <strong>Order Management</strong> &gt; Renew. On the Renewal tab, find the bill that you want to pay and then click Renew in the Actions column.</li>
+     * </ul>
+     * <p>Default value: <strong>true</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
     /**
      * <p>Specifies whether to enable auto-renewal. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
-     * <br>
-     * <p>Default value: **false**.</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * <p>Default value: <strong>false</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
 
     /**
      * <p>The business information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{“ActivityId&quot;:&quot;000000000&quot;}</p>
      */
     @NameInMap("BusinessInfo")
     public String businessInfo;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ETnLKlblzczshOTUbOCzxxxxxxxxxx</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>Specifies whether to use coupons. Default value: null. Valid values:</p>
-     * <br>
-     * <p>*   **default** or **null**: uses coupons.</p>
-     * <p>*   **youhuiquan_promotion_option_id_for_blank**: does not use coupons.</p>
+     * <ul>
+     * <li><strong>default</strong> or <strong>null</strong>: uses coupons.</li>
+     * <li><strong>youhuiquan_promotion_option_id_for_blank</strong>: does not use coupons.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1111111111111111</p>
      */
     @NameInMap("CouponNo")
     public String couponNo;
 
     /**
      * <p>The instance ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dds-bpxxxxxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -60,7 +80,11 @@ public class RenewDBInstanceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The subscription period of the instance. Unit: month. Valid values: **1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, and 36**.</p>
+     * <p>The subscription period of the instance. Unit: month. Valid values: <strong>1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, and 36</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Period")
     public Integer period;

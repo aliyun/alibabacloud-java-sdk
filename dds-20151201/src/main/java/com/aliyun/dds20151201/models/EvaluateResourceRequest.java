@@ -6,42 +6,40 @@ import com.aliyun.tea.*;
 public class EvaluateResourceRequest extends TeaModel {
     /**
      * <p>The type of the instance.</p>
-     * <br>
-     * <p>> This parameter is required when you check whether resources are sufficient for creating or upgrading a replica set instance. For more information about instance types, see [Instance types](~~57141~~).</p>
+     * <blockquote>
+     * <p>This parameter is required when you check whether resources are sufficient for creating or upgrading a replica set instance. For more information about instance types, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>dds.mongo.mid</p>
      */
     @NameInMap("DBInstanceClass")
     public String DBInstanceClass;
 
     /**
      * <p>The ID of the instance. This parameter is required when you check whether resources are sufficient for upgrading an instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dds-bp14bf67a76d****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The database engine of the instance. Set the value to **MongoDB**.</p>
+     * <p>The database engine of the instance. Set the value to <strong>MongoDB</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MongoDB</p>
      */
     @NameInMap("Engine")
     public String engine;
 
     /**
-     * <p>The version of the database engine. Valid values:</p>
-     * <br>
-     * <p>*   **7.0**</p>
-     * <p>*   **6.0**</p>
-     * <p>*   **5.0**</p>
-     * <p>*   **4.4**</p>
-     * <p>*   **4.2**</p>
-     * <p>*   **4.0**</p>
-     * <br>
-     * <p><!----></p>
-     * <br>
-     * <p>*   3.4</p>
-     * <p>*   4.0</p>
-     * <p>*   4.2</p>
-     * <p>*   4.4</p>
-     * <p>*   5.0</p>
-     * <p>*   6.0</p>
+     * <p>The version of the database engine.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4.0</p>
      */
     @NameInMap("EngineVersion")
     public String engineVersion;
@@ -53,26 +51,39 @@ public class EvaluateResourceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of read-only nodes in the instance. Valid values: **1** to **5**.</p>
-     * <br>
-     * <p>> This parameter is not required for standalone or serverless instances.</p>
+     * <p>The number of read-only nodes in the instance. Valid values: <strong>1</strong> to <strong>5</strong>.</p>
+     * <blockquote>
+     * <p>This parameter is not required for standalone or serverless instances.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("ReadonlyReplicas")
     public String readonlyReplicas;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the region ID.</p>
+     * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the region ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The number of nodes in the instance.</p>
-     * <br>
-     * <p>*   Set the value to **1** for standalone instances.</p>
-     * <p>*   Valid values for replica set instances: **3**, **5**, and **7**</p>
-     * <br>
-     * <p>> This parameter is not required for serverless instances.</p>
+     * <ul>
+     * <li>Set the value to <strong>1</strong> for standalone instances.</li>
+     * <li>Valid values for replica set instances: <strong>3</strong>, <strong>5</strong>, and <strong>7</strong></li>
+     * </ul>
+     * <blockquote>
+     * <p>This parameter is not required for serverless instances.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("ReplicationFactor")
     public String replicationFactor;
@@ -85,50 +96,59 @@ public class EvaluateResourceRequest extends TeaModel {
 
     /**
      * <p>The node information about the sharded cluster instance. This parameter is required when you check whether resources are sufficient for creating or upgrading a sharded cluster instance.</p>
-     * <br>
      * <p>To check whether resources are sufficient for creating a sharded cluster instance, specify the specifications of each node in the instance. The value must be a JSON string. Example:</p>
-     * <br>
-     * <p>    {</p>
-     * <p>         "ConfigSvrs":</p>
-     * <p>             [{"Storage":20,"DBInstanceClass":"dds.cs.mid"}],</p>
-     * <p>         "Mongos":</p>
-     * <p>             [{"DBInstanceClass":"dds.mongos.standard"},{"DBInstanceClass":"dds.mongos.standard"}],</p>
-     * <p>         "Shards":</p>
-     * <p>             [{"Storage":50,"DBInstanceClass":"dds.shard.standard"},{"Storage":50,"DBInstanceClass":"dds.shard.standard"},   {"Storage":50,"DBInstanceClass":"dds.shard.standard"}]</p>
-     * <p>     }</p>
-     * <br>
+     * <pre><code>{
+     *      &quot;ConfigSvrs&quot;:
+     *          [{&quot;Storage&quot;:20,&quot;DBInstanceClass&quot;:&quot;dds.cs.mid&quot;}],
+     *      &quot;Mongos&quot;:
+     *          [{&quot;DBInstanceClass&quot;:&quot;dds.mongos.standard&quot;},{&quot;DBInstanceClass&quot;:&quot;dds.mongos.standard&quot;}],
+     *      &quot;Shards&quot;:
+     *          [{&quot;Storage&quot;:50,&quot;DBInstanceClass&quot;:&quot;dds.shard.standard&quot;},{&quot;Storage&quot;:50,&quot;DBInstanceClass&quot;:&quot;dds.shard.standard&quot;},   {&quot;Storage&quot;:50,&quot;DBInstanceClass&quot;:&quot;dds.shard.standard&quot;}]
+     *  }
+     * </code></pre>
      * <p>Parameters in the example:</p>
-     * <br>
-     * <p>*   ConfigSvrs: the Configserver node.</p>
-     * <p>*   Mongos: the mongos node.</p>
-     * <p>*   Shards: the shard node.</p>
-     * <p>*   Storage: the storage space of the node.</p>
-     * <p>*   DBInstanceClass: the instance type of the node. For more information, see [Sharded cluster instance types](~~311414~~).</p>
-     * <br>
+     * <ul>
+     * <li>ConfigSvrs: the Configserver node.</li>
+     * <li>Mongos: the mongos node.</li>
+     * <li>Shards: the shard node.</li>
+     * <li>Storage: the storage space of the node.</li>
+     * <li>DBInstanceClass: the instance type of the node. For more information, see <a href="https://help.aliyun.com/document_detail/311414.html">Sharded cluster instance types</a>.</li>
+     * </ul>
      * <p>To check whether resources are sufficient for upgrading a single node of a sharded cluster instance, specify only the information about the node to be upgraded. The value must be a JSON string. Example:</p>
-     * <br>
-     * <p>    {</p>
-     * <p>         "NodeId": "d-bp147c4d9ca7****", "NodeClass": "dds.shard.standard"</p>
-     * <p>    } </p>
-     * <br>
+     * <pre><code>{
+     *      &quot;NodeId&quot;: &quot;d-bp147c4d9ca7****&quot;, &quot;NodeClass&quot;: &quot;dds.shard.standard&quot;
+     * } 
+     * </code></pre>
      * <p>Parameters in the example:</p>
-     * <br>
-     * <p>*   NodeId: the ID of the node.</p>
-     * <p>*   NodeClass: the instance type of the node. For more information, see [Sharded cluster instance types](~~311414~~).</p>
+     * <ul>
+     * <li>NodeId: the ID of the node.</li>
+     * <li>NodeClass: the instance type of the node. For more information, see <a href="https://help.aliyun.com/document_detail/311414.html">Sharded cluster instance types</a>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;NodeId&quot;: &quot;d-bp147c4d9ca7****&quot;, &quot;NodeClass&quot;: &quot;dds.shard.standard&quot;}</p>
      */
     @NameInMap("ShardsInfo")
     public String shardsInfo;
 
     /**
      * <p>The storage capacity of the replica set instance. Unit: GB.</p>
-     * <br>
-     * <p>> This parameter is required for the instances that use cloud disks.</p>
+     * <blockquote>
+     * <p>This parameter is required for the instances that use cloud disks.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("Storage")
     public String storage;
 
     /**
-     * <p>The zone ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the zone ID.</p>
+     * <p>The zone ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the zone ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-h</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;

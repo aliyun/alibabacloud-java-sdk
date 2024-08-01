@@ -5,22 +5,32 @@ import com.aliyun.tea.*;
 
 public class DescribeActiveOperationTaskCountResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether any O\&M tasks need pop-up windows to notify users actions. Valid values:</p>
-     * <br>
-     * <p>*   **0**: No O\&M tasks need pop-up windows to notify users actions.</p>
-     * <p>*   **1**: Some O\&M tasks need pop-up windows to notify users actions.</p>
+     * <p>Indicates whether any O\&amp;M tasks need pop-up windows to notify users actions. Valid values:</p>
+     * <ul>
+     * <li><strong>0</strong>: No O\&amp;M tasks need pop-up windows to notify users actions.</li>
+     * <li><strong>1</strong>: Some O\&amp;M tasks need pop-up windows to notify users actions.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("NeedPop")
     public Integer needPop;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>770D7F11-21A2-402B-9DF6-D1A620570EF9</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The number of pending O\&M tasks.</p>
+     * <p>The number of pending O\&amp;M tasks.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("TaskCount")
     public Integer taskCount;

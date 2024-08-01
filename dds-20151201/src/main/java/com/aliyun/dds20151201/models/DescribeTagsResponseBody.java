@@ -6,14 +6,21 @@ import com.aliyun.tea.*;
 public class DescribeTagsResponseBody extends TeaModel {
     /**
      * <p>The token used to start the next query.</p>
-     * <br>
-     * <p>>  If not all results are returned in the first query, this parameter is returned. You can pass in the value of this parameter in the next query.</p>
+     * <blockquote>
+     * <p> If not all results are returned in the first query, this parameter is returned. You can pass in the value of this parameter in the next query.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>212db86****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EEDBE38F-5CF5-4316-AAC2-35817BA60D68</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -56,6 +63,9 @@ public class DescribeTagsResponseBody extends TeaModel {
     public static class DescribeTagsResponseBodyTags extends TeaModel {
         /**
          * <p>The key of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>newKey</p>
          */
         @NameInMap("TagKey")
         public String tagKey;

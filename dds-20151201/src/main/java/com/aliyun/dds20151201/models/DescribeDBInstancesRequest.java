@@ -6,105 +6,151 @@ import com.aliyun.tea.*;
 public class DescribeDBInstancesRequest extends TeaModel {
     /**
      * <p>The billing method of the instance. Valid values:</p>
-     * <br>
-     * <p>*   **PrePaid**: subscription</p>
-     * <p>*   **PostPaid**: pay-as-you-go</p>
+     * <ul>
+     * <li><strong>PrePaid</strong>: subscription</li>
+     * <li><strong>PostPaid</strong>: pay-as-you-go</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>PrePaid</p>
      */
     @NameInMap("ChargeType")
     public String chargeType;
 
     /**
-     * <p>The endpoint of the node. You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to query the endpoint of the node.</p>
+     * <p>The endpoint of the node. You can call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to query the endpoint of the node.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dds-bp1ea17b41abecf43****.mongodb.rds.aliyuncs.com</p>
      */
     @NameInMap("ConnectionDomain")
     public String connectionDomain;
 
     /**
-     * <p>The instance type. For more information about valid values, see [Instance types](~~57141~~).</p>
+     * <p>The instance type. For more information about valid values, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dds.mongo.mid</p>
      */
     @NameInMap("DBInstanceClass")
     public String DBInstanceClass;
 
     /**
      * <p>The name of the instance. The name must meet the following requirements:</p>
-     * <br>
-     * <p>*   The name must start with a letter.</p>
-     * <p>*   It can contain digits, letters, underscores (\_), and hyphens (-).</p>
-     * <p>*   It must be 2 to 256 characters in length.</p>
+     * <ul>
+     * <li>The name must start with a letter.</li>
+     * <li>It can contain digits, letters, underscores (_), and hyphens (-).</li>
+     * <li>It must be 2 to 256 characters in length.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Test database</p>
      */
     @NameInMap("DBInstanceDescription")
     public String DBInstanceDescription;
 
     /**
      * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dds-bp199659b178****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The state of the instance. For more information about valid values, see [Instance states](~~63870~~).</p>
+     * <p>The state of the instance. For more information about valid values, see <a href="https://help.aliyun.com/document_detail/63870.html">Instance states</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Running</p>
      */
     @NameInMap("DBInstanceStatus")
     public String DBInstanceStatus;
 
     /**
      * <p>The architecture of the instance. Valid values:</p>
-     * <br>
-     * <p>*   **sharding**: sharded cluster instance</p>
-     * <p>*   **replicate**: replica set or standalone instance</p>
+     * <ul>
+     * <li><strong>sharding</strong>: sharded cluster instance</li>
+     * <li><strong>replicate</strong>: replica set or standalone instance</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>sharding</p>
      */
     @NameInMap("DBInstanceType")
     public String DBInstanceType;
 
     /**
      * <p>The type of the node in the instance. This parameter is used to filter standard or test instance.</p>
-     * <br>
-     * <p>1.  Valid value for a standalone or DBFS instance.</p>
-     * <p>2.  Valid value for a standard instance that comes in the replica set or sharded cluster architecture: standard</p>
-     * <p>3.  Valid value when all instances are displayed: default</p>
+     * <ol>
+     * <li>Valid value for a standalone or DBFS instance.</li>
+     * <li>Valid value for a standard instance that comes in the replica set or sharded cluster architecture: standard</li>
+     * <li>Valid value when all instances are displayed: default</li>
+     * </ol>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
      */
     @NameInMap("DBNodeType")
     public String DBNodeType;
 
     /**
-     * <p>The database engine of the instance. Set the value to **MongoDB**.</p>
+     * <p>The database engine of the instance. Set the value to <strong>MongoDB</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MongoDB</p>
      */
     @NameInMap("Engine")
     public String engine;
 
     /**
      * <p>The database engine version of the instance.</p>
-     * <br>
-     * <p>*   **6.0**</p>
-     * <p>*   **5.0**</p>
-     * <p>*   **4.4**</p>
-     * <p>*   **4.2**</p>
-     * <p>*   **4.0**</p>
-     * <p>*   **3.4**</p>
+     * <ul>
+     * <li><strong>6.0</strong></li>
+     * <li><strong>5.0</strong></li>
+     * <li><strong>4.4</strong></li>
+     * <li><strong>4.2</strong></li>
+     * <li><strong>4.0</strong></li>
+     * <li><strong>3.4</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>4.0</p>
      */
     @NameInMap("EngineVersion")
     public String engineVersion;
 
     /**
      * <p>The time when the instance expires.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-12-26T16:00Z</p>
      */
     @NameInMap("ExpireTime")
     public String expireTime;
 
     /**
      * <p>Specifies whether the instance has expired. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Expired")
     public String expired;
 
     /**
      * <p>The network type of the instance. Valid values:</p>
-     * <br>
-     * <p>*   **Classic**</p>
-     * <p>*   **VPC**</p>
+     * <ul>
+     * <li><strong>Classic</strong></li>
+     * <li><strong>VPC</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>VPC</p>
      */
     @NameInMap("NetworkType")
     public String networkType;
@@ -116,39 +162,56 @@ public class DescribeDBInstancesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. The value of this parameter must be an integer that is greater than 0. Default value: **1**.</p>
+     * <p>The number of the page to return. The value of this parameter must be an integer that is greater than 0. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page. Valid values:</p>
-     * <br>
-     * <p>*   **30** (default)</p>
-     * <p>*   **50**</p>
-     * <p>*   **100**</p>
+     * <ul>
+     * <li><strong>30</strong> (default)</li>
+     * <li><strong>50</strong></li>
+     * <li><strong>100</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The number of nodes in the replica set instance. Valid values:</p>
-     * <br>
-     * <p>*   **3**</p>
-     * <p>*   **5**</p>
-     * <p>*   **7**</p>
+     * <ul>
+     * <li><strong>3</strong></li>
+     * <li><strong>5</strong></li>
+     * <li><strong>7</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("ReplicationFactor")
     public String replicationFactor;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmyiu4ekp****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -167,18 +230,27 @@ public class DescribeDBInstancesRequest extends TeaModel {
 
     /**
      * <p>The vSwitch ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-bp1vj604nj5a9zz74****</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
     /**
      * <p>The VPC ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-bp1n3i15v90el48nx****</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
 
     /**
-     * <p>The zone ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent zone list.</p>
+     * <p>The zone ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the most recent zone list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-b</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;
@@ -398,21 +470,29 @@ public class DescribeDBInstancesRequest extends TeaModel {
 
     public static class DescribeDBInstancesRequestTag extends TeaModel {
         /**
-         * <p>The tag key of the instance. Valid values of N: **1** to **20**.</p>
-         * <br>
-         * <p>*   The key cannot start with `aliyun`, `acs:`, `http://`, or `https://`.</p>
-         * <p>*   It can be up to 64 characters in length.</p>
-         * <p>*   It cannot be an empty string.</p>
+         * <p>The tag key of the instance. Valid values of N: <strong>1</strong> to <strong>20</strong>.</p>
+         * <ul>
+         * <li>The key cannot start with <code>aliyun</code>, <code>acs:</code>, <code>http://</code>, or <code>https://</code>.</li>
+         * <li>It can be up to 64 characters in length.</li>
+         * <li>It cannot be an empty string.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>testdatabase</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The tag value of the instance. Valid values of N: **1** to **20**.</p>
-         * <br>
-         * <p>*   The value cannot start with `aliyun`, `acs:`, `http://`, or `https://`.</p>
-         * <p>*   The value can be up to 128 characters in length.</p>
-         * <p>*   It can be an empty string.</p>
+         * <p>The tag value of the instance. Valid values of N: <strong>1</strong> to <strong>20</strong>.</p>
+         * <ul>
+         * <li>The value cannot start with <code>aliyun</code>, <code>acs:</code>, <code>http://</code>, or <code>https://</code>.</li>
+         * <li>The value can be up to 128 characters in length.</li>
+         * <li>It can be an empty string.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>apitest</p>
          */
         @NameInMap("Value")
         public String value;

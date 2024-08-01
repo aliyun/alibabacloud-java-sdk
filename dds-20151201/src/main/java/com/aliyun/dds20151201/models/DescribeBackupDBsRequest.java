@@ -6,12 +6,17 @@ import com.aliyun.tea.*;
 public class DescribeBackupDBsRequest extends TeaModel {
     /**
      * <p>The backup ID.</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   You can call the [DescribeBackups](~~62172~~) operation to query the backup ID.</p>
-     * <br>
-     * <p>*   You must specify one of the **RestoreTime** and BackupId parameters.</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>You can call the <a href="https://help.aliyun.com/document_detail/62172.html">DescribeBackups</a> operation to query the backup ID.</p>
+     * </li>
+     * <li><p>You must specify one of the <strong>RestoreTime</strong> and BackupId parameters.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>5664****</p>
      */
     @NameInMap("BackupId")
     public String backupId;
@@ -23,19 +28,28 @@ public class DescribeBackupDBsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number of the page to return. The value must be an integer that is greater than 0. Default value: **1**.</p>
+     * <p>The page number of the page to return. The value must be an integer that is greater than 0. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return per page. Default value: 30. Valid values: **30**, **50**, and **100**.</p>
+     * <p>The number of entries to return per page. Default value: 30. Valid values: <strong>30</strong>, <strong>50</strong>, and <strong>100</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-ax68****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -48,18 +62,26 @@ public class DescribeBackupDBsRequest extends TeaModel {
 
     /**
      * <p>The point in time to which the instance is restored. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   The time can be a point in time within the previous seven days. The time must be earlier than the current time, but later than the time when the instance was created.</p>
-     * <br>
-     * <p>*   You must specify one of the RestoreTime and **BackupId** parameters.</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>The time can be a point in time within the previous seven days. The time must be earlier than the current time, but later than the time when the instance was created.</p>
+     * </li>
+     * <li><p>You must specify one of the RestoreTime and <strong>BackupId</strong> parameters.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-08-22T12:00:00Z</p>
      */
     @NameInMap("RestoreTime")
     public String restoreTime;
 
     /**
      * <p>The ID of the source instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dds-bp2286****</p>
      */
     @NameInMap("SourceDBInstance")
     public String sourceDBInstance;

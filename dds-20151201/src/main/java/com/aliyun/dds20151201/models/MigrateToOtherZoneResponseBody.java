@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class MigrateToOtherZoneResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0FDDC511-7252-4A4A-ADDA-5CB1BF63873D</p>
      */
     @NameInMap("RequestId")
     public String requestId;

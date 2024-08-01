@@ -6,12 +6,15 @@ import com.aliyun.tea.*;
 public class DescribeActiveOperationTaskTypeResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C7EE83BF-7BA8-5087-BAC9-ED85ED54****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The O\&M tasks.</p>
+     * <p>The O\&amp;M tasks.</p>
      */
     @NameInMap("TypeList")
     public java.util.List<DescribeActiveOperationTaskTypeResponseBodyTypeList> typeList;
@@ -40,27 +43,40 @@ public class DescribeActiveOperationTaskTypeResponseBody extends TeaModel {
     public static class DescribeActiveOperationTaskTypeResponseBodyTypeList extends TeaModel {
         /**
          * <p>The number of pending tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The type of the task. Valid values:</p>
-         * <br>
-         * <p>*   **rds_apsaradb_transfer**: data migration</p>
-         * <p>*   **rds_apsaradb_upgrade**: minor version update</p>
+         * <ul>
+         * <li><strong>rds_apsaradb_transfer</strong>: data migration</li>
+         * <li><strong>rds_apsaradb_upgrade</strong>: minor version update</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>rds_apsaradb_upgrade</p>
          */
         @NameInMap("TaskType")
         public String taskType;
 
         /**
          * <p>The task type in English.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds_apsaradb_upgrade</p>
          */
         @NameInMap("TaskTypeInfoEn")
         public String taskTypeInfoEn;
 
         /**
          * <p>The task type in Chinese.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds_apsaradb_upgrade</p>
          */
         @NameInMap("TaskTypeInfoZh")
         public String taskTypeInfoZh;

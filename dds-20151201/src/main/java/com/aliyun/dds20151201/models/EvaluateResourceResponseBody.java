@@ -6,27 +6,40 @@ import com.aliyun.tea.*;
 public class EvaluateResourceResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the resources are sufficient in the region. Valid values:</p>
-     * <br>
-     * <p>*   **1**: The resources are sufficient.</p>
-     * <p>*   **0**: The resources are insufficient.</p>
+     * <ul>
+     * <li><strong>1</strong>: The resources are sufficient.</li>
+     * <li><strong>0</strong>: The resources are insufficient.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("DBInstanceAvailable")
     public String DBInstanceAvailable;
 
     /**
      * <p>The database engine of the instance. Only MongoDB is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MongoDB</p>
      */
     @NameInMap("Engine")
     public String engine;
 
     /**
      * <p>The version of the database engine.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4.0</p>
      */
     @NameInMap("EngineVersion")
     public String engineVersion;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AE2DE465-E45F-481F-ABD8-37D64173****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

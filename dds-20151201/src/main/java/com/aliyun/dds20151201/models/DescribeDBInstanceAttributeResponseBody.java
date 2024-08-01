@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     /**
-     * <p>The details of the instance.</p>
+     * <p>The information of the instance.</p>
      */
     @NameInMap("DBInstances")
     public DescribeDBInstanceAttributeResponseBodyDBInstances DBInstances;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A935A8EE-A6CC-53DE-98BA-20ABAA7E632B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,54 +43,81 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     public static class DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceConfigserverListConfigserverAttribute extends TeaModel {
         /**
          * <p>The endpoint of the Configserver node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds-bp18b0934e7053e4-cs****.mongodb.rds.aliyuncs.com</p>
          */
         @NameInMap("ConnectString")
         public String connectString;
 
         /**
          * <p>The maximum number of connections to the Configserver node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         @NameInMap("MaxConnections")
         public Integer maxConnections;
 
         /**
          * <p>The maximum IOPS of the Configserver node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         @NameInMap("MaxIOPS")
         public Integer maxIOPS;
 
         /**
          * <p>The instance type of the Configserver node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds.cs.mid</p>
          */
         @NameInMap("NodeClass")
         public String nodeClass;
 
         /**
          * <p>The name of the Configserver node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testConfigserver</p>
          */
         @NameInMap("NodeDescription")
         public String nodeDescription;
 
         /**
          * <p>The ID of the Configserver node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds-bp11483712c1****-cs</p>
          */
         @NameInMap("NodeId")
         public String nodeId;
 
         /**
-         * <p>The storage capacity of the Configserver node.</p>
+         * <p>The storage capacity of the Configserver node. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("NodeStorage")
         public Integer nodeStorage;
 
         /**
          * <p>The port number that is used to connect to the Configserver node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3717</p>
          */
         @NameInMap("Port")
         public Integer port;
 
         /**
-         * <p>The status of the Configserver node. For more information, see [Instance states](~~63870~~).</p>
+         * <p>The status of the Configserver node. For more information, see <a href="https://help.aliyun.com/document_detail/63870.html">Instance states</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         @NameInMap("Status")
         public String status;
@@ -193,70 +223,105 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     public static class DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceMongosListMongosAttribute extends TeaModel {
         /**
          * <p>The endpoint of the mongos node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-bp1d8c262a15****.mongodb.rds.aliyuncs.com</p>
          */
         @NameInMap("ConnectSting")
         public String connectSting;
 
         /**
          * <p>The maximum number of connections to the mongos node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         @NameInMap("MaxConnections")
         public Integer maxConnections;
 
         /**
          * <p>The maximum IOPS of the mongos node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>800</p>
          */
         @NameInMap("MaxIOPS")
         public Integer maxIOPS;
 
         /**
          * <p>The instance type of the mongos node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds.mongos.mid</p>
          */
         @NameInMap("NodeClass")
         public String nodeClass;
 
         /**
          * <p>The name of the mongos node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mongos1</p>
          */
         @NameInMap("NodeDescription")
         public String nodeDescription;
 
         /**
          * <p>The ID of the mongos node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-bp1d8c262a15****</p>
          */
         @NameInMap("NodeId")
         public String nodeId;
 
         /**
          * <p>The port number that is used to connect to the mongos node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3717</p>
          */
         @NameInMap("Port")
         public Integer port;
 
         /**
-         * <p>The status of the mongos node. For more information, see [Instance states](~~63870~~).</p>
+         * <p>The status of the mongos node. For more information, see <a href="https://help.aliyun.com/document_detail/63870.html">Instance states</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The VPC ID of the instance.</p>
-         * <br>
-         * <p>> This parameter is returned if the network type of the instance is VPC.</p>
+         * <blockquote>
+         * <p> This parameter is returned if the network type of the instance is VPC.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1n3i15v90el48nx****</p>
          */
         @NameInMap("VPCId")
         public String VPCId;
 
         /**
          * <p>The vSwitch ID of the instance.</p>
-         * <br>
-         * <p>> This parameter is returned if the network type of the instance is VPC.</p>
+         * <blockquote>
+         * <p> This parameter is returned if the network type of the instance is VPC.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp1vj604nj5a9zz74****</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
         /**
          * <p>The ID of the mongos node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-bp1d8c262a158****</p>
          */
         @NameInMap("VpcCloudInstanceId")
         public String vpcCloudInstanceId;
@@ -378,54 +443,80 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     public static class DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceReplicaSetsReplicaSet extends TeaModel {
         /**
          * <p>The endpoint of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds-bp11483712c1****.mongodb.rds.aliyuncs.com</p>
          */
         @NameInMap("ConnectionDomain")
         public String connectionDomain;
 
         /**
          * <p>The port number that is used to connect to the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3717</p>
          */
         @NameInMap("ConnectionPort")
         public String connectionPort;
 
         /**
          * <p>The network type of the instance. Valid values:</p>
-         * <br>
-         * <p>*   **Classic**: classic network.</p>
-         * <p>*   **VPC**: VPC.</p>
+         * <ul>
+         * <li><strong>Classic</strong>: classic network</li>
+         * <li><strong>VPC</strong>: VPC</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         @NameInMap("NetworkType")
         public String networkType;
 
         /**
          * <p>The role of the node. Valid values:</p>
-         * <br>
-         * <p>*   **Primary**</p>
-         * <p>*   **Secondary**</p>
+         * <ul>
+         * <li><strong>Primary</strong></li>
+         * <li><strong>Secondary</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Primary</p>
          */
         @NameInMap("ReplicaSetRole")
         public String replicaSetRole;
 
         /**
          * <p>The instance ID.</p>
-         * <br>
-         * <p>> This parameter is returned if the network type of the instance is VPC.</p>
+         * <blockquote>
+         * <p> This parameter is returned if the network type of the instance is VPC.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>dds-bp11483712c1****</p>
          */
         @NameInMap("VPCCloudInstanceId")
         public String VPCCloudInstanceId;
 
         /**
          * <p>The VPC ID of the instance.</p>
-         * <br>
-         * <p>> This parameter is returned if the network type of the instance is VPC.</p>
+         * <blockquote>
+         * <p> This parameter is returned if the network type of the instance is VPC.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1jk5vwkcri27qme****</p>
          */
         @NameInMap("VPCId")
         public String VPCId;
 
         /**
          * <p>The vSwitch ID of the instance.</p>
-         * <br>
-         * <p>> This parameter is returned if the network type of the instance is Virtual Private Cloud (VPC).</p>
+         * <blockquote>
+         * <p> This parameter is returned if the network type of the instance is virtual private cloud (VPC).</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1jk5vwkcri27qme****</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
@@ -515,66 +606,99 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     public static class DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceShardListShardAttribute extends TeaModel {
         /**
          * <p>The endpoint of the shard node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-bp1af0680a9c6d3****.mongodb.rds.aliyuncs.com:****</p>
          */
         @NameInMap("ConnectString")
         public String connectString;
 
         /**
          * <p>The maximum number of connections to the shard node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8000</p>
          */
         @NameInMap("MaxConnections")
         public Integer maxConnections;
 
         /**
          * <p>shard节点的最大云盘吞吐量。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>350</p>
          */
         @NameInMap("MaxDiskMbps")
         public String maxDiskMbps;
 
         /**
          * <p>The maximum IOPS of the shard node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8000</p>
          */
         @NameInMap("MaxIOPS")
         public Integer maxIOPS;
 
         /**
          * <p>The instance type of the shard node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds.shard.mid</p>
          */
         @NameInMap("NodeClass")
         public String nodeClass;
 
         /**
          * <p>The name of the shard node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testshard</p>
          */
         @NameInMap("NodeDescription")
         public String nodeDescription;
 
         /**
          * <p>The ID of the shard node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-bp16e09d9c5d****</p>
          */
         @NameInMap("NodeId")
         public String nodeId;
 
         /**
-         * <p>The storage capacity of the shard node.</p>
+         * <p>The storage capacity of the shard node. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("NodeStorage")
         public Integer nodeStorage;
 
         /**
          * <p>The port number that is used to connect to the shard node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3717</p>
          */
         @NameInMap("Port")
         public Integer port;
 
         /**
-         * <p>The number of read-only nodes in the shard node. Valid values: **0** to **5**. The value must be an integer.</p>
+         * <p>The number of read-only nodes in the shard node. Valid values: <strong>0</strong> to <strong>5</strong>. The value must be an integer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ReadonlyReplicas")
         public Integer readonlyReplicas;
 
         /**
-         * <p>The status of the shard node. For more information, see [Instance states](~~63870~~).</p>
+         * <p>The status of the shard node. For more information, see <a href="https://help.aliyun.com/document_detail/63870.html">Instance states</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         @NameInMap("Status")
         public String status;
@@ -695,13 +819,19 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
     public static class DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceTagsTag extends TeaModel {
         /**
-         * <p>The tag key of the instance.</p>
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The tag value of the instance.</p>
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>api</p>
          */
         @NameInMap("Value")
         public String value;
@@ -750,385 +880,534 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
     public static class DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstance extends TeaModel {
         /**
-         * <p>是否已开启突发</p>
+         * <p>Indicates whether performance burst is enabled for the ESSD AutoPL disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("BurstingEnabled")
         public Boolean burstingEnabled;
 
         /**
          * <p>The read and write throughput consumed by the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("CapacityUnit")
         public String capacityUnit;
 
         /**
          * <p>The billing method of the instance. Valid values:</p>
-         * <br>
-         * <p>*   **PrePaid**: subscription.</p>
-         * <p>*   **PostPaid**: pay-as-you-go.</p>
+         * <ul>
+         * <li><strong>PrePaid</strong>: subscription</li>
+         * <li><strong>PostPaid</strong>: pay-as-you-go</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PostPaid</p>
          */
         @NameInMap("ChargeType")
         public String chargeType;
 
         /**
-         * <p>The details of the Configserver nodes.</p>
-         * <br>
-         * <p>> This parameter is returned if the instance is a sharded cluster instance.</p>
+         * <p>The information of the Configserver nodes.</p>
+         * <blockquote>
+         * <p> This parameter is returned if the instance is a sharded cluster instance.</p>
+         * </blockquote>
          */
         @NameInMap("ConfigserverList")
         public DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceConfigserverList configserverList;
 
         /**
-         * <p>The time when the instance was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the instance was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-01-02T07:43:59Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The minor version of the current database in the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5.0.5-20220721143518_0</p>
          */
         @NameInMap("CurrentKernelVersion")
         public String currentKernelVersion;
 
         /**
-         * <p>The instance type.</p>
+         * <p>The instance type of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds.mongo.mid</p>
          */
         @NameInMap("DBInstanceClass")
         public String DBInstanceClass;
 
         /**
          * <p>The name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test database</p>
          */
         @NameInMap("DBInstanceDescription")
         public String DBInstanceDescription;
 
         /**
          * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds-bp11483712c1****</p>
          */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
         /**
          * <p>The status of the orders generated for the instance. Valid values:</p>
-         * <br>
-         * <p>*   **all_completed**: All orders are being produced or complete.</p>
-         * <p>*   **order_unpaid**: The instance has unpaid orders.</p>
-         * <p>*   **order_wait_for_produce**: Order are being delivered for production.</p>
-         * <br>
-         * <p>> The order production process includes the following steps: place an order, pay for an order, deliver an order for production, produce an order, and complete an order.</p>
-         * <br>
-         * <p>*   If an order is in the **order_wait_for_produce** state for a long time, an error occurs when the order is being delivered for production. The system will automatically retry.</p>
-         * <p>*   The instance status changes only when the order is in the producing and complete state, such as changing configurations and running.</p>
+         * <ul>
+         * <li><strong>all_completed</strong>: All orders are being produced or complete.</li>
+         * <li><strong>order_unpaid</strong>: The instance has unpaid orders.</li>
+         * <li><strong>order_wait_for_produce</strong>: Orders are being delivered for production.</li>
+         * </ul>
+         * <blockquote>
+         * <p> The order production process includes the following steps: place an order, pay for an order, deliver an order for production, produce an order, and complete the production.</p>
+         * </blockquote>
+         * <ul>
+         * <li>If an order is in the <strong>order_wait_for_produce</strong> state for a long time, an error occurs when the order is being delivered for production. The system will automatically retry.</li>
+         * <li>The instance status changes only when the order is in the producing and complete state, such as changing configurations and running.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>all_completed</p>
          */
         @NameInMap("DBInstanceOrderStatus")
         public String DBInstanceOrderStatus;
 
         /**
          * <p>Indicates whether release protection is enabled for the instance. Valid values:</p>
-         * <br>
-         * <p>*   **true**: Release protection is enabled.</p>
-         * <p>*   **false** Release protection is disabled.</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("DBInstanceReleaseProtection")
         public Boolean DBInstanceReleaseProtection;
 
         /**
-         * <p>The status of the instance. For more information, see [Instance states](~~63870~~).</p>
+         * <p>The status of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/63870.html">Instance states</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         @NameInMap("DBInstanceStatus")
         public String DBInstanceStatus;
 
         /**
          * <p>The storage capacity of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("DBInstanceStorage")
         public Integer DBInstanceStorage;
 
         /**
          * <p>The architecture of the instance. Valid values:</p>
-         * <br>
-         * <p>*   **replicate**: replica set instance.</p>
-         * <p>*   **sharding**: sharded cluster instance.</p>
+         * <ul>
+         * <li><strong>replicate</strong>: replica set instance</li>
+         * <li><strong>sharding</strong>: sharded cluster instance</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>replicate</p>
          */
         @NameInMap("DBInstanceType")
         public String DBInstanceType;
 
         /**
          * <p>The time when the instance data was destroyed. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-10T16:00:00Z</p>
          */
         @NameInMap("DestroyTime")
         public String destroyTime;
 
         /**
-         * <p>是否开启云盘加密</p>
+         * <p>Indicates whether disk encryption is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Encrypted")
         public Boolean encrypted;
 
         /**
-         * <p>云盘加密对应的kms-key</p>
+         * <p>The Key Management Service (KMS) key used for disk encryption.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>07609cc3-3109-408f-a35e-c548e776da0b</p>
          */
         @NameInMap("EncryptionKey")
         public String encryptionKey;
 
         /**
          * <p>The database engine of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MongoDB</p>
          */
         @NameInMap("Engine")
         public String engine;
 
         /**
-         * <p>The database engine version of the instance. Valid values:</p>
-         * <br>
-         * <p>*   **6.0**</p>
-         * <p>*   **5.0**</p>
-         * <p>*   **4.4**</p>
-         * <p>*   **4.2**</p>
-         * <p>*   **4.0**</p>
+         * <p>The database engine version of the instance.</p>
+         * <ul>
+         * <li><strong>6.0</strong></li>
+         * <li><strong>5.0</strong></li>
+         * <li><strong>4.4</strong></li>
+         * <li><strong>4.2</strong></li>
+         * <li><strong>4.0</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>4.4</p>
          */
         @NameInMap("EngineVersion")
         public String engineVersion;
 
         /**
-         * <p>The time when the subscription instance expires. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.</p>
-         * <br>
-         * <p>> This parameter is returned if the instance is a subscription instance.</p>
+         * <p>The time when the subscription instance expires. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time is displayed in UTC.</p>
+         * <blockquote>
+         * <p> This parameter is returned if the instance is a subscription instance.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-02-05T16:00Z</p>
          */
         @NameInMap("ExpireTime")
         public String expireTime;
 
         /**
          * <p>The ID of the secondary zone 2 of the instance. Valid values:</p>
-         * <br>
-         * <p>*   **cn-hangzhou-g**: Hangzhou Zone G</p>
-         * <p>*   **cn-hangzhou-h**: Hangzhou Zone H</p>
-         * <p>*   **cn-hangzhou-i**: Hangzhou Zone I</p>
-         * <p>*   **cn-hongkong-b**: Hong Kong Zone B</p>
-         * <p>*   **cn-hongkong-c**: Hong Kong Zone C</p>
-         * <p>*   **cn-hongkong-d**: Hong Kong Zone D</p>
-         * <p>*   **cn-wulanchabu-a**: Ulanqab Zone A</p>
-         * <p>*   **cn-wulanchabu-b**: Ulanqab Zone B</p>
-         * <p>*   **cn-wulanchabu-c**: Ulanqab Zone C</p>
-         * <p>*   **ap-southeast-1a**: Singapore Zone A</p>
-         * <p>*   **ap-southeast-1b**: Singapore Zone B</p>
-         * <p>*   **ap-southeast-1c**: Singapore Zone C</p>
-         * <p>*   **ap-southeast-5a**: Jakarta Zone A</p>
-         * <p>*   **ap-southeast-5b**: Jakarta Zone B</p>
-         * <p>*   **ap-southeast-5c**: Jakarta Zone C</p>
-         * <p>*   **eu-central-1a**: Frankfurt Zone A</p>
-         * <p>*   **eu-central-1b**: Frankfurt Zone B</p>
-         * <p>*   **eu-central-1c**: Frankfurt Zone C</p>
-         * <br>
-         * <p>> </p>
-         * <br>
-         * <p>*   This parameter is returned if the instance is a replica set or sharded cluster instance that runs MongoDB 4.4 or 5.0 and uses multi-zone deployment.</p>
-         * <br>
-         * <p>*   This parameter is returned only if you use the Chine site (aliyun.com).</p>
+         * <ul>
+         * <li><strong>cn-hangzhou-g</strong>: Hangzhou Zone G</li>
+         * <li><strong>cn-hangzhou-h</strong>: Hangzhou Zone H</li>
+         * <li><strong>cn-hangzhou-i</strong>: Hangzhou Zone I</li>
+         * <li><strong>cn-hongkong-b</strong>: Hongkong Zone B</li>
+         * <li><strong>cn-hongkong-c</strong>: Hongkong Zone C</li>
+         * <li><strong>cn-hongkong-d</strong>: Hongkong Zone D</li>
+         * <li><strong>cn-wulanchabu-a</strong>: Ulanqab Zone A</li>
+         * <li><strong>cn-wulanchabu-b</strong>: Ulanqab Zone B</li>
+         * <li><strong>cn-wulanchabu-c</strong>: Ulanqab Zone C</li>
+         * <li><strong>ap-southeast-1a</strong>: Singapore Zone A</li>
+         * <li><strong>ap-southeast-1b</strong>: Singapore Zone B</li>
+         * <li><strong>ap-southeast-1c</strong>: Singapore Zone C</li>
+         * <li><strong>ap-southeast-5a</strong>: Jakarta Zone A</li>
+         * <li><strong>ap-southeast-5b</strong>: Jakarta Zone B</li>
+         * <li><strong>ap-southeast-5c</strong>: Jakarta Zone C</li>
+         * <li><strong>eu-central-1a</strong>: Frankfurt Zone A</li>
+         * <li><strong>eu-central-1b</strong>: Frankfurt Zone B</li>
+         * <li><strong>eu-central-1c</strong>: Frankfurt Zone C</li>
+         * </ul>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>This parameter is returned if the instance is a replica set or sharded cluster instance that runs MongoDB 4.4 or 5.0 and uses multi-zone deployment.</p>
+         * </li>
+         * <li><p>This parameter is returned only if you use the China site (aliyun.com).</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h</p>
          */
         @NameInMap("HiddenZoneId")
         public String hiddenZoneId;
 
         /**
          * <p>The kind code of the instance. Valid values:</p>
-         * <br>
-         * <p>*   **0**: physical machine.</p>
-         * <p>*   **1**: Elastic Compute Service (ECS) instance.</p>
-         * <p>*   **2**: Docker cluster.</p>
-         * <p>*   **18**: Kubernetes cluster.</p>
+         * <ul>
+         * <li><strong>0</strong>: physical machine</li>
+         * <li><strong>1</strong>: Elastic Compute Service (ECS) instance</li>
+         * <li><strong>2</strong>: Docker cluster</li>
+         * <li><strong>18</strong>: Kubernetes cluster</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("KindCode")
         public String kindCode;
 
         /**
          * <p>The date when the last downgrade operation was performed on the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-01-08</p>
          */
         @NameInMap("LastDowngradeTime")
         public String lastDowngradeTime;
 
         /**
          * <p>The lock status of the instance. Valid values:</p>
-         * <br>
-         * <p>*   **Unlock**: The instance is not locked.</p>
-         * <p>*   **ManualLock**: The instance is manually locked.</p>
-         * <p>*   **LockByExpiration**: The instance is automatically locked due to instance expiration.</p>
-         * <p>*   **LockByRestoration**: The instance is automatically locked before it is rolled back.</p>
-         * <p>*   **LockByDiskQuota**: The instance is automatically locked due to exhausted storage capacity.</p>
-         * <p>*   **Released**: The instance is released.</p>
+         * <ul>
+         * <li><strong>Unlock</strong>: The instance is not locked.</li>
+         * <li><strong>ManualLock</strong>: The instance is manually locked.</li>
+         * <li><strong>LockByExpiration</strong>: The instance is automatically locked due to instance expiration.</li>
+         * <li><strong>LockByRestoration</strong>: The instance is automatically locked before the instance is rolled back.</li>
+         * <li><strong>LockByDiskQuota</strong>: The instance is automatically locked after the storage space is exhausted.</li>
+         * <li><strong>Released</strong>: The instance is released.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Unlock</p>
          */
         @NameInMap("LockMode")
         public String lockMode;
 
         /**
-         * <p>The end time of the maintenance window. The time follows the ISO 8601 standard in the *HH:mm*Z format. The time is displayed in UTC.</p>
+         * <p>The end time of the maintenance window. The time follows the ISO 8601 standard in the <em>HH:mm</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>03:00Z</p>
          */
         @NameInMap("MaintainEndTime")
         public String maintainEndTime;
 
         /**
-         * <p>The start time of the maintenance window. The time follows the ISO 8601 standard in the *HH:mm*Z format. The time is displayed in UTC.</p>
+         * <p>The start time of the maintenance window. The time follows the ISO 8601 standard in the <em>HH:mm</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18:00Z</p>
          */
         @NameInMap("MaintainStartTime")
         public String maintainStartTime;
 
         /**
          * <p>The maximum number of connections to the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         @NameInMap("MaxConnections")
         public Integer maxConnections;
 
         /**
          * <p>The maximum IOPS of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         @NameInMap("MaxIOPS")
         public Integer maxIOPS;
 
         /**
          * <p>实例的最大云盘吞吐量，单位MB/s。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>350</p>
          */
         @NameInMap("MaxMBPS")
         public Integer maxMBPS;
 
         /**
-         * <p>The details of the mongos nodes.</p>
-         * <br>
-         * <p>> This parameter is returned if the instance is a sharded cluster instance.</p>
+         * <p>The information of the mongos nodes.</p>
+         * <blockquote>
+         * <p> This parameter is returned if the instance is a sharded cluster instance.</p>
+         * </blockquote>
          */
         @NameInMap("MongosList")
         public DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceMongosList mongosList;
 
         /**
          * <p>The network type of the instance. Valid values:</p>
-         * <br>
-         * <p>*   **Classic**</p>
-         * <p>*   **VPC**</p>
+         * <ul>
+         * <li><strong>Classic</strong>: classic network</li>
+         * <li><strong>VPC</strong>: VPC</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         @NameInMap("NetworkType")
         public String networkType;
 
         /**
          * <p>The access protocol type of the instance. Valid values:</p>
-         * <br>
-         * <p>*   **mongodb**</p>
-         * <p>*   **dynamodb**</p>
-         * <br>
-         * <p>> This parameter is returned if the instance is a sharded cluster instance.</p>
+         * <ul>
+         * <li><strong>mongodb</strong></li>
+         * <li><strong>dynamodb</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is returned if the instance is a sharded cluster instance.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>mongodb</p>
          */
         @NameInMap("ProtocolType")
         public String protocolType;
 
         /**
-         * <p>预配置性能</p>
+         * <p>The provisioned performance of the ESSD AutoPL disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1960</p>
          */
         @NameInMap("ProvisionedIops")
         public Long provisionedIops;
 
         /**
          * <p>The number of read-only nodes in the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ReadonlyReplicas")
         public String readonlyReplicas;
 
         /**
          * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>The logical ID of the replica instance.</p>
-         * <br>
-         * <p>> ApsaraDB for MongoDB does not support new instances of this type. This parameter applies only to previous-version replica instances.</p>
+         * <p>The logical ID of the replica set instance.</p>
+         * <blockquote>
+         * <p> ApsaraDB for MongoDB does not support new instances of this type. This parameter applies only to previous-version replica set instances.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>bls-m****</p>
          */
         @NameInMap("ReplacateId")
         public String replacateId;
 
         /**
          * <p>The name of the replica set instance.</p>
-         * <br>
-         * <p>> This parameter is returned if the instance is a replica set instance.</p>
+         * <blockquote>
+         * <p> This parameter is returned if the instance is a replica set instance.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>mgset-10ace****</p>
          */
         @NameInMap("ReplicaSetName")
         public String replicaSetName;
 
         /**
-         * <p>The details of the replica set instance.</p>
-         * <br>
-         * <p>> This parameter is returned if the instance is a replica set instance.</p>
+         * <p>The information of the replica set instance.</p>
+         * <blockquote>
+         * <p> This parameter is returned if the instance is a replica set instance.</p>
+         * </blockquote>
          */
         @NameInMap("ReplicaSets")
         public DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceReplicaSets replicaSets;
 
         /**
          * <p>The number of nodes in the instance.</p>
-         * <br>
-         * <p>> This parameter is returned if the instance is a replica set instance.</p>
+         * <blockquote>
+         * <p> This parameter is returned if the instance is a replica set instance.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("ReplicationFactor")
         public String replicationFactor;
 
         /**
-         * <p>The ID of the resource group.</p>
-         * <br>
-         * <p>> This parameter is returned only if you use the China site (aliyun.com).</p>
+         * <p>The ID of the resource group to which the instance belongs.</p>
+         * <blockquote>
+         * <p> This parameter is returned only if you use the China site (aliyun.com).</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmyiu4ekp****</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>The ID of the secondary zone 1 of the instance. Valid values:</p>
-         * <br>
-         * <p>*   **cn-hangzhou-g**: Hangzhou Zone G</p>
-         * <p>*   **cn-hangzhou-h**: Hangzhou Zone H</p>
-         * <p>*   **cn-hangzhou-i**: Hangzhou Zone I</p>
-         * <p>*   **cn-hongkong-b**: Hong Kong Zone B</p>
-         * <p>*   **cn-hongkong-c**: Hong Kong Zone C</p>
-         * <p>*   **cn-hongkong-d**: Hong Kong Zone D</p>
-         * <p>*   **cn-wulanchabu-a**: Ulanqab Zone A</p>
-         * <p>*   **cn-wulanchabu-b**: Ulanqab Zone B</p>
-         * <p>*   **cn-wulanchabu-c**: Ulanqab Zone C</p>
-         * <p>*   **ap-southeast-1a**: Singapore Zone A</p>
-         * <p>*   **ap-southeast-1b**: Singapore Zone B</p>
-         * <p>*   **ap-southeast-1c**: Singapore Zone C</p>
-         * <p>*   **ap-southeast-5a**: Jakarta Zone A</p>
-         * <p>*   **ap-southeast-5b**: Jakarta Zone B</p>
-         * <p>*   **ap-southeast-5c**: Jakarta Zone C</p>
-         * <p>*   **eu-central-1a**: Frankfurt Zone A</p>
-         * <p>*   **eu-central-1b**: Frankfurt Zone B</p>
-         * <p>*   **eu-central-1c**: Frankfurt Zone C</p>
-         * <br>
-         * <p>> </p>
-         * <br>
-         * <p>*   This parameter is returned if the instance is a replica set or sharded cluster instance that runs MongoDB 4.4 or 5.0 and uses multi-zone deployment.</p>
-         * <br>
-         * <p>*   This parameter is returned only if you use the Chine site (aliyun.com).</p>
+         * <ul>
+         * <li><strong>cn-hangzhou-g</strong>: Hangzhou Zone G</li>
+         * <li><strong>cn-hangzhou-h</strong>: Hangzhou Zone H</li>
+         * <li><strong>cn-hangzhou-i</strong>: Hangzhou Zone I</li>
+         * <li><strong>cn-hongkong-b</strong>: Hongkong Zone B</li>
+         * <li><strong>cn-hongkong-c</strong>: Hongkong Zone C</li>
+         * <li><strong>cn-hongkong-d</strong>: Hongkong Zone D</li>
+         * <li><strong>cn-wulanchabu-a</strong>: Ulanqab Zone A</li>
+         * <li><strong>cn-wulanchabu-b</strong>: Ulanqab Zone B</li>
+         * <li><strong>cn-wulanchabu-c</strong>: Ulanqab Zone C</li>
+         * <li><strong>ap-southeast-1a</strong>: Singapore Zone A</li>
+         * <li><strong>ap-southeast-1b</strong>: Singapore Zone B</li>
+         * <li><strong>ap-southeast-1c</strong>: Singapore Zone C</li>
+         * <li><strong>ap-southeast-5a</strong>: Jakarta Zone A</li>
+         * <li><strong>ap-southeast-5b</strong>: Jakarta Zone B</li>
+         * <li><strong>ap-southeast-5c</strong>: Jakarta Zone C</li>
+         * <li><strong>eu-central-1a</strong>: Frankfurt Zone A</li>
+         * <li><strong>eu-central-1b</strong>: Frankfurt Zone B</li>
+         * <li><strong>eu-central-1c</strong>: Frankfurt Zone C</li>
+         * </ul>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>This parameter is returned if the instance is a replica set or sharded cluster instance that runs MongoDB 4.4 or 5.0 and uses multi-zone deployment.</p>
+         * </li>
+         * <li><p>This parameter is returned only if you use the China site (aliyun.com).</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-i</p>
          */
         @NameInMap("SecondaryZoneId")
         public String secondaryZoneId;
 
         /**
-         * <p>The details of the shard nodes.</p>
-         * <br>
-         * <p>> This parameter is returned if the instance is a sharded cluster instance.</p>
+         * <p>The information of the shard nodes.</p>
+         * <blockquote>
+         * <p> This parameter is returned if the instance is a sharded cluster instance.</p>
+         * </blockquote>
          */
         @NameInMap("ShardList")
         public DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceShardList shardList;
 
         /**
          * <p>The storage engine of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WiredTiger</p>
          */
         @NameInMap("StorageEngine")
         public String storageEngine;
 
         /**
          * <p>The storage type of the instance. Valid values:</p>
-         * <br>
-         * <p>**cloud_essd1**: PL1 ESSD. **cloud_essd2**: PL2. ESSD. **cloud_essd3**: PL3 ESSD. **local_ssd**: local SSD.</p>
+         * <p><strong>cloud_essd1</strong>: ESSD PL1 <strong>cloud_essd2</strong>: ESSD PL2 <strong>cloud_essd3</strong>: ESSD PL3 <strong>local_ssd</strong>: local SSD <strong>cloud_essd_dbfs_s</strong>: DBFS disk</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_essd1</p>
          */
         @NameInMap("StorageType")
         public String storageType;
 
         /**
-         * <p>数据同步进度百分比。当实例处在变配中时，需要进行数据同步等操作，可以通过该字段判断同步进度。</p>
+         * <p>The progress of data synchronization in percentage. When you are changing the configurations of the instance, you must synchronize the data of the instance. You can obtain the data synchronization progress based on the value returned for this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.8</p>
          */
         @NameInMap("SyncPercent")
         public String syncPercent;
@@ -1140,50 +1419,73 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceTags tags;
 
         /**
-         * <p>是否使用集群备份模式。取值说明：</p>
-         * <br>
-         * <p>- **true**：启用集群备份模式。</p>
-         * <p>- **false**未启用集群备份模式。</p>
+         * <p>Indicates whether the cluster backup mode is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The cluster backup mode is enabled.</li>
+         * <li><strong>false</strong>: The cluster backup mode is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("UseClusterBackup")
         public Boolean useClusterBackup;
 
         /**
          * <p>The instance ID.</p>
-         * <br>
-         * <p>> This parameter is returned if the network type of the instance is VPC.</p>
+         * <blockquote>
+         * <p> This parameter is returned if the network type of the instance is VPC.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>dds-bp11483712c1****</p>
          */
         @NameInMap("VPCCloudInstanceIds")
         public String VPCCloudInstanceIds;
 
         /**
          * <p>The VPC ID of the instance.</p>
-         * <br>
-         * <p>> This parameter is returned if the network type of the instance is VPC.</p>
+         * <blockquote>
+         * <p> This parameter is returned if the network type of the instance is VPC.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1n3i15v90el48nx****</p>
          */
         @NameInMap("VPCId")
         public String VPCId;
 
         /**
          * <p>The vSwitch ID of the instance.</p>
-         * <br>
-         * <p>> This parameter is returned if the network type of the instance is VPC.</p>
+         * <blockquote>
+         * <p> This parameter is returned if the network type of the instance is VPC.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp1oo2a7isyrb8igf****</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
         /**
-         * <p>Indicates whether password-free access over VPC is enabled. Valid values:</p>
-         * <br>
-         * <p>*   **Open**: Password-free access over VPC is enabled.</p>
-         * <p>*   **Close**: Password-free access over VPC is disabled, and you must use a password for access.</p>
-         * <p>*   **NotSupport**: Password-free access over VPC is not supported.</p>
+         * <p>Indicates whether password-free access within the VPC is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>Open</strong>: Password-free access within the VPC is enabled.</li>
+         * <li><strong>Close</strong>: Password-free access within the VPC is disabled, and you must use a password for access.</li>
+         * <li><strong>NotSupport</strong>: Password-free access within the VPC is not supported.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Open</p>
          */
         @NameInMap("VpcAuthMode")
         public String vpcAuthMode;
 
         /**
-         * <p>The zone ID of the instance.</p>
+         * <p>The ID of the zone in which the instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-b</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;

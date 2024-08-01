@@ -6,89 +6,131 @@ import com.aliyun.tea.*;
 public class CreateNodeRequest extends TeaModel {
     /**
      * <p>The username of the account. The username must meet the following requirements:</p>
-     * <br>
-     * <p>*   The username starts with a lowercase letter.</p>
-     * <p>*   The username can contain lowercase letters, digits, and underscores (\_).</p>
-     * <p>*   The username must be 4 to 16 characters in length.</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   Keywords cannot be used as accounts.</p>
-     * <br>
-     * <p>*   This account is granted the read-only permissions.</p>
-     * <p>*   The username and password need to be set if you apply for an endpoint for the shard node for the first time.</p>
+     * <ul>
+     * <li>The username starts with a lowercase letter.</li>
+     * <li>The username can contain lowercase letters, digits, and underscores (_).</li>
+     * <li>The username must be 4 to 16 characters in length.</li>
+     * </ul>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>Keywords cannot be used as accounts.</p>
+     * </li>
+     * <li><p>This account is granted the read-only permissions.</p>
+     * </li>
+     * <li><p>The username and password need to be set if you apply for an endpoint for the shard node for the first time.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ceshi</p>
      */
     @NameInMap("AccountName")
     public String accountName;
 
     /**
      * <p>The password of the account. The password must meet the following requirements:</p>
-     * <br>
-     * <p>*   The password contains at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</p>
-     * <p>*   These special characters include ! @ # $ % ^ & \* ( ) \_ + - =</p>
-     * <p>*   The password is 8 to 32 characters in length.</p>
-     * <br>
-     * <p>>  ApsaraDB for MongoDB does not allow you to reset the password of an account.</p>
+     * <ul>
+     * <li>The password contains at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</li>
+     * <li>These special characters include ! @ # $ % ^ &amp; \* ( ) _ + - =</li>
+     * <li>The password is 8 to 32 characters in length.</li>
+     * </ul>
+     * <blockquote>
+     * <p> ApsaraDB for MongoDB does not allow you to reset the password of an account.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>123+abc</p>
      */
     @NameInMap("AccountPassword")
     public String accountPassword;
 
     /**
      * <p>Specifies whether to enable automatic payment. Valid values:</p>
-     * <br>
-     * <p>*   **true** (default): enables automatic payment. Make sure that you have sufficient balance within your account.</p>
-     * <p>*   **false**: disables automatic payment. You can perform the following operations to pay for the instance: Log on to the ApsaraDB for MongoDB console. In the upper-right corner of the page, choose **Expenses** > Orders. On the **Orders** page, find the order that you want to pay for and complete the payment.</p>
-     * <br>
-     * <p>>  This parameter is required only when the billing method of the instance is subscription.</p>
+     * <ul>
+     * <li><strong>true</strong> (default): enables automatic payment. Make sure that you have sufficient balance within your account.</li>
+     * <li><strong>false</strong>: disables automatic payment. You can perform the following operations to pay for the instance: Log on to the ApsaraDB for MongoDB console. In the upper-right corner of the page, choose <strong>Expenses</strong> &gt; Orders. On the <strong>Orders</strong> page, find the order that you want to pay for and complete the payment.</li>
+     * </ul>
+     * <blockquote>
+     * <p> This parameter is required only when the billing method of the instance is subscription.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
     /**
      * <p>The business information. This is an additional parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{“ActivityId&quot;:&quot;000000000&quot;}</p>
      */
     @NameInMap("BusinessInfo")
     public String businessInfo;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the generated token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ETnLKlblzczshOTUbOCz****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The coupon code. Default value: **youhuiquan_promotion_option_id_for_blank**.</p>
+     * <p>The coupon code. Default value: <strong>youhuiquan_promotion_option_id_for_blank</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>youhuiquan_promotion_option_id_for_blank</p>
      */
     @NameInMap("CouponNo")
     public String couponNo;
 
     /**
      * <p>The ID of the sharded cluster instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dds-bp11501cd7b5****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The instance type of the shard or mongos node. For more information, see [Instance types](~~57141~~).</p>
+     * <p>The instance type of the shard or mongos node. For more information, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dds.shard.mid</p>
      */
     @NameInMap("NodeClass")
     public String nodeClass;
 
     /**
      * <p>The disk capacity of the node. Unit: GB.</p>
-     * <br>
-     * <p>Valid values: **10** to **2000**. The value must be a multiple of 10.</p>
-     * <br>
-     * <p>>  This parameter is required only when the NodeType parameter is set to **shard**.</p>
+     * <p>Valid values: <strong>10</strong> to <strong>2000</strong>. The value must be a multiple of 10.</p>
+     * <blockquote>
+     * <p> This parameter is required only when the NodeType parameter is set to <strong>shard</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("NodeStorage")
     public Integer nodeStorage;
 
     /**
      * <p>The type of the node. Valid values:</p>
-     * <br>
-     * <p>*   **shard**: shard node</p>
-     * <p>*   **mongos**: mongos node</p>
+     * <ul>
+     * <li><strong>shard</strong>: shard node</li>
+     * <li><strong>mongos</strong>: mongos node</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>shard</p>
      */
     @NameInMap("NodeType")
     public String nodeType;
@@ -101,10 +143,13 @@ public class CreateNodeRequest extends TeaModel {
 
     /**
      * <p>The number of read-only nodes in the shard node.</p>
-     * <br>
-     * <p>Valid values: **0**, 1, 2, 3, 4, and **5**. Default value: **0**.</p>
-     * <br>
-     * <p>>  This parameter is available only for ApsaraDB for MongoDB instances that are purchased on the China site (aliyun.com).</p>
+     * <p>Valid values: <strong>0</strong>, 1, 2, 3, 4, and <strong>5</strong>. Default value: <strong>0</strong>.</p>
+     * <blockquote>
+     * <p> This parameter is available only for ApsaraDB for MongoDB instances that are purchased on the China site (aliyun.com).</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("ReadonlyReplicas")
     public Integer readonlyReplicas;
@@ -117,9 +162,13 @@ public class CreateNodeRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to apply for an endpoint for the shard node. Valid values:</p>
-     * <br>
-     * <p>*   **true**: applies for an endpoint for the shard node.</p>
-     * <p>*   **false** (default): does not apply for an endpoint for the shard node.</p>
+     * <ul>
+     * <li><strong>true</strong>: applies for an endpoint for the shard node.</li>
+     * <li><strong>false</strong> (default): does not apply for an endpoint for the shard node.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("ShardDirect")
     public Boolean shardDirect;

@@ -6,30 +6,44 @@ import com.aliyun.tea.*;
 public class DescribeAvailableResourceRequest extends TeaModel {
     /**
      * <p>The instance type of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dds.mongo.standard</p>
      */
     @NameInMap("DBInstanceClass")
     public String DBInstanceClass;
 
     /**
      * <p>The architecture of the instance. Valid values:</p>
-     * <br>
-     * <p>*   **normal**: replica set instance</p>
-     * <p>*   **sharding**: sharded cluster instance</p>
+     * <ul>
+     * <li><strong>normal</strong>: replica set instance</li>
+     * <li><strong>sharding</strong>: sharded cluster instance</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>sharding</p>
      */
     @NameInMap("DbType")
     public String dbType;
 
     /**
      * <p>The major engine version of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5.0</p>
      */
     @NameInMap("EngineVersion")
     public String engineVersion;
 
     /**
      * <p>The billing method of the instance. Valid values:</p>
-     * <br>
-     * <p>*   **PrePaid** (default): subscription</p>
-     * <p>*   **PostPaid**: pay-as-you-go</p>
+     * <ul>
+     * <li><strong>PrePaid</strong> (default): subscription</li>
+     * <li><strong>PostPaid</strong>: pay-as-you-go</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>PrePaid</p>
      */
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
@@ -41,19 +55,29 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region. You can call the [DescribeRegions](~~61933~~) operation to query the latest available regions.</p>
+     * <p>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the latest available regions.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The number of nodes, only applicable to replica sets.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("ReplicationFactor")
     public String replicationFactor;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmyiu4ekp****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -66,20 +90,29 @@ public class DescribeAvailableResourceRequest extends TeaModel {
 
     /**
      * <p>The storage type of the instance. Valid values:</p>
-     * <br>
-     * <p>*   local_ssd: local SSD</p>
-     * <p>*   cloud_essd1: PL1 enhanced SSD (ESSD)</p>
-     * <p>*   cloud_essd2: PL2 ESSD</p>
-     * <p>*   cloud_essd3: PL3 ESSD</p>
-     * <p>*   cloud_auto: ESSD AutoPL disk</p>
-     * <br>
+     * <ul>
+     * <li>local_ssd: local SSD</li>
+     * <li>cloud_essd1: PL1 enhanced SSD (ESSD)</li>
+     * <li>cloud_essd2: PL2 ESSD</li>
+     * <li>cloud_essd3: PL3 ESSD</li>
+     * <li>cloud_auto: ESSD AutoPL disk</li>
+     * </ul>
      * <p>This parameter is empty by default, which indicates all types of storage resources are queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>local_ssd</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
      */
     @NameInMap("StorageType")
     public String storageType;
 
     /**
-     * <p>The ID of the zone. You can call the [DescribeRegions](~~61933~~) operation to query the available zones.</p>
+     * <p>The ID of the zone. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the available zones.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-h</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;

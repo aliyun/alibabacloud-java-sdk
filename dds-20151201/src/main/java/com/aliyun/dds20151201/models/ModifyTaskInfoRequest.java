@@ -5,13 +5,20 @@ import com.aliyun.tea.*;
 
 public class ModifyTaskInfoRequest extends TeaModel {
     /**
-     * <p>The action-related parameters. Such parameters can be added based on your business requirements. The ActionParams parameter value varies based on the taskAction parameter value.</p>
+     * <p>A action-related parameter. This parameter can be extended based on your business requirements. This parameter value varies with the value of the TaskAction parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;recoverMode\&quot;:\&quot;immediate\&quot;}</p>
      */
     @NameInMap("ActionParams")
     public String actionParams;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the region ID.</p>
+     * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the region ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -24,18 +31,30 @@ public class ModifyTaskInfoRequest extends TeaModel {
 
     /**
      * <p>The name of the step visible to the user.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>exec_task</p>
      */
     @NameInMap("StepName")
     public String stepName;
 
     /**
-     * <p>The name of the action to perform. Specify the value of this parameter as the action name corresponding to the current state of the task. The action name can be obtained from the actionInfo parameter returned by the [DescribeHistoryTasks](~~2639186~~) operation.</p>
+     * <p>The action name that corresponds to the state described in the actionInfo parameter of the <a href="https://help.aliyun.com/document_detail/2639186.html">DescribeHistoryTasks</a> operation.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>modifySwitchTime</p>
      */
     @NameInMap("TaskAction")
     public String taskAction;
 
     /**
      * <p>The task ID. Separate multiple IDs with commas (,). You can specify up to 10 task IDs.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>t-83br18hlpdrw3uxxxx</p>
      */
     @NameInMap("TaskId")
     public String taskId;

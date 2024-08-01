@@ -6,21 +6,31 @@ import com.aliyun.tea.*;
 public class CheckRecoveryConditionResponseBody extends TeaModel {
     /**
      * <p>The instance ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dds-bp1378****</p>
      */
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
     /**
      * <p>Indicates whether the data of the instance can be restored. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The data of the instance can be restored.</p>
-     * <p>*   **false**: The data of the instance cannot be restored.</p>
+     * <ul>
+     * <li><strong>true</strong>: The data of the instance can be restored.</li>
+     * <li><strong>false</strong>: The data of the instance cannot be restored.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IsValid")
     public Boolean isValid;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D563A3E7-6010-45FE-A0CD-9283414C9657</p>
      */
     @NameInMap("RequestId")
     public String requestId;

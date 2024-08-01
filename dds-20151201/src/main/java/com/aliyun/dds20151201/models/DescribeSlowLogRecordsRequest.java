@@ -6,52 +6,78 @@ import com.aliyun.tea.*;
 public class DescribeSlowLogRecordsRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
-     * <br>
-     * <p>> If you set this parameter to the ID of a sharded cluster instance, you must also specify the `NodeId` parameter.</p>
+     * <blockquote>
+     * <p>If you set this parameter to the ID of a sharded cluster instance, you must also specify the <code>NodeId</code> parameter.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dds-bp1fc7e65108****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The name of the database.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mongodbtest</p>
      */
     @NameInMap("DBName")
     public String DBName;
 
     /**
-     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   The end time must be later than the start time.</p>
-     * <br>
-     * <p>*   The end time must be within 24 hours from the start time. Otherwise, the query fails.</p>
+     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>The end time must be later than the start time.</p>
+     * </li>
+     * <li><p>The end time must be within 24 hours from the start time. Otherwise, the query fails.</p>
+     * </li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-08-16T14:13Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The logical relationship among multiple keywords.</p>
-     * <br>
-     * <p>*   **or**</p>
-     * <p>*   **and** (default value)</p>
+     * <ul>
+     * <li><strong>or</strong></li>
+     * <li><strong>and</strong> (default value)</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>and</p>
      */
     @NameInMap("LogicalOperator")
     public String logicalOperator;
 
     /**
      * <p>The ID of the shard node.</p>
-     * <br>
-     * <p>> This parameter is required only when you specify the `DBInstanceId` parameter to the ID of a sharded cluster instance.</p>
+     * <blockquote>
+     * <p>This parameter is required only when you specify the <code>DBInstanceId</code> parameter to the ID of a sharded cluster instance.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>d-bp18b06ebc21****</p>
      */
     @NameInMap("NodeId")
     public String nodeId;
 
     /**
      * <p>The order of time in which the log entries to return are sorted. Valid values:</p>
-     * <br>
-     * <p>*   asc: The log entries are sorted by time in ascending order.</p>
-     * <p>*   desc: The log entries are sorted by time in descending order.</p>
+     * <ul>
+     * <li>asc: The log entries are sorted by time in ascending order.</li>
+     * <li>desc: The log entries are sorted by time in descending order.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>asc</p>
      */
     @NameInMap("OrderType")
     public String orderType;
@@ -63,25 +89,37 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number of the page to return. The value must be a positive integer that does not exceed the maximum value of the INTEGER data type. Default value: **1**.</p>
+     * <p>The page number of the page to return. The value must be a positive integer that does not exceed the maximum value of the INTEGER data type. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: **30** to **100**.</p>
+     * <p>The number of entries to return on each page. Valid values: <strong>30</strong> to <strong>100</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The keywords used for query. You can enter up to 10 keywords at a time. If you enter multiple keywords, separate the keywords with spaces.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test test1</p>
      */
     @NameInMap("QueryKeywords")
     public String queryKeywords;
 
     /**
      * <p>The ID of the resource group to which the instances you want to query belong.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmyiu4ekp****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -93,7 +131,11 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.</p>
+     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-08-15T14:13Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;

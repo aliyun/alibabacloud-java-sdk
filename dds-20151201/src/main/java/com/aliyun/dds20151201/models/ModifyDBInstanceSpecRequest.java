@@ -6,91 +6,124 @@ import com.aliyun.tea.*;
 public class ModifyDBInstanceSpecRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable automatic payment. Valid values:</p>
-     * <br>
-     * <p>*   **true** (default): enables automatic payment. Make sure that your Alibaba Cloud account has a sufficient balance.</p>
-     * <p>*   **false**: disables automatic payment. You can perform the following operations to pay for the instance: Log on to the ApsaraDB for MongoDB console. In the upper-right corner of the page, choose **Expenses** > **User Center**. In the left-side navigation pane, choose **Order Management** > **Order**. On the **Orders for Services** tab, find the order and pay for the order.</p>
+     * <ul>
+     * <li><strong>true</strong> (default): enables automatic payment. Make sure that your Alibaba Cloud account has a sufficient balance.</li>
+     * <li><strong>false</strong>: disables automatic payment. You can perform the following operations to pay for the instance: Log on to the ApsaraDB for MongoDB console. In the upper-right corner of the page, choose <strong>Expenses</strong> &gt; <strong>User Center</strong>. In the left-side navigation pane, choose <strong>Order Management</strong> &gt; <strong>Order</strong>. On the <strong>Orders for Services</strong> tab, find the order and pay for the order.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
     /**
      * <p>The business information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{“ActivityId&quot;:&quot;000000000&quot;}</p>
      */
     @NameInMap("BusinessInfo")
     public String businessInfo;
 
     /**
-     * <p>The coupon code. Default value: `youhuiquan_promotion_option_id_for_blank`.</p>
+     * <p>The coupon code. Default value: <code>youhuiquan_promotion_option_id_for_blank</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>youhuiquan_promotion_option_id_for_blank</p>
      */
     @NameInMap("CouponNo")
     public String couponNo;
 
     /**
-     * <p>The instance type. For more information, see [Instance types](~~57141~~). You can also call the [DescribeAvailableResource](~~149719~~) operation to view instance types.</p>
-     * <br>
-     * <p>> You must specify at least one of the DBInstanceClass and **DBInstanceStorage** parameters.</p>
+     * <p>The instance type. For more information, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>. You can also call the <a href="https://help.aliyun.com/document_detail/149719.html">DescribeAvailableResource</a> operation to view instance types.</p>
+     * <blockquote>
+     * <p>You must specify at least one of the DBInstanceClass and <strong>DBInstanceStorage</strong> parameters.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>dds.sn4.xlarge.1</p>
      */
     @NameInMap("DBInstanceClass")
     public String DBInstanceClass;
 
     /**
      * <p>The ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dds-bp1ea17b41ab****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The storage capacity of the instance. Valid values: 10 to 3000. The value must be a multiple of 10. Unit: GB. The values that can be specified for this parameter are subject to the instance types. For more information, see [Instance types](~~57141~~).</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   You must specify at least one of the DBInstanceStorage and **DBInstanceClass** parameters.</p>
-     * <br>
-     * <p>*   Storage capacity can be scaled down only for pay-as-you-go replica set instances. The new storage capacity you specify must be greater than the used storage capacity.</p>
+     * <p>The storage capacity of the instance. Valid values: 10 to 3000. The value must be a multiple of 10. Unit: GB. The values that can be specified for this parameter are subject to the instance types. For more information, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>.</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>You must specify at least one of the DBInstanceStorage and <strong>DBInstanceClass</strong> parameters.</p>
+     * </li>
+     * <li><p>Storage capacity can be scaled down only for pay-as-you-go replica set instances. The new storage capacity you specify must be greater than the used storage capacity.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("DBInstanceStorage")
     public String DBInstanceStorage;
 
     /**
      * <p>The time when the changed configurations take effect. Valid values:</p>
-     * <br>
-     * <p>*   **Immediately** (default): The configurations immediately take effect.</p>
-     * <p>*   **MaintainTime**: The configurations take effect during the maintenance window of the instance.</p>
+     * <ul>
+     * <li><strong>Immediately</strong> (default): The configurations immediately take effect.</li>
+     * <li><strong>MaintainTime</strong>: The configurations take effect during the maintenance window of the instance.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Immediately</p>
      */
     @NameInMap("EffectiveTime")
     public String effectiveTime;
 
     /**
      * <p>The additional parameter.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   async</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   sync</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
+     * <ul>
+     * <li><p>async</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- -->
+     * </li>
+     * <li><p>sync</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- --></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>async</p>
      */
     @NameInMap("ExtraParam")
     public String extraParam;
 
     /**
      * <p>The type of the configuration change. Valid values:</p>
-     * <br>
-     * <p>*   **UPGRADE**</p>
-     * <p>*   **DOWNGRADE** (default)</p>
-     * <br>
-     * <p>>  This parameter can be configured only when the billing method of the instance is subscription.</p>
+     * <ul>
+     * <li><strong>UPGRADE</strong></li>
+     * <li><strong>DOWNGRADE</strong> (default)</li>
+     * </ul>
+     * <blockquote>
+     * <p> This parameter can be configured only when the billing method of the instance is subscription.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>UPGRADE</p>
      */
     @NameInMap("OrderType")
     public String orderType;
@@ -102,22 +135,30 @@ public class ModifyDBInstanceSpecRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of read-only nodes. Valid values: **0** to **5**.</p>
-     * <br>
-     * <p>If your instance has only **Classic Network** and **VPC** endpoints, you must apply for a public endpoint or release the classic network endpoint for the instance before you can change the **Read-only Nodes** value.</p>
-     * <br>
-     * <p>> You can go to the **Database Connections** page to view the types of networks that are enabled.</p>
+     * <p>The number of read-only nodes. Valid values: <strong>0</strong> to <strong>5</strong>.</p>
+     * <p>If your instance has only <strong>Classic Network</strong> and <strong>VPC</strong> endpoints, you must apply for a public endpoint or release the classic network endpoint for the instance before you can change the <strong>Read-only Nodes</strong> value.</p>
+     * <blockquote>
+     * <p>You can go to the <strong>Database Connections</strong> page to view the types of networks that are enabled.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("ReadonlyReplicas")
     public String readonlyReplicas;
 
     /**
      * <p>The number of nodes in the instance.</p>
-     * <br>
-     * <p>*   Valid values for replica set instances: **3**, **5**, and **7**</p>
-     * <p>*   Valid values for standalone instances: **1**</p>
-     * <br>
-     * <p>>  This parameter is not required for a serverless instance which is only available on the China site (aliyun.com).</p>
+     * <ul>
+     * <li>Valid values for replica set instances: <strong>3</strong>, <strong>5</strong>, and <strong>7</strong></li>
+     * <li>Valid values for standalone instances: <strong>1</strong></li>
+     * </ul>
+     * <blockquote>
+     * <p> This parameter is not required for a serverless instance which is only available on the China site (aliyun.com).</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("ReplicationFactor")
     public String replicationFactor;

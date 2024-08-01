@@ -5,35 +5,48 @@ import com.aliyun.tea.*;
 
 public class DescribeBackupsResponseBody extends TeaModel {
     /**
-     * <p>The details of the backup sets.</p>
+     * <p>The details of the backup set.</p>
      */
     @NameInMap("Backups")
     public DescribeBackupsResponseBodyBackups backups;
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page. Valid values:</p>
-     * <br>
-     * <p>*   **30** (default)</p>
-     * <p>*   **50**</p>
-     * <p>*   **100**</p>
+     * <ul>
+     * <li><strong>30</strong> (default)</li>
+     * <li><strong>50</strong></li>
+     * <li><strong>100</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>275D43C3-F12F-5224-B375-0C6BF453BD56</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of backup sets.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -86,87 +99,134 @@ public class DescribeBackupsResponseBody extends TeaModel {
     public static class DescribeBackupsResponseBodyBackupsBackup extends TeaModel {
         /**
          * <p>The name of the database that has been backed up.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>database</p>
          */
         @NameInMap("BackupDBNames")
         public String backupDBNames;
 
         /**
-         * <p>The Internet download URL of the backup set. If the download URL is unavailable, this parameter is an empty string.</p>
+         * <p>The URL that is used to download the backup set over the Internet. If the backup set cannot be downloaded, an empty string is returned.</p>
          */
         @NameInMap("BackupDownloadURL")
         public String backupDownloadURL;
 
         /**
-         * <p>The end of the backup time range. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The end time of the backup. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-01-14T03:57:34Z</p>
          */
         @NameInMap("BackupEndTime")
         public String backupEndTime;
 
         /**
          * <p>The ID of the backup set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32102****</p>
          */
         @NameInMap("BackupId")
         public String backupId;
 
         /**
          * <p>The internal download URL of the backup set.</p>
-         * <br>
-         * <p>> You can use this URL to download the backup set from on the Elastic Compute Service (ECS) instance which is on the same network as the ApsaraDB for MongoDB instance.</p>
+         * <blockquote>
+         * <p> You can use the URL to download the specified backup set on an Elastic Compute Service (ECS) instance that is in the same Virtual Private Cloud (VPC) as the ApsaraDB for MongoDB instance.</p>
+         * </blockquote>
          */
         @NameInMap("BackupIntranetDownloadURL")
         public String backupIntranetDownloadURL;
 
+        /**
+         * <p>The ID of the backup task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1123xxxx</p>
+         */
         @NameInMap("BackupJobId")
         public String backupJobId;
 
         /**
          * <p>The method that is used to generate the backup set. Valid values:</p>
-         * <br>
-         * <p>*   **Snapshot**</p>
-         * <p>*   **Physical**</p>
-         * <p>*   **Logical**</p>
+         * <ul>
+         * <li><strong>Snapshot</strong></li>
+         * <li><strong>Physical</strong></li>
+         * <li><strong>Logical</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Physical</p>
          */
         @NameInMap("BackupMethod")
         public String backupMethod;
 
         /**
          * <p>The backup mode of the backup set. Valid values:</p>
-         * <br>
-         * <p>*   **Automated**:</p>
-         * <p>*   **Manual**</p>
+         * <ul>
+         * <li><strong>Automated</strong>:</li>
+         * <li><strong>Manual</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Automated</p>
          */
         @NameInMap("BackupMode")
         public String backupMode;
 
+        @NameInMap("BackupName")
+        public String backupName;
+
+        @NameInMap("BackupScale")
+        public String backupScale;
+
         /**
          * <p>The size of the backup set. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6168576</p>
          */
         @NameInMap("BackupSize")
         public Long backupSize;
 
         /**
-         * <p>The beginning of the backup time range. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The start time of the backup. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-01-14T03:56:17Z</p>
          */
         @NameInMap("BackupStartTime")
         public String backupStartTime;
 
         /**
          * <p>The status of the backup task. Valid values:</p>
-         * <br>
-         * <p>*   **Success**</p>
-         * <p>*   **Failed**</p>
+         * <ul>
+         * <li><strong>Success</strong>: The backup task is successful.</li>
+         * <li><strong>Failed</strong>: The backup task failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         @NameInMap("BackupStatus")
         public String backupStatus;
 
         /**
          * <p>The backup type. Valid values:</p>
-         * <br>
-         * <p>*   **FullBackup**</p>
-         * <p>*   **IncrementalBackup**</p>
+         * <ul>
+         * <li><strong>FullBackup</strong></li>
+         * <li><strong>IncrementalBackup</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>FullBackup</p>
          */
         @NameInMap("BackupType")
         public String backupType;
+
+        @NameInMap("IsAvail")
+        public Boolean isAvail;
 
         public static DescribeBackupsResponseBodyBackupsBackup build(java.util.Map<String, ?> map) throws Exception {
             DescribeBackupsResponseBodyBackupsBackup self = new DescribeBackupsResponseBodyBackupsBackup();
@@ -237,6 +297,22 @@ public class DescribeBackupsResponseBody extends TeaModel {
             return this.backupMode;
         }
 
+        public DescribeBackupsResponseBodyBackupsBackup setBackupName(String backupName) {
+            this.backupName = backupName;
+            return this;
+        }
+        public String getBackupName() {
+            return this.backupName;
+        }
+
+        public DescribeBackupsResponseBodyBackupsBackup setBackupScale(String backupScale) {
+            this.backupScale = backupScale;
+            return this;
+        }
+        public String getBackupScale() {
+            return this.backupScale;
+        }
+
         public DescribeBackupsResponseBodyBackupsBackup setBackupSize(Long backupSize) {
             this.backupSize = backupSize;
             return this;
@@ -267,6 +343,14 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
         public String getBackupType() {
             return this.backupType;
+        }
+
+        public DescribeBackupsResponseBodyBackupsBackup setIsAvail(Boolean isAvail) {
+            this.isAvail = isAvail;
+            return this;
+        }
+        public Boolean getIsAvail() {
+            return this.isAvail;
         }
 
     }

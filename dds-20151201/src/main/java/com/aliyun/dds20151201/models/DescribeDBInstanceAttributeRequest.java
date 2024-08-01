@@ -6,16 +6,33 @@ import com.aliyun.tea.*;
 public class DescribeDBInstanceAttributeRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dds-bp11483712c1****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The database engine of the instance. Set the value to **MongoDB**.</p>
+     * <p>The database engine of the instance. Set the value to <strong>MongoDB</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MongoDB</p>
      */
     @NameInMap("Engine")
     public String engine;
 
+    /**
+     * <p>Specifies whether to delete the instance. Valid values:</p>
+     * <ul>
+     * <li><strong>false</strong>: queries the details of running instances.</li>
+     * <li><strong>true</strong>: queries the details of deleted instances.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("IsDelete")
     public Boolean isDelete;
 
@@ -26,9 +43,13 @@ public class DescribeDBInstanceAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the resource group. For more information, see [View the basic information of a resource group](~~151181~~).</p>
-     * <br>
-     * <p>> This parameter is available only if you use the China site (aliyun.com).</p>
+     * <p>The ID of the resource group. For more information, see <a href="https://help.aliyun.com/document_detail/151181.html">View the basic information of a resource group</a>.</p>
+     * <blockquote>
+     * <p>This parameter is available only if you use the China site (aliyun.com).</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmyiu4ekp****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

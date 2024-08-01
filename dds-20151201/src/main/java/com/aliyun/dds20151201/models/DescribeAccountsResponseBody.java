@@ -12,6 +12,9 @@ public class DescribeAccountsResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B562A65B-39AB-4EE8-8635-5A222054FB35</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,39 +43,56 @@ public class DescribeAccountsResponseBody extends TeaModel {
     public static class DescribeAccountsResponseBodyAccountsAccount extends TeaModel {
         /**
          * <p>The description of the account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Admin</p>
          */
         @NameInMap("AccountDescription")
         public String accountDescription;
 
         /**
          * <p>The name of the account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>root</p>
          */
         @NameInMap("AccountName")
         public String accountName;
 
         /**
          * <p>The status of the account. Valid values:</p>
-         * <br>
-         * <p>*   **Unavailable**</p>
-         * <p>*   **Available**</p>
+         * <ul>
+         * <li><strong>Unavailable</strong></li>
+         * <li><strong>Available</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
          */
         @NameInMap("AccountStatus")
         public String accountStatus;
 
         /**
          * <p>The role of the account. Valid values:</p>
-         * <br>
-         * <p>*   **db**: shard node</p>
-         * <p>*   **cs**: Configserver node</p>
-         * <p>*   **mongos**: mongos node</p>
-         * <p>*   **logic**: sharded cluster instance</p>
-         * <p>*   **normal**: replica set instance</p>
+         * <ul>
+         * <li><strong>db</strong>: shard node</li>
+         * <li><strong>cs</strong>: Configserver node</li>
+         * <li><strong>mongos</strong>: mongos node</li>
+         * <li><strong>logic</strong>: sharded cluster instance</li>
+         * <li><strong>normal</strong>: replica set instance</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>mongos</p>
          */
         @NameInMap("CharacterType")
         public String characterType;
 
         /**
          * <p>The ID of the instance to which the account belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds-bp1fd530f271****</p>
          */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;

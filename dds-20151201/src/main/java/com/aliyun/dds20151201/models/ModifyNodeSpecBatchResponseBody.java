@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ModifyNodeSpecBatchResponseBody extends TeaModel {
     /**
      * <p>The order ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>21012719476****</p>
      */
     @NameInMap("OrderId")
     public String orderId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0637BC25-6895-5500-871F-1127CA34****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

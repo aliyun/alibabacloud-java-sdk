@@ -6,26 +6,39 @@ import com.aliyun.tea.*;
 public class ModifyParametersRequest extends TeaModel {
     /**
      * <p>The role of the instance. Valid values:</p>
-     * <br>
-     * <p>*   **db**: a shard node.</p>
-     * <p>*   **cs**: a Configserver node.</p>
-     * <p>*   **mongos**: a mongos node.</p>
+     * <ul>
+     * <li><strong>db</strong>: a shard node.</li>
+     * <li><strong>cs</strong>: a Configserver node.</li>
+     * <li><strong>mongos</strong>: a mongos node.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>db</p>
      */
     @NameInMap("CharacterType")
     public String characterType;
 
     /**
      * <p>The instance ID.</p>
-     * <br>
-     * <p>>  If you set this parameter to the ID of a sharded cluster instance, you must also specify the NodeId parameter.</p>
+     * <blockquote>
+     * <p> If you set this parameter to the ID of a sharded cluster instance, you must also specify the NodeId parameter.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dds-bp19f409d75****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The ID of the mongos or shard node in the specified sharded cluster instance.</p>
-     * <br>
-     * <p>>  This parameter is valid only when DBInstanceId is set to the ID of a sharded cluster instance.</p>
+     * <blockquote>
+     * <p> This parameter is valid only when DBInstanceId is set to the ID of a sharded cluster instance.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>d-bp1b7bb3bbe****</p>
      */
     @NameInMap("NodeId")
     public String nodeId;
@@ -37,15 +50,23 @@ public class ModifyParametersRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The instance parameters that you want to modify and their values. Specify this parameter in a JSON string. Sample format: {"ParameterName1":"ParameterValue1","ParameterName2":"ParameterValue2"}.</p>
-     * <br>
-     * <p>>  You can call the [DescribeParameterTemplates](~~67618~~) operation to query a list of default parameter templates.</p>
+     * <p>The instance parameters that you want to modify and their values. Specify this parameter in a JSON string. Sample format: {&quot;ParameterName1&quot;:&quot;ParameterValue1&quot;,&quot;ParameterName2&quot;:&quot;ParameterValue2&quot;}.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/67618.html">DescribeParameterTemplates</a> operation to query a list of default parameter templates.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;operationProfiling.mode&quot;:&quot;all&quot;,&quot;operationProfiling.slowOpThresholdMs&quot;:&quot;200&quot;}</p>
      */
     @NameInMap("Parameters")
     public String parameters;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

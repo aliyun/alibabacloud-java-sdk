@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeDBInstanceSwitchLogResponseBody extends TeaModel {
     /**
      * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dds-uf68f1b5a57exxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -18,24 +21,36 @@ public class DescribeDBInstanceSwitchLogResponseBody extends TeaModel {
 
     /**
      * <p>The page number returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
      * <p>The number of entries returned on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ECBCA991-XXXX-XXXX-834C-B3E8007F33AA</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The number of primary/secondary switching entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -96,31 +111,44 @@ public class DescribeDBInstanceSwitchLogResponseBody extends TeaModel {
     public static class DescribeDBInstanceSwitchLogResponseBodyLogItems extends TeaModel {
         /**
          * <p>The ID of the replica set instance or the ID of the node on which a primary/secondary switchover is performed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds-uf68f1b5a57exxxx</p>
          */
         @NameInMap("NodeId")
         public String nodeId;
 
         /**
          * <p>The code that indicates the reason of a primary/secondary switchover. Valid values:</p>
-         * <br>
-         * <p>*   USER_CONSOLE_OPERATION: The switchover is manually performed.</p>
-         * <p>*   OPERATION_AND_MAINTENANCE: Potential risks exist.</p>
-         * <p>*   MACHINE_DOWNTIME: The host is offline.</p>
-         * <p>*   PRIMARY_UNHEALTHY: An exception occurs on the primary node of the instance.</p>
-         * <p>*   SECONDARY_UNHEALTHY: An exception occurs on the secondary node of the instance.</p>
-         * <p>*   MULTIPLE_NODE_FAILURES: An exception occurs on multiple nodes of the instance.</p>
+         * <ul>
+         * <li>USER_CONSOLE_OPERATION: The switchover is manually performed.</li>
+         * <li>OPERATION_AND_MAINTENANCE: Potential risks exist.</li>
+         * <li>MACHINE_DOWNTIME: The host is offline.</li>
+         * <li>PRIMARY_UNHEALTHY: An exception occurs on the primary node of the instance.</li>
+         * <li>SECONDARY_UNHEALTHY: An exception occurs on the secondary node of the instance.</li>
+         * <li>MULTIPLE_NODE_FAILURES: An exception occurs on multiple nodes of the instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>USER_CONSOLE_OPERATION</p>
          */
         @NameInMap("SwitchCode")
         public String switchCode;
 
         /**
-         * <p>The switchover status. Valid values: **1** and **0**. The value 1 indicates a successful primary/secondary switchover and the value 0 indicates a failed primary/secondary switchover.</p>
+         * <p>The switchover status. Valid values: <strong>1</strong> and <strong>0</strong>. The value 1 indicates a successful primary/secondary switchover and the value 0 indicates a failed primary/secondary switchover.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("SwitchStatus")
         public String switchStatus;
 
         /**
-         * <p>The point in time when a primary/secondary switchover was performed. The time follows the ISO 8601 standard in the *yyyy-mm-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The point in time when a primary/secondary switchover was performed. The time follows the ISO 8601 standard in the <em>yyyy-mm-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-02-07T18:00:00Z</p>
          */
         @NameInMap("SwitchTime")
         public String switchTime;

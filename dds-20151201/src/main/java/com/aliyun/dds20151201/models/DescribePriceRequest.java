@@ -6,53 +6,80 @@ import com.aliyun.tea.*;
 public class DescribePriceRequest extends TeaModel {
     /**
      * <p>The business information. This is an additional parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;AccountPassword&quot;:&quot;Pw123456&quot;,&quot;DBInstanceDescription&quot;:&quot;test&quot;}</p>
      */
     @NameInMap("BusinessInfo")
     public String businessInfo;
 
     /**
      * <p>The code of the instance. Valid values:</p>
-     * <br>
-     * <p>*   **dds**: a replica set instance that uses the pay-as-you-go billing method</p>
-     * <p>*   **badds**: a replica set instance that uses the subscription billing method</p>
-     * <p>*   **dds_sharding**: a sharded cluster instance that uses the pay-as-you-go billing method</p>
-     * <p>*   **badds_sharding**: a sharded cluster instance that uses the subscription billing method</p>
-     * <p>*   **badds_sharding_intl**: a sharded cluster instance that uses the subscription billing method and is available on the International site (alibabacloud.com)</p>
-     * <p>*   **dds_sharding_intl**: a sharded cluster instance that uses the pay-as-you-go billing method and is available on the International site (alibabacloud.com)</p>
-     * <p>*   **badds_sharding_jp**: a sharded cluster instance that uses the subscription billing method and is available on the Japan site (jp.alibabacloud.com)</p>
-     * <p>*   **badds_intl**: a replica set instance that uses the subscription billing method and is available on the International site (alibabacloud.com)</p>
-     * <p>*   **dds_intl**: a replica set instance that uses the pay-as-you-go billing method and is available on the International site (alibabacloud.com)</p>
+     * <ul>
+     * <li><strong>dds</strong>: a replica set instance that uses the pay-as-you-go billing method</li>
+     * <li><strong>badds</strong>: a replica set instance that uses the subscription billing method</li>
+     * <li><strong>dds_sharding</strong>: a sharded cluster instance that uses the pay-as-you-go billing method</li>
+     * <li><strong>badds_sharding</strong>: a sharded cluster instance that uses the subscription billing method</li>
+     * <li><strong>badds_sharding_intl</strong>: a sharded cluster instance that uses the subscription billing method and is available on the International site (alibabacloud.com)</li>
+     * <li><strong>dds_sharding_intl</strong>: a sharded cluster instance that uses the pay-as-you-go billing method and is available on the International site (alibabacloud.com)</li>
+     * <li><strong>badds_sharding_jp</strong>: a sharded cluster instance that uses the subscription billing method and is available on the Japan site (jp.alibabacloud.com)</li>
+     * <li><strong>badds_intl</strong>: a replica set instance that uses the subscription billing method and is available on the International site (alibabacloud.com)</li>
+     * <li><strong>dds_intl</strong>: a replica set instance that uses the pay-as-you-go billing method and is available on the International site (alibabacloud.com)</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>badds</p>
      */
     @NameInMap("CommodityCode")
     public String commodityCode;
 
     /**
-     * <p>The coupon code. Default value: **youhuiquan_promotion_option_id_for_blank**.</p>
+     * <p>Specifies whether to use coupons. Default value: null. Valid values:</p>
+     * <ul>
+     * <li><strong>default</strong> or <strong>null</strong>: uses coupons.</li>
+     * <li><strong>youhuiquan_promotion_option_id_for_blank</strong>: does not use coupons.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>youhuiquan_promotion_option_id_for_blank</p>
      */
     @NameInMap("CouponNo")
     public String couponNo;
 
     /**
-     * <p>A JSON string that contains the details of the ApsaraDB for MongoDB instance. For more information, see the [DBInstances](~~197291~~) parameter in the DescribePrice operation.</p>
+     * <p>A JSON string that contains the details of the instance. For more information about the parameter and sample JSON formats, see <a href="https://help.aliyun.com/document_detail/197291.html">DescribePrice</a>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[ { &quot;DBInstanceId&quot;:&quot;dds-bp1b6e54e7cc****&quot;, &quot;RegionId&quot;:&quot;cn-hangzhou&quot;, &quot;ZoneId&quot;:&quot;cn-hangzhou-h&quot;, &quot;Engine&quot;:&quot;MongoDB&quot;, &quot;EngineVersion&quot;:&quot; 5.0&quot;, &quot;DBInstanceClass&quot;:&quot;mdb.shard.2x.xlarge.d&quot;, &quot;DBInstanceStorage&quot;:30, &quot;ChargeType&quot;:&quot;PrePaid&quot;, &quot;Period&quot;:1, &quot;StorageType&quot;:&quot;cloud_essd1&quot; } ]</p>
      */
     @NameInMap("DBInstances")
     public String DBInstances;
 
     /**
      * <p>Specifies whether to return the OrderParams parameter. Valid values:</p>
-     * <br>
-     * <p>*   **false** (default)</p>
-     * <p>*   **true**</p>
+     * <ul>
+     * <li><strong>false</strong> (default)</li>
+     * <li><strong>true</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("OrderParamOut")
     public String orderParamOut;
 
     /**
      * <p>The order type. Valid values:</p>
-     * <br>
-     * <p>*   **BUY**</p>
-     * <p>*   **UPGRADE**</p>
-     * <p>*   **RENEW**</p>
+     * <ul>
+     * <li><strong>BUY</strong></li>
+     * <li><strong>UPGRADE</strong></li>
+     * <li><strong>RENEW</strong></li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BUY</p>
      */
     @NameInMap("OrderType")
     public String orderType;
@@ -64,19 +91,28 @@ public class DescribePriceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The code of the service. Default value: **dds**.</p>
+     * <p>The code of the service. Default value: <strong>dds</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dds</p>
      */
     @NameInMap("ProductCode")
     public String productCode;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the resource group. For more information, see [View basic information of a resource group](~~151181~~).</p>
+     * <p>The ID of the resource group. For more information, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmyiu4ekp****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

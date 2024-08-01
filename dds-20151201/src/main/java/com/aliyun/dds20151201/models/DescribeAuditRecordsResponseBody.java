@@ -12,24 +12,36 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The maximum number of entries on the current page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3278BEB8-503B-4E46-8F7E-D26E040C9769</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of returned entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>40</p>
      */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
@@ -82,54 +94,81 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
     public static class DescribeAuditRecordsResponseBodyItemsSQLRecord extends TeaModel {
         /**
          * <p>The account of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("AccountName")
         public String accountName;
 
         /**
          * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test123</p>
          */
         @NameInMap("DBName")
         public String DBName;
 
         /**
-         * <p>The time when the statement was executed. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the statement was executed. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-03-11T03:30:27Z</p>
          */
         @NameInMap("ExecuteTime")
         public String executeTime;
 
         /**
          * <p>The IP addresses of the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11.xxx.xxx.xxx</p>
          */
         @NameInMap("HostAddress")
         public String hostAddress;
 
         /**
          * <p>The number of SQL audit log entries that are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("ReturnRowCounts")
         public Long returnRowCounts;
 
         /**
          * <p>The statement that was executed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{ \&quot;atype\&quot; : \&quot;createCollection\&quot;, \&quot;param\&quot; : { \&quot;ns\&quot; : \&quot;123.test1\&quot; }, \&quot;result\&quot;: \&quot;OK\&quot; }</p>
          */
         @NameInMap("Syntax")
         public String syntax;
 
         /**
          * <p>The name of the collection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C1</p>
          */
         @NameInMap("TableName")
         public String tableName;
 
         /**
          * <p>The ID of the thread.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>140682188297984</p>
          */
         @NameInMap("ThreadID")
         public String threadID;
 
         /**
          * <p>The duration of the statement execution. Unit: microseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>700</p>
          */
         @NameInMap("TotalExecutionTimes")
         public Long totalExecutionTimes;

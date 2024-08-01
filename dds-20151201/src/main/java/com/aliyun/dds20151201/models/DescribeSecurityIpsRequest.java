@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class DescribeSecurityIpsRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dds-bpxxxxxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -24,6 +28,9 @@ public class DescribeSecurityIpsRequest extends TeaModel {
 
     /**
      * <p>Whether to display DAS whitelist information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("ShowHDMIps")
     public Boolean showHDMIps;

@@ -6,30 +6,57 @@ import com.aliyun.tea.*;
 public class DescribeDBInstancePerformanceRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
-     * <br>
-     * <p>>  If you set this parameter to the ID of a sharded cluster instance, you must also specify the **NodeId** parameter.</p>
+     * <blockquote>
+     * <p> If you set this parameter to the ID of a sharded cluster instance, you must also specify the <strong>NodeId</strong> parameter.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dds-bp2635****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC. The end time must be later than the start time.</p>
+     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC. The end time must be later than the start time.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-06-13T11:58Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The performance metric. For more information about valid values, see [Performance metrics](~~64048~~).</p>
-     * <br>
-     * <p>>  If you need to specify multiple metrics, separate the metrics with commas (,).</p>
+     * <p>The interval at which performance data is collected. Valid values: 5, 30, 60, 600, 1800, 3600, 86400.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60</p>
+     */
+    @NameInMap("Interval")
+    public String interval;
+
+    /**
+     * <p>The performance metric. For more information about valid values, see <a href="https://help.aliyun.com/document_detail/216973.html">Monitoring items and metrics</a>.</p>
+     * <blockquote>
+     * <p> If you need to specify multiple metrics, separate the metrics with commas (,).</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CpuUsage</p>
      */
     @NameInMap("Key")
     public String key;
 
     /**
      * <p>The ID of the mongos or shard node in a sharded cluster instance. You can specify this parameter to view the performance data of a single node.</p>
-     * <br>
-     * <p>>  This parameter is valid when you set the **DBInstanceId** parameter to the ID of a sharded cluster instance.</p>
+     * <blockquote>
+     * <p> This parameter is valid when you set the <strong>DBInstanceId</strong> parameter to the ID of a sharded cluster instance.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>d-bp2287****</p>
      */
     @NameInMap("NodeId")
     public String nodeId;
@@ -41,16 +68,20 @@ public class DescribeDBInstancePerformanceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The role of the node in a standalone or replica set instance. Valid values:</p>
-     * <br>
-     * <p>*   **Primary**</p>
-     * <p>*   **Secondary**</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   This parameter is valid only when you set the **DBInstanceId** parameter to the ID of a standalone instance or a replica set instance.</p>
-     * <br>
-     * <p>*   If you set the **DBInstanceId** parameter to the ID of a standalone instance, the value of this parameter can only be **Primary**.</p>
+     * <p>The role of the node in the standalone or replica set instance. Valid values:</p>
+     * <ul>
+     * <li><strong>Primary</strong></li>
+     * <li><strong>Secondary</strong></li>
+     * </ul>
+     * <blockquote>
+     * <ul>
+     * <li>This parameter is valid only when you specify the <strong>DBInstanceId</strong> parameter to the ID of a standalone instance or a replica set instance.</li>
+     * <li>This parameter can be set only to <strong>Primary</strong> when you specify the <strong>DBInstanceId</strong> parameter to the ID of a standalone instance.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Primary</p>
      */
     @NameInMap("ReplicaSetRole")
     public String replicaSetRole;
@@ -62,15 +93,23 @@ public class DescribeDBInstancePerformanceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The role ID of the node in a standalone or replica set instance. You can call the [DescribeReplicaSetRole](~~62134~~) operation to query the role ID of the node.</p>
-     * <br>
-     * <p>>  This parameter is available when you set the **DBInstanceId** parameter to the ID of a standalone instance or a replica set instance.</p>
+     * <p>The role ID of the node in a standalone or replica set instance. You can call the <a href="https://help.aliyun.com/document_detail/62134.html">DescribeReplicaSetRole</a> operation to query the role ID of the node.</p>
+     * <blockquote>
+     * <p> This parameter is available when you set the <strong>DBInstanceId</strong> parameter to the ID of a standalone instance or a replica set instance.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>6025****</p>
      */
     @NameInMap("RoleId")
     public String roleId;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.</p>
+     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-06-13T10:58Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -94,6 +133,14 @@ public class DescribeDBInstancePerformanceRequest extends TeaModel {
     }
     public String getEndTime() {
         return this.endTime;
+    }
+
+    public DescribeDBInstancePerformanceRequest setInterval(String interval) {
+        this.interval = interval;
+        return this;
+    }
+    public String getInterval() {
+        return this.interval;
     }
 
     public DescribeDBInstancePerformanceRequest setKey(String key) {

@@ -6,17 +6,23 @@ import com.aliyun.tea.*;
 public class DescribeAuditPolicyResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the log audit feature is enabled. Valid values:</p>
-     * <br>
-     * <p>*   Enable</p>
-     * <p>*   Disabled</p>
-     * <br>
+     * <ul>
+     * <li>Enable</li>
+     * <li>Disabled</li>
+     * </ul>
      * <p>Default value: Disabled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Enable</p>
      */
     @NameInMap("LogAuditStatus")
     public String logAuditStatus;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>111E7B16-0A87-4CBA-B271-F34AD61E099F</p>
      */
     @NameInMap("RequestId")
     public String requestId;

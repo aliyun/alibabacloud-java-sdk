@@ -12,6 +12,9 @@ public class CreateGlobalSecurityIPGroupResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F8CA8312-530A-413A-9129-F2BB32A8D404</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,30 +43,44 @@ public class CreateGlobalSecurityIPGroupResponseBody extends TeaModel {
     public static class CreateGlobalSecurityIPGroupResponseBodyGlobalSecurityIPGroup extends TeaModel {
         /**
          * <p>The IP addresses in the whitelist template.</p>
-         * <br>
-         * <p>> Separate multiple IP addresses with commas (,). You can create up to 1,000 IP addresses or CIDR blocks for all IP address whitelists.</p>
+         * <blockquote>
+         * <p>Separate multiple IP addresses with commas (,). You can create up to 1,000 IP addresses or CIDR blocks for all IP address whitelists.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>111.207.194.217,61.149.7.154</p>
          */
         @NameInMap("GIpList")
         public String GIpList;
 
         /**
          * <p>The name of the IP whitelist template. The name must meet the following requirements:</p>
-         * <br>
-         * <p>*   It can contain lowercase letters, digits, and underscores (\_).</p>
-         * <p>*   It must start with a letter and end with a letter or digit.</p>
-         * <p>*   It must be 2 to 120 characters in length.</p>
+         * <ul>
+         * <li>It can contain lowercase letters, digits, and underscores (_).</li>
+         * <li>It must start with a letter and end with a letter or digit.</li>
+         * <li>It must be 2 to 120 characters in length.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>developer</p>
          */
         @NameInMap("GlobalIgName")
         public String globalIgName;
 
         /**
          * <p>The ID of the IP whitelist template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>g-2ifynl1jfkdlhhxgva3q</p>
          */
         @NameInMap("GlobalSecurityGroupId")
         public String globalSecurityGroupId;
 
         /**
          * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;

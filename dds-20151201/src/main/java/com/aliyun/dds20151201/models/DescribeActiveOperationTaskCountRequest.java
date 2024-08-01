@@ -12,6 +12,9 @@ public class DescribeActiveOperationTaskCountRequest extends TeaModel {
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sg-bp5689ac****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

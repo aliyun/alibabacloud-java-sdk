@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeSecurityIpsResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FC724D23-2962-479E-ABB1-606C935AE7FD</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -18,6 +21,9 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
 
     /**
      * <p>The IP addresses in the default whitelist.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>47.xxx.xxx.xx,100.xxx.xxx.0/24</p>
      */
     @NameInMap("SecurityIps")
     public String securityIps;
@@ -54,18 +60,27 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
     public static class DescribeSecurityIpsResponseBodySecurityIpGroupsSecurityIpGroup extends TeaModel {
         /**
          * <p>The attribute of the IP address whitelist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hidden</p>
          */
         @NameInMap("SecurityIpGroupAttribute")
         public String securityIpGroupAttribute;
 
         /**
          * <p>The name of the IP whitelist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("SecurityIpGroupName")
         public String securityIpGroupName;
 
         /**
          * <p>The name of the IP whitelist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47.xxx.xxx.xx,100.xxx.xxx.0/24</p>
          */
         @NameInMap("SecurityIpList")
         public String securityIpList;

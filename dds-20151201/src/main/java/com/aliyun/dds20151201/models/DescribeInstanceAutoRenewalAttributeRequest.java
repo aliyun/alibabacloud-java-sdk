@@ -6,17 +6,23 @@ import com.aliyun.tea.*;
 public class DescribeInstanceAutoRenewalAttributeRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dds-bp567b****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The category of the instance. Valid values:</p>
-     * <br>
-     * <p>*   **replicate**: the standalone or replica set instance</p>
-     * <p>*   **sharding**: the sharded cluster instance</p>
-     * <br>
-     * <p>Default value: **replicate**.</p>
+     * <ul>
+     * <li><strong>replicate</strong>: the standalone or replica set instance</li>
+     * <li><strong>sharding</strong>: the sharded cluster instance</li>
+     * </ul>
+     * <p>Default value: <strong>replicate</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>replicate</p>
      */
     @NameInMap("DBInstanceType")
     public String DBInstanceType;
@@ -28,21 +34,32 @@ public class DescribeInstanceAutoRenewalAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. The value must be a positive integer that does not exceed the maximum value of the Integer parameter. Default value: **1**.</p>
+     * <p>The number of the page to return. The value must be a positive integer that does not exceed the maximum value of the Integer parameter. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: **30**, **50**, and **100**.</p>
-     * <br>
-     * <p>>  Default value: **30**.</p>
+     * <p>The number of entries to return on each page. Valid values: <strong>30</strong>, <strong>50</strong>, and <strong>100</strong>.</p>
+     * <blockquote>
+     * <p> Default value: <strong>30</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to query the region ID of the instance.</p>
+     * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to query the region ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -6,12 +6,20 @@ import com.aliyun.tea.*;
 public class ModifyDBInstanceMonitorRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dds-bpxxxxxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The collection frequency of monitoring data. Valid values: **1** or **300**. Unit: seconds.</p>
+     * <p>The collection frequency of monitoring data. Valid values: <strong>1</strong> or <strong>300</strong>. Unit: seconds.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Granularity")
     public String granularity;

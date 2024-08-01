@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeClusterRecoverTimeResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60EEBD77-227C-5B39-86EA-D89163C5****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,20 +43,30 @@ public class DescribeClusterRecoverTimeResponseBody extends TeaModel {
     public static class DescribeClusterRecoverTimeResponseBodyRestoreRanges extends TeaModel {
         /**
          * <p>The beginning of the time range to which data can be restored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-10-16T19:33:20Z</p>
          */
         @NameInMap("RestoreBeginTime")
         public String restoreBeginTime;
 
         /**
          * <p>The end of the time range to which data can be restored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-10-16T19:43:20Z</p>
          */
         @NameInMap("RestoreEndTime")
         public String restoreEndTime;
 
         /**
          * <p>The method used to restore data. Valid values:</p>
-         * <br>
-         * <p>*   **PointInTime** (default): Data is restored based on point in time</p>
+         * <ul>
+         * <li><strong>PointInTime</strong> (default): Data is restored based on point in time</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PointInTime</p>
          */
         @NameInMap("RestoreType")
         public String restoreType;

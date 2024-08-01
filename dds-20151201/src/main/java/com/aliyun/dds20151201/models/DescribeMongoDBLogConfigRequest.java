@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeMongoDBLogConfigRequest extends TeaModel {
     /**
-     * <p>The instance ID. You can call the [DescribeDBInstances](~~61939~~) operation to query the ID of the instance.</p>
+     * <p>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/61939.html">DescribeDBInstances</a> operation to query the ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dds-bp12c5b040dc****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

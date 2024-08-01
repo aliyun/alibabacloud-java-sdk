@@ -5,19 +5,28 @@ import com.aliyun.tea.*;
 
 public class DescribeParameterTemplatesRequest extends TeaModel {
     /**
-     * <p>The database engine of the instance. Set the value to **MongoDB**.</p>
+     * <p>The database engine of the instance. Set the value to <strong>MongoDB</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mongodb</p>
      */
     @NameInMap("Engine")
     public String engine;
 
     /**
      * <p>The database engine version of the instance. Valid values:</p>
-     * <br>
-     * <p>*   **5.0**</p>
-     * <p>*   **4.4**</p>
-     * <p>*   **4.2**</p>
-     * <p>*   **4.0**</p>
-     * <p>*   **3.4**</p>
+     * <ul>
+     * <li><strong>5.0</strong></li>
+     * <li><strong>4.4</strong></li>
+     * <li><strong>4.2</strong></li>
+     * <li><strong>4.0</strong></li>
+     * <li><strong>3.4</strong></li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5.0</p>
      */
     @NameInMap("EngineVersion")
     public String engineVersion;
@@ -29,7 +38,10 @@ public class DescribeParameterTemplatesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -42,18 +54,22 @@ public class DescribeParameterTemplatesRequest extends TeaModel {
 
     /**
      * <p>The role of the instance. Valid values:</p>
-     * <br>
-     * <p>1. db:  a shard node.</p>
-     * <br>
-     * <p>1. cs:  a Configserver node.</p>
-     * <br>
-     * <p>1. mongos:  a mongos node.</p>
-     * <br>
-     * <p>1. normal: a replica set node.</p>
-     * <br>
-     * <p>1. physical: a standalone node.</p>
-     * <br>
+     * <ol>
+     * <li><p>db:  a shard node.</p>
+     * </li>
+     * <li><p>cs:  a Configserver node.</p>
+     * </li>
+     * <li><p>mongos:  a mongos node.</p>
+     * </li>
+     * <li><p>normal: a replica set node.</p>
+     * </li>
+     * <li><p>physical: a standalone node.</p>
+     * </li>
+     * </ol>
      * <p>default: normal</p>
+     * 
+     * <strong>example:</strong>
+     * <p>normal</p>
      */
     @NameInMap("Role")
     public String role;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpgradeDBInstanceEngineVersionResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C4907B00-A208-4E0C-A636-AA85140E406C</p>
      */
     @NameInMap("RequestId")
     public String requestId;

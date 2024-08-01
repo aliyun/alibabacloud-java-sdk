@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class DescribeClusterRecoverTimeRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dds-bp18f7d6b6a7****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

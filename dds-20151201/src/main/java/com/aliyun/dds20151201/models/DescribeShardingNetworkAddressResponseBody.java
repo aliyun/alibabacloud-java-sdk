@@ -18,6 +18,9 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>18D8AAFD-6BEB-420F-8164-810CB0C0AA39</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,50 +57,74 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
     public static class DescribeShardingNetworkAddressResponseBodyCompatibleConnectionsCompatibleConnection extends TeaModel {
         /**
          * <p>The remaining duration of the classic network endpoint. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2591963</p>
          */
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
         /**
          * <p>The IP address of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.140.xxx.xx</p>
          */
         @NameInMap("IPAddress")
         public String IPAddress;
 
         /**
          * <p>The endpoint of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds-bpxxxxxxxxxxxxxx.mongodb.rds.aliyuncs.com</p>
          */
         @NameInMap("NetworkAddress")
         public String networkAddress;
 
         /**
          * <p>The network type of the instance.</p>
-         * <br>
-         * <p>*   **VPC**: virtual private cloud</p>
-         * <p>*   **Classic**: classic network</p>
-         * <p>*   **Public**: the Internet</p>
+         * <ul>
+         * <li><strong>VPC</strong>: virtual private cloud</li>
+         * <li><strong>Classic</strong>: classic network</li>
+         * <li><strong>Public</strong>: the Internet</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         @NameInMap("NetworkType")
         public String networkType;
 
         /**
          * <p>The port that is used to connect to the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3717</p>
          */
         @NameInMap("Port")
         public String port;
 
         /**
          * <p>The VPC ID of the instance.</p>
-         * <br>
-         * <p>>  This parameter is returned when the network type is **VPC**.</p>
+         * <blockquote>
+         * <p> This parameter is returned when the network type is <strong>VPC</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bpxxxxxxxx</p>
          */
         @NameInMap("VPCId")
         public String VPCId;
 
         /**
          * <p>The ID of the vSwitch in the Virtual Private Cloud (VPC).</p>
-         * <br>
-         * <p>>  This parameter is returned when the network type is **VPC**.</p>
+         * <blockquote>
+         * <p> This parameter is returned when the network type is <strong>VPC</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bpxxxxxxxx</p>
          */
         @NameInMap("VswitchId")
         public String vswitchId;
@@ -187,75 +214,110 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
     public static class DescribeShardingNetworkAddressResponseBodyNetworkAddressesNetworkAddress extends TeaModel {
         /**
          * <p>The remaining duration of the classic network endpoint. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2591963</p>
          */
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
         /**
          * <p>The IP address of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.140.xxx.xx</p>
          */
         @NameInMap("IPAddress")
         public String IPAddress;
 
         /**
          * <p>The connection string of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-bpxxxxxxxx.mongodb.rds.aliyuncs.com</p>
          */
         @NameInMap("NetworkAddress")
         public String networkAddress;
 
         /**
          * <p>The network type of the instance.</p>
-         * <br>
-         * <p>*   **VPC**: virtual private cloud</p>
-         * <p>*   **Classic**: classic network</p>
-         * <p>*   **Public**: the Internet</p>
+         * <ul>
+         * <li><strong>VPC</strong>: virtual private cloud</li>
+         * <li><strong>Classic</strong>: classic network</li>
+         * <li><strong>Public</strong>: the Internet</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         @NameInMap("NetworkType")
         public String networkType;
 
         /**
          * <p>The ID of the mongos node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-bpxxxxxxxx</p>
          */
         @NameInMap("NodeId")
         public String nodeId;
 
         /**
          * <p>The type of the node. Valid values:</p>
-         * <br>
-         * <p>*   **mongos**: mongos node</p>
-         * <p>*   **shard**: shard node</p>
-         * <p>*   **configserver**: Configserver node</p>
+         * <ul>
+         * <li><strong>mongos</strong>: mongos node</li>
+         * <li><strong>shard</strong>: shard node</li>
+         * <li><strong>configserver</strong>: Configserver node</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>mongos</p>
          */
         @NameInMap("NodeType")
         public String nodeType;
 
         /**
          * <p>The port that is used to connect to the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3717</p>
          */
         @NameInMap("Port")
         public String port;
 
         /**
          * <p>The role of the node. Valid values:</p>
-         * <br>
-         * <p>*   Primary</p>
-         * <p>*   Secondary</p>
+         * <ul>
+         * <li>Primary</li>
+         * <li>Secondary</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Primary</p>
          */
         @NameInMap("Role")
         public String role;
 
         /**
          * <p>The VPC ID of the instance.</p>
-         * <br>
-         * <p>>  This parameter is returned when the network type is **VPC**.</p>
+         * <blockquote>
+         * <p> This parameter is returned when the network type is <strong>VPC</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bpxxxxxxxx</p>
          */
         @NameInMap("VPCId")
         public String VPCId;
 
         /**
          * <p>The ID of the vSwitch in the VPC.</p>
-         * <br>
-         * <p>>  This parameter is returned when the network type is **VPC**.</p>
+         * <blockquote>
+         * <p> This parameter is returned when the network type is <strong>VPC</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bpxxxxxxxx</p>
          */
         @NameInMap("VswitchId")
         public String vswitchId;

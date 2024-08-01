@@ -5,32 +5,48 @@ import com.aliyun.tea.*;
 
 public class ResetAccountPasswordRequest extends TeaModel {
     /**
-     * <p>The account whose password needs to be reset. Set the value to **root**.</p>
+     * <p>The account whose password needs to be reset. Set the value to <strong>root</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>root</p>
      */
     @NameInMap("AccountName")
     public String accountName;
 
     /**
      * <p>The new password.</p>
-     * <br>
-     * <p>*   The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include `! # $ % ^ & * ( ) _ + - =`</p>
-     * <p>*   The password must be 8 to 32 characters in length.</p>
+     * <ul>
+     * <li>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include <code>! # $ % ^ &amp; * ( ) _ + - =</code></li>
+     * <li>The password must be 8 to 32 characters in length.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Ali!123456</p>
      */
     @NameInMap("AccountPassword")
     public String accountPassword;
 
     /**
-     * <p>实例的角色类型，取值说明</p>
-     * <br>
-     * <br>
-     * <p>- 当实例类型为分片集群时，charactertype为必选； 取值为db 和cs。</p>
-     * <p>- 当实例类型为副本集时，charactertype 可为空或传入normal。</p>
+     * <p>The role of the instance.</p>
+     * <ul>
+     * <li>If the instance is a sharded cluster instance, this parameter is required. Valid values: db and cs.</li>
+     * <li>If the instance is a replica set instance, you can leave this parameter empty or set the parameter to normal.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>db</p>
      */
     @NameInMap("CharacterType")
     public String characterType;
 
     /**
      * <p>The instance ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dds-bpxxxxxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

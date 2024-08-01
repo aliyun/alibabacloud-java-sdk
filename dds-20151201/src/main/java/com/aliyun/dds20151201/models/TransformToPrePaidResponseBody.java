@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class TransformToPrePaidResponseBody extends TeaModel {
     /**
      * <p>The ID of the order.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>21022019252****</p>
      */
     @NameInMap("OrderId")
     public String orderId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2F42BB4E-461F-5B55-A37C-53B1141C****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

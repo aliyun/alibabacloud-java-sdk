@@ -4,22 +4,46 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class ReleasePublicNetworkAddressRequest extends TeaModel {
+    /**
+     * <p>The public endpoint type. Valid values:</p>
+     * <ul>
+     * <li><strong>SRV</strong></li>
+     * <li><strong>Normal</strong></li>
+     * </ul>
+     * <blockquote>
+     * <p> This parameter is valid only when you want to release an SRV endpoint.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>SRV</p>
+     */
     @NameInMap("ConnectionType")
     public String connectionType;
 
     /**
      * <p>The instance ID.</p>
-     * <br>
-     * <p>>  If you set this parameter to the ID of a sharded cluster instance, you must also specify the **NodeId** parameter.</p>
+     * <blockquote>
+     * <p> If you set this parameter to the ID of a sharded cluster instance, you must also specify the <strong>NodeId</strong> parameter.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dds-bp2235****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The ID of the mongos, shard, or Configserver node in the sharded cluster instance.</p>
-     * <br>
-     * <p>> *   This parameter is valid only if you set the **DBInstanceId** parameter to the ID of a sharded cluster instance.</p>
-     * <p>> *   You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to view the ID of the mongos, shard, or Configserver node.</p>
+     * <blockquote>
+     * <ul>
+     * <li>This parameter is valid only if you set the <strong>DBInstanceId</strong> parameter to the ID of a sharded cluster instance.</li>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to view the ID of the mongos, shard, or Configserver node.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>s-bp2235****</p>
      */
     @NameInMap("NodeId")
     public String nodeId;

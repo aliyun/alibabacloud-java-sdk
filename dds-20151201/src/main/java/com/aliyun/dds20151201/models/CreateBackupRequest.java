@@ -6,17 +6,26 @@ import com.aliyun.tea.*;
 public class CreateBackupRequest extends TeaModel {
     /**
      * <p>The backup method of the instance. Valid values:</p>
-     * <br>
-     * <p>*   **Logical**</p>
-     * <p>*   **Physical** (default)</p>
-     * <br>
-     * <p>> Only replica set instances and sharded cluster instances support this parameter. You do not need to specify this parameter for standalone instances. All standalone instances use snapshot backup.</p>
+     * <ul>
+     * <li><strong>Logical</strong></li>
+     * <li><strong>Physical</strong> (default)</li>
+     * </ul>
+     * <blockquote>
+     * <p>Only replica set instances and sharded cluster instances support this parameter. You do not need to specify this parameter for standalone instances. All standalone instances use snapshot backup.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Logical</p>
      */
     @NameInMap("BackupMethod")
     public String backupMethod;
 
     /**
      * <p>The instance ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d-bp2235****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

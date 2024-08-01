@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class DeleteNodeResponseBody extends TeaModel {
     /**
      * <p>The order ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>111111111111111</p>
      */
     @NameInMap("OrderId")
     public String orderId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9F9BDE64-BF30-41F3-BD29-C19CE4AB3404</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>111111111</p>
      */
     @NameInMap("TaskId")
     public Integer taskId;

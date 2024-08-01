@@ -5,13 +5,20 @@ import com.aliyun.tea.*;
 
 public class DescribeAccountsRequest extends TeaModel {
     /**
-     * <p>The name of the account. Set the value to **root**.</p>
+     * <p>The name of the account. Set the value to <strong>root</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>root</p>
      */
     @NameInMap("AccountName")
     public String accountName;
 
     /**
      * <p>The instance ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dds-bp1fd530f271****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

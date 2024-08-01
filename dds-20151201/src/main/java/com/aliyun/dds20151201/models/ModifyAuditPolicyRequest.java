@@ -5,22 +5,34 @@ import com.aliyun.tea.*;
 
 public class ModifyAuditPolicyRequest extends TeaModel {
     /**
-     * <p>The request source for the audit log feature. Set the value to **Console**.</p>
+     * <p>The request source for the audit log feature. Set the value to <strong>Console</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Console</p>
      */
     @NameInMap("AuditLogSwitchSource")
     public String auditLogSwitchSource;
 
     /**
      * <p>Specifies whether to enable the audit log feature. Valid values:</p>
-     * <br>
-     * <p>*   **enable**</p>
-     * <p>*   **disabled**</p>
+     * <ul>
+     * <li><strong>enable</strong></li>
+     * <li><strong>disabled</strong></li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>enable</p>
      */
     @NameInMap("AuditStatus")
     public String auditStatus;
 
     /**
      * <p>The instance ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dds-bp1785659e3f****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -39,17 +51,25 @@ public class ModifyAuditPolicyRequest extends TeaModel {
 
     /**
      * <p>The type of the audit log feature. Valid values:</p>
-     * <br>
-     * <p>*   **Trail**: free trial edition.</p>
-     * <p>*   **Standard**: official edition.</p>
-     * <br>
-     * <p>> The default value is **Trail**. Starting from January 6, 2022, the official edition of the audit log feature has been launched in all regions, and the free trial edition of the feature can no longer be applied for. We recommend that you set this parameter to **Standard**.</p>
+     * <ul>
+     * <li><strong>Trail</strong>: free trial edition.</li>
+     * <li><strong>Standard</strong>: official edition.</li>
+     * </ul>
+     * <blockquote>
+     * <p>The default value is <strong>Trail</strong>. Starting from January 6, 2022, the official edition of the audit log feature has been launched in all regions, and the free trial edition of the feature can no longer be applied for. We recommend that you set this parameter to <strong>Standard</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Standard</p>
      */
     @NameInMap("ServiceType")
     public String serviceType;
 
     /**
      * <p>The log retention period. Valid values: 1 to 365 days. Default value: 30 days.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("StoragePeriod")
     public Integer storagePeriod;

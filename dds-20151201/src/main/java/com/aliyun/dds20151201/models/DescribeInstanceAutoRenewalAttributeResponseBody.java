@@ -12,24 +12,36 @@ public class DescribeInstanceAutoRenewalAttributeResponseBody extends TeaModel {
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("ItemsNumbers")
     public Integer itemsNumbers;
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries that were returned on the current page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FAB5CB3B-DB9D-473A-9DF1-F57B6B9CB949</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -82,39 +94,59 @@ public class DescribeInstanceAutoRenewalAttributeResponseBody extends TeaModel {
     public static class DescribeInstanceAutoRenewalAttributeResponseBodyItemsItem extends TeaModel {
         /**
          * <p>Indicates whether auto-renewal is enabled for the instance. Valid values:</p>
-         * <br>
-         * <p>*   **true**: Auto-renewal is enabled for the instance.</p>
-         * <p>*   **false**: Auto-renewal is disabled for the instance.</p>
+         * <ul>
+         * <li><strong>true</strong>: Auto-renewal is enabled for the instance.</li>
+         * <li><strong>false</strong>: Auto-renewal is disabled for the instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("AutoRenew")
         public String autoRenew;
 
         /**
          * <p>The category of the instance. Valid values:</p>
-         * <br>
-         * <p>*   **replicate**: the standalone or replica set instance</p>
-         * <p>*   **sharding**: the sharded cluster instance</p>
+         * <ul>
+         * <li><strong>replicate</strong>: the standalone or replica set instance</li>
+         * <li><strong>sharding</strong>: the sharded cluster instance</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>replicate</p>
          */
         @NameInMap("DBInstanceType")
         public String DBInstanceType;
 
         /**
          * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds-bp2568*****</p>
          */
         @NameInMap("DbInstanceId")
         public String dbInstanceId;
 
         /**
          * <p>The auto-renewal period. Unit: months.</p>
-         * <br>
-         * <p>> * This parameter is ruturned only when the returned value of the **AutoRenew** parameter is **true**.</p>
-         * <p>> * You can call the [ModifyInstanceAutoRenewalAttribute](~~145979~~) operation to modify the auto-renewal period.</p>
+         * <blockquote>
+         * <ul>
+         * <li>This parameter is ruturned only when the returned value of the <strong>AutoRenew</strong> parameter is <strong>true</strong>.</li>
+         * <li>You can call the <a href="https://help.aliyun.com/document_detail/145979.html">ModifyInstanceAutoRenewalAttribute</a> operation to modify the auto-renewal period.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Duration")
         public String duration;
 
         /**
          * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;

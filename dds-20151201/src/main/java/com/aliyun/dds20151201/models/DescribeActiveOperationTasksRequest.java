@@ -6,40 +6,58 @@ import com.aliyun.tea.*;
 public class DescribeActiveOperationTasksRequest extends TeaModel {
     /**
      * <p>Specifies whether to allow the cancellation operation. Valid values:</p>
-     * <br>
-     * <p>*   **0**: The cancellation operation is not allowed.</p>
-     * <p>*   **1**: The cancellation operation is allowed.</p>
+     * <ul>
+     * <li><strong>0</strong>: The cancellation operation is not allowed.</li>
+     * <li><strong>1</strong>: The cancellation operation is allowed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <hr>
      */
     @NameInMap("AllowCancel")
     public Integer allowCancel;
 
     /**
      * <p>Specifies whether to allow the modification operation. Valid values:</p>
-     * <br>
-     * <p>*   **0**: The modification operation is not allowed.</p>
-     * <p>*   **1**: The modification operation is allowed.</p>
+     * <ul>
+     * <li><strong>0</strong>: The modification operation is not allowed.</li>
+     * <li><strong>1</strong>: The modification operation is allowed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>-1</p>
      */
     @NameInMap("AllowChange")
     public Integer allowChange;
 
     /**
      * <p>The type of task configuration change. Valid values:</p>
-     * <br>
-     * <p>*   **all** (default): The configurations of all O\&M tasks are changed.</p>
-     * <p>*   **S0**: The configurations of tasks initiated to fix exceptions are changed.</p>
-     * <p>*   **S1**: The configurations of system O\&M tasks are changed.</p>
+     * <ul>
+     * <li><strong>all</strong> (default): The configurations of all O\&amp;M tasks are changed.</li>
+     * <li><strong>S0</strong>: The configurations of tasks initiated to fix exceptions are changed.</li>
+     * <li><strong>S1</strong>: The configurations of system O\&amp;M tasks are changed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <hr>
      */
     @NameInMap("ChangeLevel")
     public String changeLevel;
 
     /**
      * <p>The type of the database engine.</p>
+     * 
+     * <strong>example:</strong>
+     * <hr>
      */
     @NameInMap("DbType")
     public String dbType;
 
     /**
      * <p>The name of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dds-bp16aaccfe10e3e4</p>
      */
     @NameInMap("InsName")
     public String insName;
@@ -52,26 +70,39 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
 
     /**
      * <p>The page number of the page to return.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: **30, 50, and 100**. Default value: **30**.</p>
+     * <p>The number of entries to return on each page. Valid values: <strong>30, 50, and 100</strong>. Default value: <strong>30</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the service.</p>
+     * 
+     * <strong>example:</strong>
+     * <hr>
      */
     @NameInMap("ProductId")
     public String productId;
 
     /**
      * <p>The region ID of the instance.</p>
-     * <br>
-     * <p>>  If you set the Region parameter to **all**, all tasks created within your Alibaba Cloud account are queried. In this case, you must set the **taskType** parameter to **all**.</p>
+     * <blockquote>
+     * <p> If you set the Region parameter to <strong>all</strong>, all tasks created within your Alibaba Cloud account are queried. In this case, you must set the <strong>taskType</strong> parameter to <strong>all</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
      */
     @NameInMap("Region")
     public String region;
@@ -84,17 +115,24 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
 
     /**
      * <p>The status of the task. Valid values:</p>
-     * <br>
-     * <p>*   **0**: waiting for execution</p>
-     * <p>*   **1**: being executed</p>
-     * <p>*   **2**: successful</p>
-     * <p>*   **3**: failed</p>
+     * <ul>
+     * <li><strong>0</strong>: waiting for execution</li>
+     * <li><strong>1</strong>: being executed</li>
+     * <li><strong>2</strong>: successful</li>
+     * <li><strong>3</strong>: failed</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("Status")
     public Integer status;
 
     /**
      * <p>The task type.</p>
+     * 
+     * <strong>example:</strong>
+     * <hr>
      */
     @NameInMap("TaskType")
     public String taskType;

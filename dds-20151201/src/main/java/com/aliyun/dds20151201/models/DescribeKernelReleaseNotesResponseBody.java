@@ -12,6 +12,9 @@ public class DescribeKernelReleaseNotesResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F01D4DDA-CB72-4083-B399-AF4642294FE6</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class DescribeKernelReleaseNotesResponseBody extends TeaModel {
     public static class DescribeKernelReleaseNotesResponseBodyReleaseNotesReleaseNote extends TeaModel {
         /**
          * <p>The version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mongodb_20180619_0.4.9</p>
          */
         @NameInMap("KernelVersion")
         public String kernelVersion;
 
         /**
          * <p>The release notes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test release note.</p>
          */
         @NameInMap("ReleaseNote")
         public String releaseNote;

@@ -12,24 +12,36 @@ public class DescribeBackupDBsResponseBody extends TeaModel {
 
     /**
      * <p>The page number of the page returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1AF0AD89-ED4F-44AD-B65F-BFC1D5CD9455</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The number of returned databases.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,6 +94,9 @@ public class DescribeBackupDBsResponseBody extends TeaModel {
     public static class DescribeBackupDBsResponseBodyDatabasesDatabase extends TeaModel {
         /**
          * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mongodbtest</p>
          */
         @NameInMap("DBName")
         public String DBName;

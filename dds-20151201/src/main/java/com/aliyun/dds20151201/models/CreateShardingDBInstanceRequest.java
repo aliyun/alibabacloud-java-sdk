@@ -6,135 +6,195 @@ import com.aliyun.tea.*;
 public class CreateShardingDBInstanceRequest extends TeaModel {
     /**
      * <p>The password of the root account. The password must meet the following requirements:</p>
-     * <br>
-     * <p>*   The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</p>
-     * <p>*   The special characters include ! # $ % ^ & \* ( ) \_ + - =</p>
-     * <p>*   The password of the account must be 8 to 32 characters in length.</p>
+     * <ul>
+     * <li>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</li>
+     * <li>The special characters include ! # $ % ^ &amp; \* ( ) _ + - =</li>
+     * <li>The password of the account must be 8 to 32 characters in length.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>123456Aa</p>
      */
     @NameInMap("AccountPassword")
     public String accountPassword;
 
     /**
      * <p>Specifies whether to enable auto-renewal for the instance. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false** (default)</p>
-     * <br>
-     * <p>> This parameter is available and optional if you set the value of **ChargeType** to **PrePaid**.</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong> (default)</li>
+     * </ul>
+     * <blockquote>
+     * <p>This parameter is available and optional if you set the value of <strong>ChargeType</strong> to <strong>PrePaid</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("AutoRenew")
     public String autoRenew;
 
+    @NameInMap("BackupId")
+    public String backupId;
+
     /**
      * <p>The billing method of the instance. Valid values:</p>
-     * <br>
-     * <p>*   **PostPaid** (default): pay-as-you-go</p>
-     * <p>*   **PrePaid**: subscription</p>
-     * <br>
-     * <p>>  If you set this parameter to **PrePaid**, you must also specify the **Period** parameter.</p>
+     * <ul>
+     * <li><strong>PostPaid</strong> (default): pay-as-you-go</li>
+     * <li><strong>PrePaid</strong>: subscription</li>
+     * </ul>
+     * <blockquote>
+     * <p> If you set this parameter to <strong>PrePaid</strong>, you must also specify the <strong>Period</strong> parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>PrePaid</p>
      */
     @NameInMap("ChargeType")
     public String chargeType;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ETnLKlblzczshOTUbOCz****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The ConfigServer nodes of the instance.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ConfigServer")
     public java.util.List<CreateShardingDBInstanceRequestConfigServer> configServer;
 
     /**
      * <p>The name of the instance. The name of the instance must meet the following requirements:</p>
-     * <br>
-     * <p>*   The name must start with a letter.</p>
-     * <p>*   It can contain digits, letters, underscores (\_), and hyphens (-).</p>
-     * <p>*   It must be 2 to 256 characters in length.</p>
+     * <ul>
+     * <li>The name must start with a letter.</li>
+     * <li>It can contain digits, letters, underscores (_), and hyphens (-).</li>
+     * <li>It must be 2 to 256 characters in length.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("DBInstanceDescription")
     public String DBInstanceDescription;
 
+    @NameInMap("DestRegion")
+    public String destRegion;
+
     /**
      * <p>Specifies whether to enable disk encryption.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Encrypted")
     public Boolean encrypted;
 
     /**
      * <p>The ID of the custom key.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2axxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx</p>
      */
     @NameInMap("EncryptionKey")
     public String encryptionKey;
 
     /**
-     * <p>The database engine of the instance. Set the value to **MongoDB**.</p>
+     * <p>The database engine of the instance. Set the value to <strong>MongoDB</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MongoDB</p>
      */
     @NameInMap("Engine")
     public String engine;
 
     /**
      * <p>The version of the database engine. Valid values:</p>
-     * <br>
-     * <p>*   **6.0**</p>
-     * <p>*   **5.0**</p>
-     * <p>*   **4.4**</p>
-     * <p>*   **4.2**</p>
-     * <p>*   **4.0**</p>
-     * <p>*   **3.4**</p>
-     * <br>
-     * <p>> *   For more information about the limits on database versions and storage engines, see [MongoDB versions and storage engines](~~61906~~).</p>
-     * <p>> *   If you call this operation to clone an instance, set the value of this parameter to the engine version of the source instance.</p>
+     * <ul>
+     * <li><strong>6.0</strong></li>
+     * <li><strong>5.0</strong></li>
+     * <li><strong>4.4</strong></li>
+     * <li><strong>4.2</strong></li>
+     * <li><strong>4.0</strong></li>
+     * <li><strong>3.4</strong></li>
+     * </ul>
+     * <blockquote>
+     * <ul>
+     * <li>For more information about the limits on database versions and storage engines, see <a href="https://help.aliyun.com/document_detail/61906.html">MongoDB versions and storage engines</a>.</li>
+     * <li>If you call this operation to clone an instance, set the value of this parameter to the engine version of the source instance.</li>
+     * </ul>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4.4</p>
      */
     @NameInMap("EngineVersion")
     public String engineVersion;
 
     /**
      * <p>The global IP address whitelist template of the instance. Separate multiple templates with commas (,). The template name must be globally unique.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>g-qxieqf40xjst1ngp****</p>
      */
     @NameInMap("GlobalSecurityGroupIds")
     public String globalSecurityGroupIds;
 
     /**
      * <p>The ID of secondary zone 2 for multi-zone deployment. Valid values:</p>
-     * <br>
-     * <p>*   **cn-hangzhou-g**: Hangzhou Zone G</p>
-     * <p>*   **cn-hangzhou-h**: Hangzhou Zone H</p>
-     * <p>*   **cn-hangzhou-i**: Hangzhou Zone I</p>
-     * <p>*   **cn-hongkong-b**: Hong Kong Zone B</p>
-     * <p>*   **cn-hongkong-c**: Hong Kong Zone C</p>
-     * <p>*   **cn-hongkong-d**: Hong Kong Zone D</p>
-     * <p>*   **cn-wulanchabu-a**: Ulanqab Zone A</p>
-     * <p>*   **cn-wulanchabu-b**: Ulanqab Zone B</p>
-     * <p>*   **cn-wulanchabu-c**: Ulanqab Zone C</p>
-     * <p>*   **ap-southeast-1a**: Singapore Zone A</p>
-     * <p>*   **ap-southeast-1b**: Singapore Zone B</p>
-     * <p>*   **ap-southeast-1c**: Singapore Zone C</p>
-     * <p>*   **ap-southeast-5a**: Jakarta Zone A</p>
-     * <p>*   **ap-southeast-5b**: Jakarta Zone B</p>
-     * <p>*   **ap-southeast-5c**: Jakarta Zone C</p>
-     * <p>*   **eu-central-1a**: Frankfurt Zone A</p>
-     * <p>*   **eu-central-1b**: Frankfurt Zone B</p>
-     * <p>*   **eu-central-1c**: Frankfurt Zone C</p>
-     * <br>
-     * <p>> *   This parameter is available and required if you set the value of **EngineVersion** to **4.4** or **5.0**.</p>
-     * <p>> *   The value of this parameter cannot be the same as the value of **ZoneId** or **SecondaryZoneId**.</p>
-     * <p>> *   For more information about the multi-zone deployment policy of a sharded cluster instance, see [Create a multi-zone sharded cluster instance](~~117865~~).</p>
+     * <ul>
+     * <li><strong>cn-hangzhou-g</strong>: Hangzhou Zone G</li>
+     * <li><strong>cn-hangzhou-h</strong>: Hangzhou Zone H</li>
+     * <li><strong>cn-hangzhou-i</strong>: Hangzhou Zone I</li>
+     * <li><strong>cn-hongkong-b</strong>: Hong Kong Zone B</li>
+     * <li><strong>cn-hongkong-c</strong>: Hong Kong Zone C</li>
+     * <li><strong>cn-hongkong-d</strong>: Hong Kong Zone D</li>
+     * <li><strong>cn-wulanchabu-a</strong>: Ulanqab Zone A</li>
+     * <li><strong>cn-wulanchabu-b</strong>: Ulanqab Zone B</li>
+     * <li><strong>cn-wulanchabu-c</strong>: Ulanqab Zone C</li>
+     * <li><strong>ap-southeast-1a</strong>: Singapore Zone A</li>
+     * <li><strong>ap-southeast-1b</strong>: Singapore Zone B</li>
+     * <li><strong>ap-southeast-1c</strong>: Singapore Zone C</li>
+     * <li><strong>ap-southeast-5a</strong>: Jakarta Zone A</li>
+     * <li><strong>ap-southeast-5b</strong>: Jakarta Zone B</li>
+     * <li><strong>ap-southeast-5c</strong>: Jakarta Zone C</li>
+     * <li><strong>eu-central-1a</strong>: Frankfurt Zone A</li>
+     * <li><strong>eu-central-1b</strong>: Frankfurt Zone B</li>
+     * <li><strong>eu-central-1c</strong>: Frankfurt Zone C</li>
+     * </ul>
+     * <blockquote>
+     * <ul>
+     * <li>This parameter is available and required if you set the value of <strong>EngineVersion</strong> to <strong>4.4</strong> or <strong>5.0</strong>.</li>
+     * <li>The value of this parameter cannot be the same as the value of <strong>ZoneId</strong> or <strong>SecondaryZoneId</strong>.</li>
+     * <li>For more information about the multi-zone deployment policy of a sharded cluster instance, see <a href="https://help.aliyun.com/document_detail/117865.html">Create a multi-zone sharded cluster instance</a>.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-i</p>
      */
     @NameInMap("HiddenZoneId")
     public String hiddenZoneId;
 
     /**
      * <p>The mongos nodes of the instance.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Mongos")
     public java.util.List<CreateShardingDBInstanceRequestMongos> mongos;
 
     /**
      * <p>The network type of the instance. Set the value to VPC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>VPC</p>
      */
     @NameInMap("NetworkType")
     public String networkType;
@@ -147,43 +207,61 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
 
     /**
      * <p>The subscription period of the instance. Unit: months.</p>
-     * <br>
-     * <p>Valid values: **1** to **9**, **12**, **24**, **36**, and **60**.</p>
-     * <br>
-     * <p>> When you set the **ChargeType** parameter to **PrePaid**, this parameter is valid and required.</p>
+     * <p>Valid values: <strong>1</strong> to <strong>9</strong>, <strong>12</strong>, <strong>24</strong>, <strong>36</strong>, and <strong>60</strong>.</p>
+     * <blockquote>
+     * <p>When you set the <strong>ChargeType</strong> parameter to <strong>PrePaid</strong>, this parameter is valid and required.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Period")
     public Integer period;
 
     /**
      * <p>The access protocol type of the instance. Valid values:</p>
-     * <br>
-     * <p>*   **mongodb**: the MongoDB protocol</p>
-     * <p>*   **dynamodb**: the DynamoDB protocol</p>
+     * <ul>
+     * <li><strong>mongodb</strong>: the MongoDB protocol</li>
+     * <li><strong>dynamodb</strong>: the DynamoDB protocol</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>mongodb</p>
      */
     @NameInMap("ProtocolType")
     public String protocolType;
 
     /**
      * <p>The provisioned IOPS of the instance:</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1960</p>
      */
     @NameInMap("ProvisionedIops")
     public Long provisionedIops;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The information of the shard node.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ReplicaSet")
     public java.util.List<CreateShardingDBInstanceRequestReplicaSet> replicaSet;
 
     /**
-     * <p>The resource group ID. For more information, see [View the basic information of a resource group](~~151181~~).</p>
+     * <p>The resource group ID. For more information, see <a href="https://help.aliyun.com/document_detail/151181.html">View the basic information of a resource group</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmyiu4ekp****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -195,82 +273,123 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The point in time to restore the instance, which must be within seven days. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in Coordinated Universal Time (UTC).</p>
-     * <br>
-     * <p>> This parameter is required only if you call this operation to clone an instance. If you specify this parameter, you must also specify **SrcDBInstanceId**.</p>
+     * <p>The point in time to restore the instance, which must be within seven days. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in Coordinated Universal Time (UTC).</p>
+     * <blockquote>
+     * <p>This parameter is required only if you call this operation to clone an instance. If you specify this parameter, you must also specify <strong>SrcDBInstanceId</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-03-08T02:30:25Z</p>
      */
     @NameInMap("RestoreTime")
     public String restoreTime;
 
+    @NameInMap("RestoreType")
+    public String restoreType;
+
     /**
      * <p>The ID of secondary zone 1 for multi-zone deployment. Valid values:</p>
-     * <br>
-     * <p>*   **cn-hangzhou-g**: Hangzhou Zone G</p>
-     * <p>*   **cn-hangzhou-h**: Hangzhou Zone H</p>
-     * <p>*   **cn-hangzhou-i**: Hangzhou Zone I</p>
-     * <p>*   **cn-hongkong-b**: Hong Kong Zone B</p>
-     * <p>*   **cn-hongkong-c**: Hong Kong Zone C</p>
-     * <p>*   **cn-hongkong-d**: Hong Kong Zone D</p>
-     * <p>*   **cn-wulanchabu-a**: Ulanqab Zone A</p>
-     * <p>*   **cn-wulanchabu-b**: Ulanqab Zone B</p>
-     * <p>*   **cn-wulanchabu-c**: Ulanqab Zone C</p>
-     * <p>*   **ap-southeast-1a**: Singapore Zone A</p>
-     * <p>*   **ap-southeast-1b**: Singapore Zone B</p>
-     * <p>*   **ap-southeast-1c**: Singapore Zone C</p>
-     * <p>*   **ap-southeast-5a**: Jakarta Zone A</p>
-     * <p>*   **ap-southeast-5b**: Jakarta Zone B</p>
-     * <p>*   **ap-southeast-5c**: Jakarta Zone C</p>
-     * <p>*   **eu-central-1a**: Frankfurt Zone A</p>
-     * <p>*   **eu-central-1b**: Frankfurt Zone B</p>
-     * <p>*   **eu-central-1c**: Frankfurt Zone C</p>
-     * <br>
-     * <p>> *   This parameter is available and required if you set the value of **EngineVersion** to **4.4** or **5.0**.</p>
-     * <p>> *   The value of this parameter cannot be the same as the value of **ZoneId** or **HiddenZoneId**.</p>
-     * <p>> *   For more information about the multi-zone deployment policy of a sharded cluster instance, see [Create a multi-zone sharded cluster instance](~~117865~~).</p>
+     * <ul>
+     * <li><strong>cn-hangzhou-g</strong>: Hangzhou Zone G</li>
+     * <li><strong>cn-hangzhou-h</strong>: Hangzhou Zone H</li>
+     * <li><strong>cn-hangzhou-i</strong>: Hangzhou Zone I</li>
+     * <li><strong>cn-hongkong-b</strong>: Hong Kong Zone B</li>
+     * <li><strong>cn-hongkong-c</strong>: Hong Kong Zone C</li>
+     * <li><strong>cn-hongkong-d</strong>: Hong Kong Zone D</li>
+     * <li><strong>cn-wulanchabu-a</strong>: Ulanqab Zone A</li>
+     * <li><strong>cn-wulanchabu-b</strong>: Ulanqab Zone B</li>
+     * <li><strong>cn-wulanchabu-c</strong>: Ulanqab Zone C</li>
+     * <li><strong>ap-southeast-1a</strong>: Singapore Zone A</li>
+     * <li><strong>ap-southeast-1b</strong>: Singapore Zone B</li>
+     * <li><strong>ap-southeast-1c</strong>: Singapore Zone C</li>
+     * <li><strong>ap-southeast-5a</strong>: Jakarta Zone A</li>
+     * <li><strong>ap-southeast-5b</strong>: Jakarta Zone B</li>
+     * <li><strong>ap-southeast-5c</strong>: Jakarta Zone C</li>
+     * <li><strong>eu-central-1a</strong>: Frankfurt Zone A</li>
+     * <li><strong>eu-central-1b</strong>: Frankfurt Zone B</li>
+     * <li><strong>eu-central-1c</strong>: Frankfurt Zone C</li>
+     * </ul>
+     * <blockquote>
+     * <ul>
+     * <li>This parameter is available and required if you set the value of <strong>EngineVersion</strong> to <strong>4.4</strong> or <strong>5.0</strong>.</li>
+     * <li>The value of this parameter cannot be the same as the value of <strong>ZoneId</strong> or <strong>HiddenZoneId</strong>.</li>
+     * <li>For more information about the multi-zone deployment policy of a sharded cluster instance, see <a href="https://help.aliyun.com/document_detail/117865.html">Create a multi-zone sharded cluster instance</a>.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-h</p>
      */
     @NameInMap("SecondaryZoneId")
     public String secondaryZoneId;
 
     /**
      * <p>The IP addresses in an IP address whitelist of the instance. Multiple IP addresses are separated by commas (,), and each IP address in the IP address whitelist must be unique. The following types of values are supported:</p>
-     * <br>
-     * <p>*   0.0.0.0/0</p>
-     * <p>*   IP addresses, such as 10.23.12.24.</p>
-     * <p>*   CIDR blocks, such as 10.23.12.0/24. In this case, 24 indicates that the prefix of each IP address is 24-bit long. You can replace 24 with a value within the range of 1 to 32.</p>
-     * <br>
-     * <p>> *   A maximum of 1,000 IP addresses and CIDR blocks can be configured for each instance.</p>
-     * <p>> *   If you enter 0.0.0.0/0, all IP addresses can access the instance. This may introduce security risks to the instance. Proceed with caution.</p>
+     * <ul>
+     * <li>0.0.0.0/0</li>
+     * <li>IP addresses, such as 10.23.12.24.</li>
+     * <li>CIDR blocks, such as 10.23.12.0/24. In this case, 24 indicates that the prefix of each IP address is 24-bit long. You can replace 24 with a value within the range of 1 to 32.</li>
+     * </ul>
+     * <blockquote>
+     * <ul>
+     * <li>A maximum of 1,000 IP addresses and CIDR blocks can be configured for each instance.</li>
+     * <li>If you enter 0.0.0.0/0, all IP addresses can access the instance. This may introduce security risks to the instance. Proceed with caution.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.xx.xx,192.168.xx.xx</p>
      */
     @NameInMap("SecurityIPList")
     public String securityIPList;
 
     /**
      * <p>The source instance ID.</p>
-     * <br>
-     * <p>> This parameter is required only if you call this operation to clone an instance. If you specify this parameter, you must also specify **RestoreTime**.</p>
+     * <blockquote>
+     * <p>This parameter is required only if you call this operation to clone an instance. If you specify this parameter, you must also specify <strong>RestoreTime</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>dds-bp11483712c1****</p>
      */
     @NameInMap("SrcDBInstanceId")
     public String srcDBInstanceId;
 
+    @NameInMap("SrcRegion")
+    public String srcRegion;
+
     /**
-     * <p>The storage engine of the instance. Set the value to **WiredTiger**.</p>
-     * <br>
-     * <p>> *   If you call this operation to clone an instance, set the value of this parameter to the storage engine of the source instance.</p>
-     * <p>> *   For more information about the limits on database versions and storage engines, see [MongoDB versions and storage engines](~~61906~~).</p>
+     * <p>The storage engine of the instance. Set the value to <strong>WiredTiger</strong>.</p>
+     * <blockquote>
+     * <ul>
+     * <li>If you call this operation to clone an instance, set the value of this parameter to the storage engine of the source instance.</li>
+     * <li>For more information about the limits on database versions and storage engines, see <a href="https://help.aliyun.com/document_detail/61906.html">MongoDB versions and storage engines</a>.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>WiredTiger</p>
      */
     @NameInMap("StorageEngine")
     public String storageEngine;
 
     /**
      * <p>The storage type of the instance. Valid values:</p>
-     * <br>
-     * <p>*   **cloud_essd1**: ESSD PL1</p>
-     * <p>*   **cloud_essd2**: ESSD PL2</p>
-     * <p>*   **cloud_essd3**: ESSD PL3</p>
-     * <p>*   **local_ssd**: local SSD</p>
-     * <br>
-     * <p>> *   Instances of MongoDB 4.4 and later support only cloud disks. **cloud_essd1** is selected if you leave this parameter empty.</p>
-     * <p>> *   Instances of MongoDB 4.2 and earlier support only local disks. **local_ssd** is selected if you leave this parameter empty.</p>
+     * <ul>
+     * <li><strong>cloud_essd1</strong>: ESSD PL1</li>
+     * <li><strong>cloud_essd2</strong>: ESSD PL2</li>
+     * <li><strong>cloud_essd3</strong>: ESSD PL3</li>
+     * <li><strong>local_ssd</strong>: local SSD</li>
+     * </ul>
+     * <blockquote>
+     * <ul>
+     * <li>Instances of MongoDB 4.4 and later support only cloud disks. <strong>cloud_essd1</strong> is selected if you leave this parameter empty.</li>
+     * <li>Instances of MongoDB 4.2 and earlier support only local disks. <strong>local_ssd</strong> is selected if you leave this parameter empty.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cloud_essd1</p>
      */
     @NameInMap("StorageType")
     public String storageType;
@@ -283,18 +402,27 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
 
     /**
      * <p>The vSwitch ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-bp1vj604nj5a9zz74****</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
     /**
      * <p>The ID of the VPC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-bp1n3i15v90el48nx****</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
 
     /**
-     * <p>The zone ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent zone list.</p>
+     * <p>The zone ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the most recent zone list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-g</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;
@@ -318,6 +446,14 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
     }
     public String getAutoRenew() {
         return this.autoRenew;
+    }
+
+    public CreateShardingDBInstanceRequest setBackupId(String backupId) {
+        this.backupId = backupId;
+        return this;
+    }
+    public String getBackupId() {
+        return this.backupId;
     }
 
     public CreateShardingDBInstanceRequest setChargeType(String chargeType) {
@@ -350,6 +486,14 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
     }
     public String getDBInstanceDescription() {
         return this.DBInstanceDescription;
+    }
+
+    public CreateShardingDBInstanceRequest setDestRegion(String destRegion) {
+        this.destRegion = destRegion;
+        return this;
+    }
+    public String getDestRegion() {
+        return this.destRegion;
     }
 
     public CreateShardingDBInstanceRequest setEncrypted(Boolean encrypted) {
@@ -504,6 +648,14 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
         return this.restoreTime;
     }
 
+    public CreateShardingDBInstanceRequest setRestoreType(String restoreType) {
+        this.restoreType = restoreType;
+        return this;
+    }
+    public String getRestoreType() {
+        return this.restoreType;
+    }
+
     public CreateShardingDBInstanceRequest setSecondaryZoneId(String secondaryZoneId) {
         this.secondaryZoneId = secondaryZoneId;
         return this;
@@ -526,6 +678,14 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
     }
     public String getSrcDBInstanceId() {
         return this.srcDBInstanceId;
+    }
+
+    public CreateShardingDBInstanceRequest setSrcRegion(String srcRegion) {
+        this.srcRegion = srcRegion;
+        return this;
+    }
+    public String getSrcRegion() {
+        return this.srcRegion;
     }
 
     public CreateShardingDBInstanceRequest setStorageEngine(String storageEngine) {
@@ -579,17 +739,27 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
     public static class CreateShardingDBInstanceRequestConfigServer extends TeaModel {
         /**
          * <p>The instance type of the ConfigServer node. Valid values:</p>
-         * <br>
-         * <p>*   **mdb.shard.2x.xlarge.d**: 4 cores, 8 GB (dedicated). Only instances that run MongoDB 4.4 and later support this instance type.</p>
-         * <p>*   **dds.cs.mid** :1 core, 2 GB (general-purpose). Only instances that run MongoDB 4.2 and earlier support this instance type.</p>
+         * <ul>
+         * <li><strong>mdb.shard.2x.xlarge.d</strong>: 4 cores, 8 GB (dedicated). Only instances that run MongoDB 4.4 and later support this instance type.</li>
+         * <li><strong>dds.cs.mid</strong> :1 core, 2 GB (general-purpose). Only instances that run MongoDB 4.2 and earlier support this instance type.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mdb.shard.2x.xlarge.d</p>
          */
         @NameInMap("Class")
         public String _class;
 
         /**
          * <p>The storage space of the ConfigServer node. Unit: GB.</p>
-         * <br>
-         * <p>> The values that can be specified for this parameter vary based on the instance types. For more information, see [Sharded cluster instance types](~~311414~~).</p>
+         * <blockquote>
+         * <p>The values that can be specified for this parameter vary based on the instance types. For more information, see <a href="https://help.aliyun.com/document_detail/311414.html">Sharded cluster instance types</a>.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("Storage")
         public Integer storage;
@@ -619,10 +789,17 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
 
     public static class CreateShardingDBInstanceRequestMongos extends TeaModel {
         /**
-         * <p>The instance type of the mongos node. For more information, see [Sharded cluster instance types](~~311414~~).</p>
-         * <br>
-         * <p>> *   **N** specifies the serial number of the mongos node for which the instance type is specified. For example, **Mongos.2.Class** specifies the instance type of the second mongos node.</p>
-         * <p>> *   Valid values for **N**: **2** to **32**.</p>
+         * <p>The instance type of the mongos node. For more information, see <a href="https://help.aliyun.com/document_detail/311414.html">Sharded cluster instance types</a>.</p>
+         * <blockquote>
+         * <ul>
+         * <li><strong>N</strong> specifies the serial number of the mongos node for which the instance type is specified. For example, <strong>Mongos.2.Class</strong> specifies the instance type of the second mongos node.</li>
+         * <li>Valid values for <strong>N</strong>: <strong>2</strong> to <strong>32</strong>.</li>
+         * </ul>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mdb.shard.2x.xlarge.d</p>
          */
         @NameInMap("Class")
         public String _class;
@@ -644,29 +821,46 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
 
     public static class CreateShardingDBInstanceRequestReplicaSet extends TeaModel {
         /**
-         * <p>The instance type of the shard node. For more information, see [Sharded cluster instance types](~~311414~~).</p>
-         * <br>
-         * <p>> *   **N** specifies the serial number of the shard node for which the instance type is specified. For example, **ReplicaSet.2.Class** specifies the instance type of the second shard node.</p>
-         * <p>> *   Valid values for **N**: **2** to **32**.</p>
+         * <p>The instance type of the shard node. For more information, see <a href="https://help.aliyun.com/document_detail/311414.html">Sharded cluster instance types</a>.</p>
+         * <blockquote>
+         * <ul>
+         * <li><strong>N</strong> specifies the serial number of the shard node for which the instance type is specified. For example, <strong>ReplicaSet.2.Class</strong> specifies the instance type of the second shard node.</li>
+         * <li>Valid values for <strong>N</strong>: <strong>2</strong> to <strong>32</strong>.</li>
+         * </ul>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds.shard.standard</p>
          */
         @NameInMap("Class")
         public String _class;
 
         /**
          * <p>The number of read-only nodes in shard node N.</p>
-         * <br>
-         * <p>Valid values: **0**, 1, 2, 3, 4, and **5**. Default value: **0**.</p>
-         * <br>
-         * <p>>  **N** specifies the serial number of the shard node for which you want to set the number of read-only nodes. For example, **ReplicaSet.2.ReadonlyReplicas** specifies the number of read-only nodes in the second shard node.</p>
+         * <p>Valid values: <strong>0</strong>, 1, 2, 3, 4, and <strong>5</strong>. Default value: <strong>0</strong>.</p>
+         * <blockquote>
+         * <p> <strong>N</strong> specifies the serial number of the shard node for which you want to set the number of read-only nodes. For example, <strong>ReplicaSet.2.ReadonlyReplicas</strong> specifies the number of read-only nodes in the second shard node.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ReadonlyReplicas")
         public Integer readonlyReplicas;
 
         /**
          * <p>The storage space of the shard node. Unit: GB.</p>
-         * <br>
-         * <p>> *   The values that can be specified for this parameter vary based on the instance types. For more information, see [Sharded cluster instance types](~~311414~~).</p>
-         * <p>> *   **N** specifies the serial number of the shard node for which the storage space is specified. For example, **ReplicaSet.2.Storage** specifies the storage space of the second shard node.</p>
+         * <blockquote>
+         * <ul>
+         * <li>The values that can be specified for this parameter vary based on the instance types. For more information, see <a href="https://help.aliyun.com/document_detail/311414.html">Sharded cluster instance types</a>.</li>
+         * <li><strong>N</strong> specifies the serial number of the shard node for which the storage space is specified. For example, <strong>ReplicaSet.2.Storage</strong> specifies the storage space of the second shard node.</li>
+         * </ul>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("Storage")
         public Integer storage;
@@ -705,16 +899,24 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
     public static class CreateShardingDBInstanceRequestTag extends TeaModel {
         /**
          * <p>The tag key.</p>
-         * <br>
-         * <p>>  **N** specifies the serial number of the tag. For example, **Tag.1.Key** specifies the key of the first tag and **Tag.2.Key** specifies the key of the second tag.</p>
+         * <blockquote>
+         * <p> <strong>N</strong> specifies the serial number of the tag. For example, <strong>Tag.1.Key</strong> specifies the key of the first tag and <strong>Tag.2.Key</strong> specifies the key of the second tag.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>testdatabase</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value.</p>
-         * <br>
-         * <p>>  **N** specifies the serial number of the tag. For example, **Tag.1.Value** specifies the value of the first tag and Tag.2.Value specifies the value of the second tag.</p>
+         * <blockquote>
+         * <p> <strong>N</strong> specifies the serial number of the tag. For example, <strong>Tag.1.Value</strong> specifies the value of the first tag and Tag.2.Value specifies the value of the second tag.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>apitest</p>
          */
         @NameInMap("Value")
         public String value;

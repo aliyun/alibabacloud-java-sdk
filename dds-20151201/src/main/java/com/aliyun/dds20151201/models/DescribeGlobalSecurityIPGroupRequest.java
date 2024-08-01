@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeGlobalSecurityIPGroupRequest extends TeaModel {
     /**
      * <p>The ID of the IP whitelist template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>g-hedmu8kg9nsabw6u42rv</p>
      */
     @NameInMap("GlobalSecurityGroupId")
     public String globalSecurityGroupId;
@@ -17,7 +20,11 @@ public class DescribeGlobalSecurityIPGroupRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

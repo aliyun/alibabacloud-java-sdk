@@ -4,9 +4,18 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceRecoverTimeResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F8CA8312-530A-413A-9129-F2BB32A8D404</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The time ranges to which data can be restored. The time ranges include those used for point-in-time data restoration.</p>
+     */
     @NameInMap("RestoreRanges")
     public java.util.List<DescribeInstanceRecoverTimeResponseBodyRestoreRanges> restoreRanges;
 
@@ -32,12 +41,33 @@ public class DescribeInstanceRecoverTimeResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceRecoverTimeResponseBodyRestoreRanges extends TeaModel {
+        /**
+         * <p>The beginning of the time range to which data can be restored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-10-16T19:33:20Z</p>
+         */
         @NameInMap("RestoreBeginTime")
         public String restoreBeginTime;
 
+        /**
+         * <p>The end of the time range to which data can be restored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-10-16T19:43:20Z</p>
+         */
         @NameInMap("RestoreEndTime")
         public String restoreEndTime;
 
+        /**
+         * <p>The method used to restore data. Valid value:</p>
+         * <ul>
+         * <li>PointInTime (default): Data is restored to a point in time.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PointInTime</p>
+         */
         @NameInMap("RestoreType")
         public String restoreType;
 

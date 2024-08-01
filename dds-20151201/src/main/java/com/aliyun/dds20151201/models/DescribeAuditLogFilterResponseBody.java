@@ -6,26 +6,36 @@ import com.aliyun.tea.*;
 public class DescribeAuditLogFilterResponseBody extends TeaModel {
     /**
      * <p>The type of the audit log entries. Valid values:</p>
-     * <br>
-     * <p>*   **admin**: O\&M and management operations</p>
-     * <p>*   **slow**: slow query logs</p>
-     * <p>*   **query**: query operations</p>
-     * <p>*   **insert**: insert operations</p>
-     * <p>*   **update**: update operations</p>
-     * <p>*   **delete**: delete operations</p>
-     * <p>*   **command**: protocol commands such as the aggregate method</p>
+     * <ul>
+     * <li><strong>admin</strong>: O\&amp;M and management operations</li>
+     * <li><strong>slow</strong>: slow query logs</li>
+     * <li><strong>query</strong>: query operations</li>
+     * <li><strong>insert</strong>: insert operations</li>
+     * <li><strong>update</strong>: update operations</li>
+     * <li><strong>delete</strong>: delete operations</li>
+     * <li><strong>command</strong>: protocol commands such as the aggregate method</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>admin,slow,insert,query,update,delete,command</p>
      */
     @NameInMap("Filter")
     public String filter;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7BAFB0B3-2A54-5B65-B13E-3937CF08FEE6</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The role of the node.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>logic</p>
      */
     @NameInMap("RoleType")
     public String roleType;

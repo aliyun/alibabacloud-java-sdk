@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class DescribeDBInstanceMonitorRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dds-bp1143f90ff3****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

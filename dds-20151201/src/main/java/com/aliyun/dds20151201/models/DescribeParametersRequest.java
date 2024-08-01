@@ -6,32 +6,48 @@ import com.aliyun.tea.*;
 public class DescribeParametersRequest extends TeaModel {
     /**
      * <p>The role of the instance. Valid values:</p>
-     * <br>
-     * <p>*   db: a shard node.</p>
-     * <p>*   cs: a Configserver node.</p>
-     * <p>*   mongos: a mongos node.</p>
+     * <ul>
+     * <li>db: a shard node.</li>
+     * <li>cs: a Configserver node.</li>
+     * <li>mongos: a mongos node.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>mongos</p>
      */
     @NameInMap("CharacterType")
     public String characterType;
 
     /**
      * <p>The instance ID.</p>
-     * <br>
-     * <p>>  If you set this parameter to the ID of a sharded cluster instance, you must also specify the **NodeId** parameter.</p>
+     * <blockquote>
+     * <p> If you set this parameter to the ID of a sharded cluster instance, you must also specify the <strong>NodeId</strong> parameter.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dds-bpxxxxxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The parameter that is available in the future.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>terrform</p>
      */
     @NameInMap("ExtraParam")
     public String extraParam;
 
     /**
      * <p>The ID of the mongos or shard node in the specified sharded cluster instance.</p>
-     * <br>
-     * <p>>  This parameter is valid when the **DBInstanceId** parameter is set to the ID of a sharded cluster instance.</p>
+     * <blockquote>
+     * <p> This parameter is valid when the <strong>DBInstanceId</strong> parameter is set to the ID of a sharded cluster instance.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>d-bpxxxxxxxx</p>
      */
     @NameInMap("NodeId")
     public String nodeId;

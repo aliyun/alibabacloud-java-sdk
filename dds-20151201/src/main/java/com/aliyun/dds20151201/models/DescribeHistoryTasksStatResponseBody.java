@@ -12,6 +12,9 @@ public class DescribeHistoryTasksStatResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FC724D23-XXXX-XXXX-ABB1-606C935AE7FD</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,20 +43,27 @@ public class DescribeHistoryTasksStatResponseBody extends TeaModel {
     public static class DescribeHistoryTasksStatResponseBodyItems extends TeaModel {
         /**
          * <p>The task status. Valid values:</p>
-         * <br>
-         * <p>*   Scheduled: The task is waiting to be executed.</p>
-         * <p>*   Running: The task is running.</p>
-         * <p>*   Succeed: The task is successful.</p>
-         * <p>*   Failed: The task failed.</p>
-         * <p>*   Cancelling: The task is being terminated.</p>
-         * <p>*   Canceled: The task has been terminated.</p>
-         * <p>*   Waiting: The task is waiting for scheduled time.</p>
+         * <ul>
+         * <li>Scheduled: The task is waiting to be executed.</li>
+         * <li>Running: The task is running.</li>
+         * <li>Succeed: The task is successful.</li>
+         * <li>Failed: The task failed.</li>
+         * <li>Cancelling: The task is being terminated.</li>
+         * <li>Canceled: The task has been terminated.</li>
+         * <li>Waiting: The task is waiting for scheduled time.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Succeed</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The number of tasks in a specified state.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;
