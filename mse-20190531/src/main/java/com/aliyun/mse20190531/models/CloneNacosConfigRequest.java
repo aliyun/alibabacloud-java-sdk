@@ -17,14 +17,17 @@ public class CloneNacosConfigRequest extends TeaModel {
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    @NameInMap("DataIds")
+    public String dataIds;
+
     /**
      * <p>The data structure.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>253661,253662</p>
      */
     @NameInMap("Ids")
+    @Deprecated
     public String ids;
 
     /**
@@ -85,6 +88,14 @@ public class CloneNacosConfigRequest extends TeaModel {
     }
     public String getAcceptLanguage() {
         return this.acceptLanguage;
+    }
+
+    public CloneNacosConfigRequest setDataIds(String dataIds) {
+        this.dataIds = dataIds;
+        return this;
+    }
+    public String getDataIds() {
+        return this.dataIds;
     }
 
     public CloneNacosConfigRequest setIds(String ids) {

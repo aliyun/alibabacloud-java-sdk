@@ -1595,6 +1595,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AcceptLanguage", request.acceptLanguage);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.dataIds)) {
+            query.put("DataIds", request.dataIds);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ids)) {
             query.put("Ids", request.ids);
         }
@@ -5213,6 +5217,76 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>黑白名单列表</p>
+     * 
+     * @param tmpReq GatewayBlackWhiteListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GatewayBlackWhiteListResponse
+     */
+    public GatewayBlackWhiteListResponse gatewayBlackWhiteListWithOptions(GatewayBlackWhiteListRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GatewayBlackWhiteListShrinkRequest request = new GatewayBlackWhiteListShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.filterParams)) {
+            request.filterParamsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.filterParams, "FilterParams", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.descSort)) {
+            query.put("DescSort", request.descSort);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.filterParamsShrink)) {
+            query.put("FilterParams", request.filterParamsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderItem)) {
+            query.put("OrderItem", request.orderItem);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GatewayBlackWhiteList"),
+            new TeaPair("version", "2019-05-31"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GatewayBlackWhiteListResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>黑白名单列表</p>
+     * 
+     * @param request GatewayBlackWhiteListRequest
+     * @return GatewayBlackWhiteListResponse
+     */
+    public GatewayBlackWhiteListResponse gatewayBlackWhiteList(GatewayBlackWhiteListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.gatewayBlackWhiteListWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries information about canary release for messaging of an application.</p>
      * 
      * @param request GetAppMessageQueueRouteRequest
@@ -5431,10 +5505,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the blacklist or whitelist of a gateway.</p>
      * 
+     * @deprecated OpenAPI GetBlackWhiteList is deprecated, please use mse::2019-05-31::GatewayBlackWhiteList instead.
+     * 
      * @param request GetBlackWhiteListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetBlackWhiteListResponse
      */
+    @Deprecated
+    // Deprecated
     public GetBlackWhiteListResponse getBlackWhiteListWithOptions(GetBlackWhiteListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5479,9 +5557,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the blacklist or whitelist of a gateway.</p>
      * 
+     * @deprecated OpenAPI GetBlackWhiteList is deprecated, please use mse::2019-05-31::GatewayBlackWhiteList instead.
+     * 
      * @param request GetBlackWhiteListRequest
      * @return GetBlackWhiteListResponse
      */
+    @Deprecated
+    // Deprecated
     public GetBlackWhiteListResponse getBlackWhiteList(GetBlackWhiteListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getBlackWhiteListWithOptions(request, runtime);

@@ -168,6 +168,9 @@ public class CloneNacosConfigResponseBody extends TeaModel {
         @NameInMap("Group")
         public String group;
 
+        @NameInMap("Reason")
+        public String reason;
+
         public static CloneNacosConfigResponseBodyDataFailData build(java.util.Map<String, ?> map) throws Exception {
             CloneNacosConfigResponseBodyDataFailData self = new CloneNacosConfigResponseBodyDataFailData();
             return TeaModel.build(map, self);
@@ -187,6 +190,14 @@ public class CloneNacosConfigResponseBody extends TeaModel {
         }
         public String getGroup() {
             return this.group;
+        }
+
+        public CloneNacosConfigResponseBodyDataFailData setReason(String reason) {
+            this.reason = reason;
+            return this;
+        }
+        public String getReason() {
+            return this.reason;
         }
 
     }
