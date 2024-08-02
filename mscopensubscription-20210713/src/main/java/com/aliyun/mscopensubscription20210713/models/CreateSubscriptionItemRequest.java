@@ -4,9 +4,16 @@ package com.aliyun.mscopensubscription20210713.models;
 import com.aliyun.tea.*;
 
 public class CreateSubscriptionItemRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ItemName")
     public String itemName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>zh-cn</p>
+     */
     @NameInMap("Locale")
     public String locale;
 

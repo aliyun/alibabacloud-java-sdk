@@ -4,9 +4,19 @@ package com.aliyun.mscopensubscription20210713.models;
 import com.aliyun.tea.*;
 
 public class DeleteWebhookRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>zh-cn</p>
+     */
     @NameInMap("Locale")
     public String locale;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10086</p>
+     */
     @NameInMap("WebhookId")
     public Long webhookId;
 

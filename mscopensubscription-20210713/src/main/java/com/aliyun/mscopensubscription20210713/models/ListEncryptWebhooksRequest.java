@@ -3,7 +3,7 @@ package com.aliyun.mscopensubscription20210713.models;
 
 import com.aliyun.tea.*;
 
-public class ListSubscriptionItemGroupDetailsRequest extends TeaModel {
+public class ListEncryptWebhooksRequest extends TeaModel {
     /**
      * <strong>example:</strong>
      * <p>zh-cn</p>
@@ -11,12 +11,12 @@ public class ListSubscriptionItemGroupDetailsRequest extends TeaModel {
     @NameInMap("Locale")
     public String locale;
 
-    public static ListSubscriptionItemGroupDetailsRequest build(java.util.Map<String, ?> map) throws Exception {
-        ListSubscriptionItemGroupDetailsRequest self = new ListSubscriptionItemGroupDetailsRequest();
+    public static ListEncryptWebhooksRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListEncryptWebhooksRequest self = new ListEncryptWebhooksRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListSubscriptionItemGroupDetailsRequest setLocale(String locale) {
+    public ListEncryptWebhooksRequest setLocale(String locale) {
         this.locale = locale;
         return this;
     }

@@ -4,24 +4,46 @@ package com.aliyun.mscopensubscription20210713.models;
 import com.aliyun.tea.*;
 
 public class ListSubscriptionItemsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>qwe-ert</p>
+     */
     @NameInMap("NextToken")
     public Integer nextToken;
 
+    /**
+     * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CFA1882C-493D-1986-922D-6AF5085C0F91</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("SubscriptionItems")
     public java.util.List<ListSubscriptionItemsResponseBodySubscriptionItems> subscriptionItems;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -87,36 +109,90 @@ public class ListSubscriptionItemsResponseBody extends TeaModel {
     }
 
     public static class ListSubscriptionItemsResponseBodySubscriptionItems extends TeaModel {
+        /**
+         * <p>属于通道</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tts</p>
+         */
         @NameInMap("Channel")
         public String channel;
 
+        /**
+         * <p>订阅联系人</p>
+         */
         @NameInMap("ContactIds")
         public java.util.List<Long> contactIds;
 
+        /**
+         * <p>订阅项描述</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>邮件订阅情况</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("EmailStatus")
         public Integer emailStatus;
 
+        /**
+         * <p>代表资源一级ID的资源属性字段</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32</p>
+         */
         @NameInMap("ItemId")
         public Integer itemId;
 
+        /**
+         * <p>订阅项名称</p>
+         */
         @NameInMap("ItemName")
         public String itemName;
 
+        /**
+         * <p>站内信订阅情况</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("PmsgStatus")
         public Integer pmsgStatus;
 
+        /**
+         * <p>短信订阅情况</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
+         */
         @NameInMap("SmsStatus")
         public Integer smsStatus;
 
+        /**
+         * <p>语音短信订阅情况</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
+         */
         @NameInMap("TtsStatus")
         public Integer ttsStatus;
 
+        /**
+         * <p>订阅webhooks</p>
+         */
         @NameInMap("WebhookIds")
         public java.util.List<Long> webhookIds;
 
+        /**
+         * <p>回调订阅情况</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-2</p>
+         */
         @NameInMap("WebhookStatus")
         public Integer webhookStatus;
 

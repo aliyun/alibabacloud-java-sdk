@@ -4,21 +4,43 @@ package com.aliyun.mscopensubscription20210713.models;
 import com.aliyun.tea.*;
 
 public class ListWebhooksResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>qwe-rty</p>
+     */
     @NameInMap("NextToken")
     public Integer nextToken;
 
+    /**
+     * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CFA1882C-493D-1986-922D-6AF5085C0F91</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -87,12 +109,27 @@ public class ListWebhooksResponseBody extends TeaModel {
     }
 
     public static class ListWebhooksResponseBodyWebhooks extends TeaModel {
+        /**
+         * <p>回调地址</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=">https://oapi.dingtalk.com/robot/send?access_token=</a></p>
+         */
         @NameInMap("ServerUrl")
         public String serverUrl;
 
+        /**
+         * <p>代表资源一级ID的资源属性字段</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10086</p>
+         */
         @NameInMap("WebhookId")
         public Long webhookId;
 
+        /**
+         * <p>名称</p>
+         */
         @NameInMap("WebhookName")
         public String webhookName;
 
