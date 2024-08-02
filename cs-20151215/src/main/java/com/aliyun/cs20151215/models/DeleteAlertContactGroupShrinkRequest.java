@@ -4,6 +4,9 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DeleteAlertContactGroupShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("contact_group_ids")
     public String contactGroupIdsShrink;
 

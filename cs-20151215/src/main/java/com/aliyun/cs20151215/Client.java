@@ -1559,6 +1559,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>删除ACK报警联系人</p>
+     * 
      * @param tmpReq DeleteAlertContactRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1596,6 +1599,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>删除ACK报警联系人</p>
+     * 
      * @param request DeleteAlertContactRequest
      * @return DeleteAlertContactResponse
      */
@@ -1606,6 +1612,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>删除ACK报警联系人分组</p>
+     * 
      * @param tmpReq DeleteAlertContactGroupRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1643,6 +1652,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>删除ACK报警联系人分组</p>
+     * 
      * @param request DeleteAlertContactGroupRequest
      * @return DeleteAlertContactGroupResponse
      */
@@ -7283,13 +7295,36 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>为集群中报警规则集设置订阅的通知对象联系人组</p>
+     * 
+     * @param request UpdateContactGroupForAlertRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateContactGroupForAlertResponse
      */
-    public UpdateContactGroupForAlertResponse updateContactGroupForAlertWithOptions(String ClusterId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public UpdateContactGroupForAlertResponse updateContactGroupForAlertWithOptions(String ClusterId, UpdateContactGroupForAlertRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.alertRuleGroupName)) {
+            body.put("alert_rule_group_name", request.alertRuleGroupName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.contactGroupIds)) {
+            body.put("contact_group_ids", request.contactGroupIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.crName)) {
+            body.put("cr_name", request.crName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            body.put("namespace", request.namespace);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "UpdateContactGroupForAlert"),
@@ -7300,18 +7335,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "none")
+            new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateContactGroupForAlertResponse());
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>为集群中报警规则集设置订阅的通知对象联系人组</p>
+     * 
+     * @param request UpdateContactGroupForAlertRequest
      * @return UpdateContactGroupForAlertResponse
      */
-    public UpdateContactGroupForAlertResponse updateContactGroupForAlert(String ClusterId) throws Exception {
+    public UpdateContactGroupForAlertResponse updateContactGroupForAlert(String ClusterId, UpdateContactGroupForAlertRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.updateContactGroupForAlertWithOptions(ClusterId, headers, runtime);
+        return this.updateContactGroupForAlertWithOptions(ClusterId, request, headers, runtime);
     }
 
     /**

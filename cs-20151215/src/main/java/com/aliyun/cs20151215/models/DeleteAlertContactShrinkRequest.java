@@ -4,6 +4,9 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DeleteAlertContactShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("contact_ids")
     public String contactIdsShrink;
 
