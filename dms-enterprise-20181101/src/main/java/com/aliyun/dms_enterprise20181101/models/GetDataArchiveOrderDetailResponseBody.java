@@ -38,10 +38,10 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -1188,7 +1188,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
 
     public static class GetDataArchiveOrderDetailResponseBodyDataArchiveOrderDetailPluginExtraDataInstances extends TeaModel {
         /**
-         * <p>The business time of the task flow. The time is in the yyyy-MM-DD HH:mm:ss format.</p>
+         * <p>The business time of the task flow. The time is displayed in the yyyy-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-05-14 16:00:57</p>
@@ -1197,7 +1197,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
         public String businessTime;
 
         /**
-         * <p>The ID of the task. You can call the <a href="https://help.aliyun.com/document_detail/424565.html">ListTaskFlow</a> or <a href="https://help.aliyun.com/document_detail/426672.html">ListLhTaskFlowAndScenario</a> operation to query the task flow ID.</p>
+         * <p>The task flow ID. You can call the <a href="https://help.aliyun.com/document_detail/424565.html">ListTaskFlow</a> or <a href="https://help.aliyun.com/document_detail/426672.html">ListLhTaskFlowAndScenario</a> operation to obtain the value of this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>37***</p>
@@ -1206,7 +1206,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
         public Long dagId;
 
         /**
-         * <p>The end time of the task flow. The time is in the yyyy-MM-DD HH:mm:ss format.</p>
+         * <p>The time when the task flow ended. The time is displayed in the yyyy-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-06-04 15:14:00</p>
@@ -1242,7 +1242,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
         public Long historyDagId;
 
         /**
-         * <p>The instance ID of the running task flow.</p>
+         * <p>The ID of the instance in the task flow that is executed.</p>
          * 
          * <strong>example:</strong>
          * <p>24***</p>
@@ -1251,7 +1251,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The running scenario of the last task flow.</p>
+         * <p>The context of the previous execution of the task flow.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -1265,7 +1265,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
         public String lastRunningContext;
 
         /**
-         * <p>The running details of the task.</p>
+         * <p>The context of the current execution of the task flow.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-05-15 16:37:48[GMT+08:00] INFO - Resource Control is active!\n2023-05-15 16:37:48[GMT+08:00] INFO - Starting job j_4834 at Mon May 15 16:37:48 CST 2023</p>
@@ -1276,12 +1276,12 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
         /**
          * <p>The status of the task. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: waiting for execution.</li>
-         * <li><strong>1</strong>: running.</li>
-         * <li><strong>2</strong>: suspended.</li>
-         * <li><strong>3</strong>: failed.</li>
-         * <li><strong>4</strong>: successful.</li>
-         * <li><strong>5</strong>: complete.</li>
+         * <li><strong>0</strong>: The task is waiting for execution.</li>
+         * <li><strong>1</strong>: The task is in progress.</li>
+         * <li><strong>2</strong>: The task is suspended.</li>
+         * <li><strong>3</strong>: The task failed.</li>
+         * <li><strong>4</strong>: The task is successful.</li>
+         * <li><strong>5</strong>: The task is complete.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1595,7 +1595,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
 
     public static class GetDataArchiveOrderDetailResponseBodyDataArchiveOrderDetailPluginParamTableIncludes extends TeaModel {
         /**
-         * <p>The name of the table.</p>
+         * <p>The table name.</p>
          * 
          * <strong>example:</strong>
          * <p>tm_insured_cb</p>
@@ -1604,7 +1604,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
         public String tableName;
 
         /**
-         * <p>The filter conditions.</p>
+         * <p>The filter condition.</p>
          * 
          * <strong>example:</strong>
          * <p>id&lt;1000 or gmt_create&lt;\&quot;2023-05-14 16:00:57\&quot;</p>

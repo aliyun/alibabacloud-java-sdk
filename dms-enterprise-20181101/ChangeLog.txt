@@ -1,3 +1,6 @@
+2024-08-02 Version: 1.60.3
+- Generated java 2018-11-01 for dms-enterprise.
+
 2024-07-11 Version: 1.60.2
 - Update API ApproveOrder: add param RealLoginUserUid.
 - Update API CreateDataCorrectOrder: add param RealLoginUserUid.

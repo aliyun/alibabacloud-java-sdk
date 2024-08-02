@@ -63,7 +63,7 @@ public class GetDataArchiveCountResponseBody extends TeaModel {
 
     public static class GetDataArchiveCountResponseBodyData extends TeaModel {
         /**
-         * <p>The number of failed archiving tickets.</p>
+         * <p>The number of tickets that data archiving failed.</p>
          * 
          * <strong>example:</strong>
          * <p>1**</p>
@@ -72,7 +72,7 @@ public class GetDataArchiveCountResponseBody extends TeaModel {
         public Long failCount;
 
         /**
-         * <p>The number of in-progress archiving tickets.</p>
+         * <p>The number of tickets that data archiving is in progress.</p>
          * 
          * <strong>example:</strong>
          * <p>2**</p>
@@ -81,7 +81,7 @@ public class GetDataArchiveCountResponseBody extends TeaModel {
         public Long processingCount;
 
         /**
-         * <p>The number of successful archiving tickets.</p>
+         * <p>The number of tickets that data archiving is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>3**</p>
@@ -90,7 +90,7 @@ public class GetDataArchiveCountResponseBody extends TeaModel {
         public Long successCount;
 
         /**
-         * <p>The total number of archiving tickets.</p>
+         * <p>The total number of data archiving tickets.</p>
          * 
          * <strong>example:</strong>
          * <p>6**</p>

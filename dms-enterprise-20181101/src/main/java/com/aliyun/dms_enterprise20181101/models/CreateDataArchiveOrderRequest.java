@@ -109,7 +109,7 @@ public class CreateDataArchiveOrderRequest extends TeaModel {
 
     public static class CreateDataArchiveOrderRequestParamTableIncludes extends TeaModel {
         /**
-         * <p>The name of the table.</p>
+         * <p>The table name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -119,7 +119,7 @@ public class CreateDataArchiveOrderRequest extends TeaModel {
         public String tableName;
 
         /**
-         * <p>The filter condition specified by the WHERE clause of the archiving configuration. If a time variable is used in the filter condition, the filter condition is specified in the following format: field name &lt;=\&quot;${variable name}\&quot;. The variable name in the filter condition must be the same as the Name value of Variables.</p>
+         * <p>The filter condition that is specified by the WHERE clause of the archiving configuration. If a time variable is used in the filter condition, the filter condition is specified in the following format: field name &lt;=\&quot;${variable name}\&quot;. The variable name in the filter condition must be the same as the time variable name that is specified in the Variables parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>gmt_modified&lt;\&quot;${time}\&quot;</p>
@@ -182,13 +182,13 @@ public class CreateDataArchiveOrderRequest extends TeaModel {
 
     public static class CreateDataArchiveOrderRequestParam extends TeaModel {
         /**
-         * <p>The type of the destination database for archiving data. Valid values:</p>
+         * <p>The archiving destination to which you want to archive data. Valid values:</p>
          * <blockquote>
-         * <p> If you set ArchiveMethod to a value other than inner_oss, you must connect the destination database for archiving data to Data Management (DMS) before you create the data archiving ticket. After the database is connected to DMS, the database is displayed in the Instances Connected section of the DMS console.</p>
+         * <p> If you set ArchiveMethod to a value other than inner_oss, you must register the corresponding destination database with Data Management (DMS) before you create the data archiving ticket. After the database is registered with DMS, the database is displayed in the Instances Connected section of the DMS console.</p>
          * </blockquote>
          * <ul>
-         * <li><strong>inner_oss</strong>: dedicated storage space, which is a built-in space.</li>
-         * <li><strong>oss_userself</strong>: Object Storage Service (OSS) bucket of the user.</li>
+         * <li><strong>inner_oss</strong>: dedicated storage, which is a built-in Object Storage Service (OSS) bucket.</li>
+         * <li><strong>oss_userself</strong>: OSS bucket of the user.</li>
          * <li><strong>mysql</strong>: ApsaraDB RDS for MySQL instance.</li>
          * <li><strong>polardb</strong>: PolarDB for MySQL cluster.</li>
          * <li><strong>adb_mysql</strong>: AnalyticDB for MySQL V3.0 cluster.</li>
@@ -203,7 +203,7 @@ public class CreateDataArchiveOrderRequest extends TeaModel {
         public String archiveMethod;
 
         /**
-         * <p>A crontab expression that specifies the scheduling cycle to run the task. For more information, see the <a href="https://help.aliyun.com/document_detail/206581.html">Crontab expressions</a> section of the &quot;Create shadow tables for synchronization&quot; topic. This parameter is required if RunMethod is set to schedule.</p>
+         * <p>A crontab expression that specifies the scheduling cycle of the data archiving task. For more information, see the <a href="https://help.aliyun.com/document_detail/206581.html">Crontab expressions</a> section of the &quot;Create shadow tables for synchronization&quot; topic. You must specify this parameter if you set RunMethod to schedule.</p>
          * 
          * <strong>example:</strong>
          * <p>00 05 11 * * ?</p>
@@ -212,6 +212,8 @@ public class CreateDataArchiveOrderRequest extends TeaModel {
         public String cronStr;
 
         /**
+         * <p>The database ID. If the database is a self-managed database or a third-party cloud database, you can call the <a href="https://help.aliyun.com/document_detail/465856.html">GetDatabase</a> operation to query the database ID. If the database is an Alibaba Cloud database, ignore this parameter.</p>
+         * 
          * <strong>example:</strong>
          * <p>1***</p>
          */
@@ -263,7 +265,7 @@ public class CreateDataArchiveOrderRequest extends TeaModel {
         public String sourceCatalogName;
 
         /**
-         * <p>The name of the source instance.</p>
+         * <p>The name of the source instance. If the database instance is a self-managed database or a third-party cloud database, you can call the <a href="https://help.aliyun.com/document_detail/465826.html">GetInstance</a> operation to query the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
