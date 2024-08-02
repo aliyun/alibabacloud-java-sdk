@@ -12,24 +12,36 @@ public class GetAllowedIpListResponseBody extends TeaModel {
 
     /**
      * <p>The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>operation success.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A421CCD7-5BC5-4B32-8DD8-64668A8FCB56</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -94,8 +106,10 @@ public class GetAllowedIpListResponseBody extends TeaModel {
 
         /**
          * <p>The port range. Valid value:</p>
-         * <br>
-         * <p>**9093/9093**.</p>
+         * <p><strong>9093/9093</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9093/9093</p>
          */
         @NameInMap("PortRange")
         public String portRange;
@@ -146,8 +160,10 @@ public class GetAllowedIpListResponseBody extends TeaModel {
 
         /**
          * <p>The port range. Valid value:</p>
-         * <br>
-         * <p>**9092/9092**.</p>
+         * <p><strong>9092/9092</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9092/9092</p>
          */
         @NameInMap("PortRange")
         public String portRange;
@@ -186,11 +202,16 @@ public class GetAllowedIpListResponseBody extends TeaModel {
     public static class GetAllowedIpListResponseBodyAllowedList extends TeaModel {
         /**
          * <p>The deployment mode of the instance. Valid values:</p>
-         * <br>
-         * <p>*   **4**: allows access from the Internet and a virtual private cloud (VPC).</p>
-         * <p>*   **5**: allows access from a VPC.</p>
-         * <br>
-         * <p>>  Only integrators need to concern themselves with the value of this parameter.</p>
+         * <ul>
+         * <li><strong>4</strong>: allows access from the Internet and a virtual private cloud (VPC).</li>
+         * <li><strong>5</strong>: allows access from a VPC.</li>
+         * </ul>
+         * <blockquote>
+         * <p> Only integrators need to concern themselves with the value of this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         @NameInMap("DeployType")
         public Integer deployType;

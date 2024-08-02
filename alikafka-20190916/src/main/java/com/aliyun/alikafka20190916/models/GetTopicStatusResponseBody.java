@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class GetTopicStatusResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>operation success.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E475C7E2-8C35-46EF-BE7D-5D2A9F5D****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -82,30 +94,45 @@ public class GetTopicStatusResponseBody extends TeaModel {
     public static class GetTopicStatusResponseBodyTopicStatusOffsetTableOffsetTable extends TeaModel {
         /**
          * <p>The last time when the partition was modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1566470063547</p>
          */
         @NameInMap("LastUpdateTimestamp")
         public Long lastUpdateTimestamp;
 
         /**
          * <p>The latest offset in the partition of the topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>76</p>
          */
         @NameInMap("MaxOffset")
         public Long maxOffset;
 
         /**
          * <p>The earliest offset in the partition of the topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("MinOffset")
         public Long minOffset;
 
         /**
          * <p>The ID of the partition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Partition")
         public Integer partition;
 
         /**
          * <p>The name of the topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testkafka</p>
          */
         @NameInMap("Topic")
         public String topic;
@@ -179,6 +206,9 @@ public class GetTopicStatusResponseBody extends TeaModel {
     public static class GetTopicStatusResponseBodyTopicStatus extends TeaModel {
         /**
          * <p>The time when the last consumed message was generated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1566470063575</p>
          */
         @NameInMap("LastTimeStamp")
         public Long lastTimeStamp;
@@ -191,6 +221,9 @@ public class GetTopicStatusResponseBody extends TeaModel {
 
         /**
          * <p>The number of messages in the topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>423</p>
          */
         @NameInMap("TotalCount")
         public Long totalCount;

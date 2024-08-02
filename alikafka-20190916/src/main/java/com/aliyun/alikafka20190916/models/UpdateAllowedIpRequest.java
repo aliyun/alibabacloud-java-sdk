@@ -5,72 +5,90 @@ import com.aliyun.tea.*;
 
 public class UpdateAllowedIpRequest extends TeaModel {
     /**
-     * <p>The IP addresses that you want to manage. You can specify a CIDR block. Example: **192.168.0.0/16**.</p>
-     * <br>
-     * <p>*   If the **UpdateType** parameter is set to **add**, specify one or more IP addresses for this parameter. Separate multiple IP addresses with commas (,).</p>
-     * <p>*   If the **UpdateType** parameter is set to **delete**, specify only one IP address.</p>
-     * <p>*   Exercise caution when you delete IP addresses.</p>
-     * <br>
+     * <p>The IP addresses that you want to manage. You can specify a CIDR block. Example: <strong>192.168.0.0/16</strong>.</p>
+     * <ul>
+     * <li>If the <strong>UpdateType</strong> parameter is set to <strong>add</strong>, specify one or more IP addresses for this parameter. Separate multiple IP addresses with commas (,).</li>
+     * <li>If the <strong>UpdateType</strong> parameter is set to <strong>delete</strong>, specify only one IP address.</li>
+     * <li>Exercise caution when you delete IP addresses.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.0.0.0/0</p>
      */
     @NameInMap("AllowedListIp")
     public String allowedListIp;
 
     /**
      * <p>The type of the whitelist. Valid values:</p>
-     * <br>
-     * <p>*   **vpc**: a whitelist for access from a VPC.</p>
-     * <p>*   **internet**: a whitelist for access from the Internet.</p>
-     * <br>
+     * <ul>
+     * <li><strong>vpc</strong>: a whitelist for access from a VPC.</li>
+     * <li><strong>internet</strong>: a whitelist for access from the Internet.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc</p>
      */
     @NameInMap("AllowedListType")
     public String allowedListType;
 
     /**
      * <p>The description of the whitelist.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tf-testAccEcsImageConfigBasic3549descriptionChange</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The ID of the instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alikafka_pre-cn-0pp1cng20***</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The port range. Valid values:</p>
-     * <br>
-     * <p>*   **9092/9092**: the port range for access from virtual private clouds (VPCs) by using the default endpoint.</p>
-     * <p>*   **9093/9093**: the port range for access from the Internet.</p>
-     * <p>*   **9094/9094**: the port range for access from VPCs by using the Simple Authentication and Security Layer (SASL) endpoint.</p>
-     * <p>*   **9095/9095**: the port range for access from VPCs by using the Secure Sockets Layer (SSL) endpoint.</p>
-     * <br>
-     * <p>This parameter must correspond to **AllowdedListType**.</p>
-     * <br>
+     * <ul>
+     * <li><strong>9092/9092</strong>: Messages are transmitted in a virtual private cloud (VPC) by using the PLAINTEXT protocol.</li>
+     * <li><strong>9093/9093</strong>: Messages are transmitted over the Internet by using the SASL_SSL protocol.</li>
+     * <li><strong>9094/9094</strong>: Messages are transmitted in a VPC by using the SASL_PLAINTEXT protocol.</li>
+     * <li><strong>9095/9095</strong>: Messages are transmitted in a VPC by using the SASL_SSL protocol.</li>
+     * </ul>
+     * <p>This parameter must correspond to <strong>AllowdedListType</strong>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9092/9092</p>
      */
     @NameInMap("PortRange")
     public String portRange;
 
     /**
      * <p>The ID of the region where the instance resides.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The type of configuration change. Valid values:</p>
-     * <br>
-     * <p>*   **add**</p>
-     * <p>*   **delete**</p>
-     * <br>
+     * <ul>
+     * <li><strong>add</strong></li>
+     * <li><strong>delete</strong></li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>add</p>
      */
     @NameInMap("UpdateType")
     public String updateType;

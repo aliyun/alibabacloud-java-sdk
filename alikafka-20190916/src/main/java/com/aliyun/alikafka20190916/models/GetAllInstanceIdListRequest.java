@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetAllInstanceIdListRequest extends TeaModel {
     /**
      * <p>The region ID of the instance. This parameter is reserved.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

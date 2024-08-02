@@ -6,116 +6,155 @@ import com.aliyun.tea.*;
 public class CreateAclRequest extends TeaModel {
     /**
      * <p>The type of the operation allowed by the access control list (ACL). Valid values:</p>
-     * <br>
-     * <p>*   **Write**</p>
-     * <p>*   **Read**</p>
-     * <p>*   **Describe**: reads of transactional IDs.</p>
-     * <p>*   **IdempotentWrite**: idempotent data writes to clusters.</p>
-     * <p>*   **IDEMPOTENT_WRITE**: idempotent data writes to clusters. This value is available only for ApsaraMQ for Kafka V3 instances.</p>
-     * <p>*   **DESCRIBE_CONFIGS**: queries of configurations. This value is available only for ApsaraMQ for Kafka V3 instances.</p>
-     * <br>
+     * <ul>
+     * <li><strong>Write</strong></li>
+     * <li><strong>Read</strong></li>
+     * <li><strong>Describe</strong>: reads of transactional IDs.</li>
+     * <li><strong>IdempotentWrite</strong>: idempotent data writes to clusters.</li>
+     * <li><strong>IDEMPOTENT_WRITE</strong>: idempotent data writes to clusters. This value is available only for ApsaraMQ for Kafka V3 instances.</li>
+     * <li><strong>DESCRIBE_CONFIGS</strong>: queries of configurations. This value is available only for ApsaraMQ for Kafka V3 instances.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Read</p>
      */
     @NameInMap("AclOperationType")
     public String aclOperationType;
 
     /**
      * <p>The types of operations allowed by the ACL. Separate multiple operation types with commas (,).</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   **Write**</p>
-     * <p>*   **Read**</p>
-     * <p>*   **Describe**: reads of transactional IDs.</p>
-     * <p>*   **IdempotentWrite**: idempotent data writes to clusters.</p>
-     * <p>*   **IDEMPOTENT_WRITE**: idempotent data writes to clusters. This value is available only for ApsaraMQ for Kafka V3 instances.</p>
-     * <p>*   **DESCRIBE_CONFIGS**: queries of configurations. This value is available only for ApsaraMQ for Kafka V3 instances.</p>
-     * <br>
-     * <p>>  This parameter is available only for ApsaraMQ for Kafka V3 serverless instances.</p>
+     * <ul>
+     * <li><strong>Write</strong></li>
+     * <li><strong>Read</strong></li>
+     * <li><strong>Describe</strong>: reads of transactional IDs.</li>
+     * <li><strong>IdempotentWrite</strong>: idempotent data writes to clusters.</li>
+     * <li><strong>IDEMPOTENT_WRITE</strong>: idempotent data writes to clusters. This value is available only for ApsaraMQ for Kafka V3 instances.</li>
+     * <li><strong>DESCRIBE_CONFIGS</strong>: queries of configurations. This value is available only for ApsaraMQ for Kafka V3 instances.</li>
+     * </ul>
+     * <blockquote>
+     * <p> This parameter is available only for ApsaraMQ for Kafka V3 serverless instances.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Write,Read</p>
      */
     @NameInMap("AclOperationTypes")
     public String aclOperationTypes;
 
     /**
      * <p>The authorization method. Valid values:</p>
-     * <br>
-     * <p>*   **DENY**</p>
-     * <p>*   **ALLOW**</p>
-     * <br>
-     * <p>>  This parameter is available only for ApsaraMQ for Kafka V3 serverless instances.</p>
+     * <ul>
+     * <li><strong>DENY</strong></li>
+     * <li><strong>ALLOW</strong></li>
+     * </ul>
+     * <blockquote>
+     * <p> This parameter is available only for ApsaraMQ for Kafka V3 serverless instances.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>DENY</p>
      */
     @NameInMap("AclPermissionType")
     public String aclPermissionType;
 
     /**
-     * <p>The name or ID of the resource.</p>
-     * <br>
-     * <p>*   The value can be the name of a topic, consumer group, or cluster, or the ID of a transaction.</p>
-     * <p>*   You can use an asterisk (\\*) to represent the names or IDs of all relevant resources.</p>
-     * <br>
+     * <p>The resource name.</p>
+     * <ul>
+     * <li>The value can be a topic name, a group ID, a cluster name, or a transaction ID.</li>
+     * <li>You can use an asterisk (\*) to specify the names of all resources of the specified type.</li>
+     * </ul>
+     * <blockquote>
+     * <p>You can use an asterisk (\*) to query the resources on which permissions are granted only after you grant the user the required permissions on all resources.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>X****</p>
      */
     @NameInMap("AclResourceName")
     public String aclResourceName;
 
     /**
      * <p>The matching mode. Valid values:</p>
-     * <br>
-     * <p>*   **LITERAL**: exact match</p>
-     * <p>*   **PREFIXED**: prefix match</p>
-     * <br>
+     * <ul>
+     * <li><strong>LITERAL</strong>: exact match</li>
+     * <li><strong>PREFIXED</strong>: prefix match</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LITERAL</p>
      */
     @NameInMap("AclResourcePatternType")
     public String aclResourcePatternType;
 
     /**
      * <p>The resource type. Valid values:</p>
-     * <br>
-     * <p>*   **Topic**</p>
-     * <p>*   **Group**</p>
-     * <p>*   **Cluster**</p>
-     * <p>*   **TransactionalId**: transactional ID</p>
-     * <br>
+     * <ul>
+     * <li><strong>Topic</strong></li>
+     * <li><strong>Group</strong></li>
+     * <li><strong>Cluster</strong></li>
+     * <li><strong>TransactionalId</strong>: transactional ID</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Group</p>
      */
     @NameInMap("AclResourceType")
     public String aclResourceType;
 
     /**
      * <p>The source IP address.</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   You can specify only a specific IP address or use the asterisk (\\*) wildcard character to specify all IP addresses. CIDR blocks are not supported.</p>
-     * <br>
-     * <p>*   This parameter is available only for ApsaraMQ for Kafka V3 serverless instances.</p>
+     * <blockquote>
+     * <ul>
+     * <li>You can specify only a specific IP address or use the asterisk (\*) wildcard character to specify all IP addresses. CIDR blocks are not supported.</li>
+     * <li>This parameter is available only for ApsaraMQ for Kafka V3 serverless instances.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <ul>
+     * <li></li>
+     * </ul>
      */
     @NameInMap("Host")
     public String host;
 
     /**
      * <p>The instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alikafka_pre-cn-v0h1cng0****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The region ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The username.</p>
-     * <br>
-     * <p>You can use an asterisk (\\*) to represent all usernames.</p>
-     * <br>
+     * <ul>
+     * <li>You can use an asterisk (\*) to specify all usernames.</li>
+     * </ul>
+     * <blockquote>
+     * <p>You can use an asterisk (\*) to query the authorized users only after you grant the required permissions to all users.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test***</p>
      */
     @NameInMap("Username")
     public String username;

@@ -6,34 +6,44 @@ import com.aliyun.tea.*;
 public class CreateConsumerGroupRequest extends TeaModel {
     /**
      * <p>The name of the consumer group.</p>
-     * <br>
-     * <p>*   The value can contain only letters, digits, hyphens (-), and underscores (_), and the value must contain at least one letter or digit.</p>
-     * <p>*   The value must be 3 to 128 characters in length. If the value that you specify contains more than 128 characters, the system automatically truncates the value to 128 characters.</p>
-     * <p>*   After a consumer group is created, you cannot change the name of the consumer group.</p>
-     * <br>
+     * <ul>
+     * <li>The value can contain only letters, digits, hyphens (-), and underscores (_), and the value must contain at least one letter or digit.</li>
+     * <li>The value must be 3 to 128 characters in length. If the value that you specify contains more than 128 characters, the system automatically truncates the value to 128 characters.</li>
+     * <li>After a consumer group is created, you cannot change the name of the consumer group.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("ConsumerId")
     public String consumerId;
 
     /**
      * <p>The instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alikafka_post-cn-0pp1l9z8****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The region ID of the instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The description of the consumer group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Remark")
     public String remark;
@@ -92,20 +102,27 @@ public class CreateConsumerGroupRequest extends TeaModel {
     public static class CreateConsumerGroupRequestTag extends TeaModel {
         /**
          * <p>The tag key.</p>
-         * <br>
-         * <p>*   You must specify this parameter.</p>
-         * <p>*   The tag key can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain `http://` or `https://`.</p>
-         * <br>
+         * <ul>
+         * <li>You must specify this parameter.</li>
+         * <li>The tag key can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain <code>http://</code> or <code>https://</code>.</li>
+         * </ul>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceDept</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value.</p>
-         * <br>
-         * <p>*   You can leave this parameter empty.</p>
-         * <p>*   The tag value can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain `http://` or `https://`.</p>
+         * <ul>
+         * <li>You can leave this parameter empty.</li>
+         * <li>The tag value can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain <code>http://</code> or <code>https://</code>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceJoshua</p>
          */
         @NameInMap("Value")
         public String value;

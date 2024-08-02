@@ -6,56 +6,73 @@ import com.aliyun.tea.*;
 public class CreateSaslUserRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alikafka_pre-cn-v0h1cng0****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The encryption method. Valid values:</p>
-     * <br>
-     * <p>*   SCRAM-SHA-512 (default)</p>
-     * <p>*   SCRAM-SHA-256</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   This parameter is available only for ApsaraMQ for Kafka V3 serverless instances.</p>
+     * <ul>
+     * <li>SCRAM-SHA-512 (default)</li>
+     * <li>SCRAM-SHA-256</li>
+     * </ul>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li>This parameter is available only for ApsaraMQ for Kafka V3 serverless instances.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>SCRAM-SHA-256</p>
      */
     @NameInMap("Mechanism")
     public String mechanism;
 
     /**
      * <p>The password of the SASL user.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12***</p>
      */
     @NameInMap("Password")
     public String password;
 
     /**
      * <p>The region ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The SASL mechanism. Valid values:</p>
-     * <br>
-     * <p>*   **plain**: a simple mechanism that uses usernames and passwords to verify user identities. Message Queue for Apache Kafka provides an optimized PLAIN mechanism that allows you to dynamically create SASL users for an instance without the need to restart the instance.</p>
-     * <p>*   **scram**: a mechanism that uses usernames and passwords to verify user identities. This mechanism provides better security protection than the PLAIN mechanism. Message Queue for Apache Kafka uses SCRAM-SHA-256.</p>
-     * <br>
-     * <p>Default value: **plain**.</p>
+     * <p>The type of the Simple Authentication and Security Layer (SASL) user. Valid values:</p>
+     * <ul>
+     * <li><strong>plain</strong>: a simple mechanism that uses usernames and passwords to verify user identities. ApsaraMQ for Kafka provides an improved PLAIN mechanism that allows you to dynamically add SASL users without the need to restart an instance.</li>
+     * <li><strong>SCRAM</strong>: a mechanism that uses usernames and passwords to verify user identities. Compared with the PLAIN mechanism, this mechanism provides better security protection. ApsaraMQ for Kafka uses the SCRAM-SHA-256 algorithm.</li>
+     * <li><strong>LDAP</strong>: This value is available only for the SASL users of ApsaraMQ for Confluent instances.</li>
+     * </ul>
+     * <p>Default value: <strong>plain</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>plain</p>
      */
     @NameInMap("Type")
     public String type;
 
     /**
      * <p>The name of the SASL user.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test***</p>
      */
     @NameInMap("Username")
     public String username;

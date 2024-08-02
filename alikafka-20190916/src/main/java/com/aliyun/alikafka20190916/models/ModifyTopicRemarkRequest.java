@@ -6,30 +6,39 @@ import com.aliyun.tea.*;
 public class ModifyTopicRemarkRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alikafka_post-cn-0pp1l9z****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The region ID of the instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The description of the topic.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testremark</p>
      */
     @NameInMap("Remark")
     public String remark;
 
     /**
      * <p>The name of the topic.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alikafka_post-cn-0pp1l9z8****</p>
      */
     @NameInMap("Topic")
     public String topic;

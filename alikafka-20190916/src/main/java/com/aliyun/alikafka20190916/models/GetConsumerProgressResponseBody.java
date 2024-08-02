@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetConsumerProgressResponseBody extends TeaModel {
     /**
      * <p>The returned HTTP status code. If the request is successful, 200 is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,18 +21,27 @@ public class GetConsumerProgressResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>operation success.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>252820E1-A2E6-45F2-B4C9-1056B8CE****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -82,36 +94,54 @@ public class GetConsumerProgressResponseBody extends TeaModel {
     public static class GetConsumerProgressResponseBodyConsumerProgressRebalanceInfoListRebalanceInfoList extends TeaModel {
         /**
          * <p>The number of rebalances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Generation")
         public Long generation;
 
         /**
          * <p>The group ID of the subscriber.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>falcon-uat</p>
          */
         @NameInMap("GroupId")
         public String groupId;
 
         /**
          * <p>The time when the last rebalance occurred. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1709199270</p>
          */
         @NameInMap("LastRebalanceTimestamp")
         public Long lastRebalanceTimestamp;
 
         /**
          * <p>The cause of the rebalance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>removing member consumer-1-cd14eb9c-379b-4b8e-9bbd-76f147f8536f on LeaveGroup</p>
          */
         @NameInMap("Reason")
         public String reason;
 
         /**
          * <p>Indicates whether new members are added to the consumer group in the rebalance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("RebalanceSuccess")
         public Boolean rebalanceSuccess;
 
         /**
          * <p>The duration of the rebalance. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("RebalanceTimeConsuming")
         public Long rebalanceTimeConsuming;
@@ -193,24 +223,36 @@ public class GetConsumerProgressResponseBody extends TeaModel {
     public static class GetConsumerProgressResponseBodyConsumerProgressTopicListTopicListOffsetListOffsetList extends TeaModel {
         /**
          * <p>The latest offset in the partition of the topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9</p>
          */
         @NameInMap("BrokerOffset")
         public Long brokerOffset;
 
         /**
          * <p>The consumer offset in the partition of the topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9</p>
          */
         @NameInMap("ConsumerOffset")
         public Long consumerOffset;
 
         /**
          * <p>The time when the last consumed message in the partition was generated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1566874931649</p>
          */
         @NameInMap("LastTimestamp")
         public Long lastTimestamp;
 
         /**
          * <p>The partition ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Partition")
         public Integer partition;
@@ -276,6 +318,9 @@ public class GetConsumerProgressResponseBody extends TeaModel {
     public static class GetConsumerProgressResponseBodyConsumerProgressTopicListTopicList extends TeaModel {
         /**
          * <p>The time when the last consumed message in the topic was generated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1566874931649</p>
          */
         @NameInMap("LastTimestamp")
         public Long lastTimestamp;
@@ -288,12 +333,18 @@ public class GetConsumerProgressResponseBody extends TeaModel {
 
         /**
          * <p>The topic name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kafka-test</p>
          */
         @NameInMap("Topic")
         public String topic;
 
         /**
          * <p>The number of unconsumed messages in the topic to which the consumer group subscribes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("TotalDiff")
         public Long totalDiff;
@@ -359,6 +410,9 @@ public class GetConsumerProgressResponseBody extends TeaModel {
     public static class GetConsumerProgressResponseBodyConsumerProgress extends TeaModel {
         /**
          * <p>The time when the last message consumed by the consumer group was generated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1566874931671</p>
          */
         @NameInMap("LastTimestamp")
         public Long lastTimestamp;
@@ -377,6 +431,9 @@ public class GetConsumerProgressResponseBody extends TeaModel {
 
         /**
          * <p>The total number of unconsumed messages in all topics to which the consumer group subscribes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("TotalDiff")
         public Long totalDiff;

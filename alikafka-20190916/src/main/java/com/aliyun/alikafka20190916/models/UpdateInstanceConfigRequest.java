@@ -6,24 +6,30 @@ import com.aliyun.tea.*;
 public class UpdateInstanceConfigRequest extends TeaModel {
     /**
      * <p>The configurations that you want to update for the ApsaraMQ for Kafka instance. The value must be a valid JSON string.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;kafka.log.retention.hours&quot;:&quot;33&quot;}</p>
      */
     @NameInMap("Config")
     public String config;
 
     /**
      * <p>The instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alikafka_post-cn-v0h1fgs2****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The region ID of the instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -6,92 +6,134 @@ import com.aliyun.tea.*;
 public class CreateTopicRequest extends TeaModel {
     /**
      * <p>The log cleanup policy that is used for the topic. This parameter is available only when LocalTopic is set to true. Valid values:</p>
-     * <br>
-     * <p>*   false: The topic uses the default log cleanup policy.</p>
-     * <p>*   true: The topic uses the log compaction policy.</p>
+     * <ul>
+     * <li>false: The topic uses the default log cleanup policy.</li>
+     * <li>true: The topic uses the log compaction policy.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("CompactTopic")
     public Boolean compactTopic;
 
     /**
      * <p>The additional configurations.</p>
-     * <br>
-     * <p>*   The value of this parameter must be in JSON format.</p>
-     * <p>*   The key must be **replications**. The value indicates the number of replicas for the topic. The value must be an integer that ranges from 1 to 3.</p>
-     * <p>*   This parameter is available only when **LocalTopic** is set to **true**, or the instance is of the **Open Source Edition (Local Disk)**.****</p>
-     * <br>
-     * <p>> If you specify this parameter, **ReplicationFactor** does not take effect.</p>
+     * <ul>
+     * <li>The value must be in JSON format.</li>
+     * <li>Set Key to <strong>replications</strong>. This value specifies the number of replicas of the topic. The value must be an integer that ranges from 1 to 3.</li>
+     * <li>You can configure this parameter only if you set <strong>LocalTopic</strong> to <strong>true</strong> or specify <strong>Open Source Edition (Local Disk)</strong> as the instance edition.****</li>
+     * </ul>
+     * <blockquote>
+     * <p> If you specify replications in this parameter, <strong>ReplicationFactor</strong> does not take effect.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;replications&quot;: 3}</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
      */
     @NameInMap("Config")
     public String config;
 
     /**
      * <p>The instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alikafka_pre-cn-mp919o4v****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The type of storage that the topic uses. Valid values:</p>
-     * <br>
-     * <p>*   false: The topic uses cloud storage.</p>
-     * <p>*   true: The topic uses local storage.</p>
+     * <ul>
+     * <li>false: The topic uses cloud storage.</li>
+     * <li>true: The topic uses local storage.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("LocalTopic")
     public Boolean localTopic;
 
     /**
      * <p>The minimum number of in-sync replicas (ISRs).</p>
-     * <br>
-     * <p>*   This parameter is available only when **LocalTopic** is set to **true**, or the instance is of the **Open Source Edition (Local Disk)**.****</p>
-     * <p>*   The value of this parameter must be smaller than the value of ReplicationFactor.</p>
-     * <p>*   Valid values: 1 to 3.</p>
+     * <ul>
+     * <li>This parameter is available only when <strong>LocalTopic</strong> is set to <strong>true</strong>, or the instance is of the <strong>Open Source Edition (Local Disk)</strong>.****</li>
+     * <li>The value of this parameter must be smaller than the value of ReplicationFactor.</li>
+     * <li>Valid values: 1 to 3.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
      */
     @NameInMap("MinInsyncReplicas")
     public Long minInsyncReplicas;
 
     /**
      * <p>The number of partitions in the topic.</p>
-     * <br>
-     * <p>*   Valid values: 1 to 360.</p>
-     * <p>*   In the ApsaraMQ for Kafka console, you can view the number of partitions that the system recommends based on the specifications of the instance. We recommend that you specify the number that is recommended by the system as the value of this parameter to reduce the risk of data skew.</p>
-     * <br>
+     * <ul>
+     * <li>Valid values: 1 to 360.</li>
+     * <li>In the ApsaraMQ for Kafka console, you can view the number of partitions that the system recommends based on the specifications of the instance. We recommend that you specify the number that is recommended by the system as the value of this parameter to reduce the risk of data skew.</li>
+     * </ul>
      * <p>Default values:</p>
-     * <br>
-     * <p>*   ApsaraMQ for Kafka V2 instance: 12</p>
-     * <p>*   ApsaraMQ for Kafka V3 instance: 3</p>
+     * <ul>
+     * <li>ApsaraMQ for Kafka V2 instance: 12</li>
+     * <li>ApsaraMQ for Kafka V3 instance: 3</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>12</p>
      */
     @NameInMap("PartitionNum")
     public String partitionNum;
 
     /**
      * <p>The region ID of the instance in which you want to create a topic.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The description of the topic.</p>
-     * <br>
-     * <p>*   The description can contain only letters, digits, hyphens (-), and underscores (_).</p>
-     * <p>*   The description must be 3 to 64 characters in length.</p>
-     * <br>
+     * <ul>
+     * <li>The description can contain only letters, digits, hyphens (-), and underscores (_).</li>
+     * <li>The description must be 3 to 64 characters in length.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alikafka_topic_test</p>
      */
     @NameInMap("Remark")
     public String remark;
 
     /**
      * <p>The number of replicas for the topic.</p>
-     * <br>
-     * <p>*   This parameter is available only when **LocalTopic** is set to **true**, or the instance is of the **Open Source Edition (Local Disk)**.****</p>
-     * <p>*   Valid values: 1 to 3.</p>
-     * <br>
-     * <p>> If you set this parameter to **1**, data loss may occur. Exercise caution when you configure this parameter.</p>
+     * <ul>
+     * <li>This parameter is available only when <strong>LocalTopic</strong> is set to <strong>true</strong>, or the instance is of the <strong>Open Source Edition (Local Disk)</strong>.****</li>
+     * <li>Valid values: 1 to 3.</li>
+     * </ul>
+     * <blockquote>
+     * <p>If you set this parameter to <strong>1</strong>, data loss may occur. Exercise caution when you configure this parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
      */
     @NameInMap("ReplicationFactor")
     public Long replicationFactor;
@@ -104,12 +146,15 @@ public class CreateTopicRequest extends TeaModel {
 
     /**
      * <p>The topic name.</p>
-     * <br>
-     * <p>*   The name can contain only letters, digits, hyphens (-), and underscores (_).</p>
-     * <p>*   The name must be 3 to 64 characters in length. If the name that you specify contains more than 64 characters, the system automatically truncates the name.</p>
-     * <p>*   After a topic is created, you cannot change the name of the topic.</p>
-     * <br>
+     * <ul>
+     * <li>The name can contain only letters, digits, hyphens (-), and underscores (_).</li>
+     * <li>The name must be 3 to 64 characters in length. If the name that you specify contains more than 64 characters, the system automatically truncates the name.</li>
+     * <li>After a topic is created, you cannot change the name of the topic.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alikafka_topic_test</p>
      */
     @NameInMap("Topic")
     public String topic;
@@ -210,20 +255,27 @@ public class CreateTopicRequest extends TeaModel {
     public static class CreateTopicRequestTag extends TeaModel {
         /**
          * <p>The tag key.</p>
-         * <br>
-         * <p>*   If you do not specify this parameter, the keys of all tags are matched.</p>
-         * <p>*   The tag key must be 1 to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `aliyun` or `acs:`.</p>
-         * <br>
+         * <ul>
+         * <li>If you do not specify this parameter, the keys of all tags are matched.</li>
+         * <li>The tag key must be 1 to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>aliyun</code> or <code>acs:</code>.</li>
+         * </ul>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceDept</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value.</p>
-         * <br>
-         * <p>*   You can leave this parameter empty.</p>
-         * <p>*   The tag value must be 1 to 128 characters in length and cannot contain http:// or https://. The tag value cannot start with aliyun or acs:.</p>
+         * <ul>
+         * <li>You can leave this parameter empty.</li>
+         * <li>The tag value must be 1 to 128 characters in length and cannot contain http:// or https://. The tag value cannot start with aliyun or acs:.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceJoshua</p>
          */
         @NameInMap("Value")
         public String value;

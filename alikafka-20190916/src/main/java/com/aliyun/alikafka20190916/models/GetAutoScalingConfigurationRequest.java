@@ -5,13 +5,21 @@ import com.aliyun.tea.*;
 
 public class GetAutoScalingConfigurationRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alikafka_serverless-cn-vxxxxxxxx</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
+     * <p>The ID of the region where the instance resides.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

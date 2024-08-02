@@ -6,35 +6,51 @@ import com.aliyun.tea.*;
 public class GetInstanceListRequest extends TeaModel {
     /**
      * <p>The IDs of instances.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alikafka_post-cn-mp91gnw0p***</p>
      */
     @NameInMap("InstanceId")
     public java.util.List<String> instanceId;
 
     /**
-     * <p>The ID of the order. You can obtain the order ID on the [Orders](https://usercenter2-intl.aliyun.com/order/list?pageIndex=1\\&pageSize=20\\&spm=5176.12818093.top-nav.ditem-ord.36f016d0OQFmJa) page in Alibaba Cloud User Center.</p>
+     * <p>The ID of the order. You can obtain the order ID on the <a href="https://usercenter2-intl.aliyun.com/order/list?pageIndex=1%5C&pageSize=20%5C&spm=5176.12818093.top-nav.ditem-ord.36f016d0OQFmJa">Orders</a> page in Alibaba Cloud User Center.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6072673****</p>
      */
     @NameInMap("OrderId")
     public String orderId;
 
     /**
      * <p>The ID of the region where the instance resides.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group. You can obtain this ID on the Resource Group page in the Resource Management console.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-ac***********7q</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>实例系列标识，可根据系列号来过滤不同系列的实例。取值如下：</p>
-     * <p>- v2</p>
-     * <p>- v3</p>
-     * <p>- confluent</p>
+     * <p>The instance version. You can use instance versions to filter different versions of instances. Valid values:</p>
+     * <ul>
+     * <li>v2</li>
+     * <li>v3</li>
+     * <li>confluent</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>v3</p>
      */
     @NameInMap("Series")
     public String series;
@@ -101,18 +117,26 @@ public class GetInstanceListRequest extends TeaModel {
     public static class GetInstanceListRequestTag extends TeaModel {
         /**
          * <p>The tag key.</p>
-         * <br>
-         * <p>*   If you leave this parameter empty, the keys of all tags are matched.</p>
-         * <p>*   The tag key can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain `http://` or `https://`.</p>
+         * <ul>
+         * <li>If you leave this parameter empty, the keys of all tags are matched.</li>
+         * <li>The tag key can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain <code>http://</code> or <code>https://</code>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value.</p>
-         * <br>
-         * <p>*   If you leave Key empty, you must also leave this parameter empty. If you leave this parameter empty, the values of all tags are matched.</p>
-         * <p>*   The tag value can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain `http://` or `https://`.</p>
+         * <ul>
+         * <li>If you leave Key empty, you must also leave this parameter empty. If you leave this parameter empty, the values of all tags are matched.</li>
+         * <li>The tag value can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain <code>http://</code> or <code>https://</code>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Value")
         public String value;

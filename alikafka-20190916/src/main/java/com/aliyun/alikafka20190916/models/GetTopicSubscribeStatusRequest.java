@@ -6,28 +6,32 @@ import com.aliyun.tea.*;
 public class GetTopicSubscribeStatusRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
-     * <br>
-     * <p>You can call the [GetInstanceList](https://help.aliyun.com/document_detail/437663.html) operation to query instances.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/437663.html">GetInstanceList</a> operation to query the list of instances.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alikafka_pre-cn-v0h1cng0***</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The region ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The topic name.</p>
-     * <br>
-     * <p>You can call the [GetTopicList](https://help.aliyun.com/document_detail/437677.html) operation to query topics.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/437677.html">GetTopicList</a> operation to query the list of topics.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>topic_name</p>
      */
     @NameInMap("Topic")
     public String topic;

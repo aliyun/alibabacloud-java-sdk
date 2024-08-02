@@ -6,67 +6,71 @@ import com.aliyun.tea.*;
 public class QueryMessageRequest extends TeaModel {
     /**
      * <p>The beginning of the time range to query. The value of this parameter is a UNIX timestamp in milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1672410180000</p>
      */
     @NameInMap("BeginTime")
     public Long beginTime;
 
     /**
      * <p>The instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alikafka_pre-cn-mp919o4v****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The consumer offset of the partition.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("Offset")
     public String offset;
 
     /**
      * <p>The partition ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("Partition")
     public String partition;
 
     /**
      * <p>The query type. Valid values:</p>
-     * <br>
-     * <p>*   byOffset: queries messages by offset. If you select this value, you must configure Partition and Offset.</p>
-     * <p>*   byTimestamp: queries messages by time. If you select this value, you must configure BeginTime.</p>
-     * <br>
-     * <p><!----></p>
-     * <br>
-     * <p>*   <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
+     * <ul>
+     * <li>byOffset: queries messages by offset. If you select this value, you must configure Partition and Offset.</li>
+     * <li>byTimestamp: queries messages by time. If you select this value, you must configure BeginTime.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>byTimestamp</p>
      */
     @NameInMap("QueryType")
     public String queryType;
 
     /**
      * <p>The ID of the region where the resource resides.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The topic name.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testkafka</p>
      */
     @NameInMap("Topic")
     public String topic;

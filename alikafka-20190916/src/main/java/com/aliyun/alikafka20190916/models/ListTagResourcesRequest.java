@@ -6,40 +6,52 @@ import com.aliyun.tea.*;
 public class ListTagResourcesRequest extends TeaModel {
     /**
      * <p>The token that determines the start point of the next query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the region in which the resource is deployed.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The resource ID. The following items describe the formats of resource IDs:</p>
-     * <br>
-     * <p>*   Instance ID: instanceId</p>
-     * <p>*   Topic ID: Kafka_alikafka_instanceId_topic</p>
-     * <p>*   Group ID: Kafka_alikafka_instanceId_consumerGroup</p>
-     * <br>
-     * <p>For example, you create an instance whose ID is alikafka_post-cn-v0h1fgs2xxxx, a topic whose name is test-topic, and a group whose ID is test-consumer-group. In this case, the resource IDs are alikafka_post-cn-v0h1fgs2xxxx, Kafka_alikafka_post-cn-v0h1fgs2xxxx_test-topic, and Kafka_alikafka_post-cn-v0h1fgs2xxxx_test-consumer-group.</p>
-     * <br>
-     * <p>>  You must specify one of the **ResourceId** and **Tag** parameters to query the tags that are attached to a resource. Otherwise, the call fails.</p>
+     * <p>The ID of the resource whose tags you want to query. The resource ID follows the following rules:</p>
+     * <ul>
+     * <li>Instance ID: instanceId</li>
+     * <li>Topic ID: Kafka_alikafka_instanceId_topic</li>
+     * <li>Group ID: Kafka_alikafka_instanceId_consumerGroup</li>
+     * </ul>
+     * <p>For example, if the instance ID is alikafka_post-cn-v0h1fgs2xxxx, the topic name is test-topic, and the group name is test-consumer-group, the resource IDs are alikafka_post-cn-v0h1fgs2xxxx, Kafka_alikafka_post-cn-v0h1fgs2xxxx_test-topic, and Kafka_alikafka_post-cn-v0h1fgs2xxxx_test-consumer-group, respectively.</p>
+     * <blockquote>
+     * <p> You must configure one of <strong>ResourceId</strong> and <strong>Tag</strong> to query the tags that are bound to a resource. Otherwise, the request fails.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>alikafka_post-cn-v0h1fgs2****</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
      * <p>The type of the resource whose tags you want to query. The value is an enumerated value. Valid values:</p>
-     * <br>
-     * <p>*   **INSTANCE**</p>
-     * <p>*   **TOPIC**</p>
-     * <p>*   **CONSUMERGROUP**</p>
-     * <br>
+     * <ul>
+     * <li><strong>INSTANCE</strong></li>
+     * <li><strong>TOPIC</strong></li>
+     * <li><strong>CONSUMERGROUP</strong></li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>INSTANCE</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
@@ -97,19 +109,27 @@ public class ListTagResourcesRequest extends TeaModel {
 
     public static class ListTagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The tag key.</p>
-         * <br>
-         * <p>*   If you leave this parameter empty, the keys of all tags are matched.</p>
-         * <p>*   The tag key must be 1 to 128 characters in length and cannot start with acs: or aliyun. The tag key cannot contain http:// or https://.</p>
+         * <p>The key of the resource tag.</p>
+         * <ul>
+         * <li>If you leave this parameter empty, the keys of all tags are matched.</li>
+         * <li>The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceDept</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The tag value.</p>
-         * <br>
-         * <p>*   If you do not specify the tag key, you cannot specify the tag value. If you leave this parameter empty, the values of all tags are matched.</p>
-         * <p>*   The tag value must be 1 to 128 characters in length and cannot start with acs: or aliyun. The tag value cannot contain http:// or https://.</p>
+         * <p>The value of the resource tag.</p>
+         * <ul>
+         * <li>If you leave Key empty, you must also leave this parameter empty. If you leave this parameter empty, the values of all tags are matched.</li>
+         * <li>The tag value can be up to 128 characters in length and cannot contain http:// or https://. The tag value cannot start with acs: or aliyun.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceJoshua</p>
          */
         @NameInMap("Value")
         public String value;

@@ -6,104 +6,146 @@ import com.aliyun.tea.*;
 public class DeleteAclRequest extends TeaModel {
     /**
      * <p>The operation allowed by the access control list (ACL). Valid values:</p>
-     * <br>
-     * <p>*   **Write**: data writes</p>
-     * <p>*   **Read**: data reads</p>
-     * <p>*   **Describe**: reads of transactional IDs</p>
-     * <p>*   **IdempotentWrite**: idempotent data writes to clusters</p>
-     * <br>
+     * <ul>
+     * <li><strong>Write</strong></li>
+     * <li><strong>Read</strong></li>
+     * <li><strong>Describe</strong>: reads of transactional IDs</li>
+     * <li><strong>IdempotentWrite</strong>: idempotent data writes to clusters</li>
+     * <li><strong>IDEMPOTENT_WRITE</strong>: idempotent data writes to clusters. This value is available only for ApsaraMQ for Kafka V3 instances.</li>
+     * <li><strong>DESCRIBE_CONFIGS</strong>: configuration queries. This value is available only for ApsaraMQ for Kafka V3 instances.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Write</p>
      */
     @NameInMap("AclOperationType")
     public String aclOperationType;
 
     /**
      * <p>The operations allowed by the ACL. Separate multiple operations with commas (,).</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   **Write**: data writes</p>
-     * <p>*   **Read**: data reads</p>
-     * <p>*   **Describe**: reads of **transactional IDs**</p>
-     * <p>*   **IdempotentWrite**: idempotent data writes to **clusters**</p>
-     * <br>
-     * <p>>  This parameter is available only for ApsaraMQ for Kafka V3 serverless instances.</p>
+     * <ul>
+     * <li><strong>Write</strong>: data writes</li>
+     * <li><strong>Read</strong>: data reads</li>
+     * <li><strong>Describe</strong>: reads of transactional IDs</li>
+     * <li><strong>IdempotentWrite</strong>: idempotent data writes to clusters</li>
+     * <li><strong>IDEMPOTENT_WRITE</strong>: idempotent data writes to clusters. This value is available only for ApsaraMQ for Kafka V3 instances.</li>
+     * <li><strong>DESCRIBE_CONFIGS</strong>: queries of configurations. This value is available only for ApsaraMQ for Kafka V3 instances.</li>
+     * </ul>
+     * <blockquote>
+     * <p> This parameter is available only for ApsaraMQ for Kafka V3 serverless instances.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Write,Read</p>
      */
     @NameInMap("AclOperationTypes")
     public String aclOperationTypes;
 
     /**
      * <p>The authorization method. Valid values:</p>
-     * <br>
-     * <p>*   Deny</p>
-     * <p>*   ALLOW</p>
-     * <br>
-     * <p>>  This parameter is available only for ApsaraMQ for Kafka V3 serverless instances.</p>
+     * <ul>
+     * <li>Deny</li>
+     * <li>ALLOW</li>
+     * </ul>
+     * <blockquote>
+     * <p> This parameter is available only for ApsaraMQ for Kafka V3 serverless instances.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>DENY</p>
      */
     @NameInMap("AclPermissionType")
     public String aclPermissionType;
 
     /**
      * <p>The name of the resource.</p>
-     * <br>
-     * <p>*   The value can be the name of a topic or consumer group.</p>
-     * <p>*   You can use an asterisk (\\*) to indicate the names of all topics or consumer groups.</p>
-     * <br>
+     * <ul>
+     * <li>The value can be the name of a topic or consumer group.</li>
+     * <li>You can use an asterisk (\*) to indicate the names of all topics or consumer groups.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>demo</p>
      */
     @NameInMap("AclResourceName")
     public String aclResourceName;
 
     /**
      * <p>The mode that is used to match resources. Valid values:</p>
-     * <br>
-     * <p>*   **LITERAL:** full match</p>
-     * <p>*   **PREFIXED**: prefix match</p>
-     * <br>
+     * <ul>
+     * <li><strong>LITERAL:</strong> full match</li>
+     * <li><strong>PREFIXED</strong>: prefix match</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LITERAL</p>
      */
     @NameInMap("AclResourcePatternType")
     public String aclResourcePatternType;
 
     /**
      * <p>The resource type. Valid values:</p>
-     * <br>
-     * <p>*   **Topic**: topic</p>
-     * <p>*   **Group**: consumer group</p>
-     * <p>*   **Cluster**: cluster</p>
-     * <p>*   **TransactionalId**: transactional ID</p>
-     * <br>
+     * <ul>
+     * <li><strong>Topic</strong>: topic</li>
+     * <li><strong>Group</strong>: consumer group</li>
+     * <li><strong>Cluster</strong>: cluster</li>
+     * <li><strong>TransactionalId</strong>: transactional ID</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Topic</p>
      */
     @NameInMap("AclResourceType")
     public String aclResourceType;
 
     /**
      * <p>The IP address of the source.</p>
+     * <blockquote>
+     * <ul>
+     * <li>You can specify only a specific IP address or use the asterisk (\*) wildcard character to specify all IP addresses. CIDR blocks are not supported.</li>
+     * <li>This parameter is available only for serverless ApsaraMQ for Kafka V3 instances.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <ul>
+     * <li></li>
+     * </ul>
      */
     @NameInMap("Host")
     public String host;
 
     /**
      * <p>The ID of the instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alikafka_pre-cn-v0h1cng0****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The ID of the region.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The name of the user.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test12****</p>
      */
     @NameInMap("Username")
     public String username;

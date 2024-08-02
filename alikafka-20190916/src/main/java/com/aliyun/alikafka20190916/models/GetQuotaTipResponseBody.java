@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class GetQuotaTipResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The additional message. This message is typically used to describe API call failures for troubleshooting.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>operation success.</p>
      */
     @NameInMap("Message")
     public String message;
@@ -24,12 +30,18 @@ public class GetQuotaTipResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0178A3A7-E87B-5E50-A16F-3E62F534****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>True</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -82,69 +94,103 @@ public class GetQuotaTipResponseBody extends TeaModel {
     public static class GetQuotaTipResponseBodyQuotaData extends TeaModel {
         /**
          * <p>The number of available groups.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         @NameInMap("GroupLeft")
         public Integer groupLeft;
 
         /**
          * <p>The number of used groups.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         @NameInMap("GroupUsed")
         public Integer groupUsed;
 
         /**
          * <p>The method that you use to purchase partitions. Valid values:</p>
-         * <br>
-         * <p>*   0: indicates that the instance is purchased based on topics.</p>
-         * <p>*   1: indicates that the instance is purchased based on partitions.</p>
+         * <ul>
+         * <li>0: indicates that the instance is purchased based on topics.</li>
+         * <li>1: indicates that the instance is purchased based on partitions.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("IsPartitionBuy")
         public Integer isPartitionBuy;
 
         /**
          * <p>The number of available partitions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1050</p>
          */
         @NameInMap("PartitionLeft")
         public Integer partitionLeft;
 
         /**
          * <p>The number of purchased partitions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("PartitionNumOfBuy")
         public Integer partitionNumOfBuy;
 
         /**
          * <p>The quota of partitions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1100</p>
          */
         @NameInMap("PartitionQuota")
         public Integer partitionQuota;
 
         /**
          * <p>The number of used partitions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         @NameInMap("PartitionUsed")
         public Integer partitionUsed;
 
         /**
          * <p>The number of available topics.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("TopicLeft")
         public Integer topicLeft;
 
         /**
          * <p>The number of purchased topics.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         @NameInMap("TopicNumOfBuy")
         public Integer topicNumOfBuy;
 
         /**
          * <p>The quota of topics.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         @NameInMap("TopicQuota")
         public Integer topicQuota;
 
         /**
          * <p>The number of used topics.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         @NameInMap("TopicUsed")
         public Integer topicUsed;

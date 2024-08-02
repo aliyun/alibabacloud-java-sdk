@@ -6,43 +6,53 @@ import com.aliyun.tea.*;
 public class TagResourcesRequest extends TeaModel {
     /**
      * <p>The ID of the Message Queue for Apache RocketMQ instance which contains the resource to which you want to attach tags.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alikafka_post-cn-v0h1fgs2****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The ID of the region in which the resource is deployed.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The list of resource IDs.</p>
-     * <br>
+     * <p>The resource IDs.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alikafka_post-cn-v0h1fgs2****</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
      * <p>The type of the resources. The value is an enumerated value. Valid values:</p>
-     * <br>
-     * <p>*   **INSTANCE**</p>
-     * <p>*   **TOPIC**</p>
-     * <p>*   **CONSUMERGROUP**</p>
-     * <br>
-     * <p>>  The value of this parameter is not case-sensitive.</p>
-     * <br>
+     * <ul>
+     * <li><strong>INSTANCE</strong></li>
+     * <li><strong>TOPIC</strong></li>
+     * <li><strong>CONSUMERGROUP</strong></li>
+     * </ul>
+     * <blockquote>
+     * <p> The value of this parameter is not case-sensitive.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>instance</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
      * <p>The tags that you want to add.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Tag")
@@ -95,21 +105,28 @@ public class TagResourcesRequest extends TeaModel {
 
     public static class TagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The tag key.</p>
-         * <br>
-         * <p>*   You must specify this parameter.</p>
-         * <p>*   The tag key must be 1 to 128 characters in length and cannot start with `acs:` or `aliyun`. The tag key cannot contain `http://` or `https://`.</p>
-         * <br>
+         * <p>The key of the resource tag.</p>
+         * <ul>
+         * <li>You must specify this parameter.</li>
+         * <li>The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>acs:</code> or <code>aliyun</code>.</li>
+         * </ul>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceDept</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The tag value.</p>
-         * <br>
-         * <p>*   You can leave this parameter empty.</p>
-         * <p>*   The tag value must be 1 to 128 characters in length and cannot start with acs: or aliyun. The tag key cannot contain http:// or https://.</p>
+         * <p>The value of the resource tag.</p>
+         * <ul>
+         * <li>You can leave this parameter empty.</li>
+         * <li>The tag value can be up to 128 characters in length and cannot contain http:// or https://. The tag value cannot start with acs: or aliyun.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceJoshua</p>
          */
         @NameInMap("Value")
         public String value;
