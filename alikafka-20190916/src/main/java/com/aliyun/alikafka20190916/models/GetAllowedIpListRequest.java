@@ -6,16 +6,20 @@ import com.aliyun.tea.*;
 public class GetAllowedIpListRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alikafka_post-cn-mp91inkw****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The region ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

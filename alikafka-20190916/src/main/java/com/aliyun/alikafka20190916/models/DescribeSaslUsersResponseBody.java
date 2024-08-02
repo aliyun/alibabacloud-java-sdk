@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class DescribeSaslUsersResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>operation success.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9E3B3592-5994-4F65-A61E-E62A77A****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -30,6 +39,9 @@ public class DescribeSaslUsersResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -82,31 +94,45 @@ public class DescribeSaslUsersResponseBody extends TeaModel {
     public static class DescribeSaslUsersResponseBodySaslUserListSaslUserVO extends TeaModel {
         /**
          * <p>The encryption method.</p>
-         * <br>
-         * <p>>  This field is available only for ApsaraMQ for Kafka V3 Serverless instances.</p>
+         * <blockquote>
+         * <p> This field is available only for serverless ApsaraMQ for Kafka V3 instances.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>SCRAM-SHA-256</p>
          */
         @NameInMap("Mechanism")
         public String mechanism;
 
         /**
          * <p>The password.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         @NameInMap("Password")
         public String password;
 
         /**
-         * <p>The type. Valid values:</p>
-         * <br>
-         * <p>*   **plain**: a simple mechanism that uses usernames and passwords to verify user identities. ApsaraMQ for Kafka provides an improved PLAIN mechanism that allows you to dynamically add SASL users without the need to restart an instance.</p>
-         * <p>*   **SCRAM**: a mechanism that uses usernames and passwords to verify user identities. Compared with the PLAIN mechanism, this mechanism provides better security protection. ApsaraMQ for Kafka uses the SCRAM-SHA-256 algorithm.</p>
-         * <br>
-         * <p>Default value: **plain**.</p>
+         * <p>The type of the SASL user. Valid values:</p>
+         * <ul>
+         * <li><strong>plain</strong>: a simple mechanism that uses usernames and passwords to verify user identities. ApsaraMQ for Kafka provides an improved PLAIN mechanism that allows you to dynamically add SASL users without the need to restart an instance.</li>
+         * <li><strong>SCRAM</strong>: a mechanism that uses usernames and passwords to verify user identities. Compared with the PLAIN mechanism, this mechanism provides better security protection. ApsaraMQ for Kafka uses the SCRAM-SHA-256 algorithm.</li>
+         * <li><strong>LDAP</strong>: This value is available only for the SASL users of ApsaraMQ for Confluent instances.</li>
+         * </ul>
+         * <p>Default value: <strong>plain</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>scram</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test12***</p>
          */
         @NameInMap("Username")
         public String username;

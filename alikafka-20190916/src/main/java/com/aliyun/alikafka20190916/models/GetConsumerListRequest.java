@@ -6,34 +6,47 @@ import com.aliyun.tea.*;
 public class GetConsumerListRequest extends TeaModel {
     /**
      * <p>The name of the consumer group. If you do not configure this parameter, all consumer groups are queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>kafka-test</p>
      */
     @NameInMap("ConsumerId")
     public String consumerId;
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>The ID of the instance to which the consumer group belongs.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alikafka_post-cn-v0h18sav****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The number of entries to be returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The region ID of the instance to which the consumer group belongs.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

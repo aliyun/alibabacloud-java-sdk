@@ -6,30 +6,45 @@ import com.aliyun.tea.*;
 public class UpdateTopicConfigResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code. If the request is successful, 200 is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Long code;
 
     /**
      * <p>The returned data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[]</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>operation success.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0178A3A7-E87B-5E50-A16F-3E62F534****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>True</p>
      */
     @NameInMap("Success")
     public Boolean success;

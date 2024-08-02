@@ -5,43 +5,57 @@ import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
     /**
-     * <p>Specifies whether to detach all tags from the resource. This parameter only takes effect when the TagKey.N parameter is not configured. Default value: **false**.</p>
+     * <p>Specifies whether to detach all tags from the resource. This parameter only takes effect when the TagKey.N parameter is not configured. Default value: <strong>false</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("All")
     public Boolean all;
 
     /**
      * <p>The ID of the region in which the resource is deployed.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The IDs of the resources from which you want to detach tags.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alikafka_post-cn-v0h1fgs2****</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
      * <p>The type of the resources. Valid values:</p>
-     * <br>
-     * <p>*   **INSTANCE**</p>
-     * <p>*   **TOPIC**</p>
-     * <p>*   **CONSUMERGROUP**</p>
-     * <br>
-     * <p>>  The value of this parameter is not case-sensitive.</p>
-     * <br>
+     * <ul>
+     * <li><strong>INSTANCE</strong></li>
+     * <li><strong>TOPIC</strong></li>
+     * <li><strong>CONSUMERGROUP</strong></li>
+     * </ul>
+     * <blockquote>
+     * <p> The value of this parameter is not case-sensitive.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>INSTANCE</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
-     * <p>The tag key.</p>
+     * <p>The key of the resource tag.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FinanceDept</p>
      */
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;

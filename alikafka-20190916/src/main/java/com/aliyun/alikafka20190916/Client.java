@@ -27,8 +27,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Changes the resource group of an ApsaraMQ for Kafka instance.
-     *
+     * <b>summary</b> : 
+     * <p>Changes the resource group of an ApsaraMQ for Kafka instance.</p>
+     * 
      * @param request ChangeResourceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ChangeResourceGroupResponse
@@ -66,8 +67,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Changes the resource group of an ApsaraMQ for Kafka instance.
-     *
+     * <b>summary</b> : 
+     * <p>Changes the resource group of an ApsaraMQ for Kafka instance.</p>
+     * 
      * @param request ChangeResourceGroupRequest
      * @return ChangeResourceGroupResponse
      */
@@ -77,8 +79,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Changes the billing method of a Message Queue for Apache Kafka instance from pay-as-you-go to subscription.
-     *
+     * <b>summary</b> : 
+     * <p>Changes the billing method of a Message Queue for Apache Kafka instance from pay-as-you-go to subscription.</p>
+     * 
      * @param request ConvertPostPayOrderRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ConvertPostPayOrderResponse
@@ -116,8 +119,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Changes the billing method of a Message Queue for Apache Kafka instance from pay-as-you-go to subscription.
-     *
+     * <b>summary</b> : 
+     * <p>Changes the billing method of a Message Queue for Apache Kafka instance from pay-as-you-go to subscription.</p>
+     * 
      * @param request ConvertPostPayOrderRequest
      * @return ConvertPostPayOrderResponse
      */
@@ -127,8 +131,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates an access control list (ACL).
-     *
+     * <b>summary</b> : 
+     * <p>Creates an access control list (ACL).</p>
+     * 
      * @param request CreateAclRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateAclResponse
@@ -194,8 +199,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates an access control list (ACL).
-     *
+     * <b>summary</b> : 
+     * <p>Creates an access control list (ACL).</p>
+     * 
      * @param request CreateAclRequest
      * @return CreateAclResponse
      */
@@ -205,8 +211,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a consumer group.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a consumer group.</p>
+     * 
      * @param request CreateConsumerGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateConsumerGroupResponse
@@ -252,8 +259,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a consumer group.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a consumer group.</p>
+     * 
      * @param request CreateConsumerGroupRequest
      * @return CreateConsumerGroupResponse
      */
@@ -263,10 +271,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a pay-as-you-go ApsaraMQ for Kafka instance. Pay-as-you-go instances allow you to pay after you use the resources. You are charged for pay-as-you-go instances based on the actual resource usage. You can use pay-as-you-go instances in test scenarios or scenarios in which the peak traffic is uncertain.
-     *
-     * @description Before you call this operation, make sure that you understand the billing method and pricing of pay-as-you-go Message Queue for Apache Kafka instances. For more information, see [Billing](https://help.aliyun.com/document_detail/84737.html).
-     *
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you understand the billing method and pricing of pay-as-you-go Message Queue for Apache Kafka instances. For more information, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a pay-as-you-go ApsaraMQ for Kafka instance. Pay-as-you-go instances allow you to pay after you use the resources. You are charged for pay-as-you-go instances based on the actual resource usage. You can use pay-as-you-go instances in test scenarios or scenarios in which the peak traffic is uncertain.</p>
+     * 
      * @param tmpReq CreatePostPayOrderRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreatePostPayOrderResponse
@@ -354,10 +364,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a pay-as-you-go ApsaraMQ for Kafka instance. Pay-as-you-go instances allow you to pay after you use the resources. You are charged for pay-as-you-go instances based on the actual resource usage. You can use pay-as-you-go instances in test scenarios or scenarios in which the peak traffic is uncertain.
-     *
-     * @description Before you call this operation, make sure that you understand the billing method and pricing of pay-as-you-go Message Queue for Apache Kafka instances. For more information, see [Billing](https://help.aliyun.com/document_detail/84737.html).
-     *
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you understand the billing method and pricing of pay-as-you-go Message Queue for Apache Kafka instances. For more information, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a pay-as-you-go ApsaraMQ for Kafka instance. Pay-as-you-go instances allow you to pay after you use the resources. You are charged for pay-as-you-go instances based on the actual resource usage. You can use pay-as-you-go instances in test scenarios or scenarios in which the peak traffic is uncertain.</p>
+     * 
      * @param request CreatePostPayOrderRequest
      * @return CreatePostPayOrderResponse
      */
@@ -367,11 +379,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a subscription ApsaraMQ for Kafka instance. You can use subscription instances only after you pay for them. Subscription instances are suitable for long-term and stable business scenarios.
-     *
-     * @description *   Before you call this operation, make sure that you understand the billing methods and pricing of subscription ApsaraMQ for Kafka instances. For more information, see [Billing](https://help.aliyun.com/document_detail/84737.html).
-     * *   If you create an ApsaraMQ for Kafka instance by calling this operation, the subscription duration is one month and the auto-renewal feature is enabled by default. The auto-renewal cycle is also one month. If you want to change the auto-renewal cycle or disable the auto-renewal feature, you can go to the [Renewal](https://renew.console.aliyun.com/#/ecs) page in the Alibaba Cloud Management Console.
-     *
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you understand the billing methods and pricing of subscription ApsaraMQ for Kafka instances. For more information, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
+     * <ul>
+     * <li>If you create an ApsaraMQ for Kafka instance by calling this operation, the subscription duration is one month and the auto-renewal feature is enabled by default. The auto-renewal cycle is also one month. If you want to change the auto-renewal cycle or disable the auto-renewal feature, you can go to the <a href="https://renew.console.aliyun.com/#/ecs">Renewal</a> page in the Alibaba Cloud Management Console.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a subscription ApsaraMQ for Kafka instance. You can use subscription instances only after you pay for them. Subscription instances are suitable for long-term and stable business scenarios.</p>
+     * 
      * @param tmpReq CreatePrePayOrderRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreatePrePayOrderResponse
@@ -463,11 +479,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a subscription ApsaraMQ for Kafka instance. You can use subscription instances only after you pay for them. Subscription instances are suitable for long-term and stable business scenarios.
-     *
-     * @description *   Before you call this operation, make sure that you understand the billing methods and pricing of subscription ApsaraMQ for Kafka instances. For more information, see [Billing](https://help.aliyun.com/document_detail/84737.html).
-     * *   If you create an ApsaraMQ for Kafka instance by calling this operation, the subscription duration is one month and the auto-renewal feature is enabled by default. The auto-renewal cycle is also one month. If you want to change the auto-renewal cycle or disable the auto-renewal feature, you can go to the [Renewal](https://renew.console.aliyun.com/#/ecs) page in the Alibaba Cloud Management Console.
-     *
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you understand the billing methods and pricing of subscription ApsaraMQ for Kafka instances. For more information, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
+     * <ul>
+     * <li>If you create an ApsaraMQ for Kafka instance by calling this operation, the subscription duration is one month and the auto-renewal feature is enabled by default. The auto-renewal cycle is also one month. If you want to change the auto-renewal cycle or disable the auto-renewal feature, you can go to the <a href="https://renew.console.aliyun.com/#/ecs">Renewal</a> page in the Alibaba Cloud Management Console.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a subscription ApsaraMQ for Kafka instance. You can use subscription instances only after you pay for them. Subscription instances are suitable for long-term and stable business scenarios.</p>
+     * 
      * @param request CreatePrePayOrderRequest
      * @return CreatePrePayOrderResponse
      */
@@ -477,8 +497,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a Simple Authentication and Security Layer (SASL) user.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a Simple Authentication and Security Layer (SASL) user.</p>
+     * 
      * @param request CreateSaslUserRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateSaslUserResponse
@@ -528,8 +549,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a Simple Authentication and Security Layer (SASL) user.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a Simple Authentication and Security Layer (SASL) user.</p>
+     * 
      * @param request CreateSaslUserRequest
      * @return CreateSaslUserResponse
      */
@@ -539,8 +561,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建定时伸缩配置
-     *
+     * <b>description</b> :
+     * <h6><a href="#-v3-serverless-"></a>This operation is supported only by serverless ApsaraMQ for Kafka V3 instances.</h6>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a scheduled scaling rule for a serverless ApsaraMQ for Kafka V3 instance.</p>
+     * 
      * @param tmpReq CreateScheduledScalingRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateScheduledScalingRuleResponse
@@ -620,8 +646,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建定时伸缩配置
-     *
+     * <b>description</b> :
+     * <h6><a href="#-v3-serverless-"></a>This operation is supported only by serverless ApsaraMQ for Kafka V3 instances.</h6>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a scheduled scaling rule for a serverless ApsaraMQ for Kafka V3 instance.</p>
+     * 
      * @param request CreateScheduledScalingRuleRequest
      * @return CreateScheduledScalingRuleResponse
      */
@@ -631,11 +661,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a topic.
-     *
-     * @description *   Each Alibaba Cloud account can call this operation up to once per second.
-     * *   The maximum number of topics that you can create in an instance is determined by the specification of the instance.
-     *
+     * <b>description</b> :
+     * <p>  Each Alibaba Cloud account can call this operation up to once per second.</p>
+     * <ul>
+     * <li>The maximum number of topics that you can create in an instance is determined by the specification of the instance.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a topic.</p>
+     * 
      * @param request CreateTopicRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateTopicResponse
@@ -705,11 +739,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a topic.
-     *
-     * @description *   Each Alibaba Cloud account can call this operation up to once per second.
-     * *   The maximum number of topics that you can create in an instance is determined by the specification of the instance.
-     *
+     * <b>description</b> :
+     * <p>  Each Alibaba Cloud account can call this operation up to once per second.</p>
+     * <ul>
+     * <li>The maximum number of topics that you can create in an instance is determined by the specification of the instance.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a topic.</p>
+     * 
      * @param request CreateTopicRequest
      * @return CreateTopicResponse
      */
@@ -719,8 +757,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes an access control list (ACL).
-     *
+     * <b>summary</b> : 
+     * <p>Deletes an access control list (ACL).</p>
+     * 
      * @param request DeleteAclRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteAclResponse
@@ -786,8 +825,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes an access control list (ACL).
-     *
+     * <b>summary</b> : 
+     * <p>Deletes an access control list (ACL).</p>
+     * 
      * @param request DeleteAclRequest
      * @return DeleteAclResponse
      */
@@ -797,8 +837,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a consumer group from a specified Message Queue for Apache Kafka instance.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a consumer group from a specified Message Queue for Apache Kafka instance.</p>
+     * 
      * @param request DeleteConsumerGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteConsumerGroupResponse
@@ -836,8 +877,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a consumer group from a specified Message Queue for Apache Kafka instance.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a consumer group from a specified Message Queue for Apache Kafka instance.</p>
+     * 
      * @param request DeleteConsumerGroupRequest
      * @return DeleteConsumerGroupResponse
      */
@@ -847,8 +889,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes an instance. You can delete subscription and pay-as-you-go instances after you release them.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes an instance. You can delete subscription and pay-as-you-go instances after you release them.</p>
+     * 
      * @param request DeleteInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteInstanceResponse
@@ -882,8 +925,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes an instance. You can delete subscription and pay-as-you-go instances after you release them.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes an instance. You can delete subscription and pay-as-you-go instances after you release them.</p>
+     * 
      * @param request DeleteInstanceRequest
      * @return DeleteInstanceResponse
      */
@@ -893,8 +937,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a Simple Authentication and Security Layer (SASL) user.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a Simple Authentication and Security Layer (SASL) user.</p>
+     * 
      * @param request DeleteSaslUserRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteSaslUserResponse
@@ -940,8 +985,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a Simple Authentication and Security Layer (SASL) user.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a Simple Authentication and Security Layer (SASL) user.</p>
+     * 
      * @param request DeleteSaslUserRequest
      * @return DeleteSaslUserResponse
      */
@@ -951,8 +997,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除定时伸缩规则
-     *
+     * <b>description</b> :
+     * <h6><a href="#-v3-serverless-"></a>This operation is supported only by serverless ApsaraMQ for Kafka V3 instance.</h6>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a scheduled scaling task for a serverless ApsaraMQ for Kafka V3 instance.</p>
+     * 
      * @param request DeleteScheduledScalingRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteScheduledScalingRuleResponse
@@ -990,8 +1040,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除定时伸缩规则
-     *
+     * <b>description</b> :
+     * <h6><a href="#-v3-serverless-"></a>This operation is supported only by serverless ApsaraMQ for Kafka V3 instance.</h6>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a scheduled scaling task for a serverless ApsaraMQ for Kafka V3 instance.</p>
+     * 
      * @param request DeleteScheduledScalingRuleRequest
      * @return DeleteScheduledScalingRuleResponse
      */
@@ -1001,8 +1055,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a topic.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a topic.</p>
+     * 
      * @param request DeleteTopicRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteTopicResponse
@@ -1040,8 +1095,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a topic.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a topic.</p>
+     * 
      * @param request DeleteTopicRequest
      * @return DeleteTopicResponse
      */
@@ -1051,8 +1107,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries access control lists (ACLs).
-     *
+     * <b>summary</b> : 
+     * <p>Queries access control lists (ACLs).</p>
+     * 
      * @param request DescribeAclsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeAclsResponse
@@ -1114,8 +1171,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries access control lists (ACLs).
-     *
+     * <b>summary</b> : 
+     * <p>Queries access control lists (ACLs).</p>
+     * 
      * @param request DescribeAclsRequest
      * @return DescribeAclsResponse
      */
@@ -1125,8 +1183,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries Simple Authentication and Security Layer (SASL) users.
-     *
+     * <b>summary</b> : 
+     * <p>Queries Simple Authentication and Security Layer (SASL) users.</p>
+     * 
      * @param request DescribeSaslUsersRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeSaslUsersResponse
@@ -1160,8 +1219,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries Simple Authentication and Security Layer (SASL) users.
-     *
+     * <b>summary</b> : 
+     * <p>Queries Simple Authentication and Security Layer (SASL) users.</p>
+     * 
      * @param request DescribeSaslUsersRequest
      * @return DescribeSaslUsersResponse
      */
@@ -1171,8 +1231,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables and disables the flexible group creation feature.
-     *
+     * <b>summary</b> : 
+     * <p>Enables and disables the flexible group creation feature.</p>
+     * 
      * @param request EnableAutoGroupCreationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return EnableAutoGroupCreationResponse
@@ -1210,8 +1271,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables and disables the flexible group creation feature.
-     *
+     * <b>summary</b> : 
+     * <p>Enables and disables the flexible group creation feature.</p>
+     * 
      * @param request EnableAutoGroupCreationRequest
      * @return EnableAutoGroupCreationResponse
      */
@@ -1221,8 +1283,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables or disables the automatic topic creation feature, or changes the number of partitions in topics that are automatically created.
-     *
+     * <b>summary</b> : 
+     * <p>Enables or disables the automatic topic creation feature, or changes the number of partitions in topics that are automatically created.</p>
+     * 
      * @param request EnableAutoTopicCreationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return EnableAutoTopicCreationResponse
@@ -1264,8 +1327,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables or disables the automatic topic creation feature, or changes the number of partitions in topics that are automatically created.
-     *
+     * <b>summary</b> : 
+     * <p>Enables or disables the automatic topic creation feature, or changes the number of partitions in topics that are automatically created.</p>
+     * 
      * @param request EnableAutoTopicCreationRequest
      * @return EnableAutoTopicCreationResponse
      */
@@ -1275,8 +1339,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the IDs of all instances in the current account.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the IDs of all instances in the current account.</p>
+     * 
      * @param request GetAllInstanceIdListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetAllInstanceIdListResponse
@@ -1306,8 +1371,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the IDs of all instances in the current account.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the IDs of all instances in the current account.</p>
+     * 
      * @param request GetAllInstanceIdListRequest
      * @return GetAllInstanceIdListResponse
      */
@@ -1317,8 +1383,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the IP address whitelist.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the IP address whitelist.</p>
+     * 
      * @param request GetAllowedIpListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetAllowedIpListResponse
@@ -1352,8 +1419,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the IP address whitelist.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the IP address whitelist.</p>
+     * 
      * @param request GetAllowedIpListRequest
      * @return GetAllowedIpListResponse
      */
@@ -1363,8 +1431,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询自动伸缩配置
-     *
+     * <b>description</b> :
+     * <h6><a href="#-v3-serverless-"></a>**This operation is supported only by serverless ApsaraMQ for Kafka V3 instances.</h6>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the configurations of the scheduled scaling rule of a serverless ApsaraMQ for Kafka V3 instance.</p>
+     * 
      * @param request GetAutoScalingConfigurationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetAutoScalingConfigurationResponse
@@ -1398,8 +1470,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询自动伸缩配置
-     *
+     * <b>description</b> :
+     * <h6><a href="#-v3-serverless-"></a>**This operation is supported only by serverless ApsaraMQ for Kafka V3 instances.</h6>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the configurations of the scheduled scaling rule of a serverless ApsaraMQ for Kafka V3 instance.</p>
+     * 
      * @param request GetAutoScalingConfigurationRequest
      * @return GetAutoScalingConfigurationResponse
      */
@@ -1409,8 +1485,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries one or more consumer groups in a specified Message Queue for Apache Kafka instance.
-     *
+     * <b>summary</b> : 
+     * <p>Queries one or more consumer groups in a specified Message Queue for Apache Kafka instance.</p>
+     * 
      * @param request GetConsumerListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetConsumerListResponse
@@ -1456,8 +1533,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries one or more consumer groups in a specified Message Queue for Apache Kafka instance.
-     *
+     * <b>summary</b> : 
+     * <p>Queries one or more consumer groups in a specified Message Queue for Apache Kafka instance.</p>
+     * 
      * @param request GetConsumerListRequest
      * @return GetConsumerListResponse
      */
@@ -1467,8 +1545,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the consumer progress of a consumer group.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the consumer progress of a consumer group.</p>
+     * 
      * @param request GetConsumerProgressRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetConsumerProgressResponse
@@ -1478,6 +1557,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.consumerId)) {
             query.put("ConsumerId", request.consumerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.hideLastTimestamp)) {
+            query.put("HideLastTimestamp", request.hideLastTimestamp);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
@@ -1506,8 +1589,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the consumer progress of a consumer group.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the consumer progress of a consumer group.</p>
+     * 
      * @param request GetConsumerProgressRequest
      * @return GetConsumerProgressResponse
      */
@@ -1517,8 +1601,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about instances in a specified region.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about instances in a specified region.</p>
+     * 
      * @param request GetInstanceListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetInstanceListResponse
@@ -1568,8 +1653,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about instances in a specified region.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about instances in a specified region.</p>
+     * 
      * @param request GetInstanceListRequest
      * @return GetInstanceListResponse
      */
@@ -1579,8 +1665,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the used quota of topics and partitions.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the used quota of topics and partitions.</p>
+     * 
      * @param request GetQuotaTipRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetQuotaTipResponse
@@ -1614,8 +1701,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the used quota of topics and partitions.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the used quota of topics and partitions.</p>
+     * 
      * @param request GetQuotaTipRequest
      * @return GetQuotaTipResponse
      */
@@ -1625,8 +1713,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about a topic.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about a topic.</p>
+     * 
      * @param request GetTopicListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetTopicListResponse
@@ -1672,8 +1761,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about a topic.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about a topic.</p>
+     * 
      * @param request GetTopicListRequest
      * @return GetTopicListResponse
      */
@@ -1683,8 +1773,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the status information about messages in a specified topic.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the messaging status of a topic.</p>
+     * 
      * @param request GetTopicStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetTopicStatusResponse
@@ -1722,8 +1813,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the status information about messages in a specified topic.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the messaging status of a topic.</p>
+     * 
      * @param request GetTopicStatusRequest
      * @return GetTopicStatusResponse
      */
@@ -1733,8 +1825,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the information about a group that subscribes to a topic.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about the groups that subscribe to a topic.</p>
+     * 
      * @param request GetTopicSubscribeStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetTopicSubscribeStatusResponse
@@ -1772,8 +1865,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the information about a group that subscribes to a topic.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about the groups that subscribe to a topic.</p>
+     * 
      * @param request GetTopicSubscribeStatusRequest
      * @return GetTopicSubscribeStatusResponse
      */
@@ -1783,8 +1877,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the tags that are attached to a specified resource.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the tags that are attached to a specified resource.</p>
+     * 
      * @param request ListTagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListTagResourcesResponse
@@ -1830,8 +1925,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the tags that are attached to a specified resource.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the tags that are attached to a specified resource.</p>
+     * 
      * @param request ListTagResourcesRequest
      * @return ListTagResourcesResponse
      */
@@ -1841,8 +1937,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Changes the name of an ApsaraMQ for Kafka instance. After you deploy an instance, you can call this operation to change the name of the instance.
-     *
+     * <b>summary</b> : 
+     * <p>Changes the name of an ApsaraMQ for Kafka instance. After you deploy an instance, you can call this operation to change the name of the instance.</p>
+     * 
      * @param request ModifyInstanceNameRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyInstanceNameResponse
@@ -1880,8 +1977,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Changes the name of an ApsaraMQ for Kafka instance. After you deploy an instance, you can call this operation to change the name of the instance.
-     *
+     * <b>summary</b> : 
+     * <p>Changes the name of an ApsaraMQ for Kafka instance. After you deploy an instance, you can call this operation to change the name of the instance.</p>
+     * 
      * @param request ModifyInstanceNameRequest
      * @return ModifyInstanceNameResponse
      */
@@ -1891,8 +1989,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Changes the number of partitions in a specified topic.
-     *
+     * <b>summary</b> : 
+     * <p>Changes the number of partitions in a topic.</p>
+     * 
      * @param request ModifyPartitionNumRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyPartitionNumResponse
@@ -1934,8 +2033,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Changes the number of partitions in a specified topic.
-     *
+     * <b>summary</b> : 
+     * <p>Changes the number of partitions in a topic.</p>
+     * 
      * @param request ModifyPartitionNumRequest
      * @return ModifyPartitionNumResponse
      */
@@ -1945,8 +2045,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 修改定时伸缩规则
-     *
+     * <b>description</b> :
+     * <h6><a href="#-v3-serverless-"></a>This operation is supported only by serverless ApsaraMQ for Kafka V3 instances.</h6>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies a scheduled scaling rule for a serverless ApsaraMQ for Kafka V3 instance.</p>
+     * 
      * @param request ModifyScheduledScalingRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyScheduledScalingRuleResponse
@@ -1988,8 +2092,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 修改定时伸缩规则
-     *
+     * <b>description</b> :
+     * <h6><a href="#-v3-serverless-"></a>This operation is supported only by serverless ApsaraMQ for Kafka V3 instances.</h6>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies a scheduled scaling rule for a serverless ApsaraMQ for Kafka V3 instance.</p>
+     * 
      * @param request ModifyScheduledScalingRuleRequest
      * @return ModifyScheduledScalingRuleResponse
      */
@@ -1999,8 +2107,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the description of a topic.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the description of a topic.</p>
+     * 
      * @param request ModifyTopicRemarkRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyTopicRemarkResponse
@@ -2042,8 +2151,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the description of a topic.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the description of a topic.</p>
+     * 
      * @param request ModifyTopicRemarkRequest
      * @return ModifyTopicRemarkResponse
      */
@@ -2053,8 +2163,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries messages stored in a topic. You can query messages by creation time or offset.
-     *
+     * <b>summary</b> : 
+     * <p>Queries messages stored in a topic. You can query messages by creation time or offset.</p>
+     * 
      * @param request QueryMessageRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryMessageResponse
@@ -2080,8 +2191,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries messages stored in a topic. You can query messages by creation time or offset.
-     *
+     * <b>summary</b> : 
+     * <p>Queries messages stored in a topic. You can query messages by creation time or offset.</p>
+     * 
      * @param request QueryMessageRequest
      * @return QueryMessageResponse
      */
@@ -2091,10 +2203,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Releases a pay-as-you-go Message Queue for Apache Kafka instance.
-     *
-     * @description You cannot call this operation to release a subscription Message Queue for Apache Kafka instance.
-     *
+     * <b>description</b> :
+     * <p>You cannot call this operation to release a subscription Message Queue for Apache Kafka instance.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Releases a pay-as-you-go instance.</p>
+     * 
      * @param request ReleaseInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ReleaseInstanceResponse
@@ -2132,10 +2246,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Releases a pay-as-you-go Message Queue for Apache Kafka instance.
-     *
-     * @description You cannot call this operation to release a subscription Message Queue for Apache Kafka instance.
-     *
+     * <b>description</b> :
+     * <p>You cannot call this operation to release a subscription Message Queue for Apache Kafka instance.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Releases a pay-as-you-go instance.</p>
+     * 
      * @param request ReleaseInstanceRequest
      * @return ReleaseInstanceResponse
      */
@@ -2145,10 +2261,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables an ApsaraMQ for Kafka instance.
-     *
-     * @description You can call this operation only if your instance is in the Stopped state.
-     *
+     * <b>description</b> :
+     * <p>You can call this operation only if your instance is in the Stopped state.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables an ApsaraMQ for Kafka instance.</p>
+     * 
      * @param request ReopenInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ReopenInstanceResponse
@@ -2182,10 +2300,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables an ApsaraMQ for Kafka instance.
-     *
-     * @description You can call this operation only if your instance is in the Stopped state.
-     *
+     * <b>description</b> :
+     * <p>You can call this operation only if your instance is in the Stopped state.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables an ApsaraMQ for Kafka instance.</p>
+     * 
      * @param request ReopenInstanceRequest
      * @return ReopenInstanceResponse
      */
@@ -2195,10 +2315,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deploys an ApsaraMQ for Kafka instance. You must purchase and deploy an ApsaraMQ for Kafka instance before you can use the instance to send and receive messages.
-     *
-     * @description >  You can call this operation up to twice per second.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> You can call this operation up to twice per second.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Deploys an ApsaraMQ for Kafka instance. You must purchase and deploy an ApsaraMQ for Kafka instance before you can use the instance to send and receive messages.</p>
+     * 
      * @param request StartInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return StartInstanceResponse
@@ -2308,10 +2432,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deploys an ApsaraMQ for Kafka instance. You must purchase and deploy an ApsaraMQ for Kafka instance before you can use the instance to send and receive messages.
-     *
-     * @description >  You can call this operation up to twice per second.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> You can call this operation up to twice per second.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Deploys an ApsaraMQ for Kafka instance. You must purchase and deploy an ApsaraMQ for Kafka instance before you can use the instance to send and receive messages.</p>
+     * 
      * @param request StartInstanceRequest
      * @return StartInstanceResponse
      */
@@ -2321,10 +2449,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Stops an ApsaraMQ for Kafka instance.
-     *
-     * @description You cannot stop a subscription ApsaraMQ for Kafka instance. If you want to stop a subscription ApsaraMQ for Kafka instance, submit a ticket.
-     *
+     * <b>description</b> :
+     * <p>You cannot stop a subscription ApsaraMQ for Kafka instance. If you want to stop a subscription ApsaraMQ for Kafka instance, submit a ticket.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Stops an ApsaraMQ for Kafka instance.</p>
+     * 
      * @param request StopInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return StopInstanceResponse
@@ -2358,10 +2488,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Stops an ApsaraMQ for Kafka instance.
-     *
-     * @description You cannot stop a subscription ApsaraMQ for Kafka instance. If you want to stop a subscription ApsaraMQ for Kafka instance, submit a ticket.
-     *
+     * <b>description</b> :
+     * <p>You cannot stop a subscription ApsaraMQ for Kafka instance. If you want to stop a subscription ApsaraMQ for Kafka instance, submit a ticket.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Stops an ApsaraMQ for Kafka instance.</p>
+     * 
      * @param request StopInstanceRequest
      * @return StopInstanceResponse
      */
@@ -2371,8 +2503,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Attaches a tag to a resource.
-     *
+     * <b>summary</b> : 
+     * <p>Attaches a tag to a resource.</p>
+     * 
      * @param request TagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return TagResourcesResponse
@@ -2418,8 +2551,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Attaches a tag to a resource.
-     *
+     * <b>summary</b> : 
+     * <p>Attaches a tag to a resource.</p>
+     * 
      * @param request TagResourcesRequest
      * @return TagResourcesResponse
      */
@@ -2429,8 +2563,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Detaches tags from a specified resource.
-     *
+     * <b>summary</b> : 
+     * <p>Detaches tags from a specified resource.</p>
+     * 
      * @param request UntagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UntagResourcesResponse
@@ -2476,8 +2611,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Detaches tags from a specified resource.
-     *
+     * <b>summary</b> : 
+     * <p>Detaches tags from a specified resource.</p>
+     * 
      * @param request UntagResourcesRequest
      * @return UntagResourcesResponse
      */
@@ -2487,8 +2623,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the IP address whitelist of an ApsaraMQ for Kafka instance. Only IP addresses and ports that are configured in the IP address whitelist of an instance can access the instance.
-     *
+     * <b>summary</b> : 
+     * <p>Updates the IP address whitelist of an ApsaraMQ for Kafka instance. Only IP addresses and ports that are configured in the IP address whitelist of an instance can access the instance.</p>
+     * 
      * @param request UpdateAllowedIpRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateAllowedIpResponse
@@ -2542,8 +2679,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the IP address whitelist of an ApsaraMQ for Kafka instance. Only IP addresses and ports that are configured in the IP address whitelist of an instance can access the instance.
-     *
+     * <b>summary</b> : 
+     * <p>Updates the IP address whitelist of an ApsaraMQ for Kafka instance. Only IP addresses and ports that are configured in the IP address whitelist of an instance can access the instance.</p>
+     * 
      * @param request UpdateAllowedIpRequest
      * @return UpdateAllowedIpResponse
      */
@@ -2553,13 +2691,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Resets the consumer offsets of the subscribed topics of a consumer group.
-     *
-     * @description You can call this operation to reset the consumer offset of a specific consumer group. You can use the timestamp or offset parameter to reset the consumer offset of a consumer group. You can implement the following features by configuring a combination of different parameters:
-     * *   Reset the consumer offsets of one or all subscribed topics of a consumer group to the latest offset. This way, you can consume messages in the topics from the latest offset.
-     * *   Reset the consumer offsets of one or all subscribed topics of a consumer group to a specific point in time. This way, you can consume messages in the topics from the specified point in time.
-     * *   Reset the consumer offset of one subscribed topic of a consumer group to a specific offset in a specific partition. This way, you can consume messages from the specified offset in the specified partition.
-     *
+     * <b>description</b> :
+     * <p>You can call this operation to reset the consumer offset of a specific consumer group. You can use the timestamp or offset parameter to reset the consumer offset of a consumer group. You can implement the following features by configuring a combination of different parameters:</p>
+     * <ul>
+     * <li>Reset the consumer offsets of one or all subscribed topics of a consumer group to the latest offset. This way, you can consume messages in the topics from the latest offset.</li>
+     * <li>Reset the consumer offsets of one or all subscribed topics of a consumer group to a specific point in time. This way, you can consume messages in the topics from the specified point in time.</li>
+     * <li>Reset the consumer offset of one subscribed topic of a consumer group to a specific offset in a specific partition. This way, you can consume messages from the specified offset in the specified partition.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Resets the consumer offsets of the subscribed topics of a consumer group.</p>
+     * 
      * @param tmpReq UpdateConsumerOffsetRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateConsumerOffsetResponse
@@ -2619,13 +2761,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Resets the consumer offsets of the subscribed topics of a consumer group.
-     *
-     * @description You can call this operation to reset the consumer offset of a specific consumer group. You can use the timestamp or offset parameter to reset the consumer offset of a consumer group. You can implement the following features by configuring a combination of different parameters:
-     * *   Reset the consumer offsets of one or all subscribed topics of a consumer group to the latest offset. This way, you can consume messages in the topics from the latest offset.
-     * *   Reset the consumer offsets of one or all subscribed topics of a consumer group to a specific point in time. This way, you can consume messages in the topics from the specified point in time.
-     * *   Reset the consumer offset of one subscribed topic of a consumer group to a specific offset in a specific partition. This way, you can consume messages from the specified offset in the specified partition.
-     *
+     * <b>description</b> :
+     * <p>You can call this operation to reset the consumer offset of a specific consumer group. You can use the timestamp or offset parameter to reset the consumer offset of a consumer group. You can implement the following features by configuring a combination of different parameters:</p>
+     * <ul>
+     * <li>Reset the consumer offsets of one or all subscribed topics of a consumer group to the latest offset. This way, you can consume messages in the topics from the latest offset.</li>
+     * <li>Reset the consumer offsets of one or all subscribed topics of a consumer group to a specific point in time. This way, you can consume messages in the topics from the specified point in time.</li>
+     * <li>Reset the consumer offset of one subscribed topic of a consumer group to a specific offset in a specific partition. This way, you can consume messages from the specified offset in the specified partition.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Resets the consumer offsets of the subscribed topics of a consumer group.</p>
+     * 
      * @param request UpdateConsumerOffsetRequest
      * @return UpdateConsumerOffsetResponse
      */
@@ -2635,14 +2781,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the configurations of an ApsaraMQ for Kafka instance. ApsaraMQ for Kafka allows you to modify the configurations of an instance, including the access control list (ACL) feature, the Secure Sockets Layer (SSL) feature, the message retention period, and the maximum message size.
-     *
-     * @description ## **Permissions**
-     * If a RAM user wants to call the **UpdateInstanceConfig** operation, the RAM user must be granted the required permissions. For more information about how to grant permissions, see [RAM policies](https://help.aliyun.com/document_detail/185815.html).
-     * |API|Action|Resource|
-     * |---|---|---|
-     * |UpdateInstanceConfig|alikafka: UpdateInstance|acs:alikafka:*:*:{instanceId}|
-     *
+     * <b>description</b> :
+     * <h2><strong>Permissions</strong></h2>
+     * <p>If a RAM user wants to call the <strong>UpdateInstanceConfig</strong> operation, the RAM user must be granted the required permissions. For more information about how to grant permissions, see <a href="https://help.aliyun.com/document_detail/185815.html">RAM policies</a>.</p>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th>API</th>
+     * <th>Action</th>
+     * <th>Resource</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>UpdateInstanceConfig</td>
+     * <td>alikafka: UpdateInstance</td>
+     * <td>acs:alikafka:<em>:</em>:{instanceId}</td>
+     * </tr>
+     * </tbody></table>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the configurations of an ApsaraMQ for Kafka instance. ApsaraMQ for Kafka allows you to modify the configurations of an instance, including the access control list (ACL) feature, the Secure Sockets Layer (SSL) feature, the message retention period, and the maximum message size.</p>
+     * 
      * @param request UpdateInstanceConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateInstanceConfigResponse
@@ -2680,14 +2839,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the configurations of an ApsaraMQ for Kafka instance. ApsaraMQ for Kafka allows you to modify the configurations of an instance, including the access control list (ACL) feature, the Secure Sockets Layer (SSL) feature, the message retention period, and the maximum message size.
-     *
-     * @description ## **Permissions**
-     * If a RAM user wants to call the **UpdateInstanceConfig** operation, the RAM user must be granted the required permissions. For more information about how to grant permissions, see [RAM policies](https://help.aliyun.com/document_detail/185815.html).
-     * |API|Action|Resource|
-     * |---|---|---|
-     * |UpdateInstanceConfig|alikafka: UpdateInstance|acs:alikafka:*:*:{instanceId}|
-     *
+     * <b>description</b> :
+     * <h2><strong>Permissions</strong></h2>
+     * <p>If a RAM user wants to call the <strong>UpdateInstanceConfig</strong> operation, the RAM user must be granted the required permissions. For more information about how to grant permissions, see <a href="https://help.aliyun.com/document_detail/185815.html">RAM policies</a>.</p>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th>API</th>
+     * <th>Action</th>
+     * <th>Resource</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>UpdateInstanceConfig</td>
+     * <td>alikafka: UpdateInstance</td>
+     * <td>acs:alikafka:<em>:</em>:{instanceId}</td>
+     * </tr>
+     * </tbody></table>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the configurations of an ApsaraMQ for Kafka instance. ApsaraMQ for Kafka allows you to modify the configurations of an instance, including the access control list (ACL) feature, the Secure Sockets Layer (SSL) feature, the message retention period, and the maximum message size.</p>
+     * 
      * @param request UpdateInstanceConfigRequest
      * @return UpdateInstanceConfigResponse
      */
@@ -2697,8 +2869,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the configurations of a topic. After you create a topic, you can modify the message retention period and maximum message size of the topic.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the configurations of a topic. After you create a topic, you can modify the message retention period and maximum message size of the topic.</p>
+     * 
      * @param request UpdateTopicConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateTopicConfigResponse
@@ -2744,8 +2917,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the configurations of a topic. After you create a topic, you can modify the message retention period and maximum message size of the topic.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the configurations of a topic. After you create a topic, you can modify the message retention period and maximum message size of the topic.</p>
+     * 
      * @param request UpdateTopicConfigRequest
      * @return UpdateTopicConfigResponse
      */
@@ -2755,16 +2929,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the version of an instance.
-     *
-     * @description ## **Permissions**
-     * A RAM user must be granted the required permissions before the RAM user calls the **UpgradeInstanceVersion** operation. For information about how to grant permissions, see [RAM policies](https://help.aliyun.com/document_detail/185815.html).
-     * |API|Action|Resource|
-     * |---|---|---|
-     * |UpgradeInstanceVersion|UpdateInstance|acs:alikafka:*:*:{instanceId}|
-     * ## **QPS limits**
-     * You can send a maximum of two queries per second (QPS).
-     *
+     * <b>description</b> :
+     * <h2><strong>Permissions</strong></h2>
+     * <p>A RAM user must be granted the required permissions before the RAM user calls the <strong>UpgradeInstanceVersion</strong> operation. For information about how to grant permissions, see <a href="https://help.aliyun.com/document_detail/185815.html">RAM policies</a>.</p>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th>API</th>
+     * <th>Action</th>
+     * <th>Resource</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>UpgradeInstanceVersion</td>
+     * <td>UpdateInstance</td>
+     * <td>acs:alikafka:<em>:</em>:{instanceId}</td>
+     * </tr>
+     * </tbody></table>
+     * <h2><strong>QPS limits</strong></h2>
+     * <p>You can send a maximum of two queries per second (QPS).</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the version of an instance.</p>
+     * 
      * @param request UpgradeInstanceVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpgradeInstanceVersionResponse
@@ -2802,16 +2989,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the version of an instance.
-     *
-     * @description ## **Permissions**
-     * A RAM user must be granted the required permissions before the RAM user calls the **UpgradeInstanceVersion** operation. For information about how to grant permissions, see [RAM policies](https://help.aliyun.com/document_detail/185815.html).
-     * |API|Action|Resource|
-     * |---|---|---|
-     * |UpgradeInstanceVersion|UpdateInstance|acs:alikafka:*:*:{instanceId}|
-     * ## **QPS limits**
-     * You can send a maximum of two queries per second (QPS).
-     *
+     * <b>description</b> :
+     * <h2><strong>Permissions</strong></h2>
+     * <p>A RAM user must be granted the required permissions before the RAM user calls the <strong>UpgradeInstanceVersion</strong> operation. For information about how to grant permissions, see <a href="https://help.aliyun.com/document_detail/185815.html">RAM policies</a>.</p>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th>API</th>
+     * <th>Action</th>
+     * <th>Resource</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>UpgradeInstanceVersion</td>
+     * <td>UpdateInstance</td>
+     * <td>acs:alikafka:<em>:</em>:{instanceId}</td>
+     * </tr>
+     * </tbody></table>
+     * <h2><strong>QPS limits</strong></h2>
+     * <p>You can send a maximum of two queries per second (QPS).</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the version of an instance.</p>
+     * 
      * @param request UpgradeInstanceVersionRequest
      * @return UpgradeInstanceVersionResponse
      */
@@ -2821,10 +3021,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Upgrades a pay-as-you-go ApsaraMQ for Kafka instance.
-     *
-     * @description Before you call this operation, make sure that you understand the billing method and pricing of pay-as-you-go Message Queue for Apache Kafka instances. For more information, see [Billing](https://help.aliyun.com/document_detail/84737.html).
-     *
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you understand the billing method and pricing of pay-as-you-go Message Queue for Apache Kafka instances. For more information, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Upgrades a pay-as-you-go ApsaraMQ for Kafka instance.</p>
+     * 
      * @param tmpReq UpgradePostPayOrderRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpgradePostPayOrderResponse
@@ -2900,10 +3102,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Upgrades a pay-as-you-go ApsaraMQ for Kafka instance.
-     *
-     * @description Before you call this operation, make sure that you understand the billing method and pricing of pay-as-you-go Message Queue for Apache Kafka instances. For more information, see [Billing](https://help.aliyun.com/document_detail/84737.html).
-     *
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you understand the billing method and pricing of pay-as-you-go Message Queue for Apache Kafka instances. For more information, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Upgrades a pay-as-you-go ApsaraMQ for Kafka instance.</p>
+     * 
      * @param request UpgradePostPayOrderRequest
      * @return UpgradePostPayOrderResponse
      */
@@ -2913,10 +3117,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Upgrades a Message Queue for Apache Kafka instance that uses the subscription billing method.
-     *
-     * @description Before you call this operation, make sure that you understand the billing method and pricing of subscription Message Queue for Apache Kafka instances. For more information, see [Billing overview](https://help.aliyun.com/document_detail/84737.html).
-     *
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you understand the billing method and pricing of subscription Message Queue for Apache Kafka instances. For more information, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing overview</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Upgrades a Message Queue for Apache Kafka instance that uses the subscription billing method.</p>
+     * 
      * @param tmpReq UpgradePrePayOrderRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpgradePrePayOrderResponse
@@ -2996,10 +3202,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Upgrades a Message Queue for Apache Kafka instance that uses the subscription billing method.
-     *
-     * @description Before you call this operation, make sure that you understand the billing method and pricing of subscription Message Queue for Apache Kafka instances. For more information, see [Billing overview](https://help.aliyun.com/document_detail/84737.html).
-     *
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you understand the billing method and pricing of subscription Message Queue for Apache Kafka instances. For more information, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing overview</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Upgrades a Message Queue for Apache Kafka instance that uses the subscription billing method.</p>
+     * 
      * @param request UpgradePrePayOrderRequest
      * @return UpgradePrePayOrderResponse
      */

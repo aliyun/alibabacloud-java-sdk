@@ -6,48 +6,60 @@ import com.aliyun.tea.*;
 public class UpdateTopicConfigRequest extends TeaModel {
     /**
      * <p>The key of the topic configuration.</p>
-     * <br>
-     * <p>*   ApsaraMQ for Kafka V2 instances allow you to modify configurations only for topics that use local storage.</p>
-     * <p>*   ApsaraMQ for Kafka V3 instances allow you to modify configurations for all topics.</p>
-     * <p>*   The following keys are supported by `local topic` of ApsaraMQ for Kafka V2 instances: retention.ms, retention.bytes, and replications.</p>
-     * <p>*   The following keys are supported by ApsaraMQ for Kafka V3 instances: retention.hours and max.message.bytes.</p>
-     * <br>
+     * <ul>
+     * <li>ApsaraMQ for Kafka V2 instances allow you to modify configurations only for topics that use local storage.</li>
+     * <li>ApsaraMQ for Kafka V3 instances allow you to modify configurations for all topics.</li>
+     * <li>The following keys are supported by <code>local topic</code> of ApsaraMQ for Kafka V2 instances: retention.ms, retention.bytes, and replications.</li>
+     * <li>The following keys are supported by ApsaraMQ for Kafka V3 instances: retention.hours and max.message.bytes.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>replications</p>
      */
     @NameInMap("Config")
     public String config;
 
     /**
      * <p>The instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alikafka_post-cn-v0h1fgs2****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The ID of the region where the instance resides.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The topic name.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dqc_test2</p>
      */
     @NameInMap("Topic")
     public String topic;
 
     /**
      * <p>The configuration item that you want to update for the topic. The following configuration items are supported by ApsaraMQ for Kafka V3 instances:</p>
-     * <br>
-     * <p>*   `retention.hours` specifies the message retention period. Value type: string. Valid values: 24 to 8760.</p>
-     * <p>*   `max.message.bytes` specifies the maximum size of a sent message. Value type: string. Valid values: 1048576 to 10485760.</p>
-     * <br>
+     * <ul>
+     * <li><code>retention.hours</code> specifies the message retention period. Value type: string. Valid values: 24 to 8760.</li>
+     * <li><code>max.message.bytes</code> specifies the maximum size of a sent message. Value type: string. Valid values: 1048576 to 10485760.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("Value")
     public String value;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetConsumerListResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,36 +21,54 @@ public class GetConsumerListResponseBody extends TeaModel {
 
     /**
      * <p>The number of the page to return. Pages start from page 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>operation success.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>808F042B-CB9A-4FBC-9009-00E7DDB6****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12</p>
      */
     @NameInMap("Total")
     public Long total;
@@ -124,12 +145,18 @@ public class GetConsumerListResponseBody extends TeaModel {
     public static class GetConsumerListResponseBodyConsumerListConsumerVOTagsTagVO extends TeaModel {
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Value")
         public String value;
@@ -185,24 +212,36 @@ public class GetConsumerListResponseBody extends TeaModel {
 
         /**
          * <p>The consumer group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kafka-test</p>
          */
         @NameInMap("ConsumerId")
         public String consumerId;
 
         /**
          * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alikafka_post-cn-v0h18sav****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The ID of the region where the instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The instance description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Remark")
         public String remark;

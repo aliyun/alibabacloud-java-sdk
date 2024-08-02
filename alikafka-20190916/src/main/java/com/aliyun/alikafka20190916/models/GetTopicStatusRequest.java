@@ -6,22 +6,29 @@ import com.aliyun.tea.*;
 public class GetTopicStatusRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alikafka_pre-cn-v0h15tjm****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The region ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The name of the topic.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>normal_topic_9d034262835916103455551be06cc****</p>
      */
     @NameInMap("Topic")
     public String topic;

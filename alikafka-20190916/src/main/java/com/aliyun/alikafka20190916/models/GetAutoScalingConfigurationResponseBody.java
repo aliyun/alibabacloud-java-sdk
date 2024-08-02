@@ -4,21 +4,45 @@ package com.aliyun.alikafka20190916.models;
 import com.aliyun.tea.*;
 
 public class GetAutoScalingConfigurationResponseBody extends TeaModel {
+    /**
+     * <p>The response code. The value 200 indicates that the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Long code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public GetAutoScalingConfigurationResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>operation success.</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B7A39AE5-0B36-4442-A304-E0885265***</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -87,42 +111,131 @@ public class GetAutoScalingConfigurationResponseBody extends TeaModel {
     }
 
     public static class GetAutoScalingConfigurationResponseBodyDataScheduledScalingRulesScheduledScalingRules extends TeaModel {
+        /**
+         * <p>The duration of a scheduled scaling task. Unit: minutes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
+         */
         @NameInMap("DurationMinutes")
         public Long durationMinutes;
 
+        /**
+         * <p>Indicates whether the scheduled scaling rule is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Enable")
         public Boolean enable;
 
+        /**
+         * <p>The estimated scale-in duration. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>780</p>
+         */
         @NameInMap("EstimatedElasticScalingDownTimeSecs")
         public Long estimatedElasticScalingDownTimeSecs;
 
+        /**
+         * <p>The estimated scale-out duration. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>780</p>
+         */
         @NameInMap("EstimatedElasticScalingUpTimeSecs")
         public Long estimatedElasticScalingUpTimeSecs;
 
+        /**
+         * <p>The timestamp that indicates the start time of the scheduled scaling task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1714467540000</p>
+         */
         @NameInMap("FirstScheduledTime")
         public Long firstScheduledTime;
 
+        /**
+         * <p>The frequency at which the scheduled scaling task is executed. This parameter is returned only if ScheduleType is set to repeat. Valid values:</p>
+         * <ul>
+         * <li><p>Daily: The scheduled scaling task is executed every day.</p>
+         * </li>
+         * <li><p>Weekly: The scheduled scaling task is executed every week.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Weekly</p>
+         */
         @NameInMap("RepeatType")
         public String repeatType;
 
+        /**
+         * <p>The reserved production capacity for scheduled scaling. Unit: MB/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120</p>
+         */
         @NameInMap("ReservedPubFlow")
         public Long reservedPubFlow;
 
+        /**
+         * <p>The reserved consumption capacity for scheduled scaling. Unit: MB/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120</p>
+         */
         @NameInMap("ReservedSubFlow")
         public Long reservedSubFlow;
 
+        /**
+         * <p>The ID of the scheduled scaling rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>64</p>
+         */
         @NameInMap("RuleId")
         public Long ruleId;
 
+        /**
+         * <p>The name of the scheduled scaling rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("RuleName")
         public String ruleName;
 
+        /**
+         * <p>The type of the scheduled scaling task. Valid values:</p>
+         * <ul>
+         * <li>at: The scheduled scaling task is executed only once.</li>
+         * <li>repeat: The scheduled scaling task is repeatedly executed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>at</p>
+         */
         @NameInMap("ScheduleType")
         public String scheduleType;
 
+        /**
+         * <p>The time zone in Coordinated Universal Time (UTC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GMT+8</p>
+         */
         @NameInMap("TimeZone")
         public String timeZone;
 
+        /**
+         * <p>The day on which the scheduled scaling task is repeatedly executed. You can specify multiple days for this parameter.</p>
+         */
         @NameInMap("WeeklyTypes")
         public GetAutoScalingConfigurationResponseBodyDataScheduledScalingRulesScheduledScalingRulesWeeklyTypes weeklyTypes;
 
@@ -257,6 +370,9 @@ public class GetAutoScalingConfigurationResponseBody extends TeaModel {
     }
 
     public static class GetAutoScalingConfigurationResponseBodyData extends TeaModel {
+        /**
+         * <p>The scheduled scaling rules.</p>
+         */
         @NameInMap("ScheduledScalingRules")
         public GetAutoScalingConfigurationResponseBodyDataScheduledScalingRules scheduledScalingRules;
 

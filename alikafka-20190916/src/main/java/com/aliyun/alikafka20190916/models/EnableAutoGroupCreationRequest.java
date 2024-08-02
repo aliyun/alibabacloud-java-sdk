@@ -6,29 +6,35 @@ import com.aliyun.tea.*;
 public class EnableAutoGroupCreationRequest extends TeaModel {
     /**
      * <p>Specify whether to enable the flexible group creation feature. Valid values:</p>
-     * <br>
-     * <p>*   **true**: enables the flexible group creation feature.</p>
-     * <p>*   **false**: disabled the flexible group creation feature.</p>
-     * <br>
+     * <ul>
+     * <li><strong>true</strong>: enables the flexible group creation feature.</li>
+     * <li><strong>false</strong>: disabled the flexible group creation feature.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Enable")
     public Boolean enable;
 
     /**
      * <p>The instance ID.</p>
-     * <br>
-     * <p>You can call the [GetInstanceList](https://help.aliyun.com/document_detail/437663.html) operation to query instances.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/437663.html">GetInstanceList</a> operation to query instances.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alikafka_post-cn-mp919o4v****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The region ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ListTagResourcesResponseBody extends TeaModel {
     /**
      * <p>The token that determines the start point of the next query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DE65F6B7-7566-4802-9007-96F2494A****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,34 +60,47 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public static class ListTagResourcesResponseBodyTagResourcesTagResource extends TeaModel {
         /**
          * <p>The ID of the resource. A resource ID complies with the following rules:</p>
-         * <br>
-         * <p>*   The resource ID of an instance is the value of the instanceId parameter.</p>
-         * <p>*   The resource ID of a topic is the value of the Kafka_alikafka_instanceId_topic parameter.</p>
-         * <p>*   The resource ID of a consumer group is the value of the Kafka_alikafka_instanceId_consumerGroup parameter.</p>
-         * <br>
+         * <ul>
+         * <li>The resource ID of an instance is the value of the instanceId parameter.</li>
+         * <li>The resource ID of a topic is the value of the Kafka_alikafka_instanceId_topic parameter.</li>
+         * <li>The resource ID of a consumer group is the value of the Kafka_alikafka_instanceId_consumerGroup parameter.</li>
+         * </ul>
          * <p>For example, the resources whose tags you want to query include the alikafka_post-cn-v0h1fgs2xxxx instance, the test-topic topic, and the test-consumer-group consumer group. In this case, their resource IDs are alikafka_post-cn-v0h1fgs2xxxx, Kafka_alikafka_post-cn-v0h1fgs2xxxx_test-topic, and Kafka_alikafka_post-cn-v0h1fgs2xxxx_test-consumer-group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alikafka_post-cn-v0h1fgs2****</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
          * <p>The type of the resource. The value is an enumerated value. Valid values:</p>
-         * <br>
-         * <p>*   **Instance**</p>
-         * <p>*   **Topic**</p>
-         * <p>*   **Consumergroup**</p>
+         * <ul>
+         * <li><strong>Instance</strong></li>
+         * <li><strong>Topic</strong></li>
+         * <li><strong>Consumergroup</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>instance</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
          * <p>The key of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceDept</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
          * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceJoshua</p>
          */
         @NameInMap("TagValue")
         public String tagValue;

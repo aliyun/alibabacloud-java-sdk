@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeAclsResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,18 +21,27 @@ public class DescribeAclsResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>operation success.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>46496E38-881E-4719-A2F3-F3DA6AE****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -81,52 +93,95 @@ public class DescribeAclsResponseBody extends TeaModel {
 
     public static class DescribeAclsResponseBodyKafkaAclListKafkaAclVO extends TeaModel {
         /**
-         * <p>The operation type. Valid values:</p>
-         * <br>
-         * <p>*   **Write**</p>
-         * <p>*   **Read**</p>
+         * <p>The types of operations allowed by the ACL. Separate multiple operation types with commas (,).</p>
+         * <ul>
+         * <li>Valid values:</li>
+         * <li>Write</li>
+         * <li>Read</li>
+         * <li>Describe: reads of transactional IDs.</li>
+         * <li>IdempotentWrite: idempotent data writes to clusters.</li>
+         * <li>IDEMPOTENT_WRITE: idempotent data writes to clusters. This value is available only for ApsaraMQ for Kafka V3 instances.</li>
+         * <li>DESCRIBE_CONFIGS: queries of configurations. This value is available only for ApsaraMQ for Kafka V3 instances.<blockquote>
+         * <p>This parameter is available only for ApsaraMQ for Kafka V3 serverless instances.</p>
+         * </blockquote>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Write</p>
          */
         @NameInMap("AclOperationType")
         public String aclOperationType;
 
+        /**
+         * <p>The authorization method. Valid values:</p>
+         * <ul>
+         * <li>DENY</li>
+         * <li>ALLOW<blockquote>
+         * <p>This parameter is available only for ApsaraMQ for Kafka V3 serverless instances.</p>
+         * </blockquote>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DENY</p>
+         */
         @NameInMap("AclPermissionType")
         public String aclPermissionType;
 
         /**
          * <p>The resource name.</p>
-         * <br>
-         * <p>*   The value can be the name of a topic or consumer group.</p>
-         * <p>*   You can use the asterisk (\\*) wildcard character to specify the names of all topics or consumer groups.</p>
+         * <ul>
+         * <li>The value can be the name of a topic or consumer group.</li>
+         * <li>You can use the asterisk (\*) wildcard character to specify the names of all topics or consumer groups.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>demo</p>
          */
         @NameInMap("AclResourceName")
         public String aclResourceName;
 
         /**
          * <p>The matching mode. Valid values:</p>
-         * <br>
-         * <p>*   **LITERAL:** full-name match</p>
-         * <p>*   **PREFIXED**: prefix match</p>
+         * <ul>
+         * <li><strong>LITERAL:</strong> full-name match</li>
+         * <li><strong>PREFIXED</strong>: prefix match</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>LITERAL</p>
          */
         @NameInMap("AclResourcePatternType")
         public String aclResourcePatternType;
 
         /**
          * <p>The resource type. Valid values:</p>
-         * <br>
-         * <p>*   **Topic**</p>
-         * <p>*   **Group**</p>
+         * <ul>
+         * <li><strong>Topic</strong></li>
+         * <li><strong>Group</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Topic</p>
          */
         @NameInMap("AclResourceType")
         public String aclResourceType;
 
         /**
          * <p>The host.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         @NameInMap("Host")
         public String host;
 
         /**
          * <p>The username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test12***</p>
          */
         @NameInMap("Username")
         public String username;

@@ -6,25 +6,33 @@ import com.aliyun.tea.*;
 public class ReleaseInstanceRequest extends TeaModel {
     /**
      * <p>Specifies whether to immediately release the physical resources of the instance. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The physical resources of the instance are immediately released.</p>
-     * <p>*   **false**: The physical resources of the instance are retained for a period of time before they are released.</p>
+     * <ul>
+     * <li><strong>true</strong>: The physical resources of the instance are immediately released.</li>
+     * <li><strong>false</strong>: The physical resources of the instance are retained for a period of time before they are released.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("ForceDeleteInstance")
     public Boolean forceDeleteInstance;
 
     /**
      * <p>The ID of the instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alikafka_post-cn-mp919o4v****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The region ID of the instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
