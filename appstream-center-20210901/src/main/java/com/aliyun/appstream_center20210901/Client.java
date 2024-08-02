@@ -330,8 +330,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("AppInstanceGroupId", request.appInstanceGroupId);
         }
 
+        java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.authorizeUserIds)) {
-            body.put("AuthorizeUserIds", request.authorizeUserIds);
+            bodyFlat.put("AuthorizeUserIds", request.authorizeUserIds);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.productType)) {
@@ -339,9 +340,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.unAuthorizeUserIds)) {
-            body.put("UnAuthorizeUserIds", request.unAuthorizeUserIds);
+            bodyFlat.put("UnAuthorizeUserIds", request.unAuthorizeUserIds);
         }
 
+        body = TeaConverter.merge(Object.class,
+            body,
+            com.aliyun.openapiutil.Client.query(bodyFlat)
+        );
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
@@ -1922,6 +1927,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListRegionsResponse listRegionsWithOptions(ListRegionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizSource)) {
+            query.put("BizSource", request.bizSource);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.productType)) {
             query.put("ProductType", request.productType);
         }

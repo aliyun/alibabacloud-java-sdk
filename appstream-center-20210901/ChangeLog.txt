@@ -1,3 +1,9 @@
+2024-08-02 Version: 1.2.1
+- Update API AuthorizeInstanceGroup: update param AuthorizeUserIds.
+- Update API AuthorizeInstanceGroup: update param UnAuthorizeUserIds.
+- Update API ListRegions: add param BizSource.
+
+
 2024-07-23 Version: 1.2.0
 - Support API AccessPageGetAcl.
 - Support API AccessPageSetAcl.
