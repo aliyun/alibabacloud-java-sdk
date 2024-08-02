@@ -3,7 +3,7 @@ package com.aliyun.mscopensubscription20210713.models;
 
 import com.aliyun.tea.*;
 
-public class CreateWebhookResponse extends TeaModel {
+public class ListEncryptWebhooksResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class CreateWebhookResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public CreateWebhookResponseBody body;
+    public ListEncryptWebhooksResponseBody body;
 
-    public static CreateWebhookResponse build(java.util.Map<String, ?> map) throws Exception {
-        CreateWebhookResponse self = new CreateWebhookResponse();
+    public static ListEncryptWebhooksResponse build(java.util.Map<String, ?> map) throws Exception {
+        ListEncryptWebhooksResponse self = new ListEncryptWebhooksResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateWebhookResponse setHeaders(java.util.Map<String, String> headers) {
+    public ListEncryptWebhooksResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class CreateWebhookResponse extends TeaModel {
         return this.headers;
     }
 
-    public CreateWebhookResponse setStatusCode(Integer statusCode) {
+    public ListEncryptWebhooksResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class CreateWebhookResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public CreateWebhookResponse setBody(CreateWebhookResponseBody body) {
+    public ListEncryptWebhooksResponse setBody(ListEncryptWebhooksResponseBody body) {
         this.body = body;
         return this;
     }
-    public CreateWebhookResponseBody getBody() {
+    public ListEncryptWebhooksResponseBody getBody() {
         return this.body;
     }
 

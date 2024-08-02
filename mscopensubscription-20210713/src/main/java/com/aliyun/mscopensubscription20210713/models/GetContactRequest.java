@@ -4,9 +4,19 @@ package com.aliyun.mscopensubscription20210713.models;
 import com.aliyun.tea.*;
 
 public class GetContactRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10086</p>
+     */
     @NameInMap("ContactId")
     public Long contactId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>zh-cn</p>
+     */
     @NameInMap("Locale")
     public String locale;
 

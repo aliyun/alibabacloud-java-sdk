@@ -4,9 +4,17 @@ package com.aliyun.mscopensubscription20210713.models;
 import com.aliyun.tea.*;
 
 public class GetSubscriptionItemDetailRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>32</p>
+     */
     @NameInMap("ItemId")
     public Integer itemId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>zh-cn</p>
+     */
     @NameInMap("Locale")
     public String locale;
 

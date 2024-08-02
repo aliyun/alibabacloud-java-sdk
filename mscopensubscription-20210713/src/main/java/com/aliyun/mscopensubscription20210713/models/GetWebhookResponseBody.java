@@ -4,15 +4,26 @@ package com.aliyun.mscopensubscription20210713.models;
 import com.aliyun.tea.*;
 
 public class GetWebhookResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Id of the request</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,12 +76,27 @@ public class GetWebhookResponseBody extends TeaModel {
     }
 
     public static class GetWebhookResponseBodyWebhook extends TeaModel {
+        /**
+         * <p>回调地址</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=">https://oapi.dingtalk.com/robot/send?access_token=</a></p>
+         */
         @NameInMap("ServerUrl")
         public String serverUrl;
 
+        /**
+         * <p>代表资源一级ID的资源属性字段</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10086</p>
+         */
         @NameInMap("WebhookId")
         public Long webhookId;
 
+        /**
+         * <p>名称</p>
+         */
         @NameInMap("WebhookName")
         public String webhookName;
 

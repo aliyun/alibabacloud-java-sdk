@@ -4,36 +4,79 @@ package com.aliyun.mscopensubscription20210713.models;
 import com.aliyun.tea.*;
 
 public class UpdateSubscriptionItemRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>abc-def</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>订阅联系人</p>
+     */
     @NameInMap("ContactIds")
     public java.util.List<Long> contactIds;
 
+    /**
+     * <p>邮件订阅情况</p>
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("EmailStatus")
     public Integer emailStatus;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>32</p>
+     */
     @NameInMap("ItemId")
     public Integer itemId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>zh-cn</p>
+     */
     @NameInMap("Locale")
     public String locale;
 
+    /**
+     * <p>站内信订阅情况</p>
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PmsgStatus")
     public Integer pmsgStatus;
 
+    /**
+     * <p>地域id</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>短信订阅情况</p>
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SmsStatus")
     public Integer smsStatus;
 
+    /**
+     * <p>语音短信订阅情况</p>
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TtsStatus")
     public Integer ttsStatus;
 
+    /**
+     * <p>订阅webhooks</p>
+     */
     @NameInMap("WebhookIds")
     public java.util.List<Long> webhookIds;
 
+    /**
+     * <p>回调订阅情况</p>
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("WebhookStatus")
     public Integer webhookStatus;
 

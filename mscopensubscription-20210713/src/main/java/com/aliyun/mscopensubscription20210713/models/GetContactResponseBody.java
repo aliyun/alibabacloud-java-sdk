@@ -4,6 +4,10 @@ package com.aliyun.mscopensubscription20210713.models;
 import com.aliyun.tea.*;
 
 public class GetContactResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
@@ -13,9 +17,19 @@ public class GetContactResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FF1EFA25-9DB3-13E4-9643-5D3AD301C1D</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,39 +79,108 @@ public class GetContactResponseBody extends TeaModel {
     }
 
     public static class GetContactResponseBodyContact extends TeaModel {
+        /**
+         * <p>账号UID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12306</p>
+         */
         @NameInMap("AccountUid")
         public Long accountUid;
 
+        /**
+         * <p>代表资源一级ID的资源属性字段</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10086</p>
+         */
         @NameInMap("ContactId")
         public Long contactId;
 
+        /**
+         * <p>联系人名称</p>
+         * 
+         * <strong>example:</strong>
+         * <p>turing</p>
+         */
         @NameInMap("ContactName")
         public String contactName;
 
+        /**
+         * <p>联系人电子邮箱</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:turing@addr.cs">turing@addr.cs</a></p>
+         */
         @NameInMap("Email")
         public String email;
 
+        /**
+         * <p>是否是账号本身</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("IsAccount")
         public Boolean isAccount;
 
+        /**
+         * <p>是否过期</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("IsObsolete")
         public Boolean isObsolete;
 
+        /**
+         * <p>电子邮箱是否验证</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsVerifiedEmail")
         public Boolean isVerifiedEmail;
 
+        /**
+         * <p>电话是否验证</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("IsVerifiedMobile")
         public Boolean isVerifiedMobile;
 
+        /**
+         * <p>上封验证邮件发送时间</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1629429213</p>
+         */
         @NameInMap("LastEmailVerificationTimeStamp")
         public Long lastEmailVerificationTimeStamp;
 
+        /**
+         * <p>上条验证短信发送时间</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1629429213</p>
+         */
         @NameInMap("LastMobileVerificationTimeStamp")
         public Long lastMobileVerificationTimeStamp;
 
+        /**
+         * <p>用户电话</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1399999999</p>
+         */
         @NameInMap("Mobile")
         public String mobile;
 
+        /**
+         * <p>职位</p>
+         */
         @NameInMap("Position")
         public String position;
 

@@ -4,18 +4,32 @@ package com.aliyun.mscopensubscription20210713.models;
 import com.aliyun.tea.*;
 
 public class ListSubscriptionItemGroupDetailsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BA7CC0BA-31E6-18B7-8B78-AA97682099A2</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("SubscriptionItemGroupDetails")
     public java.util.List<ListSubscriptionItemGroupDetailsResponseBodySubscriptionItemGroupDetails> subscriptionItemGroupDetails;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,39 +79,105 @@ public class ListSubscriptionItemGroupDetailsResponseBody extends TeaModel {
     }
 
     public static class ListSubscriptionItemGroupDetailsResponseBodySubscriptionItemGroupDetailsItemDetailsContacts extends TeaModel {
+        /**
+         * <p>账号UID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12306</p>
+         */
         @NameInMap("AccountUID")
         public Long accountUID;
 
+        /**
+         * <p>代表资源一级ID的资源属性字段</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10086</p>
+         */
         @NameInMap("ContactId")
         public Long contactId;
 
+        /**
+         * <p>联系人电子邮箱</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:turing@addr.cs">turing@addr.cs</a></p>
+         */
         @NameInMap("Email")
         public String email;
 
+        /**
+         * <p>是否是账号本身</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("IsAccount")
         public Boolean isAccount;
 
+        /**
+         * <p>是否过期</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("IsObsolete")
         public Boolean isObsolete;
 
+        /**
+         * <p>电子邮箱是否验证</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsVerifiedEmail")
         public Boolean isVerifiedEmail;
 
+        /**
+         * <p>电话是否验证</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsVerifiedMobile")
         public Boolean isVerifiedMobile;
 
+        /**
+         * <p>上封验证邮件发送时间</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1629423313</p>
+         */
         @NameInMap("LastEmailVerificationTimeStamp")
         public Long lastEmailVerificationTimeStamp;
 
+        /**
+         * <p>上条验证短信发送时间</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1629423313</p>
+         */
         @NameInMap("LastMobileVerificationTimeStamp")
         public Long lastMobileVerificationTimeStamp;
 
+        /**
+         * <p>用户电话</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1399999999</p>
+         */
         @NameInMap("Mobile")
         public String mobile;
 
+        /**
+         * <p>联系人名称</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>职位</p>
+         */
         @NameInMap("Position")
         public String position;
 
@@ -205,12 +285,27 @@ public class ListSubscriptionItemGroupDetailsResponseBody extends TeaModel {
     }
 
     public static class ListSubscriptionItemGroupDetailsResponseBodySubscriptionItemGroupDetailsItemDetailsWebhooks extends TeaModel {
+        /**
+         * <p>名称</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>回调地址</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=">https://oapi.dingtalk.com/robot/send?access_token=</a></p>
+         */
         @NameInMap("ServerUrl")
         public String serverUrl;
 
+        /**
+         * <p>代表资源一级ID的资源属性字段</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10086</p>
+         */
         @NameInMap("WebhookId")
         public Long webhookId;
 
@@ -246,39 +341,96 @@ public class ListSubscriptionItemGroupDetailsResponseBody extends TeaModel {
     }
 
     public static class ListSubscriptionItemGroupDetailsResponseBodySubscriptionItemGroupDetailsItemDetails extends TeaModel {
+        /**
+         * <p>属于通道</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tts</p>
+         */
         @NameInMap("Channel")
         public String channel;
 
+        /**
+         * <p>订阅联系人</p>
+         */
         @NameInMap("Contacts")
         public java.util.List<ListSubscriptionItemGroupDetailsResponseBodySubscriptionItemGroupDetailsItemDetailsContacts> contacts;
 
+        /**
+         * <p>订阅项描述</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>邮件订阅情况</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
+         */
         @NameInMap("EmailStatus")
         public Integer emailStatus;
 
+        /**
+         * <p>代表资源一级ID的资源属性字段</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("ItemId")
         public Integer itemId;
 
+        /**
+         * <p>订阅项名称</p>
+         */
         @NameInMap("ItemName")
         public String itemName;
 
+        /**
+         * <p>站内信订阅情况</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-2</p>
+         */
         @NameInMap("PmsgStatus")
         public Integer pmsgStatus;
 
+        /**
+         * <p>地域id</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>短信订阅情况</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("SmsStatus")
         public Integer smsStatus;
 
+        /**
+         * <p>语音短信订阅情况</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("TtsStatus")
         public Integer ttsStatus;
 
+        /**
+         * <p>回调订阅情况</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("WebhookStatus")
         public Integer webhookStatus;
 
+        /**
+         * <p>订阅webhooks</p>
+         */
         @NameInMap("Webhooks")
         public java.util.List<ListSubscriptionItemGroupDetailsResponseBodySubscriptionItemGroupDetailsItemDetailsWebhooks> webhooks;
 
@@ -392,6 +544,10 @@ public class ListSubscriptionItemGroupDetailsResponseBody extends TeaModel {
         @NameInMap("ItemDetails")
         public java.util.List<ListSubscriptionItemGroupDetailsResponseBodySubscriptionItemGroupDetailsItemDetails> itemDetails;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("ItemGroupId")
         public Integer itemGroupId;
 
