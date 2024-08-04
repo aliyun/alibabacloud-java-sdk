@@ -15,7 +15,7 @@ public class DescribeDBInstancePlansResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>The instance ID.</p>
+     * <p>The queried plans.</p>
      */
     @NameInMap("Items")
     public DescribeDBInstancePlansResponseBodyItems items;
@@ -129,7 +129,7 @@ public class DescribeDBInstancePlansResponseBody extends TeaModel {
 
     public static class DescribeDBInstancePlansResponseBodyItemsPlanList extends TeaModel {
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>gp-bp12ga6v69h86****</p>
@@ -156,10 +156,15 @@ public class DescribeDBInstancePlansResponseBody extends TeaModel {
         public String planDesc;
 
         /**
-         * <p>The end time of the plan. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time is displayed in UTC.</p>
+         * <p>The end time of the plan. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
          * <blockquote>
-         * <p> This parameter is returned only for periodically executed plans.</p>
          * </blockquote>
+         * <ul>
+         * <li><p>This parameter is returned only for the plans that are periodically executed.</p>
+         * </li>
+         * <li><p>If you did not specify the end time when you created the plan, this parameter is not returned.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>2023-04-17T23:00Z</p>
@@ -168,7 +173,7 @@ public class DescribeDBInstancePlansResponseBody extends TeaModel {
         public String planEndDate;
 
         /**
-         * <p>The ID of the plan.</p>
+         * <p>The plan ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1234</p>
@@ -199,10 +204,15 @@ public class DescribeDBInstancePlansResponseBody extends TeaModel {
         public String planScheduleType;
 
         /**
-         * <p>The start time of the plan. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time is displayed in UTC.</p>
+         * <p>The start time of the plan. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
          * <blockquote>
-         * <p> This parameter is returned only for periodically executed plans.</p>
          * </blockquote>
+         * <ul>
+         * <li><p>This parameter is returned only for the plans that are periodically executed.</p>
+         * </li>
+         * <li><p>If you did not specify the start time when you created the plan, the current time is returned.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>2022-04-17T23:00Z</p>
@@ -211,12 +221,12 @@ public class DescribeDBInstancePlansResponseBody extends TeaModel {
         public String planStartDate;
 
         /**
-         * <p>The state of the plan. Valid values:</p>
+         * <p>The status of the plan. Valid values:</p>
          * <ul>
-         * <li><strong>active</strong>: The plan is running.</li>
-         * <li><strong>cancel</strong>: The plan is canceled.</li>
-         * <li><strong>deleted</strong>: The plan is deleted.</li>
-         * <li><strong>finished</strong>: The plan execution is complete.</li>
+         * <li><strong>active</strong></li>
+         * <li><strong>cancel</strong></li>
+         * <li><strong>deleted</strong></li>
+         * <li><strong>finished</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>

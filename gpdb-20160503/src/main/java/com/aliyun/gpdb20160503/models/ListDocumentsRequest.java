@@ -27,6 +27,15 @@ public class ListDocumentsRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
+     * <p>The maximum number of entries per page. Valid values: 1 to 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
+    @NameInMap("MaxResults")
+    public Integer maxResults;
+
+    /**
      * <p>The name of the namespace. Default value: public.</p>
      * <blockquote>
      * <p> You can call the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation to create a namespace and call the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation to query a list of namespaces.</p>
@@ -50,6 +59,15 @@ public class ListDocumentsRequest extends TeaModel {
      */
     @NameInMap("NamespacePassword")
     public String namespacePassword;
+
+    /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
+     */
+    @NameInMap("NextToken")
+    public String nextToken;
 
     @NameInMap("OwnerId")
     public Long ownerId;
@@ -85,6 +103,14 @@ public class ListDocumentsRequest extends TeaModel {
         return this.DBInstanceId;
     }
 
+    public ListDocumentsRequest setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
     public ListDocumentsRequest setNamespace(String namespace) {
         this.namespace = namespace;
         return this;
@@ -99,6 +125,14 @@ public class ListDocumentsRequest extends TeaModel {
     }
     public String getNamespacePassword() {
         return this.namespacePassword;
+    }
+
+    public ListDocumentsRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public ListDocumentsRequest setOwnerId(Long ownerId) {

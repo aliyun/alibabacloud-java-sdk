@@ -4,6 +4,10 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class DescribeDocumentResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p><a href="http://oss.xxx/music_chunk.jsonl">http://oss.xxx/music_chunk.jsonl</a></p>
+     */
     @NameInMap("ChunkFileUrl")
     public String chunkFileUrl;
 
@@ -56,6 +60,10 @@ public class DescribeDocumentResponseBody extends TeaModel {
     @NameInMap("FileSize")
     public Long fileSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="http://oss.xxx/music.txt">http://oss.xxx/music.txt</a></p>
+     */
     @NameInMap("FileUrl")
     public String fileUrl;
 
@@ -73,6 +81,10 @@ public class DescribeDocumentResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="http://oss.xxx/music_plain_chunk.txt">http://oss.xxx/music_plain_chunk.txt</a></p>
+     */
     @NameInMap("PlainChunkFileUrl")
     public String plainChunkFileUrl;
 

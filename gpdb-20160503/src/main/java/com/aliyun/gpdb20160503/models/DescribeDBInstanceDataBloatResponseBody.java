@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstanceDataBloatResponseBody extends TeaModel {
     /**
-     * <p>Details of data bloat.</p>
+     * <p>The queried data bloat.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeDBInstanceDataBloatResponseBodyItems> items;

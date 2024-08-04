@@ -19,7 +19,6 @@ public class UpdateCollectionDataMetadataShrinkRequest extends TeaModel {
      * <blockquote>
      * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
      * </blockquote>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>gp-xxxxxxxxx</p>
@@ -89,6 +88,9 @@ public class UpdateCollectionDataMetadataShrinkRequest extends TeaModel {
      */
     @NameInMap("RegionId")
     public String regionId;
+
+    @NameInMap("WorkspaceId")
+    public String workspaceId;
 
     public static UpdateCollectionDataMetadataShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateCollectionDataMetadataShrinkRequest self = new UpdateCollectionDataMetadataShrinkRequest();
@@ -165,6 +167,14 @@ public class UpdateCollectionDataMetadataShrinkRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public UpdateCollectionDataMetadataShrinkRequest setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public String getWorkspaceId() {
+        return this.workspaceId;
     }
 
 }

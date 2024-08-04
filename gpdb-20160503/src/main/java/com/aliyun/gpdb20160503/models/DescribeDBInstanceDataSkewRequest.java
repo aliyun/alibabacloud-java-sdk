@@ -27,13 +27,13 @@ public class DescribeDBInstanceDataSkewRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values:</p>
+     * <p>The number of entries per page. Valid values:</p>
      * <ul>
-     * <li><strong>20</strong></li>
+     * <li><strong>30</strong></li>
      * <li><strong>50</strong></li>
      * <li><strong>100</strong></li>
      * </ul>
-     * <p>Default value: <strong>20</strong>.</p>
+     * <p>Default value: <strong>30</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

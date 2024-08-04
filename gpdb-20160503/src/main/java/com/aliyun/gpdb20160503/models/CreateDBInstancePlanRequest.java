@@ -40,13 +40,13 @@ public class CreateDBInstancePlanRequest extends TeaModel {
     public String planDesc;
 
     /**
-     * <p>The end time of the plan. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC. The end time must be later than the start time.</p>
+     * <p>The end time of the plan. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC. The end time must be later than the start time.</p>
      * <blockquote>
      * </blockquote>
      * <ul>
      * <li><p>This parameter must be specified only when <strong>PlanScheduleType</strong> is set to <strong>Regular</strong>.</p>
      * </li>
-     * <li><p>If you do not specify this parameter, the plan does not end.</p>
+     * <li><p>If you do not specify this parameter, the plan stops until the plan is deleted.</p>
      * </li>
      * </ul>
      * 
@@ -81,13 +81,13 @@ public class CreateDBInstancePlanRequest extends TeaModel {
     public String planScheduleType;
 
     /**
-     * <p>The start time of the plan. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</p>
+     * <p>The start time of the plan. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
      * <blockquote>
      * </blockquote>
      * <ul>
      * <li><p>This parameter must be specified only when <strong>PlanScheduleType</strong> is set to <strong>Regular</strong>.</p>
      * </li>
-     * <li><p>If you do not specify this parameter, the plan is executed immediately.</p>
+     * <li><p>If you do not specify this parameter, the current time is used.</p>
      * </li>
      * </ul>
      * 
@@ -105,13 +105,11 @@ public class CreateDBInstancePlanRequest extends TeaModel {
      * <li><strong>ModifySpec</strong>: changes compute node specifications.</li>
      * </ul>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>You can specify the value to Resize only for instances in Serverless mode.</p>
-     * </li>
-     * <li><p>You can specify the value to ModifySpec only for instances in elastic storage mode.</p>
-     * </li>
+     * <li>You can specify the value to ModifySpec only for instances in elastic storage mode.</li>
+     * <li>You can specify the value to ModifySpec only for instances in elastic storage mode.</li>
      * </ul>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

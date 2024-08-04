@@ -132,6 +132,10 @@ public class QueryContentResponseBody extends TeaModel {
         @NameInMap("FileName")
         public String fileName;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://xxx-cn-beijing.aliyuncs.com/image/test.png">https://xxx-cn-beijing.aliyuncs.com/image/test.png</a></p>
+         */
         @NameInMap("FileURL")
         public String fileURL;
 
@@ -152,6 +156,10 @@ public class QueryContentResponseBody extends TeaModel {
         @NameInMap("Metadata")
         public java.util.Map<String, String> metadata;
 
+        /**
+         * <strong>example:</strong>
+         * <p>6.2345</p>
+         */
         @NameInMap("RerankScore")
         public Double rerankScore;
 
@@ -279,9 +287,17 @@ public class QueryContentResponseBody extends TeaModel {
     }
 
     public static class QueryContentResponseBodyUsage extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("EmbeddingEntries")
         public String embeddingEntries;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("EmbeddingTokens")
         public String embeddingTokens;
 
@@ -312,12 +328,24 @@ public class QueryContentResponseBody extends TeaModel {
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <strong>example:</strong>
+         * <p>my_doc.txt</p>
+         */
         @NameInMap("FileName")
         public String fileName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>doca-2345</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;page_pos&quot;: 2}</p>
+         */
         @NameInMap("LoaderMetadata")
         public String loaderMetadata;
 

@@ -26,6 +26,8 @@ public class DescribeExternalDataServiceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The description of the service.</p>
+     * 
      * <strong>example:</strong>
      * <p>test-adbpgss</p>
      */
@@ -40,6 +42,8 @@ public class DescribeExternalDataServiceResponseBody extends TeaModel {
     public String serviceId;
 
     /**
+     * <p>The name of the service.</p>
+     * 
      * <strong>example:</strong>
      * <p>test-adbpgss</p>
      */
@@ -47,6 +51,8 @@ public class DescribeExternalDataServiceResponseBody extends TeaModel {
     public String serviceName;
 
     /**
+     * <p>The specifications of the service. Unit: compute units (CUs).</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */

@@ -30,8 +30,6 @@ public class QueryCollectionDataShrinkRequest extends TeaModel {
     public String content;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>gp-xxxxxxxxx</p>
      */
@@ -209,6 +207,9 @@ public class QueryCollectionDataShrinkRequest extends TeaModel {
     @NameInMap("Vector")
     public String vectorShrink;
 
+    @NameInMap("WorkspaceId")
+    public String workspaceId;
+
     public static QueryCollectionDataShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryCollectionDataShrinkRequest self = new QueryCollectionDataShrinkRequest();
         return TeaModel.build(map, self);
@@ -348,6 +349,14 @@ public class QueryCollectionDataShrinkRequest extends TeaModel {
     }
     public String getVectorShrink() {
         return this.vectorShrink;
+    }
+
+    public QueryCollectionDataShrinkRequest setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public String getWorkspaceId() {
+        return this.workspaceId;
     }
 
 }

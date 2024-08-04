@@ -30,8 +30,6 @@ public class QueryCollectionDataRequest extends TeaModel {
     public String content;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>gp-xxxxxxxxx</p>
      */
@@ -209,6 +207,9 @@ public class QueryCollectionDataRequest extends TeaModel {
     @NameInMap("Vector")
     public java.util.List<Double> vector;
 
+    @NameInMap("WorkspaceId")
+    public String workspaceId;
+
     public static QueryCollectionDataRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryCollectionDataRequest self = new QueryCollectionDataRequest();
         return TeaModel.build(map, self);
@@ -348,6 +349,14 @@ public class QueryCollectionDataRequest extends TeaModel {
     }
     public java.util.List<Double> getVector() {
         return this.vector;
+    }
+
+    public QueryCollectionDataRequest setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public String getWorkspaceId() {
+        return this.workspaceId;
     }
 
 }
