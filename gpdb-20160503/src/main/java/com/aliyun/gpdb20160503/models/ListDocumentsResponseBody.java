@@ -4,6 +4,18 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class ListDocumentsResponseBody extends TeaModel {
+    /**
+     * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
+    @NameInMap("Count")
+    public Integer count;
+
+    /**
+     * <p>The queried documents.</p>
+     */
     @NameInMap("Items")
     public ListDocumentsResponseBodyItems items;
 
@@ -13,6 +25,15 @@ public class ListDocumentsResponseBody extends TeaModel {
      */
     @NameInMap("Message")
     public String message;
+
+    /**
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
+     */
+    @NameInMap("NextToken")
+    public String nextToken;
 
     /**
      * <strong>example:</strong>
@@ -39,6 +60,14 @@ public class ListDocumentsResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ListDocumentsResponseBody setCount(Integer count) {
+        this.count = count;
+        return this;
+    }
+    public Integer getCount() {
+        return this.count;
+    }
+
     public ListDocumentsResponseBody setItems(ListDocumentsResponseBodyItems items) {
         this.items = items;
         return this;
@@ -53,6 +82,14 @@ public class ListDocumentsResponseBody extends TeaModel {
     }
     public String getMessage() {
         return this.message;
+    }
+
+    public ListDocumentsResponseBody setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public ListDocumentsResponseBody setRequestId(String requestId) {

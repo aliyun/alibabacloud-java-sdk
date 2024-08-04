@@ -263,6 +263,12 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
     }
 
     public static class DescribeHealthStatusResponseBodyStatusAdbpgInstanceColdDataGb extends TeaModel {
+        /**
+         * <p>The total amount of cold data storage. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Value")
         public Float value;
 
@@ -282,6 +288,12 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
     }
 
     public static class DescribeHealthStatusResponseBodyStatusAdbpgInstanceHotDataGb extends TeaModel {
+        /**
+         * <p>The total amount of hot data storage. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4.1</p>
+         */
         @NameInMap("Value")
         public Float value;
 
@@ -301,6 +313,12 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
     }
 
     public static class DescribeHealthStatusResponseBodyStatusAdbpgInstanceTotalDataGb extends TeaModel {
+        /**
+         * <p>The total amount of data storage of the instance. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4.1</p>
+         */
         @NameInMap("Value")
         public Float value;
 
@@ -748,12 +766,21 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
         @NameInMap("adbpg_disk_usage_percent")
         public DescribeHealthStatusResponseBodyStatusAdbpgDiskUsagePercent adbpgDiskUsagePercent;
 
+        /**
+         * <p>The total amount of cold data storage.</p>
+         */
         @NameInMap("adbpg_instance_cold_data_gb")
         public DescribeHealthStatusResponseBodyStatusAdbpgInstanceColdDataGb adbpgInstanceColdDataGb;
 
+        /**
+         * <p>The total amount of hot data storage.</p>
+         */
         @NameInMap("adbpg_instance_hot_data_gb")
         public DescribeHealthStatusResponseBodyStatusAdbpgInstanceHotDataGb adbpgInstanceHotDataGb;
 
+        /**
+         * <p>The total amount of data storage of the instance.</p>
+         */
         @NameInMap("adbpg_instance_total_data_gb")
         public DescribeHealthStatusResponseBodyStatusAdbpgInstanceTotalDataGb adbpgInstanceTotalDataGb;
 

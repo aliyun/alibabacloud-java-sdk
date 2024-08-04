@@ -25,9 +25,17 @@ public class QueryContentShrinkRequest extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test.jpg</p>
+     */
     @NameInMap("FileName")
     public String fileName;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://xx/myImage.jpg">https://xx/myImage.jpg</a></p>
+     */
     @NameInMap("FileUrl")
     public String fileUrl;
 
@@ -38,15 +46,69 @@ public class QueryContentShrinkRequest extends TeaModel {
     @NameInMap("Filter")
     public String filter;
 
+    /**
+     * <p>The two-way retrieval algorithm. This parameter is empty by default, which specifies that scores of vector search and full-text search are directly compared and sorted without additional weighting or adjustments.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>RRF: The reciprocal rank fusion (RRF) algorithm uses a constant k to control the fusion effect. For more information, see the description of the HybridSearchArgs parameter.</li>
+     * <li>Weight: This algorithm uses the alpha parameter to specify the proportion of the vector search score and the full-text search score and then sorts by weight. For more information, see the description of the HybridSearchArgs parameter.</li>
+     * <li>Cascaded: This algorithm performs first full-text search and then vector search.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>RRF</p>
+     */
     @NameInMap("HybridSearch")
     public String hybridSearch;
 
+    /**
+     * <p>The parameters of the two-way retrieval algorithm. The following parameters are supported:</p>
+     * <ul>
+     * <li>When HybridSearch is set to RRF, the scores are calculated by using the <code>1/(k+rank_i)</code> formula. The constant k is a positive integer that is greater than 1.</li>
+     * </ul>
+     * <!---->
+     * 
+     * <pre><code>{ 
+     *    &quot;RRF&quot;: {
+     *     &quot;k&quot;: 60
+     *    }
+     * }
+     * </code></pre>
+     * <ul>
+     * <li>When HybridSearch is set to Weight, the scores are calculated by using the <code>alpha * vector_score + (1-alpha) * text_score</code> formula. The alpha parameter specifies the proportion of the vector search score and the full-text search score and ranges from 0 to 1. A value of 0 specifies full-text search and a value of 1 specifies vector search.</li>
+     * </ul>
+     * <!---->
+     * 
+     * <pre><code>{ 
+     *    &quot;Weight&quot;: {
+     *     &quot;alpha&quot;: 0.5
+     *    }
+     * }
+     * </code></pre>
+     */
     @NameInMap("HybridSearchArgs")
     public String hybridSearchArgsShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("IncludeFileUrl")
+    public Boolean includeFileUrl;
+
+    /**
+     * <p>The metadata fields to be returned. Separate multiple fields with commas (,). This parameter is empty by default.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>title,page</p>
+     */
     @NameInMap("IncludeMetadataFields")
     public String includeMetadataFields;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IncludeVector")
     public Boolean includeVector;
 
@@ -58,6 +120,11 @@ public class QueryContentShrinkRequest extends TeaModel {
     public String metrics;
 
     /**
+     * <p>The name of the namespace. Default value: public.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation to create a namespace and call the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation to query a list of namespaces.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>mynamespace</p>
      */
@@ -76,6 +143,17 @@ public class QueryContentShrinkRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The recall window. If you specify this parameter, the context of the search result is returned. Format: List\&lt;A, B&gt;. Valid values: -10&lt;=A&lt;=0 and 0&lt;=B&lt;=10.</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>We recommend that you specify this parameter if the source document is segmented into large numbers of pieces and you may fail to obtain the context.</p>
+     * </li>
+     * <li><p>The context of the search result is retrieved based on the recall window after the search result is reranked.</p>
+     * </li>
+     * </ul>
+     */
     @NameInMap("RecallWindow")
     public String recallWindowShrink;
 
@@ -88,6 +166,10 @@ public class QueryContentShrinkRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("RerankFactor")
     public Double rerankFactor;
 
@@ -99,6 +181,8 @@ public class QueryContentShrinkRequest extends TeaModel {
     public Integer topK;
 
     /**
+     * <p>Specifies whether to use full-text search to implement two-way retrieval. The default value is false, which specifies that only vector search is used.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -172,6 +256,14 @@ public class QueryContentShrinkRequest extends TeaModel {
     }
     public String getHybridSearchArgsShrink() {
         return this.hybridSearchArgsShrink;
+    }
+
+    public QueryContentShrinkRequest setIncludeFileUrl(Boolean includeFileUrl) {
+        this.includeFileUrl = includeFileUrl;
+        return this;
+    }
+    public Boolean getIncludeFileUrl() {
+        return this.includeFileUrl;
     }
 
     public QueryContentShrinkRequest setIncludeMetadataFields(String includeMetadataFields) {

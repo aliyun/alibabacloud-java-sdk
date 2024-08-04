@@ -39,10 +39,15 @@ public class UpdateDBInstancePlanRequest extends TeaModel {
     public String planDesc;
 
     /**
-     * <p>The end time of the plan. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC. The end time must be later than the start time.</p>
+     * <p>The end time of the plan. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC. The end time must be later than the start time.</p>
      * <blockquote>
-     * <p> This parameter is required only for <strong>periodically executed</strong> plans.</p>
      * </blockquote>
+     * <ul>
+     * <li><p>This parameter must be specified only for <strong>periodically executed</strong> plans.</p>
+     * </li>
+     * <li><p>If you do not specify this parameter, the plan stops until the plan is deleted.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>2023-04-17T23:00Z</p>
@@ -73,10 +78,15 @@ public class UpdateDBInstancePlanRequest extends TeaModel {
     public String planName;
 
     /**
-     * <p>The start time of the plan. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time is displayed in UTC.</p>
+     * <p>The start time of the plan. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
      * <blockquote>
-     * <p> This parameter is required only for <strong>periodically executed</strong> plans.</p>
      * </blockquote>
+     * <ul>
+     * <li><p>This parameter must be specified only for <strong>periodically executed</strong> plans.</p>
+     * </li>
+     * <li><p>If you do not specify this parameter, the current time is used.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>2022-04-17T23:00Z</p>

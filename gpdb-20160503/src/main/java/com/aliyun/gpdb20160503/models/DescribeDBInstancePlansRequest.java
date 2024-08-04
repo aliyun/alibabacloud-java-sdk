@@ -21,7 +21,7 @@ public class DescribeDBInstancePlansRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The time used to filter plans. If you specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format, the plans created before this time are returned. The time must be in UTC. If you do not specify this parameter, all plans are returned.</p>
+     * <p>The time that is used to filter plans. If you specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format, the plans that are created before this time are returned. The time must be in UTC. If you do not specify this parameter, all plans are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-04-17T23:00Z</p>
@@ -68,6 +68,7 @@ public class DescribeDBInstancePlansRequest extends TeaModel {
      * <ul>
      * <li><strong>PauseResume</strong>: pauses and resumes an instance.</li>
      * <li><strong>Resize</strong>: scales an instance.</li>
+     * <li><strong>ModifySpec</strong>: changes compute node specifications.</li>
      * </ul>
      * 
      * <strong>example:</strong>

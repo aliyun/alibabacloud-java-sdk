@@ -144,8 +144,8 @@ public class DescribeActiveSQLRecordsResponseBody extends TeaModel {
         /**
          * <p>The status of the asynchronous request. Valid values:</p>
          * <ul>
-         * <li><strong>RUNNING</strong></li>
-         * <li><strong>BLOCK</strong></li>
+         * <li><strong>running</strong></li>
+         * <li><strong>block</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>

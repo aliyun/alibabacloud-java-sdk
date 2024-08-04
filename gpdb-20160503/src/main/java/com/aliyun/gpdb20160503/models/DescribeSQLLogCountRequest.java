@@ -49,10 +49,11 @@ public class DescribeSQLLogCountRequest extends TeaModel {
     public String executeCost;
 
     /**
-     * <p>The execution state of the SQL statement. Valid values:</p>
+     * <p>The execution status of the query. Valid values:</p>
      * <ul>
-     * <li><strong>success</strong></li>
-     * <li><strong>fail</strong></li>
+     * <li>1: successful.</li>
+     * <li>0: failed.</li>
+     * <li>0,1 or 1,0: all.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -100,11 +101,11 @@ public class DescribeSQLLogCountRequest extends TeaModel {
      * <blockquote>
      * </blockquote>
      * <ul>
-     * <li><p>If <strong>OperationClass</strong> is specified, the value of <strong>OperationType</strong> must belong to the corresponding query language. For example, if <strong>OperationClass</strong> is set to <strong>DQL</strong>, the value of <strong>OperationType</strong> must be a <strong>DQL</strong> statement such as <strong>SELECT</strong>.</p>
+     * <li><p>If you specify <strong>OperationClass</strong>, the value of <strong>OperationType</strong> must be of the corresponding query language. For example, if you set <strong>OperationClass</strong> to <strong>DQL</strong>, the value of <strong>OperationType</strong> must be a <strong>DQL</strong> statement such as <strong>SELECT</strong>.</p>
      * </li>
-     * <li><p>If <strong>OperationClass</strong> is not specified, the value of <strong>OperationType</strong> can be an SQL statement of any query language.</p>
+     * <li><p>If you leave <strong>OperationClass</strong> empty, the value of <strong>OperationType</strong> can be an SQL statement of any query language.</p>
      * </li>
-     * <li><p>If <strong>OperationClass</strong> and <strong>OperationType</strong> are not specified, all types of SQL statements are returned.</p>
+     * <li><p>If you leave <strong>OperationClass</strong> and <strong>OperationType</strong> empty, all types of SQL statements are returned.</p>
      * </li>
      * </ul>
      * 

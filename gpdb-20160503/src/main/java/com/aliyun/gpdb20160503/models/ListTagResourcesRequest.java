@@ -59,7 +59,10 @@ public class ListTagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The queried tags.</p>
+     * <p>The tags that are added to instances.</p>
+     * <blockquote>
+     * <p> You must specify at least one of the ResourceId and Tag parameters.</p>
+     * </blockquote>
      */
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
@@ -143,12 +146,12 @@ public class ListTagResourcesRequest extends TeaModel {
 
     public static class ListTagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N. The key must be 1 to 128 characters in length.</p>
-         * <p>You can use <code>Tag.N</code> to query instances that have specific tags added. Tag.N consists of Tag.N.Key and Tag.N.Value.</p>
+         * <p>The key of tag N. The key must be 1 to 64 characters in length.</p>
+         * <p>You can use <code>Tag.N</code> to query AnalyticDB for PostgreSQL instances that have specific tags added. Tag.N consists of Tag.N.Key and Tag.N.Value.</p>
          * <p>Valid values of N: 1 to 20.</p>
          * <ul>
          * <li>If you specify only <code>Tag.N.Key</code>, all instances that have the tag key added are returned.</li>
-         * <li>If you specify only <code>Tag.N.Value</code>, the <code>InvalidParameter.TagValue</code> error is returned.</li>
+         * <li>If you specify only <code>Tag.N.Value</code>, the <code>InvalidParameter.TagValue</code> error message is returned.</li>
          * <li>If you specify multiple tag key-value pairs at a time, the instances that match all the specified tag key-value pairs are returned.</li>
          * </ul>
          * 

@@ -9,7 +9,6 @@ public class CreateNamespaceRequest extends TeaModel {
      * <blockquote>
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/196830.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
      * </blockquote>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>gp-xxxxxxxxx</p>
@@ -75,6 +74,9 @@ public class CreateNamespaceRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("WorkspaceId")
+    public String workspaceId;
+
     public static CreateNamespaceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateNamespaceRequest self = new CreateNamespaceRequest();
         return TeaModel.build(map, self);
@@ -134,6 +136,14 @@ public class CreateNamespaceRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public CreateNamespaceRequest setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public String getWorkspaceId() {
+        return this.workspaceId;
     }
 
 }

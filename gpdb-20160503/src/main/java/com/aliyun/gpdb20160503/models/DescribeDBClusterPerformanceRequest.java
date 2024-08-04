@@ -72,6 +72,12 @@ public class DescribeDBClusterPerformanceRequest extends TeaModel {
     @NameInMap("Nodes")
     public String nodes;
 
+    /**
+     * <p>The name of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testgroup</p>
+     */
     @NameInMap("ResourceGroupName")
     public String resourceGroupName;
 

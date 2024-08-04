@@ -37,7 +37,6 @@ public class DeleteCollectionDataRequest extends TeaModel {
      * <blockquote>
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances within a region.</p>
      * </blockquote>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>gp-xxxxxxxxx</p>
@@ -79,6 +78,9 @@ public class DeleteCollectionDataRequest extends TeaModel {
      */
     @NameInMap("RegionId")
     public String regionId;
+
+    @NameInMap("WorkspaceId")
+    public String workspaceId;
 
     public static DeleteCollectionDataRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteCollectionDataRequest self = new DeleteCollectionDataRequest();
@@ -147,6 +149,14 @@ public class DeleteCollectionDataRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DeleteCollectionDataRequest setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public String getWorkspaceId() {
+        return this.workspaceId;
     }
 
 }

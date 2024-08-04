@@ -19,7 +19,6 @@ public class UpsertCollectionDataRequest extends TeaModel {
      * <blockquote>
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
      * </blockquote>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>gp-xxxxxxxxx</p>
@@ -64,6 +63,9 @@ public class UpsertCollectionDataRequest extends TeaModel {
 
     @NameInMap("Rows")
     public java.util.List<UpsertCollectionDataRequestRows> rows;
+
+    @NameInMap("WorkspaceId")
+    public String workspaceId;
 
     public static UpsertCollectionDataRequest build(java.util.Map<String, ?> map) throws Exception {
         UpsertCollectionDataRequest self = new UpsertCollectionDataRequest();
@@ -124,6 +126,14 @@ public class UpsertCollectionDataRequest extends TeaModel {
     }
     public java.util.List<UpsertCollectionDataRequestRows> getRows() {
         return this.rows;
+    }
+
+    public UpsertCollectionDataRequest setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public String getWorkspaceId() {
+        return this.workspaceId;
     }
 
     public static class UpsertCollectionDataRequestRows extends TeaModel {

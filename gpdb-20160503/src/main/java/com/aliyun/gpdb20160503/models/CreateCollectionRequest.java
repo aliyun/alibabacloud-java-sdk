@@ -18,8 +18,6 @@ public class CreateCollectionRequest extends TeaModel {
     public String collection;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>gp-xxxxxxxxx</p>
      */
@@ -99,8 +97,16 @@ public class CreateCollectionRequest extends TeaModel {
     /**
      * <p>The metadata of the vector data, which is a JSON string in the MAP format. The key specifies the field name, and the value specifies the data type.</p>
      * <blockquote>
-     * <p>Warning: Reserved fields such as id, vector, to_tsvector, and source cannot be used.</p>
      * </blockquote>
+     * <ul>
+     * <li><p>For information about the supported data types, see <a href="https://help.aliyun.com/zh/analyticdb-for-postgresql/developer-reference/data-types-1/?spm=a2c4g.11186623.0.0.43e567a1C35QRD">Data types</a>.</p>
+     * </li>
+     * <li><p>The money data type is not supported.</p>
+     * </li>
+     * </ul>
+     * <p>**</p>
+     * <p><strong>Warning</strong>
+     * Reserved fields such as id, vector, to_tsvector, and source cannot be used.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -160,6 +166,9 @@ public class CreateCollectionRequest extends TeaModel {
      */
     @NameInMap("RegionId")
     public String regionId;
+
+    @NameInMap("WorkspaceId")
+    public String workspaceId;
 
     public static CreateCollectionRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateCollectionRequest self = new CreateCollectionRequest();
@@ -284,6 +293,14 @@ public class CreateCollectionRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public CreateCollectionRequest setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public String getWorkspaceId() {
+        return this.workspaceId;
     }
 
 }
