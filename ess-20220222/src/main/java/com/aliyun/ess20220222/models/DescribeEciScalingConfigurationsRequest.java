@@ -47,14 +47,14 @@ public class DescribeEciScalingConfigurationsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The IDs of the scaling configurations that you want to query.</p>
-     * <p>The IDs of active and inactive scaling configurations are displayed in the query results. You can differentiate between active and inactive scaling configurations based on the value of the <code>LifecycleState</code> parameter.</p>
+     * <p>The IDs of the scaling configurations that you want to query. You can specify 1 to 10 scaling configuration IDs.</p>
+     * <p>The IDs of active and inactive scaling configurations are displayed in the query results. You can distinguish between active and inactive scaling configurations based on the value of <code>LifecycleState</code>.</p>
      */
     @NameInMap("ScalingConfigurationIds")
     public java.util.List<String> scalingConfigurationIds;
 
     /**
-     * <p>The names of the scaling configurations that you want to query.</p>
+     * <p>The names of the scaling configurations that you want to query. You can specify 1 to 10 scaling configuration names.</p>
      * <p>The names of inactive scaling configurations are not displayed in the query results, and no error is reported.</p>
      */
     @NameInMap("ScalingConfigurationNames")

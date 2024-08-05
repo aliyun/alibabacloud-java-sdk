@@ -189,7 +189,7 @@ public class CreateScalingConfigurationShrinkRequest extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>Details of the intelligent configuration settings that determine the range of instance types that meet the specified criteria.</p>
+     * <p>The information about the intelligent configuration settings, which determine the available instance types.</p>
      */
     @NameInMap("InstancePatternInfos")
     public java.util.List<CreateScalingConfigurationShrinkRequestInstancePatternInfos> instancePatternInfos;
@@ -1679,13 +1679,13 @@ public class CreateScalingConfigurationShrinkRequest extends TeaModel {
 
     public static class CreateScalingConfigurationShrinkRequestInstancePatternInfos extends TeaModel {
         /**
-         * <p>The architectures of the instance types. Valid values:</p>
+         * <p>The architecture types of the instance types. Valid values:</p>
          * <ul>
-         * <li>X86: x86 architecture.</li>
-         * <li>Heterogeneous: heterogeneous architecture, such as GPUs and FPGAs.</li>
-         * <li>BareMetal: ECS Bare Metal Instance architecture.</li>
-         * <li>Arm: ARM architecture.</li>
-         * <li>SuperComputeCluster: Super Computing Cluster architecture.</li>
+         * <li>X86: x86</li>
+         * <li>Heterogeneous: heterogeneous computing, such as GPU-accelerated or FPGA-accelerated</li>
+         * <li>BareMetal: ECS Bare Metal Instance</li>
+         * <li>Arm: Arm</li>
+         * <li>SuperComputeCluster: Super Computing Cluster</li>
          * </ul>
          * <p>By default, all values are included.</p>
          */
@@ -1699,7 +1699,7 @@ public class CreateScalingConfigurationShrinkRequest extends TeaModel {
          * <li>Include: includes burstable instance types.</li>
          * <li>Required: includes only burstable instance types.</li>
          * </ul>
-         * <p>Default value: Include</p>
+         * <p>Default value: Include.</p>
          * 
          * <strong>example:</strong>
          * <p>Include</p>
@@ -1708,12 +1708,12 @@ public class CreateScalingConfigurationShrinkRequest extends TeaModel {
         public String burstablePerformance;
 
         /**
-         * <p>The number of vCPUs that you want to allocate to an instance type in intelligent configuration mode. This parameter is used to filter the available instance types that meet the specified criteria. For more information, see the &quot;<a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>&quot; topic.</p>
-         * <p>Take note of the following items when you specify Cores:</p>
+         * <p>The number of vCPUs per instance type in intelligent configuration mode. You can use this parameter to filter the available instance types that meet the specified criteria. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</p>
+         * <p>Before you specify this parameter, take note of the following items:</p>
          * <ul>
-         * <li>InstancePatternInfos is available only for scaling groups that reside in VPCs.</li>
-         * <li>If you specify InstancePatternInfos, you must specify Cores and Memory.</li>
-         * <li>If you specify an instance type by using InstanceType or InstanceTypes, Auto Scaling preferentially uses the instance type that is specified by InstanceType or InstanceTypes for scale-outs. If the specified instance type does not have sufficient inventory, Auto Scaling creates instances by using the lowest-priced instance type that is specified by InstancePatternInfos.</li>
+         * <li>InstancePatternInfos is applicable only to the scaling groups that reside in virtual private clouds (VPCs).</li>
+         * <li>If you specify InstancePatternInfos, you must also specify InstancePatternInfos.Cores and InstancePatternInfos.Memory.</li>
+         * <li>If you specify InstanceType or InstanceTypes, Auto Scaling preferentially uses the instance type specified by InstanceType or InstanceTypes to create instances during scale-out events. If the specified instance type does not have sufficient inventory, Auto Scaling uses the lowest-priced instance type specified by InstancePatternInfos to create instances during scale-out events.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1726,7 +1726,7 @@ public class CreateScalingConfigurationShrinkRequest extends TeaModel {
         public java.util.List<String> cpuArchitectures;
 
         /**
-         * <p>The instance types that you want to exclude. You can use wildcard characters, such as asterisks (\*), to exclude an instance type or an instance family. Examples:</p>
+         * <p>The instance types that you want to exclude. You can use wildcard characters, such as an asterisk (\*), to exclude an instance type or an instance family. Examples:</p>
          * <ul>
          * <li>ecs.c6.large: excludes the ecs.c6.large instance type.</li>
          * <li>ecs.c6.\*: excludes the c6 instance family.</li>
@@ -1742,11 +1742,11 @@ public class CreateScalingConfigurationShrinkRequest extends TeaModel {
         public java.util.List<String> instanceCategories;
 
         /**
-         * <p>The level of the instance type, which is used to filter instance types that meet the specified criteria. This parameter takes effect only if you set <code>CostOptimization</code> to true. Valid values:</p>
+         * <p>The level of the instance family. You can specify this parameter to specify the available instance types. This parameter takes effect only if you set <code>CostOptimization</code> to true. Valid values:</p>
          * <ul>
-         * <li>EntryLevel: entry level (shared instance type). Instance types of this level are the most cost-effective but may not provide stable computing performance in a consistent manner. Instance types of this level are suitable for business scenarios in which the CPU utilization is low. For more information, see the &quot;<a href="https://help.aliyun.com/document_detail/108489.html">Shared instance families</a>&quot; topic.</li>
-         * <li>EnterpriseLevel: enterprise level. Instance types of this level provide stable performance and dedicated resources and are suitable for business scenarios that require high stability. For more information, see the &quot;<a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>&quot; topic.</li>
-         * <li>CreditEntryLevel: credit entry level. This value is valid only for burstable instances. CPU credits are used to ensure computing performance. Instance types of this level are suitable for business scenarios in which the CPU utilization is low but may fluctuate in specific cases. For more information, see the &quot;<a href="https://help.aliyun.com/document_detail/59977.html">Overview</a>&quot; topic of burstable instances.</li>
+         * <li>EntryLevel: entry level (shared instance type). Instance types of this level are the most cost-effective but may not provide stable computing performance. Instance types of this level are suitable for scenarios in which the CPU utilization is low. For more information, see <a href="https://help.aliyun.com/document_detail/108489.html">Shared instance families</a>.</li>
+         * <li>EnterpriseLevel: enterprise level. Instance types of this level provide stable performance and dedicated resources, and are suitable for business scenarios that require high stability. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</li>
+         * <li>CreditEntryLevel: credit-based entry level (burstable instance types). CPU credits are used to ensure computing performance. Instance types of this level are suitable for scenarios in which the CPU utilization is low but may fluctuate in specific cases. For more information, see <a href="https://help.aliyun.com/document_detail/59977.html">Overview of burstable instances</a>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1759,9 +1759,9 @@ public class CreateScalingConfigurationShrinkRequest extends TeaModel {
         public java.util.List<String> instanceTypeFamilies;
 
         /**
-         * <p>The maximum hourly price of a pay-as-you-go or preemptible instance in intelligent configuration mode. This parameter is used to filter the available instance types that meet the specified criteria.</p>
+         * <p>The maximum hourly price of pay-as-you-go or preemptible instances in intelligent configuration mode. You can specify this parameter to filter the available instance types.</p>
          * <blockquote>
-         * <p>If you set SpotStrategy to SpotWithPriceLimit, you must specify MaxPrice. In other cases, MaxPrice is optional.</p>
+         * <p> If you set SpotStrategy to SpotWithPriceLimit, you must specify this parameter. In other cases, this parameter is optional.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1770,17 +1770,29 @@ public class CreateScalingConfigurationShrinkRequest extends TeaModel {
         @NameInMap("MaxPrice")
         public Float maxPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("MaximumCpuCoreCount")
         public Integer maximumCpuCoreCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("MaximumGpuAmount")
         public Integer maximumGpuAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("MaximumMemorySize")
         public Float maximumMemorySize;
 
         /**
-         * <p>The memory size that you want to allocate to an instance type in intelligent configuration mode. Unit: GiB. This parameter is used to filter the available instance types that meet the specified criteria.</p>
+         * <p>The memory size per instance type in intelligent configuration mode. Unit: GiB. You can specify this parameter to filter the available instance types.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -1788,27 +1800,59 @@ public class CreateScalingConfigurationShrinkRequest extends TeaModel {
         @NameInMap("Memory")
         public Float memory;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("MinimumBaselineCredit")
         public Integer minimumBaselineCredit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("MinimumCpuCoreCount")
         public Integer minimumCpuCoreCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("MinimumEniIpv6AddressQuantity")
         public Integer minimumEniIpv6AddressQuantity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("MinimumEniPrivateIpAddressQuantity")
         public Integer minimumEniPrivateIpAddressQuantity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("MinimumEniQuantity")
         public Integer minimumEniQuantity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("MinimumGpuAmount")
         public Integer minimumGpuAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("MinimumInitialCredit")
         public Integer minimumInitialCredit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("MinimumMemorySize")
         public Float minimumMemorySize;
 

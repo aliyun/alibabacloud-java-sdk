@@ -32,7 +32,7 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Details of the scaling rules.</p>
+     * <p>The scaling rules.</p>
      */
     @NameInMap("ScalingRules")
     public java.util.List<DescribeScalingRulesResponseBodyScalingRules> scalingRules;
@@ -93,7 +93,7 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
 
     public static class DescribeScalingRulesResponseBodyScalingRulesAlarmDimensions extends TeaModel {
         /**
-         * <p>监控项关联的维度信息键。</p>
+         * <p>The dimension key of the metric.</p>
          * 
          * <strong>example:</strong>
          * <p>rulePool</p>
@@ -102,7 +102,7 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
         public String dimensionKey;
 
         /**
-         * <p>监控项关联的维度信息值。</p>
+         * <p>The dimension value of the metric.</p>
          * 
          * <strong>example:</strong>
          * <p>sgp-l1cbirz451yxu2dxxx</p>
@@ -137,8 +137,8 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
         /**
          * <p>The key of the dimension that is associated with the metric. Valid values:</p>
          * <ul>
-         * <li>scaling_group: the ID of the scaling group</li>
-         * <li>userId: the ID of the Alibaba Cloud account</li>
+         * <li>ScalingGroupId: the ID of the scaling group.</li>
+         * <li>userId: the ID of the user account.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -199,12 +199,12 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
         public String alarmTaskName;
 
         /**
-         * <p>The comparison operator between the metric value and the threshold for the event-triggered task that is associated with the scaling rule. The comparison operator indicates the relationship between the metric value and the threshold that is required to meet the condition.</p>
+         * <p>The comparison operator between the statistical value and the threshold of the metric of the event-triggered task that is associated with the scaling rule. The comparison operator indicates the relationship in which the metric value and the metric threshold can meet the alert condition.</p>
          * <ul>
-         * <li>Valid value if the metric value is greater than or equal to the threshold: &gt;=.</li>
-         * <li>Valid value if the metric value is less than or equal to the threshold: &lt;=.</li>
-         * <li>Valid value if the metric value is greater than the threshold: &gt;.</li>
-         * <li>Valid value if the metric value is less than the threshold: &lt;.</li>
+         * <li>Valid value if the metric value is greater than or equal to the threshold: &gt;=</li>
+         * <li>Valid value if the metric value is less than or equal to the threshold: &lt;=</li>
+         * <li>Valid value if the metric value is greater than the threshold: &gt;</li>
+         * <li>Valid value if the metric value is less than the threshold: &lt;</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -222,7 +222,7 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
         public java.util.List<DescribeScalingRulesResponseBodyScalingRulesAlarmsDimensions> dimensions;
 
         /**
-         * <p>The number of consecutive times for which the event-triggered task that is associated with the scaling rule meets the threshold expressions before an alert is triggered.</p>
+         * <p>The number of consecutive times when the event-triggered task that is associated with the scaling rule must meet the alert condition before an alert is triggered.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -240,10 +240,10 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
         public String metricName;
 
         /**
-         * <p>The type of the event-triggered task that is associated with the scaling rule. Valid values:</p>
+         * <p>The type of the metric of the event-triggered task that is associated with the scaling rule. Valid values:</p>
          * <ul>
-         * <li>system: system monitoring event-triggered tasks</li>
-         * <li>custom: custom monitoring event-triggered tasks</li>
+         * <li>system: system metrics</li>
+         * <li>custom: custom metrics</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -356,7 +356,7 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
 
     public static class DescribeScalingRulesResponseBodyScalingRulesStepAdjustments extends TeaModel {
         /**
-         * <p>The lower limit that is specified in a step adjustment. Valid values: -9.999999E18 to 9.999999E18.</p>
+         * <p>The lower limit of a step adjustment. Valid values: -9.999999E18 to 9.999999E18.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0</p>
@@ -365,7 +365,7 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
         public Float metricIntervalLowerBound;
 
         /**
-         * <p>The upper limit that is specified in a step adjustment. Valid values: -9.999999E18 to 9.999999E18.</p>
+         * <p>The upper limit of a step adjustment. Valid values: -9.999999E18 to 9.999999E18.</p>
          * 
          * <strong>example:</strong>
          * <p>5.0</p>
@@ -415,10 +415,10 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
 
     public static class DescribeScalingRulesResponseBodyScalingRules extends TeaModel {
         /**
-         * <p>The scaling mode of the scaling rule. Valid values:</p>
+         * <p>The adjustment method of the scaling rule. Valid values:</p>
          * <ul>
-         * <li>QuantityChangeInCapacity: adds the specified number of ECS instances to or removes the specified number of ECS instances from the scaling group.</li>
-         * <li>PercentChangeInCapacity: adds the specified percentage of ECS instances to or removes the specified percentage of ECS instances from the scaling group.</li>
+         * <li>QuantityChangeInCapacity: adds or removes the specified number of Elastic Compute Service (ECS) instances to or from the scaling group.</li>
+         * <li>PercentChangeInCapacity: adds or removes the specified percentage of ECS instances to or from the scaling group.</li>
          * <li>TotalCapacity: adjusts the number of ECS instances in the scaling group to the specified number.</li>
          * </ul>
          * 
@@ -429,7 +429,7 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
         public String adjustmentType;
 
         /**
-         * <p>The adjustment value that is specified in the scaling rule.</p>
+         * <p>The number of instances that must be scaled based on the scaling rule.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -438,19 +438,19 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
         public Integer adjustmentValue;
 
         /**
-         * <p>监控项维度信息值，适用于目标追踪规则，当监控项需额外维度信息时设置，例如LoadBalancerRealServerAverageQps监控项需指定rulePool维度信息。</p>
+         * <p>The dimensions. This parameter is applicable to target tracking scaling rules. You can specify this parameter if your predefined metric requires extra dimensions. For example, if you predefine the LoadBalancerRealServerAverageQps metric, you must use this parameter to specify the rulePool dimension.</p>
          */
         @NameInMap("AlarmDimensions")
         public java.util.List<DescribeScalingRulesResponseBodyScalingRulesAlarmDimensions> alarmDimensions;
 
         /**
-         * <p>The event-triggered tasks that are associated with the scaling rule. Event-triggered tasks that are associated with the scaling rule are returned only if you set the ShowAlarmRules parameter to true. Otherwise, an empty list is returned.</p>
+         * <p>The event-triggered tasks that are associated with the scaling rule. The value of this parameter is returned only if you set ShowAlarmRules to true. Otherwise, null is returned.</p>
          */
         @NameInMap("Alarms")
         public java.util.List<DescribeScalingRulesResponseBodyScalingRulesAlarms> alarms;
 
         /**
-         * <p>The cooldown time of the scaling rule. This parameter is available only if you set the ScalingRuleType parameter to SimpleScalingRule. Valid values: 0 to 86400. Unit: seconds.</p>
+         * <p>The cooldown period of the scaling rule. This parameter is available only if you set ScalingRuleType to SimpleScalingRule. Valid values: 0 to 86400. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -459,7 +459,7 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
         public Integer cooldown;
 
         /**
-         * <p>Specifies whether to disable scale-in. This parameter is available only if you set the ScalingRuleType parameter to TargetTrackingScalingRule. Valid values:</p>
+         * <p>Indicates whether scale-in is disabled. This parameter takes effect only if you set ScalingRuleType to TargetTrackingScalingRule. Valid values:</p>
          * <ul>
          * <li>true</li>
          * <li>false</li>
@@ -472,7 +472,7 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
         public Boolean disableScaleIn;
 
         /**
-         * <p>The warmup period of the ECS instance.</p>
+         * <p>The warm-up period of instances. During the warm-up period, a series of preparation measures are taken for the new instances. Performance metrics of instances being warmed up are not counted towards the monitoring range.</p>
          * 
          * <strong>example:</strong>
          * <p>300</p>
@@ -481,7 +481,7 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
         public Integer estimatedInstanceWarmup;
 
         /**
-         * <p>The maximum number of ECS instances in the scaling group. You must specify the InitialMaxSize and PredictiveValueBehavior parameters.</p>
+         * <p>The maximum number of ECS instances that can be contained in the scaling group. If you specify this parameter, you must also specify PredictiveValueBehavior.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -490,7 +490,7 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
         public Integer initialMaxSize;
 
         /**
-         * <p>The maximum number of ECS instances in the scaling group.</p>
+         * <p>The maximum number of ECS instances that can be contained in the scaling group.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -508,7 +508,7 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
         public String metricName;
 
         /**
-         * <p>The minimum number of instances that must be scaled when the AdjustmentType parameter is set to PercentChangeInCapacity. This parameter takes effect only if you set the ScalingRuleType parameter to SimpleScalingRule or StepScalingRule.</p>
+         * <p>The minimum number of instances that must be scaled. This parameter takes effect only if you set ScalingRuleType to SimpleScalingRule or StepScalingRule and set AdjustmentType to PercentChangeInCapacity.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -517,7 +517,7 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
         public Integer minAdjustmentMagnitude;
 
         /**
-         * <p>The minimum number of ECS instances in the scaling group.</p>
+         * <p>The minimum number of ECS instances that must be contained in the scaling group.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -528,8 +528,8 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
         /**
          * <p>The mode of the predictive scaling rule. Valid values:</p>
          * <ul>
-         * <li>PredictAndScale: produces predictions and creates prediction tasks.</li>
-         * <li>PredictOnly: produces predictions but does not create prediction tasks.</li>
+         * <li>PredictAndScale: provides predictions and creates prediction tasks.</li>
+         * <li>PredictOnly: provides predictions but does not create prediction tasks.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -539,7 +539,7 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
         public String predictiveScalingMode;
 
         /**
-         * <p>The amount of buffer time before the prediction task is executed. By default, all scheduled tasks that are automatically created for a predictive scaling rule are executed on the hour. You can specify a buffer time for resource preparation before prediction tasks are executed. Valid values: 0 to 60. Unit: minutes.</p>
+         * <p>The amount of buffer time before prediction tasks are executed. By default, all prediction tasks that are automatically created based on a predictive scaling rule are executed on the hour. You can specify a buffer time for resource preparation before prediction tasks are executed. Valid values: 0 to 60. Unit: minutes.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -548,11 +548,11 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
         public Integer predictiveTaskBufferTime;
 
         /**
-         * <p>Specifies which one of the initial maximum capacity and the predicted value can be used as the maximum value for prediction tasks. Valid values:</p>
+         * <p>The action on the predicted maximum value. Valid values:</p>
          * <ul>
          * <li>MaxOverridePredictiveValue: uses the initial maximum capacity as the maximum value for prediction tasks if the predicted value is greater than the initial maximum capacity.</li>
          * <li>PredictiveValueOverrideMax: uses the predicted value as the maximum value for prediction tasks when the predicted value is greater than the initial maximum capacity.</li>
-         * <li>PredictiveValueOverrideMaxWithBuffer: increases the predicted value by a percentage that is specified by the PredictiveValueBuffer parameter. If the predicted value that is increased by the percentage is greater than the initial maximum capacity, the increased value is used as the maximum value for prediction tasks.</li>
+         * <li>PredictiveValueOverrideMaxWithBuffer: increases the predicted value by a ratio that is specified by PredictiveValueBuffer, and uses the increased value as the maximum value for prediction tasks if the predicted value increased by this ratio is greater than the initial maximum capacity.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -562,7 +562,7 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
         public String predictiveValueBehavior;
 
         /**
-         * <p>The percentage of the increment to the predicted value when the PredictiveValueBehavior parameter is set to PredictiveValueOverrideMaxWithBuffer. If the predicted value increased by this percentage is greater than the initial maximum capacity, the increased value is used as the maximum value for prediction tasks. Valid values: 0 to 100.</p>
+         * <p>The ratio based on which the predicted value is increased when PredictiveValueBehavior is set to PredictiveValueOverrideMaxWithBuffer. If the predicted value increased by this ratio is greater than the initial maximum capacity, the increased value is used as the maximum value for prediction tasks. Valid values: 0 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -571,7 +571,7 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
         public Integer predictiveValueBuffer;
 
         /**
-         * <p>The number of consecutive times that the event-triggered task created for scale-out activities must meet the threshold conditions before an alert is triggered. After a target tracking scaling rule is created, an event-triggered task is automatically created and then associated with the target tracking scaling rule.</p>
+         * <p>The number of consecutive times that the event-triggered task for scale-in purposes must meet the threshold conditions before an alert is triggered. After a target tracking scaling rule is created, an event-triggered task is automatically created and associated with the target tracking scaling rule.</p>
          * 
          * <strong>example:</strong>
          * <p>15</p>
@@ -580,7 +580,7 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
         public Integer scaleInEvaluationCount;
 
         /**
-         * <p>The number of consecutive times that the event-triggered task created for scale-in activities must meet the threshold conditions before an alert is triggered. After a target tracking scaling rule is created, an event-triggered task is automatically created and then associated with the target tracking scaling rule.</p>
+         * <p>The number of consecutive times that the event-triggered task created for scale-out purposes must meet the threshold conditions before an alert is triggered. After a target tracking scaling rule is created, an event-triggered task is automatically created and associated with the target tracking scaling rule.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -627,10 +627,10 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
         /**
          * <p>The type of the scaling rule. Valid values:</p>
          * <ul>
-         * <li>SimpleScalingRule: adjusts the number of ECS instances based on the values of the AdjustmentType and AdjustmentValue parameters.</li>
-         * <li>TargetTrackingScalingRule: calculates the number of ECS instances that need to be scaled in a dynamic manner and maintains the value of a predefined metric close to the value of the TargetValue parameter.</li>
-         * <li>StepScalingRule: scales ECS instances in steps based on specified thresholds and metric values.</li>
-         * <li>PredictiveScalingRule: uses machine learning to analyze historical monitoring data of the scaling group and predicts the future values of metrics. In addition, Auto Scaling automatically creates scheduled tasks to adjust the boundary values for the scaling group.</li>
+         * <li>SimpleScalingRule: a simple scaling rule. Once a simple scaling rule is executed, Auto Scaling adjusts the number of ECS instances in the scaling group based on the values of AdjustmentType and AdjustmentValue.</li>
+         * <li>TargetTrackingScalingRule: a target tracking scaling rule. Once a target tracking scaling rule is executed, Auto Scaling dynamically calculates the number of ECS instances or elastic container instances to scale based on the predefined metric (MetricName) and attempts to maintain the metric value close to the specified target value (TargetValue).</li>
+         * <li>StepScalingRule: a step scaling rule. Once a step scaling rule is executed, Auto Scaling scales instances step by step based on the predefined thresholds and metric values.</li>
+         * <li>PredictiveScalingRule: a predictive scaling rule. Once a predictive scaling rule is executed, Auto Scaling analyzes the historical monitoring data based on the machine learning technology and predicts the trends of metric data. Auto Scaling also creates scheduled tasks to enable dynamic adjustment of the boundary values for the scaling group.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -646,7 +646,7 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
         public java.util.List<DescribeScalingRulesResponseBodyScalingRulesStepAdjustments> stepAdjustments;
 
         /**
-         * <p>The target value of the metric.</p>
+         * <p>The target value of the metric. If you set ScalingRuleType to TargetTrackingScalingRule or PredictiveScalingRule, Auto Scaling keeps the metric value close to the target value by adding instances to or removing instances from the scaling group.</p>
          * 
          * <strong>example:</strong>
          * <p>0.125</p>

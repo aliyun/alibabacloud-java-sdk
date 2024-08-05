@@ -52,7 +52,7 @@ public class CreateEciScalingConfigurationRequest extends TeaModel {
     public String containerGroupName;
 
     /**
-     * <p>The containers in the elastic container instance.</p>
+     * <p>The containers per elastic container instance.</p>
      */
     @NameInMap("Containers")
     public java.util.List<CreateEciScalingConfigurationRequestContainers> containers;
@@ -250,7 +250,7 @@ public class CreateEciScalingConfigurationRequest extends TeaModel {
     public String hostName;
 
     /**
-     * <p>Information about the image repository.</p>
+     * <p>The image repositories.</p>
      */
     @NameInMap("ImageRegistryCredentials")
     public java.util.List<CreateEciScalingConfigurationRequestImageRegistryCredentials> imageRegistryCredentials;
@@ -416,11 +416,11 @@ public class CreateEciScalingConfigurationRequest extends TeaModel {
     public Float spotPriceLimit;
 
     /**
-     * <p>The bidding policy for the elastic container instance. Valid values:</p>
+     * <p>The instance bidding policy. Valid values:</p>
      * <ul>
-     * <li>NoSpot: The instance is a pay-as-you-go instance.</li>
-     * <li>SpotWithPriceLimit: The instance is a preemptible instance with a user-defined maximum hourly price.</li>
-     * <li>SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is used as the bid price.</li>
+     * <li>NoSpot: The instances are created as pay-as-you-go instances.</li>
+     * <li>SpotWithPriceLimit: The instances are preemptible instances for which you can specify the maximum hourly price.</li>
+     * <li>SpotAsPriceGo: The instances are created as preemptible instances for which the market price at the time of purchase is used as the bid price.</li>
      * </ul>
      * <p>Default value: NoSpot.</p>
      * 
@@ -1348,7 +1348,7 @@ public class CreateEciScalingConfigurationRequest extends TeaModel {
         public String fieldRefFieldPath;
 
         /**
-         * <p>The name of the environment variable. The name can be 1 to 128 characters in length and can contain underscores (_) and digits. The name cannot start with a digit. Specify the value in the [0-9a-zA-Z] format.</p>
+         * <p>The name of the environment variable. The name can be 1 to 128 characters in length and can contain letters, underscores (_), and digits. The name cannot start with a digit. Specify the value in the [0-9a-zA-Z] format.</p>
          * 
          * <strong>example:</strong>
          * <p>PATH</p>
@@ -1444,7 +1444,7 @@ public class CreateEciScalingConfigurationRequest extends TeaModel {
 
     public static class CreateEciScalingConfigurationRequestContainersVolumeMounts extends TeaModel {
         /**
-         * <p>The directory to which the container mounts the volume.</p>
+         * <p>The directory in which the container mounts the volume.</p>
          * <blockquote>
          * <p> Data under this directory is overwritten by data on the volume. Specify this parameter with caution.</p>
          * </blockquote>
@@ -1456,11 +1456,11 @@ public class CreateEciScalingConfigurationRequest extends TeaModel {
         public String mountPath;
 
         /**
-         * <p>The mount propagation setting of the volume. Mount propagation allows volumes that are mounted on one container to be shared with other containers in the same pod, or even with other pods on the same node. Valid values:</p>
+         * <p>The mount propagation settings of the volume. Mount propagation enables volumes mounted on one container to be shared among other containers within the same pod or across distinct pods residing on the same node. Valid values:</p>
          * <ul>
-         * <li>None: The volume mount does not receive subsequent mounts that are performed on the volume or the subdirectories of the volume.</li>
-         * <li>HostToContainer: The volume mount receives all subsequent mounts that are performed on the volume or the subdirectories of the volume.</li>
-         * <li>Bidirectional: The volume mount behaves the same as the HostToContainer mount. The volume mount receives subsequent mounts that are performed on the volume or the subdirectories of the volume. In addition, all volume mounts that are performed on the container are propagated back to the host and all containers of all pods that use the same volume.</li>
+         * <li>None: Subsequent mounts executed either on the volume itself or its subdirectories do not propagate to the volume.</li>
+         * <li>HostToCotainer: Subsequent mounts executed either on the volume itself or its subdirectories propagate to the volume.</li>
+         * <li>Bidirectional: This value is similar to HostToCotainer. Subsequent mounts executed either on the volume itself or its subdirectories propagate to the volume. In addition, any volume mounts executed on the container not only propagate back to the underlying host but also to all containers across every pod that uses the same volume.</li>
          * </ul>
          * <p>Default value: None.</p>
          * 
@@ -1494,7 +1494,7 @@ public class CreateEciScalingConfigurationRequest extends TeaModel {
         public Boolean readOnly;
 
         /**
-         * <p>The subdirectory of the volume.</p>
+         * <p>The volume subdirectory.</p>
          * 
          * <strong>example:</strong>
          * <p>data2/</p>
@@ -1566,13 +1566,13 @@ public class CreateEciScalingConfigurationRequest extends TeaModel {
         public java.util.List<String> args;
 
         /**
-         * <p>The commands that you can run in the container when you use the CLI to perform liveness probes.</p>
+         * <p>The commands that you want to run by using the CLI for liveness probing within the container.</p>
          */
         @NameInMap("Commands")
         public java.util.List<String> commands;
 
         /**
-         * <p>The number of vCPUs that you want to allocate to the container.</p>
+         * <p>The number of vCPUs per container.</p>
          * 
          * <strong>example:</strong>
          * <p>0.25</p>
@@ -1587,7 +1587,7 @@ public class CreateEciScalingConfigurationRequest extends TeaModel {
         public java.util.List<CreateEciScalingConfigurationRequestContainersEnvironmentVars> environmentVars;
 
         /**
-         * <p>The number of GPUs that you want to allocate to the container.</p>
+         * <p>The number of GPUs per container.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1596,7 +1596,7 @@ public class CreateEciScalingConfigurationRequest extends TeaModel {
         public Integer gpu;
 
         /**
-         * <p>The image of the container.</p>
+         * <p>The container image.</p>
          * 
          * <strong>example:</strong>
          * <p>registry-vpc.cn-hangzhou.aliyuncs.com/eci_open/nginx:latest</p>
@@ -1618,10 +1618,15 @@ public class CreateEciScalingConfigurationRequest extends TeaModel {
         @NameInMap("ImagePullPolicy")
         public String imagePullPolicy;
 
+        /**
+         * <p>The commands that you want to run by using the CLI to configure the postStart callback function within the container.</p>
+         */
         @NameInMap("LifecyclePostStartHandlerExecs")
         public java.util.List<String> lifecyclePostStartHandlerExecs;
 
         /**
+         * <p>The IP address of the host to which you want to send HTTP GET requests to configure the postStart callback function.</p>
+         * 
          * <strong>example:</strong>
          * <p>10.0.XX.XX</p>
          */
@@ -1629,6 +1634,8 @@ public class CreateEciScalingConfigurationRequest extends TeaModel {
         public String lifecyclePostStartHandlerHttpGetHost;
 
         /**
+         * <p>The path to which you want to send HTTP GET requests to configure the postStart callback function.</p>
+         * 
          * <strong>example:</strong>
          * <p>/healthyz</p>
          */
@@ -1636,6 +1643,8 @@ public class CreateEciScalingConfigurationRequest extends TeaModel {
         public String lifecyclePostStartHandlerHttpGetPath;
 
         /**
+         * <p>The port over which you want to send HTTP GET requests to configure the postStart callback function.</p>
+         * 
          * <strong>example:</strong>
          * <p>5050</p>
          */
@@ -1643,6 +1652,12 @@ public class CreateEciScalingConfigurationRequest extends TeaModel {
         public Integer lifecyclePostStartHandlerHttpGetPort;
 
         /**
+         * <p>The protocol type of HTTP GET requests that you want to send to configure the postStart callback function. Valid values:</p>
+         * <ul>
+         * <li>HTTP</li>
+         * <li>HTTPS</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>HTTPS</p>
          */
@@ -1650,6 +1665,8 @@ public class CreateEciScalingConfigurationRequest extends TeaModel {
         public String lifecyclePostStartHandlerHttpGetScheme;
 
         /**
+         * <p>The IP address of the host detected by the TCP sockets that you want to use to configure the postStart callback function.</p>
+         * 
          * <strong>example:</strong>
          * <p>10.0.XX.XX</p>
          */
@@ -1657,16 +1674,23 @@ public class CreateEciScalingConfigurationRequest extends TeaModel {
         public String lifecyclePostStartHandlerTcpSocketHost;
 
         /**
+         * <p>The port detected by the TCP sockets that you want to use to configure the postStart callback function.</p>
+         * 
          * <strong>example:</strong>
          * <p>80</p>
          */
         @NameInMap("LifecyclePostStartHandlerTcpSocketPort")
         public Integer lifecyclePostStartHandlerTcpSocketPort;
 
+        /**
+         * <p>The commands that you want to run by using the CLI to configure the preStop callback function within the container.</p>
+         */
         @NameInMap("LifecyclePreStopHandlerExecs")
         public java.util.List<String> lifecyclePreStopHandlerExecs;
 
         /**
+         * <p>The IP address of the host to which you want to send HTTP GET requests to configure the preStop callback function.</p>
+         * 
          * <strong>example:</strong>
          * <p>10.0.XX.XX</p>
          */
@@ -1674,6 +1698,8 @@ public class CreateEciScalingConfigurationRequest extends TeaModel {
         public String lifecyclePreStopHandlerHttpGetHost;
 
         /**
+         * <p>The path to which you want to send HTTP GET requests to configure the preStop callback function.</p>
+         * 
          * <strong>example:</strong>
          * <p>/healthyz</p>
          */
@@ -1681,6 +1707,8 @@ public class CreateEciScalingConfigurationRequest extends TeaModel {
         public String lifecyclePreStopHandlerHttpGetPath;
 
         /**
+         * <p>The port over which you want to send HTTP GET requests to configure the preStop callback function.</p>
+         * 
          * <strong>example:</strong>
          * <p>88</p>
          */
@@ -1688,6 +1716,12 @@ public class CreateEciScalingConfigurationRequest extends TeaModel {
         public Integer lifecyclePreStopHandlerHttpGetPort;
 
         /**
+         * <p>The protocol type of the HTTP GET requests that you want to send to configure the preStop callback function. Valid values:</p>
+         * <ul>
+         * <li>HTTP</li>
+         * <li>HTTPS</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>HTTP</p>
          */
@@ -1695,6 +1729,8 @@ public class CreateEciScalingConfigurationRequest extends TeaModel {
         public String lifecyclePreStopHandlerHttpGetScheme;
 
         /**
+         * <p>The IP address of the host detected by the TCP sockets that you want to use to configure the preStop callback function.</p>
+         * 
          * <strong>example:</strong>
          * <p>10.0.XX.XX</p>
          */
@@ -1702,6 +1738,8 @@ public class CreateEciScalingConfigurationRequest extends TeaModel {
         public String lifecyclePreStopHandlerTcpSocketHost;
 
         /**
+         * <p>The port detected by the TCP sockets that you want to use to configure the preStop callback function.</p>
+         * 
          * <strong>example:</strong>
          * <p>90</p>
          */
@@ -1709,7 +1747,7 @@ public class CreateEciScalingConfigurationRequest extends TeaModel {
         public Integer lifecyclePreStopHandlerTcpSocketPort;
 
         /**
-         * <p>The memory size that you want to allocate to the container. Unit: GiB.</p>
+         * <p>The memory size per container. Unit: GiB.</p>
          * 
          * <strong>example:</strong>
          * <p>0.5</p>
@@ -1733,7 +1771,7 @@ public class CreateEciScalingConfigurationRequest extends TeaModel {
         public java.util.List<CreateEciScalingConfigurationRequestContainersPorts> ports;
 
         /**
-         * <p>Specifies whether the container allocates buffer resources to standard input streams when the container is running. If you do not specify this parameter, an end-of-file (EOF) error may occur when standard input streams in the container are read.</p>
+         * <p>Specifies whether the container allocates buffer resources to standard input streams during its active runtime. If you do not specify this parameter, an end-of-file (EOF) error occurs when standard input streams in the container are read.</p>
          * <p>Default value: false.</p>
          * 
          * <strong>example:</strong>
@@ -1743,8 +1781,8 @@ public class CreateEciScalingConfigurationRequest extends TeaModel {
         public Boolean stdin;
 
         /**
-         * <p>Specifies whether to remain standard input streams connected during multiple sessions if StdinOnce is set to true.</p>
-         * <p>If StdinOnce is set to true, standard input streams are connected after the container is started, and remain idle until a client is connected to receive data. After the client is disconnected, streams are also disconnected, and remain disconnected until the container is restarted.</p>
+         * <p>Specifies whether standard input streams remain connected during multiple sessions when StdinOnce is set to true.</p>
+         * <p>If StdinOnce is set to true, standard input streams are connected after the container is started, and remain idle until a client is connected to receive data. After the client is disconnected, streams are also disconnected and remain disconnected until the container is restarted.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -1753,7 +1791,7 @@ public class CreateEciScalingConfigurationRequest extends TeaModel {
         public Boolean stdinOnce;
 
         /**
-         * <p>Specifies whether to enable interaction. Valid values:</p>
+         * <p>Specifies whether to enable the Interaction feature. Valid values:</p>
          * <ul>
          * <li>true</li>
          * <li>false</li>
@@ -2128,7 +2166,7 @@ public class CreateEciScalingConfigurationRequest extends TeaModel {
 
     public static class CreateEciScalingConfigurationRequestImageRegistryCredentials extends TeaModel {
         /**
-         * <p>The password that is used to access the image repository.</p>
+         * <p>The password of the image repository.</p>
          * 
          * <strong>example:</strong>
          * <p>yourpaasword</p>
@@ -2146,7 +2184,7 @@ public class CreateEciScalingConfigurationRequest extends TeaModel {
         public String server;
 
         /**
-         * <p>The username that is used to access the image repository.</p>
+         * <p>The username of the image repository.</p>
          * 
          * <strong>example:</strong>
          * <p>yourusername</p>

@@ -22,10 +22,10 @@ public class DetachAlbServerGroupsRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to remove existing Elastic Compute Service (ECS) instances from the ALB server group that you want to disassociate from the scaling group. Valid values:</p>
+     * <p>Specifies whether to remove the existing ECS instances from the ALB server group. Valid values:</p>
      * <ul>
-     * <li>true: removes existing ECS instances and returns the value of the <code>ScalingActivityId</code> parameter. You can use the scaling activity ID to check whether the ECS instances are removed.</li>
-     * <li>false: does not remove existing ECS instances.</li>
+     * <li>true: removes the existing ECS instances from the ALB server group and returns the value of <code>ScalingActivityId</code>. You can query the value of ScalingActivityId to check whether the existing ECS instances are removed from the ALB server group.</li>
+     * <li>false: does not remove the existing ECS instances from the ALB server group.</li>
      * </ul>
      * <p>Default value: false.</p>
      * 

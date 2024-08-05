@@ -274,7 +274,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tbody></table>
      * 
      * <b>summary</b> : 
-     * <p>基于yaml配置进行弹性伸缩管理</p>
+     * <p>Creates and manages scaling groups by using configuration files. You can call the ApplyScalingGroup operation to create and manage scaling groups by using configuration files with efficiency.</p>
      * 
      * @param request ApplyScalingGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -440,7 +440,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tbody></table>
      * 
      * <b>summary</b> : 
-     * <p>基于yaml配置进行弹性伸缩管理</p>
+     * <p>Creates and manages scaling groups by using configuration files. You can call the ApplyScalingGroup operation to create and manage scaling groups by using configuration files with efficiency.</p>
      * 
      * @param request ApplyScalingGroupRequest
      * @return ApplyScalingGroupResponse
@@ -1693,6 +1693,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ScalingGroupId", request.scalingGroupId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.timeZone)) {
+            query.put("TimeZone", request.timeZone);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -2032,23 +2036,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * You can create only a limited number of scaling groups in a region. To check the quota of the scaling groups, go to Quota Center.
      * A scaling group does not immediately take effect after you create the scaling group. You can call the <a href="https://help.aliyun.com/document_detail/25939.html">EnableScalingGroup</a> operation to enable a scaling group. You can trigger scaling events and execute scaling rules only in scaling groups that are in the Enabled state.
      * If you want to attach a Classic Load Balancer (CLB, formerly known as SLB) instance and an ApsaraDB RDS instance to the scaling group that you want to create, the scaling group, the CLB instance, and the ApsaraDB RDS instance must reside in the same region. For more information, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.
-     * If you attach a CLB instance to the scaling group that you want to create, Auto Scaling will automatically add the ECS instances in the scaling group to the backend server groups of the CLB instance. You can specify the following types of server groups to add ECS instances:</p>
+     * If you attach a CLB instance to the scaling group that you want to create, Auto Scaling automatically adds the ECS instances in the scaling group to the backend server groups of the CLB instance. You can specify the following types of server groups to add ECS instances:</p>
      * <ul>
      * <li>Default server group: ECS instances in this group process frontend requests. If no listeners are configured for vServer groups or primary/secondary server groups, the frontend requests are forwarded to the ECS instances in the default server group.</li>
-     * <li>vServer group: If you want to forward different requests to different backend servers, or you want to forward requests based on domain names and URLs, you can specify vServer groups.<blockquote>
-     * <p> If you specify both the default server group and multiple server groups simultaneously, Auto Scaling will add the ECS instances in your scaling group to these server groups concurrently.
+     * <li>vServer group: If you want to forward different requests to different backend servers, or you want to forward requests based on domain names or URLs, you can specify vServer groups.<blockquote>
+     * <p> If you specify both the default server group and multiple server groups simultaneously, Auto Scaling adds the ECS instances in your scaling group to these server groups concurrently.
      * The default weight of each ECS instance as a backend server is 50. If you want to attach a CLB instance to the scaling group that you want to create, make sure that the CLB instance meets the following requirements:</p>
      * </blockquote>
      * </li>
      * <li>The CLB instance is in the Active state. You can call the <a href="https://help.aliyun.com/document_detail/2401696.html">DescribeLoadBalancers</a> operation to query the status of CLB instances.</li>
      * <li>Health check must be enabled on all listener ports configured for the CLB instance. Otherwise, the scaling group will fail to be created.
-     * If you attach Application Load Balancer (ALB) or Network Load Balancer (NLB) server groups to the scaling group that you want to create, Auto Scaling will add the ECS instances in your scaling group to the ALB or NLB server groups to process the access requests forwarded by the corresponding ALB or NLB instances. You can attach multiple ALB or NLB server groups to a scaling group. Make sure that the ALB or NLB server groups belong to the same virtual private cloud (VPC). For more information, see <a href="https://help.aliyun.com/document_detail/266800.html">AttachAlbServerGroups</a> or <a href="https://help.aliyun.com/document_detail/600559.html">AttachServerGroups</a>.
-     * If you attach an ApsaraDB RDS instance to the scaling group that you want to create, Auto Scaling will automatically add the private IP addresses of the ECS instances in your scaling group to the IP address whitelist of the ApsaraDB RDS instance. Before you attach an ApsaraDB RDS instance to your scaling group, make sure that the ApsaraDB RDS instance meets the following requirements:</li>
+     * If you attach Application Load Balancer (ALB) or Network Load Balancer (NLB) server groups to the scaling group that you want to create, Auto Scaling adds the ECS instances in your scaling group to the ALB or NLB server groups to process the access requests forwarded by the corresponding ALB or NLB instances. You can attach multiple ALB or NLB server groups to a scaling group. Make sure that the ALB or NLB server groups belong to the same virtual private cloud (VPC). For more information, see <a href="https://help.aliyun.com/document_detail/266800.html">AttachAlbServerGroups</a> or <a href="https://help.aliyun.com/document_detail/600535.html">AttachServerGroups</a>.
+     * If you attach an ApsaraDB RDS instance to the scaling group that you want to create, Auto Scaling automatically adds the private IP addresses of the ECS instances in your scaling group to the IP address whitelist of the ApsaraDB RDS instance. Before you attach an ApsaraDB RDS instance to your scaling group, make sure that the ApsaraDB RDS instance meets the following requirements:</li>
      * <li>The ApsaraDB RDS instance is in the Running state. You can call the <a href="https://help.aliyun.com/document_detail/610396.html">DescribeDBInstances</a> state to query the status of ApsaraDB RDS instances.</li>
      * <li>The number of IP addresses in the IP address whitelist of the ApsaraDB RDS instance does not reach its upper limit. For more information, see <a href="https://help.aliyun.com/document_detail/43185.html">Configure a whitelist</a>.
      * If you set MultiAZPolicy for the scaling group that you want to create to COST_OPTIMIZED, the following rules apply:</li>
-     * <li>If you use OnDemandBaseCapacity, OnDemandPercentageAboveBaseCapacity, and SpotInstancePools to specify the instance allocation mode under the cost optimization policy, Auto Scaling will prioritize the implementation of the specified instance allocation mode during scale-out events.</li>
-     * <li>If you do not specify OnDemandBaseCapacity, OnDemandPercentageAboveBaseCapacity, or SpotInstancePools, Auto Scaling will preferentially create instances of the lowest-priced instance type based on the cost optimization policy.
+     * <li>If you use OnDemandBaseCapacity, OnDemandPercentageAboveBaseCapacity, and SpotInstancePools to specify the instance allocation mode under the cost optimization policy, Auto Scaling prioritizes the implementation of the specified instance allocation mode during scale-out events.</li>
+     * <li>If you do not specify OnDemandBaseCapacity, OnDemandPercentageAboveBaseCapacity, or SpotInstancePools, Auto Scaling preferentially creates instances of the lowest-priced instance type based on the cost optimization policy.
      * If you set <code>Tags.Propagate</code> to true, the following rules will apply:</li>
      * <li>Tags that you add to the scaling group cannot be propagated to existing instances in the scaling group. Tags that you add to the scaling group are propagated to only new instances.</li>
      * <li>If you specify instance tags in the scaling configuration that is used to create instances and propagate the tags that you add to the scaling group to the instances, all tags exist at the same time.</li>
@@ -2268,23 +2272,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * You can create only a limited number of scaling groups in a region. To check the quota of the scaling groups, go to Quota Center.
      * A scaling group does not immediately take effect after you create the scaling group. You can call the <a href="https://help.aliyun.com/document_detail/25939.html">EnableScalingGroup</a> operation to enable a scaling group. You can trigger scaling events and execute scaling rules only in scaling groups that are in the Enabled state.
      * If you want to attach a Classic Load Balancer (CLB, formerly known as SLB) instance and an ApsaraDB RDS instance to the scaling group that you want to create, the scaling group, the CLB instance, and the ApsaraDB RDS instance must reside in the same region. For more information, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.
-     * If you attach a CLB instance to the scaling group that you want to create, Auto Scaling will automatically add the ECS instances in the scaling group to the backend server groups of the CLB instance. You can specify the following types of server groups to add ECS instances:</p>
+     * If you attach a CLB instance to the scaling group that you want to create, Auto Scaling automatically adds the ECS instances in the scaling group to the backend server groups of the CLB instance. You can specify the following types of server groups to add ECS instances:</p>
      * <ul>
      * <li>Default server group: ECS instances in this group process frontend requests. If no listeners are configured for vServer groups or primary/secondary server groups, the frontend requests are forwarded to the ECS instances in the default server group.</li>
-     * <li>vServer group: If you want to forward different requests to different backend servers, or you want to forward requests based on domain names and URLs, you can specify vServer groups.<blockquote>
-     * <p> If you specify both the default server group and multiple server groups simultaneously, Auto Scaling will add the ECS instances in your scaling group to these server groups concurrently.
+     * <li>vServer group: If you want to forward different requests to different backend servers, or you want to forward requests based on domain names or URLs, you can specify vServer groups.<blockquote>
+     * <p> If you specify both the default server group and multiple server groups simultaneously, Auto Scaling adds the ECS instances in your scaling group to these server groups concurrently.
      * The default weight of each ECS instance as a backend server is 50. If you want to attach a CLB instance to the scaling group that you want to create, make sure that the CLB instance meets the following requirements:</p>
      * </blockquote>
      * </li>
      * <li>The CLB instance is in the Active state. You can call the <a href="https://help.aliyun.com/document_detail/2401696.html">DescribeLoadBalancers</a> operation to query the status of CLB instances.</li>
      * <li>Health check must be enabled on all listener ports configured for the CLB instance. Otherwise, the scaling group will fail to be created.
-     * If you attach Application Load Balancer (ALB) or Network Load Balancer (NLB) server groups to the scaling group that you want to create, Auto Scaling will add the ECS instances in your scaling group to the ALB or NLB server groups to process the access requests forwarded by the corresponding ALB or NLB instances. You can attach multiple ALB or NLB server groups to a scaling group. Make sure that the ALB or NLB server groups belong to the same virtual private cloud (VPC). For more information, see <a href="https://help.aliyun.com/document_detail/266800.html">AttachAlbServerGroups</a> or <a href="https://help.aliyun.com/document_detail/600559.html">AttachServerGroups</a>.
-     * If you attach an ApsaraDB RDS instance to the scaling group that you want to create, Auto Scaling will automatically add the private IP addresses of the ECS instances in your scaling group to the IP address whitelist of the ApsaraDB RDS instance. Before you attach an ApsaraDB RDS instance to your scaling group, make sure that the ApsaraDB RDS instance meets the following requirements:</li>
+     * If you attach Application Load Balancer (ALB) or Network Load Balancer (NLB) server groups to the scaling group that you want to create, Auto Scaling adds the ECS instances in your scaling group to the ALB or NLB server groups to process the access requests forwarded by the corresponding ALB or NLB instances. You can attach multiple ALB or NLB server groups to a scaling group. Make sure that the ALB or NLB server groups belong to the same virtual private cloud (VPC). For more information, see <a href="https://help.aliyun.com/document_detail/266800.html">AttachAlbServerGroups</a> or <a href="https://help.aliyun.com/document_detail/600535.html">AttachServerGroups</a>.
+     * If you attach an ApsaraDB RDS instance to the scaling group that you want to create, Auto Scaling automatically adds the private IP addresses of the ECS instances in your scaling group to the IP address whitelist of the ApsaraDB RDS instance. Before you attach an ApsaraDB RDS instance to your scaling group, make sure that the ApsaraDB RDS instance meets the following requirements:</li>
      * <li>The ApsaraDB RDS instance is in the Running state. You can call the <a href="https://help.aliyun.com/document_detail/610396.html">DescribeDBInstances</a> state to query the status of ApsaraDB RDS instances.</li>
      * <li>The number of IP addresses in the IP address whitelist of the ApsaraDB RDS instance does not reach its upper limit. For more information, see <a href="https://help.aliyun.com/document_detail/43185.html">Configure a whitelist</a>.
      * If you set MultiAZPolicy for the scaling group that you want to create to COST_OPTIMIZED, the following rules apply:</li>
-     * <li>If you use OnDemandBaseCapacity, OnDemandPercentageAboveBaseCapacity, and SpotInstancePools to specify the instance allocation mode under the cost optimization policy, Auto Scaling will prioritize the implementation of the specified instance allocation mode during scale-out events.</li>
-     * <li>If you do not specify OnDemandBaseCapacity, OnDemandPercentageAboveBaseCapacity, or SpotInstancePools, Auto Scaling will preferentially create instances of the lowest-priced instance type based on the cost optimization policy.
+     * <li>If you use OnDemandBaseCapacity, OnDemandPercentageAboveBaseCapacity, and SpotInstancePools to specify the instance allocation mode under the cost optimization policy, Auto Scaling prioritizes the implementation of the specified instance allocation mode during scale-out events.</li>
+     * <li>If you do not specify OnDemandBaseCapacity, OnDemandPercentageAboveBaseCapacity, or SpotInstancePools, Auto Scaling preferentially creates instances of the lowest-priced instance type based on the cost optimization policy.
      * If you set <code>Tags.Propagate</code> to true, the following rules will apply:</li>
      * <li>Tags that you add to the scaling group cannot be propagated to existing instances in the scaling group. Tags that you add to the scaling group are propagated to only new instances.</li>
      * <li>If you specify instance tags in the scaling configuration that is used to create instances and propagate the tags that you add to the scaling group to the instances, all tags exist at the same time.</li>
@@ -3318,7 +3322,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the status of scaling activities that prompt text message or email notifications.</p>
+     * <p>Queries the status of scaling activities that trigger text message, internal message, or email-based notifications. When you call the DescribeAlertConfiguration operation, you must specify the scaling group ID and region ID to query the status of the desired scaling activities. A scaling activity can be in one of the following states: Successful, Failed, and Rejected.</p>
      * 
      * @param request DescribeAlertConfigurationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3362,7 +3366,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the status of scaling activities that prompt text message or email notifications.</p>
+     * <p>Queries the status of scaling activities that trigger text message, internal message, or email-based notifications. When you call the DescribeAlertConfiguration operation, you must specify the scaling group ID and region ID to query the status of the desired scaling activities. A scaling activity can be in one of the following states: Successful, Failed, and Rejected.</p>
      * 
      * @param request DescribeAlertConfigurationRequest
      * @return DescribeAlertConfigurationResponse
@@ -3430,7 +3434,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries scaling configurations of the Elastic Container Instance type to learn the scaling configuration details. This allows you to select an appropriate template when you create elastic container instances.</p>
+     * <p>Queries scaling configurations of the Elastic Container Instance type. When you call the DescribeEciScalingConfigurations operation, you can specify ScalingGroupId, ScalingConfigurationIds, or ScalingConfigurationNames to query details about the desired scaling configurations, such as the instance bidding policy, instance type, image pulling policy, and load balancing weight of each elastic container instance. This can help you select a suitable template for creating elastic container instances or reference existing scaling configurations before you modify the automatic scaling policy for elastic container instances.</p>
      * 
      * @param request DescribeEciScalingConfigurationsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3498,7 +3502,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries scaling configurations of the Elastic Container Instance type to learn the scaling configuration details. This allows you to select an appropriate template when you create elastic container instances.</p>
+     * <p>Queries scaling configurations of the Elastic Container Instance type. When you call the DescribeEciScalingConfigurations operation, you can specify ScalingGroupId, ScalingConfigurationIds, or ScalingConfigurationNames to query details about the desired scaling configurations, such as the instance bidding policy, instance type, image pulling policy, and load balancing weight of each elastic container instance. This can help you select a suitable template for creating elastic container instances or reference existing scaling configurations before you modify the automatic scaling policy for elastic container instances.</p>
      * 
      * @param request DescribeEciScalingConfigurationsRequest
      * @return DescribeEciScalingConfigurationsResponse
@@ -3688,7 +3692,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries resource quotas. You can call the DescribeLimitation operation to query the upper limits on resources such as scheduled tasks that can be created in a scaling group, load balancers that can be attached to a scaling group, instances that can be contained in a scaling group, and scaling configurations that can be created in a scaling group.</p>
+     * <p>Queries resource quotas. For example, you can call the DescribeLimitation operation to query the maximum numbers of scheduled tasks that you can create in a scaling group, load balancers that you can attach to a scaling group, instances that you can add to a scaling group, and scaling configurations that you can create in a scaling group.</p>
      * 
      * @param request DescribeLimitationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3724,7 +3728,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries resource quotas. You can call the DescribeLimitation operation to query the upper limits on resources such as scheduled tasks that can be created in a scaling group, load balancers that can be attached to a scaling group, instances that can be contained in a scaling group, and scaling configurations that can be created in a scaling group.</p>
+     * <p>Queries resource quotas. For example, you can call the DescribeLimitation operation to query the maximum numbers of scheduled tasks that you can create in a scaling group, load balancers that you can attach to a scaling group, instances that you can add to a scaling group, and scaling configurations that you can create in a scaling group.</p>
      * 
      * @param request DescribeLimitationRequest
      * @return DescribeLimitationResponse
@@ -3840,7 +3844,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Filters instance types that meet your business requirements. If you create a scaling configuration by opting for the Specify Instance Type approach, you can call the DescribePatternTypes operation. This operation is designed to sift through and identify instance types that fulfill your specific business needs. It does so by examining the number of vCPUs, memory size, instance family level, and maximum budgeted expense that you specify within the scaling configuration settings.</p>
+     * <p>Queries instance types. When you call the DescribePatternTypes operation, you can specify attributes such as the vSwitch ID, number of vCPUs, memory size, instance family, and maximum acceptable price to filer instance types that meet your business requirements.</p>
      * 
      * @param request DescribePatternTypesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3868,7 +3872,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Filters instance types that meet your business requirements. If you create a scaling configuration by opting for the Specify Instance Type approach, you can call the DescribePatternTypes operation. This operation is designed to sift through and identify instance types that fulfill your specific business needs. It does so by examining the number of vCPUs, memory size, instance family level, and maximum budgeted expense that you specify within the scaling configuration settings.</p>
+     * <p>Queries instance types. When you call the DescribePatternTypes operation, you can specify attributes such as the vSwitch ID, number of vCPUs, memory size, instance family, and maximum acceptable price to filer instance types that meet your business requirements.</p>
      * 
      * @param request DescribePatternTypesRequest
      * @return DescribePatternTypesResponse
@@ -4310,7 +4314,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the Elastic Compute Service (ECS) instances in a scaling group. If you want to flexibly filter ECS instances that meet the specified criteria and query the instance details, you can call the DescribeScalingInstances operation. This operation enables you to input custom parameters for precise query of ECS instances, helping you gain a clear understanding of the instance details and optimize scaling configurations.</p>
+     * <p>Queries instances in a scaling group. You can call the DescribeScalingInstances operation to query instance details such as the number of preemptible instances in the Running state, the number of Elastic Compute Service (ECS) instances, the warm-up status of ECS instances, and the lifecycle status of ECS instances in a scaling group. You can specify the desired scaling group whose instances you want to query by scaling group ID. In addition, if you want to filter instances based on conditions such as the instance health status, lifecycle status, or creation method, you can also call this operation.</p>
      * 
      * @param request DescribeScalingInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4402,7 +4406,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the Elastic Compute Service (ECS) instances in a scaling group. If you want to flexibly filter ECS instances that meet the specified criteria and query the instance details, you can call the DescribeScalingInstances operation. This operation enables you to input custom parameters for precise query of ECS instances, helping you gain a clear understanding of the instance details and optimize scaling configurations.</p>
+     * <p>Queries instances in a scaling group. You can call the DescribeScalingInstances operation to query instance details such as the number of preemptible instances in the Running state, the number of Elastic Compute Service (ECS) instances, the warm-up status of ECS instances, and the lifecycle status of ECS instances in a scaling group. You can specify the desired scaling group whose instances you want to query by scaling group ID. In addition, if you want to filter instances based on conditions such as the instance health status, lifecycle status, or creation method, you can also call this operation.</p>
      * 
      * @param request DescribeScalingInstancesRequest
      * @return DescribeScalingInstancesResponse
@@ -4417,7 +4421,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can specify a scaling group ID to query all scaling rules in the scaling group. You can also specify the scaling rule ID, name, unique identifier, and type in the request parameters as filter conditions.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries all scaling rules in a scaling group.</p>
+     * <p>Queries scaling rules. When you call this operation, you can specify the ID, name, or Alibaba Cloud Resource Name (ARN) of a scaling rule to query the details of the scaling rule. For example, you can query the adjustment method, instance warm-up period, and associated event-triggered tasks of the desired scaling rule.</p>
      * 
      * @param request DescribeScalingRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4500,7 +4504,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can specify a scaling group ID to query all scaling rules in the scaling group. You can also specify the scaling rule ID, name, unique identifier, and type in the request parameters as filter conditions.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries all scaling rules in a scaling group.</p>
+     * <p>Queries scaling rules. When you call this operation, you can specify the ID, name, or Alibaba Cloud Resource Name (ARN) of a scaling rule to query the details of the scaling rule. For example, you can query the adjustment method, instance warm-up period, and associated event-triggered tasks of the desired scaling rule.</p>
      * 
      * @param request DescribeScalingRulesRequest
      * @return DescribeScalingRulesResponse
@@ -4618,7 +4622,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disassociates one or more Application Load Balancer (ALB) server groups from a scaling group.</p>
+     * <p>Detaches Application Load Balancer (ALB) server groups from a scaling group. When you call the DetachAlbServerGroups operation, you can specify the scaling group ID, ALB server group ID, and port used by Elastic Compute Service (ECS) instances in the desired ALB server group to detach one or more ALB server groups from your scaling group.</p>
      * 
      * @param request DetachAlbServerGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4674,7 +4678,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disassociates one or more Application Load Balancer (ALB) server groups from a scaling group.</p>
+     * <p>Detaches Application Load Balancer (ALB) server groups from a scaling group. When you call the DetachAlbServerGroups operation, you can specify the scaling group ID, ALB server group ID, and port used by Elastic Compute Service (ECS) instances in the desired ALB server group to detach one or more ALB server groups from your scaling group.</p>
      * 
      * @param request DetachAlbServerGroupsRequest
      * @return DetachAlbServerGroupsResponse
@@ -6088,10 +6092,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If you want to change the name of a scaling configuration in a scaling group, make sure that the new name is unique within the scaling group.</p>
+     * <p>  If you want to change the name of a scaling configuration in a scaling group, make sure that the new name is unique within the scaling group.</p>
+     * <ul>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/459378.html">ModifyEciScalingConfiguration</a> operation to verify the modification result.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies a scaling configuration for a scaling group that contains elastic container instances.</p>
+     * <p>Modifies scaling configurations of the Elastic Container Instance type. When you call the ModifyEciScalingConfiguration operation, you can specify the ID, name, and instance properties of the desired scaling configuration to modify information such as the instance restart policy, instance bidding policy, and elastic IP address (EIP) bandwidth.</p>
      * 
      * @param request ModifyEciScalingConfigurationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6319,10 +6326,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If you want to change the name of a scaling configuration in a scaling group, make sure that the new name is unique within the scaling group.</p>
+     * <p>  If you want to change the name of a scaling configuration in a scaling group, make sure that the new name is unique within the scaling group.</p>
+     * <ul>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/459378.html">ModifyEciScalingConfiguration</a> operation to verify the modification result.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies a scaling configuration for a scaling group that contains elastic container instances.</p>
+     * <p>Modifies scaling configurations of the Elastic Container Instance type. When you call the ModifyEciScalingConfiguration operation, you can specify the ID, name, and instance properties of the desired scaling configuration to modify information such as the instance restart policy, instance bidding policy, and elastic IP address (EIP) bandwidth.</p>
      * 
      * @param request ModifyEciScalingConfigurationRequest
      * @return ModifyEciScalingConfigurationResponse
@@ -6334,7 +6344,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the attributes of an Elastic Compute Service (ECS) instance in a scaling group. You can call the ModifyInstanceAttribute operation to modify the lifecycle management attribute of a manually added ECS instance in a scaling group.</p>
+     * <p>Modifies the information of an Elastic Compute Service (ECS) instance. When you call the ModifyInstanceAttribute operation, you can specify attributes such as the instance ID, scaling group ID, and region ID to modify the attributes of an ECS instance in a scaling group. You can modify only the hosting attributes of instances that are manually added to scaling groups.</p>
      * 
      * @param request ModifyInstanceAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6386,7 +6396,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the attributes of an Elastic Compute Service (ECS) instance in a scaling group. You can call the ModifyInstanceAttribute operation to modify the lifecycle management attribute of a manually added ECS instance in a scaling group.</p>
+     * <p>Modifies the information of an Elastic Compute Service (ECS) instance. When you call the ModifyInstanceAttribute operation, you can specify attributes such as the instance ID, scaling group ID, and region ID to modify the attributes of an ECS instance in a scaling group. You can modify only the hosting attributes of instances that are manually added to scaling groups.</p>
      * 
      * @param request ModifyInstanceAttributeRequest
      * @return ModifyInstanceAttributeResponse
@@ -6535,6 +6545,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.scalingGroupId)) {
             query.put("ScalingGroupId", request.scalingGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timeZone)) {
+            query.put("TimeZone", request.timeZone);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -7478,7 +7492,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Removes one or more Elastic Compute Service (ECS) instances or elastic container instances from a scaling group.</p>
+     * <p>Removes one or more instances from a scaling group. If your scaling group is enabled and contains no ongoing scaling activities, you can call the RemoveInstances operation to remove instances that you no longer require from the scaling group.</p>
      * 
      * @param request RemoveInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7564,7 +7578,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Removes one or more Elastic Compute Service (ECS) instances or elastic container instances from a scaling group.</p>
+     * <p>Removes one or more instances from a scaling group. If your scaling group is enabled and contains no ongoing scaling activities, you can call the RemoveInstances operation to remove instances that you no longer require from the scaling group.</p>
      * 
      * @param request RemoveInstancesRequest
      * @return RemoveInstancesResponse

@@ -42,12 +42,12 @@ public class DetachInstancesRequest extends TeaModel {
     public String detachOption;
 
     /**
-     * <p>从伸缩组移出一批实例时，是否忽略其中无效的实例。取值范围：</p>
+     * <p>Specifies whether to ignore invalid instances when you remove a batch of instances from the scaling group. Valid values:</p>
      * <ul>
-     * <li>true：从伸缩组中移出一批实例时，会忽略其中无效的实例。如果存在无效的实例，并且有效的实例被成功移除时，伸缩活动执行状态也会显示为警告状态，可以从伸缩活动详情查看无效的实例。</li>
-     * <li>false：从伸缩组中移出一批实例时，不会忽略无效的实例。如果一批实例中存在无效的实例，请求会报错。</li>
+     * <li>true: ignores invalid instances. If invalid instances exist and valid instances are removed from the scaling group, the corresponding scaling activity enters the Warning state. You can check the scaling activity details to view the invalid instances that are ignored.</li>
+     * <li>false: does not ignore invalid instances. If invalid instances exist in the batch of instances that you want to remove from the scaling group, an error is reported.</li>
      * </ul>
-     * <p>默认值：false。</p>
+     * <p>Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>

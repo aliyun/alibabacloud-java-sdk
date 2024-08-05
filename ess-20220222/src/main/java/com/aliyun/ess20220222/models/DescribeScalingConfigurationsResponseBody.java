@@ -1144,7 +1144,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         public String instanceName;
 
         /**
-         * <p>The information about the intelligent configuration settings, which determines the available instance types.</p>
+         * <p>The intelligent configuration settings, which determine the available instance types.</p>
          */
         @NameInMap("InstancePatternInfos")
         public java.util.List<DescribeScalingConfigurationsResponseBodyScalingConfigurationsInstancePatternInfos> instancePatternInfos;

@@ -28,6 +28,13 @@ public class RemoveInstancesRequest extends TeaModel {
     public Boolean decreaseDesiredCapacity;
 
     /**
+     * <p>Specifies whether to ignore invalid instances when you remove a batch of instances from the scaling group. Valid values:</p>
+     * <ul>
+     * <li>true: ignores invalid instances. If invalid instances exist and valid instances are deleted, the corresponding scaling activity enters the Warning state. You can check the scaling activity details to view the invalid instances that are ignored.</li>
+     * <li>false: does not ignore invalid instances. If invalid instances exist in the batch of instances that you want to remove from the scaling group, an error is reported.</li>
+     * </ul>
+     * <p>Default value: false.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */

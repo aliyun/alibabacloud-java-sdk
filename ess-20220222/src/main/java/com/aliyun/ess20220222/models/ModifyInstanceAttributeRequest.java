@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceAttributeRequest extends TeaModel {
     /**
-     * <p>Specifies whether to use the scaling group to manage the lifecycles of the manually added ECS instances. Valid values:</p>
+     * <p>Specifies whether to allow the scaling group to manage the lifecycles of the manually added ECS instances. Valid values:</p>
      * <ul>
-     * <li>true: The scaling group manages the lifecycles of instances that are manually added and instances that are automatically created in the same manner. In this case, Auto Scaling releases the instances when they are removed from the scaling group. This rule does not apply to instances that are removed by calling the DetachInstances operation.</li>
-     * <li>false: The scaling group does not manage the lifecycles of instances that are manually added. In this case, Auto Scaling does not release the instances when they are removed from the scaling group.</li>
+     * <li>true: allows the scaling group to manage the lifecycles of the manually added ECS instances. The scaling group manages the lifecycles of manually added instances and automatically created instances in the same manner. In this case, Auto Scaling releases the instances when they are removed from the scaling group. This rule does not apply to instances that are removed by calling the DetachInstances operation.</li>
+     * <li>false: does not allow the scaling group to manage the lifecycles of the manually added ECS instances. In this case, Auto Scaling does not release the instances when they are removed from the scaling group.</li>
      * </ul>
      * <blockquote>
-     * <p> You can specify this parameter for only ECS instances that are manually added to scaling groups.</p>
+     * <p> You can specify this parameter only for ECS instances that are manually added to the scaling group.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

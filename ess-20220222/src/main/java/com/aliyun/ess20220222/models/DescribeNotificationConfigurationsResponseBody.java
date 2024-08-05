@@ -77,6 +77,9 @@ public class DescribeNotificationConfigurationsResponseBody extends TeaModel {
         @NameInMap("ScalingGroupId")
         public String scalingGroupId;
 
+        @NameInMap("TimeZone")
+        public String timeZone;
+
         public static DescribeNotificationConfigurationsResponseBodyNotificationConfigurationModels build(java.util.Map<String, ?> map) throws Exception {
             DescribeNotificationConfigurationsResponseBodyNotificationConfigurationModels self = new DescribeNotificationConfigurationsResponseBodyNotificationConfigurationModels();
             return TeaModel.build(map, self);
@@ -104,6 +107,14 @@ public class DescribeNotificationConfigurationsResponseBody extends TeaModel {
         }
         public String getScalingGroupId() {
             return this.scalingGroupId;
+        }
+
+        public DescribeNotificationConfigurationsResponseBodyNotificationConfigurationModels setTimeZone(String timeZone) {
+            this.timeZone = timeZone;
+            return this;
+        }
+        public String getTimeZone() {
+            return this.timeZone;
         }
 
     }
