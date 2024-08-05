@@ -456,60 +456,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds a remote write configuration item to a Prometheus instance.</p>
-     * 
-     * @param request AddPrometheusRemoteWriteRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return AddPrometheusRemoteWriteResponse
-     */
-    public AddPrometheusRemoteWriteResponse addPrometheusRemoteWriteWithOptions(AddPrometheusRemoteWriteRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
-            query.put("ClusterId", request.clusterId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
-            query.put("RegionId", request.regionId);
-        }
-
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.remoteWriteYaml)) {
-            body.put("RemoteWriteYaml", request.remoteWriteYaml);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "AddPrometheusRemoteWrite"),
-            new TeaPair("version", "2019-08-08"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new AddPrometheusRemoteWriteResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Adds a remote write configuration item to a Prometheus instance.</p>
-     * 
-     * @param request AddPrometheusRemoteWriteRequest
-     * @return AddPrometheusRemoteWriteResponse
-     */
-    public AddPrometheusRemoteWriteResponse addPrometheusRemoteWrite(AddPrometheusRemoteWriteRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.addPrometheusRemoteWriteWithOptions(request, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
      * <p>Creates or updates a recording rule of Managed Service for Prometheus.</p>
      * 
      * @param request AddRecordingRuleRequest
@@ -4674,58 +4620,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes remote write configuration items from a Prometheus instance.</p>
-     * 
-     * @param request DeletePrometheusRemoteWriteRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return DeletePrometheusRemoteWriteResponse
-     */
-    public DeletePrometheusRemoteWriteResponse deletePrometheusRemoteWriteWithOptions(DeletePrometheusRemoteWriteRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
-            query.put("ClusterId", request.clusterId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
-            query.put("RegionId", request.regionId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.remoteWriteNames)) {
-            query.put("RemoteWriteNames", request.remoteWriteNames);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DeletePrometheusRemoteWrite"),
-            new TeaPair("version", "2019-08-08"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeletePrometheusRemoteWriteResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Deletes remote write configuration items from a Prometheus instance.</p>
-     * 
-     * @param request DeletePrometheusRemoteWriteRequest
-     * @return DeletePrometheusRemoteWriteResponse
-     */
-    public DeletePrometheusRemoteWriteResponse deletePrometheusRemoteWrite(DeletePrometheusRemoteWriteRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.deletePrometheusRemoteWriteWithOptions(request, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
      * <p>Deletes a Browser Monitoring task.</p>
      * 
      * @param request DeleteRetcodeAppRequest
@@ -6654,10 +6548,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the installation status of a Prometheus agent in a serverless Kubernetes (ASK) cluster or an Elastic Compute Service (ECS) cluster.</p>
      * 
+     * @deprecated OpenAPI GetManagedPrometheusStatus is deprecated
+     * 
      * @param request GetManagedPrometheusStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetManagedPrometheusStatusResponse
      */
+    @Deprecated
+    // Deprecated
     public GetManagedPrometheusStatusResponse getManagedPrometheusStatusWithOptions(GetManagedPrometheusStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6702,9 +6600,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the installation status of a Prometheus agent in a serverless Kubernetes (ASK) cluster or an Elastic Compute Service (ECS) cluster.</p>
      * 
+     * @deprecated OpenAPI GetManagedPrometheusStatus is deprecated
+     * 
      * @param request GetManagedPrometheusStatusRequest
      * @return GetManagedPrometheusStatusResponse
      */
+    @Deprecated
+    // Deprecated
     public GetManagedPrometheusStatusResponse getManagedPrometheusStatus(GetManagedPrometheusStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getManagedPrometheusStatusWithOptions(request, runtime);
@@ -7062,58 +6964,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetPrometheusMonitoringResponse getPrometheusMonitoring(GetPrometheusMonitoringRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getPrometheusMonitoringWithOptions(request, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Queries a remote write configuration item of a Prometheus instance for Container Service or a Prometheus instance for ECS.</p>
-     * 
-     * @param request GetPrometheusRemoteWriteRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return GetPrometheusRemoteWriteResponse
-     */
-    public GetPrometheusRemoteWriteResponse getPrometheusRemoteWriteWithOptions(GetPrometheusRemoteWriteRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
-            query.put("ClusterId", request.clusterId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
-            query.put("RegionId", request.regionId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.remoteWriteName)) {
-            query.put("RemoteWriteName", request.remoteWriteName);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "GetPrometheusRemoteWrite"),
-            new TeaPair("version", "2019-08-08"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetPrometheusRemoteWriteResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Queries a remote write configuration item of a Prometheus instance for Container Service or a Prometheus instance for ECS.</p>
-     * 
-     * @param request GetPrometheusRemoteWriteRequest
-     * @return GetPrometheusRemoteWriteResponse
-     */
-    public GetPrometheusRemoteWriteResponse getPrometheusRemoteWrite(GetPrometheusRemoteWriteRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.getPrometheusRemoteWriteWithOptions(request, runtime);
     }
 
     /**
@@ -7700,6 +7550,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.versionId)) {
+            query.put("VersionId", request.versionId);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -8631,10 +8485,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Installs a Prometheus agent for serverless Kubernetes (ASK) clusters or Elastic Compute Service (ECS) clusters.</p>
      * 
+     * @deprecated OpenAPI InstallManagedPrometheus is deprecated
+     * 
      * @param request InstallManagedPrometheusRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return InstallManagedPrometheusResponse
      */
+    @Deprecated
+    // Deprecated
     public InstallManagedPrometheusResponse installManagedPrometheusWithOptions(InstallManagedPrometheusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -8702,9 +8560,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Installs a Prometheus agent for serverless Kubernetes (ASK) clusters or Elastic Compute Service (ECS) clusters.</p>
      * 
+     * @deprecated OpenAPI InstallManagedPrometheus is deprecated
+     * 
      * @param request InstallManagedPrometheusRequest
      * @return InstallManagedPrometheusResponse
      */
+    @Deprecated
+    // Deprecated
     public InstallManagedPrometheusResponse installManagedPrometheus(InstallManagedPrometheusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.installManagedPrometheusWithOptions(request, runtime);
@@ -8975,6 +8837,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.integrationType)) {
             query.put("IntegrationType", request.integrationType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.owner)) {
+            query.put("Owner", request.owner);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.page)) {
@@ -9629,6 +9495,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.feePackage)) {
             query.put("FeePackage", request.feePackage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.filterRegionIds)) {
+            query.put("FilterRegionIds", request.filterRegionIds);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -10388,54 +10258,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListPrometheusMonitoringResponse listPrometheusMonitoring(ListPrometheusMonitoringRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listPrometheusMonitoringWithOptions(request, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Queries the remote write configuration items of a Prometheus instance.</p>
-     * 
-     * @param request ListPrometheusRemoteWritesRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return ListPrometheusRemoteWritesResponse
-     */
-    public ListPrometheusRemoteWritesResponse listPrometheusRemoteWritesWithOptions(ListPrometheusRemoteWritesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
-            query.put("ClusterId", request.clusterId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
-            query.put("RegionId", request.regionId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ListPrometheusRemoteWrites"),
-            new TeaPair("version", "2019-08-08"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListPrometheusRemoteWritesResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Queries the remote write configuration items of a Prometheus instance.</p>
-     * 
-     * @param request ListPrometheusRemoteWritesRequest
-     * @return ListPrometheusRemoteWritesResponse
-     */
-    public ListPrometheusRemoteWritesResponse listPrometheusRemoteWrites(ListPrometheusRemoteWritesRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.listPrometheusRemoteWritesWithOptions(request, runtime);
     }
 
     /**
@@ -12953,10 +12775,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Removes a Prometheus instance from a serverless Kubernetes (ASK) cluster or an Elastic Compute Service (ECS) instance.</p>
      * 
+     * @deprecated OpenAPI UninstallManagedPrometheus is deprecated
+     * 
      * @param request UninstallManagedPrometheusRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UninstallManagedPrometheusResponse
      */
+    @Deprecated
+    // Deprecated
     public UninstallManagedPrometheusResponse uninstallManagedPrometheusWithOptions(UninstallManagedPrometheusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -13004,9 +12830,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Removes a Prometheus instance from a serverless Kubernetes (ASK) cluster or an Elastic Compute Service (ECS) instance.</p>
      * 
+     * @deprecated OpenAPI UninstallManagedPrometheus is deprecated
+     * 
      * @param request UninstallManagedPrometheusRequest
      * @return UninstallManagedPrometheusResponse
      */
+    @Deprecated
+    // Deprecated
     public UninstallManagedPrometheusResponse uninstallManagedPrometheus(UninstallManagedPrometheusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.uninstallManagedPrometheusWithOptions(request, runtime);
@@ -14292,64 +14122,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdatePrometheusMonitoringStatusResponse updatePrometheusMonitoringStatus(UpdatePrometheusMonitoringStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updatePrometheusMonitoringStatusWithOptions(request, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Modifies a remote write configuration item of a Prometheus instance for Container Service or a Prometheus instance for ECS.</p>
-     * 
-     * @param request UpdatePrometheusRemoteWriteRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return UpdatePrometheusRemoteWriteResponse
-     */
-    public UpdatePrometheusRemoteWriteResponse updatePrometheusRemoteWriteWithOptions(UpdatePrometheusRemoteWriteRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
-            query.put("ClusterId", request.clusterId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
-            query.put("RegionId", request.regionId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.remoteWriteName)) {
-            query.put("RemoteWriteName", request.remoteWriteName);
-        }
-
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.remoteWriteYaml)) {
-            body.put("RemoteWriteYaml", request.remoteWriteYaml);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "UpdatePrometheusRemoteWrite"),
-            new TeaPair("version", "2019-08-08"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdatePrometheusRemoteWriteResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Modifies a remote write configuration item of a Prometheus instance for Container Service or a Prometheus instance for ECS.</p>
-     * 
-     * @param request UpdatePrometheusRemoteWriteRequest
-     * @return UpdatePrometheusRemoteWriteResponse
-     */
-    public UpdatePrometheusRemoteWriteResponse updatePrometheusRemoteWrite(UpdatePrometheusRemoteWriteRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.updatePrometheusRemoteWriteWithOptions(request, runtime);
     }
 
     /**

@@ -11,13 +11,16 @@ public class QueryCommercialUsageResponseBody extends TeaModel {
      * <p>200</p>
      */
     @NameInMap("Code")
-    public String code;
+    public Integer code;
 
     /**
      * <p>The returned struct.</p>
      */
     @NameInMap("Data")
     public QueryCommercialUsageResponseBodyData data;
+
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
 
     /**
      * <p>The error message returned if the request failed.</p>
@@ -55,11 +58,11 @@ public class QueryCommercialUsageResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public QueryCommercialUsageResponseBody setCode(String code) {
+    public QueryCommercialUsageResponseBody setCode(Integer code) {
         this.code = code;
         return this;
     }
-    public String getCode() {
+    public Integer getCode() {
         return this.code;
     }
 
@@ -69,6 +72,14 @@ public class QueryCommercialUsageResponseBody extends TeaModel {
     }
     public QueryCommercialUsageResponseBodyData getData() {
         return this.data;
+    }
+
+    public QueryCommercialUsageResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
     public QueryCommercialUsageResponseBody setMessage(String message) {

@@ -78,6 +78,9 @@ public class ListEnvironmentsShrinkRequest extends TeaModel {
     @NameInMap("FeePackage")
     public String feePackage;
 
+    @NameInMap("FilterRegionIds")
+    public String filterRegionIds;
+
     /**
      * <p>The region ID.</p>
      * 
@@ -137,6 +140,14 @@ public class ListEnvironmentsShrinkRequest extends TeaModel {
     }
     public String getFeePackage() {
         return this.feePackage;
+    }
+
+    public ListEnvironmentsShrinkRequest setFilterRegionIds(String filterRegionIds) {
+        this.filterRegionIds = filterRegionIds;
+        return this;
+    }
+    public String getFilterRegionIds() {
+        return this.filterRegionIds;
     }
 
     public ListEnvironmentsShrinkRequest setRegionId(String regionId) {
