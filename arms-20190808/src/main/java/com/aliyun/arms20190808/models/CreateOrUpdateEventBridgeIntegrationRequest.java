@@ -73,6 +73,7 @@ public class CreateOrUpdateEventBridgeIntegrationRequest extends TeaModel {
 
     /**
      * <p>The name of the EventBridge integration.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>EventBridge_Test</p>

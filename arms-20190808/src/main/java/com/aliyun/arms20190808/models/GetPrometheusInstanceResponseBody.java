@@ -178,6 +178,12 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         @NameInMap("ClusterType")
         public String clusterType;
 
+        @NameInMap("DbInstanceStatus")
+        public String dbInstanceStatus;
+
+        @NameInMap("EnableAuthToken")
+        public String enableAuthToken;
+
         /**
          * <p>The ID of the Grafana workspace.</p>
          * 
@@ -217,6 +223,9 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
          */
         @NameInMap("PaymentType")
         public String paymentType;
+
+        @NameInMap("Product")
+        public String product;
 
         /**
          * <p>The public URL for Pushgateway.</p>
@@ -326,6 +335,9 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         @NameInMap("SubClustersJson")
         public String subClustersJson;
 
+        @NameInMap("SurpportAuthTypes")
+        public java.util.List<String> surpportAuthTypes;
+
         /**
          * <p>The tags of the instance.</p>
          */
@@ -412,6 +424,22 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             return this.clusterType;
         }
 
+        public GetPrometheusInstanceResponseBodyData setDbInstanceStatus(String dbInstanceStatus) {
+            this.dbInstanceStatus = dbInstanceStatus;
+            return this;
+        }
+        public String getDbInstanceStatus() {
+            return this.dbInstanceStatus;
+        }
+
+        public GetPrometheusInstanceResponseBodyData setEnableAuthToken(String enableAuthToken) {
+            this.enableAuthToken = enableAuthToken;
+            return this;
+        }
+        public String getEnableAuthToken() {
+            return this.enableAuthToken;
+        }
+
         public GetPrometheusInstanceResponseBodyData setGrafanaInstanceId(String grafanaInstanceId) {
             this.grafanaInstanceId = grafanaInstanceId;
             return this;
@@ -442,6 +470,14 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         }
         public String getPaymentType() {
             return this.paymentType;
+        }
+
+        public GetPrometheusInstanceResponseBodyData setProduct(String product) {
+            this.product = product;
+            return this;
+        }
+        public String getProduct() {
+            return this.product;
         }
 
         public GetPrometheusInstanceResponseBodyData setPushGatewayInterUrl(String pushGatewayInterUrl) {
@@ -538,6 +574,14 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         }
         public String getSubClustersJson() {
             return this.subClustersJson;
+        }
+
+        public GetPrometheusInstanceResponseBodyData setSurpportAuthTypes(java.util.List<String> surpportAuthTypes) {
+            this.surpportAuthTypes = surpportAuthTypes;
+            return this;
+        }
+        public java.util.List<String> getSurpportAuthTypes() {
+            return this.surpportAuthTypes;
         }
 
         public GetPrometheusInstanceResponseBodyData setTags(java.util.List<GetPrometheusInstanceResponseBodyDataTags> tags) {

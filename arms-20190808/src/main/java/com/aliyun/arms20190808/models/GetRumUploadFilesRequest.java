@@ -32,6 +32,15 @@ public class GetRumUploadFilesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The version ID. When this field is not provided, the default response includes all versions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.0.0</p>
+     */
+    @NameInMap("VersionId")
+    public String versionId;
+
     public static GetRumUploadFilesRequest build(java.util.Map<String, ?> map) throws Exception {
         GetRumUploadFilesRequest self = new GetRumUploadFilesRequest();
         return TeaModel.build(map, self);
@@ -59,6 +68,14 @@ public class GetRumUploadFilesRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public GetRumUploadFilesRequest setVersionId(String versionId) {
+        this.versionId = versionId;
+        return this;
+    }
+    public String getVersionId() {
+        return this.versionId;
     }
 
 }

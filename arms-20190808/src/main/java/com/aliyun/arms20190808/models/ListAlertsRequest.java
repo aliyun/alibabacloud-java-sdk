@@ -61,6 +61,9 @@ public class ListAlertsRequest extends TeaModel {
     @NameInMap("IntegrationType")
     public String integrationType;
 
+    @NameInMap("Owner")
+    public String owner;
+
     /**
      * <p>The number of the page to return.</p>
      * <p>This parameter is required.</p>
@@ -183,6 +186,14 @@ public class ListAlertsRequest extends TeaModel {
     }
     public String getIntegrationType() {
         return this.integrationType;
+    }
+
+    public ListAlertsRequest setOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    public String getOwner() {
+        return this.owner;
     }
 
     public ListAlertsRequest setPage(Long page) {
