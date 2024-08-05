@@ -49,6 +49,9 @@ public class GetInstanceResponseBody extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("OperatingTool")
+    public GetInstanceResponseBodyOperatingTool operatingTool;
+
     /**
      * <strong>example:</strong>
      * <p>cn-shenzhen</p>
@@ -136,6 +139,14 @@ public class GetInstanceResponseBody extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public GetInstanceResponseBody setOperatingTool(GetInstanceResponseBodyOperatingTool operatingTool) {
+        this.operatingTool = operatingTool;
+        return this;
+    }
+    public GetInstanceResponseBodyOperatingTool getOperatingTool() {
+        return this.operatingTool;
     }
 
     public GetInstanceResponseBody setRegionId(String regionId) {
@@ -354,6 +365,25 @@ public class GetInstanceResponseBody extends TeaModel {
         }
         public java.util.List<GetInstanceResponseBodyConfigMonitors> getMonitors() {
             return this.monitors;
+        }
+
+    }
+
+    public static class GetInstanceResponseBodyOperatingTool extends TeaModel {
+        @NameInMap("IsEnable")
+        public Boolean isEnable;
+
+        public static GetInstanceResponseBodyOperatingTool build(java.util.Map<String, ?> map) throws Exception {
+            GetInstanceResponseBodyOperatingTool self = new GetInstanceResponseBodyOperatingTool();
+            return TeaModel.build(map, self);
+        }
+
+        public GetInstanceResponseBodyOperatingTool setIsEnable(Boolean isEnable) {
+            this.isEnable = isEnable;
+            return this;
+        }
+        public Boolean getIsEnable() {
+            return this.isEnable;
         }
 
     }
