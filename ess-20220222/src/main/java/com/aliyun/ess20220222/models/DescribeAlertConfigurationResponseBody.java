@@ -14,7 +14,7 @@ public class DescribeAlertConfigurationResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The status of the scaling activities that prompt text message or email notifications.</p>
+     * <p>The status of the scaling activities that trigger text message, internal message, or email-based notifications.</p>
      */
     @NameInMap("ScaleStatuses")
     public java.util.List<String> scaleStatuses;

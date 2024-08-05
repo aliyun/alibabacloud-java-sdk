@@ -30,9 +30,17 @@ public class DescribeScheduledTasksRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Weekly</p>
+     */
     @NameInMap("RecurrenceType")
     public String recurrenceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1,2,3</p>
+     */
     @NameInMap("RecurrenceValue")
     public String recurrenceValue;
 
@@ -79,9 +87,17 @@ public class DescribeScheduledTasksRequest extends TeaModel {
     @NameInMap("ScheduledTaskNames")
     public java.util.List<String> scheduledTaskNames;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("TaskEnabled")
     public Boolean taskEnabled;
 
+    /**
+     * <strong>example:</strong>
+     * <p>scheduled****</p>
+     */
     @NameInMap("TaskName")
     public String taskName;
 

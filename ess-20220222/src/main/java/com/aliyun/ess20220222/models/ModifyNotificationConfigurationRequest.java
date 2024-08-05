@@ -58,6 +58,9 @@ public class ModifyNotificationConfigurationRequest extends TeaModel {
     @NameInMap("ScalingGroupId")
     public String scalingGroupId;
 
+    @NameInMap("TimeZone")
+    public String timeZone;
+
     public static ModifyNotificationConfigurationRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyNotificationConfigurationRequest self = new ModifyNotificationConfigurationRequest();
         return TeaModel.build(map, self);
@@ -109,6 +112,14 @@ public class ModifyNotificationConfigurationRequest extends TeaModel {
     }
     public String getScalingGroupId() {
         return this.scalingGroupId;
+    }
+
+    public ModifyNotificationConfigurationRequest setTimeZone(String timeZone) {
+        this.timeZone = timeZone;
+        return this;
+    }
+    public String getTimeZone() {
+        return this.timeZone;
     }
 
 }

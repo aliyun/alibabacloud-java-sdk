@@ -14,7 +14,7 @@ public class DetachAlbServerGroupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the scaling activity in which the ALB server group is disassociated from the scaling group and the ECS instances in the ALB server group are removed from the ALB server group. This parameter is returned only after you set the <code>ForceDetach</code> parameter to <code>true</code>.</p>
+     * <p>The ID of the scaling activity during which the ALB server group is detached from the scaling group and the existing ECS instances are removed from the ALB server group. This parameter has a return value only if you set <code>ForceDetach</code> to <code>true</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>asa-2ze6wxj8vsohn6j9****</p>

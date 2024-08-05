@@ -57,15 +57,49 @@ public class DescribePatternTypesRequest extends TeaModel {
     @NameInMap("CoresList")
     public java.util.List<Integer> coresList;
 
+    /**
+     * <p>The CPU architectures of the instance types. Valid values:</p>
+     * <blockquote>
+     * <p> You can specify 1 to 2 CPU architectures.</p>
+     * </blockquote>
+     * <ul>
+     * <li>x86</li>
+     * <li>Arm</li>
+     * </ul>
+     */
     @NameInMap("CpuArchitectures")
     public java.util.List<String> cpuArchitectures;
 
     @NameInMap("ExcludedInstanceType")
     public java.util.List<String> excludedInstanceType;
 
+    /**
+     * <p>The GPU models.</p>
+     */
     @NameInMap("GpuSpecs")
     public java.util.List<String> gpuSpecs;
 
+    /**
+     * <p>The categories of the instance types. Valid values:</p>
+     * <ul>
+     * <li>General-purpose</li>
+     * <li>Compute-optimized</li>
+     * <li>Memory-optimized</li>
+     * <li>Big data</li>
+     * <li>Local SSDs</li>
+     * <li>High Clock Speed</li>
+     * <li>Enhanced</li>
+     * <li>Shared</li>
+     * <li>Compute-optimized with GPU</li>
+     * <li>Visual Compute-optimized</li>
+     * <li>Heterogeneous Service</li>
+     * <li>Compute-optimized with FPGA</li>
+     * <li>Compute-optimized with NPU</li>
+     * <li>ECS Bare Metal</li>
+     * <li>Super Computing Cluster</li>
+     * <li>High Performance Compute</li>
+     * </ul>
+     */
     @NameInMap("InstanceCategories")
     public java.util.List<String> instanceCategories;
 
@@ -83,6 +117,9 @@ public class DescribePatternTypesRequest extends TeaModel {
     @NameInMap("InstanceFamilyLevel")
     public String instanceFamilyLevel;
 
+    /**
+     * <p>The instance families that you want to query. You can query 1 to 10 instance families in each call.</p>
+     */
     @NameInMap("InstanceTypeFamilies")
     public java.util.List<String> instanceTypeFamilies;
 
@@ -96,6 +133,8 @@ public class DescribePatternTypesRequest extends TeaModel {
     public Float maxPrice;
 
     /**
+     * <p>The maximum number of vCPUs per instance type.</p>
+     * 
      * <strong>example:</strong>
      * <p>4</p>
      */
@@ -103,6 +142,8 @@ public class DescribePatternTypesRequest extends TeaModel {
     public Integer maximumCpuCoreCount;
 
     /**
+     * <p>The maximum number of GPUs per instance. The value must be a positive integer.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -110,6 +151,8 @@ public class DescribePatternTypesRequest extends TeaModel {
     public Integer maximumGpuAmount;
 
     /**
+     * <p>The maximum memory size per instance. Unit: GiB.</p>
+     * 
      * <strong>example:</strong>
      * <p>4</p>
      */
@@ -132,6 +175,8 @@ public class DescribePatternTypesRequest extends TeaModel {
     public java.util.List<Float> memoryList;
 
     /**
+     * <p>The baseline vCPU computing performance (overall baseline performance of all vCPUs) per t5 or t6 burstable instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>12</p>
      */
@@ -139,6 +184,8 @@ public class DescribePatternTypesRequest extends TeaModel {
     public Integer minimumBaselineCredit;
 
     /**
+     * <p>The minimum number of vCPUs per instance type.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -146,6 +193,8 @@ public class DescribePatternTypesRequest extends TeaModel {
     public Integer minimumCpuCoreCount;
 
     /**
+     * <p>The minimum number of IPv6 addresses per ENI.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -153,6 +202,8 @@ public class DescribePatternTypesRequest extends TeaModel {
     public Integer minimumEniIpv6AddressQuantity;
 
     /**
+     * <p>The minimum number of IPv4 addresses per ENI.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -160,6 +211,8 @@ public class DescribePatternTypesRequest extends TeaModel {
     public Integer minimumEniPrivateIpAddressQuantity;
 
     /**
+     * <p>The minimum number of elastic network interfaces (ENIs) per instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -167,6 +220,8 @@ public class DescribePatternTypesRequest extends TeaModel {
     public Integer minimumEniQuantity;
 
     /**
+     * <p>The minimum number of GPUs per instance. The value must be a positive integer.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -174,6 +229,8 @@ public class DescribePatternTypesRequest extends TeaModel {
     public Integer minimumGpuAmount;
 
     /**
+     * <p>The initial vCPU credits per t5 or t6 burstable instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>12</p>
      */
@@ -181,12 +238,17 @@ public class DescribePatternTypesRequest extends TeaModel {
     public Integer minimumInitialCredit;
 
     /**
+     * <p>The minimum memory size per instance. Unit: GiB.</p>
+     * 
      * <strong>example:</strong>
      * <p>4</p>
      */
     @NameInMap("MinimumMemorySize")
     public Float minimumMemorySize;
 
+    /**
+     * <p>The processor models of the instance types. You can specify 1 to 10 processor models.</p>
+     */
     @NameInMap("PhysicalProcessorModels")
     public java.util.List<String> physicalProcessorModels;
 
@@ -216,7 +278,7 @@ public class DescribePatternTypesRequest extends TeaModel {
     public String spotStrategy;
 
     /**
-     * <p>The vSwitch IDs.</p>
+     * <p>The IDs of the vSwitches.</p>
      */
     @NameInMap("VSwitchId")
     public java.util.List<String> vSwitchId;

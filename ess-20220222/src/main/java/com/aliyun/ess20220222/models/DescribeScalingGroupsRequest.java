@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeScalingGroupsRequest extends TeaModel {
     /**
+     * <p>The type of instances that are managed by the scaling group. Valid values:</p>
+     * <ul>
+     * <li>ECS: ECS instances</li>
+     * <li>ECI: elastic container instances</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>ECS</p>
      */

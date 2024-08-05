@@ -425,7 +425,7 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
     public Long terminationGracePeriodSeconds;
 
     /**
-     * <p>Information about the volumes.</p>
+     * <p>The volumes.</p>
      */
     @NameInMap("Volumes")
     public java.util.List<ModifyEciScalingConfigurationRequestVolumes> volumes;
@@ -2970,7 +2970,7 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
 
     public static class ModifyEciScalingConfigurationRequestVolumesConfigFileVolumeConfigFileToPath extends TeaModel {
         /**
-         * <p>The content of the configuration file, which can be up to 32 KB in size.</p>
+         * <p>The content of the configuration file (32 KB).</p>
          * 
          * <strong>example:</strong>
          * <p>bGl1bWk=</p>
@@ -2979,7 +2979,7 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
         public String content;
 
         /**
-         * <p>The permissions on ConfigFileVolume.</p>
+         * <p>The permissions on the ConfigFile volume.</p>
          * 
          * <strong>example:</strong>
          * <p>0644</p>
@@ -3044,13 +3044,13 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
         public ModifyEciScalingConfigurationRequestVolumesNFSVolume NFSVolume;
 
         /**
-         * <p>The paths to the configuration files.</p>
+         * <p>The paths to configuration files.</p>
          */
         @NameInMap("ConfigFileVolumeConfigFileToPath")
         public java.util.List<ModifyEciScalingConfigurationRequestVolumesConfigFileVolumeConfigFileToPath> configFileVolumeConfigFileToPath;
 
         /**
-         * <p>The default permissions on ConfigFileVolume.</p>
+         * <p>The default permissions on the ConfigFile volume.</p>
          * 
          * <strong>example:</strong>
          * <p>0644</p>
@@ -3059,7 +3059,7 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
         public Integer configFileVolumeDefaultMode;
 
         /**
-         * <p>The name of the volume.</p>
+         * <p>The volume name.</p>
          * 
          * <strong>example:</strong>
          * <p>default-volume1</p>
@@ -3068,7 +3068,7 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The type of HostPathVolume. Examples: File, Directory, and Socket.</p>
+         * <p>The type of the Host directory. Examples: File, Directory, and Socket.</p>
          * 
          * <strong>example:</strong>
          * <p>EmptyDirVolume</p>

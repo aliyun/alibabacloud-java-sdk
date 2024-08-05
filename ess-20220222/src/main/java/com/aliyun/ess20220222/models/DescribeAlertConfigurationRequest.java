@@ -8,7 +8,7 @@ public class DescribeAlertConfigurationRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the event-triggered task.</p>
+     * <p>The region ID of the scaling group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
