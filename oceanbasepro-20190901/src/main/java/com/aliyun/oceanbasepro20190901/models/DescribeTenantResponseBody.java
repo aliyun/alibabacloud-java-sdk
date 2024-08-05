@@ -1332,7 +1332,7 @@ public class DescribeTenantResponseBody extends TeaModel {
         public String instanceType;
 
         @NameInMap("LowerCaseTableNames")
-        public byte[] lowerCaseTableNames;
+        public Integer lowerCaseTableNames;
 
         /**
          * <pre><code>http(s)://[Endpoint]/?Action=DescribeTenant
@@ -1669,11 +1669,11 @@ public class DescribeTenantResponseBody extends TeaModel {
             return this.instanceType;
         }
 
-        public DescribeTenantResponseBodyTenant setLowerCaseTableNames(byte[] lowerCaseTableNames) {
+        public DescribeTenantResponseBodyTenant setLowerCaseTableNames(Integer lowerCaseTableNames) {
             this.lowerCaseTableNames = lowerCaseTableNames;
             return this;
         }
-        public byte[] getLowerCaseTableNames() {
+        public Integer getLowerCaseTableNames() {
             return this.lowerCaseTableNames;
         }
 
