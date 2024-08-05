@@ -4,6 +4,10 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribePluginSchemasRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>en</p>
+     */
     @NameInMap("Language")
     public String language;
 

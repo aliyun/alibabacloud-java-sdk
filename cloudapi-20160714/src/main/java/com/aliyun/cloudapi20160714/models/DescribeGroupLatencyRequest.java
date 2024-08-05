@@ -6,16 +6,20 @@ import com.aliyun.tea.*;
 public class DescribeGroupLatencyRequest extends TeaModel {
     /**
      * <p>The end time of the time range to query. The time follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-04-14T06:26:14Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The ID of the API group.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d825094fdd114a869f5adb443d9b7ead</p>
      */
     @NameInMap("GroupId")
     public String groupId;
@@ -25,20 +29,25 @@ public class DescribeGroupLatencyRequest extends TeaModel {
 
     /**
      * <p>The environment in which you want to perform the query. Valid values:</p>
-     * <br>
-     * <p>*   **RELEASE**: the production environment</p>
-     * <p>*   **PRE**: the staging environment</p>
-     * <p>*   **TEST**: the test environment</p>
-     * <br>
+     * <ul>
+     * <li><strong>RELEASE</strong>: the production environment</li>
+     * <li><strong>PRE</strong>: the staging environment</li>
+     * <li><strong>TEST</strong>: the test environment</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RELEASE</p>
      */
     @NameInMap("StageName")
     public String stageName;
 
     /**
      * <p>The start time of the time range to query. The time follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-03-30T16:00:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;

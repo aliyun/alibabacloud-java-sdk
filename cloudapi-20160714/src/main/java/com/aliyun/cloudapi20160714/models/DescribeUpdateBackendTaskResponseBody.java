@@ -7,6 +7,10 @@ public class DescribeUpdateBackendTaskResponseBody extends TeaModel {
     @NameInMap("ApiUpdateBackendResults")
     public DescribeUpdateBackendTaskResponseBodyApiUpdateBackendResults apiUpdateBackendResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BZ016</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,30 +36,66 @@ public class DescribeUpdateBackendTaskResponseBody extends TeaModel {
     }
 
     public static class DescribeUpdateBackendTaskResponseBodyApiUpdateBackendResultsApiUpdateBackendResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>checkin_linechart_today</p>
+         */
         @NameInMap("ApiName")
         public String apiName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>14faa7ba0572445685866ddb6a6f19da</p>
+         */
         @NameInMap("ApiUid")
         public String apiUid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>c09b078bcb8f4ade9677bd8b18cdf43f</p>
+         */
         @NameInMap("BackendId")
         public String backendId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Failed</p>
+         */
         @NameInMap("ErrorMsg")
         public String errorMsg;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3013a55c0c44483f984d26df27120513</p>
+         */
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>imotob1</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>d8f2f54f3309458b8aaceb36c01c2dd9</p>
+         */
         @NameInMap("StageId")
         public String stageId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>RELEASE</p>
+         */
         @NameInMap("StageName")
         public String stageName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OVER</p>
+         */
         @NameInMap("UpdateStatus")
         public String updateStatus;
 

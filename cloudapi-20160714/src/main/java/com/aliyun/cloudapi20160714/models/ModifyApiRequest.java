@@ -6,51 +6,71 @@ import com.aliyun.tea.*;
 public class ModifyApiRequest extends TeaModel {
     /**
      * <p>The type of the two-way communication API. Valid values:</p>
-     * <br>
-     * <p>*   **COMMON**: general APIs</p>
-     * <p>*   **REGISTER**: registered APIs</p>
-     * <p>*   **UNREGISTER**: unregistered APIs</p>
-     * <p>*   **NOTIFY**: downstream notification</p>
+     * <ul>
+     * <li><strong>COMMON</strong>: general APIs</li>
+     * <li><strong>REGISTER</strong>: registered APIs</li>
+     * <li><strong>UNREGISTER</strong>: unregistered APIs</li>
+     * <li><strong>NOTIFY</strong>: downstream notification</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>HmacSHA256</p>
      */
     @NameInMap("AllowSignatureMethod")
     public String allowSignatureMethod;
 
     /**
      * <p>The ID of the API.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8afff6c8c4c6447abb035812e4d66b65</p>
      */
     @NameInMap("ApiId")
     public String apiId;
 
     /**
      * <p>The name of the API. The name must be unique within the API group. The name must be 4 to 50 characters in length. It must start with a letter and can contain letters, digits, and underscores (_).</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ApiName</p>
      */
     @NameInMap("ApiName")
     public String apiName;
 
     /**
      * <p>The ID of the backend service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DEFAULT</p>
      */
     @NameInMap("AppCodeAuthType")
     public String appCodeAuthType;
 
     /**
      * <p>The configuration items of API requests sent by the consumer to API Gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>APP</p>
      */
     @NameInMap("AuthType")
     public String authType;
 
     /**
      * <p>Configuration Mode</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("BackendEnable")
     public Boolean backendEnable;
 
     /**
      * <p>Specifies whether to enable backend services.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0d105f80a8f340408bd34954d4e4ff22</p>
      */
     @NameInMap("BackendId")
     public String backendId;
@@ -60,17 +80,24 @@ public class ModifyApiRequest extends TeaModel {
 
     /**
      * <p>The description of the API. The description can be up to 180 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Api description</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The AppCode authentication type supported. Valid values:</p>
-     * <br>
-     * <p>*   DEFAULT: supported after being made available in Alibaba Cloud Marketplace</p>
-     * <p>*   DISABLE: not supported</p>
-     * <p>*   HEADER : supported only in the Header parameter</p>
-     * <p>*   HEADER_QUERY: supported in the Header or Query parameter</p>
+     * <ul>
+     * <li>DEFAULT: supported after being made available in Alibaba Cloud Marketplace</li>
+     * <li>DISABLE: not supported</li>
+     * <li>HEADER : supported only in the Header parameter</li>
+     * <li>HEADER_QUERY: supported in the Header or Query parameter</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("DisableInternet")
     public Boolean disableInternet;
@@ -82,33 +109,48 @@ public class ModifyApiRequest extends TeaModel {
     public String failResultSample;
 
     /**
-     * <p>*   Specifies whether to set DisableInternet to **true** to limit API calls to within the VPC.</p>
-     * <p>*   If you set DisableInternet to **false**, the limit if lifted.</p>
-     * <br>
-     * <p>>  If you do not set this parameter, the original value is used.</p>
+     * <ul>
+     * <li>Specifies whether to set DisableInternet to <strong>true</strong> to limit API calls to within the VPC.</li>
+     * <li>If you set DisableInternet to <strong>false</strong>, the limit if lifted.</li>
+     * </ul>
+     * <blockquote>
+     * <p> If you do not set this parameter, the original value is used.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("ForceNonceCheck")
     public Boolean forceNonceCheck;
 
     /**
      * <p>The ID of the API group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>927d50c0f2e54b359919923d908bb015</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
      * <p>The client-side request signature method of the API. Valid values:</p>
-     * <br>
-     * <p>*   HmacSHA256</p>
-     * <p>*   HmacSHA1,HmacSHA256</p>
+     * <ul>
+     * <li>HmacSHA256</li>
+     * <li>HmacSHA1,HmacSHA256</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;OpenIdApiType\&quot;:\&quot;IDTOKEN\&quot;,\&quot;PublicKey\&quot;:\&quot;lzlj1573\&quot;,\&quot;IdTokenParamName\&quot;:\&quot;\&quot;,\&quot;PublicKeyId\&quot;:\&quot;lzljorders\&quot;}</p>
      */
     @NameInMap("OpenIdConnectConfig")
     public String openIdConnectConfig;
 
     /**
      * <p>The configuration items of API requests sent by API Gateway to the backend service.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;RequestProtocol&quot;:&quot;HTTP&quot;,&quot;RequestHttpMethod&quot;:&quot;GET&quot;,&quot;RequestPath&quot;:&quot;/v3/getUserTest/[userId]&quot;,&quot;BodyFormat&quot;:&quot;FORM&quot;,&quot;PostBodyDescription&quot;:&quot;&quot;}</p>
      */
     @NameInMap("RequestConfig")
     public String requestConfig;
@@ -117,8 +159,13 @@ public class ModifyApiRequest extends TeaModel {
     public String requestParameters;
 
     /**
-     * <p>*   Specifies whether to set **ForceNonceCheck** to **true** to force the check of X-Ca-Nonce during the request. This is the unique identifier of the request and is generally identified by UUID. After receiving this parameter, API Gateway verifies the validity of this parameter. The same value can be used only once within 15 minutes. This helps prevent replay attacks.</p>
-     * <p>*   If you set **ForceNonceCheck** to **false**, the check is not performed. If you do not set this parameter, the original value is used.</p>
+     * <ul>
+     * <li>Specifies whether to set <strong>ForceNonceCheck</strong> to <strong>true</strong> to force the check of X-Ca-Nonce during the request. This is the unique identifier of the request and is generally identified by UUID. After receiving this parameter, API Gateway verifies the validity of this parameter. The same value can be used only once within 15 minutes. This helps prevent replay attacks.</li>
+     * <li>If you set <strong>ForceNonceCheck</strong> to <strong>false</strong>, the check is not performed. If you do not set this parameter, the original value is used.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
      */
     @NameInMap("ResultBodyModel")
     public String resultBodyModel;
@@ -131,6 +178,9 @@ public class ModifyApiRequest extends TeaModel {
 
     /**
      * <p>The sample response from the backend service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>HTML</p>
      */
     @NameInMap("ResultType")
     public String resultType;
@@ -140,8 +190,10 @@ public class ModifyApiRequest extends TeaModel {
 
     /**
      * <p>The parameters of API requests sent by the consumer to API Gateway.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;ServiceProtocol&quot;:&quot;HTTP&quot;,&quot;ServiceHttpMethod&quot;:&quot;GET&quot;,&quot;ServiceAddress&quot;:&quot;<a href="http://www.customerdomain.com%22,%22ServiceTimeout%22:%221000%22,%22ServicePath%22:%22/v3/getUserTest/%5BuserId%5D%22%7D">http://www.customerdomain.com&quot;,&quot;ServiceTimeout&quot;:&quot;1000&quot;,&quot;ServicePath&quot;:&quot;/v3/getUserTest/[userId]&quot;}</a></p>
      */
     @NameInMap("ServiceConfig")
     public String serviceConfig;
@@ -157,17 +209,23 @@ public class ModifyApiRequest extends TeaModel {
 
     /**
      * <p>Specifies whether the API is public. Valid values:</p>
-     * <br>
-     * <p>*   **PUBLIC**: Make the API public. If you set this parameter to PUBLIC, this API is displayed on the APIs page for all users after the API is published to the production environment.</p>
-     * <p>*   **PRIVATE**: Make the API private. Private APIs are not displayed in the Alibaba Cloud Marketplace after the API group to which they belong is made available.</p>
-     * <br>
+     * <ul>
+     * <li><strong>PUBLIC</strong>: Make the API public. If you set this parameter to PUBLIC, this API is displayed on the APIs page for all users after the API is published to the production environment.</li>
+     * <li><strong>PRIVATE</strong>: Make the API private. Private APIs are not displayed in the Alibaba Cloud Marketplace after the API group to which they belong is made available.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PUBLIC</p>
      */
     @NameInMap("Visibility")
     public String visibility;
 
     /**
      * <p>The returned description of the API.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>COMMON</p>
      */
     @NameInMap("WebSocketApiType")
     public String webSocketApiType;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ReactivateDomainResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6EF60BEC-0242-43AF-BB20-270359FB54A7</p>
      */
     @NameInMap("RequestId")
     public String requestId;

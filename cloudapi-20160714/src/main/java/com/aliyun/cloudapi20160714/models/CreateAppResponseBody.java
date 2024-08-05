@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class CreateAppResponseBody extends TeaModel {
     /**
      * <p>The unique ID of the application.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20112314518278</p>
      */
     @NameInMap("AppId")
     public Long appId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BA20890E-75C7-41BC-9C8B-73276B58F550</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the tag exists. If the value is **true**, the tag exists. If the value is **false**, the tag does not exist.</p>
+     * <p>Indicates whether the tag exists. If the value is <strong>true</strong>, the tag exists. If the value is <strong>false</strong>, the tag does not exist.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("TagStatus")
     public Boolean tagStatus;

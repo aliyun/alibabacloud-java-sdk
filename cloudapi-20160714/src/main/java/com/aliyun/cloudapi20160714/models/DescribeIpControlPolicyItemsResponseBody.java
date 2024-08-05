@@ -12,24 +12,36 @@ public class DescribeIpControlPolicyItemsResponseBody extends TeaModel {
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BZ004</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of returned entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,30 +94,45 @@ public class DescribeIpControlPolicyItemsResponseBody extends TeaModel {
     public static class DescribeIpControlPolicyItemsResponseBodyIpControlPolicyItemsIpControlPolicyItem extends TeaModel {
         /**
          * <p>The ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11112</p>
          */
         @NameInMap("AppId")
         public String appId;
 
         /**
          * <p>The IP addresses or CIDR blocks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>113.125.XX.XX;101.11.XX.XX</p>
          */
         @NameInMap("CidrIp")
         public String cidrIp;
 
         /**
          * <p>The time when the policy was created. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-01-17T06:20:08Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The time when the policy was modified. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-01-17T06:25:13Z</p>
          */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
         /**
          * <p>The ID of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>P151617000829241</p>
          */
         @NameInMap("PolicyItemId")
         public String policyItemId;

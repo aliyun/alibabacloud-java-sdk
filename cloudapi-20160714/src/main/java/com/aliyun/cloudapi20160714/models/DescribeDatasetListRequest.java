@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class DescribeDatasetListRequest extends TeaModel {
     /**
      * <p>The IDs of the datasets.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4add6a61804e47858266883e********</p>
      */
     @NameInMap("DatasetIds")
     public String datasetIds;
 
     /**
      * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -79,12 +88,18 @@ public class DescribeDatasetListRequest extends TeaModel {
     public static class DescribeDatasetListRequestTag extends TeaModel {
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value</p>
          */
         @NameInMap("Value")
         public String value;

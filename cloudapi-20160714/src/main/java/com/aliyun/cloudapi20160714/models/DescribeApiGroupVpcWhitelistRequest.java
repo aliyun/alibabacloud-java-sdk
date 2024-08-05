@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class DescribeApiGroupVpcWhitelistRequest extends TeaModel {
     /**
      * <p>The ID of the API group.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>f6c64214dc27400196eef954575d60d3</p>
      */
     @NameInMap("GroupId")
     public String groupId;

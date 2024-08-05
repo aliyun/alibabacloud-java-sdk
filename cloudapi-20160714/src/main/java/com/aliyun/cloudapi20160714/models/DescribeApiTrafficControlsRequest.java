@@ -6,26 +6,37 @@ import com.aliyun.tea.*;
 public class DescribeApiTrafficControlsRequest extends TeaModel {
     /**
      * <p>The IDs of APIs that you want to query. Separate multiple API IDs with commas (,). A maximum of 100 API IDs can be entered.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123,234</p>
      */
     @NameInMap("ApiIds")
     public String apiIds;
 
     /**
      * <p>The ID of the API group that you want to query.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0009db9c828549768a200320714b8930</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
      * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page. Maximum value: 100. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -35,11 +46,14 @@ public class DescribeApiTrafficControlsRequest extends TeaModel {
 
     /**
      * <p>The runtime environment of the API. Valid values:</p>
-     * <br>
-     * <p>*   **RELEASE**</p>
-     * <p>*   **TEST**: the test environment</p>
-     * <br>
+     * <ul>
+     * <li><strong>RELEASE</strong></li>
+     * <li><strong>TEST</strong>: the test environment</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RELEASE</p>
      */
     @NameInMap("StageName")
     public String stageName;

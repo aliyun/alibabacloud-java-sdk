@@ -4,15 +4,27 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeApisByVpcAccessRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>lynkco-iov-uat</p>
+     */
     @NameInMap("VpcName")
     public String vpcName;
 

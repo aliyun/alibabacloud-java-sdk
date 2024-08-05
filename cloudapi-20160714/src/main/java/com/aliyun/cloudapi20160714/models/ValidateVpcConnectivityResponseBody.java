@@ -6,25 +6,36 @@ import com.aliyun.tea.*;
 public class ValidateVpcConnectivityResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the API Gateway instance is connected to the port. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>True</p>
      */
     @NameInMap("Connected")
     public Boolean connected;
 
     /**
      * <p>Indicates whether the instance in the authorization is an ECS instance or an SLB instance when the instance ID in the authorization is an IP address. Valid values:</p>
-     * <br>
-     * <p>*   **ECS**</p>
-     * <p>*   **SLB**</p>
-     * <p>*   **INVALID**: The instance type corresponding to the IP address is invalid.</p>
+     * <ul>
+     * <li><strong>ECS</strong></li>
+     * <li><strong>SLB</strong></li>
+     * <li><strong>INVALID</strong>: The instance type corresponding to the IP address is invalid.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ECS</p>
      */
     @NameInMap("IpType")
     public String ipType;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9A591B5B-0EC2-5463-B8B8-1984AE3AEBF1</p>
      */
     @NameInMap("RequestId")
     public String requestId;

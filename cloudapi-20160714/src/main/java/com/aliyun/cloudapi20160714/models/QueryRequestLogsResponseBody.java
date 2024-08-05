@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class QueryRequestLogsResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CE5722A6-AE78-4741-A9B0-6C81********</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,18 +43,27 @@ public class QueryRequestLogsResponseBody extends TeaModel {
     public static class QueryRequestLogsResponseBodyRequestLogsRequestLog extends TeaModel {
         /**
          * <p>The API ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4b83229ebcab4ecd88956fb3********</p>
          */
         @NameInMap("ApiId")
         public String apiId;
 
         /**
          * <p>The API name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ApiName</p>
          */
         @NameInMap("ApiName")
         public String apiName;
 
         /**
          * <p>The application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VIPROOM_VIPROOM</p>
          */
         @NameInMap("AppName")
         public String appName;
@@ -82,54 +94,81 @@ public class QueryRequestLogsResponseBody extends TeaModel {
 
         /**
          * <p>The IP address of the client that sends the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21.237.XXX.XXX</p>
          */
         @NameInMap("ClientIp")
         public String clientIp;
 
         /**
          * <p>The X-Ca-Nonce header included in the request from the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d43df9db-3b05-4cd6-888a-1c0b********</p>
          */
         @NameInMap("ClientNonce")
         public String clientNonce;
 
         /**
          * <p>The application ID that is used by the caller.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11096****</p>
          */
         @NameInMap("ConsumerAppId")
         public String consumerAppId;
 
         /**
          * <p>The App Key that is used by the caller.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20412****</p>
          */
         @NameInMap("ConsumerAppKey")
         public String consumerAppKey;
 
         /**
          * <p>The custom trace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>95657ED9-2F6F-426F-BD99-79C8********</p>
          */
         @NameInMap("CustomTraceId")
         public String customTraceId;
 
         /**
          * <p>The requested domain name in the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>360bdd88695c48ae8085c7f2********-ap-southeast-1.alicloudapi.com</p>
          */
         @NameInMap("Domain")
         public String domain;
 
         /**
          * <p>The error code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>X500ER</p>
          */
         @NameInMap("ErrorCode")
         public String errorCode;
 
         /**
          * <p>The error message returned if the call fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Backend service connect failed <code>Timeout connecting to [/1XX.20.0.XX:8080]</code></p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         /**
          * <p>The specific error message returned by the backend service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>error msg</p>
          */
         @NameInMap("Exception")
         public String exception;
@@ -160,144 +199,216 @@ public class QueryRequestLogsResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the API group to which the API belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dc024277fe6c4cada79ba0bd6********</p>
          */
         @NameInMap("GroupId")
         public String groupId;
 
         /**
          * <p>The name of the API group to which the API belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GroupName</p>
          */
         @NameInMap("GroupName")
         public String groupName;
 
         /**
          * <p>The HTTP method that is used to send the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>POST</p>
          */
         @NameInMap("HttpMethod")
         public String httpMethod;
 
         /**
          * <p>The path of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/testPath</p>
          */
         @NameInMap("HttpPath")
         public String httpPath;
 
         /**
          * <p>The initial request ID when API Gateway calls an API. For example, if API-1 calls API-2, the initialRequestId parameter in the log of API-2 indicates the ID of the request from API-1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>95657ED9-2F6F-426F-BD99-79C8********</p>
          */
         @NameInMap("InitialRequestId")
         public String initialRequestId;
 
         /**
          * <p>The ID of the API Gateway instance to which the API belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apigateway-bj-ab2b********</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The JSON web token (JWT) claims. The claims can be configured at the group level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         @NameInMap("JwtClaims")
         public String jwtClaims;
 
         /**
          * <p>The region in which the instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("Region")
         public String region;
 
         /**
          * <p>The request body. A request body cannot exceed 1,024 bytes in size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>param=paramName</p>
          */
         @NameInMap("RequestBody")
         public String requestBody;
 
         /**
          * <p>The request headers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>content-type: application/x-www-form-urlencoded</p>
          */
         @NameInMap("RequestHeaders")
         public String requestHeaders;
 
         /**
          * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>95657ED9-2F6F-426F-BD99-79C8********</p>
          */
         @NameInMap("RequestId")
         public String requestId;
 
         /**
          * <p>The protocol used by the client to send the request. Valid values: HTTP, HTTPS, and WS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP</p>
          */
         @NameInMap("RequestProtocol")
         public String requestProtocol;
 
         /**
          * <p>The query string for the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>username=name</p>
          */
         @NameInMap("RequestQueryString")
         public String requestQueryString;
 
         /**
          * <p>The size of the request. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1923</p>
          */
         @NameInMap("RequestSize")
         public String requestSize;
 
         /**
          * <p>The request time, in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-10-29T03:59:59Z</p>
          */
         @NameInMap("RequestTime")
         public String requestTime;
 
         /**
          * <p>The response body. A response body cannot exceed 1,024 bytes in size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>param=paramName</p>
          */
         @NameInMap("ResponseBody")
         public String responseBody;
 
         /**
          * <p>The headers in the API response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>content-type: application/x-www-form-urlencoded</p>
          */
         @NameInMap("ResponseHeaders")
         public String responseHeaders;
 
         /**
          * <p>The size of returned data. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23441</p>
          */
         @NameInMap("ResponseSize")
         public String responseSize;
 
         /**
          * <p>The total time consumed to access the backend resources. The total time includes the time consumed to request a connection to the resources, the time consumed to establish the connection, and the time consumed to call the backend service. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>324</p>
          */
         @NameInMap("ServiceLatency")
         public String serviceLatency;
 
         /**
          * <p>The ID of the API environment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8a305b7f10334052a52d9156********</p>
          */
         @NameInMap("StageId")
         public String stageId;
 
         /**
          * <p>The name of the API environment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RELEASE</p>
          */
         @NameInMap("StageName")
         public String stageName;
 
         /**
          * <p>The status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         @NameInMap("StatusCode")
         public String statusCode;
 
         /**
          * <p>The total time consumed by the request. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1345</p>
          */
         @NameInMap("TotalLatency")
         public String totalLatency;
 
         /**
          * <p>The plug-in hit by the request and the relevant context.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         @NameInMap("plugin")
         public String plugin;

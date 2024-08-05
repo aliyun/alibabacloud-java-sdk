@@ -6,16 +6,20 @@ import com.aliyun.tea.*;
 public class DescribeInstanceQpsRequest extends TeaModel {
     /**
      * <p>The end time. The time follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-03-29T06:25:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The ID of the instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>apigateway-bj-6c219f1fd5d4</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -25,20 +29,25 @@ public class DescribeInstanceQpsRequest extends TeaModel {
 
     /**
      * <p>The environment in which the API is requested. Valid values:</p>
-     * <br>
-     * <p>*   **RELEASE**: the production environment</p>
-     * <p>*   **PRE**: the pre-release environment</p>
-     * <p>*   **TEST**: the test environment</p>
-     * <br>
+     * <ul>
+     * <li><strong>RELEASE</strong>: the production environment</li>
+     * <li><strong>PRE</strong>: the pre-release environment</li>
+     * <li><strong>TEST</strong>: the test environment</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RELEASE</p>
      */
     @NameInMap("StageName")
     public String stageName;
 
     /**
      * <p>The start time. The time follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-02-10T06:03:47Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;

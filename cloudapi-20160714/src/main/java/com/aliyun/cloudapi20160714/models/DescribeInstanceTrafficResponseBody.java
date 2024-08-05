@@ -12,6 +12,9 @@ public class DescribeInstanceTrafficResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BZ004</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,21 +43,31 @@ public class DescribeInstanceTrafficResponseBody extends TeaModel {
     public static class DescribeInstanceTrafficResponseBodyInstanceTrafficMonitorItem extends TeaModel {
         /**
          * <p>The metric. Valid values:</p>
-         * <br>
-         * <p>*   inbound: traffic consumed by requests</p>
-         * <p>*   outbound: traffic consumed by responses</p>
+         * <ul>
+         * <li>inbound: traffic consumed by requests</li>
+         * <li>outbound: traffic consumed by responses</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>inbound</p>
          */
         @NameInMap("Item")
         public String item;
 
         /**
          * <p>The monitoring time. The time follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-04-01T06:34:03Z</p>
          */
         @NameInMap("ItemTime")
         public String itemTime;
 
         /**
          * <p>The amount of traffic consumed by the requests and responses in the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("ItemValue")
         public String itemValue;

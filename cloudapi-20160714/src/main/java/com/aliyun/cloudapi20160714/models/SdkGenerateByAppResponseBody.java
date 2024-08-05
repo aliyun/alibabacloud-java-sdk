@@ -4,9 +4,17 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class SdkGenerateByAppResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>UEsDBBQACAAIADdwnFQAAAAAAAAAAAAAAAA2AAAAQ0FTREtfSkFWQV8xMjI3NDY2NjY0MzM0MTMzXzE2NTExMjU3MD......</p>
+     */
     @NameInMap("DownloadLink")
     public String downloadLink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>61A16D46-EC04-5288-8A18-811B0F536CC2</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

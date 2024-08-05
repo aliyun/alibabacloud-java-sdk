@@ -4,6 +4,10 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DeleteDatasetResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>048C8EFB-528F-5E97-8A3D-D17B********</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

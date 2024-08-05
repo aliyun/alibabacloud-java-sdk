@@ -5,29 +5,58 @@ import com.aliyun.tea.*;
 
 public class CreateBackendRequest extends TeaModel {
     /**
+     * <p>The name of the backend service.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testBackendService</p>
      */
     @NameInMap("BackendName")
     public String backendName;
 
     /**
+     * <p>The type of the backend service.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>HTTP</p>
      */
     @NameInMap("BackendType")
     public String backendType;
 
+    /**
+     * <p>Specifies to create a EventBridge service-linked role.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("CreateEventBridgeServiceLinkedRole")
     public Boolean createEventBridgeServiceLinkedRole;
 
+    /**
+     * <p>Specifies to create a service-linked role.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("CreateSlr")
     public Boolean createSlr;
 
+    /**
+     * <p>The description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>release data api 411055691504981</p>
+     */
     @NameInMap("Description")
     public String description;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    /**
+     * <p>The tag of objects that match the rule. You can specify multiple tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreateBackendRequestTag> tag;
 
@@ -93,9 +122,21 @@ public class CreateBackendRequest extends TeaModel {
     }
 
     public static class CreateBackendRequestTag extends TeaModel {
+        /**
+         * <p>The key of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("Value")
         public String value;
 

@@ -4,18 +4,44 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstancesRequest extends TeaModel {
+    /**
+     * <p>Specifies whether tag authorization is enabled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("EnableTagAuthorization")
     public Boolean enableTagAuthorization;
 
+    /**
+     * <p>The instance ID. If you do not specify this parameter, all instances are returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>api-shared-vpc-001</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The language in which you want the description of the system policy to be returned. Valid values:</p>
+     * <ul>
+     * <li>en: English</li>
+     * <li>zh: Chinese</li>
+     * <li>ja: Japanese</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
     @NameInMap("Language")
     public String language;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    /**
+     * <p>The tag that is bound to the instance.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<DescribeInstancesRequestTag> tag;
 
@@ -65,9 +91,21 @@ public class DescribeInstancesRequest extends TeaModel {
     }
 
     public static class DescribeInstancesRequestTag extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key1</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value</p>
+         */
         @NameInMap("Value")
         public String value;
 

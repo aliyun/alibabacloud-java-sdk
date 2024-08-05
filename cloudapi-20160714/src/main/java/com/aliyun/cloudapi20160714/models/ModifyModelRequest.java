@@ -6,34 +6,47 @@ import com.aliyun.tea.*;
 public class ModifyModelRequest extends TeaModel {
     /**
      * <p>The description of the new model definition.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Model Description</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The ID of the API group to which the model belongs.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30e792398d6c4569b04c0e53a3494381</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
      * <p>The name of the model.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Test</p>
      */
     @NameInMap("ModelName")
     public String modelName;
 
     /**
      * <p>The new name of the model.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NewTest</p>
      */
     @NameInMap("NewModelName")
     public String newModelName;
 
     /**
      * <p>The new definition of the model.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;type\&quot;:\&quot;object\&quot;,\&quot;properties\&quot;:{\&quot;id\&quot;:{\&quot;format\&quot;:\&quot;int64\&quot;,\&quot;maximum\&quot;:100,\&quot;exclusiveMaximum\&quot;:true,\&quot;type\&quot;:\&quot;integer\&quot;},\&quot;name\&quot;:{\&quot;maxLength\&quot;:10,\&quot;type\&quot;:\&quot;string\&quot;}}}</p>
      */
     @NameInMap("Schema")
     public String schema;

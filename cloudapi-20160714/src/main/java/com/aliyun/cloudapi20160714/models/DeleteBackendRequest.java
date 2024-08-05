@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteBackendRequest extends TeaModel {
     /**
      * <p>The ID of the backend service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>27be0dd9ebbc467b9e86c0d250d0b92e</p>
      */
     @NameInMap("BackendId")
     public String backendId;

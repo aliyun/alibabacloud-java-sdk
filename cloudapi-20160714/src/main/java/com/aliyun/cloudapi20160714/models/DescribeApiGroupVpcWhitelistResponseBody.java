@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeApiGroupVpcWhitelistResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BZ016</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the VPC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-bp11w979o2s9rcr962w25</p>
      */
     @NameInMap("VpcIds")
     public String vpcIds;

@@ -12,6 +12,9 @@ public class DryRunSwaggerResponseBody extends TeaModel {
 
     /**
      * <p>The global condition.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
      */
     @NameInMap("GlobalCondition")
     public String globalCondition;
@@ -30,6 +33,9 @@ public class DryRunSwaggerResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EF924FE4-2EDD-4CD3-89EC-34E4708574E7</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -96,18 +102,27 @@ public class DryRunSwaggerResponseBody extends TeaModel {
     public static class DryRunSwaggerResponseBodyFailedApiImportSwaggerFailed extends TeaModel {
         /**
          * <p>The error message returned when the API is created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>api already exists : apiUid ===&gt; 8e274ec61cf6468e83b68371956831cb</p>
          */
         @NameInMap("ErrorMsg")
         public String errorMsg;
 
         /**
          * <p>The HTTP method configured when the API is created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>post</p>
          */
         @NameInMap("HttpMethod")
         public String httpMethod;
 
         /**
          * <p>The request path configured when the API is created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/http/get/mapping</p>
          */
         @NameInMap("Path")
         public String path;
@@ -165,18 +180,27 @@ public class DryRunSwaggerResponseBody extends TeaModel {
     public static class DryRunSwaggerResponseBodyModelFailedApiImportModelFailed extends TeaModel {
         /**
          * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Not Found</p>
          */
         @NameInMap("ErrorMsg")
         public String errorMsg;
 
         /**
          * <p>The ID of the API group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>36d4bcfaec1946e1870d90b2d7519710</p>
          */
         @NameInMap("GroupId")
         public String groupId;
 
         /**
          * <p>The name of the model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Region</p>
          */
         @NameInMap("ModelName")
         public String modelName;
@@ -234,24 +258,36 @@ public class DryRunSwaggerResponseBody extends TeaModel {
     public static class DryRunSwaggerResponseBodyModelSuccessApiImportModelSuccess extends TeaModel {
         /**
          * <p>The ID of the API group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b2d552ed90ca435b86f7bf8d45414793</p>
          */
         @NameInMap("GroupId")
         public String groupId;
 
         /**
          * <p>The name of the model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NewInstance</p>
          */
         @NameInMap("ModelName")
         public String modelName;
 
         /**
          * <p>The model operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CREATE</p>
          */
         @NameInMap("ModelOperation")
         public String modelOperation;
 
         /**
          * <p>The UID of the model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ec1946e1870d90b2d7519</p>
          */
         @NameInMap("ModelUid")
         public String modelUid;
@@ -317,30 +353,45 @@ public class DryRunSwaggerResponseBody extends TeaModel {
     public static class DryRunSwaggerResponseBodySuccessApiDryRunSwaggerSuccess extends TeaModel {
         /**
          * <p>Specifies whether the operation is CREATE or MODIFY.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CREATE</p>
          */
         @NameInMap("ApiOperation")
         public String apiOperation;
 
         /**
          * <p>The API definition that complies with the Swagger specification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;A Swagger API definition in YAML&quot;</p>
          */
         @NameInMap("ApiSwagger")
         public String apiSwagger;
 
         /**
          * <p>The UID of the successfully imported API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8e274ec61cf6468e83b68371956831cb</p>
          */
         @NameInMap("ApiUid")
         public String apiUid;
 
         /**
          * <p>The HTTP method configured when the API is created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>get</p>
          */
         @NameInMap("HttpMethod")
         public String httpMethod;
 
         /**
          * <p>The request path configured when the API is created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/http/get/mapping</p>
          */
         @NameInMap("Path")
         public String path;

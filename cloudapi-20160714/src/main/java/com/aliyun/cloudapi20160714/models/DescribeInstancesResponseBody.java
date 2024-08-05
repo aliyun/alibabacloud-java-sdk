@@ -4,18 +4,45 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstancesResponseBody extends TeaModel {
+    /**
+     * <p>The information about the instances.</p>
+     */
     @NameInMap("Instances")
     public DescribeInstancesResponseBodyInstances instances;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CEB6EC62-B6C7-5082-A45A-45A204724AC2</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,9 +92,18 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyInstancesInstanceAttributeInstanceSpecAttributesSpecAttribute extends TeaModel {
+        /**
+         * <p>The variable name.</p>
+         */
         @NameInMap("LocalName")
         public String localName;
 
+        /**
+         * <p>The variable value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2500</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -115,25 +151,37 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     public static class DescribeInstancesResponseBodyInstancesInstanceAttributeNetworkInterfaceAttributesNetworkInterfaceAttribute extends TeaModel {
         /**
-         * <p>vSwitch的网段。</p>
+         * <p>The CIDR block of the vSwitch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.17.0/24</p>
          */
         @NameInMap("CidrBlock")
         public String cidrBlock;
 
         /**
-         * <p>安全组的ID，同一个安全组内的服务可以互相访问。</p>
+         * <p>The security group ID. Services in the same security group can access each other.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-2zeehz13zcyj1kfk3o85</p>
          */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
         /**
-         * <p>虚拟交换机ID</p>
+         * <p>The vSwitch ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-2zeqals6rbj51bhjn8b89</p>
          */
         @NameInMap("VswitchId")
         public String vswitchId;
 
         /**
-         * <p>可用区ID</p>
+         * <p>The zone ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shenzhen-d</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;
@@ -265,108 +313,298 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyInstancesInstanceAttribute extends TeaModel {
+        /**
+         * <p>The ACL ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acl-uf6f9zfxfxtp5j9ng3yv4</p>
+         */
         @NameInMap("AclId")
         public String aclId;
 
+        /**
+         * <p>The name of the access control list (ACL).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("AclName")
         public String aclName;
 
+        /**
+         * <p>Indicates whether the ACL is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>on</strong></li>
+         * <li><strong>off</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
+         */
         @NameInMap("AclStatus")
         public String aclStatus;
 
+        /**
+         * <p>The ACL type. Valid values:</p>
+         * <ul>
+         * <li>black: blacklist</li>
+         * <li>white: whitelist</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>white</p>
+         */
         @NameInMap("AclType")
         public String aclType;
 
+        /**
+         * <p>The egress IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0.0.1</p>
+         */
         @NameInMap("ClassicEgressAddress")
         public String classicEgressAddress;
 
+        /**
+         * <p>The internal CIDR block of the user\&quot;s VPC that can be accessed if the instance is a VPC integration instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[\&quot;172.16.0.0/24\&quot;,\&quot;172.16.1.0/24\&quot;]</p>
+         */
         @NameInMap("ConnectCidrBlocks")
         public String connectCidrBlocks;
 
         /**
-         * <p>VPC融合类型专享实例联通的用户VPC ID</p>
+         * <p>The ID of the user\&quot;s VPC if the instance is a VPC integration instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-m5eo7khlb4h4f8y9egsdg</p>
          */
         @NameInMap("ConnectVpcId")
         public String connectVpcId;
 
+        /**
+         * <p>The time when the instance was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-10-22 15:36:53.0</p>
+         */
         @NameInMap("CreatedTime")
         public String createdTime;
 
         /**
-         * <p>专享实例类型</p>
-         * <p>- vpc_connect：VPC融合类型专享实例</p>
-         * <p>- normal：传统类型专享实例</p>
+         * <p>The type of the dedicated instance. Valid values:</p>
+         * <ul>
+         * <li>vpc_connect: VPC integration instance</li>
+         * <li>normal: conventional dedicated instance</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc_connect</p>
          */
         @NameInMap("DedicatedInstanceType")
         public String dedicatedInstanceType;
 
+        /**
+         * <p>Indicates whether outbound IPv6 traffic is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("EgressIpv6Enable")
         public Boolean egressIpv6Enable;
 
+        /**
+         * <p>The time when the instance expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1659801600000</p>
+         */
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
+        /**
+         * <p>The HTTPS security policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTPS2_TLS1_2</p>
+         */
         @NameInMap("HttpsPolicies")
         public String httpsPolicies;
 
+        /**
+         * <p>The ID of the IPv6 ACL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acl-124resFfs235</p>
+         */
         @NameInMap("IPV6AclId")
         public String IPV6AclId;
 
+        /**
+         * <p>The name of the IPv6 ACL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testIPV6</p>
+         */
         @NameInMap("IPV6AclName")
         public String IPV6AclName;
 
+        /**
+         * <p>Indicates whether the IPv6 ACL is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>on</strong></li>
+         * <li><strong>off</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
+         */
         @NameInMap("IPV6AclStatus")
         public String IPV6AclStatus;
 
+        /**
+         * <p>The type of the IPv6 ACL. Valid values:</p>
+         * <ul>
+         * <li>black: blacklist</li>
+         * <li>white: whitelist</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>black</p>
+         */
         @NameInMap("IPV6AclType")
         public String IPV6AclType;
 
+        /**
+         * <p>The billing method of the instance. Valid values:</p>
+         * <ul>
+         * <li>PrePaid: subscription</li>
+         * <li>PayAsYouGo: pay-as-you-go</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PrePaid</p>
+         */
         @NameInMap("InstanceChargeType")
         public String instanceChargeType;
 
         /**
-         * <p>专享实例所在网段</p>
-         * <p>- 172.16.0.0/12</p>
-         * <p>- 192.168.0.0/16</p>
+         * <p>The CIDR block of the dedicated instance.</p>
+         * <ul>
+         * <li>172.16.0.0/12</li>
+         * <li>192.168.0.0/16</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.0.0/16</p>
          */
         @NameInMap("InstanceCidrBlock")
         public String instanceCidrBlock;
 
+        /**
+         * <p>The ID of the cluster to which the dedicated instance cluster belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apigateway-cluster-sh-1523cafbgffd</p>
+         */
         @NameInMap("InstanceClusterId")
         public String instanceClusterId;
 
+        /**
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>api-shared-vpc-020</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <p>The requests per second (RPS) limit on the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
+         */
         @NameInMap("InstanceRpsLimit")
         public Integer instanceRpsLimit;
 
+        /**
+         * <p>The instance specification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>api.s1.small</p>
+         */
         @NameInMap("InstanceSpec")
         public String instanceSpec;
 
+        /**
+         * <p>The instance specification details.</p>
+         */
         @NameInMap("InstanceSpecAttributes")
         public DescribeInstancesResponseBodyInstancesInstanceAttributeInstanceSpecAttributes instanceSpecAttributes;
 
+        /**
+         * <p>The instance type. Valid values:</p>
+         * <ul>
+         * <li>VPC_SHARED: shared instance (VPC)</li>
+         * <li>VPC_DEDICATED: dedicated instance (VPC)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC_SHARED</p>
+         */
         @NameInMap("InstanceType")
         public String instanceType;
 
+        /**
+         * <p>The outbound public IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47.241.89.244</p>
+         */
         @NameInMap("InternetEgressAddress")
         public String internetEgressAddress;
 
+        /**
+         * <p>The internal CIDR block that is allowed to access the API Gateway instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[\&quot;172.36.0.0/16\&quot;,\&quot;172.31.16.0/20\&quot;]</p>
+         */
         @NameInMap("IntranetSegments")
         public String intranetSegments;
 
+        /**
+         * <p>The end time of the maintenance window. The time is in the <em>HH:mm</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>01:00Z</p>
+         */
         @NameInMap("MaintainEndTime")
         public String maintainEndTime;
 
+        /**
+         * <p>The start time of the maintenance window. The time is in the <em>HH:mm</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22:00Z</p>
+         */
         @NameInMap("MaintainStartTime")
         public String maintainStartTime;
 
         /**
-         * <p>VPC融合类型专享实例连通的用户VPC内的网络信息</p>
+         * <p>The network information of the user\&quot;s VPC if the instance is a VPC integration instance.</p>
          */
         @NameInMap("NetworkInterfaceAttributes")
         public DescribeInstancesResponseBodyInstancesInstanceAttributeNetworkInterfaceAttributes networkInterfaceAttributes;
@@ -374,39 +612,102 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("PrivateDnsList")
         public DescribeInstancesResponseBodyInstancesInstanceAttributePrivateDnsList privateDnsList;
 
+        /**
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The instance status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>Indicates whether IPv6 traffic is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("SupportIpv6")
         public Boolean supportIpv6;
 
         @NameInMap("Tags")
         public DescribeInstancesResponseBodyInstancesInstanceAttributeTags tags;
 
+        /**
+         * <p>The user VPC ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-t<em><strong>hx</strong></em><em>yu9</em>***t0g4</p>
+         */
         @NameInMap("UserVpcId")
         public String userVpcId;
 
+        /**
+         * <p>The user vSwitch ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-t4<em><strong>eh</strong></em><em>d7q</em>***i2f</p>
+         */
         @NameInMap("UserVswitchId")
         public String userVswitchId;
 
+        /**
+         * <p>The VPC egress CIDR block.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100.104.254.0/26</p>
+         */
         @NameInMap("VpcEgressAddress")
         public String vpcEgressAddress;
 
+        /**
+         * <p>Indicates whether VPC access is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("VpcIntranetEnable")
         public Boolean vpcIntranetEnable;
 
+        /**
+         * <p>The ID of the account to which the VPC-based instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1408453217640291****</p>
+         */
         @NameInMap("VpcOwnerId")
         public Long vpcOwnerId;
 
+        /**
+         * <p>Indicates whether virtual private cloud (VPC) Server Load Balancer (SLB) is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("VpcSlbIntranetEnable")
         public Boolean vpcSlbIntranetEnable;
 
+        /**
+         * <p>The zone ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-MAZ5(g,h)</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 
+        /**
+         * <p>The zone.</p>
+         */
         @NameInMap("ZoneLocalName")
         public String zoneLocalName;
 

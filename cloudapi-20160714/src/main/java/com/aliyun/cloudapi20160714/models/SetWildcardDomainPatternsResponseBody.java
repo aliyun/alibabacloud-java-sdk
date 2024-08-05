@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class SetWildcardDomainPatternsResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D0075BDA-8AED-5073-A70A-FE44E86AB20F</p>
      */
     @NameInMap("RequestId")
     public String requestId;

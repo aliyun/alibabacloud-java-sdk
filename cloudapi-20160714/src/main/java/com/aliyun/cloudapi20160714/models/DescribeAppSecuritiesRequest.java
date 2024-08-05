@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeAppSecuritiesRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>110862931</p>
      */
     @NameInMap("AppId")
     public Long appId;

@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreateIpControlResponseBody extends TeaModel {
     /**
      * <p>The ID of the ACL.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7ea91319a34d48a09b5c9c871d9768b1</p>
      */
     @NameInMap("IpControlId")
     public String ipControlId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CE5722A6-AE78-4741-A9B0-6C817D360510</p>
      */
     @NameInMap("RequestId")
     public String requestId;

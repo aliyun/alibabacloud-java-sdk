@@ -12,24 +12,36 @@ public class DescribeIpControlsResponseBody extends TeaModel {
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BZ004</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of returned entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,42 +94,63 @@ public class DescribeIpControlsResponseBody extends TeaModel {
     public static class DescribeIpControlsResponseBodyIpControlInfosIpControlInfo extends TeaModel {
         /**
          * <p>The time when the ACL was created. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-01-17T05:48:11Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The description of the ACL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>description</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The ID of the ACL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7ea91319a34d48a09b5c9c871d9768b1</p>
          */
         @NameInMap("IpControlId")
         public String ipControlId;
 
         /**
          * <p>The name of the ACL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testControl11</p>
          */
         @NameInMap("IpControlName")
         public String ipControlName;
 
         /**
          * <p>The type of the ACL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALLOW</p>
          */
         @NameInMap("IpControlType")
         public String ipControlType;
 
         /**
          * <p>The time when the ACL was modified. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-01-17T06:00:38Z</p>
          */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
         /**
          * <p>The ID of the region in which the ACL is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-qingdao</p>
          */
         @NameInMap("RegionId")
         public String regionId;

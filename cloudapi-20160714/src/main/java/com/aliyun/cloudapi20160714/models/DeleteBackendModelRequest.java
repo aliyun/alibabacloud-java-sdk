@@ -6,14 +6,19 @@ import com.aliyun.tea.*;
 public class DeleteBackendModelRequest extends TeaModel {
     /**
      * <p>The ID of the backend service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20bcdc9453524b78a8beb1f6de21edb7</p>
      */
     @NameInMap("BackendId")
     public String backendId;
 
     /**
      * <p>The ID of the backend model.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4be6b110b7aa40b0bf0c83cc00b3bd86</p>
      */
     @NameInMap("BackendModelId")
     public String backendModelId;
@@ -23,12 +28,15 @@ public class DeleteBackendModelRequest extends TeaModel {
 
     /**
      * <p>The environment to which the API is published. Valid values:</p>
-     * <br>
-     * <p>*   **RELEASE**</p>
-     * <p>*   **PRE**</p>
-     * <p>*   **TEST**</p>
-     * <br>
+     * <ul>
+     * <li><strong>RELEASE</strong></li>
+     * <li><strong>PRE</strong></li>
+     * <li><strong>TEST</strong></li>
+     * </ul>
      * <p>If you do not specify this parameter, APIs in the draft state are returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TEST</p>
      */
     @NameInMap("StageName")
     public String stageName;

@@ -12,24 +12,36 @@ public class DescribeApiProductsByAppResponseBody extends TeaModel {
 
     /**
      * <p>The page number. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0B805201-AF4C-5788-AC9E-C3EEC83DC82A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of returned entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,6 +94,9 @@ public class DescribeApiProductsByAppResponseBody extends TeaModel {
     public static class DescribeApiProductsByAppResponseBodyApiProductInfoListApiProductInfo extends TeaModel {
         /**
          * <p>The ID of the API product.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>117b7a64a8b3f064eaa4a47ac62aac5e</p>
          */
         @NameInMap("ApiProductId")
         public String apiProductId;

@@ -9,8 +9,10 @@ public class DeleteTrafficControlRequest extends TeaModel {
 
     /**
      * <p>The ID of the throttling policy.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tf123456</p>
      */
     @NameInMap("TrafficControlId")
     public String trafficControlId;

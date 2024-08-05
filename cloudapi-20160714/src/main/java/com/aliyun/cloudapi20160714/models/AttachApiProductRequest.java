@@ -6,15 +6,16 @@ import com.aliyun.tea.*;
 public class AttachApiProductRequest extends TeaModel {
     /**
      * <p>The ID of the API product.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>117b7a64a8b3f064eaa4a47ac62aac5e</p>
      */
     @NameInMap("ApiProductId")
     public String apiProductId;
 
     /**
      * <p>The APIs to be attached.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Apis")
@@ -55,20 +56,25 @@ public class AttachApiProductRequest extends TeaModel {
     public static class AttachApiProductRequestApis extends TeaModel {
         /**
          * <p>The API ID.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>551877242a4b4f3a84a56b7c3570e4a7</p>
          */
         @NameInMap("ApiId")
         public String apiId;
 
         /**
          * <p>The environment. Valid values:</p>
-         * <br>
-         * <p>*   **RELEASE**: the production environment</p>
-         * <p>*   **PRE**: the staging environment</p>
-         * <p>*   **TEST**: the test environment</p>
-         * <br>
+         * <ul>
+         * <li><strong>RELEASE</strong>: the production environment</li>
+         * <li><strong>PRE</strong>: the staging environment</li>
+         * <li><strong>TEST</strong>: the test environment</li>
+         * </ul>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RELEASE</p>
          */
         @NameInMap("StageName")
         public String stageName;

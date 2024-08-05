@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class DeleteAppRequest extends TeaModel {
     /**
      * <p>The ID of the application.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>110840611</p>
      */
     @NameInMap("AppId")
     public Long appId;
@@ -17,6 +19,9 @@ public class DeleteAppRequest extends TeaModel {
 
     /**
      * <p>The tags. Up to 20 tags are allowed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test2</p>
      */
     @NameInMap("Tag")
     public java.util.List<DeleteAppRequestTag> tag;
@@ -53,14 +58,19 @@ public class DeleteAppRequest extends TeaModel {
     public static class DeleteAppRequestTag extends TeaModel {
         /**
          * <p>The key of the tag.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>appname</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testapp</p>
          */
         @NameInMap("Value")
         public String value;

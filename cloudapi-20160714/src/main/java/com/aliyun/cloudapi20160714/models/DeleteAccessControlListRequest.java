@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class DeleteAccessControlListRequest extends TeaModel {
     /**
      * <p>The ID of the access control policy.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acl-uf6fpfdg3b5muska7uqem</p>
      */
     @NameInMap("AclId")
     public String aclId;

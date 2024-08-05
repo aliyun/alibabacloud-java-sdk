@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeSignaturesByApiResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BZ004</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,18 +43,27 @@ public class DescribeSignaturesByApiResponseBody extends TeaModel {
     public static class DescribeSignaturesByApiResponseBodySignaturesSignatureItem extends TeaModel {
         /**
          * <p>The time when the key was bound.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2016-07-23T08:28:48Z</p>
          */
         @NameInMap("BoundTime")
         public String boundTime;
 
         /**
          * <p>The ID of the backend signature key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dd05f1c54d6749eda95f9fa6d491449a</p>
          */
         @NameInMap("SignatureId")
         public String signatureId;
 
         /**
          * <p>The name of the backend signature key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysecret</p>
          */
         @NameInMap("SignatureName")
         public String signatureName;

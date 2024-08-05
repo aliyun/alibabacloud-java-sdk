@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class CreateInstanceResponseBody extends TeaModel {
     /**
      * <p>Instance ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>apigateway-hz-b3c5dadd5***</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>Request ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CEB6EC62-B6C7-5082-A45A-45A204724AC2</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the tag exists. Valid values: **true** and **false**.</p>
+     * <p>Indicates whether the tag exists. Valid values: <strong>true</strong> and <strong>false</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>True</p>
      */
     @NameInMap("TagStatus")
     public Boolean tagStatus;

@@ -6,24 +6,30 @@ import com.aliyun.tea.*;
 public class ModifyAppRequest extends TeaModel {
     /**
      * <p>The ID of the application.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20112314518278</p>
      */
     @NameInMap("AppId")
     public Long appId;
 
     /**
      * <p>The ID must be 4 to 26 characters in length and can contain letters, digits, and underscores (_). It must start with a letter.</p>
-     * <br>
      * <p>If you do not want to modify the existing value, do not specify this parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>jiedian_pord</p>
      */
     @NameInMap("AppName")
     public String appName;
 
     /**
      * <p>The description of the application. The description can be up to 180 characters in length.</p>
-     * <br>
      * <p>If you do not want to modify the existing value, do not specify this parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>modidyTest</p>
      */
     @NameInMap("Description")
     public String description;
@@ -36,6 +42,9 @@ public class ModifyAppRequest extends TeaModel {
 
     /**
      * <p>The tag of objects that match the rule. You can specify multiple tags.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Key， Value</p>
      */
     @NameInMap("Tag")
     public java.util.List<ModifyAppRequestTag> tag;
@@ -96,18 +105,21 @@ public class ModifyAppRequest extends TeaModel {
     public static class ModifyAppRequestTag extends TeaModel {
         /**
          * <p>The key of the tag.</p>
-         * <br>
-         * <p>Valid values of n: `[1, 20]`.</p>
-         * <br>
+         * <p>Valid values of n: <code>[1, 20]</code>.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the tag.</p>
-         * <br>
-         * <p>Valid values of n: `[1, 20]`.</p>
+         * <p>Valid values of n: <code>[1, 20]</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value</p>
          */
         @NameInMap("Value")
         public String value;

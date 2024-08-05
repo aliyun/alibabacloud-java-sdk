@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeUpdateBackendTaskRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4e13c3e0c44c4a4ebb5231264eeb9bc1</p>
      */
     @NameInMap("OperationUid")
     public String operationUid;

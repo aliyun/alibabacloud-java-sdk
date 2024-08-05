@@ -4,21 +4,41 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class CreateBackendModelRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>34e94fcd3e2e47a49824a89b8f92cb5e</p>
+     */
     @NameInMap("BackendId")
     public String backendId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{\&quot;ServiceAddress\&quot;:\&quot;<a href="http://apigateway-echo-redux.alicloudapi.com:8080%5C%5C%22%7D">http://apigateway-echo-redux.alicloudapi.com:8080\\&quot;}</a></p>
+     */
     @NameInMap("BackendModelData")
     public String backendModelData;
 
+    /**
+     * <strong>example:</strong>
+     * <p>HTTP</p>
+     */
     @NameInMap("BackendType")
     public String backendType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>model description</p>
+     */
     @NameInMap("Description")
     public String description;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>TEST</p>
+     */
     @NameInMap("StageName")
     public String stageName;
 

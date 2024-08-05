@@ -5,25 +5,37 @@ import com.aliyun.tea.*;
 
 public class DescribeBackendListRequest extends TeaModel {
     /**
-     * <p>The name of the backend service. You can use \\* to perform fuzzy queries.</p>
+     * <p>The name of the backend service. You can use \* to perform fuzzy queries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("BackendName")
     public String backendName;
 
     /**
      * <p>The type of the backend service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>HTTP</p>
      */
     @NameInMap("BackendType")
     public String backendType;
 
     /**
      * <p>The number of the current page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -31,6 +43,9 @@ public class DescribeBackendListRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    /**
+     * <p>The list of the tag.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<DescribeBackendListRequestTag> tag;
 
@@ -88,9 +103,21 @@ public class DescribeBackendListRequest extends TeaModel {
     }
 
     public static class DescribeBackendListRequestTag extends TeaModel {
+        /**
+         * <p>The key of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value</p>
+         */
         @NameInMap("Value")
         public String value;
 

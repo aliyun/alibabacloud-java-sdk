@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class SetVpcAccessResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BZ015</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the VPC access authorization.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4c68e061860f441ab72af7404137440e</p>
      */
     @NameInMap("VpcAccessId")
     public String vpcAccessId;

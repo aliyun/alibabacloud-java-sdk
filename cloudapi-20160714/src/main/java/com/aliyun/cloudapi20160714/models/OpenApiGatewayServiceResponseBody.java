@@ -4,9 +4,17 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class OpenApiGatewayServiceResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>210981***530495</p>
+     */
     @NameInMap("OrderId")
     public String orderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2D39D1B3-8548-508A-9CE2-7F4A3F2A7989</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

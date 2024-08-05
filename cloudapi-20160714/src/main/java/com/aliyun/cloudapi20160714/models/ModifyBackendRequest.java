@@ -6,22 +6,35 @@ import com.aliyun.tea.*;
 public class ModifyBackendRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20bcdc9453524b78a8beb1f6de21edb7</p>
      */
     @NameInMap("BackendId")
     public String backendId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testHttpModify</p>
      */
     @NameInMap("BackendName")
     public String backendName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>HTTP</p>
      */
     @NameInMap("BackendType")
     public String backendType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("Description")
     public String description;
 

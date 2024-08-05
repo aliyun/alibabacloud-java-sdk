@@ -12,24 +12,36 @@ public class DescribeDeployedApisResponseBody extends TeaModel {
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BZ002</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of returned entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,72 +94,107 @@ public class DescribeDeployedApisResponseBody extends TeaModel {
     public static class DescribeDeployedApisResponseBodyDeployedApisDeployedApiItem extends TeaModel {
         /**
          * <p>The API ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c076144d7878437b8f82fb85890ce6a0</p>
          */
         @NameInMap("ApiId")
         public String apiId;
 
         /**
          * <p>The HTTP method of the API request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>POST</p>
          */
         @NameInMap("ApiMethod")
         public String apiMethod;
 
         /**
          * <p>The API name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DescribeObjects</p>
          */
         @NameInMap("ApiName")
         public String apiName;
 
         /**
          * <p>The request path of the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/trademark/search</p>
          */
         @NameInMap("ApiPath")
         public String apiPath;
 
         /**
          * <p>The time when the API was published. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2016-07-23T08:28:48Z</p>
          */
         @NameInMap("DeployedTime")
         public String deployedTime;
 
         /**
          * <p>The API description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Queries objects by page</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The API group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>63be9002440b4778a61122f14c2b2bbb</p>
          */
         @NameInMap("GroupId")
         public String groupId;
 
         /**
          * <p>The name of the API group to which the API belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myGroup3</p>
          */
         @NameInMap("GroupName")
         public String groupName;
 
         /**
          * <p>The region ID of the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-qingdao</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The environment name. Valid values:</p>
-         * <br>
-         * <p>*   **RELEASE**</p>
-         * <p>*   **TEST**</p>
+         * <ul>
+         * <li><strong>RELEASE</strong></li>
+         * <li><strong>TEST</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>RELEASE</p>
          */
         @NameInMap("StageName")
         public String stageName;
 
         /**
          * <p>Indicates whether the API is public. Valid values:</p>
-         * <br>
-         * <p>*   **PUBLIC**</p>
-         * <p>*   **PRIVATE**</p>
+         * <ul>
+         * <li><strong>PUBLIC</strong></li>
+         * <li><strong>PRIVATE</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PUBLIC</p>
          */
         @NameInMap("Visibility")
         public String visibility;

@@ -12,24 +12,36 @@ public class DescribeAppsByApiProductResponseBody extends TeaModel {
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AC866798-62D3-52F4-8AB5-CA149A53984F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of returned entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,24 +94,36 @@ public class DescribeAppsByApiProductResponseBody extends TeaModel {
     public static class DescribeAppsByApiProductResponseBodyAuthorizedAppsAuthorizedApp extends TeaModel {
         /**
          * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>110982419</p>
          */
         @NameInMap("AppId")
         public Long appId;
 
         /**
          * <p>The application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>APP_02580_DEV</p>
          */
         @NameInMap("AppName")
         public String appName;
 
         /**
          * <p>The expiration time of the authorization. The time is in GMT. An empty value indicates that the authorization does not expire.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-06-17T03:41:53Z</p>
          */
         @NameInMap("AuthValidTime")
         public String authValidTime;
 
         /**
          * <p>The time when the authorization was created. The time is in GMT.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2016-07-21T06:17:20Z</p>
          */
         @NameInMap("AuthorizedTime")
         public String authorizedTime;
@@ -112,6 +136,9 @@ public class DescribeAppsByApiProductResponseBody extends TeaModel {
 
         /**
          * <p>The extended information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>extra info</p>
          */
         @NameInMap("Extend")
         public String extend;

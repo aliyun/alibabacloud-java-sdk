@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class EnableInstanceAccessControlRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acl-bp11escro2et2tioscy52</p>
      */
     @NameInMap("AclId")
     public String aclId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>black</p>
      */
     @NameInMap("AclType")
     public String aclType;
@@ -21,6 +27,9 @@ public class EnableInstanceAccessControlRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>apigateway-cn-v6419k43xxxxx</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

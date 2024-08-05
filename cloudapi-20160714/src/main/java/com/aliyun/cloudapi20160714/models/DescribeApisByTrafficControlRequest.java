@@ -6,26 +6,37 @@ import com.aliyun.tea.*;
 public class DescribeApisByTrafficControlRequest extends TeaModel {
     /**
      * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page. Maximum value: 100. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The security token included in the WebSocket request header. The system uses this token to authenticate the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9abe3317-3e22-4957-ab9f-dd893d0ac956</p>
      */
     @NameInMap("SecurityToken")
     public String securityToken;
 
     /**
      * <p>The ID of the throttling policy that you want to query.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dd05f1c54d6749eda95f9fa6d491449a</p>
      */
     @NameInMap("TrafficControlId")
     public String trafficControlId;

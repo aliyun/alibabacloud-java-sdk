@@ -6,28 +6,38 @@ import com.aliyun.tea.*;
 public class ModifyDatasetItemRequest extends TeaModel {
     /**
      * <p>The ID of the dataset.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a25a6589b2584ff490e891cc********</p>
      */
     @NameInMap("DatasetId")
     public String datasetId;
 
     /**
      * <p>The ID of the data entry.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5045****</p>
      */
     @NameInMap("DatasetItemId")
     public String datasetItemId;
 
     /**
      * <p>The description of the data entry. The description cannot exceed 180 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>description</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The time in UTC when the data entry expires. The time is in the **yyyy-MM-ddTHH:mm:ssZ** format.</p>
+     * <p>The time in UTC when the data entry expires. The time is in the <strong>yyyy-MM-ddTHH:mm:ssZ</strong> format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-09-22T12:00:00Z</p>
      */
     @NameInMap("ExpiredTime")
     public String expiredTime;

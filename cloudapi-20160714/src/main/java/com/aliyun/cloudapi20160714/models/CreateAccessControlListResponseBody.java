@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreateAccessControlListResponseBody extends TeaModel {
     /**
      * <p>The ID of the access control policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acl-bp1uqwgwmkbutnzq2r59z</p>
      */
     @NameInMap("AclId")
     public String aclId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BZ015</p>
      */
     @NameInMap("RequestId")
     public String requestId;

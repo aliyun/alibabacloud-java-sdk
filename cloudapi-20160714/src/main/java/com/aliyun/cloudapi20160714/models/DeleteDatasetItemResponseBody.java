@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteDatasetItemResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FF433E09-663A-5F5D-9DBA-A611********</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -6,46 +6,61 @@ import com.aliyun.tea.*;
 public class ModifyVpcAccessAndUpdateApisRequest extends TeaModel {
     /**
      * <p>The ID of the new instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-uf6bzcg1pr4oh5jjmxxx</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The name of the VPC authorization.</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   The name of a VPC authorization cannot be changed. You cannot use this parameter to change the name of a VPC authorization.</p>
-     * <br>
-     * <p>*   You must set this parameter to the name of the current VPC authorization.</p>
-     * <br>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>The name of a VPC authorization cannot be changed. You cannot use this parameter to change the name of a VPC authorization.</p>
+     * </li>
+     * <li><p>You must set this parameter to the name of the current VPC authorization.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>VpcName</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>Specifies whether to update the associated API.</p>
-     * <br>
      * <p>**</p>
-     * <br>
-     * <p>**Warning:** If you want to update the VPC authorization of a published API, you must set this parameter to true. Otherwise, the update will not be synchronized to the backend service of the API.</p>
+     * <p><strong>Warning:</strong> If you want to update the VPC authorization of a published API, you must set this parameter to true. Otherwise, the update will not be synchronized to the backend service of the API.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("NeedBatchWork")
     public Boolean needBatchWork;
 
     /**
      * <p>The new port number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>80</p>
      */
     @NameInMap("Port")
     public Integer port;
 
     /**
      * <p>Specifies whether to update the VPC authorization.</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   If the ID of the instance in your VPC is changed but the IP address of the instance remains unchanged, you can set this parameter to true to update the VPC authorization.</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li>If the ID of the instance in your VPC is changed but the IP address of the instance remains unchanged, you can set this parameter to true to update the VPC authorization.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("Refresh")
     public Boolean refresh;
@@ -55,18 +70,27 @@ public class ModifyVpcAccessAndUpdateApisRequest extends TeaModel {
 
     /**
      * <p>The token of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c20d86c4-1eb3-4d0b-afe9-c586df1e2136</p>
      */
     @NameInMap("Token")
     public String token;
 
     /**
      * <p>The ID of the new VPC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-m5e7jqfppv5wbvmdw5pg2</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
 
     /**
      * <p>The hostname of the backend service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iot.hu***ng.com</p>
      */
     @NameInMap("VpcTargetHostName")
     public String vpcTargetHostName;

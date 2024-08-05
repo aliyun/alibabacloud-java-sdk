@@ -6,26 +6,37 @@ import com.aliyun.tea.*;
 public class ModifyPluginRequest extends TeaModel {
     /**
      * <p>The description of the plug-in. The description can contain a maximum of 200 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>modify plugin first</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The statement that is used to modify the plug-in definition.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Plugin definition</p>
      */
     @NameInMap("PluginData")
     public String pluginData;
 
     /**
      * <p>The ID of the plug-in whose information you want to modify.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a96926e82f994915a8da40a119374537</p>
      */
     @NameInMap("PluginId")
     public String pluginId;
 
     /**
      * <p>The name of the plug-in. The name must be 4 to 50 characters in length and can contain letters, digits, and underscores (_). However, it cannot start with an underscore.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>modifyCors</p>
      */
     @NameInMap("PluginName")
     public String pluginName;
@@ -35,6 +46,9 @@ public class ModifyPluginRequest extends TeaModel {
 
     /**
      * <p>The tag of objects that match the rule. You can specify multiple tags.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Key， Value</p>
      */
     @NameInMap("Tag")
     public java.util.List<ModifyPluginRequestTag> tag;
@@ -95,20 +109,22 @@ public class ModifyPluginRequest extends TeaModel {
     public static class ModifyPluginRequestTag extends TeaModel {
         /**
          * <p>The key of the tag.</p>
-         * <br>
          * <p>N can be an integer from 1 to 20.``</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the tag.</p>
-         * <br>
          * <p>N can be an integer from 1 to 20.``</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>\&quot; \&quot;</p>
          */
         @NameInMap("Value")
         public String value;

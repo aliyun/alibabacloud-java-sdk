@@ -6,50 +6,73 @@ import com.aliyun.tea.*;
 public class DescribeApisWithStageNameIntegratedByAppRequest extends TeaModel {
     /**
      * <p>The API name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ApiName</p>
      */
     @NameInMap("ApiName")
     public String apiName;
 
     /**
      * <p>The API ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>b19240592b1b4e74961fb8438ed7550c</p>
      */
     @NameInMap("ApiUid")
     public String apiUid;
 
     /**
      * <p>The application ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2386789</p>
      */
     @NameInMap("AppId")
     public Long appId;
 
     /**
      * <p>The API description. The description can be up to 200 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The request HTTP method of the API.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>POST</p>
      */
     @NameInMap("Method")
     public String method;
 
     /**
      * <p>The page number of the page to return.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request path of the API.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/tt</p>
      */
     @NameInMap("Path")
     public String path;

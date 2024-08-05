@@ -6,28 +6,35 @@ import com.aliyun.tea.*;
 public class DescribeInstanceSlbConnectRequest extends TeaModel {
     /**
      * <p>The end time. The time follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-09-15T15:07:06Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The ID of the instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>apigateway-sz-1574cc7c5a31</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The statistical metric. Valid values:</p>
-     * <br>
-     * <p>*   Maximum</p>
-     * <p>*   Minimum</p>
-     * <p>*   Average</p>
-     * <br>
+     * <ul>
+     * <li>Maximum</li>
+     * <li>Minimum</li>
+     * <li>Average</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Maximum</p>
      */
     @NameInMap("SbcName")
     public String sbcName;
@@ -37,8 +44,10 @@ public class DescribeInstanceSlbConnectRequest extends TeaModel {
 
     /**
      * <p>The start time. The time follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-09-01T02:09:33Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;

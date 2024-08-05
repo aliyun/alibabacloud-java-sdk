@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class SdkGenerateByAppRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>110797019</p>
      */
     @NameInMap("AppId")
     public Long appId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>java</p>
      */
     @NameInMap("Language")
     public String language;

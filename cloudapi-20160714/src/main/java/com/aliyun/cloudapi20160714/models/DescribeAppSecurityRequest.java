@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class DescribeAppSecurityRequest extends TeaModel {
     /**
      * <p>The ID of the app.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20112314518278</p>
      */
     @NameInMap("AppId")
     public Long appId;
@@ -17,6 +19,9 @@ public class DescribeAppSecurityRequest extends TeaModel {
 
     /**
      * <p>The tag of objects that match the rule. You can specify multiple tags.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Key， Value</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeAppSecurityRequestTag> tag;
@@ -53,14 +58,19 @@ public class DescribeAppSecurityRequest extends TeaModel {
     public static class DescribeAppSecurityRequestTag extends TeaModel {
         /**
          * <p>The key of the tag.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("Value")
         public String value;

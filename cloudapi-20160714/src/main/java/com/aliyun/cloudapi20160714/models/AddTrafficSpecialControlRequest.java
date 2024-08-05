@@ -6,41 +6,53 @@ import com.aliyun.tea.*;
 public class AddTrafficSpecialControlRequest extends TeaModel {
     /**
      * <p>The security token included in the WebSocket request header. The system uses this token to authenticate the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>fa876ffb-caab-4f0a-93b3-3409f2fa5199</p>
      */
     @NameInMap("SecurityToken")
     public String securityToken;
 
     /**
-     * <p>The ID of the app or Alibaba Cloud account. Specify this parameter based on the value of the **SpecialType** parameter. You can view your account ID on the [Account Management](https://account.console.aliyun.com/?spm=a2c4g.11186623.2.15.3f053654YpMPwo#/secure) page.</p>
-     * <br>
+     * <p>The ID of the app or Alibaba Cloud account. Specify this parameter based on the value of the <strong>SpecialType</strong> parameter. You can view your account ID on the <a href="https://account.console.aliyun.com/?spm=a2c4g.11186623.2.15.3f053654YpMPwo#/secure">Account Management</a> page.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3382463</p>
      */
     @NameInMap("SpecialKey")
     public String specialKey;
 
     /**
      * <p>The type of the special throttling policy. Valid values:</p>
-     * <br>
-     * <p>*   **APP**</p>
-     * <p>*   **USER**</p>
-     * <br>
+     * <ul>
+     * <li><strong>APP</strong></li>
+     * <li><strong>USER</strong></li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>APP</p>
      */
     @NameInMap("SpecialType")
     public String specialType;
 
     /**
      * <p>The ID of the specified throttling policy.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tf123456</p>
      */
     @NameInMap("TrafficControlId")
     public String trafficControlId;
 
     /**
      * <p>The special throttling value.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10000</p>
      */
     @NameInMap("TrafficValue")
     public Integer trafficValue;

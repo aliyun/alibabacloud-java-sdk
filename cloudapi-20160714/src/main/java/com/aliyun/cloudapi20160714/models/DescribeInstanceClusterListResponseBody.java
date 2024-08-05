@@ -7,15 +7,31 @@ public class DescribeInstanceClusterListResponseBody extends TeaModel {
     @NameInMap("InstanceClusters")
     public DescribeInstanceClusterListResponseBodyInstanceClusters instanceClusters;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BZ015</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,9 +81,17 @@ public class DescribeInstanceClusterListResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceClusterListResponseBodyInstanceClustersInstanceCluster extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2023-08-14T17:46:59+08:00</p>
+         */
         @NameInMap("CreatedTime")
         public String createdTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Test TrafficControl</p>
+         */
         @NameInMap("Description")
         public String description;
 
@@ -83,9 +107,17 @@ public class DescribeInstanceClusterListResponseBody extends TeaModel {
         @NameInMap("InstanceClusterType")
         public String instanceClusterType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-01-12T10:11:08+08:00</p>
+         */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-shenzhen</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 

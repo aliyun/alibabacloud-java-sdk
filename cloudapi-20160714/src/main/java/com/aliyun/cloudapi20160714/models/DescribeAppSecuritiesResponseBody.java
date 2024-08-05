@@ -7,6 +7,10 @@ public class DescribeAppSecuritiesResponseBody extends TeaModel {
     @NameInMap("AppSecuritys")
     public DescribeAppSecuritiesResponseBodyAppSecuritys appSecuritys;
 
+    /**
+     * <strong>example:</strong>
+     * <p>EF924FE4-2EDD-4CD3-89EC-34E4708574E7</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +36,38 @@ public class DescribeAppSecuritiesResponseBody extends TeaModel {
     }
 
     public static class DescribeAppSecuritiesResponseBodyAppSecuritysAppSecurity extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>d2350ecd62c44cbfbe35a7f182e35105</p>
+         */
         @NameInMap("AppCode")
         public String appCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>34379343</p>
+         */
         @NameInMap("AppKey")
         public String appKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ea5291a7aff343769eb3139a2f6de8c9</p>
+         */
         @NameInMap("AppSecret")
         public String appSecret;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-09-14T18:50:59</p>
+         */
         @NameInMap("CreatedTime")
         public String createdTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-08-14T18:03:00+08:00</p>
+         */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 

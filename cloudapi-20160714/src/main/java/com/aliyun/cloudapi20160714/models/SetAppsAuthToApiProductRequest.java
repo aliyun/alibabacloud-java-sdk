@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class SetAppsAuthToApiProductRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>117b7a64a8b3f064eaa4a47ac62aac5e</p>
      */
     @NameInMap("ApiProductId")
     public String apiProductId;
@@ -16,6 +19,10 @@ public class SetAppsAuthToApiProductRequest extends TeaModel {
     @NameInMap("AppIds")
     public java.util.List<Long> appIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-05-31T08:15:39Z</p>
+     */
     @NameInMap("AuthValidTime")
     public String authValidTime;
 

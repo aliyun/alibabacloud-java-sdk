@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class DeleteIpControlRequest extends TeaModel {
     /**
      * <p>The ID of the ACL. The ID is unique.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7ea91319a34d48a09b5c9c871d9768b1</p>
      */
     @NameInMap("IpControlId")
     public String ipControlId;

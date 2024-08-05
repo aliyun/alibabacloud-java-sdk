@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteAccessControlListResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EF924FE4-2EDD-4CD3-89EC-34E4708574E7</p>
      */
     @NameInMap("RequestId")
     public String requestId;

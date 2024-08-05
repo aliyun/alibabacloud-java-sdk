@@ -6,14 +6,19 @@ import com.aliyun.tea.*;
 public class DeleteApiRequest extends TeaModel {
     /**
      * <p>The ID of the API.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d6f679aeb3be4b91b3688e887ca1fe16</p>
      */
     @NameInMap("ApiId")
     public String apiId;
 
     /**
      * <p>The ID of the API group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>08ae4aa0f95e4321849ee57f4e0b3077</p>
      */
     @NameInMap("GroupId")
     public String groupId;

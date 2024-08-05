@@ -12,24 +12,36 @@ public class DescribeModelsResponseBody extends TeaModel {
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>40306469-2FB5-417A-B723-AF1F4A4FA204</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of returned entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -131,48 +143,72 @@ public class DescribeModelsResponseBody extends TeaModel {
     public static class DescribeModelsResponseBodyModelDetailsModelDetail extends TeaModel {
         /**
          * <p>The time when the model was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-01-29T11:07:48Z</p>
          */
         @NameInMap("CreatedTime")
         public String createdTime;
 
         /**
          * <p>The definition of the model description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Model Description</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The ID of the API group to which the model belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30e792398d6c4569b04c0e53a3494381</p>
          */
         @NameInMap("GroupId")
         public String groupId;
 
         /**
          * <p>The ID of the model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>766c0b9538a04bdf974953b5576783ba</p>
          */
         @NameInMap("ModelId")
         public String modelId;
 
         /**
          * <p>The name of the model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test</p>
          */
         @NameInMap("ModelName")
         public String modelName;
 
         /**
          * <p>The URI of the model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://apigateway.aliyun.com/models/30e792398d6c4569b04c0e53a3494381/766c0b9538a04bdf974953b5576783ba">https://apigateway.aliyun.com/models/30e792398d6c4569b04c0e53a3494381/766c0b9538a04bdf974953b5576783ba</a></p>
          */
         @NameInMap("ModelRef")
         public String modelRef;
 
         /**
          * <p>The last modification time of the model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-01-29T11:07:48Z</p>
          */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
         /**
          * <p>The definition of the model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;type\&quot;:\&quot;object\&quot;,\&quot;properties\&quot;:{\&quot;id\&quot;:{\&quot;format\&quot;:\&quot;int64\&quot;,\&quot;maximum\&quot;:100,\&quot;exclusiveMaximum\&quot;:true,\&quot;type\&quot;:\&quot;integer\&quot;},\&quot;name\&quot;:{\&quot;maxLength\&quot;:10,\&quot;type\&quot;:\&quot;string\&quot;}}}</p>
          */
         @NameInMap("Schema")
         public String schema;

@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class DescribeMarketRemainsQuotaRequest extends TeaModel {
     /**
      * <p>The custom domain name.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>*.demo.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;

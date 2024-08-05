@@ -4,39 +4,79 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2022-10-10T18:29:27</p>
+     */
     @NameInMap("CreatedTime")
     public String createdTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>v0.0.4</p>
+     */
     @NameInMap("Description")
     public String description;
 
     @NameInMap("InstanceClusterAttribute")
     public DescribeInstanceClusterInfoResponseBodyInstanceClusterAttribute instanceClusterAttribute;
 
+    /**
+     * <strong>example:</strong>
+     * <p>apigateway-ht-04e41d95e9c1</p>
+     */
     @NameInMap("InstanceClusterId")
     public String instanceClusterId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("InstanceClusterName")
     public String instanceClusterName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>RUNNING</p>
+     */
     @NameInMap("InstanceClusterStatus")
     public String instanceClusterStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>normal</p>
+     */
     @NameInMap("InstanceClusterType")
     public String instanceClusterType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3.5.3.856</p>
+     */
     @NameInMap("InstanceClusterVersion")
     public String instanceClusterVersion;
 
     @NameInMap("InstanceList")
     public DescribeInstanceClusterInfoResponseBodyInstanceList instanceList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-06-19 10:40:29 +0800</p>
+     */
     @NameInMap("ModifiedTime")
     public String modifiedTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BZ015</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -142,69 +182,153 @@ public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceClusterInfoResponseBodyInstanceClusterAttribute extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>[&quot;192.168.1.0/24&quot;,&quot;192.168.0.0/24&quot;]</p>
+         */
         @NameInMap("ConnectCidrBlocks")
         public String connectCidrBlocks;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vpc-p0w3kxxxxxxxxxxxxxxxx</p>
+         */
         @NameInMap("ConnectVpcId")
         public String connectVpcId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("EgressIpv6Enable")
         public Boolean egressIpv6Enable;
 
+        /**
+         * <strong>example:</strong>
+         * <p>HTTPS2_TLS1_0</p>
+         */
         @NameInMap("HttpsPolicies")
         public String httpsPolicies;
 
+        /**
+         * <strong>example:</strong>
+         * <p>acl-t4n8i4rvvp70kcyuoXXXX</p>
+         */
         @NameInMap("IPV4AclId")
         public String IPV4AclId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test-black</p>
+         */
         @NameInMap("IPV4AclName")
         public String IPV4AclName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>on</p>
+         */
         @NameInMap("IPV4AclStatus")
         public String IPV4AclStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>black</p>
+         */
         @NameInMap("IPV4AclType")
         public String IPV4AclType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>acl-t4nevzhwbpe7cup18XXXX</p>
+         */
         @NameInMap("IPV6AclId")
         public String IPV6AclId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("IPV6AclName")
         public String IPV6AclName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>on</p>
+         */
         @NameInMap("IPV6AclStatus")
         public String IPV6AclStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>white</p>
+         */
         @NameInMap("IPV6AclType")
         public String IPV6AclType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>39.106.XX.XX</p>
+         */
         @NameInMap("InternetEgressAddress")
         public String internetEgressAddress;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100.104.XX.XX/26</p>
+         */
         @NameInMap("IntranetEgressAddress")
         public String intranetEgressAddress;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123.0.0.1</p>
+         */
         @NameInMap("IntranetSegments")
         public String intranetSegments;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("SupportIpv6")
         public Boolean supportIpv6;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vpc-2zew2v4vcg78mXXXX</p>
+         */
         @NameInMap("UserVpcId")
         public String userVpcId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vsw-2zecr5r7ao44tslsXXXX</p>
+         */
         @NameInMap("UserVswitchId")
         public String userVswitchId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>VPC_INTERNET_IPV6</p>
+         */
         @NameInMap("VipTypeList")
         public String vipTypeList;
 
         @NameInMap("VpcIntranetEnable")
         public Boolean vpcIntranetEnable;
 
+        /**
+         * <strong>example:</strong>
+         * <p>165438596694XXXX</p>
+         */
         @NameInMap("VpcOwnerId")
         public Long vpcOwnerId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("VpcSlbIntranetEnable")
         public Boolean vpcSlbIntranetEnable;
 
@@ -392,15 +516,31 @@ public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceClusterInfoResponseBodyInstanceListInstance extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Instance not found.</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <strong>example:</strong>
+         * <p>apigateway-ht-04e41d95e9c1</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>tf-testacceu-central-1apigatewayinstance8752</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
+         */
         @NameInMap("Status")
         public String status;
 

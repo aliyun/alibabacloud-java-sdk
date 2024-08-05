@@ -12,24 +12,36 @@ public class DescribeBackendListResponseBody extends TeaModel {
 
     /**
      * <p>The number of the current page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>090A0DF9-9144-5236-8CBA-E18DE317722D</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -80,9 +92,21 @@ public class DescribeBackendListResponseBody extends TeaModel {
     }
 
     public static class DescribeBackendListResponseBodyBackendInfoListTags extends TeaModel {
+        /**
+         * <p>The name of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>groupName</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e3b881d0-e2d0-4dfb-b1fb-a2a3d1e534b7</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -112,40 +136,61 @@ public class DescribeBackendListResponseBody extends TeaModel {
     public static class DescribeBackendListResponseBodyBackendInfoList extends TeaModel {
         /**
          * <p>The ID of the backend service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>35bd31d32c9c425ebbe9330db9f8c375</p>
          */
         @NameInMap("BackendId")
         public String backendId;
 
         /**
          * <p>The name of the backend service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("BackendName")
         public String backendName;
 
         /**
          * <p>The type of the backend service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP</p>
          */
         @NameInMap("BackendType")
         public String backendType;
 
         /**
          * <p>The time when the backend service was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-01-25T11:22:29Z</p>
          */
         @NameInMap("CreatedTime")
         public String createdTime;
 
         /**
          * <p>The description of the backend service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The time when the backend service was modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-01-25T11:22:29Z</p>
          */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
+        /**
+         * <p>The list of tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<DescribeBackendListResponseBodyBackendInfoListTags> tags;
 

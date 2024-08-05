@@ -4,30 +4,61 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeApisByAppRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>getPersonInfo</p>
+     */
     @NameInMap("ApiName")
     public String apiName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>b19240592b1b4e74961fb8438ed7550c</p>
+     */
     @NameInMap("ApiUid")
     public String apiUid;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>333486644</p>
      */
     @NameInMap("AppId")
     public Long appId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>POST</p>
+     */
     @NameInMap("Method")
     public String method;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>/tt</p>
+     */
     @NameInMap("Path")
     public String path;
 

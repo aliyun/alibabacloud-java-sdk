@@ -6,30 +6,39 @@ import com.aliyun.tea.*;
 public class SetVpcAccessRequest extends TeaModel {
     /**
      * <p>The description of the VPC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>description of the VPC</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The ID of an ECS or SLB instance in the VPC.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-uf6bzcg1pr4oh5jjmxxx</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The name of the authorization. The name must be unique.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The port number that corresponds to the instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>80</p>
      */
     @NameInMap("Port")
     public Integer port;
@@ -45,14 +54,19 @@ public class SetVpcAccessRequest extends TeaModel {
 
     /**
      * <p>The ID of the VPC. The VPC must be an available one that belongs to the same account as the API.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-uf657qec7lx42paw3qxxx</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
 
     /**
      * <p>The host of the backend service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iot.hu***ng.com</p>
      */
     @NameInMap("VpcTargetHostName")
     public String vpcTargetHostName;
@@ -129,12 +143,18 @@ public class SetVpcAccessRequest extends TeaModel {
     public static class SetVpcAccessRequestTag extends TeaModel {
         /**
          * <p>The key of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("Value")
         public String value;

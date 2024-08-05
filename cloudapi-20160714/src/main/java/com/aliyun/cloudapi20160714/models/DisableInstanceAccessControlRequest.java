@@ -6,22 +6,29 @@ import com.aliyun.tea.*;
 public class DisableInstanceAccessControlRequest extends TeaModel {
     /**
      * <p>The ID of the access control policy.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acl-grgqc0mnuhkqciwtam</p>
      */
     @NameInMap("AclId")
     public String aclId;
 
     /**
-     * <p>The IP version. Valid values: **ipv4** and **ipv6**.</p>
+     * <p>The IP version. Valid values: <strong>ipv4</strong> and <strong>ipv6</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ipv4</p>
      */
     @NameInMap("AddressIPVersion")
     public String addressIPVersion;
 
     /**
      * <p>The ID of the instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>apigateway-cn-v6419k43xxxxx</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

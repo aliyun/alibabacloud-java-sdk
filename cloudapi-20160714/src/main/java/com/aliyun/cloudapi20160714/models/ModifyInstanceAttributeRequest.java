@@ -4,42 +4,85 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceAttributeRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("DeleteVpcIpBlock")
     public String deleteVpcIpBlock;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("EgressIpv6Enable")
     public String egressIpv6Enable;
 
+    /**
+     * <strong>example:</strong>
+     * <p>HTTPS2_TLS1_0</p>
+     */
     @NameInMap("HttpsPolicy")
     public String httpsPolicy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IPV6Enabled")
     public String IPV6Enabled;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>apigateway-ht-8xxxxxxxxx</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>apigatewayInstance</p>
+     */
     @NameInMap("InstanceName")
     public String instanceName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>172.0.0.1/24</p>
+     */
     @NameInMap("IntranetSegments")
     public String intranetSegments;
 
+    /**
+     * <strong>example:</strong>
+     * <p>23:00Z</p>
+     */
     @NameInMap("MaintainEndTime")
     public String maintainEndTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>18:00Z</p>
+     */
     @NameInMap("MaintainStartTime")
     public String maintainStartTime;
 
     @NameInMap("ToConnectVpcIpBlock")
     public ModifyInstanceAttributeRequestToConnectVpcIpBlock toConnectVpcIpBlock;
 
+    /**
+     * <strong>example:</strong>
+     * <p>c20d86c4-1eb3-4d0b-afe9-c586df1e2136</p>
+     */
     @NameInMap("Token")
     public String token;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("VpcSlbIntranetEnable")
     public String vpcSlbIntranetEnable;
 
@@ -145,15 +188,31 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
     }
 
     public static class ModifyInstanceAttributeRequestToConnectVpcIpBlock extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>172.16.0.0/16</p>
+         */
         @NameInMap("CidrBlock")
         public String cidrBlock;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Customized")
         public Boolean customized;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vsw-wz94cqvaoe1ipxxxxxx</p>
+         */
         @NameInMap("VswitchId")
         public String vswitchId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-a</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 

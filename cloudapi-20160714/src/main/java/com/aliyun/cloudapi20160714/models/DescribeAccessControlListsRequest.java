@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class DescribeAccessControlListsRequest extends TeaModel {
     /**
      * <p>The name of the access control policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testAcl</p>
      */
     @NameInMap("AclName")
     public String aclName;
 
     /**
-     * <p>IP版本，可以设置为**ipv4**或者**ipv6**。</p>
+     * <p>IP版本，可以设置为<strong>ipv4</strong>或者<strong>ipv6</strong>。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ipv6</p>
      */
     @NameInMap("AddressIPVersion")
     public String addressIPVersion;
 
     /**
      * <p>The page number of the current page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

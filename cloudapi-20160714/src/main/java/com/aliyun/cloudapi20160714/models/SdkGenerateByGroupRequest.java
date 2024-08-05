@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class SdkGenerateByGroupRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1a991a450b9548a1a3df38fd3af117c2</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>java</p>
      */
     @NameInMap("Language")
     public String language;

@@ -6,22 +6,29 @@ import com.aliyun.tea.*;
 public class DescribeApiQpsDataRequest extends TeaModel {
     /**
      * <p>The ID of the API.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d6f679aeb3be4b91b3688e887ca1fe16</p>
      */
     @NameInMap("ApiId")
     public String apiId;
 
     /**
      * <p>The end time in UTC. Format: YYYY-MM-DDThh:mm:ssZ</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2016-07-23T09:28:48Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The ID of the API group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>63be9002440b4778a61122f14c2b2bbb</p>
      */
     @NameInMap("GroupId")
     public String groupId;
@@ -31,18 +38,24 @@ public class DescribeApiQpsDataRequest extends TeaModel {
 
     /**
      * <p>The environment. Valid values:</p>
-     * <br>
-     * <p>*   **RELEASE**</p>
-     * <p>*   **PRE**: the pre-release environment</p>
-     * <p>*   **TEST**</p>
+     * <ul>
+     * <li><strong>RELEASE</strong></li>
+     * <li><strong>PRE</strong>: the pre-release environment</li>
+     * <li><strong>TEST</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>RELEASE</p>
      */
     @NameInMap("StageName")
     public String stageName;
 
     /**
      * <p>The start time in UTC. Format: YYYY-MM-DDThh:mm:ssZ</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2016-07-23T08:28:48Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;

@@ -12,24 +12,36 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the access control policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acl-uf6fpfdg3b5muska7uqem</p>
      */
     @NameInMap("AclId")
     public String aclId;
 
     /**
      * <p>The name of the access control policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testAcl</p>
      */
     @NameInMap("AclName")
     public String aclName;
 
     /**
-     * <p>The IP version. Valid values: **ipv4** and **ipv6**.</p>
+     * <p>The IP version. Valid values: <strong>ipv4</strong> and <strong>ipv6</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ipv4</p>
      */
     @NameInMap("AddressIPVersion")
     public String addressIPVersion;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BZ015</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -82,12 +94,18 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
     public static class DescribeAccessControlListAttributeResponseBodyAclEntrysAclEntry extends TeaModel {
         /**
          * <p>The description of an entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("AclEntryComment")
         public String aclEntryComment;
 
         /**
          * <p>The entries of the access control policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.1.0/24</p>
          */
         @NameInMap("AclEntryIp")
         public String aclEntryIp;

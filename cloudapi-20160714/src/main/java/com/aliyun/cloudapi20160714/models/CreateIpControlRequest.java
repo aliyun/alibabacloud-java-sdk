@@ -6,14 +6,19 @@ import com.aliyun.tea.*;
 public class CreateIpControlRequest extends TeaModel {
     /**
      * <p>The description. The description can be up to 200 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The name of the ACL. The name must be 4 to 50 characters in length, and can contain letters, digits, and underscores (_). The name cannot start with an underscore (_).``</p>
-     * <br>
+     * <p>The name of the ACL. The name must be 4 to 50 characters in length, and can contain letters, digits, and underscores (<em>). The name cannot start with an underscore (</em>).``</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>controlNameTest</p>
      */
     @NameInMap("IpControlName")
     public String ipControlName;
@@ -26,11 +31,14 @@ public class CreateIpControlRequest extends TeaModel {
 
     /**
      * <p>The type of the ACL. Valid values:</p>
-     * <br>
-     * <p>*   **ALLOW**: an IP address whitelist</p>
-     * <p>*   **REFUSE**: an IP address blacklist</p>
-     * <br>
+     * <ul>
+     * <li><strong>ALLOW</strong>: an IP address whitelist</li>
+     * <li><strong>REFUSE</strong>: an IP address blacklist</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ALLOW</p>
      */
     @NameInMap("IpControlType")
     public String ipControlType;
@@ -86,23 +94,31 @@ public class CreateIpControlRequest extends TeaModel {
     public static class CreateIpControlRequestIpControlPolicys extends TeaModel {
         /**
          * <p>The ID of the application that is restricted by the policy. You can configure the AppId parameter only when the value of the IpControlType parameter is ALLOW.</p>
-         * <br>
-         * <p>*   You can add only one application ID at a time.</p>
-         * <p>*   If this parameter is empty, no applications are restricted.</p>
-         * <p>*   If this parameter is not empty, not only IP addresses but also applications are restricted.</p>
-         * <p>*   If this parameter is not empty and no security authentication method is specified for the API, all API calls are restricted.</p>
-         * <p>*   If the value of the IpControlType parameter is REFUSE and the AppId parameter is not empty, API Gateway automatically ignores the AppId parameter and restricts only the IP addresses.</p>
-         * <p>*   Valid values of N in IpControlPolicys.N: `[1,100]`.</p>
+         * <ul>
+         * <li>You can add only one application ID at a time.</li>
+         * <li>If this parameter is empty, no applications are restricted.</li>
+         * <li>If this parameter is not empty, not only IP addresses but also applications are restricted.</li>
+         * <li>If this parameter is not empty and no security authentication method is specified for the API, all API calls are restricted.</li>
+         * <li>If the value of the IpControlType parameter is REFUSE and the AppId parameter is not empty, API Gateway automatically ignores the AppId parameter and restricts only the IP addresses.</li>
+         * <li>Valid values of N in IpControlPolicys.N: <code>[1,100]</code>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>11111</p>
          */
         @NameInMap("AppId")
         public String appId;
 
         /**
          * <p>The IP address or CIDR block involved in a policy.</p>
-         * <br>
-         * <p>*   If you want to specify a policy when you create an ACL, this parameter is required.</p>
-         * <p>*   The IP address or CIDR block that is defined in each policy. Separate multiple IP addresses or CIDR blocks with semicolons (;). You can add a maximum of 10 IP addresses or CIDR blocks.</p>
-         * <p>*   Valid values of N in IpControlPolicys.N: `[1,100]`.</p>
+         * <ul>
+         * <li>If you want to specify a policy when you create an ACL, this parameter is required.</li>
+         * <li>The IP address or CIDR block that is defined in each policy. Separate multiple IP addresses or CIDR blocks with semicolons (;). You can add a maximum of 10 IP addresses or CIDR blocks.</li>
+         * <li>Valid values of N in IpControlPolicys.N: <code>[1,100]</code>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>114.1.1.0/24</p>
          */
         @NameInMap("CidrIp")
         public String cidrIp;

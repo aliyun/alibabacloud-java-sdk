@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class ValidateVpcConnectivityRequest extends TeaModel {
     /**
      * <p>The ID of the API Gateway instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>apigateway-hz-72bc18******</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -17,8 +19,10 @@ public class ValidateVpcConnectivityRequest extends TeaModel {
 
     /**
      * <p>The ID of the VPC access authorization.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5f1b3216f9********e2c1297b6741dc</p>
      */
     @NameInMap("VpcAccessId")
     public String vpcAccessId;

@@ -6,16 +6,20 @@ import com.aliyun.tea.*;
 public class DescribeApiMarketAttributesRequest extends TeaModel {
     /**
      * <p>The ID of the API.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1f9b5e9ba80943099cac52e040b7e160</p>
      */
     @NameInMap("ApiId")
     public String apiId;
 
     /**
      * <p>The ID of the API group.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>b693252f3f19445e9a01dac177c4454c</p>
      */
     @NameInMap("GroupId")
     public String groupId;

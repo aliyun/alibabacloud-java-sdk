@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DeleteAppKeyRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>110840611</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>203708622</p>
      */
     @NameInMap("AppKey")
     public String appKey;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyDatasetItemResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F7DE77BC-0F7D-5A18-B494-BD2C********</p>
      */
     @NameInMap("RequestId")
     public String requestId;

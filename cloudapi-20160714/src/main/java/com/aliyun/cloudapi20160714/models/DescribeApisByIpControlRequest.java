@@ -6,20 +6,28 @@ import com.aliyun.tea.*;
 public class DescribeApisByIpControlRequest extends TeaModel {
     /**
      * <p>The ID of the ACL.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dd05f1c54d6749eda95f9fa6d491449a</p>
      */
     @NameInMap("IpControlId")
     public String ipControlId;
 
     /**
      * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page. Maximum value: 100. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

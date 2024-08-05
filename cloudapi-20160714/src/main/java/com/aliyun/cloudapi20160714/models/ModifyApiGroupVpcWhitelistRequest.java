@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class ModifyApiGroupVpcWhitelistRequest extends TeaModel {
     /**
      * <p>The ID of the API group.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9b80408147724ddab4c4e2703c6ca019</p>
      */
     @NameInMap("GroupId")
     public String groupId;
@@ -17,8 +19,10 @@ public class ModifyApiGroupVpcWhitelistRequest extends TeaModel {
 
     /**
      * <p>The ID of the VPC instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-bp11w979o2s9rcr962w25</p>
      */
     @NameInMap("VpcIds")
     public String vpcIds;

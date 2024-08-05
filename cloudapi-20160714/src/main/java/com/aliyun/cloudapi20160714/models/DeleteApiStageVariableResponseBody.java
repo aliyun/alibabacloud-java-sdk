@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteApiStageVariableResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>03442A3D-3B7D-434C-8A95-A5FEB969B529</p>
      */
     @NameInMap("RequestId")
     public String requestId;

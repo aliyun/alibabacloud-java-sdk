@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class BatchDeployApisResponseBody extends TeaModel {
     /**
      * <p>The ID of the operation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2a322599-8e38-428a-a306-9b21ea2129bf</p>
      */
     @NameInMap("OperationId")
     public String operationId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E7FE7172-AA75-5880-B6F7-C00893E9BC06</p>
      */
     @NameInMap("RequestId")
     public String requestId;

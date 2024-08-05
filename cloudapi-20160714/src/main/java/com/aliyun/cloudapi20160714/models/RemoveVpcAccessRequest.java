@@ -6,22 +6,29 @@ import com.aliyun.tea.*;
 public class RemoveVpcAccessRequest extends TeaModel {
     /**
      * <p>The ID of an ECS or SLB instance in the VPC.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-uf6bzcg1pr4oh5jjmxxx</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>Specifies whether batch work is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("NeedBatchWork")
     public Boolean needBatchWork;
 
     /**
      * <p>The port number that corresponds to the instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>80</p>
      */
     @NameInMap("Port")
     public Integer port;
@@ -31,8 +38,10 @@ public class RemoveVpcAccessRequest extends TeaModel {
 
     /**
      * <p>The ID of the VPC.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-uf657qec7lx42paw3qxxx</p>
      */
     @NameInMap("VpcId")
     public String vpcId;

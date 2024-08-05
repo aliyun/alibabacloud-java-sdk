@@ -6,57 +6,83 @@ import com.aliyun.tea.*;
 public class DescribePluginApisRequest extends TeaModel {
     /**
      * <p>The ID of the API.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c6b0dd188b0e4e408e12f926********</p>
      */
     @NameInMap("ApiId")
     public String apiId;
 
     /**
      * <p>The name of the API.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>API</p>
      */
     @NameInMap("ApiName")
     public String apiName;
 
     /**
      * <p>The description of the API.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>API description</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The ID of the API group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>231a4bb81ee94da785733c29********</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
      * <p>The request HTTP method of the API.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>GET</p>
      */
     @NameInMap("Method")
     public String method;
 
     /**
      * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
-     * <p>Default value:10.</p>
+     * <p>The number of entries returned per page.
+     * Default value:10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request path of the API.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/sendVerifyCode</p>
      */
     @NameInMap("Path")
     public String path;
 
     /**
      * <p>The ID of the gateway plug-in.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bf6583efcef44c51adb00c4e********</p>
      */
     @NameInMap("PluginId")
     public String pluginId;

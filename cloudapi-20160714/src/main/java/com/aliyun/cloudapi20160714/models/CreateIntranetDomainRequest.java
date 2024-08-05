@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class CreateIntranetDomainRequest extends TeaModel {
     /**
      * <p>The custom domain name.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>927d50c0f2e54b359919923d908bb015</p>
      */
     @NameInMap("GroupId")
     public String groupId;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class AddAccessControlListEntryResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CEB6EC62-B6C7-5082-A45A-45A204724AC2</p>
      */
     @NameInMap("RequestId")
     public String requestId;

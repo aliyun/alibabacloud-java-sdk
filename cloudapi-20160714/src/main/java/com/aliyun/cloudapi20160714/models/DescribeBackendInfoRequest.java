@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeBackendInfoRequest extends TeaModel {
     /**
      * <p>The ID of the backend service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>739b68751c0b4e899e04d0c92b6d0be7</p>
      */
     @NameInMap("BackendId")
     public String backendId;

@@ -6,39 +6,48 @@ import com.aliyun.tea.*;
 public class DescribeImportOASTaskResponseBody extends TeaModel {
     /**
      * <p>The execution status of the subtask. Valid values:</p>
-     * <br>
-     * <p>*   RUNNING</p>
-     * <p>*   WAIT</p>
-     * <p>*   OVER</p>
-     * <p>*   FAIL</p>
-     * <p>*   CANCEL</p>
+     * <ul>
+     * <li>RUNNING</li>
+     * <li>WAIT</li>
+     * <li>OVER</li>
+     * <li>FAIL</li>
+     * <li>CANCEL</li>
+     * </ul>
      */
     @NameInMap("ApiResults")
     public DescribeImportOASTaskResponseBodyApiResults apiResults;
 
     /**
      * <p>The execution status of the subtask. Valid values:</p>
-     * <br>
-     * <p>*   RUNNING</p>
-     * <p>*   WAIT</p>
-     * <p>*   OVER</p>
-     * <p>*   FAIL</p>
-     * <p>*   CANCEL</p>
+     * <ul>
+     * <li>RUNNING</li>
+     * <li>WAIT</li>
+     * <li>OVER</li>
+     * <li>FAIL</li>
+     * <li>CANCEL</li>
+     * </ul>
      */
     @NameInMap("ModelResults")
     public DescribeImportOASTaskResponseBodyModelResults modelResults;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CE5722A6-AE78-4741-A9B0-6C817D360510</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The status of the import task. Valid values:</p>
-     * <br>
-     * <p>*   Running</p>
-     * <p>*   Finished</p>
+     * <ul>
+     * <li>Running</li>
+     * <li>Finished</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Finished</p>
      */
     @NameInMap("TaskStatus")
     public String taskStatus;
@@ -81,27 +90,82 @@ public class DescribeImportOASTaskResponseBody extends TeaModel {
     }
 
     public static class DescribeImportOASTaskResponseBodyApiResultsApiResult extends TeaModel {
+        /**
+         * <p>The API ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c5a0c2900ff746b789c007545be22fb8</p>
+         */
         @NameInMap("ApiId")
         public String apiId;
 
+        /**
+         * <p>The API name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GetByCreatorIdUsingGET</p>
+         */
         @NameInMap("ApiName")
         public String apiName;
 
+        /**
+         * <p>The API description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>release data api 411055691505041</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The cause of the failure if the API fails to be imported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Internal Error</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <p>The API group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>736508d885074167ba8fbce3bc95ea0b</p>
+         */
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <p>The HTTP request HTTP method of the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GET</p>
+         */
         @NameInMap("Method")
         public String method;
 
+        /**
+         * <p>The request path of the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/creator/getByCreatorId</p>
+         */
         @NameInMap("Path")
         public String path;
 
+        /**
+         * <p>The execution status of the subtask. Valid values:</p>
+         * <ul>
+         * <li>RUNNING</li>
+         * <li>WAIT</li>
+         * <li>OVER</li>
+         * <li>FAIL</li>
+         * <li>CANCEL</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>WAIT</p>
+         */
         @NameInMap("UpdateStatus")
         public String updateStatus;
 
@@ -196,18 +260,55 @@ public class DescribeImportOASTaskResponseBody extends TeaModel {
     }
 
     public static class DescribeImportOASTaskResponseBodyModelResultsModelResult extends TeaModel {
+        /**
+         * <p>The cause of the failure if the model fails to be imported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Internal Error</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <p>The API group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>736508d885074167ba8fbce3bc95ea0b</p>
+         */
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <p>The ID of the imported model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6b48d724c921415486e190c494dd6bf8</p>
+         */
         @NameInMap("ModelId")
         public String modelId;
 
+        /**
+         * <p>The model name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Pet</p>
+         */
         @NameInMap("ModelName")
         public String modelName;
 
+        /**
+         * <p>The execution status of the subtask. Valid values:</p>
+         * <ul>
+         * <li>RUNNING</li>
+         * <li>WAIT</li>
+         * <li>OVER</li>
+         * <li>FAIL</li>
+         * <li>CANCEL</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>FAIL</p>
+         */
         @NameInMap("UpdateStatus")
         public String updateStatus;
 

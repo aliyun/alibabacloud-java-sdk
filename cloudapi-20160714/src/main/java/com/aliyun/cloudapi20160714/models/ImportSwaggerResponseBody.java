@@ -24,6 +24,9 @@ public class ImportSwaggerResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>647CEF05-404C-4125-B3D7-44792EB77392</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -82,18 +85,27 @@ public class ImportSwaggerResponseBody extends TeaModel {
     public static class ImportSwaggerResponseBodyFailedApiImportSwaggerFailed extends TeaModel {
         /**
          * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>api already exists : apiUid ===&gt; 8e274ec61cf6468e83b68371956831cb</p>
          */
         @NameInMap("ErrorMsg")
         public String errorMsg;
 
         /**
          * <p>The HTTP method of the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>post</p>
          */
         @NameInMap("HttpMethod")
         public String httpMethod;
 
         /**
          * <p>The request path of the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/http/get/mapping</p>
          */
         @NameInMap("Path")
         public String path;
@@ -151,18 +163,27 @@ public class ImportSwaggerResponseBody extends TeaModel {
     public static class ImportSwaggerResponseBodyModelFailedApiImportModelFailed extends TeaModel {
         /**
          * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>error msg</p>
          */
         @NameInMap("ErrorMsg")
         public String errorMsg;
 
         /**
          * <p>The ID of the API group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>36d4bcfaec1946e1870d90b2d7519710</p>
          */
         @NameInMap("GroupId")
         public String groupId;
 
         /**
          * <p>The name of the model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Region</p>
          */
         @NameInMap("ModelName")
         public String modelName;
@@ -220,12 +241,18 @@ public class ImportSwaggerResponseBody extends TeaModel {
     public static class ImportSwaggerResponseBodyModelSuccessApiImportModelSuccess extends TeaModel {
         /**
          * <p>The ID of the API group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b2d552ed90ca435b86f7bf8d45414793</p>
          */
         @NameInMap("GroupId")
         public String groupId;
 
         /**
          * <p>The name of the model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NewInstance</p>
          */
         @NameInMap("ModelName")
         public String modelName;
@@ -238,6 +265,9 @@ public class ImportSwaggerResponseBody extends TeaModel {
 
         /**
          * <p>The UID of the model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d4bcfaec1946e1870d</p>
          */
         @NameInMap("ModelUid")
         public String modelUid;
@@ -303,24 +333,36 @@ public class ImportSwaggerResponseBody extends TeaModel {
     public static class ImportSwaggerResponseBodySuccessApiImportSwaggerSuccess extends TeaModel {
         /**
          * <p>Specifies that the operation is CREATE or MODIFY.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CREATE</p>
          */
         @NameInMap("ApiOperation")
         public String apiOperation;
 
         /**
          * <p>The UID of the imported API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8e274ec61cf6468e83b68371956831cb</p>
          */
         @NameInMap("ApiUid")
         public String apiUid;
 
         /**
          * <p>The HTTP method of the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>get</p>
          */
         @NameInMap("HttpMethod")
         public String httpMethod;
 
         /**
          * <p>The request path of the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/http/get/mapping</p>
          */
         @NameInMap("Path")
         public String path;

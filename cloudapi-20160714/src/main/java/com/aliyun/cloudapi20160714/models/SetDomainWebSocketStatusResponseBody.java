@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class SetDomainWebSocketStatusResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>61A16D46-EC04-5288-8A18-811B0F536CC2</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -6,42 +6,63 @@ import com.aliyun.tea.*;
 public class DescribeAppResponseBody extends TeaModel {
     /**
      * <p>The ID of the app.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>110843374</p>
      */
     @NameInMap("AppId")
     public Long appId;
 
     /**
      * <p>The name of the app.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CreateApptest</p>
      */
     @NameInMap("AppName")
     public String appName;
 
     /**
      * <p>The time when the app was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-01-29T09:33:01Z</p>
      */
     @NameInMap("CreatedTime")
     public String createdTime;
 
     /**
      * <p>The description of the app.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Estimated on October 15, 2021 at 10:20:27</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The extended information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>110243810311</p>
      */
     @NameInMap("Extend")
     public String extend;
 
     /**
      * <p>The time when the app was modified.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-01-29T09:33:01Z</p>
      */
     @NameInMap("ModifiedTime")
     public String modifiedTime;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DBDB3B0F-EC61-5F33-88AD-EC2446FA1DDB</p>
      */
     @NameInMap("RequestId")
     public String requestId;
